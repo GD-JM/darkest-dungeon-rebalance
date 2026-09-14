@@ -1,10 +1,11 @@
 resistances: .stun 40% .poison 30% .bleed 40% .disease 30% .move 40% .debuff 30% .death_blow 67% .trap 10%
 crit: .effects "on_crit_stressresist"
-weapon: .name "man_at_arms_weapon_0" .atk 0% .dmg 5 9 .crit 2% .spd 3
-weapon: .name "man_at_arms_weapon_1" .atk 0% .dmg 6 10 .crit 3% .spd 3 .upgradeRequirementCode 0
-weapon: .name "man_at_arms_weapon_2" .atk 0% .dmg 7 12 .crit 4% .spd 4 .upgradeRequirementCode 1
-weapon: .name "man_at_arms_weapon_3" .atk 0% .dmg 7 13 .crit 5% .spd 4 .upgradeRequirementCode 2
-weapon: .name "man_at_arms_weapon_4" .atk 0% .dmg 8 14 .crit 6% .spd 5 .upgradeRequirementCode 3
+weapon: .name "man_at_arms_weapon_0" .atk 0% .dmg 5 10 .crit 2% .spd 3
+weapon: .name "man_at_arms_weapon_1" .atk 0% .dmg 6 12 .crit 3% .spd 3 .upgradeRequirementCode 0
+weapon: .name "man_at_arms_weapon_2" .atk 0% .dmg 7 13 .crit 4% .spd 4 .upgradeRequirementCode 1
+weapon: .name "man_at_arms_weapon_3" .atk 0% .dmg 7 15 .crit 5% .spd 4 .upgradeRequirementCode 2
+weapon: .name "man_at_arms_weapon_4" .atk 0% .dmg 8 16 .crit 6% .spd 5 .upgradeRequirementCode 3
+// MAA-001 weapon dmg base 5-9 -> 5-10, growth 15% kept
 armour: .name "man_at_arms_armour_0" .def 5% .prot 0 .hp 31 .spd 0
 armour: .name "man_at_arms_armour_1" .def 10% .prot 0 .hp 37 .spd 0 .upgradeRequirementCode 0
 armour: .name "man_at_arms_armour_2" .def 15% .prot 0 .hp 43 .spd 0 .upgradeRequirementCode 1
