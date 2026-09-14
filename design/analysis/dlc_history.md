@@ -5,7 +5,7 @@
 
 ## 출시
 
-- **고행자**: 크림슨 코트 DLC, 2017-06-20 (Crimson Court Base Game Update)
+- **고행자**: 핏빛 궁정 DLC, 2017-06-20 (Crimson Court Base Game Update)
 - **방패 파괴자**: 2017-10-26 (Shieldbreaker Release BUILD #21049, Steam 출시일 26 Oct 2017)
 
 ## 수치가 바뀐 패치
