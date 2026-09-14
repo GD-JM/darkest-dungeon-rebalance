@@ -1,0 +1,196 @@
+[바닐라 원본] 신비학자 (occultist)
+게임 원본 수치 참고용. 게임은 이 파일을 읽지 않고, 배포에도 포함되지 않음. 수정은 occultist.info.darkest 에서.
+원본 위치: heroes/occultist/occultist.info.darkest
+
+■ 장비 (레벨 1~5)
+              1      2      3      4      5      
+  최대 체력       19     23     27     31     35     
+  회피          10     15     20     25     30     
+  방어          0      0      0      0      0      
+  속도(무기)      6      6      7      7      8      
+  피해          4-7    5-8    6-10   6-11   7-13   
+  치명타         6%     7%     8%     9%     10%    
+
+■ 저항
+  기절 20% | 중독 30% | 출혈 40% | 질병 40% | 이동 20% | 약화 60% | 죽음의 일격 67% | 함정 10%
+
+■ 전투 기술 (레벨 1~5)
+
+  제물 암습 (bloodlet)  종류 melee  사용 열 123  대상 123  
+  명중          80       85       90       95       100      
+  피해 보정       0        0        0        0        0        
+  치명타 보정      9        10       11       12       13       
+  효과 L1       Eldritch Killer 1
+  효과 L2       Eldritch Killer 2
+  효과 L3       Eldritch Killer 3
+  효과 L4       Eldritch Killer 4
+  효과 L5       Eldritch Killer 5
+
+  심연의 포격 (abyssal_artillery)  종류 ranged  사용 열 34  대상 ~34  
+  명중          85       90       95       100      105      
+  피해 보정       -33      -33      -33      -33      -33      
+  치명타 보정      0        1        2        3        4        
+  효과 L1       Abyssal Killer 1
+  효과 L2       Abyssal Killer 2
+  효과 L3       Abyssal Killer 3
+  효과 L4       Abyssal Killer 4
+  효과 L5       Abyssal Killer 5
+
+  약화 저주 (weakening_curse)  종류 ranged  사용 열 1234  대상 1234  
+  명중          95       100      105      110      115      
+  피해 보정       -75      -75      -75      -75      -75      
+  치명타 보정      5        6        7        8        9        
+  효과 L1       Occ Weakening Curse 1, Occ Weaken Prot 1
+  효과 L2       Occ Weakening Curse 2, Occ Weaken Prot 2
+  효과 L3       Occ Weakening Curse 3, Occ Weaken Prot 3
+  효과 L4       Occ Weakening Curse 4, Occ Weaken Prot 4
+  효과 L5       Occ Weakening Curse 5, Occ Weaken Prot 5
+
+  기괴한 재구축 (wyrd_reconstruction)  종류 -  사용 열 1234  대상 @1234  
+  명중                                                       
+  피해 보정                                                    
+  치명타 보정                                                   
+  체력 회복       0-13     0-15     0-17     0-19     0-22     
+  효과 L1       Wyrd Bleed 1
+  효과 L2       Wyrd Bleed 2
+  효과 L3       Wyrd Bleed 3
+  효과 L4       Wyrd Bleed 4
+  효과 L5       Wyrd Bleed 5
+
+  취약화 주술 (disruptive_curse)  종류 ranged  사용 열 1234  대상 1234  
+  명중          95       100      105      110      115      
+  피해 보정       -90      -90      -90      -90      -90      
+  치명타 보정      5        6        7        8        9        
+  효과 L1       Occ Vulnerability Curse 1, Mark Target
+  효과 L2       Occ Vulnerability Curse 2, Mark Target
+  효과 L3       Occ Vulnerability Curse 3, Mark Target
+  효과 L4       Occ Vulnerability Curse 4, Mark Target
+  효과 L5       Occ Vulnerability Curse 5, Mark Target
+
+  심연에서의 손아귀 (hands_from_abyss)  종류 ranged  사용 열 12  대상 123  
+  명중          90       95       100      105      110      
+  피해 보정       -50      -50      -50      -50      -50      
+  치명타 보정      9        10       11       12       13       
+  효과 L1       Abyssal Stun 1, Darkness 1
+  효과 L2       Abyssal Stun 2, Darkness 1
+  효과 L3       Abyssal Stun 3, Darkness 1
+  효과 L4       Abyssal Stun 4, Darkness 1
+  효과 L5       Abyssal Stun 5, Darkness 1
+
+  악마의 아귀팔 (daemons_pull)  종류 ranged  사용 열 234  대상 34  
+  명중          90       95       100      105      110      
+  피해 보정       -50      -50      -50      -50      -50      
+  치명타 보정      5        6        7        8        9        
+  효과 L1       Pull 2A, clear_corpses
+  효과 L2       Pull 2B, clear_corpses
+  효과 L3       Pull 2C, clear_corpses
+  효과 L4       Pull 2D, clear_corpses
+  효과 L5       Pull 2E, clear_corpses
+
+■ 기타 기술 줄
+  combat_move_skill: .id "move" .level 0 .type "move" .move 2 2 .launch 4321
+
+■ 이 영웅 기술이 쓰는 효과 줄 원본 (효과 파일은 영웅 파일과 따로 있음)
+  -- effects/base.effects.darkest
+  effect: .name "Eldritch Killer 1" .target "performer" .chance 100% .curio_result_type "positive" .monsterType "eldritch" .combat_stat_buff 1  .damage_low_multiply 15%	.damage_high_multiply 15%	.on_hit true .on_miss false .apply_once true
+  effect: .name "Eldritch Killer 2" .target "performer" .chance 100% .curio_result_type "positive" .monsterType "eldritch" .combat_stat_buff 1 .damage_low_multiply 20%	.damage_high_multiply 20%	.on_hit true .on_miss false .apply_once true
+  effect: .name "Eldritch Killer 3" .target "performer" .chance 100% .curio_result_type "positive" .monsterType "eldritch" .combat_stat_buff 1 .damage_low_multiply 25%	.damage_high_multiply 25%	.on_hit true .on_miss false .apply_once true
+  effect: .name "Eldritch Killer 4" .target "performer" .chance 100% .curio_result_type "positive" .monsterType "eldritch" .combat_stat_buff 1 .damage_low_multiply 30%	.damage_high_multiply 30%	.on_hit true .on_miss false .apply_once true
+  effect: .name "Eldritch Killer 5" .target "performer" .chance 100% .curio_result_type "positive" .monsterType "eldritch" .combat_stat_buff 1 .damage_low_multiply 35%	.damage_high_multiply 35%	.on_hit true .on_miss false .apply_once true
+  effect: .name "Abyssal Killer 1" .target "performer" .chance 100% .curio_result_type "positive" .monsterType "eldritch" .combat_stat_buff 1 .damage_low_multiply 15%	.damage_high_multiply 15%	.on_hit true .on_miss false .apply_once true
+  effect: .name "Abyssal Killer 2" .target "performer" .chance 100% .curio_result_type "positive" .monsterType "eldritch" .combat_stat_buff 1 .damage_low_multiply 17%	.damage_high_multiply 17%	.on_hit true .on_miss false .apply_once true
+  effect: .name "Abyssal Killer 3" .target "performer" .chance 100% .curio_result_type "positive" .monsterType "eldritch" .combat_stat_buff 1 .damage_low_multiply 20%	.damage_high_multiply 20%	.on_hit true .on_miss false .apply_once true
+  effect: .name "Abyssal Killer 4" .target "performer" .chance 100% .curio_result_type "positive" .monsterType "eldritch" .combat_stat_buff 1 .damage_low_multiply 22%	.damage_high_multiply 22%	.on_hit true .on_miss false .apply_once true
+  effect: .name "Abyssal Killer 5" .target "performer" .chance 100% .curio_result_type "positive" .monsterType "eldritch" .combat_stat_buff 1 .damage_low_multiply 25%	.damage_high_multiply 25%	.on_hit true .on_miss false .apply_once true
+  effect: .name "Occ Weakening Curse 1" .target "target" .curio_result_type "negative" .chance 100% .duration 3 .combat_stat_buff 1 .damage_low_multiply -10% .damage_high_multiply -10%	.on_hit true .on_miss false
+  effect: .name "Occ Weaken Prot 1" .target "target" .curio_result_type "negative" .chance 100% .duration 3 .combat_stat_buff 1 .protection_rating_add -10% .on_hit true .on_miss false .queue true
+  effect: .name "Occ Weakening Curse 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3 .combat_stat_buff 1 .damage_low_multiply -12% .damage_high_multiply -12%	.on_hit true .on_miss false
+  effect: .name "Occ Weaken Prot 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3 .combat_stat_buff 1 .protection_rating_add -13% .on_hit true .on_miss false .queue true
+  effect: .name "Occ Weakening Curse 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3 .combat_stat_buff 1 .damage_low_multiply -15% .damage_high_multiply -15%	.on_hit true .on_miss false
+  effect: .name "Occ Weaken Prot 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3 .combat_stat_buff 1 .protection_rating_add -15% .on_hit true .on_miss false .queue true
+  effect: .name "Occ Weakening Curse 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .combat_stat_buff 1 .damage_low_multiply -17% .damage_high_multiply -17%	.on_hit true .on_miss false
+  effect: .name "Occ Weaken Prot 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .combat_stat_buff 1 .protection_rating_add -17% .on_hit true .on_miss false .queue true
+  effect: .name "Occ Weakening Curse 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .combat_stat_buff 1 .damage_low_multiply -20% .damage_high_multiply -20%	.on_hit true .on_miss false
+  effect: .name "Occ Weaken Prot 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .combat_stat_buff 1 .protection_rating_add -20% .on_hit true .on_miss false .queue true
+  effect: .name "Wyrd Bleed 1" .target "target" .curio_result_type "negative" .chance 60%  .dotBleed 1 .duration 3	.on_hit true .on_miss false .queue true .can_apply_on_death true
+  effect: .name "Wyrd Bleed 2" .target "target" .curio_result_type "negative" .chance 70%  .dotBleed 1 .duration 3	.on_hit true .on_miss false .queue true .can_apply_on_death true
+  effect: .name "Wyrd Bleed 3" .target "target" .curio_result_type "negative" .chance 70%  .dotBleed 2 .duration 3	.on_hit true .on_miss false .queue true .can_apply_on_death true
+  effect: .name "Wyrd Bleed 4" .target "target" .curio_result_type "negative" .chance 80%  .dotBleed 2 .duration 3	.on_hit true .on_miss false .queue true .can_apply_on_death true
+  effect: .name "Wyrd Bleed 5" .target "target" .curio_result_type "negative" .chance 85%  .dotBleed 3 .duration 3	.on_hit true .on_miss false .queue true .can_apply_on_death true
+  effect: .name "Occ Vulnerability Curse 1" .target "target" .curio_result_type "negative" .chance 100% .duration 3  .combat_stat_buff 1 .defense_rating_add -15%	.on_hit true .on_miss false
+  effect: .name "Mark Target"	.target "target" .curio_result_type "positive" .chance 100%	.tag 1  .duration 3	.on_hit true .on_miss false
+  effect: .name "Occ Vulnerability Curse 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3  .combat_stat_buff 1 .defense_rating_add -16%	.on_hit true .on_miss false
+  effect: .name "Occ Vulnerability Curse 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3  .combat_stat_buff 1 .defense_rating_add -17%	.on_hit true .on_miss false
+  effect: .name "Occ Vulnerability Curse 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3  .combat_stat_buff 1 .defense_rating_add -18%	.on_hit true .on_miss false
+  effect: .name "Occ Vulnerability Curse 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3  .combat_stat_buff 1 .defense_rating_add -20%	.on_hit true .on_miss false
+  effect: .name "Abyssal Stun 1" .target "target" .curio_result_type "negative" .chance 110% .stun 1	.on_hit true .on_miss false .queue true
+  effect: .name "Darkness 1" .target "global" .chance 100% .curio_result_type "negative" .torch_decrease 5	.on_hit true .on_miss false .apply_once true .queue true
+  effect: .name "Abyssal Stun 2" .target "target" .curio_result_type "negative" .chance 120% .stun 1	.on_hit true .on_miss false .queue true
+  effect: .name "Abyssal Stun 3" .target "target" .curio_result_type "negative" .chance 130% .stun 1	.on_hit true .on_miss false .queue true
+  effect: .name "Abyssal Stun 4" .target "target" .curio_result_type "negative" .chance 140% .stun 1	.on_hit true .on_miss false .queue true
+  effect: .name "Abyssal Stun 5" .target "target" .curio_result_type "negative" .chance 150% .stun 1	.on_hit true .on_miss false .queue true
+  effect: .name "Pull 2A" .target "target" .pull 2 	.chance 100%	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "clear_corpses" .target "target_group" .chance 100% .kill_enemy_types corpse .on_hit true .on_miss false .queue false .can_apply_on_death true
+  effect: .name "Pull 2B" .target "target" .pull 2 	.chance 110%	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Pull 2C" .target "target" .pull 2 	.chance 120%	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Pull 2D" .target "target" .pull 2 	.chance 130%	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Pull 2E" .target "target" .pull 2 	.chance 140%	.on_hit true .on_miss false .can_apply_on_death true
+
+■ 원본 파일 전문 (occultist.info.darkest)
+------------------------------------------------------------
+resistances: .stun 20% .poison 30% .bleed 40% .disease 40% .move 20% .debuff 60% .death_blow 67% .trap 10%
+crit: .effects "on_crit_healdone"
+weapon: .name "occultist_weapon_0" .atk 0% .dmg 4 7 .crit 6% .spd 6
+weapon: .name "occultist_weapon_1" .atk 0% .dmg 5 8 .crit 7% .spd 6 .upgradeRequirementCode 0
+weapon: .name "occultist_weapon_2" .atk 0% .dmg 6 10 .crit 8% .spd 7 .upgradeRequirementCode 1
+weapon: .name "occultist_weapon_3" .atk 0% .dmg 6 11 .crit 9% .spd 7 .upgradeRequirementCode 2
+weapon: .name "occultist_weapon_4" .atk 0% .dmg 7 13 .crit 10% .spd 8 .upgradeRequirementCode 3
+armour: .name "occultist_armour_0" .def 10% .prot 0 .hp 19 .spd 0
+armour: .name "occultist_armour_1" .def 15% .prot 0 .hp 23 .spd 0 .upgradeRequirementCode 0
+armour: .name "occultist_armour_2" .def 20% .prot 0 .hp 27 .spd 0 .upgradeRequirementCode 1
+armour: .name "occultist_armour_3" .def 25% .prot 0 .hp 31 .spd 0 .upgradeRequirementCode 2
+armour: .name "occultist_armour_4" .def 30% .prot 0 .hp 35 .spd 0 .upgradeRequirementCode 3
+combat_skill: .id "bloodlet" .level 0 .type "melee" .atk 80% .dmg 0% .crit 9% .launch 123 .target 123 .is_crit_valid True  .effect "Eldritch Killer 1"
+combat_skill: .id "bloodlet" .level 1 .type "melee" .atk 85% .dmg 0% .crit 10% .launch 123 .target 123 .is_crit_valid True  .effect "Eldritch Killer 2"
+combat_skill: .id "bloodlet" .level 2 .type "melee" .atk 90% .dmg 0% .crit 11% .launch 123 .target 123 .is_crit_valid True  .effect "Eldritch Killer 3"
+combat_skill: .id "bloodlet" .level 3 .type "melee" .atk 95% .dmg 0% .crit 12% .launch 123 .target 123 .is_crit_valid True  .effect "Eldritch Killer 4"
+combat_skill: .id "bloodlet" .level 4 .type "melee" .atk 100% .dmg 0% .crit 13% .launch 123 .target 123 .is_crit_valid True  .effect "Eldritch Killer 5"
+combat_skill: .id "abyssal_artillery" .level 0 .type "ranged" .atk 85% .dmg -33% .crit 0% .launch 34 .target ~34 .is_crit_valid True  .effect "Abyssal Killer 1"
+combat_skill: .id "abyssal_artillery" .level 1 .type "ranged" .atk 90% .dmg -33% .crit 1% .launch 34 .target ~34 .is_crit_valid True  .effect "Abyssal Killer 2"
+combat_skill: .id "abyssal_artillery" .level 2 .type "ranged" .atk 95% .dmg -33% .crit 2% .launch 34 .target ~34 .is_crit_valid True  .effect "Abyssal Killer 3"
+combat_skill: .id "abyssal_artillery" .level 3 .type "ranged" .atk 100% .dmg -33% .crit 3% .launch 34 .target ~34 .is_crit_valid True  .effect "Abyssal Killer 4"
+combat_skill: .id "abyssal_artillery" .level 4 .type "ranged" .atk 105% .dmg -33% .crit 4% .launch 34 .target ~34 .is_crit_valid True  .effect "Abyssal Killer 5"
+combat_skill: .id "weakening_curse" .level 0 .type "ranged" .atk 95% .dmg -75% .crit 5% .launch 1234 .target 1234 .is_crit_valid True  .effect "Occ Weakening Curse 1" "Occ Weaken Prot 1"
+combat_skill: .id "weakening_curse" .level 1 .type "ranged" .atk 100% .dmg -75% .crit 6% .launch 1234 .target 1234 .is_crit_valid True  .effect "Occ Weakening Curse 2" "Occ Weaken Prot 2"
+combat_skill: .id "weakening_curse" .level 2 .type "ranged" .atk 105% .dmg -75% .crit 7% .launch 1234 .target 1234 .is_crit_valid True  .effect "Occ Weakening Curse 3" "Occ Weaken Prot 3"
+combat_skill: .id "weakening_curse" .level 3 .type "ranged" .atk 110% .dmg -75% .crit 8% .launch 1234 .target 1234 .is_crit_valid True  .effect "Occ Weakening Curse 4" "Occ Weaken Prot 4"
+combat_skill: .id "weakening_curse" .level 4 .type "ranged" .atk 115% .dmg -75% .crit 9% .launch 1234 .target 1234 .is_crit_valid True  .effect "Occ Weakening Curse 5" "Occ Weaken Prot 5"
+combat_skill: .id "wyrd_reconstruction" .level 0 .heal 0 13 .launch 1234 .target @1234  .effect "Wyrd Bleed 1" .generation_guaranteed true .is_stall_invalidating false
+combat_skill: .id "wyrd_reconstruction" .level 1 .heal 0 15 .launch 1234 .target @1234  .effect "Wyrd Bleed 2" .is_stall_invalidating false
+combat_skill: .id "wyrd_reconstruction" .level 2 .heal 0 17 .launch 1234 .target @1234  .effect "Wyrd Bleed 3" .is_stall_invalidating false
+combat_skill: .id "wyrd_reconstruction" .level 3 .heal 0 19 .launch 1234 .target @1234  .effect "Wyrd Bleed 4" .is_stall_invalidating false
+combat_skill: .id "wyrd_reconstruction" .level 4 .heal 0 22 .launch 1234 .target @1234  .effect "Wyrd Bleed 5" .is_stall_invalidating false
+combat_move_skill: .id "move" .level 0 .type "move" .move 2 2 .launch 4321
+combat_skill: .id "disruptive_curse" .level 0 .type "ranged" .atk 95% .dmg -90% .crit 5% .launch 1234 .target 1234 .is_crit_valid True  .effect "Occ Vulnerability Curse 1" "Mark Target" .is_stall_invalidating false
+combat_skill: .id "disruptive_curse" .level 1 .type "ranged" .atk 100% .dmg -90% .crit 6% .launch 1234 .target 1234 .is_crit_valid True  .effect "Occ Vulnerability Curse 2" "Mark Target" .is_stall_invalidating false
+combat_skill: .id "disruptive_curse" .level 2 .type "ranged" .atk 105% .dmg -90% .crit 7% .launch 1234 .target 1234 .is_crit_valid True  .effect "Occ Vulnerability Curse 3" "Mark Target" .is_stall_invalidating false
+combat_skill: .id "disruptive_curse" .level 3 .type "ranged" .atk 110% .dmg -90% .crit 8% .launch 1234 .target 1234 .is_crit_valid True  .effect "Occ Vulnerability Curse 4" "Mark Target" .is_stall_invalidating false
+combat_skill: .id "disruptive_curse" .level 4 .type "ranged" .atk 115% .dmg -90% .crit 9% .launch 1234 .target 1234 .is_crit_valid True  .effect "Occ Vulnerability Curse 5" "Mark Target" .is_stall_invalidating false
+combat_skill: .id "hands_from_abyss" .level 0 .type "ranged" .atk 90% .dmg -50% .crit 9% .launch 12 .target 123 .is_crit_valid True  .effect "Abyssal Stun 1" "Darkness 1"
+combat_skill: .id "hands_from_abyss" .level 1 .type "ranged" .atk 95% .dmg -50% .crit 10% .launch 12 .target 123 .is_crit_valid True  .effect "Abyssal Stun 2" "Darkness 1"
+combat_skill: .id "hands_from_abyss" .level 2 .type "ranged" .atk 100% .dmg -50% .crit 11% .launch 12 .target 123 .is_crit_valid True  .effect "Abyssal Stun 3" "Darkness 1"
+combat_skill: .id "hands_from_abyss" .level 3 .type "ranged" .atk 105% .dmg -50% .crit 12% .launch 12 .target 123 .is_crit_valid True  .effect "Abyssal Stun 4" "Darkness 1"
+combat_skill: .id "hands_from_abyss" .level 4 .type "ranged" .atk 110% .dmg -50% .crit 13% .launch 12 .target 123 .is_crit_valid True  .effect "Abyssal Stun 5" "Darkness 1"
+combat_skill: .id "daemons_pull" .level 0 .type "ranged" .atk 90% .dmg -50% .crit 5% .launch 234 .target 34 .is_crit_valid True  .effect "Pull 2A" "clear_corpses"
+combat_skill: .id "daemons_pull" .level 1 .type "ranged" .atk 95% .dmg -50% .crit 6% .launch 234 .target 34 .is_crit_valid True  .effect "Pull 2B" "clear_corpses"
+combat_skill: .id "daemons_pull" .level 2 .type "ranged" .atk 100% .dmg -50% .crit 7% .launch 234 .target 34 .is_crit_valid True  .effect "Pull 2C" "clear_corpses"
+combat_skill: .id "daemons_pull" .level 3 .type "ranged" .atk 105% .dmg -50% .crit 8% .launch 234 .target 34 .is_crit_valid True  .effect "Pull 2D" "clear_corpses"
+combat_skill: .id "daemons_pull" .level 4 .type "ranged" .atk 110% .dmg -50% .crit 9% .launch 234 .target 34 .is_crit_valid True  .effect "Pull 2E" "clear_corpses"
+tag: .id "light"
+tag: .id "non-religious"
+tag: .id "library"
+deaths_door: .buffs deathsdoorACCDebuff deathsdoorDMGLowDebuff deathsdoorDMGHighDebuff deathsdoorSPDDebuff deathsdoorSRDebuff .recovery_buffs mortalityACCDebuff mortalityDMGLowDebuff mortalityDMGHighDebuff mortalitySPDDebuff mortalitySRDebuff .recovery_heart_attack_buffs heartattackACCDebuff heartattackDMGLowDebuff heartattackDMGHighDebuff heartattackSPDDebuff heartattackSRDebuff
+controlled: .target_rank 4
+id_index: .index 7
+skill_selection: .can_select_combat_skills true .number_of_selected_combat_skills_max 4
+generation: .is_generation_enabled true .number_of_positive_quirks_min 1 .number_of_positive_quirks_max 2 .number_of_negative_quirks_min 1 .number_of_negative_quirks_max 2 .number_of_class_specific_camping_skills 2 .number_of_shared_camping_skills 1 .number_of_random_combat_skills 4 .number_of_cards_in_deck 8 .card_chance 1.0

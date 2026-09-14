@@ -1,0 +1,192 @@
+[바닐라 원본] 역병 의사 (plague_doctor)
+게임 원본 수치 참고용. 게임은 이 파일을 읽지 않고, 배포에도 포함되지 않음. 수정은 plague_doctor.info.darkest 에서.
+원본 위치: heroes/plague_doctor/plague_doctor.info.darkest
+
+■ 장비 (레벨 1~5)
+              1      2      3      4      5      
+  최대 체력       22     26     30     34     38     
+  회피          0      5      10     15     20     
+  방어          0      0      0      0      0      
+  속도(무기)      7      7      8      8      9      
+  피해          4-7    5-8    6-10   6-11   7-13   
+  치명타         2%     3%     4%     5%     6%     
+
+■ 저항
+  기절 20% | 중독 60% | 출혈 20% | 질병 50% | 이동 20% | 약화 50% | 죽음의 일격 67% | 함정 20%
+
+■ 전투 기술 (레벨 1~5)
+
+  유독기체 폭발 (noxious_blast)  종류 ranged  사용 열 432  대상 12  
+  명중          95       100      105      110      115      
+  피해 보정       -80      -80      -80      -80      -80      
+  치명타 보정      5        6        7        8        9        
+  효과 L1       PD Single Blight 1, Noxious Debuff 1
+  효과 L2       PD Single Blight 2, Noxious Debuff 2
+  효과 L3       PD Single Blight 3, Noxious Debuff 3
+  효과 L4       PD Single Blight 4, Noxious Debuff 4
+  효과 L5       PD Single Blight 5, Noxious Debuff 5
+
+  역병 수류탄 (plague_grenade)  종류 ranged  사용 열 43  대상 ~34  
+  명중          95       100      105      110      115      
+  피해 보정       -90      -90      -90      -90      -90      
+  치명타 보정      0        1        2        3        4        
+  효과 L1       PD Blight 1
+  효과 L2       PD Blight 2
+  효과 L3       PD Blight 3
+  효과 L4       PD Blight 4
+  효과 L5       PD Blight 5
+
+  실명 기체 (blinding_gas)  종류 ranged  사용 열 43  대상 ~34  전투당 제한 3
+  명중          95       100      105      110      115      
+  피해 보정       -100     -100     -100     -100     -100     
+  치명타 보정      0        0        0        0        0        
+  효과 L1       Stun 1
+  효과 L2       Stun 2
+  효과 L3       Stun 3
+  효과 L4       Stun 4
+  효과 L5       Stun 5
+
+  절개 (incision)  종류 melee  사용 열 321  대상 12  
+  명중          85       90       95       100      105      
+  피해 보정       0        0        0        0        0        
+  치명타 보정      5        6        7        8        9        
+  효과 L1       Bleed 1
+  효과 L2       Bleed 2
+  효과 L3       Bleed 3
+  효과 L4       Bleed 4
+  효과 L5       Bleed 5
+
+  야전 의술 (battlefield_medicine)  종류 -  사용 열 43  대상 @1234  
+  명중                                                       
+  피해 보정                                                    
+  치명타 보정                                                   
+  체력 회복       1-1      1-2      2-2      2-3      3-3      
+  효과          Cure, Cureself (전 레벨 동일)
+
+  강화 작용제 (emboldening_vapours)  종류 melee  사용 열 4321  대상 @1234  전투당 제한 2
+  명중          0        0        0        0        0        
+  피해 보정       0        0        0        0        0        
+  치명타 보정      0        0        0        0        0        
+  효과 L1       PD Vapours Buff 1
+  효과 L2       PD Vapours Buff 2
+  효과 L3       PD Vapours Buff 3
+  효과 L4       PD Vapours Buff 4
+  효과 L5       PD Vapours Buff 5
+
+  혼란 기체 폭발 (disorienting_blast)  종류 ranged  사용 열 432  대상 234  
+  명중          95       100      105      110      115      
+  피해 보정       -100     -100     -100     -100     -100     
+  치명타 보정      0        0        0        0        0        
+  효과 L1       Disorient 1, clear_corpses, PD Disorienting Stun 1
+  효과 L2       Disorient 2, clear_corpses, PD Disorienting Stun 2
+  효과 L3       Disorient 3, clear_corpses, PD Disorienting Stun 3
+  효과 L4       Disorient 4, clear_corpses, PD Disorienting Stun 4
+  효과 L5       Disorient 5, clear_corpses, PD Disorienting Stun 5
+
+■ 기타 기술 줄
+  combat_move_skill: .id "move" .level 0 .type "move" .move 1 1 .launch 4321
+
+■ 이 영웅 기술이 쓰는 효과 줄 원본 (효과 파일은 영웅 파일과 따로 있음)
+  -- effects/base.effects.darkest
+  effect: .name "PD Single Blight 1" .target "target" .curio_result_type "negative" .chance 100%  .dotPoison 5 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Noxious Debuff 1" .target "target" .curio_result_type "negative" .chance 100% .duration 3  .combat_stat_buff 1 .attack_rating_add -5%  .on_hit true .on_miss false
+  effect: .name "PD Single Blight 2" .target "target" .curio_result_type "negative" .chance 110%  .dotPoison 5 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Noxious Debuff 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3  .combat_stat_buff 1 .attack_rating_add -5%  .on_hit true .on_miss false
+  effect: .name "PD Single Blight 3" .target "target" .curio_result_type "negative" .chance 120%  .dotPoison 6 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Noxious Debuff 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3  .combat_stat_buff 1 .attack_rating_add -6%  .on_hit true .on_miss false
+  effect: .name "PD Single Blight 4" .target "target" .curio_result_type "negative" .chance 130%  .dotPoison 6 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Noxious Debuff 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3  .combat_stat_buff 1 .attack_rating_add -6%  .on_hit true .on_miss false
+  effect: .name "PD Single Blight 5" .target "target" .curio_result_type "negative" .chance 140%  .dotPoison 7 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Noxious Debuff 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3  .combat_stat_buff 1 .attack_rating_add -7%  .on_hit true .on_miss false
+  effect: .name "PD Blight 1" .target "target" .curio_result_type "negative" .chance 100%  .dotPoison 4 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "PD Blight 2" .target "target" .curio_result_type "negative" .chance 110%  .dotPoison 4 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "PD Blight 3" .target "target" .curio_result_type "negative" .chance 120%  .dotPoison 5 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "PD Blight 4" .target "target" .curio_result_type "negative" .chance 130%  .dotPoison 5 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "PD Blight 5" .target "target" .curio_result_type "negative" .chance 140%  .dotPoison 6 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Stun 1" .target "target" .curio_result_type "negative" .chance 100% .stun 1	.on_hit true .on_miss false .queue true
+  effect: .name "Stun 2" .target "target" .curio_result_type "negative" .chance 110% .stun 1	.on_hit true .on_miss false .queue true
+  effect: .name "Stun 3" .target "target" .curio_result_type "negative" .chance 120% .stun 1	.on_hit true .on_miss false .queue true
+  effect: .name "Stun 4" .target "target" .curio_result_type "negative" .chance 130% .stun 1	.on_hit true .on_miss false .queue true
+  effect: .name "Stun 5" .target "target" .curio_result_type "negative" .chance 140% .stun 1	.on_hit true .on_miss false .queue true
+  effect: .name "Bleed 1" .target "target" .curio_result_type "negative" .chance 100%  .dotBleed 2 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Bleed 2" .target "target" .curio_result_type "negative" .chance 110%  .dotBleed 2 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Bleed 3" .target "target" .curio_result_type "negative" .chance 120%  .dotBleed 3 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Bleed 4" .target "target" .curio_result_type "negative" .chance 130%  .dotBleed 3 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Bleed 5" .target "target" .curio_result_type "negative" .chance 140%  .dotBleed 4 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Cure" .target "target" .curio_result_type "positive" .chance 100% .cure 1	.on_hit true .on_miss false
+  effect: .name "Cureself" .target "performer" .curio_result_type "positive" .chance 100% .cure 1	.on_hit true .on_miss false .queue true .apply_once true
+  effect: .name "PD Vapours Buff 1" .target "target" .curio_result_type "positive" .chance 100% .buff_duration_type combat_end .duration 1 .combat_stat_buff 1 .damage_low_multiply 20% .damage_high_multiply 20% .speed_rating_add 3	.on_hit true .on_miss false
+  effect: .name "PD Vapours Buff 2" .target "target" .curio_result_type "positive" .chance 100% .buff_duration_type combat_end .duration 1 .combat_stat_buff 1 .damage_low_multiply 21% .damage_high_multiply 21% .speed_rating_add 3	.on_hit true .on_miss false
+  effect: .name "PD Vapours Buff 3" .target "target" .curio_result_type "positive" .chance 100% .buff_duration_type combat_end .duration 1 .combat_stat_buff 1 .damage_low_multiply 22% .damage_high_multiply 22% .speed_rating_add 4	.on_hit true .on_miss false
+  effect: .name "PD Vapours Buff 4" .target "target" .curio_result_type "positive" .chance 100% .buff_duration_type combat_end .duration 1 .combat_stat_buff 1 .damage_low_multiply 23% .damage_high_multiply 23% .speed_rating_add 4	.on_hit true .on_miss false
+  effect: .name "PD Vapours Buff 5" .target "target" .curio_result_type "positive" .chance 100% .buff_duration_type combat_end .duration 1 .combat_stat_buff 1 .damage_low_multiply 25% .damage_high_multiply 25% .speed_rating_add 5	.on_hit true .on_miss false
+  effect: .name "Disorient 1" .target "target" .shuffletarget	.chance 100% .on_hit true .on_miss false 	.apply_once true .can_apply_on_death true
+  effect: .name "clear_corpses" .target "target_group" .chance 100% .kill_enemy_types corpse .on_hit true .on_miss false .queue false .can_apply_on_death true
+  effect: .name "PD Disorienting Stun 1" .target "target" .curio_result_type "negative" .chance 100% .stun 1	.on_hit true .on_miss false .queue true
+  effect: .name "Disorient 2" .target "target" .shuffletarget	.chance 110% .on_hit true .on_miss false	.apply_once true .can_apply_on_death true
+  effect: .name "PD Disorienting Stun 2" .target "target" .curio_result_type "negative" .chance 110% .stun 1	.on_hit true .on_miss false .queue true
+  effect: .name "Disorient 3" .target "target" .shuffletarget	.chance 120% .on_hit true .on_miss false	.apply_once true .can_apply_on_death true
+  effect: .name "PD Disorienting Stun 3" .target "target" .curio_result_type "negative" .chance 120% .stun 1	.on_hit true .on_miss false .queue true
+  effect: .name "Disorient 4" .target "target" .shuffletarget	.chance 130% .on_hit true .on_miss false	.apply_once true .can_apply_on_death true
+  effect: .name "PD Disorienting Stun 4" .target "target" .curio_result_type "negative" .chance 130% .stun 1	.on_hit true .on_miss false .queue true
+  effect: .name "Disorient 5" .target "target" .shuffletarget	.chance 140% .on_hit true .on_miss false	.apply_once true .can_apply_on_death true
+  effect: .name "PD Disorienting Stun 5" .target "target" .curio_result_type "negative" .chance 140% .stun 1	.on_hit true .on_miss false .queue true
+
+■ 원본 파일 전문 (plague_doctor.info.darkest)
+------------------------------------------------------------
+resistances: .stun 20% .poison 60% .bleed 20% .disease 50% .move 20% .debuff 50% .death_blow 67% .trap 20%
+crit: .effects "on_crit_blightchance"
+weapon: .name "plague_doctor_weapon_0" .atk 0% .dmg 4 7 .crit 2% .spd 7
+weapon: .name "plague_doctor_weapon_1" .atk 0% .dmg 5 8 .crit 3% .spd 7 .upgradeRequirementCode 0
+weapon: .name "plague_doctor_weapon_2" .atk 0% .dmg 6 10 .crit 4% .spd 8 .upgradeRequirementCode 1
+weapon: .name "plague_doctor_weapon_3" .atk 0% .dmg 6 11 .crit 5% .spd 8 .upgradeRequirementCode 2
+weapon: .name "plague_doctor_weapon_4" .atk 0% .dmg 7 13 .crit 6% .spd 9 .upgradeRequirementCode 3
+armour: .name "plague_doctor_armour_0" .def 0% .prot 0 .hp 22 .spd 0
+armour: .name "plague_doctor_armour_1" .def 5% .prot 0 .hp 26 .spd 0 .upgradeRequirementCode 0
+armour: .name "plague_doctor_armour_2" .def 10% .prot 0 .hp 30 .spd 0 .upgradeRequirementCode 1
+armour: .name "plague_doctor_armour_3" .def 15% .prot 0 .hp 34 .spd 0 .upgradeRequirementCode 2
+armour: .name "plague_doctor_armour_4" .def 20% .prot 0 .hp 38 .spd 0 .upgradeRequirementCode 3
+combat_skill: .id "noxious_blast" .level 0 .type "ranged" .atk 95% .dmg -80% .crit 5% .launch 432 .target 12 .is_crit_valid True  .effect "PD Single Blight 1" "Noxious Debuff 1"
+combat_skill: .id "noxious_blast" .level 1 .type "ranged" .atk 100% .dmg -80% .crit 6% .launch 432 .target 12 .is_crit_valid True  .effect "PD Single Blight 2" "Noxious Debuff 2"
+combat_skill: .id "noxious_blast" .level 2 .type "ranged" .atk 105% .dmg -80% .crit 7% .launch 432 .target 12 .is_crit_valid True  .effect "PD Single Blight 3" "Noxious Debuff 3"
+combat_skill: .id "noxious_blast" .level 3 .type "ranged" .atk 110% .dmg -80% .crit 8% .launch 432 .target 12 .is_crit_valid True  .effect "PD Single Blight 4" "Noxious Debuff 4"
+combat_skill: .id "noxious_blast" .level 4 .type "ranged" .atk 115% .dmg -80% .crit 9% .launch 432 .target 12 .is_crit_valid True  .effect "PD Single Blight 5" "Noxious Debuff 5"
+combat_skill: .id "plague_grenade" .level 0 .type "ranged" .atk 95% .dmg -90% .crit 0% .launch 43 .target ~34 .is_crit_valid True  .effect "PD Blight 1" .generation_guaranteed true
+combat_skill: .id "plague_grenade" .level 1 .type "ranged" .atk 100% .dmg -90% .crit 1% .launch 43 .target ~34 .is_crit_valid True  .effect "PD Blight 2"
+combat_skill: .id "plague_grenade" .level 2 .type "ranged" .atk 105% .dmg -90% .crit 2% .launch 43 .target ~34 .is_crit_valid True  .effect "PD Blight 3"
+combat_skill: .id "plague_grenade" .level 3 .type "ranged" .atk 110% .dmg -90% .crit 3% .launch 43 .target ~34 .is_crit_valid True  .effect "PD Blight 4"
+combat_skill: .id "plague_grenade" .level 4 .type "ranged" .atk 115% .dmg -90% .crit 4% .launch 43 .target ~34 .is_crit_valid True  .effect "PD Blight 5"
+combat_skill: .id "blinding_gas" .level 0 .type "ranged" .atk 95% .dmg -100% .crit 0% .per_battle_limit 3 .launch 43 .target ~34 .is_crit_valid False  .effect "Stun 1" .is_stall_invalidating false
+combat_skill: .id "blinding_gas" .level 1 .type "ranged" .atk 100% .dmg -100% .crit 0% .per_battle_limit 3 .launch 43 .target ~34 .is_crit_valid False  .effect "Stun 2" .is_stall_invalidating false
+combat_skill: .id "blinding_gas" .level 2 .type "ranged" .atk 105% .dmg -100% .crit 0% .per_battle_limit 3 .launch 43 .target ~34 .is_crit_valid False  .effect "Stun 3" .is_stall_invalidating false
+combat_skill: .id "blinding_gas" .level 3 .type "ranged" .atk 110% .dmg -100% .crit 0% .per_battle_limit 3 .launch 43 .target ~34 .is_crit_valid False  .effect "Stun 4" .is_stall_invalidating false
+combat_skill: .id "blinding_gas" .level 4 .type "ranged" .atk 115% .dmg -100% .crit 0% .per_battle_limit 3 .launch 43 .target ~34 .is_crit_valid False  .effect "Stun 5" .is_stall_invalidating false
+combat_skill: .id "incision" .level 0 .type "melee" .atk 85% .dmg 0% .crit 5% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 1"
+combat_skill: .id "incision" .level 1 .type "melee" .atk 90% .dmg 0% .crit 6% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 2"
+combat_skill: .id "incision" .level 2 .type "melee" .atk 95% .dmg 0% .crit 7% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 3"
+combat_skill: .id "incision" .level 3 .type "melee" .atk 100% .dmg 0% .crit 8% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 4"
+combat_skill: .id "incision" .level 4 .type "melee" .atk 105% .dmg 0% .crit 9% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 5"
+combat_move_skill: .id "move" .level 0 .type "move" .move 1 1 .launch 4321
+combat_skill: .id "battlefield_medicine" .level 0 .heal 1 1 .launch 43 .target @1234  .effect "Cure" "Cureself" .is_stall_invalidating false
+combat_skill: .id "battlefield_medicine" .level 1 .heal 1 2 .launch 43 .target @1234  .effect "Cure" "Cureself" .is_stall_invalidating false
+combat_skill: .id "battlefield_medicine" .level 2 .heal 2 2 .launch 43 .target @1234  .effect "Cure" "Cureself" .is_stall_invalidating false
+combat_skill: .id "battlefield_medicine" .level 3 .heal 2 3 .launch 43 .target @1234  .effect "Cure" "Cureself" .is_stall_invalidating false
+combat_skill: .id "battlefield_medicine" .level 4 .heal 3 3 .launch 43 .target @1234  .effect "Cure" "Cureself" .is_stall_invalidating false
+combat_skill: .id "emboldening_vapours" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 2 .launch 4321 .target @1234 .is_crit_valid True  .effect "PD Vapours Buff 1"
+combat_skill: .id "emboldening_vapours" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 2 .launch 4321 .target @1234 .is_crit_valid True  .effect "PD Vapours Buff 2"
+combat_skill: .id "emboldening_vapours" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 2 .launch 4321 .target @1234 .is_crit_valid True  .effect "PD Vapours Buff 3"
+combat_skill: .id "emboldening_vapours" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 2 .launch 4321 .target @1234 .is_crit_valid True  .effect "PD Vapours Buff 4"
+combat_skill: .id "emboldening_vapours" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 2 .launch 4321 .target @1234 .is_crit_valid True  .effect "PD Vapours Buff 5"
+combat_skill: .id "disorienting_blast" .level 0 .type "ranged" .atk 95% .dmg -100% .crit 0% .launch 432 .target 234 .is_crit_valid False  .effect "Disorient 1" "clear_corpses" "PD Disorienting Stun 1" .is_stall_invalidating false
+combat_skill: .id "disorienting_blast" .level 1 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 432 .target 234 .is_crit_valid False  .effect "Disorient 2" "clear_corpses" "PD Disorienting Stun 2" .is_stall_invalidating false
+combat_skill: .id "disorienting_blast" .level 2 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 432 .target 234 .is_crit_valid False  .effect "Disorient 3" "clear_corpses" "PD Disorienting Stun 3" .is_stall_invalidating false
+combat_skill: .id "disorienting_blast" .level 3 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 432 .target 234 .is_crit_valid False  .effect "Disorient 4" "clear_corpses" "PD Disorienting Stun 4" .is_stall_invalidating false
+combat_skill: .id "disorienting_blast" .level 4 .type "ranged" .atk 115% .dmg -100% .crit 0% .launch 432 .target 234 .is_crit_valid False  .effect "Disorient 5" "clear_corpses" "PD Disorienting Stun 5" .is_stall_invalidating false
+tag: .id "light"
+tag: .id "non-religious"
+tag: .id "library"
+deaths_door: .buffs deathsdoorACCDebuff deathsdoorDMGLowDebuff deathsdoorDMGHighDebuff deathsdoorSPDDebuff deathsdoorSRDebuff .recovery_buffs mortalityACCDebuff mortalityDMGLowDebuff mortalityDMGHighDebuff mortalitySPDDebuff mortalitySRDebuff .recovery_heart_attack_buffs heartattackACCDebuff heartattackDMGLowDebuff heartattackDMGHighDebuff heartattackSPDDebuff heartattackSRDebuff
+controlled: .target_rank 4
+id_index: .index 2
+skill_selection: .can_select_combat_skills true .number_of_selected_combat_skills_max 4
+generation: .is_generation_enabled true .number_of_positive_quirks_min 1 .number_of_positive_quirks_max 2 .number_of_negative_quirks_min 1 .number_of_negative_quirks_max 2 .number_of_class_specific_camping_skills 2 .number_of_shared_camping_skills 1 .number_of_random_combat_skills 4 .number_of_cards_in_deck 6 .card_chance 1.0

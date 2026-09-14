@@ -1,0 +1,165 @@
+[바닐라 원본] 야만인 (hellion)
+게임 원본 수치 참고용. 게임은 이 파일을 읽지 않고, 배포에도 포함되지 않음. 수정은 hellion.info.darkest 에서.
+원본 위치: heroes/hellion/hellion.info.darkest
+
+■ 장비 (레벨 1~5)
+              1      2      3      4      5      
+  최대 체력       26     31     36     41     46     
+  회피          10     15     20     25     30     
+  방어          0      0      0      0      0      
+  속도(무기)      4      4      5      5      6      
+  피해          6-12   7-14   8-16   9-17   10-19  
+  치명타         5%     6%     7%     8%     9%     
+
+■ 저항
+  기절 40% | 중독 40% | 출혈 40% | 질병 30% | 이동 40% | 약화 30% | 죽음의 일격 67% | 함정 20%
+
+■ 전투 기술 (레벨 1~5)
+
+  사악한 난도질 (wicked_hack)  종류 melee  사용 열 21  대상 12  
+  명중          85       90       95       100      105      
+  피해 보정       0        0        0        0        0        
+  치명타 보정      4        5        6        7        8        
+
+  강철의 추모곡 (iron_swan)  종류 melee  사용 열 1  대상 4  
+  명중          85       90       95       100      105      
+  피해 보정       0        0        0        0        0        
+  치명타 보정      5        6        7        8        9        
+
+  야만스러운 함성! (barbaric_yawp)  종류 melee  사용 열 21  대상 ~12  전투당 제한 3
+  명중          95       100      105      110      115      
+  피해 보정       -100     -100     -100     -100     -100     
+  치명타 보정      0        0        0        0        0        
+  효과 L1       Hero Strong Stun 1, Hellion Exhaust
+  효과 L2       Hero Strong Stun 2, Hellion Exhaust
+  효과 L3       Hero Strong Stun 3, Hellion Exhaust
+  효과 L4       Hero Strong Stun 4, Hellion Exhaust
+  효과 L5       Hero Strong Stun 5, Hellion Exhaust
+
+  유혈사태 (if_it_bleeds)  종류 melee  사용 열 321  대상 23  
+  명중          85       90       95       100      105      
+  피해 보정       -35      -35      -35      -35      -35      
+  치명타 보정      0        1        2        3        4        
+  효과 L1       Bleed 1
+  효과 L2       Bleed 2
+  효과 L3       Bleed 3
+  효과 L4       Bleed 4
+  효과 L5       Bleed 5
+
+  돌파 (breakthru)  종류 melee  사용 열 432  대상 ~123  
+  명중          85       90       95       100      105      
+  피해 보정       -50      -50      -50      -50      -50      
+  치명타 보정      -1       0        1        2        3        
+  효과          Hellion Exhaust Sm (전 레벨 동일)
+
+  아드레날린 분출 (adrenaline_rush)  종류 melee  사용 열 4321  대상 .is_crit_valid  
+  명중          0        0        0        0        0        
+  피해 보정       0        0        0        0        0        
+  치명타 보정      0        0        0        0        0        
+  효과 L1       Adrenaline 1, HellionHealSelf 1
+  효과 L2       Adrenaline 2, HellionHealSelf 2
+  효과 L3       Adrenaline 3, HellionHealSelf 3
+  효과 L4       Adrenaline 4, HellionHealSelf 4
+  효과 L5       Adrenaline 5, HellionHealSelf 5
+
+  출혈 (bleed_out)  종류 melee  사용 열 1  대상 1  
+  명중          85       90       95       100      105      
+  피해 보정       20       20       20       20       20       
+  치명타 보정      6        7        8        9        10       
+  효과 L1       Strong Bleed 1, Hellion Exhaust
+  효과 L2       Strong Bleed 2, Hellion Exhaust
+  효과 L3       Strong Bleed 3, Hellion Exhaust
+  효과 L4       Strong Bleed 4, Hellion Exhaust
+  효과 L5       Strong Bleed 5, Hellion Exhaust
+
+■ 기타 기술 줄
+  combat_move_skill: .id "move" .level 0 .type "move" .move 0 1 .launch 4321
+
+■ 이 영웅 기술이 쓰는 효과 줄 원본 (효과 파일은 영웅 파일과 따로 있음)
+  -- effects/base.effects.darkest
+  effect: .name "Hero Strong Stun 1" .target "target" .curio_result_type "negative" .chance 110% .stun 1	.on_hit true .on_miss false .queue true
+  effect: .name "Hellion Exhaust" .target "performer" .curio_result_type "negative" .chance 100% .buff_ids "HellionExDMGL" "HellionExDMGH" "HellionExSPD" .apply_once true .on_hit true .on_miss true .queue true
+  effect: .name "Hero Strong Stun 2" .target "target" .curio_result_type "negative" .chance 120% .stun 1	.on_hit true .on_miss false .queue true
+  effect: .name "Hero Strong Stun 3" .target "target" .curio_result_type "negative" .chance 130% .stun 1	.on_hit true .on_miss false .queue true
+  effect: .name "Hero Strong Stun 4" .target "target" .curio_result_type "negative" .chance 140% .stun 1	.on_hit true .on_miss false .queue true
+  effect: .name "Hero Strong Stun 5" .target "target" .curio_result_type "negative" .chance 150% .stun 1	.on_hit true .on_miss false .queue true
+  effect: .name "Bleed 1" .target "target" .curio_result_type "negative" .chance 100%  .dotBleed 2 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Bleed 2" .target "target" .curio_result_type "negative" .chance 110%  .dotBleed 2 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Bleed 3" .target "target" .curio_result_type "negative" .chance 120%  .dotBleed 3 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Bleed 4" .target "target" .curio_result_type "negative" .chance 130%  .dotBleed 3 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Bleed 5" .target "target" .curio_result_type "negative" .chance 140%  .dotBleed 4 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Hellion Exhaust Sm" .target "performer" .curio_result_type "negative" .chance 100% .buff_ids "HellionExDMGLSm" "HellionExDMGHSm" "HellionExSPDSm" .apply_once true .on_hit true .on_miss true .queue true
+  effect: .name "Adrenaline 1" .target "performer" .curio_result_type "positive" .cure 1 .chance 100% .combat_stat_buff 1 .attack_rating_add 5% .damage_low_multiply 20% .damage_high_multiply 20%	.on_hit true .on_miss true .queue true
+  effect: .name "HellionHealSelf 1" .target "performer" .curio_result_type "positive" .chance 100% .heal 1	.on_hit true .on_miss false .queue false .source_heal_type hero_skill
+  effect: .name "Adrenaline 2" .target "performer" .curio_result_type "positive" .cure 1 .chance 100% .combat_stat_buff 1 .attack_rating_add 6% .damage_low_multiply 22% .damage_high_multiply 22%	.on_hit true .on_miss true .queue true
+  effect: .name "HellionHealSelf 2" .target "performer" .curio_result_type "positive" .chance 100% .heal 2	.on_hit true .on_miss false .queue false .source_heal_type hero_skill
+  effect: .name "Adrenaline 3" .target "performer" .curio_result_type "positive" .cure 1 .chance 100% .combat_stat_buff 1 .attack_rating_add 7% .damage_low_multiply 24% .damage_high_multiply 24%	.on_hit true .on_miss true .queue true
+  effect: .name "HellionHealSelf 3" .target "performer" .curio_result_type "positive" .chance 100% .heal 2	.on_hit true .on_miss false .queue false .source_heal_type hero_skill
+  effect: .name "Adrenaline 4" .target "performer" .curio_result_type "positive" .cure 1 .chance 100% .combat_stat_buff 1 .attack_rating_add 8% .damage_low_multiply 26% .damage_high_multiply 26%	.on_hit true .on_miss true .queue true
+  effect: .name "HellionHealSelf 4" .target "performer" .curio_result_type "positive" .chance 100% .heal 3	.on_hit true .on_miss false .queue false .source_heal_type hero_skill
+  effect: .name "Adrenaline 5" .target "performer" .curio_result_type "positive" .cure 1 .chance 100% .combat_stat_buff 1 .attack_rating_add 10% .damage_low_multiply 30% .damage_high_multiply 30%	.on_hit true .on_miss true .queue true
+  effect: .name "HellionHealSelf 5" .target "performer" .curio_result_type "positive" .chance 100% .heal 4	.on_hit true .on_miss false .queue false .source_heal_type hero_skill
+  effect: .name "Strong Bleed 1" .target "target" .curio_result_type "negative" .chance 100%  .dotBleed 3 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Strong Bleed 2" .target "target" .curio_result_type "negative" .chance 110%  .dotBleed 3 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Strong Bleed 3" .target "target" .curio_result_type "negative" .chance 120%  .dotBleed 4 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Strong Bleed 4" .target "target" .curio_result_type "negative" .chance 130%  .dotBleed 4 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Strong Bleed 5" .target "target" .curio_result_type "negative" .chance 140%  .dotBleed 5 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+
+■ 원본 파일 전문 (hellion.info.darkest)
+------------------------------------------------------------
+resistances: .stun 40% .poison 40% .bleed 40% .disease 30% .move 40% .debuff 30% .death_blow 67% .trap 20%
+crit: .effects "on_crit_dmgbleeding"
+weapon: .name "hellion_weapon_0" .atk 0% .dmg 6 12 .crit 5% .spd 4
+weapon: .name "hellion_weapon_1" .atk 0% .dmg 7 14 .crit 6% .spd 4 .upgradeRequirementCode 0
+weapon: .name "hellion_weapon_2" .atk 0% .dmg 8 16 .crit 7% .spd 5 .upgradeRequirementCode 1
+weapon: .name "hellion_weapon_3" .atk 0% .dmg 9 17 .crit 8% .spd 5 .upgradeRequirementCode 2
+weapon: .name "hellion_weapon_4" .atk 0% .dmg 10 19 .crit 9% .spd 6 .upgradeRequirementCode 3
+armour: .name "hellion_armour_0" .def 10% .prot 0 .hp 26 .spd 0
+armour: .name "hellion_armour_1" .def 15% .prot 0 .hp 31 .spd 0 .upgradeRequirementCode 0
+armour: .name "hellion_armour_2" .def 20% .prot 0 .hp 36 .spd 0 .upgradeRequirementCode 1
+armour: .name "hellion_armour_3" .def 25% .prot 0 .hp 41 .spd 0 .upgradeRequirementCode 2
+armour: .name "hellion_armour_4" .def 30% .prot 0 .hp 46 .spd 0 .upgradeRequirementCode 3
+combat_skill: .id "wicked_hack" .level 0 .type "melee" .atk 85% .dmg 0% .crit 4% .launch 21 .target 12 .is_crit_valid True  .generation_guaranteed true
+combat_skill: .id "wicked_hack" .level 1 .type "melee" .atk 90% .dmg 0% .crit 5% .launch 21 .target 12 .is_crit_valid True 
+combat_skill: .id "wicked_hack" .level 2 .type "melee" .atk 95% .dmg 0% .crit 6% .launch 21 .target 12 .is_crit_valid True 
+combat_skill: .id "wicked_hack" .level 3 .type "melee" .atk 100% .dmg 0% .crit 7% .launch 21 .target 12 .is_crit_valid True 
+combat_skill: .id "wicked_hack" .level 4 .type "melee" .atk 105% .dmg 0% .crit 8% .launch 21 .target 12 .is_crit_valid True 
+combat_skill: .id "iron_swan" .level 0 .type "melee" .atk 85% .dmg 0% .crit 5% .launch 1 .target 4 .is_crit_valid True 
+combat_skill: .id "iron_swan" .level 1 .type "melee" .atk 90% .dmg 0% .crit 6% .launch 1 .target 4 .is_crit_valid True 
+combat_skill: .id "iron_swan" .level 2 .type "melee" .atk 95% .dmg 0% .crit 7% .launch 1 .target 4 .is_crit_valid True 
+combat_skill: .id "iron_swan" .level 3 .type "melee" .atk 100% .dmg 0% .crit 8% .launch 1 .target 4 .is_crit_valid True 
+combat_skill: .id "iron_swan" .level 4 .type "melee" .atk 105% .dmg 0% .crit 9% .launch 1 .target 4 .is_crit_valid True 
+combat_skill: .id "barbaric_yawp" .level 0 .type "melee" .atk 95% .dmg -100% .crit 0% .per_battle_limit 3 .launch 21 .target ~12 .is_crit_valid False  .effect "Hero Strong Stun 1" "Hellion Exhaust" .is_stall_invalidating false
+combat_skill: .id "barbaric_yawp" .level 1 .type "melee" .atk 100% .dmg -100% .crit 0% .per_battle_limit 3 .launch 21 .target ~12 .is_crit_valid False  .effect "Hero Strong Stun 2" "Hellion Exhaust" .is_stall_invalidating false
+combat_skill: .id "barbaric_yawp" .level 2 .type "melee" .atk 105% .dmg -100% .crit 0% .per_battle_limit 3 .launch 21 .target ~12 .is_crit_valid False  .effect "Hero Strong Stun 3" "Hellion Exhaust" .is_stall_invalidating false
+combat_skill: .id "barbaric_yawp" .level 3 .type "melee" .atk 110% .dmg -100% .crit 0% .per_battle_limit 3 .launch 21 .target ~12 .is_crit_valid False  .effect "Hero Strong Stun 4" "Hellion Exhaust" .is_stall_invalidating false
+combat_skill: .id "barbaric_yawp" .level 4 .type "melee" .atk 115% .dmg -100% .crit 0% .per_battle_limit 3 .launch 21 .target ~12 .is_crit_valid False  .effect "Hero Strong Stun 5" "Hellion Exhaust" .is_stall_invalidating false
+combat_skill: .id "if_it_bleeds" .level 0 .type "melee" .atk 85% .dmg -35% .crit 0% .launch 321 .target 23 .is_crit_valid True  .effect "Bleed 1"
+combat_skill: .id "if_it_bleeds" .level 1 .type "melee" .atk 90% .dmg -35% .crit 1% .launch 321 .target 23 .is_crit_valid True  .effect "Bleed 2"
+combat_skill: .id "if_it_bleeds" .level 2 .type "melee" .atk 95% .dmg -35% .crit 2% .launch 321 .target 23 .is_crit_valid True  .effect "Bleed 3"
+combat_skill: .id "if_it_bleeds" .level 3 .type "melee" .atk 100% .dmg -35% .crit 3% .launch 321 .target 23 .is_crit_valid True  .effect "Bleed 4"
+combat_skill: .id "if_it_bleeds" .level 4 .type "melee" .atk 105% .dmg -35% .crit 4% .launch 321 .target 23 .is_crit_valid True  .effect "Bleed 5"
+combat_move_skill: .id "move" .level 0 .type "move" .move 0 1 .launch 4321
+combat_skill: .id "breakthru" .level 0 .type "melee" .atk 85% .dmg -50% .crit -1% .move 0 1 .launch 432 .target ~123 .is_crit_valid True  .effect "Hellion Exhaust Sm"
+combat_skill: .id "breakthru" .level 1 .type "melee" .atk 90% .dmg -50% .crit 0% .move 0 1 .launch 432 .target ~123 .is_crit_valid True  .effect "Hellion Exhaust Sm"
+combat_skill: .id "breakthru" .level 2 .type "melee" .atk 95% .dmg -50% .crit 1% .move 0 1 .launch 432 .target ~123 .is_crit_valid True  .effect "Hellion Exhaust Sm"
+combat_skill: .id "breakthru" .level 3 .type "melee" .atk 100% .dmg -50% .crit 2% .move 0 1 .launch 432 .target ~123 .is_crit_valid True  .effect "Hellion Exhaust Sm"
+combat_skill: .id "breakthru" .level 4 .type "melee" .atk 105% .dmg -50% .crit 3% .move 0 1 .launch 432 .target ~123 .is_crit_valid True  .effect "Hellion Exhaust Sm"
+combat_skill: .id "adrenaline_rush" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Adrenaline 1" "HellionHealSelf 1" .is_stall_invalidating false
+combat_skill: .id "adrenaline_rush" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Adrenaline 2" "HellionHealSelf 2" .is_stall_invalidating false
+combat_skill: .id "adrenaline_rush" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Adrenaline 3" "HellionHealSelf 3" .is_stall_invalidating false
+combat_skill: .id "adrenaline_rush" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Adrenaline 4" "HellionHealSelf 4" .is_stall_invalidating false
+combat_skill: .id "adrenaline_rush" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Adrenaline 5" "HellionHealSelf 5" .is_stall_invalidating false
+combat_skill: .id "bleed_out" .level 0 .type "melee" .atk 85% .dmg 20% .crit 6% .launch 1 .target 1 .is_crit_valid True  .effect "Strong Bleed 1" "Hellion Exhaust"
+combat_skill: .id "bleed_out" .level 1 .type "melee" .atk 90% .dmg 20% .crit 7% .launch 1 .target 1 .is_crit_valid True  .effect "Strong Bleed 2" "Hellion Exhaust"
+combat_skill: .id "bleed_out" .level 2 .type "melee" .atk 95% .dmg 20% .crit 8% .launch 1 .target 1 .is_crit_valid True  .effect "Strong Bleed 3" "Hellion Exhaust"
+combat_skill: .id "bleed_out" .level 3 .type "melee" .atk 100% .dmg 20% .crit 9% .launch 1 .target 1 .is_crit_valid True  .effect "Strong Bleed 4" "Hellion Exhaust"
+combat_skill: .id "bleed_out" .level 4 .type "melee" .atk 105% .dmg 20% .crit 10% .launch 1 .target 1 .is_crit_valid True  .effect "Strong Bleed 5" "Hellion Exhaust"
+tag: .id "non-religious"
+tag: .id "heavy"
+tag: .id "outsiders_bonfire"
+deaths_door: .buffs deathsdoorACCDebuff deathsdoorDMGLowDebuff deathsdoorDMGHighDebuff deathsdoorSPDDebuff deathsdoorSRDebuff .recovery_buffs mortalityACCDebuff mortalityDMGLowDebuff mortalityDMGHighDebuff mortalitySPDDebuff mortalitySRDebuff .recovery_heart_attack_buffs heartattackACCDebuff heartattackDMGLowDebuff heartattackDMGHighDebuff heartattackSPDDebuff heartattackSRDebuff
+controlled: .target_rank 1
+id_index: .index 4
+skill_selection: .can_select_combat_skills true .number_of_selected_combat_skills_max 4
+generation: .is_generation_enabled true .number_of_positive_quirks_min 1 .number_of_positive_quirks_max 2 .number_of_negative_quirks_min 1 .number_of_negative_quirks_max 2 .number_of_class_specific_camping_skills 2 .number_of_shared_camping_skills 1 .number_of_random_combat_skills 4 .number_of_cards_in_deck 6 .card_chance 1.0

@@ -1,0 +1,180 @@
+[바닐라 원본] 광대 (jester)
+게임 원본 수치 참고용. 게임은 이 파일을 읽지 않고, 배포에도 포함되지 않음. 수정은 jester.info.darkest 에서.
+원본 위치: heroes/jester/jester.info.darkest
+
+■ 장비 (레벨 1~5)
+              1      2      3      4      5      
+  최대 체력       19     23     27     31     35     
+  회피          15     20     25     30     35     
+  방어          0      0      0      0      0      
+  속도(무기)      7      7      8      8      9      
+  피해          4-7    5-8    6-10   6-11   7-13   
+  치명타         4%     5%     6%     7%     8%     
+
+■ 저항
+  기절 20% | 중독 40% | 출혈 30% | 질병 20% | 이동 20% | 약화 40% | 죽음의 일격 67% | 함정 30%
+
+■ 전투 기술 (레벨 1~5)
+
+  단검 찌르기 (dirk_stab)  종류 melee  사용 열 4321  대상 123  
+  명중          85       90       95       100      105      
+  피해 보정       0        0        0        0        0        
+  치명타 보정      5        6        7        8        9        
+  효과          Build to Finale (전 레벨 동일)
+
+  수확의 낫질 (harvest)  종류 melee  사용 열 32  대상 ~23  
+  명중          90       95       100      105      110      
+  피해 보정       -50      -50      -50      -50      -50      
+  치명타 보정      0        1        2        3        4        
+  효과 L1       Bleed 1, Build to Finale
+  효과 L2       Bleed 2, Build to Finale
+  효과 L3       Bleed 3, Build to Finale
+  효과 L4       Bleed 4, Build to Finale
+  효과 L5       Bleed 5, Build to Finale
+
+  대단원 (heroic_end)  종류 melee  사용 열 12  대상 1234  전투당 제한 1
+  명중          140      145      150      155      160      
+  피해 보정       50       50       50       50       50       
+  치명타 보정      5        6        7        8        9        
+  효과          Mortal Weakness, Mortal Weakness Stress (전 레벨 동일)
+
+  독주 (solo)  종류 ranged  사용 열 43  대상 ~1234  전투당 제한 2
+  명중          125      130      135      140      145      
+  피해 보정       -100     -100     -100     -100     -100     
+  치명타 보정      0        0        0        0        0        
+  효과 L1       Solo Mark Self, Jester Spotlight 1, Build to Finale 2
+  효과 L2       Solo Mark Self, Jester Spotlight 2, Build to Finale 2
+  효과 L3       Solo Mark Self, Jester Spotlight 3, Build to Finale 2
+  효과 L4       Solo Mark Self, Jester Spotlight 4, Build to Finale 2
+  효과 L5       Solo Mark Self, Jester Spotlight 5, Build to Finale 2
+
+  저며내기 (slice_off)  종류 melee  사용 열 32  대상 23  
+  명중          95       100      105      110      115      
+  피해 보정       -33      -33      -33      -33      -33      
+  치명타 보정      8        9        10       11       12       
+  효과 L1       Strong Bleed 1, Build to Finale
+  효과 L2       Strong Bleed 2, Build to Finale
+  효과 L3       Strong Bleed 3, Build to Finale
+  효과 L4       Strong Bleed 4, Build to Finale
+  효과 L5       Strong Bleed 5, Build to Finale
+
+  전투의 발라드 (battle_ballad)  종류 ranged  사용 열 34  대상 @~1234  
+  명중          0        0        0        0        0        
+  피해 보정       0        0        0        0        0        
+  치명타 보정      0        0        0        0        0        
+  효과 L1       Embolden Team 1, Build to Finale Song
+  효과 L2       Embolden Team 2, Build to Finale Song
+  효과 L3       Embolden Team 3, Build to Finale Song
+  효과 L4       Embolden Team 4, Build to Finale Song
+  효과 L5       Embolden Team 5, Build to Finale Song
+
+  격려의 선율 (inspiring_tune)  종류 ranged  사용 열 43  대상 @1234  
+  명중          0        0        0        0        0        
+  피해 보정       0        0        0        0        0        
+  치명타 보정      0        0        0        0        0        
+  효과 L1       InspiringTune 1, Jester Tune Buff 1, Build to Finale Song
+  효과 L2       InspiringTune 2, Jester Tune Buff 2, Build to Finale Song
+  효과 L3       InspiringTune 3, Jester Tune Buff 3, Build to Finale Song
+  효과 L4       InspiringTune 4, Jester Tune Buff 4, Build to Finale Song
+  효과 L5       InspiringTune 5, Jester Tune Buff 5, Build to Finale Song
+
+■ 기타 기술 줄
+  combat_move_skill: .id "move" .level 0 .type "move" .move 3 3 .launch 4321
+
+■ 이 영웅 기술이 쓰는 효과 줄 원본 (효과 파일은 영웅 파일과 따로 있음)
+  -- effects/base.effects.darkest
+  effect: .name "Build to Finale" .target "performer" .curio_result_type "positive" .chance 100% .buff_ids "build_to_finale_dmgL" "build_to_finale_dmgH" .on_hit true .on_miss false .apply_once true .queue true .duration 8
+  effect: .name "Bleed 1" .target "target" .curio_result_type "negative" .chance 100%  .dotBleed 2 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Bleed 2" .target "target" .curio_result_type "negative" .chance 110%  .dotBleed 2 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Bleed 3" .target "target" .curio_result_type "negative" .chance 120%  .dotBleed 3 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Bleed 4" .target "target" .curio_result_type "negative" .chance 130%  .dotBleed 3 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Bleed 5" .target "target" .curio_result_type "negative" .chance 140%  .dotBleed 4 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Mortal Weakness" .target "performer" .curio_result_type "negative" .combat_stat_buff 1 .defense_rating_add -25% .speed_rating_add -3 .duration 1 .buff_duration_type combat_end .buff_is_clear_debuff_valid false .on_hit true .on_miss true .queue true
+  effect: .name "Mortal Weakness Stress" .target "performer" .curio_result_type "negative" .chance 100% .buff_ids "mortal_weakness_stress" .buff_is_clear_debuff_valid false .on_hit true .on_miss true .queue true
+  effect: .name "Solo Mark Self" .target "performer" .curio_result_type "positive" .chance 100% .tag 1 .combat_stat_buff 1 .duration 3 .on_hit true .on_miss true .queue true .apply_once true
+  effect: .name "Jester Spotlight 1" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 20% .duration 4	.on_hit true .on_miss true .queue true .apply_once true
+  effect: .name "Build to Finale 2" .target "performer" .curio_result_type "positive" .chance 100% .buff_ids "build_to_finale2_dmgL" "build_to_finale2_dmgH" "build_to_finale2_crit" .on_hit true .on_miss false .apply_once true .queue true .duration 8
+  effect: .name "Jester Spotlight 2" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 22% .duration 4	.on_hit true .on_miss true .queue true .apply_once true
+  effect: .name "Jester Spotlight 3" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 25% .duration 4	.on_hit true .on_miss true .queue true .apply_once true
+  effect: .name "Jester Spotlight 4" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 27% .duration 4	.on_hit true .on_miss true .queue true .apply_once true
+  effect: .name "Jester Spotlight 5" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 30% .duration 4	.on_hit true .on_miss true .queue true .apply_once true
+  effect: .name "Strong Bleed 1" .target "target" .curio_result_type "negative" .chance 100%  .dotBleed 3 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Strong Bleed 2" .target "target" .curio_result_type "negative" .chance 110%  .dotBleed 3 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Strong Bleed 3" .target "target" .curio_result_type "negative" .chance 120%  .dotBleed 4 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Strong Bleed 4" .target "target" .curio_result_type "negative" .chance 130%  .dotBleed 4 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Strong Bleed 5" .target "target" .curio_result_type "negative" .chance 140%  .dotBleed 5 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Embolden Team 1" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 5% .crit_chance_add 2% .speed_rating_add 2	.on_hit true .on_miss true .apply_once false    .queue false
+  effect: .name "Build to Finale Song" .target "performer" .curio_result_type "positive" .chance 100% .buff_ids "build_to_finale_dmgL" "build_to_finale_dmgH" "build_to_finale_crit" .on_hit true .on_miss false .apply_once true .queue true .duration 8
+  effect: .name "Embolden Team 2" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 6% .crit_chance_add 3% .speed_rating_add 2	.on_hit true .on_miss true .apply_once false	.queue false
+  effect: .name "Embolden Team 3" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 7% .crit_chance_add 4% .speed_rating_add 3	.on_hit true .on_miss true .apply_once false	.queue false
+  effect: .name "Embolden Team 4" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 8% .crit_chance_add 5% .speed_rating_add 3	.on_hit true .on_miss true .apply_once false	.queue false
+  effect: .name "Embolden Team 5" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 10% .crit_chance_add 6% .speed_rating_add 4	.on_hit true .on_miss true .apply_once false	.queue false
+  effect: .name "InspiringTune 1" .target "target" .curio_result_type "positive" .chance 100% .healstress 8	.on_hit true .on_miss false .queue true
+  effect: .name "Jester Tune Buff 1" .target "target" .curio_result_type "positive" .chance 100% .buff_ids "JESTTuneStressResistance1" .on_hit true .on_miss false .queue true
+  effect: .name "InspiringTune 2" .target "target" .curio_result_type "positive" .chance 100% .healstress 9	.on_hit true .on_miss false .queue true
+  effect: .name "Jester Tune Buff 2" .target "target" .curio_result_type "positive" .chance 100% .buff_ids "JESTTuneStressResistance2" .on_hit true .on_miss false .queue true
+  effect: .name "InspiringTune 3" .target "target" .curio_result_type "positive" .chance 100% .healstress 10	.on_hit true .on_miss false .queue true
+  effect: .name "Jester Tune Buff 3" .target "target" .curio_result_type "positive" .chance 100% .buff_ids "JESTTuneStressResistance3" .on_hit true .on_miss false .queue true
+  effect: .name "InspiringTune 4" .target "target" .curio_result_type "positive" .chance 100% .healstress 11	.on_hit true .on_miss false .queue true
+  effect: .name "Jester Tune Buff 4" .target "target" .curio_result_type "positive" .chance 100% .buff_ids "JESTTuneStressResistance4" .on_hit true .on_miss false .queue true
+  effect: .name "InspiringTune 5" .target "target" .curio_result_type "positive" .chance 100% .healstress 12	.on_hit true .on_miss false .queue true
+  effect: .name "Jester Tune Buff 5" .target "target" .curio_result_type "positive" .chance 100% .buff_ids "JESTTuneStressResistance5" .on_hit true .on_miss false .queue true
+
+■ 원본 파일 전문 (jester.info.darkest)
+------------------------------------------------------------
+resistances: .stun 20% .poison 40% .bleed 30% .disease 20% .move 20% .debuff 40% .death_blow 67% .trap 30%
+crit: .effects "on_crit_stresshealdone"
+weapon: .name "jester_weapon_0" .atk 0% .dmg 4 7 .crit 4% .spd 7
+weapon: .name "jester_weapon_1" .atk 0% .dmg 5 8 .crit 5% .spd 7 .upgradeRequirementCode 0
+weapon: .name "jester_weapon_2" .atk 0% .dmg 6 10 .crit 6% .spd 8 .upgradeRequirementCode 1
+weapon: .name "jester_weapon_3" .atk 0% .dmg 6 11 .crit 7% .spd 8 .upgradeRequirementCode 2
+weapon: .name "jester_weapon_4" .atk 0% .dmg 7 13 .crit 8% .spd 9 .upgradeRequirementCode 3
+armour: .name "jester_armour_0" .def 15% .prot 0 .hp 19 .spd 0
+armour: .name "jester_armour_1" .def 20% .prot 0 .hp 23 .spd 0 .upgradeRequirementCode 0
+armour: .name "jester_armour_2" .def 25% .prot 0 .hp 27 .spd 0 .upgradeRequirementCode 1
+armour: .name "jester_armour_3" .def 30% .prot 0 .hp 31 .spd 0 .upgradeRequirementCode 2
+armour: .name "jester_armour_4" .def 35% .prot 0 .hp 35 .spd 0 .upgradeRequirementCode 3
+combat_skill: .id "dirk_stab" .level 0 .type "melee" .atk 85% .dmg 0% .crit 5% .move 0 1 .launch 4321 .target 123 .is_crit_valid True .ignore_guard true  .effect "Build to Finale"
+combat_skill: .id "dirk_stab" .level 1 .type "melee" .atk 90% .dmg 0% .crit 6% .move 0 1 .launch 4321 .target 123 .is_crit_valid True .ignore_guard true  .effect "Build to Finale"
+combat_skill: .id "dirk_stab" .level 2 .type "melee" .atk 95% .dmg 0% .crit 7% .move 0 1 .launch 4321 .target 123 .is_crit_valid True .ignore_guard true  .effect "Build to Finale"
+combat_skill: .id "dirk_stab" .level 3 .type "melee" .atk 100% .dmg 0% .crit 8% .move 0 1 .launch 4321 .target 123 .is_crit_valid True .ignore_guard true  .effect "Build to Finale"
+combat_skill: .id "dirk_stab" .level 4 .type "melee" .atk 105% .dmg 0% .crit 9% .move 0 1 .launch 4321 .target 123 .is_crit_valid True .ignore_guard true  .effect "Build to Finale"
+combat_skill: .id "harvest" .level 0 .type "melee" .atk 90% .dmg -50% .crit 0% .launch 32 .target ~23 .is_crit_valid True  .effect "Bleed 1" "Build to Finale" .generation_guaranteed true
+combat_skill: .id "harvest" .level 1 .type "melee" .atk 95% .dmg -50% .crit 1% .launch 32 .target ~23 .is_crit_valid True  .effect "Bleed 2" "Build to Finale"
+combat_skill: .id "harvest" .level 2 .type "melee" .atk 100% .dmg -50% .crit 2% .launch 32 .target ~23 .is_crit_valid True  .effect "Bleed 3" "Build to Finale"
+combat_skill: .id "harvest" .level 3 .type "melee" .atk 105% .dmg -50% .crit 3% .launch 32 .target ~23 .is_crit_valid True  .effect "Bleed 4" "Build to Finale"
+combat_skill: .id "harvest" .level 4 .type "melee" .atk 110% .dmg -50% .crit 4% .launch 32 .target ~23 .is_crit_valid True  .effect "Bleed 5" "Build to Finale"
+combat_skill: .id "heroic_end" .level 0 .type "melee" .atk 140% .dmg 50% .crit 5% .move 3 0 .per_battle_limit 1 .launch 12 .target 1234 .is_crit_valid True  .effect "Mortal Weakness" "Mortal Weakness Stress"
+combat_skill: .id "heroic_end" .level 1 .type "melee" .atk 145% .dmg 50% .crit 6% .move 3 0 .per_battle_limit 1 .launch 12 .target 1234 .is_crit_valid True  .effect "Mortal Weakness" "Mortal Weakness Stress"
+combat_skill: .id "heroic_end" .level 2 .type "melee" .atk 150% .dmg 50% .crit 7% .move 3 0 .per_battle_limit 1 .launch 12 .target 1234 .is_crit_valid True  .effect "Mortal Weakness" "Mortal Weakness Stress"
+combat_skill: .id "heroic_end" .level 3 .type "melee" .atk 155% .dmg 50% .crit 8% .move 3 0 .per_battle_limit 1 .launch 12 .target 1234 .is_crit_valid True  .effect "Mortal Weakness" "Mortal Weakness Stress"
+combat_skill: .id "heroic_end" .level 4 .type "melee" .atk 160% .dmg 50% .crit 9% .move 3 0 .per_battle_limit 1 .launch 12 .target 1234 .is_crit_valid True  .effect "Mortal Weakness" "Mortal Weakness Stress"
+combat_skill: .id "solo" .level 0 .type "ranged" .atk 125% .dmg -100% .crit 0% .move 0 3 .per_battle_limit 2 .launch 43 .target ~1234 .is_crit_valid False  .effect "Solo Mark Self" "Jester Spotlight 1" "Build to Finale 2"
+combat_skill: .id "solo" .level 1 .type "ranged" .atk 130% .dmg -100% .crit 0% .move 0 3 .per_battle_limit 2 .launch 43 .target ~1234 .is_crit_valid False  .effect "Solo Mark Self" "Jester Spotlight 2" "Build to Finale 2"
+combat_skill: .id "solo" .level 2 .type "ranged" .atk 135% .dmg -100% .crit 0% .move 0 3 .per_battle_limit 2 .launch 43 .target ~1234 .is_crit_valid False  .effect "Solo Mark Self" "Jester Spotlight 3" "Build to Finale 2"
+combat_skill: .id "solo" .level 3 .type "ranged" .atk 140% .dmg -100% .crit 0% .move 0 3 .per_battle_limit 2 .launch 43 .target ~1234 .is_crit_valid False  .effect "Solo Mark Self" "Jester Spotlight 4" "Build to Finale 2"
+combat_skill: .id "solo" .level 4 .type "ranged" .atk 145% .dmg -100% .crit 0% .move 0 3 .per_battle_limit 2 .launch 43 .target ~1234 .is_crit_valid False  .effect "Solo Mark Self" "Jester Spotlight 5" "Build to Finale 2"
+combat_move_skill: .id "move" .level 0 .type "move" .move 3 3 .launch 4321
+combat_skill: .id "slice_off" .level 0 .type "melee" .atk 95% .dmg -33% .crit 8% .launch 32 .target 23 .is_crit_valid True  .effect "Strong Bleed 1" "Build to Finale"
+combat_skill: .id "slice_off" .level 1 .type "melee" .atk 100% .dmg -33% .crit 9% .launch 32 .target 23 .is_crit_valid True  .effect "Strong Bleed 2" "Build to Finale"
+combat_skill: .id "slice_off" .level 2 .type "melee" .atk 105% .dmg -33% .crit 10% .launch 32 .target 23 .is_crit_valid True  .effect "Strong Bleed 3" "Build to Finale"
+combat_skill: .id "slice_off" .level 3 .type "melee" .atk 110% .dmg -33% .crit 11% .launch 32 .target 23 .is_crit_valid True  .effect "Strong Bleed 4" "Build to Finale"
+combat_skill: .id "slice_off" .level 4 .type "melee" .atk 115% .dmg -33% .crit 12% .launch 32 .target 23 .is_crit_valid True  .effect "Strong Bleed 5" "Build to Finale"
+combat_skill: .id "battle_ballad" .level 0 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 34 .target @~1234 .is_crit_valid True  .effect "Embolden Team 1" "Build to Finale Song" .is_stall_invalidating false
+combat_skill: .id "battle_ballad" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 34 .target @~1234 .is_crit_valid True  .effect "Embolden Team 2" "Build to Finale Song" .is_stall_invalidating false
+combat_skill: .id "battle_ballad" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 34 .target @~1234 .is_crit_valid True  .effect "Embolden Team 3" "Build to Finale Song" .is_stall_invalidating false
+combat_skill: .id "battle_ballad" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 34 .target @~1234 .is_crit_valid True  .effect "Embolden Team 4" "Build to Finale Song" .is_stall_invalidating false
+combat_skill: .id "battle_ballad" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 34 .target @~1234 .is_crit_valid True  .effect "Embolden Team 5" "Build to Finale Song" .is_stall_invalidating false
+combat_skill: .id "inspiring_tune" .level 0 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 43 .target @1234 .is_crit_valid True  .effect "InspiringTune 1" "Jester Tune Buff 1" "Build to Finale Song" .is_stall_invalidating false
+combat_skill: .id "inspiring_tune" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 43 .target @1234 .is_crit_valid True  .effect "InspiringTune 2" "Jester Tune Buff 2" "Build to Finale Song" .is_stall_invalidating false
+combat_skill: .id "inspiring_tune" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 43 .target @1234 .is_crit_valid True  .effect "InspiringTune 3" "Jester Tune Buff 3" "Build to Finale Song" .is_stall_invalidating false
+combat_skill: .id "inspiring_tune" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 43 .target @1234 .is_crit_valid True  .effect "InspiringTune 4" "Jester Tune Buff 4" "Build to Finale Song" .is_stall_invalidating false
+combat_skill: .id "inspiring_tune" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 43 .target @1234 .is_crit_valid True  .effect "InspiringTune 5" "Jester Tune Buff 5" "Build to Finale Song" .is_stall_invalidating false
+tag: .id "light"
+tag: .id "non-religious"
+tag: .id "theater"
+deaths_door: .buffs deathsdoorACCDebuff deathsdoorDMGLowDebuff deathsdoorDMGHighDebuff deathsdoorSPDDebuff deathsdoorSRDebuff .recovery_buffs mortalityACCDebuff mortalityDMGLowDebuff mortalityDMGHighDebuff mortalitySPDDebuff mortalitySRDebuff .recovery_heart_attack_buffs heartattackACCDebuff heartattackDMGLowDebuff heartattackDMGHighDebuff heartattackSPDDebuff heartattackSRDebuff
+controlled: .target_rank 3
+id_index: .index 8
+skill_selection: .can_select_combat_skills true .number_of_selected_combat_skills_max 4
+generation: .is_generation_enabled true .number_of_positive_quirks_min 1 .number_of_positive_quirks_max 2 .number_of_negative_quirks_min 1 .number_of_negative_quirks_max 2 .number_of_class_specific_camping_skills 2 .number_of_shared_camping_skills 1 .number_of_random_combat_skills 4 .number_of_cards_in_deck 6 .card_chance 1.0

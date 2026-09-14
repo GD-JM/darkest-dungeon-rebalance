@@ -1,0 +1,8 @@
+# 게임 데이터는 바이트 그대로 보관 (줄바꿈 자동 변환 금지)
+* -text
+# 문서는 diff 가독성을 위해 텍스트 diff 사용
+*.md diff
+*.txt diff
+*.darkest diff
+*.json diff
+*.xml diff

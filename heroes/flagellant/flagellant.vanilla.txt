@@ -1,0 +1,231 @@
+[바닐라 원본] 고행자 (flagellant)
+게임 원본 수치 참고용. 게임은 이 파일을 읽지 않고, 배포에도 포함되지 않음. 수정은 flagellant.info.darkest 에서.
+원본 위치: dlc/580100_crimson_court/features/flagellant/heroes/flagellant/flagellant.info.darkest
+
+■ 장비 (레벨 1~5)
+              1      2      3      4      5      
+  최대 체력       22     26     30     34     38     
+  회피          0      5      10     15     20     
+  방어          0      0      0      0      0      
+  속도(무기)      6      6      8      8      9      
+  피해          3-6    4-7    4-8    5-10   5-11   
+  치명타         2%     3%     4%     5%     6%     
+
+■ 저항
+  기절 50% | 중독 30% | 출혈 65% | 질병 40% | 이동 50% | 약화 30% | 죽음의 일격 73% | 함정 0%
+
+■ 전투 기술 (레벨 1~5)
+
+  처벌 (punish)  종류 melee  사용 열 12  대상 12  
+  명중          95       100      105      110      115      
+  피해 보정       0        0        0        0        0        
+  치명타 보정      5        6        7        8        9        
+  효과 L1       Punish Bleed 1, Punish Bleed Debuff 1
+  효과 L2       Punish Bleed 2, Punish Bleed Debuff 2
+  효과 L3       Punish Bleed 3, Punish Bleed Debuff 3
+  효과 L4       Punish Bleed 4, Punish Bleed Debuff 4
+  효과 L5       Punish Bleed 5, Punish Bleed Debuff 5
+
+  슬픔의 비 (rain_of_sorrows)  종류 melee  사용 열 12  대상 ~34  
+  명중          95       100      105      110      115      
+  피해 보정       -67      -67      -67      -67      -67      
+  치명타 보정      2        3        4        5        6        
+  효과 L1       Sorrows Bleed 1, Sorrows Bleed Debuff 1
+  효과 L2       Sorrows Bleed 2, Sorrows Bleed Debuff 2
+  효과 L3       Sorrows Bleed 3, Sorrows Bleed Debuff 3
+  효과 L4       Sorrows Bleed 4, Sorrows Bleed Debuff 4
+  효과 L5       Sorrows Bleed 5, Sorrows Bleed Debuff 5
+
+  방혈 (exsanguinate)  종류 melee  사용 열 12  대상 12  전투당 제한 3
+  명중          90       95       100      105      110      
+  피해 보정       0        0        0        0        0        
+  치명타 보정      3        4        5        6        7        
+  효과 L1       Exsanguinate 1, Flag HealSelf 1, Flagellant Exhaust
+  효과 L2       Exsanguinate 2, Flag HealSelf 2, Flagellant Exhaust
+  효과 L3       Exsanguinate 3, Flag HealSelf 3, Flagellant Exhaust
+  효과 L4       Exsanguinate 4, Flag HealSelf 4, Flagellant Exhaust
+  효과 L5       Exsanguinate 5, Flag HealSelf 5, Flagellant Exhaust
+
+  재기 (reclaim)  종류 melee  사용 열 1234  대상 @1234  
+  명중          0        0        0        0        0        
+  피해 보정       0        0        0        0        0        
+  치명타 보정      0        0        0        0        0        
+  효과 L1       Flag Healdot 1, Flag Self Wound 1
+  효과 L2       Flag Healdot 2, Flag Self Wound 2
+  효과 L3       Flag Healdot 3, Flag Self Wound 3
+  효과 L4       Flag Healdot 4, Flag Self Wound 4
+  효과 L5       Flag Healdot 5, Flag Self Wound 5
+
+  구제 (redeem)  종류 melee  사용 열 1234  대상 @1234  전투당 제한 2
+  명중          0        0        0        0        0        
+  피해 보정       0        0        0        0        0        
+  치명타 보정      0        0        0        0        0        
+  효과 L1       Flag Super Heal 1, Flag HealSelf 1, Flagellant Exhaust
+  효과 L2       Flag Super Heal 2, Flag HealSelf 2, Flagellant Exhaust
+  효과 L3       Flag Super Heal 3, Flag HealSelf 3, Flagellant Exhaust
+  효과 L4       Flag Super Heal 4, Flag HealSelf 4, Flagellant Exhaust
+  효과 L5       Flag Super Heal 5, Flag HealSelf 5, Flagellant Exhaust
+
+  인내 (endure)  종류 melee  사용 열 1234  대상 @1234  
+  명중          0        0        0        0        0        
+  피해 보정       0        0        0        0        0        
+  치명타 보정      0        0        0        0        0        
+  효과 L1       Flag Steal Stress 1, Flag Self Stress 1, Flag Endure Speed Buff 1
+  효과 L2       Flag Steal Stress 2, Flag Self Stress 2, Flag Endure Speed Buff 2
+  효과 L3       Flag Steal Stress 3, Flag Self Stress 3, Flag Endure Speed Buff 3
+  효과 L4       Flag Steal Stress 4, Flag Self Stress 4, Flag Endure Speed Buff 4
+  효과 L5       Flag Steal Stress 5, Flag Self Stress 5, Flag Endure Speed Buff 5
+
+  고통 (suffer)  종류 melee  사용 열 1234  대상 @1234  
+  명중          0        0        0        0        0        
+  피해 보정       0        0        0        0        0        
+  치명타 보정      0        0        0        0        0        
+  효과 L1       Clear Marked Target, Mark Self, Flag Steal Bleed, Flag Steal Blight, Flag Grit 1
+  효과 L2       Clear Marked Target, Mark Self, Flag Steal Bleed, Flag Steal Blight, Flag Grit 2
+  효과 L3       Clear Marked Target, Mark Self, Flag Steal Bleed, Flag Steal Blight, Flag Grit 3
+  효과 L4       Clear Marked Target, Mark Self, Flag Steal Bleed, Flag Steal Blight, Flag Grit 4
+  효과 L5       Clear Marked Target, Mark Self, Flag Steal Bleed, Flag Steal Blight, Flag Grit 5
+
+■ 기타 기술 줄
+  combat_move_skill: .id "move" .level 0 .type "move" .move 1 3 .launch 4321
+
+■ 이 영웅 기술이 쓰는 효과 줄 원본 (효과 파일은 영웅 파일과 따로 있음)
+  -- dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+  effect: .name "Punish Bleed 1" .target "target" .curio_result_type "negative" .chance 100%  .dotBleed 4 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Punish Bleed Debuff 1" .target "target" .chance 100% .buff_ids bleed_debuff_1 .on_hit true .on_miss false
+  effect: .name "Punish Bleed 2" .target "target" .curio_result_type "negative" .chance 110%  .dotBleed 4 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Punish Bleed Debuff 2" .target "target" .chance 110% .buff_ids bleed_debuff_2 .on_hit true .on_miss false
+  effect: .name "Punish Bleed 3" .target "target" .curio_result_type "negative" .chance 120%  .dotBleed 5 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Punish Bleed Debuff 3" .target "target" .chance 120% .buff_ids bleed_debuff_3 .on_hit true .on_miss false
+  effect: .name "Punish Bleed 4" .target "target" .curio_result_type "negative" .chance 130%  .dotBleed 5 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Punish Bleed Debuff 4" .target "target" .chance 130% .buff_ids bleed_debuff_4 .on_hit true .on_miss false
+  effect: .name "Punish Bleed 5" .target "target" .curio_result_type "negative" .chance 140%  .dotBleed 6 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Punish Bleed Debuff 5" .target "target" .chance 140% .buff_ids bleed_debuff_5 .on_hit true .on_miss false
+  effect: .name "Sorrows Bleed 1" .target "target" .curio_result_type "negative" .chance 100%  .dotBleed 3 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Sorrows Bleed Debuff 1" .target "target" .chance 100% .buff_ids bleed_debuff_1 .on_hit true .on_miss false
+  effect: .name "Sorrows Bleed 2" .target "target" .curio_result_type "negative" .chance 110%  .dotBleed 3 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Sorrows Bleed Debuff 2" .target "target" .chance 110% .buff_ids bleed_debuff_2 .on_hit true .on_miss false
+  effect: .name "Sorrows Bleed 3" .target "target" .curio_result_type "negative" .chance 120%  .dotBleed 4 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Sorrows Bleed Debuff 3" .target "target" .chance 120% .buff_ids bleed_debuff_3 .on_hit true .on_miss false
+  effect: .name "Sorrows Bleed 4" .target "target" .curio_result_type "negative" .chance 130%  .dotBleed 4 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Sorrows Bleed Debuff 4" .target "target" .chance 130% .buff_ids bleed_debuff_4 .on_hit true .on_miss false
+  effect: .name "Sorrows Bleed 5" .target "target" .curio_result_type "negative" .chance 140%  .dotBleed 5 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Sorrows Bleed Debuff 5" .target "target" .chance 140% .buff_ids bleed_debuff_5 .on_hit true .on_miss false
+  effect: .name "Exsanguinate 1" .target "target" .curio_result_type "negative" .chance 100%  .dotBleed 5 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Flag HealSelf 1" .target "performer" .curio_result_type "positive" .chance 100% .heal_percent 0.35	.on_hit true .on_miss false .queue true
+  effect: .name "Flagellant Exhaust" .target performer .chance 100% .buff_ids flag_exhaust_heal_done_debuff flag_exhaust_heal_recvd_debuff flag_exhaust_spd_debuff .apply_once true .on_hit true .on_miss true .queue true
+  effect: .name "Exsanguinate 2" .target "target" .curio_result_type "negative" .chance 110%  .dotBleed 6 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Flag HealSelf 2" .target "performer" .curio_result_type "positive" .chance 100% .heal_percent 0.39	.on_hit true .on_miss false	.queue true
+  effect: .name "Exsanguinate 3" .target "target" .curio_result_type "negative" .chance 120%  .dotBleed 7 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Flag HealSelf 3" .target "performer" .curio_result_type "positive" .chance 100% .heal_percent 0.42	.on_hit true .on_miss false	.queue true
+  effect: .name "Exsanguinate 4" .target "target" .curio_result_type "negative" .chance 130%  .dotBleed 8 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Flag HealSelf 4" .target "performer" .curio_result_type "positive" .chance 100% .heal_percent 0.46	.on_hit true .on_miss false .queue true
+  effect: .name "Exsanguinate 5" .target "target" .curio_result_type "negative" .chance 140%  .dotBleed 9 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Flag HealSelf 5" .target "performer" .curio_result_type "positive" .chance 100% .heal_percent 0.50	.on_hit true .on_miss false .queue true
+  effect: .name "Flag Healdot 1" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 2 .duration 2	.on_hit true .on_miss true
+  effect: .name "Flag Self Wound 1" .target "performer" .chance 120%  .dotBleed 3 .duration 3	.on_hit true .on_miss true .can_apply_on_death true
+  effect: .name "Flag Healdot 2" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 2 .duration 3	.on_hit true .on_miss true
+  effect: .name "Flag Self Wound 2" .target "performer" .chance 130%  .dotBleed 3 .duration 3	.on_hit true .on_miss true .can_apply_on_death true
+  effect: .name "Flag Healdot 3" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 3 .duration 2	.on_hit true .on_miss true
+  effect: .name "Flag Self Wound 3" .target "performer" .chance 140%  .dotBleed 4 .duration 3	.on_hit true .on_miss true .can_apply_on_death true
+  effect: .name "Flag Healdot 4" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 3 .duration 3	.on_hit true .on_miss true
+  effect: .name "Flag Self Wound 4" .target "performer" .chance 150%  .dotBleed 4 .duration 3	.on_hit true .on_miss true .can_apply_on_death true
+  effect: .name "Flag Healdot 5" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 4 .duration 3	.on_hit true .on_miss true
+  effect: .name "Flag Self Wound 5" .target "performer" .chance 160%  .dotBleed 5 .duration 3	.on_hit true .on_miss true .can_apply_on_death true
+  effect: .name "Flag Super Heal 1" .target "target" .curio_result_type "positive" .chance 100% .heal_percent 0.33	.on_hit true .on_miss false .queue true
+  effect: .name "Flag Super Heal 2" .target "target" .curio_result_type "positive" .chance 100% .heal_percent 0.35	.on_hit true .on_miss false	.queue true
+  effect: .name "Flag Super Heal 3" .target "target" .curio_result_type "positive" .chance 100% .heal_percent 0.375	.on_hit true .on_miss false	.queue true
+  effect: .name "Flag Super Heal 4" .target "target" .curio_result_type "positive" .chance 100% .heal_percent 0.40	.on_hit true .on_miss false .queue true
+  effect: .name "Flag Super Heal 5" .target "target" .curio_result_type "positive" .chance 100% .heal_percent 0.43	.on_hit true .on_miss false .queue true
+  effect: .name "Flag Steal Stress 1" .target "target" .curio_result_type "positive" .chance 100% .healstress 10	.on_hit true .on_miss false .queue true
+  effect: .name "Flag Self Stress 1" .target "performer" .curio_result_type "negative" .chance 100% .stress 10	.on_hit true .on_miss false	.queue true
+  effect: .name "Flag Endure Speed Buff 1" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 1	.on_hit true .on_miss false .queue true .apply_once true
+  effect: .name "Flag Steal Stress 2" .target "target" .curio_result_type "positive" .chance 100% .healstress 11	.on_hit true .on_miss false .queue true
+  effect: .name "Flag Self Stress 2" .target "performer" .curio_result_type "negative" .chance 100% .stress 9	.on_hit true .on_miss false	.queue true
+  effect: .name "Flag Endure Speed Buff 2" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 1	.on_hit true .on_miss false .queue true .apply_once true
+  effect: .name "Flag Steal Stress 3" .target "target" .curio_result_type "positive" .chance 100% .healstress 12	.on_hit true .on_miss false .queue true
+  effect: .name "Flag Self Stress 3" .target "performer" .curio_result_type "negative" .chance 100% .stress 8	.on_hit true .on_miss false	.queue true
+  effect: .name "Flag Endure Speed Buff 3" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 2	.on_hit true .on_miss false .queue true .apply_once true
+  effect: .name "Flag Steal Stress 4" .target "target" .curio_result_type "positive" .chance 100% .healstress 13	.on_hit true .on_miss false .queue true
+  effect: .name "Flag Self Stress 4" .target "performer" .curio_result_type "negative" .chance 100% .stress 7	.on_hit true .on_miss false	.queue true
+  effect: .name "Flag Endure Speed Buff 4" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 2	.on_hit true .on_miss false .queue true .apply_once true
+  effect: .name "Flag Steal Stress 5" .target "target" .curio_result_type "positive" .chance 100% .healstress 14	.on_hit true .on_miss false .queue true
+  effect: .name "Flag Self Stress 5" .target "performer" .curio_result_type "negative" .chance 100% .stress 6	.on_hit true .on_miss false	.queue true
+  effect: .name "Flag Endure Speed Buff 5" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 3	.on_hit true .on_miss false .queue true .apply_once true
+  effect: .name "Flag Steal Bleed" .target "target" .curio_result_type "positive" .chance 100% .steal_buff_stat_type hp_dot_bleed .on_hit true .on_miss false .queue true
+  effect: .name "Flag Steal Blight" .target "target" .curio_result_type "positive" .chance 100% .steal_buff_stat_type hp_dot_poison .on_hit true .on_miss false .queue true
+  effect: .name "Flag Grit 1" .target "performer" .curio_result_type "positive" .chance 100% .duration 4 .buff_ids flag_grit_stress_1  flag_grit_deathblow_buff_1	.on_hit true .on_miss true .queue true
+  effect: .name "Flag Grit 2" .target "performer" .curio_result_type "positive" .chance 100% .duration 4 .buff_ids flag_grit_stress_2  flag_grit_deathblow_buff_2	.on_hit true .on_miss true .queue true
+  effect: .name "Flag Grit 3" .target "performer" .curio_result_type "positive" .chance 100% .duration 4 .buff_ids flag_grit_stress_3  flag_grit_deathblow_buff_3	.on_hit true .on_miss true .queue true
+  effect: .name "Flag Grit 4" .target "performer" .curio_result_type "positive" .chance 100% .duration 4 .buff_ids flag_grit_stress_4  flag_grit_deathblow_buff_4	.on_hit true .on_miss true .queue true
+  effect: .name "Flag Grit 5" .target "performer" .curio_result_type "positive" .chance 100% .duration 4 .buff_ids flag_grit_stress_5  flag_grit_deathblow_buff_5	.on_hit true .on_miss true .queue true
+  -- effects/base.effects.darkest
+  effect: .name "Clear Marked Target" .target "target" .chance 100% .untag 1	.on_hit true .on_miss true
+  effect: .name "Mark Self" .target "performer" .curio_result_type "positive" .chance 100% .tag 1 .combat_stat_buff 1 .duration 2 .on_hit true .on_miss true .queue true
+
+■ 원본 파일 전문 (flagellant.info.darkest)
+------------------------------------------------------------
+resistances: .stun 50% .poison 30% .bleed 65% .disease 40% .move 50% .debuff 30% .death_blow 73% .trap 0%
+crit: .effects "on_crit_bleedchance"
+weapon: .name "flagellant_weapon_0" .atk 0% .dmg 3 6 .crit 2% .spd 6
+weapon: .name "flagellant_weapon_1" .atk 0% .dmg 4 7 .crit 3% .spd 6 .upgradeRequirementCode 0
+weapon: .name "flagellant_weapon_2" .atk 0% .dmg 4 8 .crit 4% .spd 8 .upgradeRequirementCode 1
+weapon: .name "flagellant_weapon_3" .atk 0% .dmg 5 10 .crit 5% .spd 8 .upgradeRequirementCode 2
+weapon: .name "flagellant_weapon_4" .atk 0% .dmg 5 11 .crit 6% .spd 9 .upgradeRequirementCode 3
+armour: .name "flagellant_armour_0" .def 0% .prot 0 .hp 22 .spd 0
+armour: .name "flagellant_armour_1" .def 5% .prot 0 .hp 26 .spd 0 .upgradeRequirementCode 0
+armour: .name "flagellant_armour_2" .def 10% .prot 0 .hp 30 .spd 0 .upgradeRequirementCode 1
+armour: .name "flagellant_armour_3" .def 15% .prot 0 .hp 34 .spd 0 .upgradeRequirementCode 2
+armour: .name "flagellant_armour_4" .def 20% .prot 0 .hp 38 .spd 0 .upgradeRequirementCode 3
+combat_skill: .id "punish" .level 0 .type "melee" .atk 95% .dmg 0% .crit 5% .launch 12 .target 12 .is_crit_valid True  .effect "Punish Bleed 1" "Punish Bleed Debuff 1" .generation_guaranteed true
+combat_skill: .id "punish" .level 1 .type "melee" .atk 100% .dmg 0% .crit 6% .launch 12 .target 12 .is_crit_valid True  .effect "Punish Bleed 2" "Punish Bleed Debuff 2"
+combat_skill: .id "punish" .level 2 .type "melee" .atk 105% .dmg 0% .crit 7% .launch 12 .target 12 .is_crit_valid True  .effect "Punish Bleed 3" "Punish Bleed Debuff 3"
+combat_skill: .id "punish" .level 3 .type "melee" .atk 110% .dmg 0% .crit 8% .launch 12 .target 12 .is_crit_valid True  .effect "Punish Bleed 4" "Punish Bleed Debuff 4"
+combat_skill: .id "punish" .level 4 .type "melee" .atk 115% .dmg 0% .crit 9% .launch 12 .target 12 .is_crit_valid True  .effect "Punish Bleed 5" "Punish Bleed Debuff 5"
+combat_skill: .id "rain_of_sorrows" .level 0 .type "melee" .atk 95% .dmg -67% .crit 2% .launch 12 .target ~34 .is_crit_valid True  .effect "Sorrows Bleed 1" "Sorrows Bleed Debuff 1"
+combat_skill: .id "rain_of_sorrows" .level 1 .type "melee" .atk 100% .dmg -67% .crit 3% .launch 12 .target ~34 .is_crit_valid True  .effect "Sorrows Bleed 2" "Sorrows Bleed Debuff 2"
+combat_skill: .id "rain_of_sorrows" .level 2 .type "melee" .atk 105% .dmg -67% .crit 4% .launch 12 .target ~34 .is_crit_valid True  .effect "Sorrows Bleed 3" "Sorrows Bleed Debuff 3"
+combat_skill: .id "rain_of_sorrows" .level 3 .type "melee" .atk 110% .dmg -67% .crit 5% .launch 12 .target ~34 .is_crit_valid True  .effect "Sorrows Bleed 4" "Sorrows Bleed Debuff 4"
+combat_skill: .id "rain_of_sorrows" .level 4 .type "melee" .atk 115% .dmg -67% .crit 6% .launch 12 .target ~34 .is_crit_valid True  .effect "Sorrows Bleed 5" "Sorrows Bleed Debuff 5"
+combat_skill: .id "exsanguinate" .level 0 .type "melee" .atk 90% .dmg 0% .crit 3%.required_performer_hp_range 0 0.40 .per_battle_limit 3 .launch 12 .target 12 .is_crit_valid True  .effect "Exsanguinate 1" "Flag HealSelf 1" "Flagellant Exhaust"
+combat_skill: .id "exsanguinate" .level 1 .type "melee" .atk 95% .dmg 0% .crit 4%.required_performer_hp_range 0 0.40 .per_battle_limit 3 .launch 12 .target 12 .is_crit_valid True  .effect "Exsanguinate 2" "Flag HealSelf 2" "Flagellant Exhaust"
+combat_skill: .id "exsanguinate" .level 2 .type "melee" .atk 100% .dmg 0% .crit 5%.required_performer_hp_range 0 0.40 .per_battle_limit 3 .launch 12 .target 12 .is_crit_valid True  .effect "Exsanguinate 3" "Flag HealSelf 3" "Flagellant Exhaust"
+combat_skill: .id "exsanguinate" .level 3 .type "melee" .atk 105% .dmg 0% .crit 6%.required_performer_hp_range 0 0.40 .per_battle_limit 3 .launch 12 .target 12 .is_crit_valid True  .effect "Exsanguinate 4" "Flag HealSelf 4" "Flagellant Exhaust"
+combat_skill: .id "exsanguinate" .level 4 .type "melee" .atk 110% .dmg 0% .crit 7%.required_performer_hp_range 0 0.40 .per_battle_limit 3 .launch 12 .target 12 .is_crit_valid True  .effect "Exsanguinate 5" "Flag HealSelf 5" "Flagellant Exhaust"
+combat_skill: .id "reclaim" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Healdot 1" "Flag Self Wound 1" .is_stall_invalidating false
+combat_skill: .id "reclaim" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Healdot 2" "Flag Self Wound 2" .is_stall_invalidating false
+combat_skill: .id "reclaim" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Healdot 3" "Flag Self Wound 3" .is_stall_invalidating false
+combat_skill: .id "reclaim" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Healdot 4" "Flag Self Wound 4" .is_stall_invalidating false
+combat_skill: .id "reclaim" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Healdot 5" "Flag Self Wound 5" .is_stall_invalidating false
+combat_move_skill: .id "move" .level 0 .type "move" .move 1 3 .launch 4321
+combat_skill: .id "redeem" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false.required_performer_hp_range 0 0.40 .per_battle_limit 2 .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Super Heal 1" "Flag HealSelf 1" "Flagellant Exhaust" .is_stall_invalidating false
+combat_skill: .id "redeem" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false.required_performer_hp_range 0 0.40 .per_battle_limit 2 .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Super Heal 2" "Flag HealSelf 2" "Flagellant Exhaust" .is_stall_invalidating false
+combat_skill: .id "redeem" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false.required_performer_hp_range 0 0.40 .per_battle_limit 2 .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Super Heal 3" "Flag HealSelf 3" "Flagellant Exhaust" .is_stall_invalidating false
+combat_skill: .id "redeem" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false.required_performer_hp_range 0 0.40 .per_battle_limit 2 .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Super Heal 4" "Flag HealSelf 4" "Flagellant Exhaust" .is_stall_invalidating false
+combat_skill: .id "redeem" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false.required_performer_hp_range 0 0.40 .per_battle_limit 2 .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Super Heal 5" "Flag HealSelf 5" "Flagellant Exhaust" .is_stall_invalidating false
+combat_skill: .id "endure" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Steal Stress 1" "Flag Self Stress 1" "Flag Endure Speed Buff 1" .is_stall_invalidating false
+combat_skill: .id "endure" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Steal Stress 2" "Flag Self Stress 2" "Flag Endure Speed Buff 2" .is_stall_invalidating false
+combat_skill: .id "endure" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Steal Stress 3" "Flag Self Stress 3" "Flag Endure Speed Buff 3" .is_stall_invalidating false
+combat_skill: .id "endure" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Steal Stress 4" "Flag Self Stress 4" "Flag Endure Speed Buff 4" .is_stall_invalidating false
+combat_skill: .id "endure" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Steal Stress 5" "Flag Self Stress 5" "Flag Endure Speed Buff 5" .is_stall_invalidating false
+combat_skill: .id "suffer" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Clear Marked Target" "Mark Self" "Flag Steal Bleed" "Flag Steal Blight" "Flag Grit 1" .is_stall_invalidating false
+combat_skill: .id "suffer" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Clear Marked Target" "Mark Self" "Flag Steal Bleed" "Flag Steal Blight" "Flag Grit 2" .is_stall_invalidating false
+combat_skill: .id "suffer" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Clear Marked Target" "Mark Self" "Flag Steal Bleed" "Flag Steal Blight" "Flag Grit 3" .is_stall_invalidating false
+combat_skill: .id "suffer" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Clear Marked Target" "Mark Self" "Flag Steal Bleed" "Flag Steal Blight" "Flag Grit 4" .is_stall_invalidating false
+combat_skill: .id "suffer" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Clear Marked Target" "Mark Self" "Flag Steal Bleed" "Flag Steal Blight" "Flag Grit 5" .is_stall_invalidating false
+tag: .id "religious"
+tag: .id "light"
+tag: .id "flagellant"
+tag: .id "altar_of_light"
+deaths_door: .buffs FdeathsdoorACCbuff FdeathsdoorDMGLowBuff FdeathsdoorDMGHighBuff FdeathsdoorSPDBuff FdeathsdoorSTUNRESISTBuff FdeathsdoorBLIGHTRESISTBuff FdeathsdoorBLEEDRESISTBuff FdeathsdoorDEBUFFRESISTBuff .recovery_buffs .recovery_heart_attack_buffs heartattackACCDebuff heartattackDMGLowDebuff heartattackDMGHighDebuff heartattackSPDDebuff heartattackSRDebuff .enter_effects flagellant_death_door_enter .enter_effect_round_cooldown 1
+controlled: .target_rank 1
+id_index: .index 16
+skill_selection: .can_select_combat_skills true .number_of_selected_combat_skills_max 4
+overstressed_modifier: .override_trait_type_ids berserk .override_trait_type_chances 1.0
+activity_modifier: .override_valid_activity_ids flagellation treatment disease_treatment .override_stress_removal_amount_low 100 .override_stress_removal_amount_high 100
+hp_reaction: .hp_ratio 0.40 .is_under true .effects flagellant_low_hp_reaction
+death_reaction: .target_allies true .target_enemies false .effects "Flag Last Gift"
+death_reaction: .target_allies false .target_enemies true .effects "Flag Last Insult"
+quirk_modifier: .incompatible_class_ids alcoholism gambler love_interest enlightened god_fearing resolution known_cheat deviant_tastes flagellant unquiet_mind witness faithless bad_gambler skilled_gambler improved_balance meditator calm nymphomania
+generation: .is_generation_enabled true .town_event_dependency "first_flagellant" .number_of_positive_quirks_min 1 .number_of_positive_quirks_max 2 .number_of_negative_quirks_min 1 .number_of_negative_quirks_max 2 .number_of_class_specific_camping_skills 2 .number_of_shared_camping_skills 1 .number_of_random_combat_skills 4 .number_of_cards_in_deck 6 .card_chance 1.0
+incompatible_party_member: .id flagellant_limit .hero_tag flagellant

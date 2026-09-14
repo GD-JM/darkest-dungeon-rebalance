@@ -1,0 +1,203 @@
+[바닐라 원본] 도망자 (runaway)
+게임 원본 수치 참고용. 게임은 이 파일을 읽지 않고, 배포에도 포함되지 않음. 수정은 runaway.info.darkest 에서.
+원본 위치: dlc/4964110_fires_edge/features/runaway/heroes/runaway/runaway.info.darkest
+
+■ 장비 (레벨 1~5)
+              1      2      3      4      5      
+  최대 체력       23     28     33     38     43     
+  회피          5      10     15     20     25     
+  방어          0      0      0      0      0      
+  속도(무기)      5      5      6      6      7      
+  피해          4-7    5-8    6-10   6-11   7-13   
+  치명타         4%     5%     6%     7%     8%     
+
+■ 저항
+  기절 20% | 중독 40% | 출혈 40% | 질병 30% | 이동 30% | 약화 20% | 죽음의 일격 67% | 함정 30%
+
+■ 전투 기술 (레벨 1~5)
+
+  작열하는 타격 (searing_strike)  종류 melee  사용 열 21  대상 123  
+  명중          85       90       95       100      105      
+  피해 보정       0        0        0        0        0        
+  치명타 보정      3        4        5        6        7        
+  효과 L1       RW Burn 3, RW Searing DMG vs Burning 1
+  효과 L2       RW Burn 3, RW Searing DMG vs Burning 2
+  효과 L3       RW Burn 4, RW Searing DMG vs Burning 3
+  효과 L4       RW Burn 4, RW Searing DMG vs Burning 4
+  효과 L5       RW Burn 5, RW Searing DMG vs Burning 5
+
+  흩날리는 불티 (firefly)  종류 ranged  사용 열 43  대상 234  
+  명중          85       90       95       100      105      
+  피해 보정       -75      -75      -75      -75      -75      
+  치명타 보정      6        7        8        9        10       
+  효과 L1       RW Firefly Burn 1, RW Firefly Torch 1
+  효과 L2       RW Firefly Burn 2, RW Firefly Torch 1
+  효과 L3       RW Firefly Burn 3, RW Firefly Torch 2
+  효과 L4       RW Firefly Burn 4, RW Firefly Torch 2
+  효과 L5       RW Firefly Burn 5, RW Firefly Torch 3
+
+  도피 (run_and_hide)  종류 ranged  사용 열 4321  대상 .is_crit_valid  
+  명중          0        0        0        0        0        
+  피해 보정       0        0        0        0        0        
+  치명타 보정      0        0        0        0        0        
+  효과 L1       RW Stealth, RW Run HoT 1, RW Run Burn Amount
+  효과 L2       RW Stealth, RW Run HoT 2, RW Run Burn Amount
+  효과 L3       RW Stealth, RW Run HoT 3, RW Run Burn Amount
+  효과 L4       RW Stealth, RW Run HoT 4, RW Run Burn Amount
+  효과 L5       RW Stealth, RW Run HoT 5, RW Run Burn Amount
+
+  판 뒤엎기 (ransack)  종류 melee  사용 열 4321  대상 1234  
+  명중          85       90       95       100      105      
+  피해 보정       -10      -10      -10      -10      -10      
+  치명타 보정      3        4        5        6        7        
+  효과 L1       Pull 1A, clear_corpses, RW Ransack ACC Stealthed
+  효과 L2       Pull 1B, clear_corpses, RW Ransack ACC Stealthed
+  효과 L3       Pull 1C, clear_corpses, RW Ransack ACC Stealthed
+  효과 L4       Pull 1D, clear_corpses, RW Ransack ACC Stealthed
+  효과 L5       Pull 1E, clear_corpses, RW Ransack ACC Stealthed
+
+  화톳불 (hearthlight)  종류 ranged  사용 열 4321  대상 ~1234  
+  명중          100      105      110      115      120      
+  피해 보정       -100     -100     -100     -100     -100     
+  치명타 보정      0        0        0        0        0        
+  효과 L1       Destealth, RW Hearthlight Torch 1, RW Hearthlight ACC Buff 1, RW Hearthlight CRIT Buff 1
+  효과 L2       Destealth, RW Hearthlight Torch 1, RW Hearthlight ACC Buff 2, RW Hearthlight CRIT Buff 2
+  효과 L3       Destealth, RW Hearthlight Torch 2, RW Hearthlight ACC Buff 3, RW Hearthlight CRIT Buff 3
+  효과 L4       Destealth, RW Hearthlight Torch 2, RW Hearthlight ACC Buff 4, RW Hearthlight CRIT Buff 4
+  효과 L5       Destealth, RW Hearthlight Torch 3, RW Hearthlight ACC Buff 5, RW Hearthlight CRIT Buff 5
+
+  통제된 화상 (controlled_burn)  종류 ranged  사용 열 321  대상 123  전투당 제한 2
+  명중          95       100      105      110      115      
+  피해 보정       -100     -100     -100     -100     -100     
+  치명타 보정      0        0        0        0        0        
+  효과 L1       RW CB Burn 1, RW CB Torch, RW CB Rank Effect 1
+  효과 L2       RW CB Burn 2, RW CB Torch, RW CB Rank Effect 2
+  효과 L3       RW CB Burn 3, RW CB Torch, RW CB Rank Effect 3
+  효과 L4       RW CB Burn 4, RW CB Torch, RW CB Rank Effect 4
+  효과 L5       RW CB Burn 5, RW CB Torch, RW CB Rank Effect 5
+
+  불길 역류 (backdraft)  종류 ranged  사용 열 321  대상 12  
+  명중          95       100      105      110      115      
+  피해 보정       -50      -50      -50      -50      -50      
+  치명타 보정      7        8        9        10       11       
+
+■ 기타 기술 줄
+  combat_move_skill: .id "move" .level 0 .type "move" .move 2 1 .launch 4321
+
+■ 이 영웅 기술이 쓰는 효과 줄 원본 (효과 파일은 영웅 파일과 따로 있음)
+  -- dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+  effect: .name "RW Burn 3" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 3 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "RW Searing DMG vs Burning 1" .target "performer" .curio_result_type "positive" .chance 100% .keyStatus "burning" .combat_stat_buff 1 .damage_low_multiply 15% .damage_high_multiply 15% .on_hit true .on_miss false
+  effect: .name "RW Searing DMG vs Burning 2" .target "performer" .curio_result_type "positive" .chance 100% .keyStatus "burning" .combat_stat_buff 1 .damage_low_multiply 20% .damage_high_multiply 20% .on_hit true .on_miss false
+  effect: .name "RW Burn 4" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 4 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "RW Searing DMG vs Burning 3" .target "performer" .curio_result_type "positive" .chance 100% .keyStatus "burning" .combat_stat_buff 1 .damage_low_multiply 25% .damage_high_multiply 25% .on_hit true .on_miss false
+  effect: .name "RW Searing DMG vs Burning 4" .target "performer" .curio_result_type "positive" .chance 100% .keyStatus "burning" .combat_stat_buff 1 .damage_low_multiply 30% .damage_high_multiply 30% .on_hit true .on_miss false
+  effect: .name "RW Burn 5" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 5 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "RW Searing DMG vs Burning 5" .target "performer" .curio_result_type "positive" .chance 100% .keyStatus "burning" .combat_stat_buff 1 .damage_low_multiply 35% .damage_high_multiply 35% .on_hit true .on_miss false
+  effect: .name "RW Firefly Burn 1" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 7 .dot_irresistible true .buff_ids rw_burn_decay_debuff .duration 2 .on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "RW Firefly Torch 1" .target "performer" .chance 100% .torch_increase 4 .on_hit true .on_miss true .queue true
+  effect: .name "RW Firefly Burn 2" .target "target" .curio_result_type "negative" .chance 110% .dotBurn 7 .dot_irresistible true .buff_ids rw_burn_decay_debuff .duration 2 .on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "RW Firefly Burn 3" .target "target" .curio_result_type "negative" .chance 120% .dotBurn 8 .dot_irresistible true .buff_ids rw_burn_decay_debuff .duration 2 .on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "RW Firefly Torch 2" .target "performer" .chance 100% .torch_increase 5 .on_hit true .on_miss true .queue true
+  effect: .name "RW Firefly Burn 4" .target "target" .curio_result_type "negative" .chance 130% .dotBurn 8 .dot_irresistible true .buff_ids rw_burn_decay_debuff .duration 2 .on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "RW Firefly Burn 5" .target "target" .curio_result_type "negative" .chance 140% .dotBurn 9 .dot_irresistible true .buff_ids rw_burn_decay_debuff .duration 2 .on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "RW Firefly Torch 3" .target "performer" .chance 100% .torch_increase 6 .on_hit true .on_miss true .queue true
+  effect: .name "RW Stealth" .target "performer" .chance 100% .buff_ids rw_run_conditional_stealth rw_in_rank_1_clear_run_and_hide rw_in_rank_2_clear_run_and_hide .duration 4 .on_hit true .on_miss true
+  effect: .name "RW Run HoT 1" .target "performer" .chance 100% .buff_ids rw_run_hot_1 .duration 2 .on_hit true .on_miss true
+  effect: .name "RW Run Burn Amount" .target "performer" .chance 100% .buff_ids rw_burn_amount_stealthed .duration 4 .on_hit true .on_miss true .queue true
+  effect: .name "RW Run HoT 2" .target "performer" .chance 100% .buff_ids rw_run_hot_2 .duration 2 .on_hit true .on_miss true
+  effect: .name "RW Run HoT 3" .target "performer" .chance 100% .buff_ids rw_run_hot_3 .duration 3 .on_hit true .on_miss true
+  effect: .name "RW Run HoT 4" .target "performer" .chance 100% .buff_ids rw_run_hot_4 .duration 3 .on_hit true .on_miss true
+  effect: .name "RW Run HoT 5" .target "performer" .chance 100% .buff_ids rw_run_hot_5 .duration 3 .on_hit true .on_miss true
+  effect: .name "RW Ransack ACC Stealthed" .target "performer" .skill_instant true .chance 100% .buff_ids rw_acc_stealthed .on_hit true .on_miss false
+  effect: .name "RW Hearthlight Torch 1" .target "performer" .chance 100% .torch_increase 6 .on_hit true .on_miss true .queue true .apply_once true
+  effect: .name "RW Hearthlight ACC Buff 1" .target "performer_group" .chance 100% .combat_stat_buff 1 .attack_rating_add 5% .on_hit true .on_miss true .duration 3 .queue true .apply_once true
+  effect: .name "RW Hearthlight CRIT Buff 1" .target "performer_group" .chance 100% .buff_ids rw_hearthlight_crit_vs_burning_1 .on_hit true .on_miss true .duration 3 .queue true .apply_once true
+  effect: .name "RW Hearthlight ACC Buff 2" .target "performer_group" .chance 100% .combat_stat_buff 1 .attack_rating_add 6% .on_hit true .on_miss true .duration 3 .queue true .apply_once true
+  effect: .name "RW Hearthlight CRIT Buff 2" .target "performer_group" .chance 100% .buff_ids rw_hearthlight_crit_vs_burning_2 .on_hit true .on_miss true .duration 3 .queue true .apply_once true
+  effect: .name "RW Hearthlight Torch 2" .target "performer" .chance 100% .torch_increase 7 .on_hit true .on_miss true .queue true .apply_once true
+  effect: .name "RW Hearthlight ACC Buff 3" .target "performer_group" .chance 100% .combat_stat_buff 1 .attack_rating_add 7% .on_hit true .on_miss true .duration 3 .queue true .apply_once true
+  effect: .name "RW Hearthlight CRIT Buff 3" .target "performer_group" .chance 100% .buff_ids rw_hearthlight_crit_vs_burning_3 .on_hit true .on_miss true .duration 3 .queue true .apply_once true
+  effect: .name "RW Hearthlight ACC Buff 4" .target "performer_group" .chance 100% .combat_stat_buff 1 .attack_rating_add 8% .on_hit true .on_miss true .duration 3 .queue true .apply_once true
+  effect: .name "RW Hearthlight CRIT Buff 4" .target "performer_group" .chance 100% .buff_ids rw_hearthlight_crit_vs_burning_4 .on_hit true .on_miss true .duration 3 .queue true .apply_once true
+  effect: .name "RW Hearthlight Torch 3" .target "performer" .chance 100% .torch_increase 8 .on_hit true .on_miss true .queue true .apply_once true
+  effect: .name "RW Hearthlight ACC Buff 5" .target "performer_group" .chance 100% .combat_stat_buff 1 .attack_rating_add 10% .on_hit true .on_miss true .duration 3 .queue true .apply_once true
+  effect: .name "RW Hearthlight CRIT Buff 5" .target "performer_group" .chance 100% .buff_ids rw_hearthlight_crit_vs_burning_5 .on_hit true .on_miss true .duration 3 .queue true .apply_once true
+  effect: .name "RW CB Burn 1" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 4 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "RW CB Torch" .target "performer" .chance 100% .torch_increase 6 .on_hit true .on_miss true .queue true
+  effect: .name "RW CB Rank Effect 1" .target "target" .chance 100% .on_hit true .on_miss true .controlled_burn_amount 3 .controlled_burn_duration 3
+  effect: .name "RW CB Burn 2" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 4 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "RW CB Rank Effect 2" .target "target" .chance 100% .on_hit true .on_miss true .controlled_burn_amount 3 .controlled_burn_duration 3
+  effect: .name "RW CB Burn 3" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 4 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "RW CB Rank Effect 3" .target "target" .chance 100% .on_hit true .on_miss true .controlled_burn_amount 4 .controlled_burn_duration 3
+  effect: .name "RW CB Burn 4" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 4 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "RW CB Rank Effect 4" .target "target" .chance 100% .on_hit true .on_miss true .controlled_burn_amount 4 .controlled_burn_duration 3
+  effect: .name "RW CB Burn 5" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 4 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "RW CB Rank Effect 5" .target "target" .chance 100% .on_hit true .on_miss true .controlled_burn_amount 5 .controlled_burn_duration 3
+  -- effects/base.effects.darkest
+  effect: .name "Pull 1A" .target "target"  .pull 1 	.chance 100%	.on_hit true .on_miss false .can_apply_on_death true 
+  effect: .name "clear_corpses" .target "target_group" .chance 100% .kill_enemy_types corpse .on_hit true .on_miss false .queue false .can_apply_on_death true
+  effect: .name "Pull 1B" .target "target"  .pull 1 	.chance 110%	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Pull 1C" .target "target"  .pull 1 	.chance 120%	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Pull 1D" .target "target"  .pull 1 	.chance 130%	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Pull 1E" .target "target"  .pull 1 	.chance 140%	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Destealth" .target "target" .chance 100% .unstealth 1 .on_hit true .on_miss false
+
+■ 원본 파일 전문 (runaway.info.darkest)
+------------------------------------------------------------
+resistances: .stun 20% .poison 40% .bleed 40% .disease 30% .move 30% .debuff 20% .death_blow 67% .trap 30%
+crit: .effects "on_crit_speed"
+weapon: .name "runaway_weapon_0" .atk 0% .dmg 4 7 .crit 4% .spd 5
+weapon: .name "runaway_weapon_1" .atk 0% .dmg 5 8 .crit 5% .spd 5 .upgradeRequirementCode 0
+weapon: .name "runaway_weapon_2" .atk 0% .dmg 6 10 .crit 6% .spd 6 .upgradeRequirementCode 1
+weapon: .name "runaway_weapon_3" .atk 0% .dmg 6 11 .crit 7% .spd 6 .upgradeRequirementCode 2
+weapon: .name "runaway_weapon_4" .atk 0% .dmg 7 13 .crit 8% .spd 7 .upgradeRequirementCode 3
+armour: .name "runaway_armour_0" .def 5% .prot 0 .hp 23 .spd 0
+armour: .name "runaway_armour_1" .def 10% .prot 0 .hp 28 .spd 0 .upgradeRequirementCode 0
+armour: .name "runaway_armour_2" .def 15% .prot 0 .hp 33 .spd 0 .upgradeRequirementCode 1
+armour: .name "runaway_armour_3" .def 20% .prot 0 .hp 38 .spd 0 .upgradeRequirementCode 2
+armour: .name "runaway_armour_4" .def 25% .prot 0 .hp 43 .spd 0 .upgradeRequirementCode 3
+combat_skill: .id "searing_strike" .level 0 .type "melee" .atk 85% .dmg 0% .crit 3% .launch 21 .target 123 .is_crit_valid True .effect "RW Burn 3" "RW Searing DMG vs Burning 1" .generation_guaranteed true
+combat_skill: .id "searing_strike" .level 1 .type "melee" .atk 90% .dmg 0% .crit 4% .launch 21 .target 123 .is_crit_valid True .effect "RW Burn 3" "RW Searing DMG vs Burning 2"
+combat_skill: .id "searing_strike" .level 2 .type "melee" .atk 95% .dmg 0% .crit 5% .launch 21 .target 123 .is_crit_valid True .effect "RW Burn 4" "RW Searing DMG vs Burning 3"
+combat_skill: .id "searing_strike" .level 3 .type "melee" .atk 100% .dmg 0% .crit 6% .launch 21 .target 123 .is_crit_valid True .effect "RW Burn 4" "RW Searing DMG vs Burning 4"
+combat_skill: .id "searing_strike" .level 4 .type "melee" .atk 105% .dmg 0% .crit 7% .launch 21 .target 123 .is_crit_valid True .effect "RW Burn 5" "RW Searing DMG vs Burning 5"
+combat_skill: .id "firefly" .level 0 .type "ranged" .atk 85% .dmg -75% .crit 6% .launch 43 .target 234 .is_crit_valid True .effect "RW Firefly Burn 1" "RW Firefly Torch 1"
+combat_skill: .id "firefly" .level 1 .type "ranged" .atk 90% .dmg -75% .crit 7% .launch 43 .target 234 .is_crit_valid True .effect "RW Firefly Burn 2" "RW Firefly Torch 1"
+combat_skill: .id "firefly" .level 2 .type "ranged" .atk 95% .dmg -75% .crit 8% .launch 43 .target 234 .is_crit_valid True .effect "RW Firefly Burn 3" "RW Firefly Torch 2"
+combat_skill: .id "firefly" .level 3 .type "ranged" .atk 100% .dmg -75% .crit 9% .launch 43 .target 234 .is_crit_valid True .effect "RW Firefly Burn 4" "RW Firefly Torch 2"
+combat_skill: .id "firefly" .level 4 .type "ranged" .atk 105% .dmg -75% .crit 10% .launch 43 .target 234 .is_crit_valid True .effect "RW Firefly Burn 5" "RW Firefly Torch 3"
+combat_skill: .id "run_and_hide" .level 0 .type "ranged" .atk 0% .dmg 0% .crit 0% .move 2 0 .launch 4321 .target .is_crit_valid False .effect "RW Stealth" "RW Run HoT 1" "RW Run Burn Amount" .is_stall_invalidating false
+combat_skill: .id "run_and_hide" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0% .move 2 0 .launch 4321 .target .is_crit_valid False .effect "RW Stealth" "RW Run HoT 2" "RW Run Burn Amount" .is_stall_invalidating false
+combat_skill: .id "run_and_hide" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .move 2 0 .launch 4321 .target .is_crit_valid False .effect "RW Stealth" "RW Run HoT 3" "RW Run Burn Amount" .is_stall_invalidating false
+combat_skill: .id "run_and_hide" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .move 2 0 .launch 4321 .target .is_crit_valid False .effect "RW Stealth" "RW Run HoT 4" "RW Run Burn Amount" .is_stall_invalidating false
+combat_skill: .id "run_and_hide" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .move 2 0 .launch 4321 .target .is_crit_valid False .effect "RW Stealth" "RW Run HoT 5" "RW Run Burn Amount" .is_stall_invalidating false
+combat_skill: .id "ransack" .level 0 .type "melee" .atk 85%  .dmg -10% .crit 3% .move 0 1 .launch 4321 .target 1234 .is_crit_valid True .effect "Pull 1A" "clear_corpses" "RW Ransack ACC Stealthed"
+combat_skill: .id "ransack" .level 1 .type "melee" .atk 90%  .dmg -10% .crit 4% .move 0 1 .launch 4321 .target 1234 .is_crit_valid True .effect "Pull 1B" "clear_corpses" "RW Ransack ACC Stealthed"
+combat_skill: .id "ransack" .level 2 .type "melee" .atk 95%  .dmg -10% .crit 5% .move 0 1 .launch 4321 .target 1234 .is_crit_valid True .effect "Pull 1C" "clear_corpses" "RW Ransack ACC Stealthed"
+combat_skill: .id "ransack" .level 3 .type "melee" .atk 100% .dmg -10% .crit 6% .move 0 1 .launch 4321 .target 1234 .is_crit_valid True .effect "Pull 1D" "clear_corpses" "RW Ransack ACC Stealthed"
+combat_skill: .id "ransack" .level 4 .type "melee" .atk 105% .dmg -10% .crit 7% .move 0 1 .launch 4321 .target 1234 .is_crit_valid True .effect "Pull 1E" "clear_corpses" "RW Ransack ACC Stealthed"
+combat_skill: .id "hearthlight" .level 0 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 4321 .target ~1234 .is_crit_valid False .ignore_stealth true .effect "Destealth" "RW Hearthlight Torch 1" "RW Hearthlight ACC Buff 1" "RW Hearthlight CRIT Buff 1" .is_stall_invalidating false
+combat_skill: .id "hearthlight" .level 1 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 4321 .target ~1234 .is_crit_valid False .ignore_stealth true .effect "Destealth" "RW Hearthlight Torch 1" "RW Hearthlight ACC Buff 2" "RW Hearthlight CRIT Buff 2" .is_stall_invalidating false
+combat_skill: .id "hearthlight" .level 2 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 4321 .target ~1234 .is_crit_valid False .ignore_stealth true .effect "Destealth" "RW Hearthlight Torch 2" "RW Hearthlight ACC Buff 3" "RW Hearthlight CRIT Buff 3" .is_stall_invalidating false
+combat_skill: .id "hearthlight" .level 3 .type "ranged" .atk 115% .dmg -100% .crit 0% .launch 4321 .target ~1234 .is_crit_valid False .ignore_stealth true .effect "Destealth" "RW Hearthlight Torch 2" "RW Hearthlight ACC Buff 4" "RW Hearthlight CRIT Buff 4" .is_stall_invalidating false
+combat_skill: .id "hearthlight" .level 4 .type "ranged" .atk 120% .dmg -100% .crit 0% .launch 4321 .target ~1234 .is_crit_valid False .ignore_stealth true .effect "Destealth" "RW Hearthlight Torch 3" "RW Hearthlight ACC Buff 5" "RW Hearthlight CRIT Buff 5" .is_stall_invalidating false
+combat_skill: .id "controlled_burn" .level 0 .type "ranged" .atk 95%  .dmg -100% .crit 0% .launch 321 .target 123 .is_crit_valid False .ignore_stealth true .effect "RW CB Burn 1" "RW CB Torch" "RW CB Rank Effect 1" .per_battle_limit 2 .refresh_after_each_wave true
+combat_skill: .id "controlled_burn" .level 1 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 321 .target 123 .is_crit_valid False .ignore_stealth true .effect "RW CB Burn 2" "RW CB Torch" "RW CB Rank Effect 2" .per_battle_limit 2 .refresh_after_each_wave true
+combat_skill: .id "controlled_burn" .level 2 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 321 .target 123 .is_crit_valid False .ignore_stealth true .effect "RW CB Burn 3" "RW CB Torch" "RW CB Rank Effect 3" .per_battle_limit 2 .refresh_after_each_wave true
+combat_skill: .id "controlled_burn" .level 3 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 321 .target 123 .is_crit_valid False .ignore_stealth true .effect "RW CB Burn 4" "RW CB Torch" "RW CB Rank Effect 4" .per_battle_limit 2 .refresh_after_each_wave true
+combat_skill: .id "controlled_burn" .level 4 .type "ranged" .atk 115% .dmg -100% .crit 0% .launch 321 .target 123 .is_crit_valid False .ignore_stealth true .effect "RW CB Burn 5" "RW CB Torch" "RW CB Rank Effect 5" .per_battle_limit 2 .refresh_after_each_wave true
+combat_skill: .id "backdraft" .level 0 .type "ranged" .atk 95% .dmg -50% .crit 7% .launch 321 .target 12 .is_crit_valid True .ignore_guard true .requires_burning true .dmg_per_burn_stack 0.25 .copy_burn_behind true
+combat_skill: .id "backdraft" .level 1 .type "ranged" .atk 100% .dmg -50% .crit 8% .launch 321 .target 12 .is_crit_valid True .ignore_guard true .requires_burning true .dmg_per_burn_stack 0.25 .copy_burn_behind true
+combat_skill: .id "backdraft" .level 2 .type "ranged" .atk 105% .dmg -50% .crit 9% .launch 321 .target 12 .is_crit_valid True .ignore_guard true .requires_burning true .dmg_per_burn_stack 0.25 .copy_burn_behind true
+combat_skill: .id "backdraft" .level 3 .type "ranged" .atk 110% .dmg -50% .crit 10% .launch 321 .target 12 .is_crit_valid True .ignore_guard true .requires_burning true .dmg_per_burn_stack 0.25 .copy_burn_behind true
+combat_skill: .id "backdraft" .level 4 .type "ranged" .atk 115% .dmg -50% .crit 11% .launch 321 .target 12 .is_crit_valid True .ignore_guard true .requires_burning true .dmg_per_burn_stack 0.25 .copy_burn_behind true
+combat_move_skill: .id "move" .level 0 .type "move" .move 2 1 .launch 4321
+tag: .id "light"
+tag: .id "non-religious"
+tag: .id "outsiders_bonfire"
+deaths_door: .buffs deathsdoorACCDebuff deathsdoorDMGLowDebuff deathsdoorDMGHighDebuff deathsdoorSPDDebuff deathsdoorSRDebuff .recovery_buffs mortalityACCDebuff mortalityDMGLowDebuff mortalityDMGHighDebuff mortalitySPDDebuff mortalitySRDebuff .recovery_heart_attack_buffs heartattackACCDebuff heartattackDMGLowDebuff heartattackDMGHighDebuff heartattackSPDDebuff heartattackSRDebuff
+controlled: .target_rank 2
+id_index: .index 18
+skill_selection: .can_select_combat_skills true .number_of_selected_combat_skills_max 4
+generation: .is_generation_enabled true .number_of_positive_quirks_min 1 .number_of_positive_quirks_max 2 .number_of_negative_quirks_min 1 .number_of_negative_quirks_max 2 .number_of_class_specific_camping_skills 2 .number_of_shared_camping_skills 1 .number_of_random_combat_skills 4 .number_of_cards_in_deck 6 .card_chance 1.0

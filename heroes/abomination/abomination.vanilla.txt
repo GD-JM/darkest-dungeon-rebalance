@@ -1,0 +1,184 @@
+[바닐라 원본] 괴인 (abomination)
+게임 원본 수치 참고용. 게임은 이 파일을 읽지 않고, 배포에도 포함되지 않음. 수정은 abomination.info.darkest 에서.
+원본 위치: heroes/abomination/abomination.info.darkest
+
+■ 장비 (레벨 1~5)
+              1      2      3      4      5      
+  최대 체력       26     31     36     41     46     
+  회피          7.5    12.5   17.5   22.5   27.5   
+  방어          0      0      0      0      0      
+  속도(무기)      7      7      8      8      9      
+  피해          6-11   7-13   8-15   10-18  11-20  
+  치명타         2%     3%     4%     5%     6%     
+
+■ 저항
+  기절 40% | 중독 60% | 출혈 30% | 질병 20% | 이동 40% | 약화 20% | 죽음의 일격 67% | 함정 10%
+
+■ 전투 기술 (레벨 1~5)
+
+  변신 (transform)  종류 ranged  사용 열 4321  대상 .is_crit_valid  전투당 제한 2  턴당 제한 1
+  명중          0        0        0        0        0        
+  피해 보정       0        0        0        0        0        
+  치명타 보정      0        0        0        0        0        
+
+  사슬질 (manacles)  종류 ranged  사용 열 32  대상 123  
+  명중          95       100      105      110      115      
+  피해 보정       -60      -60      -60      -60      -60      
+  치명타 보정      1        2        3        4        5        
+  효과 L1       Manacles Stun 1
+  효과 L2       Manacles Stun 2
+  효과 L3       Manacles Stun 3
+  효과 L4       Manacles Stun 4
+  효과 L5       Manacles Stun 5
+
+  아수의 담즙 (vomit)  종류 ranged  사용 열 32  대상 ~23  
+  명중          95       100      105      110      115      
+  피해 보정       -90      -90      -90      -90      -90      
+  치명타 보정      2        3        4        5        6        
+  효과 L1       Abom Vomit 1, Vomit Debuff 1
+  효과 L2       Abom Vomit 2, Vomit Debuff 2
+  효과 L3       Abom Vomit 3, Vomit Debuff 3
+  효과 L4       Abom Vomit 4, Vomit Debuff 4
+  효과 L5       Abom Vomit 5, Vomit Debuff 5
+
+  참회 (absolution)  종류 ranged  사용 열 4321  대상 .is_crit_valid  
+  명중          0        0        0        0        0        
+  피해 보정       0        0        0        0        0        
+  치명타 보정      0        0        0        0        0        
+  효과 L1       Absolution HealStress 1, Absolution Heal 1
+  효과 L2       Absolution HealStress 2, Absolution Heal 2
+  효과 L3       Absolution HealStress 3, Absolution Heal 3
+  효과 L4       Absolution HealStress 4, Absolution Heal 4
+  효과 L5       Absolution HealStress 5, Absolution Heal 5
+
+  할퀴기 (rake)  종류 melee  사용 열 21  대상 ~12  
+  명중          90       95       100      105      110      
+  피해 보정       -50      -50      -50      -50      -50      
+  치명타 보정      -3       -2       -1       0        1        
+  효과 L1       rakebuff_1
+  효과 L2       rakebuff_2
+  효과 L3       rakebuff_3
+  효과 L4       rakebuff_4
+  효과 L5       rakebuff_5
+
+  분노 (rage)  종류 melee  사용 열 21  대상 123  
+  명중          85       90       95       100      105      
+  피해 보정       0        0        0        0        0        
+  치명타 보정      7.5      8.5      9.5      10.5     11.5     
+
+  박치기 (slam)  종류 melee  사용 열 321  대상 12  
+  명중          80       85       90       95       100      
+  피해 보정       -25      -25      -25      -25      -25      
+  치명타 보정      1        2        3        4        5        
+  효과 L1       Push 2A, Slam Debuff 1
+  효과 L2       Push 2B, Slam Debuff 2
+  효과 L3       Push 2C, Slam Debuff 3
+  효과 L4       Push 2D, Slam Debuff 4
+  효과 L5       Push 2E, Slam Debuff 5
+
+■ 기타 기술 줄
+  combat_move_skill: .id "move" .level 0 .type "move" .move 2 1 .launch 4321 .valid_modes human beast
+
+■ 이 영웅 기술이 쓰는 효과 줄 원본 (효과 파일은 영웅 파일과 따로 있음)
+  -- effects/base.effects.darkest
+  effect: .name "Manacles Stun 1" .target "target" .curio_result_type "negative" .chance 90% .stun 1	.on_hit true .on_miss false .queue true
+  effect: .name "Manacles Stun 2" .target "target" .curio_result_type "negative" .chance 100% .stun 1	.on_hit true .on_miss false .queue true
+  effect: .name "Manacles Stun 3" .target "target" .curio_result_type "negative" .chance 110% .stun 1	.on_hit true .on_miss false .queue true
+  effect: .name "Manacles Stun 4" .target "target" .curio_result_type "negative" .chance 120% .stun 1	.on_hit true .on_miss false .queue true
+  effect: .name "Manacles Stun 5" .target "target" .curio_result_type "negative" .chance 130% .stun 1	.on_hit true .on_miss false .queue true
+  effect: .name "Abom Vomit 1" .target "target" .curio_result_type "negative" .chance 100%  .dotPoison 2 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Vomit Debuff 1" .target "target" .chance 100% .buff_ids "Vomit BlightResist Debuff 1" .on_hit true .on_miss false
+  effect: .name "Abom Vomit 2" .target "target" .curio_result_type "negative" .chance 110%  .dotPoison 3 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Vomit Debuff 2" .target "target" .chance 110% .buff_ids "Vomit BlightResist Debuff 2" .on_hit true .on_miss false
+  effect: .name "Abom Vomit 3" .target "target" .curio_result_type "negative" .chance 120%  .dotPoison 3 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Vomit Debuff 3" .target "target" .chance 120% .buff_ids "Vomit BlightResist Debuff 3" .on_hit true .on_miss false
+  effect: .name "Abom Vomit 4" .target "target" .curio_result_type "negative" .chance 130%  .dotPoison 4 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Vomit Debuff 4" .target "target" .chance 130% .buff_ids "Vomit BlightResist Debuff 4" .on_hit true .on_miss false
+  effect: .name "Abom Vomit 5" .target "target" .curio_result_type "negative" .chance 140%  .dotPoison 5 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Vomit Debuff 5" .target "target" .chance 140% .buff_ids "Vomit BlightResist Debuff 5" .on_hit true .on_miss false
+  effect: .name "Absolution HealStress 1"  .target "performer" .curio_result_type "positive" .chance 100%  .healstress 7	.on_hit true .on_miss false .queue true
+  effect: .name "Absolution Heal 1" .target "performer" .curio_result_type "positive" .chance 100% .heal 3	.on_hit true .on_miss false .queue false .source_heal_type hero_skill
+  effect: .name "Absolution HealStress 2"  .target "performer" .curio_result_type "positive" .chance 100%  .healstress 8	.on_hit true .on_miss false .queue true
+  effect: .name "Absolution Heal 2" .target "performer" .curio_result_type "positive" .chance 100% .heal 3	.on_hit true .on_miss false	.queue false .source_heal_type hero_skill
+  effect: .name "Absolution HealStress 3"  .target "performer" .curio_result_type "positive" .chance 100%  .healstress 8	.on_hit true .on_miss false .queue true
+  effect: .name "Absolution Heal 3" .target "performer" .curio_result_type "positive" .chance 100% .heal 4	.on_hit true .on_miss false	.queue false .source_heal_type hero_skill
+  effect: .name "Absolution HealStress 4"  .target "performer" .curio_result_type "positive" .chance 100%  .healstress 9	.on_hit true .on_miss false .queue true
+  effect: .name "Absolution Heal 4" .target "performer" .curio_result_type "positive" .chance 100% .heal 4	.on_hit true .on_miss false .queue false .source_heal_type hero_skill
+  effect: .name "Absolution HealStress 5"  .target "performer" .curio_result_type "positive" .chance 100%  .healstress 10	.on_hit true .on_miss false .queue true
+  effect: .name "Absolution Heal 5" .target "performer" .curio_result_type "positive" .chance 100% .heal 5	.on_hit true .on_miss false .queue false .source_heal_type hero_skill
+  effect: .name "rakebuff_1" .target "performer" .duration 4 .chance 100% .buff_ids rake_buff_1l rake_buff_1h .on_hit true .on_miss true  .apply_once true
+  effect: .name "rakebuff_2" .target "performer" .duration 4 .chance 100% .buff_ids rake_buff_2l rake_buff_2h .on_hit true .on_miss true  .apply_once true
+  effect: .name "rakebuff_3" .target "performer" .duration 4 .chance 100% .buff_ids rake_buff_3l rake_buff_3h .on_hit true .on_miss true  .apply_once true
+  effect: .name "rakebuff_4" .target "performer" .duration 4 .chance 100% .buff_ids rake_buff_4l rake_buff_4h .on_hit true .on_miss true  .apply_once true
+  effect: .name "rakebuff_5" .target "performer" .duration 4 .chance 100% .buff_ids rake_buff_5l rake_buff_5h .on_hit true .on_miss true  .apply_once true
+  effect: .name "Push 2A" .target "target"  .push 2     .chance 100%	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Slam Debuff 1" .target "target" .curio_result_type "negative" .chance 100% .duration 3 .combat_stat_buff 1 .defense_rating_add -10% .speed_rating_add -2 .on_hit true .on_miss false
+  effect: .name "Push 2B" .target "target"  .push 2	  .chance 110%	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Slam Debuff 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3 .combat_stat_buff 1 .defense_rating_add -12% .speed_rating_add -3	.on_hit true .on_miss false
+  effect: .name "Push 2C" .target "target"  .push 2     .chance 120%	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Slam Debuff 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3 .combat_stat_buff 1 .defense_rating_add -15% .speed_rating_add -4	.on_hit true .on_miss false
+  effect: .name "Push 2D" .target "target"  .push 2     .chance 130%	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Slam Debuff 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .combat_stat_buff 1 .defense_rating_add -17% .speed_rating_add -5	.on_hit true .on_miss false
+  effect: .name "Push 2E" .target "target"  .push 2     .chance 140%	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Slam Debuff 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .combat_stat_buff 1 .defense_rating_add -20% .speed_rating_add -6	.on_hit true .on_miss false
+
+■ 원본 파일 전문 (abomination.info.darkest)
+------------------------------------------------------------
+resistances: .stun 40% .poison 60% .bleed 30% .disease 20% .move 40% .debuff 20% .death_blow 67% .trap 10%
+crit: .effects "on_crit_dmg"
+weapon: .name "abomination_weapon_0" .atk 0% .dmg 6 11 .crit 2% .spd 7
+weapon: .name "abomination_weapon_1" .atk 0% .dmg 7 13 .crit 3% .spd 7 .upgradeRequirementCode 0
+weapon: .name "abomination_weapon_2" .atk 0% .dmg 8 15 .crit 4% .spd 8 .upgradeRequirementCode 1
+weapon: .name "abomination_weapon_3" .atk 0% .dmg 10 18 .crit 5% .spd 8 .upgradeRequirementCode 2
+weapon: .name "abomination_weapon_4" .atk 0% .dmg 11 20 .crit 6% .spd 9 .upgradeRequirementCode 3
+armour: .name "abomination_armour_0" .def 7.5% .prot 0 .hp 26 .spd 0
+armour: .name "abomination_armour_1" .def 12.5% .prot 0 .hp 31 .spd 0 .upgradeRequirementCode 0
+armour: .name "abomination_armour_2" .def 17.5% .prot 0 .hp 36 .spd 0 .upgradeRequirementCode 1
+armour: .name "abomination_armour_3" .def 22.5% .prot 0 .hp 41 .spd 0 .upgradeRequirementCode 2
+armour: .name "abomination_armour_4" .def 27.5% .prot 0 .hp 46 .spd 0 .upgradeRequirementCode 3
+combat_skill: .id "transform" .level 0 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True .valid_modes human beast .human_effects switch_mode_beast_self beast_stress_party beast_buff_1 beast_buff2_1 xform_damage_1 Transform_HealSelf_1 .beast_effects switch_mode_human_self human_stress_heal_party_1 beast_debuff_1 .is_continue_turn true .per_turn_limit 1 .per_battle_limit 2 .is_stall_invalidating false .refresh_after_each_wave true
+combat_skill: .id "transform" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True .valid_modes human beast .human_effects switch_mode_beast_self beast_stress_party beast_buff_2 beast_buff2_2 xform_damage_2 Transform_HealSelf_2 .beast_effects switch_mode_human_self human_stress_heal_party_2 beast_debuff_2 .is_continue_turn true .per_turn_limit 1 .per_battle_limit 2 .is_stall_invalidating false .refresh_after_each_wave true
+combat_skill: .id "transform" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True .valid_modes human beast .human_effects switch_mode_beast_self beast_stress_party beast_buff_3 beast_buff2_3 xform_damage_3 Transform_HealSelf_3 .beast_effects switch_mode_human_self human_stress_heal_party_3 beast_debuff_3 .is_continue_turn true .per_turn_limit 1 .per_battle_limit 2 .is_stall_invalidating false .refresh_after_each_wave true
+combat_skill: .id "transform" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True .valid_modes human beast .human_effects switch_mode_beast_self beast_stress_party beast_buff_4 beast_buff2_4 xform_damage_4 Transform_HealSelf_4 .beast_effects switch_mode_human_self human_stress_heal_party_4 beast_debuff_4 .is_continue_turn true .per_turn_limit 1 .per_battle_limit 2 .is_stall_invalidating false .refresh_after_each_wave true
+combat_skill: .id "transform" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True .valid_modes human beast .human_effects switch_mode_beast_self beast_stress_party beast_buff_5 beast_buff2_5 xform_damage_5 Transform_HealSelf_5 .beast_effects switch_mode_human_self human_stress_heal_party_5 beast_debuff_5 .is_continue_turn true .per_turn_limit 1 .per_battle_limit 2 .is_stall_invalidating false .refresh_after_each_wave true
+combat_skill: .id "manacles" .level 0 .type "ranged" .atk 95% .dmg -60% .crit 1% .launch 32 .target 123 .is_crit_valid True  .effect "Manacles Stun 1" .valid_modes human
+combat_skill: .id "manacles" .level 1 .type "ranged" .atk 100% .dmg -60% .crit 2% .launch 32 .target 123 .is_crit_valid True  .effect "Manacles Stun 2" .valid_modes human
+combat_skill: .id "manacles" .level 2 .type "ranged" .atk 105% .dmg -60% .crit 3% .launch 32 .target 123 .is_crit_valid True  .effect "Manacles Stun 3" .valid_modes human
+combat_skill: .id "manacles" .level 3 .type "ranged" .atk 110% .dmg -60% .crit 4% .launch 32 .target 123 .is_crit_valid True  .effect "Manacles Stun 4" .valid_modes human
+combat_skill: .id "manacles" .level 4 .type "ranged" .atk 115% .dmg -60% .crit 5% .launch 32 .target 123 .is_crit_valid True  .effect "Manacles Stun 5" .valid_modes human
+combat_skill: .id "vomit" .level 0 .type "ranged" .atk 95% .dmg -90% .crit 2% .launch 32 .target ~23 .is_crit_valid True  .effect "Abom Vomit 1" "Vomit Debuff 1" .valid_modes human
+combat_skill: .id "vomit" .level 1 .type "ranged" .atk 100% .dmg -90% .crit 3% .launch 32 .target ~23 .is_crit_valid True  .effect "Abom Vomit 2" "Vomit Debuff 2" .valid_modes human
+combat_skill: .id "vomit" .level 2 .type "ranged" .atk 105% .dmg -90% .crit 4% .launch 32 .target ~23 .is_crit_valid True  .effect "Abom Vomit 3" "Vomit Debuff 3" .valid_modes human
+combat_skill: .id "vomit" .level 3 .type "ranged" .atk 110% .dmg -90% .crit 5% .launch 32 .target ~23 .is_crit_valid True  .effect "Abom Vomit 4" "Vomit Debuff 4" .valid_modes human
+combat_skill: .id "vomit" .level 4 .type "ranged" .atk 115% .dmg -90% .crit 6% .launch 32 .target ~23 .is_crit_valid True  .effect "Abom Vomit 5" "Vomit Debuff 5" .valid_modes human
+combat_skill: .id "absolution" .level 0 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Absolution HealStress 1" "Absolution Heal 1" .valid_modes human .is_stall_invalidating false
+combat_skill: .id "absolution" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Absolution HealStress 2" "Absolution Heal 2" .valid_modes human .is_stall_invalidating false
+combat_skill: .id "absolution" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Absolution HealStress 3" "Absolution Heal 3" .valid_modes human .is_stall_invalidating false
+combat_skill: .id "absolution" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Absolution HealStress 4" "Absolution Heal 4" .valid_modes human .is_stall_invalidating false
+combat_skill: .id "absolution" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Absolution HealStress 5" "Absolution Heal 5" .valid_modes human .is_stall_invalidating false
+combat_move_skill: .id "move" .level 0 .type "move" .move 2 1 .launch 4321 .valid_modes human beast
+combat_skill: .id "rake" .level 0 .type "melee" .atk 90% .dmg -50% .crit -3% .launch 21 .target ~12 .is_crit_valid True  .effect "rakebuff_1" .valid_modes beast
+combat_skill: .id "rake" .level 1 .type "melee" .atk 95% .dmg -50% .crit -2% .launch 21 .target ~12 .is_crit_valid True  .effect "rakebuff_2" .valid_modes beast
+combat_skill: .id "rake" .level 2 .type "melee" .atk 100% .dmg -50% .crit -1% .launch 21 .target ~12 .is_crit_valid True  .effect "rakebuff_3" .valid_modes beast
+combat_skill: .id "rake" .level 3 .type "melee" .atk 105% .dmg -50% .crit 0% .launch 21 .target ~12 .is_crit_valid True  .effect "rakebuff_4" .valid_modes beast
+combat_skill: .id "rake" .level 4 .type "melee" .atk 110% .dmg -50% .crit 1% .launch 21 .target ~12 .is_crit_valid True  .effect "rakebuff_5" .valid_modes beast
+combat_skill: .id "rage" .level 0 .type "melee" .atk 85% .dmg 0% .crit 7.5% .launch 21 .target 123 .is_crit_valid True  .valid_modes beast
+combat_skill: .id "rage" .level 1 .type "melee" .atk 90% .dmg 0% .crit 8.5% .launch 21 .target 123 .is_crit_valid True  .valid_modes beast
+combat_skill: .id "rage" .level 2 .type "melee" .atk 95% .dmg 0% .crit 9.5% .launch 21 .target 123 .is_crit_valid True  .valid_modes beast
+combat_skill: .id "rage" .level 3 .type "melee" .atk 100% .dmg 0% .crit 10.5% .launch 21 .target 123 .is_crit_valid True  .valid_modes beast
+combat_skill: .id "rage" .level 4 .type "melee" .atk 105% .dmg 0% .crit 11.5% .launch 21 .target 123 .is_crit_valid True  .valid_modes beast
+combat_skill: .id "slam" .level 0 .type "melee" .atk 80% .dmg -25% .crit 1% .move 0 1 .launch 321 .target 12 .is_crit_valid True  .effect "Push 2A" "Slam Debuff 1" .valid_modes beast
+combat_skill: .id "slam" .level 1 .type "melee" .atk 85% .dmg -25% .crit 2% .move 0 1 .launch 321 .target 12 .is_crit_valid True  .effect "Push 2B" "Slam Debuff 2" .valid_modes beast
+combat_skill: .id "slam" .level 2 .type "melee" .atk 90% .dmg -25% .crit 3% .move 0 1 .launch 321 .target 12 .is_crit_valid True  .effect "Push 2C" "Slam Debuff 3" .valid_modes beast
+combat_skill: .id "slam" .level 3 .type "melee" .atk 95% .dmg -25% .crit 4% .move 0 1 .launch 321 .target 12 .is_crit_valid True  .effect "Push 2D" "Slam Debuff 4" .valid_modes beast
+combat_skill: .id "slam" .level 4 .type "melee" .atk 100% .dmg -25% .crit 5% .move 0 1 .launch 321 .target 12 .is_crit_valid True  .effect "Push 2E" "Slam Debuff 5" .valid_modes beast
+tag: .id "light"
+tag: .id "non-religious"
+tag: .id "outsiders_bonfire"
+deaths_door: .buffs deathsdoorACCDebuff deathsdoorDMGLowDebuff deathsdoorDMGHighDebuff deathsdoorSPDDebuff deathsdoorSRDebuff .recovery_buffs mortalityACCDebuff mortalityDMGLowDebuff mortalityDMGHighDebuff mortalitySPDDebuff mortalitySRDebuff .recovery_heart_attack_buffs heartattackACCDebuff heartattackDMGLowDebuff heartattackDMGHighDebuff heartattackSPDDebuff heartattackSRDebuff
+controlled: .target_rank 2
+id_index: .index 13
+skill_selection: .can_select_combat_skills false .number_of_selected_combat_skills_max 7
+mode: .id human .is_raid_default true
+mode: .id beast .bark_override_id str_beast_bark .affliction_combat_skill_id transform .battle_complete_combat_skill_id transform .stress_damage_per_turn 6
+generation: .is_generation_enabled true .number_of_positive_quirks_min 1 .number_of_positive_quirks_max 2 .number_of_negative_quirks_min 1 .number_of_negative_quirks_max 2 .number_of_class_specific_camping_skills 2 .number_of_shared_camping_skills 1 .number_of_random_combat_skills 7 .number_of_cards_in_deck 6 .card_chance 1.0

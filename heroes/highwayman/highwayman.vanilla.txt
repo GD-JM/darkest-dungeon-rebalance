@@ -1,0 +1,190 @@
+[바닐라 원본] 노상강도 (highwayman)
+게임 원본 수치 참고용. 게임은 이 파일을 읽지 않고, 배포에도 포함되지 않음. 수정은 highwayman.info.darkest 에서.
+원본 위치: heroes/highwayman/highwayman.info.darkest
+
+■ 장비 (레벨 1~5)
+              1      2      3      4      5      
+  최대 체력       23     28     33     38     43     
+  회피          10     15     20     25     30     
+  방어          0      0      0      0      0      
+  속도(무기)      5      5      6      6      7      
+  피해          5-10   6-12   7-13   8-15   9-16   
+  치명타         5%     6%     7%     8%     9%     
+
+■ 저항
+  기절 30% | 중독 30% | 출혈 30% | 질병 30% | 이동 30% | 약화 30% | 죽음의 일격 67% | 함정 40%
+
+■ 전투 기술 (레벨 1~5)
+
+  사악한 칼질 (wicked_slice)  종류 melee  사용 열 321  대상 12  
+  명중          85       90       95       100      105      
+  피해 보정       15       15       15       15       15       
+  치명타 보정      5        6        7        8        9        
+
+  권총 사격 (pistol_shot)  종류 ranged  사용 열 432  대상 234  
+  명중          85       90       95       100      105      
+  피해 보정       -15      -15      -15      -15      -15      
+  치명타 보정      7.5      8.5      9.5      10.5     11.5     
+  효과 L1       HW Pistol Dmg Marked 1
+  효과 L2       HW Pistol Dmg Marked 2
+  효과 L3       HW Pistol Dmg Marked 3
+  효과 L4       HW Pistol Dmg Marked 4
+  효과 L5       HW Pistol Dmg Marked 5
+
+  영거리 사격 (point_blank_shot)  종류 ranged  사용 열 1  대상 1  
+  명중          95       100      105      110      115      
+  피해 보정       50       50       50       50       50       
+  치명타 보정      5        6        7        8        9        
+  효과 L1       Push 1A
+  효과 L2       Push 1B
+  효과 L3       Push 1C
+  효과 L4       Push 1D
+  효과 L5       Push 1E
+
+  포도탄 발사 (grape_shot_blast)  종류 ranged  사용 열 23  대상 ~123  
+  명중          75       80       85       90       95       
+  피해 보정       -50      -50      -50      -50      -50      
+  치명타 보정      -9       -8       -7       -6       -5       
+  효과 L1       Grapeshot Vulnerability 1
+  효과 L2       Grapeshot Vulnerability 2
+  효과 L3       Grapeshot Vulnerability 3
+  효과 L4       Grapeshot Vulnerability 4
+  효과 L5       Grapeshot Vulnerability 5
+
+  추적탄 (take_aim)  종류 ranged  사용 열 4321  대상 234  전투당 제한 1
+  명중          95       100      105      110      115      
+  피해 보정       -80      -80      -80      -80      -80      
+  치명타 보정      0        0        0.5      0.5      1        
+  효과 L1       Tracking Buff 1, Destealth
+  효과 L2       Tracking Buff 2, Destealth
+  효과 L3       Tracking Buff 3, Destealth
+  효과 L4       Tracking Buff 4, Destealth
+  효과 L5       Tracking Buff 5, Destealth
+
+  결투가의 진격 (duelist_advance)  종류 melee  사용 열 432  대상 123  
+  명중          90       95       100      105      110      
+  피해 보정       -20      -20      -20      -20      -20      
+  치명타 보정      5        6        7        8        9        
+  효과 L1       Hwy Riposte 1
+  효과 L2       Hwy Riposte 2
+  효과 L3       Hwy Riposte 3
+  효과 L4       Hwy Riposte 4
+  효과 L5       Hwy Riposte 5
+
+  정맥 절개 (opened_vein)  종류 melee  사용 열 321  대상 12  
+  명중          95       100      105      110      115      
+  피해 보정       -15      -15      -15      -15      -15      
+  치명타 보정      0        1        2        3        4        
+  효과 L1       Bleed 1, HW Open Vein Bleed Debuff 1, HW Open Vein SPD Debuff 1
+  효과 L2       Bleed 2, HW Open Vein Bleed Debuff 2, HW Open Vein SPD Debuff 2
+  효과 L3       Bleed 3, HW Open Vein Bleed Debuff 3, HW Open Vein SPD Debuff 3
+  효과 L4       Bleed 4, HW Open Vein Bleed Debuff 4, HW Open Vein SPD Debuff 4
+  효과 L5       Bleed 5, HW Open Vein Bleed Debuff 5, HW Open Vein SPD Debuff 5
+
+■ 기타 기술 줄
+  combat_move_skill: .id "move" .level 0 .type "move" .move 2 2 .launch 4321
+  riposte_skill: .id "riposte1" .level 0 .type "melee" .atk 85% .dmg 0% .crit 5% .launch 1234 .target 1234 .is_crit_valid True
+
+■ 이 영웅 기술이 쓰는 효과 줄 원본 (효과 파일은 영웅 파일과 따로 있음)
+  -- effects/base.effects.darkest
+  effect: .name "HW Pistol Dmg Marked 1"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 25%	.damage_high_multiply 25%	.on_hit true .on_miss false
+  effect: .name "HW Pistol Dmg Marked 2"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 30%	.damage_high_multiply 30%	.on_hit true .on_miss false
+  effect: .name "HW Pistol Dmg Marked 3"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 35%	.damage_high_multiply 35%	.on_hit true .on_miss false
+  effect: .name "HW Pistol Dmg Marked 4"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 40%	.damage_high_multiply 40%	.on_hit true .on_miss false
+  effect: .name "HW Pistol Dmg Marked 5"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 50%	.damage_high_multiply 50%	.on_hit true .on_miss false
+  effect: .name "Push 1A" .target "target"  .push 1 	.chance 100%   .on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Push 1B" .target "target"  .push 1 	.chance 110%   .on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Push 1C" .target "target"  .push 1 	.chance 120%   .on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Push 1D" .target "target"  .push 1 	.chance 130%   .on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Push 1E" .target "target"  .push 1 	.chance 140%   .on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Grapeshot Vulnerability 1" .target "target" .curio_result_type "negative" .chance 100% .duration 3 .buff_type crit_received_chance .buff_amount 4% .on_hit true .on_miss false .queue true
+  effect: .name "Grapeshot Vulnerability 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3 .buff_type crit_received_chance .buff_amount 5% .on_hit true .on_miss false .queue true
+  effect: .name "Grapeshot Vulnerability 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3 .buff_type crit_received_chance .buff_amount 6% .on_hit true .on_miss false .queue true
+  effect: .name "Grapeshot Vulnerability 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .buff_type crit_received_chance .buff_amount 7% .on_hit true .on_miss false .queue true
+  effect: .name "Grapeshot Vulnerability 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .buff_type crit_received_chance .buff_amount 8% .on_hit true .on_miss false .queue true
+  effect: .name "Tracking Buff 1" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 6%  .crit_chance_add 4% .damage_low_multiply 12% .damage_high_multiply 12%  .on_hit true .on_miss true .duration 1 .buff_duration_type combat_end
+  effect: .name "Destealth" .target "target" .chance 100% .unstealth 1 .on_hit true .on_miss false
+  effect: .name "Tracking Buff 2" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 7%  .crit_chance_add 5% .damage_low_multiply 14% .damage_high_multiply 14%  .on_hit true .on_miss true .duration 1 .buff_duration_type combat_end
+  effect: .name "Tracking Buff 3" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 8%  .crit_chance_add 6% .damage_low_multiply 16% .damage_high_multiply 16%  .on_hit true .on_miss true .duration 1 .buff_duration_type combat_end
+  effect: .name "Tracking Buff 4" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 9%  .crit_chance_add 7% .damage_low_multiply 18% .damage_high_multiply 18%  .on_hit true .on_miss true .duration 1 .buff_duration_type combat_end
+  effect: .name "Tracking Buff 5" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 10% .crit_chance_add 8% .damage_low_multiply 20% .damage_high_multiply 20%  .on_hit true .on_miss true .duration 1 .buff_duration_type combat_end
+  effect: .name "Hwy Riposte 1"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -40%  .damage_high_multiply -40%  .crit_chance_add 0%
+  effect: .name "Hwy Riposte 2"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -33%  .damage_high_multiply -33%  .crit_chance_add 2% 
+  effect: .name "Hwy Riposte 3"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -25% .damage_high_multiply -25% .crit_chance_add 3% 
+  effect: .name "Hwy Riposte 4"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -20% .damage_high_multiply -20% .crit_chance_add 4% 
+  effect: .name "Hwy Riposte 5"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -15% .damage_high_multiply -15% .crit_chance_add 5%
+  effect: .name "Bleed 1" .target "target" .curio_result_type "negative" .chance 100%  .dotBleed 2 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "HW Open Vein Bleed Debuff 1" .target "target" .curio_result_type "negative" .chance 100% .duration 3 .buff_ids "bleed_debuff_1"  .on_hit true .on_miss false
+  effect: .name "HW Open Vein SPD Debuff 1" .target "target" .curio_result_type "negative" .chance 100% .duration 3 .buff_ids "SPD-1"  .on_hit true .on_miss false
+  effect: .name "Bleed 2" .target "target" .curio_result_type "negative" .chance 110%  .dotBleed 2 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "HW Open Vein Bleed Debuff 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3 .buff_ids "bleed_debuff_2"  .on_hit true .on_miss false
+  effect: .name "HW Open Vein SPD Debuff 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3 .buff_ids "SPD-1"  .on_hit true .on_miss false
+  effect: .name "Bleed 3" .target "target" .curio_result_type "negative" .chance 120%  .dotBleed 3 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "HW Open Vein Bleed Debuff 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3 .buff_ids "bleed_debuff_3"  .on_hit true .on_miss false
+  effect: .name "HW Open Vein SPD Debuff 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3 .buff_ids "SPD-2"  .on_hit true .on_miss false
+  effect: .name "Bleed 4" .target "target" .curio_result_type "negative" .chance 130%  .dotBleed 3 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "HW Open Vein Bleed Debuff 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .buff_ids "bleed_debuff_4" .on_hit true .on_miss false
+  effect: .name "HW Open Vein SPD Debuff 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .buff_ids "SPD-2"  .on_hit true .on_miss false
+  effect: .name "Bleed 5" .target "target" .curio_result_type "negative" .chance 140%  .dotBleed 4 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "HW Open Vein Bleed Debuff 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .buff_ids "bleed_debuff_5"  .on_hit true .on_miss false
+  effect: .name "HW Open Vein SPD Debuff 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .buff_ids "SPD-3"  .on_hit true .on_miss false
+
+■ 원본 파일 전문 (highwayman.info.darkest)
+------------------------------------------------------------
+resistances: .stun 30% .poison 30% .bleed 30% .disease 30% .move 30% .debuff 30% .death_blow 67% .trap 40%
+crit: .effects "on_crit_speed"
+weapon: .name "highwayman_weapon_0" .atk 0% .dmg 5 10 .crit 5% .spd 5
+weapon: .name "highwayman_weapon_1" .atk 0% .dmg 6 12 .crit 6% .spd 5 .upgradeRequirementCode 0
+weapon: .name "highwayman_weapon_2" .atk 0% .dmg 7 13 .crit 7% .spd 6 .upgradeRequirementCode 1
+weapon: .name "highwayman_weapon_3" .atk 0% .dmg 8 15 .crit 8% .spd 6 .upgradeRequirementCode 2
+weapon: .name "highwayman_weapon_4" .atk 0% .dmg 9 16 .crit 9% .spd 7 .upgradeRequirementCode 3
+armour: .name "highwayman_armour_0" .def 10% .prot 0 .hp 23 .spd 0
+armour: .name "highwayman_armour_1" .def 15% .prot 0 .hp 28 .spd 0 .upgradeRequirementCode 0
+armour: .name "highwayman_armour_2" .def 20% .prot 0 .hp 33 .spd 0 .upgradeRequirementCode 1
+armour: .name "highwayman_armour_3" .def 25% .prot 0 .hp 38 .spd 0 .upgradeRequirementCode 2
+armour: .name "highwayman_armour_4" .def 30% .prot 0 .hp 43 .spd 0 .upgradeRequirementCode 3
+combat_skill: .id "wicked_slice" .level 0 .type "melee" .atk 85% .dmg 15% .crit 5% .launch 321 .target 12 .is_crit_valid True 
+combat_skill: .id "wicked_slice" .level 1 .type "melee" .atk 90% .dmg 15% .crit 6% .launch 321 .target 12 .is_crit_valid True 
+combat_skill: .id "wicked_slice" .level 2 .type "melee" .atk 95% .dmg 15% .crit 7% .launch 321 .target 12 .is_crit_valid True 
+combat_skill: .id "wicked_slice" .level 3 .type "melee" .atk 100% .dmg 15% .crit 8% .launch 321 .target 12 .is_crit_valid True 
+combat_skill: .id "wicked_slice" .level 4 .type "melee" .atk 105% .dmg 15% .crit 9% .launch 321 .target 12 .is_crit_valid True 
+combat_skill: .id "pistol_shot" .level 0 .type "ranged" .atk 85% .dmg -15% .crit 7.5% .launch 432 .target 234 .is_crit_valid True  .effect "HW Pistol Dmg Marked 1" .generation_guaranteed true
+combat_skill: .id "pistol_shot" .level 1 .type "ranged" .atk 90% .dmg -15% .crit 8.5% .launch 432 .target 234 .is_crit_valid True  .effect "HW Pistol Dmg Marked 2"
+combat_skill: .id "pistol_shot" .level 2 .type "ranged" .atk 95% .dmg -15% .crit 9.5% .launch 432 .target 234 .is_crit_valid True  .effect "HW Pistol Dmg Marked 3"
+combat_skill: .id "pistol_shot" .level 3 .type "ranged" .atk 100% .dmg -15% .crit 10.5% .launch 432 .target 234 .is_crit_valid True  .effect "HW Pistol Dmg Marked 4"
+combat_skill: .id "pistol_shot" .level 4 .type "ranged" .atk 105% .dmg -15% .crit 11.5% .launch 432 .target 234 .is_crit_valid True  .effect "HW Pistol Dmg Marked 5"
+combat_skill: .id "point_blank_shot" .level 0 .type "ranged" .atk 95% .dmg 50% .crit 5% .move 1 0 .launch 1 .target 1 .is_crit_valid True  .effect "Push 1A"
+combat_skill: .id "point_blank_shot" .level 1 .type "ranged" .atk 100% .dmg 50% .crit 6% .move 1 0 .launch 1 .target 1 .is_crit_valid True  .effect "Push 1B"
+combat_skill: .id "point_blank_shot" .level 2 .type "ranged" .atk 105% .dmg 50% .crit 7% .move 1 0 .launch 1 .target 1 .is_crit_valid True  .effect "Push 1C"
+combat_skill: .id "point_blank_shot" .level 3 .type "ranged" .atk 110% .dmg 50% .crit 8% .move 1 0 .launch 1 .target 1 .is_crit_valid True  .effect "Push 1D"
+combat_skill: .id "point_blank_shot" .level 4 .type "ranged" .atk 115% .dmg 50% .crit 9% .move 1 0 .launch 1 .target 1 .is_crit_valid True  .effect "Push 1E"
+combat_skill: .id "grape_shot_blast" .level 0 .type "ranged" .atk 75% .dmg -50% .crit -9% .launch 23 .target ~123 .is_crit_valid True  .effect "Grapeshot Vulnerability 1"
+combat_skill: .id "grape_shot_blast" .level 1 .type "ranged" .atk 80% .dmg -50% .crit -8% .launch 23 .target ~123 .is_crit_valid True  .effect "Grapeshot Vulnerability 2"
+combat_skill: .id "grape_shot_blast" .level 2 .type "ranged" .atk 85% .dmg -50% .crit -7% .launch 23 .target ~123 .is_crit_valid True  .effect "Grapeshot Vulnerability 3"
+combat_skill: .id "grape_shot_blast" .level 3 .type "ranged" .atk 90% .dmg -50% .crit -6% .launch 23 .target ~123 .is_crit_valid True  .effect "Grapeshot Vulnerability 4"
+combat_skill: .id "grape_shot_blast" .level 4 .type "ranged" .atk 95% .dmg -50% .crit -5% .launch 23 .target ~123 .is_crit_valid True  .effect "Grapeshot Vulnerability 5"
+combat_move_skill: .id "move" .level 0 .type "move" .move 2 2 .launch 4321
+combat_skill: .id "take_aim" .level 0 .type "ranged" .atk 95% .dmg -80% .crit 0% .per_battle_limit 1 .launch 4321 .target 234 .is_crit_valid True .ignore_stealth true  .effect "Tracking Buff 1" "Destealth"
+combat_skill: .id "take_aim" .level 1 .type "ranged" .atk 100% .dmg -80% .crit 0% .per_battle_limit 1 .launch 4321 .target 234 .is_crit_valid True .ignore_stealth true  .effect "Tracking Buff 2" "Destealth"
+combat_skill: .id "take_aim" .level 2 .type "ranged" .atk 105% .dmg -80% .crit 0.5% .per_battle_limit 1 .launch 4321 .target 234 .is_crit_valid True .ignore_stealth true  .effect "Tracking Buff 3" "Destealth"
+combat_skill: .id "take_aim" .level 3 .type "ranged" .atk 110% .dmg -80% .crit 0.5% .per_battle_limit 1 .launch 4321 .target 234 .is_crit_valid True .ignore_stealth true  .effect "Tracking Buff 4" "Destealth"
+combat_skill: .id "take_aim" .level 4 .type "ranged" .atk 115% .dmg -80% .crit 1% .per_battle_limit 1 .launch 4321 .target 234 .is_crit_valid True .ignore_stealth true  .effect "Tracking Buff 5" "Destealth"
+combat_skill: .id "duelist_advance" .level 0 .type "melee" .atk 90% .dmg -20% .crit 5% .move 0 1 .launch 432 .target 123 .is_crit_valid True  .effect "Hwy Riposte 1"
+combat_skill: .id "duelist_advance" .level 1 .type "melee" .atk 95% .dmg -20% .crit 6% .move 0 1 .launch 432 .target 123 .is_crit_valid True  .effect "Hwy Riposte 2"
+combat_skill: .id "duelist_advance" .level 2 .type "melee" .atk 100% .dmg -20% .crit 7% .move 0 1 .launch 432 .target 123 .is_crit_valid True  .effect "Hwy Riposte 3"
+combat_skill: .id "duelist_advance" .level 3 .type "melee" .atk 105% .dmg -20% .crit 8% .move 0 1 .launch 432 .target 123 .is_crit_valid True  .effect "Hwy Riposte 4"
+combat_skill: .id "duelist_advance" .level 4 .type "melee" .atk 110% .dmg -20% .crit 9% .move 0 1 .launch 432 .target 123 .is_crit_valid True  .effect "Hwy Riposte 5"
+combat_skill: .id "opened_vein" .level 0 .type "melee" .atk 95% .dmg -15% .crit 0% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 1" "HW Open Vein Bleed Debuff 1" "HW Open Vein SPD Debuff 1"
+combat_skill: .id "opened_vein" .level 1 .type "melee" .atk 100% .dmg -15% .crit 1% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 2" "HW Open Vein Bleed Debuff 2" "HW Open Vein SPD Debuff 2"
+combat_skill: .id "opened_vein" .level 2 .type "melee" .atk 105% .dmg -15% .crit 2% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 3" "HW Open Vein Bleed Debuff 3" "HW Open Vein SPD Debuff 3"
+combat_skill: .id "opened_vein" .level 3 .type "melee" .atk 110% .dmg -15% .crit 3% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 4" "HW Open Vein Bleed Debuff 4" "HW Open Vein SPD Debuff 4"
+combat_skill: .id "opened_vein" .level 4 .type "melee" .atk 115% .dmg -15% .crit 4% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 5" "HW Open Vein Bleed Debuff 5" "HW Open Vein SPD Debuff 5"
+riposte_skill: .id "riposte1" .level 0 .type "melee" .atk 85% .dmg 0% .crit 5% .launch 1234 .target 1234 .is_crit_valid True 
+tag: .id "light"
+tag: .id "non-religious"
+tag: .id "house_of_the_yellow_hand"
+deaths_door: .buffs deathsdoorACCDebuff deathsdoorDMGLowDebuff deathsdoorDMGHighDebuff deathsdoorSPDDebuff deathsdoorSRDebuff .recovery_buffs mortalityACCDebuff mortalityDMGLowDebuff mortalityDMGHighDebuff mortalitySPDDebuff mortalitySRDebuff .recovery_heart_attack_buffs heartattackACCDebuff heartattackDMGLowDebuff heartattackDMGHighDebuff heartattackSPDDebuff heartattackSRDebuff
+controlled: .target_rank 1
+id_index: .index 1
+skill_selection: .can_select_combat_skills true .number_of_selected_combat_skills_max 4
+generation: .is_generation_enabled true .number_of_positive_quirks_min 1 .number_of_positive_quirks_max 2 .number_of_negative_quirks_min 1 .number_of_negative_quirks_max 2 .number_of_class_specific_camping_skills 2 .number_of_shared_camping_skills 1 .number_of_random_combat_skills 4 .number_of_cards_in_deck 6 .card_chance 1.0

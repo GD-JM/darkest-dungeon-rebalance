@@ -1,0 +1,188 @@
+[바닐라 원본] 결투가 (duelist)
+게임 원본 수치 참고용. 게임은 이 파일을 읽지 않고, 배포에도 포함되지 않음. 수정은 duelist.info.darkest 에서.
+원본 위치: dlc/4964110_fires_edge/features/duelist/heroes/duelist/duelist.info.darkest
+
+■ 장비 (레벨 1~5)
+              1      2      3      4      5      
+  최대 체력       20     24     28     32     36     
+  회피          5      10     15     20     25     
+  방어          0      0      0      0      0      
+  속도(무기)      6      6      7      7      8      
+  피해          5-7    6-8    7-10   7-11   8-13   
+  치명타         5%     6%     7%     8%     9%     
+
+■ 저항
+  기절 30% | 중독 30% | 출혈 30% | 질병 30% | 이동 30% | 약화 40% | 죽음의 일격 67% | 함정 10%
+
+■ 전투 기술 (레벨 1~5)
+
+  예상 (anticipation)  종류 ranged  사용 열 4321  대상 .is_crit_valid  턴당 제한 1
+  명중          0        0        0        0        0        
+  피해 보정       0        0        0        0        0        
+  치명타 보정      0        0        0        0        0        
+
+  찌르기 (touche)  종류 melee  사용 열 4321  대상 12  
+  명중          90       95       100      105      110      
+  피해 보정       0        0        0        0        0        
+  치명타 보정      1        2        3        4        5        
+  효과 L1       Duelist Touche Buff 1
+  효과 L2       Duelist Touche Buff 2
+  효과 L3       Duelist Touche Buff 3
+  효과 L4       Duelist Touche Buff 4
+  효과 L5       Duelist Touche Buff 5
+
+  눈속임 (feint)  종류 melee  사용 열 321  대상 12  
+  명중          95       100      105      110      115      
+  피해 보정       -50      -50      -50      -50      -50      
+  치명타 보정      3        4        5        6        7        
+  효과 L1       Mark Self, Duelist Feint Buff 1, Duelist Feint Debuff 1
+  효과 L2       Mark Self, Duelist Feint Buff 2, Duelist Feint Debuff 2
+  효과 L3       Mark Self, Duelist Feint Buff 3, Duelist Feint Debuff 3
+  효과 L4       Mark Self, Duelist Feint Buff 4, Duelist Feint Debuff 4
+  효과 L5       Mark Self, Duelist Feint Buff 5, Duelist Feint Debuff 5
+
+  회수 (disengage)  종류 melee  사용 열 21  대상 12  
+  명중          95       100      105      110      115      
+  피해 보정       -50      -50      -50      -50      -50      
+  치명타 보정      -1       0        1        2        3        
+  효과 L1       Duelist Disengage Buff 1, Duelist Disengage Any Position
+  효과 L2       Duelist Disengage Buff 2, Duelist Disengage Any Position
+  효과 L3       Duelist Disengage Buff 3, Duelist Disengage Any Position
+  효과 L4       Duelist Disengage Buff 4, Duelist Disengage Any Position
+  효과 L5       Duelist Disengage Buff 5, Duelist Disengage Any Position
+
+  날쌘 돌진 (fleche)  종류 melee  사용 열 432  대상 123  
+  명중          90       95       100      105      110      
+  피해 보정       20       20       20       20       20       
+  치명타 보정      9        10       11       12       13       
+  효과          Mark Self (전 레벨 동일)
+
+  최후의 일격 (coup_de_grace)  종류 ranged  사용 열 4321  대상 1234  
+  명중          95       100      105      110      115      
+  피해 보정       -60      -60      -60      -60      -60      
+  치명타 보정      7        8        9        10       11       
+  효과          Duelist Kill Bonus Action, Duelist Coup CRIT vs Stunned (전 레벨 동일)
+
+  부츠 (the_boot)  종류 melee  사용 열 321  대상 12  
+  명중          95       100      105      110      115      
+  피해 보정       -40      -40      -40      -40      -40      
+  치명타 보정      1        2        3        4        5        
+  효과 L1       Stun 1, Push 1B
+  효과 L2       Stun 2, Push 1C
+  효과 L3       Stun 3, Push 1D
+  효과 L4       Stun 4, Push 1E
+  효과 L5       Stun 5, Push 1F
+
+■ 기타 기술 줄
+  combat_move_skill: .id "move" .level 0 .type "move" .move 3 3 .launch 4321 .valid_modes stance_defensive stance_aggressive
+  riposte_skill: .id "riposte1" .level 0 .type "melee" .atk 95% .dmg 0% .crit 4% .launch 1234 .target 1234 .is_crit_valid True
+
+■ 이 영웅 기술이 쓰는 효과 줄 원본 (효과 파일은 영웅 파일과 따로 있음)
+  -- dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
+  effect: .name "Duelist Touche Buff 1" .target "performer" .chance 100% .curio_result_type "positive" .buff_ids "DUELIST_TOUCHE_DODGE_1" .duration 4  .on_hit true .on_miss true
+  effect: .name "Duelist Touche Buff 2" .target "performer" .chance 100% .curio_result_type "positive" .buff_ids "DUELIST_TOUCHE_DODGE_2" .duration 4  .on_hit true .on_miss true
+  effect: .name "Duelist Touche Buff 3" .target "performer" .chance 100% .curio_result_type "positive" .buff_ids "DUELIST_TOUCHE_DODGE_3" .duration 4  .on_hit true .on_miss true
+  effect: .name "Duelist Touche Buff 4" .target "performer" .chance 100% .curio_result_type "positive" .buff_ids "DUELIST_TOUCHE_DODGE_4" .duration 4  .on_hit true .on_miss true
+  effect: .name "Duelist Touche Buff 5" .target "performer" .chance 100% .curio_result_type "positive" .buff_ids "DUELIST_TOUCHE_DODGE_5" .duration 4  .on_hit true .on_miss true
+  effect: .name "Duelist Feint Buff 1" .target "performer" .chance 100% .duration 4 .buff_ids "DUELIST_FEINT_RIPOSTEDMGLBUFF1" "DUELIST_FEINT_RIPOSTEDMGHBUFF1"  .on_hit true .on_miss true
+  effect: .name "Duelist Feint Debuff 1" .target "target" .chance 110% .duration 3 .buff_ids "DUELIST_FEINT_ACCDEBUFF" "DUELIST_FEINT_PROTDEBUFF1"  .on_hit true .on_miss false
+  effect: .name "Duelist Feint Buff 2" .target "performer" .chance 100% .duration 4 .buff_ids "DUELIST_FEINT_RIPOSTEDMGLBUFF2" "DUELIST_FEINT_RIPOSTEDMGHBUFF2"  .on_hit true .on_miss true
+  effect: .name "Duelist Feint Debuff 2" .target "target" .chance 120% .duration 3 .buff_ids "DUELIST_FEINT_ACCDEBUFF" "DUELIST_FEINT_PROTDEBUFF2"  .on_hit true .on_miss false
+  effect: .name "Duelist Feint Buff 3" .target "performer" .chance 100% .duration 4 .buff_ids "DUELIST_FEINT_RIPOSTEDMGLBUFF3" "DUELIST_FEINT_RIPOSTEDMGHBUFF3"  .on_hit true .on_miss true
+  effect: .name "Duelist Feint Debuff 3" .target "target" .chance 130% .duration 3 .buff_ids "DUELIST_FEINT_ACCDEBUFF" "DUELIST_FEINT_PROTDEBUFF3"  .on_hit true .on_miss false
+  effect: .name "Duelist Feint Buff 4" .target "performer" .chance 100% .duration 4 .buff_ids "DUELIST_FEINT_RIPOSTEDMGLBUFF4" "DUELIST_FEINT_RIPOSTEDMGHBUFF4"  .on_hit true .on_miss true
+  effect: .name "Duelist Feint Debuff 4" .target "target" .chance 140% .duration 3 .buff_ids "DUELIST_FEINT_ACCDEBUFF" "DUELIST_FEINT_PROTDEBUFF4"  .on_hit true .on_miss false
+  effect: .name "Duelist Feint Buff 5" .target "performer" .chance 100% .duration 4 .buff_ids "DUELIST_FEINT_RIPOSTEDMGLBUFF5" "DUELIST_FEINT_RIPOSTEDMGHBUFF5"  .on_hit true .on_miss true
+  effect: .name "Duelist Feint Debuff 5" .target "target" .chance 150% .duration 3 .buff_ids "DUELIST_FEINT_ACCDEBUFF" "DUELIST_FEINT_PROTDEBUFF5"  .on_hit true .on_miss false
+  effect: .name "Duelist Disengage Buff 1" .target "performer" .chance 100% .curio_result_type "positive" .combat_stat_buff 1 .attack_rating_add 10% .speed_rating_add 4 .duration 4  .on_hit true .on_miss true
+  effect: .name "Duelist Disengage Any Position" .target "performer" .chance 100% .curio_result_type "positive" .buff_ids "ATTACKS_ANY_LAUNCH_RANK" "ATTACKS_ANY_TARGET_RANK" .duration 2  .on_hit true .on_miss true
+  effect: .name "Duelist Disengage Buff 2" .target "performer" .chance 100% .curio_result_type "positive" .combat_stat_buff 1 .attack_rating_add 10% .speed_rating_add 4 .duration 4  .on_hit true .on_miss true
+  effect: .name "Duelist Disengage Buff 3" .target "performer" .chance 100% .curio_result_type "positive" .combat_stat_buff 1 .attack_rating_add 10% .speed_rating_add 5 .duration 4  .on_hit true .on_miss true
+  effect: .name "Duelist Disengage Buff 4" .target "performer" .chance 100% .curio_result_type "positive" .combat_stat_buff 1 .attack_rating_add 10% .speed_rating_add 5 .duration 4  .on_hit true .on_miss true
+  effect: .name "Duelist Disengage Buff 5" .target "performer" .chance 100% .curio_result_type "positive" .combat_stat_buff 1 .attack_rating_add 10% .speed_rating_add 6 .duration 4  .on_hit true .on_miss true
+  effect: .name "Duelist Kill Bonus Action" 	.target "performer" .chance 100% .initiative_change 1 .bonus_action_next_turn true .on_hit true .on_miss false .queue true .requires_kill_target true
+  effect: .name "Duelist Coup CRIT vs Stunned" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "stunned" .combat_stat_buff 1 .crit_chance_add 100% .on_hit true .on_miss false
+  -- effects/base.effects.darkest
+  effect: .name "Mark Self" .target "performer" .curio_result_type "positive" .chance 100% .tag 1 .combat_stat_buff 1 .duration 2 .on_hit true .on_miss true .queue true
+  effect: .name "Stun 1" .target "target" .curio_result_type "negative" .chance 100% .stun 1	.on_hit true .on_miss false .queue true
+  effect: .name "Push 1B" .target "target"  .push 1 	.chance 110%   .on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Stun 2" .target "target" .curio_result_type "negative" .chance 110% .stun 1	.on_hit true .on_miss false .queue true
+  effect: .name "Push 1C" .target "target"  .push 1 	.chance 120%   .on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Stun 3" .target "target" .curio_result_type "negative" .chance 120% .stun 1	.on_hit true .on_miss false .queue true
+  effect: .name "Push 1D" .target "target"  .push 1 	.chance 130%   .on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Stun 4" .target "target" .curio_result_type "negative" .chance 130% .stun 1	.on_hit true .on_miss false .queue true
+  effect: .name "Push 1E" .target "target"  .push 1 	.chance 140%   .on_hit true .on_miss false .can_apply_on_death true
+  effect: .name "Stun 5" .target "target" .curio_result_type "negative" .chance 140% .stun 1	.on_hit true .on_miss false .queue true
+  effect: .name "Push 1F" .target "target"  .push 1 	.chance 150%   .on_hit true .on_miss false .can_apply_on_death true
+
+■ 원본 파일 전문 (duelist.info.darkest)
+------------------------------------------------------------
+resistances: .stun 30% .poison 30% .bleed 30% .disease 30% .move 30% .debuff 40% .death_blow 67% .trap 10%
+crit: .effects "on_crit_duelist_def"
+weapon: .name "duelist_weapon_0" .atk 0% .dmg 5 7  .crit 5% .spd 6
+weapon: .name "duelist_weapon_1" .atk 0% .dmg 6 8 .crit 6% .spd 6 .upgradeRequirementCode 0
+weapon: .name "duelist_weapon_2" .atk 0% .dmg 7 10 .crit 7% .spd 7 .upgradeRequirementCode 1
+weapon: .name "duelist_weapon_3" .atk 0% .dmg 7 11 .crit 8% .spd 7 .upgradeRequirementCode 2
+weapon: .name "duelist_weapon_4" .atk 0% .dmg 8 13 .crit 9% .spd 8 .upgradeRequirementCode 3
+armour: .name "duelist_armour_0" .def 5%  .prot 0 .hp 20 .spd 0
+armour: .name "duelist_armour_1" .def 10% .prot 0 .hp 24 .spd 0 .upgradeRequirementCode 0
+armour: .name "duelist_armour_2" .def 15% .prot 0 .hp 28 .spd 0 .upgradeRequirementCode 1
+armour: .name "duelist_armour_3" .def 20% .prot 0 .hp 32 .spd 0 .upgradeRequirementCode 2
+armour: .name "duelist_armour_4" .def 25% .prot 0 .hp 36 .spd 0 .upgradeRequirementCode 3
+
+combat_skill: .id "anticipation" .level 0 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True .valid_modes stance_defensive stance_aggressive .effect duelist_riposte .stance_defensive_effects switch_mode_stance_aggressive_self duelist_aggressive_buff1 .stance_aggressive_effects switch_mode_stance_defensive_self duelist_defensive_buff1 .is_continue_turn true .per_turn_limit 1 .is_stall_invalidating false
+combat_skill: .id "anticipation" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True .valid_modes stance_defensive stance_aggressive .effect duelist_riposte .stance_defensive_effects switch_mode_stance_aggressive_self duelist_aggressive_buff2 .stance_aggressive_effects switch_mode_stance_defensive_self duelist_defensive_buff2 .is_continue_turn true .per_turn_limit 1 .is_stall_invalidating false
+combat_skill: .id "anticipation" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True .valid_modes stance_defensive stance_aggressive .effect duelist_riposte .stance_defensive_effects switch_mode_stance_aggressive_self duelist_aggressive_buff3 .stance_aggressive_effects switch_mode_stance_defensive_self duelist_defensive_buff3 .is_continue_turn true .per_turn_limit 1 .is_stall_invalidating false
+combat_skill: .id "anticipation" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True .valid_modes stance_defensive stance_aggressive .effect duelist_riposte .stance_defensive_effects switch_mode_stance_aggressive_self duelist_aggressive_buff4 .stance_aggressive_effects switch_mode_stance_defensive_self duelist_defensive_buff4 .is_continue_turn true .per_turn_limit 1 .is_stall_invalidating false
+combat_skill: .id "anticipation" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True .valid_modes stance_defensive stance_aggressive .effect duelist_riposte .stance_defensive_effects switch_mode_stance_aggressive_self duelist_aggressive_buff5 .stance_aggressive_effects switch_mode_stance_defensive_self duelist_defensive_buff5 .is_continue_turn true .per_turn_limit 1 .is_stall_invalidating false
+
+combat_skill: .id "touche" .level 0 .type "melee" .atk 90%  .dmg 0% .crit 1% .move 1 0 .launch 4321 .target 12 .is_crit_valid True  .effect "Duelist Touche Buff 1" .valid_modes stance_defensive
+combat_skill: .id "touche" .level 1 .type "melee" .atk 95%  .dmg 0% .crit 2% .move 1 0 .launch 4321 .target 12 .is_crit_valid True  .effect "Duelist Touche Buff 2" .valid_modes stance_defensive
+combat_skill: .id "touche" .level 2 .type "melee" .atk 100% .dmg 0% .crit 3% .move 1 0 .launch 4321 .target 12 .is_crit_valid True  .effect "Duelist Touche Buff 3" .valid_modes stance_defensive
+combat_skill: .id "touche" .level 3 .type "melee" .atk 105% .dmg 0% .crit 4% .move 1 0 .launch 4321 .target 12 .is_crit_valid True  .effect "Duelist Touche Buff 4" .valid_modes stance_defensive
+combat_skill: .id "touche" .level 4 .type "melee" .atk 110% .dmg 0% .crit 5% .move 1 0 .launch 4321 .target 12 .is_crit_valid True  .effect "Duelist Touche Buff 5" .valid_modes stance_defensive
+
+combat_skill: .id "feint" .level 0 .type "melee" .atk 95%  .dmg -50% .crit 3% .launch 321 .target 12 .is_crit_valid True  .effect "Mark Self" "Duelist Feint Buff 1" "Duelist Feint Debuff 1" .valid_modes stance_defensive
+combat_skill: .id "feint" .level 1 .type "melee" .atk 100% .dmg -50% .crit 4% .launch 321 .target 12 .is_crit_valid True  .effect "Mark Self" "Duelist Feint Buff 2" "Duelist Feint Debuff 2" .valid_modes stance_defensive
+combat_skill: .id "feint" .level 2 .type "melee" .atk 105% .dmg -50% .crit 5% .launch 321 .target 12 .is_crit_valid True  .effect "Mark Self" "Duelist Feint Buff 3" "Duelist Feint Debuff 3" .valid_modes stance_defensive
+combat_skill: .id "feint" .level 3 .type "melee" .atk 110% .dmg -50% .crit 6% .launch 321 .target 12 .is_crit_valid True  .effect "Mark Self" "Duelist Feint Buff 4" "Duelist Feint Debuff 4" .valid_modes stance_defensive
+combat_skill: .id "feint" .level 4 .type "melee" .atk 115% .dmg -50% .crit 7% .launch 321 .target 12 .is_crit_valid True  .effect "Mark Self" "Duelist Feint Buff 5" "Duelist Feint Debuff 5" .valid_modes stance_defensive
+
+combat_skill: .id "disengage" .level 0 .type "melee" .atk 95%  .dmg -50% .crit -1% .move 3 0 .launch 21 .target 12 .is_crit_valid True  .effect "Duelist Disengage Buff 1" "Duelist Disengage Any Position" .valid_modes stance_defensive
+combat_skill: .id "disengage" .level 1 .type "melee" .atk 100% .dmg -50% .crit 0%  .move 3 0 .launch 21 .target 12 .is_crit_valid True  .effect "Duelist Disengage Buff 2" "Duelist Disengage Any Position" .valid_modes stance_defensive
+combat_skill: .id "disengage" .level 2 .type "melee" .atk 105% .dmg -50% .crit 1%  .move 3 0 .launch 21 .target 12 .is_crit_valid True  .effect "Duelist Disengage Buff 3" "Duelist Disengage Any Position" .valid_modes stance_defensive
+combat_skill: .id "disengage" .level 3 .type "melee" .atk 110% .dmg -50% .crit 2%  .move 3 0 .launch 21 .target 12 .is_crit_valid True  .effect "Duelist Disengage Buff 4" "Duelist Disengage Any Position" .valid_modes stance_defensive
+combat_skill: .id "disengage" .level 4 .type "melee" .atk 115% .dmg -50% .crit 3%  .move 3 0 .launch 21 .target 12 .is_crit_valid True  .effect "Duelist Disengage Buff 5" "Duelist Disengage Any Position" .valid_modes stance_defensive
+
+combat_move_skill: .id "move" .level 0 .type "move" .move 3 3 .launch 4321 .valid_modes stance_defensive stance_aggressive
+
+combat_skill: .id "fleche" .level 0 .type "melee" .atk 90%  .dmg 20% .crit 9% .move 0 2 .launch 432 .target 123 .is_crit_valid True  .effect "Mark Self" .valid_modes stance_aggressive
+combat_skill: .id "fleche" .level 1 .type "melee" .atk 95%  .dmg 20% .crit 10% .move 0 2 .launch 432 .target 123 .is_crit_valid True  .effect "Mark Self" .valid_modes stance_aggressive
+combat_skill: .id "fleche" .level 2 .type "melee" .atk 100% .dmg 20% .crit 11% .move 0 2 .launch 432 .target 123 .is_crit_valid True  .effect "Mark Self" .valid_modes stance_aggressive
+combat_skill: .id "fleche" .level 3 .type "melee" .atk 105% .dmg 20% .crit 12% .move 0 2 .launch 432 .target 123 .is_crit_valid True  .effect "Mark Self" .valid_modes stance_aggressive
+combat_skill: .id "fleche" .level 4 .type "melee" .atk 110% .dmg 20% .crit 13% .move 0 2 .launch 432 .target 123 .is_crit_valid True  .effect "Mark Self" .valid_modes stance_aggressive
+
+combat_skill: .id "coup_de_grace" .level 0 .type "ranged" .atk 95%  .dmg -60% .crit 7% .launch 4321 .target 1234 .is_crit_valid True .ignore_protection true .effect "Duelist Kill Bonus Action" "Duelist Coup CRIT vs Stunned" .valid_modes stance_aggressive
+combat_skill: .id "coup_de_grace" .level 1 .type "ranged" .atk 100% .dmg -60% .crit 8% .launch 4321 .target 1234 .is_crit_valid True .ignore_protection true .effect "Duelist Kill Bonus Action" "Duelist Coup CRIT vs Stunned" .valid_modes stance_aggressive
+combat_skill: .id "coup_de_grace" .level 2 .type "ranged" .atk 105% .dmg -60% .crit 9% .launch 4321 .target 1234 .is_crit_valid True .ignore_protection true .effect "Duelist Kill Bonus Action" "Duelist Coup CRIT vs Stunned" .valid_modes stance_aggressive
+combat_skill: .id "coup_de_grace" .level 3 .type "ranged" .atk 110% .dmg -60% .crit 10% .launch 4321 .target 1234 .is_crit_valid True .ignore_protection true .effect "Duelist Kill Bonus Action" "Duelist Coup CRIT vs Stunned" .valid_modes stance_aggressive
+combat_skill: .id "coup_de_grace" .level 4 .type "ranged" .atk 115% .dmg -60% .crit 11% .launch 4321 .target 1234 .is_crit_valid True .ignore_protection true .effect "Duelist Kill Bonus Action" "Duelist Coup CRIT vs Stunned" .valid_modes stance_aggressive
+
+combat_skill: .id "the_boot" .level 0 .type "melee" .atk 95%  .dmg -40% .crit 1% .move 0 1 .launch 321 .target 12 .is_crit_valid True  .effect "Stun 1" "Push 1B" .valid_modes stance_aggressive
+combat_skill: .id "the_boot" .level 1 .type "melee" .atk 100% .dmg -40% .crit 2% .move 0 1 .launch 321 .target 12 .is_crit_valid True  .effect "Stun 2" "Push 1C" .valid_modes stance_aggressive
+combat_skill: .id "the_boot" .level 2 .type "melee" .atk 105% .dmg -40% .crit 3% .move 0 1 .launch 321 .target 12 .is_crit_valid True  .effect "Stun 3" "Push 1D" .valid_modes stance_aggressive
+combat_skill: .id "the_boot" .level 3 .type "melee" .atk 110% .dmg -40% .crit 4% .move 0 1 .launch 321 .target 12 .is_crit_valid True  .effect "Stun 4" "Push 1E" .valid_modes stance_aggressive
+combat_skill: .id "the_boot" .level 4 .type "melee" .atk 115% .dmg -40% .crit 5% .move 0 1 .launch 321 .target 12 .is_crit_valid True  .effect "Stun 5" "Push 1F" .valid_modes stance_aggressive
+
+riposte_skill: .id "riposte1" .level 0 .type "melee" .atk 95% .dmg 0% .crit 4% .launch 1234 .target 1234 .is_crit_valid True 
+
+tag: .id "light"
+tag: .id "non-religious"
+tag: .id "conservatory_of_steel"
+deaths_door: .buffs deathsdoorACCDebuff deathsdoorDMGLowDebuff deathsdoorDMGHighDebuff deathsdoorSPDDebuff deathsdoorSRDebuff .recovery_buffs mortalityACCDebuff mortalityDMGLowDebuff mortalityDMGHighDebuff mortalitySPDDebuff mortalitySRDebuff .recovery_heart_attack_buffs heartattackACCDebuff heartattackDMGLowDebuff heartattackDMGHighDebuff heartattackSPDDebuff heartattackSRDebuff
+controlled: .target_rank 3
+id_index: .index 19
+skill_selection: .can_select_combat_skills false .number_of_selected_combat_skills_max 7
+mode: .id stance_defensive .is_raid_default true .battle_start_effect_ids "Duelist Combat Start Riposte" "Duelist Combat Start Debuff"
+mode: .id stance_aggressive .is_raid_default true .battle_start_effect_ids "Duelist Combat Start Riposte" "Duelist Combat Start Debuff"
+generation: .is_generation_enabled true .number_of_positive_quirks_min 1 .number_of_positive_quirks_max 2 .number_of_negative_quirks_min 1 .number_of_negative_quirks_max 2 .number_of_class_specific_camping_skills 2 .number_of_shared_camping_skills 1 .number_of_random_combat_skills 7 .number_of_cards_in_deck 6 .card_chance 1.0
