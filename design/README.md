@@ -11,7 +11,9 @@ mods/Rebalance/
     rules.md         원본 수치 규칙(R-xx) + 원칙 이탈 목록
     analysis/        근거 자료 (회복 분석, DLC 패치 이력 …)
     changes/<영웅>.md 영웅별 변경 항목
+    feedback.md      창작마당·플레이 테스트 피드백 기록 (FB-xxx)
     vanilla/         총사 바닐라 시트 (총사는 모드에서 제외 중)
+  effects/rebalance_<영웅>.effects.darkest  ← 모드가 새 이름으로 추가한 효과 (바닐라 효과 파일은 덮어쓰지 않음)
   tools/make_modfiles.py   파일 목록(modfiles.txt) 다시 만들기
   project.xml / preview_icon.png   모드 목록·창작마당 정보
 ```
