@@ -1,0 +1,143 @@
+// [편집용 효과 사본] 신비학자 (occultist)
+// 이 파일은 게임이 읽지 않는다. 여기서 고친 수치는 Claude에게 "정리해줘"라고 요청한 뒤에 게임에 적용된다.
+//   정리 시: 원본과 달라진 효과만 새 이름("RB OCC 원래이름")으로 effects/rebalance_occultist.effects.darkest 에 추가되고,
+//            이 영웅의 기술이 새 효과를 가리키게 바뀐다. 다른 영웅·몬스터는 영향 없음. 원래대로 되돌리면 새 효과도 사라진다.
+// 규칙
+//   - 수치만 고친다. 효과 줄을 지우거나 효과 이름(.name "...")을 바꾸지 않는다.
+//   - 메모는 바꾼 줄 바로 밑에 // 로 쓴다. //# 로 시작하는 줄은 자동 설명이므로 고치지 않는다.
+//   - 강화 효과(.buff_ids)의 실제 수치는 이 파일에 없다(shared/buffs JSON). //# 설명에 참고용으로만 적었다. 바꾸려면 요청.
+// 자주 쓰는 키
+//   .chance 적용 확률 | .duration 지속 턴 | .stun 기절 | .dotBleed 턴당 출혈 | .dotPoison 턴당 중독 | .dotBurn 턴당 화상
+//   .push / .pull 밀치기·당기기 칸 | .heal 회복 | .heal_percent 최대 체력 비율 회복 | .dotHpHeal 턴당 회복 | .healstress 스트레스 회복 | .stress 스트레스
+//   .combat_stat_buff 1 과 함께: .attack_rating_add 명중 / .defense_rating_add 회피 / .protection_rating_add 방어 / .speed_rating_add 속도
+//     / .crit_chance_add 치명타 / .damage_low_multiply · .damage_high_multiply 피해 %
+//   .tag 표식 | .riposte 반격 | .guard 보호 | .keyStatus 조건(대상 상태) | .target "performer" = 자신
+
+//# ======================================================================
+//# 기술: 제물 암습 (bloodlet)
+//# 레벨별 효과: 1레벨 Eldritch Killer 1 | 2레벨 Eldritch Killer 2 | 3레벨 Eldritch Killer 3 | 4레벨 Eldritch Killer 4 | 5레벨 Eldritch Killer 5
+effect: .name "Eldritch Killer 1" .target "performer" .chance 100% .curio_result_type "positive" .monsterType "eldritch" .combat_stat_buff 1  .damage_low_multiply 15%	.damage_high_multiply 15%	.on_hit true .on_miss false .apply_once true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Eldritch Killer 2" .target "performer" .chance 100% .curio_result_type "positive" .monsterType "eldritch" .combat_stat_buff 1 .damage_low_multiply 20%	.damage_high_multiply 20%	.on_hit true .on_miss false .apply_once true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Eldritch Killer 3" .target "performer" .chance 100% .curio_result_type "positive" .monsterType "eldritch" .combat_stat_buff 1 .damage_low_multiply 25%	.damage_high_multiply 25%	.on_hit true .on_miss false .apply_once true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Eldritch Killer 4" .target "performer" .chance 100% .curio_result_type "positive" .monsterType "eldritch" .combat_stat_buff 1 .damage_low_multiply 30%	.damage_high_multiply 30%	.on_hit true .on_miss false .apply_once true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Eldritch Killer 5" .target "performer" .chance 100% .curio_result_type "positive" .monsterType "eldritch" .combat_stat_buff 1 .damage_low_multiply 35%	.damage_high_multiply 35%	.on_hit true .on_miss false .apply_once true
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 심연의 포격 (abyssal_artillery)
+//# 레벨별 효과: 1레벨 Abyssal Killer 1 | 2레벨 Abyssal Killer 2 | 3레벨 Abyssal Killer 3 | 4레벨 Abyssal Killer 4 | 5레벨 Abyssal Killer 5
+effect: .name "Abyssal Killer 1" .target "performer" .chance 100% .curio_result_type "positive" .monsterType "eldritch" .combat_stat_buff 1 .damage_low_multiply 15%	.damage_high_multiply 15%	.on_hit true .on_miss false .apply_once true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Abyssal Killer 2" .target "performer" .chance 100% .curio_result_type "positive" .monsterType "eldritch" .combat_stat_buff 1 .damage_low_multiply 17%	.damage_high_multiply 17%	.on_hit true .on_miss false .apply_once true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Abyssal Killer 3" .target "performer" .chance 100% .curio_result_type "positive" .monsterType "eldritch" .combat_stat_buff 1 .damage_low_multiply 20%	.damage_high_multiply 20%	.on_hit true .on_miss false .apply_once true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Abyssal Killer 4" .target "performer" .chance 100% .curio_result_type "positive" .monsterType "eldritch" .combat_stat_buff 1 .damage_low_multiply 22%	.damage_high_multiply 22%	.on_hit true .on_miss false .apply_once true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Abyssal Killer 5" .target "performer" .chance 100% .curio_result_type "positive" .monsterType "eldritch" .combat_stat_buff 1 .damage_low_multiply 25%	.damage_high_multiply 25%	.on_hit true .on_miss false .apply_once true
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 약화 저주 (weakening_curse)
+//# 레벨별 효과: 1레벨 Occ Weakening Curse 1, Occ Weaken Prot 1 | 2레벨 Occ Weakening Curse 2, Occ Weaken Prot 2 | 3레벨 Occ Weakening Curse 3, Occ Weaken Prot 3 | 4레벨 Occ Weakening Curse 4, Occ Weaken Prot 4 | 5레벨 Occ Weakening Curse 5, Occ Weaken Prot 5
+effect: .name "Occ Weakening Curse 1" .target "target" .curio_result_type "negative" .chance 100% .duration 3 .combat_stat_buff 1 .damage_low_multiply -10% .damage_high_multiply -10%	.on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Occ Weaken Prot 1" .target "target" .curio_result_type "negative" .chance 100% .duration 3 .combat_stat_buff 1 .protection_rating_add -10% .on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Occ Weakening Curse 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3 .combat_stat_buff 1 .damage_low_multiply -12% .damage_high_multiply -12%	.on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Occ Weaken Prot 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3 .combat_stat_buff 1 .protection_rating_add -13% .on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Occ Weakening Curse 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3 .combat_stat_buff 1 .damage_low_multiply -15% .damage_high_multiply -15%	.on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Occ Weaken Prot 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3 .combat_stat_buff 1 .protection_rating_add -15% .on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Occ Weakening Curse 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .combat_stat_buff 1 .damage_low_multiply -17% .damage_high_multiply -17%	.on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Occ Weaken Prot 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .combat_stat_buff 1 .protection_rating_add -17% .on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Occ Weakening Curse 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .combat_stat_buff 1 .damage_low_multiply -20% .damage_high_multiply -20%	.on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Occ Weaken Prot 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .combat_stat_buff 1 .protection_rating_add -20% .on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 기괴한 재구축 (wyrd_reconstruction)
+//# 레벨별 효과: 1레벨 Wyrd Bleed 1 | 2레벨 Wyrd Bleed 2 | 3레벨 Wyrd Bleed 3 | 4레벨 Wyrd Bleed 4 | 5레벨 Wyrd Bleed 5
+effect: .name "Wyrd Bleed 1" .target "target" .curio_result_type "negative" .chance 60%  .dotBleed 1 .duration 3	.on_hit true .on_miss false .queue true .can_apply_on_death true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Wyrd Bleed 2" .target "target" .curio_result_type "negative" .chance 70%  .dotBleed 1 .duration 3	.on_hit true .on_miss false .queue true .can_apply_on_death true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Wyrd Bleed 3" .target "target" .curio_result_type "negative" .chance 70%  .dotBleed 2 .duration 3	.on_hit true .on_miss false .queue true .can_apply_on_death true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Wyrd Bleed 4" .target "target" .curio_result_type "negative" .chance 80%  .dotBleed 2 .duration 3	.on_hit true .on_miss false .queue true .can_apply_on_death true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Wyrd Bleed 5" .target "target" .curio_result_type "negative" .chance 85%  .dotBleed 3 .duration 3	.on_hit true .on_miss false .queue true .can_apply_on_death true
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 취약화 주술 (disruptive_curse)
+//# 레벨별 효과: 1레벨 Occ Vulnerability Curse 1, Mark Target | 2레벨 Occ Vulnerability Curse 2, Mark Target | 3레벨 Occ Vulnerability Curse 3, Mark Target | 4레벨 Occ Vulnerability Curse 4, Mark Target | 5레벨 Occ Vulnerability Curse 5, Mark Target
+effect: .name "Occ Vulnerability Curse 1" .target "target" .curio_result_type "negative" .chance 100% .duration 3  .combat_stat_buff 1 .defense_rating_add -15%	.on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Mark Target"	.target "target" .curio_result_type "positive" .chance 100%	.tag 1  .duration 3	.on_hit true .on_miss false
+//#   공유 효과: 다른 영웅 1명(유물수집상) / 몬스터 기술 34곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Occ Vulnerability Curse 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3  .combat_stat_buff 1 .defense_rating_add -16%	.on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Occ Vulnerability Curse 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3  .combat_stat_buff 1 .defense_rating_add -17%	.on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Occ Vulnerability Curse 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3  .combat_stat_buff 1 .defense_rating_add -18%	.on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Occ Vulnerability Curse 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3  .combat_stat_buff 1 .defense_rating_add -20%	.on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 심연에서의 손아귀 (hands_from_abyss)
+//# 레벨별 효과: 1레벨 Abyssal Stun 1, Darkness 1 | 2레벨 Abyssal Stun 2, Darkness 1 | 3레벨 Abyssal Stun 3, Darkness 1 | 4레벨 Abyssal Stun 4, Darkness 1 | 5레벨 Abyssal Stun 5, Darkness 1
+effect: .name "Abyssal Stun 1" .target "target" .curio_result_type "negative" .chance 110% .stun 1	.on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Darkness 1" .target "global" .chance 100% .curio_result_type "negative" .torch_decrease 5	.on_hit true .on_miss false .apply_once true .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Abyssal Stun 2" .target "target" .curio_result_type "negative" .chance 120% .stun 1	.on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Abyssal Stun 3" .target "target" .curio_result_type "negative" .chance 130% .stun 1	.on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Abyssal Stun 4" .target "target" .curio_result_type "negative" .chance 140% .stun 1	.on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Abyssal Stun 5" .target "target" .curio_result_type "negative" .chance 150% .stun 1	.on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 악마의 아귀팔 (daemons_pull)
+//# 레벨별 효과: 1레벨 Pull 2A, clear_corpses | 2레벨 Pull 2B, clear_corpses | 3레벨 Pull 2C, clear_corpses | 4레벨 Pull 2D, clear_corpses | 5레벨 Pull 2E, clear_corpses
+effect: .name "Pull 2A" .target "target" .pull 2 	.chance 100%	.on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 2명(현상금 사냥꾼, 방패 파괴자) / 몬스터 기술 1곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "clear_corpses" .target "target_group" .chance 100% .kill_enemy_types corpse .on_hit true .on_miss false .queue false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 3명(나병환자, 역병 의사, 도망자). 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Pull 2B" .target "target" .pull 2 	.chance 110%	.on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 2명(현상금 사냥꾼, 방패 파괴자). 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Pull 2C" .target "target" .pull 2 	.chance 120%	.on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 2명(현상금 사냥꾼, 방패 파괴자) / 몬스터 기술 1곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Pull 2D" .target "target" .pull 2 	.chance 130%	.on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 2명(현상금 사냥꾼, 방패 파괴자). 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Pull 2E" .target "target" .pull 2 	.chance 140%	.on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 2명(현상금 사냥꾼, 방패 파괴자) / 몬스터 기술 1곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술 외 효과 (치명타 발동, 자세·모드 등)
+//# crit 
+effect: .name "on_crit_healdone"    .target "performer" .curio_result_type "positive" .chance 100% .buff_source_type bsrc_crit .buff_ids "on_crit_healbuff" .duration 2	.on_hit true .on_miss false .apply_once true
+//#   공유 효과: 다른 영웅 1명(성녀). 여기서 고치면 이 영웅만 바뀐다
+//#   강화 효과 수치(JSON, 참고용): on_crit_healbuff = hp_heal_percent 0.25
+//#   원본 위치: effects/base.effects.darkest

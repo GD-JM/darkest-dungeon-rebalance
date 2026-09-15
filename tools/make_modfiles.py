@@ -19,7 +19,7 @@ for root, dirs, files in os.walk(M):
         rel = f if rel_root == '.' else f'{rel_root}/{f}'
         if rel_root == '.' and (f in SKIP_ROOT_FILES or f.endswith('.md')):
             continue
-        if f.endswith('.vanilla.txt') or f.endswith('.md'):
+        if f.endswith('.vanilla.txt') or f.endswith('.effects_edit.txt') or f.endswith('.md'):
             continue
         entries.append(f'{rel} {os.path.getsize(os.path.join(M, rel))}')
 

@@ -1,0 +1,154 @@
+// [편집용 효과 사본] 노상강도 (highwayman)
+// 이 파일은 게임이 읽지 않는다. 여기서 고친 수치는 Claude에게 "정리해줘"라고 요청한 뒤에 게임에 적용된다.
+//   정리 시: 원본과 달라진 효과만 새 이름("RB HWY 원래이름")으로 effects/rebalance_highwayman.effects.darkest 에 추가되고,
+//            이 영웅의 기술이 새 효과를 가리키게 바뀐다. 다른 영웅·몬스터는 영향 없음. 원래대로 되돌리면 새 효과도 사라진다.
+// 규칙
+//   - 수치만 고친다. 효과 줄을 지우거나 효과 이름(.name "...")을 바꾸지 않는다.
+//   - 메모는 바꾼 줄 바로 밑에 // 로 쓴다. //# 로 시작하는 줄은 자동 설명이므로 고치지 않는다.
+//   - 강화 효과(.buff_ids)의 실제 수치는 이 파일에 없다(shared/buffs JSON). //# 설명에 참고용으로만 적었다. 바꾸려면 요청.
+// 자주 쓰는 키
+//   .chance 적용 확률 | .duration 지속 턴 | .stun 기절 | .dotBleed 턴당 출혈 | .dotPoison 턴당 중독 | .dotBurn 턴당 화상
+//   .push / .pull 밀치기·당기기 칸 | .heal 회복 | .heal_percent 최대 체력 비율 회복 | .dotHpHeal 턴당 회복 | .healstress 스트레스 회복 | .stress 스트레스
+//   .combat_stat_buff 1 과 함께: .attack_rating_add 명중 / .defense_rating_add 회피 / .protection_rating_add 방어 / .speed_rating_add 속도
+//     / .crit_chance_add 치명타 / .damage_low_multiply · .damage_high_multiply 피해 %
+//   .tag 표식 | .riposte 반격 | .guard 보호 | .keyStatus 조건(대상 상태) | .target "performer" = 자신
+
+//# ======================================================================
+//# 기술: 사악한 칼질 (wicked_slice)
+//# 레벨별 효과: 1레벨 없음 | 2레벨 없음 | 3레벨 없음 | 4레벨 없음 | 5레벨 없음
+//#   (효과 없음: 명중·피해·치명타는 영웅 파일에서 조정)
+
+//# ======================================================================
+//# 기술: 권총 사격 (pistol_shot)
+//# 레벨별 효과: 1레벨 HW Pistol Dmg Marked 1 | 2레벨 HW Pistol Dmg Marked 2 | 3레벨 HW Pistol Dmg Marked 3 | 4레벨 HW Pistol Dmg Marked 4 | 5레벨 HW Pistol Dmg Marked 5
+effect: .name "HW Pistol Dmg Marked 1"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 25%	.damage_high_multiply 25%	.on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "HW Pistol Dmg Marked 2"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 30%	.damage_high_multiply 30%	.on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "HW Pistol Dmg Marked 3"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 35%	.damage_high_multiply 35%	.on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "HW Pistol Dmg Marked 4"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 40%	.damage_high_multiply 40%	.on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "HW Pistol Dmg Marked 5"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 50%	.damage_high_multiply 50%	.on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 영거리 사격 (point_blank_shot)
+//# 레벨별 효과: 1레벨 Push 1A | 2레벨 Push 1B | 3레벨 Push 1C | 4레벨 Push 1D | 5레벨 Push 1E
+effect: .name "Push 1A" .target "target"  .push 1 	.chance 100%   .on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 1명(중보병) / 몬스터 기술 4곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Push 1B" .target "target"  .push 1 	.chance 110%   .on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 2명(결투가, 중보병). 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Push 1C" .target "target"  .push 1 	.chance 120%   .on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 2명(결투가, 중보병) / 몬스터 기술 4곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Push 1D" .target "target"  .push 1 	.chance 130%   .on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 2명(결투가, 중보병). 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Push 1E" .target "target"  .push 1 	.chance 140%   .on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 2명(결투가, 중보병) / 몬스터 기술 5곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 포도탄 발사 (grape_shot_blast)
+//# 레벨별 효과: 1레벨 Grapeshot Vulnerability 1 | 2레벨 Grapeshot Vulnerability 2 | 3레벨 Grapeshot Vulnerability 3 | 4레벨 Grapeshot Vulnerability 4 | 5레벨 Grapeshot Vulnerability 5
+effect: .name "Grapeshot Vulnerability 1" .target "target" .curio_result_type "negative" .chance 100% .duration 3 .buff_type crit_received_chance .buff_amount 4% .on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Grapeshot Vulnerability 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3 .buff_type crit_received_chance .buff_amount 5% .on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Grapeshot Vulnerability 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3 .buff_type crit_received_chance .buff_amount 6% .on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Grapeshot Vulnerability 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .buff_type crit_received_chance .buff_amount 7% .on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Grapeshot Vulnerability 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .buff_type crit_received_chance .buff_amount 8% .on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 추적탄 (take_aim)
+//# 레벨별 효과: 1레벨 Tracking Buff 1, Destealth | 2레벨 Tracking Buff 2, Destealth | 3레벨 Tracking Buff 3, Destealth | 4레벨 Tracking Buff 4, Destealth | 5레벨 Tracking Buff 5, Destealth
+effect: .name "Tracking Buff 1" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 6%  .crit_chance_add 4% .damage_low_multiply 12% .damage_high_multiply 12%  .on_hit true .on_miss true .duration 1 .buff_duration_type combat_end
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Destealth" .target "target" .chance 100% .unstealth 1 .on_hit true .on_miss false
+//#   공유 효과: 다른 영웅 7명(유물수집상, 석궁사수, 나병환자, 총사, 도망자, 방패 파괴자, 성녀). 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Tracking Buff 2" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 7%  .crit_chance_add 5% .damage_low_multiply 14% .damage_high_multiply 14%  .on_hit true .on_miss true .duration 1 .buff_duration_type combat_end
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Tracking Buff 3" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 8%  .crit_chance_add 6% .damage_low_multiply 16% .damage_high_multiply 16%  .on_hit true .on_miss true .duration 1 .buff_duration_type combat_end
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Tracking Buff 4" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 9%  .crit_chance_add 7% .damage_low_multiply 18% .damage_high_multiply 18%  .on_hit true .on_miss true .duration 1 .buff_duration_type combat_end
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Tracking Buff 5" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 10% .crit_chance_add 8% .damage_low_multiply 20% .damage_high_multiply 20%  .on_hit true .on_miss true .duration 1 .buff_duration_type combat_end
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 결투가의 진격 (duelist_advance)
+//# 레벨별 효과: 1레벨 Hwy Riposte 1 | 2레벨 Hwy Riposte 2 | 3레벨 Hwy Riposte 3 | 4레벨 Hwy Riposte 4 | 5레벨 Hwy Riposte 5
+effect: .name "Hwy Riposte 1"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -40%  .damage_high_multiply -40%  .crit_chance_add 0%
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Hwy Riposte 2"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -33%  .damage_high_multiply -33%  .crit_chance_add 2% 
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Hwy Riposte 3"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -25% .damage_high_multiply -25% .crit_chance_add 3% 
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Hwy Riposte 4"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -20% .damage_high_multiply -20% .crit_chance_add 4% 
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Hwy Riposte 5"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -15% .damage_high_multiply -15% .crit_chance_add 5%
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 정맥 절개 (opened_vein)
+//# 레벨별 효과: 1레벨 Bleed 1, HW Open Vein Bleed Debuff 1, HW Open Vein SPD Debuff 1 | 2레벨 Bleed 2, HW Open Vein Bleed Debuff 2, HW Open Vein SPD Debuff 2 | 3레벨 Bleed 3, HW Open Vein Bleed Debuff 3, HW Open Vein SPD Debuff 3 | 4레벨 Bleed 4, HW Open Vein Bleed Debuff 4, HW Open Vein SPD Debuff 4 | 5레벨 Bleed 5, HW Open Vein Bleed Debuff 5, HW Open Vein SPD Debuff 5
+effect: .name "Bleed 1" .target "target" .curio_result_type "negative" .chance 100%  .dotBleed 2 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 야만인, 광대, 역병 의사) / 몬스터 기술 11곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "HW Open Vein Bleed Debuff 1" .target "target" .curio_result_type "negative" .chance 100% .duration 3 .buff_ids "bleed_debuff_1"  .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): bleed_debuff_1 = bleed -0.2
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "HW Open Vein SPD Debuff 1" .target "target" .curio_result_type "negative" .chance 100% .duration 3 .buff_ids "SPD-1"  .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): SPD = (정의 없음)
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Bleed 2" .target "target" .curio_result_type "negative" .chance 110%  .dotBleed 2 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 야만인, 광대, 역병 의사) / 몬스터 기술 3곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "HW Open Vein Bleed Debuff 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3 .buff_ids "bleed_debuff_2"  .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): bleed_debuff_2 = bleed -0.23
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "HW Open Vein SPD Debuff 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3 .buff_ids "SPD-1"  .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): SPD = (정의 없음)
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Bleed 3" .target "target" .curio_result_type "negative" .chance 120%  .dotBleed 3 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 야만인, 광대, 역병 의사) / 몬스터 기술 11곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "HW Open Vein Bleed Debuff 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3 .buff_ids "bleed_debuff_3"  .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): bleed_debuff_3 = bleed -0.26
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "HW Open Vein SPD Debuff 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3 .buff_ids "SPD-2"  .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): SPD = (정의 없음)
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Bleed 4" .target "target" .curio_result_type "negative" .chance 130%  .dotBleed 3 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 야만인, 광대, 역병 의사). 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "HW Open Vein Bleed Debuff 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .buff_ids "bleed_debuff_4" .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): bleed_debuff_4 = bleed -0.3
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "HW Open Vein SPD Debuff 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .buff_ids "SPD-2"  .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): SPD = (정의 없음)
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Bleed 5" .target "target" .curio_result_type "negative" .chance 140%  .dotBleed 4 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 야만인, 광대, 역병 의사) / 몬스터 기술 8곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "HW Open Vein Bleed Debuff 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .buff_ids "bleed_debuff_5"  .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): bleed_debuff_5 = bleed -0.33
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "HW Open Vein SPD Debuff 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .buff_ids "SPD-3"  .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): SPD = (정의 없음)
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술 외 효과 (치명타 발동, 자세·모드 등)
+//# crit 
+effect: .name "on_crit_speed"    .target "performer" .curio_result_type "positive" .chance 100% .buff_source_type bsrc_crit .buff_ids "on_crit_spd" .on_hit true .on_miss false .apply_once true
+//#   공유 효과: 다른 영웅 1명(도망자). 여기서 고치면 이 영웅만 바뀐다
+//#   강화 효과 수치(JSON, 참고용): on_crit_spd = speed_rating 2
+//#   원본 위치: effects/base.effects.darkest

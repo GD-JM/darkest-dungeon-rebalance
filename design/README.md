@@ -6,6 +6,7 @@
 mods/Rebalance/
   heroes/<영웅>/<영웅>.info.darkest   ← 수정하는 파일 (게임이 읽음)
   heroes/<영웅>/<영웅>.vanilla.txt    ← 바닐라 참고 시트 (게임이 안 읽음, 배포 제외)
+  heroes/<영웅>/<영웅>.effects_edit.txt ← 효과 수치 편집용 사본 (게임이 안 읽음, 정리 시 적용)
   design/
     intent.md        기획 의도·목표(G-xx)·수정 원칙(P-xx)
     rules.md         원본 수치 규칙(R-xx) + 원칙 이탈 목록
@@ -15,6 +16,8 @@ mods/Rebalance/
     vanilla/         총사 바닐라 시트 (총사는 모드에서 제외 중)
   effects/rebalance_<영웅>.effects.darkest  ← 모드가 새 이름으로 추가한 효과 (바닐라 효과 파일은 덮어쓰지 않음)
   tools/make_modfiles.py   파일 목록(modfiles.txt) 다시 만들기
+  tools/make_effect_edit_files.py   효과 편집용 사본 만들기
+  tools/apply_effect_edits.py       편집용 사본의 변경을 게임 데이터에 적용
   project.xml / preview_icon.png   모드 목록·창작마당 정보
 ```
 
@@ -32,6 +35,21 @@ mods/Rebalance/
 - `//` 줄은 줄 맨 앞에서 시작한다. 수치 줄 끝에 이어 쓰지 않는다.
 - 한글 주석이 든 상태로 게임이 정상 로드되는지는 아직 검증 전이다. 게임 테스트 전에 정리를 먼저 요청하는 것을 권장한다.
 
+## 효과 수치 편집 (기절 확률, 출혈량, 버프 수치 등)
+
+기술의 효과 수치는 영웅 파일이 아니라 효과 파일에 있다. 원본 효과 파일은 다른 영웅·몬스터와 공유되므로 통째로 복사해 덮어쓰지 않는다.
+
+1. `heroes/<영웅>/<영웅>.effects_edit.txt`를 메모장으로 연다. 그 영웅 기술이 쓰는 효과 줄만 기술별로 모아 둔 **편집용 사본**이다. **게임은 이 파일을 읽지 않는다.**
+2. 수치만 고친다. 효과 줄을 지우거나 이름을 바꾸지 않는다. 메모는 바꾼 줄 바로 밑에 `//`로 쓴다. `//#` 줄은 자동 설명이다.
+3. Claude에게 "정리해줘"라고 요청한다. 내부적으로 `python tools/apply_effect_edits.py`가 실행된다.
+   - 원본과 달라진 효과만 새 이름(`RB <약어> 원래이름`)으로 `effects/rebalance_<영웅>.effects.darkest`에 들어간다.
+   - 그 영웅 기술 줄이 새 효과를 가리키게 바뀐다. 다른 영웅·몬스터는 영향이 없다.
+   - 원래 값으로 되돌리면 새 효과가 사라지고 참조도 원래대로 돌아간다.
+4. 이후 기록·커밋은 간편 방식과 같다.
+
+- 사본 다시 만들기(편집 내용이 사라지므로 주의): `python tools/make_effect_edit_files.py --force <영웅>`
+- 강화 효과(`.buff_ids`)의 실제 수치는 JSON에 있어 사본에서는 참고만 가능하다. 바꾸려면 요청한다.
+
 ## 수정 절차 (직접 할 때)
 
 1. `heroes/<영웅>/<영웅>.info.darkest`를 메모장으로 고친다. 바닐라 수치는 같은 폴더의 `.vanilla.txt`에서 본다.
@@ -42,7 +60,7 @@ mods/Rebalance/
 4. GitHub Desktop에서 커밋한다. 커밋 메시지 첫 줄에 항목 ID를 넣는다. 예: `MAA-002 응징 피해 보정 조정`
 5. 새 파일(효과 파일 등)을 모드에 추가했으면 `python tools/make_modfiles.py`를 실행하거나 Claude에게 요청한다.
 
-- 기술 효과 수치는 영웅 파일이 아니라 `effects/*.effects.darkest`에 있다. 효과를 바꾸려면 해당 효과 파일을 모드에 복사해야 하니 요청할 것.
+- 기술 효과 수치(기절 확률, 출혈량 등)는 영웅 파일이 아니라 효과 파일에 있다. 원본 효과 파일은 복사하지 말고 `heroes/<영웅>/<영웅>.effects_edit.txt`에서 고친다(위 "효과 수치 편집").
 - 기술 ID(`.id "..."`)는 바꾸거나 지우지 않는다(P-04, 세이브 호환).
 
 ## 항목 ID

@@ -1,3 +1,4 @@
 modfiles.txt
 Thumbs.db
 *.bak
+__pycache__/

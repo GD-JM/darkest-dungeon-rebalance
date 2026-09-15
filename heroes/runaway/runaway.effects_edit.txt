@@ -1,0 +1,183 @@
+// [편집용 효과 사본] 도망자 (runaway)
+// 이 파일은 게임이 읽지 않는다. 여기서 고친 수치는 Claude에게 "정리해줘"라고 요청한 뒤에 게임에 적용된다.
+//   정리 시: 원본과 달라진 효과만 새 이름("RB RUN 원래이름")으로 effects/rebalance_runaway.effects.darkest 에 추가되고,
+//            이 영웅의 기술이 새 효과를 가리키게 바뀐다. 다른 영웅·몬스터는 영향 없음. 원래대로 되돌리면 새 효과도 사라진다.
+// 규칙
+//   - 수치만 고친다. 효과 줄을 지우거나 효과 이름(.name "...")을 바꾸지 않는다.
+//   - 메모는 바꾼 줄 바로 밑에 // 로 쓴다. //# 로 시작하는 줄은 자동 설명이므로 고치지 않는다.
+//   - 강화 효과(.buff_ids)의 실제 수치는 이 파일에 없다(shared/buffs JSON). //# 설명에 참고용으로만 적었다. 바꾸려면 요청.
+// 자주 쓰는 키
+//   .chance 적용 확률 | .duration 지속 턴 | .stun 기절 | .dotBleed 턴당 출혈 | .dotPoison 턴당 중독 | .dotBurn 턴당 화상
+//   .push / .pull 밀치기·당기기 칸 | .heal 회복 | .heal_percent 최대 체력 비율 회복 | .dotHpHeal 턴당 회복 | .healstress 스트레스 회복 | .stress 스트레스
+//   .combat_stat_buff 1 과 함께: .attack_rating_add 명중 / .defense_rating_add 회피 / .protection_rating_add 방어 / .speed_rating_add 속도
+//     / .crit_chance_add 치명타 / .damage_low_multiply · .damage_high_multiply 피해 %
+//   .tag 표식 | .riposte 반격 | .guard 보호 | .keyStatus 조건(대상 상태) | .target "performer" = 자신
+
+//# ======================================================================
+//# 기술: 작열하는 타격 (searing_strike)
+//# 레벨별 효과: 1레벨 RW Burn 3, RW Searing DMG vs Burning 1 | 2레벨 RW Burn 3, RW Searing DMG vs Burning 2 | 3레벨 RW Burn 4, RW Searing DMG vs Burning 3 | 4레벨 RW Burn 4, RW Searing DMG vs Burning 4 | 5레벨 RW Burn 5, RW Searing DMG vs Burning 5
+effect: .name "RW Burn 3" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 3 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW Searing DMG vs Burning 1" .target "performer" .curio_result_type "positive" .chance 100% .keyStatus "burning" .combat_stat_buff 1 .damage_low_multiply 15% .damage_high_multiply 15% .on_hit true .on_miss false
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW Searing DMG vs Burning 2" .target "performer" .curio_result_type "positive" .chance 100% .keyStatus "burning" .combat_stat_buff 1 .damage_low_multiply 20% .damage_high_multiply 20% .on_hit true .on_miss false
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW Burn 4" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 4 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW Searing DMG vs Burning 3" .target "performer" .curio_result_type "positive" .chance 100% .keyStatus "burning" .combat_stat_buff 1 .damage_low_multiply 25% .damage_high_multiply 25% .on_hit true .on_miss false
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW Searing DMG vs Burning 4" .target "performer" .curio_result_type "positive" .chance 100% .keyStatus "burning" .combat_stat_buff 1 .damage_low_multiply 30% .damage_high_multiply 30% .on_hit true .on_miss false
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW Burn 5" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 5 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW Searing DMG vs Burning 5" .target "performer" .curio_result_type "positive" .chance 100% .keyStatus "burning" .combat_stat_buff 1 .damage_low_multiply 35% .damage_high_multiply 35% .on_hit true .on_miss false
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+
+//# ======================================================================
+//# 기술: 흩날리는 불티 (firefly)
+//# 레벨별 효과: 1레벨 RW Firefly Burn 1, RW Firefly Torch 1 | 2레벨 RW Firefly Burn 2, RW Firefly Torch 1 | 3레벨 RW Firefly Burn 3, RW Firefly Torch 2 | 4레벨 RW Firefly Burn 4, RW Firefly Torch 2 | 5레벨 RW Firefly Burn 5, RW Firefly Torch 3
+effect: .name "RW Firefly Burn 1" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 7 .dot_irresistible true .buff_ids rw_burn_decay_debuff .duration 2 .on_hit true .on_miss false .can_apply_on_death true
+//#   강화 효과 수치(JSON, 참고용): rw_burn_decay_debuff = hp_dot_burn_decay_percent 0.5
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW Firefly Torch 1" .target "performer" .chance 100% .torch_increase 4 .on_hit true .on_miss true .queue true
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW Firefly Burn 2" .target "target" .curio_result_type "negative" .chance 110% .dotBurn 7 .dot_irresistible true .buff_ids rw_burn_decay_debuff .duration 2 .on_hit true .on_miss false .can_apply_on_death true
+//#   강화 효과 수치(JSON, 참고용): rw_burn_decay_debuff = hp_dot_burn_decay_percent 0.5
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW Firefly Burn 3" .target "target" .curio_result_type "negative" .chance 120% .dotBurn 8 .dot_irresistible true .buff_ids rw_burn_decay_debuff .duration 2 .on_hit true .on_miss false .can_apply_on_death true
+//#   강화 효과 수치(JSON, 참고용): rw_burn_decay_debuff = hp_dot_burn_decay_percent 0.5
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW Firefly Torch 2" .target "performer" .chance 100% .torch_increase 5 .on_hit true .on_miss true .queue true
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW Firefly Burn 4" .target "target" .curio_result_type "negative" .chance 130% .dotBurn 8 .dot_irresistible true .buff_ids rw_burn_decay_debuff .duration 2 .on_hit true .on_miss false .can_apply_on_death true
+//#   강화 효과 수치(JSON, 참고용): rw_burn_decay_debuff = hp_dot_burn_decay_percent 0.5
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW Firefly Burn 5" .target "target" .curio_result_type "negative" .chance 140% .dotBurn 9 .dot_irresistible true .buff_ids rw_burn_decay_debuff .duration 2 .on_hit true .on_miss false .can_apply_on_death true
+//#   강화 효과 수치(JSON, 참고용): rw_burn_decay_debuff = hp_dot_burn_decay_percent 0.5
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW Firefly Torch 3" .target "performer" .chance 100% .torch_increase 6 .on_hit true .on_miss true .queue true
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+
+//# ======================================================================
+//# 기술: 도피 (run_and_hide)
+//# 레벨별 효과: 1레벨 RW Stealth, RW Run HoT 1, RW Run Burn Amount | 2레벨 RW Stealth, RW Run HoT 2, RW Run Burn Amount | 3레벨 RW Stealth, RW Run HoT 3, RW Run Burn Amount | 4레벨 RW Stealth, RW Run HoT 4, RW Run Burn Amount | 5레벨 RW Stealth, RW Run HoT 5, RW Run Burn Amount
+effect: .name "RW Stealth" .target "performer" .chance 100% .buff_ids rw_run_conditional_stealth rw_in_rank_1_clear_run_and_hide rw_in_rank_2_clear_run_and_hide .duration 4 .on_hit true .on_miss true
+//#   강화 효과 수치(JSON, 참고용): rw_run_conditional_stealth = stealth 1
+//#   강화 효과 수치(JSON, 참고용): rw_in_rank_1_clear_run_and_hide = tag_blocked 0 [in_rank]
+//#   강화 효과 수치(JSON, 참고용): rw_in_rank_2_clear_run_and_hide = tag_blocked 0 [in_rank]
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW Run HoT 1" .target "performer" .chance 100% .buff_ids rw_run_hot_1 .duration 2 .on_hit true .on_miss true
+//#   강화 효과 수치(JSON, 참고용): rw_run_hot_1 = hp_dot_heal 2 [is_stealthed]
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW Run Burn Amount" .target "performer" .chance 100% .buff_ids rw_burn_amount_stealthed .duration 4 .on_hit true .on_miss true .queue true
+//#   강화 효과 수치(JSON, 참고용): rw_burn_amount_stealthed = hp_dot_burn_amount_percent 0.5 [is_stealthed]
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW Run HoT 2" .target "performer" .chance 100% .buff_ids rw_run_hot_2 .duration 2 .on_hit true .on_miss true
+//#   강화 효과 수치(JSON, 참고용): rw_run_hot_2 = hp_dot_heal 3 [is_stealthed]
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW Run HoT 3" .target "performer" .chance 100% .buff_ids rw_run_hot_3 .duration 3 .on_hit true .on_miss true
+//#   강화 효과 수치(JSON, 참고용): rw_run_hot_3 = hp_dot_heal 3 [is_stealthed]
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW Run HoT 4" .target "performer" .chance 100% .buff_ids rw_run_hot_4 .duration 3 .on_hit true .on_miss true
+//#   강화 효과 수치(JSON, 참고용): rw_run_hot_4 = hp_dot_heal 4 [is_stealthed]
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW Run HoT 5" .target "performer" .chance 100% .buff_ids rw_run_hot_5 .duration 3 .on_hit true .on_miss true
+//#   강화 효과 수치(JSON, 참고용): rw_run_hot_5 = hp_dot_heal 5 [is_stealthed]
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+
+//# ======================================================================
+//# 기술: 판 뒤엎기 (ransack)
+//# 레벨별 효과: 1레벨 Pull 1A, clear_corpses, RW Ransack ACC Stealthed | 2레벨 Pull 1B, clear_corpses, RW Ransack ACC Stealthed | 3레벨 Pull 1C, clear_corpses, RW Ransack ACC Stealthed | 4레벨 Pull 1D, clear_corpses, RW Ransack ACC Stealthed | 5레벨 Pull 1E, clear_corpses, RW Ransack ACC Stealthed
+effect: .name "Pull 1A" .target "target"  .pull 1 	.chance 100%	.on_hit true .on_miss false .can_apply_on_death true 
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "clear_corpses" .target "target_group" .chance 100% .kill_enemy_types corpse .on_hit true .on_miss false .queue false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 3명(나병환자, 신비학자, 역병 의사). 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "RW Ransack ACC Stealthed" .target "performer" .skill_instant true .chance 100% .buff_ids rw_acc_stealthed .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): rw_acc_stealthed = attack_rating 0.1 [is_stealthed]
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "Pull 1B" .target "target"  .pull 1 	.chance 110%	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Pull 1C" .target "target"  .pull 1 	.chance 120%	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Pull 1D" .target "target"  .pull 1 	.chance 130%	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Pull 1E" .target "target"  .pull 1 	.chance 140%	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 화톳불 (hearthlight)
+//# 레벨별 효과: 1레벨 Destealth, RW Hearthlight Torch 1, RW Hearthlight ACC Buff 1, RW Hearthlight CRIT Buff 1 | 2레벨 Destealth, RW Hearthlight Torch 1, RW Hearthlight ACC Buff 2, RW Hearthlight CRIT Buff 2 | 3레벨 Destealth, RW Hearthlight Torch 2, RW Hearthlight ACC Buff 3, RW Hearthlight CRIT Buff 3 | 4레벨 Destealth, RW Hearthlight Torch 2, RW Hearthlight ACC Buff 4, RW Hearthlight CRIT Buff 4 | 5레벨 Destealth, RW Hearthlight Torch 3, RW Hearthlight ACC Buff 5, RW Hearthlight CRIT Buff 5
+effect: .name "Destealth" .target "target" .chance 100% .unstealth 1 .on_hit true .on_miss false
+//#   공유 효과: 다른 영웅 7명(유물수집상, 석궁사수, 노상강도, 나병환자, 총사, 방패 파괴자, 성녀). 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "RW Hearthlight Torch 1" .target "performer" .chance 100% .torch_increase 6 .on_hit true .on_miss true .queue true .apply_once true
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW Hearthlight ACC Buff 1" .target "performer_group" .chance 100% .combat_stat_buff 1 .attack_rating_add 5% .on_hit true .on_miss true .duration 3 .queue true .apply_once true
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW Hearthlight CRIT Buff 1" .target "performer_group" .chance 100% .buff_ids rw_hearthlight_crit_vs_burning_1 .on_hit true .on_miss true .duration 3 .queue true .apply_once true
+//#   강화 효과 수치(JSON, 참고용): rw_hearthlight_crit_vs_burning_1 = crit_chance 0.08 [actorStatus]
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW Hearthlight ACC Buff 2" .target "performer_group" .chance 100% .combat_stat_buff 1 .attack_rating_add 6% .on_hit true .on_miss true .duration 3 .queue true .apply_once true
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW Hearthlight CRIT Buff 2" .target "performer_group" .chance 100% .buff_ids rw_hearthlight_crit_vs_burning_2 .on_hit true .on_miss true .duration 3 .queue true .apply_once true
+//#   강화 효과 수치(JSON, 참고용): rw_hearthlight_crit_vs_burning_2 = crit_chance 0.09 [actorStatus]
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW Hearthlight Torch 2" .target "performer" .chance 100% .torch_increase 7 .on_hit true .on_miss true .queue true .apply_once true
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW Hearthlight ACC Buff 3" .target "performer_group" .chance 100% .combat_stat_buff 1 .attack_rating_add 7% .on_hit true .on_miss true .duration 3 .queue true .apply_once true
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW Hearthlight CRIT Buff 3" .target "performer_group" .chance 100% .buff_ids rw_hearthlight_crit_vs_burning_3 .on_hit true .on_miss true .duration 3 .queue true .apply_once true
+//#   강화 효과 수치(JSON, 참고용): rw_hearthlight_crit_vs_burning_3 = crit_chance 0.1 [actorStatus]
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW Hearthlight ACC Buff 4" .target "performer_group" .chance 100% .combat_stat_buff 1 .attack_rating_add 8% .on_hit true .on_miss true .duration 3 .queue true .apply_once true
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW Hearthlight CRIT Buff 4" .target "performer_group" .chance 100% .buff_ids rw_hearthlight_crit_vs_burning_4 .on_hit true .on_miss true .duration 3 .queue true .apply_once true
+//#   강화 효과 수치(JSON, 참고용): rw_hearthlight_crit_vs_burning_4 = crit_chance 0.11 [actorStatus]
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW Hearthlight Torch 3" .target "performer" .chance 100% .torch_increase 8 .on_hit true .on_miss true .queue true .apply_once true
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW Hearthlight ACC Buff 5" .target "performer_group" .chance 100% .combat_stat_buff 1 .attack_rating_add 10% .on_hit true .on_miss true .duration 3 .queue true .apply_once true
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW Hearthlight CRIT Buff 5" .target "performer_group" .chance 100% .buff_ids rw_hearthlight_crit_vs_burning_5 .on_hit true .on_miss true .duration 3 .queue true .apply_once true
+//#   강화 효과 수치(JSON, 참고용): rw_hearthlight_crit_vs_burning_5 = crit_chance 0.12 [actorStatus]
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+
+//# ======================================================================
+//# 기술: 통제된 화상 (controlled_burn)
+//# 레벨별 효과: 1레벨 RW CB Burn 1, RW CB Torch, RW CB Rank Effect 1 | 2레벨 RW CB Burn 2, RW CB Torch, RW CB Rank Effect 2 | 3레벨 RW CB Burn 3, RW CB Torch, RW CB Rank Effect 3 | 4레벨 RW CB Burn 4, RW CB Torch, RW CB Rank Effect 4 | 5레벨 RW CB Burn 5, RW CB Torch, RW CB Rank Effect 5
+effect: .name "RW CB Burn 1" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 4 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW CB Torch" .target "performer" .chance 100% .torch_increase 6 .on_hit true .on_miss true .queue true
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW CB Rank Effect 1" .target "target" .chance 100% .on_hit true .on_miss true .controlled_burn_amount 3 .controlled_burn_duration 3
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW CB Burn 2" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 4 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW CB Rank Effect 2" .target "target" .chance 100% .on_hit true .on_miss true .controlled_burn_amount 3 .controlled_burn_duration 3
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW CB Burn 3" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 4 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW CB Rank Effect 3" .target "target" .chance 100% .on_hit true .on_miss true .controlled_burn_amount 4 .controlled_burn_duration 3
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW CB Burn 4" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 4 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW CB Rank Effect 4" .target "target" .chance 100% .on_hit true .on_miss true .controlled_burn_amount 4 .controlled_burn_duration 3
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW CB Burn 5" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 4 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+effect: .name "RW CB Rank Effect 5" .target "target" .chance 100% .on_hit true .on_miss true .controlled_burn_amount 5 .controlled_burn_duration 3
+//#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
+
+//# ======================================================================
+//# 기술: 불길 역류 (backdraft)
+//# 레벨별 효과: 1레벨 없음 | 2레벨 없음 | 3레벨 없음 | 4레벨 없음 | 5레벨 없음
+//#   (효과 없음: 명중·피해·치명타는 영웅 파일에서 조정)
+
+//# ======================================================================
+//# 기술 외 효과 (치명타 발동, 자세·모드 등)
+//# crit 
+effect: .name "on_crit_speed"    .target "performer" .curio_result_type "positive" .chance 100% .buff_source_type bsrc_crit .buff_ids "on_crit_spd" .on_hit true .on_miss false .apply_once true
+//#   공유 효과: 다른 영웅 1명(노상강도). 여기서 고치면 이 영웅만 바뀐다
+//#   강화 효과 수치(JSON, 참고용): on_crit_spd = speed_rating 2
+//#   원본 위치: effects/base.effects.darkest

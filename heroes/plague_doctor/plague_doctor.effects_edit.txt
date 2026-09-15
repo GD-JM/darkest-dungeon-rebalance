@@ -1,0 +1,151 @@
+// [편집용 효과 사본] 역병 의사 (plague_doctor)
+// 이 파일은 게임이 읽지 않는다. 여기서 고친 수치는 Claude에게 "정리해줘"라고 요청한 뒤에 게임에 적용된다.
+//   정리 시: 원본과 달라진 효과만 새 이름("RB PD 원래이름")으로 effects/rebalance_plague_doctor.effects.darkest 에 추가되고,
+//            이 영웅의 기술이 새 효과를 가리키게 바뀐다. 다른 영웅·몬스터는 영향 없음. 원래대로 되돌리면 새 효과도 사라진다.
+// 규칙
+//   - 수치만 고친다. 효과 줄을 지우거나 효과 이름(.name "...")을 바꾸지 않는다.
+//   - 메모는 바꾼 줄 바로 밑에 // 로 쓴다. //# 로 시작하는 줄은 자동 설명이므로 고치지 않는다.
+//   - 강화 효과(.buff_ids)의 실제 수치는 이 파일에 없다(shared/buffs JSON). //# 설명에 참고용으로만 적었다. 바꾸려면 요청.
+// 자주 쓰는 키
+//   .chance 적용 확률 | .duration 지속 턴 | .stun 기절 | .dotBleed 턴당 출혈 | .dotPoison 턴당 중독 | .dotBurn 턴당 화상
+//   .push / .pull 밀치기·당기기 칸 | .heal 회복 | .heal_percent 최대 체력 비율 회복 | .dotHpHeal 턴당 회복 | .healstress 스트레스 회복 | .stress 스트레스
+//   .combat_stat_buff 1 과 함께: .attack_rating_add 명중 / .defense_rating_add 회피 / .protection_rating_add 방어 / .speed_rating_add 속도
+//     / .crit_chance_add 치명타 / .damage_low_multiply · .damage_high_multiply 피해 %
+//   .tag 표식 | .riposte 반격 | .guard 보호 | .keyStatus 조건(대상 상태) | .target "performer" = 자신
+
+//# ======================================================================
+//# 기술: 유독기체 폭발 (noxious_blast)
+//# 레벨별 효과: 1레벨 PD Single Blight 1, Noxious Debuff 1 | 2레벨 PD Single Blight 2, Noxious Debuff 2 | 3레벨 PD Single Blight 3, Noxious Debuff 3 | 4레벨 PD Single Blight 4, Noxious Debuff 4 | 5레벨 PD Single Blight 5, Noxious Debuff 5
+effect: .name "PD Single Blight 1" .target "target" .curio_result_type "negative" .chance 100%  .dotPoison 5 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Noxious Debuff 1" .target "target" .curio_result_type "negative" .chance 100% .duration 3  .combat_stat_buff 1 .attack_rating_add -5%  .on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "PD Single Blight 2" .target "target" .curio_result_type "negative" .chance 110%  .dotPoison 5 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Noxious Debuff 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3  .combat_stat_buff 1 .attack_rating_add -5%  .on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "PD Single Blight 3" .target "target" .curio_result_type "negative" .chance 120%  .dotPoison 6 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Noxious Debuff 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3  .combat_stat_buff 1 .attack_rating_add -6%  .on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "PD Single Blight 4" .target "target" .curio_result_type "negative" .chance 130%  .dotPoison 6 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Noxious Debuff 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3  .combat_stat_buff 1 .attack_rating_add -6%  .on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "PD Single Blight 5" .target "target" .curio_result_type "negative" .chance 140%  .dotPoison 7 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Noxious Debuff 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3  .combat_stat_buff 1 .attack_rating_add -7%  .on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 역병 수류탄 (plague_grenade)
+//# 레벨별 효과: 1레벨 PD Blight 1 | 2레벨 PD Blight 2 | 3레벨 PD Blight 3 | 4레벨 PD Blight 4 | 5레벨 PD Blight 5
+effect: .name "PD Blight 1" .target "target" .curio_result_type "negative" .chance 100%  .dotPoison 4 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "PD Blight 2" .target "target" .curio_result_type "negative" .chance 110%  .dotPoison 4 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "PD Blight 3" .target "target" .curio_result_type "negative" .chance 120%  .dotPoison 5 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "PD Blight 4" .target "target" .curio_result_type "negative" .chance 130%  .dotPoison 5 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "PD Blight 5" .target "target" .curio_result_type "negative" .chance 140%  .dotPoison 6 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 실명 기체 (blinding_gas)
+//# 레벨별 효과: 1레벨 Stun 1 | 2레벨 Stun 2 | 3레벨 Stun 3 | 4레벨 Stun 4 | 5레벨 Stun 5
+effect: .name "Stun 1" .target "target" .curio_result_type "negative" .chance 100% .stun 1	.on_hit true .on_miss false .queue true
+//#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 성전사, 결투가, 중보병) / 몬스터 기술 13곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Stun 2" .target "target" .curio_result_type "negative" .chance 110% .stun 1	.on_hit true .on_miss false .queue true
+//#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 성전사, 결투가, 중보병) / 몬스터 기술 5곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Stun 3" .target "target" .curio_result_type "negative" .chance 120% .stun 1	.on_hit true .on_miss false .queue true
+//#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 성전사, 결투가, 중보병) / 몬스터 기술 14곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Stun 4" .target "target" .curio_result_type "negative" .chance 130% .stun 1	.on_hit true .on_miss false .queue true
+//#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 성전사, 결투가, 중보병) / 몬스터 기술 1곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Stun 5" .target "target" .curio_result_type "negative" .chance 140% .stun 1	.on_hit true .on_miss false .queue true
+//#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 성전사, 결투가, 중보병) / 몬스터 기술 14곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 절개 (incision)
+//# 레벨별 효과: 1레벨 Bleed 1 | 2레벨 Bleed 2 | 3레벨 Bleed 3 | 4레벨 Bleed 4 | 5레벨 Bleed 5
+effect: .name "Bleed 1" .target "target" .curio_result_type "negative" .chance 100%  .dotBleed 2 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 야만인, 노상강도, 광대) / 몬스터 기술 11곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Bleed 2" .target "target" .curio_result_type "negative" .chance 110%  .dotBleed 2 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 야만인, 노상강도, 광대) / 몬스터 기술 3곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Bleed 3" .target "target" .curio_result_type "negative" .chance 120%  .dotBleed 3 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 야만인, 노상강도, 광대) / 몬스터 기술 11곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Bleed 4" .target "target" .curio_result_type "negative" .chance 130%  .dotBleed 3 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 야만인, 노상강도, 광대). 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Bleed 5" .target "target" .curio_result_type "negative" .chance 140%  .dotBleed 4 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 야만인, 노상강도, 광대) / 몬스터 기술 8곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 야전 의술 (battlefield_medicine)
+//# 레벨별 효과: 1레벨 Cure, Cureself | 2레벨 Cure, Cureself | 3레벨 Cure, Cureself | 4레벨 Cure, Cureself | 5레벨 Cure, Cureself
+effect: .name "Cure" .target "target" .curio_result_type "positive" .chance 100% .cure 1	.on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Cureself" .target "performer" .curio_result_type "positive" .chance 100% .cure 1	.on_hit true .on_miss false .queue true .apply_once true
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 강화 작용제 (emboldening_vapours)
+//# 레벨별 효과: 1레벨 PD Vapours Buff 1 | 2레벨 PD Vapours Buff 2 | 3레벨 PD Vapours Buff 3 | 4레벨 PD Vapours Buff 4 | 5레벨 PD Vapours Buff 5
+effect: .name "PD Vapours Buff 1" .target "target" .curio_result_type "positive" .chance 100% .buff_duration_type combat_end .duration 1 .combat_stat_buff 1 .damage_low_multiply 20% .damage_high_multiply 20% .speed_rating_add 3	.on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "PD Vapours Buff 2" .target "target" .curio_result_type "positive" .chance 100% .buff_duration_type combat_end .duration 1 .combat_stat_buff 1 .damage_low_multiply 21% .damage_high_multiply 21% .speed_rating_add 3	.on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "PD Vapours Buff 3" .target "target" .curio_result_type "positive" .chance 100% .buff_duration_type combat_end .duration 1 .combat_stat_buff 1 .damage_low_multiply 22% .damage_high_multiply 22% .speed_rating_add 4	.on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "PD Vapours Buff 4" .target "target" .curio_result_type "positive" .chance 100% .buff_duration_type combat_end .duration 1 .combat_stat_buff 1 .damage_low_multiply 23% .damage_high_multiply 23% .speed_rating_add 4	.on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "PD Vapours Buff 5" .target "target" .curio_result_type "positive" .chance 100% .buff_duration_type combat_end .duration 1 .combat_stat_buff 1 .damage_low_multiply 25% .damage_high_multiply 25% .speed_rating_add 5	.on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 혼란 기체 폭발 (disorienting_blast)
+//# 레벨별 효과: 1레벨 Disorient 1, clear_corpses, PD Disorienting Stun 1 | 2레벨 Disorient 2, clear_corpses, PD Disorienting Stun 2 | 3레벨 Disorient 3, clear_corpses, PD Disorienting Stun 3 | 4레벨 Disorient 4, clear_corpses, PD Disorienting Stun 4 | 5레벨 Disorient 5, clear_corpses, PD Disorienting Stun 5
+effect: .name "Disorient 1" .target "target" .shuffletarget	.chance 100% .on_hit true .on_miss false 	.apply_once true .can_apply_on_death true
+//#   공유 효과: 다른 영웅 1명(현상금 사냥꾼). 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "clear_corpses" .target "target_group" .chance 100% .kill_enemy_types corpse .on_hit true .on_miss false .queue false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 3명(나병환자, 신비학자, 도망자). 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "PD Disorienting Stun 1" .target "target" .curio_result_type "negative" .chance 100% .stun 1	.on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Disorient 2" .target "target" .shuffletarget	.chance 110% .on_hit true .on_miss false	.apply_once true .can_apply_on_death true
+//#   공유 효과: 다른 영웅 1명(현상금 사냥꾼). 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "PD Disorienting Stun 2" .target "target" .curio_result_type "negative" .chance 110% .stun 1	.on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Disorient 3" .target "target" .shuffletarget	.chance 120% .on_hit true .on_miss false	.apply_once true .can_apply_on_death true
+//#   공유 효과: 다른 영웅 1명(현상금 사냥꾼). 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "PD Disorienting Stun 3" .target "target" .curio_result_type "negative" .chance 120% .stun 1	.on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Disorient 4" .target "target" .shuffletarget	.chance 130% .on_hit true .on_miss false	.apply_once true .can_apply_on_death true
+//#   공유 효과: 다른 영웅 1명(현상금 사냥꾼). 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "PD Disorienting Stun 4" .target "target" .curio_result_type "negative" .chance 130% .stun 1	.on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Disorient 5" .target "target" .shuffletarget	.chance 140% .on_hit true .on_miss false	.apply_once true .can_apply_on_death true
+//#   공유 효과: 다른 영웅 1명(현상금 사냥꾼). 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "PD Disorienting Stun 5" .target "target" .curio_result_type "negative" .chance 140% .stun 1	.on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술 외 효과 (치명타 발동, 자세·모드 등)
+//# crit 
+effect: .name "on_crit_blightchance"    .target "performer" .curio_result_type "positive" .chance 100% .buff_source_type bsrc_crit .buff_ids "on_crit_blightchance" .duration 2	.on_hit true .on_miss false .apply_once true
+//#   강화 효과 수치(JSON, 참고용): on_crit_blightchance = poison_chance 0.2
+//#   원본 위치: effects/base.effects.darkest

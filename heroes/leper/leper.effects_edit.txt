@@ -1,0 +1,147 @@
+// [편집용 효과 사본] 나병환자 (leper)
+// 이 파일은 게임이 읽지 않는다. 여기서 고친 수치는 Claude에게 "정리해줘"라고 요청한 뒤에 게임에 적용된다.
+//   정리 시: 원본과 달라진 효과만 새 이름("RB LEP 원래이름")으로 effects/rebalance_leper.effects.darkest 에 추가되고,
+//            이 영웅의 기술이 새 효과를 가리키게 바뀐다. 다른 영웅·몬스터는 영향 없음. 원래대로 되돌리면 새 효과도 사라진다.
+// 규칙
+//   - 수치만 고친다. 효과 줄을 지우거나 효과 이름(.name "...")을 바꾸지 않는다.
+//   - 메모는 바꾼 줄 바로 밑에 // 로 쓴다. //# 로 시작하는 줄은 자동 설명이므로 고치지 않는다.
+//   - 강화 효과(.buff_ids)의 실제 수치는 이 파일에 없다(shared/buffs JSON). //# 설명에 참고용으로만 적었다. 바꾸려면 요청.
+// 자주 쓰는 키
+//   .chance 적용 확률 | .duration 지속 턴 | .stun 기절 | .dotBleed 턴당 출혈 | .dotPoison 턴당 중독 | .dotBurn 턴당 화상
+//   .push / .pull 밀치기·당기기 칸 | .heal 회복 | .heal_percent 최대 체력 비율 회복 | .dotHpHeal 턴당 회복 | .healstress 스트레스 회복 | .stress 스트레스
+//   .combat_stat_buff 1 과 함께: .attack_rating_add 명중 / .defense_rating_add 회피 / .protection_rating_add 방어 / .speed_rating_add 속도
+//     / .crit_chance_add 치명타 / .damage_low_multiply · .damage_high_multiply 피해 %
+//   .tag 표식 | .riposte 반격 | .guard 보호 | .keyStatus 조건(대상 상태) | .target "performer" = 자신
+
+//# ======================================================================
+//# 기술: 토막치기 (chop)
+//# 레벨별 효과: 1레벨 없음 | 2레벨 없음 | 3레벨 없음 | 4레벨 없음 | 5레벨 없음
+//#   (효과 없음: 명중·피해·치명타는 영웅 파일에서 조정)
+
+//# ======================================================================
+//# 기술: 가르기 (hew)
+//# 레벨별 효과: 1레벨 없음 | 2레벨 없음 | 3레벨 없음 | 4레벨 없음 | 5레벨 없음
+//#   (효과 없음: 명중·피해·치명타는 영웅 파일에서 조정)
+
+//# ======================================================================
+//# 기술: 축출 (focus)
+//# 레벨별 효과: 1레벨 Push 3A, clear_corpses, Leper Acc | 2레벨 Push 3B, clear_corpses, Leper Acc | 3레벨 Push 3C, clear_corpses, Leper Acc | 4레벨 Push 3D, clear_corpses, Leper Acc | 5레벨 Push 3E, clear_corpses, Leper Acc
+effect: .name "Push 3A" .target "target" .push 3 	.chance 100%	.on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 몬스터 기술 1곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "clear_corpses" .target "target_group" .chance 100% .kill_enemy_types corpse .on_hit true .on_miss false .queue false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 3명(신비학자, 역병 의사, 도망자). 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Leper Acc" .target "performer" .chance 100% .duration 4 .buff_ids "ACC5" .on_hit true .on_miss true .queue true
+//#   강화 효과 수치(JSON, 참고용): ACC5 = attack_rating 0.05
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Push 3B" .target "target" .push 3 	.chance 110%	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Push 3C" .target "target" .push 3 	.chance 120%	.on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 몬스터 기술 5곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Push 3D" .target "target" .push 3	.chance 130%	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Push 3E" .target "target" .push 3 	.chance 140%	.on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 몬스터 기술 1곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 복수 (revenge)
+//# 레벨별 효과: 1레벨 Leper Strength 1, Leper Vulnerability | 2레벨 Leper Strength 2, Leper Vulnerability | 3레벨 Leper Strength 3, Leper Vulnerability | 4레벨 Leper Strength 4, Leper Vulnerability | 5레벨 Leper Strength 5, Leper Vulnerability
+effect: .name "Leper Strength 1" .target "performer" .chance 100% .curio_result_type "positive" .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .attack_rating_add 10% .damage_low_multiply 25% .damage_high_multiply 25% .crit_chance_add 7%	.on_hit true .on_miss true .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Leper Vulnerability" .target "performer" .curio_result_type "negative" .chance 100% .duration 1 .buff_duration_type combat_end .buff_ids "LeperDEFVuln" "LeperDMGVuln" .apply_once true .on_hit true .on_miss true .queue true
+//#   강화 효과 수치(JSON, 참고용): LeperDEFVuln = defense_rating -0.1
+//#   강화 효과 수치(JSON, 참고용): LeperDMGVuln = damage_received_percent 0.25
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Leper Strength 2" .target "performer" .chance 100% .curio_result_type "positive" .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .attack_rating_add 11% .damage_low_multiply 27% .damage_high_multiply 27% .crit_chance_add 8%	.on_hit true .on_miss true .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Leper Strength 3" .target "performer" .chance 100% .curio_result_type "positive" .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .attack_rating_add 12% .damage_low_multiply 30% .damage_high_multiply 30% .crit_chance_add 9%	.on_hit true .on_miss true .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Leper Strength 4" .target "performer" .chance 100% .curio_result_type "positive" .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .attack_rating_add 13% .damage_low_multiply 32% .damage_high_multiply 32% .crit_chance_add 10%	.on_hit true .on_miss true .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Leper Strength 5" .target "performer" .chance 100% .curio_result_type "positive" .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .attack_rating_add 15% .damage_low_multiply 35% .damage_high_multiply 35% .crit_chance_add 11%	.on_hit true .on_miss true .queue true
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 인내 (withstand)
+//# 레벨별 효과: 1레벨 Leper Protect 1, Leper Resist Buff 1, Leper Mark Self | 2레벨 Leper Protect 2, Leper Resist Buff 1, Leper Mark Self | 3레벨 Leper Protect 3, Leper Resist Buff 1, Leper Mark Self | 4레벨 Leper Protect 4, Leper Resist Buff 1, Leper Mark Self | 5레벨 Leper Protect 5, Leper Resist Buff 1, Leper Mark Self
+effect: .name "Leper Protect 1" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .protection_rating_add 20%	.on_hit true .on_miss true .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Leper Resist Buff 1" .target "performer" .chance 100% .duration 1 .buff_duration_type combat_end .buff_ids leper_blight_resist leper_bleed_resist leper_debuff_resist leper_move_resist .on_hit true .queue true
+//#   강화 효과 수치(JSON, 참고용): leper_blight_resist = poison 0.3
+//#   강화 효과 수치(JSON, 참고용): leper_bleed_resist = bleed 0.3
+//#   강화 효과 수치(JSON, 참고용): leper_debuff_resist = debuff 0.3
+//#   강화 효과 수치(JSON, 참고용): leper_move_resist = move 0.3
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Leper Mark Self" .target "performer" .curio_result_type "positive" .chance 100% .tag 1 .combat_stat_buff 1 .duration 1 .buff_duration_type combat_end .on_hit true .on_miss true .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Leper Protect 2" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .protection_rating_add 22%	.on_hit true .on_miss true .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Leper Protect 3" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .protection_rating_add 25%	.on_hit true .on_miss true .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Leper Protect 4" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .protection_rating_add 27%	.on_hit true .on_miss true .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Leper Protect 5" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .protection_rating_add 30%	.on_hit true .on_miss true .queue true
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 평온 (solemnity)
+//# 레벨별 효과: 1레벨 LeperHealSelf 1, LeperHealSelfStress 1 | 2레벨 LeperHealSelf 2, LeperHealSelfStress 2 | 3레벨 LeperHealSelf 3, LeperHealSelfStress 3 | 4레벨 LeperHealSelf 4, LeperHealSelfStress 4 | 5레벨 LeperHealSelf 5, LeperHealSelfStress 5
+effect: .name "LeperHealSelf 1" .target "performer" .curio_result_type "positive" .chance 100% .heal 6	.on_hit true .on_miss false .queue false .source_heal_type hero_skill
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "LeperHealSelfStress 1"  .target "performer" .curio_result_type "positive" .chance 100%  .healstress 5	.on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "LeperHealSelf 2" .target "performer" .curio_result_type "positive" .chance 100% .heal 7	.on_hit true .on_miss false	.queue false .source_heal_type hero_skill
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "LeperHealSelfStress 2"  .target "performer" .curio_result_type "positive" .chance 100%  .healstress 5	.on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "LeperHealSelf 3" .target "performer" .curio_result_type "positive" .chance 100% .heal 8	.on_hit true .on_miss false	.queue false .source_heal_type hero_skill
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "LeperHealSelfStress 3"  .target "performer" .curio_result_type "positive" .chance 100%  .healstress 6	.on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "LeperHealSelf 4" .target "performer" .curio_result_type "positive" .chance 100% .heal 9	.on_hit true .on_miss false .queue false .source_heal_type hero_skill
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "LeperHealSelfStress 4"  .target "performer" .curio_result_type "positive" .chance 100%  .healstress 6	.on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "LeperHealSelf 5" .target "performer" .curio_result_type "positive" .chance 100% .heal 10	.on_hit true .on_miss false .queue false .source_heal_type hero_skill
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "LeperHealSelfStress 5"  .target "performer" .curio_result_type "positive" .chance 100%  .healstress 7	.on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 위협 (intimidate)
+//# 레벨별 효과: 1레벨 Leper Intimidate 1, Leper Intimidate Mark, Destealth, Leper Hype 1 | 2레벨 Leper Intimidate 2, Leper Intimidate Mark, Destealth, Leper Hype 2 | 3레벨 Leper Intimidate 3, Leper Intimidate Mark, Destealth, Leper Hype 3 | 4레벨 Leper Intimidate 4, Leper Intimidate Mark, Destealth, Leper Hype 4 | 5레벨 Leper Intimidate 5, Leper Intimidate Mark, Destealth, Leper Hype 5
+effect: .name "Leper Intimidate 1" .target "target" .curio_result_type "negative" .chance 100% .duration 3  .combat_stat_buff 1 .speed_rating_add -3 .damage_low_multiply -20% .damage_high_multiply -20%	.on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Leper Intimidate Mark" .target "performer" .curio_result_type "positive" .chance 100% .tag 1 .duration 4	.on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Destealth" .target "target" .chance 100% .unstealth 1 .on_hit true .on_miss false
+//#   공유 효과: 다른 영웅 7명(유물수집상, 석궁사수, 노상강도, 총사, 도망자, 방패 파괴자, 성녀). 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Leper Hype 1" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 2 .on_hit true .on_miss true	.queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Leper Intimidate 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3  .combat_stat_buff 1 .speed_rating_add -3 .damage_low_multiply -23% .damage_high_multiply -23%	.on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Leper Hype 2" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 2 .on_hit true .on_miss true	.queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Leper Intimidate 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3  .combat_stat_buff 1 .speed_rating_add -4 .damage_low_multiply -26% .damage_high_multiply -26%	.on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Leper Hype 3" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 3 .on_hit true .on_miss true	.queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Leper Intimidate 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3  .combat_stat_buff 1 .speed_rating_add -4 .damage_low_multiply -29% .damage_high_multiply -29%	.on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Leper Hype 4" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 3 .on_hit true .on_miss true	.queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Leper Intimidate 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3  .combat_stat_buff 1 .speed_rating_add -5 .damage_low_multiply -33% .damage_high_multiply -33%	.on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Leper Hype 5" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 4 .on_hit true .on_miss true	.queue true
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술 외 효과 (치명타 발동, 자세·모드 등)
+//# crit 
+effect: .name "on_crit_acc"    .target "performer" .curio_result_type "positive" .chance 100% .buff_source_type bsrc_crit .buff_ids "on_crit_acc" .on_hit true .on_miss false .apply_once true
+//#   강화 효과 수치(JSON, 참고용): on_crit_acc = attack_rating 0.1
+//#   원본 위치: effects/base.effects.darkest

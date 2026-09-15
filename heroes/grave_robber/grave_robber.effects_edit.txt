@@ -1,0 +1,168 @@
+// [편집용 효과 사본] 도굴꾼 (grave_robber)
+// 이 파일은 게임이 읽지 않는다. 여기서 고친 수치는 Claude에게 "정리해줘"라고 요청한 뒤에 게임에 적용된다.
+//   정리 시: 원본과 달라진 효과만 새 이름("RB GR 원래이름")으로 effects/rebalance_grave_robber.effects.darkest 에 추가되고,
+//            이 영웅의 기술이 새 효과를 가리키게 바뀐다. 다른 영웅·몬스터는 영향 없음. 원래대로 되돌리면 새 효과도 사라진다.
+// 규칙
+//   - 수치만 고친다. 효과 줄을 지우거나 효과 이름(.name "...")을 바꾸지 않는다.
+//   - 메모는 바꾼 줄 바로 밑에 // 로 쓴다. //# 로 시작하는 줄은 자동 설명이므로 고치지 않는다.
+//   - 강화 효과(.buff_ids)의 실제 수치는 이 파일에 없다(shared/buffs JSON). //# 설명에 참고용으로만 적었다. 바꾸려면 요청.
+// 자주 쓰는 키
+//   .chance 적용 확률 | .duration 지속 턴 | .stun 기절 | .dotBleed 턴당 출혈 | .dotPoison 턴당 중독 | .dotBurn 턴당 화상
+//   .push / .pull 밀치기·당기기 칸 | .heal 회복 | .heal_percent 최대 체력 비율 회복 | .dotHpHeal 턴당 회복 | .healstress 스트레스 회복 | .stress 스트레스
+//   .combat_stat_buff 1 과 함께: .attack_rating_add 명중 / .defense_rating_add 회피 / .protection_rating_add 방어 / .speed_rating_add 속도
+//     / .crit_chance_add 치명타 / .damage_low_multiply · .damage_high_multiply 피해 %
+//   .tag 표식 | .riposte 반격 | .guard 보호 | .keyStatus 조건(대상 상태) | .target "performer" = 자신
+
+//# ======================================================================
+//# 기술: 얼굴 찍기 (pick)
+//# 레벨별 효과: 1레벨 없음 | 2레벨 없음 | 3레벨 없음 | 4레벨 없음 | 5레벨 없음
+//#   (효과 없음: 명중·피해·치명타는 영웅 파일에서 조정)
+
+//# ======================================================================
+//# 기술: 돌진 (lunge)
+//# 레벨별 효과: 1레벨 Poison Killer 1 | 2레벨 Poison Killer 2 | 3레벨 Poison Killer 3 | 4레벨 Poison Killer 4 | 5레벨 Poison Killer 5
+effect: .name "Poison Killer 1"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "poisoned"	.combat_stat_buff 1 .damage_low_multiply 20% .damage_high_multiply 20%	.on_hit true .on_miss false
+//#   이 영웅의 다른 기술에서도 사용: 단검 투척
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Poison Killer 2"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "poisoned"	.combat_stat_buff 1 .damage_low_multiply 23% .damage_high_multiply 23%	.on_hit true .on_miss false
+//#   이 영웅의 다른 기술에서도 사용: 단검 투척
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Poison Killer 3"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "poisoned"	.combat_stat_buff 1 .damage_low_multiply 26% .damage_high_multiply 26%	.on_hit true .on_miss false
+//#   이 영웅의 다른 기술에서도 사용: 단검 투척
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Poison Killer 4"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "poisoned"	.combat_stat_buff 1 .damage_low_multiply 29% .damage_high_multiply 29%	.on_hit true .on_miss false
+//#   이 영웅의 다른 기술에서도 사용: 단검 투척
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Poison Killer 5"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "poisoned"	.combat_stat_buff 1 .damage_low_multiply 33% .damage_high_multiply 33%	.on_hit true .on_miss false
+//#   이 영웅의 다른 기술에서도 사용: 단검 투척
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 번뜩이는 비도 (flashing_daggers)
+//# 레벨별 효과: 1레벨 GR Bleed Debuff 1 | 2레벨 GR Bleed Debuff 2 | 3레벨 GR Bleed Debuff 3 | 4레벨 GR Bleed Debuff 4 | 5레벨 GR Bleed Debuff 5
+effect: .name "GR Bleed Debuff 1" .target "target" .chance 100% .buff_ids bleed_debuff_1 .duration 3 .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): bleed_debuff_1 = bleed -0.2
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "GR Bleed Debuff 2" .target "target" .chance 110% .buff_ids bleed_debuff_2 .duration 3 .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): bleed_debuff_2 = bleed -0.23
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "GR Bleed Debuff 3" .target "target" .chance 120% .buff_ids bleed_debuff_3 .duration 3 .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): bleed_debuff_3 = bleed -0.26
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "GR Bleed Debuff 4" .target "target" .chance 130% .buff_ids bleed_debuff_4 .duration 3 .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): bleed_debuff_4 = bleed -0.3
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "GR Bleed Debuff 5" .target "target" .chance 140% .buff_ids bleed_debuff_5 .duration 3 .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): bleed_debuff_5 = bleed -0.33
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 그림자 은신 (shadow_fade)
+//# 레벨별 효과: 1레벨 stealth_self, GR Fade Attack 1, GR Dodge 1 | 2레벨 stealth_self, GR Fade Attack 2, GR Dodge 2 | 3레벨 stealth_self, GR Fade Attack 3, GR Dodge 3 | 4레벨 stealth_self, GR Fade Attack 4, GR Dodge 4 | 5레벨 stealth_self, GR Fade Attack 5, GR Dodge 5
+effect: .name "stealth_self" .target "performer" .chance 100% .stealth 1 .on_hit true .on_miss false .duration 2
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "GR Fade Attack 1" .target "performer" .chance 100% .curio_result_type "positive" .combat_stat_buff 1 .duration 2 .damage_low_multiply 80% .damage_high_multiply 80% .crit_chance_add 4% .on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "GR Dodge 1" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .duration 4 .defense_rating_add 10%	.on_hit true .on_miss true .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "GR Fade Attack 2" .target "performer" .chance 100% .curio_result_type "positive" .combat_stat_buff 1 .duration 2 .damage_low_multiply 85% .damage_high_multiply 85% .crit_chance_add 5% .on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "GR Dodge 2" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .duration 4 .defense_rating_add 11%	.on_hit true .on_miss true .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "GR Fade Attack 3" .target "performer" .chance 100% .curio_result_type "positive" .combat_stat_buff 1 .duration 2 .damage_low_multiply 90% .damage_high_multiply 90% .crit_chance_add 6% .on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "GR Dodge 3" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .duration 4 .defense_rating_add 12%	.on_hit true .on_miss true .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "GR Fade Attack 4" .target "performer" .chance 100% .curio_result_type "positive" .combat_stat_buff 1 .duration 2 .damage_low_multiply 95% .damage_high_multiply 95% .crit_chance_add 7% .on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "GR Dodge 4" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .duration 4 .defense_rating_add 13%	.on_hit true .on_miss true .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "GR Fade Attack 5" .target "performer" .chance 100% .curio_result_type "positive" .combat_stat_buff 1 .duration 2 .damage_low_multiply 100% .damage_high_multiply 100% .crit_chance_add 8% .on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "GR Dodge 5" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .duration 4 .defense_rating_add 15%	.on_hit true .on_miss true .queue true
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 단검 투척 (thrown_dagger)
+//# 레벨별 효과: 1레벨 GR Acc Buff 1, GR Dagger Dmg Marked 1, Poison Killer 1 | 2레벨 GR Acc Buff 2, GR Dagger Dmg Marked 2, Poison Killer 2 | 3레벨 GR Acc Buff 3, GR Dagger Dmg Marked 3, Poison Killer 3 | 4레벨 GR Acc Buff 4, GR Dagger Dmg Marked 4, Poison Killer 4 | 5레벨 GR Acc Buff 5, GR Dagger Dmg Marked 5, Poison Killer 5
+effect: .name "GR Acc Buff 1" .target "performer" .chance 100% .curio_result_type "positive" .combat_stat_buff 1 .attack_rating_add 5%  .on_hit true .on_miss false .apply_once true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "GR Dagger Dmg Marked 1" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 25%	.damage_high_multiply 25%	.on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "GR Acc Buff 2" .target "performer" .chance 100% .curio_result_type "positive" .combat_stat_buff 1 .attack_rating_add 6%  .on_hit true .on_miss false .apply_once true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "GR Dagger Dmg Marked 2" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 28%	.damage_high_multiply 28%	.on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "GR Acc Buff 3" .target "performer" .chance 100% .curio_result_type "positive" .combat_stat_buff 1 .attack_rating_add 7%  .on_hit true .on_miss false .apply_once true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "GR Dagger Dmg Marked 3" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 32%	.damage_high_multiply 32%	.on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "GR Acc Buff 4" .target "performer" .chance 100% .curio_result_type "positive" .combat_stat_buff 1 .attack_rating_add 8%  .on_hit true .on_miss false .apply_once true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "GR Dagger Dmg Marked 4" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 36%	.damage_high_multiply 36%	.on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "GR Acc Buff 5" .target "performer" .chance 100% .curio_result_type "positive" .combat_stat_buff 1 .attack_rating_add 10% .on_hit true .on_miss false .apply_once true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "GR Dagger Dmg Marked 5" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 40%	.damage_high_multiply 40%	.on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 맹독 다트 (poison_dart)
+//# 레벨별 효과: 1레벨 GR Blight 1, GR Blight Debuff 1 | 2레벨 GR Blight 2, GR Blight Debuff 2 | 3레벨 GR Blight 3, GR Blight Debuff 3 | 4레벨 GR Blight 4, GR Blight Debuff 4 | 5레벨 GR Blight 5, GR Blight Debuff 5
+effect: .name "GR Blight 1" .target "target" .curio_result_type "negative" .chance 100%  .dotPoison 2 .duration 4	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "GR Blight Debuff 1" .target "target" .chance 100% .duration 3 .buff_ids blight_debuff_1 .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): blight_debuff_1 = poison -0.2
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "GR Blight 2" .target "target" .curio_result_type "negative" .chance 110%  .dotPoison 3 .duration 4	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "GR Blight Debuff 2" .target "target" .chance 110% .duration 3 .buff_ids blight_debuff_2 .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): blight_debuff_2 = poison -0.23
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "GR Blight 3" .target "target" .curio_result_type "negative" .chance 120%  .dotPoison 3 .duration 4	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "GR Blight Debuff 3" .target "target" .chance 120% .duration 3 .buff_ids blight_debuff_3 .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): blight_debuff_3 = poison -0.26
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "GR Blight 4" .target "target" .curio_result_type "negative" .chance 130%  .dotPoison 3 .duration 4	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "GR Blight Debuff 4" .target "target" .chance 130% .duration 3 .buff_ids blight_debuff_4 .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): blight_debuff_4 = poison -0.3
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "GR Blight 5" .target "target" .curio_result_type "negative" .chance 140%  .dotPoison 4 .duration 4	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "GR Blight Debuff 5" .target "target" .chance 140% .duration 3 .buff_ids blight_debuff_5 .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): blight_debuff_5 = poison -0.33
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 극약처방 (toxin_trickery)
+//# 레벨별 효과: 1레벨 Shadow Blood 1, GR Self Speed 1 | 2레벨 Shadow Blood 2, GR Self Speed 2 | 3레벨 Shadow Blood 3, GR Self Speed 3 | 4레벨 Shadow Blood 4, GR Self Speed 4 | 5레벨 Shadow Blood 5, GR Self Speed 5
+effect: .name "Shadow Blood 1" .target "performer" .curio_result_type "positive" .cure 1 .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .defense_rating_add 9%	.on_hit true .on_miss true .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "GR Self Speed 1" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .speed_rating_add 2  .on_hit true .on_miss false .queue true .apply_once true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Shadow Blood 2" .target "performer" .curio_result_type "positive" .cure 1 .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .defense_rating_add 10%	.on_hit true .on_miss true .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "GR Self Speed 2" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .speed_rating_add 2  .on_hit true .on_miss false .queue true .apply_once true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Shadow Blood 3" .target "performer" .curio_result_type "positive" .cure 1 .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .defense_rating_add 11%	.on_hit true .on_miss true .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "GR Self Speed 3" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .speed_rating_add 3  .on_hit true .on_miss false .queue true .apply_once true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Shadow Blood 4" .target "performer" .curio_result_type "positive" .cure 1 .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .defense_rating_add 12%	.on_hit true .on_miss true .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "GR Self Speed 4" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .speed_rating_add 3  .on_hit true .on_miss false .queue true .apply_once true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Shadow Blood 5" .target "performer" .curio_result_type "positive" .cure 1 .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .defense_rating_add 13%	.on_hit true .on_miss true .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "GR Self Speed 5" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .speed_rating_add 4  .on_hit true .on_miss false .queue true .apply_once true
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술 외 효과 (치명타 발동, 자세·모드 등)
+//# crit 
+effect: .name "on_crit_def"    .target "performer" .curio_result_type "positive" .chance 100% .buff_source_type bsrc_crit .buff_ids "on_crit_def" .on_hit true .on_miss false .apply_once true
+//#   공유 효과: 다른 영웅 1명(유물수집상). 여기서 고치면 이 영웅만 바뀐다
+//#   강화 효과 수치(JSON, 참고용): on_crit_def = defense_rating 0.1
+//#   원본 위치: effects/base.effects.darkest

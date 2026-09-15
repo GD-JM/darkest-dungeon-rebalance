@@ -1,0 +1,147 @@
+// [편집용 효과 사본] 방패 파괴자 (shieldbreaker)
+// 이 파일은 게임이 읽지 않는다. 여기서 고친 수치는 Claude에게 "정리해줘"라고 요청한 뒤에 게임에 적용된다.
+//   정리 시: 원본과 달라진 효과만 새 이름("RB SB 원래이름")으로 effects/rebalance_shieldbreaker.effects.darkest 에 추가되고,
+//            이 영웅의 기술이 새 효과를 가리키게 바뀐다. 다른 영웅·몬스터는 영향 없음. 원래대로 되돌리면 새 효과도 사라진다.
+// 규칙
+//   - 수치만 고친다. 효과 줄을 지우거나 효과 이름(.name "...")을 바꾸지 않는다.
+//   - 메모는 바꾼 줄 바로 밑에 // 로 쓴다. //# 로 시작하는 줄은 자동 설명이므로 고치지 않는다.
+//   - 강화 효과(.buff_ids)의 실제 수치는 이 파일에 없다(shared/buffs JSON). //# 설명에 참고용으로만 적었다. 바꾸려면 요청.
+// 자주 쓰는 키
+//   .chance 적용 확률 | .duration 지속 턴 | .stun 기절 | .dotBleed 턴당 출혈 | .dotPoison 턴당 중독 | .dotBurn 턴당 화상
+//   .push / .pull 밀치기·당기기 칸 | .heal 회복 | .heal_percent 최대 체력 비율 회복 | .dotHpHeal 턴당 회복 | .healstress 스트레스 회복 | .stress 스트레스
+//   .combat_stat_buff 1 과 함께: .attack_rating_add 명중 / .defense_rating_add 회피 / .protection_rating_add 방어 / .speed_rating_add 속도
+//     / .crit_chance_add 치명타 / .damage_low_multiply · .damage_high_multiply 피해 %
+//   .tag 표식 | .riposte 반격 | .guard 보호 | .keyStatus 조건(대상 상태) | .target "performer" = 자신
+
+//# ======================================================================
+//# 기술: 찌르기 (pierce)
+//# 레벨별 효과: 1레벨 없음 | 2레벨 없음 | 3레벨 없음 | 4레벨 없음 | 5레벨 없음
+//#   (효과 없음: 명중·피해·치명타는 영웅 파일에서 조정)
+
+//# ======================================================================
+//# 기술: 구멍내기 (break_guard)
+//# 레벨별 효과: 1레벨 Clear Guarded Target, Block Guard, Pull 2A, Daze Slowdown 1 | 2레벨 Clear Guarded Target, Block Guard, Pull 2B, Daze Slowdown 2 | 3레벨 Clear Guarded Target, Block Guard, Pull 2C, Daze Slowdown 3 | 4레벨 Clear Guarded Target, Block Guard, Pull 2D, Daze Slowdown 4 | 5레벨 Clear Guarded Target, Block Guard, Pull 2E, Daze Slowdown 5
+effect: .name "Clear Guarded Target" .target "target" .chance 100% .clearguarded 1 .on_hit true .on_miss true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Block Guard" .target target .chance 500% .buff_ids "block_guard" .duration 2 .on_hit true .on_miss false .queue true
+//#   강화 효과 수치(JSON, 참고용): block_guard = guard_blocked 1
+//#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
+effect: .name "Pull 2A" .target "target" .pull 2 	.chance 100%	.on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 2명(현상금 사냥꾼, 신비학자) / 몬스터 기술 1곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Daze Slowdown 1" .target "target" .chance 100% .combat_stat_buff 1 .speed_rating_add -1 .on_hit true .on_miss false .queue false
+//#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
+effect: .name "Pull 2B" .target "target" .pull 2 	.chance 110%	.on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 2명(현상금 사냥꾼, 신비학자). 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Daze Slowdown 2" .target "target" .chance 110% .combat_stat_buff 1 .speed_rating_add -1 .on_hit true .on_miss false .queue false
+//#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
+effect: .name "Pull 2C" .target "target" .pull 2 	.chance 120%	.on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 2명(현상금 사냥꾼, 신비학자) / 몬스터 기술 1곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Daze Slowdown 3" .target "target" .chance 120% .combat_stat_buff 1 .speed_rating_add -2 .on_hit true .on_miss false .queue false
+//#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
+effect: .name "Pull 2D" .target "target" .pull 2 	.chance 130%	.on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 2명(현상금 사냥꾼, 신비학자). 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Daze Slowdown 4" .target "target" .chance 130% .combat_stat_buff 1 .speed_rating_add -2 .on_hit true .on_miss false .queue false
+//#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
+effect: .name "Pull 2E" .target "target" .pull 2 	.chance 140%	.on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 2명(현상금 사냥꾼, 신비학자) / 몬스터 기술 1곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Daze Slowdown 5" .target "target" .chance 140% .combat_stat_buff 1 .speed_rating_add -3 .on_hit true .on_miss false .queue false
+//#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
+
+//# ======================================================================
+//# 기술: 살모사의 입맞춤 (adders_kiss)
+//# 레벨별 효과: 1레벨 SB Adder Blight 1 | 2레벨 SB Adder Blight 2 | 3레벨 SB Adder Blight 3 | 4레벨 SB Adder Blight 4 | 5레벨 SB Adder Blight 5
+effect: .name "SB Adder Blight 1" .target "target" .curio_result_type "negative" .chance 100%  .dotPoison 3 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   이 영웅의 다른 기술에서도 사용: 휘감기
+//#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
+effect: .name "SB Adder Blight 2" .target "target" .curio_result_type "negative" .chance 110%  .dotPoison 3 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   이 영웅의 다른 기술에서도 사용: 휘감기
+//#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
+effect: .name "SB Adder Blight 3" .target "target" .curio_result_type "negative" .chance 120%  .dotPoison 4 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   이 영웅의 다른 기술에서도 사용: 휘감기
+//#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
+effect: .name "SB Adder Blight 4" .target "target" .curio_result_type "negative" .chance 130%  .dotPoison 4 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   이 영웅의 다른 기술에서도 사용: 휘감기
+//#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
+effect: .name "SB Adder Blight 5" .target "target" .curio_result_type "negative" .chance 140%  .dotPoison 5 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   이 영웅의 다른 기술에서도 사용: 휘감기
+//#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
+
+//# ======================================================================
+//# 기술: 꿰뚫기 (spearing)
+//# 레벨별 효과: 1레벨 없음 | 2레벨 없음 | 3레벨 SB Spearing Blight 3 | 4레벨 SB Spearing Blight 4 | 5레벨 SB Spearing Blight 5
+effect: .name "SB Spearing Blight 3" .target "target" .curio_result_type "negative" .chance 120%  .dotPoison 1 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
+effect: .name "SB Spearing Blight 4" .target "target" .curio_result_type "negative" .chance 130%  .dotPoison 1 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
+effect: .name "SB Spearing Blight 5" .target "target" .curio_result_type "negative" .chance 140%  .dotPoison 2 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
+
+//# ======================================================================
+//# 기술: 노출 (expose)
+//# 레벨별 효과: 1레벨 Expose Crit Debuff 1, Destealth, SB Slow 1 | 2레벨 Expose Crit Debuff 2, Destealth, SB Slow 2 | 3레벨 Expose Crit Debuff 3, Destealth, SB Slow 3 | 4레벨 Expose Crit Debuff 4, Destealth, SB Slow 4 | 5레벨 Expose Crit Debuff 5, Destealth, SB Slow 5
+effect: .name "Expose Crit Debuff 1" .target "target" .curio_result_type "negative" .chance 100% .buff_type crit_received_chance .buff_amount 8%	.on_hit true .on_miss false
+//#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
+effect: .name "Destealth" .target "target" .chance 100% .unstealth 1 .on_hit true .on_miss false
+//#   공유 효과: 다른 영웅 7명(유물수집상, 석궁사수, 노상강도, 나병환자, 총사, 도망자, 성녀). 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "SB Slow 1" .target "target" .curio_result_type "negative" .chance 100% .combat_stat_buff 1 .speed_rating_add -4	.on_hit true .on_miss false
+//#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
+effect: .name "Expose Crit Debuff 2" .target "target" .curio_result_type "negative" .chance 110% .buff_type crit_received_chance .buff_amount 8%	.on_hit true .on_miss false
+//#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
+effect: .name "SB Slow 2" .target "target" .curio_result_type "negative" .chance 110% .combat_stat_buff 1 .speed_rating_add -5	.on_hit true .on_miss false
+//#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
+effect: .name "Expose Crit Debuff 3" .target "target" .curio_result_type "negative" .chance 120% .buff_type crit_received_chance .buff_amount 9%	.on_hit true .on_miss false
+//#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
+effect: .name "SB Slow 3" .target "target" .curio_result_type "negative" .chance 120% .combat_stat_buff 1 .speed_rating_add -6	.on_hit true .on_miss false
+//#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
+effect: .name "Expose Crit Debuff 4" .target "target" .curio_result_type "negative" .chance 130% .buff_type crit_received_chance .buff_amount 9%	.on_hit true .on_miss false
+//#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
+effect: .name "SB Slow 4" .target "target" .curio_result_type "negative" .chance 130% .combat_stat_buff 1 .speed_rating_add -7	.on_hit true .on_miss false
+//#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
+effect: .name "Expose Crit Debuff 5" .target "target" .curio_result_type "negative" .chance 140% .buff_type crit_received_chance .buff_amount 10%	.on_hit true .on_miss false
+//#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
+effect: .name "SB Slow 5" .target "target" .curio_result_type "negative" .chance 140% .combat_stat_buff 1 .speed_rating_add -8	.on_hit true .on_miss false
+//#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
+
+//# ======================================================================
+//# 기술: 휘감기 (single_out)
+//# 레벨별 효과: 1레벨 SB Dmg Marked 1, SB Adder Blight 1 | 2레벨 SB Dmg Marked 2, SB Adder Blight 2 | 3레벨 SB Dmg Marked 3, SB Adder Blight 3 | 4레벨 SB Dmg Marked 4, SB Adder Blight 4 | 5레벨 SB Dmg Marked 5, SB Adder Blight 5
+effect: .name "SB Dmg Marked 1"	.target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 40%	.damage_high_multiply 40% .on_hit true .on_miss false
+//#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
+effect: .name "SB Dmg Marked 2"	.target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 45%	.damage_high_multiply 45% .on_hit true .on_miss false
+//#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
+effect: .name "SB Dmg Marked 3"	.target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 50%	.damage_high_multiply 50% .on_hit true .on_miss false
+//#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
+effect: .name "SB Dmg Marked 4"	.target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 55%	.damage_high_multiply 55% .on_hit true .on_miss false
+//#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
+effect: .name "SB Dmg Marked 5"	.target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 60%	.damage_high_multiply 60% .on_hit true .on_miss false
+//#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
+
+//# ======================================================================
+//# 기술: 뱀의 형상 (serpents_sway)
+//# 레벨별 효과: 1레벨 SB Aegis, SB Serpent Speed 1 | 2레벨 SB Aegis, SB Serpent Speed 2 | 3레벨 SB Aegis, SB Serpent Speed 3 | 4레벨 SB Aegis, SB Serpent Speed 4 | 5레벨 SB Aegis, SB Serpent Speed 5
+effect: .name "SB Aegis" .target performer .chance 100% .health_damage_blocks 2 .on_hit true .on_miss false .queue true
+//#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
+effect: .name "SB Serpent Speed 1" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 1	.on_hit true .on_miss false .queue true .apply_once true
+//#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
+effect: .name "SB Serpent Speed 2" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 2	.on_hit true .on_miss false .queue true .apply_once true
+//#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
+effect: .name "SB Serpent Speed 3" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 3	.on_hit true .on_miss false .queue true .apply_once true
+//#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
+effect: .name "SB Serpent Speed 4" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 3	.on_hit true .on_miss false .queue true .apply_once true
+//#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
+effect: .name "SB Serpent Speed 5" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 4	.on_hit true .on_miss false .queue true .apply_once true
+//#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
+
+//# ======================================================================
+//# 기술 외 효과 (치명타 발동, 자세·모드 등)
+//# crit 
+effect: .name "on_crit_prot"    .target "performer" .curio_result_type "positive" .chance 100% .buff_source_type bsrc_crit .buff_ids "on_crit_prot" .on_hit true .on_miss false .apply_once true
+//#   공유 효과: 다른 영웅 1명(성전사). 여기서 고치면 이 영웅만 바뀐다
+//#   강화 효과 수치(JSON, 참고용): on_crit_prot = protection_rating 0.15
+//#   원본 위치: effects/base.effects.darkest

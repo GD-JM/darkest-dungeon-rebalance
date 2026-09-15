@@ -1,0 +1,221 @@
+// [편집용 효과 사본] 고행자 (flagellant)
+// 이 파일은 게임이 읽지 않는다. 여기서 고친 수치는 Claude에게 "정리해줘"라고 요청한 뒤에 게임에 적용된다.
+//   정리 시: 원본과 달라진 효과만 새 이름("RB FLA 원래이름")으로 effects/rebalance_flagellant.effects.darkest 에 추가되고,
+//            이 영웅의 기술이 새 효과를 가리키게 바뀐다. 다른 영웅·몬스터는 영향 없음. 원래대로 되돌리면 새 효과도 사라진다.
+// 규칙
+//   - 수치만 고친다. 효과 줄을 지우거나 효과 이름(.name "...")을 바꾸지 않는다.
+//   - 메모는 바꾼 줄 바로 밑에 // 로 쓴다. //# 로 시작하는 줄은 자동 설명이므로 고치지 않는다.
+//   - 강화 효과(.buff_ids)의 실제 수치는 이 파일에 없다(shared/buffs JSON). //# 설명에 참고용으로만 적었다. 바꾸려면 요청.
+// 자주 쓰는 키
+//   .chance 적용 확률 | .duration 지속 턴 | .stun 기절 | .dotBleed 턴당 출혈 | .dotPoison 턴당 중독 | .dotBurn 턴당 화상
+//   .push / .pull 밀치기·당기기 칸 | .heal 회복 | .heal_percent 최대 체력 비율 회복 | .dotHpHeal 턴당 회복 | .healstress 스트레스 회복 | .stress 스트레스
+//   .combat_stat_buff 1 과 함께: .attack_rating_add 명중 / .defense_rating_add 회피 / .protection_rating_add 방어 / .speed_rating_add 속도
+//     / .crit_chance_add 치명타 / .damage_low_multiply · .damage_high_multiply 피해 %
+//   .tag 표식 | .riposte 반격 | .guard 보호 | .keyStatus 조건(대상 상태) | .target "performer" = 자신
+
+//# ======================================================================
+//# 기술: 처벌 (punish)
+//# 레벨별 효과: 1레벨 Punish Bleed 1, Punish Bleed Debuff 1 | 2레벨 Punish Bleed 2, Punish Bleed Debuff 2 | 3레벨 Punish Bleed 3, Punish Bleed Debuff 3 | 4레벨 Punish Bleed 4, Punish Bleed Debuff 4 | 5레벨 Punish Bleed 5, Punish Bleed Debuff 5
+effect: .name "Punish Bleed 1" .target "target" .curio_result_type "negative" .chance 100%  .dotBleed 4 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Punish Bleed Debuff 1" .target "target" .chance 100% .buff_ids bleed_debuff_1 .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): bleed_debuff_1 = bleed -0.2
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Punish Bleed 2" .target "target" .curio_result_type "negative" .chance 110%  .dotBleed 4 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Punish Bleed Debuff 2" .target "target" .chance 110% .buff_ids bleed_debuff_2 .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): bleed_debuff_2 = bleed -0.23
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Punish Bleed 3" .target "target" .curio_result_type "negative" .chance 120%  .dotBleed 5 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Punish Bleed Debuff 3" .target "target" .chance 120% .buff_ids bleed_debuff_3 .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): bleed_debuff_3 = bleed -0.26
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Punish Bleed 4" .target "target" .curio_result_type "negative" .chance 130%  .dotBleed 5 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Punish Bleed Debuff 4" .target "target" .chance 130% .buff_ids bleed_debuff_4 .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): bleed_debuff_4 = bleed -0.3
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Punish Bleed 5" .target "target" .curio_result_type "negative" .chance 140%  .dotBleed 6 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Punish Bleed Debuff 5" .target "target" .chance 140% .buff_ids bleed_debuff_5 .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): bleed_debuff_5 = bleed -0.33
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+
+//# ======================================================================
+//# 기술: 슬픔의 비 (rain_of_sorrows)
+//# 레벨별 효과: 1레벨 Sorrows Bleed 1, Sorrows Bleed Debuff 1 | 2레벨 Sorrows Bleed 2, Sorrows Bleed Debuff 2 | 3레벨 Sorrows Bleed 3, Sorrows Bleed Debuff 3 | 4레벨 Sorrows Bleed 4, Sorrows Bleed Debuff 4 | 5레벨 Sorrows Bleed 5, Sorrows Bleed Debuff 5
+effect: .name "Sorrows Bleed 1" .target "target" .curio_result_type "negative" .chance 100%  .dotBleed 3 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Sorrows Bleed Debuff 1" .target "target" .chance 100% .buff_ids bleed_debuff_1 .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): bleed_debuff_1 = bleed -0.2
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Sorrows Bleed 2" .target "target" .curio_result_type "negative" .chance 110%  .dotBleed 3 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Sorrows Bleed Debuff 2" .target "target" .chance 110% .buff_ids bleed_debuff_2 .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): bleed_debuff_2 = bleed -0.23
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Sorrows Bleed 3" .target "target" .curio_result_type "negative" .chance 120%  .dotBleed 4 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Sorrows Bleed Debuff 3" .target "target" .chance 120% .buff_ids bleed_debuff_3 .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): bleed_debuff_3 = bleed -0.26
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Sorrows Bleed 4" .target "target" .curio_result_type "negative" .chance 130%  .dotBleed 4 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Sorrows Bleed Debuff 4" .target "target" .chance 130% .buff_ids bleed_debuff_4 .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): bleed_debuff_4 = bleed -0.3
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Sorrows Bleed 5" .target "target" .curio_result_type "negative" .chance 140%  .dotBleed 5 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Sorrows Bleed Debuff 5" .target "target" .chance 140% .buff_ids bleed_debuff_5 .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): bleed_debuff_5 = bleed -0.33
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+
+//# ======================================================================
+//# 기술: 방혈 (exsanguinate)
+//# 레벨별 효과: 1레벨 Exsanguinate 1, Flag HealSelf 1, Flagellant Exhaust | 2레벨 Exsanguinate 2, Flag HealSelf 2, Flagellant Exhaust | 3레벨 Exsanguinate 3, Flag HealSelf 3, Flagellant Exhaust | 4레벨 Exsanguinate 4, Flag HealSelf 4, Flagellant Exhaust | 5레벨 Exsanguinate 5, Flag HealSelf 5, Flagellant Exhaust
+effect: .name "Exsanguinate 1" .target "target" .curio_result_type "negative" .chance 100%  .dotBleed 5 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Flag HealSelf 1" .target "performer" .curio_result_type "positive" .chance 100% .heal_percent 0.35	.on_hit true .on_miss false .queue true
+//#   이 영웅의 다른 기술에서도 사용: 구제
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Flagellant Exhaust" .target performer .chance 100% .buff_ids flag_exhaust_heal_done_debuff flag_exhaust_heal_recvd_debuff flag_exhaust_spd_debuff .apply_once true .on_hit true .on_miss true .queue true
+//#   이 영웅의 다른 기술에서도 사용: 구제
+//#   강화 효과 수치(JSON, 참고용): flag_exhaust_heal_done_debuff = hp_heal_percent -0.25
+//#   강화 효과 수치(JSON, 참고용): flag_exhaust_heal_recvd_debuff = hp_heal_received_percent -0.25
+//#   강화 효과 수치(JSON, 참고용): flag_exhaust_spd_debuff = speed_rating -3
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Exsanguinate 2" .target "target" .curio_result_type "negative" .chance 110%  .dotBleed 6 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Flag HealSelf 2" .target "performer" .curio_result_type "positive" .chance 100% .heal_percent 0.39	.on_hit true .on_miss false	.queue true
+//#   이 영웅의 다른 기술에서도 사용: 구제
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Exsanguinate 3" .target "target" .curio_result_type "negative" .chance 120%  .dotBleed 7 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Flag HealSelf 3" .target "performer" .curio_result_type "positive" .chance 100% .heal_percent 0.42	.on_hit true .on_miss false	.queue true
+//#   이 영웅의 다른 기술에서도 사용: 구제
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Exsanguinate 4" .target "target" .curio_result_type "negative" .chance 130%  .dotBleed 8 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Flag HealSelf 4" .target "performer" .curio_result_type "positive" .chance 100% .heal_percent 0.46	.on_hit true .on_miss false .queue true
+//#   이 영웅의 다른 기술에서도 사용: 구제
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Exsanguinate 5" .target "target" .curio_result_type "negative" .chance 140%  .dotBleed 9 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Flag HealSelf 5" .target "performer" .curio_result_type "positive" .chance 100% .heal_percent 0.50	.on_hit true .on_miss false .queue true
+//#   이 영웅의 다른 기술에서도 사용: 구제
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+
+//# ======================================================================
+//# 기술: 재기 (reclaim)
+//# 레벨별 효과: 1레벨 Flag Healdot 1, Flag Self Wound 1 | 2레벨 Flag Healdot 2, Flag Self Wound 2 | 3레벨 Flag Healdot 3, Flag Self Wound 3 | 4레벨 Flag Healdot 4, Flag Self Wound 4 | 5레벨 Flag Healdot 5, Flag Self Wound 5
+effect: .name "Flag Healdot 1" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 2 .duration 2	.on_hit true .on_miss true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Flag Self Wound 1" .target "performer" .chance 120%  .dotBleed 3 .duration 3	.on_hit true .on_miss true .can_apply_on_death true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Flag Healdot 2" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 2 .duration 3	.on_hit true .on_miss true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Flag Self Wound 2" .target "performer" .chance 130%  .dotBleed 3 .duration 3	.on_hit true .on_miss true .can_apply_on_death true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Flag Healdot 3" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 3 .duration 2	.on_hit true .on_miss true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Flag Self Wound 3" .target "performer" .chance 140%  .dotBleed 4 .duration 3	.on_hit true .on_miss true .can_apply_on_death true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Flag Healdot 4" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 3 .duration 3	.on_hit true .on_miss true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Flag Self Wound 4" .target "performer" .chance 150%  .dotBleed 4 .duration 3	.on_hit true .on_miss true .can_apply_on_death true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Flag Healdot 5" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 4 .duration 3	.on_hit true .on_miss true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Flag Self Wound 5" .target "performer" .chance 160%  .dotBleed 5 .duration 3	.on_hit true .on_miss true .can_apply_on_death true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+
+//# ======================================================================
+//# 기술: 구제 (redeem)
+//# 레벨별 효과: 1레벨 Flag Super Heal 1, Flag HealSelf 1, Flagellant Exhaust | 2레벨 Flag Super Heal 2, Flag HealSelf 2, Flagellant Exhaust | 3레벨 Flag Super Heal 3, Flag HealSelf 3, Flagellant Exhaust | 4레벨 Flag Super Heal 4, Flag HealSelf 4, Flagellant Exhaust | 5레벨 Flag Super Heal 5, Flag HealSelf 5, Flagellant Exhaust
+effect: .name "Flag Super Heal 1" .target "target" .curio_result_type "positive" .chance 100% .heal_percent 0.33	.on_hit true .on_miss false .queue true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Flag Super Heal 2" .target "target" .curio_result_type "positive" .chance 100% .heal_percent 0.35	.on_hit true .on_miss false	.queue true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Flag Super Heal 3" .target "target" .curio_result_type "positive" .chance 100% .heal_percent 0.375	.on_hit true .on_miss false	.queue true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Flag Super Heal 4" .target "target" .curio_result_type "positive" .chance 100% .heal_percent 0.40	.on_hit true .on_miss false .queue true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Flag Super Heal 5" .target "target" .curio_result_type "positive" .chance 100% .heal_percent 0.43	.on_hit true .on_miss false .queue true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+
+//# ======================================================================
+//# 기술: 인내 (endure)
+//# 레벨별 효과: 1레벨 Flag Steal Stress 1, Flag Self Stress 1, Flag Endure Speed Buff 1 | 2레벨 Flag Steal Stress 2, Flag Self Stress 2, Flag Endure Speed Buff 2 | 3레벨 Flag Steal Stress 3, Flag Self Stress 3, Flag Endure Speed Buff 3 | 4레벨 Flag Steal Stress 4, Flag Self Stress 4, Flag Endure Speed Buff 4 | 5레벨 Flag Steal Stress 5, Flag Self Stress 5, Flag Endure Speed Buff 5
+effect: .name "Flag Steal Stress 1" .target "target" .curio_result_type "positive" .chance 100% .healstress 10	.on_hit true .on_miss false .queue true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Flag Self Stress 1" .target "performer" .curio_result_type "negative" .chance 100% .stress 10	.on_hit true .on_miss false	.queue true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Flag Endure Speed Buff 1" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 1	.on_hit true .on_miss false .queue true .apply_once true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Flag Steal Stress 2" .target "target" .curio_result_type "positive" .chance 100% .healstress 11	.on_hit true .on_miss false .queue true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Flag Self Stress 2" .target "performer" .curio_result_type "negative" .chance 100% .stress 9	.on_hit true .on_miss false	.queue true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Flag Endure Speed Buff 2" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 1	.on_hit true .on_miss false .queue true .apply_once true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Flag Steal Stress 3" .target "target" .curio_result_type "positive" .chance 100% .healstress 12	.on_hit true .on_miss false .queue true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Flag Self Stress 3" .target "performer" .curio_result_type "negative" .chance 100% .stress 8	.on_hit true .on_miss false	.queue true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Flag Endure Speed Buff 3" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 2	.on_hit true .on_miss false .queue true .apply_once true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Flag Steal Stress 4" .target "target" .curio_result_type "positive" .chance 100% .healstress 13	.on_hit true .on_miss false .queue true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Flag Self Stress 4" .target "performer" .curio_result_type "negative" .chance 100% .stress 7	.on_hit true .on_miss false	.queue true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Flag Endure Speed Buff 4" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 2	.on_hit true .on_miss false .queue true .apply_once true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Flag Steal Stress 5" .target "target" .curio_result_type "positive" .chance 100% .healstress 14	.on_hit true .on_miss false .queue true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Flag Self Stress 5" .target "performer" .curio_result_type "negative" .chance 100% .stress 6	.on_hit true .on_miss false	.queue true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Flag Endure Speed Buff 5" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 3	.on_hit true .on_miss false .queue true .apply_once true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+
+//# ======================================================================
+//# 기술: 고통 (suffer)
+//# 레벨별 효과: 1레벨 Clear Marked Target, Mark Self, Flag Steal Bleed, Flag Steal Blight, Flag Grit 1 | 2레벨 Clear Marked Target, Mark Self, Flag Steal Bleed, Flag Steal Blight, Flag Grit 2 | 3레벨 Clear Marked Target, Mark Self, Flag Steal Bleed, Flag Steal Blight, Flag Grit 3 | 4레벨 Clear Marked Target, Mark Self, Flag Steal Bleed, Flag Steal Blight, Flag Grit 4 | 5레벨 Clear Marked Target, Mark Self, Flag Steal Bleed, Flag Steal Blight, Flag Grit 5
+effect: .name "Clear Marked Target" .target "target" .chance 100% .untag 1	.on_hit true .on_miss true
+//#   공유 효과: 몬스터 기술 7곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Mark Self" .target "performer" .curio_result_type "positive" .chance 100% .tag 1 .combat_stat_buff 1 .duration 2 .on_hit true .on_miss true .queue true
+//#   공유 효과: 다른 영웅 2명(결투가, 중보병). 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Flag Steal Bleed" .target "target" .curio_result_type "positive" .chance 100% .steal_buff_stat_type hp_dot_bleed .on_hit true .on_miss false .queue true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Flag Steal Blight" .target "target" .curio_result_type "positive" .chance 100% .steal_buff_stat_type hp_dot_poison .on_hit true .on_miss false .queue true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Flag Grit 1" .target "performer" .curio_result_type "positive" .chance 100% .duration 4 .buff_ids flag_grit_stress_1  flag_grit_deathblow_buff_1	.on_hit true .on_miss true .queue true
+//#   강화 효과 수치(JSON, 참고용): flag_grit_stress_1 = stress_dmg_received_percent -0.2
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Flag Grit 2" .target "performer" .curio_result_type "positive" .chance 100% .duration 4 .buff_ids flag_grit_stress_2  flag_grit_deathblow_buff_2	.on_hit true .on_miss true .queue true
+//#   강화 효과 수치(JSON, 참고용): flag_grit_stress_2 = stress_dmg_received_percent -0.25
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Flag Grit 3" .target "performer" .curio_result_type "positive" .chance 100% .duration 4 .buff_ids flag_grit_stress_3  flag_grit_deathblow_buff_3	.on_hit true .on_miss true .queue true
+//#   강화 효과 수치(JSON, 참고용): flag_grit_stress_3 = stress_dmg_received_percent -0.3
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Flag Grit 4" .target "performer" .curio_result_type "positive" .chance 100% .duration 4 .buff_ids flag_grit_stress_4  flag_grit_deathblow_buff_4	.on_hit true .on_miss true .queue true
+//#   강화 효과 수치(JSON, 참고용): flag_grit_stress_4 = stress_dmg_received_percent -0.35
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Flag Grit 5" .target "performer" .curio_result_type "positive" .chance 100% .duration 4 .buff_ids flag_grit_stress_5  flag_grit_deathblow_buff_5	.on_hit true .on_miss true .queue true
+//#   강화 효과 수치(JSON, 참고용): flag_grit_stress_5 = stress_dmg_received_percent -0.4
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+
+//# ======================================================================
+//# 기술 외 효과 (치명타 발동, 자세·모드 등)
+//# crit 
+effect: .name "on_crit_bleedchance"    .target "performer" .curio_result_type "positive" .chance 100% .buff_source_type bsrc_crit .buff_ids "on_crit_bleedchance" .duration 2	.on_hit true .on_miss false .apply_once true
+//#   공유 효과: 다른 영웅 1명(조련사). 여기서 고치면 이 영웅만 바뀐다
+//#   강화 효과 수치(JSON, 참고용): on_crit_bleedchance = bleed_chance 0.2
+//#   원본 위치: effects/base.effects.darkest
+//# death_reaction 
+effect: .name "Flag Last Gift" .target "target" .curio_result_type "positive" .chance 100% .heal 10	.on_hit true .on_miss false .queue true .source_heal_type hero_skill
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "Flag Last Insult" .target "target" .curio_result_type "negative" .chance 125% .stun 1	.on_hit true .on_miss false .queue true
+//#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest

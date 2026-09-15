@@ -1,0 +1,147 @@
+// [편집용 효과 사본] 광대 (jester)
+// 이 파일은 게임이 읽지 않는다. 여기서 고친 수치는 Claude에게 "정리해줘"라고 요청한 뒤에 게임에 적용된다.
+//   정리 시: 원본과 달라진 효과만 새 이름("RB JES 원래이름")으로 effects/rebalance_jester.effects.darkest 에 추가되고,
+//            이 영웅의 기술이 새 효과를 가리키게 바뀐다. 다른 영웅·몬스터는 영향 없음. 원래대로 되돌리면 새 효과도 사라진다.
+// 규칙
+//   - 수치만 고친다. 효과 줄을 지우거나 효과 이름(.name "...")을 바꾸지 않는다.
+//   - 메모는 바꾼 줄 바로 밑에 // 로 쓴다. //# 로 시작하는 줄은 자동 설명이므로 고치지 않는다.
+//   - 강화 효과(.buff_ids)의 실제 수치는 이 파일에 없다(shared/buffs JSON). //# 설명에 참고용으로만 적었다. 바꾸려면 요청.
+// 자주 쓰는 키
+//   .chance 적용 확률 | .duration 지속 턴 | .stun 기절 | .dotBleed 턴당 출혈 | .dotPoison 턴당 중독 | .dotBurn 턴당 화상
+//   .push / .pull 밀치기·당기기 칸 | .heal 회복 | .heal_percent 최대 체력 비율 회복 | .dotHpHeal 턴당 회복 | .healstress 스트레스 회복 | .stress 스트레스
+//   .combat_stat_buff 1 과 함께: .attack_rating_add 명중 / .defense_rating_add 회피 / .protection_rating_add 방어 / .speed_rating_add 속도
+//     / .crit_chance_add 치명타 / .damage_low_multiply · .damage_high_multiply 피해 %
+//   .tag 표식 | .riposte 반격 | .guard 보호 | .keyStatus 조건(대상 상태) | .target "performer" = 자신
+
+//# ======================================================================
+//# 기술: 단검 찌르기 (dirk_stab)
+//# 레벨별 효과: 1레벨 Build to Finale | 2레벨 Build to Finale | 3레벨 Build to Finale | 4레벨 Build to Finale | 5레벨 Build to Finale
+effect: .name "Build to Finale" .target "performer" .curio_result_type "positive" .chance 100% .buff_ids "build_to_finale_dmgL" "build_to_finale_dmgH" .on_hit true .on_miss false .apply_once true .queue true .duration 8
+//#   이 영웅의 다른 기술에서도 사용: 수확의 낫질, 저며내기
+//#   강화 효과 수치(JSON, 참고용): build_to_finale_dmgL = damage_low 0.3 [skill]
+//#   강화 효과 수치(JSON, 참고용): build_to_finale_dmgH = damage_high 0.3 [skill]
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 수확의 낫질 (harvest)
+//# 레벨별 효과: 1레벨 Bleed 1, Build to Finale | 2레벨 Bleed 2, Build to Finale | 3레벨 Bleed 3, Build to Finale | 4레벨 Bleed 4, Build to Finale | 5레벨 Bleed 5, Build to Finale
+effect: .name "Bleed 1" .target "target" .curio_result_type "negative" .chance 100%  .dotBleed 2 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 야만인, 노상강도, 역병 의사) / 몬스터 기술 11곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Bleed 2" .target "target" .curio_result_type "negative" .chance 110%  .dotBleed 2 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 야만인, 노상강도, 역병 의사) / 몬스터 기술 3곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Bleed 3" .target "target" .curio_result_type "negative" .chance 120%  .dotBleed 3 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 야만인, 노상강도, 역병 의사) / 몬스터 기술 11곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Bleed 4" .target "target" .curio_result_type "negative" .chance 130%  .dotBleed 3 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 야만인, 노상강도, 역병 의사). 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Bleed 5" .target "target" .curio_result_type "negative" .chance 140%  .dotBleed 4 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 야만인, 노상강도, 역병 의사) / 몬스터 기술 8곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 대단원 (heroic_end)
+//# 레벨별 효과: 1레벨 Mortal Weakness, Mortal Weakness Stress | 2레벨 Mortal Weakness, Mortal Weakness Stress | 3레벨 Mortal Weakness, Mortal Weakness Stress | 4레벨 Mortal Weakness, Mortal Weakness Stress | 5레벨 Mortal Weakness, Mortal Weakness Stress
+effect: .name "Mortal Weakness" .target "performer" .curio_result_type "negative" .combat_stat_buff 1 .defense_rating_add -25% .speed_rating_add -3 .duration 1 .buff_duration_type combat_end .buff_is_clear_debuff_valid false .on_hit true .on_miss true .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Mortal Weakness Stress" .target "performer" .curio_result_type "negative" .chance 100% .buff_ids "mortal_weakness_stress" .buff_is_clear_debuff_valid false .on_hit true .on_miss true .queue true
+//#   강화 효과 수치(JSON, 참고용): mortal_weakness_stress = stress_dmg_received_percent 1
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 독주 (solo)
+//# 레벨별 효과: 1레벨 Solo Mark Self, Jester Spotlight 1, Build to Finale 2 | 2레벨 Solo Mark Self, Jester Spotlight 2, Build to Finale 2 | 3레벨 Solo Mark Self, Jester Spotlight 3, Build to Finale 2 | 4레벨 Solo Mark Self, Jester Spotlight 4, Build to Finale 2 | 5레벨 Solo Mark Self, Jester Spotlight 5, Build to Finale 2
+effect: .name "Solo Mark Self" .target "performer" .curio_result_type "positive" .chance 100% .tag 1 .combat_stat_buff 1 .duration 3 .on_hit true .on_miss true .queue true .apply_once true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Jester Spotlight 1" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 20% .duration 4	.on_hit true .on_miss true .queue true .apply_once true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Build to Finale 2" .target "performer" .curio_result_type "positive" .chance 100% .buff_ids "build_to_finale2_dmgL" "build_to_finale2_dmgH" "build_to_finale2_crit" .on_hit true .on_miss false .apply_once true .queue true .duration 8
+//#   강화 효과 수치(JSON, 참고용): build_to_finale2_dmgL = damage_low 0.75 [skill]
+//#   강화 효과 수치(JSON, 참고용): build_to_finale2_dmgH = damage_high 0.75 [skill]
+//#   강화 효과 수치(JSON, 참고용): build_to_finale2_crit = crit_chance 0.08 [skill]
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Jester Spotlight 2" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 22% .duration 4	.on_hit true .on_miss true .queue true .apply_once true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Jester Spotlight 3" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 25% .duration 4	.on_hit true .on_miss true .queue true .apply_once true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Jester Spotlight 4" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 27% .duration 4	.on_hit true .on_miss true .queue true .apply_once true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Jester Spotlight 5" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 30% .duration 4	.on_hit true .on_miss true .queue true .apply_once true
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 저며내기 (slice_off)
+//# 레벨별 효과: 1레벨 Strong Bleed 1, Build to Finale | 2레벨 Strong Bleed 2, Build to Finale | 3레벨 Strong Bleed 3, Build to Finale | 4레벨 Strong Bleed 4, Build to Finale | 5레벨 Strong Bleed 5, Build to Finale
+effect: .name "Strong Bleed 1" .target "target" .curio_result_type "negative" .chance 100%  .dotBleed 3 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 1명(야만인). 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Strong Bleed 2" .target "target" .curio_result_type "negative" .chance 110%  .dotBleed 3 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 1명(야만인). 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Strong Bleed 3" .target "target" .curio_result_type "negative" .chance 120%  .dotBleed 4 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 1명(야만인). 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Strong Bleed 4" .target "target" .curio_result_type "negative" .chance 130%  .dotBleed 4 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 1명(야만인). 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Strong Bleed 5" .target "target" .curio_result_type "negative" .chance 140%  .dotBleed 5 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 1명(야만인). 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 전투의 발라드 (battle_ballad)
+//# 레벨별 효과: 1레벨 Embolden Team 1, Build to Finale Song | 2레벨 Embolden Team 2, Build to Finale Song | 3레벨 Embolden Team 3, Build to Finale Song | 4레벨 Embolden Team 4, Build to Finale Song | 5레벨 Embolden Team 5, Build to Finale Song
+effect: .name "Embolden Team 1" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 5% .crit_chance_add 2% .speed_rating_add 2	.on_hit true .on_miss true .apply_once false    .queue false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Build to Finale Song" .target "performer" .curio_result_type "positive" .chance 100% .buff_ids "build_to_finale_dmgL" "build_to_finale_dmgH" "build_to_finale_crit" .on_hit true .on_miss false .apply_once true .queue true .duration 8
+//#   이 영웅의 다른 기술에서도 사용: 격려의 선율
+//#   강화 효과 수치(JSON, 참고용): build_to_finale_dmgL = damage_low 0.3 [skill]
+//#   강화 효과 수치(JSON, 참고용): build_to_finale_dmgH = damage_high 0.3 [skill]
+//#   강화 효과 수치(JSON, 참고용): build_to_finale_crit = crit_chance 0.08 [skill]
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Embolden Team 2" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 6% .crit_chance_add 3% .speed_rating_add 2	.on_hit true .on_miss true .apply_once false	.queue false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Embolden Team 3" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 7% .crit_chance_add 4% .speed_rating_add 3	.on_hit true .on_miss true .apply_once false	.queue false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Embolden Team 4" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 8% .crit_chance_add 5% .speed_rating_add 3	.on_hit true .on_miss true .apply_once false	.queue false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Embolden Team 5" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 10% .crit_chance_add 6% .speed_rating_add 4	.on_hit true .on_miss true .apply_once false	.queue false
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 격려의 선율 (inspiring_tune)
+//# 레벨별 효과: 1레벨 InspiringTune 1, Jester Tune Buff 1, Build to Finale Song | 2레벨 InspiringTune 2, Jester Tune Buff 2, Build to Finale Song | 3레벨 InspiringTune 3, Jester Tune Buff 3, Build to Finale Song | 4레벨 InspiringTune 4, Jester Tune Buff 4, Build to Finale Song | 5레벨 InspiringTune 5, Jester Tune Buff 5, Build to Finale Song
+effect: .name "InspiringTune 1" .target "target" .curio_result_type "positive" .chance 100% .healstress 8	.on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Jester Tune Buff 1" .target "target" .curio_result_type "positive" .chance 100% .buff_ids "JESTTuneStressResistance1" .on_hit true .on_miss false .queue true
+//#   강화 효과 수치(JSON, 참고용): JESTTuneStressResistance1 = stress_dmg_received_percent -0.1
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "InspiringTune 2" .target "target" .curio_result_type "positive" .chance 100% .healstress 9	.on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Jester Tune Buff 2" .target "target" .curio_result_type "positive" .chance 100% .buff_ids "JESTTuneStressResistance2" .on_hit true .on_miss false .queue true
+//#   강화 효과 수치(JSON, 참고용): JESTTuneStressResistance2 = stress_dmg_received_percent -0.125
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "InspiringTune 3" .target "target" .curio_result_type "positive" .chance 100% .healstress 10	.on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Jester Tune Buff 3" .target "target" .curio_result_type "positive" .chance 100% .buff_ids "JESTTuneStressResistance3" .on_hit true .on_miss false .queue true
+//#   강화 효과 수치(JSON, 참고용): JESTTuneStressResistance3 = stress_dmg_received_percent -0.15
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "InspiringTune 4" .target "target" .curio_result_type "positive" .chance 100% .healstress 11	.on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Jester Tune Buff 4" .target "target" .curio_result_type "positive" .chance 100% .buff_ids "JESTTuneStressResistance4" .on_hit true .on_miss false .queue true
+//#   강화 효과 수치(JSON, 참고용): JESTTuneStressResistance4 = stress_dmg_received_percent -0.175
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "InspiringTune 5" .target "target" .curio_result_type "positive" .chance 100% .healstress 12	.on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Jester Tune Buff 5" .target "target" .curio_result_type "positive" .chance 100% .buff_ids "JESTTuneStressResistance5" .on_hit true .on_miss false .queue true
+//#   강화 효과 수치(JSON, 참고용): JESTTuneStressResistance5 = stress_dmg_received_percent -0.2
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술 외 효과 (치명타 발동, 자세·모드 등)
+//# crit 
+effect: .name "on_crit_stresshealdone"    .target "performer" .curio_result_type "positive" .chance 100% .buff_source_type bsrc_crit .buff_ids "on_crit_stresshealbuff" .duration 2	.on_hit true .on_miss false .apply_once true
+//#   강화 효과 수치(JSON, 참고용): on_crit_stresshealbuff = stress_heal_percent 0.4
+//#   원본 위치: effects/base.effects.darkest

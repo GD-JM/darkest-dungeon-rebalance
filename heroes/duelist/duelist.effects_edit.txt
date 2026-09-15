@@ -1,0 +1,157 @@
+// [편집용 효과 사본] 결투가 (duelist)
+// 이 파일은 게임이 읽지 않는다. 여기서 고친 수치는 Claude에게 "정리해줘"라고 요청한 뒤에 게임에 적용된다.
+//   정리 시: 원본과 달라진 효과만 새 이름("RB DUE 원래이름")으로 effects/rebalance_duelist.effects.darkest 에 추가되고,
+//            이 영웅의 기술이 새 효과를 가리키게 바뀐다. 다른 영웅·몬스터는 영향 없음. 원래대로 되돌리면 새 효과도 사라진다.
+// 규칙
+//   - 수치만 고친다. 효과 줄을 지우거나 효과 이름(.name "...")을 바꾸지 않는다.
+//   - 메모는 바꾼 줄 바로 밑에 // 로 쓴다. //# 로 시작하는 줄은 자동 설명이므로 고치지 않는다.
+//   - 강화 효과(.buff_ids)의 실제 수치는 이 파일에 없다(shared/buffs JSON). //# 설명에 참고용으로만 적었다. 바꾸려면 요청.
+// 자주 쓰는 키
+//   .chance 적용 확률 | .duration 지속 턴 | .stun 기절 | .dotBleed 턴당 출혈 | .dotPoison 턴당 중독 | .dotBurn 턴당 화상
+//   .push / .pull 밀치기·당기기 칸 | .heal 회복 | .heal_percent 최대 체력 비율 회복 | .dotHpHeal 턴당 회복 | .healstress 스트레스 회복 | .stress 스트레스
+//   .combat_stat_buff 1 과 함께: .attack_rating_add 명중 / .defense_rating_add 회피 / .protection_rating_add 방어 / .speed_rating_add 속도
+//     / .crit_chance_add 치명타 / .damage_low_multiply · .damage_high_multiply 피해 %
+//   .tag 표식 | .riposte 반격 | .guard 보호 | .keyStatus 조건(대상 상태) | .target "performer" = 자신
+
+//# ======================================================================
+//# 기술: 예상 (anticipation)
+//# 레벨별 효과: 1레벨 없음 | 2레벨 없음 | 3레벨 없음 | 4레벨 없음 | 5레벨 없음
+//#   (효과 없음: 명중·피해·치명타는 영웅 파일에서 조정)
+
+//# ======================================================================
+//# 기술: 찌르기 (touche)
+//# 레벨별 효과: 1레벨 Duelist Touche Buff 1 | 2레벨 Duelist Touche Buff 2 | 3레벨 Duelist Touche Buff 3 | 4레벨 Duelist Touche Buff 4 | 5레벨 Duelist Touche Buff 5
+effect: .name "Duelist Touche Buff 1" .target "performer" .chance 100% .curio_result_type "positive" .buff_ids "DUELIST_TOUCHE_DODGE_1" .duration 4  .on_hit true .on_miss true
+//#   강화 효과 수치(JSON, 참고용): DUELIST_TOUCHE_DODGE_1 = defense_rating 0.25
+//#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
+effect: .name "Duelist Touche Buff 2" .target "performer" .chance 100% .curio_result_type "positive" .buff_ids "DUELIST_TOUCHE_DODGE_2" .duration 4  .on_hit true .on_miss true
+//#   강화 효과 수치(JSON, 참고용): DUELIST_TOUCHE_DODGE_2 = defense_rating 0.27
+//#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
+effect: .name "Duelist Touche Buff 3" .target "performer" .chance 100% .curio_result_type "positive" .buff_ids "DUELIST_TOUCHE_DODGE_3" .duration 4  .on_hit true .on_miss true
+//#   강화 효과 수치(JSON, 참고용): DUELIST_TOUCHE_DODGE_3 = defense_rating 0.3
+//#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
+effect: .name "Duelist Touche Buff 4" .target "performer" .chance 100% .curio_result_type "positive" .buff_ids "DUELIST_TOUCHE_DODGE_4" .duration 4  .on_hit true .on_miss true
+//#   강화 효과 수치(JSON, 참고용): DUELIST_TOUCHE_DODGE_4 = defense_rating 0.32
+//#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
+effect: .name "Duelist Touche Buff 5" .target "performer" .chance 100% .curio_result_type "positive" .buff_ids "DUELIST_TOUCHE_DODGE_5" .duration 4  .on_hit true .on_miss true
+//#   강화 효과 수치(JSON, 참고용): DUELIST_TOUCHE_DODGE_5 = defense_rating 0.35
+//#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
+
+//# ======================================================================
+//# 기술: 눈속임 (feint)
+//# 레벨별 효과: 1레벨 Mark Self, Duelist Feint Buff 1, Duelist Feint Debuff 1 | 2레벨 Mark Self, Duelist Feint Buff 2, Duelist Feint Debuff 2 | 3레벨 Mark Self, Duelist Feint Buff 3, Duelist Feint Debuff 3 | 4레벨 Mark Self, Duelist Feint Buff 4, Duelist Feint Debuff 4 | 5레벨 Mark Self, Duelist Feint Buff 5, Duelist Feint Debuff 5
+effect: .name "Mark Self" .target "performer" .curio_result_type "positive" .chance 100% .tag 1 .combat_stat_buff 1 .duration 2 .on_hit true .on_miss true .queue true
+//#   공유 효과: 다른 영웅 2명(고행자, 중보병). 여기서 고치면 이 영웅만 바뀐다
+//#   이 영웅의 다른 기술에서도 사용: 날쌘 돌진
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Duelist Feint Buff 1" .target "performer" .chance 100% .duration 4 .buff_ids "DUELIST_FEINT_RIPOSTEDMGLBUFF1" "DUELIST_FEINT_RIPOSTEDMGHBUFF1"  .on_hit true .on_miss true
+//#   강화 효과 수치(JSON, 참고용): DUELIST_FEINT_RIPOSTEDMGLBUFF1 = damage_low 0.25 [riposte]
+//#   강화 효과 수치(JSON, 참고용): DUELIST_FEINT_RIPOSTEDMGHBUFF1 = damage_high 0.25 [riposte]
+//#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
+effect: .name "Duelist Feint Debuff 1" .target "target" .chance 110% .duration 3 .buff_ids "DUELIST_FEINT_ACCDEBUFF" "DUELIST_FEINT_PROTDEBUFF1"  .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): DUELIST_FEINT_ACCDEBUFF = attack_rating -0.1 [actorStatus]
+//#   강화 효과 수치(JSON, 참고용): DUELIST_FEINT_PROTDEBUFF1 = protection_rating -0.2
+//#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
+effect: .name "Duelist Feint Buff 2" .target "performer" .chance 100% .duration 4 .buff_ids "DUELIST_FEINT_RIPOSTEDMGLBUFF2" "DUELIST_FEINT_RIPOSTEDMGHBUFF2"  .on_hit true .on_miss true
+//#   강화 효과 수치(JSON, 참고용): DUELIST_FEINT_RIPOSTEDMGLBUFF2 = damage_low 0.27 [riposte]
+//#   강화 효과 수치(JSON, 참고용): DUELIST_FEINT_RIPOSTEDMGHBUFF2 = damage_high 0.27 [riposte]
+//#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
+effect: .name "Duelist Feint Debuff 2" .target "target" .chance 120% .duration 3 .buff_ids "DUELIST_FEINT_ACCDEBUFF" "DUELIST_FEINT_PROTDEBUFF2"  .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): DUELIST_FEINT_ACCDEBUFF = attack_rating -0.1 [actorStatus]
+//#   강화 효과 수치(JSON, 참고용): DUELIST_FEINT_PROTDEBUFF2 = protection_rating -0.22
+//#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
+effect: .name "Duelist Feint Buff 3" .target "performer" .chance 100% .duration 4 .buff_ids "DUELIST_FEINT_RIPOSTEDMGLBUFF3" "DUELIST_FEINT_RIPOSTEDMGHBUFF3"  .on_hit true .on_miss true
+//#   강화 효과 수치(JSON, 참고용): DUELIST_FEINT_RIPOSTEDMGLBUFF3 = damage_low 0.3 [riposte]
+//#   강화 효과 수치(JSON, 참고용): DUELIST_FEINT_RIPOSTEDMGHBUFF3 = damage_high 0.3 [riposte]
+//#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
+effect: .name "Duelist Feint Debuff 3" .target "target" .chance 130% .duration 3 .buff_ids "DUELIST_FEINT_ACCDEBUFF" "DUELIST_FEINT_PROTDEBUFF3"  .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): DUELIST_FEINT_ACCDEBUFF = attack_rating -0.1 [actorStatus]
+//#   강화 효과 수치(JSON, 참고용): DUELIST_FEINT_PROTDEBUFF3 = protection_rating -0.25
+//#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
+effect: .name "Duelist Feint Buff 4" .target "performer" .chance 100% .duration 4 .buff_ids "DUELIST_FEINT_RIPOSTEDMGLBUFF4" "DUELIST_FEINT_RIPOSTEDMGHBUFF4"  .on_hit true .on_miss true
+//#   강화 효과 수치(JSON, 참고용): DUELIST_FEINT_RIPOSTEDMGLBUFF4 = damage_low 0.32 [riposte]
+//#   강화 효과 수치(JSON, 참고용): DUELIST_FEINT_RIPOSTEDMGHBUFF4 = damage_high 0.32 [riposte]
+//#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
+effect: .name "Duelist Feint Debuff 4" .target "target" .chance 140% .duration 3 .buff_ids "DUELIST_FEINT_ACCDEBUFF" "DUELIST_FEINT_PROTDEBUFF4"  .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): DUELIST_FEINT_ACCDEBUFF = attack_rating -0.1 [actorStatus]
+//#   강화 효과 수치(JSON, 참고용): DUELIST_FEINT_PROTDEBUFF4 = protection_rating -0.27
+//#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
+effect: .name "Duelist Feint Buff 5" .target "performer" .chance 100% .duration 4 .buff_ids "DUELIST_FEINT_RIPOSTEDMGLBUFF5" "DUELIST_FEINT_RIPOSTEDMGHBUFF5"  .on_hit true .on_miss true
+//#   강화 효과 수치(JSON, 참고용): DUELIST_FEINT_RIPOSTEDMGLBUFF5 = damage_low 0.35 [riposte]
+//#   강화 효과 수치(JSON, 참고용): DUELIST_FEINT_RIPOSTEDMGHBUFF5 = damage_high 0.35 [riposte]
+//#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
+effect: .name "Duelist Feint Debuff 5" .target "target" .chance 150% .duration 3 .buff_ids "DUELIST_FEINT_ACCDEBUFF" "DUELIST_FEINT_PROTDEBUFF5"  .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): DUELIST_FEINT_ACCDEBUFF = attack_rating -0.1 [actorStatus]
+//#   강화 효과 수치(JSON, 참고용): DUELIST_FEINT_PROTDEBUFF5 = protection_rating -0.3
+//#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
+
+//# ======================================================================
+//# 기술: 회수 (disengage)
+//# 레벨별 효과: 1레벨 Duelist Disengage Buff 1, Duelist Disengage Any Position | 2레벨 Duelist Disengage Buff 2, Duelist Disengage Any Position | 3레벨 Duelist Disengage Buff 3, Duelist Disengage Any Position | 4레벨 Duelist Disengage Buff 4, Duelist Disengage Any Position | 5레벨 Duelist Disengage Buff 5, Duelist Disengage Any Position
+effect: .name "Duelist Disengage Buff 1" .target "performer" .chance 100% .curio_result_type "positive" .combat_stat_buff 1 .attack_rating_add 10% .speed_rating_add 4 .duration 4  .on_hit true .on_miss true
+//#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
+effect: .name "Duelist Disengage Any Position" .target "performer" .chance 100% .curio_result_type "positive" .buff_ids "ATTACKS_ANY_LAUNCH_RANK" "ATTACKS_ANY_TARGET_RANK" .duration 2  .on_hit true .on_miss true
+//#   강화 효과 수치(JSON, 참고용): ATTACKS_ANY_LAUNCH_RANK = defense_rating 0
+//#   강화 효과 수치(JSON, 참고용): ATTACKS_ANY_TARGET_RANK = defense_rating 0
+//#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
+effect: .name "Duelist Disengage Buff 2" .target "performer" .chance 100% .curio_result_type "positive" .combat_stat_buff 1 .attack_rating_add 10% .speed_rating_add 4 .duration 4  .on_hit true .on_miss true
+//#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
+effect: .name "Duelist Disengage Buff 3" .target "performer" .chance 100% .curio_result_type "positive" .combat_stat_buff 1 .attack_rating_add 10% .speed_rating_add 5 .duration 4  .on_hit true .on_miss true
+//#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
+effect: .name "Duelist Disengage Buff 4" .target "performer" .chance 100% .curio_result_type "positive" .combat_stat_buff 1 .attack_rating_add 10% .speed_rating_add 5 .duration 4  .on_hit true .on_miss true
+//#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
+effect: .name "Duelist Disengage Buff 5" .target "performer" .chance 100% .curio_result_type "positive" .combat_stat_buff 1 .attack_rating_add 10% .speed_rating_add 6 .duration 4  .on_hit true .on_miss true
+//#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
+
+//# ======================================================================
+//# 기술: 날쌘 돌진 (fleche)
+//# 레벨별 효과: 1레벨 Mark Self | 2레벨 Mark Self | 3레벨 Mark Self | 4레벨 Mark Self | 5레벨 Mark Self
+
+//# ======================================================================
+//# 기술: 최후의 일격 (coup_de_grace)
+//# 레벨별 효과: 1레벨 Duelist Kill Bonus Action, Duelist Coup CRIT vs Stunned | 2레벨 Duelist Kill Bonus Action, Duelist Coup CRIT vs Stunned | 3레벨 Duelist Kill Bonus Action, Duelist Coup CRIT vs Stunned | 4레벨 Duelist Kill Bonus Action, Duelist Coup CRIT vs Stunned | 5레벨 Duelist Kill Bonus Action, Duelist Coup CRIT vs Stunned
+effect: .name "Duelist Kill Bonus Action" 	.target "performer" .chance 100% .initiative_change 1 .bonus_action_next_turn true .on_hit true .on_miss false .queue true .requires_kill_target true
+//#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
+effect: .name "Duelist Coup CRIT vs Stunned" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "stunned" .combat_stat_buff 1 .crit_chance_add 100% .on_hit true .on_miss false
+//#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
+
+//# ======================================================================
+//# 기술: 부츠 (the_boot)
+//# 레벨별 효과: 1레벨 Stun 1, Push 1B | 2레벨 Stun 2, Push 1C | 3레벨 Stun 3, Push 1D | 4레벨 Stun 4, Push 1E | 5레벨 Stun 5, Push 1F
+effect: .name "Stun 1" .target "target" .curio_result_type "negative" .chance 100% .stun 1	.on_hit true .on_miss false .queue true
+//#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 성전사, 중보병, 역병 의사) / 몬스터 기술 13곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Push 1B" .target "target"  .push 1 	.chance 110%   .on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 2명(노상강도, 중보병). 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Stun 2" .target "target" .curio_result_type "negative" .chance 110% .stun 1	.on_hit true .on_miss false .queue true
+//#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 성전사, 중보병, 역병 의사) / 몬스터 기술 5곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Push 1C" .target "target"  .push 1 	.chance 120%   .on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 2명(노상강도, 중보병) / 몬스터 기술 4곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Stun 3" .target "target" .curio_result_type "negative" .chance 120% .stun 1	.on_hit true .on_miss false .queue true
+//#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 성전사, 중보병, 역병 의사) / 몬스터 기술 14곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Push 1D" .target "target"  .push 1 	.chance 130%   .on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 2명(노상강도, 중보병). 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Stun 4" .target "target" .curio_result_type "negative" .chance 130% .stun 1	.on_hit true .on_miss false .queue true
+//#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 성전사, 중보병, 역병 의사) / 몬스터 기술 1곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Push 1E" .target "target"  .push 1 	.chance 140%   .on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 2명(노상강도, 중보병) / 몬스터 기술 5곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Stun 5" .target "target" .curio_result_type "negative" .chance 140% .stun 1	.on_hit true .on_miss false .queue true
+//#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 성전사, 중보병, 역병 의사) / 몬스터 기술 14곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Push 1F" .target "target"  .push 1 	.chance 150%   .on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 몬스터 기술 3곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술 외 효과 (치명타 발동, 자세·모드 등)
+//# crit 
+effect: .name "on_crit_duelist_def"    .target "performer" .curio_result_type "positive" .chance 100% .buff_source_type bsrc_crit .buff_ids "on_crit_duelist_def" .on_hit true .on_miss false .apply_once true
+//#   강화 효과 수치(JSON, 참고용): on_crit_duelist_def = defense_rating 0.1
+//#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest

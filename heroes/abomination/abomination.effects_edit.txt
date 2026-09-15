@@ -1,0 +1,167 @@
+// [편집용 효과 사본] 괴인 (abomination)
+// 이 파일은 게임이 읽지 않는다. 여기서 고친 수치는 Claude에게 "정리해줘"라고 요청한 뒤에 게임에 적용된다.
+//   정리 시: 원본과 달라진 효과만 새 이름("RB ABO 원래이름")으로 effects/rebalance_abomination.effects.darkest 에 추가되고,
+//            이 영웅의 기술이 새 효과를 가리키게 바뀐다. 다른 영웅·몬스터는 영향 없음. 원래대로 되돌리면 새 효과도 사라진다.
+// 규칙
+//   - 수치만 고친다. 효과 줄을 지우거나 효과 이름(.name "...")을 바꾸지 않는다.
+//   - 메모는 바꾼 줄 바로 밑에 // 로 쓴다. //# 로 시작하는 줄은 자동 설명이므로 고치지 않는다.
+//   - 강화 효과(.buff_ids)의 실제 수치는 이 파일에 없다(shared/buffs JSON). //# 설명에 참고용으로만 적었다. 바꾸려면 요청.
+// 자주 쓰는 키
+//   .chance 적용 확률 | .duration 지속 턴 | .stun 기절 | .dotBleed 턴당 출혈 | .dotPoison 턴당 중독 | .dotBurn 턴당 화상
+//   .push / .pull 밀치기·당기기 칸 | .heal 회복 | .heal_percent 최대 체력 비율 회복 | .dotHpHeal 턴당 회복 | .healstress 스트레스 회복 | .stress 스트레스
+//   .combat_stat_buff 1 과 함께: .attack_rating_add 명중 / .defense_rating_add 회피 / .protection_rating_add 방어 / .speed_rating_add 속도
+//     / .crit_chance_add 치명타 / .damage_low_multiply · .damage_high_multiply 피해 %
+//   .tag 표식 | .riposte 반격 | .guard 보호 | .keyStatus 조건(대상 상태) | .target "performer" = 자신
+
+//# ======================================================================
+//# 기술: 변신 (transform)
+//# 레벨별 효과: 1레벨 없음 | 2레벨 없음 | 3레벨 없음 | 4레벨 없음 | 5레벨 없음
+//#   (효과 없음: 명중·피해·치명타는 영웅 파일에서 조정)
+
+//# ======================================================================
+//# 기술: 사슬질 (manacles)
+//# 레벨별 효과: 1레벨 Manacles Stun 1 | 2레벨 Manacles Stun 2 | 3레벨 Manacles Stun 3 | 4레벨 Manacles Stun 4 | 5레벨 Manacles Stun 5
+effect: .name "Manacles Stun 1" .target "target" .curio_result_type "negative" .chance 90% .stun 1	.on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Manacles Stun 2" .target "target" .curio_result_type "negative" .chance 100% .stun 1	.on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Manacles Stun 3" .target "target" .curio_result_type "negative" .chance 110% .stun 1	.on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Manacles Stun 4" .target "target" .curio_result_type "negative" .chance 120% .stun 1	.on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Manacles Stun 5" .target "target" .curio_result_type "negative" .chance 130% .stun 1	.on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 아수의 담즙 (vomit)
+//# 레벨별 효과: 1레벨 Abom Vomit 1, Vomit Debuff 1 | 2레벨 Abom Vomit 2, Vomit Debuff 2 | 3레벨 Abom Vomit 3, Vomit Debuff 3 | 4레벨 Abom Vomit 4, Vomit Debuff 4 | 5레벨 Abom Vomit 5, Vomit Debuff 5
+effect: .name "Abom Vomit 1" .target "target" .curio_result_type "negative" .chance 100%  .dotPoison 2 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Vomit Debuff 1" .target "target" .chance 100% .buff_ids "Vomit BlightResist Debuff 1" .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): Vomit = (정의 없음)
+//#   강화 효과 수치(JSON, 참고용): BlightResist = (정의 없음)
+//#   강화 효과 수치(JSON, 참고용): Debuff = (정의 없음)
+//#   강화 효과 수치(JSON, 참고용): 1 = (정의 없음)
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Abom Vomit 2" .target "target" .curio_result_type "negative" .chance 110%  .dotPoison 3 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Vomit Debuff 2" .target "target" .chance 110% .buff_ids "Vomit BlightResist Debuff 2" .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): Vomit = (정의 없음)
+//#   강화 효과 수치(JSON, 참고용): BlightResist = (정의 없음)
+//#   강화 효과 수치(JSON, 참고용): Debuff = (정의 없음)
+//#   강화 효과 수치(JSON, 참고용): 2 = (정의 없음)
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Abom Vomit 3" .target "target" .curio_result_type "negative" .chance 120%  .dotPoison 3 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Vomit Debuff 3" .target "target" .chance 120% .buff_ids "Vomit BlightResist Debuff 3" .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): Vomit = (정의 없음)
+//#   강화 효과 수치(JSON, 참고용): BlightResist = (정의 없음)
+//#   강화 효과 수치(JSON, 참고용): Debuff = (정의 없음)
+//#   강화 효과 수치(JSON, 참고용): 3 = (정의 없음)
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Abom Vomit 4" .target "target" .curio_result_type "negative" .chance 130%  .dotPoison 4 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Vomit Debuff 4" .target "target" .chance 130% .buff_ids "Vomit BlightResist Debuff 4" .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): Vomit = (정의 없음)
+//#   강화 효과 수치(JSON, 참고용): BlightResist = (정의 없음)
+//#   강화 효과 수치(JSON, 참고용): Debuff = (정의 없음)
+//#   강화 효과 수치(JSON, 참고용): 4 = (정의 없음)
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Abom Vomit 5" .target "target" .curio_result_type "negative" .chance 140%  .dotPoison 5 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Vomit Debuff 5" .target "target" .chance 140% .buff_ids "Vomit BlightResist Debuff 5" .on_hit true .on_miss false
+//#   강화 효과 수치(JSON, 참고용): Vomit = (정의 없음)
+//#   강화 효과 수치(JSON, 참고용): BlightResist = (정의 없음)
+//#   강화 효과 수치(JSON, 참고용): Debuff = (정의 없음)
+//#   강화 효과 수치(JSON, 참고용): 5 = (정의 없음)
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 참회 (absolution)
+//# 레벨별 효과: 1레벨 Absolution HealStress 1, Absolution Heal 1 | 2레벨 Absolution HealStress 2, Absolution Heal 2 | 3레벨 Absolution HealStress 3, Absolution Heal 3 | 4레벨 Absolution HealStress 4, Absolution Heal 4 | 5레벨 Absolution HealStress 5, Absolution Heal 5
+effect: .name "Absolution HealStress 1"  .target "performer" .curio_result_type "positive" .chance 100%  .healstress 7	.on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Absolution Heal 1" .target "performer" .curio_result_type "positive" .chance 100% .heal 3	.on_hit true .on_miss false .queue false .source_heal_type hero_skill
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Absolution HealStress 2"  .target "performer" .curio_result_type "positive" .chance 100%  .healstress 8	.on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Absolution Heal 2" .target "performer" .curio_result_type "positive" .chance 100% .heal 3	.on_hit true .on_miss false	.queue false .source_heal_type hero_skill
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Absolution HealStress 3"  .target "performer" .curio_result_type "positive" .chance 100%  .healstress 8	.on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Absolution Heal 3" .target "performer" .curio_result_type "positive" .chance 100% .heal 4	.on_hit true .on_miss false	.queue false .source_heal_type hero_skill
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Absolution HealStress 4"  .target "performer" .curio_result_type "positive" .chance 100%  .healstress 9	.on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Absolution Heal 4" .target "performer" .curio_result_type "positive" .chance 100% .heal 4	.on_hit true .on_miss false .queue false .source_heal_type hero_skill
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Absolution HealStress 5"  .target "performer" .curio_result_type "positive" .chance 100%  .healstress 10	.on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Absolution Heal 5" .target "performer" .curio_result_type "positive" .chance 100% .heal 5	.on_hit true .on_miss false .queue false .source_heal_type hero_skill
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 할퀴기 (rake)
+//# 레벨별 효과: 1레벨 rakebuff_1 | 2레벨 rakebuff_2 | 3레벨 rakebuff_3 | 4레벨 rakebuff_4 | 5레벨 rakebuff_5
+effect: .name "rakebuff_1" .target "performer" .duration 4 .chance 100% .buff_ids rake_buff_1l rake_buff_1h .on_hit true .on_miss true  .apply_once true
+//#   강화 효과 수치(JSON, 참고용): rake_buff_1l = damage_low 0.15 [skill]
+//#   강화 효과 수치(JSON, 참고용): rake_buff_1h = damage_high 0.15 [skill]
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "rakebuff_2" .target "performer" .duration 4 .chance 100% .buff_ids rake_buff_2l rake_buff_2h .on_hit true .on_miss true  .apply_once true
+//#   강화 효과 수치(JSON, 참고용): rake_buff_2l = damage_low 0.17 [skill]
+//#   강화 효과 수치(JSON, 참고용): rake_buff_2h = damage_high 0.17 [skill]
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "rakebuff_3" .target "performer" .duration 4 .chance 100% .buff_ids rake_buff_3l rake_buff_3h .on_hit true .on_miss true  .apply_once true
+//#   강화 효과 수치(JSON, 참고용): rake_buff_3l = damage_low 0.2 [skill]
+//#   강화 효과 수치(JSON, 참고용): rake_buff_3h = damage_high 0.2 [skill]
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "rakebuff_4" .target "performer" .duration 4 .chance 100% .buff_ids rake_buff_4l rake_buff_4h .on_hit true .on_miss true  .apply_once true
+//#   강화 효과 수치(JSON, 참고용): rake_buff_4l = damage_low 0.22 [skill]
+//#   강화 효과 수치(JSON, 참고용): rake_buff_4h = damage_high 0.22 [skill]
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "rakebuff_5" .target "performer" .duration 4 .chance 100% .buff_ids rake_buff_5l rake_buff_5h .on_hit true .on_miss true  .apply_once true
+//#   강화 효과 수치(JSON, 참고용): rake_buff_5l = damage_low 0.25 [skill]
+//#   강화 효과 수치(JSON, 참고용): rake_buff_5h = damage_high 0.25 [skill]
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 분노 (rage)
+//# 레벨별 효과: 1레벨 없음 | 2레벨 없음 | 3레벨 없음 | 4레벨 없음 | 5레벨 없음
+//#   (효과 없음: 명중·피해·치명타는 영웅 파일에서 조정)
+
+//# ======================================================================
+//# 기술: 박치기 (slam)
+//# 레벨별 효과: 1레벨 Push 2A, Slam Debuff 1 | 2레벨 Push 2B, Slam Debuff 2 | 3레벨 Push 2C, Slam Debuff 3 | 4레벨 Push 2D, Slam Debuff 4 | 5레벨 Push 2E, Slam Debuff 5
+effect: .name "Push 2A" .target "target"  .push 2     .chance 100%	.on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 1명(현상금 사냥꾼) / 몬스터 기술 3곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Slam Debuff 1" .target "target" .curio_result_type "negative" .chance 100% .duration 3 .combat_stat_buff 1 .defense_rating_add -10% .speed_rating_add -2 .on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Push 2B" .target "target"  .push 2	  .chance 110%	.on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 1명(현상금 사냥꾼). 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Slam Debuff 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3 .combat_stat_buff 1 .defense_rating_add -12% .speed_rating_add -3	.on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Push 2C" .target "target"  .push 2     .chance 120%	.on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 1명(현상금 사냥꾼) / 몬스터 기술 2곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Slam Debuff 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3 .combat_stat_buff 1 .defense_rating_add -15% .speed_rating_add -4	.on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Push 2D" .target "target"  .push 2     .chance 130%	.on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 1명(현상금 사냥꾼). 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Slam Debuff 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .combat_stat_buff 1 .defense_rating_add -17% .speed_rating_add -5	.on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Push 2E" .target "target"  .push 2     .chance 140%	.on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 1명(현상금 사냥꾼) / 몬스터 기술 3곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Slam Debuff 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .combat_stat_buff 1 .defense_rating_add -20% .speed_rating_add -6	.on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술 외 효과 (치명타 발동, 자세·모드 등)
+//# crit 
+effect: .name "on_crit_dmg"    .target "performer" .curio_result_type "positive" .chance 100% .buff_source_type bsrc_crit .buff_ids "on_crit_dmgl" "on_crit_dmgh" .duration 3	.on_hit true .on_miss false .apply_once true
+//#   강화 효과 수치(JSON, 참고용): on_crit_dmgl = damage_low 0.2
+//#   강화 효과 수치(JSON, 참고용): on_crit_dmgh = damage_high 0.2
+//#   원본 위치: effects/base.effects.darkest

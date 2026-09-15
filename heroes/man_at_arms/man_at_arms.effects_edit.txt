@@ -1,0 +1,192 @@
+// [편집용 효과 사본] 중보병 (man_at_arms)
+// 이 파일은 게임이 읽지 않는다. 여기서 고친 수치는 Claude에게 "정리해줘"라고 요청한 뒤에 게임에 적용된다.
+//   정리 시: 원본과 달라진 효과만 새 이름("RB MAA 원래이름")으로 effects/rebalance_man_at_arms.effects.darkest 에 추가되고,
+//            이 영웅의 기술이 새 효과를 가리키게 바뀐다. 다른 영웅·몬스터는 영향 없음. 원래대로 되돌리면 새 효과도 사라진다.
+// 규칙
+//   - 수치만 고친다. 효과 줄을 지우거나 효과 이름(.name "...")을 바꾸지 않는다.
+//   - 메모는 바꾼 줄 바로 밑에 // 로 쓴다. //# 로 시작하는 줄은 자동 설명이므로 고치지 않는다.
+//   - 강화 효과(.buff_ids)의 실제 수치는 이 파일에 없다(shared/buffs JSON). //# 설명에 참고용으로만 적었다. 바꾸려면 요청.
+// 자주 쓰는 키
+//   .chance 적용 확률 | .duration 지속 턴 | .stun 기절 | .dotBleed 턴당 출혈 | .dotPoison 턴당 중독 | .dotBurn 턴당 화상
+//   .push / .pull 밀치기·당기기 칸 | .heal 회복 | .heal_percent 최대 체력 비율 회복 | .dotHpHeal 턴당 회복 | .healstress 스트레스 회복 | .stress 스트레스
+//   .combat_stat_buff 1 과 함께: .attack_rating_add 명중 / .defense_rating_add 회피 / .protection_rating_add 방어 / .speed_rating_add 속도
+//     / .crit_chance_add 치명타 / .damage_low_multiply · .damage_high_multiply 피해 %
+//   .tag 표식 | .riposte 반격 | .guard 보호 | .keyStatus 조건(대상 상태) | .target "performer" = 자신
+
+//# ======================================================================
+//# 기술: 분쇄 (crush)
+//# 레벨별 효과: 1레벨 없음 | 2레벨 없음 | 3레벨 없음 | 4레벨 없음 | 5레벨 없음
+//#   (효과 없음: 명중·피해·치명타는 영웅 파일에서 조정)
+
+//# ======================================================================
+//# 기술: 성채의 일격 (rampart)
+//# 레벨별 효과: 1레벨 Push 1A, Stun 1 | 2레벨 Push 1B, Stun 2 | 3레벨 Push 1C, Stun 3 | 4레벨 Push 1D, Stun 4 | 5레벨 Push 1E, Stun 5
+effect: .name "Push 1A" .target "target"  .push 1 	.chance 100%   .on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 1명(노상강도) / 몬스터 기술 4곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Stun 1" .target "target" .curio_result_type "negative" .chance 100% .stun 1	.on_hit true .on_miss false .queue true
+//#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 성전사, 결투가, 역병 의사) / 몬스터 기술 13곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Push 1B" .target "target"  .push 1 	.chance 110%   .on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 2명(결투가, 노상강도). 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Stun 2" .target "target" .curio_result_type "negative" .chance 110% .stun 1	.on_hit true .on_miss false .queue true
+//#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 성전사, 결투가, 역병 의사) / 몬스터 기술 5곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Push 1C" .target "target"  .push 1 	.chance 120%   .on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 2명(결투가, 노상강도) / 몬스터 기술 4곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Stun 3" .target "target" .curio_result_type "negative" .chance 120% .stun 1	.on_hit true .on_miss false .queue true
+//#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 성전사, 결투가, 역병 의사) / 몬스터 기술 14곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Push 1D" .target "target"  .push 1 	.chance 130%   .on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 2명(결투가, 노상강도). 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Stun 4" .target "target" .curio_result_type "negative" .chance 130% .stun 1	.on_hit true .on_miss false .queue true
+//#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 성전사, 결투가, 역병 의사) / 몬스터 기술 1곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Push 1E" .target "target"  .push 1 	.chance 140%   .on_hit true .on_miss false .can_apply_on_death true
+//#   공유 효과: 다른 영웅 2명(결투가, 노상강도) / 몬스터 기술 5곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Stun 5" .target "target" .curio_result_type "negative" .chance 140% .stun 1	.on_hit true .on_miss false .queue true
+//#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 성전사, 결투가, 역병 의사) / 몬스터 기술 14곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 포효 (bellow)
+//# 레벨별 효과: 1레벨 Disrupt 1, Bellow Crit 1 | 2레벨 Disrupt 2, Bellow Crit 2 | 3레벨 Disrupt 3, Bellow Crit 3 | 4레벨 Disrupt 4, Bellow Crit 4 | 5레벨 Disrupt 5, Bellow Crit 5
+effect: .name "Disrupt 1" .target "target" .curio_result_type "negative" .chance 100% .duration 3  .combat_stat_buff 1 .defense_rating_add -5% .speed_rating_add -5   .on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Bellow Crit 1" .target "target" .curio_result_type "negative" .chance 100% .buff_ids "MAA_Bellow_CritReceived_1" .on_hit true .on_miss false .queue true
+//#   강화 효과 수치(JSON, 참고용): MAA_Bellow_CritReceived_1 = crit_received_chance 0.05 [is_actor_status]
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Disrupt 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3  .combat_stat_buff 1 .defense_rating_add -6% .speed_rating_add -5   .on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Bellow Crit 2" .target "target" .curio_result_type "negative" .chance 110% .buff_ids "MAA_Bellow_CritReceived_1" .on_hit true .on_miss false .queue true
+//#   강화 효과 수치(JSON, 참고용): MAA_Bellow_CritReceived_1 = crit_received_chance 0.05 [is_actor_status]
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Disrupt 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3  .combat_stat_buff 1 .defense_rating_add -7% .speed_rating_add -6   .on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Bellow Crit 3" .target "target" .curio_result_type "negative" .chance 120% .buff_ids "MAA_Bellow_CritReceived_1" .on_hit true .on_miss false .queue true
+//#   강화 효과 수치(JSON, 참고용): MAA_Bellow_CritReceived_1 = crit_received_chance 0.05 [is_actor_status]
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Disrupt 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3  .combat_stat_buff 1 .defense_rating_add -8% .speed_rating_add -6   .on_hit true .on_miss false
+//#   공유 효과: 몬스터 기술 3곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Bellow Crit 4" .target "target" .curio_result_type "negative" .chance 130% .buff_ids "MAA_Bellow_CritReceived_1" .on_hit true .on_miss false .queue true
+//#   강화 효과 수치(JSON, 참고용): MAA_Bellow_CritReceived_1 = crit_received_chance 0.05 [is_actor_status]
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Disrupt 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3  .combat_stat_buff 1 .defense_rating_add -10% .speed_rating_add -7  .on_hit true .on_miss false
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Bellow Crit 5" .target "target" .curio_result_type "negative" .chance 140% .buff_ids "MAA_Bellow_CritReceived_1" .on_hit true .on_miss false .queue true
+//#   강화 효과 수치(JSON, 참고용): MAA_Bellow_CritReceived_1 = crit_received_chance 0.05 [is_actor_status]
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 수호자 (defender)
+//# 레벨별 효과: 1레벨 Clear Guard Performer, Clear Guard Target, MAA Guard 1, Defender 1 | 2레벨 Clear Guard Performer, Clear Guard Target, MAA Guard 1, Defender 2 | 3레벨 Clear Guard Performer, Clear Guard Target, MAA Guard 1, Defender 3 | 4레벨 Clear Guard Performer, Clear Guard Target, MAA Guard 1, Defender 4 | 5레벨 Clear Guard Performer, Clear Guard Target, MAA Guard 1, Defender 5
+effect: .name "Clear Guard Performer" .target "performer" .chance 100% .clearguarding 1 .clearguarded 1 .on_hit true .on_miss true .has_description false
+//#   공유 효과: 다른 영웅 1명(조련사) / 몬스터 기술 15곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Clear Guard Target" .target "target" .chance 100% .clearguarding 1 .clearguarded 1 .on_hit true .on_miss true .has_description false
+//#   공유 효과: 다른 영웅 1명(조련사) / 몬스터 기술 15곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "MAA Guard 1"  .target "target" .curio_result_type "positive" .guard 1 .on_hit true .on_miss true .duration 3
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Defender 1" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .protection_rating_add 15%	.on_hit true .on_miss true .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Defender 2" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .protection_rating_add 18%	.on_hit true .on_miss true .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Defender 3" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .protection_rating_add 22%	.on_hit true .on_miss true .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Defender 4" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .protection_rating_add 26%	.on_hit true .on_miss true .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Defender 5" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .protection_rating_add 30%	.on_hit true .on_miss true .queue true
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 응징 (retribution)
+//# 레벨별 효과: 1레벨 MAA Riposte 1, Mark Self | 2레벨 MAA Riposte 2, Mark Self | 3레벨 MAA Riposte 3, Mark Self | 4레벨 MAA Riposte 4, Mark Self | 5레벨 MAA Riposte 5, Mark Self
+effect: .name "MAA Riposte 1"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -40% .damage_high_multiply -40% .crit_chance_add 0%
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Mark Self" .target "performer" .curio_result_type "positive" .chance 100% .tag 1 .combat_stat_buff 1 .duration 2 .on_hit true .on_miss true .queue true
+//#   공유 효과: 다른 영웅 2명(결투가, 고행자). 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "MAA Riposte 2"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -35% .damage_high_multiply -35% .crit_chance_add 1% 
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "MAA Riposte 3"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -30% .damage_high_multiply -30% .crit_chance_add 2% 
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "MAA Riposte 4"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -25% .damage_high_multiply -25% .crit_chance_add 3% 
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "MAA Riposte 5"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -20% .damage_high_multiply -20% .crit_chance_add 4%
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 지휘 (command)
+//# 레벨별 효과: 1레벨 Command 1 | 2레벨 Command 2 | 3레벨 Command 3 | 4레벨 Command 4 | 5레벨 Command 5
+effect: .name "Command 1" .target "target" .curio_result_type "negative" .chance 100% .buff_ids "MAA_Command_ACC_1" "MAA_Command_CRIT_1" "MAA_Command_GuardedDMGL_1" "MAA_Command_GuardedDMGH_1" .on_hit true .on_miss true .queue true
+//#   강화 효과 수치(JSON, 참고용): MAA_Command_ACC_1 = attack_rating 0.05
+//#   강화 효과 수치(JSON, 참고용): MAA_Command_CRIT_1 = crit_chance 0.04
+//#   강화 효과 수치(JSON, 참고용): MAA_Command_GuardedDMGL_1 = damage_low 0.15 [is_guarded]
+//#   강화 효과 수치(JSON, 참고용): MAA_Command_GuardedDMGH_1 = damage_high 0.15 [is_guarded]
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Command 2" .target "target" .curio_result_type "negative" .chance 100% .buff_ids "MAA_Command_ACC_2" "MAA_Command_CRIT_2" "MAA_Command_GuardedDMGL_2" "MAA_Command_GuardedDMGH_2" .on_hit true .on_miss true .queue true
+//#   강화 효과 수치(JSON, 참고용): MAA_Command_ACC_2 = attack_rating 0.06
+//#   강화 효과 수치(JSON, 참고용): MAA_Command_CRIT_2 = crit_chance 0.05
+//#   강화 효과 수치(JSON, 참고용): MAA_Command_GuardedDMGL_2 = damage_low 0.17 [is_guarded]
+//#   강화 효과 수치(JSON, 참고용): MAA_Command_GuardedDMGH_2 = damage_high 0.17 [is_guarded]
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Command 3" .target "target" .curio_result_type "negative" .chance 100% .buff_ids "MAA_Command_ACC_3" "MAA_Command_CRIT_3" "MAA_Command_GuardedDMGL_3" "MAA_Command_GuardedDMGH_3" .on_hit true .on_miss true .queue true
+//#   강화 효과 수치(JSON, 참고용): MAA_Command_ACC_3 = attack_rating 0.07
+//#   강화 효과 수치(JSON, 참고용): MAA_Command_CRIT_3 = crit_chance 0.06
+//#   강화 효과 수치(JSON, 참고용): MAA_Command_GuardedDMGL_3 = damage_low 0.2 [is_guarded]
+//#   강화 효과 수치(JSON, 참고용): MAA_Command_GuardedDMGH_3 = damage_high 0.2 [is_guarded]
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Command 4" .target "target" .curio_result_type "negative" .chance 100% .buff_ids "MAA_Command_ACC_4" "MAA_Command_CRIT_4" "MAA_Command_GuardedDMGL_4" "MAA_Command_GuardedDMGH_4" .on_hit true .on_miss true .queue true
+//#   강화 효과 수치(JSON, 참고용): MAA_Command_ACC_4 = attack_rating 0.08
+//#   강화 효과 수치(JSON, 참고용): MAA_Command_CRIT_4 = crit_chance 0.07
+//#   강화 효과 수치(JSON, 참고용): MAA_Command_GuardedDMGL_4 = damage_low 0.22 [is_guarded]
+//#   강화 효과 수치(JSON, 참고용): MAA_Command_GuardedDMGH_4 = damage_high 0.22 [is_guarded]
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Command 5" .target "target" .curio_result_type "negative" .chance 100% .buff_ids "MAA_Command_ACC_5" "MAA_Command_CRIT_5" "MAA_Command_GuardedDMGL_5" "MAA_Command_GuardedDMGH_5" .on_hit true .on_miss true .queue true
+//#   강화 효과 수치(JSON, 참고용): MAA_Command_ACC_5 = attack_rating 0.1
+//#   강화 효과 수치(JSON, 참고용): MAA_Command_CRIT_5 = crit_chance 0.08
+//#   강화 효과 수치(JSON, 참고용): MAA_Command_GuardedDMGL_5 = damage_low 0.25 [is_guarded]
+//#   강화 효과 수치(JSON, 참고용): MAA_Command_GuardedDMGH_5 = damage_high 0.25 [is_guarded]
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 고양 (bolster)
+//# 레벨별 효과: 1레벨 Bolster 1, Bolster Stress Buff 1 | 2레벨 Bolster 2, Bolster Stress Buff 2 | 3레벨 Bolster 3, Bolster Stress Buff 3 | 4레벨 Bolster 4, Bolster Stress Buff 4 | 5레벨 Bolster 5, Bolster Stress Buff 5
+effect: .name "Bolster 1" .target "target" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 5%  .duration 1 .buff_duration_type combat_end .on_hit true .on_miss true	.queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Bolster Stress Buff 1" .target "target" .chance 100% .buff_ids "STRESSDMG-10" .duration 1 .buff_duration_type combat_end  .on_hit true .on_miss true .queue true
+//#   강화 효과 수치(JSON, 참고용): STRESSDMG = (정의 없음)
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Bolster 2" .target "target" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 6%  .duration 1 .buff_duration_type combat_end .on_hit true .on_miss true	.queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Bolster Stress Buff 2" .target "target" .chance 100% .buff_ids "STRESSDMG-10" .duration 1 .buff_duration_type combat_end  .on_hit true .on_miss true .queue true
+//#   강화 효과 수치(JSON, 참고용): STRESSDMG = (정의 없음)
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Bolster 3" .target "target" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 7%  .duration 1 .buff_duration_type combat_end .on_hit true .on_miss true	.queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Bolster Stress Buff 3" .target "target" .chance 100% .buff_ids "STRESSDMG-15" .duration 1 .buff_duration_type combat_end  .on_hit true .on_miss true .queue true
+//#   강화 효과 수치(JSON, 참고용): STRESSDMG = (정의 없음)
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Bolster 4" .target "target" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 8%  .duration 1 .buff_duration_type combat_end .on_hit true .on_miss true	.queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Bolster Stress Buff 4" .target "target" .chance 100% .buff_ids "STRESSDMG-15" .duration 1 .buff_duration_type combat_end  .on_hit true .on_miss true .queue true
+//#   강화 효과 수치(JSON, 참고용): STRESSDMG = (정의 없음)
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Bolster 5" .target "target" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 10%  .duration 1 .buff_duration_type combat_end .on_hit true .on_miss true	.queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Bolster Stress Buff 5" .target "target" .chance 100% .buff_ids "STRESSDMG-20" .duration 1 .buff_duration_type combat_end  .on_hit true .on_miss true .queue true
+//#   강화 효과 수치(JSON, 참고용): STRESSDMG = (정의 없음)
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술 외 효과 (치명타 발동, 자세·모드 등)
+//# crit 
+effect: .name "on_crit_stressresist"    .target "performer" .curio_result_type "positive" .chance 100% .buff_source_type bsrc_crit .buff_ids "on_crit_stressresist" .duration 3	.on_hit true .on_miss false .apply_once true
+//#   강화 효과 수치(JSON, 참고용): on_crit_stressresist = stress_dmg_received_percent -0.33
+//#   원본 위치: effects/base.effects.darkest
