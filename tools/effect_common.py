@@ -9,7 +9,9 @@ ABBR = dict(abomination='ABO', antiquarian='ANT', arbalest='ARB', bounty_hunter=
 
 P = lambda p: p.replace('\\', '/')
 norm_ws = lambda s: re.sub(r'\s+', ' ', s.strip())
-EFFECT_LIST = re.compile(r'(\.effects?)((?:\s+"[^"]*")+)')
+# effect names are usually quoted, but some vanilla lines use bare names (duelist: .effect duelist_riposte)
+EFFECT_LIST = re.compile(r'(\.effects?)((?:\s+(?:"[^"]*"|(?!\.)[^\s"]+))+)')
+EFFECT_TOKEN = re.compile(r'"([^"]*)"|([^\s"]+)')
 
 
 def paths(mod_root=None, game_root=None):
@@ -60,7 +62,7 @@ def vanilla_hero_file(G, hero):
 
 def effect_names_in(line):
     m = EFFECT_LIST.search(line)
-    return re.findall(r'"([^"]*)"', m.group(2)) if m else []
+    return [a if a or not b else b for a, b in EFFECT_TOKEN.findall(m.group(2))] if m else []
 
 
 def load_buffs(G):

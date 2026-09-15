@@ -210,3 +210,23 @@ effect: .name "on_crit_dmgmarked"    .target "performer" .curio_result_type "pos
 //#   강화 효과 수치(JSON, 참고용): on_crit_dmgl_marked = damage_low 0.33 [actorStatus]
 //#   강화 효과 수치(JSON, 참고용): on_crit_dmgh_marked = damage_high 0.33 [actorStatus]
 //#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 모드 신규 효과 (원본에 없음): 이름이 "RB BH "로 시작
+//#   원본과 비교하지 않고 그대로 effects/rebalance_bounty_hunter.effects.darkest 에 들어간다.
+//#   수치는 여기서 고치고, 메모는 줄 밑에 // 로 쓴다. 기술에 붙이거나 떼는 것은 Claude에게 요청.
+//#   // 로 시작하는 영문 메모는 배포 파일에도 복사된다(한글 메모는 변경 기록 문서로 옮겨진다).
+//# ----------------------------------------------------------------------
+//# BH-001 끝장내기(finish_him): 출혈 중인 대상 추가 피해
+//#   근거: 도굴꾼 Poison Killer 1~5(중독 대상 +20/23/26/29/33%)와 같은 수치. 원본 세트 장신구가 이미 표식·기절·출혈 3종을 현상금 사냥꾼 조건으로 정의.
+//#   레벨 연결: 끝장내기 1레벨 → RB BH Bleed Killer 1 … 5레벨 → RB BH Bleed Killer 5 (Stun Killer와 함께 적용)
+effect: .name "RB BH Bleed Killer 1" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "bleeding" .combat_stat_buff 1 .damage_low_multiply 20% .damage_high_multiply 20% .on_hit true .on_miss false
+// BH-001 finish_him: +20% dmg vs bleeding (level 1, mirrors GR Poison Killer 1)
+effect: .name "RB BH Bleed Killer 2" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "bleeding" .combat_stat_buff 1 .damage_low_multiply 23% .damage_high_multiply 23% .on_hit true .on_miss false
+// BH-001 finish_him: +23% dmg vs bleeding (level 2, mirrors GR Poison Killer 2)
+effect: .name "RB BH Bleed Killer 3" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "bleeding" .combat_stat_buff 1 .damage_low_multiply 26% .damage_high_multiply 26% .on_hit true .on_miss false
+// BH-001 finish_him: +26% dmg vs bleeding (level 3, mirrors GR Poison Killer 3)
+effect: .name "RB BH Bleed Killer 4" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "bleeding" .combat_stat_buff 1 .damage_low_multiply 29% .damage_high_multiply 29% .on_hit true .on_miss false
+// BH-001 finish_him: +29% dmg vs bleeding (level 4, mirrors GR Poison Killer 4)
+effect: .name "RB BH Bleed Killer 5" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "bleeding" .combat_stat_buff 1 .damage_low_multiply 33% .damage_high_multiply 33% .on_hit true .on_miss false
+// BH-001 finish_him: +33% dmg vs bleeding (level 5, mirrors GR Poison Killer 5)

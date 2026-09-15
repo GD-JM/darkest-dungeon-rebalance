@@ -15,8 +15,9 @@
 
 //# ======================================================================
 //# 기술: 예상 (anticipation)
-//# 레벨별 효과: 1레벨 없음 | 2레벨 없음 | 3레벨 없음 | 4레벨 없음 | 5레벨 없음
-//#   (효과 없음: 명중·피해·치명타는 영웅 파일에서 조정)
+//# 레벨별 효과: 1레벨 duelist_riposte | 2레벨 duelist_riposte | 3레벨 duelist_riposte | 4레벨 duelist_riposte | 5레벨 duelist_riposte
+effect: .name "duelist_riposte"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 2  .on_hit true .on_miss true
+//#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
 
 //# ======================================================================
 //# 기술: 찌르기 (touche)
