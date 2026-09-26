@@ -1,10 +1,12 @@
-resistances: .stun 50% .poison 30% .bleed 65% .disease 40% .move 50% .debuff 30% .death_blow 73% .trap 0%
+resistances: .stun 30% .poison 30% .bleed 60% .disease 40% .move 30% .debuff 30% .death_blow 73% .trap 0%
+//실브랑 고행자 특이사항 수정, 출혈 저항 +35를 +30으로 수정 -> 나병환자 기절저항 +30 과 맞춤
 crit: .effects "on_crit_bleedchance"
 weapon: .name "flagellant_weapon_0" .atk 0% .dmg 3 6 .crit 2% .spd 6
 weapon: .name "flagellant_weapon_1" .atk 0% .dmg 4 7 .crit 3% .spd 6 .upgradeRequirementCode 0
-weapon: .name "flagellant_weapon_2" .atk 0% .dmg 4 8 .crit 4% .spd 8 .upgradeRequirementCode 1
-weapon: .name "flagellant_weapon_3" .atk 0% .dmg 5 10 .crit 5% .spd 8 .upgradeRequirementCode 2
-weapon: .name "flagellant_weapon_4" .atk 0% .dmg 5 11 .crit 6% .spd 9 .upgradeRequirementCode 3
+weapon: .name "flagellant_weapon_2" .atk 0% .dmg 4 8 .crit 4% .spd 7 .upgradeRequirementCode 1
+weapon: .name "flagellant_weapon_3" .atk 0% .dmg 5 10 .crit 5% .spd 7 .upgradeRequirementCode 2
+weapon: .name "flagellant_weapon_4" .atk 0% .dmg 5 11 .crit 6% .spd 8 .upgradeRequirementCode 3
+//속도 정상화 66889 -> 66778
 armour: .name "flagellant_armour_0" .def 0% .prot 0 .hp 22 .spd 0
 armour: .name "flagellant_armour_1" .def 5% .prot 0 .hp 26 .spd 0 .upgradeRequirementCode 0
 armour: .name "flagellant_armour_2" .def 10% .prot 0 .hp 30 .spd 0 .upgradeRequirementCode 1

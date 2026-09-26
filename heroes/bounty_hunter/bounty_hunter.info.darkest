@@ -1,3 +1,11 @@
+//현상금사냥꾼은 버프 많이 필요하긴 함. 이유는 후반 방어력 높아지고 원턴킬이 어려워질 때 반격딜러, 방어관통 딜러에 비해 그냥 성능에서 밀림
+//핵심은 출혈딜러 로서의 정체성 추가. 도굴꾼과 대칭되는
+//현상금 사냥꾼 정체성은 강약약강 -> 이게 아트와도 완벽히 매칭됨
+//4열도 사용가능 표식 이리와라 마름쇠 섬광탄
+//1.2열 쓰면 어퍼컷 , 3,4열 쓰면 섬광탄으로 구분 되게 설정
+//기존에는 2열에 모든 기술들이 몰려있었음. 2>3>1>4열로 다양하게 사용될 수 있게 조정
+
+
 resistances: .stun 40% .poison 30% .bleed 30% .disease 20% .move 40% .debuff 30% .death_blow 67% .trap 40%
 crit: .effects "on_crit_dmgmarked"
 
@@ -8,48 +16,74 @@ weapon: .name "bounty_hunter_weapon_1" .atk 0% .dmg 6 12 .crit 5% .spd 5 .upgrad
 weapon: .name "bounty_hunter_weapon_2" .atk 0% .dmg 7 13 .crit 6% .spd 6 .upgradeRequirementCode 1
 weapon: .name "bounty_hunter_weapon_3" .atk 0% .dmg 7 15 .crit 7% .spd 6 .upgradeRequirementCode 2
 weapon: .name "bounty_hunter_weapon_4" .atk 0% .dmg 8 16 .crit 8% .spd 7 .upgradeRequirementCode 3
+
 armour: .name "bounty_hunter_armour_0" .def 5% .prot 0 .hp 25 .spd 0
 armour: .name "bounty_hunter_armour_1" .def 10% .prot 0 .hp 30 .spd 0 .upgradeRequirementCode 0
 armour: .name "bounty_hunter_armour_2" .def 15% .prot 0 .hp 35 .spd 0 .upgradeRequirementCode 1
 armour: .name "bounty_hunter_armour_3" .def 20% .prot 0 .hp 40 .spd 0 .upgradeRequirementCode 2
 armour: .name "bounty_hunter_armour_4" .def 25% .prot 0 .hp 45 .spd 0 .upgradeRequirementCode 3
+
 combat_skill: .id "collect_bounty" .level 0 .type "melee" .atk 85% .dmg 0% .crit 7% .launch 321 .target 12 .is_crit_valid True  .effect "BH Dmg Marked" "Man Killer 1" .generation_guaranteed true
 combat_skill: .id "collect_bounty" .level 1 .type "melee" .atk 90% .dmg 0% .crit 8% .launch 321 .target 12 .is_crit_valid True  .effect "BH Dmg Marked" "Man Killer 2"
 combat_skill: .id "collect_bounty" .level 2 .type "melee" .atk 95% .dmg 0% .crit 9% .launch 321 .target 12 .is_crit_valid True  .effect "BH Dmg Marked" "Man Killer 3"
 combat_skill: .id "collect_bounty" .level 3 .type "melee" .atk 100% .dmg 0% .crit 10% .launch 321 .target 12 .is_crit_valid True  .effect "BH Dmg Marked" "Man Killer 4"
 combat_skill: .id "collect_bounty" .level 4 .type "melee" .atk 105% .dmg 0% .crit 11% .launch 321 .target 12 .is_crit_valid True  .effect "BH Dmg Marked" "Man Killer 5"
+//사용열, 타겟열 변경 123 -> 12, 12 -> 123
+//사유 끝장내기와의 차별점 있어야 함. 끝장내기가 범용적으로 더 좋음 지금은, 그래서 2개 채용할 이유가 굳이 사라짐.
+//기존엔 끝장내기와 이 기술 동시에 채용했음 이유는 12열은 현상금 사냥, 3열은 끝장내기
+// 여기서 끝장내기 1,2열 공격이 출혈딜러가 생겨서 범용성이 너무 높아짐. 이게 현상금 사냥보다 더 좋아지면 현상금 사냥 쓸 이유가 없어짐 그래서 조정
+//근데 어퍼컷과의 시너지를 생각해서 다시 롤백
+
+
 combat_skill: .id "target_tag" .level 0 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 4321 .target 1234 .is_crit_valid False  .effect "BH Mark Target" "BH Mark Debuff 1" "BH Self Speed 1" .is_stall_invalidating false
 combat_skill: .id "target_tag" .level 1 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 4321 .target 1234 .is_crit_valid False  .effect "BH Mark Target" "BH Mark Debuff 2" "BH Self Speed 2" .is_stall_invalidating false
 combat_skill: .id "target_tag" .level 2 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 4321 .target 1234 .is_crit_valid False  .effect "BH Mark Target" "BH Mark Debuff 3" "BH Self Speed 3" .is_stall_invalidating false
 combat_skill: .id "target_tag" .level 3 .type "ranged" .atk 115% .dmg -100% .crit 0% .launch 4321 .target 1234 .is_crit_valid False  .effect "BH Mark Target" "BH Mark Debuff 4" "BH Self Speed 4" .is_stall_invalidating false
 combat_skill: .id "target_tag" .level 4 .type "ranged" .atk 120% .dmg -100% .crit 0% .launch 4321 .target 1234 .is_crit_valid False  .effect "BH Mark Target" "BH Mark Debuff 5" "BH Self Speed 5" .is_stall_invalidating false
+
 combat_skill: .id "come_hither" .level 0 .type "ranged" .atk 90% .dmg -80% .crit 0% .launch 4321 .target 34 .is_crit_valid True  .effect "Pull 2A" "BH Minor Mark"
 combat_skill: .id "come_hither" .level 1 .type "ranged" .atk 95% .dmg -80% .crit 1% .launch 4321 .target 34 .is_crit_valid True  .effect "Pull 2B" "BH Minor Mark"
 combat_skill: .id "come_hither" .level 2 .type "ranged" .atk 100% .dmg -80% .crit 2% .launch 4321 .target 34 .is_crit_valid True  .effect "Pull 2C" "BH Minor Mark"
 combat_skill: .id "come_hither" .level 3 .type "ranged" .atk 105% .dmg -80% .crit 3% .launch 4321 .target 34 .is_crit_valid True  .effect "Pull 2D" "BH Minor Mark"
 combat_skill: .id "come_hither" .level 4 .type "ranged" .atk 110% .dmg -80% .crit 4% .launch 4321 .target 34 .is_crit_valid True  .effect "Pull 2E" "BH Minor Mark"
-combat_skill: .id "uppercut" .level 0 .type "melee" .atk 90% .dmg -67% .crit 0% .launch 21 .target 12 .is_crit_valid True  .effect "Push 2A" "Stun 1"
-combat_skill: .id "uppercut" .level 1 .type "melee" .atk 95% .dmg -67% .crit 1% .launch 21 .target 12 .is_crit_valid True  .effect "Push 2B" "Stun 2"
-combat_skill: .id "uppercut" .level 2 .type "melee" .atk 100% .dmg -67% .crit 2% .launch 21 .target 12 .is_crit_valid True  .effect "Push 2C" "Stun 3"
-combat_skill: .id "uppercut" .level 3 .type "melee" .atk 105% .dmg -67% .crit 3% .launch 21 .target 12 .is_crit_valid True  .effect "Push 2D" "Stun 4"
-combat_skill: .id "uppercut" .level 4 .type "melee" .atk 110% .dmg -67% .crit 4% .launch 21 .target 12 .is_crit_valid True  .effect "Push 2E" "Stun 5"
+
+combat_skill: .id "uppercut" .level 0 .type "melee" .atk 90% .dmg -45% .crit 9% .launch 21 .target 1 .is_crit_valid True  .effect "Push 2A" "Stun 1"
+combat_skill: .id "uppercut" .level 1 .type "melee" .atk 95% .dmg -45% .crit 10% .launch 21 .target 1 .is_crit_valid True  .effect "Push 2B" "Stun 2"
+combat_skill: .id "uppercut" .level 2 .type "melee" .atk 100% .dmg -45% .crit 11% .launch 21 .target 1 .is_crit_valid True  .effect "Push 2C" "Stun 3"
+combat_skill: .id "uppercut" .level 3 .type "melee" .atk 105% .dmg -45% .crit 12% .launch 21 .target 1 .is_crit_valid True  .effect "Push 2D" "Stun 4"
+combat_skill: .id "uppercut" .level 4 .type "melee" .atk 110% .dmg -45% .crit 13% .launch 21 .target 1 .is_crit_valid True  .effect "Push 2E" "Stun 5"
+// BH-007 uppercut: target 12 -> 1, dmg -67% -> -45%, crit +0~4 -> +9~13 (launch 21 kept)
+
 combat_move_skill: .id "move" .level 0 .type "move" .move 2 2 .launch 4321
-combat_skill: .id "flashbang" .level 0 .type "ranged" .atk 95% .dmg -100% .crit 0% .launch 432 .target 234 .is_crit_valid False  .effect "Hero Strong Stun 1" "Disorient 1" .is_stall_invalidating false
-combat_skill: .id "flashbang" .level 1 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 432 .target 234 .is_crit_valid False  .effect "Hero Strong Stun 2" "Disorient 2" .is_stall_invalidating false
-combat_skill: .id "flashbang" .level 2 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 432 .target 234 .is_crit_valid False  .effect "Hero Strong Stun 3" "Disorient 3" .is_stall_invalidating false
-combat_skill: .id "flashbang" .level 3 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 432 .target 234 .is_crit_valid False  .effect "Hero Strong Stun 4" "Disorient 4" .is_stall_invalidating false
-combat_skill: .id "flashbang" .level 4 .type "ranged" .atk 115% .dmg -100% .crit 0% .launch 432 .target 234 .is_crit_valid False  .effect "Hero Strong Stun 5" "Disorient 5" .is_stall_invalidating false
-combat_skill: .id "finish_him" .level 0 .type "melee" .atk 85% .dmg 0% .crit 5% .launch 321 .target 123 .is_crit_valid True  .effect "Stun Killer 1" "RB BH Bleed Killer 1"
-combat_skill: .id "finish_him" .level 1 .type "melee" .atk 90% .dmg 0% .crit 6% .launch 321 .target 123 .is_crit_valid True  .effect "Stun Killer 2" "RB BH Bleed Killer 2"
-combat_skill: .id "finish_him" .level 2 .type "melee" .atk 95% .dmg 0% .crit 7% .launch 321 .target 123 .is_crit_valid True  .effect "Stun Killer 3" "RB BH Bleed Killer 3"
-combat_skill: .id "finish_him" .level 3 .type "melee" .atk 100% .dmg 0% .crit 8% .launch 321 .target 123 .is_crit_valid True  .effect "Stun Killer 4" "RB BH Bleed Killer 4"
-combat_skill: .id "finish_him" .level 4 .type "melee" .atk 105% .dmg 0% .crit 9% .launch 321 .target 123 .is_crit_valid True  .effect "Stun Killer 5" "RB BH Bleed Killer 5"
+
+
+combat_skill: .id "flashbang" .level 0 .type "ranged" .atk 95% .dmg -100% .crit 0% .launch 43 .target 234 .is_crit_valid False  .effect "Hero Strong Stun 1" "Disorient 1" .is_stall_invalidating false
+combat_skill: .id "flashbang" .level 1 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 43 .target 234 .is_crit_valid False  .effect "Hero Strong Stun 2" "Disorient 2" .is_stall_invalidating false
+combat_skill: .id "flashbang" .level 2 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 43 .target 234 .is_crit_valid False  .effect "Hero Strong Stun 3" "Disorient 3" .is_stall_invalidating false
+combat_skill: .id "flashbang" .level 3 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 43 .target 234 .is_crit_valid False  .effect "Hero Strong Stun 4" "Disorient 4" .is_stall_invalidating false
+combat_skill: .id "flashbang" .level 4 .type "ranged" .atk 115% .dmg -100% .crit 0% .launch 43 .target 234 .is_crit_valid False  .effect "Hero Strong Stun 5" "Disorient 5" .is_stall_invalidating false
+//사용열 432 -> 43 이유 2열에서 어퍼컷이랑 겹침. 다양한 열에서 영웅이 사용될 수 있게
+
+
+combat_skill: .id "finish_him" .level 0 .type "melee" .atk 85% .dmg 0% .crit 5% .launch 21 .target 123 .is_crit_valid True  .effect "Stun Killer 1" "RB BH Bleed Killer 1"
+combat_skill: .id "finish_him" .level 1 .type "melee" .atk 90% .dmg 0% .crit 6% .launch 21 .target 123 .is_crit_valid True  .effect "Stun Killer 2" "RB BH Bleed Killer 2"
+combat_skill: .id "finish_him" .level 2 .type "melee" .atk 95% .dmg 0% .crit 7% .launch 21 .target 123 .is_crit_valid True  .effect "Stun Killer 3" "RB BH Bleed Killer 3"
+combat_skill: .id "finish_him" .level 3 .type "melee" .atk 100% .dmg 0% .crit 8% .launch 21 .target 123 .is_crit_valid True  .effect "Stun Killer 4" "RB BH Bleed Killer 4"
+combat_skill: .id "finish_him" .level 4 .type "melee" .atk 105% .dmg 0% .crit 9% .launch 21 .target 123 .is_crit_valid True  .effect "Stun Killer 5" "RB BH Bleed Killer 5"
+
 // BH-001 finish_him: + RB BH Bleed Killer 1-5 (dmg vs bleeding target, mirrors GR Poison Killer)
-combat_skill: .id "hook_and_slice" .level 0 .type "ranged" .atk 90% .dmg -95% .crit 5% .launch 234 .target 34 .is_crit_valid True  .effect "Bleed 1" "Caltrops SPD Debuff 1" "Caltrops Prey Debuff 1"
-combat_skill: .id "hook_and_slice" .level 1 .type "ranged" .atk 95% .dmg -95% .crit 6% .launch 234 .target 34 .is_crit_valid True  .effect "Bleed 2" "Caltrops SPD Debuff 2" "Caltrops Prey Debuff 2"
-combat_skill: .id "hook_and_slice" .level 2 .type "ranged" .atk 100% .dmg -95% .crit 7% .launch 234 .target 34 .is_crit_valid True  .effect "Bleed 3" "Caltrops SPD Debuff 3" "Caltrops Prey Debuff 3"
-combat_skill: .id "hook_and_slice" .level 3 .type "ranged" .atk 105% .dmg -95% .crit 8% .launch 234 .target 34 .is_crit_valid True  .effect "Bleed 4" "Caltrops SPD Debuff 4" "Caltrops Prey Debuff 4"
-combat_skill: .id "hook_and_slice" .level 4 .type "ranged" .atk 110% .dmg -95% .crit 9% .launch 234 .target 34 .is_crit_valid True  .effect "Bleed 5" "Caltrops SPD Debuff 5" "Caltrops Prey Debuff 5"
+// 사용열 변경 123 -> 12
+//
+
+
+combat_skill: .id "hook_and_slice" .level 0 .type "ranged" .atk 90% .dmg -80% .crit 5% .launch 234 .target 34 .is_crit_valid True  .effect "Bleed 1" "Caltrops SPD Debuff 1" "Caltrops Prey Debuff 1"
+combat_skill: .id "hook_and_slice" .level 1 .type "ranged" .atk 95% .dmg -80% .crit 6% .launch 234 .target 34 .is_crit_valid True  .effect "Bleed 2" "Caltrops SPD Debuff 2" "Caltrops Prey Debuff 2"
+combat_skill: .id "hook_and_slice" .level 2 .type "ranged" .atk 100% .dmg -80% .crit 7% .launch 234 .target 34 .is_crit_valid True  .effect "Bleed 3" "Caltrops SPD Debuff 3" "Caltrops Prey Debuff 3"
+combat_skill: .id "hook_and_slice" .level 3 .type "ranged" .atk 105% .dmg -80% .crit 8% .launch 234 .target 34 .is_crit_valid True  .effect "Bleed 4" "Caltrops SPD Debuff 4" "Caltrops Prey Debuff 4"
+combat_skill: .id "hook_and_slice" .level 4 .type "ranged" .atk 110% .dmg -80% .crit 9% .launch 234 .target 34 .is_crit_valid True  .effect "Bleed 5" "Caltrops SPD Debuff 5" "Caltrops Prey Debuff 5"
+//피해량 95 -> 80으로 상향
+
+
 riposte_skill: .id "riposte1" .level 0 .type "melee" .atk 85% .dmg 0% .crit 5% .launch 1234 .target 1234 .is_crit_valid True 
 tag: .id "heavy"
 tag: .id "non-religious"

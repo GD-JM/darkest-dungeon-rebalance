@@ -1,5 +1,9 @@
 resistances: .stun 30% .poison 30% .bleed 30% .disease 30% .move 30% .debuff 30% .death_blow 67% .trap 40%
 crit: .effects "on_crit_speed"
+
+//방향성 
+
+
 weapon: .name "highwayman_weapon_0" .atk 0% .dmg 5 10 .crit 5% .spd 5
 weapon: .name "highwayman_weapon_1" .atk 0% .dmg 6 12 .crit 6% .spd 5 .upgradeRequirementCode 0
 weapon: .name "highwayman_weapon_2" .atk 0% .dmg 7 13 .crit 7% .spd 6 .upgradeRequirementCode 1
@@ -10,42 +14,61 @@ armour: .name "highwayman_armour_1" .def 15% .prot 0 .hp 28 .spd 0 .upgradeRequi
 armour: .name "highwayman_armour_2" .def 20% .prot 0 .hp 33 .spd 0 .upgradeRequirementCode 1
 armour: .name "highwayman_armour_3" .def 25% .prot 0 .hp 38 .spd 0 .upgradeRequirementCode 2
 armour: .name "highwayman_armour_4" .def 30% .prot 0 .hp 43 .spd 0 .upgradeRequirementCode 3
+
+
 combat_skill: .id "wicked_slice" .level 0 .type "melee" .atk 85% .dmg 15% .crit 5% .launch 321 .target 12 .is_crit_valid True 
 combat_skill: .id "wicked_slice" .level 1 .type "melee" .atk 90% .dmg 15% .crit 6% .launch 321 .target 12 .is_crit_valid True 
 combat_skill: .id "wicked_slice" .level 2 .type "melee" .atk 95% .dmg 15% .crit 7% .launch 321 .target 12 .is_crit_valid True 
 combat_skill: .id "wicked_slice" .level 3 .type "melee" .atk 100% .dmg 15% .crit 8% .launch 321 .target 12 .is_crit_valid True 
 combat_skill: .id "wicked_slice" .level 4 .type "melee" .atk 105% .dmg 15% .crit 9% .launch 321 .target 12 .is_crit_valid True 
+//
+
+
 combat_skill: .id "pistol_shot" .level 0 .type "ranged" .atk 85% .dmg -15% .crit 7.5% .launch 432 .target 234 .is_crit_valid True  .effect "HW Pistol Dmg Marked 1" .generation_guaranteed true
 combat_skill: .id "pistol_shot" .level 1 .type "ranged" .atk 90% .dmg -15% .crit 8.5% .launch 432 .target 234 .is_crit_valid True  .effect "HW Pistol Dmg Marked 2"
 combat_skill: .id "pistol_shot" .level 2 .type "ranged" .atk 95% .dmg -15% .crit 9.5% .launch 432 .target 234 .is_crit_valid True  .effect "HW Pistol Dmg Marked 3"
 combat_skill: .id "pistol_shot" .level 3 .type "ranged" .atk 100% .dmg -15% .crit 10.5% .launch 432 .target 234 .is_crit_valid True  .effect "HW Pistol Dmg Marked 4"
 combat_skill: .id "pistol_shot" .level 4 .type "ranged" .atk 105% .dmg -15% .crit 11.5% .launch 432 .target 234 .is_crit_valid True  .effect "HW Pistol Dmg Marked 5"
-combat_skill: .id "point_blank_shot" .level 0 .type "ranged" .atk 95% .dmg 50% .crit 5% .move 1 0 .launch 1 .target 1 .is_crit_valid True  .effect "Push 1A"
-combat_skill: .id "point_blank_shot" .level 1 .type "ranged" .atk 100% .dmg 50% .crit 6% .move 1 0 .launch 1 .target 1 .is_crit_valid True  .effect "Push 1B"
-combat_skill: .id "point_blank_shot" .level 2 .type "ranged" .atk 105% .dmg 50% .crit 7% .move 1 0 .launch 1 .target 1 .is_crit_valid True  .effect "Push 1C"
-combat_skill: .id "point_blank_shot" .level 3 .type "ranged" .atk 110% .dmg 50% .crit 8% .move 1 0 .launch 1 .target 1 .is_crit_valid True  .effect "Push 1D"
-combat_skill: .id "point_blank_shot" .level 4 .type "ranged" .atk 115% .dmg 50% .crit 9% .move 1 0 .launch 1 .target 1 .is_crit_valid True  .effect "Push 1E"
+
+
+combat_skill: .id "point_blank_shot" .level 0 .type "ranged" .atk 95% .dmg 50% .crit 5% .move 2 0 .launch 1 .target 1 .is_crit_valid True  .effect "Push 2A"
+combat_skill: .id "point_blank_shot" .level 1 .type "ranged" .atk 100% .dmg 50% .crit 6% .move 2 0 .launch 1 .target 1 .is_crit_valid True  .effect "Push 2B"
+combat_skill: .id "point_blank_shot" .level 2 .type "ranged" .atk 105% .dmg 50% .crit 7% .move 2 0 .launch 1 .target 1 .is_crit_valid True  .effect "Push 2C"
+combat_skill: .id "point_blank_shot" .level 3 .type "ranged" .atk 110% .dmg 50% .crit 8% .move 2 0 .launch 1 .target 1 .is_crit_valid True  .effect "Push 2D"
+combat_skill: .id "point_blank_shot" .level 4 .type "ranged" .atk 115% .dmg 50% .crit 9% .move 2 0 .launch 1 .target 1 .is_crit_valid True  .effect "Push 2E"
+//명중 95, 아무런 패널티 없는 스킬데미지 50, 높은 크리 확률 명백한 사기스킬임 사실 떡너프가 맞으나, 순수 성능 너프를 때리면 유저 체감이 불쾌해짐. 그래서 연속해서 사용하기 어렵게 변경하고 대신에, 사용 체감 늘리는 부분도 만듦
+//도굴꾼 돌진과 역으로 대칭 도굴꾼으로 앞으로 2칸 전진, 노상은 뒤로 2칸 후퇴. 대신에 상대 밀쳐내기도 2칸으로 버프.      
+
+
 combat_skill: .id "grape_shot_blast" .level 0 .type "ranged" .atk 75% .dmg -50% .crit -9% .launch 23 .target ~123 .is_crit_valid True  .effect "Grapeshot Vulnerability 1"
 combat_skill: .id "grape_shot_blast" .level 1 .type "ranged" .atk 80% .dmg -50% .crit -8% .launch 23 .target ~123 .is_crit_valid True  .effect "Grapeshot Vulnerability 2"
 combat_skill: .id "grape_shot_blast" .level 2 .type "ranged" .atk 85% .dmg -50% .crit -7% .launch 23 .target ~123 .is_crit_valid True  .effect "Grapeshot Vulnerability 3"
 combat_skill: .id "grape_shot_blast" .level 3 .type "ranged" .atk 90% .dmg -50% .crit -6% .launch 23 .target ~123 .is_crit_valid True  .effect "Grapeshot Vulnerability 4"
 combat_skill: .id "grape_shot_blast" .level 4 .type "ranged" .atk 95% .dmg -50% .crit -5% .launch 23 .target ~123 .is_crit_valid True  .effect "Grapeshot Vulnerability 5"
+
+
 combat_move_skill: .id "move" .level 0 .type "move" .move 2 2 .launch 4321
 combat_skill: .id "take_aim" .level 0 .type "ranged" .atk 95% .dmg -80% .crit 0% .per_battle_limit 1 .launch 4321 .target 234 .is_crit_valid True .ignore_stealth true  .effect "Tracking Buff 1" "Destealth"
 combat_skill: .id "take_aim" .level 1 .type "ranged" .atk 100% .dmg -80% .crit 0% .per_battle_limit 1 .launch 4321 .target 234 .is_crit_valid True .ignore_stealth true  .effect "Tracking Buff 2" "Destealth"
 combat_skill: .id "take_aim" .level 2 .type "ranged" .atk 105% .dmg -80% .crit 0.5% .per_battle_limit 1 .launch 4321 .target 234 .is_crit_valid True .ignore_stealth true  .effect "Tracking Buff 3" "Destealth"
 combat_skill: .id "take_aim" .level 3 .type "ranged" .atk 110% .dmg -80% .crit 0.5% .per_battle_limit 1 .launch 4321 .target 234 .is_crit_valid True .ignore_stealth true  .effect "Tracking Buff 4" "Destealth"
 combat_skill: .id "take_aim" .level 4 .type "ranged" .atk 115% .dmg -80% .crit 1% .per_battle_limit 1 .launch 4321 .target 234 .is_crit_valid True .ignore_stealth true  .effect "Tracking Buff 5" "Destealth"
+
+
 combat_skill: .id "duelist_advance" .level 0 .type "melee" .atk 90% .dmg -20% .crit 5% .move 0 1 .launch 432 .target 123 .is_crit_valid True  .effect "Hwy Riposte 1"
 combat_skill: .id "duelist_advance" .level 1 .type "melee" .atk 95% .dmg -20% .crit 6% .move 0 1 .launch 432 .target 123 .is_crit_valid True  .effect "Hwy Riposte 2"
 combat_skill: .id "duelist_advance" .level 2 .type "melee" .atk 100% .dmg -20% .crit 7% .move 0 1 .launch 432 .target 123 .is_crit_valid True  .effect "Hwy Riposte 3"
 combat_skill: .id "duelist_advance" .level 3 .type "melee" .atk 105% .dmg -20% .crit 8% .move 0 1 .launch 432 .target 123 .is_crit_valid True  .effect "Hwy Riposte 4"
 combat_skill: .id "duelist_advance" .level 4 .type "melee" .atk 110% .dmg -20% .crit 9% .move 0 1 .launch 432 .target 123 .is_crit_valid True  .effect "Hwy Riposte 5"
+
+
 combat_skill: .id "opened_vein" .level 0 .type "melee" .atk 95% .dmg -15% .crit 0% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 1" "HW Open Vein Bleed Debuff 1" "HW Open Vein SPD Debuff 1"
 combat_skill: .id "opened_vein" .level 1 .type "melee" .atk 100% .dmg -15% .crit 1% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 2" "HW Open Vein Bleed Debuff 2" "HW Open Vein SPD Debuff 2"
 combat_skill: .id "opened_vein" .level 2 .type "melee" .atk 105% .dmg -15% .crit 2% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 3" "HW Open Vein Bleed Debuff 3" "HW Open Vein SPD Debuff 3"
 combat_skill: .id "opened_vein" .level 3 .type "melee" .atk 110% .dmg -15% .crit 3% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 4" "HW Open Vein Bleed Debuff 4" "HW Open Vein SPD Debuff 4"
 combat_skill: .id "opened_vein" .level 4 .type "melee" .atk 115% .dmg -15% .crit 4% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 5" "HW Open Vein Bleed Debuff 5" "HW Open Vein SPD Debuff 5"
+
+
 riposte_skill: .id "riposte1" .level 0 .type "melee" .atk 85% .dmg 0% .crit 5% .launch 1234 .target 1234 .is_crit_valid True 
 tag: .id "light"
 tag: .id "non-religious"

@@ -147,16 +147,17 @@ effect: .name "Disorient 5" .target "target" .shuffletarget	.chance 140% .on_hit
 //# ======================================================================
 //# 기술: 끝장내기 (finish_him)
 //# 레벨별 효과: 1레벨 Stun Killer 1 | 2레벨 Stun Killer 2 | 3레벨 Stun Killer 3 | 4레벨 Stun Killer 4 | 5레벨 Stun Killer 5
-effect: .name "Stun Killer 1"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 25% .damage_high_multiply 25%	.on_hit true .on_miss false
+effect: .name "Stun Killer 1"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 25% .damage_high_multiply 60%	.on_hit true .on_miss false
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Stun Killer 2"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 33% .damage_high_multiply 33%	.on_hit true .on_miss false
+effect: .name "Stun Killer 2"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 33% .damage_high_multiply 70%	.on_hit true .on_miss false
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Stun Killer 3"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 40% .damage_high_multiply 40%	.on_hit true .on_miss false
+effect: .name "Stun Killer 3"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 40% .damage_high_multiply 80%	.on_hit true .on_miss false
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Stun Killer 4"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 50% .damage_high_multiply 50%	.on_hit true .on_miss false
+effect: .name "Stun Killer 4"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 50% .damage_high_multiply 90%	.on_hit true .on_miss false
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Stun Killer 5"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 60% .damage_high_multiply 60%	.on_hit true .on_miss false
+effect: .name "Stun Killer 5"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 60% .damage_high_multiply 100%	.on_hit true .on_miss false
 //#   원본 위치: effects/base.effects.darkest
+// 60-100으로 변경
 
 //# ======================================================================
 //# 기술: 마름쇠 (hook_and_slice)

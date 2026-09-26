@@ -1,47 +1,68 @@
 resistances: .stun 40% .poison 30% .bleed 30% .disease 30% .move 40% .debuff 30% .death_blow 67% .trap 10%
 crit: .effects "on_crit_dmgmarked"
+
+
 weapon: .name "arbalest_weapon_0" .atk 0% .dmg 4 8 .crit 6% .spd 3
 weapon: .name "arbalest_weapon_1" .atk 0% .dmg 5 10 .crit 7% .spd 3 .upgradeRequirementCode 0
 weapon: .name "arbalest_weapon_2" .atk 0% .dmg 6 11 .crit 8% .spd 4 .upgradeRequirementCode 1
 weapon: .name "arbalest_weapon_3" .atk 0% .dmg 6 13 .crit 9% .spd 4 .upgradeRequirementCode 2
 weapon: .name "arbalest_weapon_4" .atk 0% .dmg 7 14 .crit 10% .spd 5 .upgradeRequirementCode 3
+
+
 armour: .name "arbalest_armour_0" .def 0% .prot 0 .hp 27 .spd 0
 armour: .name "arbalest_armour_1" .def 5% .prot 0 .hp 32 .spd 0 .upgradeRequirementCode 0
 armour: .name "arbalest_armour_2" .def 10% .prot 0 .hp 37 .spd 0 .upgradeRequirementCode 1
 armour: .name "arbalest_armour_3" .def 15% .prot 0 .hp 42 .spd 0 .upgradeRequirementCode 2
 armour: .name "arbalest_armour_4" .def 20% .prot 0 .hp 47 .spd 0 .upgradeRequirementCode 3
+
+
 combat_skill: .id "sniper_shot" .level 0 .type "ranged" .atk 95% .dmg 0% .crit 5% .launch 43 .target 234 .is_crit_valid True  .effect "Sniper Damage 1" .generation_guaranteed true
 combat_skill: .id "sniper_shot" .level 1 .type "ranged" .atk 100% .dmg 0% .crit 6% .launch 43 .target 234 .is_crit_valid True  .effect "Sniper Damage 2"
 combat_skill: .id "sniper_shot" .level 2 .type "ranged" .atk 105% .dmg 0% .crit 7% .launch 43 .target 234 .is_crit_valid True  .effect "Sniper Damage 3"
 combat_skill: .id "sniper_shot" .level 3 .type "ranged" .atk 110% .dmg 0% .crit 8% .launch 43 .target 234 .is_crit_valid True  .effect "Sniper Damage 4"
 combat_skill: .id "sniper_shot" .level 4 .type "ranged" .atk 115% .dmg 0% .crit 9% .launch 43 .target 234 .is_crit_valid True  .effect "Sniper Damage 5"
+
+
 combat_skill: .id "suppressing_fire" .level 0 .type "ranged" .atk 95% .dmg -80% .crit -10% .launch 43 .target ~34 .is_crit_valid True  .effect "Suppression 1"
 combat_skill: .id "suppressing_fire" .level 1 .type "ranged" .atk 100% .dmg -80% .crit -9% .launch 43 .target ~34 .is_crit_valid True  .effect "Suppression 2"
 combat_skill: .id "suppressing_fire" .level 2 .type "ranged" .atk 105% .dmg -80% .crit -8% .launch 43 .target ~34 .is_crit_valid True  .effect "Suppression 3"
 combat_skill: .id "suppressing_fire" .level 3 .type "ranged" .atk 110% .dmg -80% .crit -7% .launch 43 .target ~34 .is_crit_valid True  .effect "Suppression 4"
 combat_skill: .id "suppressing_fire" .level 4 .type "ranged" .atk 115% .dmg -80% .crit -6% .launch 43 .target ~34 .is_crit_valid True  .effect "Suppression 5"
+
+
 combat_skill: .id "sniper_mark" .level 0 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 43 .target 234 .is_crit_valid False  .effect "Arb Mark Target" "Arb Mark Debuff 1" .is_stall_invalidating false
 combat_skill: .id "sniper_mark" .level 1 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 43 .target 234 .is_crit_valid False  .effect "Arb Mark Target" "Arb Mark Debuff 2" .is_stall_invalidating false
 combat_skill: .id "sniper_mark" .level 2 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 43 .target 234 .is_crit_valid False  .effect "Arb Mark Target" "Arb Mark Debuff 3" .is_stall_invalidating false
 combat_skill: .id "sniper_mark" .level 3 .type "ranged" .atk 115% .dmg -100% .crit 0% .launch 43 .target 234 .is_crit_valid False  .effect "Arb Mark Target" "Arb Mark Debuff 4" .is_stall_invalidating false
 combat_skill: .id "sniper_mark" .level 4 .type "ranged" .atk 120% .dmg -100% .crit 0% .launch 43 .target 234 .is_crit_valid False  .effect "Arb Mark Target" "Arb Mark Debuff 5" .is_stall_invalidating false
+
+
 combat_skill: .id "bola" .level 0 .type "ranged" .atk 95% .dmg -50% .crit 2% .launch 43 .target ~12 .is_crit_valid True  .effect "Bolo Push 1A"
 combat_skill: .id "bola" .level 1 .type "ranged" .atk 100% .dmg -50% .crit 3% .launch 43 .target ~12 .is_crit_valid True  .effect "Bolo Push 1B"
 combat_skill: .id "bola" .level 2 .type "ranged" .atk 105% .dmg -50% .crit 4% .launch 43 .target ~12 .is_crit_valid True  .effect "Bolo Push 1C"
 combat_skill: .id "bola" .level 3 .type "ranged" .atk 110% .dmg -50% .crit 5% .launch 43 .target ~12 .is_crit_valid True  .effect "Bolo Push 1D"
 combat_skill: .id "bola" .level 4 .type "ranged" .atk 115% .dmg -50% .crit 6% .launch 43 .target ~12 .is_crit_valid True  .effect "Bolo Push 1D"
+
+
 combat_move_skill: .id "move" .level 0 .type "move" .move 2 0 .launch 4321
+
+
 combat_skill: .id "blindfire" .level 0 .type "ranged" .atk 75% .dmg -10% .crit 0% .launch 4321 .target ?1234 .is_crit_valid True  .effect "Arb Self Speed 1"
 combat_skill: .id "blindfire" .level 1 .type "ranged" .atk 80% .dmg -10% .crit 1% .launch 4321 .target ?1234 .is_crit_valid True  .effect "Arb Self Speed 2"
 combat_skill: .id "blindfire" .level 2 .type "ranged" .atk 85% .dmg -10% .crit 2% .launch 4321 .target ?1234 .is_crit_valid True  .effect "Arb Self Speed 3"
 combat_skill: .id "blindfire" .level 3 .type "ranged" .atk 90% .dmg -10% .crit 3% .launch 4321 .target ?1234 .is_crit_valid True  .effect "Arb Self Speed 4"
 combat_skill: .id "blindfire" .level 4 .type "ranged" .atk 95% .dmg -10% .crit 4% .launch 4321 .target ?1234 .is_crit_valid True  .effect "Arb Self Speed 5"
-combat_skill: .id "battlefield_bandage" .level 0 .heal 3 3 .launch 43 .target @1234  .effect "RB ARB Cure Bleed" .is_stall_invalidating false
-combat_skill: .id "battlefield_bandage" .level 1 .heal 3 4 .launch 43 .target @1234  .effect "RB ARB Cure Bleed" .is_stall_invalidating false
-combat_skill: .id "battlefield_bandage" .level 2 .heal 4 5 .launch 43 .target @1234  .effect "RB ARB Cure Bleed" .is_stall_invalidating false
-combat_skill: .id "battlefield_bandage" .level 3 .heal 5 6 .launch 43 .target @1234  .effect "RB ARB Cure Bleed" .is_stall_invalidating false
-combat_skill: .id "battlefield_bandage" .level 4 .heal 6 7 .launch 43 .target @1234  .effect "RB ARB Cure Bleed" .is_stall_invalidating false
+
+
+combat_skill: .id "battlefield_bandage" .level 0 .heal 3 .launch 43 .target @1234  .effect "RB ARB Cure Bleed" .is_stall_invalidating false
+combat_skill: .id "battlefield_bandage" .level 1 .heal 4 .launch 43 .target @1234  .effect "RB ARB Cure Bleed" .is_stall_invalidating false
+combat_skill: .id "battlefield_bandage" .level 2 .heal 5 .launch 43 .target @1234  .effect "RB ARB Cure Bleed" .is_stall_invalidating false
+combat_skill: .id "battlefield_bandage" .level 3 .heal 6 .launch 43 .target @1234  .effect "RB ARB Cure Bleed" .is_stall_invalidating false
+combat_skill: .id "battlefield_bandage" .level 4 .heal 7 .launch 43 .target @1234  .effect "RB ARB Cure Bleed" .is_stall_invalidating false
 // ARB-001 battlefield_bandage: heal 2-3/4-5 -> 3-3/6-7, Arb Stacking Heal -> RB ARB Cure Bleed
+// 34567로 바꿈 직관적으로
+
+
 combat_skill: .id "flare" .level 0 .type "ranged" .atk 95% .dmg -100% .crit 0% .launch 4321 .target ~1234 .is_crit_valid False .ignore_stealth true  .effect "FlareClear 1" "FlareLight 1" "Destealth" "FlareHealStress 1" .is_stall_invalidating false
 combat_skill: .id "flare" .level 1 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 4321 .target ~1234 .is_crit_valid False .ignore_stealth true  .effect "FlareClear 1" "FlareLight 2" "Destealth" "FlareHealStress 2" .is_stall_invalidating false
 combat_skill: .id "flare" .level 2 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 4321 .target ~1234 .is_crit_valid False .ignore_stealth true  .effect "FlareClear 1" "FlareLight 3" "Destealth" "FlareHealStress 3" .is_stall_invalidating false

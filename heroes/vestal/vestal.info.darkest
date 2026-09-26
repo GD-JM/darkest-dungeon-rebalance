@@ -1,54 +1,101 @@
+//성녀의 정체성은 안정성, 예측가능성 , BUT 열 붙박이라 열 섞임에 취약함
+//성녀는 3,4열에서 안정성이 너무 좋긴했음. 가장 큰 문제가 3열 스턴 그리고 심판에서 자가힐 때문에 압도적이었음
+//특히 성녀는 쓰는 기술 4개가 아예 고정되어 있었음 심판 스턴 힐 2개 이렇게 이게 가장 큰 문제임. 100이면 100 이 기술 4개만 씀.
+//힐 2개는 정답과 같은 성능 유지되는 게 맞고, 심판과 스턴을 하향하고 다른 기술을 상향해서
+//다양한 기술이 상황에 따라 정답처럼 쓰일 수 있게 수정할 계획임 
+
+
 resistances: .stun 30% .poison 30% .bleed 40% .disease 30% .move 30% .debuff 30% .death_blow 67% .trap 10%
 crit: .effects "on_crit_healdone"
+
+
 weapon: .name "vestal_weapon_0" .atk 0% .dmg 4 8 .crit 1% .spd 4
 weapon: .name "vestal_weapon_1" .atk 0% .dmg 5 10 .crit 2% .spd 4 .upgradeRequirementCode 0
 weapon: .name "vestal_weapon_2" .atk 0% .dmg 6 11 .crit 3% .spd 5 .upgradeRequirementCode 1
 weapon: .name "vestal_weapon_3" .atk 0% .dmg 6 13 .crit 4% .spd 5 .upgradeRequirementCode 2
 weapon: .name "vestal_weapon_4" .atk 0% .dmg 7 14 .crit 5% .spd 6 .upgradeRequirementCode 3
+
+
 armour: .name "vestal_armour_0" .def 0% .prot 0 .hp 24 .spd 0
 armour: .name "vestal_armour_1" .def 5% .prot 0 .hp 29 .spd 0 .upgradeRequirementCode 0
 armour: .name "vestal_armour_2" .def 10% .prot 0 .hp 34 .spd 0 .upgradeRequirementCode 1
 armour: .name "vestal_armour_3" .def 15% .prot 0 .hp 39 .spd 0 .upgradeRequirementCode 2
 armour: .name "vestal_armour_4" .def 20% .prot 0 .hp 44 .spd 0 .upgradeRequirementCode 3
-combat_skill: .id "mace_bash" .level 0 .type "melee" .atk 85% .dmg 0% .crit 0% .launch 21 .target 12 .is_crit_valid True  .effect "Unholy Killer 1"
-combat_skill: .id "mace_bash" .level 1 .type "melee" .atk 90% .dmg 0% .crit 1% .launch 21 .target 12 .is_crit_valid True  .effect "Unholy Killer 2"
-combat_skill: .id "mace_bash" .level 2 .type "melee" .atk 95% .dmg 0% .crit 2% .launch 21 .target 12 .is_crit_valid True  .effect "Unholy Killer 3"
-combat_skill: .id "mace_bash" .level 3 .type "melee" .atk 100% .dmg 0% .crit 3% .launch 21 .target 12 .is_crit_valid True  .effect "Unholy Killer 4"
-combat_skill: .id "mace_bash" .level 4 .type "melee" .atk 105% .dmg 0% .crit 4% .launch 21 .target 12 .is_crit_valid True  .effect "Unholy Killer 5"
-combat_skill: .id "judgement" .level 0 .type "ranged" .atk 85% .dmg -25% .crit 5% .launch 43 .target 1234 .is_crit_valid True  .effect "Vestal HealSelf 1"
-combat_skill: .id "judgement" .level 1 .type "ranged" .atk 90% .dmg -25% .crit 6% .launch 43 .target 1234 .is_crit_valid True  .effect "Vestal HealSelf 1"
-combat_skill: .id "judgement" .level 2 .type "ranged" .atk 95% .dmg -25% .crit 7% .launch 43 .target 1234 .is_crit_valid True  .effect "Vestal HealSelf 2"
-combat_skill: .id "judgement" .level 3 .type "ranged" .atk 100% .dmg -25% .crit 8% .launch 43 .target 1234 .is_crit_valid True  .effect "Vestal HealSelf 2"
-combat_skill: .id "judgement" .level 4 .type "ranged" .atk 105% .dmg -25% .crit 9% .launch 43 .target 1234 .is_crit_valid True  .effect "Vestal HealSelf 3"
-combat_skill: .id "dazzling_light" .level 0 .type "ranged" .atk 90% .dmg -75% .crit 5% .launch 432 .target 123 .is_crit_valid True  .effect "Vestal Stun 1" "Dazzling Light 1"
-combat_skill: .id "dazzling_light" .level 1 .type "ranged" .atk 95% .dmg -75% .crit 6% .launch 432 .target 123 .is_crit_valid True  .effect "Vestal Stun 2" "Dazzling Light 1"
-combat_skill: .id "dazzling_light" .level 2 .type "ranged" .atk 100% .dmg -75% .crit 7% .launch 432 .target 123 .is_crit_valid True  .effect "Vestal Stun 3" "Dazzling Light 1"
-combat_skill: .id "dazzling_light" .level 3 .type "ranged" .atk 105% .dmg -75% .crit 8% .launch 432 .target 123 .is_crit_valid True  .effect "Vestal Stun 4" "Dazzling Light 1"
-combat_skill: .id "dazzling_light" .level 4 .type "ranged" .atk 110% .dmg -75% .crit 9% .launch 432 .target 123 .is_crit_valid True  .effect "Vestal Stun 5" "Dazzling Light 1"
-combat_skill: .id "divine_grace" .level 0 .heal 4 5 .launch 43 .target @4321  .generation_guaranteed true .is_stall_invalidating false
-combat_skill: .id "divine_grace" .level 1 .heal 5 6 .launch 43 .target @4321  .is_stall_invalidating false
-combat_skill: .id "divine_grace" .level 2 .heal 6 7 .launch 43 .target @4321  .is_stall_invalidating false
-combat_skill: .id "divine_grace" .level 3 .heal 7 8 .launch 43 .target @4321  .is_stall_invalidating false
-combat_skill: .id "divine_grace" .level 4 .heal 8 9 .launch 43 .target @4321  .is_stall_invalidating false
+
+
+combat_skill: .id "mace_bash" .level 0 .type "melee" .atk 85% .dmg 0% .crit 5% .launch 21 .target 12 .is_crit_valid True  .effect "Unholy Killer 1"  .effect "Vestal HealSelf 1"
+combat_skill: .id "mace_bash" .level 1 .type "melee" .atk 90% .dmg 0% .crit 6% .launch 21 .target 12 .is_crit_valid True  .effect "Unholy Killer 2"  .effect "Vestal HealSelf 1"
+combat_skill: .id "mace_bash" .level 2 .type "melee" .atk 95% .dmg 0% .crit 7% .launch 21 .target 12 .is_crit_valid True  .effect "Unholy Killer 3"  .effect "Vestal HealSelf 2"
+combat_skill: .id "mace_bash" .level 3 .type "melee" .atk 100% .dmg 0% .crit 8% .launch 21 .target 12 .is_crit_valid True  .effect "Unholy Killer 4"  .effect "Vestal HealSelf 2"
+combat_skill: .id "mace_bash" .level 4 .type "melee" .atk 105% .dmg 0% .crit 9% .launch 21 .target 12 .is_crit_valid True  .effect "Unholy Killer 5"  .effect "Vestal HealSelf 3"
+// 1,2열 성녀가 때에 따라 가능하도록, 3,4열 붙박이 스킬인 심판의 자힐을 메이스로 가져옴
+// 이 변화만으로 1열의 탱커 성녀가 진짜 가능할거라 생각함. 
+// 치명타 확률 심판이랑 바꿈
+
+combat_skill: .id "judgement" .level 0 .type "ranged" .atk 90 .dmg -25% .crit 0 .launch 43 .target 1234 .is_crit_valid True 
+combat_skill: .id "judgement" .level 1 .type "ranged" .atk 95 .dmg -25% .crit 1 .launch 43 .target 1234 .is_crit_valid True
+combat_skill: .id "judgement" .level 2 .type "ranged" .atk 100 .dmg -25% .crit 2 .launch 43 .target 1234 .is_crit_valid True
+combat_skill: .id "judgement" .level 3 .type "ranged" .atk 105 .dmg -25% .crit 3 .launch 43 .target 1234 .is_crit_valid True
+combat_skill: .id "judgement" .level 4 .type "ranged" .atk 110 .dmg -25% .crit 4 .launch 43 .target 1234 .is_crit_valid True
+// 자힐을 메이스로 넘김
+// 명중을 RANGE 표준인 90으로 바꾸고 대신에 치명타 확율을 메이스랑 바꿈
+
+
+combat_skill: .id "dazzling_light" .level 0 .type "ranged" .atk 90% .dmg -100% .crit 5% .launch 43 .target 123 .is_crit_valid True  .effect "Vestal Stun 1" "Dazzling Light 1"
+combat_skill: .id "dazzling_light" .level 1 .type "ranged" .atk 95% .dmg -100% .crit 6% .launch 43 .target 123 .is_crit_valid True  .effect "Vestal Stun 2" "Dazzling Light 1"
+combat_skill: .id "dazzling_light" .level 2 .type "ranged" .atk 100% .dmg -100% .crit 7% .launch 43 .target 123 .is_crit_valid True  .effect "Vestal Stun 3" "Dazzling Light 1"
+combat_skill: .id "dazzling_light" .level 3 .type "ranged" .atk 105% .dmg -100% .crit 8% .launch 43 .target 123 .is_crit_valid True  .effect "Vestal Stun 4" "Dazzling Light 1"
+combat_skill: .id "dazzling_light" .level 4 .type "ranged" .atk 110% .dmg -100% .crit 9% .launch 43 .target 123 .is_crit_valid True  .effect "Vestal Stun 5" "Dazzling Light 1"
+//3,4열과 1,2열 분리 위해 432 -> 43으로 변경
+//심판보다 스턴이 3열 닿아서 너무 좋기 때문에 데미지 자체를 없애서 너프함
+
+
+
+
+combat_skill: .id "divine_grace" .level 0 .heal 5 .launch 4321 .target @4321  .generation_guaranteed true .is_stall_invalidating false
+combat_skill: .id "divine_grace" .level 1 .heal 6 .launch 4321 .target @4321  .is_stall_invalidating false
+combat_skill: .id "divine_grace" .level 2 .heal 7 .launch 4321 .target @4321  .is_stall_invalidating false
+combat_skill: .id "divine_grace" .level 3 .heal 8 .launch 4321 .target @4321  .is_stall_invalidating false
+combat_skill: .id "divine_grace" .level 4 .heal 9 .launch 4321 .target @4321  .is_stall_invalidating false
+//성녀의 정체성을 안정성 즉 예측 가능성에 둠.
+//그렇기에 힐의 랜덤성을 없애고 소폭 상향함
+//1열 성녀의 가능성 때문에 사용열을 전라인으로 변경 43 -> 4321
+
+
 combat_move_skill: .id "move" .level 0 .type "move" .move 1 1 .launch 4321
-combat_skill: .id "gods_comfort" .level 0 .heal 1 3 .launch 432 .target @~1234  .is_stall_invalidating false
-combat_skill: .id "gods_comfort" .level 1 .heal 2 3 .launch 432 .target @~1234  .is_stall_invalidating false
-combat_skill: .id "gods_comfort" .level 2 .heal 3 3 .launch 432 .target @~1234  .is_stall_invalidating false
-combat_skill: .id "gods_comfort" .level 3 .heal 3 4 .launch 432 .target @~1234  .is_stall_invalidating false
-combat_skill: .id "gods_comfort" .level 4 .heal 4 5 .launch 432 .target @~1234  .is_stall_invalidating false
-combat_skill: .id "gods_illumination" .level 0 .type "ranged" .atk 90% .dmg -75% .crit 0% .launch 321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "Dodge Curse 1" "Vestal Light 1" "Destealth"
-combat_skill: .id "gods_illumination" .level 1 .type "ranged" .atk 95% .dmg -75% .crit 0% .launch 321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "Dodge Curse 2" "Vestal Light 2" "Destealth"
-combat_skill: .id "gods_illumination" .level 2 .type "ranged" .atk 100% .dmg -75% .crit 0% .launch 321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "Dodge Curse 3" "Vestal Light 3" "Destealth"
-combat_skill: .id "gods_illumination" .level 3 .type "ranged" .atk 105% .dmg -75% .crit 0% .launch 321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "Dodge Curse 4" "Vestal Light 4" "Destealth"
-combat_skill: .id "gods_illumination" .level 4 .type "ranged" .atk 110% .dmg -75% .crit 0% .launch 321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "Dodge Curse 5" "Vestal Light 5" "Destealth"
-combat_skill: .id "gods_hand" .level 0 .type "ranged" .atk 85% .dmg -50% .crit 1% .launch 12 .target 123 .is_crit_valid True  .effect "Vestal Inspiration 1" "Unholy Killer 1"
-combat_skill: .id "gods_hand" .level 1 .type "ranged" .atk 90% .dmg -50% .crit 2% .launch 12 .target 123 .is_crit_valid True  .effect "Vestal Inspiration 2" "Unholy Killer 2"
-combat_skill: .id "gods_hand" .level 2 .type "ranged" .atk 95% .dmg -50% .crit 3% .launch 12 .target 123 .is_crit_valid True  .effect "Vestal Inspiration 3" "Unholy Killer 3"
-combat_skill: .id "gods_hand" .level 3 .type "ranged" .atk 100% .dmg -50% .crit 4% .launch 12 .target 123 .is_crit_valid True  .effect "Vestal Inspiration 4" "Unholy Killer 4"
-combat_skill: .id "gods_hand" .level 4 .type "ranged" .atk 105% .dmg -50% .crit 5% .launch 12 .target 123 .is_crit_valid True  .effect "Vestal Inspiration 5" "Unholy Killer 5"
+combat_skill: .id "gods_comfort" .level 0 .heal 2 3 .launch 43 .target @~1234  .is_stall_invalidating false
+combat_skill: .id "gods_comfort" .level 1 .heal 3 3 .launch 43 .target @~1234  .is_stall_invalidating false
+combat_skill: .id "gods_comfort" .level 2 .heal 3 4 .launch 43 .target @~1234  .is_stall_invalidating false
+combat_skill: .id "gods_comfort" .level 3 .heal 4 4 .launch 43 .target @~1234  .is_stall_invalidating false
+combat_skill: .id "gods_comfort" .level 4 .heal 4 5 .launch 43 .target @~1234  .is_stall_invalidating false
+//가장 사기기술인 이 기술은 대신에 3,4열에서만 사용하게 변경 432 -> 43
+//힐량 소폭 상승 이유는 1렙에 1힐이 떠버리면 디바인 그레이스보다 힐량이 구림. 근데 마지막 4->5렙 갈 때 비정상으로 높은 수치로 레벨 상승
+//그래서 1렙에 몰아줌 힐성능을 대신에 등차적으로 성장하게 바꿈
+
+
+combat_skill: .id "gods_illumination" .level 0 .type "ranged" .atk 90% .dmg -75% .crit 0% .launch 4321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "Dodge Curse 1" "Vestal Light 1" "Destealth"
+combat_skill: .id "gods_illumination" .level 1 .type "ranged" .atk 95% .dmg -75% .crit 0% .launch 4321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "Dodge Curse 2" "Vestal Light 2" "Destealth"
+combat_skill: .id "gods_illumination" .level 2 .type "ranged" .atk 100% .dmg -75% .crit 0% .launch 4321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "Dodge Curse 3" "Vestal Light 3" "Destealth"
+combat_skill: .id "gods_illumination" .level 3 .type "ranged" .atk 105% .dmg -75% .crit 0% .launch 4321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "Dodge Curse 4" "Vestal Light 4" "Destealth"
+combat_skill: .id "gods_illumination" .level 4 .type "ranged" .atk 110% .dmg -75% .crit 0% .launch 4321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "Dodge Curse 5" "Vestal Light 5" "Destealth"
+//1열에 쓸게 없어서 이거 넣어야함
+//사용열 321 -> 4321
+
+
+
+combat_skill: .id "gods_hand" .level 0 .type "ranged" .atk 90% .dmg -50% .crit 1% .launch 12 .target 123 .is_crit_valid True  .effect "Vestal Inspiration 1" "Unholy Killer 1"
+combat_skill: .id "gods_hand" .level 1 .type "ranged" .atk 95% .dmg -50% .crit 2% .launch 12 .target 123 .is_crit_valid True  .effect "Vestal Inspiration 2" "Unholy Killer 2"
+combat_skill: .id "gods_hand" .level 2 .type "ranged" .atk 100% .dmg -50% .crit 3% .launch 12 .target 123 .is_crit_valid True  .effect "Vestal Inspiration 3" "Unholy Killer 3"
+combat_skill: .id "gods_hand" .level 3 .type "ranged" .atk 105% .dmg -50% .crit 4% .launch 12 .target 123 .is_crit_valid True  .effect "Vestal Inspiration 4" "Unholy Killer 4"
+combat_skill: .id "gods_hand" .level 4 .type "ranged" .atk 110% .dmg -50% .crit 5% .launch 12 .target 123 .is_crit_valid True  .effect "Vestal Inspiration 5" "Unholy Killer 5"
+//1,2열 성녀 버프 위해 명중 레인지 표준 90으로 조정 85 -> 90
+
+
 tag: .id "religious"
 tag: .id "heavy"
 tag: .id "altar_of_light"
+
+
 deaths_door: .buffs deathsdoorACCDebuff deathsdoorDMGLowDebuff deathsdoorDMGHighDebuff deathsdoorSPDDebuff deathsdoorSRDebuff .recovery_buffs mortalityACCDebuff mortalityDMGLowDebuff mortalityDMGHighDebuff mortalitySPDDebuff mortalitySRDebuff .recovery_heart_attack_buffs heartattackACCDebuff heartattackDMGLowDebuff heartattackDMGHighDebuff heartattackSPDDebuff heartattackSRDebuff
 controlled: .target_rank 4
 id_index: .index 3
