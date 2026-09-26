@@ -16,7 +16,8 @@
 //# ======================================================================
 //# 기술: 현상금 수거 (collect_bounty)
 //# 레벨별 효과: 1레벨 BH Dmg Marked, Man Killer 1 | 2레벨 BH Dmg Marked, Man Killer 2 | 3레벨 BH Dmg Marked, Man Killer 3 | 4레벨 BH Dmg Marked, Man Killer 4 | 5레벨 BH Dmg Marked, Man Killer 5
-effect: .name "BH Dmg Marked"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 100%	.damage_high_multiply 90%	.on_hit true .on_miss false
+effect: .name "BH Dmg Marked"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 100%	.damage_high_multiply 100%	.on_hit true .on_miss false
+// BH-003 표식 대상 피해 90%% -> 100%% (90은 수치가 애매). damage_high도 100으로 맞춤
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Man Killer 1" .target "performer" .chance 100% .curio_result_type "positive" .monsterType "man" .combat_stat_buff 1 .damage_low_multiply 15%	.damage_high_multiply 15%	.on_hit true .on_miss false
 //#   원본 위치: effects/base.effects.darkest

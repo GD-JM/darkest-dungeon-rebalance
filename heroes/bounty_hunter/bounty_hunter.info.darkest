@@ -23,11 +23,11 @@ armour: .name "bounty_hunter_armour_2" .def 15% .prot 0 .hp 35 .spd 0 .upgradeRe
 armour: .name "bounty_hunter_armour_3" .def 20% .prot 0 .hp 40 .spd 0 .upgradeRequirementCode 2
 armour: .name "bounty_hunter_armour_4" .def 25% .prot 0 .hp 45 .spd 0 .upgradeRequirementCode 3
 
-combat_skill: .id "collect_bounty" .level 0 .type "melee" .atk 85% .dmg 0% .crit 7% .launch 321 .target 12 .is_crit_valid True  .effect "BH Dmg Marked" "Man Killer 1" .generation_guaranteed true
-combat_skill: .id "collect_bounty" .level 1 .type "melee" .atk 90% .dmg 0% .crit 8% .launch 321 .target 12 .is_crit_valid True  .effect "BH Dmg Marked" "Man Killer 2"
-combat_skill: .id "collect_bounty" .level 2 .type "melee" .atk 95% .dmg 0% .crit 9% .launch 321 .target 12 .is_crit_valid True  .effect "BH Dmg Marked" "Man Killer 3"
-combat_skill: .id "collect_bounty" .level 3 .type "melee" .atk 100% .dmg 0% .crit 10% .launch 321 .target 12 .is_crit_valid True  .effect "BH Dmg Marked" "Man Killer 4"
-combat_skill: .id "collect_bounty" .level 4 .type "melee" .atk 105% .dmg 0% .crit 11% .launch 321 .target 12 .is_crit_valid True  .effect "BH Dmg Marked" "Man Killer 5"
+combat_skill: .id "collect_bounty" .level 0 .type "melee" .atk 85% .dmg 0% .crit 7% .launch 321 .target 12 .is_crit_valid True  .effect "RB BH Dmg Marked" "Man Killer 1" .generation_guaranteed true
+combat_skill: .id "collect_bounty" .level 1 .type "melee" .atk 90% .dmg 0% .crit 8% .launch 321 .target 12 .is_crit_valid True  .effect "RB BH Dmg Marked" "Man Killer 2"
+combat_skill: .id "collect_bounty" .level 2 .type "melee" .atk 95% .dmg 0% .crit 9% .launch 321 .target 12 .is_crit_valid True  .effect "RB BH Dmg Marked" "Man Killer 3"
+combat_skill: .id "collect_bounty" .level 3 .type "melee" .atk 100% .dmg 0% .crit 10% .launch 321 .target 12 .is_crit_valid True  .effect "RB BH Dmg Marked" "Man Killer 4"
+combat_skill: .id "collect_bounty" .level 4 .type "melee" .atk 105% .dmg 0% .crit 11% .launch 321 .target 12 .is_crit_valid True  .effect "RB BH Dmg Marked" "Man Killer 5"
 //사용열, 타겟열 변경 123 -> 12, 12 -> 123
 //사유 끝장내기와의 차별점 있어야 함. 끝장내기가 범용적으로 더 좋음 지금은, 그래서 2개 채용할 이유가 굳이 사라짐.
 //기존엔 끝장내기와 이 기술 동시에 채용했음 이유는 12열은 현상금 사냥, 3열은 끝장내기
@@ -66,11 +66,11 @@ combat_skill: .id "flashbang" .level 4 .type "ranged" .atk 115% .dmg -100% .crit
 //사용열 432 -> 43 이유 2열에서 어퍼컷이랑 겹침. 다양한 열에서 영웅이 사용될 수 있게
 
 
-combat_skill: .id "finish_him" .level 0 .type "melee" .atk 85% .dmg 0% .crit 5% .launch 21 .target 123 .is_crit_valid True  .effect "Stun Killer 1" "RB BH Bleed Killer 1"
-combat_skill: .id "finish_him" .level 1 .type "melee" .atk 90% .dmg 0% .crit 6% .launch 21 .target 123 .is_crit_valid True  .effect "Stun Killer 2" "RB BH Bleed Killer 2"
-combat_skill: .id "finish_him" .level 2 .type "melee" .atk 95% .dmg 0% .crit 7% .launch 21 .target 123 .is_crit_valid True  .effect "Stun Killer 3" "RB BH Bleed Killer 3"
-combat_skill: .id "finish_him" .level 3 .type "melee" .atk 100% .dmg 0% .crit 8% .launch 21 .target 123 .is_crit_valid True  .effect "Stun Killer 4" "RB BH Bleed Killer 4"
-combat_skill: .id "finish_him" .level 4 .type "melee" .atk 105% .dmg 0% .crit 9% .launch 21 .target 123 .is_crit_valid True  .effect "Stun Killer 5" "RB BH Bleed Killer 5"
+combat_skill: .id "finish_him" .level 0 .type "melee" .atk 85% .dmg 0% .crit 5% .launch 21 .target 123 .is_crit_valid True  .effect "RB BH Stun Killer 1" "RB BH Bleed Killer 1"
+combat_skill: .id "finish_him" .level 1 .type "melee" .atk 90% .dmg 0% .crit 6% .launch 21 .target 123 .is_crit_valid True  .effect "RB BH Stun Killer 2" "RB BH Bleed Killer 2"
+combat_skill: .id "finish_him" .level 2 .type "melee" .atk 95% .dmg 0% .crit 7% .launch 21 .target 123 .is_crit_valid True  .effect "RB BH Stun Killer 3" "RB BH Bleed Killer 3"
+combat_skill: .id "finish_him" .level 3 .type "melee" .atk 100% .dmg 0% .crit 8% .launch 21 .target 123 .is_crit_valid True  .effect "RB BH Stun Killer 4" "RB BH Bleed Killer 4"
+combat_skill: .id "finish_him" .level 4 .type "melee" .atk 105% .dmg 0% .crit 9% .launch 21 .target 123 .is_crit_valid True  .effect "RB BH Stun Killer 5" "RB BH Bleed Killer 5"
 
 // BH-001 finish_him: + RB BH Bleed Killer 1-5 (dmg vs bleeding target, mirrors GR Poison Killer)
 // 사용열 변경 123 -> 12
