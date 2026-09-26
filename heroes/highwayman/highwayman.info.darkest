@@ -65,12 +65,12 @@ combat_skill: .id "grape_shot_blast" .level 4 .type "ranged" .atk 110% .dmg -70%
 combat_move_skill: .id "move" .level 0 .type "move" .move 2 2 .launch 4321
 
 
-combat_skill: .id "take_aim" .level 0 .type "ranged" .atk 95% .dmg -65% .crit 0% .launch 4321 .target 234 .is_crit_valid True .ignore_stealth true  .effect "Hwy Riposte 1" "Destealth"
-combat_skill: .id "take_aim" .level 1 .type "ranged" .atk 100% .dmg -65% .crit 0% .launch 4321 .target 234 .is_crit_valid True .ignore_stealth true  .effect "Hwy Riposte 2" "Destealth"
-combat_skill: .id "take_aim" .level 2 .type "ranged" .atk 105% .dmg -65% .crit 0.5% .launch 4321 .target 234 .is_crit_valid True .ignore_stealth true  .effect "Hwy Riposte 3" "Destealth"
-combat_skill: .id "take_aim" .level 3 .type "ranged" .atk 110% .dmg -65% .crit 0.5% .launch 4321 .target 234 .is_crit_valid True .ignore_stealth true  .effect "Hwy Riposte 4" "Destealth"
-combat_skill: .id "take_aim" .level 4 .type "ranged" .atk 115% .dmg -65% .crit 1% .launch 4321 .target 234 .is_crit_valid True .ignore_stealth true  .effect "Hwy Riposte 5" "Destealth"
-// HWY-004 take_aim: Tracking Buff -> Hwy Riposte, 전투당 1회 제거, dmg -80% -> -65%
+combat_skill: .id "take_aim" .level 0 .type "ranged" .atk 95% .dmg -60% .crit 0% .launch 4321 .target 234 .is_crit_valid True .ignore_stealth true  .effect "Hwy Riposte 1" "Destealth"
+combat_skill: .id "take_aim" .level 1 .type "ranged" .atk 100% .dmg -60% .crit 0% .launch 4321 .target 234 .is_crit_valid True .ignore_stealth true  .effect "Hwy Riposte 2" "Destealth"
+combat_skill: .id "take_aim" .level 2 .type "ranged" .atk 105% .dmg -60% .crit 0.5% .launch 4321 .target 234 .is_crit_valid True .ignore_stealth true  .effect "Hwy Riposte 3" "Destealth"
+combat_skill: .id "take_aim" .level 3 .type "ranged" .atk 110% .dmg -60% .crit 0.5% .launch 4321 .target 234 .is_crit_valid True .ignore_stealth true  .effect "Hwy Riposte 4" "Destealth"
+combat_skill: .id "take_aim" .level 4 .type "ranged" .atk 115% .dmg -60% .crit 1% .launch 4321 .target 234 .is_crit_valid True .ignore_stealth true  .effect "Hwy Riposte 5" "Destealth"
+// HWY-004 take_aim: Tracking Buff -> Hwy Riposte, 전투당 1회 제거, dmg -80% -> -60%
 
 
 combat_skill: .id "duelist_advance" .level 0 .type "melee" .atk 90% .dmg -40% .crit 5% .move 0 1 .launch 432 .target 123 .is_crit_valid True  .effect "RB HWY Tracking Buff 1"
