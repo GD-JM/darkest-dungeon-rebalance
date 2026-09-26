@@ -119,3 +119,11 @@ effect: .name "on_crit_prot"    .target "performer" .curio_result_type "positive
 //#   공유 효과: 다른 영웅 1명(방패 파괴자). 여기서 고치면 이 영웅만 바뀐다
 //#   강화 효과 수치(JSON, 참고용): on_crit_prot = protection_rating 0.15
 //#   원본 위치: effects/base.effects.darkest
+//# ----------------------------------------------------------------------
+//# 모드 신규 효과 (원본에 없음): 이름이 "RB CRU "로 시작
+//#   원본과 비교하지 않고 그대로 effects/rebalance_crusader.effects.darkest 에 들어간다.
+//#   수치는 여기서 고치고, 메모는 줄 밑에 // 로 쓴다. 기술에 붙이거나 떼는 것은 Claude에게 요청.
+//# ----------------------------------------------------------------------
+//# CRU-001 전투 치유: 석궁사수에게서 가져온 스택 힐. 원본 야전 붕대질은 38%였고 여기서는 20%로 약화했다.
+effect: .name "RB CRU Stacking Heal" .target "target" .curio_result_type "positive" .chance 100% .buff_type hp_heal_received_percent .buff_amount 20% .on_hit true .on_miss true .queue true
+// CRU-001 battle_heal: target receives +20% healing afterwards (weakened copy of Arb Stacking Heal)
