@@ -83,7 +83,7 @@ combat_skill: .id "hook_and_slice" .level 2 .type "ranged" .atk 100% .dmg -70% .
 combat_skill: .id "hook_and_slice" .level 3 .type "ranged" .atk 105% .dmg -70% .crit 8% .launch 234 .target 34 .is_crit_valid True  .effect "Bleed 4" "Caltrops SPD Debuff 4" "Caltrops Prey Debuff 4"
 combat_skill: .id "hook_and_slice" .level 4 .type "ranged" .atk 110% .dmg -70% .crit 9% .launch 234 .target 34 .is_crit_valid True  .effect "Bleed 5" "Caltrops SPD Debuff 5" "Caltrops Prey Debuff 5"
 // BH-005 hook_and_slice(마름쇠): dmg -80% -> -70% (vanilla -95%)
-//피해량 95 -> 80으로 상향
+
 
 
 riposte_skill: .id "riposte1" .level 0 .type "melee" .atk 85% .dmg 0% .crit 5% .launch 1234 .target 1234 .is_crit_valid True 
