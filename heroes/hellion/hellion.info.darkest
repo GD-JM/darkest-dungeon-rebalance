@@ -61,11 +61,11 @@ combat_skill: .id "breakthru" .level 4 .type "melee" .atk 105% .dmg -60% .crit 3
 //피해량 50 -> 60
 //탈진 삭제
 
-combat_skill: .id "adrenaline_rush" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Cureself" "HellionHealSelf 1" .is_stall_invalidating false
-combat_skill: .id "adrenaline_rush" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Cureself" "HellionHealSelf 2" .is_stall_invalidating false
-combat_skill: .id "adrenaline_rush" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Cureself" "HellionHealSelf 3" .is_stall_invalidating false
-combat_skill: .id "adrenaline_rush" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Cureself" "HellionHealSelf 4" .is_stall_invalidating false
-combat_skill: .id "adrenaline_rush" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Cureself" "HellionHealSelf 5" .is_stall_invalidating false
+combat_skill: .id "adrenaline_rush" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Cureself" "RB HEL HellionHealSelf 1" .is_stall_invalidating false
+combat_skill: .id "adrenaline_rush" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Cureself" "RB HEL HellionHealSelf 2" .is_stall_invalidating false
+combat_skill: .id "adrenaline_rush" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Cureself" "RB HEL HellionHealSelf 3" .is_stall_invalidating false
+combat_skill: .id "adrenaline_rush" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Cureself" "RB HEL HellionHealSelf 4" .is_stall_invalidating false
+combat_skill: .id "adrenaline_rush" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Cureself" "RB HEL HellionHealSelf 5" .is_stall_invalidating false
 
 
 combat_skill: .id "bleed_out" .level 0 .type "melee" .atk 85% .dmg 0% .crit 10% .launch 1 .target 1 .is_crit_valid True  .effect "Strong Bleed 1" 
