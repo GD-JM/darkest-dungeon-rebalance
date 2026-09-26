@@ -23,19 +23,19 @@ effect: .name "duelist_riposte"  .target "performer" .curio_result_type "positiv
 //# 기술: 찌르기 (touche)
 //# 레벨별 효과: 1레벨 Duelist Touche Buff 1 | 2레벨 Duelist Touche Buff 2 | 3레벨 Duelist Touche Buff 3 | 4레벨 Duelist Touche Buff 4 | 5레벨 Duelist Touche Buff 5
 effect: .name "Duelist Touche Buff 1" .target "performer" .chance 100% .curio_result_type "positive" .buff_ids "DUELIST_TOUCHE_DODGE_1" .duration 4  .on_hit true .on_miss true
-//#   강화 효과 수치(JSON, 참고용): DUELIST_TOUCHE_DODGE_1 = defense_rating 0.25
+//#   강화 효과 수치(JSON, 참고용): DUELIST_TOUCHE_DODGE_1 = defense_rating 0.4
 //#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
 effect: .name "Duelist Touche Buff 2" .target "performer" .chance 100% .curio_result_type "positive" .buff_ids "DUELIST_TOUCHE_DODGE_2" .duration 4  .on_hit true .on_miss true
-//#   강화 효과 수치(JSON, 참고용): DUELIST_TOUCHE_DODGE_2 = defense_rating 0.27
+//#   강화 효과 수치(JSON, 참고용): DUELIST_TOUCHE_DODGE_2 = defense_rating 0.42
 //#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
 effect: .name "Duelist Touche Buff 3" .target "performer" .chance 100% .curio_result_type "positive" .buff_ids "DUELIST_TOUCHE_DODGE_3" .duration 4  .on_hit true .on_miss true
-//#   강화 효과 수치(JSON, 참고용): DUELIST_TOUCHE_DODGE_3 = defense_rating 0.3
+//#   강화 효과 수치(JSON, 참고용): DUELIST_TOUCHE_DODGE_3 = defense_rating 0.45
 //#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
 effect: .name "Duelist Touche Buff 4" .target "performer" .chance 100% .curio_result_type "positive" .buff_ids "DUELIST_TOUCHE_DODGE_4" .duration 4  .on_hit true .on_miss true
-//#   강화 효과 수치(JSON, 참고용): DUELIST_TOUCHE_DODGE_4 = defense_rating 0.32
+//#   강화 효과 수치(JSON, 참고용): DUELIST_TOUCHE_DODGE_4 = defense_rating 0.47
 //#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
 effect: .name "Duelist Touche Buff 5" .target "performer" .chance 100% .curio_result_type "positive" .buff_ids "DUELIST_TOUCHE_DODGE_5" .duration 4  .on_hit true .on_miss true
-//#   강화 효과 수치(JSON, 참고용): DUELIST_TOUCHE_DODGE_5 = defense_rating 0.35
+//#   강화 효과 수치(JSON, 참고용): DUELIST_TOUCHE_DODGE_5 = defense_rating 0.5
 //#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
 
 //# ======================================================================
@@ -89,19 +89,34 @@ effect: .name "Duelist Feint Debuff 5" .target "target" .chance 150% .duration 3
 //# ======================================================================
 //# 기술: 회수 (disengage)
 //# 레벨별 효과: 1레벨 Duelist Disengage Buff 1, Duelist Disengage Any Position | 2레벨 Duelist Disengage Buff 2, Duelist Disengage Any Position | 3레벨 Duelist Disengage Buff 3, Duelist Disengage Any Position | 4레벨 Duelist Disengage Buff 4, Duelist Disengage Any Position | 5레벨 Duelist Disengage Buff 5, Duelist Disengage Any Position
-effect: .name "Duelist Disengage Buff 1" .target "performer" .chance 100% .curio_result_type "positive" .combat_stat_buff 1 .attack_rating_add 10% .speed_rating_add 4 .duration 4  .on_hit true .on_miss true
+effect: .name "Duelist Disengage Buff 1" .target "performer" .chance 100% .curio_result_type "positive" .buff_ids "DUELIST_DISENGAGE_ACCBUFF" "DUELIST_DISENGAGE_SPDBUFF1" "DUELIST_DISENGAGE_DODGEBUFF1" .duration 4  .on_hit true .on_miss true
+//#   강화 효과 수치(JSON, 참고용): DUELIST_DISENGAGE_ACCBUFF = attack_rating 0.1
+//#   강화 효과 수치(JSON, 참고용): DUELIST_DISENGAGE_SPDBUFF1 = speed_rating 6
+//#   강화 효과 수치(JSON, 참고용): DUELIST_DISENGAGE_DODGEBUFF1 = defense_rating 0.3 [in_rank]
 //#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
 effect: .name "Duelist Disengage Any Position" .target "performer" .chance 100% .curio_result_type "positive" .buff_ids "ATTACKS_ANY_LAUNCH_RANK" "ATTACKS_ANY_TARGET_RANK" .duration 2  .on_hit true .on_miss true
 //#   강화 효과 수치(JSON, 참고용): ATTACKS_ANY_LAUNCH_RANK = defense_rating 0
 //#   강화 효과 수치(JSON, 참고용): ATTACKS_ANY_TARGET_RANK = defense_rating 0
 //#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
-effect: .name "Duelist Disengage Buff 2" .target "performer" .chance 100% .curio_result_type "positive" .combat_stat_buff 1 .attack_rating_add 10% .speed_rating_add 4 .duration 4  .on_hit true .on_miss true
+effect: .name "Duelist Disengage Buff 2" .target "performer" .chance 100% .curio_result_type "positive" .buff_ids "DUELIST_DISENGAGE_ACCBUFF" "DUELIST_DISENGAGE_SPDBUFF2" "DUELIST_DISENGAGE_DODGEBUFF2" .duration 4  .on_hit true .on_miss true
+//#   강화 효과 수치(JSON, 참고용): DUELIST_DISENGAGE_ACCBUFF = attack_rating 0.1
+//#   강화 효과 수치(JSON, 참고용): DUELIST_DISENGAGE_SPDBUFF2 = speed_rating 6
+//#   강화 효과 수치(JSON, 참고용): DUELIST_DISENGAGE_DODGEBUFF2 = defense_rating 0.32 [in_rank]
 //#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
-effect: .name "Duelist Disengage Buff 3" .target "performer" .chance 100% .curio_result_type "positive" .combat_stat_buff 1 .attack_rating_add 10% .speed_rating_add 5 .duration 4  .on_hit true .on_miss true
+effect: .name "Duelist Disengage Buff 3" .target "performer" .chance 100% .curio_result_type "positive" .buff_ids "DUELIST_DISENGAGE_ACCBUFF" "DUELIST_DISENGAGE_SPDBUFF3" "DUELIST_DISENGAGE_DODGEBUFF3" .duration 4  .on_hit true .on_miss true
+//#   강화 효과 수치(JSON, 참고용): DUELIST_DISENGAGE_ACCBUFF = attack_rating 0.1
+//#   강화 효과 수치(JSON, 참고용): DUELIST_DISENGAGE_SPDBUFF3 = speed_rating 7
+//#   강화 효과 수치(JSON, 참고용): DUELIST_DISENGAGE_DODGEBUFF3 = defense_rating 0.35 [in_rank]
 //#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
-effect: .name "Duelist Disengage Buff 4" .target "performer" .chance 100% .curio_result_type "positive" .combat_stat_buff 1 .attack_rating_add 10% .speed_rating_add 5 .duration 4  .on_hit true .on_miss true
+effect: .name "Duelist Disengage Buff 4" .target "performer" .chance 100% .curio_result_type "positive" .buff_ids "DUELIST_DISENGAGE_ACCBUFF" "DUELIST_DISENGAGE_SPDBUFF4" "DUELIST_DISENGAGE_DODGEBUFF4" .duration 4  .on_hit true .on_miss true
+//#   강화 효과 수치(JSON, 참고용): DUELIST_DISENGAGE_ACCBUFF = attack_rating 0.1
+//#   강화 효과 수치(JSON, 참고용): DUELIST_DISENGAGE_SPDBUFF4 = speed_rating 7
+//#   강화 효과 수치(JSON, 참고용): DUELIST_DISENGAGE_DODGEBUFF4 = defense_rating 0.37 [in_rank]
 //#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
-effect: .name "Duelist Disengage Buff 5" .target "performer" .chance 100% .curio_result_type "positive" .combat_stat_buff 1 .attack_rating_add 10% .speed_rating_add 6 .duration 4  .on_hit true .on_miss true
+effect: .name "Duelist Disengage Buff 5" .target "performer" .chance 100% .curio_result_type "positive" .buff_ids "DUELIST_DISENGAGE_ACCBUFF" "DUELIST_DISENGAGE_SPDBUFF5" "DUELIST_DISENGAGE_DODGEBUFF5" .duration 4  .on_hit true .on_miss true
+//#   강화 효과 수치(JSON, 참고용): DUELIST_DISENGAGE_ACCBUFF = attack_rating 0.1
+//#   강화 효과 수치(JSON, 참고용): DUELIST_DISENGAGE_SPDBUFF5 = speed_rating 8
+//#   강화 효과 수치(JSON, 참고용): DUELIST_DISENGAGE_DODGEBUFF5 = defense_rating 0.4 [in_rank]
 //#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
 
 //# ======================================================================

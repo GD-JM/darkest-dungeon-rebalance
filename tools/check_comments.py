@@ -3,13 +3,15 @@
 Compares each hero's .info.darkest and .effects_edit.txt with vanilla.
   - A run of consecutive changed lines (e.g. level 1-5 of one skill) may share one "//" line under the run.
   - "//#" lines are auto-generated explanations and do not count as notes.
+  - An effect name defined in more than one vanilla file counts as unchanged if it matches any definition.
+  - In effect sheets one "//" note per skill section covers every changed effect line in that section.
   - Lines removed from vanilla are listed too (explain them in a note near the place they were).
 Read-only. Usage: python tools/check_comments.py [--mod PATH] [--game PATH] [hero ...]
 """
 import os, re, sys
 from collections import Counter
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from effect_common import paths, load_vanilla_effects, vanilla_hero_file, norm_ws
+from effect_common import paths, load_vanilla_effects, vanilla_hero_file, norm_ws, effect_files
 
 args = sys.argv[1:]
 opt = lambda k: args[args.index(k) + 1] if k in args else None
@@ -17,6 +19,15 @@ M, G = paths(opt('--mod'), opt('--game'))
 skip_vals = {opt('--mod'), opt('--game')}
 only = [a for a in args if not a.startswith('--') and a not in skip_vals]
 EFF = load_vanilla_effects(G)
+# an effect name can be defined in several vanilla files; accept a match with any definition
+ALL_EFF = {}
+for _f in effect_files(G):
+    for _l in open(_f, encoding='utf-8', errors='replace'):
+        if _l.startswith('effect:'):
+            _m = re.search(r'\.name\s+"([^"]+)"', _l)
+            if _m:
+                ALL_EFF.setdefault(_m.group(1), set()).add(norm_ws(_l))
+
 RB = re.compile(r'"RB [A-Z]+ ([^"]+)"')
 
 
@@ -36,7 +47,7 @@ def uncommented(lines, changed_idx):
     bad = []
     for i in sorted(changed_idx):
         j = i + 1
-        while j < len(lines) and (j in changed_idx or not lines[j].strip()):
+        while j < len(lines) and (j in changed_idx or not lines[j].strip() or lines[j].startswith('//#')):
             j += 1
         if not (j < len(lines) and lines[j].startswith('//') and not lines[j].startswith('//#')):
             bad.append(i)
@@ -76,18 +87,31 @@ for hero in sorted(d for d in os.listdir(os.path.join(M, 'heroes')) if os.path.i
     edit = os.path.join(M, 'heroes', hero, hero + '.effects_edit.txt')
     if os.path.exists(edit):
         lines = read_lines(edit)
-        changed = set()
+        changed, sections = set(), []
         for i, l in enumerate(lines):
+            if l.startswith('//# 기술'):
+                sections.append(i)
             if l.startswith('effect:'):
                 m = re.search(r'\.name\s+"([^"]+)"', l)
                 name = m.group(1) if m else ''
-                if name not in EFF or norm_ws(l) != norm_ws(EFF[name][0]):
+                if name not in ALL_EFF or norm_ws(l) not in ALL_EFF[name]:
                     changed.add(i)
-        # effect lines are independent: each needs its own note (no shared runs)
+        # a section runs from one "//# 기술" header to the next; one "//" note inside it covers the section
+        def section_of(i):
+            s = [x for x in sections if x <= i]
+            return s[-1] if s else 0
+        def section_end(s):
+            later = [x for x in sections if x > s]
+            return later[0] if later else len(lines)
+        done = set()
         for i in sorted(changed):
-            nxt = lines[i + 1] if i + 1 < len(lines) else ''
-            if not (nxt.startswith('//') and not nxt.startswith('//#')):
-                out.append('  효과  %4d행 주석 없음: %s' % (i + 1, lines[i][:110]))
+            s = section_of(i)
+            if s in done:
+                continue
+            done.add(s)
+            body = lines[s:section_end(s)]
+            if not any(x.startswith('//') and not x.startswith('//#') for x in body):
+                out.append('  효과  %4d행 주석 없음 (이 기술 구역에 // 메모가 없음): %s' % (i + 1, lines[i][:100]))
     if out:
         print('[%s]' % hero)
         print('\n'.join(out))
