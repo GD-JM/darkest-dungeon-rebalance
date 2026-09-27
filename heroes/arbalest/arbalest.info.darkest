@@ -64,11 +64,11 @@ combat_skill: .id "battlefield_bandage" .level 4 .heal 7 7 .launch 43 .target @1
 // 34567로 바꿈 직관적으로
 
 
-combat_skill: .id "flare" .level 0 .type "ranged" .atk 95% .dmg -100% .crit 0% .launch 4321 .target ~1234 .is_crit_valid False .ignore_stealth true  .effect "FlareClear 1" "FlareLight 1" "Destealth" "FlareHealStress 1" .is_stall_invalidating false
-combat_skill: .id "flare" .level 1 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 4321 .target ~1234 .is_crit_valid False .ignore_stealth true  .effect "FlareClear 1" "FlareLight 2" "Destealth" "FlareHealStress 2" .is_stall_invalidating false
-combat_skill: .id "flare" .level 2 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 4321 .target ~1234 .is_crit_valid False .ignore_stealth true  .effect "FlareClear 1" "FlareLight 3" "Destealth" "FlareHealStress 3" .is_stall_invalidating false
-combat_skill: .id "flare" .level 3 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 4321 .target ~1234 .is_crit_valid False .ignore_stealth true  .effect "FlareClear 1" "FlareLight 4" "Destealth" "FlareHealStress 4" .is_stall_invalidating false
-combat_skill: .id "flare" .level 4 .type "ranged" .atk 115% .dmg -100% .crit 0% .launch 4321 .target ~1234 .is_crit_valid False .ignore_stealth true  .effect "FlareClear 1" "FlareLight 5" "Destealth" "FlareHealStress 5" .is_stall_invalidating false
+combat_skill: .id "flare" .level 0 .type "ranged" .atk 95% .dmg -100% .crit 0% .launch 4321 .target ~1234 .is_crit_valid False .ignore_stealth true  .effect "FlareClear 1" "FlareLight 1" "Destealth" "RB ARB FlareHealStress 1" .is_stall_invalidating false
+combat_skill: .id "flare" .level 1 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 4321 .target ~1234 .is_crit_valid False .ignore_stealth true  .effect "FlareClear 1" "FlareLight 2" "Destealth" "RB ARB FlareHealStress 2" .is_stall_invalidating false
+combat_skill: .id "flare" .level 2 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 4321 .target ~1234 .is_crit_valid False .ignore_stealth true  .effect "FlareClear 1" "FlareLight 3" "Destealth" "RB ARB FlareHealStress 3" .is_stall_invalidating false
+combat_skill: .id "flare" .level 3 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 4321 .target ~1234 .is_crit_valid False .ignore_stealth true  .effect "FlareClear 1" "FlareLight 4" "Destealth" "RB ARB FlareHealStress 4" .is_stall_invalidating false
+combat_skill: .id "flare" .level 4 .type "ranged" .atk 115% .dmg -100% .crit 0% .launch 4321 .target ~1234 .is_crit_valid False .ignore_stealth true  .effect "FlareClear 1" "FlareLight 5" "Destealth" "RB ARB FlareHealStress 5" .is_stall_invalidating false
 tag: .id "heavy"
 tag: .id "non-religious"
 tag: .id "training_ring"

@@ -308,6 +308,10 @@ def skill_value(C, l, d):
             if who == 'performer' and ('keyStatus' in k or 'monsterType' in k):
                 continue                                       # 조건부 피해 (위에서 처리)
             tgt_n = 1 if (who == 'performer' or self_only or not ally) else n_t
+            if who == 'performer_group_other':             # 자신을 뺀 아군 전원 (결집 신호탄)
+                tgt_n = 3
+            elif who == 'performer_group':
+                tgt_n = 4
             ch = min(1.0, chance / 100)
             heal_n = tgt_n * (P['ALLY_AOE_HEAL'] if tgt_n > 1 else 1)
             sm = P['SUPPORT_MULT']
