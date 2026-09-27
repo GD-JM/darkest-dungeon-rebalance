@@ -1,4 +1,5 @@
-resistances: .stun 40% .poison 40% .bleed 40% .disease 30% .move 40% .debuff 30% .death_blow 67% .trap 40%
+resistances: .stun 40% .poison 30% .bleed 30% .disease 30% .move 40% .debuff 30% .death_blow 67% .trap 40%
+// HM-017 저항: 중독 40 -> 30, 출혈 40 -> 30 (기준값 복귀). 설정 근거 없는 편차 제거. 노상강도는 "두껍게 덧댄 외투... 칼도 잘 박히지 않지만, 받아내기보다는 회피 선호"로 출혈 30인데, 같은 문장 구조의 조련사("낡은 제복... 받아내기보다는 아예 회피 선호")가 40인 건 모순. 함정 40(+30)은 야영 "늑대개를 정찰에 내보내거나 경비로 세울 수 있습니다"로 정당화되어 유지. 저항 총합 260(1위) -> 240. analysis/resistances.md
 crit: .effects "on_crit_bleedchance"
 weapon: .name "houndmaster_weapon_0" .atk 0% .dmg 4 7 .crit 4% .spd 5
 weapon: .name "houndmaster_weapon_1" .atk 0% .dmg 5 8 .crit 5% .spd 5 .upgradeRequirementCode 0
