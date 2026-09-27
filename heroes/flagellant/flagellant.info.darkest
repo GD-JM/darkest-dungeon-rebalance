@@ -1,5 +1,5 @@
-resistances: .stun 30% .poison 30% .bleed 60% .disease 40% .move 30% .debuff 30% .death_blow 73% .trap 0%
-//실브랑 고행자 특이사항 수정, 출혈 저항 +35를 +30으로 수정 -> 나병환자 기절저항 +30 과 맞춤
+resistances: .stun 40% .poison 30% .bleed 60% .disease 40% .move 40% .debuff 30% .death_blow 73% .trap 0%
+// FLA-001 저항: 기절·이동 50 -> 40(기준값), 출혈 65 -> 60. 기절·이동 기준선은 40이다(R-RES-01; 30 가정으로 30까지 내렸던 것을 정정). 대장간 "스스로 찢음으로써 더욱 견고해집니다"(고통 내성 +)와 거의 벌거벗은 외형(경장 -, P-19)이 상쇄되어 기준값. 30(-10)은 순감소를 뒷받침할 문장이 없다. 출혈 60(+30)은 대표 저항 상한 +30(괴인 중독, 역병 의사 중독, 신비학자 약화)에 맞춤 - 바닐라 +35가 유일한 초과였다
 crit: .effects "on_crit_bleedchance"
 weapon: .name "flagellant_weapon_0" .atk 0% .dmg 3 6 .crit 2% .spd 6
 weapon: .name "flagellant_weapon_1" .atk 0% .dmg 4 7 .crit 3% .spd 6 .upgradeRequirementCode 0
