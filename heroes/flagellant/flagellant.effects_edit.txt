@@ -109,26 +109,33 @@ effect: .name "Flag HealSelf 5" .target "performer" .curio_result_type "positive
 //# ======================================================================
 //# 기술: 재기 (reclaim)
 //# 레벨별 효과: 1레벨 Flag Healdot 1, Flag Self Wound 1 | 2레벨 Flag Healdot 2, Flag Self Wound 2 | 3레벨 Flag Healdot 3, Flag Self Wound 3 | 4레벨 Flag Healdot 4, Flag Self Wound 4 | 5레벨 Flag Healdot 5, Flag Self Wound 5
-effect: .name "Flag Healdot 1" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 2 .duration 2	.on_hit true .on_miss true
+effect: .name "Flag Healdot 1" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 3 .duration 3	.on_hit true .on_miss true
+// FLA-005 재기 1레벨: 턴당 회복 = 자해 출혈 턴당(3), 지속 3 고정. 아군 최대 체력 대비 32~39%로 전 레벨 일정(현재 17~28% 들쭉날쭉), 파티 순 체력 전 레벨 0 이상
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
 effect: .name "Flag Self Wound 1" .target "performer" .chance 120%  .dotBleed 3 .duration 3	.on_hit true .on_miss true .can_apply_on_death true
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
-effect: .name "Flag Healdot 2" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 2 .duration 3	.on_hit true .on_miss true
+effect: .name "Flag Healdot 2" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 3 .duration 3	.on_hit true .on_miss true
+// FLA-005 재기 2레벨: 턴당 회복 = 자해 출혈 턴당(3), 지속 3 고정. 아군 최대 체력 대비 32~39%로 전 레벨 일정(현재 17~28% 들쭉날쭉), 파티 순 체력 전 레벨 0 이상
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
 effect: .name "Flag Self Wound 2" .target "performer" .chance 130%  .dotBleed 3 .duration 3	.on_hit true .on_miss true .can_apply_on_death true
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
-effect: .name "Flag Healdot 3" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 3 .duration 2	.on_hit true .on_miss true
+effect: .name "Flag Healdot 3" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 4 .duration 3	.on_hit true .on_miss true
+// FLA-005 재기 3레벨: 턴당 회복 = 자해 출혈 턴당(4), 지속 3 고정. 아군 최대 체력 대비 32~39%로 전 레벨 일정(현재 17~28% 들쭉날쭉), 파티 순 체력 전 레벨 0 이상
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
 effect: .name "Flag Self Wound 3" .target "performer" .chance 140%  .dotBleed 4 .duration 3	.on_hit true .on_miss true .can_apply_on_death true
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
-effect: .name "Flag Healdot 4" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 3 .duration 3	.on_hit true .on_miss true
+effect: .name "Flag Healdot 4" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 4 .duration 3	.on_hit true .on_miss true
+// FLA-005 재기 4레벨: 턴당 회복 = 자해 출혈 턴당(4), 지속 3 고정. 아군 최대 체력 대비 32~39%로 전 레벨 일정(현재 17~28% 들쭉날쭉), 파티 순 체력 전 레벨 0 이상
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
 effect: .name "Flag Self Wound 4" .target "performer" .chance 150%  .dotBleed 4 .duration 3	.on_hit true .on_miss true .can_apply_on_death true
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
-effect: .name "Flag Healdot 5" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 4 .duration 3	.on_hit true .on_miss true
+effect: .name "Flag Healdot 5" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 5 .duration 3	.on_hit true .on_miss true
+// FLA-005 재기 5레벨: 턴당 회복 = 자해 출혈 턴당(5), 지속 3 고정. 아군 최대 체력 대비 32~39%로 전 레벨 일정(현재 17~28% 들쭉날쭉), 파티 순 체력 전 레벨 0 이상
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
 effect: .name "Flag Self Wound 5" .target "performer" .chance 160%  .dotBleed 5 .duration 3	.on_hit true .on_miss true .can_apply_on_death true
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+
+
 
 //# ======================================================================
 //# 기술: 구제 (redeem)
@@ -149,31 +156,36 @@ effect: .name "Flag Super Heal 5" .target "target" .curio_result_type "positive"
 //# 레벨별 효과: 1레벨 Flag Steal Stress 1, Flag Self Stress 1, Flag Endure Speed Buff 1 | 2레벨 Flag Steal Stress 2, Flag Self Stress 2, Flag Endure Speed Buff 2 | 3레벨 Flag Steal Stress 3, Flag Self Stress 3, Flag Endure Speed Buff 3 | 4레벨 Flag Steal Stress 4, Flag Self Stress 4, Flag Endure Speed Buff 4 | 5레벨 Flag Steal Stress 5, Flag Self Stress 5, Flag Endure Speed Buff 5
 effect: .name "Flag Steal Stress 1" .target "target" .curio_result_type "positive" .chance 100% .healstress 10	.on_hit true .on_miss false .queue true
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
-effect: .name "Flag Self Stress 1" .target "performer" .curio_result_type "negative" .chance 100% .stress 10	.on_hit true .on_miss false	.queue true
+effect: .name "Flag Self Stress 1" .target "performer" .curio_result_type "negative" .chance 100% .stress 4	.on_hit true .on_miss false	.queue true
+// FLA-006 인내 1레벨: 자기 스트레스 10 -> 4 고정. 순회복 0 -> 6, 광대 격려의 선율보다 항상 2 낮게. 회복량 10~14(공식 하향값)는 유지
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
 effect: .name "Flag Endure Speed Buff 1" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 1	.on_hit true .on_miss false .queue true .apply_once true
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
 effect: .name "Flag Steal Stress 2" .target "target" .curio_result_type "positive" .chance 100% .healstress 11	.on_hit true .on_miss false .queue true
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
-effect: .name "Flag Self Stress 2" .target "performer" .curio_result_type "negative" .chance 100% .stress 9	.on_hit true .on_miss false	.queue true
+effect: .name "Flag Self Stress 2" .target "performer" .curio_result_type "negative" .chance 100% .stress 4	.on_hit true .on_miss false	.queue true
+// FLA-006 인내 2레벨: 자기 스트레스 9 -> 4 고정. 순회복 2 -> 7, 광대 격려의 선율보다 항상 2 낮게. 회복량 10~14(공식 하향값)는 유지
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
 effect: .name "Flag Endure Speed Buff 2" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 1	.on_hit true .on_miss false .queue true .apply_once true
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
 effect: .name "Flag Steal Stress 3" .target "target" .curio_result_type "positive" .chance 100% .healstress 12	.on_hit true .on_miss false .queue true
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
-effect: .name "Flag Self Stress 3" .target "performer" .curio_result_type "negative" .chance 100% .stress 8	.on_hit true .on_miss false	.queue true
+effect: .name "Flag Self Stress 3" .target "performer" .curio_result_type "negative" .chance 100% .stress 4	.on_hit true .on_miss false	.queue true
+// FLA-006 인내 3레벨: 자기 스트레스 8 -> 4 고정. 순회복 4 -> 8, 광대 격려의 선율보다 항상 2 낮게. 회복량 10~14(공식 하향값)는 유지
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
 effect: .name "Flag Endure Speed Buff 3" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 2	.on_hit true .on_miss false .queue true .apply_once true
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
 effect: .name "Flag Steal Stress 4" .target "target" .curio_result_type "positive" .chance 100% .healstress 13	.on_hit true .on_miss false .queue true
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
-effect: .name "Flag Self Stress 4" .target "performer" .curio_result_type "negative" .chance 100% .stress 7	.on_hit true .on_miss false	.queue true
+effect: .name "Flag Self Stress 4" .target "performer" .curio_result_type "negative" .chance 100% .stress 4	.on_hit true .on_miss false	.queue true
+// FLA-006 인내 4레벨: 자기 스트레스 7 -> 4 고정. 순회복 6 -> 9, 광대 격려의 선율보다 항상 2 낮게. 회복량 10~14(공식 하향값)는 유지
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
 effect: .name "Flag Endure Speed Buff 4" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 2	.on_hit true .on_miss false .queue true .apply_once true
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
 effect: .name "Flag Steal Stress 5" .target "target" .curio_result_type "positive" .chance 100% .healstress 14	.on_hit true .on_miss false .queue true
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
-effect: .name "Flag Self Stress 5" .target "performer" .curio_result_type "negative" .chance 100% .stress 6	.on_hit true .on_miss false	.queue true
+effect: .name "Flag Self Stress 5" .target "performer" .curio_result_type "negative" .chance 100% .stress 4	.on_hit true .on_miss false	.queue true
+// FLA-006 인내 5레벨: 자기 스트레스 6 -> 4 고정. 순회복 8 -> 10, 광대 격려의 선율보다 항상 2 낮게. 회복량 10~14(공식 하향값)는 유지
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
 effect: .name "Flag Endure Speed Buff 5" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 3	.on_hit true .on_miss false .queue true .apply_once true
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
