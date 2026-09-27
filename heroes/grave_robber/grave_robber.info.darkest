@@ -36,12 +36,11 @@ combat_skill: .id "flashing_daggers" .level 3 .type "ranged" .atk 105% .dmg -33%
 combat_skill: .id "flashing_daggers" .level 4 .type "ranged" .atk 110% .dmg -33% .crit -1% .launch 432 .target ~23 .is_crit_valid True  .effect "GR Bleed Debuff 5"
 
 
-combat_skill: .id "shadow_fade" .level 0 .type "melee" .atk 95% .dmg -100% .crit 0% .move 3 0 .launch 21 .target  .is_crit_valid False  .effect "stealth_self" "GR Fade Attack 1" "GR Dodge 1" .generation_guaranteed true .is_stall_invalidating false
-combat_skill: .id "shadow_fade" .level 1 .type "melee" .atk 100% .dmg -100% .crit 0% .move 3 0 .launch 21 .target  .is_crit_valid False  .effect "stealth_self" "GR Fade Attack 2" "GR Dodge 2" .is_stall_invalidating false
-combat_skill: .id "shadow_fade" .level 2 .type "melee" .atk 105% .dmg -100% .crit 0% .move 3 0 .launch 21 .target  .is_crit_valid False  .effect "stealth_self" "GR Fade Attack 3" "GR Dodge 3" .is_stall_invalidating false
-combat_skill: .id "shadow_fade" .level 3 .type "melee" .atk 110% .dmg -100% .crit 0% .move 3 0 .launch 21 .target  .is_crit_valid False  .effect "stealth_self" "GR Fade Attack 4" "GR Dodge 4" .is_stall_invalidating false
-combat_skill: .id "shadow_fade" .level 4 .type "melee" .atk 115% .dmg -100% .crit 0% .move 3 0 .launch 21 .target  .is_crit_valid False  .effect "stealth_self" "GR Fade Attack 5" "GR Dodge 5" .is_stall_invalidating false
-// 3열 빠지는 거로 바꿈 2열이 아니라 이유는 런지 사용성 늘리려고
+combat_skill: .id "shadow_fade" .level 0 .type "melee" .atk 95% .dmg -100% .crit 0% .move 2 0 .launch 21 .target  .is_crit_valid False  .effect "stealth_self" "GR Fade Attack 1" "GR Dodge 1" .generation_guaranteed true .is_stall_invalidating false
+combat_skill: .id "shadow_fade" .level 1 .type "melee" .atk 100% .dmg -100% .crit 0% .move 2 0 .launch 21 .target  .is_crit_valid False  .effect "stealth_self" "GR Fade Attack 2" "GR Dodge 2" .is_stall_invalidating false
+combat_skill: .id "shadow_fade" .level 2 .type "melee" .atk 105% .dmg -100% .crit 0% .move 2 0 .launch 21 .target  .is_crit_valid False  .effect "stealth_self" "GR Fade Attack 3" "GR Dodge 3" .is_stall_invalidating false
+combat_skill: .id "shadow_fade" .level 3 .type "melee" .atk 110% .dmg -100% .crit 0% .move 2 0 .launch 21 .target  .is_crit_valid False  .effect "stealth_self" "GR Fade Attack 4" "GR Dodge 4" .is_stall_invalidating false
+combat_skill: .id "shadow_fade" .level 4 .type "melee" .atk 115% .dmg -100% .crit 0% .move 2 0 .launch 21 .target  .is_crit_valid False  .effect "stealth_self" "GR Fade Attack 5" "GR Dodge 5" .is_stall_invalidating false
 
 combat_move_skill: .id "move" .level 0 .type "move" .move 2 2 .launch 4321
 
