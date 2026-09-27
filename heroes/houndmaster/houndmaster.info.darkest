@@ -15,6 +15,7 @@ combat_skill: .id "hounds_rush" .level 1 .type "ranged" .atk 90% .dmg 0% .crit 6
 combat_skill: .id "hounds_rush" .level 2 .type "ranged" .atk 95% .dmg 0% .crit 7% .launch 432 .target 1234 .is_crit_valid True  .effect "Beast Killer 3" "RB HM Dmg Marked 3" "Hound Bleed 3"
 combat_skill: .id "hounds_rush" .level 3 .type "ranged" .atk 100% .dmg 0% .crit 8% .launch 432 .target 1234 .is_crit_valid True  .effect "Beast Killer 4" "RB HM Dmg Marked 4" "Hound Bleed 4"
 combat_skill: .id "hounds_rush" .level 4 .type "ranged" .atk 105% .dmg 0% .crit 9% .launch 432 .target 1234 .is_crit_valid True  .effect "Beast Killer 5" "RB HM Dmg Marked 5" "Hound Bleed 5"
+// MARK-01 hounds_rush: 표식 피해 60~100 -> 40~60 (RB HM Dmg Marked). 야수 특효+출혈과 중복, 조련사 강함 2위
 combat_skill: .id "hounds_harry" .level 0 .type "ranged" .atk 85% .dmg -75% .crit -5% .launch 4321 .target ~1234 .is_crit_valid True  .effect "Harry Bleed 1"
 combat_skill: .id "hounds_harry" .level 1 .type "ranged" .atk 90% .dmg -75% .crit -4% .launch 4321 .target ~1234 .is_crit_valid True  .effect "Harry Bleed 2"
 combat_skill: .id "hounds_harry" .level 2 .type "ranged" .atk 95% .dmg -75% .crit -3% .launch 4321 .target ~1234 .is_crit_valid True  .effect "Harry Bleed 3"
