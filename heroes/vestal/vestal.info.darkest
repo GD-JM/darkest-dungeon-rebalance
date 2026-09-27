@@ -52,11 +52,12 @@ combat_skill: .id "dazzling_light" .level 4 .type "ranged" .atk 110% .dmg -100% 
 
 
 
-combat_skill: .id "divine_grace" .level 0 .heal 5 .launch 4321 .target @4321  .generation_guaranteed true .is_stall_invalidating false
-combat_skill: .id "divine_grace" .level 1 .heal 6 .launch 4321 .target @4321  .is_stall_invalidating false
-combat_skill: .id "divine_grace" .level 2 .heal 7 .launch 4321 .target @4321  .is_stall_invalidating false
-combat_skill: .id "divine_grace" .level 3 .heal 8 .launch 4321 .target @4321  .is_stall_invalidating false
-combat_skill: .id "divine_grace" .level 4 .heal 9 .launch 4321 .target @4321  .is_stall_invalidating false
+combat_skill: .id "divine_grace" .level 0 .heal 5 5 .launch 4321 .target @4321  .generation_guaranteed true .is_stall_invalidating false
+combat_skill: .id "divine_grace" .level 1 .heal 6 6 .launch 4321 .target @4321  .is_stall_invalidating false
+combat_skill: .id "divine_grace" .level 2 .heal 7 7 .launch 4321 .target @4321  .is_stall_invalidating false
+combat_skill: .id "divine_grace" .level 3 .heal 8 8 .launch 4321 .target @4321  .is_stall_invalidating false
+combat_skill: .id "divine_grace" .level 4 .heal 9 9 .launch 4321 .target @4321  .is_stall_invalidating false
+// 표기: .heal N -> .heal N N. 바닐라 기술 줄 회복 45개는 전부 "최소 최대" 두 숫자다. 한 숫자는 게임 해석이 보장되지 않아 같은 값을 두 번 쓴다(회복량 변화 없음)
 //성녀의 정체성을 안정성 즉 예측 가능성에 둠.
 //그렇기에 힐의 랜덤성을 없애고 소폭 상향함
 //1열 성녀의 가능성 때문에 사용열을 전라인으로 변경 43 -> 4321

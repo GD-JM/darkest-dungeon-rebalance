@@ -128,7 +128,8 @@ def load_effects(mode):
 def hero_file(hero, mode):
     if mode == 'vanilla':
         return ec.vanilla_hero_file(G, hero)
-    return os.path.join(M_ROOT, 'heroes', hero, hero + '.info.darkest')
+    f = os.path.join(M_ROOT, 'heroes', hero, hero + '.info.darkest')
+    return f if os.path.exists(f) else ec.vanilla_hero_file(G, hero)   # 모드에서 뺀 영웅(총사)은 바닐라
 
 
 def load_hero(hero, mode):
