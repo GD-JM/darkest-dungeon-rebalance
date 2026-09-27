@@ -87,23 +87,24 @@ effect: .name "GR Dodge 5" .target "performer" .curio_result_type "positive" .ch
 //# 레벨별 효과: 1레벨 GR Acc Buff 1, GR Dagger Dmg Marked 1, Poison Killer 1 | 2레벨 GR Acc Buff 2, GR Dagger Dmg Marked 2, Poison Killer 2 | 3레벨 GR Acc Buff 3, GR Dagger Dmg Marked 3, Poison Killer 3 | 4레벨 GR Acc Buff 4, GR Dagger Dmg Marked 4, Poison Killer 4 | 5레벨 GR Acc Buff 5, GR Dagger Dmg Marked 5, Poison Killer 5
 effect: .name "GR Acc Buff 1" .target "performer" .chance 100% .curio_result_type "positive" .combat_stat_buff 1 .attack_rating_add 5%  .on_hit true .on_miss false .apply_once true
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "GR Dagger Dmg Marked 1" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 25%	.damage_high_multiply 25%	.on_hit true .on_miss false
+effect: .name "GR Dagger Dmg Marked 1" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 40%	.damage_high_multiply 40%	.on_hit true .on_miss false
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "GR Acc Buff 2" .target "performer" .chance 100% .curio_result_type "positive" .combat_stat_buff 1 .attack_rating_add 6%  .on_hit true .on_miss false .apply_once true
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "GR Dagger Dmg Marked 2" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 28%	.damage_high_multiply 28%	.on_hit true .on_miss false
+effect: .name "GR Dagger Dmg Marked 2" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 50%	.damage_high_multiply 50%	.on_hit true .on_miss false
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "GR Acc Buff 3" .target "performer" .chance 100% .curio_result_type "positive" .combat_stat_buff 1 .attack_rating_add 7%  .on_hit true .on_miss false .apply_once true
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "GR Dagger Dmg Marked 3" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 32%	.damage_high_multiply 32%	.on_hit true .on_miss false
+effect: .name "GR Dagger Dmg Marked 3" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 60%	.damage_high_multiply 60%	.on_hit true .on_miss false
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "GR Acc Buff 4" .target "performer" .chance 100% .curio_result_type "positive" .combat_stat_buff 1 .attack_rating_add 8%  .on_hit true .on_miss false .apply_once true
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "GR Dagger Dmg Marked 4" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 36%	.damage_high_multiply 36%	.on_hit true .on_miss false
+effect: .name "GR Dagger Dmg Marked 4" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 70%	.damage_high_multiply 70%	.on_hit true .on_miss false
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "GR Acc Buff 5" .target "performer" .chance 100% .curio_result_type "positive" .combat_stat_buff 1 .attack_rating_add 10% .on_hit true .on_miss false .apply_once true
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "GR Dagger Dmg Marked 5" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 40%	.damage_high_multiply 40%	.on_hit true .on_miss false
+effect: .name "GR Dagger Dmg Marked 5" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 80%	.damage_high_multiply 80%	.on_hit true .on_miss false
+// MARK-01 GR Dagger Dmg Marked: 표식 피해 25~40 -> 40~80 (서브 표식 딜러)
 //#   원본 위치: effects/base.effects.darkest
 
 //# ======================================================================

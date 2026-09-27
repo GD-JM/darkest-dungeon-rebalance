@@ -21,15 +21,16 @@
 //# ======================================================================
 //# 기술: 권총 사격 (pistol_shot)
 //# 레벨별 효과: 1레벨 HW Pistol Dmg Marked 1 | 2레벨 HW Pistol Dmg Marked 2 | 3레벨 HW Pistol Dmg Marked 3 | 4레벨 HW Pistol Dmg Marked 4 | 5레벨 HW Pistol Dmg Marked 5
-effect: .name "HW Pistol Dmg Marked 1"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 25%	.damage_high_multiply 25%	.on_hit true .on_miss false
+effect: .name "HW Pistol Dmg Marked 1"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 40%	.damage_high_multiply 40%	.on_hit true .on_miss false
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "HW Pistol Dmg Marked 2"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 30%	.damage_high_multiply 30%	.on_hit true .on_miss false
+effect: .name "HW Pistol Dmg Marked 2"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 45%	.damage_high_multiply 45%	.on_hit true .on_miss false
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "HW Pistol Dmg Marked 3"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 35%	.damage_high_multiply 35%	.on_hit true .on_miss false
+effect: .name "HW Pistol Dmg Marked 3"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 50%	.damage_high_multiply 50%	.on_hit true .on_miss false
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "HW Pistol Dmg Marked 4"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 40%	.damage_high_multiply 40%	.on_hit true .on_miss false
+effect: .name "HW Pistol Dmg Marked 4"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 55%	.damage_high_multiply 55%	.on_hit true .on_miss false
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "HW Pistol Dmg Marked 5"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 50%	.damage_high_multiply 50%	.on_hit true .on_miss false
+effect: .name "HW Pistol Dmg Marked 5"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 60%	.damage_high_multiply 60%	.on_hit true .on_miss false
+// MARK-01 HW Pistol Dmg Marked: 표식 피해 25~50 -> 40~60 (서브 표식 딜러)
 //#   원본 위치: effects/base.effects.darkest
 
 //# ======================================================================

@@ -66,11 +66,11 @@ combat_skill: .id "expose" .level 4 .type "melee" .atk 110% .dmg -40% .crit 6.5%
 // 찌르기와 명중 변경 -> 효과가 있으면 명중이 높고 없으면 낮다는 기본 공식에 충실
 
 
-combat_skill: .id "single_out" .level 0 .type "ranged" .atk 90% .dmg -25% .crit 4% .launch 32 .target 23 .is_crit_valid True  .effect "SB Dmg Marked 1" "SB Adder Blight 1"
-combat_skill: .id "single_out" .level 1 .type "ranged" .atk 95% .dmg -25% .crit 5% .launch 32 .target 23 .is_crit_valid True  .effect "SB Dmg Marked 2" "SB Adder Blight 2"
-combat_skill: .id "single_out" .level 2 .type "ranged" .atk 100% .dmg -25% .crit 6% .launch 32 .target 23 .is_crit_valid True  .effect "SB Dmg Marked 3" "SB Adder Blight 3"
-combat_skill: .id "single_out" .level 3 .type "ranged" .atk 105% .dmg -25% .crit 7% .launch 32 .target 23 .is_crit_valid True  .effect "SB Dmg Marked 4" "SB Adder Blight 4"
-combat_skill: .id "single_out" .level 4 .type "ranged" .atk 110% .dmg -25% .crit 8% .launch 32 .target 23 .is_crit_valid True  .effect "SB Dmg Marked 5" "SB Adder Blight 5"
+combat_skill: .id "single_out" .level 0 .type "ranged" .atk 90% .dmg -25% .crit 4% .launch 32 .target 23 .is_crit_valid True  .effect "RB SB Dmg Marked 1" "SB Adder Blight 1"
+combat_skill: .id "single_out" .level 1 .type "ranged" .atk 95% .dmg -25% .crit 5% .launch 32 .target 23 .is_crit_valid True  .effect "RB SB Dmg Marked 2" "SB Adder Blight 2"
+combat_skill: .id "single_out" .level 2 .type "ranged" .atk 100% .dmg -25% .crit 6% .launch 32 .target 23 .is_crit_valid True  .effect "RB SB Dmg Marked 3" "SB Adder Blight 3"
+combat_skill: .id "single_out" .level 3 .type "ranged" .atk 105% .dmg -25% .crit 7% .launch 32 .target 23 .is_crit_valid True  .effect "RB SB Dmg Marked 4" "SB Adder Blight 4"
+combat_skill: .id "single_out" .level 4 .type "ranged" .atk 110% .dmg -25% .crit 8% .launch 32 .target 23 .is_crit_valid True  .effect "RB SB Dmg Marked 5" "SB Adder Blight 5"
 // 명중 85 -> 90으로 변경 
 
 

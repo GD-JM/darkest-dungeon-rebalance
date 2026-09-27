@@ -111,15 +111,16 @@ effect: .name "SB Slow 5" .target "target" .curio_result_type "negative" .chance
 //# ======================================================================
 //# 기술: 휘감기 (single_out)
 //# 레벨별 효과: 1레벨 SB Dmg Marked 1, SB Adder Blight 1 | 2레벨 SB Dmg Marked 2, SB Adder Blight 2 | 3레벨 SB Dmg Marked 3, SB Adder Blight 3 | 4레벨 SB Dmg Marked 4, SB Adder Blight 4 | 5레벨 SB Dmg Marked 5, SB Adder Blight 5
-effect: .name "SB Dmg Marked 1"	.target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 40%	.damage_high_multiply 40% .on_hit true .on_miss false
+effect: .name "SB Dmg Marked 1"	.target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 50%	.damage_high_multiply 50% .on_hit true .on_miss false
 //#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
-effect: .name "SB Dmg Marked 2"	.target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 45%	.damage_high_multiply 45% .on_hit true .on_miss false
+effect: .name "SB Dmg Marked 2"	.target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 60%	.damage_high_multiply 60% .on_hit true .on_miss false
 //#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
-effect: .name "SB Dmg Marked 3"	.target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 50%	.damage_high_multiply 50% .on_hit true .on_miss false
+effect: .name "SB Dmg Marked 3"	.target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 70%	.damage_high_multiply 70% .on_hit true .on_miss false
 //#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
-effect: .name "SB Dmg Marked 4"	.target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 55%	.damage_high_multiply 55% .on_hit true .on_miss false
+effect: .name "SB Dmg Marked 4"	.target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 80%	.damage_high_multiply 80% .on_hit true .on_miss false
 //#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
-effect: .name "SB Dmg Marked 5"	.target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 60%	.damage_high_multiply 60% .on_hit true .on_miss false
+effect: .name "SB Dmg Marked 5"	.target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 90%	.damage_high_multiply 90% .on_hit true .on_miss false
+// MARK-01 SB Dmg Marked: 표식 피해 40~60 -> 50~90 (열 붙박이 패널티 보상, 피해 -25% 유지)
 //#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
 
 //# ======================================================================

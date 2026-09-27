@@ -16,19 +16,20 @@
 //# ======================================================================
 //# 기술: 저격 (sniper_shot)
 //# 레벨별 효과: 1레벨 Sniper Damage 1 | 2레벨 Sniper Damage 2 | 3레벨 Sniper Damage 3 | 4레벨 Sniper Damage 4 | 5레벨 Sniper Damage 5
-effect: .name "Sniper Damage 1".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged" .duration 3 .combat_stat_buff 1 .damage_low_multiply 50%  .damage_high_multiply 50% .crit_chance_add 9%	 .on_hit true .on_miss false
+effect: .name "Sniper Damage 1".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged" .duration 3 .combat_stat_buff 1 .damage_low_multiply 60%  .damage_high_multiply 60% .crit_chance_add 9%	 .on_hit true .on_miss false
 //#   공유 효과: 다른 영웅 1명(총사). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Sniper Damage 2".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged" .duration 3 .combat_stat_buff 1 .damage_low_multiply 60%  .damage_high_multiply 60% .crit_chance_add 10%	 .on_hit true .on_miss false
+effect: .name "Sniper Damage 2".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged" .duration 3 .combat_stat_buff 1 .damage_low_multiply 70%  .damage_high_multiply 70% .crit_chance_add 10%	 .on_hit true .on_miss false
 //#   공유 효과: 다른 영웅 1명(총사). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Sniper Damage 3".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged" .duration 3 .combat_stat_buff 1 .damage_low_multiply 70%  .damage_high_multiply 70% .crit_chance_add 11%	 .on_hit true .on_miss false
+effect: .name "Sniper Damage 3".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged" .duration 3 .combat_stat_buff 1 .damage_low_multiply 80%  .damage_high_multiply 80% .crit_chance_add 11%	 .on_hit true .on_miss false
 //#   공유 효과: 다른 영웅 1명(총사). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Sniper Damage 4".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged" .duration 3 .combat_stat_buff 1 .damage_low_multiply 80%  .damage_high_multiply 80% .crit_chance_add 12%	 .on_hit true .on_miss false
+effect: .name "Sniper Damage 4".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged" .duration 3 .combat_stat_buff 1 .damage_low_multiply 90%  .damage_high_multiply 90% .crit_chance_add 12%	 .on_hit true .on_miss false
 //#   공유 효과: 다른 영웅 1명(총사). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Sniper Damage 5".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged" .duration 3 .combat_stat_buff 1 .damage_low_multiply 100%  .damage_high_multiply 100% .crit_chance_add 13%	 .on_hit true .on_miss false
+// MARK-01 Sniper Damage: 표식 피해 50~100 -> 60~100 등차(마지막 도약 제거). 치명타 +9~13은 유지
 //#   공유 효과: 다른 영웅 1명(총사). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
 
