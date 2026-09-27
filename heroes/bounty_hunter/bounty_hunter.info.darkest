@@ -41,11 +41,12 @@ combat_skill: .id "target_tag" .level 2 .type "ranged" .atk 110% .dmg -100% .cri
 combat_skill: .id "target_tag" .level 3 .type "ranged" .atk 115% .dmg -100% .crit 0% .launch 4321 .target 1234 .is_crit_valid False  .effect "BH Mark Target" "BH Mark Debuff 4" "BH Self Speed 4" .is_stall_invalidating false
 combat_skill: .id "target_tag" .level 4 .type "ranged" .atk 120% .dmg -100% .crit 0% .launch 4321 .target 1234 .is_crit_valid False  .effect "BH Mark Target" "BH Mark Debuff 5" "BH Self Speed 5" .is_stall_invalidating false
 
-combat_skill: .id "come_hither" .level 0 .type "ranged" .atk 90% .dmg -70% .crit 0% .launch 4321 .target 34 .is_crit_valid True  .effect "Pull 3A" "BH Minor Mark"
-combat_skill: .id "come_hither" .level 1 .type "ranged" .atk 95% .dmg -70% .crit 1% .launch 4321 .target 34 .is_crit_valid True  .effect "Pull 3B" "BH Minor Mark"
-combat_skill: .id "come_hither" .level 2 .type "ranged" .atk 100% .dmg -70% .crit 2% .launch 4321 .target 34 .is_crit_valid True  .effect "Pull 3C" "BH Minor Mark"
-combat_skill: .id "come_hither" .level 3 .type "ranged" .atk 105% .dmg -70% .crit 3% .launch 4321 .target 34 .is_crit_valid True  .effect "Pull 3D" "BH Minor Mark"
-combat_skill: .id "come_hither" .level 4 .type "ranged" .atk 110% .dmg -70% .crit 4% .launch 4321 .target 34 .is_crit_valid True  .effect "Pull 3E" "BH Minor Mark"
+combat_skill: .id "come_hither" .level 0 .type "ranged" .atk 95% .dmg -60% .crit 0% .launch 4321 .target 34 .is_crit_valid True  .effect "Pull 3A"
+combat_skill: .id "come_hither" .level 1 .type "ranged" .atk 100% .dmg -60% .crit 1% .launch 4321 .target 34 .is_crit_valid True  .effect "Pull 3B"
+combat_skill: .id "come_hither" .level 2 .type "ranged" .atk 105% .dmg -60% .crit 2% .launch 4321 .target 34 .is_crit_valid True  .effect "Pull 3C"
+combat_skill: .id "come_hither" .level 3 .type "ranged" .atk 110% .dmg -60% .crit 3% .launch 4321 .target 34 .is_crit_valid True  .effect "Pull 3D"
+combat_skill: .id "come_hither" .level 4 .type "ranged" .atk 115% .dmg -60% .crit 4% .launch 4321 .target 34 .is_crit_valid True  .effect "Pull 3E"
+// BH-010 come_hither: 소표식(BH Minor Mark) 삭제, 명중 +5 (1렙 90 -> 95), 피해 -70% -> -60%. 길드 "미리 표식을 새겨" / "갈고리와 섬광탄과 어퍼컷으로 열과 오를 헤집어" - 표식과 갈고리는 다른 전술. 표식은 죽음의 표식(3턴)이 맡아 표식 -> 당기기 -> 처형 3턴 연계
 // BH-009 come_hither: Pull 2 -> Pull 3 (게임 최초 당기기 3칸), dmg -80% -> -70%
 
 combat_skill: .id "uppercut" .level 0 .type "melee" .atk 90% .dmg -45% .crit 9% .launch 21 .target 1 .is_crit_valid True  .effect "Push 2A" "Stun 1"
