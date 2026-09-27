@@ -31,6 +31,7 @@ PARAM = dict(
     MARK_PARTY=2.0,       # 표식 파티 활용분 (hero_power.md 4-2)
     CORPSE=1.5,           # 시체 제거 (검증 전 가정)
     COND_SELF=0.6, COND_OTHER=0.3, COND_STUN=0.67,  # 조건 유지율 (hero_power.md 4-2). 적 유형 조건은 실측 비율
+    LOW_HP_SELF=0.6, LOW_HP_OTHER=0.3,  # '체력 X% 이하에서만' 사용 가능 기술. 스스로 체력을 깎는 기술이 있으면 0.6 (가정, 조건 유지율과 같은 규칙)
     BUFF_DUR_CAP=2,       # 강화·약화·보호 지속 상한. 전투 2.55라운드(R-STRAT-02), 사용 시점의 평균 잔여 = v1 자기 강화 규칙과 같은 2
     DEFAULT_DUR=3,
     HITS_TAKEN=0.5,       # 영웅 1명이 라운드당 받는 공격. 적 4명이 2.55라운드에 걸쳐 선형 감소 -> 평균 2명 생존 -> 2회를 4명이 나눔 (R-STRAT-02)
@@ -52,6 +53,7 @@ def kv(line):
     이름은 먼저 떼어낸다: 바닐라에 '.name "HM Dmg Marked 5".target' 처럼 공백 없이 붙은 줄이 있다."""
     line = re.sub(r'\.name\s+"[^"]*"', ' ', line)
     line = re.sub(r'"(?=\.)', '" ', line)
+    line = re.sub(r'(?<=[^\s\d.])\.(?=[a-z_]{3,})', ' .', line)   # '.crit 7%.required_...' 처럼 붙은 키 (고행자)
     return {m.group(1): m.group(2).split() for m in re.finditer(r'\.(\w+)((?:\s+(?!\.)[^\s]+)*)', line)}
 
 
@@ -157,6 +159,9 @@ class Ctx:
         s.H, s.eff, s.buffs, s.P = H, eff, buffs, P
         lo, hi = H['dmg']
         s.avg, s.max = (lo + hi) / 2, hi
+        s.med_hp = PARAM_MED_HP
+        s.self_wound = any('.target "performer"' in eff.get(n, '') and '.dotBleed' in eff.get(n, '')
+                           for l, d in H['skills'] for n in ec.effect_names_in(l))
         s.self_status = set()            # 이 영웅이 스스로 걸 수 있는 상태 -> 조건 유지율 0.6
         for l, d in H['skills']:
             for n in ec.effect_names_in(l):
@@ -312,7 +317,9 @@ def skill_value(C, l, d):
             if 'dotHpHeal' in k:
                 add('회복', num(first(k, 'dotHpHeal')) * dur * ch * heal_n * sm)
             if 'heal_percent' in k:
-                add('회복', num(first(k, 'heal_percent')) / 100 * 40 * ch * heal_n * sm)
+                x = num(first(k, 'heal_percent')); x = x if x <= 1 else x / 100      # 0.43 = 43%
+                base_hp = H['hp'] if who == 'performer' else C.med_hp
+                add('회복', x * base_hp * ch * (1 if who == 'performer' else heal_n) * sm)
             if 'guard' in k:
                 add('보호', P['ENEMY_ACT'] * P['HITS_TAKEN'] * min(dur, P['BUFF_DUR_CAP']) * ch * sm)
             if 'health_damage_blocks' in k:
@@ -333,6 +340,11 @@ def skill_value(C, l, d):
                 wh = 'self' if who == 'performer' else 'ally'
                 v = C.buff_ids_value(k['buff_ids'], min(dur, P['BUFF_DUR_CAP']), wh) * tgt_n * ch
                 add('강화' if v > 0 else '대가', v)
+            if who == 'performer':                          # 자해 지속 피해(고행자 재기)는 자기 저항 적용 후 대가
+                for key, rk in (('dotBleed', 'bleed'), ('dotPoison', 'poison')):
+                    if key in k:
+                        a = max(0.0, min(1.0, (chance - H['res'].get(rk, 0)) / 100))
+                        add('대가', -num(first(k, key)) * dur * a)
             if 'stress' in k and who == 'performer':
                 add('대가', -num(first(k, 'stress')) * ch * P['STRESS_HP'])
     if 'heal' in d and len(d['heal']) >= 2:                  # 기술 줄의 .heal lo hi
@@ -349,7 +361,12 @@ def skill_value(C, l, d):
     tot = sum(parts.values())
     if limit:
         tot *= min(1.0, limit / 3)
+    if 'required_performer_hp_range' in d:
+        tot *= P['LOW_HP_SELF'] if C.self_wound else P['LOW_HP_OTHER']
     return tot, parts
+
+
+PARAM_MED_HP = 43.0      # evaluate()에서 바닐라 5레벨 체력 중앙값으로 덮어쓴다
 
 
 def stress_hp(mode):
@@ -358,6 +375,8 @@ def stress_hp(mode):
 
 
 def evaluate(mode, P=PARAM):
+    global PARAM_MED_HP
+    PARAM_MED_HP = stress_hp('vanilla') * 100
     if P['STRESS_HP'] is None:
         P = dict(P, STRESS_HP=stress_hp('vanilla'))       # 기준은 바닐라 체력으로 고정
     eff = load_effects(mode)
@@ -440,7 +459,8 @@ def main():
                       ' '.join(f'{k}{x:.1f}' for k, x in parts.items()))
     if a.sens:
         variants = {'스트레스=HP 1(v1)': dict(STRESS_HP=1.0), '기절 x1.3': dict(STUN_MULT=1.3), '지원 x0.7': dict(SUPPORT_MULT=0.7),
-                    '광역 직접 0.75': dict(E_AOE=0.75), '조건 유지율 0.45/0.2': dict(COND_SELF=0.45, COND_OTHER=0.2)}
+                    '광역 직접 0.75': dict(E_AOE=0.75), '조건 유지율 0.45/0.2': dict(COND_SELF=0.45, COND_OTHER=0.2),
+                    '저체력 조건 0.3': dict(LOW_HP_SELF=0.3)}
         rows = {h: [rr[h]] for h in KO}
         for ch in variants.values():
             rk = ranking(run(dict(PARAM, **ch))['rb'], '기본')[0]
