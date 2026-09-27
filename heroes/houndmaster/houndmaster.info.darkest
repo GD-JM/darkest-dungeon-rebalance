@@ -11,10 +11,10 @@ armour: .name "houndmaster_armour_2" .def 20% .prot 0 .hp 29 .spd 0 .upgradeRequ
 armour: .name "houndmaster_armour_3" .def 25% .prot 0 .hp 33 .spd 0 .upgradeRequirementCode 2
 armour: .name "houndmaster_armour_4" .def 30% .prot 0 .hp 37 .spd 0 .upgradeRequirementCode 3
 combat_skill: .id "hounds_rush" .level 0 .type "ranged" .atk 85% .dmg 0% .crit 5% .launch 4321 .target 234 .is_crit_valid True  .effect "Beast Killer 1" "HM Dmg Marked 1" "RB HM Hound Bleed 1" .generation_guaranteed true
-combat_skill: .id "hounds_rush" .level 1 .type "ranged" .atk 90% .dmg 0% .crit 6% .launch 4321 .target 234 .is_crit_valid True  .effect "Beast Killer 2" "RB HM Dmg Marked 2" "RB HM Hound Bleed 2"
-combat_skill: .id "hounds_rush" .level 2 .type "ranged" .atk 95% .dmg 0% .crit 7% .launch 4321 .target 234 .is_crit_valid True  .effect "Beast Killer 3" "RB HM Dmg Marked 3" "RB HM Hound Bleed 3"
-combat_skill: .id "hounds_rush" .level 3 .type "ranged" .atk 100% .dmg 0% .crit 8% .launch 4321 .target 234 .is_crit_valid True  .effect "Beast Killer 4" "RB HM Dmg Marked 4" "RB HM Hound Bleed 4"
-combat_skill: .id "hounds_rush" .level 4 .type "ranged" .atk 105% .dmg 0% .crit 9% .launch 4321 .target 234 .is_crit_valid True  .effect "Beast Killer 5" "RB HM Dmg Marked 5" "RB HM Hound Bleed 5"
+combat_skill: .id "hounds_rush" .level 1 .type "ranged" .atk 90% .dmg 0% .crit 6% .launch 4321 .target 234 .is_crit_valid True  .effect "Beast Killer 2" "HM Dmg Marked 1" "RB HM Hound Bleed 2"
+combat_skill: .id "hounds_rush" .level 2 .type "ranged" .atk 95% .dmg 0% .crit 7% .launch 4321 .target 234 .is_crit_valid True  .effect "Beast Killer 3" "HM Dmg Marked 1" "RB HM Hound Bleed 3"
+combat_skill: .id "hounds_rush" .level 3 .type "ranged" .atk 100% .dmg 0% .crit 8% .launch 4321 .target 234 .is_crit_valid True  .effect "Beast Killer 4" "HM Dmg Marked 1" "RB HM Hound Bleed 4"
+combat_skill: .id "hounds_rush" .level 4 .type "ranged" .atk 105% .dmg 0% .crit 9% .launch 4321 .target 234 .is_crit_valid True  .effect "Beast Killer 5" "HM Dmg Marked 1" "RB HM Hound Bleed 5"
 // HM-011 사냥개 돌진: 사용 432 -> 4321(1열 추가), 대상 1234 -> 234(1열 제거). 설정 "후열에 접근해" / 1열에서도 쓰되 1열이 메인이 되지 않게. 출혈 너프(HM-010)와 상쇄되어 피해 보정 0% 유지
 // MARK-01 hounds_rush: 표식 피해 60~100 -> 40~60 (RB HM Dmg Marked). 야수 특효+출혈과 중복, 조련사 강함 2위
 combat_skill: .id "hounds_harry" .level 0 .type "ranged" .atk 85% .dmg -70% .crit -5% .launch 432 .target ~1234 .is_crit_valid True  .effect "Harry Bleed 1"
@@ -45,11 +45,11 @@ combat_skill: .id "lick_wounds" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% 
 combat_skill: .id "lick_wounds" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Lick Wounds 4" .is_stall_invalidating false
 combat_skill: .id "lick_wounds" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Lick Wounds 5" .is_stall_invalidating false
 // HM-015 상처 핥기: 사용 432 -> 4321. 가장 많이 맞는 1열에서 자가 회복을 못 쓰는 구조 해소. 조련사 1열 사용 가능 기술 4개 -> 평균(4.7) 수준
-combat_skill: .id "blackjack" .level 0 .type "melee" .atk 90% .dmg -80% .crit 5% .launch 21 .target 123 .is_crit_valid True  .effect "RB HM Hero Strong Stun 1"
-combat_skill: .id "blackjack" .level 1 .type "melee" .atk 95% .dmg -80% .crit 6% .launch 21 .target 123 .is_crit_valid True  .effect "RB HM Hero Strong Stun 2"
-combat_skill: .id "blackjack" .level 2 .type "melee" .atk 100% .dmg -80% .crit 7% .launch 21 .target 123 .is_crit_valid True  .effect "RB HM Hero Strong Stun 3"
-combat_skill: .id "blackjack" .level 3 .type "melee" .atk 105% .dmg -80% .crit 8% .launch 21 .target 123 .is_crit_valid True  .effect "RB HM Hero Strong Stun 4"
-combat_skill: .id "blackjack" .level 4 .type "melee" .atk 110% .dmg -80% .crit 9% .launch 21 .target 123 .is_crit_valid True  .effect "RB HM Hero Strong Stun 5"
+combat_skill: .id "blackjack" .level 0 .type "melee" .atk 90% .dmg -80% .crit 5% .launch 21 .target 123 .is_crit_valid True  .effect "Stun 1"
+combat_skill: .id "blackjack" .level 1 .type "melee" .atk 95% .dmg -80% .crit 6% .launch 21 .target 123 .is_crit_valid True  .effect "Stun 2"
+combat_skill: .id "blackjack" .level 2 .type "melee" .atk 100% .dmg -80% .crit 7% .launch 21 .target 123 .is_crit_valid True  .effect "Stun 3"
+combat_skill: .id "blackjack" .level 3 .type "melee" .atk 105% .dmg -80% .crit 8% .launch 21 .target 123 .is_crit_valid True  .effect "Stun 4"
+combat_skill: .id "blackjack" .level 4 .type "melee" .atk 110% .dmg -80% .crit 9% .launch 21 .target 123 .is_crit_valid True  .effect "Stun 5"
 // HM-013 둔기 강타: 1렙 명중 95 -> 90(표준), 피해 -65% -> -80%. 대상 1/2/3 유지. 설정 "곤봉은 효과적으로 기절시키지만 진짜 치명타는 사냥개가 먹입니다" -> 3열 도달과 기절은 남기고 화력만 제거
 tag: .id "light"
 tag: .id "non-religious"

@@ -31,11 +31,11 @@ combat_skill: .id "bulwark_of_faith" .level 2 .type "melee" .atk 0% .dmg 0% .cri
 combat_skill: .id "bulwark_of_faith" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 21 .target  .is_crit_valid True  .effect "Crusader Bulwark 4" "Crusader Bulwark Mark" "Crusader Bulwark Light" .is_stall_invalidating false
 combat_skill: .id "bulwark_of_faith" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 21 .target  .is_crit_valid True  .effect "Crusader Bulwark 5" "Crusader Bulwark Mark" "Crusader Bulwark Light" .is_stall_invalidating false
 combat_move_skill: .id "move" .level 0 .type "move" .move 1 1 .launch 4321
-combat_skill: .id "battle_heal" .level 0 .heal 2 2 .launch 1234 .target @1234  .effect "RB CRU Stacking Heal" .is_stall_invalidating false
-combat_skill: .id "battle_heal" .level 1 .heal 2 3 .launch 1234 .target @1234  .effect "RB CRU Stacking Heal" .is_stall_invalidating false
-combat_skill: .id "battle_heal" .level 2 .heal 3 3 .launch 1234 .target @1234  .effect "RB CRU Stacking Heal" .is_stall_invalidating false
-combat_skill: .id "battle_heal" .level 3 .heal 3 4 .launch 1234 .target @1234  .effect "RB CRU Stacking Heal" .is_stall_invalidating false
-combat_skill: .id "battle_heal" .level 4 .heal 4 4 .launch 1234 .target @1234  .effect "RB CRU Stacking Heal" .is_stall_invalidating false
+combat_skill: .id "battle_heal" .level 0 .heal 2 2 .launch 1234 .target @1234  .effect "Stacking Heal 1" .is_stall_invalidating false
+combat_skill: .id "battle_heal" .level 1 .heal 2 3 .launch 1234 .target @1234  .effect "Stacking Heal 1" .is_stall_invalidating false
+combat_skill: .id "battle_heal" .level 2 .heal 3 3 .launch 1234 .target @1234  .effect "Stacking Heal 1" .is_stall_invalidating false
+combat_skill: .id "battle_heal" .level 3 .heal 3 4 .launch 1234 .target @1234  .effect "Stacking Heal 1" .is_stall_invalidating false
+combat_skill: .id "battle_heal" .level 4 .heal 4 4 .launch 1234 .target @1234  .effect "Stacking Heal 1" .is_stall_invalidating false
 // CRU-001 battle_heal: heal 2-3/5-6 -> 2-2/4-4, added RB CRU Stacking Heal (+20% healing received)
 combat_skill: .id "holy_lance" .level 0 .type "melee" .atk 85% .dmg 0% .crit 6.5% .move 0 1 .launch 34 .target 234 .is_crit_valid True  .effect "Unholy Killer 1"
 combat_skill: .id "holy_lance" .level 1 .type "melee" .atk 90% .dmg 0% .crit 7.5% .move 0 1 .launch 34 .target 234 .is_crit_valid True  .effect "Unholy Killer 2"

@@ -53,11 +53,11 @@ combat_skill: .id "thrown_dagger" .level 3 .type "ranged" .atk 105% .dmg -10% .c
 combat_skill: .id "thrown_dagger" .level 4 .type "ranged" .atk 110% .dmg -10% .crit 12% .launch 432 .target 234 .is_crit_valid True  .effect  "RB GR Dagger Dmg Marked 5" "Poison Killer 5"
 // GR-002 thrown_dagger: GR Acc Buff moved to poison_dart
 
-combat_skill: .id "poison_dart" .level 0 .type "ranged" .atk 95% .dmg -60% .crit 7.5% .launch 432 .target 1234 .is_crit_valid True  .effect "RB GR Blight 1" "GR Blight Debuff 1" "GR Acc Buff 1" 
+combat_skill: .id "poison_dart" .level 0 .type "ranged" .atk 95% .dmg -60% .crit 7.5% .launch 432 .target 1234 .is_crit_valid True  .effect "Blight 1" "GR Blight Debuff 1" "GR Acc Buff 1" 
 combat_skill: .id "poison_dart" .level 1 .type "ranged" .atk 100% .dmg -60% .crit 8.5% .launch 432 .target 1234 .is_crit_valid True  .effect "RB GR Blight 2" "GR Blight Debuff 2" "GR Acc Buff 2" 
-combat_skill: .id "poison_dart" .level 2 .type "ranged" .atk 105% .dmg -60% .crit 9.5% .launch 432 .target 1234 .is_crit_valid True  .effect "RB GR Blight 3" "GR Blight Debuff 3" "GR Acc Buff 3" 
-combat_skill: .id "poison_dart" .level 3 .type "ranged" .atk 110% .dmg -60% .crit 10.5% .launch 432 .target 1234 .is_crit_valid True  .effect "RB GR Blight 4" "GR Blight Debuff 4" "GR Acc Buff 4"
-combat_skill: .id "poison_dart" .level 4 .type "ranged" .atk 115% .dmg -60% .crit 11.5% .launch 432 .target 1234 .is_crit_valid True  .effect "RB GR Blight 5" "GR Blight Debuff 5" "GR Acc Buff 5"
+combat_skill: .id "poison_dart" .level 2 .type "ranged" .atk 105% .dmg -60% .crit 9.5% .launch 432 .target 1234 .is_crit_valid True  .effect "Blight 3" "GR Blight Debuff 3" "GR Acc Buff 3" 
+combat_skill: .id "poison_dart" .level 3 .type "ranged" .atk 110% .dmg -60% .crit 10.5% .launch 432 .target 1234 .is_crit_valid True  .effect "Blight 4" "GR Blight Debuff 4" "GR Acc Buff 4"
+combat_skill: .id "poison_dart" .level 4 .type "ranged" .atk 115% .dmg -60% .crit 11.5% .launch 432 .target 1234 .is_crit_valid True  .effect "Blight 5" "GR Blight Debuff 5" "GR Acc Buff 5"
 // GR-001 poison_dart: blight 4 -> 3 turns (RB GR Blight 1-5), + GR Acc Buff moved here (GR-002)
 
 combat_skill: .id "toxin_trickery" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 4321 .target  .is_crit_valid True  .effect "Shadow Blood 1" "GR Self Speed 1" .is_stall_invalidating false
