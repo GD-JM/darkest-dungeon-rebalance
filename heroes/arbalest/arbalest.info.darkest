@@ -41,7 +41,8 @@ combat_skill: .id "bola" .level 0 .type "ranged" .atk 95% .dmg -50% .crit 2% .la
 combat_skill: .id "bola" .level 1 .type "ranged" .atk 100% .dmg -50% .crit 3% .launch 43 .target ~12 .is_crit_valid True  .effect "Bolo Push 1B"
 combat_skill: .id "bola" .level 2 .type "ranged" .atk 105% .dmg -50% .crit 4% .launch 43 .target ~12 .is_crit_valid True  .effect "Bolo Push 1C"
 combat_skill: .id "bola" .level 3 .type "ranged" .atk 110% .dmg -50% .crit 5% .launch 43 .target ~12 .is_crit_valid True  .effect "Bolo Push 1D"
-combat_skill: .id "bola" .level 4 .type "ranged" .atk 115% .dmg -50% .crit 6% .launch 43 .target ~12 .is_crit_valid True  .effect "Bolo Push 1D"
+combat_skill: .id "bola" .level 4 .type "ranged" .atk 115% .dmg -50% .crit 6% .launch 43 .target ~12 .is_crit_valid True  .effect "Bolo Push 1E"
+// ARB-004 bola 5레벨: Bolo Push 1D(105) -> 1E(115). 바닐라에 1E가 정의돼 있는데 어떤 기술도 쓰지 않는다(연결 누락). 4·5레벨이 같은 105를 써서 성장이 멈췄고, 이동 저항이 레벨당 +20 오르는 동안 성공률이 43 -> 40 -> 28%로 떨어지는 유일한 이동 기술이었다(M1·M5). 5레벨 성공률 30.5 -> 37.8%
 
 
 combat_move_skill: .id "move" .level 0 .type "move" .move 2 0 .launch 4321

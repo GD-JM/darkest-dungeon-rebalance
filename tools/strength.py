@@ -29,7 +29,7 @@ PARAM = dict(
     PUSH=1.0,             # 밀치기·섞기: 실측 가격표의 1/3 (stun.md 10-6)
     PULL=3.0,             # 당기기: 후열 스트레스 발생원을 끌어냄 [사용자]
     MARK_PARTY=2.0,       # 표식 파티 활용분 (hero_power.md 4-2)
-    CORPSE=1.5,           # 시체 제거 (검증 전 가정)
+    CORPSE=0.5,           # 시체 제거. 시뮬레이션: 메인 전략(3·4열 먼저)이면 1·2열로 끌어오는 적 0명, 무작위 처치면 0.32명 x 당기기 3.0 = 1.0 -> 중간값 0.5 (arbalest.md 참고 아님, man_at_arms.md MAA 검토)
     COND_SELF=0.6, COND_OTHER=0.3, COND_STUN=0.67,  # 조건 유지율 (hero_power.md 4-2). 적 유형 조건은 실측 비율
     LOW_HP_SELF=0.6, LOW_HP_OTHER=0.3,  # '체력 X% 이하에서만' 사용 가능 기술. 스스로 체력을 깎는 기술이 있으면 0.6 (가정, 조건 유지율과 같은 규칙)
     BUFF_DUR_CAP=2,       # 강화·약화·보호 지속 상한. 전투 2.55라운드(R-STRAT-02), 사용 시점의 평균 잔여 = v1 자기 강화 규칙과 같은 2
@@ -218,7 +218,7 @@ class Ctx:
 def skill_value(C, l, d):
     P, H = C.P, C.H
     tgt = first(d, 'target')
-    ally, aoe, self_only = tgt.startswith('@'), '~' in tgt, tgt == ''
+    ally, aoe, self_only = '@' in tgt, '~' in tgt, tgt == ''     # '@~1234' 와 '~@1234' 두 표기가 모두 있다
     enemy = not ally and not self_only
     ranks = len(re.sub(r'[^1-4]', '', tgt))
     atk = num(first(d, 'atk', '0')); dmgm = num(first(d, 'dmg', '0')) / 100
@@ -262,7 +262,7 @@ def skill_value(C, l, d):
         chance = num(first(k, 'chance', '100'))
         on_hit = first(k, 'on_hit', 'true').lower() == 'true'
         dur = num(first(k, 'duration', str(P['DEFAULT_DUR']))) or P['DEFAULT_DUR']
-        if who == 'target' and enemy:
+        if who in ('target', 'target_group') and enemy:          # target_group = 적 그룹 전체 (시체 제거)
             def ev(res_key, fn=None):
                 tot = 0.0
                 for m in MONS:
