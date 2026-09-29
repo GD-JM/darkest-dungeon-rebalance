@@ -262,6 +262,8 @@ def skill_value(C, l, d):
         chance = num(first(k, 'chance', '100'))
         on_hit = first(k, 'on_hit', 'true').lower() == 'true'
         dur = num(first(k, 'duration', str(P['DEFAULT_DUR']))) or P['DEFAULT_DUR']
+        if first(k, 'buff_duration_type') == 'combat_end':          # '.duration 1 .buff_duration_type combat_end' = 전투 끝까지
+            dur = P['BUFF_DUR_CAP']
         if who in ('target', 'target_group') and enemy:          # target_group = 적 그룹 전체 (시체 제거)
             def ev(res_key, fn=None):
                 tot = 0.0
