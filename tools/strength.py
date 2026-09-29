@@ -22,7 +22,7 @@ PARAM = dict(
     CRIT_EFF=0.20,        # 치명타 시 효과 확률 +20%p (R-CMB-08)
     CRIT_DOT_DUR=1.5,     # 치명타 시 출혈·중독 지속 x1.5 올림 (R-CMB-08)
     CRIT_STRESS=3 + 3 * 0.25 * 3,   # 본인 -3 + 아군 3명 x 25% x -3 = 5.25 (R-CMB-08), 스트레스 단위
-    STRESS_HP=None,       # 스트레스 1 = HP 몇? None 이면 데이터에서: 5레벨 체력 중앙값 / 100 (둘 다 영웅을 잃는 한계선)
+    STRESS_HP=None,       # 스트레스 1 = HP 몇? None 이면 게임 가격에서: (영지 스트레스 회복 금화/점) / (야영 식사 체력 회복 금화/점). R-VALUE-06
     CRIT_BUFF_DUR=2,      # 직업 치명타 버프 2턴 (R-CMB-08)
     STUN_MULT=1.0,        # 기절 = 성공률 x 몬스터 1행동. 행동 경제 프리미엄은 민감도로만 본다
     SUPPORT_MULT=1.0,     # 회복·보호·스트레스 회복. 프리미엄 없음(R-STRAT-01 3) -> 민감도로만
@@ -471,6 +471,30 @@ HERO_MED_SPD = 7.0
 _STRESS_CACHE = None
 
 
+def stress_price_ratio():
+    """R-VALUE-06 스트레스 회복 난이도: 원 개발사가 매긴 가격 비율.
+    스트레스: 수도원·여관 기본 단계 활동의 금화 / 회복량 평균.
+    체력: 야영 '식사'(음식 1개 = 75금화)가 최대 체력 10% 회복 (shared/rules.json meals_table full), 체력 중앙값 기준.
+    가격으로 보면 한계선 비율(체력 중앙값/100)은 상쇄되어, 결과가 곧 '스트레스 1 = HP 몇'이다."""
+    per = []
+    for b in ('abbey', 'tavern'):
+        f = os.path.join(G, 'campaign', 'town', 'buildings', b, b + '.building.json')
+        d = json.loads(re.sub(r',\s*([}\]])', r'\1', open(f, encoding='utf-8-sig').read()))
+        for a in d['data']['activities']:
+            dd = a['data']
+            if 'stress_upgrades' in dd and 'cost_upgrades' in dd:
+                per.append(dd['cost_upgrades'][0]['cost_currency']['amount'] / dd['stress_upgrades'][0]['heal_low'])
+    gold_per_stress = st.mean(per)
+    rules = json.load(open(os.path.join(G, 'shared', 'rules.json'), encoding='utf-8-sig'))
+    full = [m for m in rules['meals_table'] if m['type'] == 'full'][0]
+    food = 75.0
+    for l in open(os.path.join(G, 'inventory', 'base.supply.inventory.items.darkest'), encoding='utf-8', errors='ignore'):
+        if '.type "provision"' in l:
+            food = num(first(kv(l), 'purchase_gold_value', '75'))
+    gold_per_hp = food * full['rations_per'] / (full['healing'] * stress_hp('vanilla') * 100)
+    return gold_per_stress / gold_per_hp, gold_per_stress, gold_per_hp
+
+
 def stress_hp(mode):
     hps = [load_hero(h, mode)['hp'] for h in KO]
     return st.median(hps) / 100
@@ -485,7 +509,7 @@ def evaluate(mode, P=PARAM):
             _STRESS_CACHE = 2 * monster_stress_per_action() / 4
         P = dict(P, STRESS_TAKEN=_STRESS_CACHE)
     if P['STRESS_HP'] is None:
-        P = dict(P, STRESS_HP=stress_hp('vanilla'))       # 기준은 바닐라 체력으로 고정
+        P = dict(P, STRESS_HP=stress_price_ratio()[0])     # R-VALUE-06 가격 비율
     eff = load_effects(mode)
     buffs = ec.load_buffs(G)
     out = {}
@@ -545,7 +569,7 @@ def main():
     ap.add_argument('--detail'); ap.add_argument('--sens', action='store_true')
     a = ap.parse_args()
     allres = run()
-    print(f'몬스터 모집단: 영웅 등급 일반 몬스터 {N_MON}종 (보스·오브젝트 제외) / 스트레스 1 = HP {stress_hp("vanilla"):.2f}\n')
+    print(f'몬스터 모집단: 영웅 등급 일반 몬스터 {N_MON}종 (보스·오브젝트 제외) / 스트레스 1 = HP {stress_price_ratio()[0]:.2f} (가격 비율, R-VALUE-06)\n')
     rv = ranking(allres['vanilla'], '기본')[0]
     rr, orr = ranking(allres['rb'], '기본')
     # 표시 단위 = 환산 피해 보정(%p) [제작자 지정, R-VALUE-02 개정]. HP는 내부 계산에만 쓴다.
@@ -571,7 +595,7 @@ def main():
                 print(f'  {s:24s} 환산 {pp(v, r["base"]):+5.0f}%p  사용 {launch:5s} 구성: ' +
                       ' '.join(f'{k}{x / r["base"] * 100:+.0f}' for k, x in parts.items()))
     if a.sens:
-        variants = {'스트레스=HP 1(v1)': dict(STRESS_HP=1.0), '기절 x1.3': dict(STUN_MULT=1.3), '지원 x0.7': dict(SUPPORT_MULT=0.7),
+        variants = {'스트레스=HP 0.43(한계선)': dict(STRESS_HP=0.43), '스트레스=HP 1(v1)': dict(STRESS_HP=1.0), '기절 x1.3': dict(STUN_MULT=1.3), '지원 x0.7': dict(SUPPORT_MULT=0.7),
                     '광역 직접 0.75': dict(E_AOE=0.75), '조건 유지율 0.45/0.2': dict(COND_SELF=0.45, COND_OTHER=0.2),
                     '저체력 조건 0.3': dict(LOW_HP_SELF=0.3)}
         rows = {h: [rr[h]] for h in KO}
