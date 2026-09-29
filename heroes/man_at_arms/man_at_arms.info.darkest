@@ -16,13 +16,12 @@ combat_skill: .id "crush" .level 1 .type "melee" .atk 90% .dmg 0% .crit 6% .laun
 combat_skill: .id "crush" .level 2 .type "melee" .atk 95% .dmg 0% .crit 7% .launch 12 .target 123 .is_crit_valid True 
 combat_skill: .id "crush" .level 3 .type "melee" .atk 100% .dmg 0% .crit 8% .launch 12 .target 123 .is_crit_valid True 
 combat_skill: .id "crush" .level 4 .type "melee" .atk 105% .dmg 0% .crit 9% .launch 12 .target 123 .is_crit_valid True 
-combat_skill: .id "rampart" .level 0 .type "melee" .atk 90% .dmg -40% .crit 5% .move 0 1 .launch 123 .target 12 .is_crit_valid True  .effect "Push 1A" "Stun 1"
-combat_skill: .id "rampart" .level 1 .type "melee" .atk 95% .dmg -40% .crit 6% .move 0 1 .launch 123 .target 12 .is_crit_valid True  .effect "Push 1B" "Stun 2"
-combat_skill: .id "rampart" .level 2 .type "melee" .atk 100% .dmg -40% .crit 7% .move 0 1 .launch 123 .target 12 .is_crit_valid True  .effect "Push 1C" "Stun 3"
-combat_skill: .id "rampart" .level 3 .type "melee" .atk 105% .dmg -40% .crit 8% .move 0 1 .launch 123 .target 12 .is_crit_valid True  .effect "Push 1D" "Stun 4"
-combat_skill: .id "rampart" .level 4 .type "melee" .atk 110% .dmg -40% .crit 9% .move 0 1 .launch 123 .target 12 .is_crit_valid True  .effect "Push 1E" "Stun 5"
+combat_skill: .id "rampart" .level 0 .type "melee" .atk 90% .dmg -60% .crit 5% .move 0 1 .launch 123 .target 12 .is_crit_valid True  .effect "Push 1A" "Stun 1"
+combat_skill: .id "rampart" .level 1 .type "melee" .atk 95% .dmg -60% .crit 6% .move 0 1 .launch 123 .target 12 .is_crit_valid True  .effect "Push 1B" "Stun 2"
+combat_skill: .id "rampart" .level 2 .type "melee" .atk 100% .dmg -60% .crit 7% .move 0 1 .launch 123 .target 12 .is_crit_valid True  .effect "Push 1C" "Stun 3"
+combat_skill: .id "rampart" .level 3 .type "melee" .atk 105% .dmg -60% .crit 8% .move 0 1 .launch 123 .target 12 .is_crit_valid True  .effect "Push 1D" "Stun 4"
+combat_skill: .id "rampart" .level 4 .type "melee" .atk 110% .dmg -60% .crit 9% .move 0 1 .launch 123 .target 12 .is_crit_valid True  .effect "Push 1E" "Stun 5"
 
-//중보병 성채의 일격과 데미지 보정을 바꿈. 40-> 60너무 사기임. 거기에 명중 95까지 있어서 바꿔도 사실 3열에서 사용 가능하기도 하고 성기사 거랑 비교하면 더 좋은 수준
 
 
 

@@ -5,7 +5,7 @@
 - 모든 가치는 HP 환산. 기술 목록은 평타 배수(R-VALUE-02)로도 표기.
 - 파라미터와 출처는 PARAM 에 모아 둔다. 바꾸면 design/analysis/hero_power_v2.md 도 갱신할 것.
 """
-import os, re, glob, sys, io, math, argparse, statistics as st
+import os, re, glob, sys, io, math, argparse, json, functools, statistics as st
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import effect_common as ec
 
@@ -34,6 +34,9 @@ PARAM = dict(
     LOW_HP_SELF=0.6, LOW_HP_OTHER=0.3,  # '체력 X% 이하에서만' 사용 가능 기술. 스스로 체력을 깎는 기술이 있으면 0.6 (가정, 조건 유지율과 같은 규칙)
     BUFF_DUR_CAP=2,       # 강화·약화·보호 지속 상한. 전투 2.55라운드(R-STRAT-02), 사용 시점의 평균 잔여 = v1 자기 강화 규칙과 같은 2
     DEFAULT_DUR=3,
+    KILL_SHARE=1.57 / 4,  # 영웅 1명이 라운드당 처치하는 적 수 (R-STRAT-01: 파티 1.57명/라운드)
+    DEATH_RATE=0.393,     # 적 1명이 한 라운드에 죽을 확률 (R-STRAT-02)
+    STRESS_TAKEN=None,    # 영웅 1명이 라운드당 받는 스트레스. None 이면 몬스터 AI 가중치로 계산 (생존 적 2명 x 1행동 기대 스트레스 / 4)
     HITS_TAKEN=0.5,       # 영웅 1명이 라운드당 받는 공격. 적 4명이 2.55라운드에 걸쳐 선형 감소 -> 평균 2명 생존 -> 2회를 4명이 나눔 (R-STRAT-02)
     ACT_TOP=3,            # 행동 가치 = 상위 3기술 평균 (4칸 중 1칸은 이동·상황기)
 )
@@ -89,7 +92,7 @@ def load_monsters():
             continue
         prot = d.get('prot', 0)
         typ = re.search(r'enemy_type:\s*\.id\s*"?(\w+)', t)
-        mons.append(dict(name=os.path.basename(f).split('.')[0], dodge=d['def'], prot=prot if prot <= 1 else prot / 100,
+        mons.append(dict(name=os.path.basename(f).split('.')[0], dodge=d['def'], prot=prot if prot <= 1 else prot / 100, spd=d.get('spd', 0),
                          stun=d.get('stun_resist', 0), poison=d.get('poison_resist', 0), bleed=d.get('bleed_resist', 0),
                          debuff=d.get('debuff_resist', 0), move=d.get('move_resist', 0),
                          type=typ.group(1) if typ else '?'))
@@ -110,6 +113,81 @@ def hit(m, acc):
 
 def apply_rate(m, chance, res_key):
     return max(0.0, min(1.0, (chance - (m[res_key] if res_key else 0)) / 100))
+
+
+INIT_RAND = int(json.load(open(os.path.join(G, 'shared', 'rules.json'), encoding='utf-8-sig')).get('initiative_base', 8))
+# 행동 순서 = 속도 + 1~INIT_RAND 무작위 (가정, 검증 V-09). 두 무작위 값의 차 분포
+_D = {k: (INIT_RAND - abs(k)) / INIT_RAND ** 2 for k in range(-INIT_RAND + 1, INIT_RAND)}
+
+
+def p_before(h, m):
+    """속도 h인 영웅이 속도 m인 몬스터보다 먼저 행동할 확률 (동률은 절반)"""
+    return sum(p * (1.0 if k > m - h else 0.5 if k == m - h else 0.0) for k, p in _D.items())
+
+
+@functools.lru_cache(maxsize=None)
+def dp_self(h, s):
+    """영웅 속도 +s일 때 몬스터보다 먼저 행동할 확률의 평균 증가 (몬스터 모집단 평균)"""
+    return st.mean(p_before(h + s, m['spd']) - p_before(h, m['spd']) for m in MONS)
+
+
+@functools.lru_cache(maxsize=None)
+def dp_enemy(s):
+    """적 속도 -s일 때 영웅(속도 중앙값)이 먼저 행동할 확률의 평균 증가"""
+    return st.mean(p_before(HERO_MED_SPD, m['spd'] - s) - p_before(HERO_MED_SPD, m['spd']) for m in MONS)
+
+
+def monster_stress_per_action():
+    """몬스터 1행동이 파티에 주는 기대 스트레스.
+    몬스터 AI(skill_selection_desires의 base_chance) 가중치, 영웅 회피 25, 광역 칸 x 0.8, 몬스터 치명타 스트레스(+10 / 동료 50% +5) 포함"""
+    eff = {}
+    for f in glob.glob(os.path.join(G, '**', '*.effects.darkest'), recursive=True):
+        if 'mods' in ec.P(f) or 'arena' in ec.P(f):
+            continue
+        for raw in open(f, encoding='utf-8', errors='ignore'):
+            if raw.startswith('effect:'):
+                m = re.search(r'\.name\s+"([^"]+)"', raw)
+                if m:
+                    eff.setdefault(m.group(1), raw.rstrip())
+    brains = {}
+    for f in glob.glob(os.path.join(G, '**', '*.monster_brains.json'), recursive=True):
+        if 'arena' in ec.P(f) or 'mods' in ec.P(f):
+            continue
+        for b in json.load(open(f, encoding='utf-8-sig')).get('monster_brains', []):
+            brains.setdefault(b['id'], b)
+    names = {m['name'] for m in MONS}
+    out = []
+    for f in glob.glob(os.path.join(G, 'monsters', '**', '*_C.info.darkest'), recursive=True) + \
+             glob.glob(os.path.join(G, 'dlc', '**', 'monsters', '**', '*_C.info.darkest'), recursive=True):
+        if os.path.basename(f).split('.')[0] not in names:
+            continue
+        t = open(f, encoding='utf-8', errors='ignore').read()
+        bid = re.search(r'monster_brain:\s*\.id\s*(\S+)', t)
+        w = {}
+        for dsr in brains.get(bid.group(1) if bid else '', {}).get('skill_selection_desires', []):
+            if dsr['type'] == 'specific_skill':
+                sid = dsr['data']['combat_skill_id']
+                w[sid] = w.get(sid, 0) + dsr['data'].get('base_chance', 1)
+        vals, ws = [], []
+        for l in re.findall(r'^skill:.*$', t, re.M):
+            d = kv(l)
+            tgt = first(d, 'target')
+            nt = len(re.sub('[^1-4]', '', tgt)) * 0.8 if '~' in tgt else 1
+            h = max(0, min(95, num(first(d, 'atk')) - 25)) / 100
+            sv = 0.0
+            for en in ec.effect_names_in(l):
+                k = kv(eff.get(en, ''))
+                if 'stress' in k and first(k, 'target', 'target') == 'target':
+                    hit_ = 1 if first(k, 'on_miss', 'false').lower() == 'true' else h
+                    sv += num(first(k, 'stress')) * hit_ * min(1, num(first(k, 'chance', '100')) / 100)
+            dm = d.get('dmg') or ['0']
+            cr = num(first(d, 'crit')) / 100 if num(dm[-1]) > 0 and first(d, 'is_crit_valid', 'True').lower() == 'true' else 0
+            vals.append(sv * nt + h * cr * (10 + 3 * 0.5 * 5))
+            ws.append(w.get(first(d, 'id'), 0))
+        if vals:
+            ws = ws if sum(ws) else [1] * len(vals)
+            out.append(sum(a * b for a, b in zip(ws, vals)) / sum(ws))
+    return st.mean(out)
 
 
 # ---------------------------------------------------------------- 데이터 적재
@@ -202,16 +280,26 @@ class Ctx:
             return P['ENEMY_ACT'] * P['HITS_TAKEN'] * amt * 100 / 77.5 * dur
         if stat == 'protection_rating':
             return P['ENEMY_ACT'] * P['HITS_TAKEN'] * amt * dur
+        if stat == 'speed_rating':                  # amt = 속도 점수(원값). 먼저 행동해 죽이는 적의 행동을 지운다
+            h = s.H['spd'] if who == 'self' else HERO_MED_SPD
+            return P['KILL_SHARE'] * dp_self(h, amt) * P['ENEMY_ACT'] * dur
         return 0.0
+
+    def stress_resist_value(s, amt, dur):
+        """받는 스트레스 amt(음수 = 감소) -> HP. 대상 1명, dur 턴"""
+        return -amt * s.P['STRESS_TAKEN'] * dur * s.P['STRESS_HP']
 
     def buff_ids_value(s, ids, dur, who):
         v = 0.0
         for b in ids:
             B = s.buffs.get(b.strip('"'))
-            if not B or B.get('stat_type') not in ('combat_stat_add', 'combat_stat_multiply'):
+            if not B:
                 continue
             cm = 1.0 if B.get('rule_type') in (None, 'always') else s.P['COND_OTHER']
-            v += cm * s.stat_value(B['stat_sub_type'], B['amount'], dur, who)
+            if B.get('stat_type') == 'stress_dmg_received_percent':
+                v += cm * s.stress_resist_value(B['amount'], dur)
+            elif B.get('stat_type') in ('combat_stat_add', 'combat_stat_multiply'):
+                v += cm * s.stat_value(B['stat_sub_type'], B['amount'], dur, who)
         return v
 
 
@@ -297,6 +385,9 @@ def skill_value(C, l, d):
                     x = -num(first(k, key)) / 100
                     if x <= 0:
                         continue
+                    if key == 'speed_rating_add':           # 속도 점수 원값. 적이 늦어져 먼저 죽는다
+                        v += P['DEATH_RATE'] * dp_enemy(x * 100) * P['ENEMY_ACT']
+                        continue
                     if key.startswith('damage_'):
                         v += P['ENEMY_ACT'] * x * 0.5
                     elif key == 'attack_rating_add':
@@ -339,6 +430,8 @@ def skill_value(C, l, d):
                 dd = min(dur, P['BUFF_DUR_CAP'])
                 for key in k:
                     x = num(first(k, key)) / 100
+                    if key == 'speed_rating_add':
+                        x = num(first(k, key))                # 속도는 % 가 아니라 점수
                     # 자기 약화(탈진 등)는 대가로 뺀다. buff_ids 경로와 같은 처리
                     if key.endswith(('_add', '_multiply')) and (x > 0 or wh == 'self'):
                         stat = key.replace('_add', '').replace('_multiply', '')
@@ -374,6 +467,8 @@ def skill_value(C, l, d):
 
 
 PARAM_MED_HP = 43.0      # evaluate()에서 바닐라 5레벨 체력 중앙값으로 덮어쓴다
+HERO_MED_SPD = 7.0
+_STRESS_CACHE = None
 
 
 def stress_hp(mode):
@@ -382,8 +477,13 @@ def stress_hp(mode):
 
 
 def evaluate(mode, P=PARAM):
-    global PARAM_MED_HP
+    global PARAM_MED_HP, HERO_MED_SPD, _STRESS_CACHE
     PARAM_MED_HP = stress_hp('vanilla') * 100
+    HERO_MED_SPD = st.median(load_hero(h, 'vanilla')['spd'] for h in KO)
+    if P['STRESS_TAKEN'] is None:
+        if _STRESS_CACHE is None:
+            _STRESS_CACHE = 2 * monster_stress_per_action() / 4
+        P = dict(P, STRESS_TAKEN=_STRESS_CACHE)
     if P['STRESS_HP'] is None:
         P = dict(P, STRESS_HP=stress_hp('vanilla'))       # 기준은 바닐라 체력으로 고정
     eff = load_effects(mode)
