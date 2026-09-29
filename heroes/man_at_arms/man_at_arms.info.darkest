@@ -26,11 +26,12 @@ combat_skill: .id "rampart" .level 4 .type "melee" .atk 110% .dmg -40% .crit 9% 
 
 
 
-combat_skill: .id "bellow" .level 0 .type "ranged" .atk 90% .dmg -100% .crit 0% .launch 1234 .target ~1234 .is_crit_valid False  .effect "Disrupt 1" "Bellow Crit 1" .is_stall_invalidating false
-combat_skill: .id "bellow" .level 1 .type "ranged" .atk 95% .dmg -100% .crit 0% .launch 1234 .target ~1234 .is_crit_valid False  .effect "Disrupt 2" "Bellow Crit 2" .is_stall_invalidating false
-combat_skill: .id "bellow" .level 2 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 1234 .target ~1234 .is_crit_valid False  .effect "Disrupt 3" "Bellow Crit 3" .is_stall_invalidating false
-combat_skill: .id "bellow" .level 3 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 1234 .target ~1234 .is_crit_valid False  .effect "Disrupt 4" "Bellow Crit 4" .is_stall_invalidating false
-combat_skill: .id "bellow" .level 4 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 1234 .target ~1234 .is_crit_valid False  .effect "Disrupt 5" "Bellow Crit 5" .is_stall_invalidating false
+combat_skill: .id "bellow" .level 0 .type "ranged" .atk 90% .dmg -100% .crit 0% .launch 1234 .target ~1234 .is_crit_valid False  .effect "Disrupt 1" "clear_corpses" "Bellow Crit 1" .is_stall_invalidating false
+combat_skill: .id "bellow" .level 1 .type "ranged" .atk 95% .dmg -100% .crit 0% .launch 1234 .target ~1234 .is_crit_valid False  .effect "Disrupt 2" "clear_corpses" "Bellow Crit 2" .is_stall_invalidating false
+combat_skill: .id "bellow" .level 2 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 1234 .target ~1234 .is_crit_valid False  .effect "Disrupt 3" "clear_corpses" "Bellow Crit 3" .is_stall_invalidating false
+combat_skill: .id "bellow" .level 3 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 1234 .target ~1234 .is_crit_valid False  .effect "Disrupt 4" "clear_corpses" "Bellow Crit 4" .is_stall_invalidating false
+combat_skill: .id "bellow" .level 4 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 1234 .target ~1234 .is_crit_valid False  .effect "Disrupt 5" "clear_corpses" "Bellow Crit 5" .is_stall_invalidating false
+// MAA-002 bellow: 시체 제거 추가(약화는 그대로). 길드 "철퇴, 버클러와 맹렬한 함성으로 적의 전열을 짓뭉갭니다". 야만인 함성(HEL-001)에 이은 두 번째 "함성 = 대열 정리" 기술
 combat_skill: .id "defender" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Clear Guard Performer" "Clear Guard Target" "MAA Guard 1" "Defender 1" .is_stall_invalidating false
 combat_skill: .id "defender" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Clear Guard Performer" "Clear Guard Target" "MAA Guard 1" "Defender 2" .is_stall_invalidating false
 combat_skill: .id "defender" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Clear Guard Performer" "Clear Guard Target" "MAA Guard 1" "Defender 3" .is_stall_invalidating false

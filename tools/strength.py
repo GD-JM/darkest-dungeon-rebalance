@@ -446,22 +446,28 @@ def main():
     print(f'몬스터 모집단: 영웅 등급 일반 몬스터 {N_MON}종 (보스·오브젝트 제외) / 스트레스 1 = HP {stress_hp("vanilla"):.2f}\n')
     rv = ranking(allres['vanilla'], '기본')[0]
     rr, orr = ranking(allres['rb'], '기본')
-    print('| RB 순위 | 영웅 | 총점 | 행동 가치 | 생존 | 속도 | 유연성 | 바닐라 순위 (총점) | 균등 / 행동 중시 | 상위 기술 HP (평타 배수) |')
+    # 표시 단위 = 환산 피해 보정(%p) [제작자 지정, R-VALUE-02 개정]. HP는 내부 계산에만 쓴다.
+    #   기술: "이 기술 1회 = 그 영웅 무기로 피해 보정 X%인 단일 공격 1회" (평타 = 피해 보정 0%)
+    #   행동 가치: 표준 평타(바닐라 20영웅 평타 중앙값) 기준 -> 영웅끼리 비교 가능
+    std = st.median(r['base'] for r in allres['vanilla'].values())
+    pp = lambda v, base: (v / base - 1) * 100
+    print(f'표준 평타 = 바닐라 20영웅 평타 중앙값 (1%p = {std / 100:.3f} HP)\n')
+    print('| RB 순위 | 영웅 | 총점 | 행동 가치 (표준 평타 기준 %p) | 유효 체력 | 속도 | 유연성 | 바닐라 순위 (총점) | 균등 / 행동 중시 | 상위 기술 (자기 무기 기준 환산 피해 보정) |')
     print('|---|---|---|---|---|---|---|---|---|---|')
     for h in orr:
         r, v = allres['rb'][h], allres['vanilla'][h]
         top = sorted(r['skills'].items(), key=lambda x: -x[1][0])[:3]
-        ts = ', '.join(f'{s} {x[0]:.1f} ({x[0] / r["base"] * 100:.0f}%)' for s, x in top)
+        ts = ', '.join(f'{s} {pp(x[0], r["base"]):+.0f}%p' for s, x in top)
         oth = '/'.join(str(ranking(allres['rb'], wk)[0][h]) for wk in ('균등', '행동 중시'))
-        print(f'| {rr[h]} | {KO[h]}{"*" if h in DLC else ""} | {r["score"]["기본"]:.0f} | {r["act"]:.1f} | {r["surv"]:.0f} | '
+        print(f'| {rr[h]} | {KO[h]}{"*" if h in DLC else ""} | {r["score"]["기본"]:.0f} | {pp(r["act"], std):+.0f}%p | {r["surv"]:.0f} | '
               f'{r["spd"]:.0f} | {r["flex"]:.1f} | {rv[h]} ({v["score"]["기본"]:.0f}) | {oth} | {ts} |')
     if a.detail:
         for mode in ('vanilla', 'rb'):
             r = allres[mode][a.detail]
-            print(f'\n[{mode}] {KO[a.detail]} 평타 {r["base"]:.2f} HP  열 점수 {r["rank_pts"]}')
+            print(f'\n[{mode}] {KO[a.detail]} (자기 무기 기준, 평타 = 피해 보정 0% 단일 공격)  열 점수 {r["rank_pts"]}')
             for s, (v, parts, launch) in sorted(r['skills'].items(), key=lambda x: -x[1][0]):
-                print(f'  {s:24s} {v:6.2f} ({v / r["base"] * 100:4.0f}%) 사용 {launch:5s} ' +
-                      ' '.join(f'{k}{x:.1f}' for k, x in parts.items()))
+                print(f'  {s:24s} 환산 {pp(v, r["base"]):+5.0f}%p  사용 {launch:5s} 구성: ' +
+                      ' '.join(f'{k}{x / r["base"] * 100:+.0f}' for k, x in parts.items()))
     if a.sens:
         variants = {'스트레스=HP 1(v1)': dict(STRESS_HP=1.0), '기절 x1.3': dict(STUN_MULT=1.3), '지원 x0.7': dict(SUPPORT_MULT=0.7),
                     '광역 직접 0.75': dict(E_AOE=0.75), '조건 유지율 0.45/0.2': dict(COND_SELF=0.45, COND_OTHER=0.2),
