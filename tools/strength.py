@@ -38,7 +38,8 @@ PARAM = dict(
     DEATH_RATE=0.393,     # 적 1명이 한 라운드에 죽을 확률 (R-STRAT-02)
     STRESS_TAKEN=None,    # 영웅 1명이 라운드당 받는 스트레스. None 이면 몬스터 AI 가중치로 계산 (생존 적 2명 x 1행동 기대 스트레스 / 4)
     RANK_MODEL=True,      # R-VALUE-07: 대상 열 위협도 배수 + 적 1행동 = 편성 위협도 + 당기기·밀치기 재정의. False 면 이전 방식(민감도)
-    HITS_TAKEN=0.5,       # 영웅 1명이 라운드당 받는 공격. 적 4명이 2.55라운드에 걸쳐 선형 감소 -> 평균 2명 생존 -> 2회를 4명이 나눔 (R-STRAT-02)
+    HITS_TAKEN=0.5,
+    MARK_DRAW=2.22,       # 자기 표식 중 받는 공격 배수. 몬스터 AI marked_target 가중치, 실제 편성 빈도 가중: 표식 대상이 공격받을 확률 55.6% (없으면 25%)       # 영웅 1명이 라운드당 받는 공격. 적 4명이 2.55라운드에 걸쳐 선형 감소 -> 평균 2명 생존 -> 2회를 4명이 나눔 (R-STRAT-02)
     ACT_TOP=3,            # 행동 가치 = 상위 3기술 평균 (4칸 중 1칸은 이동·상황기)
 )
 W = {'기본': (50, 30, 10, 10), '균등': (25, 25, 25, 25), '행동 중시': (70, 20, 5, 5)}
@@ -577,7 +578,15 @@ def skill_value(C, l, d):
             if 'health_damage_blocks' in k:
                 add('보호', P['ENEMY_ACT'] * num(first(k, 'health_damage_blocks')) * ch * sm)
             if 'riposte' in k:
-                add('반격', C.riposte(k) * P['HITS_TAKEN'] * min(dur, P['BUFF_DUR_CAP']) * ch)
+                rd = min(dur, P['BUFF_DUR_CAP'])
+                # 같은 기술이 자기 표식을 걸면 표식 지속 동안 공격을 끌어와 반격이 더 자주 터진다 (중보병 응징)
+                md = 0
+                for e2 in effs:
+                    k2 = kv(e2)
+                    if first(k2, 'target') == 'performer' and 'tag' in k2:
+                        md = min(num(first(k2, 'duration', '2')) or 2, rd)
+                hits = P['HITS_TAKEN'] * (md * P['MARK_DRAW'] + (rd - md))
+                add('반격', C.riposte(k) * hits * ch)
             if 'combat_stat_buff' in k:
                 cm = P['COND_OTHER'] if 'keyStatus' in k else 1.0
                 wh = 'self' if tgt_n == 1 and who == 'performer' else 'ally'
