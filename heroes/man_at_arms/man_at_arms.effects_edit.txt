@@ -107,23 +107,18 @@ effect: .name "Defender 5" .target "performer" .curio_result_type "positive" .ch
 //# ======================================================================
 //# 기술: 응징 (retribution)
 //# 레벨별 효과: 1레벨 MAA Riposte 1, Mark Self | 2레벨 MAA Riposte 2, Mark Self | 3레벨 MAA Riposte 3, Mark Self | 4레벨 MAA Riposte 4, Mark Self | 5레벨 MAA Riposte 5, Mark Self
-effect: .name "MAA Riposte 1"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 2  .on_hit true .on_miss true .damage_low_multiply -40% .damage_high_multiply -40% .crit_chance_add 0%
-// MAA-004 응징 1레벨 반격 지속 3 -> 2턴. 자기 표식(2턴)과 같이 끝난다. 표식 없는 3번째 턴 반격은 장기전에서만 의미가 있었다
+effect: .name "MAA Riposte 1"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -40% .damage_high_multiply -40% .crit_chance_add 0%
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Mark Self" .target "performer" .curio_result_type "positive" .chance 100% .tag 1 .combat_stat_buff 1 .duration 2 .on_hit true .on_miss true .queue true
 //#   공유 효과: 다른 영웅 2명(결투가, 고행자). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "MAA Riposte 2"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 2  .on_hit true .on_miss true .damage_low_multiply -35% .damage_high_multiply -35% .crit_chance_add 1% 
-// MAA-004 응징 2레벨 반격 지속 3 -> 2턴. 자기 표식(2턴)과 같이 끝난다. 표식 없는 3번째 턴 반격은 장기전에서만 의미가 있었다
+effect: .name "MAA Riposte 2"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -35% .damage_high_multiply -35% .crit_chance_add 1% 
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "MAA Riposte 3"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 2  .on_hit true .on_miss true .damage_low_multiply -30% .damage_high_multiply -30% .crit_chance_add 2% 
-// MAA-004 응징 3레벨 반격 지속 3 -> 2턴. 자기 표식(2턴)과 같이 끝난다. 표식 없는 3번째 턴 반격은 장기전에서만 의미가 있었다
+effect: .name "MAA Riposte 3"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -30% .damage_high_multiply -30% .crit_chance_add 2% 
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "MAA Riposte 4"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 2  .on_hit true .on_miss true .damage_low_multiply -25% .damage_high_multiply -25% .crit_chance_add 3% 
-// MAA-004 응징 4레벨 반격 지속 3 -> 2턴. 자기 표식(2턴)과 같이 끝난다. 표식 없는 3번째 턴 반격은 장기전에서만 의미가 있었다
+effect: .name "MAA Riposte 4"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -25% .damage_high_multiply -25% .crit_chance_add 3% 
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "MAA Riposte 5"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 2  .on_hit true .on_miss true .damage_low_multiply -20% .damage_high_multiply -20% .crit_chance_add 4%
-// MAA-004 응징 5레벨 반격 지속 3 -> 2턴. 자기 표식(2턴)과 같이 끝난다. 표식 없는 3번째 턴 반격은 장기전에서만 의미가 있었다
+effect: .name "MAA Riposte 5"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -20% .damage_high_multiply -20% .crit_chance_add 4%
 //#   원본 위치: effects/base.effects.darkest
 
 //# ======================================================================
