@@ -41,6 +41,10 @@ PARAM = dict(
     HITS_TAKEN=0.5,
     MARK_DRAW=1.72,       # 자기 표식 중 받는 공격 배수. 표식 대상이 단일 공격을 받을 확률 55.6%(없으면 25%, 몬스터 AI marked_target 가중치 x 실제 편성 빈도). 몬스터 공격의 15%는 광역이라 표식과 무관 -> (0.85 x 0.556 + 0.15) / (0.85 x 0.25 + 0.15) = 1.72       # 영웅 1명이 라운드당 받는 공격. 적 4명이 2.55라운드에 걸쳐 선형 감소 -> 평균 2명 생존 -> 2회를 4명이 나눔 (R-STRAT-02)
     ACT_TOP=3,            # 행동 가치 = 상위 3기술 평균 (4칸 중 1칸은 이동·상황기)
+    # R-VALUE-08 화상 (도망자). 툴팁: 라운드 끝에 중첩만큼 피해, 그 뒤 남은 중첩 절반. 저항 무시. 틱은 DEFAULT_DUR 라운드까지 센다
+    BURN_KEEP=0.5,        # 라운드마다 남는 비율 (절반, 내림 - V-12)
+    BURN_SLOW_KEEP=0.75,  # '화상 감소 +50%' 약화(흩날리는 불티) 중 남는 비율. 감소를 늦춘다고 가정 (V-12)
+    HOT_STEALTH_TICKS=1,  # '은신 중' 턴당 회복: 다음 턴 시작에 1번 받고 공격하면 은신이 풀린다
 )
 W = {'기본': (50, 30, 10, 10), '균등': (25, 25, 25, 25), '행동 중시': (70, 20, 5, 5)}
 RES_BASE = dict(stun=40, poison=30, bleed=30, debuff=30)   # R-RES-01
@@ -111,6 +115,35 @@ def type_share(t):
 
 def hit(m, acc):
     return max(0.0, min(95.0, acc - m['dodge'])) / 100
+
+
+def burn_total(n, keep_rounds=0, P=None):
+    """화상 중첩 n 1회가 주는 총 피해 (R-VALUE-08). 라운드 끝마다 중첩만큼 피해 후 남은 중첩 x 비율, 내림.
+    keep_rounds = 감소를 늦추는 약화가 걸린 라운드 수."""
+    P = P or PARAM
+    tot, s = 0, int(n)
+    for r in range(int(P['DEFAULT_DUR'])):
+        tot += s
+        s = math.floor(s * (P['BURN_SLOW_KEEP'] if r < keep_rounds else P['BURN_KEEP']))
+        if s <= 0:
+            break
+    return tot
+
+
+def burn_zone(z, rounds, P=None):
+    """통제된 화상: 대상 열에 '턴 시작 시 화상 z'를 rounds 라운드. 그 열의 적이 라운드마다 1번 행동하고,
+    건 라운드에는 이미 행동했을 확률 0.5."""
+    P = P or PARAM
+    out = 0.0
+    for acted in (True, False):
+        s, tot = 0, 0
+        for r in range(int(P['DEFAULT_DUR'])):
+            if r < rounds and not (r == 0 and acted):
+                s += z
+            tot += s
+            s = math.floor(s * P['BURN_KEEP'])
+        out += 0.5 * tot
+    return out
 
 
 def apply_rate(m, chance, res_key):
@@ -391,6 +424,14 @@ class Ctx:
                                  ('.dotPoison', 'poisoned'), ('.dotBurn', 'burning')):
                     if key in e:
                         s.self_status.add(stt)
+        # 불길 역류처럼 '화상 중첩당 피해'를 쓰는 기술: 이 영웅이 건 화상이 한 라운드 뒤 남기는 중첩 (가장 큰 것)
+        s.burn_left = 0
+        for l, d in H['skills']:
+            for n in ec.effect_names_in(l):
+                k = kv(eff.get(n, ''))
+                if 'dotBurn' in k and first(k, 'target') == 'target':
+                    slow = any(buffs.get(b.strip('"'), {}).get('stat_type') == 'hp_dot_burn_decay_percent' for b in k.get('buff_ids', []))
+                    s.burn_left = max(s.burn_left, math.floor(num(first(k, 'dotBurn')) * (P['BURN_SLOW_KEEP'] if slow else P['BURN_KEEP'])))
 
     def riposte(s, k):
         """반격 1회 기대 피해: 영웅의 riposte_skill 명중·피해·치명타 + 반격 효과의 피해·치명타 보정"""
@@ -481,6 +522,10 @@ def skill_value(C, l, d):
             lo = num(first(k, 'damage_low_multiply')); hi = num(first(k, 'damage_high_multiply', str(lo)))
             cond_bonus += (lo + hi) / 200 * C.cond_uptime(k)
 
+    # 화상 중첩당 피해 (불길 역류, R-VALUE-08): 대상 중첩 = 이 영웅이 건 화상이 한 라운드 뒤 남긴 수
+    if 'dmg_per_burn_stack' in d:
+        cond_bonus += num(first(d, 'dmg_per_burn_stack')) * C.burn_left
+
     # 직접 피해 (몬스터 분포 평균, 치명타 = 최대값 x 1.5)
     p_any_crit = 0.0
     if does_dmg:
@@ -490,6 +535,11 @@ def skill_value(C, l, d):
         add('직접', per * n_t * (P['E_AOE'] if aoe else P['E_SGL']) * rw)
         ph = st.mean(hit(m, atk) for m in MONS) * crit
         p_any_crit = 1 - (1 - ph) ** n_t
+        if first(d, 'copy_burn_behind').lower() == 'true' and tranks:
+            # 대상 뒤 열도 맞는다(비어 있을 수 있어 광역 1칸 취급). 화상은 첫 대상에서 뒤 대상으로 옮겨질 뿐(총량 0)
+            rwb = st.mean(mult_[min(4, r + 1)] for r in tranks) if P['RANK_MODEL'] else 1.0
+            add('직접', per * P['AOE_PER_RANK'] * P['E_AOE'] * rwb)
+            p_any_crit = 1 - (1 - ph) ** (1 + P['AOE_PER_RANK'])
 
     for e in effs:
         if not e:
@@ -512,12 +562,20 @@ def skill_value(C, l, d):
                 return tot / N_MON
             if 'stun' in k:
                 add('기절', ev('stun') * act_full * P['STUN_MULT'] * n_t * rw)
-            for key, rk, nm in (('dotBleed', 'bleed', '출혈'), ('dotPoison', 'poison', '중독'), ('dotBurn', None, '화상')):
+            for key, rk, nm in (('dotBleed', 'bleed', '출혈'), ('dotPoison', 'poison', '중독')):
                 if key in k:
                     per_tick = num(first(k, key))
-                    cd = math.ceil(dur * P['CRIT_DOT_DUR']) if rk else dur
+                    cd = math.ceil(dur * P['CRIT_DOT_DUR'])
                     val = ev(rk, fn=lambda a, c: a * per_tick * (cd if c else dur))
                     add(nm, val * n_t * (P['E_DOT_AOE'] if aoe else P['E_DOT_SGL']) * rw)
+            if 'dotBurn' in k:                                  # R-VALUE-08: 중첩 절반 감소, 저항 무시
+                slow = any(C.buffs.get(b.strip('"'), {}).get('stat_type') == 'hp_dot_burn_decay_percent' for b in k.get('buff_ids', []))
+                bt = burn_total(num(first(k, 'dotBurn')), dur if slow else 0, P)
+                add('화상', ev(None, fn=lambda a, c: a * bt) * n_t * (P['E_DOT_AOE'] if aoe else P['E_DOT_SGL']) * rw)
+            if 'controlled_burn_amount' in k:                   # 통제된 화상 열 효과 (빗나가도 걸림)
+                zb = burn_zone(num(first(k, 'controlled_burn_amount')), num(first(k, 'controlled_burn_duration', '3')), P)
+                h_ = 1.0 if first(k, 'on_miss', 'false').lower() == 'true' else st.mean(hit(m, atk) for m in MONS)
+                add('화상', h_ * zb * P['E_DOT_SGL'] * rw)
             if P['RANK_MODEL'] and ('push' in k or 'pull' in k) and tranks:
                 kind = 'pull' if 'pull' in k else 'push'
                 mv = move_value(kind, int(num(first(k, kind))), tranks, P['STRESS_HP'], P['DEATH_RATE'], int(P['BUFF_DUR_CAP']))
@@ -603,6 +661,11 @@ def skill_value(C, l, d):
                 wh = 'self' if who == 'performer' else 'ally'
                 v = C.buff_ids_value(k['buff_ids'], min(dur, P['BUFF_DUR_CAP']), wh) * tgt_n * ch
                 add('강화' if v > 0 else '대가', v)
+                for b in k['buff_ids']:                           # 턴당 회복 강화 (도망자 도피: 은신 중에만)
+                    B = C.buffs.get(b.strip('"'), {})
+                    if B.get('stat_type') == 'hp_dot_heal':
+                        ticks = P['HOT_STEALTH_TICKS'] if B.get('rule_type') == 'is_stealthed' else dur
+                        add('회복', B['amount'] * ticks * tgt_n * ch * P['SUPPORT_MULT'])
             if who == 'performer':                          # 자해 지속 피해(고행자 재기)는 자기 저항 적용 후 대가
                 for key, rk in (('dotBleed', 'bleed'), ('dotPoison', 'poison')):
                     if key in k:
@@ -624,6 +687,8 @@ def skill_value(C, l, d):
     tot = sum(parts.values())
     if limit:
         tot *= min(1.0, limit / 3)
+    if first(d, 'requires_burning').lower() == 'true':      # 화상 걸린 대상이 있어야 쓸 수 있다: 자기 상태 조건 유지율
+        tot *= P['COND_SELF']
     if 'required_performer_hp_range' in d:
         tot *= P['LOW_HP_SELF'] if C.self_wound else P['LOW_HP_OTHER']
     return tot, parts
@@ -760,7 +825,8 @@ def main():
     if a.sens:
         variants = {'스트레스=HP 0.43(한계선)': dict(STRESS_HP=0.43), '스트레스=HP 1(v1)': dict(STRESS_HP=1.0), '기절 x1.3': dict(STUN_MULT=1.3), '지원 x0.7': dict(SUPPORT_MULT=0.7),
                     '광역 직접 0.75': dict(E_AOE=0.75), '조건 유지율 0.45/0.2': dict(COND_SELF=0.45, COND_OTHER=0.2),
-                    '저체력 조건 0.3': dict(LOW_HP_SELF=0.3), '열 모델 끔(이전)': dict(RANK_MODEL=False)}
+                    '저체력 조건 0.3': dict(LOW_HP_SELF=0.3), '화상 감소 약화 무시(V-12)': dict(BURN_SLOW_KEEP=0.5),
+                    '열 모델 끔(이전)': dict(RANK_MODEL=False)}
         rows = {h: [rr[h]] for h in KO}
         for ch in variants.values():
             rk = ranking(run(dict(PARAM, **ch))['rb'], '기본')[0]
