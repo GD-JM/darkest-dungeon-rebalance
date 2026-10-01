@@ -33,23 +33,24 @@ combat_skill: .id "mace_bash" .level 4 .type "melee" .atk 105% .dmg 0% .crit 9% 
 // 치명타 확률 심판이랑 바꿈
 // 표기: .effect 를 한 줄에 두 번 쓰던 것을 한 목록으로 합침(바닐라·창작마당 모드 어디에도 없는 형식, 한쪽이 무시될 수 있음). 효과 변화 없음
 
-combat_skill: .id "judgement" .level 0 .type "ranged" .atk 90% .dmg -25% .crit 0% .launch 43 .target 1234 .is_crit_valid True 
-combat_skill: .id "judgement" .level 1 .type "ranged" .atk 95% .dmg -25% .crit 1% .launch 43 .target 1234 .is_crit_valid True
-combat_skill: .id "judgement" .level 2 .type "ranged" .atk 100% .dmg -25% .crit 2% .launch 43 .target 1234 .is_crit_valid True
-combat_skill: .id "judgement" .level 3 .type "ranged" .atk 105% .dmg -25% .crit 3% .launch 43 .target 1234 .is_crit_valid True
-combat_skill: .id "judgement" .level 4 .type "ranged" .atk 110% .dmg -25% .crit 4% .launch 43 .target 1234 .is_crit_valid True
+combat_skill: .id "judgement" .level 0 .type "ranged" .atk 90% .dmg 0% .crit 0% .launch 43 .target 1234 .is_crit_valid True 
+combat_skill: .id "judgement" .level 1 .type "ranged" .atk 95% .dmg 0% .crit 1% .launch 43 .target 1234 .is_crit_valid True
+combat_skill: .id "judgement" .level 2 .type "ranged" .atk 100% .dmg 0% .crit 2% .launch 43 .target 1234 .is_crit_valid True
+combat_skill: .id "judgement" .level 3 .type "ranged" .atk 105% .dmg 0% .crit 3% .launch 43 .target 1234 .is_crit_valid True
+combat_skill: .id "judgement" .level 4 .type "ranged" .atk 110% .dmg 0% .crit 4% .launch 43 .target 1234 .is_crit_valid True
 // 자힐을 메이스로 넘김
 // 명중을 RANGE 표준인 90으로 바꾸고 대신에 치명타 확율을 메이스랑 바꿈
 // 표기: .atk 90 -> 90%, .crit 0 -> 0%. % 없는 명중·치명타는 바닐라에 없다. 90을 9000%, 4를 400%로 읽을 위험. 값 변화 없음
+// VES-009 피해 -25 -> 0. 자기 회복이 철퇴로 갔으니(VES-001) 회복 없는 4열 도달 공격으로 남긴다. 가치 +2 -> +33%p, 위무(+73)는 못 넘음
 
 
-combat_skill: .id "dazzling_light" .level 0 .type "ranged" .atk 90% .dmg -100% .crit 5% .launch 43 .target 123 .is_crit_valid True  .effect "Vestal Stun 1" "Dazzling Light 1"
-combat_skill: .id "dazzling_light" .level 1 .type "ranged" .atk 95% .dmg -100% .crit 6% .launch 43 .target 123 .is_crit_valid True  .effect "Vestal Stun 2" "Dazzling Light 1"
-combat_skill: .id "dazzling_light" .level 2 .type "ranged" .atk 100% .dmg -100% .crit 7% .launch 43 .target 123 .is_crit_valid True  .effect "Vestal Stun 3" "Dazzling Light 1"
-combat_skill: .id "dazzling_light" .level 3 .type "ranged" .atk 105% .dmg -100% .crit 8% .launch 43 .target 123 .is_crit_valid True  .effect "Vestal Stun 4" "Dazzling Light 1"
-combat_skill: .id "dazzling_light" .level 4 .type "ranged" .atk 110% .dmg -100% .crit 9% .launch 43 .target 123 .is_crit_valid True  .effect "Vestal Stun 5" "Dazzling Light 1"
+combat_skill: .id "dazzling_light" .level 0 .type "ranged" .atk 90% .dmg -75% .crit 5% .launch 43 .target 123 .is_crit_valid True  .effect "Vestal Stun 1" "Dazzling Light 1"
+combat_skill: .id "dazzling_light" .level 1 .type "ranged" .atk 95% .dmg -75% .crit 6% .launch 43 .target 123 .is_crit_valid True  .effect "Vestal Stun 2" "Dazzling Light 1"
+combat_skill: .id "dazzling_light" .level 2 .type "ranged" .atk 100% .dmg -75% .crit 7% .launch 43 .target 123 .is_crit_valid True  .effect "Vestal Stun 3" "Dazzling Light 1"
+combat_skill: .id "dazzling_light" .level 3 .type "ranged" .atk 105% .dmg -75% .crit 8% .launch 43 .target 123 .is_crit_valid True  .effect "Vestal Stun 4" "Dazzling Light 1"
+combat_skill: .id "dazzling_light" .level 4 .type "ranged" .atk 110% .dmg -75% .crit 9% .launch 43 .target 123 .is_crit_valid True  .effect "Vestal Stun 5" "Dazzling Light 1"
 //3,4열과 1,2열 분리 위해 432 -> 43으로 변경
-//심판보다 스턴이 3열 닿아서 너무 좋기 때문에 데미지 자체를 없애서 너프함
+// VES-008 피해 -100 -> -75 롤백(바닐라). 사용 열 43 분리(VES-003)만으로 하향은 충분, 피해까지 없애면 키트 최하위(-19%p)라 후열 선택지에서 빠짐. 가치 -19 -> +24%p
 
 
 
