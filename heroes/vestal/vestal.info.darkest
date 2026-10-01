@@ -23,22 +23,24 @@ armour: .name "vestal_armour_3" .def 15% .prot 0 .hp 39 .spd 0 .upgradeRequireme
 armour: .name "vestal_armour_4" .def 20% .prot 0 .hp 44 .spd 0 .upgradeRequirementCode 3
 
 
-combat_skill: .id "mace_bash" .level 0 .type "melee" .atk 85% .dmg 0% .crit 5% .launch 21 .target 12 .is_crit_valid True  .effect "Unholy Killer 1"  .effect "Vestal HealSelf 1"
-combat_skill: .id "mace_bash" .level 1 .type "melee" .atk 90% .dmg 0% .crit 6% .launch 21 .target 12 .is_crit_valid True  .effect "Unholy Killer 2"  .effect "Vestal HealSelf 1"
-combat_skill: .id "mace_bash" .level 2 .type "melee" .atk 95% .dmg 0% .crit 7% .launch 21 .target 12 .is_crit_valid True  .effect "Unholy Killer 3"  .effect "Vestal HealSelf 2"
-combat_skill: .id "mace_bash" .level 3 .type "melee" .atk 100% .dmg 0% .crit 8% .launch 21 .target 12 .is_crit_valid True  .effect "Unholy Killer 4"  .effect "Vestal HealSelf 2"
-combat_skill: .id "mace_bash" .level 4 .type "melee" .atk 105% .dmg 0% .crit 9% .launch 21 .target 12 .is_crit_valid True  .effect "Unholy Killer 5"  .effect "Vestal HealSelf 3"
+combat_skill: .id "mace_bash" .level 0 .type "melee" .atk 85% .dmg 0% .crit 5% .launch 21 .target 12 .is_crit_valid True  .effect "Unholy Killer 1" "Vestal HealSelf 1"
+combat_skill: .id "mace_bash" .level 1 .type "melee" .atk 90% .dmg 0% .crit 6% .launch 21 .target 12 .is_crit_valid True  .effect "Unholy Killer 2" "Vestal HealSelf 1"
+combat_skill: .id "mace_bash" .level 2 .type "melee" .atk 95% .dmg 0% .crit 7% .launch 21 .target 12 .is_crit_valid True  .effect "Unholy Killer 3" "Vestal HealSelf 2"
+combat_skill: .id "mace_bash" .level 3 .type "melee" .atk 100% .dmg 0% .crit 8% .launch 21 .target 12 .is_crit_valid True  .effect "Unholy Killer 4" "Vestal HealSelf 2"
+combat_skill: .id "mace_bash" .level 4 .type "melee" .atk 105% .dmg 0% .crit 9% .launch 21 .target 12 .is_crit_valid True  .effect "Unholy Killer 5" "Vestal HealSelf 3"
 // 1,2열 성녀가 때에 따라 가능하도록, 3,4열 붙박이 스킬인 심판의 자힐을 메이스로 가져옴
 // 이 변화만으로 1열의 탱커 성녀가 진짜 가능할거라 생각함. 
 // 치명타 확률 심판이랑 바꿈
+// 표기: .effect 를 한 줄에 두 번 쓰던 것을 한 목록으로 합침(바닐라·창작마당 모드 어디에도 없는 형식, 한쪽이 무시될 수 있음). 효과 변화 없음
 
-combat_skill: .id "judgement" .level 0 .type "ranged" .atk 90 .dmg -25% .crit 0 .launch 43 .target 1234 .is_crit_valid True 
-combat_skill: .id "judgement" .level 1 .type "ranged" .atk 95 .dmg -25% .crit 1 .launch 43 .target 1234 .is_crit_valid True
-combat_skill: .id "judgement" .level 2 .type "ranged" .atk 100 .dmg -25% .crit 2 .launch 43 .target 1234 .is_crit_valid True
-combat_skill: .id "judgement" .level 3 .type "ranged" .atk 105 .dmg -25% .crit 3 .launch 43 .target 1234 .is_crit_valid True
-combat_skill: .id "judgement" .level 4 .type "ranged" .atk 110 .dmg -25% .crit 4 .launch 43 .target 1234 .is_crit_valid True
+combat_skill: .id "judgement" .level 0 .type "ranged" .atk 90% .dmg -25% .crit 0% .launch 43 .target 1234 .is_crit_valid True 
+combat_skill: .id "judgement" .level 1 .type "ranged" .atk 95% .dmg -25% .crit 1% .launch 43 .target 1234 .is_crit_valid True
+combat_skill: .id "judgement" .level 2 .type "ranged" .atk 100% .dmg -25% .crit 2% .launch 43 .target 1234 .is_crit_valid True
+combat_skill: .id "judgement" .level 3 .type "ranged" .atk 105% .dmg -25% .crit 3% .launch 43 .target 1234 .is_crit_valid True
+combat_skill: .id "judgement" .level 4 .type "ranged" .atk 110% .dmg -25% .crit 4% .launch 43 .target 1234 .is_crit_valid True
 // 자힐을 메이스로 넘김
 // 명중을 RANGE 표준인 90으로 바꾸고 대신에 치명타 확율을 메이스랑 바꿈
+// 표기: .atk 90 -> 90%, .crit 0 -> 0%. % 없는 명중·치명타는 바닐라에 없다. 90을 9000%, 4를 400%로 읽을 위험. 값 변화 없음
 
 
 combat_skill: .id "dazzling_light" .level 0 .type "ranged" .atk 90% .dmg -100% .crit 5% .launch 43 .target 123 .is_crit_valid True  .effect "Vestal Stun 1" "Dazzling Light 1"
