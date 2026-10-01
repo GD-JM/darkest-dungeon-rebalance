@@ -49,6 +49,8 @@ PARAM = dict(
     # 해제하면 그 적을 지금부터 죽일 수 있다 -> 줄어든 적 행동 x 열 위협도 = 3.94 HP (출현 전투에서 골라 쓸 때).
     # 기술 1회 기대값 = 0.369 x 3.94 x 은신 창 안에서 쓸 확률(2/2.55) = 1.14 HP
     DESTEALTH=1.14,
+    # R-VALUE-10 모드 영웅(괴인): 전환 기술에 전투당 제한이 있으면 모드별 계획으로 따로 센다.
+    FIGHT_ACTS=2.55,      # 전투 2.55라운드 = 영웅 1명의 행동 수 (R-STRAT-02). 전투당 1회 꾸러미를 행동당으로 나눈다
 )
 W = {'기본': (50, 30, 10, 10), '균등': (25, 25, 25, 25), '행동 중시': (70, 20, 5, 5)}
 RES_BASE = dict(stun=40, poison=30, bleed=30, debuff=30)   # R-RES-01
@@ -391,7 +393,7 @@ def hero_file(hero, mode):
 
 def load_hero(hero, mode):
     t = open(hero_file(hero, mode), encoding='utf-8', errors='ignore').read()
-    H = dict(id=hero, skills=[], crit_effects=[])
+    H = dict(id=hero, skills=[], crit_effects=[], modes={})
     for l in t.splitlines():
         if l.strip().startswith('//'):
             continue
@@ -404,6 +406,8 @@ def load_hero(hero, mode):
             H['res'] = {k: num(v[0]) for k, v in d.items()}
         elif l.startswith('riposte_skill:'):
             H['riposte'] = d
+        elif l.startswith('mode:'):
+            H['modes'][first(d, 'id')] = d
         elif l.startswith('crit:'):
             H['crit_effects'] = ec.effect_names_in(l.replace('.effects', '.effect'))
         elif l.startswith('combat_skill:') and first(d, 'level') == '4':
@@ -680,6 +684,8 @@ def skill_value(C, l, d):
                         add('대가', -num(first(k, key)) * dur * a)
             if 'stress' in k and who == 'performer':
                 add('대가', -num(first(k, 'stress')) * ch * P['STRESS_HP'])
+            if 'stress' in k and who in ('performer_group_other', 'performer_group'):   # 아군에게 주는 스트레스 (괴인 변신)
+                add('대가', -num(first(k, 'stress')) * ch * tgt_n * P['STRESS_HP'])
     if 'heal' in d and len(d['heal']) >= 2:                  # 기술 줄의 .heal lo hi
         amt = (num(d['heal'][0]) + num(d['heal'][1])) / 2
         hn = n_t * (P['ALLY_AOE_HEAL'] if n_t > 1 else 1) if ally else 1
@@ -704,6 +710,54 @@ def skill_value(C, l, d):
 PARAM_MED_HP = 43.0      # evaluate()에서 바닐라 5레벨 체력 중앙값으로 덮어쓴다
 HERO_MED_SPD = 7.0
 _STRESS_CACHE = None
+
+
+def mode_plans(C, H, sk, P):
+    """R-VALUE-10. 전환 기술(여러 모드 + 전투당 제한)이 있는 영웅은 모드마다 따로 센다.
+    모드 m 행동 가치 = m에서 쓸 수 있는 기술 상위 ACT_TOP 평균
+                      + (기본 모드가 아니면) [전환 꾸러미 + 전투 끝 복귀 꾸러미 - 모드 턴당 스트레스 x 지속 상한] / FIGHT_ACTS.
+    반환 {모드: (행동 가치 HP, 설명)}. 해당 없으면 {}."""
+    sw = [(l, d) for l, d in H['skills'] if 'per_battle_limit' in d and len(d.get('valid_modes', [])) > 1
+          and any(k.endswith('_effects') and k[:-8] in H['modes'] for k in d)]
+    if not sw or not H['modes']:
+        return {}
+    l, d = sw[0]
+    sid = first(d, 'id')
+    default = next((m for m, md in H['modes'].items() if first(md, 'is_raid_default') == 'true'), next(iter(H['modes'])))
+
+    def pkg(mode_from):
+        lst = d.get(mode_from + '_effects', [])
+        if not lst:
+            return 0.0, {}
+        base = re.sub(r'\.\w+_effects(\s+(?!\.)\S+)*', '', l)
+        base = re.sub(r'\.per_battle_limit\s+\S+', '', base)
+        line = base + ' .effect ' + ' '.join('"%s"' % x.strip('"') for x in lst)
+        return skill_value(C, line, kv(line))
+
+    out = {}
+    for m, md in H['modes'].items():
+        usable = [s for s, (v, parts, la) in sk.items() if s != sid and m in skill_modes(H, s)]
+        if not usable:
+            continue
+        top = sorted((sk[s][0] for s in usable), reverse=True)[:P['ACT_TOP']]
+        v = st.mean(top)
+        note = '+'.join(sorted(usable, key=lambda s: -sk[s][0])[:P['ACT_TOP']])
+        if m != default:
+            go, _ = pkg(default)
+            back, _ = pkg(m)
+            mode_stress = num(first(md, 'stress_damage_per_turn', '0')) * P['BUFF_DUR_CAP'] * P['STRESS_HP']
+            once = go + back - mode_stress
+            v += once / P['FIGHT_ACTS']
+            note += ' / 전환 1회 %+.1f HP (전환 %+.1f, 복귀 %+.1f, 모드 스트레스 %+.1f)' % (once, go, back, -mode_stress)
+        out[m] = (v, note)
+    return out
+
+
+def skill_modes(H, sid):
+    for l, d in H['skills']:
+        if first(d, 'id') == sid:
+            return d.get('valid_modes', list(H['modes']))
+    return []
 
 
 def stress_price_ratio():
@@ -762,6 +816,9 @@ def evaluate(mode, P=PARAM):
                 sk[sid] = (v, parts, launch)
         vals = sorted((v[0] for v in sk.values()), reverse=True)
         act = st.mean(vals[:P['ACT_TOP']])
+        plans = mode_plans(C, H, sk, P)
+        if plans:
+            act = max(v for v, _ in plans.values())
         top2 = sorted(sk, key=lambda s: -sk[s][1].get('직접', 0))[:2]
 
         def pts(s):
@@ -773,7 +830,7 @@ def evaluate(mode, P=PARAM):
         sub = sum(1 for x in rank_pts if 0.6 * best <= x < 0.9 * best)
         rmean = st.mean(H['res'].get(k, 0) for k in RES_BASE) - st.mean(RES_BASE.values())
         surv = H['hp'] / ((P['MON_HIT'] - H['def']) / 100) * (1 + rmean / 200)
-        out[hero] = dict(act=act, surv=surv, spd=H['spd'], flex=opt + 0.5 * sub, base=base, skills=sk, rank_pts=rank_pts)
+        out[hero] = dict(act=act, surv=surv, spd=H['spd'], flex=opt + 0.5 * sub, base=base, skills=sk, rank_pts=rank_pts, plans=plans)
     return out
 
 
@@ -829,6 +886,8 @@ def main():
             for s, (v, parts, launch) in sorted(r['skills'].items(), key=lambda x: -x[1][0]):
                 print(f'  {s:24s} 환산 {pp(v, r["base"]):+5.0f}%p  사용 {launch:5s} 구성: ' +
                       ' '.join(f'{k}{x / r["base"] * 100:+.0f}' for k, x in parts.items()))
+            for m, (v, note) in r.get('plans', {}).items():
+                print(f'  [모드 {m}] 행동 가치 {pp(v, std):+.0f}%p (표준 평타 기준)  {note}')
     if a.sens:
         variants = {'스트레스=HP 0.43(한계선)': dict(STRESS_HP=0.43), '스트레스=HP 1(v1)': dict(STRESS_HP=1.0), '기절 x1.3': dict(STUN_MULT=1.3), '지원 x0.7': dict(SUPPORT_MULT=0.7),
                     '광역 직접 0.75': dict(E_AOE=0.75), '조건 유지율 0.45/0.2': dict(COND_SELF=0.45, COND_OTHER=0.2),
