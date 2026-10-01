@@ -45,6 +45,10 @@ PARAM = dict(
     BURN_KEEP=0.5,        # 라운드마다 남는 비율 (절반, 내림 - V-12)
     BURN_SLOW_KEEP=0.75,  # '화상 감소 +50%' 약화(흩날리는 불티) 중 남는 비율. 감소를 늦춘다고 가정 (V-12)
     HOT_STEALTH_TICKS=1,  # '은신 중' 턴당 회복: 다음 턴 시작에 1번 받고 공격하면 은신이 풀린다
+    # R-VALUE-09 은신 해제: 챔피언 6종이 전투 시작 2라운드 은신(spawn Stealth2). 영웅 등급 편성의 36.9%에 출현.
+    # 해제하면 그 적을 지금부터 죽일 수 있다 -> 줄어든 적 행동 x 열 위협도 = 3.94 HP (출현 전투에서 골라 쓸 때).
+    # 기술 1회 기대값 = 0.369 x 3.94 x 은신 창 안에서 쓸 확률(2/2.55) = 1.14 HP
+    DESTEALTH=1.14,
 )
 W = {'기본': (50, 30, 10, 10), '균등': (25, 25, 25, 25), '행동 중시': (70, 20, 5, 5)}
 RES_BASE = dict(stun=40, poison=30, bleed=30, debuff=30)   # R-RES-01
@@ -590,6 +594,9 @@ def skill_value(C, l, d):
                 add('표식', st.mean(hit(m, atk) for m in MONS) * P['MARK_PARTY'] * n_t * rw)
             if 'kill_enemy_types' in k:
                 add('시체', P['CORPSE'])
+            if 'unstealth' in k:                                # R-VALUE-09: 광역이어도 가치는 은신 적 1명분
+                h_ = 1.0 if aoe else st.mean(hit(m, atk) for m in MONS)
+                add('은신 해제', h_ * P['DESTEALTH'])
             if 'combat_stat_buff' in k:
                 v = 0.0
                 for key in k:
