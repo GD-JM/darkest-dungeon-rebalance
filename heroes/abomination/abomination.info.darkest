@@ -41,11 +41,12 @@ combat_skill: .id "rage" .level 1 .type "melee" .atk 90% .dmg 0% .crit 8.5% .lau
 combat_skill: .id "rage" .level 2 .type "melee" .atk 95% .dmg 0% .crit 9.5% .launch 21 .target 123 .is_crit_valid True  .valid_modes beast
 combat_skill: .id "rage" .level 3 .type "melee" .atk 100% .dmg 0% .crit 10.5% .launch 21 .target 123 .is_crit_valid True  .valid_modes beast
 combat_skill: .id "rage" .level 4 .type "melee" .atk 105% .dmg 0% .crit 11.5% .launch 21 .target 123 .is_crit_valid True  .valid_modes beast
-combat_skill: .id "slam" .level 0 .type "melee" .atk 80% .dmg -25% .crit 1% .move 0 1 .launch 321 .target 12 .is_crit_valid True  .effect "Push 2A" "Slam Debuff 1" .valid_modes beast
-combat_skill: .id "slam" .level 1 .type "melee" .atk 85% .dmg -25% .crit 2% .move 0 1 .launch 321 .target 12 .is_crit_valid True  .effect "Push 2B" "Slam Debuff 2" .valid_modes beast
-combat_skill: .id "slam" .level 2 .type "melee" .atk 90% .dmg -25% .crit 3% .move 0 1 .launch 321 .target 12 .is_crit_valid True  .effect "Push 2C" "Slam Debuff 3" .valid_modes beast
-combat_skill: .id "slam" .level 3 .type "melee" .atk 95% .dmg -25% .crit 4% .move 0 1 .launch 321 .target 12 .is_crit_valid True  .effect "Push 2D" "Slam Debuff 4" .valid_modes beast
-combat_skill: .id "slam" .level 4 .type "melee" .atk 100% .dmg -25% .crit 5% .move 0 1 .launch 321 .target 12 .is_crit_valid True  .effect "Push 2E" "Slam Debuff 5" .valid_modes beast
+combat_skill: .id "slam" .level 0 .type "melee" .atk 80% .dmg -25% .crit 1% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "Push 2A" "Slam Debuff 1" .valid_modes beast
+combat_skill: .id "slam" .level 1 .type "melee" .atk 85% .dmg -25% .crit 2% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "Push 2B" "Slam Debuff 2" .valid_modes beast
+combat_skill: .id "slam" .level 2 .type "melee" .atk 90% .dmg -25% .crit 3% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "Push 2C" "Slam Debuff 3" .valid_modes beast
+combat_skill: .id "slam" .level 3 .type "melee" .atk 95% .dmg -25% .crit 4% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "Push 2D" "Slam Debuff 4" .valid_modes beast
+combat_skill: .id "slam" .level 4 .type "melee" .atk 100% .dmg -25% .crit 5% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "Push 2E" "Slam Debuff 5" .valid_modes beast
+// ABO-001 slam: 사용 열 321 -> 432. 야수는 4열에서 쓸 기술이 없어 열이 섞이면 한 턴을 통째로 날린다. 4열에서 박고 앞으로 1칸 -> 3열 -> 2열로 복귀하는 길. 1열 사용은 포기(1열엔 분노·할퀴기, 1열에서 2칸 밀치기는 오히려 손해). 기술 1회 가치 변화 없음(대상 12 그대로)
 tag: .id "light"
 tag: .id "non-religious"
 tag: .id "outsiders_bonfire"
