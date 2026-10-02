@@ -20,11 +20,12 @@ combat_skill: .id "manacles" .level 1 .type "ranged" .atk 100% .dmg -60% .crit 2
 combat_skill: .id "manacles" .level 2 .type "ranged" .atk 105% .dmg -60% .crit 3% .launch 32 .target 123 .is_crit_valid True  .effect "Manacles Stun 3" .valid_modes human
 combat_skill: .id "manacles" .level 3 .type "ranged" .atk 110% .dmg -60% .crit 4% .launch 32 .target 123 .is_crit_valid True  .effect "Manacles Stun 4" .valid_modes human
 combat_skill: .id "manacles" .level 4 .type "ranged" .atk 115% .dmg -60% .crit 5% .launch 32 .target 123 .is_crit_valid True  .effect "Manacles Stun 5" .valid_modes human
-combat_skill: .id "vomit" .level 0 .type "ranged" .atk 95% .dmg -90% .crit 2% .launch 32 .target ~23 .is_crit_valid True  .effect "Abom Vomit 1" "Vomit Debuff 1" .valid_modes human
-combat_skill: .id "vomit" .level 1 .type "ranged" .atk 100% .dmg -90% .crit 3% .launch 32 .target ~23 .is_crit_valid True  .effect "Abom Vomit 2" "Vomit Debuff 2" .valid_modes human
-combat_skill: .id "vomit" .level 2 .type "ranged" .atk 105% .dmg -90% .crit 4% .launch 32 .target ~23 .is_crit_valid True  .effect "Abom Vomit 3" "Vomit Debuff 3" .valid_modes human
-combat_skill: .id "vomit" .level 3 .type "ranged" .atk 110% .dmg -90% .crit 5% .launch 32 .target ~23 .is_crit_valid True  .effect "Abom Vomit 4" "Vomit Debuff 4" .valid_modes human
-combat_skill: .id "vomit" .level 4 .type "ranged" .atk 115% .dmg -90% .crit 6% .launch 32 .target ~23 .is_crit_valid True  .effect "Abom Vomit 5" "Vomit Debuff 5" .valid_modes human
+combat_skill: .id "vomit" .level 0 .type "ranged" .atk 95% .dmg -75% .crit 2% .launch 32 .target ~23 .is_crit_valid True  .effect "Abom Vomit 1" "Vomit Debuff 1" .valid_modes human
+combat_skill: .id "vomit" .level 1 .type "ranged" .atk 100% .dmg -75% .crit 3% .launch 32 .target ~23 .is_crit_valid True  .effect "Abom Vomit 2" "Vomit Debuff 2" .valid_modes human
+combat_skill: .id "vomit" .level 2 .type "ranged" .atk 105% .dmg -75% .crit 4% .launch 32 .target ~23 .is_crit_valid True  .effect "Abom Vomit 3" "Vomit Debuff 3" .valid_modes human
+combat_skill: .id "vomit" .level 3 .type "ranged" .atk 110% .dmg -75% .crit 5% .launch 32 .target ~23 .is_crit_valid True  .effect "Abom Vomit 4" "Vomit Debuff 4" .valid_modes human
+combat_skill: .id "vomit" .level 4 .type "ranged" .atk 115% .dmg -75% .crit 6% .launch 32 .target ~23 .is_crit_valid True  .effect "Abom Vomit 5" "Vomit Debuff 5" .valid_modes human
+// ABO-002 vomit: 피해 -90 -> -75. 같은 2·3열 광역 지속 피해인 광대 수확(+54%p)에 가치로 맞춤(+24 -> +59%p). 지속 피해 기대량은 이미 같다(중독 5 x 60% = 3.0 vs 출혈 4 x 80% = 3.2/틱, 몬스터 중독 저항 중앙 80 > 출혈 60). 차이는 직접 피해뿐. 괴인 무기가 광대의 1.55배라 스펙 -50은 과다
 combat_skill: .id "absolution" .level 0 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Absolution HealStress 1" "Absolution Heal 1" .valid_modes human .is_stall_invalidating false
 combat_skill: .id "absolution" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Absolution HealStress 2" "Absolution Heal 2" .valid_modes human .is_stall_invalidating false
 combat_skill: .id "absolution" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Absolution HealStress 3" "Absolution Heal 3" .valid_modes human .is_stall_invalidating false
