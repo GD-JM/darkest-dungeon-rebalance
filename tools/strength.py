@@ -58,6 +58,7 @@ PARAM = dict(
     # 2026-10-03 wiki.gg 대조 (analysis/wiki_notes.md)
     DMG_STACK='mult',     # V-01: 기술 피해 보정 x (1 + 강화·조건부 보너스) [위키 계산 예시]. 'add' = 이전 가산 가정(민감도)
     HEAL_CRIT_SGL=0.12, HEAL_CRIT_AOE=0.05,   # 회복 치명타 고정 확률 [위키]: 회복 2배 + 스트레스 −4
+    KILL_ON_HIT=1.57 / 4, # '.requires_kill_target' 효과(처치 시에만)의 발동률 = 영웅 1행동당 처치 수 (R-STRAT-01)
 )
 W = {'기본': (50, 30, 10, 10), '균등': (25, 25, 25, 25), '행동 중시': (70, 20, 5, 5)}
 RES_BASE = dict(stun=40, poison=30, bleed=30, debuff=30)   # R-RES-01
@@ -618,6 +619,8 @@ def skill_value(C, l, d):
         k = kv(e)
         who = first(k, 'target', 'target')
         chance = num(first(k, 'chance', '100'))
+        if first(k, 'requires_kill_target').lower() == 'true':     # 처치했을 때만 (결투가 최후의 일격 등)
+            chance *= P['KILL_ON_HIT'] * (st.mean(hit(m, atk) for m in MONS) if atk > 0 else 1)
         on_hit = first(k, 'on_hit', 'true').lower() == 'true'
         dur = num(first(k, 'duration', str(P['DEFAULT_DUR']))) or P['DEFAULT_DUR']
         if first(k, 'buff_duration_type') == 'combat_end':          # '.duration 1 .buff_duration_type combat_end' = 전투 끝까지
