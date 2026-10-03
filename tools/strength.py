@@ -351,24 +351,66 @@ def formation_stats(stress_hp):
 
 
 @functools.lru_cache(maxsize=None)
+def formation_lineups(stress_hp):
+    """R-VALUE-07 개정(2026-10-03). 편성별 유닛 순서: ((가중치, ((크기, 기술 프로필), ...)), ...). 보스 편성 제외."""
+    _, _, info = _monster_db()
+    out = []
+    for f in sorted(glob.glob(os.path.join(G, 'dungeons', '*', '*.5.mash.darkest'))):
+        for l in open(f, encoding='utf-8', errors='ignore'):
+            m = re.match(r'^(hall|room):\s*\.chance\s+([\d.]+)\s+\.types\s+(.*)$', l.strip())
+            if not m:
+                continue
+            prof = [_monster_profile(x) for x in m.group(3).split() if x in info]
+            if any(p_[1] for p_ in prof):
+                continue
+            out.append((float(m.group(2)), tuple((size, sk) for size, _, sk in prof)))
+    return tuple(out)
+
+
+@functools.lru_cache(maxsize=None)
 def move_value(kind, dist, tranks, stress_hp, death_rate, horizon):
-    """당기기·밀치기 1회 성공의 가치(HP). 대상 열 중 가장 이득인 열을 고른다.
-    가치 = (원래 열에서 남은 행동 x 위협도) - (새 열에서 남은 행동 x 위협도).
-    남은 행동 = sum_{t=1..horizon} (1-d)^t, d = 라운드당 사망 확률 x (그 열 도달률 / 평균 도달률) — 근접 사거리에 들어오면 빨리 죽는다."""
+    """당기기·밀치기 1회 성공의 가치(HP). R-VALUE-07 개정(2026-10-03, 제작자 지적):
+    대상만이 아니라 **대열 전체**를 다시 세운다 — 대상이 dist칸 움직이면 사이의 적들이 반대로 한 칸씩 움직인다
+    (앞열 적을 밀면 3열 적이 2열 근접 사거리로 들어온다 / 뒤 적을 당기면 앞열 적이 뒤로 밀려난다).
+    가치 = sum(남은 행동(열) x 그 몬스터의 그 열 위협도) [이동 전 - 이동 후], 대상 열 중 가장 이득인 적을 고른다.
+    상태 = 시작 4명 편성과 1명이 죽은 3명 편성(죽는 적은 고르게)의 평균. 크기 2 몬스터는 유닛 단위로 근사."""
     tau, mult, act, entries, rho = formation_stats(stress_hp)
     rbar = st.mean(rho.values())
+
     def remain(r):
         d = min(0.95, death_rate * rho[r] / rbar)
         return sum((1 - d) ** k for k in range(1, horizon + 1))
-    best = None
-    for tr in tranks:
-        es = [e for e in entries if e[1] == tr]
-        if not es:
-            continue
-        new = max(1, tr - dist) if kind == 'pull' else min(4, tr + dist)
-        v = sum(w * (remain(tr) * at[tr - 1] - remain(new) * at[new - 1]) for w, _, at in es) / sum(w for w, _, _ in es)
-        best = v if best is None else max(best, v)
-    return best or 0.0
+
+    def lineup(units):
+        v, r = 0.0, 1
+        for size, sk in units:
+            if r > 4:
+                break
+            ranks = list(range(r, min(4, r + size - 1) + 1))
+            v += remain(r) * _threat_at(sk, ranks, stress_hp)
+            r += size
+        return v
+
+    def avg(states):
+        tot = wt = 0.0
+        for w, us in states:
+            best = None
+            for i in range(len(us)):
+                if 1 + sum(u[0] for u in us[:i]) not in tranks:
+                    continue
+                mv = list(us); x = mv.pop(i)
+                mv.insert(min(len(mv), i + dist) if kind == 'push' else max(0, i - dist), x)
+                g = lineup(us) - lineup(mv)
+                best = g if best is None else max(best, g)
+            if best is not None:
+                tot += w * best; wt += w
+        return tot / wt if wt else None
+
+    forms = formation_lineups(stress_hp)
+    four = avg([(w, us) for w, us in forms])
+    three = avg([(w / len(us), us[:k] + us[k + 1:]) for w, us in forms for k in range(len(us))])
+    vals = [v for v in (four, three) if v is not None]
+    return st.mean(vals) if vals else 0.0
 
 
 # ---------------------------------------------------------------- 데이터 적재
