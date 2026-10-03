@@ -54,7 +54,6 @@ PARAM = dict(
     # R-VALUE-06 개정(2026-10-03): 스트레스 = 가격 비율 + 고통(붕괴) 비용. 스트레스 100에서 75% 고통 / 25% 미덕
     AFFLICT_ROUNDS=10,    # 고통이 유지되는 라운드 (남은 원정 약 4전투 x 2.55, 영지 귀환 전까지 대개 유지) [가정]
     AFFLICT_EVENTS=1.0,   # 라운드당 고통 영웅이 반응할 사건 수 (적중·빗나감·이동 등) [가정]
-    VIRTUE_SHARE=0.5,     # 미덕 1회 이득 = 고통 1회 비용 x 0.5 [가정]
     FOCUS_FIRE=True,      # R-VALUE-07 개정: 이동 가치는 우선 처치(닿는 적 중 위협이 큰 적부터 집중)로 센다
 )
 W = {'기본': (50, 30, 10, 10), '균등': (25, 25, 25, 25), '행동 중시': (70, 20, 5, 5)}
@@ -842,26 +841,61 @@ def stress_price_ratio():
 
 
 def affliction_margin(P=PARAM, sh0=None):
-    """R-VALUE-06 개정. 스트레스 1점이 고통(붕괴) 위험으로 더하는 HP.
-    고통 1회 = 비아냥 스트레스(턴 시작 + 사건 반응, 1회 +6) x 가격 비율 + 행동 손실(무시·임의 명령·자리 이탈) x 적 1행동 + 피해 −25%.
-    스트레스 1점 = (0.75 x 고통 − 0.25 x 미덕) / 100."""
+    """R-VALUE-06 개정(2026-10-03). 스트레스 1점이 고통(붕괴)·미덕 판정으로 더하는 HP. 고통 7종·미덕 5종을 효과별로 센다.
+    고통 1회(라운드당 x AFFLICT_ROUNDS): 비아냥 스트레스(턴 시작 + 사건 반응 x masterBarkChance, 1회 +6)
+      + 행동 손실(명령 무시·임의 명령·자리 이탈) x 영웅 1행동 + 아군 공격·자기 공격·자기 표식 + 능력치 변화 + 회복·강화·이동 거부.
+    미덕 1회: 턴 시작 행동 25%(스트레스 회복 15 / 파티 4 / 아군 강화 / 파티 피해 +15% / 자기 회복 10%) + 능력치 + 스트레스 100 -> 45.
+    스트레스 1점 = (고통 확률 x 고통 비용 - 미덕 확률 x 미덕 이득) / 100. 반환 (스트레스 1점 HP, 고통 평균, 미덕 평균)."""
     sh0 = sh0 or stress_price_ratio()[0]
+    rules = json.load(open(os.path.join(G, 'shared', 'rules.json'), encoding='utf-8-sig'))
+    master = rules.get('masterBarkChance', 0.5)
+    buffs = ec.load_buffs(G)
     d = json.loads(re.sub(r',\s*([}\]])', r'\1', open(os.path.join(G, 'shared', 'trait', 'trait_library.json'), encoding='utf-8-sig').read()))
-    aff = [t_ for t_ in d['traits'] if t_['overstress_type'] == 'affliction' and t_['id'] != 'test']
-    bark, lost, comm = [], [], []
-    for t_ in aff:
-        ao = [a for a in t_.get('combat_start_turn_act_outs', []) if 'valid_hero_class_ids' not in a]
-        tot = sum(a['chance'] for a in ao) or 1
-        bark.append(sum(a['chance'] for a in ao if a['id'] == 'bark_stress') / tot)
-        lost.append(sum(a['chance'] for a in ao if a['id'] in ('ignore_command', 'random_command', 'change_pos', 'retreat_from_combat')) / tot)
-        cs = [o['chance'] for k, v in t_.items() if isinstance(v, list) for o in v
-              if isinstance(o, dict) and str(o.get('id', '')).startswith('comment_') and o.get('chance', 0) > 0]
-        comm.append(sum(cs))
-    bark_round = st.mean(bark) + st.mean(comm) / 9 * P['AFFLICT_EVENTS'] * 9 * 0.5
-    act_full = formation_stats(sh0)[2]
-    cost = (bark_round * 6 * P['AFFLICT_ROUNDS'] * sh0 + st.mean(lost) * P['AFFLICT_ROUNDS'] * act_full
-            + 0.25 * P['AFFLICT_ROUNDS'] * 7.65 * 0.75)
-    return (0.75 * cost - 0.25 * P['VIRTUE_SHARE'] * cost) / 100, cost
+    std, hero_act, hp_med = 7.65, 13.2, PARAM_MED_HP          # 표준 평타·영웅 1행동(바닐라 중앙)·체력 중앙
+    hit_on_me = P['HITS_TAKEN']; att_on_me = hit_on_me / ((P['MON_HIT'] - 25) / 100)
+    ev = dict(comment_self_hit=hit_on_me, comment_self_missed=att_on_me - hit_on_me, comment_ally_hit=3 * hit_on_me,
+              comment_ally_missed=3 * (att_on_me - hit_on_me), comment_ally_attack_hit=2.25, comment_ally_attack_missed=0.75, comment_move=0.3)
+
+    def bf(tr):
+        o = {}
+        for b in tr.get('buff_ids', []):
+            x = buffs.get(b, {}); k = x.get('stat_sub_type') or x.get('stat_type')
+            o[k] = o.get(k, 0) + x.get('amount', 0)
+        return o
+    aff, vir = [], []
+    for tr in d['traits']:
+        ao = [a for a in tr.get('combat_start_turn_act_outs', []) if a.get('chance', 0) > 0 and 'valid_hero_class_ids' not in a]
+        b = bf(tr)
+        if tr['overstress_type'] == 'affliction' and tr['id'] != 'test':
+            af = [a['chance'] for a in tr['combat_start_turn_act_outs'] if a.get('id') == 'attack_friendly' and a.get('chance', 0) > 0]
+            afw = st.mean(af) if af else 0
+            tot = sum(a['chance'] for a in ao) + afw
+            p = lambda ids: sum(a['chance'] for a in ao if a['id'] in ids) / tot
+            re_ = {o['id']: o['chance'] for o in tr.get('reaction_act_outs', []) if o.get('chance', 0) > 0}
+            # 비아냥 범위(나무위키, 엔진 규칙 V-14): 고통 영웅 자신의 돌발 행동·피격에서 나오면 파티 전체(자신 제외 3명),
+            # 다른 영웅의 행동에 반응한 것이면 그 영웅 1명
+            own = ('comment_self_hit', 'comment_self_missed')
+            bark = (3 * (p(('bark_stress',)) + sum(ev.get(k, 0) * c * master for k, c in re_.items() if k in own))
+                    + sum(ev.get(k, 0) * c * master for k, c in re_.items() if k.startswith('comment_') and k not in own))
+            dmg = (b.get('damage_low', 0) + b.get('damage_high', 0)) / 2
+            per = (bark * 6 * sh0 + p(('ignore_command', 'random_command', 'change_pos', 'retreat_from_combat')) * hero_act
+                   + afw / tot * (hero_act + std) + p(('attack_self',)) * 0.1 * hp_med + p(('mark_self',)) * (P['MARK_DRAW'] - 1) * hit_on_me * 8
+                   - dmg * std * 0.75 - b.get('attack_rating', 0) * std - b.get('defense_rating', 0) * P['ENEMY_ACT'] * hit_on_me * 100 / 77.5
+                   - b.get('speed_rating', 0) * 0.3 + 0.1 * P['ENEMY_ACT'] * hit_on_me * 0.5
+                   + re_.get('block_heal', 0) * 0.35 * 6 + re_.get('block_buff', 0) * 0.6 + re_.get('block_move', 0) * 0.1 * hero_act)
+            aff.append(per * P['AFFLICT_ROUNDS'])
+        elif tr['overstress_type'] == 'virtue':
+            tot = sum(a['chance'] for a in ao)
+            av = dict(stress_heal_self=15 * sh0, stress_heal_party=4 * 4 * sh0 * 0.7, buff_random_party_member=(10 / 77.5 + 0.10) * std,
+                      buff_party=0.15 * std * 0.75 * 4, heal_self=0.1 * hp_med)
+            dmg = (b.get('damage_low', 0) + b.get('damage_high', 0)) / 2
+            per = (sum(a['chance'] / tot * av.get(a['id'], 0) for a in ao) + dmg * std * 0.75 + b.get('attack_rating', 0) * std
+                   + b.get('crit_chance', 0) * std + (b.get('protection_rating', 0) + b.get('defense_rating', 0)) * P['ENEMY_ACT'] * hit_on_me
+                   + b.get('speed_rating', 0) * 0.3 + 0.25 * P['ENEMY_ACT'] * 0.3 - b.get('stress_dmg_received_percent', 0) * 1.68 * sh0)
+            vir.append(per * P['AFFLICT_ROUNDS'] + (100 - rules['stress_affliction_critically_resisted']) * sh0)
+    pa = rules['affliction_base_onset_chance']
+    ca, cv = st.mean(aff), st.mean(vir)
+    return (pa * ca - (1 - pa) * cv) / 100, ca, cv
 
 
 def stress_value(P=PARAM):
