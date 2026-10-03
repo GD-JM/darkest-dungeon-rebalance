@@ -51,6 +51,11 @@ PARAM = dict(
     DESTEALTH=1.14,
     # R-VALUE-10 모드 영웅(괴인): 전환 기술에 전투당 제한이 있으면 모드별 계획으로 따로 센다.
     FIGHT_ACTS=2.55,      # 전투 2.55라운드 = 영웅 1명의 행동 수 (R-STRAT-02). 전투당 1회 꾸러미를 행동당으로 나눈다
+    # R-VALUE-06 개정(2026-10-03): 스트레스 = 가격 비율 + 고통(붕괴) 비용. 스트레스 100에서 75% 고통 / 25% 미덕
+    AFFLICT_ROUNDS=10,    # 고통이 유지되는 라운드 (남은 원정 약 4전투 x 2.55, 영지 귀환 전까지 대개 유지) [가정]
+    AFFLICT_EVENTS=1.0,   # 라운드당 고통 영웅이 반응할 사건 수 (적중·빗나감·이동 등) [가정]
+    VIRTUE_SHARE=0.5,     # 미덕 1회 이득 = 고통 1회 비용 x 0.5 [가정]
+    FOCUS_FIRE=True,      # R-VALUE-07 개정: 이동 가치는 우선 처치(닿는 적 중 위협이 큰 적부터 집중)로 센다
 )
 W = {'기본': (50, 30, 10, 10), '균등': (25, 25, 25, 25), '행동 중시': (70, 20, 5, 5)}
 RES_BASE = dict(stun=40, poison=30, bleed=30, debuff=30)   # R-RES-01
@@ -381,15 +386,25 @@ def move_value(kind, dist, tranks, stress_hp, death_rate, horizon):
         d = min(0.95, death_rate * rho[r] / rbar)
         return sum((1 - d) ** k for k in range(1, horizon + 1))
 
+    rmax = max(rho.values())
+
     def lineup(units):
-        v, r = 0.0, 1
+        pos, r = [], 1
         for size, sk in units:
             if r > 4:
                 break
             ranks = list(range(r, min(4, r + size - 1) + 1))
-            v += remain(r) * _threat_at(sk, ranks, stress_hp)
+            pos.append((r, _threat_at(sk, ranks, stress_hp)))
             r += size
-        return v
+        if PARAM['FOCUS_FIRE']:
+            # 우선 처치: 파티(라운드당 1.57명 처치)가 '위협 x 도달률'이 큰 적부터 집중한다 (R-STRAT-01)
+            K = PARAM['KILL_SHARE'] * 4
+            dd = [0.0] * len(pos)
+            for i in sorted(range(len(pos)), key=lambda i: -pos[i][1] * rho[pos[i][0]]):
+                dd[i] = min(0.95, K * rho[pos[i][0]] / rmax)
+                K = max(0.0, K - dd[i])
+            return sum(sum((1 - dd[i]) ** k for k in range(1, horizon + 1)) * pos[i][1] for i in range(len(pos)))
+        return sum(remain(p_[0]) * p_[1] for p_ in pos)
 
     def avg(states):
         tot = wt = 0.0
@@ -826,6 +841,34 @@ def stress_price_ratio():
     return gold_per_stress / gold_per_hp, gold_per_stress, gold_per_hp
 
 
+def affliction_margin(P=PARAM, sh0=None):
+    """R-VALUE-06 개정. 스트레스 1점이 고통(붕괴) 위험으로 더하는 HP.
+    고통 1회 = 비아냥 스트레스(턴 시작 + 사건 반응, 1회 +6) x 가격 비율 + 행동 손실(무시·임의 명령·자리 이탈) x 적 1행동 + 피해 −25%.
+    스트레스 1점 = (0.75 x 고통 − 0.25 x 미덕) / 100."""
+    sh0 = sh0 or stress_price_ratio()[0]
+    d = json.loads(re.sub(r',\s*([}\]])', r'\1', open(os.path.join(G, 'shared', 'trait', 'trait_library.json'), encoding='utf-8-sig').read()))
+    aff = [t_ for t_ in d['traits'] if t_['overstress_type'] == 'affliction' and t_['id'] != 'test']
+    bark, lost, comm = [], [], []
+    for t_ in aff:
+        ao = [a for a in t_.get('combat_start_turn_act_outs', []) if 'valid_hero_class_ids' not in a]
+        tot = sum(a['chance'] for a in ao) or 1
+        bark.append(sum(a['chance'] for a in ao if a['id'] == 'bark_stress') / tot)
+        lost.append(sum(a['chance'] for a in ao if a['id'] in ('ignore_command', 'random_command', 'change_pos', 'retreat_from_combat')) / tot)
+        cs = [o['chance'] for k, v in t_.items() if isinstance(v, list) for o in v
+              if isinstance(o, dict) and str(o.get('id', '')).startswith('comment_') and o.get('chance', 0) > 0]
+        comm.append(sum(cs))
+    bark_round = st.mean(bark) + st.mean(comm) / 9 * P['AFFLICT_EVENTS'] * 9 * 0.5
+    act_full = formation_stats(sh0)[2]
+    cost = (bark_round * 6 * P['AFFLICT_ROUNDS'] * sh0 + st.mean(lost) * P['AFFLICT_ROUNDS'] * act_full
+            + 0.25 * P['AFFLICT_ROUNDS'] * 7.65 * 0.75)
+    return (0.75 * cost - 0.25 * P['VIRTUE_SHARE'] * cost) / 100, cost
+
+
+def stress_value(P=PARAM):
+    sh0 = stress_price_ratio()[0]
+    return sh0 + affliction_margin(P, sh0)[0]
+
+
 def stress_hp(mode):
     hps = [load_hero(h, mode)['hp'] for h in KO]
     return st.median(hps) / 100
@@ -840,7 +883,7 @@ def evaluate(mode, P=PARAM):
             _STRESS_CACHE = 2 * monster_stress_per_action() / 4
         P = dict(P, STRESS_TAKEN=_STRESS_CACHE)
     if P['STRESS_HP'] is None:
-        P = dict(P, STRESS_HP=stress_price_ratio()[0])     # R-VALUE-06 가격 비율
+        P = dict(P, STRESS_HP=stress_value(P))             # R-VALUE-06 가격 비율 + 고통 비용
     eff = load_effects(mode)
     buffs = ec.load_buffs(G)
     out = {}
@@ -903,7 +946,7 @@ def main():
     ap.add_argument('--detail'); ap.add_argument('--sens', action='store_true')
     a = ap.parse_args()
     allres = run()
-    print(f'몬스터 모집단: 영웅 등급 일반 몬스터 {N_MON}종 (보스·오브젝트 제외) / 스트레스 1 = HP {stress_price_ratio()[0]:.2f} (가격 비율, R-VALUE-06)\n')
+    print(f'몬스터 모집단: 영웅 등급 일반 몬스터 {N_MON}종 (보스·오브젝트 제외) / 스트레스 1 = HP {stress_value():.2f} (가격 비율 {stress_price_ratio()[0]:.2f} + 고통 비용, R-VALUE-06)\n')
     rv = ranking(allres['vanilla'], '기본')[0]
     rr, orr = ranking(allres['rb'], '기본')
     # 표시 단위 = 환산 피해 보정(%p) [제작자 지정, R-VALUE-02 개정]. HP는 내부 계산에만 쓴다.
@@ -931,7 +974,7 @@ def main():
             for m, (v, note) in r.get('plans', {}).items():
                 print(f'  [모드 {m}] 행동 가치 {pp(v, std):+.0f}%p (표준 평타 기준)  {note}')
     if a.sens:
-        variants = {'스트레스=HP 0.43(한계선)': dict(STRESS_HP=0.43), '스트레스=HP 1(v1)': dict(STRESS_HP=1.0), '기절 x1.3': dict(STUN_MULT=1.3), '지원 x0.7': dict(SUPPORT_MULT=0.7),
+        variants = {'스트레스=HP 1.22(가격만)': dict(STRESS_HP=1.22), '스트레스=HP 1(v1)': dict(STRESS_HP=1.0), '기절 x1.3': dict(STUN_MULT=1.3), '지원 x0.7': dict(SUPPORT_MULT=0.7),
                     '광역 직접 0.75': dict(E_AOE=0.75), '조건 유지율 0.45/0.2': dict(COND_SELF=0.45, COND_OTHER=0.2),
                     '저체력 조건 0.3': dict(LOW_HP_SELF=0.3), '화상 감소 약화 무시(V-12)': dict(BURN_SLOW_KEEP=0.5),
                     '열 모델 끔(이전)': dict(RANK_MODEL=False)}
