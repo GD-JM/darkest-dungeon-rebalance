@@ -55,6 +55,9 @@ PARAM = dict(
     AFFLICT_ROUNDS=10,    # 고통이 유지되는 라운드 (남은 원정 약 4전투 x 2.55, 영지 귀환 전까지 대개 유지) [가정]
     AFFLICT_EVENTS=1.0,   # 라운드당 고통 영웅이 반응할 사건 수 (적중·빗나감·이동 등) [가정]
     FOCUS_FIRE=True,      # R-VALUE-07 개정: 이동 가치는 우선 처치(닿는 적 중 위협이 큰 적부터 집중)로 센다
+    # 2026-10-03 wiki.gg 대조 (analysis/wiki_notes.md)
+    DMG_STACK='mult',     # V-01: 기술 피해 보정 x (1 + 강화·조건부 보너스) [위키 계산 예시]. 'add' = 이전 가산 가정(민감도)
+    HEAL_CRIT_SGL=0.12, HEAL_CRIT_AOE=0.05,   # 회복 치명타 고정 확률 [위키]: 회복 2배 + 스트레스 −4
 )
 W = {'기본': (50, 30, 10, 10), '균등': (25, 25, 25, 25), '행동 중시': (70, 20, 5, 5)}
 RES_BASE = dict(stun=40, poison=30, bleed=30, debuff=30)   # R-RES-01
@@ -124,7 +127,10 @@ def type_share(t):
 
 
 def hit(m, acc):
-    return max(0.0, min(95.0, acc - m['dodge'])) / 100
+    """적중 = 명중 − 회피. 95% 이상이면 무조건 명중(rules.json cutoffAlwaysHit 0.95), 0 이하면 빗나감(cutoffAlwaysMiss 0).
+    위키의 '숨은 명중 +5'는 데이터 근거가 없어 넣지 않는다(V-15)."""
+    x = acc - m['dodge']
+    return 1.0 if x >= 95 else max(0.0, x) / 100
 
 
 def burn_total(n, keep_rounds=0, P=None):
@@ -166,8 +172,8 @@ _D = {k: (INIT_RAND - abs(k)) / INIT_RAND ** 2 for k in range(-INIT_RAND + 1, IN
 
 
 def p_before(h, m):
-    """속도 h인 영웅이 속도 m인 몬스터보다 먼저 행동할 확률 (동률은 절반)"""
-    return sum(p * (1.0 if k > m - h else 0.5 if k == m - h else 0.0) for k, p in _D.items())
+    """속도 h인 영웅이 속도 m인 몬스터보다 먼저 행동할 확률. 동률이면 영웅이 먼저 [위키, V-09]"""
+    return sum(p * (1.0 if k >= m - h else 0.0) for k, p in _D.items())
 
 
 @functools.lru_cache(maxsize=None)
@@ -501,9 +507,10 @@ class Ctx:
         """반격 1회 기대 피해: 영웅의 riposte_skill 명중·피해·치명타 + 반격 효과의 피해·치명타 보정"""
         r = s.H.get('riposte', {})
         atk = num(first(r, 'atk', '85'))
-        dm = num(first(r, 'dmg', '0')) / 100 + num(first(k, 'damage_low_multiply', '0')) / 100
+        sk_dm, buf = num(first(r, 'dmg', '0')) / 100, num(first(k, 'damage_low_multiply', '0')) / 100
+        mul = max(0.0, 1 + sk_dm) * (1 + buf) if s.P.get('DMG_STACK') == 'mult' else max(0.0, 1 + sk_dm + buf)
         cr = (num(first(r, 'crit', '0')) + num(first(k, 'crit_chance_add', '0')) + s.H['wcrit']) / 100
-        per = ((1 - cr) * s.avg + cr * s.max * 1.5) * max(0.0, 1 + dm)
+        per = ((1 - cr) * s.avg + cr * s.max * 1.5) * mul
         return st.mean(hit(m, atk) * per * (1 - m['prot']) for m in MONS)
 
     def cond_uptime(s, k):
@@ -593,7 +600,7 @@ def skill_value(C, l, d):
     # 직접 피해 (몬스터 분포 평균, 치명타 = 최대값 x 1.5)
     p_any_crit = 0.0
     if does_dmg:
-        mult = max(0.0, 1 + dmgm + cond_bonus)
+        mult = (max(0.0, 1 + dmgm) * (1 + cond_bonus)) if P.get('DMG_STACK') == 'mult' else max(0.0, 1 + dmgm + cond_bonus)
         dm = ((1 - crit) * C.avg + crit * C.max * 1.5) * mult
         per = st.mean(hit(m, atk) * dm * (1 if ign_prot else 1 - m['prot']) for m in MONS)
         add('직접', per * n_t * (P['E_AOE'] if aoe else P['E_SGL']) * rw)
@@ -688,8 +695,10 @@ def skill_value(C, l, d):
             ch = min(1.0, chance / 100)
             heal_n = tgt_n * (P['ALLY_AOE_HEAL'] if tgt_n > 1 else 1)
             sm = P['SUPPORT_MULT']
+            hc = P['HEAL_CRIT_SGL'] if tgt_n == 1 else P['HEAL_CRIT_AOE']   # 회복 치명타 [위키]: 2배 + 스트레스 −4
             if 'heal' in k:
-                add('회복', num(first(k, 'heal')) * ch * heal_n * sm)
+                add('회복', num(first(k, 'heal')) * ch * heal_n * sm * (1 + hc))
+                add('스트레스', hc * 4 * ch * heal_n * sm * P['STRESS_HP'])
             if 'healstress' in k:
                 add('스트레스', num(first(k, 'healstress')) * ch * heal_n * sm * P['STRESS_HP'])
             if 'dotHpHeal' in k:
@@ -711,6 +720,8 @@ def skill_value(C, l, d):
                     if first(k2, 'target') == 'performer' and 'tag' in k2:
                         md = min(num(first(k2, 'duration', '2')) or 2, rd)
                 hits = P['HITS_TAKEN'] * (md * P['MARK_DRAW'] + (rd - md))
+                # 반격은 빗나간 공격에도 발동한다(riposte_on_miss_chance_add 100%) -> 맞은 횟수가 아니라 받은 공격 수
+                hits /= max(0.05, (P['MON_HIT'] - H['def']) / 100)
                 add('반격', C.riposte(k) * hits * ch)
             if 'combat_stat_buff' in k:
                 cm = P['COND_OTHER'] if 'keyStatus' in k else 1.0
@@ -745,7 +756,9 @@ def skill_value(C, l, d):
     if 'heal' in d and len(d['heal']) >= 2:                  # 기술 줄의 .heal lo hi
         amt = (num(d['heal'][0]) + num(d['heal'][1])) / 2
         hn = n_t * (P['ALLY_AOE_HEAL'] if n_t > 1 else 1) if ally else 1
-        add('회복', amt * hn * P['SUPPORT_MULT'])
+        hc = P['HEAL_CRIT_AOE'] if (ally and n_t > 1) else P['HEAL_CRIT_SGL']
+        add('회복', amt * hn * P['SUPPORT_MULT'] * (1 + hc))
+        add('스트레스', hc * 4 * hn * P['SUPPORT_MULT'] * P['STRESS_HP'])
 
     # 치명타 부수 효과: 스트레스 회복 + 직업 버프 2턴. 광역도 1회만 (R-CMB-08)
     if p_any_crit > 0:
@@ -1011,6 +1024,7 @@ def main():
         variants = {'스트레스=HP 1.22(가격만)': dict(STRESS_HP=1.22), '스트레스=HP 1(v1)': dict(STRESS_HP=1.0), '기절 x1.3': dict(STUN_MULT=1.3), '지원 x0.7': dict(SUPPORT_MULT=0.7),
                     '광역 직접 0.75': dict(E_AOE=0.75), '조건 유지율 0.45/0.2': dict(COND_SELF=0.45, COND_OTHER=0.2),
                     '저체력 조건 0.3': dict(LOW_HP_SELF=0.3), '화상 감소 약화 무시(V-12)': dict(BURN_SLOW_KEEP=0.5),
+                    '피해 보정 가산(V-01 이전)': dict(DMG_STACK='add'),
                     '열 모델 끔(이전)': dict(RANK_MODEL=False)}
         rows = {h: [rr[h]] for h in KO}
         for ch in variants.values():
