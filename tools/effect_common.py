@@ -10,7 +10,7 @@ ABBR = dict(abomination='ABO', antiquarian='ANT', arbalest='ARB', bounty_hunter=
 P = lambda p: p.replace('\\', '/')
 norm_ws = lambda s: re.sub(r'\s+', ' ', s.strip())
 # effect names are usually quoted, but some vanilla lines use bare names (duelist: .effect duelist_riposte)
-EFFECT_LIST = re.compile(r'(\.effects?)((?:\s+(?:"[^"]*"|(?!\.)[^\s"]+))+)')
+EFFECT_LIST = re.compile(r'(\.(?:effects?|human_effects|beast_effects))((?:\s+(?:"[^"]*"|(?!\.)[^\s"]+))+)')
 EFFECT_TOKEN = re.compile(r'"([^"]*)"|([^\s"]+)')
 
 
@@ -61,8 +61,10 @@ def vanilla_hero_file(G, hero):
 
 
 def effect_names_in(line):
-    m = EFFECT_LIST.search(line)
-    return [a if a or not b else b for a, b in EFFECT_TOKEN.findall(m.group(2))] if m else []
+    # A transform skill carries both human and beast effect lists on the same line.
+    return [a if a or not b else b
+            for m in EFFECT_LIST.finditer(line)
+            for a, b in EFFECT_TOKEN.findall(m.group(2))]
 
 
 def load_buffs(G):

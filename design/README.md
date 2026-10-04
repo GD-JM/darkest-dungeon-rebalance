@@ -53,6 +53,7 @@ mods/Rebalance/
 3. Claude에게 "정리해줘"라고 요청한다. 내부적으로 `python tools/apply_effect_edits.py`가 실행된다.
    - 원본과 달라진 효과만 새 이름(`RB <약어> 원래이름`)으로 `effects/rebalance_<영웅>.effects.darkest`에 들어간다.
    - 그 영웅 기술 줄이 새 효과를 가리키게 바뀐다. 다른 영웅·몬스터는 영향이 없다.
+   - 괴인의 `.human_effects`와 `.beast_effects`도 함께 처리한다. 편집 사본에는 변신·복귀의 두 목록이 모두 포함된다.
    - 원래 값으로 되돌리면 새 효과가 사라지고 참조도 원래대로 돌아간다.
 4. 이후 기록·커밋은 간편 방식과 같다.
 
