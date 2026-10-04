@@ -59,6 +59,11 @@ PARAM = dict(
     DMG_STACK='mult',     # V-01: 기술 피해 보정 x (1 + 강화·조건부 보너스) [위키 계산 예시]. 'add' = 이전 가산 가정(민감도)
     HEAL_CRIT_SGL=0.12, HEAL_CRIT_AOE=0.05,   # 회복 치명타 고정 확률 [위키]: 회복 2배 + 스트레스 −4
     KILL_ON_HIT=1.57 / 4, # '.requires_kill_target' 효과(처치 시에만)의 발동률 = 영웅 1행동당 처치 수 (R-STRAT-01)
+    # R-VALUE-11: 같은 대상에게 이후 들어올 회복 행동 수/라운드 [가정, 민감도 대상].
+    HEAL_FOLLOWUP_RATE=0.5,
+    HEAL_FOLLOWUP_AMOUNT=None,  # None: 원본 영웅별 최대 단일 아군 직접 회복 평균의 중앙값, 회복 치명 포함
+    # R-VALUE-12: 표식 특효 피해 비용. None: 일반 몬스터 표본의 AI 기술 가중 피해 비율로 추정.
+    MARK_DAMAGE_BONUS=None,
 )
 W = {'기본': (50, 30, 10, 10), '균등': (25, 25, 25, 25), '행동 중시': (70, 20, 5, 5)}
 RES_BASE = dict(stun=40, poison=30, bleed=30, debuff=30)   # R-RES-01
@@ -464,7 +469,7 @@ def load_hero(hero, mode):
         if l.startswith('weapon:') and '_weapon_4' in l:
             H['dmg'] = (num(d['dmg'][0]), num(d['dmg'][1])); H['wcrit'] = num(d['crit'][0]); H['spd'] = num(d['spd'][0])
         elif l.startswith('armour:') and '_armour_4' in l:
-            H['def'] = num(d['def'][0]); H['hp'] = num(d['hp'][0])
+            H['def'] = num(d['def'][0]); H['hp'] = num(d['hp'][0]); H['prot'] = num(first(d, 'prot', '0'))
         elif l.startswith('resistances:'):
             H['res'] = {k: num(v[0]) for k, v in d.items()}
         elif l.startswith('riposte_skill:'):
@@ -479,6 +484,66 @@ def load_hero(hero, mode):
 
 
 # ---------------------------------------------------------------- 가치 계산
+@functools.lru_cache(maxsize=None)
+def followup_heal_amount():
+    """각 영웅의 최대 단일 아군 직접 회복 평균을 1개씩 집계. 미래 회복 사용 빈도는 별도 가정이다."""
+    amounts = []
+    for hero in KO:
+        vals = [(num(d['heal'][0]) + num(d['heal'][1])) / 2 for l, d in load_hero(hero, 'vanilla')['skills']
+                if len(d.get('heal', [])) >= 2 and '@' in first(d, 'target') and '~' not in first(d, 'target')]
+        if vals:
+            amounts.append(max(vals))
+    return st.median(amounts) * (1 + PARAM['HEAL_CRIT_SGL']) if amounts else 0.0
+
+
+@functools.lru_cache(maxsize=None)
+def marked_damage_bonus():
+    """표식 대상 추가 직접 피해 / 표식 없는 직접 피해. MONS 동일 표본, specific_skill 기본 AI 가중치.
+    표식 뒤 기술 선택 변화·열별 표적 가중치·부가 상태는 시뮬레이션하지 않는다. 추정값을 민감도로 검토한다.
+    """
+    eff, brains, info = _monster_db()
+    base_total = bonus_total = 0.0
+    for monster in MONS:
+        mid = monster['name']
+        if mid not in info:
+            continue
+        text = open(info[mid], encoding='utf-8', errors='ignore').read()
+        bid = re.search(r'monster_brain:\s*\.id\s*(\S+)', text)
+        weights = {}
+        for desire in brains.get(bid.group(1) if bid else '', {}).get('skill_selection_desires', []):
+            if desire['type'] == 'specific_skill':
+                data = desire['data']; sid = data['combat_skill_id']
+                weights[sid] = weights.get(sid, 0) + data.get('base_chance', 1)
+        values = []
+        for line in re.findall(r'^skill:.*$', text, re.M):
+            d = kv(line); target = first(d, 'target'); damage = d.get('dmg', ['0'])
+            if '@' in target or not re.sub('[^1-4]', '', target):
+                continue
+            low, high = num(damage[0]), num(damage[-1]); crit = num(first(d, 'crit')) / 100
+            if first(d, 'is_crit_valid', 'true').lower() == 'false': crit = 0.0
+            hit_rate = max(0.0, min(0.95, (num(first(d, 'atk')) - 25) / 100))
+            amount = ((low + high) / 2 * (1 - crit) + high * 1.5 * crit) * hit_rate
+            bonus = 0.0
+            for name in ec.effect_names_in(line):
+                e = kv(eff.get(name, ''))
+                if first(e, 'target') == 'performer' and first(e, 'keyStatus') == 'tagged':
+                    bonus += (num(first(e, 'damage_low_multiply')) + num(first(e, 'damage_high_multiply'))) / 200
+            values.append((amount, amount * bonus, weights.get(first(d, 'id'), 0)))
+        if values:
+            ws = [x[2] for x in values]
+            if not sum(ws): ws = [1] * len(values)
+            base_total += sum(x[0] * w for x, w in zip(values, ws)) / sum(ws)
+            bonus_total += sum(x[1] * w for x, w in zip(values, ws)) / sum(ws)
+    return bonus_total / base_total if base_total else 0.0
+
+
+def effect_duration(k, P):
+    """combat_end의 duration1은 1턴이 아니다. 모델은 남은 지속 상한만 계산한다."""
+    if first(k, 'buff_duration_type') == 'combat_end':
+        return P['BUFF_DUR_CAP']
+    return num(first(k, 'duration', str(P['DEFAULT_DUR']))) or P['DEFAULT_DUR']
+
+
 class Ctx:
     def __init__(s, H, eff, buffs, P):
         s.H, s.eff, s.buffs, s.P = H, eff, buffs, P
@@ -524,6 +589,10 @@ class Ctx:
     def stat_value(s, stat, amt, dur, who):
         """강화 수치 -> HP (대상 1명, dur 턴)"""
         P = s.P
+        if stat == 'hp_heal_received_percent':
+            packet = P['HEAL_FOLLOWUP_AMOUNT']
+            if packet is None: packet = followup_heal_amount()
+            return amt * packet * P['HEAL_FOLLOWUP_RATE'] * dur * P['SUPPORT_MULT']
         atk_val = s.avg * 0.8 * 0.83 if who == 'self' else P['ALLY_ATK']
         if stat in ('damage_low', 'damage_high'):
             return atk_val * amt * 0.5 * dur          # low/high 각각 절반
@@ -554,9 +623,53 @@ class Ctx:
             cm = 1.0 if B.get('rule_type') in (None, 'always') else s.P['COND_OTHER']
             if B.get('stat_type') == 'stress_dmg_received_percent':
                 v += cm * s.stress_resist_value(B['amount'], dur)
+            elif B.get('stat_type') == 'hp_heal_received_percent':
+                v += cm * s.stat_value(B['stat_type'], B['amount'], dur, who)
             elif B.get('stat_type') in ('combat_stat_add', 'combat_stat_multiply'):
                 v += cm * s.stat_value(B['stat_sub_type'], B['amount'], dur, who)
         return v
+
+
+def self_mark_value(C, effects):
+    """피격 재배분으로 줄인 파티 HP 피해와 표식 특효의 추가 피해를 따로 계산한다.
+    공격 유도 자체는 회복/보호가 아니다. 기준 동료 회피25/방어0; 스트레스 재배분·위기 구출은 제외.
+    """
+    P, H = C.P, C.H
+    self_effects = [kv(e) for e in effects if first(kv(e), 'target') == 'performer']
+    marks = [k for k in self_effects if 'tag' in k]
+    if not marks:
+        return 0.0, 0.0
+    mark_duration = min(P['BUFF_DUR_CAP'], max(effect_duration(k, P) for k in marks))
+    mark_chance = max(min(1.0, num(first(k, 'chance', '100')) / 100) for k in marks)
+    defenses = []
+    for k in self_effects:
+        if 'keyStatus' in k or 'monsterType' in k:
+            continue
+        duration = min(mark_duration, effect_duration(k, P))
+        chance = min(1.0, num(first(k, 'chance', '100')) / 100)
+        if 'combat_stat_buff' in k:
+            defenses.append((duration, num(first(k, 'protection_rating_add')) / 100 * chance,
+                             num(first(k, 'defense_rating_add')) * chance))
+        for name in k.get('buff_ids', []):
+            b = C.buffs.get(name.strip('"'), {})
+            if b.get('stat_type') == 'combat_stat_add' and b.get('rule_type') in (None, 'always'):
+                stat, amount = b.get('stat_sub_type'), b.get('amount', 0)
+                defenses.append((duration, amount * chance if stat == 'protection_rating' else 0,
+                                 amount * 100 * chance if stat == 'defense_rating' else 0))
+    bounds = sorted({0.0, mark_duration, *(duration for duration, _, _ in defenses)})
+    bonus = P['MARK_DAMAGE_BONUS']
+    if bonus is None: bonus = marked_damage_bonus()
+    incoming = P['ENEMY_ACT'] * P['HITS_TAKEN']
+    ref_hit = max(0.05, (P['MON_HIT'] - 25) / 100)
+    redirect = risk = 0.0
+    for start, end in zip(bounds, bounds[1:]):
+        prot = max(0.0, min(0.8, H.get('prot', 0) + sum(p for duration, p, _ in defenses if duration > start)))
+        dodge = H['def'] + sum(v for duration, _, v in defenses if duration > start)
+        hit_ratio = max(0.0, min(0.95, (P['MON_HIT'] - dodge) / 100)) / ref_hit
+        remaining = hit_ratio * (1 - prot)
+        redirect += incoming * max(0.0, P['MARK_DRAW'] - 1) * (end - start) * (1 - remaining)
+        risk += incoming * P['MARK_DRAW'] * (end - start) * bonus * remaining
+    return redirect * mark_chance, risk * mark_chance
 
 
 def skill_value(C, l, d):
@@ -622,9 +735,7 @@ def skill_value(C, l, d):
         if first(k, 'requires_kill_target').lower() == 'true':     # 처치했을 때만 (결투가 최후의 일격 등)
             chance *= P['KILL_ON_HIT'] * (st.mean(hit(m, atk) for m in MONS) if atk > 0 else 1)
         on_hit = first(k, 'on_hit', 'true').lower() == 'true'
-        dur = num(first(k, 'duration', str(P['DEFAULT_DUR']))) or P['DEFAULT_DUR']
-        if first(k, 'buff_duration_type') == 'combat_end':          # '.duration 1 .buff_duration_type combat_end' = 전투 끝까지
-            dur = P['BUFF_DUR_CAP']
+        dur = effect_duration(k, P)
         if who in ('target', 'target_group') and enemy:          # target_group = 적 그룹 전체 (시체 제거)
             def ev(res_key, fn=None):
                 tot = 0.0
@@ -721,7 +832,7 @@ def skill_value(C, l, d):
                 for e2 in effs:
                     k2 = kv(e2)
                     if first(k2, 'target') == 'performer' and 'tag' in k2:
-                        md = min(num(first(k2, 'duration', '2')) or 2, rd)
+                        md = min(effect_duration(k2, P), rd)
                 hits = P['HITS_TAKEN'] * (md * P['MARK_DRAW'] + (rd - md))
                 # 반격은 빗나간 공격에도 발동한다(riposte_on_miss_chance_add 100%) -> 맞은 횟수가 아니라 받은 공격 수
                 hits /= max(0.05, (P['MON_HIT'] - H['def']) / 100)
@@ -747,6 +858,9 @@ def skill_value(C, l, d):
                     if B.get('stat_type') == 'hp_dot_heal':
                         ticks = P['HOT_STEALTH_TICKS'] if B.get('rule_type') == 'is_stealthed' else dur
                         add('회복', B['amount'] * ticks * tgt_n * ch * P['SUPPORT_MULT'])
+            if first(k, 'buff_type') == 'hp_heal_received_percent':
+                add('회복 증폭', C.stat_value('hp_heal_received_percent', num(first(k, 'buff_amount')) / 100,
+                                             min(dur, P['BUFF_DUR_CAP']), 'ally') * tgt_n * ch)
             if who == 'performer':                          # 자해 지속 피해(고행자 재기)는 자기 저항 적용 후 대가
                 for key, rk in (('dotBleed', 'bleed'), ('dotPoison', 'poison')):
                     if key in k:
@@ -769,6 +883,9 @@ def skill_value(C, l, d):
                  for n in H['crit_effects'])
         add('치명타', p_any_crit * (P['CRIT_STRESS'] * P['STRESS_HP'] + cb))
 
+    redirect, mark_risk = self_mark_value(C, effs)
+    add('공격 유도', redirect)
+    add('표식 위험', -mark_risk)
     tot = sum(parts.values())
     if limit:
         tot *= min(1.0, limit / 3)
@@ -934,6 +1051,10 @@ def evaluate(mode, P=PARAM):
         P = dict(P, STRESS_TAKEN=_STRESS_CACHE)
     if P['STRESS_HP'] is None:
         P = dict(P, STRESS_HP=stress_value(P))             # R-VALUE-06 가격 비율 + 고통 비용
+    if P['HEAL_FOLLOWUP_AMOUNT'] is None:
+        P = dict(P, HEAL_FOLLOWUP_AMOUNT=followup_heal_amount())
+    if P['MARK_DAMAGE_BONUS'] is None:
+        P = dict(P, MARK_DAMAGE_BONUS=marked_damage_bonus())
     eff = load_effects(mode)
     buffs = ec.load_buffs(G)
     out = {}
@@ -1028,7 +1149,9 @@ def main():
                     '광역 직접 0.75': dict(E_AOE=0.75), '조건 유지율 0.45/0.2': dict(COND_SELF=0.45, COND_OTHER=0.2),
                     '저체력 조건 0.3': dict(LOW_HP_SELF=0.3), '화상 감소 약화 무시(V-12)': dict(BURN_SLOW_KEEP=0.5),
                     '피해 보정 가산(V-01 이전)': dict(DMG_STACK='add'),
-                    '열 모델 끔(이전)': dict(RANK_MODEL=False)}
+                    '열 모델 끔(이전)': dict(RANK_MODEL=False),
+                    '후속 회복 없음': dict(HEAL_FOLLOWUP_RATE=0.0), '후속 회복 1회/라운드': dict(HEAL_FOLLOWUP_RATE=1.0),
+                    '표식 유도 없음': dict(MARK_DRAW=1.0), '표식 특효 비용 없음': dict(MARK_DAMAGE_BONUS=0.0)}
         rows = {h: [rr[h]] for h in KO}
         for ch in variants.values():
             rk = ranking(run(dict(PARAM, **ch))['rb'], '기본')[0]
