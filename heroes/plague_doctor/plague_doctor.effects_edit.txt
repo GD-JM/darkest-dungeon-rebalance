@@ -157,4 +157,5 @@ effect: .name "on_crit_blightchance"    .target "performer" .curio_result_type "
 //# ----------------------------------------------------------------------
 //# PD-001 야전 의술: 출혈·중독 동시 치료와 자기 치료를 빼고, 대상 중독 치료만 남긴다. 회복량은 영웅 파일에서 올렸다.
 effect: .name "RB PD Cure Poison" .target "target" .curio_result_type "positive" .chance 100% .cure_poison 1 .on_hit true .on_miss false
+// PD-001 [trace 2026-10-05] Differentiate allied blight treatment from the Arbalest bleed-heal option. Effect: RB PD Cure Poison.
 // PD-001 battlefield_medicine: cure blight only, on the target ally (replaces Cure + Cureself)

@@ -65,3 +65,226 @@
   3. 1레벨 75에서 시작하는 것(광역 2명의 대가, 가격표상 정가)은 그대로 두고 **멈춘 마지막 단계만 되살린다.** 가장 작은 수정이다(P-12).
 - 결과: 5레벨 밀치기 성공률(대상 1명당) 30.5% → **37.8%**. 총사 산탄은 바닐라 그대로(MUS-000).
 - R-DATA-01: 같은 계열(Bolo Push)의 다른 단계를 가리키는 재사용이라 허용된다.
+
+
+## 2026-10-05 주석·의도 전수 추적 (수치 변경 없음)
+이번 항목은 이전 문서의 후보/기각/예전 수치를 덮어쓰지 않는 현재 스냅샷이다. 사용자 한국어 메모를 원문 그대로 보존했다. 실제 데이터와 편집 사본의 상태를 별도로 기록하며, 새로운 수치 결정이나 전역 효과 적용을 하지 않는다. 최신 사용자 작업은 이 섹션을 우선 참고한다.
+
+### ARB-005 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 기존 MARK-01 재배분에 맞춰 표식 파티의 서브 딜러 선택을 넓힌다. 마지막 레벨 상한은 보존한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/sniper_shot`
+  - 원본: `combat_skill: .id "sniper_shot" .level 0 .type "ranged" .atk 95% .dmg 0% .crit 5% .launch 43 .target 234 .is_crit_valid True  .effect "Sniper Damage 1" .generation_guaranteed true`
+  - 현재: `combat_skill: .id "sniper_shot" .level 0 .type "ranged" .atk 95% .dmg 0% .crit 5% .launch 43 .target 234 .is_crit_valid True  .effect "RB ARB Sniper Damage 1" .generation_guaranteed true`
+  - 원본: `combat_skill: .id "sniper_shot" .level 1 .type "ranged" .atk 100% .dmg 0% .crit 6% .launch 43 .target 234 .is_crit_valid True  .effect "Sniper Damage 2"`
+  - 현재: `combat_skill: .id "sniper_shot" .level 1 .type "ranged" .atk 100% .dmg 0% .crit 6% .launch 43 .target 234 .is_crit_valid True  .effect "RB ARB Sniper Damage 2"`
+  - 원본: `combat_skill: .id "sniper_shot" .level 2 .type "ranged" .atk 105% .dmg 0% .crit 7% .launch 43 .target 234 .is_crit_valid True  .effect "Sniper Damage 3"`
+  - 현재: `combat_skill: .id "sniper_shot" .level 2 .type "ranged" .atk 105% .dmg 0% .crit 7% .launch 43 .target 234 .is_crit_valid True  .effect "RB ARB Sniper Damage 3"`
+  - 원본: `combat_skill: .id "sniper_shot" .level 3 .type "ranged" .atk 110% .dmg 0% .crit 8% .launch 43 .target 234 .is_crit_valid True  .effect "Sniper Damage 4"`
+  - 현재: `combat_skill: .id "sniper_shot" .level 3 .type "ranged" .atk 110% .dmg 0% .crit 8% .launch 43 .target 234 .is_crit_valid True  .effect "RB ARB Sniper Damage 4"`
+- 출처: `heroes/arbalest/arbalest.info.darkest`, 주석 추가 전 22행; Git 원문 {"commit": "30e207f78a8342186f06ebafd638d53ded3d8a34", "summary": "MARK-01 표식 피해 재배분: 서브 표식 딜러 상향 + 조련사 하향"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Sniper Damage 1`
+- 원본: `effect: .name "Sniper Damage 1".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged" .duration 3 .combat_stat_buff 1 .damage_low_multiply 50%  .damage_high_multiply 50% .crit_chance_add 9%	 .on_hit true .on_miss false`
+- 현재: `effect: .name "Sniper Damage 1".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged" .duration 3 .combat_stat_buff 1 .damage_low_multiply 60%  .damage_high_multiply 60% .crit_chance_add 9%	 .on_hit true .on_miss false`
+- 출처: `heroes/arbalest/arbalest.effects_edit.txt`, 주석 추가 전 19행; Git 원문 {"commit": "30e207f78a8342186f06ebafd638d53ded3d8a34", "summary": "MARK-01 표식 피해 재배분: 서브 표식 딜러 상향 + 조련사 하향"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Sniper Damage 2`
+- 원본: `effect: .name "Sniper Damage 2".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged" .duration 3 .combat_stat_buff 1 .damage_low_multiply 60%  .damage_high_multiply 60% .crit_chance_add 10%	 .on_hit true .on_miss false`
+- 현재: `effect: .name "Sniper Damage 2".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged" .duration 3 .combat_stat_buff 1 .damage_low_multiply 70%  .damage_high_multiply 70% .crit_chance_add 10%	 .on_hit true .on_miss false`
+- 출처: `heroes/arbalest/arbalest.effects_edit.txt`, 주석 추가 전 22행; Git 원문 {"commit": "30e207f78a8342186f06ebafd638d53ded3d8a34", "summary": "MARK-01 표식 피해 재배분: 서브 표식 딜러 상향 + 조련사 하향"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Sniper Damage 3`
+- 원본: `effect: .name "Sniper Damage 3".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged" .duration 3 .combat_stat_buff 1 .damage_low_multiply 70%  .damage_high_multiply 70% .crit_chance_add 11%	 .on_hit true .on_miss false`
+- 현재: `effect: .name "Sniper Damage 3".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged" .duration 3 .combat_stat_buff 1 .damage_low_multiply 80%  .damage_high_multiply 80% .crit_chance_add 11%	 .on_hit true .on_miss false`
+- 출처: `heroes/arbalest/arbalest.effects_edit.txt`, 주석 추가 전 25행; Git 원문 {"commit": "30e207f78a8342186f06ebafd638d53ded3d8a34", "summary": "MARK-01 표식 피해 재배분: 서브 표식 딜러 상향 + 조련사 하향"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Sniper Damage 4`
+- 원본: `effect: .name "Sniper Damage 4".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged" .duration 3 .combat_stat_buff 1 .damage_low_multiply 80%  .damage_high_multiply 80% .crit_chance_add 12%	 .on_hit true .on_miss false`
+- 현재: `effect: .name "Sniper Damage 4".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged" .duration 3 .combat_stat_buff 1 .damage_low_multiply 90%  .damage_high_multiply 90% .crit_chance_add 12%	 .on_hit true .on_miss false`
+- 출처: `heroes/arbalest/arbalest.effects_edit.txt`, 주석 추가 전 28행; Git 원문 {"commit": "30e207f78a8342186f06ebafd638d53ded3d8a34", "summary": "MARK-01 표식 피해 재배분: 서브 표식 딜러 상향 + 조련사 하향"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB ARB Sniper Damage 1`
+- 원본 (Sniper Damage 1): `effect: .name "Sniper Damage 1".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged" .duration 3 .combat_stat_buff 1 .damage_low_multiply 50%  .damage_high_multiply 50% .crit_chance_add 9%	 .on_hit true .on_miss false`
+- 현재: `effect: .name "RB ARB Sniper Damage 1".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged" .duration 3 .combat_stat_buff 1 .damage_low_multiply 60%  .damage_high_multiply 60% .crit_chance_add 9%	 .on_hit true .on_miss false`
+- 출처: `effects/rebalance_arbalest.effects.darkest`, 주석 추가 전 5행; Git 원문 {"commit": "30e207f78a8342186f06ebafd638d53ded3d8a34", "summary": "MARK-01 표식 피해 재배분: 서브 표식 딜러 상향 + 조련사 하향"}
+- 기존 주석 원문:
+```text
+// edited vanilla effect (from effects/base.effects.darkest)
+```
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB ARB Sniper Damage 2`
+- 원본 (Sniper Damage 2): `effect: .name "Sniper Damage 2".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged" .duration 3 .combat_stat_buff 1 .damage_low_multiply 60%  .damage_high_multiply 60% .crit_chance_add 10%	 .on_hit true .on_miss false`
+- 현재: `effect: .name "RB ARB Sniper Damage 2".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged" .duration 3 .combat_stat_buff 1 .damage_low_multiply 70%  .damage_high_multiply 70% .crit_chance_add 10%	 .on_hit true .on_miss false`
+- 출처: `effects/rebalance_arbalest.effects.darkest`, 주석 추가 전 7행; Git 원문 {"commit": "30e207f78a8342186f06ebafd638d53ded3d8a34", "summary": "MARK-01 표식 피해 재배분: 서브 표식 딜러 상향 + 조련사 하향"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB ARB Sniper Damage 3`
+- 원본 (Sniper Damage 3): `effect: .name "Sniper Damage 3".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged" .duration 3 .combat_stat_buff 1 .damage_low_multiply 70%  .damage_high_multiply 70% .crit_chance_add 11%	 .on_hit true .on_miss false`
+- 현재: `effect: .name "RB ARB Sniper Damage 3".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged" .duration 3 .combat_stat_buff 1 .damage_low_multiply 80%  .damage_high_multiply 80% .crit_chance_add 11%	 .on_hit true .on_miss false`
+- 출처: `effects/rebalance_arbalest.effects.darkest`, 주석 추가 전 9행; Git 원문 {"commit": "30e207f78a8342186f06ebafd638d53ded3d8a34", "summary": "MARK-01 표식 피해 재배분: 서브 표식 딜러 상향 + 조련사 하향"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB ARB Sniper Damage 4`
+- 원본 (Sniper Damage 4): `effect: .name "Sniper Damage 4".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged" .duration 3 .combat_stat_buff 1 .damage_low_multiply 80%  .damage_high_multiply 80% .crit_chance_add 12%	 .on_hit true .on_miss false`
+- 현재: `effect: .name "RB ARB Sniper Damage 4".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged" .duration 3 .combat_stat_buff 1 .damage_low_multiply 90%  .damage_high_multiply 90% .crit_chance_add 12%	 .on_hit true .on_miss false`
+- 출처: `effects/rebalance_arbalest.effects.darkest`, 주석 추가 전 11행; Git 원문 {"commit": "30e207f78a8342186f06ebafd638d53ded3d8a34", "summary": "MARK-01 표식 피해 재배분: 서브 표식 딜러 상향 + 조련사 하향"}
+
+### ARB-004 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 5레벨 밀치기 연결 누락을 보완해 마지막 업그레이드의 성공률 성장을 복구한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/bola`
+  - 원본: `combat_skill: .id "bola" .level 4 .type "ranged" .atk 115% .dmg -50% .crit 6% .launch 43 .target ~12 .is_crit_valid True  .effect "Bolo Push 1D"`
+  - 현재: `combat_skill: .id "bola" .level 4 .type "ranged" .atk 115% .dmg -50% .crit 6% .launch 43 .target ~12 .is_crit_valid True  .effect "Bolo Push 1E"`
+- 출처: `heroes/arbalest/arbalest.info.darkest`, 주석 추가 전 44행; Git 원문 {"commit": "5a0b78fbe8644317732f33431d3f433231f39626", "summary": "ARB-004 사냥돌 발사 5렙 Bolo Push 1E + 시체 제거 가치 R-VALUE-05 + 모델 파서 수정"}
+- 기존 주석 원문:
+```text
+// ARB-004 bola 5레벨: Bolo Push 1D(105) -> 1E(115). 바닐라에 1E가 정의돼 있는데 어떤 기술도 쓰지 않는다(연결 누락). 4·5레벨이 같은 105를 써서 성장이 멈췄고, 이동 저항이 레벨당 +20 오르는 동안 성공률이 43 -> 40 -> 28%로 떨어지는 유일한 이동 기술이었다(M1·M5). 5레벨 성공률 30.5 -> 37.8%
+```
+
+### ARB-001 ARB-002 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 예측 가능한 동료 회복과 출혈 치료로 다른 회복 기술과 역할을 나눈다. 단일값 회복은 최소/최대 같은 값 표기를 유지한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/battlefield_bandage`
+  - 원본: `combat_skill: .id "battlefield_bandage" .level 0 .heal 2 3 .launch 43 .target @1234  .effect "Arb Stacking Heal 1" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "battlefield_bandage" .level 0 .heal 3 3 .launch 43 .target @1234  .effect "RB ARB Cure Bleed" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "battlefield_bandage" .level 1 .heal 3 3 .launch 43 .target @1234  .effect "Arb Stacking Heal 2" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "battlefield_bandage" .level 1 .heal 4 4 .launch 43 .target @1234  .effect "RB ARB Cure Bleed" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "battlefield_bandage" .level 2 .heal 3 4 .launch 43 .target @1234  .effect "Arb Stacking Heal 3" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "battlefield_bandage" .level 2 .heal 5 5 .launch 43 .target @1234  .effect "RB ARB Cure Bleed" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "battlefield_bandage" .level 3 .heal 4 4 .launch 43 .target @1234  .effect "Arb Stacking Heal 4" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "battlefield_bandage" .level 3 .heal 6 6 .launch 43 .target @1234  .effect "RB ARB Cure Bleed" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "battlefield_bandage" .level 4 .heal 4 5 .launch 43 .target @1234  .effect "Arb Stacking Heal 5" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "battlefield_bandage" .level 4 .heal 7 7 .launch 43 .target @1234  .effect "RB ARB Cure Bleed" .is_stall_invalidating false`
+- 출처: `heroes/arbalest/arbalest.info.darkest`, 주석 추가 전 62행; Git 원문 {"commit": "8f52fcfe821547d58c60e6547066b8d66da8553d", "summary": "총사 모드 제외(MUS-000) + 회복 표기 정정(ARB-002: 석궁사수 붕대질, 성녀 신성한 은총)"}
+- 기존 주석 원문:
+```text
+// 표기: .heal N -> .heal N N. 바닐라 기술 줄 회복 45개는 전부 "최소 최대" 두 숫자다. 한 숫자는 게임 해석이 보장되지 않아 같은 값을 두 번 쓴다(회복량 변화 없음)
+```
+- 기존 주석 원문:
+```text
+// ARB-001 battlefield_bandage: heal 2-3/4-5 -> 3-3/6-7, Arb Stacking Heal -> RB ARB Cure Bleed
+```
+- 기존 주석 원문:
+```text
+// 34567로 바꿈 직관적으로
+```
+
+### ARB-003 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 저레벨 불안정성을 줄이고 광대 외 파티 스트레스 회복 선택지를 보완한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/flare`
+  - 원본: `combat_skill: .id "flare" .level 0 .type "ranged" .atk 95% .dmg -100% .crit 0% .launch 4321 .target ~1234 .is_crit_valid False .ignore_stealth true  .effect "FlareClear 1" "FlareLight 1" "Destealth" "FlareHealStress 1" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "flare" .level 0 .type "ranged" .atk 95% .dmg -100% .crit 0% .launch 4321 .target ~1234 .is_crit_valid False .ignore_stealth true  .effect "FlareClear 1" "FlareLight 1" "Destealth" "RB ARB FlareHealStress 1" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "flare" .level 1 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 4321 .target ~1234 .is_crit_valid False .ignore_stealth true  .effect "FlareClear 1" "FlareLight 2" "Destealth" "FlareHealStress 2" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "flare" .level 1 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 4321 .target ~1234 .is_crit_valid False .ignore_stealth true  .effect "FlareClear 1" "FlareLight 2" "Destealth" "RB ARB FlareHealStress 2" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "flare" .level 2 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 4321 .target ~1234 .is_crit_valid False .ignore_stealth true  .effect "FlareClear 1" "FlareLight 3" "Destealth" "FlareHealStress 3" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "flare" .level 2 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 4321 .target ~1234 .is_crit_valid False .ignore_stealth true  .effect "FlareClear 1" "FlareLight 3" "Destealth" "RB ARB FlareHealStress 3" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "flare" .level 3 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 4321 .target ~1234 .is_crit_valid False .ignore_stealth true  .effect "FlareClear 1" "FlareLight 4" "Destealth" "FlareHealStress 4" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "flare" .level 3 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 4321 .target ~1234 .is_crit_valid False .ignore_stealth true  .effect "FlareClear 1" "FlareLight 4" "Destealth" "RB ARB FlareHealStress 4" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "flare" .level 4 .type "ranged" .atk 115% .dmg -100% .crit 0% .launch 4321 .target ~1234 .is_crit_valid False .ignore_stealth true  .effect "FlareClear 1" "FlareLight 5" "Destealth" "FlareHealStress 5" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "flare" .level 4 .type "ranged" .atk 115% .dmg -100% .crit 0% .launch 4321 .target ~1234 .is_crit_valid False .ignore_stealth true  .effect "FlareClear 1" "FlareLight 5" "Destealth" "RB ARB FlareHealStress 5" .is_stall_invalidating false`
+- 출처: `heroes/arbalest/arbalest.info.darkest`, 주석 추가 전 72행; Git 원문 {"commit": "5b9b587c16f06c41a44d4119c10ff9c0a0a6d20d", "summary": "ARB-003 결집 신호탄 스트레스 회복 3/3/4/4/5, 74% 고정 + 모델 그룹 대상 수정"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `FlareHealStress 1`
+- 원본: `effect: .name "FlareHealStress 1" .target "performer_group_other" .curio_result_type "positive" .chance 60% .healstress 1 .on_hit true .on_miss true .queue true .apply_once true`
+- 현재: `effect: .name "FlareHealStress 1" .target "performer_group_other" .curio_result_type "positive" .chance 74% .healstress 3 .on_hit true .on_miss true .queue true .apply_once true`
+- 출처: `heroes/arbalest/arbalest.effects_edit.txt`, 주석 추가 전 143행; Git 원문 {"commit": "5b9b587c16f06c41a44d4119c10ff9c0a0a6d20d", "summary": "ARB-003 결집 신호탄 스트레스 회복 3/3/4/4/5, 74% 고정 + 모델 그룹 대상 수정"}
+- 기존 주석 원문:
+```text
+// ARB-003 결집 신호탄 1레벨 스트레스 회복 1 (60%) -> 3 (74% 고정). 길드 "결집소이자 포탑이며 어둠 속의 횃불". 광역 스트레스 회복 법칙 H6(확률형). 파티 기대 1렙 1.8 -> 6.7, 5렙 6.0 -> 11.1, 위험 경보의 약 62%
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `FlareHealStress 2`
+- 원본: `effect: .name "FlareHealStress 2" .target "performer_group_other" .curio_result_type "positive" .chance 60% .healstress 2 .on_hit true .on_miss true .queue true .apply_once true`
+- 현재: `effect: .name "FlareHealStress 2" .target "performer_group_other" .curio_result_type "positive" .chance 74% .healstress 3 .on_hit true .on_miss true .queue true .apply_once true`
+- 출처: `heroes/arbalest/arbalest.effects_edit.txt`, 주석 추가 전 150행; Git 원문 {"commit": "5b9b587c16f06c41a44d4119c10ff9c0a0a6d20d", "summary": "ARB-003 결집 신호탄 스트레스 회복 3/3/4/4/5, 74% 고정 + 모델 그룹 대상 수정"}
+- 기존 주석 원문:
+```text
+// ARB-003 결집 신호탄 2레벨 스트레스 회복 2 (60%) -> 3 (74% 고정). 길드 "결집소이자 포탑이며 어둠 속의 횃불". 광역 스트레스 회복 법칙 H6(확률형). 파티 기대 1렙 1.8 -> 6.7, 5렙 6.0 -> 11.1, 위험 경보의 약 62%
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `FlareHealStress 3`
+- 원본: `effect: .name "FlareHealStress 3" .target "performer_group_other" .curio_result_type "positive" .chance 67% .healstress 2 .on_hit true .on_miss true .queue true .apply_once true`
+- 현재: `effect: .name "FlareHealStress 3" .target "performer_group_other" .curio_result_type "positive" .chance 74% .healstress 4 .on_hit true .on_miss true .queue true .apply_once true`
+- 출처: `heroes/arbalest/arbalest.effects_edit.txt`, 주석 추가 전 157행; Git 원문 {"commit": "5b9b587c16f06c41a44d4119c10ff9c0a0a6d20d", "summary": "ARB-003 결집 신호탄 스트레스 회복 3/3/4/4/5, 74% 고정 + 모델 그룹 대상 수정"}
+- 기존 주석 원문:
+```text
+// ARB-003 결집 신호탄 3레벨 스트레스 회복 2 (67%) -> 4 (74% 고정). 길드 "결집소이자 포탑이며 어둠 속의 횃불". 광역 스트레스 회복 법칙 H6(확률형). 파티 기대 1렙 1.8 -> 6.7, 5렙 6.0 -> 11.1, 위험 경보의 약 62%
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `FlareHealStress 4`
+- 원본: `effect: .name "FlareHealStress 4" .target "performer_group_other" .curio_result_type "positive" .chance 60% .healstress 3 .on_hit true .on_miss true .queue true .apply_once true`
+- 현재: `effect: .name "FlareHealStress 4" .target "performer_group_other" .curio_result_type "positive" .chance 74% .healstress 4 .on_hit true .on_miss true .queue true .apply_once true`
+- 출처: `heroes/arbalest/arbalest.effects_edit.txt`, 주석 추가 전 164행; Git 원문 {"commit": "5b9b587c16f06c41a44d4119c10ff9c0a0a6d20d", "summary": "ARB-003 결집 신호탄 스트레스 회복 3/3/4/4/5, 74% 고정 + 모델 그룹 대상 수정"}
+- 기존 주석 원문:
+```text
+// ARB-003 결집 신호탄 4레벨 스트레스 회복 3 (60%) -> 4 (74% 고정). 길드 "결집소이자 포탑이며 어둠 속의 횃불". 광역 스트레스 회복 법칙 H6(확률형). 파티 기대 1렙 1.8 -> 6.7, 5렙 6.0 -> 11.1, 위험 경보의 약 62%
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `FlareHealStress 5`
+- 원본: `effect: .name "FlareHealStress 5" .target "performer_group_other" .curio_result_type "positive" .chance 67% .healstress 3 .on_hit true .on_miss true .queue true .apply_once true`
+- 현재: `effect: .name "FlareHealStress 5" .target "performer_group_other" .curio_result_type "positive" .chance 74% .healstress 5 .on_hit true .on_miss true .queue true .apply_once true`
+- 출처: `heroes/arbalest/arbalest.effects_edit.txt`, 주석 추가 전 171행; Git 원문 {"commit": "5b9b587c16f06c41a44d4119c10ff9c0a0a6d20d", "summary": "ARB-003 결집 신호탄 스트레스 회복 3/3/4/4/5, 74% 고정 + 모델 그룹 대상 수정"}
+- 기존 주석 원문:
+```text
+// ARB-003 결집 신호탄 5레벨 스트레스 회복 3 (67%) -> 5 (74% 고정). 길드 "결집소이자 포탑이며 어둠 속의 횃불". 광역 스트레스 회복 법칙 H6(확률형). 파티 기대 1렙 1.8 -> 6.7, 5렙 6.0 -> 11.1, 위험 경보의 약 62%
+```
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB ARB FlareHealStress 1`
+- 원본 (FlareHealStress 1): `effect: .name "FlareHealStress 1" .target "performer_group_other" .curio_result_type "positive" .chance 60% .healstress 1 .on_hit true .on_miss true .queue true .apply_once true`
+- 현재: `effect: .name "RB ARB FlareHealStress 1" .target "performer_group_other" .curio_result_type "positive" .chance 74% .healstress 3 .on_hit true .on_miss true .queue true .apply_once true`
+- 출처: `effects/rebalance_arbalest.effects.darkest`, 주석 추가 전 13행; Git 원문 {"commit": "5b9b587c16f06c41a44d4119c10ff9c0a0a6d20d", "summary": "ARB-003 결집 신호탄 스트레스 회복 3/3/4/4/5, 74% 고정 + 모델 그룹 대상 수정"}
+- 기존 주석 원문:
+```text
+// edited vanilla effect (from effects/base.effects.darkest)
+```
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB ARB FlareHealStress 2`
+- 원본 (FlareHealStress 2): `effect: .name "FlareHealStress 2" .target "performer_group_other" .curio_result_type "positive" .chance 60% .healstress 2 .on_hit true .on_miss true .queue true .apply_once true`
+- 현재: `effect: .name "RB ARB FlareHealStress 2" .target "performer_group_other" .curio_result_type "positive" .chance 74% .healstress 3 .on_hit true .on_miss true .queue true .apply_once true`
+- 출처: `effects/rebalance_arbalest.effects.darkest`, 주석 추가 전 15행; Git 원문 {"commit": "5b9b587c16f06c41a44d4119c10ff9c0a0a6d20d", "summary": "ARB-003 결집 신호탄 스트레스 회복 3/3/4/4/5, 74% 고정 + 모델 그룹 대상 수정"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB ARB FlareHealStress 3`
+- 원본 (FlareHealStress 3): `effect: .name "FlareHealStress 3" .target "performer_group_other" .curio_result_type "positive" .chance 67% .healstress 2 .on_hit true .on_miss true .queue true .apply_once true`
+- 현재: `effect: .name "RB ARB FlareHealStress 3" .target "performer_group_other" .curio_result_type "positive" .chance 74% .healstress 4 .on_hit true .on_miss true .queue true .apply_once true`
+- 출처: `effects/rebalance_arbalest.effects.darkest`, 주석 추가 전 17행; Git 원문 {"commit": "5b9b587c16f06c41a44d4119c10ff9c0a0a6d20d", "summary": "ARB-003 결집 신호탄 스트레스 회복 3/3/4/4/5, 74% 고정 + 모델 그룹 대상 수정"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB ARB FlareHealStress 4`
+- 원본 (FlareHealStress 4): `effect: .name "FlareHealStress 4" .target "performer_group_other" .curio_result_type "positive" .chance 60% .healstress 3 .on_hit true .on_miss true .queue true .apply_once true`
+- 현재: `effect: .name "RB ARB FlareHealStress 4" .target "performer_group_other" .curio_result_type "positive" .chance 74% .healstress 4 .on_hit true .on_miss true .queue true .apply_once true`
+- 출처: `effects/rebalance_arbalest.effects.darkest`, 주석 추가 전 19행; Git 원문 {"commit": "5b9b587c16f06c41a44d4119c10ff9c0a0a6d20d", "summary": "ARB-003 결집 신호탄 스트레스 회복 3/3/4/4/5, 74% 고정 + 모델 그룹 대상 수정"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB ARB FlareHealStress 5`
+- 원본 (FlareHealStress 5): `effect: .name "FlareHealStress 5" .target "performer_group_other" .curio_result_type "positive" .chance 67% .healstress 3 .on_hit true .on_miss true .queue true .apply_once true`
+- 현재: `effect: .name "RB ARB FlareHealStress 5" .target "performer_group_other" .curio_result_type "positive" .chance 74% .healstress 5 .on_hit true .on_miss true .queue true .apply_once true`
+- 출처: `effects/rebalance_arbalest.effects.darkest`, 주석 추가 전 21행; Git 원문 {"commit": "5b9b587c16f06c41a44d4119c10ff9c0a0a6d20d", "summary": "ARB-003 결집 신호탄 스트레스 회복 3/3/4/4/5, 74% 고정 + 모델 그룹 대상 수정"}
+- 기존 주석 원문:
+```text
+// mod-only new effects
+```
+
+### ARB-001 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 예측 가능한 동료 회복과 출혈 치료로 다른 회복 기술과 역할을 나눈다. 단일값 회복은 최소/최대 같은 값 표기를 유지한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `RB ARB Cure Bleed`
+- 원본: `None`
+- 현재: `effect: .name "RB ARB Cure Bleed" .target "target" .curio_result_type "positive" .chance 100% .cure_bleed 1 .on_hit true .on_miss false`
+- 출처: `heroes/arbalest/arbalest.effects_edit.txt`, 주석 추가 전 191행; Git 원문 {"commit": "0e828416b7347a0972bd347c000141963cc8b189", "summary": "ARB-001 야전 붕대질 출혈 치료, PD-001 야전 의술 중독 치료 (회복량 상향)"}
+- 기존 주석 원문:
+```text
+// ARB-001 battlefield_bandage: cure bleed on the healed ally (replaces Arb Stacking Heal)
+```
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB ARB Cure Bleed`
+- 원본: `None`
+- 현재: `effect: .name "RB ARB Cure Bleed" .target "target" .curio_result_type "positive" .chance 100% .cure_bleed 1 .on_hit true .on_miss false`
+- 출처: `effects/rebalance_arbalest.effects.darkest`, 주석 추가 전 24행; Git 원문 {"commit": "0e828416b7347a0972bd347c000141963cc8b189", "summary": "ARB-001 야전 붕대질 출혈 치료, PD-001 야전 의술 중독 치료 (회복량 상향)"}

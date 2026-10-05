@@ -21,35 +21,44 @@ effect: .name "Beast Killer 1" .target "performer" .chance 100% .curio_result_ty
 effect: .name "HM Dmg Marked 1".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"  .combat_stat_buff 1 .damage_low_multiply 60%  .damage_high_multiply 60%  .on_hit true .on_miss false
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Hound Bleed 1" .target "target" .curio_result_type "negative" .chance 100%  .dotBleed 1 .duration 1	.on_hit true .on_miss false .can_apply_on_death true
+// HM-010 [trace 2026-10-05] Retain conditional mark/beast specialization while reducing unconditional and bleed output. Effect: Hound Bleed 1.
 // HM-010 사냥개 돌진 출혈: 지속 3턴 -> 1턴. 턴당 1/1/1/2/2 -> 1/1/2/2/3 (5렙 총량 6 -> 3). 치명타 시 1->2턴
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Beast Killer 2" .target "performer" .chance 100% .curio_result_type "positive" .monsterType "beast" .combat_stat_buff 1 .damage_low_multiply 20%	.damage_high_multiply 20%	.on_hit true .on_miss false
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "HM Dmg Marked 2".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"  .combat_stat_buff 1 .damage_low_multiply 60%  .damage_high_multiply 60%	.on_hit true .on_miss false
+// HM-018 [trace 2026-10-05] Retain the author-set flat60 marked damage instead of the historical growing bonus. Effect: HM Dmg Marked 2.
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Hound Bleed 2" .target "target" .curio_result_type "negative" .chance 110%  .dotBleed 1 .duration 1	.on_hit true .on_miss false .can_apply_on_death true
+// HM-010 [trace 2026-10-05] Retain conditional mark/beast specialization while reducing unconditional and bleed output. Effect: Hound Bleed 2.
 // HM-010 지속 3 -> 1
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Beast Killer 3" .target "performer" .chance 100% .curio_result_type "positive" .monsterType "beast" .combat_stat_buff 1 .damage_low_multiply 25%	.damage_high_multiply 25%	.on_hit true .on_miss false
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "HM Dmg Marked 3".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"  .combat_stat_buff 1 .damage_low_multiply 60%  .damage_high_multiply 60%  .on_hit true .on_miss false
+// HM-018 [trace 2026-10-05] Retain the author-set flat60 marked damage instead of the historical growing bonus. Effect: HM Dmg Marked 3.
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Hound Bleed 3" .target "target" .curio_result_type "negative" .chance 120%  .dotBleed 2 .duration 1	.on_hit true .on_miss false .can_apply_on_death true
+// HM-010 [trace 2026-10-05] Retain conditional mark/beast specialization while reducing unconditional and bleed output. Effect: Hound Bleed 3.
 // HM-010 지속 3 -> 1, 턴당 1 -> 2
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Beast Killer 4" .target "performer" .chance 100% .curio_result_type "positive" .monsterType "beast" .combat_stat_buff 1 .damage_low_multiply 30%	.damage_high_multiply 30%	.on_hit true .on_miss false
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "HM Dmg Marked 4".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"  .combat_stat_buff 1 .damage_low_multiply 60%  .damage_high_multiply 60%  .on_hit true .on_miss false
+// HM-018 [trace 2026-10-05] Retain the author-set flat60 marked damage instead of the historical growing bonus. Effect: HM Dmg Marked 4.
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Hound Bleed 4" .target "target" .curio_result_type "negative" .chance 130%  .dotBleed 2 .duration 1	.on_hit true .on_miss false .can_apply_on_death true
+// HM-010 [trace 2026-10-05] Retain conditional mark/beast specialization while reducing unconditional and bleed output. Effect: Hound Bleed 4.
 // HM-010 지속 3 -> 1
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Beast Killer 5" .target "performer" .chance 100% .curio_result_type "positive" .monsterType "beast" .combat_stat_buff 1 .damage_low_multiply 35%	.damage_high_multiply 35%	.on_hit true .on_miss false
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "HM Dmg Marked 5".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"  .combat_stat_buff 1 .damage_low_multiply 60%  .damage_high_multiply 60% .on_hit true .on_miss false
+// HM-018 [trace 2026-10-05] Retain the author-set flat60 marked damage instead of the historical growing bonus. Effect: HM Dmg Marked 5.
 // MARK-01 HM Dmg Marked: 표식 피해 60~100 -> 60 고정(전 레벨). 야수 특효+출혈+개 간식과 중복, 조련사 강함 2위
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Hound Bleed 5" .target "target" .curio_result_type "negative" .chance 140%  .dotBleed 3 .duration 1	.on_hit true .on_miss false .can_apply_on_death true
+// HM-010 [trace 2026-10-05] Retain conditional mark/beast specialization while reducing unconditional and bleed output. Effect: Hound Bleed 5.
 // HM-010 지속 3 -> 1, 턴당 2 -> 3
 //#   원본 위치: effects/base.effects.darkest
 
@@ -87,15 +96,19 @@ effect: .name "Hound Debuff 5" .target "target" .curio_result_type "negative" .c
 //# 기술: 위험 경보 (howl)
 //# 레벨별 효과: 1레벨 Hound Howl 1 | 2레벨 Hound Howl 2 | 3레벨 Hound Howl 3 | 4레벨 Hound Howl 4 | 5레벨 Hound Howl 5
 effect: .name "Hound Howl 1" .target "target" .curio_result_type "positive" .chance 74% .healstress 4	.on_hit true .on_miss false .queue true
+// HM-014 [trace 2026-10-05] Stabilize early stress recovery without raising the top-level effect. Effect: Hound Howl 1.
 // HM-014 위험 경보: 회복 2 -> 4, 확률 66 -> 74. 5렙(6@74%)은 그대로 두고 저레벨 불안정성만 해소 (P-12)
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Hound Howl 2" .target "target" .curio_result_type "positive" .chance 74% .healstress 4	.on_hit true .on_miss false .queue true
+// HM-014 [trace 2026-10-05] Stabilize early stress recovery without raising the top-level effect. Effect: Hound Howl 2.
 // HM-014 회복 3 -> 4, 확률 68 -> 74
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Hound Howl 3" .target "target" .curio_result_type "positive" .chance 74% .healstress 5	.on_hit true .on_miss false .queue true
+// HM-014 [trace 2026-10-05] Stabilize early stress recovery without raising the top-level effect. Effect: Hound Howl 3.
 // HM-014 회복 4 -> 5, 확률 70 -> 74
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Hound Howl 4" .target "target" .curio_result_type "positive" .chance 74% .healstress 5	.on_hit true .on_miss false .queue true
+// HM-014 [trace 2026-10-05] Stabilize early stress recovery without raising the top-level effect. Effect: Hound Howl 4.
 // HM-014 회복 5 -> 5(유지), 확률 72 -> 74
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Hound Howl 5" .target "target" .curio_result_type "positive" .chance 74% .healstress 6	.on_hit true .on_miss false .queue true
@@ -141,22 +154,27 @@ effect: .name "Lick Wounds 5" .target "performer" .curio_result_type "positive" 
 //# 기술: 둔기 강타 (blackjack)
 //# 레벨별 효과: 1레벨 Hero Strong Stun 1 | 2레벨 Hero Strong Stun 2 | 3레벨 Hero Strong Stun 3 | 4레벨 Hero Strong Stun 4 | 5레벨 Hero Strong Stun 5
 effect: .name "Hero Strong Stun 1" .target "target" .curio_result_type "negative" .chance 100% .stun 1	.on_hit true .on_miss false .queue true
+// HM-013 [trace 2026-10-05] Retain rank-3 control while paying with accuracy, damage and the normal stun tier. Effect: Hero Strong Stun 1.
 // HM-013 둔기 강타 기절: 강한 기절(110) -> 기본 기절(100) 등급으로 정상화. 조련사만 3열까지 닿는데 등급까지 상위인 중복 우위 제거
 //#   공유 효과: 다른 영웅 2명(현상금 사냥꾼, 야만인). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Hero Strong Stun 2" .target "target" .curio_result_type "negative" .chance 110% .stun 1	.on_hit true .on_miss false .queue true
+// HM-013 [trace 2026-10-05] Retain rank-3 control while paying with accuracy, damage and the normal stun tier. Effect: Hero Strong Stun 2.
 // HM-013 120 -> 110
 //#   공유 효과: 다른 영웅 2명(현상금 사냥꾼, 야만인). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Hero Strong Stun 3" .target "target" .curio_result_type "negative" .chance 120% .stun 1	.on_hit true .on_miss false .queue true
+// HM-013 [trace 2026-10-05] Retain rank-3 control while paying with accuracy, damage and the normal stun tier. Effect: Hero Strong Stun 3.
 // HM-013 130 -> 120
 //#   공유 효과: 다른 영웅 2명(현상금 사냥꾼, 야만인). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Hero Strong Stun 4" .target "target" .curio_result_type "negative" .chance 130% .stun 1	.on_hit true .on_miss false .queue true
+// HM-013 [trace 2026-10-05] Retain rank-3 control while paying with accuracy, damage and the normal stun tier. Effect: Hero Strong Stun 4.
 // HM-013 140 -> 130
 //#   공유 효과: 다른 영웅 2명(현상금 사냥꾼, 야만인). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Hero Strong Stun 5" .target "target" .curio_result_type "negative" .chance 140% .stun 1	.on_hit true .on_miss false .queue true
+// HM-013 [trace 2026-10-05] Retain rank-3 control while paying with accuracy, damage and the normal stun tier. Effect: Hero Strong Stun 5.
 // HM-013 150 -> 140
 //#   공유 효과: 다른 영웅 2명(현상금 사냥꾼, 야만인). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest

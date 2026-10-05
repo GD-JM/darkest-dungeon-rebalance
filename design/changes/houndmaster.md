@@ -255,3 +255,346 @@ HP와 %p를 섞어 쓰던 것을 통일한다. **평타(그 영웅의 피해 보
 
 - 영웅 순위: 바닐라 10위 → RB 12위(기본 가중치), 균등 가중치 4위.
 - **미해결**: 모델은 습격을 여전히 1위로 본다. 제작자 경험(바닐라 습격 미사용)과 어긋난다. 원인 후보는 출혈 면역 몬스터의 던전 편중(v2 7절).
+
+
+## 2026-10-05 주석·의도 전수 추적 (수치 변경 없음)
+이번 항목은 이전 문서의 후보/기각/예전 수치를 덮어쓰지 않는 현재 스냅샷이다. 사용자 한국어 메모를 원문 그대로 보존했다. 실제 데이터와 편집 사본의 상태를 별도로 기록하며, 새로운 수치 결정이나 전역 효과 적용을 하지 않는다. 최신 사용자 작업은 이 섹션을 우선 참고한다.
+
+### HM-017 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 기존 설정 비교에 따라 설명되지 않은 중독/출혈 저항 우위를 줄인다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `resistances/`
+  - 원본: `resistances: .stun 40% .poison 40% .bleed 40% .disease 30% .move 40% .debuff 30% .death_blow 67% .trap 40%`
+  - 현재: `resistances: .stun 40% .poison 30% .bleed 30% .disease 30% .move 40% .debuff 30% .death_blow 67% .trap 40%`
+- 출처: `heroes/houndmaster/houndmaster.info.darkest`, 주석 추가 전 1행; Git 원문 {"commit": "58a206d640f107da347acc230f675d5ffea1ed40", "summary": "조련사 HM-017 저항 정상화 + 저항 설계 축 분석(R-RES-01)"}
+- 기존 주석 원문:
+```text
+// HM-017 저항: 중독 40 -> 30, 출혈 40 -> 30 (기준값 복귀). 설정 근거 없는 편차 제거. 노상강도는 "두껍게 덧댄 외투... 칼도 잘 박히지 않지만, 받아내기보다는 회피 선호"로 출혈 30인데, 같은 문장 구조의 조련사("낡은 제복... 받아내기보다는 아예 회피 선호")가 40인 건 모순. 함정 40(+30)은 야영 "늑대개를 정찰에 내보내거나 경비로 세울 수 있습니다"로 정당화되어 유지. 저항 총합 260(1위) -> 240. analysis/resistances.md
+```
+
+### HM-010 HM-011 HM-016 HM-018 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 표식·야수 조건부 역할을 남기되 직접 피해/출혈/도달 범위를 재배분한다. 실제 표식 피해60 고정과 옛40~60 메모를 구분한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/hounds_rush`
+  - 원본: `combat_skill: .id "hounds_rush" .level 0 .type "ranged" .atk 85% .dmg 0% .crit 5% .launch 432 .target 1234 .is_crit_valid True  .effect "Beast Killer 1" "HM Dmg Marked 1" "Hound Bleed 1" .generation_guaranteed true`
+  - 현재: `combat_skill: .id "hounds_rush" .level 0 .type "ranged" .atk 85% .dmg -25% .crit 5% .launch 4321 .target 234 .is_crit_valid True  .effect "Beast Killer 1" "HM Dmg Marked 1" "RB HM Hound Bleed 1" .generation_guaranteed true`
+  - 원본: `combat_skill: .id "hounds_rush" .level 1 .type "ranged" .atk 90% .dmg 0% .crit 6% .launch 432 .target 1234 .is_crit_valid True  .effect "Beast Killer 2" "HM Dmg Marked 2" "Hound Bleed 2"`
+  - 현재: `combat_skill: .id "hounds_rush" .level 1 .type "ranged" .atk 90% .dmg -25% .crit 6% .launch 4321 .target 234 .is_crit_valid True  .effect "Beast Killer 2" "HM Dmg Marked 1" "RB HM Hound Bleed 2"`
+  - 원본: `combat_skill: .id "hounds_rush" .level 2 .type "ranged" .atk 95% .dmg 0% .crit 7% .launch 432 .target 1234 .is_crit_valid True  .effect "Beast Killer 3" "HM Dmg Marked 3" "Hound Bleed 3"`
+  - 현재: `combat_skill: .id "hounds_rush" .level 2 .type "ranged" .atk 95% .dmg -25% .crit 7% .launch 4321 .target 234 .is_crit_valid True  .effect "Beast Killer 3" "HM Dmg Marked 1" "RB HM Hound Bleed 3"`
+  - 원본: `combat_skill: .id "hounds_rush" .level 3 .type "ranged" .atk 100% .dmg 0% .crit 8% .launch 432 .target 1234 .is_crit_valid True  .effect "Beast Killer 4" "HM Dmg Marked 4" "Hound Bleed 4"`
+  - 현재: `combat_skill: .id "hounds_rush" .level 3 .type "ranged" .atk 100% .dmg -25% .crit 8% .launch 4321 .target 234 .is_crit_valid True  .effect "Beast Killer 4" "HM Dmg Marked 1" "RB HM Hound Bleed 4"`
+  - 원본: `combat_skill: .id "hounds_rush" .level 4 .type "ranged" .atk 105% .dmg 0% .crit 9% .launch 432 .target 1234 .is_crit_valid True  .effect "Beast Killer 5" "HM Dmg Marked 5" "Hound Bleed 5"`
+  - 현재: `combat_skill: .id "hounds_rush" .level 4 .type "ranged" .atk 105% .dmg -25% .crit 9% .launch 4321 .target 234 .is_crit_valid True  .effect "Beast Killer 5" "HM Dmg Marked 1" "RB HM Hound Bleed 5"`
+- 출처: `heroes/houndmaster/houndmaster.info.darkest`, 주석 추가 전 22행; Git 원문 {"commit": "d5762d209d46704fa8d1f4aea12babd6af9f57c2", "summary": "조련사 HM-016 + 광역 지속 피해 재평가(R-VALUE-03) + 검증 목록 신설"}
+- 기존 주석 원문:
+```text
+// HM-016 hounds_rush: 피해 0% -> -25%. 표식(+60%)+야수(+35%) 중첩 시 실전가 226%(조련사 1위). 조정 후 조건 없을 때 92%(평타 수준), 조건 충족 시 188%로 조건부 아키타입을 선명하게
+```
+- 기존 주석 원문:
+```text
+// HM-011 사냥개 돌진: 사용 432 -> 4321(1열 추가), 대상 1234 -> 234(1열 제거). 설정 "후열에 접근해" / 1열에서도 쓰되 1열이 메인이 되지 않게. 출혈 너프(HM-010)와 상쇄되어 피해 보정 0% 유지
+```
+- 기존 주석 원문:
+```text
+// MARK-01 hounds_rush: 표식 피해 60~100 -> 40~60 (RB HM Dmg Marked). 야수 특효+출혈과 중복, 조련사 강함 2위
+```
+
+### HM-012 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 1열 사용을 내주는 대신 광역 출혈 선택지를 보완한다. 최신 명중90은 사용자 출혈 기술 기준 메모에 근거한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/hounds_harry`
+  - 원본: `combat_skill: .id "hounds_harry" .level 0 .type "ranged" .atk 85% .dmg -75% .crit -5% .launch 4321 .target ~1234 .is_crit_valid True  .effect "Harry Bleed 1"`
+  - 현재: `combat_skill: .id "hounds_harry" .level 0 .type "ranged" .atk 90% .dmg -70% .crit -5% .launch 432 .target ~1234 .is_crit_valid True  .effect "Harry Bleed 1"`
+  - 원본: `combat_skill: .id "hounds_harry" .level 1 .type "ranged" .atk 90% .dmg -75% .crit -4% .launch 4321 .target ~1234 .is_crit_valid True  .effect "Harry Bleed 2"`
+  - 현재: `combat_skill: .id "hounds_harry" .level 1 .type "ranged" .atk 95% .dmg -70% .crit -4% .launch 432 .target ~1234 .is_crit_valid True  .effect "Harry Bleed 2"`
+  - 원본: `combat_skill: .id "hounds_harry" .level 2 .type "ranged" .atk 95% .dmg -75% .crit -3% .launch 4321 .target ~1234 .is_crit_valid True  .effect "Harry Bleed 3"`
+  - 현재: `combat_skill: .id "hounds_harry" .level 2 .type "ranged" .atk 100% .dmg -70% .crit -3% .launch 432 .target ~1234 .is_crit_valid True  .effect "Harry Bleed 3"`
+  - 원본: `combat_skill: .id "hounds_harry" .level 3 .type "ranged" .atk 100% .dmg -75% .crit -2% .launch 4321 .target ~1234 .is_crit_valid True  .effect "Harry Bleed 4"`
+  - 현재: `combat_skill: .id "hounds_harry" .level 3 .type "ranged" .atk 105% .dmg -70% .crit -2% .launch 432 .target ~1234 .is_crit_valid True  .effect "Harry Bleed 4"`
+  - 원본: `combat_skill: .id "hounds_harry" .level 4 .type "ranged" .atk 105% .dmg -75% .crit -1% .launch 4321 .target ~1234 .is_crit_valid True  .effect "Harry Bleed 5"`
+  - 현재: `combat_skill: .id "hounds_harry" .level 4 .type "ranged" .atk 110% .dmg -70% .crit -1% .launch 432 .target ~1234 .is_crit_valid True  .effect "Harry Bleed 5"`
+- 출처: `heroes/houndmaster/houndmaster.info.darkest`, 주석 추가 전 32행; Git 원문 {"commit": "82e021e47a720a7e9565b5355463b605210dc2bd", "summary": "강함 순위 모델 v2 (R-VALUE-04): tools/strength.py 신설, 바닐라·RB 동시 계산"}
+- 기존 주석 원문:
+```text
+// HM-012 사냥개 습격: 사용 4321 -> 432(1열 제거, 2열 메인 구조), 피해 -75% -> -70%. 광역 지속 피해는 전투 2.55라운드 안에 40%만 회수되어 R-STRAT-01에 역행 -> 실사용률 최하위. 사용 열 축소의 대가로 화력 보상
+```
+- 기존 주석 원문:
+```text
+// 명중 85 ->90 , 사유 : 출혈 기술 표준치가 90임
+```
+
+### HM-014 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 최고 레벨은 유지하고 저레벨 위험 경보의 스트레스 회복 불안정성을 줄인다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/howl`
+  - 원본: `combat_skill: .id "howl" .level 0 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 43 .target @~1234 .is_crit_valid True  .effect "Hound Howl 1" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "howl" .level 0 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 43 .target @~1234 .is_crit_valid True  .effect "RB HM Hound Howl 1" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "howl" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 43 .target @~1234 .is_crit_valid True  .effect "Hound Howl 2" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "howl" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 43 .target @~1234 .is_crit_valid True  .effect "RB HM Hound Howl 2" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "howl" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 43 .target @~1234 .is_crit_valid True  .effect "Hound Howl 3" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "howl" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 43 .target @~1234 .is_crit_valid True  .effect "RB HM Hound Howl 3" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "howl" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 43 .target @~1234 .is_crit_valid True  .effect "Hound Howl 4" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "howl" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 43 .target @~1234 .is_crit_valid True  .effect "RB HM Hound Howl 4" .is_stall_invalidating false`
+- 출처: `heroes/houndmaster/houndmaster.info.darkest`, 주석 추가 전 47행; Git 원문 {"commit": "00fb87c575ff90e81960a1bfd767461b04c04c64", "summary": "조련사 전면 조정 (HM-010~015) + R-STRAT-02 광역 지속 피해 재평가"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Hound Howl 1`
+- 원본: `effect: .name "Hound Howl 1" .target "target" .curio_result_type "positive" .chance 66% .healstress 2	.on_hit true .on_miss false .queue true`
+- 현재: `effect: .name "Hound Howl 1" .target "target" .curio_result_type "positive" .chance 74% .healstress 4	.on_hit true .on_miss false .queue true`
+- 출처: `heroes/houndmaster/houndmaster.effects_edit.txt`, 주석 추가 전 89행; Git 원문 {"commit": "00fb87c575ff90e81960a1bfd767461b04c04c64", "summary": "조련사 전면 조정 (HM-010~015) + R-STRAT-02 광역 지속 피해 재평가"}
+- 기존 주석 원문:
+```text
+// HM-014 위험 경보: 회복 2 -> 4, 확률 66 -> 74. 5렙(6@74%)은 그대로 두고 저레벨 불안정성만 해소 (P-12)
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Hound Howl 2`
+- 원본: `effect: .name "Hound Howl 2" .target "target" .curio_result_type "positive" .chance 68% .healstress 3	.on_hit true .on_miss false .queue true`
+- 현재: `effect: .name "Hound Howl 2" .target "target" .curio_result_type "positive" .chance 74% .healstress 4	.on_hit true .on_miss false .queue true`
+- 출처: `heroes/houndmaster/houndmaster.effects_edit.txt`, 주석 추가 전 92행; Git 원문 {"commit": "00fb87c575ff90e81960a1bfd767461b04c04c64", "summary": "조련사 전면 조정 (HM-010~015) + R-STRAT-02 광역 지속 피해 재평가"}
+- 기존 주석 원문:
+```text
+// HM-014 회복 3 -> 4, 확률 68 -> 74
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Hound Howl 3`
+- 원본: `effect: .name "Hound Howl 3" .target "target" .curio_result_type "positive" .chance 70% .healstress 4	.on_hit true .on_miss false .queue true`
+- 현재: `effect: .name "Hound Howl 3" .target "target" .curio_result_type "positive" .chance 74% .healstress 5	.on_hit true .on_miss false .queue true`
+- 출처: `heroes/houndmaster/houndmaster.effects_edit.txt`, 주석 추가 전 95행; Git 원문 {"commit": "00fb87c575ff90e81960a1bfd767461b04c04c64", "summary": "조련사 전면 조정 (HM-010~015) + R-STRAT-02 광역 지속 피해 재평가"}
+- 기존 주석 원문:
+```text
+// HM-014 회복 4 -> 5, 확률 70 -> 74
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Hound Howl 4`
+- 원본: `effect: .name "Hound Howl 4" .target "target" .curio_result_type "positive" .chance 72% .healstress 5	.on_hit true .on_miss false .queue true`
+- 현재: `effect: .name "Hound Howl 4" .target "target" .curio_result_type "positive" .chance 74% .healstress 5	.on_hit true .on_miss false .queue true`
+- 출처: `heroes/houndmaster/houndmaster.effects_edit.txt`, 주석 추가 전 98행; Git 원문 {"commit": "00fb87c575ff90e81960a1bfd767461b04c04c64", "summary": "조련사 전면 조정 (HM-010~015) + R-STRAT-02 광역 지속 피해 재평가"}
+- 기존 주석 원문:
+```text
+// HM-014 회복 5 -> 5(유지), 확률 72 -> 74
+```
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB HM Hound Howl 1`
+- 원본 (Hound Howl 1): `effect: .name "Hound Howl 1" .target "target" .curio_result_type "positive" .chance 66% .healstress 2	.on_hit true .on_miss false .queue true`
+- 현재: `effect: .name "RB HM Hound Howl 1" .target "target" .curio_result_type "positive" .chance 74% .healstress 4	.on_hit true .on_miss false .queue true`
+- 출처: `effects/rebalance_houndmaster.effects.darkest`, 주석 추가 전 25행; Git 원문 {"commit": "00fb87c575ff90e81960a1bfd767461b04c04c64", "summary": "조련사 전면 조정 (HM-010~015) + R-STRAT-02 광역 지속 피해 재평가"}
+- 기존 주석 원문:
+```text
+// edited vanilla effect (from effects/base.effects.darkest)
+```
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB HM Hound Howl 2`
+- 원본 (Hound Howl 2): `effect: .name "Hound Howl 2" .target "target" .curio_result_type "positive" .chance 68% .healstress 3	.on_hit true .on_miss false .queue true`
+- 현재: `effect: .name "RB HM Hound Howl 2" .target "target" .curio_result_type "positive" .chance 74% .healstress 4	.on_hit true .on_miss false .queue true`
+- 출처: `effects/rebalance_houndmaster.effects.darkest`, 주석 추가 전 27행; Git 원문 {"commit": "00fb87c575ff90e81960a1bfd767461b04c04c64", "summary": "조련사 전면 조정 (HM-010~015) + R-STRAT-02 광역 지속 피해 재평가"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB HM Hound Howl 3`
+- 원본 (Hound Howl 3): `effect: .name "Hound Howl 3" .target "target" .curio_result_type "positive" .chance 70% .healstress 4	.on_hit true .on_miss false .queue true`
+- 현재: `effect: .name "RB HM Hound Howl 3" .target "target" .curio_result_type "positive" .chance 74% .healstress 5	.on_hit true .on_miss false .queue true`
+- 출처: `effects/rebalance_houndmaster.effects.darkest`, 주석 추가 전 29행; Git 원문 {"commit": "00fb87c575ff90e81960a1bfd767461b04c04c64", "summary": "조련사 전면 조정 (HM-010~015) + R-STRAT-02 광역 지속 피해 재평가"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB HM Hound Howl 4`
+- 원본 (Hound Howl 4): `effect: .name "Hound Howl 4" .target "target" .curio_result_type "positive" .chance 72% .healstress 5	.on_hit true .on_miss false .queue true`
+- 현재: `effect: .name "RB HM Hound Howl 4" .target "target" .curio_result_type "positive" .chance 74% .healstress 5	.on_hit true .on_miss false .queue true`
+- 출처: `effects/rebalance_houndmaster.effects.darkest`, 주석 추가 전 31행; Git 원문 {"commit": "00fb87c575ff90e81960a1bfd767461b04c04c64", "summary": "조련사 전면 조정 (HM-010~015) + R-STRAT-02 광역 지속 피해 재평가"}
+
+### HM-015 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 주로 맞는 1열에서도 자기 회복을 사용할 수 있게 한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/lick_wounds`
+  - 원본: `combat_skill: .id "lick_wounds" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 432 .target  .is_crit_valid True  .effect "Lick Wounds 1" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "lick_wounds" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Lick Wounds 1" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "lick_wounds" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 432 .target  .is_crit_valid True  .effect "Lick Wounds 2" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "lick_wounds" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Lick Wounds 2" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "lick_wounds" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 432 .target  .is_crit_valid True  .effect "Lick Wounds 3" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "lick_wounds" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Lick Wounds 3" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "lick_wounds" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 432 .target  .is_crit_valid True  .effect "Lick Wounds 4" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "lick_wounds" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Lick Wounds 4" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "lick_wounds" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 432 .target  .is_crit_valid True  .effect "Lick Wounds 5" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "lick_wounds" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Lick Wounds 5" .is_stall_invalidating false`
+- 출처: `heroes/houndmaster/houndmaster.info.darkest`, 주석 추가 전 65행; Git 원문 {"commit": "00fb87c575ff90e81960a1bfd767461b04c04c64", "summary": "조련사 전면 조정 (HM-010~015) + R-STRAT-02 광역 지속 피해 재평가"}
+- 기존 주석 원문:
+```text
+// HM-015 상처 핥기: 사용 432 -> 4321. 가장 많이 맞는 1열에서 자가 회복을 못 쓰는 구조 해소. 조련사 1열 사용 가능 기술 4개 -> 평균(4.7) 수준
+```
+
+### HM-013 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 3열 도달을 보존하고 명중/피해/기절 등급으로 대가를 낸다. 이중 우위 제거라는 옛 판단은 설계 의도이며 바닐라 보편 규칙은 아니다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/blackjack`
+  - 원본: `combat_skill: .id "blackjack" .level 0 .type "melee" .atk 95% .dmg -65% .crit 5% .launch 21 .target 123 .is_crit_valid True  .effect "Hero Strong Stun 1"`
+  - 현재: `combat_skill: .id "blackjack" .level 0 .type "melee" .atk 90% .dmg -80% .crit 5% .launch 21 .target 123 .is_crit_valid True  .effect "Stun 1"`
+  - 원본: `combat_skill: .id "blackjack" .level 1 .type "melee" .atk 100% .dmg -65% .crit 6% .launch 21 .target 123 .is_crit_valid True  .effect "Hero Strong Stun 2"`
+  - 현재: `combat_skill: .id "blackjack" .level 1 .type "melee" .atk 95% .dmg -80% .crit 6% .launch 21 .target 123 .is_crit_valid True  .effect "Stun 2"`
+  - 원본: `combat_skill: .id "blackjack" .level 2 .type "melee" .atk 105% .dmg -65% .crit 7% .launch 21 .target 123 .is_crit_valid True  .effect "Hero Strong Stun 3"`
+  - 현재: `combat_skill: .id "blackjack" .level 2 .type "melee" .atk 100% .dmg -80% .crit 7% .launch 21 .target 123 .is_crit_valid True  .effect "Stun 3"`
+  - 원본: `combat_skill: .id "blackjack" .level 3 .type "melee" .atk 110% .dmg -65% .crit 8% .launch 21 .target 123 .is_crit_valid True  .effect "Hero Strong Stun 4"`
+  - 현재: `combat_skill: .id "blackjack" .level 3 .type "melee" .atk 105% .dmg -80% .crit 8% .launch 21 .target 123 .is_crit_valid True  .effect "Stun 4"`
+  - 원본: `combat_skill: .id "blackjack" .level 4 .type "melee" .atk 115% .dmg -65% .crit 9% .launch 21 .target 123 .is_crit_valid True  .effect "Hero Strong Stun 5"`
+  - 현재: `combat_skill: .id "blackjack" .level 4 .type "melee" .atk 110% .dmg -80% .crit 9% .launch 21 .target 123 .is_crit_valid True  .effect "Stun 5"`
+- 출처: `heroes/houndmaster/houndmaster.info.darkest`, 주석 추가 전 73행; Git 원문 {"commit": "6381c531a2e253486cc7222d22bd079047d3f198", "summary": "R-DATA-01 중복 효과 금지 + 도구가 기존 효과를 자동 재사용"}
+- 기존 주석 원문:
+```text
+// HM-013 둔기 강타: 1렙 명중 95 -> 90(표준), 피해 -65% -> -80%. 대상 1/2/3 유지. 설정 "곤봉은 효과적으로 기절시키지만 진짜 치명타는 사냥개가 먹입니다" -> 3열 도달과 기절은 남기고 화력만 제거
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Hero Strong Stun 1`
+- 원본: `effect: .name "Hero Strong Stun 1" .target "target" .curio_result_type "negative" .chance 110% .stun 1	.on_hit true .on_miss false .queue true`
+- 현재: `effect: .name "Hero Strong Stun 1" .target "target" .curio_result_type "negative" .chance 100% .stun 1	.on_hit true .on_miss false .queue true`
+- 출처: `heroes/houndmaster/houndmaster.effects_edit.txt`, 주석 추가 전 143행; Git 원문 {"commit": "00fb87c575ff90e81960a1bfd767461b04c04c64", "summary": "조련사 전면 조정 (HM-010~015) + R-STRAT-02 광역 지속 피해 재평가"}
+- 기존 주석 원문:
+```text
+// HM-013 둔기 강타 기절: 강한 기절(110) -> 기본 기절(100) 등급으로 정상화. 조련사만 3열까지 닿는데 등급까지 상위인 중복 우위 제거
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Hero Strong Stun 2`
+- 원본: `effect: .name "Hero Strong Stun 2" .target "target" .curio_result_type "negative" .chance 120% .stun 1	.on_hit true .on_miss false .queue true`
+- 현재: `effect: .name "Hero Strong Stun 2" .target "target" .curio_result_type "negative" .chance 110% .stun 1	.on_hit true .on_miss false .queue true`
+- 출처: `heroes/houndmaster/houndmaster.effects_edit.txt`, 주석 추가 전 147행; Git 원문 {"commit": "00fb87c575ff90e81960a1bfd767461b04c04c64", "summary": "조련사 전면 조정 (HM-010~015) + R-STRAT-02 광역 지속 피해 재평가"}
+- 기존 주석 원문:
+```text
+// HM-013 120 -> 110
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Hero Strong Stun 3`
+- 원본: `effect: .name "Hero Strong Stun 3" .target "target" .curio_result_type "negative" .chance 130% .stun 1	.on_hit true .on_miss false .queue true`
+- 현재: `effect: .name "Hero Strong Stun 3" .target "target" .curio_result_type "negative" .chance 120% .stun 1	.on_hit true .on_miss false .queue true`
+- 출처: `heroes/houndmaster/houndmaster.effects_edit.txt`, 주석 추가 전 151행; Git 원문 {"commit": "00fb87c575ff90e81960a1bfd767461b04c04c64", "summary": "조련사 전면 조정 (HM-010~015) + R-STRAT-02 광역 지속 피해 재평가"}
+- 기존 주석 원문:
+```text
+// HM-013 130 -> 120
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Hero Strong Stun 4`
+- 원본: `effect: .name "Hero Strong Stun 4" .target "target" .curio_result_type "negative" .chance 140% .stun 1	.on_hit true .on_miss false .queue true`
+- 현재: `effect: .name "Hero Strong Stun 4" .target "target" .curio_result_type "negative" .chance 130% .stun 1	.on_hit true .on_miss false .queue true`
+- 출처: `heroes/houndmaster/houndmaster.effects_edit.txt`, 주석 추가 전 155행; Git 원문 {"commit": "00fb87c575ff90e81960a1bfd767461b04c04c64", "summary": "조련사 전면 조정 (HM-010~015) + R-STRAT-02 광역 지속 피해 재평가"}
+- 기존 주석 원문:
+```text
+// HM-013 140 -> 130
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Hero Strong Stun 5`
+- 원본: `effect: .name "Hero Strong Stun 5" .target "target" .curio_result_type "negative" .chance 150% .stun 1	.on_hit true .on_miss false .queue true`
+- 현재: `effect: .name "Hero Strong Stun 5" .target "target" .curio_result_type "negative" .chance 140% .stun 1	.on_hit true .on_miss false .queue true`
+- 출처: `heroes/houndmaster/houndmaster.effects_edit.txt`, 주석 추가 전 159행; Git 원문 {"commit": "00fb87c575ff90e81960a1bfd767461b04c04c64", "summary": "조련사 전면 조정 (HM-010~015) + R-STRAT-02 광역 지속 피해 재평가"}
+- 기존 주석 원문:
+```text
+// HM-013 150 -> 140
+```
+
+### HM-010 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 표식·야수 조건부 역할을 남기되 직접 피해/출혈/도달 범위를 재배분한다. 실제 표식 피해60 고정과 옛40~60 메모를 구분한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Hound Bleed 1`
+- 원본: `effect: .name "Hound Bleed 1" .target "target" .curio_result_type "negative" .chance 100%  .dotBleed 1 .duration 3	.on_hit true .on_miss false .can_apply_on_death true`
+- 현재: `effect: .name "Hound Bleed 1" .target "target" .curio_result_type "negative" .chance 100%  .dotBleed 1 .duration 1	.on_hit true .on_miss false .can_apply_on_death true`
+- 출처: `heroes/houndmaster/houndmaster.effects_edit.txt`, 주석 추가 전 23행; Git 원문 {"commit": "00fb87c575ff90e81960a1bfd767461b04c04c64", "summary": "조련사 전면 조정 (HM-010~015) + R-STRAT-02 광역 지속 피해 재평가"}
+- 기존 주석 원문:
+```text
+// HM-010 사냥개 돌진 출혈: 지속 3턴 -> 1턴. 턴당 1/1/1/2/2 -> 1/1/2/2/3 (5렙 총량 6 -> 3). 치명타 시 1->2턴
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Hound Bleed 2`
+- 원본: `effect: .name "Hound Bleed 2" .target "target" .curio_result_type "negative" .chance 110%  .dotBleed 1 .duration 3	.on_hit true .on_miss false .can_apply_on_death true`
+- 현재: `effect: .name "Hound Bleed 2" .target "target" .curio_result_type "negative" .chance 110%  .dotBleed 1 .duration 1	.on_hit true .on_miss false .can_apply_on_death true`
+- 출처: `heroes/houndmaster/houndmaster.effects_edit.txt`, 주석 추가 전 30행; Git 원문 {"commit": "00fb87c575ff90e81960a1bfd767461b04c04c64", "summary": "조련사 전면 조정 (HM-010~015) + R-STRAT-02 광역 지속 피해 재평가"}
+- 기존 주석 원문:
+```text
+// HM-010 지속 3 -> 1
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Hound Bleed 3`
+- 원본: `effect: .name "Hound Bleed 3" .target "target" .curio_result_type "negative" .chance 120%  .dotBleed 1 .duration 3	.on_hit true .on_miss false .can_apply_on_death true`
+- 현재: `effect: .name "Hound Bleed 3" .target "target" .curio_result_type "negative" .chance 120%  .dotBleed 2 .duration 1	.on_hit true .on_miss false .can_apply_on_death true`
+- 출처: `heroes/houndmaster/houndmaster.effects_edit.txt`, 주석 추가 전 37행; Git 원문 {"commit": "00fb87c575ff90e81960a1bfd767461b04c04c64", "summary": "조련사 전면 조정 (HM-010~015) + R-STRAT-02 광역 지속 피해 재평가"}
+- 기존 주석 원문:
+```text
+// HM-010 지속 3 -> 1, 턴당 1 -> 2
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Hound Bleed 4`
+- 원본: `effect: .name "Hound Bleed 4" .target "target" .curio_result_type "negative" .chance 130%  .dotBleed 2 .duration 3	.on_hit true .on_miss false .can_apply_on_death true`
+- 현재: `effect: .name "Hound Bleed 4" .target "target" .curio_result_type "negative" .chance 130%  .dotBleed 2 .duration 1	.on_hit true .on_miss false .can_apply_on_death true`
+- 출처: `heroes/houndmaster/houndmaster.effects_edit.txt`, 주석 추가 전 44행; Git 원문 {"commit": "00fb87c575ff90e81960a1bfd767461b04c04c64", "summary": "조련사 전면 조정 (HM-010~015) + R-STRAT-02 광역 지속 피해 재평가"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Hound Bleed 5`
+- 원본: `effect: .name "Hound Bleed 5" .target "target" .curio_result_type "negative" .chance 140%  .dotBleed 2 .duration 3	.on_hit true .on_miss false .can_apply_on_death true`
+- 현재: `effect: .name "Hound Bleed 5" .target "target" .curio_result_type "negative" .chance 140%  .dotBleed 3 .duration 1	.on_hit true .on_miss false .can_apply_on_death true`
+- 출처: `heroes/houndmaster/houndmaster.effects_edit.txt`, 주석 추가 전 52행; Git 원문 {"commit": "00fb87c575ff90e81960a1bfd767461b04c04c64", "summary": "조련사 전면 조정 (HM-010~015) + R-STRAT-02 광역 지속 피해 재평가"}
+- 기존 주석 원문:
+```text
+// HM-010 지속 3 -> 1, 턴당 2 -> 3
+```
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB HM Hound Bleed 1`
+- 원본 (Hound Bleed 1): `effect: .name "Hound Bleed 1" .target "target" .curio_result_type "negative" .chance 100%  .dotBleed 1 .duration 3	.on_hit true .on_miss false .can_apply_on_death true`
+- 현재: `effect: .name "RB HM Hound Bleed 1" .target "target" .curio_result_type "negative" .chance 100%  .dotBleed 1 .duration 1	.on_hit true .on_miss false .can_apply_on_death true`
+- 출처: `effects/rebalance_houndmaster.effects.darkest`, 주석 추가 전 15행; Git 원문 {"commit": "00fb87c575ff90e81960a1bfd767461b04c04c64", "summary": "조련사 전면 조정 (HM-010~015) + R-STRAT-02 광역 지속 피해 재평가"}
+- 기존 주석 원문:
+```text
+// edited vanilla effect (from effects/base.effects.darkest)
+```
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB HM Hound Bleed 2`
+- 원본 (Hound Bleed 2): `effect: .name "Hound Bleed 2" .target "target" .curio_result_type "negative" .chance 110%  .dotBleed 1 .duration 3	.on_hit true .on_miss false .can_apply_on_death true`
+- 현재: `effect: .name "RB HM Hound Bleed 2" .target "target" .curio_result_type "negative" .chance 110%  .dotBleed 1 .duration 1	.on_hit true .on_miss false .can_apply_on_death true`
+- 출처: `effects/rebalance_houndmaster.effects.darkest`, 주석 추가 전 17행; Git 원문 {"commit": "00fb87c575ff90e81960a1bfd767461b04c04c64", "summary": "조련사 전면 조정 (HM-010~015) + R-STRAT-02 광역 지속 피해 재평가"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB HM Hound Bleed 3`
+- 원본 (Hound Bleed 3): `effect: .name "Hound Bleed 3" .target "target" .curio_result_type "negative" .chance 120%  .dotBleed 1 .duration 3	.on_hit true .on_miss false .can_apply_on_death true`
+- 현재: `effect: .name "RB HM Hound Bleed 3" .target "target" .curio_result_type "negative" .chance 120%  .dotBleed 2 .duration 1	.on_hit true .on_miss false .can_apply_on_death true`
+- 출처: `effects/rebalance_houndmaster.effects.darkest`, 주석 추가 전 19행; Git 원문 {"commit": "00fb87c575ff90e81960a1bfd767461b04c04c64", "summary": "조련사 전면 조정 (HM-010~015) + R-STRAT-02 광역 지속 피해 재평가"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB HM Hound Bleed 4`
+- 원본 (Hound Bleed 4): `effect: .name "Hound Bleed 4" .target "target" .curio_result_type "negative" .chance 130%  .dotBleed 2 .duration 3	.on_hit true .on_miss false .can_apply_on_death true`
+- 현재: `effect: .name "RB HM Hound Bleed 4" .target "target" .curio_result_type "negative" .chance 130%  .dotBleed 2 .duration 1	.on_hit true .on_miss false .can_apply_on_death true`
+- 출처: `effects/rebalance_houndmaster.effects.darkest`, 주석 추가 전 21행; Git 원문 {"commit": "00fb87c575ff90e81960a1bfd767461b04c04c64", "summary": "조련사 전면 조정 (HM-010~015) + R-STRAT-02 광역 지속 피해 재평가"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB HM Hound Bleed 5`
+- 원본 (Hound Bleed 5): `effect: .name "Hound Bleed 5" .target "target" .curio_result_type "negative" .chance 140%  .dotBleed 2 .duration 3	.on_hit true .on_miss false .can_apply_on_death true`
+- 현재: `effect: .name "RB HM Hound Bleed 5" .target "target" .curio_result_type "negative" .chance 140%  .dotBleed 3 .duration 1	.on_hit true .on_miss false .can_apply_on_death true`
+- 출처: `effects/rebalance_houndmaster.effects.darkest`, 주석 추가 전 23행; Git 원문 {"commit": "00fb87c575ff90e81960a1bfd767461b04c04c64", "summary": "조련사 전면 조정 (HM-010~015) + R-STRAT-02 광역 지속 피해 재평가"}
+
+### HM-018 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 표식/야수/출혈/간식의 조건부 중첩을 줄이고 서브 표식 딜러로 재배분한 실제 표식60 고정을 기록한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `HM Dmg Marked 2`
+- 원본: `effect: .name "HM Dmg Marked 2".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"  .combat_stat_buff 1 .damage_low_multiply 70%  .damage_high_multiply 70%	.on_hit true .on_miss false`
+- 현재: `effect: .name "HM Dmg Marked 2".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"  .combat_stat_buff 1 .damage_low_multiply 60%  .damage_high_multiply 60%	.on_hit true .on_miss false`
+- 출처: `heroes/houndmaster/houndmaster.effects_edit.txt`, 주석 추가 전 28행; Git 원문 {"commit": "00fb87c575ff90e81960a1bfd767461b04c04c64", "summary": "조련사 전면 조정 (HM-010~015) + R-STRAT-02 광역 지속 피해 재평가"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `HM Dmg Marked 3`
+- 원본: `effect: .name "HM Dmg Marked 3".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"  .combat_stat_buff 1 .damage_low_multiply 80%  .damage_high_multiply 80%  .on_hit true .on_miss false`
+- 현재: `effect: .name "HM Dmg Marked 3".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"  .combat_stat_buff 1 .damage_low_multiply 60%  .damage_high_multiply 60%  .on_hit true .on_miss false`
+- 출처: `heroes/houndmaster/houndmaster.effects_edit.txt`, 주석 추가 전 35행; Git 원문 {"commit": "00fb87c575ff90e81960a1bfd767461b04c04c64", "summary": "조련사 전면 조정 (HM-010~015) + R-STRAT-02 광역 지속 피해 재평가"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `HM Dmg Marked 4`
+- 원본: `effect: .name "HM Dmg Marked 4".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"  .combat_stat_buff 1 .damage_low_multiply 90%  .damage_high_multiply 90%  .on_hit true .on_miss false`
+- 현재: `effect: .name "HM Dmg Marked 4".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"  .combat_stat_buff 1 .damage_low_multiply 60%  .damage_high_multiply 60%  .on_hit true .on_miss false`
+- 출처: `heroes/houndmaster/houndmaster.effects_edit.txt`, 주석 추가 전 42행; Git 원문 {"commit": "00fb87c575ff90e81960a1bfd767461b04c04c64", "summary": "조련사 전면 조정 (HM-010~015) + R-STRAT-02 광역 지속 피해 재평가"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `HM Dmg Marked 5`
+- 원본: `effect: .name "HM Dmg Marked 5".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"  .combat_stat_buff 1 .damage_low_multiply 100%  .damage_high_multiply 100% .on_hit true .on_miss false`
+- 현재: `effect: .name "HM Dmg Marked 5".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"  .combat_stat_buff 1 .damage_low_multiply 60%  .damage_high_multiply 60% .on_hit true .on_miss false`
+- 출처: `heroes/houndmaster/houndmaster.effects_edit.txt`, 주석 추가 전 49행; Git 원문 {"commit": "00fb87c575ff90e81960a1bfd767461b04c04c64", "summary": "조련사 전면 조정 (HM-010~015) + R-STRAT-02 광역 지속 피해 재평가"}
+- 기존 주석 원문:
+```text
+// MARK-01 HM Dmg Marked: 표식 피해 60~100 -> 60 고정(전 레벨). 야수 특효+출혈+개 간식과 중복, 조련사 강함 2위
+```

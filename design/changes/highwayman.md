@@ -185,3 +185,329 @@
 3. **P-20의 올바른 적용 방향은 반대다.** "장신구가 명중을 올려주니 기본을 낮추자"가 아니라, **"기본을 낮추면 그 장신구가 필수가 되어 선택지가 줄어든다"**이다. 장신구는 선택을 넓혀야지 강제하면 안 된다.
 
 **따라서 포도탄 1레벨 명중 90 / 권총 사격 90 / 영거리 사격 90을 그대로 유지한다.** 권총 사격은 표식 피해를 포함해 손대지 않는다 [제작자 결정].
+
+
+## 2026-10-05 주석·의도 전수 추적 (수치 변경 없음)
+이번 항목은 이전 문서의 후보/기각/예전 수치를 덮어쓰지 않는 현재 스냅샷이다. 사용자 한국어 메모를 원문 그대로 보존했다. 실제 데이터와 편집 사본의 상태를 별도로 기록하며, 새로운 수치 결정이나 전역 효과 적용을 하지 않는다. 최신 사용자 작업은 이 섹션을 우선 참고한다.
+
+### HWY-008 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 전열 근접 선택지를 남기면서 사용자의 최신 표준 명중90/피해0 결정을 기록한다. 예전 피해+15 주석은 역사 기록이다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/wicked_slice`
+  - 원본: `combat_skill: .id "wicked_slice" .level 0 .type "melee" .atk 85% .dmg 15% .crit 5% .launch 321 .target 12 .is_crit_valid True `
+  - 현재: `combat_skill: .id "wicked_slice" .level 0 .type "melee" .atk 90% .dmg 15% .crit 5% .launch 21 .target 12 .is_crit_valid True `
+  - 원본: `combat_skill: .id "wicked_slice" .level 1 .type "melee" .atk 90% .dmg 15% .crit 6% .launch 321 .target 12 .is_crit_valid True `
+  - 현재: `combat_skill: .id "wicked_slice" .level 1 .type "melee" .atk 95% .dmg 15% .crit 6% .launch 21 .target 12 .is_crit_valid True `
+  - 원본: `combat_skill: .id "wicked_slice" .level 2 .type "melee" .atk 95% .dmg 15% .crit 7% .launch 321 .target 12 .is_crit_valid True `
+  - 현재: `combat_skill: .id "wicked_slice" .level 2 .type "melee" .atk 100% .dmg 15% .crit 7% .launch 21 .target 12 .is_crit_valid True `
+  - 원본: `combat_skill: .id "wicked_slice" .level 3 .type "melee" .atk 100% .dmg 15% .crit 8% .launch 321 .target 12 .is_crit_valid True `
+  - 현재: `combat_skill: .id "wicked_slice" .level 3 .type "melee" .atk 105% .dmg 15% .crit 8% .launch 21 .target 12 .is_crit_valid True `
+  - 원본: `combat_skill: .id "wicked_slice" .level 4 .type "melee" .atk 105% .dmg 15% .crit 9% .launch 321 .target 12 .is_crit_valid True `
+  - 현재: `combat_skill: .id "wicked_slice" .level 4 .type "melee" .atk 110% .dmg 15% .crit 9% .launch 21 .target 12 .is_crit_valid True `
+- 출처: `heroes/highwayman/highwayman.info.darkest`, 주석 추가 전 30행; Git 원문 {"commit": "30e207f78a8342186f06ebafd638d53ded3d8a34", "summary": "MARK-01 표식 피해 재배분: 서브 표식 딜러 상향 + 조련사 하향"}
+- 기존 주석 원문:
+```text
+// HWY-008 wicked_slice: 사용 321 -> 21(근접 사거리), 명중 1렙 85 -> 90, dmg 0% -> +15%(바닐라 원복)
+```
+- 기존 주석 원문:
+```text
+//표준으로 바꿈 데미지 보정 15 -> 0
+```
+
+### HWY-009 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 사용자 원거리 명중90 결정과 MARK-01의 서브 표식 피해 재배분을 기록한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/pistol_shot`
+  - 원본: `combat_skill: .id "pistol_shot" .level 0 .type "ranged" .atk 85% .dmg -15% .crit 7.5% .launch 432 .target 234 .is_crit_valid True  .effect "HW Pistol Dmg Marked 1" .generation_guaranteed true`
+  - 현재: `combat_skill: .id "pistol_shot" .level 0 .type "ranged" .atk 90% .dmg -15% .crit 7.5% .launch 432 .target 234 .is_crit_valid True  .effect "RB HWY HW Pistol Dmg Marked 1" .generation_guaranteed true`
+  - 원본: `combat_skill: .id "pistol_shot" .level 1 .type "ranged" .atk 90% .dmg -15% .crit 8.5% .launch 432 .target 234 .is_crit_valid True  .effect "HW Pistol Dmg Marked 2"`
+  - 현재: `combat_skill: .id "pistol_shot" .level 1 .type "ranged" .atk 95% .dmg -15% .crit 8.5% .launch 432 .target 234 .is_crit_valid True  .effect "RB HWY HW Pistol Dmg Marked 2"`
+  - 원본: `combat_skill: .id "pistol_shot" .level 2 .type "ranged" .atk 95% .dmg -15% .crit 9.5% .launch 432 .target 234 .is_crit_valid True  .effect "HW Pistol Dmg Marked 3"`
+  - 현재: `combat_skill: .id "pistol_shot" .level 2 .type "ranged" .atk 100% .dmg -15% .crit 9.5% .launch 432 .target 234 .is_crit_valid True  .effect "RB HWY HW Pistol Dmg Marked 3"`
+  - 원본: `combat_skill: .id "pistol_shot" .level 3 .type "ranged" .atk 100% .dmg -15% .crit 10.5% .launch 432 .target 234 .is_crit_valid True  .effect "HW Pistol Dmg Marked 4"`
+  - 현재: `combat_skill: .id "pistol_shot" .level 3 .type "ranged" .atk 105% .dmg -15% .crit 10.5% .launch 432 .target 234 .is_crit_valid True  .effect "RB HWY HW Pistol Dmg Marked 4"`
+  - 원본: `combat_skill: .id "pistol_shot" .level 4 .type "ranged" .atk 105% .dmg -15% .crit 11.5% .launch 432 .target 234 .is_crit_valid True  .effect "HW Pistol Dmg Marked 5"`
+  - 현재: `combat_skill: .id "pistol_shot" .level 4 .type "ranged" .atk 110% .dmg -15% .crit 11.5% .launch 432 .target 234 .is_crit_valid True  .effect "RB HWY HW Pistol Dmg Marked 5"`
+- 출처: `heroes/highwayman/highwayman.info.darkest`, 주석 추가 전 39행; Git 원문 {"commit": "30e207f78a8342186f06ebafd638d53ded3d8a34", "summary": "MARK-01 표식 피해 재배분: 서브 표식 딜러 상향 + 조련사 하향"}
+- 기존 주석 원문:
+```text
+//명중 원거리 표준 90으로 변경 85 -> 90
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `HW Pistol Dmg Marked 1`
+- 원본: `effect: .name "HW Pistol Dmg Marked 1"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 25%	.damage_high_multiply 25%	.on_hit true .on_miss false`
+- 현재: `effect: .name "HW Pistol Dmg Marked 1"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 40%	.damage_high_multiply 40%	.on_hit true .on_miss false`
+- 출처: `heroes/highwayman/highwayman.effects_edit.txt`, 주석 추가 전 24행; Git 원문 {"commit": "30e207f78a8342186f06ebafd638d53ded3d8a34", "summary": "MARK-01 표식 피해 재배분: 서브 표식 딜러 상향 + 조련사 하향"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `HW Pistol Dmg Marked 2`
+- 원본: `effect: .name "HW Pistol Dmg Marked 2"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 30%	.damage_high_multiply 30%	.on_hit true .on_miss false`
+- 현재: `effect: .name "HW Pistol Dmg Marked 2"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 45%	.damage_high_multiply 45%	.on_hit true .on_miss false`
+- 출처: `heroes/highwayman/highwayman.effects_edit.txt`, 주석 추가 전 26행; Git 원문 {"commit": "30e207f78a8342186f06ebafd638d53ded3d8a34", "summary": "MARK-01 표식 피해 재배분: 서브 표식 딜러 상향 + 조련사 하향"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `HW Pistol Dmg Marked 3`
+- 원본: `effect: .name "HW Pistol Dmg Marked 3"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 35%	.damage_high_multiply 35%	.on_hit true .on_miss false`
+- 현재: `effect: .name "HW Pistol Dmg Marked 3"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 50%	.damage_high_multiply 50%	.on_hit true .on_miss false`
+- 출처: `heroes/highwayman/highwayman.effects_edit.txt`, 주석 추가 전 28행; Git 원문 {"commit": "30e207f78a8342186f06ebafd638d53ded3d8a34", "summary": "MARK-01 표식 피해 재배분: 서브 표식 딜러 상향 + 조련사 하향"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `HW Pistol Dmg Marked 4`
+- 원본: `effect: .name "HW Pistol Dmg Marked 4"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 40%	.damage_high_multiply 40%	.on_hit true .on_miss false`
+- 현재: `effect: .name "HW Pistol Dmg Marked 4"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 55%	.damage_high_multiply 55%	.on_hit true .on_miss false`
+- 출처: `heroes/highwayman/highwayman.effects_edit.txt`, 주석 추가 전 30행; Git 원문 {"commit": "30e207f78a8342186f06ebafd638d53ded3d8a34", "summary": "MARK-01 표식 피해 재배분: 서브 표식 딜러 상향 + 조련사 하향"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `HW Pistol Dmg Marked 5`
+- 원본: `effect: .name "HW Pistol Dmg Marked 5"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 50%	.damage_high_multiply 50%	.on_hit true .on_miss false`
+- 현재: `effect: .name "HW Pistol Dmg Marked 5"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 60%	.damage_high_multiply 60%	.on_hit true .on_miss false`
+- 출처: `heroes/highwayman/highwayman.effects_edit.txt`, 주석 추가 전 32행; Git 원문 {"commit": "30e207f78a8342186f06ebafd638d53ded3d8a34", "summary": "MARK-01 표식 피해 재배분: 서브 표식 딜러 상향 + 조련사 하향"}
+- 기존 주석 원문:
+```text
+// MARK-01 HW Pistol Dmg Marked: 표식 피해 25~50 -> 40~60 (서브 표식 딜러)
+```
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB HWY HW Pistol Dmg Marked 1`
+- 원본 (HW Pistol Dmg Marked 1): `effect: .name "HW Pistol Dmg Marked 1"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 25%	.damage_high_multiply 25%	.on_hit true .on_miss false`
+- 현재: `effect: .name "RB HWY HW Pistol Dmg Marked 1"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 40%	.damage_high_multiply 40%	.on_hit true .on_miss false`
+- 출처: `effects/rebalance_highwayman.effects.darkest`, 주석 추가 전 5행; Git 원문 {"commit": "30e207f78a8342186f06ebafd638d53ded3d8a34", "summary": "MARK-01 표식 피해 재배분: 서브 표식 딜러 상향 + 조련사 하향"}
+- 기존 주석 원문:
+```text
+// edited vanilla effect (from effects/base.effects.darkest)
+```
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB HWY HW Pistol Dmg Marked 2`
+- 원본 (HW Pistol Dmg Marked 2): `effect: .name "HW Pistol Dmg Marked 2"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 30%	.damage_high_multiply 30%	.on_hit true .on_miss false`
+- 현재: `effect: .name "RB HWY HW Pistol Dmg Marked 2"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 45%	.damage_high_multiply 45%	.on_hit true .on_miss false`
+- 출처: `effects/rebalance_highwayman.effects.darkest`, 주석 추가 전 7행; Git 원문 {"commit": "30e207f78a8342186f06ebafd638d53ded3d8a34", "summary": "MARK-01 표식 피해 재배분: 서브 표식 딜러 상향 + 조련사 하향"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB HWY HW Pistol Dmg Marked 3`
+- 원본 (HW Pistol Dmg Marked 3): `effect: .name "HW Pistol Dmg Marked 3"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 35%	.damage_high_multiply 35%	.on_hit true .on_miss false`
+- 현재: `effect: .name "RB HWY HW Pistol Dmg Marked 3"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 50%	.damage_high_multiply 50%	.on_hit true .on_miss false`
+- 출처: `effects/rebalance_highwayman.effects.darkest`, 주석 추가 전 9행; Git 원문 {"commit": "30e207f78a8342186f06ebafd638d53ded3d8a34", "summary": "MARK-01 표식 피해 재배분: 서브 표식 딜러 상향 + 조련사 하향"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB HWY HW Pistol Dmg Marked 4`
+- 원본 (HW Pistol Dmg Marked 4): `effect: .name "HW Pistol Dmg Marked 4"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 40%	.damage_high_multiply 40%	.on_hit true .on_miss false`
+- 현재: `effect: .name "RB HWY HW Pistol Dmg Marked 4"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 55%	.damage_high_multiply 55%	.on_hit true .on_miss false`
+- 출처: `effects/rebalance_highwayman.effects.darkest`, 주석 추가 전 11행; Git 원문 {"commit": "30e207f78a8342186f06ebafd638d53ded3d8a34", "summary": "MARK-01 표식 피해 재배분: 서브 표식 딜러 상향 + 조련사 하향"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB HWY HW Pistol Dmg Marked 5`
+- 원본 (HW Pistol Dmg Marked 5): `effect: .name "HW Pistol Dmg Marked 5"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 50%	.damage_high_multiply 50%	.on_hit true .on_miss false`
+- 현재: `effect: .name "RB HWY HW Pistol Dmg Marked 5"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 60%	.damage_high_multiply 60%	.on_hit true .on_miss false`
+- 출처: `effects/rebalance_highwayman.effects.darkest`, 주석 추가 전 13행; Git 원문 {"commit": "30e207f78a8342186f06ebafd638d53ded3d8a34", "summary": "MARK-01 표식 피해 재배분: 서브 표식 딜러 상향 + 조련사 하향"}
+
+### HWY-001 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 필살기 사용감을 남기되 후퇴2칸으로 손쉬운 반복 순환과 특정 고정 조합을 줄인다. 현재 명중90/피해40/밀치기2를 기록한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/point_blank_shot`
+  - 원본: `combat_skill: .id "point_blank_shot" .level 0 .type "ranged" .atk 95% .dmg 50% .crit 5% .move 1 0 .launch 1 .target 1 .is_crit_valid True  .effect "Push 1A"`
+  - 현재: `combat_skill: .id "point_blank_shot" .level 0 .type "ranged" .atk 90% .dmg 40% .crit 5% .move 2 0 .launch 1 .target 1 .is_crit_valid True  .effect "Push 2A"`
+  - 원본: `combat_skill: .id "point_blank_shot" .level 1 .type "ranged" .atk 100% .dmg 50% .crit 6% .move 1 0 .launch 1 .target 1 .is_crit_valid True  .effect "Push 1B"`
+  - 현재: `combat_skill: .id "point_blank_shot" .level 1 .type "ranged" .atk 95% .dmg 40% .crit 6% .move 2 0 .launch 1 .target 1 .is_crit_valid True  .effect "Push 2B"`
+  - 원본: `combat_skill: .id "point_blank_shot" .level 2 .type "ranged" .atk 105% .dmg 50% .crit 7% .move 1 0 .launch 1 .target 1 .is_crit_valid True  .effect "Push 1C"`
+  - 현재: `combat_skill: .id "point_blank_shot" .level 2 .type "ranged" .atk 100% .dmg 40% .crit 7% .move 2 0 .launch 1 .target 1 .is_crit_valid True  .effect "Push 2C"`
+  - 원본: `combat_skill: .id "point_blank_shot" .level 3 .type "ranged" .atk 110% .dmg 50% .crit 8% .move 1 0 .launch 1 .target 1 .is_crit_valid True  .effect "Push 1D"`
+  - 현재: `combat_skill: .id "point_blank_shot" .level 3 .type "ranged" .atk 105% .dmg 40% .crit 8% .move 2 0 .launch 1 .target 1 .is_crit_valid True  .effect "Push 2D"`
+  - 원본: `combat_skill: .id "point_blank_shot" .level 4 .type "ranged" .atk 115% .dmg 50% .crit 9% .move 1 0 .launch 1 .target 1 .is_crit_valid True  .effect "Push 1E"`
+  - 현재: `combat_skill: .id "point_blank_shot" .level 4 .type "ranged" .atk 110% .dmg 40% .crit 9% .move 2 0 .launch 1 .target 1 .is_crit_valid True  .effect "Push 2E"`
+- 출처: `heroes/highwayman/highwayman.info.darkest`, 주석 추가 전 46행; Git 원문 {"commit": "caa6e47fdf918af3de85869ee82165271fc85979", "summary": "P-20 장신구 고정 제약 + P-21 치명타는 조정 수단 아님"}
+- 기존 주석 원문 (JSON 문자열, 끝 공백 포함):
+```json
+"//명중 95, 아무런 패널티 없는 스킬데미지 50, 높은 크리 확률 명백한 사기스킬임 사실 떡너프가 맞으나, 순수 성능 너프를 때리면 유저 체감이 불쾌해짐. "
+```
+- 기존 주석 원문:
+```text
+//그래서 연속해서 사용하기 어렵게 변경하고 대신에, 사용 체감 늘리는 부분도 만듦
+```
+- 기존 주석 원문 (JSON 문자열, 끝 공백 포함):
+```json
+"//도굴꾼 돌진과 역으로 대칭 도굴꾼으로 앞으로 2칸 전진, 노상은 뒤로 2칸 후퇴. 대신에 상대 밀쳐내기도 2칸으로 버프.    "
+```
+- 기존 주석 원문 (JSON 문자열, 끝 공백 포함):
+```json
+"//일단 명중 5 너프, 데미지 10 너프 적용해놓음. 명중 95 -> 90, 딜 50 -> 40   "
+```
+- 기존 주석 원문:
+```text
+//방파자 살모사 입맞춤, 스피어랑 너무 찰떡이었음 그래서 사기 빌드가 성녀 광대 노상 실브 이렇게 고정 됐었음 이를 타파하기 위해
+```
+- 기존 주석 원문:
+```text
+//영거리 뒤로 2칸 물러나게 바꿈
+```
+
+### HWY-007 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 받는 치명 약화의 견제 역할을 보존하고 명중을 높이는 대가로 직접 피해를 낮춘다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/grape_shot_blast`
+  - 원본: `combat_skill: .id "grape_shot_blast" .level 0 .type "ranged" .atk 75% .dmg -50% .crit -9% .launch 23 .target ~123 .is_crit_valid True  .effect "Grapeshot Vulnerability 1"`
+  - 현재: `combat_skill: .id "grape_shot_blast" .level 0 .type "ranged" .atk 90% .dmg -70% .crit -9% .launch 23 .target ~123 .is_crit_valid True  .effect "Grapeshot Vulnerability 1"`
+  - 원본: `combat_skill: .id "grape_shot_blast" .level 1 .type "ranged" .atk 80% .dmg -50% .crit -8% .launch 23 .target ~123 .is_crit_valid True  .effect "Grapeshot Vulnerability 2"`
+  - 현재: `combat_skill: .id "grape_shot_blast" .level 1 .type "ranged" .atk 95% .dmg -70% .crit -8% .launch 23 .target ~123 .is_crit_valid True  .effect "Grapeshot Vulnerability 2"`
+  - 원본: `combat_skill: .id "grape_shot_blast" .level 2 .type "ranged" .atk 85% .dmg -50% .crit -7% .launch 23 .target ~123 .is_crit_valid True  .effect "Grapeshot Vulnerability 3"`
+  - 현재: `combat_skill: .id "grape_shot_blast" .level 2 .type "ranged" .atk 100% .dmg -70% .crit -7% .launch 23 .target ~123 .is_crit_valid True  .effect "Grapeshot Vulnerability 3"`
+  - 원본: `combat_skill: .id "grape_shot_blast" .level 3 .type "ranged" .atk 90% .dmg -50% .crit -6% .launch 23 .target ~123 .is_crit_valid True  .effect "Grapeshot Vulnerability 4"`
+  - 현재: `combat_skill: .id "grape_shot_blast" .level 3 .type "ranged" .atk 105% .dmg -70% .crit -6% .launch 23 .target ~123 .is_crit_valid True  .effect "Grapeshot Vulnerability 4"`
+  - 원본: `combat_skill: .id "grape_shot_blast" .level 4 .type "ranged" .atk 95% .dmg -50% .crit -5% .launch 23 .target ~123 .is_crit_valid True  .effect "Grapeshot Vulnerability 5"`
+  - 현재: `combat_skill: .id "grape_shot_blast" .level 4 .type "ranged" .atk 110% .dmg -70% .crit -5% .launch 23 .target ~123 .is_crit_valid True  .effect "Grapeshot Vulnerability 5"`
+- 출처: `heroes/highwayman/highwayman.info.darkest`, 주석 추가 전 59행; Git 원문 {"commit": "7c4149ab216433ca9f31d5902c210f525ba467a2", "summary": "HWY 수치 확정: 포도탄 1렙 명중 90, 진격 1렙 90/-40%, 정맥 절개 -40%"}
+- 기존 주석 원문:
+```text
+// HWY-007 grape_shot_blast: 명중 1렙 75 -> 90, dmg -75% -> -70% (치명타 -5 유지 = 설계된 값, P-21)
+```
+- 기존 주석 원문:
+```text
+//돌파와 직접 비교 기술 치명타 낮은것과 약화거는 것을 동률이라 보고
+```
+- 기존 주석 원문:
+```text
+//명중을 높이는 대신 데미지를 깎겠다. 데미지 깎는 이유 -> 포도탄 반복하면서 치명타 확률만 높이는 편법 배제?
+```
+- 기존 주석 원문:
+```text
+//명중 높이는 이유 -> 부가효과가 있으면 명중이 올라간다
+```
+- 기존 주석 원문:
+```text
+//데미지 50 -> 70
+```
+
+### HWY-004 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 자리 이동 없이 원거리 빌드에서 반격을 켤 수 있도록 자기 강화와 반격의 기술 배치를 바꾼다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/take_aim`
+  - 원본: `combat_skill: .id "take_aim" .level 0 .type "ranged" .atk 95% .dmg -80% .crit 0% .per_battle_limit 1 .launch 4321 .target 234 .is_crit_valid True .ignore_stealth true  .effect "Tracking Buff 1" "Destealth"`
+  - 현재: `combat_skill: .id "take_aim" .level 0 .type "ranged" .atk 95% .dmg -75% .crit 0% .launch 4321 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "Hwy Riposte 1" "Destealth"`
+  - 원본: `combat_skill: .id "take_aim" .level 1 .type "ranged" .atk 100% .dmg -80% .crit 0% .per_battle_limit 1 .launch 4321 .target 234 .is_crit_valid True .ignore_stealth true  .effect "Tracking Buff 2" "Destealth"`
+  - 현재: `combat_skill: .id "take_aim" .level 1 .type "ranged" .atk 100% .dmg -75% .crit 0% .launch 4321 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "Hwy Riposte 2" "Destealth"`
+  - 원본: `combat_skill: .id "take_aim" .level 2 .type "ranged" .atk 105% .dmg -80% .crit 0.5% .per_battle_limit 1 .launch 4321 .target 234 .is_crit_valid True .ignore_stealth true  .effect "Tracking Buff 3" "Destealth"`
+  - 현재: `combat_skill: .id "take_aim" .level 2 .type "ranged" .atk 105% .dmg -75% .crit 0.5% .launch 4321 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "Hwy Riposte 3" "Destealth"`
+  - 원본: `combat_skill: .id "take_aim" .level 3 .type "ranged" .atk 110% .dmg -80% .crit 0.5% .per_battle_limit 1 .launch 4321 .target 234 .is_crit_valid True .ignore_stealth true  .effect "Tracking Buff 4" "Destealth"`
+  - 현재: `combat_skill: .id "take_aim" .level 3 .type "ranged" .atk 110% .dmg -75% .crit 0.5% .launch 4321 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "Hwy Riposte 4" "Destealth"`
+  - 원본: `combat_skill: .id "take_aim" .level 4 .type "ranged" .atk 115% .dmg -80% .crit 1% .per_battle_limit 1 .launch 4321 .target 234 .is_crit_valid True .ignore_stealth true  .effect "Tracking Buff 5" "Destealth"`
+  - 현재: `combat_skill: .id "take_aim" .level 4 .type "ranged" .atk 115% .dmg -75% .crit 1% .launch 4321 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "Hwy Riposte 5" "Destealth"`
+- 출처: `heroes/highwayman/highwayman.info.darkest`, 주석 추가 전 73행; Git 원문 {"commit": "0000000000000000000000000000000000000000", "summary": "Version of heroes/highwayman/highwayman.info.darkest from heroes/highwayman/highwayman.info.darkest"}
+- 기존 주석 원문:
+```text
+// HWY-004 take_aim: Hwy Riposte, 전투당 1회 제거, dmg -80% -> -75% ->중보병꺼랑 데미지 바꿈 대상 234 -> 1234
+```
+
+### HWY-005 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 반격을 추적탄으로 옮기고 전진 공격은 축소 자기 강화를 맡긴다. 현재 수치와 역사 속 후보를 구분한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/duelist_advance`
+  - 원본: `combat_skill: .id "duelist_advance" .level 0 .type "melee" .atk 90% .dmg -20% .crit 5% .move 0 1 .launch 432 .target 123 .is_crit_valid True  .effect "Hwy Riposte 1"`
+  - 현재: `combat_skill: .id "duelist_advance" .level 0 .type "melee" .atk 95% .dmg -20% .crit 5% .move 0 1 .launch 432 .target 123 .is_crit_valid True  .effect "RB HWY Tracking Buff 1"`
+  - 원본: `combat_skill: .id "duelist_advance" .level 1 .type "melee" .atk 95% .dmg -20% .crit 6% .move 0 1 .launch 432 .target 123 .is_crit_valid True  .effect "Hwy Riposte 2"`
+  - 현재: `combat_skill: .id "duelist_advance" .level 1 .type "melee" .atk 100% .dmg -20% .crit 6% .move 0 1 .launch 432 .target 123 .is_crit_valid True  .effect "RB HWY Tracking Buff 2"`
+  - 원본: `combat_skill: .id "duelist_advance" .level 2 .type "melee" .atk 100% .dmg -20% .crit 7% .move 0 1 .launch 432 .target 123 .is_crit_valid True  .effect "Hwy Riposte 3"`
+  - 현재: `combat_skill: .id "duelist_advance" .level 2 .type "melee" .atk 105% .dmg -20% .crit 7% .move 0 1 .launch 432 .target 123 .is_crit_valid True  .effect "RB HWY Tracking Buff 3"`
+  - 원본: `combat_skill: .id "duelist_advance" .level 3 .type "melee" .atk 105% .dmg -20% .crit 8% .move 0 1 .launch 432 .target 123 .is_crit_valid True  .effect "Hwy Riposte 4"`
+  - 현재: `combat_skill: .id "duelist_advance" .level 3 .type "melee" .atk 110% .dmg -20% .crit 8% .move 0 1 .launch 432 .target 123 .is_crit_valid True  .effect "RB HWY Tracking Buff 4"`
+  - 원본: `combat_skill: .id "duelist_advance" .level 4 .type "melee" .atk 110% .dmg -20% .crit 9% .move 0 1 .launch 432 .target 123 .is_crit_valid True  .effect "Hwy Riposte 5"`
+  - 현재: `combat_skill: .id "duelist_advance" .level 4 .type "melee" .atk 115% .dmg -20% .crit 9% .move 0 1 .launch 432 .target 123 .is_crit_valid True  .effect "RB HWY Tracking Buff 5"`
+- 출처: `heroes/highwayman/highwayman.info.darkest`, 주석 추가 전 81행; Git 원문 {"commit": "119535adb664630cf45efd9a1d07240d791e8a47", "summary": "R-CMB-09 명중 상한과 장신구: '낮은 명중 = 장신구 전제' 가설 기각"}
+- 기존 주석 원문:
+```text
+// HWY-005 duelist_advance: 명중 1렙 90 -> 95, dmg -20% 유지 (반격 상실 -47 / 축소 버프 +11.5 보상)
+```
+- 기존 주석 원문:
+```text
+// HWY-005 duelist_advance: Hwy Riposte -> Tracking Buff(축소), dmg -20% -> -40%
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Tracking Buff 1`
+- 원본: `effect: .name "Tracking Buff 1" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 6%  .crit_chance_add 4% .damage_low_multiply 12% .damage_high_multiply 12%  .on_hit true .on_miss true .duration 1 .buff_duration_type combat_end`
+- 현재: `effect: .name "Tracking Buff 1" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 3%  .crit_chance_add 3% .damage_low_multiply 6% .damage_high_multiply 6%  .on_hit true .on_miss true .duration 1 .buff_duration_type combat_end`
+- 출처: `heroes/highwayman/highwayman.effects_edit.txt`, 주석 추가 전 72행; Git 원문 {"commit": "2b526f34c1c82ec33b43856ed2a0898b99475688", "summary": "HWY-004/005 추적탄 반격 <-> 결투가의 진격 자기 강화 교환"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Tracking Buff 2`
+- 원본: `effect: .name "Tracking Buff 2" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 7%  .crit_chance_add 5% .damage_low_multiply 14% .damage_high_multiply 14%  .on_hit true .on_miss true .duration 1 .buff_duration_type combat_end`
+- 현재: `effect: .name "Tracking Buff 2" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 3%  .crit_chance_add 3% .damage_low_multiply 7% .damage_high_multiply 7%  .on_hit true .on_miss true .duration 1 .buff_duration_type combat_end`
+- 출처: `heroes/highwayman/highwayman.effects_edit.txt`, 주석 추가 전 77행; Git 원문 {"commit": "2b526f34c1c82ec33b43856ed2a0898b99475688", "summary": "HWY-004/005 추적탄 반격 <-> 결투가의 진격 자기 강화 교환"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Tracking Buff 3`
+- 원본: `effect: .name "Tracking Buff 3" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 8%  .crit_chance_add 6% .damage_low_multiply 16% .damage_high_multiply 16%  .on_hit true .on_miss true .duration 1 .buff_duration_type combat_end`
+- 현재: `effect: .name "Tracking Buff 3" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 4%  .crit_chance_add 4% .damage_low_multiply 8% .damage_high_multiply 8%  .on_hit true .on_miss true .duration 1 .buff_duration_type combat_end`
+- 출처: `heroes/highwayman/highwayman.effects_edit.txt`, 주석 추가 전 79행; Git 원문 {"commit": "2b526f34c1c82ec33b43856ed2a0898b99475688", "summary": "HWY-004/005 추적탄 반격 <-> 결투가의 진격 자기 강화 교환"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Tracking Buff 4`
+- 원본: `effect: .name "Tracking Buff 4" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 9%  .crit_chance_add 7% .damage_low_multiply 18% .damage_high_multiply 18%  .on_hit true .on_miss true .duration 1 .buff_duration_type combat_end`
+- 현재: `effect: .name "Tracking Buff 4" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 4%  .crit_chance_add 4% .damage_low_multiply 9% .damage_high_multiply 9%  .on_hit true .on_miss true .duration 1 .buff_duration_type combat_end`
+- 출처: `heroes/highwayman/highwayman.effects_edit.txt`, 주석 추가 전 81행; Git 원문 {"commit": "2b526f34c1c82ec33b43856ed2a0898b99475688", "summary": "HWY-004/005 추적탄 반격 <-> 결투가의 진격 자기 강화 교환"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Tracking Buff 5`
+- 원본: `effect: .name "Tracking Buff 5" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 10% .crit_chance_add 8% .damage_low_multiply 20% .damage_high_multiply 20%  .on_hit true .on_miss true .duration 1 .buff_duration_type combat_end`
+- 현재: `effect: .name "Tracking Buff 5" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 5% .crit_chance_add 5% .damage_low_multiply 10% .damage_high_multiply 10%  .on_hit true .on_miss true .duration 1 .buff_duration_type combat_end`
+- 출처: `heroes/highwayman/highwayman.effects_edit.txt`, 주석 추가 전 83행; Git 원문 {"commit": "2b526f34c1c82ec33b43856ed2a0898b99475688", "summary": "HWY-004/005 추적탄 반격 <-> 결투가의 진격 자기 강화 교환"}
+- 기존 주석 원문:
+```text
+// HWY-004 Tracking Buff 축소: 명중 6~10 -> 3~5, 치명타 4~8 -> 3~5, 피해 12~20%% -> 6~10%% (전투당 1회 제한 해제 대가)
+```
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB HWY Tracking Buff 1`
+- 원본 (Tracking Buff 1): `effect: .name "Tracking Buff 1" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 6%  .crit_chance_add 4% .damage_low_multiply 12% .damage_high_multiply 12%  .on_hit true .on_miss true .duration 1 .buff_duration_type combat_end`
+- 현재: `effect: .name "RB HWY Tracking Buff 1" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 3%  .crit_chance_add 3% .damage_low_multiply 6% .damage_high_multiply 6%  .on_hit true .on_miss true .duration 1 .buff_duration_type combat_end`
+- 출처: `effects/rebalance_highwayman.effects.darkest`, 주석 추가 전 15행; Git 원문 {"commit": "2b526f34c1c82ec33b43856ed2a0898b99475688", "summary": "HWY-004/005 추적탄 반격 <-> 결투가의 진격 자기 강화 교환"}
+- 기존 주석 원문:
+```text
+// edited vanilla effect (from effects/base.effects.darkest)
+```
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB HWY Tracking Buff 2`
+- 원본 (Tracking Buff 2): `effect: .name "Tracking Buff 2" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 7%  .crit_chance_add 5% .damage_low_multiply 14% .damage_high_multiply 14%  .on_hit true .on_miss true .duration 1 .buff_duration_type combat_end`
+- 현재: `effect: .name "RB HWY Tracking Buff 2" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 3%  .crit_chance_add 3% .damage_low_multiply 7% .damage_high_multiply 7%  .on_hit true .on_miss true .duration 1 .buff_duration_type combat_end`
+- 출처: `effects/rebalance_highwayman.effects.darkest`, 주석 추가 전 17행; Git 원문 {"commit": "2b526f34c1c82ec33b43856ed2a0898b99475688", "summary": "HWY-004/005 추적탄 반격 <-> 결투가의 진격 자기 강화 교환"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB HWY Tracking Buff 3`
+- 원본 (Tracking Buff 3): `effect: .name "Tracking Buff 3" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 8%  .crit_chance_add 6% .damage_low_multiply 16% .damage_high_multiply 16%  .on_hit true .on_miss true .duration 1 .buff_duration_type combat_end`
+- 현재: `effect: .name "RB HWY Tracking Buff 3" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 4%  .crit_chance_add 4% .damage_low_multiply 8% .damage_high_multiply 8%  .on_hit true .on_miss true .duration 1 .buff_duration_type combat_end`
+- 출처: `effects/rebalance_highwayman.effects.darkest`, 주석 추가 전 19행; Git 원문 {"commit": "2b526f34c1c82ec33b43856ed2a0898b99475688", "summary": "HWY-004/005 추적탄 반격 <-> 결투가의 진격 자기 강화 교환"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB HWY Tracking Buff 4`
+- 원본 (Tracking Buff 4): `effect: .name "Tracking Buff 4" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 9%  .crit_chance_add 7% .damage_low_multiply 18% .damage_high_multiply 18%  .on_hit true .on_miss true .duration 1 .buff_duration_type combat_end`
+- 현재: `effect: .name "RB HWY Tracking Buff 4" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 4%  .crit_chance_add 4% .damage_low_multiply 9% .damage_high_multiply 9%  .on_hit true .on_miss true .duration 1 .buff_duration_type combat_end`
+- 출처: `effects/rebalance_highwayman.effects.darkest`, 주석 추가 전 21행; Git 원문 {"commit": "2b526f34c1c82ec33b43856ed2a0898b99475688", "summary": "HWY-004/005 추적탄 반격 <-> 결투가의 진격 자기 강화 교환"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB HWY Tracking Buff 5`
+- 원본 (Tracking Buff 5): `effect: .name "Tracking Buff 5" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 10% .crit_chance_add 8% .damage_low_multiply 20% .damage_high_multiply 20%  .on_hit true .on_miss true .duration 1 .buff_duration_type combat_end`
+- 현재: `effect: .name "RB HWY Tracking Buff 5" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 5% .crit_chance_add 5% .damage_low_multiply 10% .damage_high_multiply 10%  .on_hit true .on_miss true .duration 1 .buff_duration_type combat_end`
+- 출처: `effects/rebalance_highwayman.effects.darkest`, 주석 추가 전 23행; Git 원문 {"commit": "2b526f34c1c82ec33b43856ed2a0898b99475688", "summary": "HWY-004/005 추적탄 반격 <-> 결투가의 진격 자기 강화 교환"}
+
+### HWY-006 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 출혈·두 약화와 기존 치명을 보존하며 사용자의 최신 명중90/피해−25 교환을 기록한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/opened_vein`
+  - 원본: `combat_skill: .id "opened_vein" .level 0 .type "melee" .atk 95% .dmg -15% .crit 0% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 1" "HW Open Vein Bleed Debuff 1" "HW Open Vein SPD Debuff 1"`
+  - 현재: `combat_skill: .id "opened_vein" .level 0 .type "melee" .atk 95% .dmg -40% .crit 8% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 1" "HW Open Vein Bleed Debuff 1" "HW Open Vein SPD Debuff 1"`
+  - 원본: `combat_skill: .id "opened_vein" .level 1 .type "melee" .atk 100% .dmg -15% .crit 1% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 2" "HW Open Vein Bleed Debuff 2" "HW Open Vein SPD Debuff 2"`
+  - 현재: `combat_skill: .id "opened_vein" .level 1 .type "melee" .atk 100% .dmg -40% .crit 9% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 2" "HW Open Vein Bleed Debuff 2" "HW Open Vein SPD Debuff 2"`
+  - 원본: `combat_skill: .id "opened_vein" .level 2 .type "melee" .atk 105% .dmg -15% .crit 2% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 3" "HW Open Vein Bleed Debuff 3" "HW Open Vein SPD Debuff 3"`
+  - 현재: `combat_skill: .id "opened_vein" .level 2 .type "melee" .atk 105% .dmg -40% .crit 10% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 3" "HW Open Vein Bleed Debuff 3" "HW Open Vein SPD Debuff 3"`
+  - 원본: `combat_skill: .id "opened_vein" .level 3 .type "melee" .atk 110% .dmg -15% .crit 3% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 4" "HW Open Vein Bleed Debuff 4" "HW Open Vein SPD Debuff 4"`
+  - 현재: `combat_skill: .id "opened_vein" .level 3 .type "melee" .atk 110% .dmg -40% .crit 11% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 4" "HW Open Vein Bleed Debuff 4" "HW Open Vein SPD Debuff 4"`
+  - 원본: `combat_skill: .id "opened_vein" .level 4 .type "melee" .atk 115% .dmg -15% .crit 4% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 5" "HW Open Vein Bleed Debuff 5" "HW Open Vein SPD Debuff 5"`
+  - 현재: `combat_skill: .id "opened_vein" .level 4 .type "melee" .atk 115% .dmg -40% .crit 12% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 5" "HW Open Vein Bleed Debuff 5" "HW Open Vein SPD Debuff 5"`
+- 출처: `heroes/highwayman/highwayman.info.darkest`, 주석 추가 전 90행; Git 원문 {"commit": "0ea50274ef8fede611b3351997bcea18f0668c84", "summary": "HWY-005~007 + 명중 표기 1레벨 기준 규칙"}
+- 기존 주석 원문:
+```text
+// HWY-006 opened_vein: 치명타 보정 1렙 +0 -> +8, dmg -15% -> -40% (명중 1렙 95, 약화 2개 유지)
+```
+- 기존 주석 원문:
+```text
+//명중 95 -> 90 , 출혈 기술은 5 올리는 게 국룰, 약화 까지 달려서 10 올라간 거 같은 데 그러면 데미지를 까야함.
+```
+- 기존 주석 원문:
+```text
+//데미지 15 -> 25 로 바꿈 대신 명중 5만 깎음. 명중 안 깎으면 데미지 35까지 내려야할듯?
+```

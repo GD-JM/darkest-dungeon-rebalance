@@ -81,3 +81,393 @@
 - 단점: 선택지가 줄어든다(G-00·G-03 역행). 1열에서 쓰면 첫 회에 대열이 한 칸씩 밀린다.
 - 판단: 목적이 "돌진 사용성"이면 **2칸으로 되돌리는 것을 권한다.** 목적이 "도굴꾼을 1열에서 빼기"라면 의도된 선택이고, 위 단점을 감수하는 것이다. 결정은 제작자(P-18).
 - **결정 (2026-09-28, 제작자)**: 철회. 2칸으로 원복했다. 바닐라의 닫힌 루프 두 개(1↔3, 2↔4)를 유지한다.
+
+
+## 2026-10-05 주석·의도 전수 추적 (수치 변경 없음)
+이번 항목은 이전 문서의 후보/기각/예전 수치를 덮어쓰지 않는 현재 스냅샷이다. 사용자 한국어 메모를 원문 그대로 보존했다. 실제 데이터와 편집 사본의 상태를 별도로 기록하며, 새로운 수치 결정이나 전역 효과 적용을 하지 않는다. 최신 사용자 작업은 이 섹션을 우선 참고한다.
+
+### GR-002 GR-005 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 명중 준비를 맹독 다트로 옮기고 MARK-01의 서브 표식 딜러 재배분을 단검에 반영한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/thrown_dagger`
+  - 원본: `combat_skill: .id "thrown_dagger" .level 0 .type "ranged" .atk 90% .dmg -10% .crit 8% .launch 432 .target 234 .is_crit_valid True  .effect "GR Acc Buff 1" "GR Dagger Dmg Marked 1" "Poison Killer 1"`
+  - 현재: `combat_skill: .id "thrown_dagger" .level 0 .type "ranged" .atk 90% .dmg -10% .crit 8% .launch 432 .target 234 .is_crit_valid True  .effect "RB GR Dagger Dmg Marked 1" "Poison Killer 1"`
+  - 원본: `combat_skill: .id "thrown_dagger" .level 1 .type "ranged" .atk 95% .dmg -10% .crit 9% .launch 432 .target 234 .is_crit_valid True  .effect "GR Acc Buff 2" "GR Dagger Dmg Marked 2" "Poison Killer 2"`
+  - 현재: `combat_skill: .id "thrown_dagger" .level 1 .type "ranged" .atk 95% .dmg -10% .crit 9% .launch 432 .target 234 .is_crit_valid True  .effect "RB GR Dagger Dmg Marked 2" "Poison Killer 2"`
+  - 원본: `combat_skill: .id "thrown_dagger" .level 2 .type "ranged" .atk 100% .dmg -10% .crit 10% .launch 432 .target 234 .is_crit_valid True  .effect "GR Acc Buff 3" "GR Dagger Dmg Marked 3" "Poison Killer 3"`
+  - 현재: `combat_skill: .id "thrown_dagger" .level 2 .type "ranged" .atk 100% .dmg -10% .crit 10% .launch 432 .target 234 .is_crit_valid True  .effect "RB GR Dagger Dmg Marked 3" "Poison Killer 3"`
+  - 원본: `combat_skill: .id "thrown_dagger" .level 3 .type "ranged" .atk 105% .dmg -10% .crit 11% .launch 432 .target 234 .is_crit_valid True  .effect "GR Acc Buff 4" "GR Dagger Dmg Marked 4" "Poison Killer 4"`
+  - 현재: `combat_skill: .id "thrown_dagger" .level 3 .type "ranged" .atk 105% .dmg -10% .crit 11% .launch 432 .target 234 .is_crit_valid True  .effect  "RB GR Dagger Dmg Marked 4" "Poison Killer 4"`
+  - 원본: `combat_skill: .id "thrown_dagger" .level 4 .type "ranged" .atk 110% .dmg -10% .crit 12% .launch 432 .target 234 .is_crit_valid True  .effect "GR Acc Buff 5" "GR Dagger Dmg Marked 5" "Poison Killer 5"`
+  - 현재: `combat_skill: .id "thrown_dagger" .level 4 .type "ranged" .atk 110% .dmg -10% .crit 12% .launch 432 .target 234 .is_crit_valid True  .effect  "RB GR Dagger Dmg Marked 5" "Poison Killer 5"`
+- 출처: `heroes/grave_robber/grave_robber.info.darkest`, 주석 추가 전 52행; Git 원문 {"commit": "30e207f78a8342186f06ebafd638d53ded3d8a34", "summary": "MARK-01 표식 피해 재배분: 서브 표식 딜러 상향 + 조련사 하향"}
+- 기존 주석 원문:
+```text
+// GR-002 thrown_dagger: GR Acc Buff moved to poison_dart
+```
+
+### GR-001 GR-002 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 지속 피해 총량을 줄이고 명중 준비 효과를 이전해 기술별 역할을 나눈다. 동일 바닐라 중독 효과 재사용을 보존한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/poison_dart`
+  - 원본: `combat_skill: .id "poison_dart" .level 0 .type "ranged" .atk 95% .dmg -60% .crit 7.5% .launch 432 .target 1234 .is_crit_valid True  .effect "GR Blight 1" "GR Blight Debuff 1"`
+  - 현재: `combat_skill: .id "poison_dart" .level 0 .type "ranged" .atk 95% .dmg -60% .crit 7.5% .launch 432 .target 1234 .is_crit_valid True  .effect "Blight 1" "GR Blight Debuff 1" "GR Acc Buff 1" `
+  - 원본: `combat_skill: .id "poison_dart" .level 1 .type "ranged" .atk 100% .dmg -60% .crit 8.5% .launch 432 .target 1234 .is_crit_valid True  .effect "GR Blight 2" "GR Blight Debuff 2"`
+  - 현재: `combat_skill: .id "poison_dart" .level 1 .type "ranged" .atk 100% .dmg -60% .crit 8.5% .launch 432 .target 1234 .is_crit_valid True  .effect "RB GR Blight 2" "GR Blight Debuff 2" "GR Acc Buff 2" `
+  - 원본: `combat_skill: .id "poison_dart" .level 2 .type "ranged" .atk 105% .dmg -60% .crit 9.5% .launch 432 .target 1234 .is_crit_valid True  .effect "GR Blight 3" "GR Blight Debuff 3"`
+  - 현재: `combat_skill: .id "poison_dart" .level 2 .type "ranged" .atk 105% .dmg -60% .crit 9.5% .launch 432 .target 1234 .is_crit_valid True  .effect "Blight 3" "GR Blight Debuff 3" "GR Acc Buff 3" `
+  - 원본: `combat_skill: .id "poison_dart" .level 3 .type "ranged" .atk 110% .dmg -60% .crit 10.5% .launch 432 .target 1234 .is_crit_valid True  .effect "GR Blight 4" "GR Blight Debuff 4"`
+  - 현재: `combat_skill: .id "poison_dart" .level 3 .type "ranged" .atk 110% .dmg -60% .crit 10.5% .launch 432 .target 1234 .is_crit_valid True  .effect "Blight 4" "GR Blight Debuff 4" "GR Acc Buff 4"`
+  - 원본: `combat_skill: .id "poison_dart" .level 4 .type "ranged" .atk 115% .dmg -60% .crit 11.5% .launch 432 .target 1234 .is_crit_valid True  .effect "GR Blight 5" "GR Blight Debuff 5"`
+  - 현재: `combat_skill: .id "poison_dart" .level 4 .type "ranged" .atk 115% .dmg -60% .crit 11.5% .launch 432 .target 1234 .is_crit_valid True  .effect "Blight 5" "GR Blight Debuff 5" "GR Acc Buff 5"`
+- 출처: `heroes/grave_robber/grave_robber.info.darkest`, 주석 추가 전 59행; Git 원문 {"commit": "6381c531a2e253486cc7222d22bd079047d3f198", "summary": "R-DATA-01 중복 효과 금지 + 도구가 기존 효과를 자동 재사용"}
+- 기존 주석 원문:
+```text
+// GR-001 poison_dart: blight 4 -> 3 turns (RB GR Blight 1-5), + GR Acc Buff moved here (GR-002)
+```
+
+### GR-003 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 반복 자기 유지기를 만들되 회피/속도 버프 크기와 지속을 낮춰 대가를 낸다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/toxin_trickery`
+  - 원본: `combat_skill: .id "toxin_trickery" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 4321 .target  .is_crit_valid True  .effect "Shadow Blood 1" "GR Self Speed 1" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "toxin_trickery" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "RB GR Shadow Blood 1" "RB GR Self Speed 1" "RB GR Toxin Heal 1" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "toxin_trickery" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 4321 .target  .is_crit_valid True  .effect "Shadow Blood 2" "GR Self Speed 2" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "toxin_trickery" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "RB GR Shadow Blood 2" "RB GR Self Speed 2" "RB GR Toxin Heal 2" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "toxin_trickery" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 4321 .target  .is_crit_valid True  .effect "Shadow Blood 3" "GR Self Speed 3" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "toxin_trickery" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "RB GR Shadow Blood 3" "RB GR Self Speed 3" "RB GR Toxin Heal 3" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "toxin_trickery" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 4321 .target  .is_crit_valid True  .effect "Shadow Blood 4" "GR Self Speed 4" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "toxin_trickery" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "RB GR Shadow Blood 4" "RB GR Self Speed 4" "RB GR Toxin Heal 4" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "toxin_trickery" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 4321 .target  .is_crit_valid True  .effect "Shadow Blood 5" "GR Self Speed 5" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "toxin_trickery" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "RB GR Shadow Blood 5" "RB GR Self Speed 5" "RB GR Toxin Heal 5" .is_stall_invalidating false`
+- 출처: `heroes/grave_robber/grave_robber.info.darkest`, 주석 추가 전 66행; Git 원문 {"commit": "7e3bd8107a6d3446af60b507c8be15972696b6bf", "summary": "GR-003 극약처방 반복 자기 유지기화 + GR-004 그림자 은신 3칸 검토 기록"}
+- 기존 주석 원문:
+```text
+// GR-003 toxin_trickery: 전투당 1회 제한 삭제, 자기 회복 3/3/4/4/5 추가, 회피·속도 버프 절반 + 전투 끝까지 -> 3턴. G-05(모든 영웅 자기 회복), P-19(이름 "극약처방" = 처방·치료)
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Shadow Blood 1`
+- 원본: `effect: .name "Shadow Blood 1" .target "performer" .curio_result_type "positive" .cure 1 .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .defense_rating_add 9%	.on_hit true .on_miss true .queue true`
+- 현재: `effect: .name "Shadow Blood 1" .target "performer" .curio_result_type "positive" .cure 1 .chance 100% .duration 3 .combat_stat_buff 1 .defense_rating_add 5%	.on_hit true .on_miss true .queue true`
+- 출처: `heroes/grave_robber/grave_robber.effects_edit.txt`, 주석 추가 전 147행; Git 원문 {"commit": "7e3bd8107a6d3446af60b507c8be15972696b6bf", "summary": "GR-003 극약처방 반복 자기 유지기화 + GR-004 그림자 은신 3칸 검토 기록"}
+- 기존 주석 원문:
+```text
+// GR-003 극약처방 1레벨 회피: +9%(전투 끝까지) -> +5%(3턴). 전투당 1회 제한 해제로 재사용 시 중첩 가능성(V-07) -> 지속을 턴 단위로 묶고 절반으로. 치료(.cure)는 원래 있음
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `GR Self Speed 1`
+- 원본: `effect: .name "GR Self Speed 1" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .speed_rating_add 2  .on_hit true .on_miss false .queue true .apply_once true`
+- 현재: `effect: .name "GR Self Speed 1" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .combat_stat_buff 1 .speed_rating_add 1  .on_hit true .on_miss false .queue true .apply_once true`
+- 출처: `heroes/grave_robber/grave_robber.effects_edit.txt`, 주석 추가 전 150행; Git 원문 {"commit": "7e3bd8107a6d3446af60b507c8be15972696b6bf", "summary": "GR-003 극약처방 반복 자기 유지기화 + GR-004 그림자 은신 3칸 검토 기록"}
+- 기존 주석 원문:
+```text
+// GR-003 극약처방 1레벨 속도: +2(전투 끝까지) -> +1(3턴). 같은 이유
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Shadow Blood 2`
+- 원본: `effect: .name "Shadow Blood 2" .target "performer" .curio_result_type "positive" .cure 1 .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .defense_rating_add 10%	.on_hit true .on_miss true .queue true`
+- 현재: `effect: .name "Shadow Blood 2" .target "performer" .curio_result_type "positive" .cure 1 .chance 100% .duration 3 .combat_stat_buff 1 .defense_rating_add 5%	.on_hit true .on_miss true .queue true`
+- 출처: `heroes/grave_robber/grave_robber.effects_edit.txt`, 주석 추가 전 153행; Git 원문 {"commit": "7e3bd8107a6d3446af60b507c8be15972696b6bf", "summary": "GR-003 극약처방 반복 자기 유지기화 + GR-004 그림자 은신 3칸 검토 기록"}
+- 기존 주석 원문:
+```text
+// GR-003 극약처방 2레벨 회피: +10%(전투 끝까지) -> +5%(3턴). 전투당 1회 제한 해제로 재사용 시 중첩 가능성(V-07) -> 지속을 턴 단위로 묶고 절반으로. 치료(.cure)는 원래 있음
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `GR Self Speed 2`
+- 원본: `effect: .name "GR Self Speed 2" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .speed_rating_add 2  .on_hit true .on_miss false .queue true .apply_once true`
+- 현재: `effect: .name "GR Self Speed 2" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .combat_stat_buff 1 .speed_rating_add 1  .on_hit true .on_miss false .queue true .apply_once true`
+- 출처: `heroes/grave_robber/grave_robber.effects_edit.txt`, 주석 추가 전 156행; Git 원문 {"commit": "7e3bd8107a6d3446af60b507c8be15972696b6bf", "summary": "GR-003 극약처방 반복 자기 유지기화 + GR-004 그림자 은신 3칸 검토 기록"}
+- 기존 주석 원문:
+```text
+// GR-003 극약처방 2레벨 속도: +2(전투 끝까지) -> +1(3턴). 같은 이유
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Shadow Blood 3`
+- 원본: `effect: .name "Shadow Blood 3" .target "performer" .curio_result_type "positive" .cure 1 .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .defense_rating_add 11%	.on_hit true .on_miss true .queue true`
+- 현재: `effect: .name "Shadow Blood 3" .target "performer" .curio_result_type "positive" .cure 1 .chance 100% .duration 3 .combat_stat_buff 1 .defense_rating_add 6%	.on_hit true .on_miss true .queue true`
+- 출처: `heroes/grave_robber/grave_robber.effects_edit.txt`, 주석 추가 전 159행; Git 원문 {"commit": "7e3bd8107a6d3446af60b507c8be15972696b6bf", "summary": "GR-003 극약처방 반복 자기 유지기화 + GR-004 그림자 은신 3칸 검토 기록"}
+- 기존 주석 원문:
+```text
+// GR-003 극약처방 3레벨 회피: +11%(전투 끝까지) -> +6%(3턴). 전투당 1회 제한 해제로 재사용 시 중첩 가능성(V-07) -> 지속을 턴 단위로 묶고 절반으로. 치료(.cure)는 원래 있음
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `GR Self Speed 3`
+- 원본: `effect: .name "GR Self Speed 3" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .speed_rating_add 3  .on_hit true .on_miss false .queue true .apply_once true`
+- 현재: `effect: .name "GR Self Speed 3" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .combat_stat_buff 1 .speed_rating_add 2  .on_hit true .on_miss false .queue true .apply_once true`
+- 출처: `heroes/grave_robber/grave_robber.effects_edit.txt`, 주석 추가 전 162행; Git 원문 {"commit": "7e3bd8107a6d3446af60b507c8be15972696b6bf", "summary": "GR-003 극약처방 반복 자기 유지기화 + GR-004 그림자 은신 3칸 검토 기록"}
+- 기존 주석 원문:
+```text
+// GR-003 극약처방 3레벨 속도: +3(전투 끝까지) -> +2(3턴). 같은 이유
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Shadow Blood 4`
+- 원본: `effect: .name "Shadow Blood 4" .target "performer" .curio_result_type "positive" .cure 1 .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .defense_rating_add 12%	.on_hit true .on_miss true .queue true`
+- 현재: `effect: .name "Shadow Blood 4" .target "performer" .curio_result_type "positive" .cure 1 .chance 100% .duration 3 .combat_stat_buff 1 .defense_rating_add 6%	.on_hit true .on_miss true .queue true`
+- 출처: `heroes/grave_robber/grave_robber.effects_edit.txt`, 주석 추가 전 165행; Git 원문 {"commit": "7e3bd8107a6d3446af60b507c8be15972696b6bf", "summary": "GR-003 극약처방 반복 자기 유지기화 + GR-004 그림자 은신 3칸 검토 기록"}
+- 기존 주석 원문:
+```text
+// GR-003 극약처방 4레벨 회피: +12%(전투 끝까지) -> +6%(3턴). 전투당 1회 제한 해제로 재사용 시 중첩 가능성(V-07) -> 지속을 턴 단위로 묶고 절반으로. 치료(.cure)는 원래 있음
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `GR Self Speed 4`
+- 원본: `effect: .name "GR Self Speed 4" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .speed_rating_add 3  .on_hit true .on_miss false .queue true .apply_once true`
+- 현재: `effect: .name "GR Self Speed 4" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .combat_stat_buff 1 .speed_rating_add 2  .on_hit true .on_miss false .queue true .apply_once true`
+- 출처: `heroes/grave_robber/grave_robber.effects_edit.txt`, 주석 추가 전 168행; Git 원문 {"commit": "7e3bd8107a6d3446af60b507c8be15972696b6bf", "summary": "GR-003 극약처방 반복 자기 유지기화 + GR-004 그림자 은신 3칸 검토 기록"}
+- 기존 주석 원문:
+```text
+// GR-003 극약처방 4레벨 속도: +3(전투 끝까지) -> +2(3턴). 같은 이유
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Shadow Blood 5`
+- 원본: `effect: .name "Shadow Blood 5" .target "performer" .curio_result_type "positive" .cure 1 .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .defense_rating_add 13%	.on_hit true .on_miss true .queue true`
+- 현재: `effect: .name "Shadow Blood 5" .target "performer" .curio_result_type "positive" .cure 1 .chance 100% .duration 3 .combat_stat_buff 1 .defense_rating_add 7%	.on_hit true .on_miss true .queue true`
+- 출처: `heroes/grave_robber/grave_robber.effects_edit.txt`, 주석 추가 전 171행; Git 원문 {"commit": "7e3bd8107a6d3446af60b507c8be15972696b6bf", "summary": "GR-003 극약처방 반복 자기 유지기화 + GR-004 그림자 은신 3칸 검토 기록"}
+- 기존 주석 원문:
+```text
+// GR-003 극약처방 5레벨 회피: +13%(전투 끝까지) -> +7%(3턴). 전투당 1회 제한 해제로 재사용 시 중첩 가능성(V-07) -> 지속을 턴 단위로 묶고 절반으로. 치료(.cure)는 원래 있음
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `GR Self Speed 5`
+- 원본: `effect: .name "GR Self Speed 5" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .speed_rating_add 4  .on_hit true .on_miss false .queue true .apply_once true`
+- 현재: `effect: .name "GR Self Speed 5" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .combat_stat_buff 1 .speed_rating_add 2  .on_hit true .on_miss false .queue true .apply_once true`
+- 출처: `heroes/grave_robber/grave_robber.effects_edit.txt`, 주석 추가 전 174행; Git 원문 {"commit": "7e3bd8107a6d3446af60b507c8be15972696b6bf", "summary": "GR-003 극약처방 반복 자기 유지기화 + GR-004 그림자 은신 3칸 검토 기록"}
+- 기존 주석 원문:
+```text
+// GR-003 극약처방 5레벨 속도: +4(전투 끝까지) -> +2(3턴). 같은 이유
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `RB GR Toxin Heal 1`
+- 원본: `None`
+- 현재: `effect: .name "RB GR Toxin Heal 1" .target "performer" .curio_result_type "positive" .chance 100% .heal 3 .on_hit true .on_miss false .queue true .source_heal_type hero_skill`
+- 출처: `heroes/grave_robber/grave_robber.effects_edit.txt`, 주석 추가 전 188행; Git 원문 {"commit": "7e3bd8107a6d3446af60b507c8be15972696b6bf", "summary": "GR-003 극약처방 반복 자기 유지기화 + GR-004 그림자 은신 3칸 검토 기록"}
+- 기존 주석 원문:
+```text
+// GR-003 극약처방 1레벨 자기 회복 3 (신규). 도굴꾼 체력 20/24/28/32/36 대비 13~15%로 레벨마다 일정. 괴인 사면(3->5)과 같은 대역, 야만인 아드레날린(3->7)·조련사 상처 핥기(4->8)보다 낮음(치료·버프가 같이 있으므로)
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `RB GR Toxin Heal 2`
+- 원본: `None`
+- 현재: `effect: .name "RB GR Toxin Heal 2" .target "performer" .curio_result_type "positive" .chance 100% .heal 3 .on_hit true .on_miss false .queue true .source_heal_type hero_skill`
+- 출처: `heroes/grave_robber/grave_robber.effects_edit.txt`, 주석 추가 전 190행; Git 원문 {"commit": "7e3bd8107a6d3446af60b507c8be15972696b6bf", "summary": "GR-003 극약처방 반복 자기 유지기화 + GR-004 그림자 은신 3칸 검토 기록"}
+- 기존 주석 원문:
+```text
+// GR-003 극약처방 2레벨 자기 회복 3 (신규). 도굴꾼 체력 20/24/28/32/36 대비 13~15%로 레벨마다 일정. 괴인 사면(3->5)과 같은 대역, 야만인 아드레날린(3->7)·조련사 상처 핥기(4->8)보다 낮음(치료·버프가 같이 있으므로)
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `RB GR Toxin Heal 3`
+- 원본: `None`
+- 현재: `effect: .name "RB GR Toxin Heal 3" .target "performer" .curio_result_type "positive" .chance 100% .heal 4 .on_hit true .on_miss false .queue true .source_heal_type hero_skill`
+- 출처: `heroes/grave_robber/grave_robber.effects_edit.txt`, 주석 추가 전 192행; Git 원문 {"commit": "7e3bd8107a6d3446af60b507c8be15972696b6bf", "summary": "GR-003 극약처방 반복 자기 유지기화 + GR-004 그림자 은신 3칸 검토 기록"}
+- 기존 주석 원문:
+```text
+// GR-003 극약처방 3레벨 자기 회복 4 (신규). 도굴꾼 체력 20/24/28/32/36 대비 13~15%로 레벨마다 일정. 괴인 사면(3->5)과 같은 대역, 야만인 아드레날린(3->7)·조련사 상처 핥기(4->8)보다 낮음(치료·버프가 같이 있으므로)
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `RB GR Toxin Heal 4`
+- 원본: `None`
+- 현재: `effect: .name "RB GR Toxin Heal 4" .target "performer" .curio_result_type "positive" .chance 100% .heal 4 .on_hit true .on_miss false .queue true .source_heal_type hero_skill`
+- 출처: `heroes/grave_robber/grave_robber.effects_edit.txt`, 주석 추가 전 194행; Git 원문 {"commit": "7e3bd8107a6d3446af60b507c8be15972696b6bf", "summary": "GR-003 극약처방 반복 자기 유지기화 + GR-004 그림자 은신 3칸 검토 기록"}
+- 기존 주석 원문:
+```text
+// GR-003 극약처방 4레벨 자기 회복 4 (신규). 도굴꾼 체력 20/24/28/32/36 대비 13~15%로 레벨마다 일정. 괴인 사면(3->5)과 같은 대역, 야만인 아드레날린(3->7)·조련사 상처 핥기(4->8)보다 낮음(치료·버프가 같이 있으므로)
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `RB GR Toxin Heal 5`
+- 원본: `None`
+- 현재: `effect: .name "RB GR Toxin Heal 5" .target "performer" .curio_result_type "positive" .chance 100% .heal 5 .on_hit true .on_miss false .queue true .source_heal_type hero_skill`
+- 출처: `heroes/grave_robber/grave_robber.effects_edit.txt`, 주석 추가 전 196행; Git 원문 {"commit": "7e3bd8107a6d3446af60b507c8be15972696b6bf", "summary": "GR-003 극약처방 반복 자기 유지기화 + GR-004 그림자 은신 3칸 검토 기록"}
+- 기존 주석 원문:
+```text
+// GR-003 극약처방 5레벨 자기 회복 5 (신규). 도굴꾼 체력 20/24/28/32/36 대비 13~15%로 레벨마다 일정. 괴인 사면(3->5)과 같은 대역, 야만인 아드레날린(3->7)·조련사 상처 핥기(4->8)보다 낮음(치료·버프가 같이 있으므로)
+```
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB GR Shadow Blood 1`
+- 원본 (Shadow Blood 1): `effect: .name "Shadow Blood 1" .target "performer" .curio_result_type "positive" .cure 1 .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .defense_rating_add 9%	.on_hit true .on_miss true .queue true`
+- 현재: `effect: .name "RB GR Shadow Blood 1" .target "performer" .curio_result_type "positive" .cure 1 .chance 100% .duration 3 .combat_stat_buff 1 .defense_rating_add 5%	.on_hit true .on_miss true .queue true`
+- 출처: `effects/rebalance_grave_robber.effects.darkest`, 주석 추가 전 22행; Git 원문 {"commit": "7e3bd8107a6d3446af60b507c8be15972696b6bf", "summary": "GR-003 극약처방 반복 자기 유지기화 + GR-004 그림자 은신 3칸 검토 기록"}
+- 기존 주석 원문:
+```text
+// edited vanilla effect (from effects/base.effects.darkest)
+```
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB GR Self Speed 1`
+- 원본 (GR Self Speed 1): `effect: .name "GR Self Speed 1" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .speed_rating_add 2  .on_hit true .on_miss false .queue true .apply_once true`
+- 현재: `effect: .name "RB GR Self Speed 1" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .combat_stat_buff 1 .speed_rating_add 1  .on_hit true .on_miss false .queue true .apply_once true`
+- 출처: `effects/rebalance_grave_robber.effects.darkest`, 주석 추가 전 24행; Git 원문 {"commit": "7e3bd8107a6d3446af60b507c8be15972696b6bf", "summary": "GR-003 극약처방 반복 자기 유지기화 + GR-004 그림자 은신 3칸 검토 기록"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB GR Shadow Blood 2`
+- 원본 (Shadow Blood 2): `effect: .name "Shadow Blood 2" .target "performer" .curio_result_type "positive" .cure 1 .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .defense_rating_add 10%	.on_hit true .on_miss true .queue true`
+- 현재: `effect: .name "RB GR Shadow Blood 2" .target "performer" .curio_result_type "positive" .cure 1 .chance 100% .duration 3 .combat_stat_buff 1 .defense_rating_add 5%	.on_hit true .on_miss true .queue true`
+- 출처: `effects/rebalance_grave_robber.effects.darkest`, 주석 추가 전 26행; Git 원문 {"commit": "7e3bd8107a6d3446af60b507c8be15972696b6bf", "summary": "GR-003 극약처방 반복 자기 유지기화 + GR-004 그림자 은신 3칸 검토 기록"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB GR Self Speed 2`
+- 원본 (GR Self Speed 2): `effect: .name "GR Self Speed 2" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .speed_rating_add 2  .on_hit true .on_miss false .queue true .apply_once true`
+- 현재: `effect: .name "RB GR Self Speed 2" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .combat_stat_buff 1 .speed_rating_add 1  .on_hit true .on_miss false .queue true .apply_once true`
+- 출처: `effects/rebalance_grave_robber.effects.darkest`, 주석 추가 전 28행; Git 원문 {"commit": "7e3bd8107a6d3446af60b507c8be15972696b6bf", "summary": "GR-003 극약처방 반복 자기 유지기화 + GR-004 그림자 은신 3칸 검토 기록"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB GR Shadow Blood 3`
+- 원본 (Shadow Blood 3): `effect: .name "Shadow Blood 3" .target "performer" .curio_result_type "positive" .cure 1 .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .defense_rating_add 11%	.on_hit true .on_miss true .queue true`
+- 현재: `effect: .name "RB GR Shadow Blood 3" .target "performer" .curio_result_type "positive" .cure 1 .chance 100% .duration 3 .combat_stat_buff 1 .defense_rating_add 6%	.on_hit true .on_miss true .queue true`
+- 출처: `effects/rebalance_grave_robber.effects.darkest`, 주석 추가 전 30행; Git 원문 {"commit": "7e3bd8107a6d3446af60b507c8be15972696b6bf", "summary": "GR-003 극약처방 반복 자기 유지기화 + GR-004 그림자 은신 3칸 검토 기록"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB GR Self Speed 3`
+- 원본 (GR Self Speed 3): `effect: .name "GR Self Speed 3" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .speed_rating_add 3  .on_hit true .on_miss false .queue true .apply_once true`
+- 현재: `effect: .name "RB GR Self Speed 3" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .combat_stat_buff 1 .speed_rating_add 2  .on_hit true .on_miss false .queue true .apply_once true`
+- 출처: `effects/rebalance_grave_robber.effects.darkest`, 주석 추가 전 32행; Git 원문 {"commit": "7e3bd8107a6d3446af60b507c8be15972696b6bf", "summary": "GR-003 극약처방 반복 자기 유지기화 + GR-004 그림자 은신 3칸 검토 기록"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB GR Shadow Blood 4`
+- 원본 (Shadow Blood 4): `effect: .name "Shadow Blood 4" .target "performer" .curio_result_type "positive" .cure 1 .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .defense_rating_add 12%	.on_hit true .on_miss true .queue true`
+- 현재: `effect: .name "RB GR Shadow Blood 4" .target "performer" .curio_result_type "positive" .cure 1 .chance 100% .duration 3 .combat_stat_buff 1 .defense_rating_add 6%	.on_hit true .on_miss true .queue true`
+- 출처: `effects/rebalance_grave_robber.effects.darkest`, 주석 추가 전 34행; Git 원문 {"commit": "7e3bd8107a6d3446af60b507c8be15972696b6bf", "summary": "GR-003 극약처방 반복 자기 유지기화 + GR-004 그림자 은신 3칸 검토 기록"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB GR Self Speed 4`
+- 원본 (GR Self Speed 4): `effect: .name "GR Self Speed 4" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .speed_rating_add 3  .on_hit true .on_miss false .queue true .apply_once true`
+- 현재: `effect: .name "RB GR Self Speed 4" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .combat_stat_buff 1 .speed_rating_add 2  .on_hit true .on_miss false .queue true .apply_once true`
+- 출처: `effects/rebalance_grave_robber.effects.darkest`, 주석 추가 전 36행; Git 원문 {"commit": "7e3bd8107a6d3446af60b507c8be15972696b6bf", "summary": "GR-003 극약처방 반복 자기 유지기화 + GR-004 그림자 은신 3칸 검토 기록"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB GR Shadow Blood 5`
+- 원본 (Shadow Blood 5): `effect: .name "Shadow Blood 5" .target "performer" .curio_result_type "positive" .cure 1 .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .defense_rating_add 13%	.on_hit true .on_miss true .queue true`
+- 현재: `effect: .name "RB GR Shadow Blood 5" .target "performer" .curio_result_type "positive" .cure 1 .chance 100% .duration 3 .combat_stat_buff 1 .defense_rating_add 7%	.on_hit true .on_miss true .queue true`
+- 출처: `effects/rebalance_grave_robber.effects.darkest`, 주석 추가 전 38행; Git 원문 {"commit": "7e3bd8107a6d3446af60b507c8be15972696b6bf", "summary": "GR-003 극약처방 반복 자기 유지기화 + GR-004 그림자 은신 3칸 검토 기록"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB GR Self Speed 5`
+- 원본 (GR Self Speed 5): `effect: .name "GR Self Speed 5" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .speed_rating_add 4  .on_hit true .on_miss false .queue true .apply_once true`
+- 현재: `effect: .name "RB GR Self Speed 5" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .combat_stat_buff 1 .speed_rating_add 2  .on_hit true .on_miss false .queue true .apply_once true`
+- 출처: `effects/rebalance_grave_robber.effects.darkest`, 주석 추가 전 40행; Git 원문 {"commit": "7e3bd8107a6d3446af60b507c8be15972696b6bf", "summary": "GR-003 극약처방 반복 자기 유지기화 + GR-004 그림자 은신 3칸 검토 기록"}
+- 기존 주석 원문:
+```text
+// mod-only new effects
+```
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB GR Toxin Heal 1`
+- 원본: `None`
+- 현재: `effect: .name "RB GR Toxin Heal 1" .target "performer" .curio_result_type "positive" .chance 100% .heal 3 .on_hit true .on_miss false .queue true .source_heal_type hero_skill`
+- 출처: `effects/rebalance_grave_robber.effects.darkest`, 주석 추가 전 43행; Git 원문 {"commit": "7e3bd8107a6d3446af60b507c8be15972696b6bf", "summary": "GR-003 극약처방 반복 자기 유지기화 + GR-004 그림자 은신 3칸 검토 기록"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB GR Toxin Heal 2`
+- 원본: `None`
+- 현재: `effect: .name "RB GR Toxin Heal 2" .target "performer" .curio_result_type "positive" .chance 100% .heal 3 .on_hit true .on_miss false .queue true .source_heal_type hero_skill`
+- 출처: `effects/rebalance_grave_robber.effects.darkest`, 주석 추가 전 44행; Git 원문 {"commit": "7e3bd8107a6d3446af60b507c8be15972696b6bf", "summary": "GR-003 극약처방 반복 자기 유지기화 + GR-004 그림자 은신 3칸 검토 기록"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB GR Toxin Heal 3`
+- 원본: `None`
+- 현재: `effect: .name "RB GR Toxin Heal 3" .target "performer" .curio_result_type "positive" .chance 100% .heal 4 .on_hit true .on_miss false .queue true .source_heal_type hero_skill`
+- 출처: `effects/rebalance_grave_robber.effects.darkest`, 주석 추가 전 45행; Git 원문 {"commit": "7e3bd8107a6d3446af60b507c8be15972696b6bf", "summary": "GR-003 극약처방 반복 자기 유지기화 + GR-004 그림자 은신 3칸 검토 기록"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB GR Toxin Heal 4`
+- 원본: `None`
+- 현재: `effect: .name "RB GR Toxin Heal 4" .target "performer" .curio_result_type "positive" .chance 100% .heal 4 .on_hit true .on_miss false .queue true .source_heal_type hero_skill`
+- 출처: `effects/rebalance_grave_robber.effects.darkest`, 주석 추가 전 46행; Git 원문 {"commit": "7e3bd8107a6d3446af60b507c8be15972696b6bf", "summary": "GR-003 극약처방 반복 자기 유지기화 + GR-004 그림자 은신 3칸 검토 기록"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB GR Toxin Heal 5`
+- 원본: `None`
+- 현재: `effect: .name "RB GR Toxin Heal 5" .target "performer" .curio_result_type "positive" .chance 100% .heal 5 .on_hit true .on_miss false .queue true .source_heal_type hero_skill`
+- 출처: `effects/rebalance_grave_robber.effects.darkest`, 주석 추가 전 47행; Git 원문 {"commit": "7e3bd8107a6d3446af60b507c8be15972696b6bf", "summary": "GR-003 극약처방 반복 자기 유지기화 + GR-004 그림자 은신 3칸 검토 기록"}
+
+### GR-005 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 명중 준비를 맹독 다트로 옮기고 MARK-01의 서브 표식 딜러 재배분을 단검에 반영한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `GR Dagger Dmg Marked 1`
+- 원본: `effect: .name "GR Dagger Dmg Marked 1" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 25%	.damage_high_multiply 25%	.on_hit true .on_miss false`
+- 현재: `effect: .name "GR Dagger Dmg Marked 1" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 40%	.damage_high_multiply 40%	.on_hit true .on_miss false`
+- 출처: `heroes/grave_robber/grave_robber.effects_edit.txt`, 주석 추가 전 90행; Git 원문 {"commit": "30e207f78a8342186f06ebafd638d53ded3d8a34", "summary": "MARK-01 표식 피해 재배분: 서브 표식 딜러 상향 + 조련사 하향"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `GR Dagger Dmg Marked 2`
+- 원본: `effect: .name "GR Dagger Dmg Marked 2" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 28%	.damage_high_multiply 28%	.on_hit true .on_miss false`
+- 현재: `effect: .name "GR Dagger Dmg Marked 2" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 50%	.damage_high_multiply 50%	.on_hit true .on_miss false`
+- 출처: `heroes/grave_robber/grave_robber.effects_edit.txt`, 주석 추가 전 94행; Git 원문 {"commit": "30e207f78a8342186f06ebafd638d53ded3d8a34", "summary": "MARK-01 표식 피해 재배분: 서브 표식 딜러 상향 + 조련사 하향"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `GR Dagger Dmg Marked 3`
+- 원본: `effect: .name "GR Dagger Dmg Marked 3" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 32%	.damage_high_multiply 32%	.on_hit true .on_miss false`
+- 현재: `effect: .name "GR Dagger Dmg Marked 3" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 60%	.damage_high_multiply 60%	.on_hit true .on_miss false`
+- 출처: `heroes/grave_robber/grave_robber.effects_edit.txt`, 주석 추가 전 98행; Git 원문 {"commit": "30e207f78a8342186f06ebafd638d53ded3d8a34", "summary": "MARK-01 표식 피해 재배분: 서브 표식 딜러 상향 + 조련사 하향"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `GR Dagger Dmg Marked 4`
+- 원본: `effect: .name "GR Dagger Dmg Marked 4" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 36%	.damage_high_multiply 36%	.on_hit true .on_miss false`
+- 현재: `effect: .name "GR Dagger Dmg Marked 4" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 70%	.damage_high_multiply 70%	.on_hit true .on_miss false`
+- 출처: `heroes/grave_robber/grave_robber.effects_edit.txt`, 주석 추가 전 102행; Git 원문 {"commit": "30e207f78a8342186f06ebafd638d53ded3d8a34", "summary": "MARK-01 표식 피해 재배분: 서브 표식 딜러 상향 + 조련사 하향"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `GR Dagger Dmg Marked 5`
+- 원본: `effect: .name "GR Dagger Dmg Marked 5" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 40%	.damage_high_multiply 40%	.on_hit true .on_miss false`
+- 현재: `effect: .name "GR Dagger Dmg Marked 5" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 80%	.damage_high_multiply 80%	.on_hit true .on_miss false`
+- 출처: `heroes/grave_robber/grave_robber.effects_edit.txt`, 주석 추가 전 106행; Git 원문 {"commit": "30e207f78a8342186f06ebafd638d53ded3d8a34", "summary": "MARK-01 표식 피해 재배분: 서브 표식 딜러 상향 + 조련사 하향"}
+- 기존 주석 원문:
+```text
+// MARK-01 GR Dagger Dmg Marked: 표식 피해 25~40 -> 40~80 (서브 표식 딜러)
+```
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB GR Dagger Dmg Marked 1`
+- 원본 (GR Dagger Dmg Marked 1): `effect: .name "GR Dagger Dmg Marked 1" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 25%	.damage_high_multiply 25%	.on_hit true .on_miss false`
+- 현재: `effect: .name "RB GR Dagger Dmg Marked 1" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 40%	.damage_high_multiply 40%	.on_hit true .on_miss false`
+- 출처: `effects/rebalance_grave_robber.effects.darkest`, 주석 추가 전 10행; Git 원문 {"commit": "30e207f78a8342186f06ebafd638d53ded3d8a34", "summary": "MARK-01 표식 피해 재배분: 서브 표식 딜러 상향 + 조련사 하향"}
+- 기존 주석 원문:
+```text
+// edited vanilla effect (from effects/base.effects.darkest)
+```
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB GR Dagger Dmg Marked 2`
+- 원본 (GR Dagger Dmg Marked 2): `effect: .name "GR Dagger Dmg Marked 2" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 28%	.damage_high_multiply 28%	.on_hit true .on_miss false`
+- 현재: `effect: .name "RB GR Dagger Dmg Marked 2" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 50%	.damage_high_multiply 50%	.on_hit true .on_miss false`
+- 출처: `effects/rebalance_grave_robber.effects.darkest`, 주석 추가 전 12행; Git 원문 {"commit": "30e207f78a8342186f06ebafd638d53ded3d8a34", "summary": "MARK-01 표식 피해 재배분: 서브 표식 딜러 상향 + 조련사 하향"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB GR Dagger Dmg Marked 3`
+- 원본 (GR Dagger Dmg Marked 3): `effect: .name "GR Dagger Dmg Marked 3" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 32%	.damage_high_multiply 32%	.on_hit true .on_miss false`
+- 현재: `effect: .name "RB GR Dagger Dmg Marked 3" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 60%	.damage_high_multiply 60%	.on_hit true .on_miss false`
+- 출처: `effects/rebalance_grave_robber.effects.darkest`, 주석 추가 전 14행; Git 원문 {"commit": "30e207f78a8342186f06ebafd638d53ded3d8a34", "summary": "MARK-01 표식 피해 재배분: 서브 표식 딜러 상향 + 조련사 하향"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB GR Dagger Dmg Marked 4`
+- 원본 (GR Dagger Dmg Marked 4): `effect: .name "GR Dagger Dmg Marked 4" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 36%	.damage_high_multiply 36%	.on_hit true .on_miss false`
+- 현재: `effect: .name "RB GR Dagger Dmg Marked 4" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 70%	.damage_high_multiply 70%	.on_hit true .on_miss false`
+- 출처: `effects/rebalance_grave_robber.effects.darkest`, 주석 추가 전 16행; Git 원문 {"commit": "30e207f78a8342186f06ebafd638d53ded3d8a34", "summary": "MARK-01 표식 피해 재배분: 서브 표식 딜러 상향 + 조련사 하향"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB GR Dagger Dmg Marked 5`
+- 원본 (GR Dagger Dmg Marked 5): `effect: .name "GR Dagger Dmg Marked 5" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 40%	.damage_high_multiply 40%	.on_hit true .on_miss false`
+- 현재: `effect: .name "RB GR Dagger Dmg Marked 5" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 80%	.damage_high_multiply 80%	.on_hit true .on_miss false`
+- 출처: `effects/rebalance_grave_robber.effects.darkest`, 주석 추가 전 18행; Git 원문 {"commit": "30e207f78a8342186f06ebafd638d53ded3d8a34", "summary": "MARK-01 표식 피해 재배분: 서브 표식 딜러 상향 + 조련사 하향"}
+
+### GR-001 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 지속 피해 총량을 줄이고 명중 준비 효과를 이전해 기술별 역할을 나눈다. 동일 바닐라 중독 효과 재사용을 보존한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `GR Blight 1`
+- 원본: `effect: .name "GR Blight 1" .target "target" .curio_result_type "negative" .chance 100%  .dotPoison 2 .duration 4	.on_hit true .on_miss false .can_apply_on_death true`
+- 현재: `effect: .name "GR Blight 1" .target "target" .curio_result_type "negative" .chance 100%  .dotPoison 2 .duration 3	.on_hit true .on_miss false .can_apply_on_death true`
+- 출처: `heroes/grave_robber/grave_robber.effects_edit.txt`, 주석 추가 전 113행; Git 원문 {"commit": "a75753c5ad39f95d0e0d13f12147a4eb0cd079fc", "summary": "GR-001·GR-002 도굴꾼 적용, CRU-001 성전사 전투 치유, RB 접두어 중복 제거"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `GR Blight 2`
+- 원본: `effect: .name "GR Blight 2" .target "target" .curio_result_type "negative" .chance 110%  .dotPoison 3 .duration 4	.on_hit true .on_miss false .can_apply_on_death true`
+- 현재: `effect: .name "GR Blight 2" .target "target" .curio_result_type "negative" .chance 110%  .dotPoison 3 .duration 3	.on_hit true .on_miss false .can_apply_on_death true`
+- 출처: `heroes/grave_robber/grave_robber.effects_edit.txt`, 주석 추가 전 118행; Git 원문 {"commit": "a75753c5ad39f95d0e0d13f12147a4eb0cd079fc", "summary": "GR-001·GR-002 도굴꾼 적용, CRU-001 성전사 전투 치유, RB 접두어 중복 제거"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `GR Blight 3`
+- 원본: `effect: .name "GR Blight 3" .target "target" .curio_result_type "negative" .chance 120%  .dotPoison 3 .duration 4	.on_hit true .on_miss false .can_apply_on_death true`
+- 현재: `effect: .name "GR Blight 3" .target "target" .curio_result_type "negative" .chance 120%  .dotPoison 3 .duration 3	.on_hit true .on_miss false .can_apply_on_death true`
+- 출처: `heroes/grave_robber/grave_robber.effects_edit.txt`, 주석 추가 전 123행; Git 원문 {"commit": "a75753c5ad39f95d0e0d13f12147a4eb0cd079fc", "summary": "GR-001·GR-002 도굴꾼 적용, CRU-001 성전사 전투 치유, RB 접두어 중복 제거"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `GR Blight 4`
+- 원본: `effect: .name "GR Blight 4" .target "target" .curio_result_type "negative" .chance 130%  .dotPoison 3 .duration 4	.on_hit true .on_miss false .can_apply_on_death true`
+- 현재: `effect: .name "GR Blight 4" .target "target" .curio_result_type "negative" .chance 130%  .dotPoison 3 .duration 3	.on_hit true .on_miss false .can_apply_on_death true`
+- 출처: `heroes/grave_robber/grave_robber.effects_edit.txt`, 주석 추가 전 128행; Git 원문 {"commit": "a75753c5ad39f95d0e0d13f12147a4eb0cd079fc", "summary": "GR-001·GR-002 도굴꾼 적용, CRU-001 성전사 전투 치유, RB 접두어 중복 제거"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `GR Blight 5`
+- 원본: `effect: .name "GR Blight 5" .target "target" .curio_result_type "negative" .chance 140%  .dotPoison 4 .duration 4	.on_hit true .on_miss false .can_apply_on_death true`
+- 현재: `effect: .name "GR Blight 5" .target "target" .curio_result_type "negative" .chance 140%  .dotPoison 4 .duration 3	.on_hit true .on_miss false .can_apply_on_death true`
+- 출처: `heroes/grave_robber/grave_robber.effects_edit.txt`, 주석 추가 전 133행; Git 원문 {"commit": "a75753c5ad39f95d0e0d13f12147a4eb0cd079fc", "summary": "GR-001·GR-002 도굴꾼 적용, CRU-001 성전사 전투 치유, RB 접두어 중복 제거"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB GR Blight 2`
+- 원본 (GR Blight 2): `effect: .name "GR Blight 2" .target "target" .curio_result_type "negative" .chance 110%  .dotPoison 3 .duration 4	.on_hit true .on_miss false .can_apply_on_death true`
+- 현재: `effect: .name "RB GR Blight 2" .target "target" .curio_result_type "negative" .chance 110%  .dotPoison 3 .duration 3	.on_hit true .on_miss false .can_apply_on_death true`
+- 출처: `effects/rebalance_grave_robber.effects.darkest`, 주석 추가 전 20행; Git 원문 {"commit": "a75753c5ad39f95d0e0d13f12147a4eb0cd079fc", "summary": "GR-001·GR-002 도굴꾼 적용, CRU-001 성전사 전투 치유, RB 접두어 중복 제거"}
+- 기존 주석 원문:
+```text
+// edited vanilla effect (from effects/base.effects.darkest)
+```

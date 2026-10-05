@@ -77,6 +77,7 @@ effect: .name "Wyrd Bleed 3" .target "target" .curio_result_type "negative" .cha
 effect: .name "Wyrd Bleed 4" .target "target" .curio_result_type "negative" .chance 80%  .dotBleed 2 .duration 3	.on_hit true .on_miss false .queue true .can_apply_on_death true
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Wyrd Bleed 5" .target "target" .curio_result_type "negative" .chance 80%  .dotBleed 2 .duration 3	.on_hit true .on_miss false .queue true .can_apply_on_death true
+// OCC-001 [trace 2026-10-05] Make the final upgrade reduce bleed risk without increasing mean healing. Effect: Wyrd Bleed 5.
 // OCC-001 level 5 bleed matches level 4: reuse its vanilla effect; no duplicate definition.
 //#   원본 위치: effects/base.effects.darkest
 

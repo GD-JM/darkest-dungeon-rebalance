@@ -290,3 +290,335 @@
   4. **명중 +5**: 기술의 본업인 당기기 성공률이 54.6%였다(명중 × (140 − 이동 저항, 중앙 65)). 57.9%로 오른다. 후열을 전열로 끌어오면 스트레스 기술을 못 쓰게 되는 가치(제작자, R-STRAT-01)는 v2 모델에 아직 없어 수치보다 실제 가치가 크다.
 - 수치 (v2 모델 5레벨): 6.53 → **6.18 HP**. 표식 가치(1.6)를 피해(+0.9)와 명중(+0.3)으로 대부분 보전한 재구성이다.
 - 검증: 죽음의 표식 3턴이 연계 세 번째 턴까지 남는지(지속 차감 시점).
+
+
+## 2026-10-05 주석·의도 전수 추적 (수치 변경 없음)
+이번 항목은 이전 문서의 후보/기각/예전 수치를 덮어쓰지 않는 현재 스냅샷이다. 사용자 한국어 메모를 원문 그대로 보존했다. 실제 데이터와 편집 사본의 상태를 별도로 기록하며, 새로운 수치 결정이나 전역 효과 적용을 하지 않는다. 최신 사용자 작업은 이 섹션을 우선 참고한다.
+
+### BH-003 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 사용자의 90→100 표식 피해 결정과 전열 표식 처형 역할을 기록한다. 레벨별 성장 제안과 현재 고정100은 구분한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/collect_bounty`
+  - 원본: `combat_skill: .id "collect_bounty" .level 0 .type "melee" .atk 85% .dmg 0% .crit 7% .launch 321 .target 12 .is_crit_valid True  .effect "BH Dmg Marked" "Man Killer 1" .generation_guaranteed true`
+  - 현재: `combat_skill: .id "collect_bounty" .level 0 .type "melee" .atk 85% .dmg 0% .crit 7% .launch 321 .target 12 .is_crit_valid True  .effect "RB BH Dmg Marked" "Man Killer 1" .generation_guaranteed true`
+  - 원본: `combat_skill: .id "collect_bounty" .level 1 .type "melee" .atk 90% .dmg 0% .crit 8% .launch 321 .target 12 .is_crit_valid True  .effect "BH Dmg Marked" "Man Killer 2"`
+  - 현재: `combat_skill: .id "collect_bounty" .level 1 .type "melee" .atk 90% .dmg 0% .crit 8% .launch 321 .target 12 .is_crit_valid True  .effect "RB BH Dmg Marked" "Man Killer 2"`
+  - 원본: `combat_skill: .id "collect_bounty" .level 2 .type "melee" .atk 95% .dmg 0% .crit 9% .launch 321 .target 12 .is_crit_valid True  .effect "BH Dmg Marked" "Man Killer 3"`
+  - 현재: `combat_skill: .id "collect_bounty" .level 2 .type "melee" .atk 95% .dmg 0% .crit 9% .launch 321 .target 12 .is_crit_valid True  .effect "RB BH Dmg Marked" "Man Killer 3"`
+  - 원본: `combat_skill: .id "collect_bounty" .level 3 .type "melee" .atk 100% .dmg 0% .crit 10% .launch 321 .target 12 .is_crit_valid True  .effect "BH Dmg Marked" "Man Killer 4"`
+  - 현재: `combat_skill: .id "collect_bounty" .level 3 .type "melee" .atk 100% .dmg 0% .crit 10% .launch 321 .target 12 .is_crit_valid True  .effect "RB BH Dmg Marked" "Man Killer 4"`
+  - 원본: `combat_skill: .id "collect_bounty" .level 4 .type "melee" .atk 105% .dmg 0% .crit 11% .launch 321 .target 12 .is_crit_valid True  .effect "BH Dmg Marked" "Man Killer 5"`
+  - 현재: `combat_skill: .id "collect_bounty" .level 4 .type "melee" .atk 105% .dmg 0% .crit 11% .launch 321 .target 12 .is_crit_valid True  .effect "RB BH Dmg Marked" "Man Killer 5"`
+- 출처: `heroes/bounty_hunter/bounty_hunter.info.darkest`, 주석 추가 전 30행; Git 원문 {"commit": "c1826646598f71f92681c3901362602332285460", "summary": "BH-003 표식 피해 100%% 적용 + damage_high 90 누락 수정"}
+- 기존 주석 원문:
+```text
+//사용열, 타겟열 변경 123 -> 12, 12 -> 123
+```
+- 기존 주석 원문:
+```text
+//사유 끝장내기와의 차별점 있어야 함. 끝장내기가 범용적으로 더 좋음 지금은, 그래서 2개 채용할 이유가 굳이 사라짐.
+```
+- 기존 주석 원문:
+```text
+//기존엔 끝장내기와 이 기술 동시에 채용했음 이유는 12열은 현상금 사냥, 3열은 끝장내기
+```
+- 기존 주석 원문:
+```text
+// 여기서 끝장내기 1,2열 공격이 출혈딜러가 생겨서 범용성이 너무 높아짐. 이게 현상금 사냥보다 더 좋아지면 현상금 사냥 쓸 이유가 없어짐 그래서 조정
+```
+- 기존 주석 원문:
+```text
+//근데 어퍼컷과의 시너지를 생각해서 다시 롤백
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `BH Dmg Marked`
+- 원본: `effect: .name "BH Dmg Marked"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 90%	.damage_high_multiply 90%	.on_hit true .on_miss false`
+- 현재: `effect: .name "BH Dmg Marked"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 100%	.damage_high_multiply 100%	.on_hit true .on_miss false`
+- 출처: `heroes/bounty_hunter/bounty_hunter.effects_edit.txt`, 주석 추가 전 19행; Git 원문 {"commit": "c1826646598f71f92681c3901362602332285460", "summary": "BH-003 표식 피해 100%% 적용 + damage_high 90 누락 수정"}
+- 기존 주석 원문:
+```text
+// BH-003 표식 대상 피해 90%% -> 100%% (90은 수치가 애매). damage_high도 100으로 맞춤
+```
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB BH Dmg Marked`
+- 원본 (BH Dmg Marked): `effect: .name "BH Dmg Marked"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 90%	.damage_high_multiply 90%	.on_hit true .on_miss false`
+- 현재: `effect: .name "RB BH Dmg Marked"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 100%	.damage_high_multiply 100%	.on_hit true .on_miss false`
+- 출처: `effects/rebalance_bounty_hunter.effects.darkest`, 주석 추가 전 5행; Git 원문 {"commit": "c1826646598f71f92681c3901362602332285460", "summary": "BH-003 표식 피해 100%% 적용 + damage_high 90 누락 수정"}
+- 기존 주석 원문:
+```text
+// edited vanilla effect (from effects/base.effects.darkest)
+```
+
+### BH-009 BH-010 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 당기기와 표식을 분리하여 죽음의 표식 사용 이유를 보존하고 당기기 접근성과 명중을 보완한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/come_hither`
+  - 원본: `combat_skill: .id "come_hither" .level 0 .type "ranged" .atk 90% .dmg -80% .crit 0% .launch 4321 .target 34 .is_crit_valid True  .effect "Pull 2A" "BH Minor Mark"`
+  - 현재: `combat_skill: .id "come_hither" .level 0 .type "ranged" .atk 95% .dmg -60% .crit 0% .launch 4321 .target 34 .is_crit_valid True  .effect "Pull 3A"`
+  - 원본: `combat_skill: .id "come_hither" .level 1 .type "ranged" .atk 95% .dmg -80% .crit 1% .launch 4321 .target 34 .is_crit_valid True  .effect "Pull 2B" "BH Minor Mark"`
+  - 현재: `combat_skill: .id "come_hither" .level 1 .type "ranged" .atk 100% .dmg -60% .crit 1% .launch 4321 .target 34 .is_crit_valid True  .effect "Pull 3B"`
+  - 원본: `combat_skill: .id "come_hither" .level 2 .type "ranged" .atk 100% .dmg -80% .crit 2% .launch 4321 .target 34 .is_crit_valid True  .effect "Pull 2C" "BH Minor Mark"`
+  - 현재: `combat_skill: .id "come_hither" .level 2 .type "ranged" .atk 105% .dmg -60% .crit 2% .launch 4321 .target 34 .is_crit_valid True  .effect "Pull 3C"`
+  - 원본: `combat_skill: .id "come_hither" .level 3 .type "ranged" .atk 105% .dmg -80% .crit 3% .launch 4321 .target 34 .is_crit_valid True  .effect "Pull 2D" "BH Minor Mark"`
+  - 현재: `combat_skill: .id "come_hither" .level 3 .type "ranged" .atk 110% .dmg -60% .crit 3% .launch 4321 .target 34 .is_crit_valid True  .effect "Pull 3D"`
+  - 원본: `combat_skill: .id "come_hither" .level 4 .type "ranged" .atk 110% .dmg -80% .crit 4% .launch 4321 .target 34 .is_crit_valid True  .effect "Pull 2E" "BH Minor Mark"`
+  - 현재: `combat_skill: .id "come_hither" .level 4 .type "ranged" .atk 115% .dmg -60% .crit 4% .launch 4321 .target 34 .is_crit_valid True  .effect "Pull 3E"`
+- 출처: `heroes/bounty_hunter/bounty_hunter.info.darkest`, 주석 추가 전 48행; Git 원문 {"commit": "c0b60f8882374879b91b4cae2602f3f8b0f41958", "summary": "BH-010 이리 오너라: 소표식 삭제, 명중 +5, 피해 -70% -> -60%"}
+- 기존 주석 원문:
+```text
+// BH-010 come_hither: 소표식(BH Minor Mark) 삭제, 명중 +5 (1렙 90 -> 95), 피해 -70% -> -60%. 길드 "미리 표식을 새겨" / "갈고리와 섬광탄과 어퍼컷으로 열과 오를 헤집어" - 표식과 갈고리는 다른 전술. 표식은 죽음의 표식(3턴)이 맡아 표식 -> 당기기 -> 처형 3턴 연계
+```
+- 기존 주석 원문:
+```text
+// BH-009 come_hither: Pull 2 -> Pull 3 (게임 최초 당기기 3칸), dmg -80% -> -70%
+```
+
+### BH-007 BH-011 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 현상금 사냥꾼 1열 운용의 특장점으로 강한 기절과 전열 접근을 주고 피해로 대가를 낸다. 높은 치명과 표식 후속 연계를 보존한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/uppercut`
+  - 원본: `combat_skill: .id "uppercut" .level 0 .type "melee" .atk 90% .dmg -67% .crit 0% .launch 21 .target 12 .is_crit_valid True  .effect "Push 2A" "Stun 1"`
+  - 현재: `combat_skill: .id "uppercut" .level 0 .type "melee" .atk 90% .dmg -67% .crit 9% .launch 1 .target 12 .is_crit_valid True  .effect "Push 2A" "Hero Strong Stun 1"`
+  - 원본: `combat_skill: .id "uppercut" .level 1 .type "melee" .atk 95% .dmg -67% .crit 1% .launch 21 .target 12 .is_crit_valid True  .effect "Push 2B" "Stun 2"`
+  - 현재: `combat_skill: .id "uppercut" .level 1 .type "melee" .atk 95% .dmg -67% .crit 10% .launch 1 .target 12 .is_crit_valid True  .effect "Push 2B" "Hero Strong Stun 2"`
+  - 원본: `combat_skill: .id "uppercut" .level 2 .type "melee" .atk 100% .dmg -67% .crit 2% .launch 21 .target 12 .is_crit_valid True  .effect "Push 2C" "Stun 3"`
+  - 현재: `combat_skill: .id "uppercut" .level 2 .type "melee" .atk 100% .dmg -67% .crit 11% .launch 1 .target 12 .is_crit_valid True  .effect "Push 2C" "Hero Strong Stun 3"`
+  - 원본: `combat_skill: .id "uppercut" .level 3 .type "melee" .atk 105% .dmg -67% .crit 3% .launch 21 .target 12 .is_crit_valid True  .effect "Push 2D" "Stun 4"`
+  - 현재: `combat_skill: .id "uppercut" .level 3 .type "melee" .atk 105% .dmg -67% .crit 12% .launch 1 .target 12 .is_crit_valid True  .effect "Push 2D" "Hero Strong Stun 4"`
+  - 원본: `combat_skill: .id "uppercut" .level 4 .type "melee" .atk 110% .dmg -67% .crit 4% .launch 21 .target 12 .is_crit_valid True  .effect "Push 2E" "Stun 5"`
+  - 현재: `combat_skill: .id "uppercut" .level 4 .type "melee" .atk 110% .dmg -67% .crit 13% .launch 1 .target 12 .is_crit_valid True  .effect "Push 2E" "Hero Strong Stun 5"`
+- 출처: `heroes/bounty_hunter/bounty_hunter.info.darkest`, 주석 추가 전 56행; Git 원문 {"commit": "0000000000000000000000000000000000000000", "summary": "Version of heroes/bounty_hunter/bounty_hunter.info.darkest from heroes/bounty_hunter/bounty_hunter.info.darkest"}
+- 기존 주석 원문:
+```text
+// BH-007 uppercut: target 12 -> 1, dmg -67% -> -45%, crit +0~4 -> +9~13 (launch 21 kept)
+```
+- 기존 주석 원문:
+```text
+// 히어로 스트롱 스턴 섬광탄 걸 빼와서 얘한테 줌. 대신에 데미지를 바닐라로 줄임
+```
+- 기존 주석 원문 (JSON 문자열, 끝 공백 포함):
+```json
+"//타겟열 사용열도 바꿈 이유는 1열 설수있는 영웅이 많이 없음 이 게임에, 그래서 1열 섰을 때 특장점 메리트를 줌. 현상금 1열은 표식조합 쓰면 강제됨. 거기에 특장점을 더 줘서 1열 파티 조합 가능성을 더 높임 사용열 12 -> 1 타겟열 1-> 12 이게 좋은게 또 현상금 치명타 효과가 표식 대상 데미지 증가임 -> 어퍼컷의 높은 치명타 보정으로 1턴에 치명타 내서 표식 증가 데미지 갖추고 남이 표식 찍어준거를 끝낸다는 윈플랜도 가능해짐. "
+```
+
+### BH-008 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 2열 어퍼컷과 사용열을 분리하고 높은 명중·후열 도달·자리바꿈의 대가로 일반 기절을 사용한다. 사용자 가치 판단이며 바닐라 보편 규칙의 확정은 아니다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/flashbang`
+  - 원본: `combat_skill: .id "flashbang" .level 0 .type "ranged" .atk 95% .dmg -100% .crit 0% .launch 432 .target 234 .is_crit_valid False  .effect "Hero Strong Stun 1" "Disorient 1" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "flashbang" .level 0 .type "ranged" .atk 95% .dmg -100% .crit 0% .launch 43 .target 234 .is_crit_valid False  .effect "Stun 1" "Disorient 1" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "flashbang" .level 1 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 432 .target 234 .is_crit_valid False  .effect "Hero Strong Stun 2" "Disorient 2" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "flashbang" .level 1 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 43 .target 234 .is_crit_valid False  .effect "Stun 2" "Disorient 2" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "flashbang" .level 2 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 432 .target 234 .is_crit_valid False  .effect "Hero Strong Stun 3" "Disorient 3" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "flashbang" .level 2 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 43 .target 234 .is_crit_valid False  .effect "Stun 3" "Disorient 3" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "flashbang" .level 3 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 432 .target 234 .is_crit_valid False  .effect "Hero Strong Stun 4" "Disorient 4" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "flashbang" .level 3 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 43 .target 234 .is_crit_valid False  .effect "Stun 4" "Disorient 4" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "flashbang" .level 4 .type "ranged" .atk 115% .dmg -100% .crit 0% .launch 432 .target 234 .is_crit_valid False  .effect "Hero Strong Stun 5" "Disorient 5" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "flashbang" .level 4 .type "ranged" .atk 115% .dmg -100% .crit 0% .launch 43 .target 234 .is_crit_valid False  .effect "Stun 5" "Disorient 5" .is_stall_invalidating false`
+- 출처: `heroes/bounty_hunter/bounty_hunter.info.darkest`, 주석 추가 전 68행; Git 원문 {"commit": "0000000000000000000000000000000000000000", "summary": "Version of heroes/bounty_hunter/bounty_hunter.info.darkest from heroes/bounty_hunter/bounty_hunter.info.darkest"}
+- 기존 주석 원문:
+```text
+//사용열 432 -> 43 이유 2열에서 어퍼컷이랑 겹침. 다양한 열에서 영웅이 사용될 수 있게
+```
+- 기존 주석 원문 (JSON 문자열, 끝 공백 포함):
+```json
+"//대신에 스트롱 스턴을 그냥 스턴으로 바꿈 근거는 명중이 95임 명중 90을 표준이라 두면, 명중 +5, 데미지 없는 것 + 3,4열 타격가능 + 자리바꿈 3개가 추가되면 데미지 없는 걸 상쇄함. 물론 치명타 안뜨는 것도 포함되서 상쇄되는것 "
+```
+
+### BH-001 BH-002 BH-012 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 출혈·기절 준비 후 처형을 강화하고 어퍼컷 이후 3열 후속 공격이 가능하도록 한다. 기절 피해의 최소/최대가 비대칭임을 그대로 기록한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/finish_him`
+  - 원본: `combat_skill: .id "finish_him" .level 0 .type "melee" .atk 85% .dmg 0% .crit 5% .launch 321 .target 123 .is_crit_valid True  .effect "Stun Killer 1"`
+  - 현재: `combat_skill: .id "finish_him" .level 0 .type "melee" .atk 85% .dmg 0% .crit 5% .launch 21 .target 123 .is_crit_valid True  .effect "RB BH Stun Killer 1" "RB BH Bleed Killer 1"`
+  - 원본: `combat_skill: .id "finish_him" .level 1 .type "melee" .atk 90% .dmg 0% .crit 6% .launch 321 .target 123 .is_crit_valid True  .effect "Stun Killer 2"`
+  - 현재: `combat_skill: .id "finish_him" .level 1 .type "melee" .atk 90% .dmg 0% .crit 6% .launch 21 .target 123 .is_crit_valid True  .effect "RB BH Stun Killer 2" "RB BH Bleed Killer 2"`
+  - 원본: `combat_skill: .id "finish_him" .level 2 .type "melee" .atk 95% .dmg 0% .crit 7% .launch 321 .target 123 .is_crit_valid True  .effect "Stun Killer 3"`
+  - 현재: `combat_skill: .id "finish_him" .level 2 .type "melee" .atk 95% .dmg 0% .crit 7% .launch 21 .target 123 .is_crit_valid True  .effect "RB BH Stun Killer 3" "RB BH Bleed Killer 3"`
+  - 원본: `combat_skill: .id "finish_him" .level 3 .type "melee" .atk 100% .dmg 0% .crit 8% .launch 321 .target 123 .is_crit_valid True  .effect "Stun Killer 4"`
+  - 현재: `combat_skill: .id "finish_him" .level 3 .type "melee" .atk 100% .dmg 0% .crit 8% .launch 21 .target 123 .is_crit_valid True  .effect "RB BH Stun Killer 4" "RB BH Bleed Killer 4"`
+  - 원본: `combat_skill: .id "finish_him" .level 4 .type "melee" .atk 105% .dmg 0% .crit 9% .launch 321 .target 123 .is_crit_valid True  .effect "Stun Killer 5"`
+  - 현재: `combat_skill: .id "finish_him" .level 4 .type "melee" .atk 105% .dmg 0% .crit 9% .launch 21 .target 123 .is_crit_valid True  .effect "RB BH Stun Killer 5" "RB BH Bleed Killer 5"`
+- 출처: `heroes/bounty_hunter/bounty_hunter.info.darkest`, 주석 추가 전 77행; Git 원문 {"commit": "c1826646598f71f92681c3901362602332285460", "summary": "BH-003 표식 피해 100%% 적용 + damage_high 90 누락 수정"}
+- 기존 주석 원문:
+```text
+// BH-001 finish_him: + RB BH Bleed Killer 1-5 (dmg vs bleeding target, mirrors GR Poison Killer)
+```
+- 기존 주석 원문:
+```text
+// 사용열 변경 123 -> 12 사유는 어퍼컷 때문에 3열 때릴 수 있어야함 연계되려면
+```
+
+### BH-005 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 후열 출혈·약화 기술의 직접 피해를 보완해 출혈 딜러 선택지를 만든다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/hook_and_slice`
+  - 원본: `combat_skill: .id "hook_and_slice" .level 0 .type "ranged" .atk 90% .dmg -95% .crit 5% .launch 234 .target 34 .is_crit_valid True  .effect "Bleed 1" "Caltrops SPD Debuff 1" "Caltrops Prey Debuff 1"`
+  - 현재: `combat_skill: .id "hook_and_slice" .level 0 .type "ranged" .atk 90% .dmg -70% .crit 5% .launch 234 .target 34 .is_crit_valid True  .effect "Bleed 1" "Caltrops SPD Debuff 1" "Caltrops Prey Debuff 1"`
+  - 원본: `combat_skill: .id "hook_and_slice" .level 1 .type "ranged" .atk 95% .dmg -95% .crit 6% .launch 234 .target 34 .is_crit_valid True  .effect "Bleed 2" "Caltrops SPD Debuff 2" "Caltrops Prey Debuff 2"`
+  - 현재: `combat_skill: .id "hook_and_slice" .level 1 .type "ranged" .atk 95% .dmg -70% .crit 6% .launch 234 .target 34 .is_crit_valid True  .effect "Bleed 2" "Caltrops SPD Debuff 2" "Caltrops Prey Debuff 2"`
+  - 원본: `combat_skill: .id "hook_and_slice" .level 2 .type "ranged" .atk 100% .dmg -95% .crit 7% .launch 234 .target 34 .is_crit_valid True  .effect "Bleed 3" "Caltrops SPD Debuff 3" "Caltrops Prey Debuff 3"`
+  - 현재: `combat_skill: .id "hook_and_slice" .level 2 .type "ranged" .atk 100% .dmg -70% .crit 7% .launch 234 .target 34 .is_crit_valid True  .effect "Bleed 3" "Caltrops SPD Debuff 3" "Caltrops Prey Debuff 3"`
+  - 원본: `combat_skill: .id "hook_and_slice" .level 3 .type "ranged" .atk 105% .dmg -95% .crit 8% .launch 234 .target 34 .is_crit_valid True  .effect "Bleed 4" "Caltrops SPD Debuff 4" "Caltrops Prey Debuff 4"`
+  - 현재: `combat_skill: .id "hook_and_slice" .level 3 .type "ranged" .atk 105% .dmg -70% .crit 8% .launch 234 .target 34 .is_crit_valid True  .effect "Bleed 4" "Caltrops SPD Debuff 4" "Caltrops Prey Debuff 4"`
+  - 원본: `combat_skill: .id "hook_and_slice" .level 4 .type "ranged" .atk 110% .dmg -95% .crit 9% .launch 234 .target 34 .is_crit_valid True  .effect "Bleed 5" "Caltrops SPD Debuff 5" "Caltrops Prey Debuff 5"`
+  - 현재: `combat_skill: .id "hook_and_slice" .level 4 .type "ranged" .atk 110% .dmg -70% .crit 9% .launch 234 .target 34 .is_crit_valid True  .effect "Bleed 5" "Caltrops SPD Debuff 5" "Caltrops Prey Debuff 5"`
+- 출처: `heroes/bounty_hunter/bounty_hunter.info.darkest`, 주석 추가 전 88행; Git 원문 {"commit": "85ed78358dc522e062c53336633b0ea0120f71c3", "summary": "R-RANK-01 이동기 원칙 + 야만인 자가 회복 적용 + BH-005 마름쇠"}
+- 기존 주석 원문:
+```text
+// BH-005 hook_and_slice(마름쇠): dmg -80% -> -70% (vanilla -95%)
+```
+
+### BH-002 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 출혈·기절 준비 후 처형을 강화하고 어퍼컷 이후 3열 후속 공격이 가능하도록 한다. 기절 피해의 최소/최대가 비대칭임을 그대로 기록한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Stun Killer 1`
+- 원본: `effect: .name "Stun Killer 1"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 25% .damage_high_multiply 25%	.on_hit true .on_miss false`
+- 현재: `effect: .name "Stun Killer 1"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 25% .damage_high_multiply 60%	.on_hit true .on_miss false`
+- 출처: `heroes/bounty_hunter/bounty_hunter.effects_edit.txt`, 주석 추가 전 151행; Git 원문 {"commit": "3e0b7650d63bb2c9bf5c6fe2fece69519ef897da", "summary": "BH-007 어퍼컷 1열 전용 처형 기절기 + BH-008 섬광탄 사용 열 기록"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Stun Killer 2`
+- 원본: `effect: .name "Stun Killer 2"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 33% .damage_high_multiply 33%	.on_hit true .on_miss false`
+- 현재: `effect: .name "Stun Killer 2"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 33% .damage_high_multiply 70%	.on_hit true .on_miss false`
+- 출처: `heroes/bounty_hunter/bounty_hunter.effects_edit.txt`, 주석 추가 전 153행; Git 원문 {"commit": "3e0b7650d63bb2c9bf5c6fe2fece69519ef897da", "summary": "BH-007 어퍼컷 1열 전용 처형 기절기 + BH-008 섬광탄 사용 열 기록"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Stun Killer 3`
+- 원본: `effect: .name "Stun Killer 3"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 40% .damage_high_multiply 40%	.on_hit true .on_miss false`
+- 현재: `effect: .name "Stun Killer 3"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 40% .damage_high_multiply 80%	.on_hit true .on_miss false`
+- 출처: `heroes/bounty_hunter/bounty_hunter.effects_edit.txt`, 주석 추가 전 155행; Git 원문 {"commit": "3e0b7650d63bb2c9bf5c6fe2fece69519ef897da", "summary": "BH-007 어퍼컷 1열 전용 처형 기절기 + BH-008 섬광탄 사용 열 기록"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Stun Killer 4`
+- 원본: `effect: .name "Stun Killer 4"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 50% .damage_high_multiply 50%	.on_hit true .on_miss false`
+- 현재: `effect: .name "Stun Killer 4"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 50% .damage_high_multiply 90%	.on_hit true .on_miss false`
+- 출처: `heroes/bounty_hunter/bounty_hunter.effects_edit.txt`, 주석 추가 전 157행; Git 원문 {"commit": "3e0b7650d63bb2c9bf5c6fe2fece69519ef897da", "summary": "BH-007 어퍼컷 1열 전용 처형 기절기 + BH-008 섬광탄 사용 열 기록"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Stun Killer 5`
+- 원본: `effect: .name "Stun Killer 5"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 60% .damage_high_multiply 60%	.on_hit true .on_miss false`
+- 현재: `effect: .name "Stun Killer 5"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 60% .damage_high_multiply 100%	.on_hit true .on_miss false`
+- 출처: `heroes/bounty_hunter/bounty_hunter.effects_edit.txt`, 주석 추가 전 159행; Git 원문 {"commit": "3e0b7650d63bb2c9bf5c6fe2fece69519ef897da", "summary": "BH-007 어퍼컷 1열 전용 처형 기절기 + BH-008 섬광탄 사용 열 기록"}
+- 기존 주석 원문:
+```text
+// 60-100으로 변경
+```
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB BH Stun Killer 1`
+- 원본 (Stun Killer 1): `effect: .name "Stun Killer 1"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 25% .damage_high_multiply 25%	.on_hit true .on_miss false`
+- 현재: `effect: .name "RB BH Stun Killer 1"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 25% .damage_high_multiply 60%	.on_hit true .on_miss false`
+- 출처: `effects/rebalance_bounty_hunter.effects.darkest`, 주석 추가 전 7행; Git 원문 {"commit": "c1826646598f71f92681c3901362602332285460", "summary": "BH-003 표식 피해 100%% 적용 + damage_high 90 누락 수정"}
+- 기존 주석 원문:
+```text
+// edited vanilla effect (from effects/base.effects.darkest)
+```
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB BH Stun Killer 2`
+- 원본 (Stun Killer 2): `effect: .name "Stun Killer 2"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 33% .damage_high_multiply 33%	.on_hit true .on_miss false`
+- 현재: `effect: .name "RB BH Stun Killer 2"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 33% .damage_high_multiply 70%	.on_hit true .on_miss false`
+- 출처: `effects/rebalance_bounty_hunter.effects.darkest`, 주석 추가 전 9행; Git 원문 {"commit": "c1826646598f71f92681c3901362602332285460", "summary": "BH-003 표식 피해 100%% 적용 + damage_high 90 누락 수정"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB BH Stun Killer 3`
+- 원본 (Stun Killer 3): `effect: .name "Stun Killer 3"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 40% .damage_high_multiply 40%	.on_hit true .on_miss false`
+- 현재: `effect: .name "RB BH Stun Killer 3"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 40% .damage_high_multiply 80%	.on_hit true .on_miss false`
+- 출처: `effects/rebalance_bounty_hunter.effects.darkest`, 주석 추가 전 11행; Git 원문 {"commit": "c1826646598f71f92681c3901362602332285460", "summary": "BH-003 표식 피해 100%% 적용 + damage_high 90 누락 수정"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB BH Stun Killer 4`
+- 원본 (Stun Killer 4): `effect: .name "Stun Killer 4"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 50% .damage_high_multiply 50%	.on_hit true .on_miss false`
+- 현재: `effect: .name "RB BH Stun Killer 4"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 50% .damage_high_multiply 90%	.on_hit true .on_miss false`
+- 출처: `effects/rebalance_bounty_hunter.effects.darkest`, 주석 추가 전 13행; Git 원문 {"commit": "c1826646598f71f92681c3901362602332285460", "summary": "BH-003 표식 피해 100%% 적용 + damage_high 90 누락 수정"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB BH Stun Killer 5`
+- 원본 (Stun Killer 5): `effect: .name "Stun Killer 5"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 60% .damage_high_multiply 60%	.on_hit true .on_miss false`
+- 현재: `effect: .name "RB BH Stun Killer 5"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 60% .damage_high_multiply 100%	.on_hit true .on_miss false`
+- 출처: `effects/rebalance_bounty_hunter.effects.darkest`, 주석 추가 전 15행; Git 원문 {"commit": "c1826646598f71f92681c3901362602332285460", "summary": "BH-003 표식 피해 100%% 적용 + damage_high 90 누락 수정"}
+- 기존 주석 원문:
+```text
+// mod-only new effects
+```
+
+### BH-001 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 출혈·기절 준비 후 처형을 강화하고 어퍼컷 이후 3열 후속 공격이 가능하도록 한다. 기절 피해의 최소/최대가 비대칭임을 그대로 기록한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `RB BH Bleed Killer 1`
+- 원본: `None`
+- 현재: `effect: .name "RB BH Bleed Killer 1" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "bleeding" .combat_stat_buff 1 .damage_low_multiply 20% .damage_high_multiply 20% .on_hit true .on_miss false`
+- 출처: `heroes/bounty_hunter/bounty_hunter.effects_edit.txt`, 주석 추가 전 225행; Git 원문 {"commit": "c7df494cb407eebf6deb6bbc0e22f0a43c7a3c3b", "summary": "BH-001 끝장내기 출혈 대상 추가 피해(신규 효과), BH-002 기절 조건 강화 제안, 최적 열·딜러 비교"}
+- 기존 주석 원문:
+```text
+// BH-001 finish_him: +20% dmg vs bleeding (level 1, mirrors GR Poison Killer 1)
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `RB BH Bleed Killer 2`
+- 원본: `None`
+- 현재: `effect: .name "RB BH Bleed Killer 2" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "bleeding" .combat_stat_buff 1 .damage_low_multiply 23% .damage_high_multiply 23% .on_hit true .on_miss false`
+- 출처: `heroes/bounty_hunter/bounty_hunter.effects_edit.txt`, 주석 추가 전 227행; Git 원문 {"commit": "c7df494cb407eebf6deb6bbc0e22f0a43c7a3c3b", "summary": "BH-001 끝장내기 출혈 대상 추가 피해(신규 효과), BH-002 기절 조건 강화 제안, 최적 열·딜러 비교"}
+- 기존 주석 원문:
+```text
+// BH-001 finish_him: +23% dmg vs bleeding (level 2, mirrors GR Poison Killer 2)
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `RB BH Bleed Killer 3`
+- 원본: `None`
+- 현재: `effect: .name "RB BH Bleed Killer 3" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "bleeding" .combat_stat_buff 1 .damage_low_multiply 26% .damage_high_multiply 26% .on_hit true .on_miss false`
+- 출처: `heroes/bounty_hunter/bounty_hunter.effects_edit.txt`, 주석 추가 전 229행; Git 원문 {"commit": "c7df494cb407eebf6deb6bbc0e22f0a43c7a3c3b", "summary": "BH-001 끝장내기 출혈 대상 추가 피해(신규 효과), BH-002 기절 조건 강화 제안, 최적 열·딜러 비교"}
+- 기존 주석 원문:
+```text
+// BH-001 finish_him: +26% dmg vs bleeding (level 3, mirrors GR Poison Killer 3)
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `RB BH Bleed Killer 4`
+- 원본: `None`
+- 현재: `effect: .name "RB BH Bleed Killer 4" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "bleeding" .combat_stat_buff 1 .damage_low_multiply 29% .damage_high_multiply 29% .on_hit true .on_miss false`
+- 출처: `heroes/bounty_hunter/bounty_hunter.effects_edit.txt`, 주석 추가 전 231행; Git 원문 {"commit": "c7df494cb407eebf6deb6bbc0e22f0a43c7a3c3b", "summary": "BH-001 끝장내기 출혈 대상 추가 피해(신규 효과), BH-002 기절 조건 강화 제안, 최적 열·딜러 비교"}
+- 기존 주석 원문:
+```text
+// BH-001 finish_him: +29% dmg vs bleeding (level 4, mirrors GR Poison Killer 4)
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `RB BH Bleed Killer 5`
+- 원본: `None`
+- 현재: `effect: .name "RB BH Bleed Killer 5" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "bleeding" .combat_stat_buff 1 .damage_low_multiply 33% .damage_high_multiply 33% .on_hit true .on_miss false`
+- 출처: `heroes/bounty_hunter/bounty_hunter.effects_edit.txt`, 주석 추가 전 233행; Git 원문 {"commit": "c7df494cb407eebf6deb6bbc0e22f0a43c7a3c3b", "summary": "BH-001 끝장내기 출혈 대상 추가 피해(신규 효과), BH-002 기절 조건 강화 제안, 최적 열·딜러 비교"}
+- 기존 주석 원문:
+```text
+// BH-001 finish_him: +33% dmg vs bleeding (level 5, mirrors GR Poison Killer 5)
+```
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB BH Bleed Killer 1`
+- 원본: `None`
+- 현재: `effect: .name "RB BH Bleed Killer 1" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "bleeding" .combat_stat_buff 1 .damage_low_multiply 20% .damage_high_multiply 20% .on_hit true .on_miss false`
+- 출처: `effects/rebalance_bounty_hunter.effects.darkest`, 주석 추가 전 18행; Git 원문 {"commit": "c7df494cb407eebf6deb6bbc0e22f0a43c7a3c3b", "summary": "BH-001 끝장내기 출혈 대상 추가 피해(신규 효과), BH-002 기절 조건 강화 제안, 최적 열·딜러 비교"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB BH Bleed Killer 2`
+- 원본: `None`
+- 현재: `effect: .name "RB BH Bleed Killer 2" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "bleeding" .combat_stat_buff 1 .damage_low_multiply 23% .damage_high_multiply 23% .on_hit true .on_miss false`
+- 출처: `effects/rebalance_bounty_hunter.effects.darkest`, 주석 추가 전 20행; Git 원문 {"commit": "c7df494cb407eebf6deb6bbc0e22f0a43c7a3c3b", "summary": "BH-001 끝장내기 출혈 대상 추가 피해(신규 효과), BH-002 기절 조건 강화 제안, 최적 열·딜러 비교"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB BH Bleed Killer 3`
+- 원본: `None`
+- 현재: `effect: .name "RB BH Bleed Killer 3" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "bleeding" .combat_stat_buff 1 .damage_low_multiply 26% .damage_high_multiply 26% .on_hit true .on_miss false`
+- 출처: `effects/rebalance_bounty_hunter.effects.darkest`, 주석 추가 전 22행; Git 원문 {"commit": "c7df494cb407eebf6deb6bbc0e22f0a43c7a3c3b", "summary": "BH-001 끝장내기 출혈 대상 추가 피해(신규 효과), BH-002 기절 조건 강화 제안, 최적 열·딜러 비교"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB BH Bleed Killer 4`
+- 원본: `None`
+- 현재: `effect: .name "RB BH Bleed Killer 4" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "bleeding" .combat_stat_buff 1 .damage_low_multiply 29% .damage_high_multiply 29% .on_hit true .on_miss false`
+- 출처: `effects/rebalance_bounty_hunter.effects.darkest`, 주석 추가 전 24행; Git 원문 {"commit": "c7df494cb407eebf6deb6bbc0e22f0a43c7a3c3b", "summary": "BH-001 끝장내기 출혈 대상 추가 피해(신규 효과), BH-002 기절 조건 강화 제안, 최적 열·딜러 비교"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB BH Bleed Killer 5`
+- 원본: `None`
+- 현재: `effect: .name "RB BH Bleed Killer 5" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "bleeding" .combat_stat_buff 1 .damage_low_multiply 33% .damage_high_multiply 33% .on_hit true .on_miss false`
+- 출처: `effects/rebalance_bounty_hunter.effects.darkest`, 주석 추가 전 26행; Git 원문 {"commit": "c7df494cb407eebf6deb6bbc0e22f0a43c7a3c3b", "summary": "BH-001 끝장내기 출혈 대상 추가 피해(신규 효과), BH-002 기절 조건 강화 제안, 최적 열·딜러 비교"}

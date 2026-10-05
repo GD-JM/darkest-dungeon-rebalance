@@ -105,3 +105,213 @@
 - 1열 성녀 생존: 체력 44, 회피 20, 방어 0. 철퇴 자기 회복 5/회로 버티는지.
 - P-19: 바닐라 심판 연출에 회복 이펙트가 붙어 있는지.
 - 표기 수정 2건이 게임에서 의도대로 읽히는지(철퇴 회복이 뜨는지, 심판 치명타가 0~4%인지).
+
+
+## 2026-10-05 주석·의도 전수 추적 (수치 변경 없음)
+이번 항목은 이전 문서의 후보/기각/예전 수치를 덮어쓰지 않는 현재 스냅샷이다. 사용자 한국어 메모를 원문 그대로 보존했다. 실제 데이터와 편집 사본의 상태를 별도로 기록하며, 새로운 수치 결정이나 전역 효과 적용을 하지 않는다. 최신 사용자 작업은 이 섹션을 우선 참고한다.
+
+### VES-001 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 심판의 자기 회복과 치명을 철퇴로 옮겨 전열 성녀의 운용 가능성을 만든다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/mace_bash`
+  - 원본: `combat_skill: .id "mace_bash" .level 0 .type "melee" .atk 85% .dmg 0% .crit 0% .launch 21 .target 12 .is_crit_valid True  .effect "Unholy Killer 1"`
+  - 현재: `combat_skill: .id "mace_bash" .level 0 .type "melee" .atk 85% .dmg 0% .crit 5% .launch 21 .target 12 .is_crit_valid True  .effect "Unholy Killer 1" "Vestal HealSelf 1"`
+  - 원본: `combat_skill: .id "mace_bash" .level 1 .type "melee" .atk 90% .dmg 0% .crit 1% .launch 21 .target 12 .is_crit_valid True  .effect "Unholy Killer 2"`
+  - 현재: `combat_skill: .id "mace_bash" .level 1 .type "melee" .atk 90% .dmg 0% .crit 6% .launch 21 .target 12 .is_crit_valid True  .effect "Unholy Killer 2" "Vestal HealSelf 1"`
+  - 원본: `combat_skill: .id "mace_bash" .level 2 .type "melee" .atk 95% .dmg 0% .crit 2% .launch 21 .target 12 .is_crit_valid True  .effect "Unholy Killer 3"`
+  - 현재: `combat_skill: .id "mace_bash" .level 2 .type "melee" .atk 95% .dmg 0% .crit 7% .launch 21 .target 12 .is_crit_valid True  .effect "Unholy Killer 3" "Vestal HealSelf 2"`
+  - 원본: `combat_skill: .id "mace_bash" .level 3 .type "melee" .atk 100% .dmg 0% .crit 3% .launch 21 .target 12 .is_crit_valid True  .effect "Unholy Killer 4"`
+  - 현재: `combat_skill: .id "mace_bash" .level 3 .type "melee" .atk 100% .dmg 0% .crit 8% .launch 21 .target 12 .is_crit_valid True  .effect "Unholy Killer 4" "Vestal HealSelf 2"`
+  - 원본: `combat_skill: .id "mace_bash" .level 4 .type "melee" .atk 105% .dmg 0% .crit 4% .launch 21 .target 12 .is_crit_valid True  .effect "Unholy Killer 5"`
+  - 현재: `combat_skill: .id "mace_bash" .level 4 .type "melee" .atk 105% .dmg 0% .crit 9% .launch 21 .target 12 .is_crit_valid True  .effect "Unholy Killer 5" "Vestal HealSelf 3"`
+- 출처: `heroes/vestal/vestal.info.darkest`, 주석 추가 전 30행; Git 원문 {"commit": "8149600a5b1ae1e4e2b97dd25aa84ac4fb4dcab6", "summary": "VES-001~007 성녀 제작자 변경 기록 + 표기 수정 2건, 분석"}
+- 기존 주석 원문:
+```text
+// 1,2열 성녀가 때에 따라 가능하도록, 3,4열 붙박이 스킬인 심판의 자힐을 메이스로 가져옴
+```
+- 기존 주석 원문 (JSON 문자열, 끝 공백 포함):
+```json
+"// 이 변화만으로 1열의 탱커 성녀가 진짜 가능할거라 생각함. "
+```
+- 기존 주석 원문:
+```text
+// 치명타 확률 심판이랑 바꿈
+```
+- 기존 주석 원문:
+```text
+// 표기: .effect 를 한 줄에 두 번 쓰던 것을 한 목록으로 합침(바닐라·창작마당 모드 어디에도 없는 형식, 한쪽이 무시될 수 있음). 효과 변화 없음
+```
+
+### VES-002 VES-009 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 자기 회복을 철퇴로 옮긴 뒤에도 후열 도달 공격으로 선택할 수 있게 명중과 직접 피해를 보완한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/judgement`
+  - 원본: `combat_skill: .id "judgement" .level 0 .type "ranged" .atk 85% .dmg -25% .crit 5% .launch 43 .target 1234 .is_crit_valid True  .effect "Vestal HealSelf 1"`
+  - 현재: `combat_skill: .id "judgement" .level 0 .type "ranged" .atk 90% .dmg 0% .crit 0% .launch 43 .target 1234 .is_crit_valid True `
+  - 원본: `combat_skill: .id "judgement" .level 1 .type "ranged" .atk 90% .dmg -25% .crit 6% .launch 43 .target 1234 .is_crit_valid True  .effect "Vestal HealSelf 1"`
+  - 현재: `combat_skill: .id "judgement" .level 1 .type "ranged" .atk 95% .dmg 0% .crit 1% .launch 43 .target 1234 .is_crit_valid True`
+  - 원본: `combat_skill: .id "judgement" .level 2 .type "ranged" .atk 95% .dmg -25% .crit 7% .launch 43 .target 1234 .is_crit_valid True  .effect "Vestal HealSelf 2"`
+  - 현재: `combat_skill: .id "judgement" .level 2 .type "ranged" .atk 100% .dmg 0% .crit 2% .launch 43 .target 1234 .is_crit_valid True`
+  - 원본: `combat_skill: .id "judgement" .level 3 .type "ranged" .atk 100% .dmg -25% .crit 8% .launch 43 .target 1234 .is_crit_valid True  .effect "Vestal HealSelf 2"`
+  - 현재: `combat_skill: .id "judgement" .level 3 .type "ranged" .atk 105% .dmg 0% .crit 3% .launch 43 .target 1234 .is_crit_valid True`
+  - 원본: `combat_skill: .id "judgement" .level 4 .type "ranged" .atk 105% .dmg -25% .crit 9% .launch 43 .target 1234 .is_crit_valid True  .effect "Vestal HealSelf 3"`
+  - 현재: `combat_skill: .id "judgement" .level 4 .type "ranged" .atk 110% .dmg 0% .crit 4% .launch 43 .target 1234 .is_crit_valid True`
+- 출처: `heroes/vestal/vestal.info.darkest`, 주석 추가 전 40행; Git 원문 {"commit": "d15763d3d66b968e0a11270f80e21b3658a36fad", "summary": "VES-008 눈부신 광채 피해 -75 롤백, VES-009 심판 피해 0"}
+- 기존 주석 원문:
+```text
+// 자힐을 메이스로 넘김
+```
+- 기존 주석 원문:
+```text
+// 명중을 RANGE 표준인 90으로 바꾸고 대신에 치명타 확율을 메이스랑 바꿈
+```
+- 기존 주석 원문:
+```text
+// 표기: .atk 90 -> 90%, .crit 0 -> 0%. % 없는 명중·치명타는 바닐라에 없다. 90을 9000%, 4를 400%로 읽을 위험. 값 변화 없음
+```
+- 기존 주석 원문:
+```text
+// VES-009 피해 -25 -> 0. 자기 회복이 철퇴로 갔으니(VES-001) 회복 없는 4열 도달 공격으로 남긴다. 가치 +2 -> +33%p, 위무(+73)는 못 넘음
+```
+
+### VES-003 VES-008 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 후열 기절과 전열 운용을 나누되 직접 피해까지 없애 과도하게 약해지지 않도록 바닐라 피해를 복귀시킨다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/dazzling_light`
+  - 원본: `combat_skill: .id "dazzling_light" .level 0 .type "ranged" .atk 90% .dmg -75% .crit 5% .launch 432 .target 123 .is_crit_valid True  .effect "Vestal Stun 1" "Dazzling Light 1"`
+  - 현재: `combat_skill: .id "dazzling_light" .level 0 .type "ranged" .atk 90% .dmg -75% .crit 5% .launch 43 .target 123 .is_crit_valid True  .effect "Vestal Stun 1" "Dazzling Light 1"`
+  - 원본: `combat_skill: .id "dazzling_light" .level 1 .type "ranged" .atk 95% .dmg -75% .crit 6% .launch 432 .target 123 .is_crit_valid True  .effect "Vestal Stun 2" "Dazzling Light 1"`
+  - 현재: `combat_skill: .id "dazzling_light" .level 1 .type "ranged" .atk 95% .dmg -75% .crit 6% .launch 43 .target 123 .is_crit_valid True  .effect "Vestal Stun 2" "Dazzling Light 1"`
+  - 원본: `combat_skill: .id "dazzling_light" .level 2 .type "ranged" .atk 100% .dmg -75% .crit 7% .launch 432 .target 123 .is_crit_valid True  .effect "Vestal Stun 3" "Dazzling Light 1"`
+  - 현재: `combat_skill: .id "dazzling_light" .level 2 .type "ranged" .atk 100% .dmg -75% .crit 7% .launch 43 .target 123 .is_crit_valid True  .effect "Vestal Stun 3" "Dazzling Light 1"`
+  - 원본: `combat_skill: .id "dazzling_light" .level 3 .type "ranged" .atk 105% .dmg -75% .crit 8% .launch 432 .target 123 .is_crit_valid True  .effect "Vestal Stun 4" "Dazzling Light 1"`
+  - 현재: `combat_skill: .id "dazzling_light" .level 3 .type "ranged" .atk 105% .dmg -75% .crit 8% .launch 43 .target 123 .is_crit_valid True  .effect "Vestal Stun 4" "Dazzling Light 1"`
+  - 원본: `combat_skill: .id "dazzling_light" .level 4 .type "ranged" .atk 110% .dmg -75% .crit 9% .launch 432 .target 123 .is_crit_valid True  .effect "Vestal Stun 5" "Dazzling Light 1"`
+  - 현재: `combat_skill: .id "dazzling_light" .level 4 .type "ranged" .atk 110% .dmg -75% .crit 9% .launch 43 .target 123 .is_crit_valid True  .effect "Vestal Stun 5" "Dazzling Light 1"`
+- 출처: `heroes/vestal/vestal.info.darkest`, 주석 추가 전 51행; Git 원문 {"commit": "d15763d3d66b968e0a11270f80e21b3658a36fad", "summary": "VES-008 눈부신 광채 피해 -75 롤백, VES-009 심판 피해 0"}
+- 기존 주석 원문:
+```text
+//3,4열과 1,2열 분리 위해 432 -> 43으로 변경
+```
+- 기존 주석 원문:
+```text
+// VES-008 피해 -100 -> -75 롤백(바닐라). 사용 열 43 분리(VES-003)만으로 하향은 충분, 피해까지 없애면 키트 최하위(-19%p)라 후열 선택지에서 빠짐. 가치 -19 -> +24%p
+```
+
+### VES-004 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 회복의 예측 가능성을 성녀 정체성으로 두고 전열에서도 단일 회복을 쓰게 한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/divine_grace`
+  - 원본: `combat_skill: .id "divine_grace" .level 0 .heal 4 5 .launch 43 .target @4321  .generation_guaranteed true .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "divine_grace" .level 0 .heal 5 5 .launch 4321 .target @4321  .generation_guaranteed true .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "divine_grace" .level 1 .heal 5 6 .launch 43 .target @4321  .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "divine_grace" .level 1 .heal 6 6 .launch 4321 .target @4321  .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "divine_grace" .level 2 .heal 6 7 .launch 43 .target @4321  .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "divine_grace" .level 2 .heal 7 7 .launch 4321 .target @4321  .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "divine_grace" .level 3 .heal 7 8 .launch 43 .target @4321  .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "divine_grace" .level 3 .heal 8 8 .launch 4321 .target @4321  .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "divine_grace" .level 4 .heal 8 9 .launch 43 .target @4321  .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "divine_grace" .level 4 .heal 9 9 .launch 4321 .target @4321  .is_stall_invalidating false`
+- 출처: `heroes/vestal/vestal.info.darkest`, 주석 추가 전 62행; Git 원문 {"commit": "8f52fcfe821547d58c60e6547066b8d66da8553d", "summary": "총사 모드 제외(MUS-000) + 회복 표기 정정(ARB-002: 석궁사수 붕대질, 성녀 신성한 은총)"}
+- 기존 주석 원문:
+```text
+// 표기: .heal N -> .heal N N. 바닐라 기술 줄 회복 45개는 전부 "최소 최대" 두 숫자다. 한 숫자는 게임 해석이 보장되지 않아 같은 값을 두 번 쓴다(회복량 변화 없음)
+```
+- 기존 주석 원문:
+```text
+//성녀의 정체성을 안정성 즉 예측 가능성에 둠.
+```
+- 기존 주석 원문:
+```text
+//그렇기에 힐의 랜덤성을 없애고 소폭 상향함
+```
+- 기존 주석 원문:
+```text
+//1열 성녀의 가능성 때문에 사용열을 전라인으로 변경 43 -> 4321
+```
+
+### VES-005 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 강한 광역 회복을 후열에 제한하고 초반 회복 성장의 불균형을 보완한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/gods_comfort`
+  - 원본: `combat_skill: .id "gods_comfort" .level 0 .heal 1 3 .launch 432 .target @~1234  .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "gods_comfort" .level 0 .heal 2 3 .launch 43 .target @~1234  .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "gods_comfort" .level 1 .heal 2 3 .launch 432 .target @~1234  .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "gods_comfort" .level 1 .heal 3 3 .launch 43 .target @~1234  .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "gods_comfort" .level 2 .heal 3 3 .launch 432 .target @~1234  .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "gods_comfort" .level 2 .heal 3 4 .launch 43 .target @~1234  .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "gods_comfort" .level 3 .heal 3 4 .launch 432 .target @~1234  .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "gods_comfort" .level 3 .heal 4 4 .launch 43 .target @~1234  .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "gods_comfort" .level 4 .heal 4 5 .launch 432 .target @~1234  .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "gods_comfort" .level 4 .heal 4 5 .launch 43 .target @~1234  .is_stall_invalidating false`
+- 출처: `heroes/vestal/vestal.info.darkest`, 주석 추가 전 74행; Git 원문 {"commit": "3e0b7650d63bb2c9bf5c6fe2fece69519ef897da", "summary": "BH-007 어퍼컷 1열 전용 처형 기절기 + BH-008 섬광탄 사용 열 기록"}
+- 기존 주석 원문:
+```text
+//가장 사기기술인 이 기술은 대신에 3,4열에서만 사용하게 변경 432 -> 43
+```
+- 기존 주석 원문:
+```text
+//힐량 소폭 상승 이유는 1렙에 1힐이 떠버리면 디바인 그레이스보다 힐량이 구림. 근데 마지막 4->5렙 갈 때 비정상으로 높은 수치로 레벨 상승
+```
+- 기존 주석 원문:
+```text
+//그래서 1렙에 몰아줌 힐성능을 대신에 등차적으로 성장하게 바꿈
+```
+
+### VES-006 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 전열 성녀에게도 은신 대응/견제 선택지를 제공한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/gods_illumination`
+  - 원본: `combat_skill: .id "gods_illumination" .level 0 .type "ranged" .atk 90% .dmg -75% .crit 0% .launch 321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "Dodge Curse 1" "Vestal Light 1" "Destealth"`
+  - 현재: `combat_skill: .id "gods_illumination" .level 0 .type "ranged" .atk 90% .dmg -75% .crit 0% .launch 4321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "Dodge Curse 1" "Vestal Light 1" "Destealth"`
+  - 원본: `combat_skill: .id "gods_illumination" .level 1 .type "ranged" .atk 95% .dmg -75% .crit 0% .launch 321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "Dodge Curse 2" "Vestal Light 2" "Destealth"`
+  - 현재: `combat_skill: .id "gods_illumination" .level 1 .type "ranged" .atk 95% .dmg -75% .crit 0% .launch 4321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "Dodge Curse 2" "Vestal Light 2" "Destealth"`
+  - 원본: `combat_skill: .id "gods_illumination" .level 2 .type "ranged" .atk 100% .dmg -75% .crit 0% .launch 321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "Dodge Curse 3" "Vestal Light 3" "Destealth"`
+  - 현재: `combat_skill: .id "gods_illumination" .level 2 .type "ranged" .atk 100% .dmg -75% .crit 0% .launch 4321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "Dodge Curse 3" "Vestal Light 3" "Destealth"`
+  - 원본: `combat_skill: .id "gods_illumination" .level 3 .type "ranged" .atk 105% .dmg -75% .crit 0% .launch 321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "Dodge Curse 4" "Vestal Light 4" "Destealth"`
+  - 현재: `combat_skill: .id "gods_illumination" .level 3 .type "ranged" .atk 105% .dmg -75% .crit 0% .launch 4321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "Dodge Curse 4" "Vestal Light 4" "Destealth"`
+  - 원본: `combat_skill: .id "gods_illumination" .level 4 .type "ranged" .atk 110% .dmg -75% .crit 0% .launch 321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "Dodge Curse 5" "Vestal Light 5" "Destealth"`
+  - 현재: `combat_skill: .id "gods_illumination" .level 4 .type "ranged" .atk 110% .dmg -75% .crit 0% .launch 4321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "Dodge Curse 5" "Vestal Light 5" "Destealth"`
+- 출처: `heroes/vestal/vestal.info.darkest`, 주석 추가 전 84행; Git 원문 {"commit": "3e0b7650d63bb2c9bf5c6fe2fece69519ef897da", "summary": "BH-007 어퍼컷 1열 전용 처형 기절기 + BH-008 섬광탄 사용 열 기록"}
+- 기존 주석 원문:
+```text
+//1열에 쓸게 없어서 이거 넣어야함
+```
+- 기존 주석 원문:
+```text
+//사용열 321 -> 4321
+```
+
+### VES-007 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 전열 성녀 공격/지원 선택을 보완하려는 명중90 결정을 기록한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/gods_hand`
+  - 원본: `combat_skill: .id "gods_hand" .level 0 .type "ranged" .atk 85% .dmg -50% .crit 1% .launch 12 .target 123 .is_crit_valid True  .effect "Vestal Inspiration 1" "Unholy Killer 1"`
+  - 현재: `combat_skill: .id "gods_hand" .level 0 .type "ranged" .atk 90% .dmg -50% .crit 1% .launch 12 .target 123 .is_crit_valid True  .effect "Vestal Inspiration 1" "Unholy Killer 1"`
+  - 원본: `combat_skill: .id "gods_hand" .level 1 .type "ranged" .atk 90% .dmg -50% .crit 2% .launch 12 .target 123 .is_crit_valid True  .effect "Vestal Inspiration 2" "Unholy Killer 2"`
+  - 현재: `combat_skill: .id "gods_hand" .level 1 .type "ranged" .atk 95% .dmg -50% .crit 2% .launch 12 .target 123 .is_crit_valid True  .effect "Vestal Inspiration 2" "Unholy Killer 2"`
+  - 원본: `combat_skill: .id "gods_hand" .level 2 .type "ranged" .atk 95% .dmg -50% .crit 3% .launch 12 .target 123 .is_crit_valid True  .effect "Vestal Inspiration 3" "Unholy Killer 3"`
+  - 현재: `combat_skill: .id "gods_hand" .level 2 .type "ranged" .atk 100% .dmg -50% .crit 3% .launch 12 .target 123 .is_crit_valid True  .effect "Vestal Inspiration 3" "Unholy Killer 3"`
+  - 원본: `combat_skill: .id "gods_hand" .level 3 .type "ranged" .atk 100% .dmg -50% .crit 4% .launch 12 .target 123 .is_crit_valid True  .effect "Vestal Inspiration 4" "Unholy Killer 4"`
+  - 현재: `combat_skill: .id "gods_hand" .level 3 .type "ranged" .atk 105% .dmg -50% .crit 4% .launch 12 .target 123 .is_crit_valid True  .effect "Vestal Inspiration 4" "Unholy Killer 4"`
+  - 원본: `combat_skill: .id "gods_hand" .level 4 .type "ranged" .atk 105% .dmg -50% .crit 5% .launch 12 .target 123 .is_crit_valid True  .effect "Vestal Inspiration 5" "Unholy Killer 5"`
+  - 현재: `combat_skill: .id "gods_hand" .level 4 .type "ranged" .atk 110% .dmg -50% .crit 5% .launch 12 .target 123 .is_crit_valid True  .effect "Vestal Inspiration 5" "Unholy Killer 5"`
+- 출처: `heroes/vestal/vestal.info.darkest`, 주석 추가 전 94행; Git 원문 {"commit": "3e0b7650d63bb2c9bf5c6fe2fece69519ef897da", "summary": "BH-007 어퍼컷 1열 전용 처형 기절기 + BH-008 섬광탄 사용 열 기록"}
+- 기존 주석 원문:
+```text
+//1,2열 성녀 버프 위해 명중 레인지 표준 90으로 조정 85 -> 90
+```

@@ -28,6 +28,7 @@ combat_skill: .id "mace_bash" .level 1 .type "melee" .atk 90% .dmg 0% .crit 6% .
 combat_skill: .id "mace_bash" .level 2 .type "melee" .atk 95% .dmg 0% .crit 7% .launch 21 .target 12 .is_crit_valid True  .effect "Unholy Killer 3" "Vestal HealSelf 2"
 combat_skill: .id "mace_bash" .level 3 .type "melee" .atk 100% .dmg 0% .crit 8% .launch 21 .target 12 .is_crit_valid True  .effect "Unholy Killer 4" "Vestal HealSelf 2"
 combat_skill: .id "mace_bash" .level 4 .type "melee" .atk 105% .dmg 0% .crit 9% .launch 21 .target 12 .is_crit_valid True  .effect "Unholy Killer 5" "Vestal HealSelf 3"
+// VES-001 [trace 2026-10-05] Move self healing to the front attack to enable a front support build.
 // 1,2열 성녀가 때에 따라 가능하도록, 3,4열 붙박이 스킬인 심판의 자힐을 메이스로 가져옴
 // 이 변화만으로 1열의 탱커 성녀가 진짜 가능할거라 생각함. 
 // 치명타 확률 심판이랑 바꿈
@@ -38,6 +39,7 @@ combat_skill: .id "judgement" .level 1 .type "ranged" .atk 95% .dmg 0% .crit 1% 
 combat_skill: .id "judgement" .level 2 .type "ranged" .atk 100% .dmg 0% .crit 2% .launch 43 .target 1234 .is_crit_valid True
 combat_skill: .id "judgement" .level 3 .type "ranged" .atk 105% .dmg 0% .crit 3% .launch 43 .target 1234 .is_crit_valid True
 combat_skill: .id "judgement" .level 4 .type "ranged" .atk 110% .dmg 0% .crit 4% .launch 43 .target 1234 .is_crit_valid True
+// VES-002 VES-009 [trace 2026-10-05] Keep a rear-reaching damage choice after moving self healing to Mace Bash.
 // 자힐을 메이스로 넘김
 // 명중을 RANGE 표준인 90으로 바꾸고 대신에 치명타 확율을 메이스랑 바꿈
 // 표기: .atk 90 -> 90%, .crit 0 -> 0%. % 없는 명중·치명타는 바닐라에 없다. 90을 9000%, 4를 400%로 읽을 위험. 값 변화 없음
@@ -49,6 +51,7 @@ combat_skill: .id "dazzling_light" .level 1 .type "ranged" .atk 95% .dmg -75% .c
 combat_skill: .id "dazzling_light" .level 2 .type "ranged" .atk 100% .dmg -75% .crit 7% .launch 43 .target 123 .is_crit_valid True  .effect "Vestal Stun 3" "Dazzling Light 1"
 combat_skill: .id "dazzling_light" .level 3 .type "ranged" .atk 105% .dmg -75% .crit 8% .launch 43 .target 123 .is_crit_valid True  .effect "Vestal Stun 4" "Dazzling Light 1"
 combat_skill: .id "dazzling_light" .level 4 .type "ranged" .atk 110% .dmg -75% .crit 9% .launch 43 .target 123 .is_crit_valid True  .effect "Vestal Stun 5" "Dazzling Light 1"
+// VES-003 VES-008 [trace 2026-10-05] Separate rear stun from front play without removing its vanilla damage.
 //3,4열과 1,2열 분리 위해 432 -> 43으로 변경
 // VES-008 피해 -100 -> -75 롤백(바닐라). 사용 열 43 분리(VES-003)만으로 하향은 충분, 피해까지 없애면 키트 최하위(-19%p)라 후열 선택지에서 빠짐. 가치 -19 -> +24%p
 
@@ -60,6 +63,7 @@ combat_skill: .id "divine_grace" .level 1 .heal 6 6 .launch 4321 .target @4321  
 combat_skill: .id "divine_grace" .level 2 .heal 7 7 .launch 4321 .target @4321  .is_stall_invalidating false
 combat_skill: .id "divine_grace" .level 3 .heal 8 8 .launch 4321 .target @4321  .is_stall_invalidating false
 combat_skill: .id "divine_grace" .level 4 .heal 9 9 .launch 4321 .target @4321  .is_stall_invalidating false
+// VES-004 [trace 2026-10-05] Offer predictable healing and allow front-rank support.
 // 표기: .heal N -> .heal N N. 바닐라 기술 줄 회복 45개는 전부 "최소 최대" 두 숫자다. 한 숫자는 게임 해석이 보장되지 않아 같은 값을 두 번 쓴다(회복량 변화 없음)
 //성녀의 정체성을 안정성 즉 예측 가능성에 둠.
 //그렇기에 힐의 랜덤성을 없애고 소폭 상향함
@@ -72,6 +76,7 @@ combat_skill: .id "gods_comfort" .level 1 .heal 3 3 .launch 43 .target @~1234  .
 combat_skill: .id "gods_comfort" .level 2 .heal 3 4 .launch 43 .target @~1234  .is_stall_invalidating false
 combat_skill: .id "gods_comfort" .level 3 .heal 4 4 .launch 43 .target @~1234  .is_stall_invalidating false
 combat_skill: .id "gods_comfort" .level 4 .heal 4 5 .launch 43 .target @~1234  .is_stall_invalidating false
+// VES-005 [trace 2026-10-05] Keep strong party healing rear-only and smooth early upgrade values.
 //가장 사기기술인 이 기술은 대신에 3,4열에서만 사용하게 변경 432 -> 43
 //힐량 소폭 상승 이유는 1렙에 1힐이 떠버리면 디바인 그레이스보다 힐량이 구림. 근데 마지막 4->5렙 갈 때 비정상으로 높은 수치로 레벨 상승
 //그래서 1렙에 몰아줌 힐성능을 대신에 등차적으로 성장하게 바꿈
@@ -82,6 +87,7 @@ combat_skill: .id "gods_illumination" .level 1 .type "ranged" .atk 95% .dmg -75%
 combat_skill: .id "gods_illumination" .level 2 .type "ranged" .atk 100% .dmg -75% .crit 0% .launch 4321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "Dodge Curse 3" "Vestal Light 3" "Destealth"
 combat_skill: .id "gods_illumination" .level 3 .type "ranged" .atk 105% .dmg -75% .crit 0% .launch 4321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "Dodge Curse 4" "Vestal Light 4" "Destealth"
 combat_skill: .id "gods_illumination" .level 4 .type "ranged" .atk 110% .dmg -75% .crit 0% .launch 4321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "Dodge Curse 5" "Vestal Light 5" "Destealth"
+// VES-006 [trace 2026-10-05] Provide an all-rank utility option for front Vestal play.
 //1열에 쓸게 없어서 이거 넣어야함
 //사용열 321 -> 4321
 
@@ -92,6 +98,7 @@ combat_skill: .id "gods_hand" .level 1 .type "ranged" .atk 95% .dmg -50% .crit 2
 combat_skill: .id "gods_hand" .level 2 .type "ranged" .atk 100% .dmg -50% .crit 3% .launch 12 .target 123 .is_crit_valid True  .effect "Vestal Inspiration 3" "Unholy Killer 3"
 combat_skill: .id "gods_hand" .level 3 .type "ranged" .atk 105% .dmg -50% .crit 4% .launch 12 .target 123 .is_crit_valid True  .effect "Vestal Inspiration 4" "Unholy Killer 4"
 combat_skill: .id "gods_hand" .level 4 .type "ranged" .atk 110% .dmg -50% .crit 5% .launch 12 .target 123 .is_crit_valid True  .effect "Vestal Inspiration 5" "Unholy Killer 5"
+// VES-007 [trace 2026-10-05] Improve the front support attack using the author-set ranged accuracy.
 //1,2열 성녀 버프 위해 명중 레인지 표준 90으로 조정 85 -> 90
 
 

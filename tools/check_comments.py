@@ -1,119 +1,140 @@
-"""Check the comment rule: every changed data line must have a "//" note under it.
+"""Require traceable comments on changed hero data and every changed effect.
 
-Compares each hero's .info.darkest and .effects_edit.txt with vanilla.
-  - A run of consecutive changed lines (e.g. level 1-5 of one skill) may share one "//" line under the run.
-  - "//#" lines are auto-generated explanations and do not count as notes.
-  - An effect name defined in more than one vanilla file counts as unchanged if it matches any definition.
-  - In effect sheets one "//" note per skill section covers every changed effect line in that section.
-  - Lines removed from vanilla are listed too (explain them in a note near the place they were).
-Read-only. Usage: python tools/check_comments.py [--mod PATH] [--game PATH] [hero ...]
+Consecutive changed rows of one skill/stat series may share a note below the run.
+Effect sheets and generated effects require an ID + explanation immediately below
+each changed/new effect. RB references count as changes. No game files are written.
 """
-import os, re, sys
+import argparse
 from collections import Counter
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from effect_common import paths, load_vanilla_effects, vanilla_hero_file, norm_ws, effect_files
+from pathlib import Path
+import re
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from effect_common import paths, vanilla_hero_file, norm_ws, effect_files
 
-args = sys.argv[1:]
-opt = lambda k: args[args.index(k) + 1] if k in args else None
-M, G = paths(opt('--mod'), opt('--game'))
-skip_vals = {opt('--mod'), opt('--game')}
-only = [a for a in args if not a.startswith('--') and a not in skip_vals]
-EFF = load_vanilla_effects(G)
-# an effect name can be defined in several vanilla files; accept a match with any definition
-ALL_EFF = {}
-for _f in effect_files(G):
-    for _l in open(_f, encoding='utf-8', errors='replace'):
-        if _l.startswith('effect:'):
-            _m = re.search(r'\.name\s+"([^"]+)"', _l)
-            if _m:
-                ALL_EFF.setdefault(_m.group(1), set()).add(norm_ws(_l))
+CHANGE_ID = re.compile(r'\b[A-Z][A-Z0-9]{1,7}-\d{2,3}\b')
 
-RB = re.compile(r'"RB [A-Z]+ ([^"]+)"')
-
+def read_lines(path):
+    return Path(path).read_bytes().decode('utf-8', errors='replace').splitlines()
 
 def info_key(line):
     kind = line.split(':', 1)[0]
-    idm = re.search(r'\.(?:id|name) "?([^" ]+)', line)
-    lv = re.search(r'\.level (\d+)', line)
-    return (kind, idm.group(1) if idm else '', lv.group(1) if lv else '')
+    ident = re.search(r'\.(?:id|name)\s+"?([^" ]+)', line)
+    level = re.search(r'\.level\s+(\d+)', line)
+    return kind, ident[1] if ident else '', level[1] if level else ''
 
+def series_key(line):
+    kind, ident, _ = info_key(line)
+    if kind in ('weapon', 'armour'):
+        ident = re.sub(r'_\d+$', '', ident)
+    return kind, ident
 
-def read_lines(path):
-    return open(path, 'rb').read().decode('utf-8', errors='replace').replace('\r\n', '\n').split('\n')
+def data_map(lines):
+    result, count = {}, Counter()
+    for line in lines:
+        if not line.strip() or line.startswith('//'):
+            continue
+        key = info_key(line)
+        count[key] += 1
+        result[key + (count[key],)] = norm_ws(line)
+    return result
 
+def note_error(line, known_ids):
+    if not line.startswith('//') or line.startswith('//#'):
+        return '바로 아래 // 변경 ID·설명 주석 없음'
+    ids = CHANGE_ID.findall(line)
+    if not ids:
+        return '변경 ID 없음'
+    if any(i not in known_ids for i in ids):
+        return '의도 문서에 없는 ID: ' + ', '.join(i for i in ids if i not in known_ids)
+    description = CHANGE_ID.sub('', line[2:]).strip(' /,;:[]-')
+    if not description:
+        return '변경 설명/의도 연결 없음'
+    return None
 
-def uncommented(lines, changed_idx):
-    """changed_idx: set of line indexes that differ from vanilla. Returns indexes lacking a note."""
-    bad = []
-    for i in sorted(changed_idx):
+def check_info(lines, vanilla, known_ids):
+    original = data_map(vanilla)
+    changed, seen, count = set(), set(), Counter()
+    for i, line in enumerate(lines):
+        if not line.strip() or line.startswith('//'):
+            continue
+        key = info_key(line)
+        count[key] += 1
+        key += (count[key],)
+        seen.add(key)
+        if original.get(key) != norm_ws(line):
+            changed.add(i)
+    errors = []
+    for i in sorted(changed):
         j = i + 1
-        while j < len(lines) and (j in changed_idx or not lines[j].strip() or lines[j].startswith('//#')):
-            j += 1
-        if not (j < len(lines) and lines[j].startswith('//') and not lines[j].startswith('//#')):
-            bad.append(i)
-    return bad
+        while j < len(lines):
+            if not lines[j].strip() or lines[j].startswith('//#'):
+                j += 1
+            elif j in changed and series_key(lines[j]) == series_key(lines[i]):
+                j += 1
+            else:
+                break
+        error = note_error(lines[j] if j < len(lines) else '', known_ids)
+        if error:
+            errors.append((i + 1, error, lines[i]))
+    for key in original.keys() - seen:
+        errors.append((0, '원본 줄 삭제: 삭제 위치의 의도 기록을 검토하세요', str(key)))
+    return errors
 
+def check_effects(lines, vanilla_effects, known_ids, generated=False):
+    errors = []
+    for i, line in enumerate(lines):
+        if not line.startswith('effect:'):
+            continue
+        match = re.search(r'\.name\s+"([^"]+)"', line)
+        name = match[1] if match else ''
+        if not generated and norm_ws(line) in vanilla_effects.get(name, set()):
+            continue
+        error = note_error(lines[i + 1] if i + 1 < len(lines) else '', known_ids)
+        if error:
+            errors.append((i + 1, error, name))
+    return errors
 
-total = 0
-for hero in sorted(d for d in os.listdir(os.path.join(M, 'heroes')) if os.path.isdir(os.path.join(M, 'heroes', d))):
-    if only and hero not in only:
-        continue
-    out = []
-    info = os.path.join(M, 'heroes', hero, hero + '.info.darkest')
-    if os.path.exists(info):
-        # lines without an id (e.g. two death_reaction lines) are keyed by their order of appearance
-        van, cnt = {}, Counter()
-        for l in read_lines(vanilla_hero_file(G, hero)):
-            if l.strip() and not l.startswith('//'):
-                k = info_key(l); cnt[k] += 1
-                van[k + (cnt[k],)] = norm_ws(l)
-        lines = read_lines(info)
-        changed, seen, cnt = set(), set(), Counter()
-        for i, l in enumerate(lines):
-            if not l.strip() or l.startswith('//'):
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--mod')
+    parser.add_argument('--game')
+    parser.add_argument('heroes', nargs='*')
+    args = parser.parse_args(argv)
+    mod, game = paths(args.mod, args.game)
+    mod = Path(mod)
+    known = set()
+    for path in (mod / 'design' / 'changes').glob('*.md'):
+        for line in path.read_text(encoding='utf-8', errors='replace').splitlines():
+            if line.startswith(('#', '|')):
+                known.update(CHANGE_ID.findall(line))
+    effects = {}
+    for path in effect_files(game):
+        for line in read_lines(path):
+            if line.startswith('effect:'):
+                match = re.search(r'\.name\s+"([^"]+)"', line)
+                if match:
+                    effects.setdefault(match[1], set()).add(norm_ws(line))
+    errors, checked_heroes = 0, 0
+    for hero in sorted(p for p in (mod / 'heroes').iterdir() if p.is_dir()):
+        if args.heroes and hero.name not in args.heroes:
+            continue
+        checked_heroes += 1
+        files = [(hero / (hero.name + '.info.darkest'), 'info'),
+                 (hero / (hero.name + '.effects_edit.txt'), 'edit'),
+                 (mod / 'effects' / ('rebalance_' + hero.name + '.effects.darkest'), 'generated')]
+        for path, kind in files:
+            if not path.exists():
                 continue
-            k = info_key(l); cnt[k] += 1
-            k = k + (cnt[k],)
-            seen.add(k)
-            # RB-renamed references alone are generated by apply_effect_edits; compare with them undone
-            base = RB.sub(lambda m: '"%s"' % m.group(1), l)
-            if van.get(k) != norm_ws(base) and van.get(k) != norm_ws(l):
-                changed.add(i)
-        for i in uncommented(lines, changed):
-            out.append('  info  %4d행 주석 없음: %s' % (i + 1, re.sub(r'\s+', ' ', lines[i])[:110]))
-        for k in van:
-            if k not in seen:
-                out.append('  info        원본에서 삭제된 줄: %s %s %s' % k[:3])
-    edit = os.path.join(M, 'heroes', hero, hero + '.effects_edit.txt')
-    if os.path.exists(edit):
-        lines = read_lines(edit)
-        changed, sections = set(), []
-        for i, l in enumerate(lines):
-            if l.startswith('//# 기술'):
-                sections.append(i)
-            if l.startswith('effect:'):
-                m = re.search(r'\.name\s+"([^"]+)"', l)
-                name = m.group(1) if m else ''
-                if name not in ALL_EFF or norm_ws(l) not in ALL_EFF[name]:
-                    changed.add(i)
-        # a section runs from one "//# 기술" header to the next; one "//" note inside it covers the section
-        def section_of(i):
-            s = [x for x in sections if x <= i]
-            return s[-1] if s else 0
-        def section_end(s):
-            later = [x for x in sections if x > s]
-            return later[0] if later else len(lines)
-        done = set()
-        for i in sorted(changed):
-            s = section_of(i)
-            if s in done:
-                continue
-            done.add(s)
-            body = lines[s:section_end(s)]
-            if not any(x.startswith('//') and not x.startswith('//#') for x in body):
-                out.append('  효과  %4d행 주석 없음 (이 기술 구역에 // 메모가 없음): %s' % (i + 1, lines[i][:100]))
-    if out:
-        print('[%s]' % hero)
-        print('\n'.join(out))
-        total += len(out)
-print('주석 규칙 위반 %d건' % total if total else '주석 규칙: 모든 변경에 주석 있음')
+            lines = read_lines(path)
+            found = (check_info(lines, read_lines(vanilla_hero_file(game, hero.name)), known)
+                     if kind == 'info' else check_effects(lines, effects, known, kind == 'generated'))
+            for number, error, source in found:
+                print('[%s/%s] %s행 %s: %s' % (hero.name, kind, number or '-', error, source[:120]))
+            errors += len(found)
+    print('주석 규칙 위반 %d건' % errors if errors else
+          '주석 규칙: %d명 모든 변경에 ID·설명 주석 있음 (효과는 행별 검사)' % checked_heroes)
+    return 1 if errors else 0
+
+if __name__ == '__main__':
+    raise SystemExit(main())

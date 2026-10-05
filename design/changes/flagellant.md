@@ -126,3 +126,229 @@
 ### 모델 참고
 
 v2 모델에서 두 기술은 고행자 상위 3기술(방혈·처벌·구제)에 들지 않아 **영웅 총점은 변하지 않는다**(1위, 67). 재기 5레벨 0.0 HP, 인내 4.3 HP. 재기가 체력 40% 조건을 여는 가치는 방혈·구제의 유지율(V-06)에 들어가 있다.
+
+
+## 2026-10-05 주석·의도 전수 추적 (수치 변경 없음)
+이번 항목은 이전 문서의 후보/기각/예전 수치를 덮어쓰지 않는 현재 스냅샷이다. 사용자 한국어 메모를 원문 그대로 보존했다. 실제 데이터와 편집 사본의 상태를 별도로 기록하며, 새로운 수치 결정이나 전역 효과 적용을 하지 않는다. 최신 사용자 작업은 이 섹션을 우선 참고한다.
+
+### FLA-001 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 기존 설정·저항 예산 근거에 맞춰 기절/이동40, 출혈60을 기록한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `resistances/`
+  - 원본: `resistances: .stun 50% .poison 30% .bleed 65% .disease 40% .move 50% .debuff 30% .death_blow 73% .trap 0%`
+  - 현재: `resistances: .stun 40% .poison 30% .bleed 60% .disease 40% .move 40% .debuff 30% .death_blow 73% .trap 0%`
+- 출처: `heroes/flagellant/flagellant.info.darkest`, 주석 추가 전 1행; Git 원문 {"commit": "afdddd4fe5ecb3c998a50ef8f79df79d027a69f4", "summary": "FLA-001 고행자 기절·이동 40 + SB-010 방패 파괴자 근거 정정"}
+- 기존 주석 원문:
+```text
+// FLA-001 저항: 기절·이동 50 -> 40(기준값), 출혈 65 -> 60. 기절·이동 기준선은 40이다(R-RES-01; 30 가정으로 30까지 내렸던 것을 정정). 대장간 "스스로 찢음으로써 더욱 견고해집니다"(고통 내성 +)와 거의 벌거벗은 외형(경장 -, P-19)이 상쇄되어 기준값. 30(-10)은 순감소를 뒷받침할 문장이 없다. 출혈 60(+30)은 대표 저항 상한 +30(괴인 중독, 역병 의사 중독, 신비학자 약화)에 맞춤 - 바닐라 +35가 유일한 초과였다
+```
+
+### FLA-007 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 사용자 메모의 속도 정상화66889→66778을 기록한다. 구체적인 성장 선택 이유는 기존 메모에 추가 설명이 없어 확인되지 않았다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `weapon/flagellant_weapon_2`
+  - 원본: `weapon: .name "flagellant_weapon_2" .atk 0% .dmg 4 8 .crit 4% .spd 8 .upgradeRequirementCode 1`
+  - 현재: `weapon: .name "flagellant_weapon_2" .atk 0% .dmg 4 8 .crit 4% .spd 7 .upgradeRequirementCode 1`
+- 출처: `heroes/flagellant/flagellant.info.darkest`, 주석 추가 전 10행; Git 원문 {"commit": "3e0b7650d63bb2c9bf5c6fe2fece69519ef897da", "summary": "BH-007 어퍼컷 1열 전용 처형 기절기 + BH-008 섬광탄 사용 열 기록"}
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `weapon/flagellant_weapon_3`
+  - 원본: `weapon: .name "flagellant_weapon_3" .atk 0% .dmg 5 10 .crit 5% .spd 8 .upgradeRequirementCode 2`
+  - 현재: `weapon: .name "flagellant_weapon_3" .atk 0% .dmg 5 10 .crit 5% .spd 7 .upgradeRequirementCode 2`
+- 출처: `heroes/flagellant/flagellant.info.darkest`, 주석 추가 전 11행; Git 원문 {"commit": "3e0b7650d63bb2c9bf5c6fe2fece69519ef897da", "summary": "BH-007 어퍼컷 1열 전용 처형 기절기 + BH-008 섬광탄 사용 열 기록"}
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `weapon/flagellant_weapon_4`
+  - 원본: `weapon: .name "flagellant_weapon_4" .atk 0% .dmg 5 11 .crit 6% .spd 9 .upgradeRequirementCode 3`
+  - 현재: `weapon: .name "flagellant_weapon_4" .atk 0% .dmg 5 11 .crit 6% .spd 8 .upgradeRequirementCode 3`
+- 출처: `heroes/flagellant/flagellant.info.darkest`, 주석 추가 전 12행; Git 원문 {"commit": "3e0b7650d63bb2c9bf5c6fe2fece69519ef897da", "summary": "BH-007 어퍼컷 1열 전용 처형 기절기 + BH-008 섬광탄 사용 열 기록"}
+- 기존 주석 원문:
+```text
+//속도 정상화 66889 -> 66778
+```
+
+### FLA-005 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 아군 지속 회복과 자기 출혈 비용을 레벨별로 맞추고 지속3턴을 유지한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/reclaim`
+  - 원본: `combat_skill: .id "reclaim" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Healdot 1" "Flag Self Wound 1" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "reclaim" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "RB FLA Flag Healdot 1" "Flag Self Wound 1" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "reclaim" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Healdot 2" "Flag Self Wound 2" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "reclaim" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "RB FLA Flag Healdot 2" "Flag Self Wound 2" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "reclaim" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Healdot 3" "Flag Self Wound 3" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "reclaim" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "RB FLA Flag Healdot 3" "Flag Self Wound 3" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "reclaim" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Healdot 4" "Flag Self Wound 4" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "reclaim" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "RB FLA Flag Healdot 4" "Flag Self Wound 4" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "reclaim" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Healdot 5" "Flag Self Wound 5" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "reclaim" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "RB FLA Flag Healdot 5" "Flag Self Wound 5" .is_stall_invalidating false`
+- 출처: `heroes/flagellant/flagellant.info.darkest`, 주석 추가 전 48행; Git 원문 {"commit": "e45819b3d49885514d861ecb697f87b8e5707742", "summary": "FLA-005 재기 회복 일관화 + FLA-006 인내 자기 스트레스 4 고정"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Flag Healdot 1`
+- 원본: `effect: .name "Flag Healdot 1" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 2 .duration 2	.on_hit true .on_miss true`
+- 현재: `effect: .name "Flag Healdot 1" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 3 .duration 3	.on_hit true .on_miss true`
+- 출처: `heroes/flagellant/flagellant.effects_edit.txt`, 주석 추가 전 112행; Git 원문 {"commit": "e45819b3d49885514d861ecb697f87b8e5707742", "summary": "FLA-005 재기 회복 일관화 + FLA-006 인내 자기 스트레스 4 고정"}
+- 기존 주석 원문:
+```text
+// FLA-005 재기 1레벨: 턴당 회복 = 자해 출혈 턴당(3), 지속 3 고정. 아군 최대 체력 대비 32~39%로 전 레벨 일정(현재 17~28% 들쭉날쭉), 파티 순 체력 전 레벨 0 이상
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Flag Healdot 2`
+- 원본: `effect: .name "Flag Healdot 2" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 2 .duration 3	.on_hit true .on_miss true`
+- 현재: `effect: .name "Flag Healdot 2" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 3 .duration 3	.on_hit true .on_miss true`
+- 출처: `heroes/flagellant/flagellant.effects_edit.txt`, 주석 추가 전 117행; Git 원문 {"commit": "e45819b3d49885514d861ecb697f87b8e5707742", "summary": "FLA-005 재기 회복 일관화 + FLA-006 인내 자기 스트레스 4 고정"}
+- 기존 주석 원문:
+```text
+// FLA-005 재기 2레벨: 턴당 회복 = 자해 출혈 턴당(3), 지속 3 고정. 아군 최대 체력 대비 32~39%로 전 레벨 일정(현재 17~28% 들쭉날쭉), 파티 순 체력 전 레벨 0 이상
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Flag Healdot 3`
+- 원본: `effect: .name "Flag Healdot 3" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 3 .duration 2	.on_hit true .on_miss true`
+- 현재: `effect: .name "Flag Healdot 3" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 4 .duration 3	.on_hit true .on_miss true`
+- 출처: `heroes/flagellant/flagellant.effects_edit.txt`, 주석 추가 전 122행; Git 원문 {"commit": "e45819b3d49885514d861ecb697f87b8e5707742", "summary": "FLA-005 재기 회복 일관화 + FLA-006 인내 자기 스트레스 4 고정"}
+- 기존 주석 원문:
+```text
+// FLA-005 재기 3레벨: 턴당 회복 = 자해 출혈 턴당(4), 지속 3 고정. 아군 최대 체력 대비 32~39%로 전 레벨 일정(현재 17~28% 들쭉날쭉), 파티 순 체력 전 레벨 0 이상
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Flag Healdot 4`
+- 원본: `effect: .name "Flag Healdot 4" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 3 .duration 3	.on_hit true .on_miss true`
+- 현재: `effect: .name "Flag Healdot 4" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 4 .duration 3	.on_hit true .on_miss true`
+- 출처: `heroes/flagellant/flagellant.effects_edit.txt`, 주석 추가 전 127행; Git 원문 {"commit": "e45819b3d49885514d861ecb697f87b8e5707742", "summary": "FLA-005 재기 회복 일관화 + FLA-006 인내 자기 스트레스 4 고정"}
+- 기존 주석 원문:
+```text
+// FLA-005 재기 4레벨: 턴당 회복 = 자해 출혈 턴당(4), 지속 3 고정. 아군 최대 체력 대비 32~39%로 전 레벨 일정(현재 17~28% 들쭉날쭉), 파티 순 체력 전 레벨 0 이상
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Flag Healdot 5`
+- 원본: `effect: .name "Flag Healdot 5" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 4 .duration 3	.on_hit true .on_miss true`
+- 현재: `effect: .name "Flag Healdot 5" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 5 .duration 3	.on_hit true .on_miss true`
+- 출처: `heroes/flagellant/flagellant.effects_edit.txt`, 주석 추가 전 132행; Git 원문 {"commit": "e45819b3d49885514d861ecb697f87b8e5707742", "summary": "FLA-005 재기 회복 일관화 + FLA-006 인내 자기 스트레스 4 고정"}
+- 기존 주석 원문:
+```text
+// FLA-005 재기 5레벨: 턴당 회복 = 자해 출혈 턴당(5), 지속 3 고정. 아군 최대 체력 대비 32~39%로 전 레벨 일정(현재 17~28% 들쭉날쭉), 파티 순 체력 전 레벨 0 이상
+```
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB FLA Flag Healdot 1`
+- 원본 (Flag Healdot 1): `effect: .name "Flag Healdot 1" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 2 .duration 2	.on_hit true .on_miss true`
+- 현재: `effect: .name "RB FLA Flag Healdot 1" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 3 .duration 3	.on_hit true .on_miss true`
+- 출처: `effects/rebalance_flagellant.effects.darkest`, 주석 추가 전 5행; Git 원문 {"commit": "e45819b3d49885514d861ecb697f87b8e5707742", "summary": "FLA-005 재기 회복 일관화 + FLA-006 인내 자기 스트레스 4 고정"}
+- 기존 주석 원문:
+```text
+// edited vanilla effect (from dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest)
+```
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB FLA Flag Healdot 2`
+- 원본 (Flag Healdot 2): `effect: .name "Flag Healdot 2" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 2 .duration 3	.on_hit true .on_miss true`
+- 현재: `effect: .name "RB FLA Flag Healdot 2" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 3 .duration 3	.on_hit true .on_miss true`
+- 출처: `effects/rebalance_flagellant.effects.darkest`, 주석 추가 전 7행; Git 원문 {"commit": "e45819b3d49885514d861ecb697f87b8e5707742", "summary": "FLA-005 재기 회복 일관화 + FLA-006 인내 자기 스트레스 4 고정"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB FLA Flag Healdot 3`
+- 원본 (Flag Healdot 3): `effect: .name "Flag Healdot 3" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 3 .duration 2	.on_hit true .on_miss true`
+- 현재: `effect: .name "RB FLA Flag Healdot 3" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 4 .duration 3	.on_hit true .on_miss true`
+- 출처: `effects/rebalance_flagellant.effects.darkest`, 주석 추가 전 9행; Git 원문 {"commit": "e45819b3d49885514d861ecb697f87b8e5707742", "summary": "FLA-005 재기 회복 일관화 + FLA-006 인내 자기 스트레스 4 고정"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB FLA Flag Healdot 4`
+- 원본 (Flag Healdot 4): `effect: .name "Flag Healdot 4" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 3 .duration 3	.on_hit true .on_miss true`
+- 현재: `effect: .name "RB FLA Flag Healdot 4" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 4 .duration 3	.on_hit true .on_miss true`
+- 출처: `effects/rebalance_flagellant.effects.darkest`, 주석 추가 전 11행; Git 원문 {"commit": "e45819b3d49885514d861ecb697f87b8e5707742", "summary": "FLA-005 재기 회복 일관화 + FLA-006 인내 자기 스트레스 4 고정"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB FLA Flag Healdot 5`
+- 원본 (Flag Healdot 5): `effect: .name "Flag Healdot 5" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 4 .duration 3	.on_hit true .on_miss true`
+- 현재: `effect: .name "RB FLA Flag Healdot 5" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 5 .duration 3	.on_hit true .on_miss true`
+- 출처: `effects/rebalance_flagellant.effects.darkest`, 주석 추가 전 13행; Git 원문 {"commit": "e45819b3d49885514d861ecb697f87b8e5707742", "summary": "FLA-005 재기 회복 일관화 + FLA-006 인내 자기 스트레스 4 고정"}
+
+### FLA-006 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 자기 스트레스 부담을 고정4로 줄여 광대 외 스트레스 회복 역할을 보완한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/endure`
+  - 원본: `combat_skill: .id "endure" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Steal Stress 1" "Flag Self Stress 1" "Flag Endure Speed Buff 1" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "endure" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Steal Stress 1" "RB FLA Flag Self Stress 1" "Flag Endure Speed Buff 1" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "endure" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Steal Stress 2" "Flag Self Stress 2" "Flag Endure Speed Buff 2" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "endure" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Steal Stress 2" "RB FLA Flag Self Stress 2" "Flag Endure Speed Buff 2" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "endure" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Steal Stress 3" "Flag Self Stress 3" "Flag Endure Speed Buff 3" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "endure" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Steal Stress 3" "RB FLA Flag Self Stress 3" "Flag Endure Speed Buff 3" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "endure" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Steal Stress 4" "Flag Self Stress 4" "Flag Endure Speed Buff 4" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "endure" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Steal Stress 4" "RB FLA Flag Self Stress 4" "Flag Endure Speed Buff 4" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "endure" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Steal Stress 5" "Flag Self Stress 5" "Flag Endure Speed Buff 5" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "endure" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Steal Stress 5" "RB FLA Flag Self Stress 5" "Flag Endure Speed Buff 5" .is_stall_invalidating false`
+- 출처: `heroes/flagellant/flagellant.info.darkest`, 주석 추가 전 65행; Git 원문 {"commit": "e45819b3d49885514d861ecb697f87b8e5707742", "summary": "FLA-005 재기 회복 일관화 + FLA-006 인내 자기 스트레스 4 고정"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Flag Self Stress 1`
+- 원본: `effect: .name "Flag Self Stress 1" .target "performer" .curio_result_type "negative" .chance 100% .stress 10	.on_hit true .on_miss false	.queue true`
+- 현재: `effect: .name "Flag Self Stress 1" .target "performer" .curio_result_type "negative" .chance 100% .stress 4	.on_hit true .on_miss false	.queue true`
+- 출처: `heroes/flagellant/flagellant.effects_edit.txt`, 주석 추가 전 159행; Git 원문 {"commit": "e45819b3d49885514d861ecb697f87b8e5707742", "summary": "FLA-005 재기 회복 일관화 + FLA-006 인내 자기 스트레스 4 고정"}
+- 기존 주석 원문:
+```text
+// FLA-006 인내 1레벨: 자기 스트레스 10 -> 4 고정. 순회복 0 -> 6, 광대 격려의 선율보다 항상 2 낮게. 회복량 10~14(공식 하향값)는 유지
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Flag Self Stress 2`
+- 원본: `effect: .name "Flag Self Stress 2" .target "performer" .curio_result_type "negative" .chance 100% .stress 9	.on_hit true .on_miss false	.queue true`
+- 현재: `effect: .name "Flag Self Stress 2" .target "performer" .curio_result_type "negative" .chance 100% .stress 4	.on_hit true .on_miss false	.queue true`
+- 출처: `heroes/flagellant/flagellant.effects_edit.txt`, 주석 추가 전 166행; Git 원문 {"commit": "e45819b3d49885514d861ecb697f87b8e5707742", "summary": "FLA-005 재기 회복 일관화 + FLA-006 인내 자기 스트레스 4 고정"}
+- 기존 주석 원문:
+```text
+// FLA-006 인내 2레벨: 자기 스트레스 9 -> 4 고정. 순회복 2 -> 7, 광대 격려의 선율보다 항상 2 낮게. 회복량 10~14(공식 하향값)는 유지
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Flag Self Stress 3`
+- 원본: `effect: .name "Flag Self Stress 3" .target "performer" .curio_result_type "negative" .chance 100% .stress 8	.on_hit true .on_miss false	.queue true`
+- 현재: `effect: .name "Flag Self Stress 3" .target "performer" .curio_result_type "negative" .chance 100% .stress 4	.on_hit true .on_miss false	.queue true`
+- 출처: `heroes/flagellant/flagellant.effects_edit.txt`, 주석 추가 전 173행; Git 원문 {"commit": "e45819b3d49885514d861ecb697f87b8e5707742", "summary": "FLA-005 재기 회복 일관화 + FLA-006 인내 자기 스트레스 4 고정"}
+- 기존 주석 원문:
+```text
+// FLA-006 인내 3레벨: 자기 스트레스 8 -> 4 고정. 순회복 4 -> 8, 광대 격려의 선율보다 항상 2 낮게. 회복량 10~14(공식 하향값)는 유지
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Flag Self Stress 4`
+- 원본: `effect: .name "Flag Self Stress 4" .target "performer" .curio_result_type "negative" .chance 100% .stress 7	.on_hit true .on_miss false	.queue true`
+- 현재: `effect: .name "Flag Self Stress 4" .target "performer" .curio_result_type "negative" .chance 100% .stress 4	.on_hit true .on_miss false	.queue true`
+- 출처: `heroes/flagellant/flagellant.effects_edit.txt`, 주석 추가 전 180행; Git 원문 {"commit": "e45819b3d49885514d861ecb697f87b8e5707742", "summary": "FLA-005 재기 회복 일관화 + FLA-006 인내 자기 스트레스 4 고정"}
+- 기존 주석 원문:
+```text
+// FLA-006 인내 4레벨: 자기 스트레스 7 -> 4 고정. 순회복 6 -> 9, 광대 격려의 선율보다 항상 2 낮게. 회복량 10~14(공식 하향값)는 유지
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Flag Self Stress 5`
+- 원본: `effect: .name "Flag Self Stress 5" .target "performer" .curio_result_type "negative" .chance 100% .stress 6	.on_hit true .on_miss false	.queue true`
+- 현재: `effect: .name "Flag Self Stress 5" .target "performer" .curio_result_type "negative" .chance 100% .stress 4	.on_hit true .on_miss false	.queue true`
+- 출처: `heroes/flagellant/flagellant.effects_edit.txt`, 주석 추가 전 187행; Git 원문 {"commit": "e45819b3d49885514d861ecb697f87b8e5707742", "summary": "FLA-005 재기 회복 일관화 + FLA-006 인내 자기 스트레스 4 고정"}
+- 기존 주석 원문:
+```text
+// FLA-006 인내 5레벨: 자기 스트레스 6 -> 4 고정. 순회복 8 -> 10, 광대 격려의 선율보다 항상 2 낮게. 회복량 10~14(공식 하향값)는 유지
+```
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB FLA Flag Self Stress 1`
+- 원본 (Flag Self Stress 1): `effect: .name "Flag Self Stress 1" .target "performer" .curio_result_type "negative" .chance 100% .stress 10	.on_hit true .on_miss false	.queue true`
+- 현재: `effect: .name "RB FLA Flag Self Stress 1" .target "performer" .curio_result_type "negative" .chance 100% .stress 4	.on_hit true .on_miss false	.queue true`
+- 출처: `effects/rebalance_flagellant.effects.darkest`, 주석 추가 전 15행; Git 원문 {"commit": "e45819b3d49885514d861ecb697f87b8e5707742", "summary": "FLA-005 재기 회복 일관화 + FLA-006 인내 자기 스트레스 4 고정"}
+- 기존 주석 원문:
+```text
+// edited vanilla effect (from dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest)
+```
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB FLA Flag Self Stress 2`
+- 원본 (Flag Self Stress 2): `effect: .name "Flag Self Stress 2" .target "performer" .curio_result_type "negative" .chance 100% .stress 9	.on_hit true .on_miss false	.queue true`
+- 현재: `effect: .name "RB FLA Flag Self Stress 2" .target "performer" .curio_result_type "negative" .chance 100% .stress 4	.on_hit true .on_miss false	.queue true`
+- 출처: `effects/rebalance_flagellant.effects.darkest`, 주석 추가 전 17행; Git 원문 {"commit": "e45819b3d49885514d861ecb697f87b8e5707742", "summary": "FLA-005 재기 회복 일관화 + FLA-006 인내 자기 스트레스 4 고정"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB FLA Flag Self Stress 3`
+- 원본 (Flag Self Stress 3): `effect: .name "Flag Self Stress 3" .target "performer" .curio_result_type "negative" .chance 100% .stress 8	.on_hit true .on_miss false	.queue true`
+- 현재: `effect: .name "RB FLA Flag Self Stress 3" .target "performer" .curio_result_type "negative" .chance 100% .stress 4	.on_hit true .on_miss false	.queue true`
+- 출처: `effects/rebalance_flagellant.effects.darkest`, 주석 추가 전 19행; Git 원문 {"commit": "e45819b3d49885514d861ecb697f87b8e5707742", "summary": "FLA-005 재기 회복 일관화 + FLA-006 인내 자기 스트레스 4 고정"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB FLA Flag Self Stress 4`
+- 원본 (Flag Self Stress 4): `effect: .name "Flag Self Stress 4" .target "performer" .curio_result_type "negative" .chance 100% .stress 7	.on_hit true .on_miss false	.queue true`
+- 현재: `effect: .name "RB FLA Flag Self Stress 4" .target "performer" .curio_result_type "negative" .chance 100% .stress 4	.on_hit true .on_miss false	.queue true`
+- 출처: `effects/rebalance_flagellant.effects.darkest`, 주석 추가 전 21행; Git 원문 {"commit": "e45819b3d49885514d861ecb697f87b8e5707742", "summary": "FLA-005 재기 회복 일관화 + FLA-006 인내 자기 스트레스 4 고정"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB FLA Flag Self Stress 5`
+- 원본 (Flag Self Stress 5): `effect: .name "Flag Self Stress 5" .target "performer" .curio_result_type "negative" .chance 100% .stress 6	.on_hit true .on_miss false	.queue true`
+- 현재: `effect: .name "RB FLA Flag Self Stress 5" .target "performer" .curio_result_type "negative" .chance 100% .stress 4	.on_hit true .on_miss false	.queue true`
+- 출처: `effects/rebalance_flagellant.effects.darkest`, 주석 추가 전 23행; Git 원문 {"commit": "e45819b3d49885514d861ecb697f87b8e5707742", "summary": "FLA-005 재기 회복 일관화 + FLA-006 인내 자기 스트레스 4 고정"}

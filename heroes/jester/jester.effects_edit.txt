@@ -56,6 +56,7 @@ effect: .name "Mortal Weakness Stress" .target "performer" .curio_result_type "n
 effect: .name "Solo Mark Self" .target "performer" .curio_result_type "positive" .chance 100% .tag 1 .combat_stat_buff 1 .duration 3 .on_hit true .on_miss true .queue true .apply_once true
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Jester Spotlight 1" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 25% .duration 4	.on_hit true .on_miss true .queue true .apply_once true
+// JES-006 [trace 2026-10-05] Make front-rank mark/dodge play practical alongside Finale preparation and corpse clearing. Effect: Jester Spotlight 1.
 // JES-006 Solo dodge +5 at every level to offset front-rank mark exposure; duration and other effects retained.
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Build to Finale 2" .target "performer" .curio_result_type "positive" .chance 100% .buff_ids "build_to_finale2_dmgL" "build_to_finale2_dmgH" "build_to_finale2_crit" .on_hit true .on_miss false .apply_once true .queue true .duration 8
@@ -64,15 +65,19 @@ effect: .name "Build to Finale 2" .target "performer" .curio_result_type "positi
 //#   강화 효과 수치(JSON, 참고용): build_to_finale2_crit = crit_chance 0.08 [skill]
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Jester Spotlight 2" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 27% .duration 4	.on_hit true .on_miss true .queue true .apply_once true
+// JES-006 [trace 2026-10-05] Make front-rank mark/dodge play practical alongside Finale preparation and corpse clearing. Effect: Jester Spotlight 2.
 // JES-006 Solo dodge +5 at every level to offset front-rank mark exposure; duration and other effects retained.
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Jester Spotlight 3" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 30% .duration 4	.on_hit true .on_miss true .queue true .apply_once true
+// JES-006 [trace 2026-10-05] Make front-rank mark/dodge play practical alongside Finale preparation and corpse clearing. Effect: Jester Spotlight 3.
 // JES-006 Solo dodge +5 at every level to offset front-rank mark exposure; duration and other effects retained.
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Jester Spotlight 4" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 32% .duration 4	.on_hit true .on_miss true .queue true .apply_once true
+// JES-006 [trace 2026-10-05] Make front-rank mark/dodge play practical alongside Finale preparation and corpse clearing. Effect: Jester Spotlight 4.
 // JES-006 Solo dodge +5 at every level to offset front-rank mark exposure; duration and other effects retained.
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Jester Spotlight 5" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 35% .duration 4	.on_hit true .on_miss true .queue true .apply_once true
+// JES-006 [trace 2026-10-05] Make front-rank mark/dodge play practical alongside Finale preparation and corpse clearing. Effect: Jester Spotlight 5.
 // JES-006 Solo dodge +5 at every level to offset front-rank mark exposure; duration and other effects retained.
 //#   원본 위치: effects/base.effects.darkest
 
@@ -99,6 +104,7 @@ effect: .name "Strong Bleed 5" .target "target" .curio_result_type "negative" .c
 //# 기술: 전투의 발라드 (battle_ballad)
 //# 레벨별 효과: 1레벨 Embolden Team 1, Build to Finale Song | 2레벨 Embolden Team 2, Build to Finale Song | 3레벨 Embolden Team 3, Build to Finale Song | 4레벨 Embolden Team 4, Build to Finale Song | 5레벨 Embolden Team 5, Build to Finale Song
 effect: .name "Embolden Team 1" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 5% .crit_chance_add 1% .speed_rating_add 1	.on_hit true .on_miss true .apply_once false    .queue false
+// JES-002 [trace 2026-10-05] Reduce dominant team speed and critical bonuses while retaining accuracy and Finale preparation. Effect: Embolden Team 1.
 // JES-002 Team critical bonus -1% point and speed -1; approved level 1 values, accuracy retained.
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Build to Finale Song" .target "performer" .curio_result_type "positive" .chance 100% .buff_ids "build_to_finale_dmgL" "build_to_finale_dmgH" "build_to_finale_crit" .on_hit true .on_miss false .apply_once true .queue true .duration 8
@@ -108,15 +114,19 @@ effect: .name "Build to Finale Song" .target "performer" .curio_result_type "pos
 //#   강화 효과 수치(JSON, 참고용): build_to_finale_crit = crit_chance 0.08 [skill]
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Embolden Team 2" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 6% .crit_chance_add 2% .speed_rating_add 1	.on_hit true .on_miss true .apply_once false	.queue false
+// JES-002 [trace 2026-10-05] Reduce dominant team speed and critical bonuses while retaining accuracy and Finale preparation. Effect: Embolden Team 2.
 // JES-002 Team critical bonus -1% point and speed -1; approved level 2 values, accuracy retained.
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Embolden Team 3" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 7% .crit_chance_add 3% .speed_rating_add 2	.on_hit true .on_miss true .apply_once false	.queue false
+// JES-002 [trace 2026-10-05] Reduce dominant team speed and critical bonuses while retaining accuracy and Finale preparation. Effect: Embolden Team 3.
 // JES-002 Team critical bonus -1% point and speed -1; approved level 3 values, accuracy retained.
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Embolden Team 4" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 8% .crit_chance_add 4% .speed_rating_add 2	.on_hit true .on_miss true .apply_once false	.queue false
+// JES-002 [trace 2026-10-05] Reduce dominant team speed and critical bonuses while retaining accuracy and Finale preparation. Effect: Embolden Team 4.
 // JES-002 Team critical bonus -1% point and speed -1; approved level 4 values, accuracy retained.
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Embolden Team 5" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 10% .crit_chance_add 5% .speed_rating_add 3	.on_hit true .on_miss true .apply_once false	.queue false
+// JES-002 [trace 2026-10-05] Reduce dominant team speed and critical bonuses while retaining accuracy and Finale preparation. Effect: Embolden Team 5.
 // JES-002 Team critical bonus -1% point and speed -1; approved level 5 values, accuracy retained.
 //#   원본 위치: effects/base.effects.darkest
 

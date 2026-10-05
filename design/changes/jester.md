@@ -114,3 +114,240 @@
 - 영향: 기본 회피와 두 번 사용·폭군의 손가락뼈 등 전열 조건을 따로 검토한다.5레벨 두 번 정상 중첩 가정 회피95→105이며, 대단원 직후에는 회피−25와받는스트레스+100%가 있어 한 번 독주65/70의보호량을그대로연장하지않는다.
 - 참조: 이어가기 outputs/solo-dodge-options.txt/.json, solo-tanking-cap-review.txt/.json. 회피 중첩·기간·숨은 명중·대단원 강화 상한은 아직 게임 확인 항목이다.
 - 검증: 광대만 대상으로 편집 효과를 적용하고35기술줄과모든편집효과에서회피5줄/참조5줄만승인대로변경됐는지대조한다.주석검사·전용효과정의·참조·모드목록과관련파일바이트보존을확인한다. 기존 사용자 한국어 주석은 원문 그대로 보존한다.
+
+
+## 2026-10-05 주석·의도 전수 추적 (수치 변경 없음)
+이번 항목은 이전 문서의 후보/기각/예전 수치를 덮어쓰지 않는 현재 스냅샷이다. 사용자 한국어 메모를 원문 그대로 보존했다. 실제 데이터와 편집 사본의 상태를 별도로 기록하며, 새로운 수치 결정이나 전역 효과 적용을 하지 않는다. 최신 사용자 작업은 이 섹션을 우선 참고한다.
+
+### JES-004 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 이동 공격의 명중을 보완해 기술 선택지를 만들고 기존 치명/보호 무시/대단원 준비를 유지한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/dirk_stab`
+  - 원본: `combat_skill: .id "dirk_stab" .level 0 .type "melee" .atk 85% .dmg 0% .crit 5% .move 0 1 .launch 4321 .target 123 .is_crit_valid True .ignore_guard true  .effect "Build to Finale"`
+  - 현재: `combat_skill: .id "dirk_stab" .level 0 .type "melee" .atk 90% .dmg 0% .crit 5% .move 0 1 .launch 4321 .target 123 .is_crit_valid True .ignore_guard true  .effect "Build to Finale"`
+  - 원본: `combat_skill: .id "dirk_stab" .level 1 .type "melee" .atk 90% .dmg 0% .crit 6% .move 0 1 .launch 4321 .target 123 .is_crit_valid True .ignore_guard true  .effect "Build to Finale"`
+  - 현재: `combat_skill: .id "dirk_stab" .level 1 .type "melee" .atk 95% .dmg 0% .crit 6% .move 0 1 .launch 4321 .target 123 .is_crit_valid True .ignore_guard true  .effect "Build to Finale"`
+  - 원본: `combat_skill: .id "dirk_stab" .level 2 .type "melee" .atk 95% .dmg 0% .crit 7% .move 0 1 .launch 4321 .target 123 .is_crit_valid True .ignore_guard true  .effect "Build to Finale"`
+  - 현재: `combat_skill: .id "dirk_stab" .level 2 .type "melee" .atk 100% .dmg 0% .crit 7% .move 0 1 .launch 4321 .target 123 .is_crit_valid True .ignore_guard true  .effect "Build to Finale"`
+  - 원본: `combat_skill: .id "dirk_stab" .level 3 .type "melee" .atk 100% .dmg 0% .crit 8% .move 0 1 .launch 4321 .target 123 .is_crit_valid True .ignore_guard true  .effect "Build to Finale"`
+  - 현재: `combat_skill: .id "dirk_stab" .level 3 .type "melee" .atk 105% .dmg 0% .crit 8% .move 0 1 .launch 4321 .target 123 .is_crit_valid True .ignore_guard true  .effect "Build to Finale"`
+  - 원본: `combat_skill: .id "dirk_stab" .level 4 .type "melee" .atk 105% .dmg 0% .crit 9% .move 0 1 .launch 4321 .target 123 .is_crit_valid True .ignore_guard true  .effect "Build to Finale"`
+  - 현재: `combat_skill: .id "dirk_stab" .level 4 .type "melee" .atk 110% .dmg 0% .crit 9% .move 0 1 .launch 4321 .target 123 .is_crit_valid True .ignore_guard true  .effect "Build to Finale"`
+- 출처: `heroes/jester/jester.info.darkest`, 주석 추가 전 17행; Git 원문 {"commit": "84a709eea8f59e18bb43c17f3bc0d9083f1269fb", "summary": "JES-002/003/004 apply approved Ballad growth, rank-2 Tune and Dirk accuracy"}
+- 기존 주석 원문:
+```text
+// JES-004 Dirk Stab accuracy +5 at every level; damage, critical modifier, guard bypass, movement and Finale preparation retained.
+```
+
+### JES-001 JES-005 JES-006 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 전열 표식/회피 운영을 실용적으로 만들어 강한 지원·출혈 기술과 슬롯 경쟁이 가능하게 한다. 전열 노출 비용을 회피+5로 보완한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/solo`
+  - 원본: `combat_skill: .id "solo" .level 0 .type "ranged" .atk 125% .dmg -100% .crit 0% .move 0 3 .per_battle_limit 2 .launch 43 .target ~1234 .is_crit_valid False  .effect "Solo Mark Self" "Jester Spotlight 1" "Build to Finale 2"`
+  - 현재: `combat_skill: .id "solo" .level 0 .type "ranged" .atk 125% .dmg -100% .crit 0% .move 0 3 .per_battle_limit 2 .launch 1234 .target ~1234 .is_crit_valid False  .effect "Solo Mark Self" "clear_corpses" "RB JES Jester Spotlight 1" "Build to Finale 2"`
+  - 원본: `combat_skill: .id "solo" .level 1 .type "ranged" .atk 130% .dmg -100% .crit 0% .move 0 3 .per_battle_limit 2 .launch 43 .target ~1234 .is_crit_valid False  .effect "Solo Mark Self" "Jester Spotlight 2" "Build to Finale 2"`
+  - 현재: `combat_skill: .id "solo" .level 1 .type "ranged" .atk 130% .dmg -100% .crit 0% .move 0 3 .per_battle_limit 2 .launch 1234 .target ~1234 .is_crit_valid False  .effect "Solo Mark Self" "clear_corpses" "RB JES Jester Spotlight 2" "Build to Finale 2"`
+  - 원본: `combat_skill: .id "solo" .level 2 .type "ranged" .atk 135% .dmg -100% .crit 0% .move 0 3 .per_battle_limit 2 .launch 43 .target ~1234 .is_crit_valid False  .effect "Solo Mark Self" "Jester Spotlight 3" "Build to Finale 2"`
+  - 현재: `combat_skill: .id "solo" .level 2 .type "ranged" .atk 135% .dmg -100% .crit 0% .move 0 3 .per_battle_limit 2 .launch 1234 .target ~1234 .is_crit_valid False  .effect "Solo Mark Self" "clear_corpses" "RB JES Jester Spotlight 3" "Build to Finale 2"`
+  - 원본: `combat_skill: .id "solo" .level 3 .type "ranged" .atk 140% .dmg -100% .crit 0% .move 0 3 .per_battle_limit 2 .launch 43 .target ~1234 .is_crit_valid False  .effect "Solo Mark Self" "Jester Spotlight 4" "Build to Finale 2"`
+  - 현재: `combat_skill: .id "solo" .level 3 .type "ranged" .atk 140% .dmg -100% .crit 0% .move 0 3 .per_battle_limit 2 .launch 1234 .target ~1234 .is_crit_valid False  .effect "Solo Mark Self" "clear_corpses" "RB JES Jester Spotlight 4" "Build to Finale 2"`
+  - 원본: `combat_skill: .id "solo" .level 4 .type "ranged" .atk 145% .dmg -100% .crit 0% .move 0 3 .per_battle_limit 2 .launch 43 .target ~1234 .is_crit_valid False  .effect "Solo Mark Self" "Jester Spotlight 5" "Build to Finale 2"`
+  - 현재: `combat_skill: .id "solo" .level 4 .type "ranged" .atk 145% .dmg -100% .crit 0% .move 0 3 .per_battle_limit 2 .launch 1234 .target ~1234 .is_crit_valid False  .effect "Solo Mark Self" "clear_corpses" "RB JES Jester Spotlight 5" "Build to Finale 2"`
+- 출처: `heroes/jester/jester.info.darkest`, 주석 추가 전 33행; Git 원문 {"commit": "577aabb0717238508f421a9dd119fb5072f75ea0", "summary": "JES-006 raise Solo dodge by five at each level"}
+- 기존 주석 원문:
+```text
+// JES-006 Solo dodge 25/27/30/32/35 via dedicated effects; JES-005 all-rank launch and two uses retained.
+```
+- 기존 주석 원문:
+```text
+// JES-005 Solo usable from ranks 1/2/3/4; improve front-rank dodge/mark use and skill selection. Existing effects, forward 3 and two uses per battle retained.
+```
+- 기존 주석 원문:
+```text
+// JES-001 solo: 시체 제거 추가. 3열 처치 -> 독주(1열 이동 + 시체 제거)로 4열 적을 3열로 -> 대단원 연계 [제작자]. 효과 이름 Jester Spotlight(무대 조명) = 무대를 비운다(P-19). 대단원 4열 도달 여부는 V-08
+```
+
+### JES-002 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 중요 능력치 셋을 함께 올리는 지원기의 우위를 줄여 다른 버프/조합의 선택을 넓힌다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/battle_ballad`
+  - 원본: `combat_skill: .id "battle_ballad" .level 0 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 34 .target @~1234 .is_crit_valid True  .effect "Embolden Team 1" "Build to Finale Song" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "battle_ballad" .level 0 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 34 .target @~1234 .is_crit_valid True  .effect "RB JES Embolden Team 1" "Build to Finale Song" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "battle_ballad" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 34 .target @~1234 .is_crit_valid True  .effect "Embolden Team 2" "Build to Finale Song" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "battle_ballad" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 34 .target @~1234 .is_crit_valid True  .effect "RB JES Embolden Team 2" "Build to Finale Song" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "battle_ballad" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 34 .target @~1234 .is_crit_valid True  .effect "Embolden Team 3" "Build to Finale Song" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "battle_ballad" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 34 .target @~1234 .is_crit_valid True  .effect "RB JES Embolden Team 3" "Build to Finale Song" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "battle_ballad" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 34 .target @~1234 .is_crit_valid True  .effect "Embolden Team 4" "Build to Finale Song" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "battle_ballad" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 34 .target @~1234 .is_crit_valid True  .effect "RB JES Embolden Team 4" "Build to Finale Song" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "battle_ballad" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 34 .target @~1234 .is_crit_valid True  .effect "Embolden Team 5" "Build to Finale Song" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "battle_ballad" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 34 .target @~1234 .is_crit_valid True  .effect "RB JES Embolden Team 5" "Build to Finale Song" .is_stall_invalidating false`
+- 출처: `heroes/jester/jester.info.darkest`, 주석 추가 전 47행; Git 원문 {"commit": "84a709eea8f59e18bb43c17f3bc0d9083f1269fb", "summary": "JES-002/003/004 apply approved Ballad growth, rank-2 Tune and Dirk accuracy"}
+- 기존 주석 원문:
+```text
+// JES-002 Battle Ballad team speed 1/1/2/2/3 and critical bonus 1/2/3/4/5%; accuracy and Finale-specific preparation retained.
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Embolden Team 1`
+- 원본: `effect: .name "Embolden Team 1" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 5% .crit_chance_add 2% .speed_rating_add 2	.on_hit true .on_miss true .apply_once false    .queue false`
+- 현재: `effect: .name "Embolden Team 1" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 5% .crit_chance_add 1% .speed_rating_add 1	.on_hit true .on_miss true .apply_once false    .queue false`
+- 출처: `heroes/jester/jester.effects_edit.txt`, 주석 추가 전 101행; Git 원문 {"commit": "84a709eea8f59e18bb43c17f3bc0d9083f1269fb", "summary": "JES-002/003/004 apply approved Ballad growth, rank-2 Tune and Dirk accuracy"}
+- 기존 주석 원문:
+```text
+// JES-002 Team critical bonus -1% point and speed -1; approved level 1 values, accuracy retained.
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Embolden Team 2`
+- 원본: `effect: .name "Embolden Team 2" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 6% .crit_chance_add 3% .speed_rating_add 2	.on_hit true .on_miss true .apply_once false	.queue false`
+- 현재: `effect: .name "Embolden Team 2" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 6% .crit_chance_add 2% .speed_rating_add 1	.on_hit true .on_miss true .apply_once false	.queue false`
+- 출처: `heroes/jester/jester.effects_edit.txt`, 주석 추가 전 110행; Git 원문 {"commit": "84a709eea8f59e18bb43c17f3bc0d9083f1269fb", "summary": "JES-002/003/004 apply approved Ballad growth, rank-2 Tune and Dirk accuracy"}
+- 기존 주석 원문:
+```text
+// JES-002 Team critical bonus -1% point and speed -1; approved level 2 values, accuracy retained.
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Embolden Team 3`
+- 원본: `effect: .name "Embolden Team 3" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 7% .crit_chance_add 4% .speed_rating_add 3	.on_hit true .on_miss true .apply_once false	.queue false`
+- 현재: `effect: .name "Embolden Team 3" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 7% .crit_chance_add 3% .speed_rating_add 2	.on_hit true .on_miss true .apply_once false	.queue false`
+- 출처: `heroes/jester/jester.effects_edit.txt`, 주석 추가 전 113행; Git 원문 {"commit": "84a709eea8f59e18bb43c17f3bc0d9083f1269fb", "summary": "JES-002/003/004 apply approved Ballad growth, rank-2 Tune and Dirk accuracy"}
+- 기존 주석 원문:
+```text
+// JES-002 Team critical bonus -1% point and speed -1; approved level 3 values, accuracy retained.
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Embolden Team 4`
+- 원본: `effect: .name "Embolden Team 4" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 8% .crit_chance_add 5% .speed_rating_add 3	.on_hit true .on_miss true .apply_once false	.queue false`
+- 현재: `effect: .name "Embolden Team 4" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 8% .crit_chance_add 4% .speed_rating_add 2	.on_hit true .on_miss true .apply_once false	.queue false`
+- 출처: `heroes/jester/jester.effects_edit.txt`, 주석 추가 전 116행; Git 원문 {"commit": "84a709eea8f59e18bb43c17f3bc0d9083f1269fb", "summary": "JES-002/003/004 apply approved Ballad growth, rank-2 Tune and Dirk accuracy"}
+- 기존 주석 원문:
+```text
+// JES-002 Team critical bonus -1% point and speed -1; approved level 4 values, accuracy retained.
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Embolden Team 5`
+- 원본: `effect: .name "Embolden Team 5" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 10% .crit_chance_add 6% .speed_rating_add 4	.on_hit true .on_miss true .apply_once false	.queue false`
+- 현재: `effect: .name "Embolden Team 5" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 10% .crit_chance_add 5% .speed_rating_add 3	.on_hit true .on_miss true .apply_once false	.queue false`
+- 출처: `heroes/jester/jester.effects_edit.txt`, 주석 추가 전 119행; Git 원문 {"commit": "84a709eea8f59e18bb43c17f3bc0d9083f1269fb", "summary": "JES-002/003/004 apply approved Ballad growth, rank-2 Tune and Dirk accuracy"}
+- 기존 주석 원문:
+```text
+// JES-002 Team critical bonus -1% point and speed -1; approved level 5 values, accuracy retained.
+```
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB JES Embolden Team 1`
+- 원본 (Embolden Team 1): `effect: .name "Embolden Team 1" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 5% .crit_chance_add 2% .speed_rating_add 2	.on_hit true .on_miss true .apply_once false    .queue false`
+- 현재: `effect: .name "RB JES Embolden Team 1" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 5% .crit_chance_add 1% .speed_rating_add 1	.on_hit true .on_miss true .apply_once false    .queue false`
+- 출처: `effects/rebalance_jester.effects.darkest`, 주석 추가 전 20행; Git 원문 {"commit": "84a709eea8f59e18bb43c17f3bc0d9083f1269fb", "summary": "JES-002/003/004 apply approved Ballad growth, rank-2 Tune and Dirk accuracy"}
+- 기존 주석 원문:
+```text
+// edited vanilla effect (from effects/base.effects.darkest)
+```
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB JES Embolden Team 2`
+- 원본 (Embolden Team 2): `effect: .name "Embolden Team 2" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 6% .crit_chance_add 3% .speed_rating_add 2	.on_hit true .on_miss true .apply_once false	.queue false`
+- 현재: `effect: .name "RB JES Embolden Team 2" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 6% .crit_chance_add 2% .speed_rating_add 1	.on_hit true .on_miss true .apply_once false	.queue false`
+- 출처: `effects/rebalance_jester.effects.darkest`, 주석 추가 전 23행; Git 원문 {"commit": "84a709eea8f59e18bb43c17f3bc0d9083f1269fb", "summary": "JES-002/003/004 apply approved Ballad growth, rank-2 Tune and Dirk accuracy"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB JES Embolden Team 3`
+- 원본 (Embolden Team 3): `effect: .name "Embolden Team 3" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 7% .crit_chance_add 4% .speed_rating_add 3	.on_hit true .on_miss true .apply_once false	.queue false`
+- 현재: `effect: .name "RB JES Embolden Team 3" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 7% .crit_chance_add 3% .speed_rating_add 2	.on_hit true .on_miss true .apply_once false	.queue false`
+- 출처: `effects/rebalance_jester.effects.darkest`, 주석 추가 전 26행; Git 원문 {"commit": "84a709eea8f59e18bb43c17f3bc0d9083f1269fb", "summary": "JES-002/003/004 apply approved Ballad growth, rank-2 Tune and Dirk accuracy"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB JES Embolden Team 4`
+- 원본 (Embolden Team 4): `effect: .name "Embolden Team 4" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 8% .crit_chance_add 5% .speed_rating_add 3	.on_hit true .on_miss true .apply_once false	.queue false`
+- 현재: `effect: .name "RB JES Embolden Team 4" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 8% .crit_chance_add 4% .speed_rating_add 2	.on_hit true .on_miss true .apply_once false	.queue false`
+- 출처: `effects/rebalance_jester.effects.darkest`, 주석 추가 전 29행; Git 원문 {"commit": "84a709eea8f59e18bb43c17f3bc0d9083f1269fb", "summary": "JES-002/003/004 apply approved Ballad growth, rank-2 Tune and Dirk accuracy"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB JES Embolden Team 5`
+- 원본 (Embolden Team 5): `effect: .name "Embolden Team 5" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 10% .crit_chance_add 6% .speed_rating_add 4	.on_hit true .on_miss true .apply_once false	.queue false`
+- 현재: `effect: .name "RB JES Embolden Team 5" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 10% .crit_chance_add 5% .speed_rating_add 3	.on_hit true .on_miss true .apply_once false	.queue false`
+- 출처: `effects/rebalance_jester.effects.darkest`, 주석 추가 전 32행; Git 원문 {"commit": "84a709eea8f59e18bb43c17f3bc0d9083f1269fb", "summary": "JES-002/003/004 apply approved Ballad growth, rank-2 Tune and Dirk accuracy"}
+
+### JES-003 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 2열 광대가 공격 기술만 고정 채용하지 않도록 지원 선택지를 연다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/inspiring_tune`
+  - 원본: `combat_skill: .id "inspiring_tune" .level 0 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 43 .target @1234 .is_crit_valid True  .effect "InspiringTune 1" "Jester Tune Buff 1" "Build to Finale Song" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "inspiring_tune" .level 0 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 234 .target @1234 .is_crit_valid True  .effect "InspiringTune 1" "Jester Tune Buff 1" "Build to Finale Song" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "inspiring_tune" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 43 .target @1234 .is_crit_valid True  .effect "InspiringTune 2" "Jester Tune Buff 2" "Build to Finale Song" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "inspiring_tune" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 234 .target @1234 .is_crit_valid True  .effect "InspiringTune 2" "Jester Tune Buff 2" "Build to Finale Song" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "inspiring_tune" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 43 .target @1234 .is_crit_valid True  .effect "InspiringTune 3" "Jester Tune Buff 3" "Build to Finale Song" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "inspiring_tune" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 234 .target @1234 .is_crit_valid True  .effect "InspiringTune 3" "Jester Tune Buff 3" "Build to Finale Song" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "inspiring_tune" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 43 .target @1234 .is_crit_valid True  .effect "InspiringTune 4" "Jester Tune Buff 4" "Build to Finale Song" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "inspiring_tune" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 234 .target @1234 .is_crit_valid True  .effect "InspiringTune 4" "Jester Tune Buff 4" "Build to Finale Song" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "inspiring_tune" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 43 .target @1234 .is_crit_valid True  .effect "InspiringTune 5" "Jester Tune Buff 5" "Build to Finale Song" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "inspiring_tune" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 234 .target @1234 .is_crit_valid True  .effect "InspiringTune 5" "Jester Tune Buff 5" "Build to Finale Song" .is_stall_invalidating false`
+- 출처: `heroes/jester/jester.info.darkest`, 주석 추가 전 53행; Git 원문 {"commit": "84a709eea8f59e18bb43c17f3bc0d9083f1269fb", "summary": "JES-002/003/004 apply approved Ballad growth, rank-2 Tune and Dirk accuracy"}
+- 기존 주석 원문:
+```text
+// JES-003 Inspiring Tune usable from ranks 2/3/4; stress healing and stress resistance retained.
+```
+
+### JES-006 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 전열 표식/회피 운영을 실용적으로 만들어 강한 지원·출혈 기술과 슬롯 경쟁이 가능하게 한다. 전열 노출 비용을 회피+5로 보완한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Jester Spotlight 1`
+- 원본: `effect: .name "Jester Spotlight 1" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 20% .duration 4	.on_hit true .on_miss true .queue true .apply_once true`
+- 현재: `effect: .name "Jester Spotlight 1" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 25% .duration 4	.on_hit true .on_miss true .queue true .apply_once true`
+- 출처: `heroes/jester/jester.effects_edit.txt`, 주석 추가 전 58행; Git 원문 {"commit": "577aabb0717238508f421a9dd119fb5072f75ea0", "summary": "JES-006 raise Solo dodge by five at each level"}
+- 기존 주석 원문:
+```text
+// JES-006 Solo dodge +5 at every level to offset front-rank mark exposure; duration and other effects retained.
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Jester Spotlight 2`
+- 원본: `effect: .name "Jester Spotlight 2" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 22% .duration 4	.on_hit true .on_miss true .queue true .apply_once true`
+- 현재: `effect: .name "Jester Spotlight 2" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 27% .duration 4	.on_hit true .on_miss true .queue true .apply_once true`
+- 출처: `heroes/jester/jester.effects_edit.txt`, 주석 추가 전 66행; Git 원문 {"commit": "577aabb0717238508f421a9dd119fb5072f75ea0", "summary": "JES-006 raise Solo dodge by five at each level"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Jester Spotlight 3`
+- 원본: `effect: .name "Jester Spotlight 3" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 25% .duration 4	.on_hit true .on_miss true .queue true .apply_once true`
+- 현재: `effect: .name "Jester Spotlight 3" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 30% .duration 4	.on_hit true .on_miss true .queue true .apply_once true`
+- 출처: `heroes/jester/jester.effects_edit.txt`, 주석 추가 전 69행; Git 원문 {"commit": "577aabb0717238508f421a9dd119fb5072f75ea0", "summary": "JES-006 raise Solo dodge by five at each level"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Jester Spotlight 4`
+- 원본: `effect: .name "Jester Spotlight 4" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 27% .duration 4	.on_hit true .on_miss true .queue true .apply_once true`
+- 현재: `effect: .name "Jester Spotlight 4" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 32% .duration 4	.on_hit true .on_miss true .queue true .apply_once true`
+- 출처: `heroes/jester/jester.effects_edit.txt`, 주석 추가 전 72행; Git 원문 {"commit": "577aabb0717238508f421a9dd119fb5072f75ea0", "summary": "JES-006 raise Solo dodge by five at each level"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Jester Spotlight 5`
+- 원본: `effect: .name "Jester Spotlight 5" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 30% .duration 4	.on_hit true .on_miss true .queue true .apply_once true`
+- 현재: `effect: .name "Jester Spotlight 5" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 35% .duration 4	.on_hit true .on_miss true .queue true .apply_once true`
+- 출처: `heroes/jester/jester.effects_edit.txt`, 주석 추가 전 75행; Git 원문 {"commit": "577aabb0717238508f421a9dd119fb5072f75ea0", "summary": "JES-006 raise Solo dodge by five at each level"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB JES Jester Spotlight 1`
+- 원본 (Jester Spotlight 1): `effect: .name "Jester Spotlight 1" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 20% .duration 4	.on_hit true .on_miss true .queue true .apply_once true`
+- 현재: `effect: .name "RB JES Jester Spotlight 1" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 25% .duration 4	.on_hit true .on_miss true .queue true .apply_once true`
+- 출처: `effects/rebalance_jester.effects.darkest`, 주석 추가 전 5행; Git 원문 {"commit": "577aabb0717238508f421a9dd119fb5072f75ea0", "summary": "JES-006 raise Solo dodge by five at each level"}
+- 기존 주석 원문:
+```text
+// edited vanilla effect (from effects/base.effects.darkest)
+```
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB JES Jester Spotlight 2`
+- 원본 (Jester Spotlight 2): `effect: .name "Jester Spotlight 2" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 22% .duration 4	.on_hit true .on_miss true .queue true .apply_once true`
+- 현재: `effect: .name "RB JES Jester Spotlight 2" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 27% .duration 4	.on_hit true .on_miss true .queue true .apply_once true`
+- 출처: `effects/rebalance_jester.effects.darkest`, 주석 추가 전 8행; Git 원문 {"commit": "577aabb0717238508f421a9dd119fb5072f75ea0", "summary": "JES-006 raise Solo dodge by five at each level"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB JES Jester Spotlight 3`
+- 원본 (Jester Spotlight 3): `effect: .name "Jester Spotlight 3" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 25% .duration 4	.on_hit true .on_miss true .queue true .apply_once true`
+- 현재: `effect: .name "RB JES Jester Spotlight 3" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 30% .duration 4	.on_hit true .on_miss true .queue true .apply_once true`
+- 출처: `effects/rebalance_jester.effects.darkest`, 주석 추가 전 11행; Git 원문 {"commit": "577aabb0717238508f421a9dd119fb5072f75ea0", "summary": "JES-006 raise Solo dodge by five at each level"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB JES Jester Spotlight 4`
+- 원본 (Jester Spotlight 4): `effect: .name "Jester Spotlight 4" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 27% .duration 4	.on_hit true .on_miss true .queue true .apply_once true`
+- 현재: `effect: .name "RB JES Jester Spotlight 4" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 32% .duration 4	.on_hit true .on_miss true .queue true .apply_once true`
+- 출처: `effects/rebalance_jester.effects.darkest`, 주석 추가 전 14행; Git 원문 {"commit": "577aabb0717238508f421a9dd119fb5072f75ea0", "summary": "JES-006 raise Solo dodge by five at each level"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB JES Jester Spotlight 5`
+- 원본 (Jester Spotlight 5): `effect: .name "Jester Spotlight 5" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 30% .duration 4	.on_hit true .on_miss true .queue true .apply_once true`
+- 현재: `effect: .name "RB JES Jester Spotlight 5" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 35% .duration 4	.on_hit true .on_miss true .queue true .apply_once true`
+- 출처: `effects/rebalance_jester.effects.darkest`, 주석 추가 전 17행; Git 원문 {"commit": "577aabb0717238508f421a9dd119fb5072f75ea0", "summary": "JES-006 raise Solo dodge by five at each level"}

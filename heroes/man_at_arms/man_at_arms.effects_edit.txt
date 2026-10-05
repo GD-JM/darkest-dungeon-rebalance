@@ -193,4 +193,5 @@ effect: .name "on_crit_stressresist"    .target "performer" .curio_result_type "
 //# ----------------------------------------------------------------------
 //# MAA-005 고양 아군 전체 스트레스 회복 (신규)
 effect: .name "RB MAA Bolster Rally" .target "target" .curio_result_type "positive" .chance 100% .healstress 2 .on_hit true .on_miss true .queue true
+// MAA-005 [trace 2026-10-05] Add immediate morale recovery to a buff whose benefit otherwise accumulates later. Effect: RB MAA Bolster Rally.
 // MAA-005 고양: 아군 전체(자신 포함) 스트레스 회복 2, 1~5레벨 고정. 받는 스트레스 감소는 늦게 쌓이는 가치라 첫 턴에 바로 들어오는 회복을 더한다. "고양" = 사기 진작(P-19). 몬스터 스트레스는 던전 레벨로 오르지 않아 고정값

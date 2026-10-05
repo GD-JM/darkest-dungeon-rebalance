@@ -17,6 +17,7 @@
 //# 기술: 현상금 수거 (collect_bounty)
 //# 레벨별 효과: 1레벨 BH Dmg Marked, Man Killer 1 | 2레벨 BH Dmg Marked, Man Killer 2 | 3레벨 BH Dmg Marked, Man Killer 3 | 4레벨 BH Dmg Marked, Man Killer 4 | 5레벨 BH Dmg Marked, Man Killer 5
 effect: .name "BH Dmg Marked"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 100%	.damage_high_multiply 100%	.on_hit true .on_miss false
+// BH-003 [trace 2026-10-05] Retain the author-set marked-target finisher at the front. Effect: BH Dmg Marked.
 // BH-003 표식 대상 피해 90%% -> 100%% (90은 수치가 애매). damage_high도 100으로 맞춤
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Man Killer 1" .target "performer" .chance 100% .curio_result_type "positive" .monsterType "man" .combat_stat_buff 1 .damage_low_multiply 15%	.damage_high_multiply 15%	.on_hit true .on_miss false
@@ -149,14 +150,19 @@ effect: .name "Disorient 5" .target "target" .shuffletarget	.chance 140% .on_hit
 //# 기술: 끝장내기 (finish_him)
 //# 레벨별 효과: 1레벨 Stun Killer 1 | 2레벨 Stun Killer 2 | 3레벨 Stun Killer 3 | 4레벨 Stun Killer 4 | 5레벨 Stun Killer 5
 effect: .name "Stun Killer 1"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 25% .damage_high_multiply 60%	.on_hit true .on_miss false
+// BH-002 [trace 2026-10-05] Reward allied bleed/stun setup while retaining the author-set front launch and rank-3 followup. Effect: Stun Killer 1.
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Stun Killer 2"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 33% .damage_high_multiply 70%	.on_hit true .on_miss false
+// BH-002 [trace 2026-10-05] Reward allied bleed/stun setup while retaining the author-set front launch and rank-3 followup. Effect: Stun Killer 2.
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Stun Killer 3"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 40% .damage_high_multiply 80%	.on_hit true .on_miss false
+// BH-002 [trace 2026-10-05] Reward allied bleed/stun setup while retaining the author-set front launch and rank-3 followup. Effect: Stun Killer 3.
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Stun Killer 4"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 50% .damage_high_multiply 90%	.on_hit true .on_miss false
+// BH-002 [trace 2026-10-05] Reward allied bleed/stun setup while retaining the author-set front launch and rank-3 followup. Effect: Stun Killer 4.
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Stun Killer 5"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 60% .damage_high_multiply 100%	.on_hit true .on_miss false
+// BH-002 [trace 2026-10-05] Reward allied bleed/stun setup while retaining the author-set front launch and rank-3 followup. Effect: Stun Killer 5.
 //#   원본 위치: effects/base.effects.darkest
 // 60-100으로 변경
 
@@ -223,12 +229,17 @@ effect: .name "on_crit_dmgmarked"    .target "performer" .curio_result_type "pos
 //#   근거: 도굴꾼 Poison Killer 1~5(중독 대상 +20/23/26/29/33%)와 같은 수치. 원본 세트 장신구가 이미 표식·기절·출혈 3종을 현상금 사냥꾼 조건으로 정의.
 //#   레벨 연결: 끝장내기 1레벨 → RB BH Bleed Killer 1 … 5레벨 → RB BH Bleed Killer 5 (Stun Killer와 함께 적용)
 effect: .name "RB BH Bleed Killer 1" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "bleeding" .combat_stat_buff 1 .damage_low_multiply 20% .damage_high_multiply 20% .on_hit true .on_miss false
+// BH-001 [trace 2026-10-05] Reward allied bleed/stun setup while retaining the author-set front launch and rank-3 followup. Effect: RB BH Bleed Killer 1.
 // BH-001 finish_him: +20% dmg vs bleeding (level 1, mirrors GR Poison Killer 1)
 effect: .name "RB BH Bleed Killer 2" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "bleeding" .combat_stat_buff 1 .damage_low_multiply 23% .damage_high_multiply 23% .on_hit true .on_miss false
+// BH-001 [trace 2026-10-05] Reward allied bleed/stun setup while retaining the author-set front launch and rank-3 followup. Effect: RB BH Bleed Killer 2.
 // BH-001 finish_him: +23% dmg vs bleeding (level 2, mirrors GR Poison Killer 2)
 effect: .name "RB BH Bleed Killer 3" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "bleeding" .combat_stat_buff 1 .damage_low_multiply 26% .damage_high_multiply 26% .on_hit true .on_miss false
+// BH-001 [trace 2026-10-05] Reward allied bleed/stun setup while retaining the author-set front launch and rank-3 followup. Effect: RB BH Bleed Killer 3.
 // BH-001 finish_him: +26% dmg vs bleeding (level 3, mirrors GR Poison Killer 3)
 effect: .name "RB BH Bleed Killer 4" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "bleeding" .combat_stat_buff 1 .damage_low_multiply 29% .damage_high_multiply 29% .on_hit true .on_miss false
+// BH-001 [trace 2026-10-05] Reward allied bleed/stun setup while retaining the author-set front launch and rank-3 followup. Effect: RB BH Bleed Killer 4.
 // BH-001 finish_him: +29% dmg vs bleeding (level 4, mirrors GR Poison Killer 4)
 effect: .name "RB BH Bleed Killer 5" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "bleeding" .combat_stat_buff 1 .damage_low_multiply 33% .damage_high_multiply 33% .on_hit true .on_miss false
+// BH-001 [trace 2026-10-05] Reward allied bleed/stun setup while retaining the author-set front launch and rank-3 followup. Effect: RB BH Bleed Killer 5.
 // BH-001 finish_him: +33% dmg vs bleeding (level 5, mirrors GR Poison Killer 5)

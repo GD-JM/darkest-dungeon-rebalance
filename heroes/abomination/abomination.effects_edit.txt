@@ -20,6 +20,7 @@
 effect: .name "switch_mode_beast_self" .target "performer" .set_mode beast .chance 100% .on_hit true .on_miss false .queue false
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "beast_stress_party" .target "performer_group_other" .chance 100% .stress 6 .on_hit true .on_miss false .queue true
+// ABO-004 [trace 2026-10-05] Relieve self stress during transformation while retaining the allies fear/return cost. Effect: beast_stress_party.
 // ABO-004 transform: ally fear 8 -> 6; suppression remains a fixed trinket constraint.
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "beast_buff_1" .target "performer" .chance 100% .combat_stat_buff 1 .speed_rating_add 1 .on_hit true .on_miss false .queue false .duration 4
@@ -33,6 +34,7 @@ effect: .name "Transform_HealSelf_1" .target "performer" .curio_result_type "pos
 effect: .name "switch_mode_human_self" .target "performer" .set_mode human .chance 100% .on_hit true .on_miss false .queue false
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "human_stress_heal_party_1" .target "performer_group_other" .chance 100% .healstress 3 .on_hit true .on_miss false .queue true
+// ABO-004 [trace 2026-10-05] Relieve self stress during transformation while retaining the allies fear/return cost. Effect: human_stress_heal_party_1.
 // ABO-004 return: ally recovery 2 -> 3 at all skill levels; retain a cost after suppression before rounding.
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "beast_debuff_1" .target "performer" .chance 100% .combat_stat_buff 1 .speed_rating_add -4 .on_hit true .on_miss false .queue false
@@ -234,4 +236,5 @@ effect: .name "on_crit_dmg"    .target "performer" .curio_result_type "positive"
 //# ======================================================================
 //# 모드 신규 효과
 effect: .name "RB ABO Transform HealStress 1"  .target "performer" .curio_result_type "positive" .chance 100%  .healstress 4	.on_hit true .on_miss false .queue true
+// ABO-004 [trace 2026-10-05] Relieve self stress during transformation while retaining the allies fear/return cost. Effect: RB ABO Transform HealStress 1.
 // ABO-004 transform: self stress recovery 4 at skill level 1; crisis relief without spending the attack action.

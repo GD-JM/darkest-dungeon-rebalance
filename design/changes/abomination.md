@@ -560,3 +560,136 @@
 
 - 파일 검증: 두 모드 목록 파싱/재적용 안정성, 효과 대상·수치·참조, 주석 규칙, 원본 공유 효과 보존과 신비학자 빈줄 보존을 확인했다.
 - 게임 검증 대기: V-16 실제 툴팁, 억제 적용 및 반올림, 야수 스트레스 발생 시점, 공유 transform ID의 턴당/전투당 사용 계수, 전투 종료 자동 복귀와 제한 예외. 무료 행동 필드만으로 무제한 왕복이나 항상 변신이 최적이라고 결론 내리지 않는다.
+
+
+## 2026-10-05 주석·의도 전수 추적 (수치 변경 없음)
+이번 항목은 이전 문서의 후보/기각/예전 수치를 덮어쓰지 않는 현재 스냅샷이다. 사용자 한국어 메모를 원문 그대로 보존했다. 실제 데이터와 편집 사본의 상태를 별도로 기록하며, 새로운 수치 결정이나 전역 효과 적용을 하지 않는다. 최신 사용자 작업은 이 섹션을 우선 참고한다.
+
+### ABO-004 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 위기 변신에서 공격 행동을 보존하며 자신과 동료의 스트레스 부담을 나눈다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/transform`
+  - 원본: `combat_skill: .id "transform" .level 0 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True .valid_modes human beast .human_effects switch_mode_beast_self beast_stress_party beast_buff_1 beast_buff2_1 xform_damage_1 Transform_HealSelf_1 .beast_effects switch_mode_human_self human_stress_heal_party_1 beast_debuff_1 .is_continue_turn true .per_turn_limit 1 .per_battle_limit 2 .is_stall_invalidating false .refresh_after_each_wave true`
+  - 현재: `combat_skill: .id "transform" .level 0 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True .valid_modes human beast .human_effects switch_mode_beast_self "RB ABO beast_stress_party" beast_buff_1 beast_buff2_1 xform_damage_1 Transform_HealSelf_1 "RB ABO Transform HealStress 1" .beast_effects switch_mode_human_self "RB ABO human_stress_heal_party_1" beast_debuff_1 .is_continue_turn true .per_turn_limit 1 .per_battle_limit 2 .is_stall_invalidating false .refresh_after_each_wave true`
+  - 원본: `combat_skill: .id "transform" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True .valid_modes human beast .human_effects switch_mode_beast_self beast_stress_party beast_buff_2 beast_buff2_2 xform_damage_2 Transform_HealSelf_2 .beast_effects switch_mode_human_self human_stress_heal_party_2 beast_debuff_2 .is_continue_turn true .per_turn_limit 1 .per_battle_limit 2 .is_stall_invalidating false .refresh_after_each_wave true`
+  - 현재: `combat_skill: .id "transform" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True .valid_modes human beast .human_effects switch_mode_beast_self "RB ABO beast_stress_party" beast_buff_2 beast_buff2_2 xform_damage_2 Transform_HealSelf_2 "LeperHealSelfStress 1" .beast_effects switch_mode_human_self "RB ABO human_stress_heal_party_1" beast_debuff_2 .is_continue_turn true .per_turn_limit 1 .per_battle_limit 2 .is_stall_invalidating false .refresh_after_each_wave true`
+  - 원본: `combat_skill: .id "transform" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True .valid_modes human beast .human_effects switch_mode_beast_self beast_stress_party beast_buff_3 beast_buff2_3 xform_damage_3 Transform_HealSelf_3 .beast_effects switch_mode_human_self human_stress_heal_party_3 beast_debuff_3 .is_continue_turn true .per_turn_limit 1 .per_battle_limit 2 .is_stall_invalidating false .refresh_after_each_wave true`
+  - 현재: `combat_skill: .id "transform" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True .valid_modes human beast .human_effects switch_mode_beast_self "RB ABO beast_stress_party" beast_buff_3 beast_buff2_3 xform_damage_3 Transform_HealSelf_3 "LeperHealSelfStress 3" .beast_effects switch_mode_human_self "RB ABO human_stress_heal_party_1" beast_debuff_3 .is_continue_turn true .per_turn_limit 1 .per_battle_limit 2 .is_stall_invalidating false .refresh_after_each_wave true`
+  - 원본: `combat_skill: .id "transform" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True .valid_modes human beast .human_effects switch_mode_beast_self beast_stress_party beast_buff_4 beast_buff2_4 xform_damage_4 Transform_HealSelf_4 .beast_effects switch_mode_human_self human_stress_heal_party_4 beast_debuff_4 .is_continue_turn true .per_turn_limit 1 .per_battle_limit 2 .is_stall_invalidating false .refresh_after_each_wave true`
+  - 현재: `combat_skill: .id "transform" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True .valid_modes human beast .human_effects switch_mode_beast_self "RB ABO beast_stress_party" beast_buff_4 beast_buff2_4 xform_damage_4 Transform_HealSelf_4 "Absolution HealStress 1" .beast_effects switch_mode_human_self "RB ABO human_stress_heal_party_1" beast_debuff_4 .is_continue_turn true .per_turn_limit 1 .per_battle_limit 2 .is_stall_invalidating false .refresh_after_each_wave true`
+  - 원본: `combat_skill: .id "transform" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True .valid_modes human beast .human_effects switch_mode_beast_self beast_stress_party beast_buff_5 beast_buff2_5 xform_damage_5 Transform_HealSelf_5 .beast_effects switch_mode_human_self human_stress_heal_party_5 beast_debuff_5 .is_continue_turn true .per_turn_limit 1 .per_battle_limit 2 .is_stall_invalidating false .refresh_after_each_wave true`
+  - 현재: `combat_skill: .id "transform" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True .valid_modes human beast .human_effects switch_mode_beast_self "RB ABO beast_stress_party" beast_buff_5 beast_buff2_5 xform_damage_5 Transform_HealSelf_5 "Absolution HealStress 2" .beast_effects switch_mode_human_self "RB ABO human_stress_heal_party_1" beast_debuff_5 .is_continue_turn true .per_turn_limit 1 .per_battle_limit 2 .is_stall_invalidating false .refresh_after_each_wave true`
+- 출처: `heroes/abomination/abomination.info.darkest`, 주석 추가 전 17행; Git 원문 {"commit": "410278b35aead31ef27a108c8c94088b32b4906f", "summary": "ABO-004: crisis transformation and stress allocation"}
+- 기존 주석 원문:
+```text
+// ABO-004 transform: ally fear 6, return recovery 3; self recovery 4/5/6/7/8. Preserve the attack action during a crisis.
+```
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `mode/beast`
+  - 원본: `mode: .id beast .bark_override_id str_beast_bark .affliction_combat_skill_id transform .battle_complete_combat_skill_id transform .stress_damage_per_turn 6`
+  - 현재: `mode: .id beast .bark_override_id str_beast_bark .affliction_combat_skill_id transform .battle_complete_combat_skill_id transform .stress_damage_per_turn 4`
+- 출처: `heroes/abomination/abomination.info.darkest`, 주석 추가 전 61행; Git 원문 {"commit": "410278b35aead31ef27a108c8c94088b32b4906f", "summary": "ABO-004: crisis transformation and stress allocation"}
+- 기존 주석 원문:
+```text
+// ABO-004 beast: stress per turn 6 -> 4; prolonged beast form still adds stress.
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `beast_stress_party`
+- 원본: `effect: .name "beast_stress_party" .target "performer_group_other" .chance 100% .stress 8 .on_hit true .on_miss false .queue true`
+- 현재: `effect: .name "beast_stress_party" .target "performer_group_other" .chance 100% .stress 6 .on_hit true .on_miss false .queue true`
+- 출처: `heroes/abomination/abomination.effects_edit.txt`, 주석 추가 전 22행; Git 원문 {"commit": "410278b35aead31ef27a108c8c94088b32b4906f", "summary": "ABO-004: crisis transformation and stress allocation"}
+- 기존 주석 원문:
+```text
+// ABO-004 transform: ally fear 8 -> 6; suppression remains a fixed trinket constraint.
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `human_stress_heal_party_1`
+- 원본: `effect: .name "human_stress_heal_party_1" .target "performer_group_other" .chance 100% .healstress 2 .on_hit true .on_miss false .queue true`
+- 현재: `effect: .name "human_stress_heal_party_1" .target "performer_group_other" .chance 100% .healstress 3 .on_hit true .on_miss false .queue true`
+- 출처: `heroes/abomination/abomination.effects_edit.txt`, 주석 추가 전 35행; Git 원문 {"commit": "410278b35aead31ef27a108c8c94088b32b4906f", "summary": "ABO-004: crisis transformation and stress allocation"}
+- 기존 주석 원문:
+```text
+// ABO-004 return: ally recovery 2 -> 3 at all skill levels; retain a cost after suppression before rounding.
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `RB ABO Transform HealStress 1`
+- 원본: `None`
+- 현재: `effect: .name "RB ABO Transform HealStress 1"  .target "performer" .curio_result_type "positive" .chance 100%  .healstress 4	.on_hit true .on_miss false .queue true`
+- 출처: `heroes/abomination/abomination.effects_edit.txt`, 주석 추가 전 236행; Git 원문 {"commit": "410278b35aead31ef27a108c8c94088b32b4906f", "summary": "ABO-004: crisis transformation and stress allocation"}
+- 기존 주석 원문:
+```text
+// ABO-004 transform: self stress recovery 4 at skill level 1; crisis relief without spending the attack action.
+```
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB ABO beast_stress_party`
+- 원본 (beast_stress_party): `effect: .name "beast_stress_party" .target "performer_group_other" .chance 100% .stress 8 .on_hit true .on_miss false .queue true`
+- 현재: `effect: .name "RB ABO beast_stress_party" .target "performer_group_other" .chance 100% .stress 6 .on_hit true .on_miss false .queue true`
+- 출처: `effects/rebalance_abomination.effects.darkest`, 주석 추가 전 5행; Git 원문 {"commit": "410278b35aead31ef27a108c8c94088b32b4906f", "summary": "ABO-004: crisis transformation and stress allocation"}
+- 기존 주석 원문:
+```text
+// edited vanilla effect (from effects/base.effects.darkest)
+```
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB ABO human_stress_heal_party_1`
+- 원본 (human_stress_heal_party_1): `effect: .name "human_stress_heal_party_1" .target "performer_group_other" .chance 100% .healstress 2 .on_hit true .on_miss false .queue true`
+- 현재: `effect: .name "RB ABO human_stress_heal_party_1" .target "performer_group_other" .chance 100% .healstress 3 .on_hit true .on_miss false .queue true`
+- 출처: `effects/rebalance_abomination.effects.darkest`, 주석 추가 전 8행; Git 원문 {"commit": "410278b35aead31ef27a108c8c94088b32b4906f", "summary": "ABO-004: crisis transformation and stress allocation"}
+- 기존 주석 원문:
+```text
+// mod-only new effects
+```
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB ABO Transform HealStress 1`
+- 원본: `None`
+- 현재: `effect: .name "RB ABO Transform HealStress 1"  .target "performer" .curio_result_type "positive" .chance 100%  .healstress 4	.on_hit true .on_miss false .queue true`
+- 출처: `effects/rebalance_abomination.effects.darkest`, 주석 추가 전 12행; Git 원문 {"commit": "410278b35aead31ef27a108c8c94088b32b4906f", "summary": "ABO-004: crisis transformation and stress allocation"}
+
+### ABO-002 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 두 대상 지속 피해 기술의 직접 피해를 보완해 기술 선택을 넓힌다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/vomit`
+  - 원본: `combat_skill: .id "vomit" .level 0 .type "ranged" .atk 95% .dmg -90% .crit 2% .launch 32 .target ~23 .is_crit_valid True  .effect "Abom Vomit 1" "Vomit Debuff 1" .valid_modes human`
+  - 현재: `combat_skill: .id "vomit" .level 0 .type "ranged" .atk 95% .dmg -75% .crit 2% .launch 32 .target ~23 .is_crit_valid True  .effect "Abom Vomit 1" "Vomit Debuff 1" .valid_modes human`
+  - 원본: `combat_skill: .id "vomit" .level 1 .type "ranged" .atk 100% .dmg -90% .crit 3% .launch 32 .target ~23 .is_crit_valid True  .effect "Abom Vomit 2" "Vomit Debuff 2" .valid_modes human`
+  - 현재: `combat_skill: .id "vomit" .level 1 .type "ranged" .atk 100% .dmg -75% .crit 3% .launch 32 .target ~23 .is_crit_valid True  .effect "Abom Vomit 2" "Vomit Debuff 2" .valid_modes human`
+  - 원본: `combat_skill: .id "vomit" .level 2 .type "ranged" .atk 105% .dmg -90% .crit 4% .launch 32 .target ~23 .is_crit_valid True  .effect "Abom Vomit 3" "Vomit Debuff 3" .valid_modes human`
+  - 현재: `combat_skill: .id "vomit" .level 2 .type "ranged" .atk 105% .dmg -75% .crit 4% .launch 32 .target ~23 .is_crit_valid True  .effect "Abom Vomit 3" "Vomit Debuff 3" .valid_modes human`
+  - 원본: `combat_skill: .id "vomit" .level 3 .type "ranged" .atk 110% .dmg -90% .crit 5% .launch 32 .target ~23 .is_crit_valid True  .effect "Abom Vomit 4" "Vomit Debuff 4" .valid_modes human`
+  - 현재: `combat_skill: .id "vomit" .level 3 .type "ranged" .atk 110% .dmg -75% .crit 5% .launch 32 .target ~23 .is_crit_valid True  .effect "Abom Vomit 4" "Vomit Debuff 4" .valid_modes human`
+  - 원본: `combat_skill: .id "vomit" .level 4 .type "ranged" .atk 115% .dmg -90% .crit 6% .launch 32 .target ~23 .is_crit_valid True  .effect "Abom Vomit 5" "Vomit Debuff 5" .valid_modes human`
+  - 현재: `combat_skill: .id "vomit" .level 4 .type "ranged" .atk 115% .dmg -75% .crit 6% .launch 32 .target ~23 .is_crit_valid True  .effect "Abom Vomit 5" "Vomit Debuff 5" .valid_modes human`
+- 출처: `heroes/abomination/abomination.info.darkest`, 주석 추가 전 28행; Git 원문 {"commit": "5c76c3f960ce1022617f466a6d1008e1434a3a90", "summary": "ABO-002 아수의 담즙 피해 -90 -> -75, 박치기 명중 비교 정정, 변신 조정안 재도출"}
+- 기존 주석 원문:
+```text
+// ABO-002 vomit: 피해 -90 -> -75. 같은 2·3열 광역 지속 피해인 광대 수확(+54%p)에 가치로 맞춤(+24 -> +59%p). 지속 피해 기대량은 이미 같다(중독 5 x 60% = 3.0 vs 출혈 4 x 80% = 3.2/틱, 몬스터 중독 저항 중앙 80 > 출혈 60). 차이는 직접 피해뿐. 괴인 무기가 광대의 1.55배라 스펙 -50은 과다
+```
+
+### ABO-001 ABO-003 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 후열로 밀린 야수의 복귀 경로와 전열 밀치기를 보완하고 기존 약화를 제거해 역할을 나눈다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/slam`
+  - 원본: `combat_skill: .id "slam" .level 0 .type "melee" .atk 80% .dmg -25% .crit 1% .move 0 1 .launch 321 .target 12 .is_crit_valid True  .effect "Push 2A" "Slam Debuff 1" .valid_modes beast`
+  - 현재: `combat_skill: .id "slam" .level 0 .type "melee" .atk 90% .dmg 0% .crit 1% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "Push 2A" .valid_modes beast`
+  - 원본: `combat_skill: .id "slam" .level 1 .type "melee" .atk 85% .dmg -25% .crit 2% .move 0 1 .launch 321 .target 12 .is_crit_valid True  .effect "Push 2B" "Slam Debuff 2" .valid_modes beast`
+  - 현재: `combat_skill: .id "slam" .level 1 .type "melee" .atk 95% .dmg 0% .crit 2% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "Push 2B" .valid_modes beast`
+  - 원본: `combat_skill: .id "slam" .level 2 .type "melee" .atk 90% .dmg -25% .crit 3% .move 0 1 .launch 321 .target 12 .is_crit_valid True  .effect "Push 2C" "Slam Debuff 3" .valid_modes beast`
+  - 현재: `combat_skill: .id "slam" .level 2 .type "melee" .atk 100% .dmg 0% .crit 3% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "Push 2C" .valid_modes beast`
+  - 원본: `combat_skill: .id "slam" .level 3 .type "melee" .atk 95% .dmg -25% .crit 4% .move 0 1 .launch 321 .target 12 .is_crit_valid True  .effect "Push 2D" "Slam Debuff 4" .valid_modes beast`
+  - 현재: `combat_skill: .id "slam" .level 3 .type "melee" .atk 105% .dmg 0% .crit 4% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "Push 2D" .valid_modes beast`
+  - 원본: `combat_skill: .id "slam" .level 4 .type "melee" .atk 100% .dmg -25% .crit 5% .move 0 1 .launch 321 .target 12 .is_crit_valid True  .effect "Push 2E" "Slam Debuff 5" .valid_modes beast`
+  - 현재: `combat_skill: .id "slam" .level 4 .type "melee" .atk 110% .dmg 0% .crit 5% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "Push 2E" .valid_modes beast`
+- 출처: `heroes/abomination/abomination.info.darkest`, 주석 추가 전 50행; Git 원문 {"commit": "cfc7d1f68010858e1bd3ab597ccd7518923c0121", "summary": "ABO-003 박치기 약화 삭제·명중 90~110·피해 0, 처치 조건 효과 모델 지원, 야수 설계안"}
+- 기존 주석 원문:
+```text
+// ABO-001 slam: 사용 열 321 -> 432. 야수는 4열에서 쓸 기술이 없어 열이 섞이면 한 턴을 통째로 날린다. 4열에서 박고 앞으로 1칸 -> 3열 -> 2열로 복귀하는 길. 1열 사용은 포기(1열엔 분노·할퀴기, 1열에서 2칸 밀치기는 오히려 손해). 기술 1회 가치 변화 없음(대상 12 그대로)
+```
+- 기존 주석 원문:
+```text
+// ABO-003 slam: 약화(회피 -10~-20, 속도 -2~-6) 삭제, 명중 80~100 -> 90~110, 피해 -25 -> 0. 괴인 전용 장신구에 약화 관련이 없어 지킬 제약 없음. 명중 90 근접 단일의 기본(사악한 난도질·찌르기 0)에 맞추고, 분노(85/0, 3열 도달·치명타)와 역할을 나눈다: 박치기 = 1·2열을 확실히 맞히는 밀치기. 5레벨 빗나감 27.6 -> 18.1%, 가치 +84 -> +87%p
+```

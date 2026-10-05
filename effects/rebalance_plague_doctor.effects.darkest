@@ -4,4 +4,5 @@
 
 // mod-only new effects
 effect: .name "RB PD Cure Poison" .target "target" .curio_result_type "positive" .chance 100% .cure_poison 1 .on_hit true .on_miss false
+// PD-001 [trace 2026-10-05] Differentiate allied blight treatment from the Arbalest bleed-heal option. Effect: RB PD Cure Poison.
 // PD-001 battlefield_medicine: cure blight only, on the target ally (replaces Cure + Cureself)

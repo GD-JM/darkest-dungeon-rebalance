@@ -15,6 +15,7 @@ combat_skill: .id "transform" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0% .
 combat_skill: .id "transform" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True .valid_modes human beast .human_effects switch_mode_beast_self "RB ABO beast_stress_party" beast_buff_3 beast_buff2_3 xform_damage_3 Transform_HealSelf_3 "LeperHealSelfStress 3" .beast_effects switch_mode_human_self "RB ABO human_stress_heal_party_1" beast_debuff_3 .is_continue_turn true .per_turn_limit 1 .per_battle_limit 2 .is_stall_invalidating false .refresh_after_each_wave true
 combat_skill: .id "transform" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True .valid_modes human beast .human_effects switch_mode_beast_self "RB ABO beast_stress_party" beast_buff_4 beast_buff2_4 xform_damage_4 Transform_HealSelf_4 "Absolution HealStress 1" .beast_effects switch_mode_human_self "RB ABO human_stress_heal_party_1" beast_debuff_4 .is_continue_turn true .per_turn_limit 1 .per_battle_limit 2 .is_stall_invalidating false .refresh_after_each_wave true
 combat_skill: .id "transform" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True .valid_modes human beast .human_effects switch_mode_beast_self "RB ABO beast_stress_party" beast_buff_5 beast_buff2_5 xform_damage_5 Transform_HealSelf_5 "Absolution HealStress 2" .beast_effects switch_mode_human_self "RB ABO human_stress_heal_party_1" beast_debuff_5 .is_continue_turn true .per_turn_limit 1 .per_battle_limit 2 .is_stall_invalidating false .refresh_after_each_wave true
+// ABO-004 [trace 2026-10-05] Relieve self stress during transformation while retaining the allies fear/return cost.
 // ABO-004 transform: ally fear 6, return recovery 3; self recovery 4/5/6/7/8. Preserve the attack action during a crisis.
 combat_skill: .id "manacles" .level 0 .type "ranged" .atk 95% .dmg -60% .crit 1% .launch 32 .target 123 .is_crit_valid True  .effect "Manacles Stun 1" .valid_modes human
 combat_skill: .id "manacles" .level 1 .type "ranged" .atk 100% .dmg -60% .crit 2% .launch 32 .target 123 .is_crit_valid True  .effect "Manacles Stun 2" .valid_modes human
@@ -26,6 +27,7 @@ combat_skill: .id "vomit" .level 1 .type "ranged" .atk 100% .dmg -75% .crit 3% .
 combat_skill: .id "vomit" .level 2 .type "ranged" .atk 105% .dmg -75% .crit 4% .launch 32 .target ~23 .is_crit_valid True  .effect "Abom Vomit 3" "Vomit Debuff 3" .valid_modes human
 combat_skill: .id "vomit" .level 3 .type "ranged" .atk 110% .dmg -75% .crit 5% .launch 32 .target ~23 .is_crit_valid True  .effect "Abom Vomit 4" "Vomit Debuff 4" .valid_modes human
 combat_skill: .id "vomit" .level 4 .type "ranged" .atk 115% .dmg -75% .crit 6% .launch 32 .target ~23 .is_crit_valid True  .effect "Abom Vomit 5" "Vomit Debuff 5" .valid_modes human
+// ABO-002 [trace 2026-10-05] Improve the direct damage portion of the two-rank DOT option.
 // ABO-002 vomit: 피해 -90 -> -75. 같은 2·3열 광역 지속 피해인 광대 수확(+54%p)에 가치로 맞춤(+24 -> +59%p). 지속 피해 기대량은 이미 같다(중독 5 x 60% = 3.0 vs 출혈 4 x 80% = 3.2/틱, 몬스터 중독 저항 중앙 80 > 출혈 60). 차이는 직접 피해뿐. 괴인 무기가 광대의 1.55배라 스펙 -50은 과다
 combat_skill: .id "absolution" .level 0 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Absolution HealStress 1" "Absolution Heal 1" .valid_modes human .is_stall_invalidating false
 combat_skill: .id "absolution" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Absolution HealStress 2" "Absolution Heal 2" .valid_modes human .is_stall_invalidating false
@@ -48,6 +50,7 @@ combat_skill: .id "slam" .level 1 .type "melee" .atk 95% .dmg 0% .crit 2% .move 
 combat_skill: .id "slam" .level 2 .type "melee" .atk 100% .dmg 0% .crit 3% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "Push 2C" .valid_modes beast
 combat_skill: .id "slam" .level 3 .type "melee" .atk 105% .dmg 0% .crit 4% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "Push 2D" .valid_modes beast
 combat_skill: .id "slam" .level 4 .type "melee" .atk 110% .dmg 0% .crit 5% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "Push 2E" .valid_modes beast
+// ABO-001 ABO-003 [trace 2026-10-05] Restore beast rear-rank mobility and give reliable front control without the old debuffs.
 // ABO-001 slam: 사용 열 321 -> 432. 야수는 4열에서 쓸 기술이 없어 열이 섞이면 한 턴을 통째로 날린다. 4열에서 박고 앞으로 1칸 -> 3열 -> 2열로 복귀하는 길. 1열 사용은 포기(1열엔 분노·할퀴기, 1열에서 2칸 밀치기는 오히려 손해). 기술 1회 가치 변화 없음(대상 12 그대로)
 // ABO-003 slam: 약화(회피 -10~-20, 속도 -2~-6) 삭제, 명중 80~100 -> 90~110, 피해 -25 -> 0. 괴인 전용 장신구에 약화 관련이 없어 지킬 제약 없음. 명중 90 근접 단일의 기본(사악한 난도질·찌르기 0)에 맞추고, 분노(85/0, 3열 도달·치명타)와 역할을 나눈다: 박치기 = 1·2열을 확실히 맞히는 밀치기. 5레벨 빗나감 27.6 -> 18.1%, 가치 +84 -> +87%p
 tag: .id "light"
@@ -59,5 +62,6 @@ id_index: .index 13
 skill_selection: .can_select_combat_skills false .number_of_selected_combat_skills_max 7
 mode: .id human .is_raid_default true
 mode: .id beast .bark_override_id str_beast_bark .affliction_combat_skill_id transform .battle_complete_combat_skill_id transform .stress_damage_per_turn 4
+// ABO-004 [trace 2026-10-05] Keep accumulating stress as the cost of prolonged beast form.
 // ABO-004 beast: stress per turn 6 -> 4; prolonged beast form still adds stress.
 generation: .is_generation_enabled true .number_of_positive_quirks_min 1 .number_of_positive_quirks_max 2 .number_of_negative_quirks_min 1 .number_of_negative_quirks_max 2 .number_of_class_specific_camping_skills 2 .number_of_shared_camping_skills 1 .number_of_random_combat_skills 7 .number_of_cards_in_deck 6 .card_chance 1.0

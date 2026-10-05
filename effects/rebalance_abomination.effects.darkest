@@ -3,11 +3,14 @@
 
 // edited vanilla effect (from effects/base.effects.darkest)
 effect: .name "RB ABO beast_stress_party" .target "performer_group_other" .chance 100% .stress 6 .on_hit true .on_miss false .queue true
+// ABO-004 [trace 2026-10-05] Relieve self stress during transformation while retaining the allies fear/return cost. Effect: RB ABO beast_stress_party.
 // ABO-004 transform: ally fear 8 -> 6; suppression remains a fixed trinket constraint.
 // edited vanilla effect (from effects/base.effects.darkest)
 effect: .name "RB ABO human_stress_heal_party_1" .target "performer_group_other" .chance 100% .healstress 3 .on_hit true .on_miss false .queue true
+// ABO-004 [trace 2026-10-05] Relieve self stress during transformation while retaining the allies fear/return cost. Effect: RB ABO human_stress_heal_party_1.
 // ABO-004 return: ally recovery 2 -> 3 at all skill levels; retain a cost after suppression before rounding.
 
 // mod-only new effects
 effect: .name "RB ABO Transform HealStress 1"  .target "performer" .curio_result_type "positive" .chance 100%  .healstress 4	.on_hit true .on_miss false .queue true
+// ABO-004 [trace 2026-10-05] Relieve self stress during transformation while retaining the allies fear/return cost. Effect: RB ABO Transform HealStress 1.
 // ABO-004 transform: self stress recovery 4 at skill level 1; crisis relief without spending the attack action.

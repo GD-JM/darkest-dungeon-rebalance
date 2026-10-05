@@ -171,3 +171,30 @@
 마지막 승인 대상은 회복0~20/출혈2×3턴/80% 후보다. 이전의 회복0~22 유지 또는 범위1~21 후보를 적용하지 않는다.
 
 검증: 주석 규칙/효과 재사용/재적용 안정성/다른 기술과 기존 빈줄 보존/목록 파일 크기 점검. 게임에서 실제 툴팁·회복 치명·출혈과 죽음의 문턱 운용을 비교하는 검증은 대기한다.
+
+
+## 2026-10-05 주석·의도 전수 추적 (수치 변경 없음)
+이번 항목은 이전 문서의 후보/기각/예전 수치를 덮어쓰지 않는 현재 스냅샷이다. 사용자 한국어 메모를 원문 그대로 보존했다. 실제 데이터와 편집 사본의 상태를 별도로 기록하며, 새로운 수치 결정이나 전역 효과 적용을 하지 않는다. 최신 사용자 작업은 이 섹션을 우선 참고한다.
+
+### OCC-001 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 마지막 업그레이드에서 출혈 부담이 급증하지 않도록 하고 평균 회복의 상향을 피한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/wyrd_reconstruction`
+  - 원본: `combat_skill: .id "wyrd_reconstruction" .level 4 .heal 0 22 .launch 1234 .target @1234  .effect "Wyrd Bleed 5" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "wyrd_reconstruction" .level 4 .heal 0 20 .launch 1234 .target @1234  .effect "Wyrd Bleed 4" .is_stall_invalidating false`
+- 출처: `heroes/occultist/occultist.info.darkest`, 주석 추가 전 42행; Git 원문 {"commit": "a562074e975b8bfd9d395d99bf71184c04750b8c", "summary": "OCC-001: rebalance final Wyrd Reconstruction upgrade"}
+- 기존 주석 원문:
+```text
+// OCC-001 wyrd level 5: heal 0-22 -> 0-20; reuse level 4 bleed (2 x 3, 80%). Preserve gambling identity and remove the final upgrade cost spike.
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Wyrd Bleed 5`
+- 원본: `effect: .name "Wyrd Bleed 5" .target "target" .curio_result_type "negative" .chance 85%  .dotBleed 3 .duration 3	.on_hit true .on_miss false .queue true .can_apply_on_death true`
+- 현재: `effect: .name "Wyrd Bleed 5" .target "target" .curio_result_type "negative" .chance 80%  .dotBleed 2 .duration 3	.on_hit true .on_miss false .queue true .can_apply_on_death true`
+- 출처: `heroes/occultist/occultist.effects_edit.txt`, 주석 추가 전 79행; Git 원문 {"commit": "a562074e975b8bfd9d395d99bf71184c04750b8c", "summary": "OCC-001: rebalance final Wyrd Reconstruction upgrade"}
+- 기존 주석 원문:
+```text
+// OCC-001 level 5 bleed matches level 4: reuse its vanilla effect; no duplicate definition.
+```

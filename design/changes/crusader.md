@@ -303,3 +303,140 @@ R-VALUE-12: 피격 재배분은 기존 MARK_DRAW1.72와 기준 동료 회피25/�
 - 관련 끝장내기/최후의 일격 연계도 확인했다. 기절 성공 이후 적이 살아 있고 아군이 사거리/행동 순서를 만족할 때의 증분이며 공짜 후속 행동으로 일반 기절 값에 더하지 않는다.
 - 원본12/현행11 기절 변형의115레벨,모든40직업 파일1400 combat_skill줄과311개 초기 편성을 검사했고107개 계산/자료 검사를 통과했다.
 - 기절/고발 등 어떤 신규 성전사 수치 후보도 승인·적용하지 않았다. 사용자 파일·효과 편집 사본·기존 모델 코드는 그대로다.
+
+
+## 2026-10-05 주석·의도 전수 추적 (수치 변경 없음)
+이번 항목은 이전 문서의 후보/기각/예전 수치를 덮어쓰지 않는 현재 스냅샷이다. 사용자 한국어 메모를 원문 그대로 보존했다. 실제 데이터와 편집 사본의 상태를 별도로 기록하며, 새로운 수치 결정이나 전역 효과 적용을 하지 않는다. 최신 사용자 작업은 이 섹션을 우선 참고한다.
+
+### CRU-002 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 사용자 메모에 따라 강타와의 선택 경쟁을 보완하려고 원거리 명중90으로 조정한 현재 편집을 기록한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/zealous_accusation`
+  - 원본: `combat_skill: .id "zealous_accusation" .level 0 .type "ranged" .atk 85% .dmg -40% .crit -4% .launch 21 .target ~12 .is_crit_valid True `
+  - 현재: `combat_skill: .id "zealous_accusation" .level 0 .type "ranged" .atk 90% .dmg -40% .crit -4% .launch 21 .target ~12 .is_crit_valid True `
+  - 원본: `combat_skill: .id "zealous_accusation" .level 1 .type "ranged" .atk 90% .dmg -40% .crit -3% .launch 21 .target ~12 .is_crit_valid True `
+  - 현재: `combat_skill: .id "zealous_accusation" .level 1 .type "ranged" .atk 95% .dmg -40% .crit -3% .launch 21 .target ~12 .is_crit_valid True `
+  - 원본: `combat_skill: .id "zealous_accusation" .level 2 .type "ranged" .atk 95% .dmg -40% .crit -2% .launch 21 .target ~12 .is_crit_valid True `
+  - 현재: `combat_skill: .id "zealous_accusation" .level 2 .type "ranged" .atk 100% .dmg -40% .crit -2% .launch 21 .target ~12 .is_crit_valid True `
+  - 원본: `combat_skill: .id "zealous_accusation" .level 3 .type "ranged" .atk 100% .dmg -40% .crit -1% .launch 21 .target ~12 .is_crit_valid True `
+  - 현재: `combat_skill: .id "zealous_accusation" .level 3 .type "ranged" .atk 105% .dmg -40% .crit -1% .launch 21 .target ~12 .is_crit_valid True `
+  - 원본: `combat_skill: .id "zealous_accusation" .level 4 .type "ranged" .atk 105% .dmg -40% .crit 0% .launch 21 .target ~12 .is_crit_valid True `
+  - 현재: `combat_skill: .id "zealous_accusation" .level 4 .type "ranged" .atk 110% .dmg -40% .crit 0% .launch 21 .target ~12 .is_crit_valid True `
+- 출처: `heroes/crusader/crusader.info.darkest`, 주석 추가 전 28행; Git 원문 {"commit": "0000000000000000000000000000000000000000", "summary": "Version of heroes/crusader/crusader.info.darkest from heroes/crusader/crusader.info.darkest"}
+- 기존 주석 원문:
+```text
+// 레인지 표준 명중 90으로 바꿈 85 -> 90 이유는 선택성 늘리기 위해. 강타가 좋아서 고발을 쓸 이유가 많이 없는데 고발까지 있으면 명중 높일 수 있음.
+```
+
+### CRU-003 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 3열 도달이 없는 전열 기절의 제어를 강화하되 손잡이로 때리는 연출에 맞춰 피해를 낮춘 사용자 의도를 기록한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/stunning_blow`
+  - 원본: `combat_skill: .id "stunning_blow" .level 0 .type "melee" .atk 90% .dmg -50% .crit 0% .launch 21 .target 12 .is_crit_valid True  .effect "Stun 1"`
+  - 현재: `combat_skill: .id "stunning_blow" .level 0 .type "melee" .atk 90% .dmg -60% .crit 0% .launch 21 .target 12 .is_crit_valid True  .effect "Hero Strong Stun 1"`
+  - 원본: `combat_skill: .id "stunning_blow" .level 1 .type "melee" .atk 95% .dmg -50% .crit 1% .launch 21 .target 12 .is_crit_valid True  .effect "Stun 2"`
+  - 현재: `combat_skill: .id "stunning_blow" .level 1 .type "melee" .atk 95% .dmg -60% .crit 1% .launch 21 .target 12 .is_crit_valid True  .effect "Hero Strong Stun 2"`
+  - 원본: `combat_skill: .id "stunning_blow" .level 2 .type "melee" .atk 100% .dmg -50% .crit 2% .launch 21 .target 12 .is_crit_valid True  .effect "Stun 3"`
+  - 현재: `combat_skill: .id "stunning_blow" .level 2 .type "melee" .atk 100% .dmg -60% .crit 2% .launch 21 .target 12 .is_crit_valid True  .effect "Hero Strong Stun 3"`
+  - 원본: `combat_skill: .id "stunning_blow" .level 3 .type "melee" .atk 105% .dmg -50% .crit 3% .launch 21 .target 12 .is_crit_valid True  .effect "Stun 4"`
+  - 현재: `combat_skill: .id "stunning_blow" .level 3 .type "melee" .atk 105% .dmg -60% .crit 3% .launch 21 .target 12 .is_crit_valid True  .effect "Hero Strong Stun 4"`
+  - 원본: `combat_skill: .id "stunning_blow" .level 4 .type "melee" .atk 110% .dmg -50% .crit 4% .launch 21 .target 12 .is_crit_valid True  .effect "Stun 5"`
+  - 현재: `combat_skill: .id "stunning_blow" .level 4 .type "melee" .atk 110% .dmg -60% .crit 4% .launch 21 .target 12 .is_crit_valid True  .effect "Hero Strong Stun 5"`
+- 출처: `heroes/crusader/crusader.info.darkest`, 주석 추가 전 37행; Git 원문 {"commit": "0000000000000000000000000000000000000000", "summary": "Version of heroes/crusader/crusader.info.darkest from heroes/crusader/crusader.info.darkest"}
+- 기존 주석 원문:
+```text
+// 바꿈 스트롱 스턴으로 왜냐하면 3열 공격이 안돼서 쌔야함.  대신에 데미지 낮춤 애니메이션 자체가 칼 손잡이로 때리는거라 쌔면 안됨 50 -> 60
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Hero Strong Stun 1`
+- 원본: `effect: .name "Hero Strong Stun 1" .target "target" .curio_result_type "negative" .chance 110% .stun 1	.on_hit true .on_miss false .queue true`
+- 현재: `effect: .name "Hero Strong Stun 1" .target "target" .curio_result_type "negative" .chance 100% .stun 1	.on_hit true .on_miss false .queue true`
+- 적용 불일치 주의: info의 강한 기절 원본 참조와 사본의 이름/일반 확률, 사본에만 있는 스트레스 회복 증가는 이번에 동기화하지 않았다. 사본 의도를 기록하는 작업이지 추가 적용 승인이 아니다.
+- 출처: `heroes/crusader/crusader.effects_edit.txt`, 주석 추가 전 48행; Git 원문 {"commit": "0000000000000000000000000000000000000000", "summary": "Version of heroes/crusader/crusader.effects_edit.txt from heroes/crusader/crusader.effects_edit.txt"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Hero Strong Stun 2`
+- 원본: `effect: .name "Hero Strong Stun 2" .target "target" .curio_result_type "negative" .chance 120% .stun 1	.on_hit true .on_miss false .queue true`
+- 현재: `effect: .name "Hero Strong Stun 2" .target "target" .curio_result_type "negative" .chance 110% .stun 1	.on_hit true .on_miss false .queue true`
+- 적용 불일치 주의: info의 강한 기절 원본 참조와 사본의 이름/일반 확률, 사본에만 있는 스트레스 회복 증가는 이번에 동기화하지 않았다. 사본 의도를 기록하는 작업이지 추가 적용 승인이 아니다.
+- 출처: `heroes/crusader/crusader.effects_edit.txt`, 주석 추가 전 51행; Git 원문 {"commit": "0000000000000000000000000000000000000000", "summary": "Version of heroes/crusader/crusader.effects_edit.txt from heroes/crusader/crusader.effects_edit.txt"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Hero Strong Stun 3`
+- 원본: `effect: .name "Hero Strong Stun 3" .target "target" .curio_result_type "negative" .chance 130% .stun 1	.on_hit true .on_miss false .queue true`
+- 현재: `effect: .name "Hero Strong Stun 3" .target "target" .curio_result_type "negative" .chance 120% .stun 1	.on_hit true .on_miss false .queue true`
+- 적용 불일치 주의: info의 강한 기절 원본 참조와 사본의 이름/일반 확률, 사본에만 있는 스트레스 회복 증가는 이번에 동기화하지 않았다. 사본 의도를 기록하는 작업이지 추가 적용 승인이 아니다.
+- 출처: `heroes/crusader/crusader.effects_edit.txt`, 주석 추가 전 54행; Git 원문 {"commit": "0000000000000000000000000000000000000000", "summary": "Version of heroes/crusader/crusader.effects_edit.txt from heroes/crusader/crusader.effects_edit.txt"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Hero Strong Stun 4`
+- 원본: `effect: .name "Hero Strong Stun 4" .target "target" .curio_result_type "negative" .chance 140% .stun 1	.on_hit true .on_miss false .queue true`
+- 현재: `effect: .name "Hero Strong Stun 4" .target "target" .curio_result_type "negative" .chance 130% .stun 1	.on_hit true .on_miss false .queue true`
+- 적용 불일치 주의: info의 강한 기절 원본 참조와 사본의 이름/일반 확률, 사본에만 있는 스트레스 회복 증가는 이번에 동기화하지 않았다. 사본 의도를 기록하는 작업이지 추가 적용 승인이 아니다.
+- 출처: `heroes/crusader/crusader.effects_edit.txt`, 주석 추가 전 57행; Git 원문 {"commit": "0000000000000000000000000000000000000000", "summary": "Version of heroes/crusader/crusader.effects_edit.txt from heroes/crusader/crusader.effects_edit.txt"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Hero Strong Stun 5`
+- 원본: `effect: .name "Hero Strong Stun 5" .target "target" .curio_result_type "negative" .chance 150% .stun 1	.on_hit true .on_miss false .queue true`
+- 현재: `effect: .name "Hero Strong Stun 5" .target "target" .curio_result_type "negative" .chance 140% .stun 1	.on_hit true .on_miss false .queue true`
+- 적용 불일치 주의: info의 강한 기절 원본 참조와 사본의 이름/일반 확률, 사본에만 있는 스트레스 회복 증가는 이번에 동기화하지 않았다. 사본 의도를 기록하는 작업이지 추가 적용 승인이 아니다.
+- 출처: `heroes/crusader/crusader.effects_edit.txt`, 주석 추가 전 60행; Git 원문 {"commit": "0000000000000000000000000000000000000000", "summary": "Version of heroes/crusader/crusader.effects_edit.txt from heroes/crusader/crusader.effects_edit.txt"}
+- 기존 주석 원문 (JSON 문자열, 끝 공백 포함):
+```json
+"// 바꿈 스트롱 스턴으로 왜냐하면 3열 공격이 안돼서 쌔야함. "
+```
+
+### CRU-001 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 즉시 회복 일부를 받는 회복 증폭으로 옮겨 보조 회복 담당 역할을 만든다. 현재 공유 Stacking Heal1 재사용을 기록한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/battle_heal`
+  - 원본: `combat_skill: .id "battle_heal" .level 0 .heal 2 3 .launch 1234 .target @1234  .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "battle_heal" .level 0 .heal 2 3 .launch 1234 .target @1234  .effect "Stacking Heal 1" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "battle_heal" .level 1 .heal 3 3 .launch 1234 .target @1234  .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "battle_heal" .level 1 .heal 3 3 .launch 1234 .target @1234  .effect "Stacking Heal 1" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "battle_heal" .level 2 .heal 3 4 .launch 1234 .target @1234  .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "battle_heal" .level 2 .heal 3 4 .launch 1234 .target @1234  .effect "Stacking Heal 1" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "battle_heal" .level 3 .heal 4 5 .launch 1234 .target @1234  .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "battle_heal" .level 3 .heal 4 4 .launch 1234 .target @1234  .effect "Stacking Heal 1" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "battle_heal" .level 4 .heal 5 6 .launch 1234 .target @1234  .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "battle_heal" .level 4 .heal 4 5 .launch 1234 .target @1234  .effect "Stacking Heal 1" .is_stall_invalidating false`
+- 출처: `heroes/crusader/crusader.info.darkest`, 주석 추가 전 56행; Git 원문 {"commit": "0000000000000000000000000000000000000000", "summary": "Version of heroes/crusader/crusader.info.darkest from heroes/crusader/crusader.info.darkest"}
+- 기존 주석 원문:
+```text
+// CRU-001 battle_heal: heal 2-3/5-6 -> 2-3/4-5, added RB CRU Stacking Heal (+20% healing received)
+```
+- 기존 주석 원문:
+```text
+// 보조 힐러로써 역할 하도록 높임
+```
+
+### CRU-004 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 스트레스 회복 공급이 광대에 편중되는 문제를 줄이려는 사용자 의도로 격려의 함성 회복5/6/7/8/9 편집 사본을 기록한다. 게임 데이터에는 추가 적용하지 않는다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Crusader HealStress 2`
+- 원본: `effect: .name "Crusader HealStress 2" .target "target" .curio_result_type "positive" .chance 100% .healstress 5		.on_hit true .on_miss false .queue true`
+- 현재: `effect: .name "Crusader HealStress 2" .target "target" .curio_result_type "positive" .chance 100% .healstress 6		.on_hit true .on_miss false .queue true`
+- 적용 불일치 주의: info의 강한 기절 원본 참조와 사본의 이름/일반 확률, 사본에만 있는 스트레스 회복 증가는 이번에 동기화하지 않았다. 사본 의도를 기록하는 작업이지 추가 적용 승인이 아니다.
+- 출처: `heroes/crusader/crusader.effects_edit.txt`, 주석 추가 전 102행; Git 원문 {"commit": "0000000000000000000000000000000000000000", "summary": "Version of heroes/crusader/crusader.effects_edit.txt from heroes/crusader/crusader.effects_edit.txt"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Crusader HealStress 3`
+- 원본: `effect: .name "Crusader HealStress 3" .target "target" .curio_result_type "positive" .chance 100% .healstress 6		.on_hit true .on_miss false .queue true`
+- 현재: `effect: .name "Crusader HealStress 3" .target "target" .curio_result_type "positive" .chance 100% .healstress 7		.on_hit true .on_miss false .queue true`
+- 적용 불일치 주의: info의 강한 기절 원본 참조와 사본의 이름/일반 확률, 사본에만 있는 스트레스 회복 증가는 이번에 동기화하지 않았다. 사본 의도를 기록하는 작업이지 추가 적용 승인이 아니다.
+- 출처: `heroes/crusader/crusader.effects_edit.txt`, 주석 추가 전 106행; Git 원문 {"commit": "0000000000000000000000000000000000000000", "summary": "Version of heroes/crusader/crusader.effects_edit.txt from heroes/crusader/crusader.effects_edit.txt"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Crusader HealStress 4`
+- 원본: `effect: .name "Crusader HealStress 4" .target "target" .curio_result_type "positive" .chance 100% .healstress 7		.on_hit true .on_miss false .queue true`
+- 현재: `effect: .name "Crusader HealStress 4" .target "target" .curio_result_type "positive" .chance 100% .healstress 8		.on_hit true .on_miss false .queue true`
+- 적용 불일치 주의: info의 강한 기절 원본 참조와 사본의 이름/일반 확률, 사본에만 있는 스트레스 회복 증가는 이번에 동기화하지 않았다. 사본 의도를 기록하는 작업이지 추가 적용 승인이 아니다.
+- 출처: `heroes/crusader/crusader.effects_edit.txt`, 주석 추가 전 110행; Git 원문 {"commit": "0000000000000000000000000000000000000000", "summary": "Version of heroes/crusader/crusader.effects_edit.txt from heroes/crusader/crusader.effects_edit.txt"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `Crusader HealStress 5`
+- 원본: `effect: .name "Crusader HealStress 5" .target "target" .curio_result_type "positive" .chance 100% .healstress 8		.on_hit true .on_miss false .queue true`
+- 현재: `effect: .name "Crusader HealStress 5" .target "target" .curio_result_type "positive" .chance 100% .healstress 9		.on_hit true .on_miss false .queue true`
+- 적용 불일치 주의: info의 강한 기절 원본 참조와 사본의 이름/일반 확률, 사본에만 있는 스트레스 회복 증가는 이번에 동기화하지 않았다. 사본 의도를 기록하는 작업이지 추가 적용 승인이 아니다.
+- 출처: `heroes/crusader/crusader.effects_edit.txt`, 주석 추가 전 114행; Git 원문 {"commit": "0000000000000000000000000000000000000000", "summary": "Version of heroes/crusader/crusader.effects_edit.txt from heroes/crusader/crusader.effects_edit.txt"}

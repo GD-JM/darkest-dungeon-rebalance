@@ -62,3 +62,29 @@
 
 - 기술 5개 레벨의 피해 필드와 해당 주석만 변경하고 나머지 기술 필드는 바이트 단위로 검증한다. 관련 영웅·효과·편집 사본·도구는 변경 전후 해시로 보존 여부를 확인한다.
 - `tools/check_comments.py duelist` 통과, 해당 두 파일의 `git diff --check` 통과. 기술 피해 5개 필드·주석 외 데이터 변경 없음, 나머지 57개 영웅·효과·편집 사본·도구 파일 해시 일치. 게임 내 실전 확인은 별도다.
+
+
+## 2026-10-05 주석·의도 전수 추적 (수치 변경 없음)
+이번 항목은 이전 문서의 후보/기각/예전 수치를 덮어쓰지 않는 현재 스냅샷이다. 사용자 한국어 메모를 원문 그대로 보존했다. 실제 데이터와 편집 사본의 상태를 별도로 기록하며, 새로운 수치 결정이나 전역 효과 적용을 하지 않는다. 최신 사용자 작업은 이 섹션을 우선 참고한다.
+
+### DUE-001 DUE-002 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 성채의 일격보다 높은 명중과 밀치기 안정성에 피해로 대가를 내고 기존 기절/태세를 보존한다. 이 수치만으로 두 기술의 역할 차이가 해결된 것은 아니다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/the_boot`
+  - 원본: `combat_skill: .id "the_boot" .level 0 .type "melee" .atk 95%  .dmg -40% .crit 1% .move 0 1 .launch 321 .target 12 .is_crit_valid True  .effect "Stun 1" "Push 1B" .valid_modes stance_aggressive`
+  - 현재: `combat_skill: .id "the_boot" .level 0 .type "melee" .atk 95%  .dmg -70% .crit 1% .move 0 1 .launch 321 .target 12 .is_crit_valid True  .effect "Stun 1" "Push 1B" .valid_modes stance_aggressive`
+  - 원본: `combat_skill: .id "the_boot" .level 1 .type "melee" .atk 100% .dmg -40% .crit 2% .move 0 1 .launch 321 .target 12 .is_crit_valid True  .effect "Stun 2" "Push 1C" .valid_modes stance_aggressive`
+  - 현재: `combat_skill: .id "the_boot" .level 1 .type "melee" .atk 100% .dmg -70% .crit 2% .move 0 1 .launch 321 .target 12 .is_crit_valid True  .effect "Stun 2" "Push 1C" .valid_modes stance_aggressive`
+  - 원본: `combat_skill: .id "the_boot" .level 2 .type "melee" .atk 105% .dmg -40% .crit 3% .move 0 1 .launch 321 .target 12 .is_crit_valid True  .effect "Stun 3" "Push 1D" .valid_modes stance_aggressive`
+  - 현재: `combat_skill: .id "the_boot" .level 2 .type "melee" .atk 105% .dmg -70% .crit 3% .move 0 1 .launch 321 .target 12 .is_crit_valid True  .effect "Stun 3" "Push 1D" .valid_modes stance_aggressive`
+  - 원본: `combat_skill: .id "the_boot" .level 3 .type "melee" .atk 110% .dmg -40% .crit 4% .move 0 1 .launch 321 .target 12 .is_crit_valid True  .effect "Stun 4" "Push 1E" .valid_modes stance_aggressive`
+  - 현재: `combat_skill: .id "the_boot" .level 3 .type "melee" .atk 110% .dmg -70% .crit 4% .move 0 1 .launch 321 .target 12 .is_crit_valid True  .effect "Stun 4" "Push 1E" .valid_modes stance_aggressive`
+  - 원본: `combat_skill: .id "the_boot" .level 4 .type "melee" .atk 115% .dmg -40% .crit 5% .move 0 1 .launch 321 .target 12 .is_crit_valid True  .effect "Stun 5" "Push 1F" .valid_modes stance_aggressive`
+  - 현재: `combat_skill: .id "the_boot" .level 4 .type "melee" .atk 115% .dmg -70% .crit 5% .move 0 1 .launch 321 .target 12 .is_crit_valid True  .effect "Stun 5" "Push 1F" .valid_modes stance_aggressive`
+- 출처: `heroes/duelist/duelist.info.darkest`, 주석 추가 전 56행; Git 원문 {"commit": "eca6f56492abde68e068e46c48eb9935424586ae", "summary": "DUE-002 부츠 피해 보정 -70% 적용"}
+- 기존 주석 원문:
+```text
+// DUE-002 The Boot damage -60% -> -70% at all levels; accuracy, crit, stun, push and stance retained. Previous change: DUE-001.
+```

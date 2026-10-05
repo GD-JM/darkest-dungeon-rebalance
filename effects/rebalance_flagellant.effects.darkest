@@ -3,21 +3,31 @@
 
 // edited vanilla effect (from dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest)
 effect: .name "RB FLA Flag Healdot 1" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 3 .duration 3	.on_hit true .on_miss true
+// FLA-005 [trace 2026-10-05] Match ally HOT output to the self-bleed cost across skill levels. Effect: RB FLA Flag Healdot 1.
 // edited vanilla effect (from dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest)
 effect: .name "RB FLA Flag Healdot 2" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 3 .duration 3	.on_hit true .on_miss true
+// FLA-005 [trace 2026-10-05] Match ally HOT output to the self-bleed cost across skill levels. Effect: RB FLA Flag Healdot 2.
 // edited vanilla effect (from dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest)
 effect: .name "RB FLA Flag Healdot 3" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 4 .duration 3	.on_hit true .on_miss true
+// FLA-005 [trace 2026-10-05] Match ally HOT output to the self-bleed cost across skill levels. Effect: RB FLA Flag Healdot 3.
 // edited vanilla effect (from dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest)
 effect: .name "RB FLA Flag Healdot 4" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 4 .duration 3	.on_hit true .on_miss true
+// FLA-005 [trace 2026-10-05] Match ally HOT output to the self-bleed cost across skill levels. Effect: RB FLA Flag Healdot 4.
 // edited vanilla effect (from dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest)
 effect: .name "RB FLA Flag Healdot 5" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 5 .duration 3	.on_hit true .on_miss true
+// FLA-005 [trace 2026-10-05] Match ally HOT output to the self-bleed cost across skill levels. Effect: RB FLA Flag Healdot 5.
 // edited vanilla effect (from dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest)
 effect: .name "RB FLA Flag Self Stress 1" .target "performer" .curio_result_type "negative" .chance 100% .stress 4	.on_hit true .on_miss false	.queue true
+// FLA-006 [trace 2026-10-05] Reduce self stress transfer cost to support an alternative stress healer. Effect: RB FLA Flag Self Stress 1.
 // edited vanilla effect (from dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest)
 effect: .name "RB FLA Flag Self Stress 2" .target "performer" .curio_result_type "negative" .chance 100% .stress 4	.on_hit true .on_miss false	.queue true
+// FLA-006 [trace 2026-10-05] Reduce self stress transfer cost to support an alternative stress healer. Effect: RB FLA Flag Self Stress 2.
 // edited vanilla effect (from dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest)
 effect: .name "RB FLA Flag Self Stress 3" .target "performer" .curio_result_type "negative" .chance 100% .stress 4	.on_hit true .on_miss false	.queue true
+// FLA-006 [trace 2026-10-05] Reduce self stress transfer cost to support an alternative stress healer. Effect: RB FLA Flag Self Stress 3.
 // edited vanilla effect (from dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest)
 effect: .name "RB FLA Flag Self Stress 4" .target "performer" .curio_result_type "negative" .chance 100% .stress 4	.on_hit true .on_miss false	.queue true
+// FLA-006 [trace 2026-10-05] Reduce self stress transfer cost to support an alternative stress healer. Effect: RB FLA Flag Self Stress 4.
 // edited vanilla effect (from dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest)
 effect: .name "RB FLA Flag Self Stress 5" .target "performer" .curio_result_type "negative" .chance 100% .stress 4	.on_hit true .on_miss false	.queue true
+// FLA-006 [trace 2026-10-05] Reduce self stress transfer cost to support an alternative stress healer. Effect: RB FLA Flag Self Stress 5.

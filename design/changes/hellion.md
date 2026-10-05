@@ -67,3 +67,199 @@
 - 변경: `HellionHealSelf 1~5`의 회복 `1/2/2/3/4` → **`3/4/5/6/7`** → 적용 시 `RB HEL HellionHealSelf 1~5`로 분리. 바닐라 효과 파일은 건드리지 않았다.
 - 근거: HEL-001로 `Adrenaline`이 함성으로 옮겨가면서 이 기술에 **치료 + 자가 회복 4**만 남았다. 자가 회복 시세 표준은 8.0(조련사 상처 핥기)이라 4는 절반이었고, 한 턴을 써서 4를 회복하는 기술은 아무도 고르지 않는다(G-02 위반). 7은 표준에 근접한다.
 - 주의: 편집 사본만 고쳐진 상태로 **게임에는 반영되지 않고 있었다.** `tools/apply_effect_edits.py` 실행이 필요하다.
+
+
+## 2026-10-05 주석·의도 전수 추적 (수치 변경 없음)
+이번 항목은 이전 문서의 후보/기각/예전 수치를 덮어쓰지 않는 현재 스냅샷이다. 사용자 한국어 메모를 원문 그대로 보존했다. 실제 데이터와 편집 사본의 상태를 별도로 기록하며, 새로운 수치 결정이나 전역 효과 적용을 하지 않는다. 최신 사용자 작업은 이 섹션을 우선 참고한다.
+
+### HEL-005 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 출혈·유혈·강철 백조·아드레날린 분출 고정 조합 밖의 변주를 위해 평타 명중을 보완한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/wicked_hack`
+  - 원본: `combat_skill: .id "wicked_hack" .level 0 .type "melee" .atk 85% .dmg 0% .crit 4% .launch 21 .target 12 .is_crit_valid True  .generation_guaranteed true`
+  - 현재: `combat_skill: .id "wicked_hack" .level 0 .type "melee" .atk 90% .dmg 0% .crit 4% .launch 21 .target 12 .is_crit_valid True  .generation_guaranteed true`
+  - 원본: `combat_skill: .id "wicked_hack" .level 1 .type "melee" .atk 90% .dmg 0% .crit 5% .launch 21 .target 12 .is_crit_valid True `
+  - 현재: `combat_skill: .id "wicked_hack" .level 1 .type "melee" .atk 95% .dmg 0% .crit 5% .launch 21 .target 12 .is_crit_valid True `
+  - 원본: `combat_skill: .id "wicked_hack" .level 2 .type "melee" .atk 95% .dmg 0% .crit 6% .launch 21 .target 12 .is_crit_valid True `
+  - 현재: `combat_skill: .id "wicked_hack" .level 2 .type "melee" .atk 100% .dmg 0% .crit 6% .launch 21 .target 12 .is_crit_valid True `
+  - 원본: `combat_skill: .id "wicked_hack" .level 3 .type "melee" .atk 100% .dmg 0% .crit 7% .launch 21 .target 12 .is_crit_valid True `
+  - 현재: `combat_skill: .id "wicked_hack" .level 3 .type "melee" .atk 105% .dmg 0% .crit 7% .launch 21 .target 12 .is_crit_valid True `
+  - 원본: `combat_skill: .id "wicked_hack" .level 4 .type "melee" .atk 105% .dmg 0% .crit 8% .launch 21 .target 12 .is_crit_valid True `
+  - 현재: `combat_skill: .id "wicked_hack" .level 4 .type "melee" .atk 110% .dmg 0% .crit 8% .launch 21 .target 12 .is_crit_valid True `
+- 출처: `heroes/hellion/hellion.info.darkest`, 주석 추가 전 27행; Git 원문 {"commit": "3e0b7650d63bb2c9bf5c6fe2fece69519ef897da", "summary": "BH-007 어퍼컷 1열 전용 처형 기절기 + BH-008 섬광탄 사용 열 기록"}
+- 기존 주석 원문:
+```text
+//명중 85 -> 90 근거는 블리드아웃,이프잇블리즈,아이언스완,아드레날린 러쉬 4개가 너무 정답조합임 변주 필요함
+```
+
+### HEL-001 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 몰아치는 연출에 맞춰 탈진/기절 대신 자기 준비와 시체 제거를 맡기고 반복 사용을 허용한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/barbaric_yawp`
+  - 원본: `combat_skill: .id "barbaric_yawp" .level 0 .type "melee" .atk 95% .dmg -100% .crit 0% .per_battle_limit 3 .launch 21 .target ~12 .is_crit_valid False  .effect "Hero Strong Stun 1" "Hellion Exhaust" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "barbaric_yawp" .level 0 .type "melee" .atk 95% .dmg -100% .crit 0% .launch 21 .target ~1234 .is_crit_valid False  .effect "clear_corpses" "Adrenaline 1" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "barbaric_yawp" .level 1 .type "melee" .atk 100% .dmg -100% .crit 0% .per_battle_limit 3 .launch 21 .target ~12 .is_crit_valid False  .effect "Hero Strong Stun 2" "Hellion Exhaust" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "barbaric_yawp" .level 1 .type "melee" .atk 100% .dmg -100% .crit 0% .launch 21 .target ~1234 .is_crit_valid False  .effect "clear_corpses"  "Adrenaline 2" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "barbaric_yawp" .level 2 .type "melee" .atk 105% .dmg -100% .crit 0% .per_battle_limit 3 .launch 21 .target ~12 .is_crit_valid False  .effect "Hero Strong Stun 3" "Hellion Exhaust" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "barbaric_yawp" .level 2 .type "melee" .atk 105% .dmg -100% .crit 0% .launch 21 .target ~1234 .is_crit_valid False  .effect "clear_corpses" "Adrenaline 3" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "barbaric_yawp" .level 3 .type "melee" .atk 110% .dmg -100% .crit 0% .per_battle_limit 3 .launch 21 .target ~12 .is_crit_valid False  .effect "Hero Strong Stun 4" "Hellion Exhaust" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "barbaric_yawp" .level 3 .type "melee" .atk 110% .dmg -100% .crit 0% .launch 21 .target ~1234 .is_crit_valid False  .effect "clear_corpses" "Adrenaline 4" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "barbaric_yawp" .level 4 .type "melee" .atk 115% .dmg -100% .crit 0% .per_battle_limit 3 .launch 21 .target ~12 .is_crit_valid False  .effect "Hero Strong Stun 5" "Hellion Exhaust" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "barbaric_yawp" .level 4 .type "melee" .atk 115% .dmg -100% .crit 0% .launch 21 .target ~1234 .is_crit_valid False  .effect "clear_corpses" "Adrenaline 5" .is_stall_invalidating false`
+- 출처: `heroes/hellion/hellion.info.darkest`, 주석 추가 전 42행; Git 원문 {"commit": "3e0b7650d63bb2c9bf5c6fe2fece69519ef897da", "summary": "BH-007 어퍼컷 1열 전용 처형 기절기 + BH-008 섬광탄 사용 열 기록"}
+- 기존 주석 원문:
+```text
+//탈진 삭제
+```
+- 기존 주석 원문:
+```text
+//스턴 삭제
+```
+- 기존 주석 원문:
+```text
+//시체 제거 추가
+```
+- 기존 주석 원문:
+```text
+//아드레날린 버프 추가
+```
+
+### HEL-002 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 탈진 제거의 이득 일부를 직접 피해로 반납한다. 자기 전진을 자동 패널티로 가격 매기지 않는다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/breakthru`
+  - 원본: `combat_skill: .id "breakthru" .level 0 .type "melee" .atk 85% .dmg -50% .crit -1% .move 0 1 .launch 432 .target ~123 .is_crit_valid True  .effect "Hellion Exhaust Sm"`
+  - 현재: `combat_skill: .id "breakthru" .level 0 .type "melee" .atk 85% .dmg -60% .crit -1% .move 0 1 .launch 432 .target ~123 .is_crit_valid True`
+  - 원본: `combat_skill: .id "breakthru" .level 1 .type "melee" .atk 90% .dmg -50% .crit 0% .move 0 1 .launch 432 .target ~123 .is_crit_valid True  .effect "Hellion Exhaust Sm"`
+  - 현재: `combat_skill: .id "breakthru" .level 1 .type "melee" .atk 90% .dmg -60% .crit 0% .move 0 1 .launch 432 .target ~123 .is_crit_valid True`
+  - 원본: `combat_skill: .id "breakthru" .level 2 .type "melee" .atk 95% .dmg -50% .crit 1% .move 0 1 .launch 432 .target ~123 .is_crit_valid True  .effect "Hellion Exhaust Sm"`
+  - 현재: `combat_skill: .id "breakthru" .level 2 .type "melee" .atk 95% .dmg -60% .crit 1% .move 0 1 .launch 432 .target ~123 .is_crit_valid True `
+  - 원본: `combat_skill: .id "breakthru" .level 3 .type "melee" .atk 100% .dmg -50% .crit 2% .move 0 1 .launch 432 .target ~123 .is_crit_valid True  .effect "Hellion Exhaust Sm"`
+  - 현재: `combat_skill: .id "breakthru" .level 3 .type "melee" .atk 100% .dmg -60% .crit 2% .move 0 1 .launch 432 .target ~123 .is_crit_valid True  `
+  - 원본: `combat_skill: .id "breakthru" .level 4 .type "melee" .atk 105% .dmg -50% .crit 3% .move 0 1 .launch 432 .target ~123 .is_crit_valid True  .effect "Hellion Exhaust Sm"`
+  - 현재: `combat_skill: .id "breakthru" .level 4 .type "melee" .atk 105% .dmg -60% .crit 3% .move 0 1 .launch 432 .target ~123 .is_crit_valid True `
+- 출처: `heroes/hellion/hellion.info.darkest`, 주석 추가 전 60행; Git 원문 {"commit": "3e0b7650d63bb2c9bf5c6fe2fece69519ef897da", "summary": "BH-007 어퍼컷 1열 전용 처형 기절기 + BH-008 섬광탄 사용 열 기록"}
+- 기존 주석 원문:
+```text
+//피해량 50 -> 60
+```
+- 기존 주석 원문:
+```text
+//탈진 삭제
+```
+
+### HEL-004 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 공격 강화를 함성으로 옮기고 자기 회복을 높여 회복 기술의 역할을 분리한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/adrenaline_rush`
+  - 원본: `combat_skill: .id "adrenaline_rush" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Adrenaline 1" "HellionHealSelf 1" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "adrenaline_rush" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Cureself" "RB HEL HellionHealSelf 1" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "adrenaline_rush" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Adrenaline 2" "HellionHealSelf 2" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "adrenaline_rush" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Cureself" "RB HEL HellionHealSelf 2" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "adrenaline_rush" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Adrenaline 3" "HellionHealSelf 3" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "adrenaline_rush" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Cureself" "RB HEL HellionHealSelf 3" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "adrenaline_rush" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Adrenaline 4" "HellionHealSelf 4" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "adrenaline_rush" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Cureself" "RB HEL HellionHealSelf 4" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "adrenaline_rush" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Adrenaline 5" "HellionHealSelf 5" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "adrenaline_rush" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Cureself" "RB HEL HellionHealSelf 5" .is_stall_invalidating false`
+- 출처: `heroes/hellion/hellion.info.darkest`, 주석 추가 전 68행; Git 원문 {"commit": "85ed78358dc522e062c53336633b0ea0120f71c3", "summary": "R-RANK-01 이동기 원칙 + 야만인 자가 회복 적용 + BH-005 마름쇠"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `HellionHealSelf 1`
+- 원본: `effect: .name "HellionHealSelf 1" .target "performer" .curio_result_type "positive" .chance 100% .heal 1	.on_hit true .on_miss false .queue false .source_heal_type hero_skill`
+- 현재: `effect: .name "HellionHealSelf 1" .target "performer" .curio_result_type "positive" .chance 100% .heal 3	.on_hit true .on_miss false .queue false .source_heal_type hero_skill`
+- 출처: `heroes/hellion/hellion.effects_edit.txt`, 주석 추가 전 84행; Git 원문 {"commit": "3e0b7650d63bb2c9bf5c6fe2fece69519ef897da", "summary": "BH-007 어퍼컷 1열 전용 처형 기절기 + BH-008 섬광탄 사용 열 기록"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `HellionHealSelf 2`
+- 원본: `effect: .name "HellionHealSelf 2" .target "performer" .curio_result_type "positive" .chance 100% .heal 2	.on_hit true .on_miss false .queue false .source_heal_type hero_skill`
+- 현재: `effect: .name "HellionHealSelf 2" .target "performer" .curio_result_type "positive" .chance 100% .heal 4	.on_hit true .on_miss false .queue false .source_heal_type hero_skill`
+- 출처: `heroes/hellion/hellion.effects_edit.txt`, 주석 추가 전 88행; Git 원문 {"commit": "3e0b7650d63bb2c9bf5c6fe2fece69519ef897da", "summary": "BH-007 어퍼컷 1열 전용 처형 기절기 + BH-008 섬광탄 사용 열 기록"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `HellionHealSelf 3`
+- 원본: `effect: .name "HellionHealSelf 3" .target "performer" .curio_result_type "positive" .chance 100% .heal 2	.on_hit true .on_miss false .queue false .source_heal_type hero_skill`
+- 현재: `effect: .name "HellionHealSelf 3" .target "performer" .curio_result_type "positive" .chance 100% .heal 5	.on_hit true .on_miss false .queue false .source_heal_type hero_skill`
+- 출처: `heroes/hellion/hellion.effects_edit.txt`, 주석 추가 전 92행; Git 원문 {"commit": "3e0b7650d63bb2c9bf5c6fe2fece69519ef897da", "summary": "BH-007 어퍼컷 1열 전용 처형 기절기 + BH-008 섬광탄 사용 열 기록"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `HellionHealSelf 4`
+- 원본: `effect: .name "HellionHealSelf 4" .target "performer" .curio_result_type "positive" .chance 100% .heal 3	.on_hit true .on_miss false .queue false .source_heal_type hero_skill`
+- 현재: `effect: .name "HellionHealSelf 4" .target "performer" .curio_result_type "positive" .chance 100% .heal 6	.on_hit true .on_miss false .queue false .source_heal_type hero_skill`
+- 출처: `heroes/hellion/hellion.effects_edit.txt`, 주석 추가 전 96행; Git 원문 {"commit": "3e0b7650d63bb2c9bf5c6fe2fece69519ef897da", "summary": "BH-007 어퍼컷 1열 전용 처형 기절기 + BH-008 섬광탄 사용 열 기록"}
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `HellionHealSelf 5`
+- 원본: `effect: .name "HellionHealSelf 5" .target "performer" .curio_result_type "positive" .chance 100% .heal 4	.on_hit true .on_miss false .queue false .source_heal_type hero_skill`
+- 현재: `effect: .name "HellionHealSelf 5" .target "performer" .curio_result_type "positive" .chance 100% .heal 7	.on_hit true .on_miss false .queue false .source_heal_type hero_skill`
+- 출처: `heroes/hellion/hellion.effects_edit.txt`, 주석 추가 전 100행; Git 원문 {"commit": "3e0b7650d63bb2c9bf5c6fe2fece69519ef897da", "summary": "BH-007 어퍼컷 1열 전용 처형 기절기 + BH-008 섬광탄 사용 열 기록"}
+- 기존 주석 원문:
+```text
+//야만인 힐수치 조정 12234 에서 34567으로
+```
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB HEL HellionHealSelf 1`
+- 원본 (HellionHealSelf 1): `effect: .name "HellionHealSelf 1" .target "performer" .curio_result_type "positive" .chance 100% .heal 1	.on_hit true .on_miss false .queue false .source_heal_type hero_skill`
+- 현재: `effect: .name "RB HEL HellionHealSelf 1" .target "performer" .curio_result_type "positive" .chance 100% .heal 3	.on_hit true .on_miss false .queue false .source_heal_type hero_skill`
+- 출처: `effects/rebalance_hellion.effects.darkest`, 주석 추가 전 5행; Git 원문 {"commit": "85ed78358dc522e062c53336633b0ea0120f71c3", "summary": "R-RANK-01 이동기 원칙 + 야만인 자가 회복 적용 + BH-005 마름쇠"}
+- 기존 주석 원문:
+```text
+// edited vanilla effect (from effects/base.effects.darkest)
+```
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB HEL HellionHealSelf 2`
+- 원본 (HellionHealSelf 2): `effect: .name "HellionHealSelf 2" .target "performer" .curio_result_type "positive" .chance 100% .heal 2	.on_hit true .on_miss false .queue false .source_heal_type hero_skill`
+- 현재: `effect: .name "RB HEL HellionHealSelf 2" .target "performer" .curio_result_type "positive" .chance 100% .heal 4	.on_hit true .on_miss false .queue false .source_heal_type hero_skill`
+- 출처: `effects/rebalance_hellion.effects.darkest`, 주석 추가 전 7행; Git 원문 {"commit": "85ed78358dc522e062c53336633b0ea0120f71c3", "summary": "R-RANK-01 이동기 원칙 + 야만인 자가 회복 적용 + BH-005 마름쇠"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB HEL HellionHealSelf 3`
+- 원본 (HellionHealSelf 3): `effect: .name "HellionHealSelf 3" .target "performer" .curio_result_type "positive" .chance 100% .heal 2	.on_hit true .on_miss false .queue false .source_heal_type hero_skill`
+- 현재: `effect: .name "RB HEL HellionHealSelf 3" .target "performer" .curio_result_type "positive" .chance 100% .heal 5	.on_hit true .on_miss false .queue false .source_heal_type hero_skill`
+- 출처: `effects/rebalance_hellion.effects.darkest`, 주석 추가 전 9행; Git 원문 {"commit": "85ed78358dc522e062c53336633b0ea0120f71c3", "summary": "R-RANK-01 이동기 원칙 + 야만인 자가 회복 적용 + BH-005 마름쇠"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB HEL HellionHealSelf 4`
+- 원본 (HellionHealSelf 4): `effect: .name "HellionHealSelf 4" .target "performer" .curio_result_type "positive" .chance 100% .heal 3	.on_hit true .on_miss false .queue false .source_heal_type hero_skill`
+- 현재: `effect: .name "RB HEL HellionHealSelf 4" .target "performer" .curio_result_type "positive" .chance 100% .heal 6	.on_hit true .on_miss false .queue false .source_heal_type hero_skill`
+- 출처: `effects/rebalance_hellion.effects.darkest`, 주석 추가 전 11행; Git 원문 {"commit": "85ed78358dc522e062c53336633b0ea0120f71c3", "summary": "R-RANK-01 이동기 원칙 + 야만인 자가 회복 적용 + BH-005 마름쇠"}
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB HEL HellionHealSelf 5`
+- 원본 (HellionHealSelf 5): `effect: .name "HellionHealSelf 5" .target "performer" .curio_result_type "positive" .chance 100% .heal 4	.on_hit true .on_miss false .queue false .source_heal_type hero_skill`
+- 현재: `effect: .name "RB HEL HellionHealSelf 5" .target "performer" .curio_result_type "positive" .chance 100% .heal 7	.on_hit true .on_miss false .queue false .source_heal_type hero_skill`
+- 출처: `effects/rebalance_hellion.effects.darkest`, 주석 추가 전 13행; Git 원문 {"commit": "85ed78358dc522e062c53336633b0ea0120f71c3", "summary": "R-RANK-01 이동기 원칙 + 야만인 자가 회복 적용 + BH-005 마름쇠"}
+
+### HEL-003 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 탈진 제거 뒤 피해를 반납하고 살모사의 입맞춤과 비교한 사용자의 치명 보상 결정을 보존한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/bleed_out`
+  - 원본: `combat_skill: .id "bleed_out" .level 0 .type "melee" .atk 85% .dmg 20% .crit 6% .launch 1 .target 1 .is_crit_valid True  .effect "Strong Bleed 1" "Hellion Exhaust"`
+  - 현재: `combat_skill: .id "bleed_out" .level 0 .type "melee" .atk 85% .dmg 0% .crit 10% .launch 1 .target 1 .is_crit_valid True  .effect "Strong Bleed 1" `
+  - 원본: `combat_skill: .id "bleed_out" .level 1 .type "melee" .atk 90% .dmg 20% .crit 7% .launch 1 .target 1 .is_crit_valid True  .effect "Strong Bleed 2" "Hellion Exhaust"`
+  - 현재: `combat_skill: .id "bleed_out" .level 1 .type "melee" .atk 90% .dmg 0% .crit 11% .launch 1 .target 1 .is_crit_valid True  .effect "Strong Bleed 2" `
+  - 원본: `combat_skill: .id "bleed_out" .level 2 .type "melee" .atk 95% .dmg 20% .crit 8% .launch 1 .target 1 .is_crit_valid True  .effect "Strong Bleed 3" "Hellion Exhaust"`
+  - 현재: `combat_skill: .id "bleed_out" .level 2 .type "melee" .atk 95% .dmg 0% .crit 12% .launch 1 .target 1 .is_crit_valid True  .effect "Strong Bleed 3" `
+  - 원본: `combat_skill: .id "bleed_out" .level 3 .type "melee" .atk 100% .dmg 20% .crit 9% .launch 1 .target 1 .is_crit_valid True  .effect "Strong Bleed 4" "Hellion Exhaust"`
+  - 현재: `combat_skill: .id "bleed_out" .level 3 .type "melee" .atk 100% .dmg 0% .crit 13% .launch 1 .target 1 .is_crit_valid True  .effect "Strong Bleed 4" `
+  - 원본: `combat_skill: .id "bleed_out" .level 4 .type "melee" .atk 105% .dmg 20% .crit 10% .launch 1 .target 1 .is_crit_valid True  .effect "Strong Bleed 5" "Hellion Exhaust"`
+  - 현재: `combat_skill: .id "bleed_out" .level 4 .type "melee" .atk 105% .dmg 0% .crit 14% .launch 1 .target 1 .is_crit_valid True  .effect "Strong Bleed 5" `
+- 출처: `heroes/hellion/hellion.info.darkest`, 주석 추가 전 75행; Git 원문 {"commit": "3e0b7650d63bb2c9bf5c6fe2fece69519ef897da", "summary": "BH-007 어퍼컷 1열 전용 처형 기절기 + BH-008 섬광탄 사용 열 기록"}
+- 기존 주석 원문 (JSON 문자열, 끝 공백 포함):
+```json
+"//탈진 없애고 피해량 20 -> 0 "
+```
+- 기존 주석 원문:
+```text
+// 살모사의 입맞춤에 비해 명중 5 낮음 , 살모사의 입맞춤은 2열까지 공격 가능
+```
+- 기존 주석 원문 (JSON 문자열, 끝 공백 포함):
+```json
+"// 치명타 확률로 보정 "
+```
+- 기존 주석 원문:
+```text
+// 치명타 6 -> 10
+```

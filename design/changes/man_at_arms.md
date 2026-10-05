@@ -254,3 +254,121 @@
 - 기각: 전투당 제한 해제. 전투 끝까지 가는 강화의 재사용 중첩(V-07)이 걸리고, 중보병을 반복 스트레스 힐러로 만든다.
 - 참고: 모델의 "전투당 1회 = 가치 1/3" 할인은 **매 전투 첫 턴에 쓰는 기술**을 과하게 깎는다. 고양은 1회 가치로 보는 것이 맞다.
 - **결정 (제작자 2026-09-30)**: 권장안 적용. 기존 회피·받는 스트레스 감소·전투당 1회는 그대로, 새 효과 `RB MAA Bolster Rally`(스트레스 회복 2, 확률 100%, 아군 전체)를 1~5레벨에 추가. 체력 자기 회복은 넣지 않았다. 수치가 같은 `Miller Pipe Stress Heal`이 있으나 다른 효과라 R-DATA-01에 따라 사본 유지.
+
+
+## 2026-10-05 주석·의도 전수 추적 (수치 변경 없음)
+이번 항목은 이전 문서의 후보/기각/예전 수치를 덮어쓰지 않는 현재 스냅샷이다. 사용자 한국어 메모를 원문 그대로 보존했다. 실제 데이터와 편집 사본의 상태를 별도로 기록하며, 새로운 수치 결정이나 전역 효과 적용을 하지 않는다. 최신 사용자 작업은 이 섹션을 우선 참고한다.
+
+### MAA-001 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 기존 무기 피해 기본 최대값 보완과15% 성장 의도를 기록한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `weapon/man_at_arms_weapon_0`
+  - 원본: `weapon: .name "man_at_arms_weapon_0" .atk 0% .dmg 5 9 .crit 2% .spd 3`
+  - 현재: `weapon: .name "man_at_arms_weapon_0" .atk 0% .dmg 5 10 .crit 2% .spd 3`
+- 출처: `heroes/man_at_arms/man_at_arms.info.darkest`, 주석 추가 전 3행; Git 원문 {"commit": "75a4d252d62286c0151c43707428d668552760f6", "summary": "MAA-002 포효 시체 제거 + 가치 단위를 환산 피해 보정 %p로 (R-VALUE-02 개정)"}
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `weapon/man_at_arms_weapon_1`
+  - 원본: `weapon: .name "man_at_arms_weapon_1" .atk 0% .dmg 6 10 .crit 3% .spd 3 .upgradeRequirementCode 0`
+  - 현재: `weapon: .name "man_at_arms_weapon_1" .atk 0% .dmg 6 12 .crit 3% .spd 3 .upgradeRequirementCode 0`
+- 출처: `heroes/man_at_arms/man_at_arms.info.darkest`, 주석 추가 전 4행; Git 원문 {"commit": "75a4d252d62286c0151c43707428d668552760f6", "summary": "MAA-002 포효 시체 제거 + 가치 단위를 환산 피해 보정 %p로 (R-VALUE-02 개정)"}
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `weapon/man_at_arms_weapon_2`
+  - 원본: `weapon: .name "man_at_arms_weapon_2" .atk 0% .dmg 7 12 .crit 4% .spd 4 .upgradeRequirementCode 1`
+  - 현재: `weapon: .name "man_at_arms_weapon_2" .atk 0% .dmg 7 13 .crit 4% .spd 4 .upgradeRequirementCode 1`
+- 출처: `heroes/man_at_arms/man_at_arms.info.darkest`, 주석 추가 전 5행; Git 원문 {"commit": "75a4d252d62286c0151c43707428d668552760f6", "summary": "MAA-002 포효 시체 제거 + 가치 단위를 환산 피해 보정 %p로 (R-VALUE-02 개정)"}
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `weapon/man_at_arms_weapon_3`
+  - 원본: `weapon: .name "man_at_arms_weapon_3" .atk 0% .dmg 7 13 .crit 5% .spd 4 .upgradeRequirementCode 2`
+  - 현재: `weapon: .name "man_at_arms_weapon_3" .atk 0% .dmg 7 15 .crit 5% .spd 4 .upgradeRequirementCode 2`
+- 출처: `heroes/man_at_arms/man_at_arms.info.darkest`, 주석 추가 전 6행; Git 원문 {"commit": "75a4d252d62286c0151c43707428d668552760f6", "summary": "MAA-002 포효 시체 제거 + 가치 단위를 환산 피해 보정 %p로 (R-VALUE-02 개정)"}
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `weapon/man_at_arms_weapon_4`
+  - 원본: `weapon: .name "man_at_arms_weapon_4" .atk 0% .dmg 8 14 .crit 6% .spd 5 .upgradeRequirementCode 3`
+  - 현재: `weapon: .name "man_at_arms_weapon_4" .atk 0% .dmg 8 16 .crit 6% .spd 5 .upgradeRequirementCode 3`
+- 출처: `heroes/man_at_arms/man_at_arms.info.darkest`, 주석 추가 전 7행; Git 원문 {"commit": "75a4d252d62286c0151c43707428d668552760f6", "summary": "MAA-002 포효 시체 제거 + 가치 단위를 환산 피해 보정 %p로 (R-VALUE-02 개정)"}
+- 기존 주석 원문:
+```text
+// MAA-001 weapon dmg base 5-9 -> 5-10, growth 15% kept
+```
+
+### MAA-002 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 전열을 짓뭉개는 함성 설정에 맞춰 시체 정리를 추가하고 기존 약화를 유지한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/bellow`
+  - 원본: `combat_skill: .id "bellow" .level 0 .type "ranged" .atk 90% .dmg -100% .crit 0% .launch 1234 .target ~1234 .is_crit_valid False  .effect "Disrupt 1" "Bellow Crit 1" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "bellow" .level 0 .type "ranged" .atk 90% .dmg -100% .crit 0% .launch 1234 .target ~1234 .is_crit_valid False  .effect "Disrupt 1" "clear_corpses" "Bellow Crit 1" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "bellow" .level 1 .type "ranged" .atk 95% .dmg -100% .crit 0% .launch 1234 .target ~1234 .is_crit_valid False  .effect "Disrupt 2" "Bellow Crit 2" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "bellow" .level 1 .type "ranged" .atk 95% .dmg -100% .crit 0% .launch 1234 .target ~1234 .is_crit_valid False  .effect "Disrupt 2" "clear_corpses" "Bellow Crit 2" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "bellow" .level 2 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 1234 .target ~1234 .is_crit_valid False  .effect "Disrupt 3" "Bellow Crit 3" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "bellow" .level 2 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 1234 .target ~1234 .is_crit_valid False  .effect "Disrupt 3" "clear_corpses" "Bellow Crit 3" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "bellow" .level 3 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 1234 .target ~1234 .is_crit_valid False  .effect "Disrupt 4" "Bellow Crit 4" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "bellow" .level 3 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 1234 .target ~1234 .is_crit_valid False  .effect "Disrupt 4" "clear_corpses" "Bellow Crit 4" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "bellow" .level 4 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 1234 .target ~1234 .is_crit_valid False  .effect "Disrupt 5" "Bellow Crit 5" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "bellow" .level 4 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 1234 .target ~1234 .is_crit_valid False  .effect "Disrupt 5" "clear_corpses" "Bellow Crit 5" .is_stall_invalidating false`
+- 출처: `heroes/man_at_arms/man_at_arms.info.darkest`, 주석 추가 전 34행; Git 원문 {"commit": "75a4d252d62286c0151c43707428d668552760f6", "summary": "MAA-002 포효 시체 제거 + 가치 단위를 환산 피해 보정 %p로 (R-VALUE-02 개정)"}
+- 기존 주석 원문:
+```text
+// MAA-002 bellow: 시체 제거 추가(약화는 그대로). 길드 "철퇴, 버클러와 맹렬한 함성으로 적의 전열을 짓뭉갭니다". 야만인 함성(HEL-001)에 이은 두 번째 "함성 = 대열 정리" 기술
+```
+
+### MAA-004 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 3열 도달을 내주고 응징의 직접 피해를 보완하며3턴 반격과 지원 루프를 유지한다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/retribution`
+  - 원본: `combat_skill: .id "retribution" .level 0 .type "melee" .atk 85% .dmg -75% .crit 2.5% .launch 123 .target 123 .is_crit_valid True  .effect "MAA Riposte 1" "Mark Self"`
+  - 현재: `combat_skill: .id "retribution" .level 0 .type "melee" .atk 85% .dmg -20% .crit 2.5% .launch 123 .target 12 .is_crit_valid True  .effect "MAA Riposte 1" "Mark Self"`
+  - 원본: `combat_skill: .id "retribution" .level 1 .type "melee" .atk 90% .dmg -75% .crit 3.5% .launch 123 .target 123 .is_crit_valid True  .effect "MAA Riposte 2" "Mark Self"`
+  - 현재: `combat_skill: .id "retribution" .level 1 .type "melee" .atk 90% .dmg -20% .crit 3.5% .launch 123 .target 12 .is_crit_valid True  .effect "MAA Riposte 2" "Mark Self"`
+  - 원본: `combat_skill: .id "retribution" .level 2 .type "melee" .atk 95% .dmg -75% .crit 4.5% .launch 123 .target 123 .is_crit_valid True  .effect "MAA Riposte 3" "Mark Self"`
+  - 현재: `combat_skill: .id "retribution" .level 2 .type "melee" .atk 95% .dmg -20% .crit 4.5% .launch 123 .target 12 .is_crit_valid True  .effect "MAA Riposte 3" "Mark Self"`
+  - 원본: `combat_skill: .id "retribution" .level 3 .type "melee" .atk 100% .dmg -75% .crit 5.5% .launch 123 .target 123 .is_crit_valid True  .effect "MAA Riposte 4" "Mark Self"`
+  - 현재: `combat_skill: .id "retribution" .level 3 .type "melee" .atk 100% .dmg -20% .crit 5.5% .launch 123 .target 12 .is_crit_valid True  .effect "MAA Riposte 4" "Mark Self"`
+  - 원본: `combat_skill: .id "retribution" .level 4 .type "melee" .atk 105% .dmg -75% .crit 6.5% .launch 123 .target 123 .is_crit_valid True  .effect "MAA Riposte 5" "Mark Self"`
+  - 현재: `combat_skill: .id "retribution" .level 4 .type "melee" .atk 105% .dmg -20% .crit 6.5% .launch 123 .target 12 .is_crit_valid True  .effect "MAA Riposte 5" "Mark Self"`
+- 출처: `heroes/man_at_arms/man_at_arms.info.darkest`, 주석 추가 전 50행; Git 원문 {"commit": "21782b6bc0456cc35ab43ecdf23c10ca6e6fa57d", "summary": "MAA-004 개정: 응징 대상 1·2열, 피해 -20%, 반격 3턴 유지"}
+- 기존 주석 원문:
+```text
+// MAA-004 retribution: 대상 123 -> 12, 피해 -75% -> -20% (반격 3턴 유지). 분쇄와 같은 휘두르기 모션인데 한 방이 분쇄의 25%였다(P-19) -> 80%. 3열 도달(피해 약 20%p 가치)을 내주고 전열 전용 반격·도발 기술로 분쇄와 역할 분리. 1라운드 +15 -> +41%p, 지원 루프(응징-수호자-지휘) +14%
+```
+
+### MAA-005 현재 연결·의도 기록
+- 목표: 기존 조합/기술 선택 다양성과 해당 항목의 기존 목표를 추적한다.
+- 의도: 늦게 누적되는 스트레스 감소에 즉시 회복2를 더해 고양의 사기 진작 역할을 만든다.
+- 근거: 아래 사용자 원문, 기존 항목/커밋 출처와 실제 원본 대조. 추적된 의도는 설계의 보편적 정답을 입증하지 않는다. 값의 세부 이유가 원문에 없는 경우 새로 창작하지 않는다.
+- 상태: 게임이 읽는 info의 현재 값. 기존 HEAD와 다른 데이터는 사용자가 이미 편집한 상태이며 이번 작업은 주석만 추가했다.
+- 기술/행: `combat_skill/bolster`
+  - 원본: `combat_skill: .id "bolster" .level 0 .type "ranged" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target ~@1234 .is_crit_valid True  .effect "Bolster 1" "Bolster Stress Buff 1" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "bolster" .level 0 .type "ranged" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target ~@1234 .is_crit_valid True  .effect "Bolster 1" "Bolster Stress Buff 1" "RB MAA Bolster Rally" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "bolster" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target ~@1234 .is_crit_valid True  .effect "Bolster 2" "Bolster Stress Buff 2" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "bolster" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target ~@1234 .is_crit_valid True  .effect "Bolster 2" "Bolster Stress Buff 2" "RB MAA Bolster Rally" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "bolster" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target ~@1234 .is_crit_valid True  .effect "Bolster 3" "Bolster Stress Buff 3" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "bolster" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target ~@1234 .is_crit_valid True  .effect "Bolster 3" "Bolster Stress Buff 3" "RB MAA Bolster Rally" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "bolster" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target ~@1234 .is_crit_valid True  .effect "Bolster 4" "Bolster Stress Buff 4" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "bolster" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target ~@1234 .is_crit_valid True  .effect "Bolster 4" "Bolster Stress Buff 4" "RB MAA Bolster Rally" .is_stall_invalidating false`
+  - 원본: `combat_skill: .id "bolster" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target ~@1234 .is_crit_valid True  .effect "Bolster 5" "Bolster Stress Buff 5" .is_stall_invalidating false`
+  - 현재: `combat_skill: .id "bolster" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target ~@1234 .is_crit_valid True  .effect "Bolster 5" "Bolster Stress Buff 5" "RB MAA Bolster Rally" .is_stall_invalidating false`
+- 출처: `heroes/man_at_arms/man_at_arms.info.darkest`, 주석 추가 전 65행; Git 원문 {"commit": "305267bd93d52be65bea9b0dc722281711b218d5", "summary": "MAA-005 고양: 아군 전체 스트레스 회복 2 추가 (적용)"}
+- 기존 주석 원문:
+```text
+// MAA-005 bolster: 아군 전체 스트레스 회복 2 추가(RB MAA Bolster Rally), 회피·받는 스트레스·전투당 1회는 그대로. 1회 가치 1라운드 -66 -> +20%p. 중보병의 첫 자기 회복(G-05)
+```
+- 상태: 편집 사본(게임이 직접 읽지 않음)
+- 효과: `RB MAA Bolster Rally`
+- 원본: `None`
+- 현재: `effect: .name "RB MAA Bolster Rally" .target "target" .curio_result_type "positive" .chance 100% .healstress 2 .on_hit true .on_miss true .queue true`
+- 출처: `heroes/man_at_arms/man_at_arms.effects_edit.txt`, 주석 추가 전 195행; Git 원문 {"commit": "305267bd93d52be65bea9b0dc722281711b218d5", "summary": "MAA-005 고양: 아군 전체 스트레스 회복 2 추가 (적용)"}
+- 기존 주석 원문:
+```text
+// MAA-005 고양: 아군 전체(자신 포함) 스트레스 회복 2, 1~5레벨 고정. 받는 스트레스 감소는 늦게 쌓이는 가치라 첫 턴에 바로 들어오는 회복을 더한다. "고양" = 사기 진작(P-19). 몬스터 스트레스는 던전 레벨로 오르지 않아 고정값
+```
+- 상태: 게임용 파생 효과의 현재 정의
+- 효과: `RB MAA Bolster Rally`
+- 원본: `None`
+- 현재: `effect: .name "RB MAA Bolster Rally" .target "target" .curio_result_type "positive" .chance 100% .healstress 2 .on_hit true .on_miss true .queue true`
+- 출처: `effects/rebalance_man_at_arms.effects.darkest`, 주석 추가 전 6행; Git 원문 {"commit": "305267bd93d52be65bea9b0dc722281711b218d5", "summary": "MAA-005 고양: 아군 전체 스트레스 회복 2 추가 (적용)"}

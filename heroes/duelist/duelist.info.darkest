@@ -54,6 +54,7 @@ combat_skill: .id "the_boot" .level 1 .type "melee" .atk 100% .dmg -70% .crit 2%
 combat_skill: .id "the_boot" .level 2 .type "melee" .atk 105% .dmg -70% .crit 3% .move 0 1 .launch 321 .target 12 .is_crit_valid True  .effect "Stun 3" "Push 1D" .valid_modes stance_aggressive
 combat_skill: .id "the_boot" .level 3 .type "melee" .atk 110% .dmg -70% .crit 4% .move 0 1 .launch 321 .target 12 .is_crit_valid True  .effect "Stun 4" "Push 1E" .valid_modes stance_aggressive
 combat_skill: .id "the_boot" .level 4 .type "melee" .atk 115% .dmg -70% .crit 5% .move 0 1 .launch 321 .target 12 .is_crit_valid True  .effect "Stun 5" "Push 1F" .valid_modes stance_aggressive
+// DUE-001 DUE-002 [trace 2026-10-05] Pay for higher accuracy and reliable push with lower damage while retaining stun and stance.
 // DUE-002 The Boot damage -60% -> -70% at all levels; accuracy, crit, stun, push and stance retained. Previous change: DUE-001.
 
 riposte_skill: .id "riposte1" .level 0 .type "melee" .atk 100% .dmg 0% .crit 4% .launch 1234 .target 1234 .is_crit_valid True 

@@ -17,15 +17,19 @@
 //# 기술: 저격 (sniper_shot)
 //# 레벨별 효과: 1레벨 Sniper Damage 1 | 2레벨 Sniper Damage 2 | 3레벨 Sniper Damage 3 | 4레벨 Sniper Damage 4 | 5레벨 Sniper Damage 5
 effect: .name "Sniper Damage 1".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged" .duration 3 .combat_stat_buff 1 .damage_low_multiply 60%  .damage_high_multiply 60% .crit_chance_add 9%	 .on_hit true .on_miss false
+// ARB-005 [trace 2026-10-05] Support marked-target specialization; retain the existing top-level ceiling. Effect: Sniper Damage 1.
 //#   공유 효과: 다른 영웅 1명(총사). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Sniper Damage 2".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged" .duration 3 .combat_stat_buff 1 .damage_low_multiply 70%  .damage_high_multiply 70% .crit_chance_add 10%	 .on_hit true .on_miss false
+// ARB-005 [trace 2026-10-05] Support marked-target specialization; retain the existing top-level ceiling. Effect: Sniper Damage 2.
 //#   공유 효과: 다른 영웅 1명(총사). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Sniper Damage 3".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged" .duration 3 .combat_stat_buff 1 .damage_low_multiply 80%  .damage_high_multiply 80% .crit_chance_add 11%	 .on_hit true .on_miss false
+// ARB-005 [trace 2026-10-05] Support marked-target specialization; retain the existing top-level ceiling. Effect: Sniper Damage 3.
 //#   공유 효과: 다른 영웅 1명(총사). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Sniper Damage 4".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged" .duration 3 .combat_stat_buff 1 .damage_low_multiply 90%  .damage_high_multiply 90% .crit_chance_add 12%	 .on_hit true .on_miss false
+// ARB-005 [trace 2026-10-05] Support marked-target specialization; retain the existing top-level ceiling. Effect: Sniper Damage 4.
 //#   공유 효과: 다른 영웅 1명(총사). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Sniper Damage 5".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged" .duration 3 .combat_stat_buff 1 .damage_low_multiply 100%  .damage_high_multiply 100% .crit_chance_add 13%	 .on_hit true .on_miss false
@@ -141,6 +145,7 @@ effect: .name "Destealth" .target "target" .chance 100% .unstealth 1 .on_hit tru
 //#   공유 효과: 다른 영웅 7명(유물수집상, 노상강도, 나병환자, 총사, 도망자, 방패 파괴자, 성녀). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "FlareHealStress 1" .target "performer_group_other" .curio_result_type "positive" .chance 74% .healstress 3 .on_hit true .on_miss true .queue true .apply_once true
+// ARB-003 [trace 2026-10-05] Add an alternative party stress recovery option with stable low-level chance. Effect: FlareHealStress 1.
 // ARB-003 결집 신호탄 1레벨 스트레스 회복 1 (60%) -> 3 (74% 고정). 길드 "결집소이자 포탑이며 어둠 속의 횃불". 광역 스트레스 회복 법칙 H6(확률형). 파티 기대 1렙 1.8 -> 6.7, 5렙 6.0 -> 11.1, 위험 경보의 약 62%
 //#   공유 효과: 다른 영웅 1명(총사). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
@@ -148,6 +153,7 @@ effect: .name "FlareLight 2" .target "global" .chance 100% .curio_result_type "p
 //#   공유 효과: 다른 영웅 1명(총사). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "FlareHealStress 2" .target "performer_group_other" .curio_result_type "positive" .chance 74% .healstress 3 .on_hit true .on_miss true .queue true .apply_once true
+// ARB-003 [trace 2026-10-05] Add an alternative party stress recovery option with stable low-level chance. Effect: FlareHealStress 2.
 // ARB-003 결집 신호탄 2레벨 스트레스 회복 2 (60%) -> 3 (74% 고정). 길드 "결집소이자 포탑이며 어둠 속의 횃불". 광역 스트레스 회복 법칙 H6(확률형). 파티 기대 1렙 1.8 -> 6.7, 5렙 6.0 -> 11.1, 위험 경보의 약 62%
 //#   공유 효과: 다른 영웅 1명(총사). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
@@ -155,6 +161,7 @@ effect: .name "FlareLight 3" .target "global" .chance 100% .curio_result_type "p
 //#   공유 효과: 다른 영웅 1명(총사). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "FlareHealStress 3" .target "performer_group_other" .curio_result_type "positive" .chance 74% .healstress 4 .on_hit true .on_miss true .queue true .apply_once true
+// ARB-003 [trace 2026-10-05] Add an alternative party stress recovery option with stable low-level chance. Effect: FlareHealStress 3.
 // ARB-003 결집 신호탄 3레벨 스트레스 회복 2 (67%) -> 4 (74% 고정). 길드 "결집소이자 포탑이며 어둠 속의 횃불". 광역 스트레스 회복 법칙 H6(확률형). 파티 기대 1렙 1.8 -> 6.7, 5렙 6.0 -> 11.1, 위험 경보의 약 62%
 //#   공유 효과: 다른 영웅 1명(총사). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
@@ -162,6 +169,7 @@ effect: .name "FlareLight 4" .target "global" .chance 100% .curio_result_type "p
 //#   공유 효과: 다른 영웅 1명(총사). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "FlareHealStress 4" .target "performer_group_other" .curio_result_type "positive" .chance 74% .healstress 4 .on_hit true .on_miss true .queue true .apply_once true
+// ARB-003 [trace 2026-10-05] Add an alternative party stress recovery option with stable low-level chance. Effect: FlareHealStress 4.
 // ARB-003 결집 신호탄 4레벨 스트레스 회복 3 (60%) -> 4 (74% 고정). 길드 "결집소이자 포탑이며 어둠 속의 횃불". 광역 스트레스 회복 법칙 H6(확률형). 파티 기대 1렙 1.8 -> 6.7, 5렙 6.0 -> 11.1, 위험 경보의 약 62%
 //#   공유 효과: 다른 영웅 1명(총사). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
@@ -169,6 +177,7 @@ effect: .name "FlareLight 5" .target "global" .chance 100% .curio_result_type "p
 //#   공유 효과: 다른 영웅 1명(총사). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "FlareHealStress 5" .target "performer_group_other" .curio_result_type "positive" .chance 74% .healstress 5 .on_hit true .on_miss true .queue true .apply_once true
+// ARB-003 [trace 2026-10-05] Add an alternative party stress recovery option with stable low-level chance. Effect: FlareHealStress 5.
 // ARB-003 결집 신호탄 5레벨 스트레스 회복 3 (67%) -> 5 (74% 고정). 길드 "결집소이자 포탑이며 어둠 속의 횃불". 광역 스트레스 회복 법칙 H6(확률형). 파티 기대 1렙 1.8 -> 6.7, 5렙 6.0 -> 11.1, 위험 경보의 약 62%
 //#   공유 효과: 다른 영웅 1명(총사). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
@@ -189,4 +198,5 @@ effect: .name "on_crit_dmgmarked"    .target "performer" .curio_result_type "pos
 //# ----------------------------------------------------------------------
 //# ARB-001 야전 붕대질: 스택 힐(받는 회복 +38%)을 빼고 출혈 치료를 넣는다. 회복량은 영웅 파일에서 올렸다.
 effect: .name "RB ARB Cure Bleed" .target "target" .curio_result_type "positive" .chance 100% .cure_bleed 1 .on_hit true .on_miss false
+// ARB-001 [trace 2026-10-05] Offer predictable allied healing and bleed treatment instead of a stacking heal amplifier. Effect: RB ARB Cure Bleed.
 // ARB-001 battlefield_bandage: cure bleed on the healed ally (replaces Arb Stacking Heal)
