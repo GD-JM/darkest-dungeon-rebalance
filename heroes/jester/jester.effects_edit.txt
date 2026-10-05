@@ -55,20 +55,25 @@ effect: .name "Mortal Weakness Stress" .target "performer" .curio_result_type "n
 //# 레벨별 효과: 1레벨 Solo Mark Self, Jester Spotlight 1, Build to Finale 2 | 2레벨 Solo Mark Self, Jester Spotlight 2, Build to Finale 2 | 3레벨 Solo Mark Self, Jester Spotlight 3, Build to Finale 2 | 4레벨 Solo Mark Self, Jester Spotlight 4, Build to Finale 2 | 5레벨 Solo Mark Self, Jester Spotlight 5, Build to Finale 2
 effect: .name "Solo Mark Self" .target "performer" .curio_result_type "positive" .chance 100% .tag 1 .combat_stat_buff 1 .duration 3 .on_hit true .on_miss true .queue true .apply_once true
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Jester Spotlight 1" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 20% .duration 4	.on_hit true .on_miss true .queue true .apply_once true
+effect: .name "Jester Spotlight 1" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 25% .duration 4	.on_hit true .on_miss true .queue true .apply_once true
+// JES-006 Solo dodge +5 at every level to offset front-rank mark exposure; duration and other effects retained.
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Build to Finale 2" .target "performer" .curio_result_type "positive" .chance 100% .buff_ids "build_to_finale2_dmgL" "build_to_finale2_dmgH" "build_to_finale2_crit" .on_hit true .on_miss false .apply_once true .queue true .duration 8
 //#   강화 효과 수치(JSON, 참고용): build_to_finale2_dmgL = damage_low 0.75 [skill]
 //#   강화 효과 수치(JSON, 참고용): build_to_finale2_dmgH = damage_high 0.75 [skill]
 //#   강화 효과 수치(JSON, 참고용): build_to_finale2_crit = crit_chance 0.08 [skill]
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Jester Spotlight 2" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 22% .duration 4	.on_hit true .on_miss true .queue true .apply_once true
+effect: .name "Jester Spotlight 2" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 27% .duration 4	.on_hit true .on_miss true .queue true .apply_once true
+// JES-006 Solo dodge +5 at every level to offset front-rank mark exposure; duration and other effects retained.
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Jester Spotlight 3" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 25% .duration 4	.on_hit true .on_miss true .queue true .apply_once true
+effect: .name "Jester Spotlight 3" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 30% .duration 4	.on_hit true .on_miss true .queue true .apply_once true
+// JES-006 Solo dodge +5 at every level to offset front-rank mark exposure; duration and other effects retained.
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Jester Spotlight 4" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 27% .duration 4	.on_hit true .on_miss true .queue true .apply_once true
+effect: .name "Jester Spotlight 4" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 32% .duration 4	.on_hit true .on_miss true .queue true .apply_once true
+// JES-006 Solo dodge +5 at every level to offset front-rank mark exposure; duration and other effects retained.
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Jester Spotlight 5" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 30% .duration 4	.on_hit true .on_miss true .queue true .apply_once true
+effect: .name "Jester Spotlight 5" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 35% .duration 4	.on_hit true .on_miss true .queue true .apply_once true
+// JES-006 Solo dodge +5 at every level to offset front-rank mark exposure; duration and other effects retained.
 //#   원본 위치: effects/base.effects.darkest
 
 //# ======================================================================
