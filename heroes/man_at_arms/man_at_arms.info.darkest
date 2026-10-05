@@ -16,11 +16,12 @@ combat_skill: .id "crush" .level 1 .type "melee" .atk 90% .dmg 0% .crit 6% .laun
 combat_skill: .id "crush" .level 2 .type "melee" .atk 95% .dmg 0% .crit 7% .launch 12 .target 123 .is_crit_valid True 
 combat_skill: .id "crush" .level 3 .type "melee" .atk 100% .dmg 0% .crit 8% .launch 12 .target 123 .is_crit_valid True 
 combat_skill: .id "crush" .level 4 .type "melee" .atk 105% .dmg 0% .crit 9% .launch 12 .target 123 .is_crit_valid True 
-combat_skill: .id "rampart" .level 0 .type "melee" .atk 90% .dmg -60% .crit 5% .move 0 1 .launch 123 .target 12 .is_crit_valid True  .effect "Push 1A" "Stun 1"
-combat_skill: .id "rampart" .level 1 .type "melee" .atk 95% .dmg -60% .crit 6% .move 0 1 .launch 123 .target 12 .is_crit_valid True  .effect "Push 1B" "Stun 2"
-combat_skill: .id "rampart" .level 2 .type "melee" .atk 100% .dmg -60% .crit 7% .move 0 1 .launch 123 .target 12 .is_crit_valid True  .effect "Push 1C" "Stun 3"
-combat_skill: .id "rampart" .level 3 .type "melee" .atk 105% .dmg -60% .crit 8% .move 0 1 .launch 123 .target 12 .is_crit_valid True  .effect "Push 1D" "Stun 4"
-combat_skill: .id "rampart" .level 4 .type "melee" .atk 110% .dmg -60% .crit 9% .move 0 1 .launch 123 .target 12 .is_crit_valid True  .effect "Push 1E" "Stun 5"
+combat_skill: .id "rampart" .level 0 .type "melee" .atk 90% .dmg -60% .crit 5% .launch 123 .target 12 .is_crit_valid True  .effect "Push 1A" "Stun 1"
+combat_skill: .id "rampart" .level 1 .type "melee" .atk 95% .dmg -60% .crit 6% .launch 123 .target 12 .is_crit_valid True  .effect "Push 1B" "Stun 2"
+combat_skill: .id "rampart" .level 2 .type "melee" .atk 100% .dmg -60% .crit 7% .launch 123 .target 12 .is_crit_valid True  .effect "Push 1C" "Stun 3"
+combat_skill: .id "rampart" .level 3 .type "melee" .atk 105% .dmg -60% .crit 8% .launch 123 .target 12 .is_crit_valid True  .effect "Push 1D" "Stun 4"
+combat_skill: .id "rampart" .level 4 .type "melee" .atk 110% .dmg -60% .crit 9% .launch 123 .target 12 .is_crit_valid True  .effect "Push 1E" "Stun 5"
+// MAA-006 [current 2026-10-05] Remove Rampart self forward movement at all levels; retain -60% damage, enemy push and stun to control without displacing allies.
 
 
 
