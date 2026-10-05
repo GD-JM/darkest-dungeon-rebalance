@@ -93,7 +93,8 @@ effect: .name "Strong Bleed 5" .target "target" .curio_result_type "negative" .c
 //# ======================================================================
 //# 기술: 전투의 발라드 (battle_ballad)
 //# 레벨별 효과: 1레벨 Embolden Team 1, Build to Finale Song | 2레벨 Embolden Team 2, Build to Finale Song | 3레벨 Embolden Team 3, Build to Finale Song | 4레벨 Embolden Team 4, Build to Finale Song | 5레벨 Embolden Team 5, Build to Finale Song
-effect: .name "Embolden Team 1" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 5% .crit_chance_add 2% .speed_rating_add 2	.on_hit true .on_miss true .apply_once false    .queue false
+effect: .name "Embolden Team 1" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 5% .crit_chance_add 1% .speed_rating_add 1	.on_hit true .on_miss true .apply_once false    .queue false
+// JES-002 Team critical bonus -1% point and speed -1; approved level 1 values, accuracy retained.
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Build to Finale Song" .target "performer" .curio_result_type "positive" .chance 100% .buff_ids "build_to_finale_dmgL" "build_to_finale_dmgH" "build_to_finale_crit" .on_hit true .on_miss false .apply_once true .queue true .duration 8
 //#   이 영웅의 다른 기술에서도 사용: 격려의 선율
@@ -101,13 +102,17 @@ effect: .name "Build to Finale Song" .target "performer" .curio_result_type "pos
 //#   강화 효과 수치(JSON, 참고용): build_to_finale_dmgH = damage_high 0.3 [skill]
 //#   강화 효과 수치(JSON, 참고용): build_to_finale_crit = crit_chance 0.08 [skill]
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Embolden Team 2" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 6% .crit_chance_add 3% .speed_rating_add 2	.on_hit true .on_miss true .apply_once false	.queue false
+effect: .name "Embolden Team 2" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 6% .crit_chance_add 2% .speed_rating_add 1	.on_hit true .on_miss true .apply_once false	.queue false
+// JES-002 Team critical bonus -1% point and speed -1; approved level 2 values, accuracy retained.
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Embolden Team 3" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 7% .crit_chance_add 4% .speed_rating_add 3	.on_hit true .on_miss true .apply_once false	.queue false
+effect: .name "Embolden Team 3" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 7% .crit_chance_add 3% .speed_rating_add 2	.on_hit true .on_miss true .apply_once false	.queue false
+// JES-002 Team critical bonus -1% point and speed -1; approved level 3 values, accuracy retained.
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Embolden Team 4" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 8% .crit_chance_add 5% .speed_rating_add 3	.on_hit true .on_miss true .apply_once false	.queue false
+effect: .name "Embolden Team 4" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 8% .crit_chance_add 4% .speed_rating_add 2	.on_hit true .on_miss true .apply_once false	.queue false
+// JES-002 Team critical bonus -1% point and speed -1; approved level 4 values, accuracy retained.
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Embolden Team 5" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 10% .crit_chance_add 6% .speed_rating_add 4	.on_hit true .on_miss true .apply_once false	.queue false
+effect: .name "Embolden Team 5" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 10% .crit_chance_add 5% .speed_rating_add 3	.on_hit true .on_miss true .apply_once false	.queue false
+// JES-002 Team critical bonus -1% point and speed -1; approved level 5 values, accuracy retained.
 //#   원본 위치: effects/base.effects.darkest
 
 //# ======================================================================
