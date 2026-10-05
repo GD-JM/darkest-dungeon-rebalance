@@ -1,0 +1,515 @@
+# 나병환자 전수 조사 — 2026-10-05
+
+승인된 독주 JES-006 회피25/27/30/32/35 적용 후의 조사. 나병환자는 분석만 했으며 수치·효과·모델을 수정하지 않았다. 35개 기술 행, 기본 능력치, 연결 효과와 편집용 효과가 원본과 일치한다. 사용자 빈 줄과 다른 영웅 편집은 보존했다.
+
+판단: 낮은 명중과 속도, 전열 고정, 큰 직접 피해와 자급자족이 묶인 영웅이다. 우선 검토할 것은 가르기의 선택 상황이다. 명중을 일괄 올리거나 후열 주력 공격을 주는 방식은 고정 장신구·심사숙고·축출·치명 명중 버프의 역할을 함께 바꾼다. 인내와 복수는 누락 항목이 있는 총점만으로 상향/하향을 결정할 수 없다.
+
+
+## 범위와 평가 단위
+
+설치 PvE 데이터, 모드 live 파일, 보관 바닐라 파일을 대조했다. 전투 기술7개×5레벨, 무기/방어구 각5단계, 이동/저항/태그/죽음의 문턱, 연결 효과 전부, 전용 장신구8개+핏빛 궁정 세트, 야영7개, 모닥불을 확인했다. 아레나/다키스트 던전2 규칙은 사용하지 않았다.
+
+표의 명중·치명 보정은 기술1레벨이다. 치명은 무기의 기본 치명에 더하는 기술 보정이다. 평가는 표준 평타 대비 환산 피해 보정 %p이며, 내부 HP는 중간 단위다. 동일 영웅의 높은 무기 피해를 100으로 다시 정규화하지 않았다. 명중의 숨은+5와 기절/약화 치명 보정 등은 엔진 확정 사실로 취급하지 않는다.
+
+
+## 전투 기술 요약
+
+| 기술 | 사용열 → 대상열 | 명중1 | 치명 보정1 | 피해 보정 | 주요 효과(별도 표시 없으면 기술5레벨) |
+|---|---|---:|---:|---:|---|
+| 토막치기 | 12 → 12 | 75 | +3% | 0% | 부가 상태 없음. 큰 전열 단일 피해 |
+| 가르기 | 12 → 12 동시 | 75 | −4% | −50% | 전열 둘 타격. 출혈·약화 없음 |
+| 축출 | 1 → 1 | 85 | 0% | −40% | 밀치기3(140%), 시체 제거, 자신 명중+5 |
+| 복수 | 1234 → 자신 | — | — | — | 전투당1회, 명중+15·피해+35%·치명+11%p / 회피−10·받는 피해+25% |
+| 인내 | 123 → 자신 | — | — | — | 전투당1회, 방어+30%·자신 표식·중독/출혈/약화/이동 저항+30%p |
+| 평온 | 12 → 자신 | — | — | — | 체력10·스트레스7 회복, 동료 회복 없음 |
+| 위협 | 1 → 1234 | 95 | 0% | −85→−80% | 은신 무시/해제, 적 피해−33%·속도−5(140%), 자신 속도+4·표식 |
+
+위협 피해는 기술1~3레벨−85%, 4~5레벨−80%. 축출 밀치기/위협 약화 확률은 저항 적용 전 수치다. 가르기의 음수 치명 보정은 실제 음수 치명 확률을 뜻하지 않는다. 장비5·기술5 치명 합은 토막치기12%, 가르기5%, 축출9%, 위협5%.
+
+
+## 능력치·대열·정체성
+
+무기1→5: 피해8–16→13–26, 기본 치명1→5%, 속도2→4. 방어구1→5: 체력35→63, 회피0→20, 기본 방어0. 클래스 원시 저항: 기절60/중독40/출혈10/질병20/이동60/약화40/죽음의 일격67/함정10%. 이는 5레벨 실효 저항이 아니다.
+
+이동은 앞으로1, 뒤로0. 1열은 모든 기술, 2열은 토막치기·가르기·복수·인내·평온, 3열은 복수·인내, 4열은 복수만 가능하다. 4열에서 2열 복귀에는 동료 이동이 없으면 자신의 이동 행동2회가 필요하다. 적 스트레스 후열을 직접 빨리 제거하기 어려운 점은 조합에서 다른 영웅이 맡아야 하는 제약이다.
+
+기술 슬롯은4개다. 공격2개와 준비/방어/회복/제어 기술을 모두 동시에 사용할 수 없다. 종교인·heavy·outsiders_bonfire 태그가 있다. 공식 설치 길드 설명은 집중한 뒤 큰 일격을 내는 전사이자 시인, 스스로 회복·보호·격노하는 영웅으로 설명한다. 이는 정체성에 대한 해석 근거이며 특정 상향을 자동 승인하는 설정은 아니다.
+
+클래스 치명 효과는 자신 명중+10, 버프 정의 duration2. 실제로 버프가 유지되는 동안 후속 공격을 해야 이익이 발생한다. 전투 종료·대상 사망·대열 불일치면 후속 이득은0이며, 별도 계산을 기존 점수에 중복 합산하지 않았다.
+
+
+## 기술별 운용과 실제 행동 경로
+
+토막치기: 바닐라 저명중/고피해 전열 평타 축이다. 기술5 명중95는 회피20 상대 기존 명중식에서75% 적중이다. 낮은 속도로 후열 선제 처치를 맡기기 어렵다. 명중+5가 단순 편의 수정이라고 볼 수 없으며, 장신구·야영·축출·치명 보상과 총 파워를 함께 봐야 한다.
+
+가르기: 둘을 모두 때릴 때 비치명 합계 피해는 토막치기 한 타와 같은 출발점이지만, 기술 치명이 낮고 피해가 분산된다. 두 적이 이미 다쳤다면 한 행동으로 둘을 마무리할 수 있으므로 선택 상황은 있다. 실제 두 타격과 모델의2×0.8 대상 효율×0.85 광역 효율은 별개다. 건강한 두 적에게 분산해서 행동 우위를 늦추는 문제를 낮은 종합 점수와 혼동하지 않는다.
+
+- 각 대상 잔여체력8, 회피20/방어0, 기술·장비5: 토막치기 기대 처치0.750, 가르기 기대 처치1.195, 가르기 둘 처치35.7%. 정수 무기 굴림·독립 적중/치명·반올림 전 가정.
+
+- 각 대상 잔여체력12, 회피20/방어0, 기술·장비5: 토막치기 기대 처치0.750, 가르기 기대 처치0.380, 가르기 둘 처치3.6%. 정수 무기 굴림·독립 적중/치명·반올림 전 가정.
+
+- 각 대상 잔여체력16, 회피20/방어0, 기술·장비5: 토막치기 기대 처치0.609, 가르기 기대 처치0.075, 가르기 둘 처치0.1%. 정수 무기 굴림·독립 적중/치명·반올림 전 가정.
+
+- 각 대상 잔여체력20, 회피20/방어0, 기술·장비5: 토막치기 기대 처치0.420, 가르기 기대 처치0.000, 가르기 둘 처치0.0%. 정수 무기 굴림·독립 적중/치명·반올림 전 가정.
+
+축출: 1열에서만 쓰는 밀치기/시체 정리/명중 준비 기술. 명중+5는 적중·실패 양쪽에 적용되는 정의이고 duration4이다. 밀치기·시체 제거는 적중이 필요하다. 시체가 없으면 시체 정리 가치는0. 전열 적을 뒤로 보내 후열을 앞으로 노출시키는 대체 경로지만, 언제나 원하는 적을 끌어오거나 후열을 죽이는 효과는 아니다. 자신의 후속 명중만으로 낮은 피해를 빠르게 상쇄한다고 단정하지 않는다.
+
+복수: 전투 종료까지 지속되는 공격 준비다. 준비 턴에 공격하지 않으며, 회피−10과 받는 피해+25%를 동시에 얻는다. 기존 strength.py는 받는 피해+25%를 가격에 넣지 않아 총점이 비용을 과소평가한다.
+
+- 기술·장비5, 회피20/방어0: 복수 후 공격1회 vs 준비 없이 공격2회, 직접 피해 차이 -47.20%p. 장신구 없음; 생존·대상/대열 유지·공격 피해 곱셈 가정; 피격 비용과 치명 후 명중 재귀 제외.
+
+- 기술·장비5, 회피20/방어0: 복수 후 공격2회 vs 준비 없이 공격3회, 직접 피해 차이 +119.28%p. 장신구 없음; 생존·대상/대열 유지·공격 피해 곱셈 가정; 피격 비용과 치명 후 명중 재귀 제외.
+
+- 기술·장비5, 회피20/방어0: 복수 후 공격3회 vs 준비 없이 공격4회, 직접 피해 차이 +285.76%p. 장신구 없음; 생존·대상/대열 유지·공격 피해 곱셈 가정; 피격 비용과 치명 후 명중 재귀 제외.
+
+이 예에서는 유효 후속 공격2회부터 직접 피해 이득이 생긴다. 긴 전투의 후보이지, 모든 전투에서2회면 이득이라는 규칙은 아니다. 적 명중100 상대 장비5 회피20→10 및 받는 피해1.25를 함께 적용하면 동일 공격의 기대 직접 피격 피해가40.63% 증가한다. 인내와 병용하면 방어가 일부 상쇄하지만 준비 행동2회·표식·실제 적 행동을 지불한다.
+
+인내: 방어와 출혈/중독/이동/약화 저항을 전투 종료까지 얻는 유지형 기술이다. 기절 저항은 올리지 않는다. 자신의 표식은 동료를 보호하는 보호 기술과 다르다. 모델은 네 저항을 전부 누락해 총점이 낮다. 회피가 낮아 표식으로 자신의 피격 횟수나 표식 특효 피해가 늘 수 있고, 단일 적의 공격 대상열과 AI에 따라 유도 효과가 달라진다. 그래서 점수만 보고 사기/함정/상향 필요를 결정하지 않는다.
+
+평온: 자기 체력과 스트레스를 함께 복구한다. 이미 회복할 체력이 없거나 스트레스0이면 해당 부분 가치는 사라진다. 다른 동료를 회복하지 못하고, 후열로 밀리면 사용 불가다. 기존 모델은 효과 기반 체력 회복에도 고정12% 치명과 치명 추가 스트레스4를 계산한다. 이 고정 가정의 실제 엔진 작동·반올림은 확인 대상이다. 광전사의 가면 받는 회복−33%와 치유의 팔찌+20%는 이 기술에도 관련된다.
+
+위협: 1열에서 후열까지 닿는 제어/은신 대응. 적 피해 약화는 직접 피해의 감소이며 스트레스·지속 피해·지원 행동을 일괄33% 줄이지 않는다. 적 약화와 은신 해제에는 적중이 필요하고 약화에는 저항도 적용된다. 자신 속도는 실패에도 증가하지만 자신 표식은 on_hit이다. 적이 이미 행동한 라운드의 행동을 되돌리지 않는다. 높은 명중95는 큰 피해 평타75와 다른 저피해 제어 역할이다.
+
+위협의 적 약화 duration3, 자신 표식 duration4, 자신 속도 효과에는 명시 duration 없음(모델 기본3 사용). 실제 큐/갱신/중첩/속도 적용 라운드는 게임 검증 대상이다. 순서 예측은 다음 라운드 random1..8·영웅 동률 우선이라는 비교 가정이며 엔진 확인으로 표시하지 않았다.
+
+
+## 모델 환산값과 한계
+
+| 기술 | 기존 전투당 제한 포함 | 한 번 실제 사용 |
+|---|---:|---:|
+| 토막치기 | +51.02%p | +51.02%p |
+| 가르기 | -5.53%p | -5.53%p |
+| 축출 | +58.47%p | +58.47%p |
+| 복수 | -30.12%p | +109.64%p |
+| 인내 | -92.83%p | -78.50%p |
+| 평온 | +208.87%p | +208.87%p |
+| 위협 | +49.05%p | +49.05%p |
+
+기존 제한식은 전투당1회 기술에 총가치1/3을 적용한다. 오른쪽은 그 할인만 제거한 같은 모델이며, 준비 행동 뒤 실제 공격 경로의 결과와 다르다. 모델 파츠는 제한 할인 전 값이므로 왼쪽 총점과 그대로 합산하지 않는다. 가르기 대상 효율, 축출 시체 존재/적중, 평온 회복 낭비, 복수 피격 증가, 인내 네 저항, 대열 복귀 행동, 위협의 실제 후속 적 행동을 점수에 모두 반영했다고 주장하지 않는다.
+
+63개 지속/표식 민감도 조합과 별도 처치·치명 후속·회복·준비·피격 경로를 JSON에 저장했다. 표식 유도는 모델 기본1.72배, 균등 표적 예시에서는 자신25→55.6%의 가정이다. 실제 표식 AI 가중치와 동일한 실측 확률이 아니다. 치명 스트레스는 회복할 스트레스가 있을 때만 유효하다.
+
+
+## 전용 장신구8개와 세트 — 고정 제약
+
+| 장신구 | 확인한 효과와 주의점 |
+|---|---|
+| 주석 플루트 | 받는 스트레스−20%, 야영 중 스트레스 회복량+33%. 전투 평온에+33%를 넣지 않는다. |
+| 마지막 유언장 | 방어+15%, 최대 체력+15%, 죽음의 일격 저항−10%p. |
+| 결정화된 목걸이 | 붕대 소지 시 명중+10, 최대 체력+15%, 출혈 저항−15%p. 상시 명중으로 계산하지 않는다. |
+| 광전사의 가면 | 치명+8%p, 속도+3, 영웅의 기상 확률−10%p, 받는 회복−33%. |
+| 면역의 가면 | 기절 저항+40%p, 중독/출혈 저항+30%p, 최대 체력−10%. |
+| 행운의 팔찌 | 명중+8, 치명+3%p, 받는 스트레스+10%. |
+| 참회의 팔찌 | 전열 조건 피해+15%, 영웅의 기상 확률−3%p. rule in_rank float0의 실제 대열 매핑은 엔진 확인 대상. |
+| 치유의 팔찌 | 받는 회복+20%. 평온의 회복과 관련된다. |
+| 핏빛 궁정 세트 | 체력60% 초과 조건 명중+15. 세트 구성은 마지막 유언장/주석 플루트. 조건·회복·방어의 연결을 무시하고 상시 명중으로 합산하지 않는다. |
+
+고정 장신구가 명중·속도·버티기·자기 회복 약점을 이미 보완한다. 기본 명중/저항을 상향하면 이런 선택의 상대 가치를 바꾼다. 여러 장신구와 효과의 합산·상한·반올림은 별도 실제 게임 검증 대상이다. 가면을 쓴 평온 회복의 단순 비치명 원시값10×0.67=6.7, 치유의 팔찌는10×1.2=12이지만 실제 표시 정수와 두 효과 중첩을 확정하지 않는다.
+
+
+## 야영7개와 건물
+
+| 기술 | 시간 | 효과 |
+|---|---:|---|
+| 격려 | 2 | 동료1명 스트레스−15 |
+| 상처 치료 | 2 | 동료1명 최대 체력15% 회복, 출혈·중독 제거 |
+| 위로 | 2 | 동료1명 받는 스트레스−15% |
+| 가면 벗기 | 1 | 자신 스트레스−25, 다른 동료 각+5. 파티 합−10은 초과 회복 전 |
+| 피에 젖은 수의 | 2 | 자신 출혈·중독·이동·약화 저항+25%p |
+| 심사숙고 | 3 | 자신 스트레스−20, 명중+10·치명+8%p |
+| 격리 | 3 | 자신 최대 체력20% 피해, 동료별 스트레스 회복20/15 각50% 정의 |
+
+격리 두 회복은 같은 chance code b로 정의된다. 표준 상호 배타 선택 가정이면 동료별 기대17.5이지만, 코드만으로 상관/발동 구조를 엔진 검증한 것은 아니다. 각 동료가 항상35를 회복한다고 합산하지 않는다. 모든 야영 기술 use_limit1. 중복 DLC 야영 항목은 클래스 목록만 달라7개 고유 기술로 처리했다.
+
+참조한 야영 버프 정의:
+
+- campingStressResistBuff: duration_type=combat_end, duration=4, stat=stress_dmg_received_percent/. 야영 amount가 기술별 크기를 지정한다.
+
+- campingBleedResistBuff: duration_type=combat_end, duration=4, stat=resistance/bleed. 야영 amount가 기술별 크기를 지정한다.
+
+- campingBlightResistBuff: duration_type=combat_end, duration=4, stat=resistance/poison. 야영 amount가 기술별 크기를 지정한다.
+
+- campingMoveResistBuff: duration_type=combat_end, duration=4, stat=resistance/move. 야영 amount가 기술별 크기를 지정한다.
+
+- campingDebuffResistBuff: duration_type=combat_end, duration=4, stat=resistance/debuff. 야영 amount가 기술별 크기를 지정한다.
+
+- campingACCBuff: duration_type=combat_end, duration=4, stat=combat_stat_add/attack_rating. 야영 amount가 기술별 크기를 지정한다.
+
+- campingCRITBuff: duration_type=combat_end, duration=4, stat=combat_stat_add/crit_chance. 야영 amount가 기술별 크기를 지정한다.
+
+outsiders_bonfire 태그로 이방인의 모닥불 camping_points2 정의와 연결된다. 실제 건설 여부·여러 태그 영웅의 합산은 엔진 확인 대상이며, 전투 피해 보너스로 더하지 않았다.
+
+
+## 조정 논의 후보 — 미승인, 미적용
+
+우선 가르기를 검토한다. 명중+5와 피해+5%p는 서로 다른 대안이며 동시에 권하지 않는다. 첫째는 토막치기와 구분되는 안정적인 두 대상 마무리, 둘째는 명중 약점을 유지하는 광역 피해 선택이다. 어떤 쪽이든 영웅 총량 보존을 자동 충족하지 않는다. 필요성은 실제 두 대상 마무리 빈도와 조합/슬롯 사용률로 판단한다.
+
+- 가르기 명중1레벨75→80: 기존 비교 모델 +7.00%p. 승인/적용 없음.
+
+- 가르기 피해−50→−45: 기존 비교 모델 +8.62%p. 승인/적용 없음.
+
+- 축출 피해−40→−30: 기존 비교 모델 +14.70%p. 승인/적용 없음.
+
+축출 피해−30 후보는 수치 참고에 머문다. 밀치기·시체·명중 준비의 사용 상황을 확인하기 전에 가르기와 함께 상향하지 않는다. 토막치기·평온·인내·위협은 전수 조사만으로 즉시 변경할 근거가 부족하다. 복수는 긴 전투용의 실제 준비 수지를 먼저 평가한다. 치명 수치·장신구·기술 사거리 변경은 제안 패키지에 넣지 않았다.
+
+
+## 모든 레벨 및 연결 효과 원문
+
+
+### 토막치기
+
+레벨1: `combat_skill: .id "chop" .level 0 .type "melee" .atk 75% .dmg 0% .crit 3% .launch 12 .target 12 .is_crit_valid True  .generation_guaranteed true`
+
+레벨2: `combat_skill: .id "chop" .level 1 .type "melee" .atk 80% .dmg 0% .crit 4% .launch 12 .target 12 .is_crit_valid True `
+
+레벨3: `combat_skill: .id "chop" .level 2 .type "melee" .atk 85% .dmg 0% .crit 5% .launch 12 .target 12 .is_crit_valid True `
+
+레벨4: `combat_skill: .id "chop" .level 3 .type "melee" .atk 90% .dmg 0% .crit 6% .launch 12 .target 12 .is_crit_valid True `
+
+레벨5: `combat_skill: .id "chop" .level 4 .type "melee" .atk 95% .dmg 0% .crit 7% .launch 12 .target 12 .is_crit_valid True `
+
+
+### 가르기
+
+레벨1: `combat_skill: .id "hew" .level 0 .type "melee" .atk 75% .dmg -50% .crit -4% .launch 12 .target ~12 .is_crit_valid True `
+
+레벨2: `combat_skill: .id "hew" .level 1 .type "melee" .atk 80% .dmg -50% .crit -3% .launch 12 .target ~12 .is_crit_valid True `
+
+레벨3: `combat_skill: .id "hew" .level 2 .type "melee" .atk 85% .dmg -50% .crit -2% .launch 12 .target ~12 .is_crit_valid True `
+
+레벨4: `combat_skill: .id "hew" .level 3 .type "melee" .atk 90% .dmg -50% .crit -1% .launch 12 .target ~12 .is_crit_valid True `
+
+레벨5: `combat_skill: .id "hew" .level 4 .type "melee" .atk 95% .dmg -50% .crit 0% .launch 12 .target ~12 .is_crit_valid True `
+
+
+### 축출
+
+레벨1: `combat_skill: .id "focus" .level 0 .type "melee" .atk 85% .dmg -40% .crit 0% .launch 1 .target 1 .is_crit_valid True  .effect "Push 3A" "clear_corpses" "Leper Acc"`
+
+  effect: .name "Push 3A" .target "target" .push 3 	.chance 100%	.on_hit true .on_miss false .can_apply_on_death true
+
+  effect: .name "clear_corpses" .target "target_group" .chance 100% .kill_enemy_types corpse .on_hit true .on_miss false .queue false .can_apply_on_death true
+
+  effect: .name "Leper Acc" .target "performer" .chance 100% .duration 4 .buff_ids "ACC5" .on_hit true .on_miss true .queue true
+
+레벨2: `combat_skill: .id "focus" .level 1 .type "melee" .atk 90% .dmg -40% .crit 1% .launch 1 .target 1 .is_crit_valid True  .effect "Push 3B" "clear_corpses" "Leper Acc"`
+
+  effect: .name "Push 3B" .target "target" .push 3 	.chance 110%	.on_hit true .on_miss false .can_apply_on_death true
+
+  effect: .name "clear_corpses" .target "target_group" .chance 100% .kill_enemy_types corpse .on_hit true .on_miss false .queue false .can_apply_on_death true
+
+  effect: .name "Leper Acc" .target "performer" .chance 100% .duration 4 .buff_ids "ACC5" .on_hit true .on_miss true .queue true
+
+레벨3: `combat_skill: .id "focus" .level 2 .type "melee" .atk 95% .dmg -40% .crit 2% .launch 1 .target 1 .is_crit_valid True  .effect "Push 3C" "clear_corpses" "Leper Acc"`
+
+  effect: .name "Push 3C" .target "target" .push 3 	.chance 120%	.on_hit true .on_miss false .can_apply_on_death true
+
+  effect: .name "clear_corpses" .target "target_group" .chance 100% .kill_enemy_types corpse .on_hit true .on_miss false .queue false .can_apply_on_death true
+
+  effect: .name "Leper Acc" .target "performer" .chance 100% .duration 4 .buff_ids "ACC5" .on_hit true .on_miss true .queue true
+
+레벨4: `combat_skill: .id "focus" .level 3 .type "melee" .atk 100% .dmg -40% .crit 3% .launch 1 .target 1 .is_crit_valid True  .effect "Push 3D" "clear_corpses" "Leper Acc"`
+
+  effect: .name "Push 3D" .target "target" .push 3	.chance 130%	.on_hit true .on_miss false .can_apply_on_death true
+
+  effect: .name "clear_corpses" .target "target_group" .chance 100% .kill_enemy_types corpse .on_hit true .on_miss false .queue false .can_apply_on_death true
+
+  effect: .name "Leper Acc" .target "performer" .chance 100% .duration 4 .buff_ids "ACC5" .on_hit true .on_miss true .queue true
+
+레벨5: `combat_skill: .id "focus" .level 4 .type "melee" .atk 105% .dmg -40% .crit 4% .launch 1 .target 1 .is_crit_valid True  .effect "Push 3E" "clear_corpses" "Leper Acc"`
+
+  effect: .name "Push 3E" .target "target" .push 3 	.chance 140%	.on_hit true .on_miss false .can_apply_on_death true
+
+  effect: .name "clear_corpses" .target "target_group" .chance 100% .kill_enemy_types corpse .on_hit true .on_miss false .queue false .can_apply_on_death true
+
+  effect: .name "Leper Acc" .target "performer" .chance 100% .duration 4 .buff_ids "ACC5" .on_hit true .on_miss true .queue true
+
+
+### 복수
+
+레벨1: `combat_skill: .id "revenge" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target  .is_crit_valid True  .effect "Leper Strength 1" "Leper Vulnerability"`
+
+  effect: .name "Leper Strength 1" .target "performer" .chance 100% .curio_result_type "positive" .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .attack_rating_add 10% .damage_low_multiply 25% .damage_high_multiply 25% .crit_chance_add 7%	.on_hit true .on_miss true .queue true
+
+  effect: .name "Leper Vulnerability" .target "performer" .curio_result_type "negative" .chance 100% .duration 1 .buff_duration_type combat_end .buff_ids "LeperDEFVuln" "LeperDMGVuln" .apply_once true .on_hit true .on_miss true .queue true
+
+레벨2: `combat_skill: .id "revenge" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target  .is_crit_valid True  .effect "Leper Strength 2" "Leper Vulnerability"`
+
+  effect: .name "Leper Strength 2" .target "performer" .chance 100% .curio_result_type "positive" .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .attack_rating_add 11% .damage_low_multiply 27% .damage_high_multiply 27% .crit_chance_add 8%	.on_hit true .on_miss true .queue true
+
+  effect: .name "Leper Vulnerability" .target "performer" .curio_result_type "negative" .chance 100% .duration 1 .buff_duration_type combat_end .buff_ids "LeperDEFVuln" "LeperDMGVuln" .apply_once true .on_hit true .on_miss true .queue true
+
+레벨3: `combat_skill: .id "revenge" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target  .is_crit_valid True  .effect "Leper Strength 3" "Leper Vulnerability"`
+
+  effect: .name "Leper Strength 3" .target "performer" .chance 100% .curio_result_type "positive" .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .attack_rating_add 12% .damage_low_multiply 30% .damage_high_multiply 30% .crit_chance_add 9%	.on_hit true .on_miss true .queue true
+
+  effect: .name "Leper Vulnerability" .target "performer" .curio_result_type "negative" .chance 100% .duration 1 .buff_duration_type combat_end .buff_ids "LeperDEFVuln" "LeperDMGVuln" .apply_once true .on_hit true .on_miss true .queue true
+
+레벨4: `combat_skill: .id "revenge" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target  .is_crit_valid True  .effect "Leper Strength 4" "Leper Vulnerability"`
+
+  effect: .name "Leper Strength 4" .target "performer" .chance 100% .curio_result_type "positive" .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .attack_rating_add 13% .damage_low_multiply 32% .damage_high_multiply 32% .crit_chance_add 10%	.on_hit true .on_miss true .queue true
+
+  effect: .name "Leper Vulnerability" .target "performer" .curio_result_type "negative" .chance 100% .duration 1 .buff_duration_type combat_end .buff_ids "LeperDEFVuln" "LeperDMGVuln" .apply_once true .on_hit true .on_miss true .queue true
+
+레벨5: `combat_skill: .id "revenge" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target  .is_crit_valid True  .effect "Leper Strength 5" "Leper Vulnerability"`
+
+  effect: .name "Leper Strength 5" .target "performer" .chance 100% .curio_result_type "positive" .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .attack_rating_add 15% .damage_low_multiply 35% .damage_high_multiply 35% .crit_chance_add 11%	.on_hit true .on_miss true .queue true
+
+  effect: .name "Leper Vulnerability" .target "performer" .curio_result_type "negative" .chance 100% .duration 1 .buff_duration_type combat_end .buff_ids "LeperDEFVuln" "LeperDMGVuln" .apply_once true .on_hit true .on_miss true .queue true
+
+
+### 인내
+
+레벨1: `combat_skill: .id "withstand" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 123 .target  .is_crit_valid True  .effect "Leper Protect 1" "Leper Resist Buff 1" "Leper Mark Self" .is_stall_invalidating false`
+
+  effect: .name "Leper Protect 1" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .protection_rating_add 20%	.on_hit true .on_miss true .queue true
+
+  effect: .name "Leper Resist Buff 1" .target "performer" .chance 100% .duration 1 .buff_duration_type combat_end .buff_ids leper_blight_resist leper_bleed_resist leper_debuff_resist leper_move_resist .on_hit true .queue true
+
+  effect: .name "Leper Mark Self" .target "performer" .curio_result_type "positive" .chance 100% .tag 1 .combat_stat_buff 1 .duration 1 .buff_duration_type combat_end .on_hit true .on_miss true .queue true
+
+레벨2: `combat_skill: .id "withstand" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 123 .target  .is_crit_valid True  .effect "Leper Protect 2" "Leper Resist Buff 1" "Leper Mark Self" .is_stall_invalidating false`
+
+  effect: .name "Leper Protect 2" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .protection_rating_add 22%	.on_hit true .on_miss true .queue true
+
+  effect: .name "Leper Resist Buff 1" .target "performer" .chance 100% .duration 1 .buff_duration_type combat_end .buff_ids leper_blight_resist leper_bleed_resist leper_debuff_resist leper_move_resist .on_hit true .queue true
+
+  effect: .name "Leper Mark Self" .target "performer" .curio_result_type "positive" .chance 100% .tag 1 .combat_stat_buff 1 .duration 1 .buff_duration_type combat_end .on_hit true .on_miss true .queue true
+
+레벨3: `combat_skill: .id "withstand" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 123 .target  .is_crit_valid True  .effect "Leper Protect 3" "Leper Resist Buff 1" "Leper Mark Self" .is_stall_invalidating false`
+
+  effect: .name "Leper Protect 3" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .protection_rating_add 25%	.on_hit true .on_miss true .queue true
+
+  effect: .name "Leper Resist Buff 1" .target "performer" .chance 100% .duration 1 .buff_duration_type combat_end .buff_ids leper_blight_resist leper_bleed_resist leper_debuff_resist leper_move_resist .on_hit true .queue true
+
+  effect: .name "Leper Mark Self" .target "performer" .curio_result_type "positive" .chance 100% .tag 1 .combat_stat_buff 1 .duration 1 .buff_duration_type combat_end .on_hit true .on_miss true .queue true
+
+레벨4: `combat_skill: .id "withstand" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 123 .target  .is_crit_valid True  .effect "Leper Protect 4" "Leper Resist Buff 1" "Leper Mark Self" .is_stall_invalidating false`
+
+  effect: .name "Leper Protect 4" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .protection_rating_add 27%	.on_hit true .on_miss true .queue true
+
+  effect: .name "Leper Resist Buff 1" .target "performer" .chance 100% .duration 1 .buff_duration_type combat_end .buff_ids leper_blight_resist leper_bleed_resist leper_debuff_resist leper_move_resist .on_hit true .queue true
+
+  effect: .name "Leper Mark Self" .target "performer" .curio_result_type "positive" .chance 100% .tag 1 .combat_stat_buff 1 .duration 1 .buff_duration_type combat_end .on_hit true .on_miss true .queue true
+
+레벨5: `combat_skill: .id "withstand" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 123 .target  .is_crit_valid True  .effect "Leper Protect 5" "Leper Resist Buff 1" "Leper Mark Self" .is_stall_invalidating false`
+
+  effect: .name "Leper Protect 5" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .protection_rating_add 30%	.on_hit true .on_miss true .queue true
+
+  effect: .name "Leper Resist Buff 1" .target "performer" .chance 100% .duration 1 .buff_duration_type combat_end .buff_ids leper_blight_resist leper_bleed_resist leper_debuff_resist leper_move_resist .on_hit true .queue true
+
+  effect: .name "Leper Mark Self" .target "performer" .curio_result_type "positive" .chance 100% .tag 1 .combat_stat_buff 1 .duration 1 .buff_duration_type combat_end .on_hit true .on_miss true .queue true
+
+
+### 평온
+
+레벨1: `combat_skill: .id "solemnity" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 12 .target  .is_crit_valid True  .effect "LeperHealSelf 1" "LeperHealSelfStress 1" .is_stall_invalidating false`
+
+  effect: .name "LeperHealSelf 1" .target "performer" .curio_result_type "positive" .chance 100% .heal 6	.on_hit true .on_miss false .queue false .source_heal_type hero_skill
+
+  effect: .name "LeperHealSelfStress 1"  .target "performer" .curio_result_type "positive" .chance 100%  .healstress 5	.on_hit true .on_miss false .queue true
+
+레벨2: `combat_skill: .id "solemnity" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 12 .target  .is_crit_valid True  .effect "LeperHealSelf 2" "LeperHealSelfStress 2" .is_stall_invalidating false`
+
+  effect: .name "LeperHealSelf 2" .target "performer" .curio_result_type "positive" .chance 100% .heal 7	.on_hit true .on_miss false	.queue false .source_heal_type hero_skill
+
+  effect: .name "LeperHealSelfStress 2"  .target "performer" .curio_result_type "positive" .chance 100%  .healstress 5	.on_hit true .on_miss false .queue true
+
+레벨3: `combat_skill: .id "solemnity" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 12 .target  .is_crit_valid True  .effect "LeperHealSelf 3" "LeperHealSelfStress 3" .is_stall_invalidating false`
+
+  effect: .name "LeperHealSelf 3" .target "performer" .curio_result_type "positive" .chance 100% .heal 8	.on_hit true .on_miss false	.queue false .source_heal_type hero_skill
+
+  effect: .name "LeperHealSelfStress 3"  .target "performer" .curio_result_type "positive" .chance 100%  .healstress 6	.on_hit true .on_miss false .queue true
+
+레벨4: `combat_skill: .id "solemnity" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 12 .target  .is_crit_valid True  .effect "LeperHealSelf 4" "LeperHealSelfStress 4" .is_stall_invalidating false`
+
+  effect: .name "LeperHealSelf 4" .target "performer" .curio_result_type "positive" .chance 100% .heal 9	.on_hit true .on_miss false .queue false .source_heal_type hero_skill
+
+  effect: .name "LeperHealSelfStress 4"  .target "performer" .curio_result_type "positive" .chance 100%  .healstress 6	.on_hit true .on_miss false .queue true
+
+레벨5: `combat_skill: .id "solemnity" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 12 .target  .is_crit_valid True  .effect "LeperHealSelf 5" "LeperHealSelfStress 5" .is_stall_invalidating false`
+
+  effect: .name "LeperHealSelf 5" .target "performer" .curio_result_type "positive" .chance 100% .heal 10	.on_hit true .on_miss false .queue false .source_heal_type hero_skill
+
+  effect: .name "LeperHealSelfStress 5"  .target "performer" .curio_result_type "positive" .chance 100%  .healstress 7	.on_hit true .on_miss false .queue true
+
+
+### 위협
+
+레벨1: `combat_skill: .id "intimidate" .level 0 .type "melee" .atk 95% .dmg -85% .crit 0% .launch 1 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "Leper Intimidate 1" "Leper Intimidate Mark" "Destealth" "Leper Hype 1"`
+
+  effect: .name "Leper Intimidate 1" .target "target" .curio_result_type "negative" .chance 100% .duration 3  .combat_stat_buff 1 .speed_rating_add -3 .damage_low_multiply -20% .damage_high_multiply -20%	.on_hit true .on_miss false
+
+  effect: .name "Leper Intimidate Mark" .target "performer" .curio_result_type "positive" .chance 100% .tag 1 .duration 4	.on_hit true .on_miss false .queue true
+
+  effect: .name "Destealth" .target "target" .chance 100% .unstealth 1 .on_hit true .on_miss false
+
+  effect: .name "Leper Hype 1" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 2 .on_hit true .on_miss true	.queue true
+
+레벨2: `combat_skill: .id "intimidate" .level 1 .type "melee" .atk 100% .dmg -85% .crit 0% .launch 1 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "Leper Intimidate 2" "Leper Intimidate Mark" "Destealth" "Leper Hype 2"`
+
+  effect: .name "Leper Intimidate 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3  .combat_stat_buff 1 .speed_rating_add -3 .damage_low_multiply -23% .damage_high_multiply -23%	.on_hit true .on_miss false
+
+  effect: .name "Leper Intimidate Mark" .target "performer" .curio_result_type "positive" .chance 100% .tag 1 .duration 4	.on_hit true .on_miss false .queue true
+
+  effect: .name "Destealth" .target "target" .chance 100% .unstealth 1 .on_hit true .on_miss false
+
+  effect: .name "Leper Hype 2" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 2 .on_hit true .on_miss true	.queue true
+
+레벨3: `combat_skill: .id "intimidate" .level 2 .type "melee" .atk 105% .dmg -85% .crit 0% .launch 1 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "Leper Intimidate 3" "Leper Intimidate Mark" "Destealth" "Leper Hype 3"`
+
+  effect: .name "Leper Intimidate 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3  .combat_stat_buff 1 .speed_rating_add -4 .damage_low_multiply -26% .damage_high_multiply -26%	.on_hit true .on_miss false
+
+  effect: .name "Leper Intimidate Mark" .target "performer" .curio_result_type "positive" .chance 100% .tag 1 .duration 4	.on_hit true .on_miss false .queue true
+
+  effect: .name "Destealth" .target "target" .chance 100% .unstealth 1 .on_hit true .on_miss false
+
+  effect: .name "Leper Hype 3" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 3 .on_hit true .on_miss true	.queue true
+
+레벨4: `combat_skill: .id "intimidate" .level 3 .type "melee" .atk 110% .dmg -80% .crit 0% .launch 1 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "Leper Intimidate 4" "Leper Intimidate Mark" "Destealth" "Leper Hype 4"`
+
+  effect: .name "Leper Intimidate 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3  .combat_stat_buff 1 .speed_rating_add -4 .damage_low_multiply -29% .damage_high_multiply -29%	.on_hit true .on_miss false
+
+  effect: .name "Leper Intimidate Mark" .target "performer" .curio_result_type "positive" .chance 100% .tag 1 .duration 4	.on_hit true .on_miss false .queue true
+
+  effect: .name "Destealth" .target "target" .chance 100% .unstealth 1 .on_hit true .on_miss false
+
+  effect: .name "Leper Hype 4" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 3 .on_hit true .on_miss true	.queue true
+
+레벨5: `combat_skill: .id "intimidate" .level 4 .type "melee" .atk 115% .dmg -80% .crit 0% .launch 1 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "Leper Intimidate 5" "Leper Intimidate Mark" "Destealth" "Leper Hype 5"`
+
+  effect: .name "Leper Intimidate 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3  .combat_stat_buff 1 .speed_rating_add -5 .damage_low_multiply -33% .damage_high_multiply -33%	.on_hit true .on_miss false
+
+  effect: .name "Leper Intimidate Mark" .target "performer" .curio_result_type "positive" .chance 100% .tag 1 .duration 4	.on_hit true .on_miss false .queue true
+
+  effect: .name "Destealth" .target "target" .chance 100% .unstealth 1 .on_hit true .on_miss false
+
+  effect: .name "Leper Hype 5" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 4 .on_hit true .on_miss true	.queue true
+
+
+### 치명 효과와 버프 정의
+
+on_crit_acc: effect: .name "on_crit_acc"    .target "performer" .curio_result_type "positive" .chance 100% .buff_source_type bsrc_crit .buff_ids "on_crit_acc" .on_hit true .on_miss false .apply_once true
+
+  {"id": "on_crit_acc", "stat_type": "combat_stat_add", "stat_sub_type": "attack_rating", "amount": 0.1, "duration": 2, "remove_if_not_active": false, "rule_type": "always", "is_false_rule": false, "rule_data": {"float": 0, "string": ""}}
+
+Push 3A: effect: .name "Push 3A" .target "target" .push 3 	.chance 100%	.on_hit true .on_miss false .can_apply_on_death true
+
+clear_corpses: effect: .name "clear_corpses" .target "target_group" .chance 100% .kill_enemy_types corpse .on_hit true .on_miss false .queue false .can_apply_on_death true
+
+Leper Acc: effect: .name "Leper Acc" .target "performer" .chance 100% .duration 4 .buff_ids "ACC5" .on_hit true .on_miss true .queue true
+
+  {"id": "ACC5", "stat_type": "combat_stat_add", "stat_sub_type": "attack_rating", "amount": 0.05, "remove_if_not_active": false, "rule_type": "always", "is_false_rule": false, "rule_data": {"float": 0, "string": ""}}
+
+Push 3B: effect: .name "Push 3B" .target "target" .push 3 	.chance 110%	.on_hit true .on_miss false .can_apply_on_death true
+
+Push 3C: effect: .name "Push 3C" .target "target" .push 3 	.chance 120%	.on_hit true .on_miss false .can_apply_on_death true
+
+Push 3D: effect: .name "Push 3D" .target "target" .push 3	.chance 130%	.on_hit true .on_miss false .can_apply_on_death true
+
+Push 3E: effect: .name "Push 3E" .target "target" .push 3 	.chance 140%	.on_hit true .on_miss false .can_apply_on_death true
+
+Leper Strength 1: effect: .name "Leper Strength 1" .target "performer" .chance 100% .curio_result_type "positive" .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .attack_rating_add 10% .damage_low_multiply 25% .damage_high_multiply 25% .crit_chance_add 7%	.on_hit true .on_miss true .queue true
+
+Leper Vulnerability: effect: .name "Leper Vulnerability" .target "performer" .curio_result_type "negative" .chance 100% .duration 1 .buff_duration_type combat_end .buff_ids "LeperDEFVuln" "LeperDMGVuln" .apply_once true .on_hit true .on_miss true .queue true
+
+  {"id": "LeperDEFVuln", "stat_type": "combat_stat_add", "stat_sub_type": "defense_rating", "amount": -0.1, "remove_if_not_active": false, "rule_type": "always", "is_false_rule": false, "rule_data": {"float": 0, "string": ""}, "is_clear_debuff_valid": false}
+
+  {"id": "LeperDMGVuln", "stat_type": "damage_received_percent", "stat_sub_type": "", "amount": 0.25, "remove_if_not_active": false, "rule_type": "always", "is_false_rule": false, "rule_data": {"float": 0, "string": ""}, "is_clear_debuff_valid": false}
+
+Leper Strength 2: effect: .name "Leper Strength 2" .target "performer" .chance 100% .curio_result_type "positive" .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .attack_rating_add 11% .damage_low_multiply 27% .damage_high_multiply 27% .crit_chance_add 8%	.on_hit true .on_miss true .queue true
+
+Leper Strength 3: effect: .name "Leper Strength 3" .target "performer" .chance 100% .curio_result_type "positive" .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .attack_rating_add 12% .damage_low_multiply 30% .damage_high_multiply 30% .crit_chance_add 9%	.on_hit true .on_miss true .queue true
+
+Leper Strength 4: effect: .name "Leper Strength 4" .target "performer" .chance 100% .curio_result_type "positive" .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .attack_rating_add 13% .damage_low_multiply 32% .damage_high_multiply 32% .crit_chance_add 10%	.on_hit true .on_miss true .queue true
+
+Leper Strength 5: effect: .name "Leper Strength 5" .target "performer" .chance 100% .curio_result_type "positive" .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .attack_rating_add 15% .damage_low_multiply 35% .damage_high_multiply 35% .crit_chance_add 11%	.on_hit true .on_miss true .queue true
+
+Leper Protect 1: effect: .name "Leper Protect 1" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .protection_rating_add 20%	.on_hit true .on_miss true .queue true
+
+Leper Resist Buff 1: effect: .name "Leper Resist Buff 1" .target "performer" .chance 100% .duration 1 .buff_duration_type combat_end .buff_ids leper_blight_resist leper_bleed_resist leper_debuff_resist leper_move_resist .on_hit true .queue true
+
+  {"id": "leper_blight_resist", "stat_type": "resistance", "stat_sub_type": "poison", "amount": 0.3, "remove_if_not_active": false, "rule_type": "always", "is_false_rule": false, "rule_data": {"float": 0, "string": ""}}
+
+  {"id": "leper_bleed_resist", "stat_type": "resistance", "stat_sub_type": "bleed", "amount": 0.3, "remove_if_not_active": false, "rule_type": "always", "is_false_rule": false, "rule_data": {"float": 0, "string": ""}}
+
+  {"id": "leper_debuff_resist", "stat_type": "resistance", "stat_sub_type": "debuff", "amount": 0.3, "remove_if_not_active": false, "rule_type": "always", "is_false_rule": false, "rule_data": {"float": 0, "string": ""}}
+
+  {"id": "leper_move_resist", "stat_type": "resistance", "stat_sub_type": "move", "amount": 0.3, "remove_if_not_active": false, "rule_type": "always", "is_false_rule": false, "rule_data": {"float": 0, "string": ""}}
+
+Leper Mark Self: effect: .name "Leper Mark Self" .target "performer" .curio_result_type "positive" .chance 100% .tag 1 .combat_stat_buff 1 .duration 1 .buff_duration_type combat_end .on_hit true .on_miss true .queue true
+
+Leper Protect 2: effect: .name "Leper Protect 2" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .protection_rating_add 22%	.on_hit true .on_miss true .queue true
+
+Leper Protect 3: effect: .name "Leper Protect 3" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .protection_rating_add 25%	.on_hit true .on_miss true .queue true
+
+Leper Protect 4: effect: .name "Leper Protect 4" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .protection_rating_add 27%	.on_hit true .on_miss true .queue true
+
+Leper Protect 5: effect: .name "Leper Protect 5" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .protection_rating_add 30%	.on_hit true .on_miss true .queue true
+
+LeperHealSelf 1: effect: .name "LeperHealSelf 1" .target "performer" .curio_result_type "positive" .chance 100% .heal 6	.on_hit true .on_miss false .queue false .source_heal_type hero_skill
+
+LeperHealSelfStress 1: effect: .name "LeperHealSelfStress 1"  .target "performer" .curio_result_type "positive" .chance 100%  .healstress 5	.on_hit true .on_miss false .queue true
+
+LeperHealSelf 2: effect: .name "LeperHealSelf 2" .target "performer" .curio_result_type "positive" .chance 100% .heal 7	.on_hit true .on_miss false	.queue false .source_heal_type hero_skill
+
+LeperHealSelfStress 2: effect: .name "LeperHealSelfStress 2"  .target "performer" .curio_result_type "positive" .chance 100%  .healstress 5	.on_hit true .on_miss false .queue true
+
+LeperHealSelf 3: effect: .name "LeperHealSelf 3" .target "performer" .curio_result_type "positive" .chance 100% .heal 8	.on_hit true .on_miss false	.queue false .source_heal_type hero_skill
+
+LeperHealSelfStress 3: effect: .name "LeperHealSelfStress 3"  .target "performer" .curio_result_type "positive" .chance 100%  .healstress 6	.on_hit true .on_miss false .queue true
+
+LeperHealSelf 4: effect: .name "LeperHealSelf 4" .target "performer" .curio_result_type "positive" .chance 100% .heal 9	.on_hit true .on_miss false .queue false .source_heal_type hero_skill
+
+LeperHealSelfStress 4: effect: .name "LeperHealSelfStress 4"  .target "performer" .curio_result_type "positive" .chance 100%  .healstress 6	.on_hit true .on_miss false .queue true
+
+LeperHealSelf 5: effect: .name "LeperHealSelf 5" .target "performer" .curio_result_type "positive" .chance 100% .heal 10	.on_hit true .on_miss false .queue false .source_heal_type hero_skill
+
+LeperHealSelfStress 5: effect: .name "LeperHealSelfStress 5"  .target "performer" .curio_result_type "positive" .chance 100%  .healstress 7	.on_hit true .on_miss false .queue true
+
+Leper Intimidate 1: effect: .name "Leper Intimidate 1" .target "target" .curio_result_type "negative" .chance 100% .duration 3  .combat_stat_buff 1 .speed_rating_add -3 .damage_low_multiply -20% .damage_high_multiply -20%	.on_hit true .on_miss false
+
+Leper Intimidate Mark: effect: .name "Leper Intimidate Mark" .target "performer" .curio_result_type "positive" .chance 100% .tag 1 .duration 4	.on_hit true .on_miss false .queue true
+
+Destealth: effect: .name "Destealth" .target "target" .chance 100% .unstealth 1 .on_hit true .on_miss false
+
+Leper Hype 1: effect: .name "Leper Hype 1" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 2 .on_hit true .on_miss true	.queue true
+
+Leper Intimidate 2: effect: .name "Leper Intimidate 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3  .combat_stat_buff 1 .speed_rating_add -3 .damage_low_multiply -23% .damage_high_multiply -23%	.on_hit true .on_miss false
+
+Leper Hype 2: effect: .name "Leper Hype 2" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 2 .on_hit true .on_miss true	.queue true
+
+Leper Intimidate 3: effect: .name "Leper Intimidate 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3  .combat_stat_buff 1 .speed_rating_add -4 .damage_low_multiply -26% .damage_high_multiply -26%	.on_hit true .on_miss false
+
+Leper Hype 3: effect: .name "Leper Hype 3" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 3 .on_hit true .on_miss true	.queue true
+
+Leper Intimidate 4: effect: .name "Leper Intimidate 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3  .combat_stat_buff 1 .speed_rating_add -4 .damage_low_multiply -29% .damage_high_multiply -29%	.on_hit true .on_miss false
+
+Leper Hype 4: effect: .name "Leper Hype 4" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 3 .on_hit true .on_miss true	.queue true
+
+Leper Intimidate 5: effect: .name "Leper Intimidate 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3  .combat_stat_buff 1 .speed_rating_add -5 .damage_low_multiply -33% .damage_high_multiply -33%	.on_hit true .on_miss false
+
+Leper Hype 5: effect: .name "Leper Hype 5" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 4 .on_hit true .on_miss true	.queue true
+
+
+## 검증과 미확인 사항
+
+{"checks": 254, "finite_floats": 1472, "preserved_files": 59, "skills_per_source": 35, "camp_skills": 7, "trinkets": 8, "sensitivity_rows": 63, "game_numeric_edits": false, "model_edits": false}
+
+위 검증은 데이터·계산 검사이며 게임 실행 테스트가 아니다. 모든 기존 영웅/효과/편집용 효과/분석 도구 해시를 보존했다. 기술/장신구/야영의 원문·출처 해시·민감도·모델 한계·全 시나리오는 leper-full-review.json에서 추적할 수 있다.
+
+- buff durations/stacking/refresh/queue order
+
+- heal crit on effect-based self healing
+
+- stealth/stall rules and corpse clearing trigger
+
+- crit20% status application and hidden accuracy alternative
+
+- actual AI mark selection and marked damage
+
+- resistance level scaling, chance caps and rounding
+
+- district camping points aggregation
+
+변경 승인: JES-006 독주 회피만 적용 완료. 나병환자 숫자 변경 승인 없음. 이번 기록은 분석 전용이며 기존 사용자 파일을 커밋하지 않는다.
