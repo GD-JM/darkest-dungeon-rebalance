@@ -67,7 +67,7 @@ def effect_names_in(line):
             for a, b in EFFECT_TOKEN.findall(m.group(2))]
 
 
-def load_buffs(G):
+def load_buffs(G, mod_root=None):
     def walk(o):
         if isinstance(o, dict):
             yield o
@@ -87,7 +87,46 @@ def load_buffs(G):
         for o in walk(d):
             if 'id' in o and 'stat_sub_type' in o:
                 buffs.setdefault(o['id'], o)
+    if mod_root:
+        for f in sorted(glob.glob(os.path.join(mod_root, 'shared', 'buffs', '*.json'))):
+            for o in walk(json.load(open(f, encoding='utf-8-sig'))):
+                if 'id' in o and 'stat_sub_type' in o:
+                    buffs[o['id']] = o
     return buffs
+
+
+def imported_hero(M, hero):
+    """MUS-001: pinned upstream baseline, separate from shared vanilla definitions."""
+    f = os.path.join(M, 'design', 'imports', hero, 'manifest.json')
+    return json.load(open(f, encoding='utf-8')) if os.path.exists(f) else None
+
+
+def edit_effect_baseline(M, G, hero):
+    effects = load_vanilla_effects(G)
+    imported = imported_hero(M, hero)
+    if imported:
+        for raw in open(os.path.join(M, imported['effect_baseline']), encoding='utf-8'):
+            if raw.startswith('effect:'):
+                name = re.search(r'\.name\s+"([^"]+)"', raw)[1]
+                if name in effects and norm_ws(effects[name][0]) != norm_ws(raw):
+                    raise ValueError('Imported effect collides with vanilla: ' + name)
+                effects[name] = (raw.rstrip('\r\n'), imported['effect_baseline'])
+    return effects
+
+
+def edit_hero_baseline(M, G, hero):
+    imported = imported_hero(M, hero)
+    return os.path.join(M, imported['hero_baseline']) if imported else vanilla_hero_file(G, hero)
+
+
+def load_edit_korean(M, G):
+    ko = load_korean(G)
+    for f in sorted(glob.glob(os.path.join(M, 'localization', '*.string_table.xml'))):
+        t = open(f, encoding='utf-8').read()
+        m = re.search(r'<language id="koreana">(.*?)</language>', t, re.S)
+        if m:
+            ko.update(dict(re.findall(r'<entry id="([^"]*)"><!\[CDATA\[(.*?)\]\]></entry>', m[1], re.S)))
+    return ko
 
 
 def effect_sig(line):

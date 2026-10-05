@@ -10,7 +10,7 @@ from pathlib import Path
 import re
 import sys
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from effect_common import paths, vanilla_hero_file, norm_ws, effect_files
+from effect_common import paths, vanilla_hero_file, norm_ws, effect_files, imported_hero
 
 CHANGE_ID = re.compile(r'\b[A-Z][A-Z0-9]{1,7}-\d{2,3}\b')
 
@@ -78,7 +78,13 @@ def check_info(lines, vanilla, known_ids):
         if error:
             errors.append((i + 1, error, lines[i]))
     for key in original.keys() - seen:
-        errors.append((0, '원본 줄 삭제: 삭제 위치의 의도 기록을 검토하세요', str(key)))
+        # MUS-001: a removed upstream row requires an exact, traceable deletion
+        # record. A generic ID note cannot silence an accidental missing row.
+        marker = 'removed-original: ' + original[key] + ' | '
+        found = any(marker in l and note_error(l, known_ids) is None and l.split(marker, 1)[1].strip()
+                    for l in lines if l.startswith('//'))
+        if not found:
+            errors.append((0, '원본 줄 삭제: 삭제 위치의 의도 기록을 검토하세요', str(key)))
     return errors
 
 def check_effects(lines, vanilla_effects, known_ids, generated=False):
@@ -123,6 +129,9 @@ def main(argv=None):
         files = [(hero / (hero.name + '.info.darkest'), 'info'),
                  (hero / (hero.name + '.effects_edit.txt'), 'edit'),
                  (mod / 'effects' / ('rebalance_' + hero.name + '.effects.darkest'), 'generated')]
+        imported = imported_hero(str(mod), hero.name)
+        if imported:
+            files.append((mod / imported['runtime_effects'], 'generated'))
         for path, kind in files:
             if not path.exists():
                 continue

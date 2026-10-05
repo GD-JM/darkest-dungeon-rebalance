@@ -456,7 +456,7 @@ def hero_file(hero, mode):
     if mode == 'vanilla':
         return ec.vanilla_hero_file(G, hero)
     f = os.path.join(M_ROOT, 'heroes', hero, hero + '.info.darkest')
-    return f if os.path.exists(f) else ec.vanilla_hero_file(G, hero)   # 모드에서 뺀 영웅(총사)은 바닐라
+    return f if os.path.exists(f) else ec.vanilla_hero_file(G, hero)   # MUS-001: 편입한 총사는 RB 파일, 미편입 영웅만 원본
 
 
 def load_hero(hero, mode):
@@ -1056,7 +1056,7 @@ def evaluate(mode, P=PARAM):
     if P['MARK_DAMAGE_BONUS'] is None:
         P = dict(P, MARK_DAMAGE_BONUS=marked_damage_bonus())
     eff = load_effects(mode)
-    buffs = ec.load_buffs(G)
+    buffs = ec.load_buffs(G, M_ROOT if mode == 'rb' else None)
     out = {}
     for hero in KO:
         H = load_hero(hero, mode)

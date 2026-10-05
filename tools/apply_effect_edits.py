@@ -16,7 +16,8 @@ Usage: python tools/apply_effect_edits.py [--mod PATH] [--game PATH] [--dry-run]
 import os, re, sys, subprocess
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from effect_common import (ABBR, P, paths, load_vanilla_effects, norm_ws, EFFECT_LIST, EFFECT_TOKEN,
-                           effect_names_in, reuse_candidate, vanilla_index)
+                           effect_names_in, reuse_candidate, vanilla_index,
+                           edit_effect_baseline, imported_hero)
 
 args = sys.argv[1:]
 opt = lambda k: args[args.index(k) + 1] if k in args else None
@@ -24,8 +25,6 @@ M, G = paths(opt('--mod'), opt('--game'))
 dry = '--dry-run' in args
 skip_vals = {opt('--mod'), opt('--game')}
 only = [a for a in args if not a.startswith('--') and a not in skip_vals]
-EFF = load_vanilla_effects(G)
-VIDX = vanilla_index(EFF)
 nrm = lambda l: re.sub(r'"\.(?=[A-Za-z_])', '" .', l)
 
 report = []
@@ -36,6 +35,9 @@ for hero in sorted(d for d in os.listdir(os.path.join(M, 'heroes')) if os.path.i
     info = os.path.join(M, 'heroes', hero, hero + '.info.darkest')
     if not os.path.exists(edit) or not os.path.exists(info):
         continue
+    EFF = edit_effect_baseline(M, G, hero)
+    VIDX = vanilla_index(EFF)
+    imported = imported_hero(M, hero)
     abbr = ABBR[hero]
     prefix = 'RB %s ' % abbr
 
@@ -160,6 +162,48 @@ for hero in sorted(d for d in os.listdir(os.path.join(M, 'heroes')) if os.path.i
     if new_data != data and not dry:
         with open(info, 'wb') as fh:
             fh.write(new_data.encode('utf-8'))
+
+    # MUS-001: imported effects can also be referenced by riposte, actor DOTs,
+    # and trinkets. Restore from pinned baselines on every run, then remap only
+    # effect-reference fields; buff IDs and effect definition names stay intact.
+    if imported:
+        import json
+        def mapped(name):
+            base = base_of(name)
+            return reuse.get(base) or (rb_of(base) if base in changed else base)
+        effect_keys = {'increment_effects', 'completion_effects',
+                       'attack_skill_additional_effects', 'friendly_skill_additional_effects',
+                       'riposte_skill_additional_effects'}
+        def remap_json(o):
+            if isinstance(o, dict):
+                return {k: ([mapped(x) for x in v] if k in effect_keys else remap_json(v)) for k, v in o.items()}
+            if isinstance(o, list):
+                return [remap_json(x) for x in o]
+            return o
+        for ref in imported['reference_files']:
+            baseline = os.path.join(M, ref['baseline'])
+            target = os.path.join(M, ref['runtime'])
+            original = open(baseline, 'rb').read()
+            current_bytes = open(target, 'rb').read() if os.path.exists(target) else original
+            if ref['kind'] == 'effects':
+                text = original.decode('utf-8')
+                new = re.sub(r'(\.riposte_effect\s+)"([^"]+)"',
+                             lambda m: m[1] + '"' + mapped(m[2]) + '"', text).encode('utf-8')
+            else:
+                # Keep user changes to other trinkets/fields. Only effect-name
+                # references are managed by this workflow. Exact pinned bytes
+                # are restored only if the entire parsed document matches.
+                data = json.loads(current_bytes.decode('utf-8-sig'))
+                fixed = remap_json(data)
+                if fixed == json.loads(original.decode('utf-8-sig')):
+                    new = original
+                elif fixed == data:
+                    new = current_bytes
+                else:
+                    new = (json.dumps(fixed, ensure_ascii=False, indent=2) + '\n').encode('utf-8')
+            if new != current_bytes and not dry:
+                with open(target, 'wb') as fh:
+                    fh.write(new)
 
     # 3) checks for mod-only effects
     refs = set()

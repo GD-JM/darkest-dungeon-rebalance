@@ -13,7 +13,7 @@ mods/Rebalance/
     analysis/        근거 자료 (회복 분석, DLC 패치 이력 …)
     changes/<영웅>.md 영웅별 변경 항목
     feedback.md      창작마당·플레이 테스트 피드백 기록 (FB-xxx)
-    vanilla/         총사 바닐라 시트 (총사는 모드에서 제외 중)
+    vanilla/         총사 바닐라 시트 (MUS-001로 편입)
   effects/rebalance_<영웅>.effects.darkest  ← 모드가 새 이름으로 추가한 효과 (바닐라 효과 파일은 덮어쓰지 않음)
   tools/make_modfiles.py   파일 목록(modfiles.txt) 다시 만들기
   tools/make_effect_edit_files.py   효과 편집용 사본 만들기
@@ -138,3 +138,10 @@ File → Add local repository → `C:\Program Files (x86)\Steam\steamapps\common
 `design/changes/<영웅>.md`에는 원본/현재 값, 의도, 근거, 원문 메모, 이력을 연결한다. 이미 쓴 사용자 한국어 주석은 지우거나 바꿔 쓰지 않고 원문 그대로 보존한다. 옛 주석과 최신 데이터가 다르면 현재 추적 주석과 날짜별 기록으로 구분한다. 의도를 확인할 근거가 없으면 미확인으로 적고, 사후 이유를 만들지 않는다.
 
 주석 정리는 수치 수정 승인이 아니다. 편집 사본과 설치 데이터가 다르면 각각 기록하고 전역 효과 적용을 자동 실행하지 않는다. 검사 `python tools/check_comments.py`는 효과 행별 주석·ID·설명·문서 연결과 게임용 파생 효과까지 확인하고, 위반 시 종료 코드1을 반환한다. 기존 자연어 메모만 있는 작업 중 파일은 의도 ID 주석을 덧붙여 보존한다.
+
+
+## 총사 편집 (MUS-001)
+
+총사는 설치된 YAMR을 전체 편입했다. heroes/musketeer의 info/vanilla/effects_edit 파일을 다른 영웅처럼 사용한다. 바닐라 시트는 실제 바닐라이며, 고정 YAMR 비교 원본은 design/imports/musketeer에 있다. 효과 정리는 외부 개조 효과도 원본으로 인식한다. 반격/재충전/장신구 추가 효과의 참조도 함께 갱신하고 되돌릴 수 있다. 적용은 tools/apply_effect_edits.py musketeer, 주석 확인은 tools/check_comments.py musketeer. 기존 편집 사본은 --force로 덮어쓰지 않는다.
+
+독립 통합본을 쓸 때 기존 YAMR·다른 총사 리워크·Trinket Separator·Trinkets Plus를 끄고 Rebalance를 우선 적용한다. 총사 DLC 등 게임 제공 자원은 계속 사용한다. JSON/이미지/번역 바이너리의 // 의도 기록은 design/imports/musketeer/intents.txt에 있으며 JSON 안에 불법 주석을 넣지 않는다. 새 밸런스 후보는 이 편입에 포함되지 않았다.

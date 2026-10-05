@@ -7,14 +7,18 @@ Usage: python tools/make_effect_edit_files.py [--force] [hero ...]
 import os, re, sys, glob
 from collections import defaultdict, OrderedDict
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from effect_common import ABBR, P, paths, load_vanilla_effects, load_korean, vanilla_hero_file, effect_names_in, load_buffs
+from effect_common import (ABBR, P, paths, load_vanilla_effects, load_korean, vanilla_hero_file,
+                          effect_names_in, load_buffs, edit_effect_baseline, edit_hero_baseline,
+                          imported_hero, load_edit_korean)
 
-M, G = paths()
+args = sys.argv[1:]
+opt = lambda k: args[args.index(k) + 1] if k in args else None
+M, G = paths(opt('--mod'), opt('--game'))
 force = '--force' in sys.argv
-only = [a for a in sys.argv[1:] if not a.startswith('--')]
+only = [a for a in args if not a.startswith('--') and a not in {opt('--mod'), opt('--game')}]
 EFF = load_vanilla_effects(G)
-KO = load_korean(G)
-BUFF = load_buffs(G)
+KO = load_edit_korean(M, G)
+BUFF = load_buffs(G, M)
 
 heroes = sorted(d for d in os.listdir(os.path.join(M, 'heroes')) if os.path.isdir(os.path.join(M, 'heroes', d)))
 
@@ -73,7 +77,9 @@ for hero in heroes:
     if os.path.exists(dst) and not force:
         written.append((hero, 'SKIP (이미 있음)', 0))
         continue
-    src = vanilla_hero_file(G, hero)
+    EFF = edit_effect_baseline(M, G, hero)
+    imported = imported_hero(M, hero)
+    src = edit_hero_baseline(M, G, hero)
     lines = [re.sub(r'"\.(?=[A-Za-z_])', '" .', l.rstrip('\r\n')) for l in open(src, encoding='utf-8', errors='replace')]
     skills = OrderedDict()
     extra = OrderedDict()
@@ -110,6 +116,8 @@ for hero in heroes:
             return
         raw, srcfile = EFF[n]
         out.append(raw)
+        if imported:
+            out.append('// %s Preserve imported %s effect values as the editable baseline.' % (imported['change_id'], hero))
         n_lines += 1
         notes = []
         others = sorted(hero_use[n] - {hero})
@@ -148,6 +156,12 @@ for hero in heroes:
         for key, names in extra.items():
             out.append('//# %s' % key)
             for n in dict.fromkeys(names):
+                emit_effect(n)
+    if imported:
+        out.append('')
+        out.append('//# Imported nested/riposte/actor/trinket effects')
+        for n, (_raw, source) in EFF.items():
+            if source == imported['effect_baseline']:
                 emit_effect(n)
     with open(dst, 'w', encoding='utf-8', newline='\r\n') as fh:
         fh.write('\n'.join(out) + '\n')
