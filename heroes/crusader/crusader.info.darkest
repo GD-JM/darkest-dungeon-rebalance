@@ -43,10 +43,11 @@ combat_skill: .id "holy_lance" .level 2 .type "melee" .atk 95% .dmg 0% .crit 8.5
 combat_skill: .id "holy_lance" .level 3 .type "melee" .atk 100% .dmg 0% .crit 9.5% .move 0 1 .launch 34 .target 234 .is_crit_valid True  .effect "Unholy Killer 4"
 combat_skill: .id "holy_lance" .level 4 .type "melee" .atk 105% .dmg 0% .crit 10.5% .move 0 1 .launch 34 .target 234 .is_crit_valid True  .effect "Unholy Killer 5"
 combat_skill: .id "inspiring_cry" .level 0 .heal 1 1 .launch 1234 .target @1234  .effect "Crusader HealStress 1" "Crusader Light 1" .is_stall_invalidating false
-combat_skill: .id "inspiring_cry" .level 1 .heal 1 1 .launch 1234 .target @1234  .effect "Crusader HealStress 2" "Crusader Light 2" .is_stall_invalidating false
-combat_skill: .id "inspiring_cry" .level 2 .heal 1 2 .launch 1234 .target @1234  .effect "Crusader HealStress 3" "Crusader Light 3" .is_stall_invalidating false
-combat_skill: .id "inspiring_cry" .level 3 .heal 1 2 .launch 1234 .target @1234  .effect "Crusader HealStress 4" "Crusader Light 4" .is_stall_invalidating false
-combat_skill: .id "inspiring_cry" .level 4 .heal 2 2 .launch 1234 .target @1234  .effect "Crusader HealStress 5" "Crusader Light 5" .is_stall_invalidating false
+combat_skill: .id "inspiring_cry" .level 1 .heal 1 1 .launch 1234 .target @1234  .effect "RB CRU Crusader HealStress 2" "Crusader Light 2" .is_stall_invalidating false
+combat_skill: .id "inspiring_cry" .level 2 .heal 1 2 .launch 1234 .target @1234  .effect "RB CRU Crusader HealStress 3" "Crusader Light 3" .is_stall_invalidating false
+combat_skill: .id "inspiring_cry" .level 3 .heal 1 2 .launch 1234 .target @1234  .effect "RB CRU Crusader HealStress 4" "Crusader Light 4" .is_stall_invalidating false
+combat_skill: .id "inspiring_cry" .level 4 .heal 2 2 .launch 1234 .target @1234  .effect "RB CRU Crusader HealStress 5" "Crusader Light 5" .is_stall_invalidating false
+// CRU-006 [2026-10-06] Inspiring Cry stress recovery 5/5/6/7/8 -> 5/6/7/8/9; improve non-Jester concentrated support and preserve healing, torch and targeting.
 tag: .id "heavy"
 tag: .id "religious"
 tag: .id "altar_of_light"
