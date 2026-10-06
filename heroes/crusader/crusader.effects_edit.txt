@@ -45,19 +45,24 @@ effect: .name "Unholy Killer 5" .target "performer" .chance 100% .curio_result_t
 //# ======================================================================
 //# 기술: 기절의 일격 (stunning_blow)
 //# 레벨별 효과: 1레벨 Stun 1 | 2레벨 Stun 2 | 3레벨 Stun 3 | 4레벨 Stun 4 | 5레벨 Stun 5
-effect: .name "Stun 1" .target "target" .curio_result_type "negative" .chance 100% .stun 1	.on_hit true .on_miss false .queue true
+effect: .name "Hero Strong Stun 1" .target "target" .curio_result_type "negative" .chance 110% .stun 1	.on_hit true .on_miss false .queue true
+// CRU-005 [2026-10-06] Match the currently loaded vanilla effect; archive pending values so reapplying cannot silently alter stun or stress recovery.
 //#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 결투가, 중보병, 역병 의사) / 몬스터 기술 13곳. 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Stun 2" .target "target" .curio_result_type "negative" .chance 110% .stun 1	.on_hit true .on_miss false .queue true
+effect: .name "Hero Strong Stun 2" .target "target" .curio_result_type "negative" .chance 120% .stun 1	.on_hit true .on_miss false .queue true
+// CRU-005 [2026-10-06] Match the currently loaded vanilla effect; archive pending values so reapplying cannot silently alter stun or stress recovery.
 //#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 결투가, 중보병, 역병 의사) / 몬스터 기술 5곳. 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Stun 3" .target "target" .curio_result_type "negative" .chance 120% .stun 1	.on_hit true .on_miss false .queue true
+effect: .name "Hero Strong Stun 3" .target "target" .curio_result_type "negative" .chance 130% .stun 1	.on_hit true .on_miss false .queue true
+// CRU-005 [2026-10-06] Match the currently loaded vanilla effect; archive pending values so reapplying cannot silently alter stun or stress recovery.
 //#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 결투가, 중보병, 역병 의사) / 몬스터 기술 14곳. 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Stun 4" .target "target" .curio_result_type "negative" .chance 130% .stun 1	.on_hit true .on_miss false .queue true
+effect: .name "Hero Strong Stun 4" .target "target" .curio_result_type "negative" .chance 140% .stun 1	.on_hit true .on_miss false .queue true
+// CRU-005 [2026-10-06] Match the currently loaded vanilla effect; archive pending values so reapplying cannot silently alter stun or stress recovery.
 //#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 결투가, 중보병, 역병 의사) / 몬스터 기술 1곳. 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Stun 5" .target "target" .curio_result_type "negative" .chance 140% .stun 1	.on_hit true .on_miss false .queue true
+effect: .name "Hero Strong Stun 5" .target "target" .curio_result_type "negative" .chance 150% .stun 1	.on_hit true .on_miss false .queue true
+// CRU-005 [2026-10-06] Match the currently loaded vanilla effect; archive pending values so reapplying cannot silently alter stun or stress recovery.
 //#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 결투가, 중보병, 역병 의사) / 몬스터 기술 14곳. 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
 
@@ -96,18 +101,22 @@ effect: .name "Crusader HealStress 1" .target "target" .curio_result_type "posit
 effect: .name "Crusader Light 1" .target "global" .chance 100% .curio_result_type "positive" .torch_increase 5	.on_hit true .on_miss true .apply_once true .queue true
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Crusader HealStress 2" .target "target" .curio_result_type "positive" .chance 100% .healstress 5		.on_hit true .on_miss false .queue true
+// CRU-005 [2026-10-06] Match the currently loaded vanilla effect; archive pending values so reapplying cannot silently alter stun or stress recovery.
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Crusader Light 2" .target "global" .chance 100% .curio_result_type "positive" .torch_increase 6	.on_hit true .on_miss true .apply_once true .queue true
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Crusader HealStress 3" .target "target" .curio_result_type "positive" .chance 100% .healstress 6		.on_hit true .on_miss false .queue true
+// CRU-005 [2026-10-06] Match the currently loaded vanilla effect; archive pending values so reapplying cannot silently alter stun or stress recovery.
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Crusader Light 3" .target "global" .chance 100% .curio_result_type "positive" .torch_increase 7	.on_hit true .on_miss true .apply_once true .queue true
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Crusader HealStress 4" .target "target" .curio_result_type "positive" .chance 100% .healstress 7		.on_hit true .on_miss false .queue true
+// CRU-005 [2026-10-06] Match the currently loaded vanilla effect; archive pending values so reapplying cannot silently alter stun or stress recovery.
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Crusader Light 4" .target "global" .chance 100% .curio_result_type "positive" .torch_increase 8	.on_hit true .on_miss true .apply_once true .queue true
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Crusader HealStress 5" .target "target" .curio_result_type "positive" .chance 100% .healstress 8		.on_hit true .on_miss false .queue true
+// CRU-005 [2026-10-06] Match the currently loaded vanilla effect; archive pending values so reapplying cannot silently alter stun or stress recovery.
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Crusader Light 5" .target "global" .chance 100% .curio_result_type "positive" .torch_increase 10	.on_hit true .on_miss true .apply_once true .queue true
 //#   원본 위치: effects/base.effects.darkest

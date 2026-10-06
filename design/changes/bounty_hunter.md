@@ -622,3 +622,8 @@
 - 원본: `None`
 - 현재: `effect: .name "RB BH Bleed Killer 5" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "bleeding" .combat_stat_buff 1 .damage_low_multiply 33% .damage_high_multiply 33% .on_hit true .on_miss false`
 - 출처: `effects/rebalance_bounty_hunter.effects.darkest`, 주석 추가 전 26행; Git 원문 {"commit": "c7df494cb407eebf6deb6bbc0e22f0a43c7a3c3b", "summary": "BH-001 끝장내기 출혈 대상 추가 피해(신규 효과), BH-002 기절 조건 강화 제안, 최적 열·딜러 비교"}
+
+### BH-003 BH-008 변경 ID 누락 정리 (2026-10-06)
+- 상태: 현재 현상금 수거/섬광탄5단계 묶음 아래 ID·의도 주석만 추가. 수치/참조/사용·대상 열은 변경 없음.
+- 기존 한국어 메모는 원문 그대로 보존. collect_bounty는 현재321/12 및 표식 효과를 유지, flashbang은 현재43/234 및 일반 기절 유지. 어퍼컷 명중95 후보는 적용하지 않았다.
+- 근거: 전체 주석 검사에서 해당10행의 ID가 누락되어 기록 검증이 실패했다. 기존 BH-003/BH-008 이력에 연결한다.

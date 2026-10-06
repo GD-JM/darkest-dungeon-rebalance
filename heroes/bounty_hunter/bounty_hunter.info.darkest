@@ -28,6 +28,7 @@ combat_skill: .id "collect_bounty" .level 1 .type "melee" .atk 90% .dmg 0% .crit
 combat_skill: .id "collect_bounty" .level 2 .type "melee" .atk 95% .dmg 0% .crit 9% .launch 321 .target 12 .is_crit_valid True  .effect "RB BH Dmg Marked" "Man Killer 3"
 combat_skill: .id "collect_bounty" .level 3 .type "melee" .atk 100% .dmg 0% .crit 10% .launch 321 .target 12 .is_crit_valid True  .effect "RB BH Dmg Marked" "Man Killer 4"
 combat_skill: .id "collect_bounty" .level 4 .type "melee" .atk 105% .dmg 0% .crit 11% .launch 321 .target 12 .is_crit_valid True  .effect "RB BH Dmg Marked" "Man Killer 5"
+// BH-003 [2026-10-06] Keep current marked-target specialization and restored rank layout; attach the existing change ID without changing skill data.
 //사용열, 타겟열 변경 123 -> 12, 12 -> 123
 //사유 끝장내기와의 차별점 있어야 함. 끝장내기가 범용적으로 더 좋음 지금은, 그래서 2개 채용할 이유가 굳이 사라짐.
 //기존엔 끝장내기와 이 기술 동시에 채용했음 이유는 12열은 현상금 사냥, 3열은 끝장내기
@@ -64,6 +65,7 @@ combat_skill: .id "flashbang" .level 1 .type "ranged" .atk 100% .dmg -100% .crit
 combat_skill: .id "flashbang" .level 2 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 43 .target 234 .is_crit_valid False  .effect "Hero Strong Stun 3" "Disorient 3" .is_stall_invalidating false
 combat_skill: .id "flashbang" .level 3 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 43 .target 234 .is_crit_valid False  .effect "Hero Strong Stun 4" "Disorient 4" .is_stall_invalidating false
 combat_skill: .id "flashbang" .level 4 .type "ranged" .atk 115% .dmg -100% .crit 0% .launch 43 .target 234 .is_crit_valid False  .effect "Hero Strong Stun 5" "Disorient 5" .is_stall_invalidating false
+// BH-008 [2026-10-06] Keep rank34 flash control separate from front Uppercut, paying with normal stun; restore the missing trace ID only.
 //사용열 432 -> 43 이유 2열에서 어퍼컷이랑 겹침. 다양한 열에서 영웅이 사용될 수 있게
 
 

@@ -1,0 +1,142 @@
+// [편집용 효과 사본] 성전사 (crusader)
+// 이 파일은 게임이 읽지 않는다. 여기서 고친 수치는 Claude에게 "정리해줘"라고 요청한 뒤에 게임에 적용된다.
+//   정리 시: 원본과 달라진 효과만 새 이름("RB CRU 원래이름")으로 effects/rebalance_crusader.effects.darkest 에 추가되고,
+//            이 영웅의 기술이 새 효과를 가리키게 바뀐다. 다른 영웅·몬스터는 영향 없음. 원래대로 되돌리면 새 효과도 사라진다.
+// 규칙
+//   - 수치만 고친다. 효과 줄을 지우거나 효과 이름(.name "...")을 바꾸지 않는다.
+//   - 메모는 바꾼 줄 바로 밑에 // 로 쓴다. //# 로 시작하는 줄은 자동 설명이므로 고치지 않는다.
+//   - 강화 효과(.buff_ids)의 실제 수치는 이 파일에 없다(shared/buffs JSON). //# 설명에 참고용으로만 적었다. 바꾸려면 요청.
+// 자주 쓰는 키
+//   .chance 적용 확률 | .duration 지속 턴 | .stun 기절 | .dotBleed 턴당 출혈 | .dotPoison 턴당 중독 | .dotBurn 턴당 화상
+//   .push / .pull 밀치기·당기기 칸 | .heal 회복 | .heal_percent 최대 체력 비율 회복 | .dotHpHeal 턴당 회복 | .healstress 스트레스 회복 | .stress 스트레스
+//   .combat_stat_buff 1 과 함께: .attack_rating_add 명중 / .defense_rating_add 회피 / .protection_rating_add 방어 / .speed_rating_add 속도
+//     / .crit_chance_add 치명타 / .damage_low_multiply · .damage_high_multiply 피해 %
+//   .tag 표식 | .riposte 반격 | .guard 보호 | .keyStatus 조건(대상 상태) | .target "performer" = 자신
+
+//# ======================================================================
+//# 기술: 강타 (smite)
+//# 레벨별 효과: 1레벨 Unholy Killer 1 | 2레벨 Unholy Killer 2 | 3레벨 Unholy Killer 3 | 4레벨 Unholy Killer 4 | 5레벨 Unholy Killer 5
+effect: .name "Unholy Killer 1" .target "performer" .chance 100% .curio_result_type "positive" .monsterType "unholy" .combat_stat_buff 1 .damage_low_multiply 15%	.damage_high_multiply 15%	.on_hit true .on_miss false
+//#   공유 효과: 다른 영웅 1명(성녀). 여기서 고치면 이 영웅만 바뀐다
+//#   이 영웅의 다른 기술에서도 사용: 성스러운 돌격
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Unholy Killer 2" .target "performer" .chance 100% .curio_result_type "positive" .monsterType "unholy" .combat_stat_buff 1 .damage_low_multiply 20%	.damage_high_multiply 20%	.on_hit true .on_miss false
+//#   공유 효과: 다른 영웅 1명(성녀). 여기서 고치면 이 영웅만 바뀐다
+//#   이 영웅의 다른 기술에서도 사용: 성스러운 돌격
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Unholy Killer 3" .target "performer" .chance 100% .curio_result_type "positive" .monsterType "unholy" .combat_stat_buff 1 .damage_low_multiply 25%	.damage_high_multiply 25%	.on_hit true .on_miss false
+//#   공유 효과: 다른 영웅 1명(성녀). 여기서 고치면 이 영웅만 바뀐다
+//#   이 영웅의 다른 기술에서도 사용: 성스러운 돌격
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Unholy Killer 4" .target "performer" .chance 100% .curio_result_type "positive" .monsterType "unholy" .combat_stat_buff 1 .damage_low_multiply 30%	.damage_high_multiply 30%	.on_hit true .on_miss false
+//#   공유 효과: 다른 영웅 1명(성녀). 여기서 고치면 이 영웅만 바뀐다
+//#   이 영웅의 다른 기술에서도 사용: 성스러운 돌격
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Unholy Killer 5" .target "performer" .chance 100% .curio_result_type "positive" .monsterType "unholy" .combat_stat_buff 1 .damage_low_multiply 35%	.damage_high_multiply 35%	.on_hit true .on_miss false
+//#   공유 효과: 다른 영웅 1명(성녀). 여기서 고치면 이 영웅만 바뀐다
+//#   이 영웅의 다른 기술에서도 사용: 성스러운 돌격
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 광신적 고발 (zealous_accusation)
+//# 레벨별 효과: 1레벨 없음 | 2레벨 없음 | 3레벨 없음 | 4레벨 없음 | 5레벨 없음
+//#   (효과 없음: 명중·피해·치명타는 영웅 파일에서 조정)
+
+//# ======================================================================
+//# 기술: 기절의 일격 (stunning_blow)
+//# 레벨별 효과: 1레벨 Stun 1 | 2레벨 Stun 2 | 3레벨 Stun 3 | 4레벨 Stun 4 | 5레벨 Stun 5
+effect: .name "Hero Strong Stun 1" .target "target" .curio_result_type "negative" .chance 100% .stun 1	.on_hit true .on_miss false .queue true
+// CRU-003 [trace 2026-10-05] Document pending edit only: name says strong but chance remains normal-tier; do not auto-apply. Intent is stronger front stun with damage cost.
+//#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 결투가, 중보병, 역병 의사) / 몬스터 기술 13곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Hero Strong Stun 2" .target "target" .curio_result_type "negative" .chance 110% .stun 1	.on_hit true .on_miss false .queue true
+// CRU-003 [trace 2026-10-05] Document pending edit only: name says strong but chance remains normal-tier; do not auto-apply. Intent is stronger front stun with damage cost.
+//#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 결투가, 중보병, 역병 의사) / 몬스터 기술 5곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Hero Strong Stun 3" .target "target" .curio_result_type "negative" .chance 120% .stun 1	.on_hit true .on_miss false .queue true
+// CRU-003 [trace 2026-10-05] Document pending edit only: name says strong but chance remains normal-tier; do not auto-apply. Intent is stronger front stun with damage cost.
+//#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 결투가, 중보병, 역병 의사) / 몬스터 기술 14곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Hero Strong Stun 4" .target "target" .curio_result_type "negative" .chance 130% .stun 1	.on_hit true .on_miss false .queue true
+// CRU-003 [trace 2026-10-05] Document pending edit only: name says strong but chance remains normal-tier; do not auto-apply. Intent is stronger front stun with damage cost.
+//#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 결투가, 중보병, 역병 의사) / 몬스터 기술 1곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Hero Strong Stun 5" .target "target" .curio_result_type "negative" .chance 140% .stun 1	.on_hit true .on_miss false .queue true
+// CRU-003 [trace 2026-10-05] Document pending edit only: name says strong but chance remains normal-tier; do not auto-apply. Intent is stronger front stun with damage cost.
+//#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 결투가, 중보병, 역병 의사) / 몬스터 기술 14곳. 여기서 고치면 이 영웅만 바뀐다
+//#   원본 위치: effects/base.effects.darkest
+
+// 바꿈 스트롱 스턴으로 왜냐하면 3열 공격이 안돼서 쌔야함. 
+
+//# ======================================================================
+//# 기술: 신앙의 방패 (bulwark_of_faith)
+//# 레벨별 효과: 1레벨 Crusader Bulwark 1, Crusader Bulwark Mark, Crusader Bulwark Light | 2레벨 Crusader Bulwark 2, Crusader Bulwark Mark, Crusader Bulwark Light | 3레벨 Crusader Bulwark 3, Crusader Bulwark Mark, Crusader Bulwark Light | 4레벨 Crusader Bulwark 4, Crusader Bulwark Mark, Crusader Bulwark Light | 5레벨 Crusader Bulwark 5, Crusader Bulwark Mark, Crusader Bulwark Light
+
+
+effect: .name "Crusader Bulwark 1" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .protection_rating_add 20%	.on_hit true .on_miss true .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Crusader Bulwark Mark" .target "performer" .curio_result_type "positive" .chance 100% .tag 1 .duration 1 .buff_duration_type combat_end	.on_hit true .on_miss true .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Crusader Bulwark Light" .target "global" .chance 100% .curio_result_type "positive" .torch_increase 24	.on_hit true .on_miss true .apply_once true .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Crusader Bulwark 2" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .protection_rating_add 22%	.on_hit true .on_miss true .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Crusader Bulwark 3" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .protection_rating_add 25%	.on_hit true .on_miss true .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Crusader Bulwark 4" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .protection_rating_add 28%	.on_hit true .on_miss true .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Crusader Bulwark 5" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .protection_rating_add 30%	.on_hit true .on_miss true .queue true
+//#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 기술: 전투 치유 (battle_heal)
+//# 레벨별 효과: 1레벨 없음 | 2레벨 없음 | 3레벨 없음 | 4레벨 없음 | 5레벨 없음
+//#   (효과 없음: 명중·피해·치명타는 영웅 파일에서 조정)
+
+//# ======================================================================
+//# 기술: 성스러운 돌격 (holy_lance)
+//# 레벨별 효과: 1레벨 Unholy Killer 1 | 2레벨 Unholy Killer 2 | 3레벨 Unholy Killer 3 | 4레벨 Unholy Killer 4 | 5레벨 Unholy Killer 5
+
+//# ======================================================================
+//# 기술: 격려의 함성 (inspiring_cry)
+//# 레벨별 효과: 1레벨 Crusader HealStress 1, Crusader Light 1 | 2레벨 Crusader HealStress 2, Crusader Light 2 | 3레벨 Crusader HealStress 3, Crusader Light 3 | 4레벨 Crusader HealStress 4, Crusader Light 4 | 5레벨 Crusader HealStress 5, Crusader Light 5
+effect: .name "Crusader HealStress 1" .target "target" .curio_result_type "positive" .chance 100% .healstress 5		.on_hit true .on_miss false .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Crusader Light 1" .target "global" .chance 100% .curio_result_type "positive" .torch_increase 5	.on_hit true .on_miss true .apply_once true .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Crusader HealStress 2" .target "target" .curio_result_type "positive" .chance 100% .healstress 6		.on_hit true .on_miss false .queue true
+// CRU-004 [trace 2026-10-05] Pending edit only: improve standalone stress recovery supply; do not auto-apply.
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Crusader Light 2" .target "global" .chance 100% .curio_result_type "positive" .torch_increase 6	.on_hit true .on_miss true .apply_once true .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Crusader HealStress 3" .target "target" .curio_result_type "positive" .chance 100% .healstress 7		.on_hit true .on_miss false .queue true
+// CRU-004 [trace 2026-10-05] Pending edit only: improve standalone stress recovery supply; do not auto-apply.
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Crusader Light 3" .target "global" .chance 100% .curio_result_type "positive" .torch_increase 7	.on_hit true .on_miss true .apply_once true .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Crusader HealStress 4" .target "target" .curio_result_type "positive" .chance 100% .healstress 8		.on_hit true .on_miss false .queue true
+// CRU-004 [trace 2026-10-05] Pending edit only: improve standalone stress recovery supply; do not auto-apply.
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Crusader Light 4" .target "global" .chance 100% .curio_result_type "positive" .torch_increase 8	.on_hit true .on_miss true .apply_once true .queue true
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Crusader HealStress 5" .target "target" .curio_result_type "positive" .chance 100% .healstress 9		.on_hit true .on_miss false .queue true
+// CRU-004 [trace 2026-10-05] Pending edit only: improve standalone stress recovery supply; do not auto-apply.
+//#   원본 위치: effects/base.effects.darkest
+effect: .name "Crusader Light 5" .target "global" .chance 100% .curio_result_type "positive" .torch_increase 10	.on_hit true .on_miss true .apply_once true .queue true
+//#   원본 위치: effects/base.effects.darkest
+
+// 수정함 55678 -> 56789로 이유는 스트레스힐러로서 단독으로 쓰일 수 있을 정도가 되어야함. 왜냐하면 스트레스 회복에 대한 수요는 어마어마한데 공급이 광대만으로 한정됨. 다른 스트레스힐러는 그만큼의 수요를 못 채워줌. 공급이 낮아서. 그래서 다른 스트레스힐러도 공급량을 늘려야, 조합의 다양성이 커짐.
+
+//# ======================================================================
+//# 기술 외 효과 (치명타 발동, 자세·모드 등)
+//# crit 
+effect: .name "on_crit_prot"    .target "performer" .curio_result_type "positive" .chance 100% .buff_source_type bsrc_crit .buff_ids "on_crit_prot" .on_hit true .on_miss false .apply_once true
+//#   공유 효과: 다른 영웅 1명(방패 파괴자). 여기서 고치면 이 영웅만 바뀐다
+//#   강화 효과 수치(JSON, 참고용): on_crit_prot = protection_rating 0.15
+//#   원본 위치: effects/base.effects.darkest
+//# ----------------------------------------------------------------------
+//# 모드 신규 효과 (원본에 없음): 이름이 "RB CRU "로 시작
+//#   원본과 비교하지 않고 그대로 effects/rebalance_crusader.effects.darkest 에 들어간다.
+//#   수치는 여기서 고치고, 메모는 줄 밑에 // 로 쓴다. 기술에 붙이거나 떼는 것은 Claude에게 요청.
+//# ----------------------------------------------------------------------
+//# CRU-001 전투 치유: 석궁사수에게서 가져온 스택 힐. 원본 야전 붕대질은 38%였고 여기서는 20%로 약화했다.

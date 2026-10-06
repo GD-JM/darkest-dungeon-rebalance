@@ -440,3 +440,11 @@ R-VALUE-12: 피격 재배분은 기존 MARK_DRAW1.72와 기준 동료 회피25/�
 - 현재: `effect: .name "Crusader HealStress 5" .target "target" .curio_result_type "positive" .chance 100% .healstress 9		.on_hit true .on_miss false .queue true`
 - 적용 불일치 주의: info의 강한 기절 원본 참조와 사본의 이름/일반 확률, 사본에만 있는 스트레스 회복 증가는 이번에 동기화하지 않았다. 사본 의도를 기록하는 작업이지 추가 적용 승인이 아니다.
 - 출처: `heroes/crusader/crusader.effects_edit.txt`, 주석 추가 전 114행; Git 원문 {"commit": "0000000000000000000000000000000000000000", "summary": "Version of heroes/crusader/crusader.effects_edit.txt from heroes/crusader/crusader.effects_edit.txt"}
+
+### CRU-005 편집 사본 재적용 시 미승인 수치 변경 방지 (2026-10-06)
+- 상태: 오류 가능성 정리 요청으로 편집 사본만 동기화. 게임 info/원본 효과는 변경하지 않았다.
+- 목표: G-00, G-02. 원칙: P-02, P-13, P-15, P-18.
+- 문제: 강한 기절 이름에 일반 기절 확률100~140이 적혀 있어 재적용하면 현재 강한 기절110~150이 일반으로 바뀐다. 격려의 함성 사본은5/6/7/8/9지만 현재 실행은5/5/6/7/8이다.
+- 수정: 사본9행을 현재 실행값에 맞춘다. 강한 기절110/120/130/140/150, 스트레스 회복5/5/6/7/8. 게임 효과나 수치는 그대로다.
+- 기존 계획/한국어 메모 보존: design/pending/crusader-effects-before-sync-2026-10-06.txt에 이전 사본 전체를 보존했다. 기존 사본의 한국어 메모와 이전 기록도 삭제하지 않았다. CRU-003/004의 pending 문구는 그 날짜의 역사이며 이번 상태는 CRU-005를 따른다.
+- 검증: 재적용 시 info 참조·실행 효과 값이 변하지 않는지 확인. 별도 스트레스 회복 상향안을 승인한 것으로 취급하지 않는다.

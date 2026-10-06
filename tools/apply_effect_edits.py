@@ -28,6 +28,7 @@ only = [a for a in args if not a.startswith('--') and a not in skip_vals]
 nrm = lambda l: re.sub(r'"\.(?=[A-Za-z_])', '" .', l)
 
 report = []
+pending_writes = {}  # SYS-101: validate the complete requested batch before mutating files.
 for hero in sorted(d for d in os.listdir(os.path.join(M, 'heroes')) if os.path.isdir(os.path.join(M, 'heroes', d))):
     if only and hero not in only:
         continue
@@ -122,12 +123,10 @@ for hero in sorted(d for d in os.listdir(os.path.join(M, 'heroes')) if os.path.i
                 body.extend(notes.get(name, []))
         new_text = '\r\n'.join(body) + '\r\n'
         old_bytes = open(reb, 'rb').read() if os.path.exists(reb) else None
-        if old_bytes != new_text.encode('utf-8') and not dry:
-            os.makedirs(os.path.dirname(reb), exist_ok=True)
-            with open(reb, 'wb') as fh:
-                fh.write(new_text.encode('utf-8'))
-    elif os.path.exists(reb) and not dry:
-        os.remove(reb)
+        if old_bytes != new_text.encode('utf-8'):
+            pending_writes[reb] = new_text.encode('utf-8')
+    elif os.path.exists(reb):
+        pending_writes[reb] = None
 
     # 2) hero info references
     data = open(info, 'rb').read().decode('utf-8')
@@ -159,9 +158,8 @@ for hero in sorted(d for d in os.listdir(os.path.join(M, 'heroes')) if os.path.i
         fixed = EFFECT_LIST.sub(fix_list, n)
         new_lines.append(fixed if fixed != n else l)
     new_data = nl.join(new_lines)
-    if new_data != data and not dry:
-        with open(info, 'wb') as fh:
-            fh.write(new_data.encode('utf-8'))
+    if new_data != data:
+        pending_writes[info] = new_data.encode('utf-8')
 
     # MUS-001: imported effects can also be referenced by riposte, actor DOTs,
     # and trinkets. Restore from pinned baselines on every run, then remap only
@@ -201,9 +199,8 @@ for hero in sorted(d for d in os.listdir(os.path.join(M, 'heroes')) if os.path.i
                     new = current_bytes
                 else:
                     new = (json.dumps(fixed, ensure_ascii=False, indent=2) + '\n').encode('utf-8')
-            if new != current_bytes and not dry:
-                with open(target, 'wb') as fh:
-                    fh.write(new)
+            if new != current_bytes:
+                pending_writes[target] = new
 
     # 3) checks for mod-only effects
     refs = set()
@@ -229,7 +226,19 @@ for hero, ch, cu, rn, er, ru in report:
     print('   참조 변경 %d곳%s' % (len(rn), (': ' + '; '.join(sorted(set(rn)))[:400]) if rn else ''))
     for e in er:
         print('   오류:', e)
-if report and not dry:
+fatal = [e for _, _, _, _, errors, _ in report for e in errors if not e.startswith('(경고)')]
+if fatal:
+    print('검증 실패: 요청한 영웅 일괄 적용을 취소했습니다. 게임 파일과 파일 목록은 변경하지 않았습니다.')
+    raise SystemExit(1)
+if pending_writes and not dry:
+    # SYS-101: malformed/unknown/missing effects are rejected before all writes.
+    for target, payload in pending_writes.items():
+        if payload is None:
+            os.remove(target)
+        else:
+            os.makedirs(os.path.dirname(target), exist_ok=True)
+            with open(target, 'wb') as fh:
+                fh.write(payload)
     mk = os.path.join(M, 'tools', 'make_modfiles.py')
     if os.path.exists(mk):
         print(subprocess.run([sys.executable, mk], capture_output=True, text=True).stdout.strip())
