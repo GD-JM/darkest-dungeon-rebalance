@@ -73,6 +73,7 @@ combat_skill: .id "flare" .level 1 .type "ranged" .atk 100% .dmg -100% .crit 0% 
 combat_skill: .id "flare" .level 2 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 4321 .target ~1234 .is_crit_valid False .ignore_stealth true  .effect "FlareClear 1" "FlareLight 3" "Destealth" "RB ARB FlareHealStress 3" .is_stall_invalidating false
 combat_skill: .id "flare" .level 3 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 4321 .target ~1234 .is_crit_valid False .ignore_stealth true  .effect "FlareClear 1" "FlareLight 4" "Destealth" "RB ARB FlareHealStress 4" .is_stall_invalidating false
 combat_skill: .id "flare" .level 4 .type "ranged" .atk 115% .dmg -100% .crit 0% .launch 4321 .target ~1234 .is_crit_valid False .ignore_stealth true  .effect "FlareClear 1" "FlareLight 5" "Destealth" "RB ARB FlareHealStress 5" .is_stall_invalidating false
+// ARB-006 [2026-10-06] Rallying Flare stress recovery guaranteed at all levels; keep other-ally amounts 3/3/4/4/5 and utility effects unchanged.
 // ARB-003 [trace 2026-10-05] Add an alternative party stress recovery option with stable low-level chance.
 tag: .id "heavy"
 tag: .id "non-religious"
