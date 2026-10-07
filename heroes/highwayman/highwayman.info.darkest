@@ -33,13 +33,13 @@ combat_skill: .id "wicked_slice" .level 4 .type "melee" .atk 110% .dmg 15% .crit
 // HWY-014 wicked_slice: dmg 0% -> +15% 복귀 (HWY-011 철회, 제작자 결정 명중 90 / 피해 +15)
 
 
-combat_skill: .id "pistol_shot" .level 0 .type "ranged" .atk 85% .dmg -15% .crit 7.5% .launch 432 .target 234 .is_crit_valid True  .effect "RB HWY HW Pistol Dmg Marked 1" .generation_guaranteed true
-combat_skill: .id "pistol_shot" .level 1 .type "ranged" .atk 90% .dmg -15% .crit 8.5% .launch 432 .target 234 .is_crit_valid True  .effect "RB HWY HW Pistol Dmg Marked 2"
-combat_skill: .id "pistol_shot" .level 2 .type "ranged" .atk 95% .dmg -15% .crit 9.5% .launch 432 .target 234 .is_crit_valid True  .effect "RB HWY HW Pistol Dmg Marked 3"
-combat_skill: .id "pistol_shot" .level 3 .type "ranged" .atk 100% .dmg -15% .crit 10.5% .launch 432 .target 234 .is_crit_valid True  .effect "RB HWY HW Pistol Dmg Marked 4"
-combat_skill: .id "pistol_shot" .level 4 .type "ranged" .atk 105% .dmg -15% .crit 11.5% .launch 432 .target 234 .is_crit_valid True  .effect "RB HWY HW Pistol Dmg Marked 5"
+combat_skill: .id "pistol_shot" .level 0 .type "ranged" .atk 90% .dmg -15% .crit 7.5% .launch 432 .target 234 .is_crit_valid True  .effect "RB HWY HW Pistol Dmg Marked 1" .generation_guaranteed true
+combat_skill: .id "pistol_shot" .level 1 .type "ranged" .atk 95% .dmg -15% .crit 8.5% .launch 432 .target 234 .is_crit_valid True  .effect "RB HWY HW Pistol Dmg Marked 2"
+combat_skill: .id "pistol_shot" .level 2 .type "ranged" .atk 100% .dmg -15% .crit 9.5% .launch 432 .target 234 .is_crit_valid True  .effect "RB HWY HW Pistol Dmg Marked 3"
+combat_skill: .id "pistol_shot" .level 3 .type "ranged" .atk 105% .dmg -15% .crit 10.5% .launch 432 .target 234 .is_crit_valid True  .effect "RB HWY HW Pistol Dmg Marked 4"
+combat_skill: .id "pistol_shot" .level 4 .type "ranged" .atk 110% .dmg -15% .crit 11.5% .launch 432 .target 234 .is_crit_valid True  .effect "RB HWY HW Pistol Dmg Marked 5"
 //명중 원거리 표준 90으로 변경 85 -> 90
-// HWY-012 pistol_shot: 명중 1렙 90 -> 85(바닐라). MARK-01 표식 피해 상향과 겹친 이중 상향 정리
+// HWY-015 pistol_shot: 명중 1렙 85 -> 90 복귀 (HWY-012 철회, 제작자 결정: 공격 기술 명중 90 정렬, 표식 피해 상향 유지)
 
 combat_skill: .id "point_blank_shot" .level 0 .type "ranged" .atk 90% .dmg 40% .crit 5% .move 2 0 .launch 1 .target 1 .is_crit_valid True  .effect "Push 2A"
 combat_skill: .id "point_blank_shot" .level 1 .type "ranged" .atk 95% .dmg 40% .crit 6% .move 2 0 .launch 1 .target 1 .is_crit_valid True  .effect "Push 2B"
