@@ -39,11 +39,12 @@ combat_skill: .id "blinding_gas" .level 3 .type "ranged" .atk 110% .dmg -100% .c
 combat_skill: .id "blinding_gas" .level 4 .type "ranged" .atk 115% .dmg -100% .crit 0% .per_battle_limit 3 .launch 43 .target ~34 .is_crit_valid False  .effect "Stun 5" .is_stall_invalidating false
 
 
-combat_skill: .id "incision" .level 0 .type "melee" .atk 85% .dmg 0% .crit 5% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 1"
-combat_skill: .id "incision" .level 1 .type "melee" .atk 90% .dmg 0% .crit 6% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 2"
-combat_skill: .id "incision" .level 2 .type "melee" .atk 95% .dmg 0% .crit 7% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 3"
-combat_skill: .id "incision" .level 3 .type "melee" .atk 100% .dmg 0% .crit 8% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 4"
-combat_skill: .id "incision" .level 4 .type "melee" .atk 105% .dmg 0% .crit 9% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 5"
+combat_skill: .id "incision" .level 0 .type "melee" .atk 90% .dmg 0% .crit 5% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 1"
+combat_skill: .id "incision" .level 1 .type "melee" .atk 95% .dmg 0% .crit 6% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 2"
+combat_skill: .id "incision" .level 2 .type "melee" .atk 100% .dmg 0% .crit 7% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 3"
+combat_skill: .id "incision" .level 3 .type "melee" .atk 105% .dmg 0% .crit 8% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 4"
+combat_skill: .id "incision" .level 4 .type "melee" .atk 110% .dmg 0% .crit 9% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 5"
+// PD-002 incision: 명중 1렙 85 -> 90. 다른 기술이 강해 절개를 고를 이유가 약함 -> 명중으로 선택지 보강 [제작자]
 
 
 combat_move_skill: .id "move" .level 0 .type "move" .move 1 1 .launch 4321
