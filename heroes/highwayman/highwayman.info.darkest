@@ -23,14 +23,14 @@ armour: .name "highwayman_armour_3" .def 25% .prot 0 .hp 38 .spd 0 .upgradeRequi
 armour: .name "highwayman_armour_4" .def 30% .prot 0 .hp 43 .spd 0 .upgradeRequirementCode 3
 
 
-combat_skill: .id "wicked_slice" .level 0 .type "melee" .atk 90% .dmg 0% .crit 5% .launch 21 .target 12 .is_crit_valid True 
-combat_skill: .id "wicked_slice" .level 1 .type "melee" .atk 95% .dmg 0% .crit 6% .launch 21 .target 12 .is_crit_valid True 
-combat_skill: .id "wicked_slice" .level 2 .type "melee" .atk 100% .dmg 0% .crit 7% .launch 21 .target 12 .is_crit_valid True 
-combat_skill: .id "wicked_slice" .level 3 .type "melee" .atk 105% .dmg 0% .crit 8% .launch 21 .target 12 .is_crit_valid True 
-combat_skill: .id "wicked_slice" .level 4 .type "melee" .atk 110% .dmg 0% .crit 9% .launch 21 .target 12 .is_crit_valid True 
+combat_skill: .id "wicked_slice" .level 0 .type "melee" .atk 90% .dmg 15% .crit 5% .launch 21 .target 12 .is_crit_valid True 
+combat_skill: .id "wicked_slice" .level 1 .type "melee" .atk 95% .dmg 15% .crit 6% .launch 21 .target 12 .is_crit_valid True 
+combat_skill: .id "wicked_slice" .level 2 .type "melee" .atk 100% .dmg 15% .crit 7% .launch 21 .target 12 .is_crit_valid True 
+combat_skill: .id "wicked_slice" .level 3 .type "melee" .atk 105% .dmg 15% .crit 8% .launch 21 .target 12 .is_crit_valid True 
+combat_skill: .id "wicked_slice" .level 4 .type "melee" .atk 110% .dmg 15% .crit 9% .launch 21 .target 12 .is_crit_valid True 
 // HWY-008 wicked_slice: 사용 321 -> 21(근접 사거리), 명중 1렙 85 -> 90, dmg 0% -> +15%(바닐라 원복)
 //표준으로 바꿈 데미지 보정 15 -> 0
-// HWY-011 wicked_slice: dmg +15% -> 0% (위 주석 의도 반영, 명중 90 유지. 대가 없던 명중 +5를 피해로 치름)
+// HWY-014 wicked_slice: dmg 0% -> +15% 복귀 (HWY-011 철회, 제작자 결정 명중 90 / 피해 +15)
 
 
 combat_skill: .id "pistol_shot" .level 0 .type "ranged" .atk 85% .dmg -15% .crit 7.5% .launch 432 .target 234 .is_crit_valid True  .effect "RB HWY HW Pistol Dmg Marked 1" .generation_guaranteed true
@@ -76,13 +76,14 @@ combat_skill: .id "take_aim" .level 4 .type "ranged" .atk 115% .dmg -70% .crit 1
 // HWY-004 take_aim: Hwy Riposte, 전투당 1회 제거, dmg -80% -> -70%, 대상 234 -> 1234
 
 
-combat_skill: .id "duelist_advance" .level 0 .type "melee" .atk 95% .dmg -20% .crit 5% .move 0 1 .launch 432 .target 123 .is_crit_valid True  .effect "RB HWY Tracking Buff 1"
-combat_skill: .id "duelist_advance" .level 1 .type "melee" .atk 100% .dmg -20% .crit 6% .move 0 1 .launch 432 .target 123 .is_crit_valid True  .effect "RB HWY Tracking Buff 2"
-combat_skill: .id "duelist_advance" .level 2 .type "melee" .atk 105% .dmg -20% .crit 7% .move 0 1 .launch 432 .target 123 .is_crit_valid True  .effect "RB HWY Tracking Buff 3"
-combat_skill: .id "duelist_advance" .level 3 .type "melee" .atk 110% .dmg -20% .crit 8% .move 0 1 .launch 432 .target 123 .is_crit_valid True  .effect "RB HWY Tracking Buff 4"
-combat_skill: .id "duelist_advance" .level 4 .type "melee" .atk 115% .dmg -20% .crit 9% .move 0 1 .launch 432 .target 123 .is_crit_valid True  .effect "RB HWY Tracking Buff 5"
+combat_skill: .id "duelist_advance" .level 0 .type "melee" .atk 90% .dmg -40% .crit 5% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "RB HWY Tracking Buff 1"
+combat_skill: .id "duelist_advance" .level 1 .type "melee" .atk 95% .dmg -40% .crit 6% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "RB HWY Tracking Buff 2"
+combat_skill: .id "duelist_advance" .level 2 .type "melee" .atk 100% .dmg -40% .crit 7% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "RB HWY Tracking Buff 3"
+combat_skill: .id "duelist_advance" .level 3 .type "melee" .atk 105% .dmg -40% .crit 8% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "RB HWY Tracking Buff 4"
+combat_skill: .id "duelist_advance" .level 4 .type "melee" .atk 110% .dmg -40% .crit 9% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "RB HWY Tracking Buff 5"
 // HWY-005 duelist_advance: 명중 1렙 90 -> 95, dmg -20% 유지 (반격 상실 -47 / 축소 버프 +11.5 보상)
 // HWY-005 duelist_advance: Hwy Riposte -> Tracking Buff(축소), dmg -20% -> -40%
+// HWY-013 duelist_advance: 명중 1렙 95 -> 90, dmg -20% -> -40%, 대상 123 -> 12(3열 도달 제거), Tracking Buff 바닐라 수치 복원(3턴 지속 유지)
 
 
 combat_skill: .id "opened_vein" .level 0 .type "melee" .atk 95% .dmg -40% .crit 8% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 1" "HW Open Vein Bleed Debuff 1" "HW Open Vein SPD Debuff 1"

@@ -3,36 +3,41 @@
 
 // edited vanilla effect (from effects/base.effects.darkest)
 effect: .name "RB HWY HW Pistol Dmg Marked 1"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 40%	.damage_high_multiply 40%	.on_hit true .on_miss false
-// HWY-009 [trace 2026-10-05] Support the author-set ranged accuracy and secondary marked-target role. Effect: RB HWY HW Pistol Dmg Marked 1.
+// HWY-009 [trace 2026-10-05] Support the author-set ranged accuracy and secondary marked-target role. Effect: HW Pistol Dmg Marked 1.
 // edited vanilla effect (from effects/base.effects.darkest)
 effect: .name "RB HWY HW Pistol Dmg Marked 2"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 45%	.damage_high_multiply 45%	.on_hit true .on_miss false
-// HWY-009 [trace 2026-10-05] Support the author-set ranged accuracy and secondary marked-target role. Effect: RB HWY HW Pistol Dmg Marked 2.
+// HWY-009 [trace 2026-10-05] Support the author-set ranged accuracy and secondary marked-target role. Effect: HW Pistol Dmg Marked 2.
 // edited vanilla effect (from effects/base.effects.darkest)
 effect: .name "RB HWY HW Pistol Dmg Marked 3"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 50%	.damage_high_multiply 50%	.on_hit true .on_miss false
-// HWY-009 [trace 2026-10-05] Support the author-set ranged accuracy and secondary marked-target role. Effect: RB HWY HW Pistol Dmg Marked 3.
+// HWY-009 [trace 2026-10-05] Support the author-set ranged accuracy and secondary marked-target role. Effect: HW Pistol Dmg Marked 3.
 // edited vanilla effect (from effects/base.effects.darkest)
 effect: .name "RB HWY HW Pistol Dmg Marked 4"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 55%	.damage_high_multiply 55%	.on_hit true .on_miss false
-// HWY-009 [trace 2026-10-05] Support the author-set ranged accuracy and secondary marked-target role. Effect: RB HWY HW Pistol Dmg Marked 4.
+// HWY-009 [trace 2026-10-05] Support the author-set ranged accuracy and secondary marked-target role. Effect: HW Pistol Dmg Marked 4.
 // edited vanilla effect (from effects/base.effects.darkest)
 effect: .name "RB HWY HW Pistol Dmg Marked 5"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 60%	.damage_high_multiply 60%	.on_hit true .on_miss false
-// HWY-009 [trace 2026-10-05] Support the author-set ranged accuracy and secondary marked-target role. Effect: RB HWY HW Pistol Dmg Marked 5.
+// HWY-009 [trace 2026-10-05] Support the author-set ranged accuracy and secondary marked-target role. Effect: HW Pistol Dmg Marked 5.
 // edited vanilla effect (from effects/base.effects.darkest)
-effect: .name "RB HWY Tracking Buff 1" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 3%  .crit_chance_add 3% .damage_low_multiply 6% .damage_high_multiply 6%  .on_hit true .on_miss true .duration 3
+effect: .name "RB HWY Tracking Buff 1" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 6%  .crit_chance_add 4% .damage_low_multiply 12% .damage_high_multiply 12%  .on_hit true .on_miss true .duration 3
+// HWY-013 Restore vanilla Tracking Buff values (acc/crit/dmg); keep the 3-turn duration from HWY-010.
 // HWY-010 [2026-10-06] Limit Advance self setup to three turns instead of combat end; preserve accuracy, critical and damage bonuses.
-// HWY-005 [trace 2026-10-05] Use advance for smaller self setup after transferring riposte to Tracking Shot. Effect: RB HWY Tracking Buff 1.
+// HWY-005 [trace 2026-10-05] Use advance for smaller self setup after transferring riposte to Tracking Shot. Effect: Tracking Buff 1.
 // edited vanilla effect (from effects/base.effects.darkest)
-effect: .name "RB HWY Tracking Buff 2" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 3%  .crit_chance_add 3% .damage_low_multiply 7% .damage_high_multiply 7%  .on_hit true .on_miss true .duration 3
+effect: .name "RB HWY Tracking Buff 2" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 7%  .crit_chance_add 5% .damage_low_multiply 14% .damage_high_multiply 14%  .on_hit true .on_miss true .duration 3
+// HWY-013 Restore vanilla Tracking Buff values (acc/crit/dmg); keep the 3-turn duration from HWY-010.
 // HWY-010 [2026-10-06] Limit Advance self setup to three turns instead of combat end; preserve accuracy, critical and damage bonuses.
-// HWY-005 [trace 2026-10-05] Use advance for smaller self setup after transferring riposte to Tracking Shot. Effect: RB HWY Tracking Buff 2.
+// HWY-005 [trace 2026-10-05] Use advance for smaller self setup after transferring riposte to Tracking Shot. Effect: Tracking Buff 2.
 // edited vanilla effect (from effects/base.effects.darkest)
-effect: .name "RB HWY Tracking Buff 3" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 4%  .crit_chance_add 4% .damage_low_multiply 8% .damage_high_multiply 8%  .on_hit true .on_miss true .duration 3
+effect: .name "RB HWY Tracking Buff 3" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 8%  .crit_chance_add 6% .damage_low_multiply 16% .damage_high_multiply 16%  .on_hit true .on_miss true .duration 3
+// HWY-013 Restore vanilla Tracking Buff values (acc/crit/dmg); keep the 3-turn duration from HWY-010.
 // HWY-010 [2026-10-06] Limit Advance self setup to three turns instead of combat end; preserve accuracy, critical and damage bonuses.
-// HWY-005 [trace 2026-10-05] Use advance for smaller self setup after transferring riposte to Tracking Shot. Effect: RB HWY Tracking Buff 3.
+// HWY-005 [trace 2026-10-05] Use advance for smaller self setup after transferring riposte to Tracking Shot. Effect: Tracking Buff 3.
 // edited vanilla effect (from effects/base.effects.darkest)
-effect: .name "RB HWY Tracking Buff 4" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 4%  .crit_chance_add 4% .damage_low_multiply 9% .damage_high_multiply 9%  .on_hit true .on_miss true .duration 3
+effect: .name "RB HWY Tracking Buff 4" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 9%  .crit_chance_add 7% .damage_low_multiply 18% .damage_high_multiply 18%  .on_hit true .on_miss true .duration 3
+// HWY-013 Restore vanilla Tracking Buff values (acc/crit/dmg); keep the 3-turn duration from HWY-010.
 // HWY-010 [2026-10-06] Limit Advance self setup to three turns instead of combat end; preserve accuracy, critical and damage bonuses.
-// HWY-005 [trace 2026-10-05] Use advance for smaller self setup after transferring riposte to Tracking Shot. Effect: RB HWY Tracking Buff 4.
+// HWY-005 [trace 2026-10-05] Use advance for smaller self setup after transferring riposte to Tracking Shot. Effect: Tracking Buff 4.
 // edited vanilla effect (from effects/base.effects.darkest)
-effect: .name "RB HWY Tracking Buff 5" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 5% .crit_chance_add 5% .damage_low_multiply 10% .damage_high_multiply 10%  .on_hit true .on_miss true .duration 3
+effect: .name "RB HWY Tracking Buff 5" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 10% .crit_chance_add 8% .damage_low_multiply 20% .damage_high_multiply 20%  .on_hit true .on_miss true .duration 3
+// HWY-013 Restore vanilla Tracking Buff values (acc/crit/dmg); keep the 3-turn duration from HWY-010.
 // HWY-010 [2026-10-06] Limit Advance self setup to three turns instead of combat end; preserve accuracy, critical and damage bonuses.
-// HWY-005 [trace 2026-10-05] Use advance for smaller self setup after transferring riposte to Tracking Shot. Effect: RB HWY Tracking Buff 5.
+// HWY-005 [trace 2026-10-05] Use advance for smaller self setup after transferring riposte to Tracking Shot. Effect: Tracking Buff 5.
