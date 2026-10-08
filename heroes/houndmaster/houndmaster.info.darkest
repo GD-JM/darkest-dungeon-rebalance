@@ -1,4 +1,5 @@
 resistances: .stun 40% .poison 30% .bleed 30% .disease 30% .move 40% .debuff 30% .death_blow 67% .trap 40%
+// HM-017 [trace 2026-10-05] Remove undocumented resistance advantages using the existing lore comparison.
 // HM-017 저항: 중독 40 -> 30, 출혈 40 -> 30 (기준값 복귀). 설정 근거 없는 편차 제거. 노상강도는 "두껍게 덧댄 외투... 칼도 잘 박히지 않지만, 받아내기보다는 회피 선호"로 출혈 30인데, 같은 문장 구조의 조련사("낡은 제복... 받아내기보다는 아예 회피 선호")가 40인 건 모순. 함정 40(+30)은 야영 "늑대개를 정찰에 내보내거나 경비로 세울 수 있습니다"로 정당화되어 유지. 저항 총합 260(1위) -> 240. analysis/resistances.md
 crit: .effects "on_crit_bleedchance"
 weapon: .name "houndmaster_weapon_0" .atk 0% .dmg 4 7 .crit 4% .spd 5
@@ -21,6 +22,7 @@ combat_skill: .id "hounds_rush" .level 2 .type "ranged" .atk 95% .dmg -25% .crit
 combat_skill: .id "hounds_rush" .level 3 .type "ranged" .atk 100% .dmg -25% .crit 8% .launch 4321 .target 1234 .is_crit_valid True  .effect "Beast Killer 4" "HM Dmg Marked 1" "RB HM Hound Bleed 4"
 combat_skill: .id "hounds_rush" .level 4 .type "ranged" .atk 105% .dmg -25% .crit 9% .launch 4321 .target 1234 .is_crit_valid True  .effect "Beast Killer 5" "HM Dmg Marked 1" "RB HM Hound Bleed 5"
 // HM-019 [2026-10-06] Target all enemy ranks from all ally ranks; retain damage -25 and flat marked bonus +60 to favor versatility and support over sustained damage. Supersedes HM-011 target234.
+// HM-010 HM-011 HM-016 HM-018 [trace 2026-10-05] Retain conditional mark/beast specialization while reducing unconditional and bleed output.
 // HM-016 hounds_rush: 피해 0% -> -25%. 표식(+60%)+야수(+35%) 중첩 시 실전가 226%(조련사 1위). 조정 후 조건 없을 때 92%(평타 수준), 조건 충족 시 188%로 조건부 아키타입을 선명하게
 // HM-011 사냥개 돌진: 사용 432 -> 4321(1열 추가), 대상 1234 -> 234(1열 제거). 설정 "후열에 접근해" / 1열에서도 쓰되 1열이 메인이 되지 않게. 출혈 너프(HM-010)와 상쇄되어 피해 보정 0% 유지
 // MARK-01 hounds_rush: 표식 피해 60~100 -> 40~60 (RB HM Dmg Marked). 야수 특효+출혈과 중복, 조련사 강함 2위
@@ -31,6 +33,7 @@ combat_skill: .id "hounds_harry" .level 1 .type "ranged" .atk 95% .dmg -70% .cri
 combat_skill: .id "hounds_harry" .level 2 .type "ranged" .atk 100% .dmg -70% .crit -3% .launch 432 .target ~1234 .is_crit_valid True  .effect "Harry Bleed 3"
 combat_skill: .id "hounds_harry" .level 3 .type "ranged" .atk 105% .dmg -70% .crit -2% .launch 432 .target ~1234 .is_crit_valid True  .effect "Harry Bleed 4"
 combat_skill: .id "hounds_harry" .level 4 .type "ranged" .atk 110% .dmg -70% .crit -1% .launch 432 .target ~1234 .is_crit_valid True  .effect "Harry Bleed 5"
+// HM-012 [trace 2026-10-05] Support the rear AOE bleed option after removing front-rank launch.
 // HM-012 사냥개 습격: 사용 4321 -> 432(1열 제거, 2열 메인 구조), 피해 -75% -> -70%. 광역 지속 피해는 전투 2.55라운드 안에 40%만 회수되어 R-STRAT-01에 역행 -> 실사용률 최하위. 사용 열 축소의 대가로 화력 보상
 // 명중 85 ->90 , 사유 : 출혈 기술 표준치가 90임
 
@@ -40,10 +43,13 @@ combat_skill: .id "whistle" .level 1 .type "ranged" .atk 105% .dmg -100% .crit 0
 combat_skill: .id "whistle" .level 2 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 4321 .target 1234 .is_crit_valid False  .effect "HM Mark Target" "Hound Debuff 3" .is_stall_invalidating false
 combat_skill: .id "whistle" .level 3 .type "ranged" .atk 115% .dmg -100% .crit 0% .launch 4321 .target 1234 .is_crit_valid False  .effect "HM Mark Target" "Hound Debuff 4" .is_stall_invalidating false
 combat_skill: .id "whistle" .level 4 .type "ranged" .atk 120% .dmg -100% .crit 0% .launch 4321 .target 1234 .is_crit_valid False  .effect "HM Mark Target" "Hound Debuff 5" .is_stall_invalidating false
+
+
 combat_skill: .id "howl" .level 0 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 43 .target @~1234 .is_crit_valid True  .effect "RB HM Hound Howl 1" .is_stall_invalidating false
 combat_skill: .id "howl" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 43 .target @~1234 .is_crit_valid True  .effect "RB HM Hound Howl 2" .is_stall_invalidating false
 combat_skill: .id "howl" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 43 .target @~1234 .is_crit_valid True  .effect "RB HM Hound Howl 3" .is_stall_invalidating false
 combat_skill: .id "howl" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 43 .target @~1234 .is_crit_valid True  .effect "RB HM Hound Howl 4" .is_stall_invalidating false
+// HM-014 [trace 2026-10-05] Stabilize early stress recovery without raising the top-level effect.
 combat_skill: .id "howl" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 43 .target @~1234 .is_crit_valid True  .effect "Hound Howl 5" .is_stall_invalidating false
 
 
@@ -62,6 +68,7 @@ combat_skill: .id "lick_wounds" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% 
 combat_skill: .id "lick_wounds" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Lick Wounds 3" .is_stall_invalidating false
 combat_skill: .id "lick_wounds" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Lick Wounds 4" .is_stall_invalidating false
 combat_skill: .id "lick_wounds" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Lick Wounds 5" .is_stall_invalidating false
+// HM-015 [trace 2026-10-05] Allow self recovery in the front rank where incoming damage is frequent.
 // HM-015 상처 핥기: 사용 432 -> 4321. 가장 많이 맞는 1열에서 자가 회복을 못 쓰는 구조 해소. 조련사 1열 사용 가능 기술 4개 -> 평균(4.7) 수준
 
 
@@ -70,6 +77,7 @@ combat_skill: .id "blackjack" .level 1 .type "melee" .atk 95% .dmg -80% .crit 6%
 combat_skill: .id "blackjack" .level 2 .type "melee" .atk 100% .dmg -80% .crit 7% .launch 21 .target 123 .is_crit_valid True  .effect "Stun 3"
 combat_skill: .id "blackjack" .level 3 .type "melee" .atk 105% .dmg -80% .crit 8% .launch 21 .target 123 .is_crit_valid True  .effect "Stun 4"
 combat_skill: .id "blackjack" .level 4 .type "melee" .atk 110% .dmg -80% .crit 9% .launch 21 .target 123 .is_crit_valid True  .effect "Stun 5"
+// HM-013 [trace 2026-10-05] Retain rank-3 control while paying with accuracy, damage and the normal stun tier.
 // HM-013 둔기 강타: 1렙 명중 95 -> 90(표준), 피해 -65% -> -80%. 대상 1/2/3 유지. 설정 "곤봉은 효과적으로 기절시키지만 진짜 치명타는 사냥개가 먹입니다" -> 3열 도달과 기절은 남기고 화력만 제거
 
 

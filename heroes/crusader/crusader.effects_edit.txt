@@ -47,28 +47,37 @@ effect: .name "Unholy Killer 5" .target "performer" .chance 100% .curio_result_t
 //# 레벨별 효과: 1레벨 Stun 1 | 2레벨 Stun 2 | 3레벨 Stun 3 | 4레벨 Stun 4 | 5레벨 Stun 5
 effect: .name "Hero Strong Stun 1" .target "target" .curio_result_type "negative" .chance 110% .stun 1	.on_hit true .on_miss false .queue true
 // CRU-005 [2026-10-06] Match the currently loaded vanilla effect; archive pending values so reapplying cannot silently alter stun or stress recovery.
+// CRU-003 [trace 2026-10-05] Document pending edit only: name says strong but chance remains normal-tier; do not auto-apply. Intent is stronger front stun with damage cost.
 //#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 결투가, 중보병, 역병 의사) / 몬스터 기술 13곳. 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Hero Strong Stun 2" .target "target" .curio_result_type "negative" .chance 120% .stun 1	.on_hit true .on_miss false .queue true
 // CRU-005 [2026-10-06] Match the currently loaded vanilla effect; archive pending values so reapplying cannot silently alter stun or stress recovery.
+// CRU-003 [trace 2026-10-05] Document pending edit only: name says strong but chance remains normal-tier; do not auto-apply. Intent is stronger front stun with damage cost.
 //#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 결투가, 중보병, 역병 의사) / 몬스터 기술 5곳. 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Hero Strong Stun 3" .target "target" .curio_result_type "negative" .chance 130% .stun 1	.on_hit true .on_miss false .queue true
 // CRU-005 [2026-10-06] Match the currently loaded vanilla effect; archive pending values so reapplying cannot silently alter stun or stress recovery.
+// CRU-003 [trace 2026-10-05] Document pending edit only: name says strong but chance remains normal-tier; do not auto-apply. Intent is stronger front stun with damage cost.
 //#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 결투가, 중보병, 역병 의사) / 몬스터 기술 14곳. 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Hero Strong Stun 4" .target "target" .curio_result_type "negative" .chance 140% .stun 1	.on_hit true .on_miss false .queue true
 // CRU-005 [2026-10-06] Match the currently loaded vanilla effect; archive pending values so reapplying cannot silently alter stun or stress recovery.
+// CRU-003 [trace 2026-10-05] Document pending edit only: name says strong but chance remains normal-tier; do not auto-apply. Intent is stronger front stun with damage cost.
 //#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 결투가, 중보병, 역병 의사) / 몬스터 기술 1곳. 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Hero Strong Stun 5" .target "target" .curio_result_type "negative" .chance 150% .stun 1	.on_hit true .on_miss false .queue true
 // CRU-005 [2026-10-06] Match the currently loaded vanilla effect; archive pending values so reapplying cannot silently alter stun or stress recovery.
+// CRU-003 [trace 2026-10-05] Document pending edit only: name says strong but chance remains normal-tier; do not auto-apply. Intent is stronger front stun with damage cost.
 //#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 결투가, 중보병, 역병 의사) / 몬스터 기술 14곳. 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
+
+// 바꿈 스트롱 스턴으로 왜냐하면 3열 공격이 안돼서 쌔야함. 
 
 //# ======================================================================
 //# 기술: 신앙의 방패 (bulwark_of_faith)
 //# 레벨별 효과: 1레벨 Crusader Bulwark 1, Crusader Bulwark Mark, Crusader Bulwark Light | 2레벨 Crusader Bulwark 2, Crusader Bulwark Mark, Crusader Bulwark Light | 3레벨 Crusader Bulwark 3, Crusader Bulwark Mark, Crusader Bulwark Light | 4레벨 Crusader Bulwark 4, Crusader Bulwark Mark, Crusader Bulwark Light | 5레벨 Crusader Bulwark 5, Crusader Bulwark Mark, Crusader Bulwark Light
+
+
 effect: .name "Crusader Bulwark 1" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .protection_rating_add 20%	.on_hit true .on_miss true .queue true
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Crusader Bulwark Mark" .target "performer" .curio_result_type "positive" .chance 100% .tag 1 .duration 1 .buff_duration_type combat_end	.on_hit true .on_miss true .queue true
@@ -103,27 +112,33 @@ effect: .name "Crusader Light 1" .target "global" .chance 100% .curio_result_typ
 effect: .name "Crusader HealStress 2" .target "target" .curio_result_type "positive" .chance 100% .healstress 6		.on_hit true .on_miss false .queue true
 // CRU-006 [2026-10-06] Approved Inspiring Cry level2: stress 5 -> 6; diversify standalone stress support. Supersedes CRU-005 sync and CRU-004 pending status.
 // CRU-005 [2026-10-06] Match the currently loaded vanilla effect; archive pending values so reapplying cannot silently alter stun or stress recovery.
+// CRU-004 [trace 2026-10-05] Pending edit only: improve standalone stress recovery supply; do not auto-apply.
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Crusader Light 2" .target "global" .chance 100% .curio_result_type "positive" .torch_increase 6	.on_hit true .on_miss true .apply_once true .queue true
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Crusader HealStress 3" .target "target" .curio_result_type "positive" .chance 100% .healstress 7		.on_hit true .on_miss false .queue true
 // CRU-006 [2026-10-06] Approved Inspiring Cry level3: stress 6 -> 7; diversify standalone stress support. Supersedes CRU-005 sync and CRU-004 pending status.
 // CRU-005 [2026-10-06] Match the currently loaded vanilla effect; archive pending values so reapplying cannot silently alter stun or stress recovery.
+// CRU-004 [trace 2026-10-05] Pending edit only: improve standalone stress recovery supply; do not auto-apply.
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Crusader Light 3" .target "global" .chance 100% .curio_result_type "positive" .torch_increase 7	.on_hit true .on_miss true .apply_once true .queue true
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Crusader HealStress 4" .target "target" .curio_result_type "positive" .chance 100% .healstress 8		.on_hit true .on_miss false .queue true
 // CRU-006 [2026-10-06] Approved Inspiring Cry level4: stress 7 -> 8; diversify standalone stress support. Supersedes CRU-005 sync and CRU-004 pending status.
 // CRU-005 [2026-10-06] Match the currently loaded vanilla effect; archive pending values so reapplying cannot silently alter stun or stress recovery.
+// CRU-004 [trace 2026-10-05] Pending edit only: improve standalone stress recovery supply; do not auto-apply.
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Crusader Light 4" .target "global" .chance 100% .curio_result_type "positive" .torch_increase 8	.on_hit true .on_miss true .apply_once true .queue true
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Crusader HealStress 5" .target "target" .curio_result_type "positive" .chance 100% .healstress 9		.on_hit true .on_miss false .queue true
 // CRU-006 [2026-10-06] Approved Inspiring Cry level5: stress 8 -> 9; diversify standalone stress support. Supersedes CRU-005 sync and CRU-004 pending status.
 // CRU-005 [2026-10-06] Match the currently loaded vanilla effect; archive pending values so reapplying cannot silently alter stun or stress recovery.
+// CRU-004 [trace 2026-10-05] Pending edit only: improve standalone stress recovery supply; do not auto-apply.
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Crusader Light 5" .target "global" .chance 100% .curio_result_type "positive" .torch_increase 10	.on_hit true .on_miss true .apply_once true .queue true
 //#   원본 위치: effects/base.effects.darkest
+
+// 수정함 55678 -> 56789로 이유는 스트레스힐러로서 단독으로 쓰일 수 있을 정도가 되어야함. 왜냐하면 스트레스 회복에 대한 수요는 어마어마한데 공급이 광대만으로 한정됨. 다른 스트레스힐러는 그만큼의 수요를 못 채워줌. 공급이 낮아서. 그래서 다른 스트레스힐러도 공급량을 늘려야, 조합의 다양성이 커짐.
 
 //# ======================================================================
 //# 기술 외 효과 (치명타 발동, 자세·모드 등)

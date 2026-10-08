@@ -28,6 +28,7 @@ combat_skill: .id "wicked_slice" .level 1 .type "melee" .atk 95% .dmg 15% .crit 
 combat_skill: .id "wicked_slice" .level 2 .type "melee" .atk 100% .dmg 15% .crit 7% .launch 21 .target 12 .is_crit_valid True 
 combat_skill: .id "wicked_slice" .level 3 .type "melee" .atk 105% .dmg 15% .crit 8% .launch 21 .target 12 .is_crit_valid True 
 combat_skill: .id "wicked_slice" .level 4 .type "melee" .atk 110% .dmg 15% .crit 9% .launch 21 .target 12 .is_crit_valid True 
+// HWY-008 [trace 2026-10-05] Keep a front melee alternative with the latest author-set accuracy and damage budget.
 // HWY-008 wicked_slice: 사용 321 -> 21(근접 사거리), 명중 1렙 85 -> 90, dmg 0% -> +15%(바닐라 원복)
 //표준으로 바꿈 데미지 보정 15 -> 0
 // HWY-014 wicked_slice: dmg 0% -> +15% 복귀 (HWY-011 철회, 제작자 결정 명중 90 / 피해 +15)
@@ -38,6 +39,7 @@ combat_skill: .id "pistol_shot" .level 1 .type "ranged" .atk 95% .dmg -15% .crit
 combat_skill: .id "pistol_shot" .level 2 .type "ranged" .atk 100% .dmg -15% .crit 9.5% .launch 432 .target 234 .is_crit_valid True  .effect "RB HWY HW Pistol Dmg Marked 3"
 combat_skill: .id "pistol_shot" .level 3 .type "ranged" .atk 105% .dmg -15% .crit 10.5% .launch 432 .target 234 .is_crit_valid True  .effect "RB HWY HW Pistol Dmg Marked 4"
 combat_skill: .id "pistol_shot" .level 4 .type "ranged" .atk 110% .dmg -15% .crit 11.5% .launch 432 .target 234 .is_crit_valid True  .effect "RB HWY HW Pistol Dmg Marked 5"
+// HWY-009 [trace 2026-10-05] Support the author-set ranged accuracy and secondary marked-target role.
 //명중 원거리 표준 90으로 변경 85 -> 90
 // HWY-015 pistol_shot: 명중 1렙 85 -> 90 복귀 (HWY-012 철회, 제작자 결정: 공격 기술 명중 90 정렬, 표식 피해 상향 유지)
 
@@ -46,6 +48,7 @@ combat_skill: .id "point_blank_shot" .level 1 .type "ranged" .atk 95% .dmg 40% .
 combat_skill: .id "point_blank_shot" .level 2 .type "ranged" .atk 100% .dmg 40% .crit 7% .move 2 0 .launch 1 .target 1 .is_crit_valid True  .effect "Push 2C"
 combat_skill: .id "point_blank_shot" .level 3 .type "ranged" .atk 105% .dmg 40% .crit 8% .move 2 0 .launch 1 .target 1 .is_crit_valid True  .effect "Push 2D"
 combat_skill: .id "point_blank_shot" .level 4 .type "ranged" .atk 110% .dmg 40% .crit 9% .move 2 0 .launch 1 .target 1 .is_crit_valid True  .effect "Push 2E"
+// HWY-001 [trace 2026-10-05] Limit easy repeat cycles through two-rank retreat while preserving the heavy shot feel.
 //명중 95, 아무런 패널티 없는 스킬데미지 50, 높은 크리 확률 명백한 사기스킬임 사실 떡너프가 맞으나, 순수 성능 너프를 때리면 유저 체감이 불쾌해짐. 
 //그래서 연속해서 사용하기 어렵게 변경하고 대신에, 사용 체감 늘리는 부분도 만듦
 //도굴꾼 돌진과 역으로 대칭 도굴꾼으로 앞으로 2칸 전진, 노상은 뒤로 2칸 후퇴. 대신에 상대 밀쳐내기도 2칸으로 버프.    
@@ -59,6 +62,7 @@ combat_skill: .id "grape_shot_blast" .level 1 .type "ranged" .atk 95% .dmg -70% 
 combat_skill: .id "grape_shot_blast" .level 2 .type "ranged" .atk 100% .dmg -70% .crit -7% .launch 23 .target ~123 .is_crit_valid True  .effect "Grapeshot Vulnerability 3"
 combat_skill: .id "grape_shot_blast" .level 3 .type "ranged" .atk 105% .dmg -70% .crit -6% .launch 23 .target ~123 .is_crit_valid True  .effect "Grapeshot Vulnerability 4"
 combat_skill: .id "grape_shot_blast" .level 4 .type "ranged" .atk 110% .dmg -70% .crit -5% .launch 23 .target ~123 .is_crit_valid True  .effect "Grapeshot Vulnerability 5"
+// HWY-007 [trace 2026-10-05] Trade damage for accurate critical-vulnerability setup instead of repeated AOE damage.
 // HWY-007 grape_shot_blast: 명중 1렙 75 -> 90, dmg -75% -> -70% (치명타 -5 유지 = 설계된 값, P-21)
 //돌파와 직접 비교 기술 치명타 낮은것과 약화거는 것을 동률이라 보고
 //명중을 높이는 대신 데미지를 깎겠다. 데미지 깎는 이유 -> 포도탄 반복하면서 치명타 확률만 높이는 편법 배제?
@@ -68,12 +72,13 @@ combat_skill: .id "grape_shot_blast" .level 4 .type "ranged" .atk 110% .dmg -70%
 combat_move_skill: .id "move" .level 0 .type "move" .move 2 2 .launch 4321
 
 
-combat_skill: .id "take_aim" .level 0 .type "ranged" .atk 95% .dmg -70% .crit 0% .launch 4321 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "Hwy Riposte 1" "Destealth"
-combat_skill: .id "take_aim" .level 1 .type "ranged" .atk 100% .dmg -70% .crit 0% .launch 4321 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "Hwy Riposte 2" "Destealth"
-combat_skill: .id "take_aim" .level 2 .type "ranged" .atk 105% .dmg -70% .crit 0.5% .launch 4321 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "Hwy Riposte 3" "Destealth"
-combat_skill: .id "take_aim" .level 3 .type "ranged" .atk 110% .dmg -70% .crit 0.5% .launch 4321 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "Hwy Riposte 4" "Destealth"
-combat_skill: .id "take_aim" .level 4 .type "ranged" .atk 115% .dmg -70% .crit 1% .launch 4321 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "Hwy Riposte 5" "Destealth"
-// HWY-004 take_aim: Hwy Riposte, 전투당 1회 제거, dmg -80% -> -70%, 대상 234 -> 1234
+combat_skill: .id "take_aim" .level 0 .type "ranged" .atk 95% .dmg -75% .crit 0% .launch 4321 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "Hwy Riposte 1" "Destealth"
+combat_skill: .id "take_aim" .level 1 .type "ranged" .atk 100% .dmg -75% .crit 0% .launch 4321 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "Hwy Riposte 2" "Destealth"
+combat_skill: .id "take_aim" .level 2 .type "ranged" .atk 105% .dmg -75% .crit 0.5% .launch 4321 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "Hwy Riposte 3" "Destealth"
+combat_skill: .id "take_aim" .level 3 .type "ranged" .atk 110% .dmg -75% .crit 0.5% .launch 4321 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "Hwy Riposte 4" "Destealth"
+combat_skill: .id "take_aim" .level 4 .type "ranged" .atk 115% .dmg -75% .crit 1% .launch 4321 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "Hwy Riposte 5" "Destealth"
+// HWY-004 [trace 2026-10-05] Enable stationary ranged riposte play instead of tying riposte to melee advance.
+// HWY-004 take_aim: Hwy Riposte, 전투당 1회 제거, dmg -80% -> -75% ->중보병꺼랑 데미지 바꿈 대상 234 -> 1234
 
 
 combat_skill: .id "duelist_advance" .level 0 .type "melee" .atk 90% .dmg -40% .crit 5% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "RB HWY Tracking Buff 1"
@@ -81,6 +86,7 @@ combat_skill: .id "duelist_advance" .level 1 .type "melee" .atk 95% .dmg -40% .c
 combat_skill: .id "duelist_advance" .level 2 .type "melee" .atk 100% .dmg -40% .crit 7% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "RB HWY Tracking Buff 3"
 combat_skill: .id "duelist_advance" .level 3 .type "melee" .atk 105% .dmg -40% .crit 8% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "RB HWY Tracking Buff 4"
 combat_skill: .id "duelist_advance" .level 4 .type "melee" .atk 110% .dmg -40% .crit 9% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "RB HWY Tracking Buff 5"
+// HWY-005 [trace 2026-10-05] Use advance for smaller self setup after transferring riposte to Tracking Shot.
 // HWY-005 duelist_advance: 명중 1렙 90 -> 95, dmg -20% 유지 (반격 상실 -47 / 축소 버프 +11.5 보상)
 // HWY-005 duelist_advance: Hwy Riposte -> Tracking Buff(축소), dmg -20% -> -40%
 // HWY-013 duelist_advance: 명중 1렙 95 -> 90, dmg -20% -> -40%, 대상 123 -> 12(3열 도달 제거), Tracking Buff 바닐라 수치 복원(3턴 지속 유지)
@@ -91,6 +97,7 @@ combat_skill: .id "opened_vein" .level 1 .type "melee" .atk 100% .dmg -40% .crit
 combat_skill: .id "opened_vein" .level 2 .type "melee" .atk 105% .dmg -40% .crit 10% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 3" "HW Open Vein Bleed Debuff 3" "HW Open Vein SPD Debuff 3"
 combat_skill: .id "opened_vein" .level 3 .type "melee" .atk 110% .dmg -40% .crit 11% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 4" "HW Open Vein Bleed Debuff 4" "HW Open Vein SPD Debuff 4"
 combat_skill: .id "opened_vein" .level 4 .type "melee" .atk 115% .dmg -40% .crit 12% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 5" "HW Open Vein Bleed Debuff 5" "HW Open Vein SPD Debuff 5"
+// HWY-006 [trace 2026-10-05] Retain bleed/debuff identity while recording the latest author-set accuracy/damage trade.
 // HWY-006 opened_vein: 치명타 보정 1렙 +0 -> +8, dmg -15% -> -40% (명중 1렙 95, 약화 2개 유지)
 //명중 95 -> 90 , 출혈 기술은 5 올리는 게 국룰, 약화 까지 달려서 10 올라간 거 같은 데 그러면 데미지를 까야함.
 //데미지 15 -> 25 로 바꿈 대신 명중 5만 깎음. 명중 안 깎으면 데미지 35까지 내려야할듯?
