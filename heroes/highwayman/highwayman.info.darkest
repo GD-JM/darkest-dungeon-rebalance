@@ -81,11 +81,12 @@ combat_skill: .id "take_aim" .level 4 .type "ranged" .atk 115% .dmg -75% .crit 1
 // HWY-004 take_aim: Hwy Riposte, 전투당 1회 제거, dmg -80% -> -75% ->중보병꺼랑 데미지 바꿈 대상 234 -> 1234
 
 
-combat_skill: .id "duelist_advance" .level 0 .type "melee" .atk 90% .dmg -40% .crit 5% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "RB HWY Tracking Buff 1"
-combat_skill: .id "duelist_advance" .level 1 .type "melee" .atk 95% .dmg -40% .crit 6% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "RB HWY Tracking Buff 2"
-combat_skill: .id "duelist_advance" .level 2 .type "melee" .atk 100% .dmg -40% .crit 7% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "RB HWY Tracking Buff 3"
-combat_skill: .id "duelist_advance" .level 3 .type "melee" .atk 105% .dmg -40% .crit 8% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "RB HWY Tracking Buff 4"
-combat_skill: .id "duelist_advance" .level 4 .type "melee" .atk 110% .dmg -40% .crit 9% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "RB HWY Tracking Buff 5"
+combat_skill: .id "duelist_advance" .level 0 .type "melee" .atk 90% .dmg -20% .crit 5% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "RB HWY Tracking Buff 1"
+combat_skill: .id "duelist_advance" .level 1 .type "melee" .atk 95% .dmg -20% .crit 6% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "RB HWY Tracking Buff 2"
+combat_skill: .id "duelist_advance" .level 2 .type "melee" .atk 100% .dmg -20% .crit 7% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "RB HWY Tracking Buff 3"
+combat_skill: .id "duelist_advance" .level 3 .type "melee" .atk 105% .dmg -20% .crit 8% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "RB HWY Tracking Buff 4"
+combat_skill: .id "duelist_advance" .level 4 .type "melee" .atk 110% .dmg -20% .crit 9% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "RB HWY Tracking Buff 5"
+// HWY-018 duelist_advance: 피해 -40% -> -20%. 3열 도달 제거 보상으로 걸었던 피해 감소가 버프 축소(HWY-016)와 이중 대가였음. 버프는 레벨당 +1 규칙값(명중 4~8, 치명타 2~6, 피해 10~14%) [제작자]
 // HWY-005 [trace 2026-10-05] Use advance for smaller self setup after transferring riposte to Tracking Shot.
 // HWY-005 duelist_advance: 명중 1렙 90 -> 95, dmg -20% 유지 (반격 상실 -47 / 축소 버프 +11.5 보상)
 // HWY-005 duelist_advance: Hwy Riposte -> Tracking Buff(축소), dmg -20% -> -40%

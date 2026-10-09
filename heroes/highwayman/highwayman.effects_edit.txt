@@ -74,7 +74,8 @@ effect: .name "Grapeshot Vulnerability 5" .target "target" .curio_result_type "n
 //# ======================================================================
 //# 기술: 추적탄 (take_aim)
 //# 레벨별 효과: 1레벨 Tracking Buff 1, Destealth | 2레벨 Tracking Buff 2, Destealth | 3레벨 Tracking Buff 3, Destealth | 4레벨 Tracking Buff 4, Destealth | 5레벨 Tracking Buff 5, Destealth
-effect: .name "Tracking Buff 1" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 5%  .crit_chance_add 3% .damage_low_multiply 9% .damage_high_multiply 9%  .on_hit true .on_miss true .duration 3
+effect: .name "Tracking Buff 1" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 4%  .crit_chance_add 2% .damage_low_multiply 10% .damage_high_multiply 10%  .on_hit true .on_miss true .duration 3
+// HWY-018 Even progression: acc 4-8, crit 2-6, dmg 10-14% (+1 per level; was rounded x0.75 of vanilla 5/5/6/7/8, 3/4/5/5/6, 9/11/12/14/15).
 // HWY-016 Stacking confirmed in game: scale vanilla Tracking Buff to x0.75 (2 stacks = 1.5x vanilla peak).
 // HWY-013 Restore vanilla Tracking Buff values (acc/crit/dmg); keep the 3-turn duration from HWY-010.
 // HWY-010 [2026-10-06] Limit Advance self setup to three turns instead of combat end; preserve accuracy, critical and damage bonuses.
@@ -83,25 +84,29 @@ effect: .name "Tracking Buff 1" .target "performer" .curio_result_type "positive
 effect: .name "Destealth" .target "target" .chance 100% .unstealth 1 .on_hit true .on_miss false
 //#   공유 효과: 다른 영웅 7명(유물수집상, 석궁사수, 나병환자, 총사, 도망자, 방패 파괴자, 성녀). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Tracking Buff 2" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 5%  .crit_chance_add 4% .damage_low_multiply 11% .damage_high_multiply 11%  .on_hit true .on_miss true .duration 3
+effect: .name "Tracking Buff 2" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 5%  .crit_chance_add 3% .damage_low_multiply 11% .damage_high_multiply 11%  .on_hit true .on_miss true .duration 3
+// HWY-018 Even progression: acc 4-8, crit 2-6, dmg 10-14% (+1 per level; was rounded x0.75 of vanilla 5/5/6/7/8, 3/4/5/5/6, 9/11/12/14/15).
 // HWY-016 Stacking confirmed in game: scale vanilla Tracking Buff to x0.75 (2 stacks = 1.5x vanilla peak).
 // HWY-013 Restore vanilla Tracking Buff values (acc/crit/dmg); keep the 3-turn duration from HWY-010.
 // HWY-010 [2026-10-06] Limit Advance self setup to three turns instead of combat end; preserve accuracy, critical and damage bonuses.
 // HWY-005 [trace 2026-10-05] Use advance for smaller self setup after transferring riposte to Tracking Shot. Effect: Tracking Buff 2.
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Tracking Buff 3" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 6%  .crit_chance_add 5% .damage_low_multiply 12% .damage_high_multiply 12%  .on_hit true .on_miss true .duration 3
+effect: .name "Tracking Buff 3" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 6%  .crit_chance_add 4% .damage_low_multiply 12% .damage_high_multiply 12%  .on_hit true .on_miss true .duration 3
+// HWY-018 Even progression: acc 4-8, crit 2-6, dmg 10-14% (+1 per level; was rounded x0.75 of vanilla 5/5/6/7/8, 3/4/5/5/6, 9/11/12/14/15).
 // HWY-016 Stacking confirmed in game: scale vanilla Tracking Buff to x0.75 (2 stacks = 1.5x vanilla peak).
 // HWY-013 Restore vanilla Tracking Buff values (acc/crit/dmg); keep the 3-turn duration from HWY-010.
 // HWY-010 [2026-10-06] Limit Advance self setup to three turns instead of combat end; preserve accuracy, critical and damage bonuses.
 // HWY-005 [trace 2026-10-05] Use advance for smaller self setup after transferring riposte to Tracking Shot. Effect: Tracking Buff 3.
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Tracking Buff 4" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 7%  .crit_chance_add 5% .damage_low_multiply 14% .damage_high_multiply 14%  .on_hit true .on_miss true .duration 3
+effect: .name "Tracking Buff 4" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 7%  .crit_chance_add 5% .damage_low_multiply 13% .damage_high_multiply 13%  .on_hit true .on_miss true .duration 3
+// HWY-018 Even progression: acc 4-8, crit 2-6, dmg 10-14% (+1 per level; was rounded x0.75 of vanilla 5/5/6/7/8, 3/4/5/5/6, 9/11/12/14/15).
 // HWY-016 Stacking confirmed in game: scale vanilla Tracking Buff to x0.75 (2 stacks = 1.5x vanilla peak).
 // HWY-013 Restore vanilla Tracking Buff values (acc/crit/dmg); keep the 3-turn duration from HWY-010.
 // HWY-010 [2026-10-06] Limit Advance self setup to three turns instead of combat end; preserve accuracy, critical and damage bonuses.
 // HWY-005 [trace 2026-10-05] Use advance for smaller self setup after transferring riposte to Tracking Shot. Effect: Tracking Buff 4.
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Tracking Buff 5" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 8% .crit_chance_add 6% .damage_low_multiply 15% .damage_high_multiply 15%  .on_hit true .on_miss true .duration 3
+effect: .name "Tracking Buff 5" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 8% .crit_chance_add 6% .damage_low_multiply 14% .damage_high_multiply 14%  .on_hit true .on_miss true .duration 3
+// HWY-018 Even progression: acc 4-8, crit 2-6, dmg 10-14% (+1 per level; was rounded x0.75 of vanilla 5/5/6/7/8, 3/4/5/5/6, 9/11/12/14/15).
 // HWY-016 Stacking confirmed in game: scale vanilla Tracking Buff to x0.75 (2 stacks = 1.5x vanilla peak).
 // HWY-013 Restore vanilla Tracking Buff values (acc/crit/dmg); keep the 3-turn duration from HWY-010.
 // HWY-010 [2026-10-06] Limit Advance self setup to three turns instead of combat end; preserve accuracy, critical and damage bonuses.
