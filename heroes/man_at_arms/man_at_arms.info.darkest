@@ -60,11 +60,12 @@ combat_skill: .id "retribution" .level 4 .type "melee" .atk 105% .dmg -20% .crit
 // MAA-004 retribution: 대상 123 -> 12, 피해 -75% -> -20% (반격 3턴 유지). 분쇄와 같은 휘두르기 모션인데 한 방이 분쇄의 25%였다(P-19) -> 80%. 3열 도달(피해 약 20%p 가치)을 내주고 전열 전용 반격·도발 기술로 분쇄와 역할 분리. 1라운드 +15 -> +41%p, 지원 루프(응징-수호자-지휘) +14%
 
 
-combat_skill: .id "command" .level 0 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 1234 .target ~@1234 .is_crit_valid True  .effect "Command 1" .is_stall_invalidating false
-combat_skill: .id "command" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 1234 .target ~@1234 .is_crit_valid True  .effect "Command 2" .is_stall_invalidating false
-combat_skill: .id "command" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 1234 .target ~@1234 .is_crit_valid True  .effect "Command 3" .is_stall_invalidating false
-combat_skill: .id "command" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 1234 .target ~@1234 .is_crit_valid True  .effect "Command 4" .is_stall_invalidating false
-combat_skill: .id "command" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 1234 .target ~@1234 .is_crit_valid True  .effect "Command 5" .is_stall_invalidating false
+combat_skill: .id "command" .level 0 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 1234 .target ~@1234 .is_crit_valid True  .effect "Command 1" "FlareClear 1" .is_stall_invalidating false
+combat_skill: .id "command" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 1234 .target ~@1234 .is_crit_valid True  .effect "Command 2" "FlareClear 1" .is_stall_invalidating false
+combat_skill: .id "command" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 1234 .target ~@1234 .is_crit_valid True  .effect "Command 3" "FlareClear 1" .is_stall_invalidating false
+combat_skill: .id "command" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 1234 .target ~@1234 .is_crit_valid True  .effect "Command 4" "FlareClear 1" .is_stall_invalidating false
+combat_skill: .id "command" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 1234 .target ~@1234 .is_crit_valid True  .effect "Command 5" "FlareClear 1" .is_stall_invalidating false
+// MAA-008 command: 다른 아군 전원 기절·표식 해제(FlareClear 1, 석궁사수 결집 신호탄에서 이동) 추가. 노병이 명령으로 대열을 다잡아 기절한 동료를 깨움(P-19), 횟수 제한 없음 그대로 [제작자]
 
 
 combat_skill: .id "bolster" .level 0 .type "ranged" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target ~@1234 .is_crit_valid True  .effect "Bolster 1" "Bolster Stress Buff 1" "RB MAA Bolster Rally 1" .is_stall_invalidating false
