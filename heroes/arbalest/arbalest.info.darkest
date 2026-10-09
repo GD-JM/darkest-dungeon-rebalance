@@ -38,11 +38,12 @@ combat_skill: .id "sniper_mark" .level 3 .type "ranged" .atk 115% .dmg -100% .cr
 combat_skill: .id "sniper_mark" .level 4 .type "ranged" .atk 120% .dmg -100% .crit 0% .launch 43 .target 234 .is_crit_valid False  .effect "Arb Mark Target" "Arb Mark Debuff 5" .is_stall_invalidating false
 
 
-combat_skill: .id "bola" .level 0 .type "ranged" .atk 95% .dmg -50% .crit 2% .launch 43 .target ~12 .is_crit_valid True  .effect "Bolo Push 1A"
-combat_skill: .id "bola" .level 1 .type "ranged" .atk 100% .dmg -50% .crit 3% .launch 43 .target ~12 .is_crit_valid True  .effect "Bolo Push 1B"
-combat_skill: .id "bola" .level 2 .type "ranged" .atk 105% .dmg -50% .crit 4% .launch 43 .target ~12 .is_crit_valid True  .effect "Bolo Push 1C"
-combat_skill: .id "bola" .level 3 .type "ranged" .atk 110% .dmg -50% .crit 5% .launch 43 .target ~12 .is_crit_valid True  .effect "Bolo Push 1D"
-combat_skill: .id "bola" .level 4 .type "ranged" .atk 115% .dmg -50% .crit 6% .launch 43 .target ~12 .is_crit_valid True  .effect "Bolo Push 1E"
+combat_skill: .id "bola" .level 0 .type "ranged" .atk 95% .dmg -40% .crit 2% .launch 43 .target ~12 .is_crit_valid True  .effect "Bolo Push 1A"
+combat_skill: .id "bola" .level 1 .type "ranged" .atk 100% .dmg -40% .crit 3% .launch 43 .target ~12 .is_crit_valid True  .effect "Bolo Push 1B"
+combat_skill: .id "bola" .level 2 .type "ranged" .atk 105% .dmg -40% .crit 4% .launch 43 .target ~12 .is_crit_valid True  .effect "Bolo Push 1C"
+combat_skill: .id "bola" .level 3 .type "ranged" .atk 110% .dmg -40% .crit 5% .launch 43 .target ~12 .is_crit_valid True  .effect "Bolo Push 1D"
+combat_skill: .id "bola" .level 4 .type "ranged" .atk 115% .dmg -40% .crit 6% .launch 43 .target ~12 .is_crit_valid True  .effect "Bolo Push 1E"
+// ARB-007 bola: 피해 -50% -> -40%. 적 1·2열 밀치기 광역이 핵심 4개(저격·조명탄·무작위 사격·야전 붕대)에 밀려 선택성이 낮았음 [제작자]
 // ARB-004 [trace 2026-10-05] Restore the missing final push-effect upgrade.
 // ARB-004 bola 5레벨: Bolo Push 1D(105) -> 1E(115). 바닐라에 1E가 정의돼 있는데 어떤 기술도 쓰지 않는다(연결 누락). 4·5레벨이 같은 105를 써서 성장이 멈췄고, 이동 저항이 레벨당 +20 오르는 동안 성공률이 43 -> 40 -> 28%로 떨어지는 유일한 이동 기술이었다(M1·M5). 5레벨 성공률 30.5 -> 37.8%
 
