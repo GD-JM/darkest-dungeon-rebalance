@@ -1,0 +1,47 @@
+{
+	"buffs": [
+		{
+			"id": "RB_JES_build_to_finale2_dmgL",
+			"stat_type": "combat_stat_multiply",
+			"stat_sub_type": "damage_low",
+			"amount": 1.0,
+			"remove_on_battle_complete": true,
+			"remove_if_not_active": false,
+			"rule_type": "skill",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": "heroic_end"
+			}
+		},
+		{
+			"id": "RB_JES_build_to_finale2_dmgH",
+			"stat_type": "combat_stat_multiply",
+			"stat_sub_type": "damage_high",
+			"amount": 1.0,
+			"remove_on_battle_complete": true,
+			"remove_if_not_active": false,
+			"rule_type": "skill",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": "heroic_end"
+			}
+		},
+		{
+			"id": "RB_JES_build_to_finale2_crit",
+			"stat_type": "combat_stat_add",
+			"stat_sub_type": "crit_chance",
+			"amount": 0.1,
+			"duration": 7,
+			"remove_on_battle_complete": true,
+			"remove_if_not_active": false,
+			"rule_type": "skill",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": "heroic_end"
+			}
+		}
+	]
+}

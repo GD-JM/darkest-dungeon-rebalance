@@ -17,11 +17,12 @@ combat_skill: .id "anticipation" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0
 combat_skill: .id "anticipation" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True .valid_modes stance_defensive stance_aggressive .effect duelist_riposte .stance_defensive_effects switch_mode_stance_aggressive_self duelist_aggressive_buff4 .stance_aggressive_effects switch_mode_stance_defensive_self duelist_defensive_buff4 .is_continue_turn true .per_turn_limit 1 .is_stall_invalidating false
 combat_skill: .id "anticipation" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True .valid_modes stance_defensive stance_aggressive .effect duelist_riposte .stance_defensive_effects switch_mode_stance_aggressive_self duelist_aggressive_buff5 .stance_aggressive_effects switch_mode_stance_defensive_self duelist_defensive_buff5 .is_continue_turn true .per_turn_limit 1 .is_stall_invalidating false
 
-combat_skill: .id "touche" .level 0 .type "melee" .atk 90%  .dmg 0% .crit 1% .move 1 0 .launch 4321 .target 12 .is_crit_valid True  .effect "Duelist Touche Buff 1" .valid_modes stance_defensive
-combat_skill: .id "touche" .level 1 .type "melee" .atk 95%  .dmg 0% .crit 2% .move 1 0 .launch 4321 .target 12 .is_crit_valid True  .effect "Duelist Touche Buff 2" .valid_modes stance_defensive
-combat_skill: .id "touche" .level 2 .type "melee" .atk 100% .dmg 0% .crit 3% .move 1 0 .launch 4321 .target 12 .is_crit_valid True  .effect "Duelist Touche Buff 3" .valid_modes stance_defensive
-combat_skill: .id "touche" .level 3 .type "melee" .atk 105% .dmg 0% .crit 4% .move 1 0 .launch 4321 .target 12 .is_crit_valid True  .effect "Duelist Touche Buff 4" .valid_modes stance_defensive
-combat_skill: .id "touche" .level 4 .type "melee" .atk 110% .dmg 0% .crit 5% .move 1 0 .launch 4321 .target 12 .is_crit_valid True  .effect "Duelist Touche Buff 5" .valid_modes stance_defensive
+combat_skill: .id "touche" .level 0 .type "melee" .atk 90%  .dmg 0% .crit 1% .move 1 0 .launch 4321 .target 12 .is_crit_valid True  .effect "RB DUE Duelist Touche Buff 1" .valid_modes stance_defensive
+combat_skill: .id "touche" .level 1 .type "melee" .atk 95%  .dmg 0% .crit 2% .move 1 0 .launch 4321 .target 12 .is_crit_valid True  .effect "RB DUE Duelist Touche Buff 2" .valid_modes stance_defensive
+combat_skill: .id "touche" .level 2 .type "melee" .atk 100% .dmg 0% .crit 3% .move 1 0 .launch 4321 .target 12 .is_crit_valid True  .effect "RB DUE Duelist Touche Buff 3" .valid_modes stance_defensive
+combat_skill: .id "touche" .level 3 .type "melee" .atk 105% .dmg 0% .crit 4% .move 1 0 .launch 4321 .target 12 .is_crit_valid True  .effect "RB DUE Duelist Touche Buff 4" .valid_modes stance_defensive
+combat_skill: .id "touche" .level 4 .type "melee" .atk 110% .dmg 0% .crit 5% .move 1 0 .launch 4321 .target 12 .is_crit_valid True  .effect "RB DUE Duelist Touche Buff 5" .valid_modes stance_defensive
+// DUE-005 touche: 자기 회피 +40~50 4턴 -> +15/17/20/22/25 2턴(RB DUE Duelist Touche Buff). 피해 0% 평타가 중첩으로 적 명중 0%까지 가던 문제 [제작자 B안]
 
 combat_skill: .id "feint" .level 0 .type "melee" .atk 95%  .dmg -50% .crit 8% .launch 321 .target 12 .is_crit_valid True  .effect "Mark Self" "Duelist Feint Buff 1" "Duelist Feint Debuff 1" .valid_modes stance_defensive
 combat_skill: .id "feint" .level 1 .type "melee" .atk 100% .dmg -50% .crit 9% .launch 321 .target 12 .is_crit_valid True  .effect "Mark Self" "Duelist Feint Buff 2" "Duelist Feint Debuff 2" .valid_modes stance_defensive
