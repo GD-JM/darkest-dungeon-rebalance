@@ -41,11 +41,12 @@ combat_skill: .id "stunning_blow" .level 4 .type "melee" .atk 110% .dmg -60% .cr
 // 바꿈 스트롱 스턴으로 왜냐하면 3열 공격이 안돼서 쌔야함.  대신에 데미지 낮춤 애니메이션 자체가 칼 손잡이로 때리는거라 쌔면 안됨 50 -> 60
 
 
-combat_skill: .id "bulwark_of_faith" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 21 .target  .is_crit_valid True  .effect "Crusader Bulwark 1" "Crusader Bulwark Mark" "Crusader Bulwark Light" .is_stall_invalidating false
-combat_skill: .id "bulwark_of_faith" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 21 .target  .is_crit_valid True  .effect "Crusader Bulwark 2" "Crusader Bulwark Mark" "Crusader Bulwark Light" .is_stall_invalidating false
-combat_skill: .id "bulwark_of_faith" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 21 .target  .is_crit_valid True  .effect "Crusader Bulwark 3" "Crusader Bulwark Mark" "Crusader Bulwark Light" .is_stall_invalidating false
-combat_skill: .id "bulwark_of_faith" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 21 .target  .is_crit_valid True  .effect "Crusader Bulwark 4" "Crusader Bulwark Mark" "Crusader Bulwark Light" .is_stall_invalidating false
-combat_skill: .id "bulwark_of_faith" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 21 .target  .is_crit_valid True  .effect "Crusader Bulwark 5" "Crusader Bulwark Mark" "Crusader Bulwark Light" .is_stall_invalidating false
+combat_skill: .id "bulwark_of_faith" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 4321 .target  .is_crit_valid True  .effect "Crusader Bulwark 1" "Crusader Bulwark Mark" "Crusader Bulwark Light" .is_stall_invalidating false
+combat_skill: .id "bulwark_of_faith" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 4321 .target  .is_crit_valid True  .effect "Crusader Bulwark 2" "Crusader Bulwark Mark" "Crusader Bulwark Light" .is_stall_invalidating false
+combat_skill: .id "bulwark_of_faith" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 4321 .target  .is_crit_valid True  .effect "Crusader Bulwark 3" "Crusader Bulwark Mark" "Crusader Bulwark Light" .is_stall_invalidating false
+combat_skill: .id "bulwark_of_faith" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 4321 .target  .is_crit_valid True  .effect "Crusader Bulwark 4" "Crusader Bulwark Mark" "Crusader Bulwark Light" .is_stall_invalidating false
+combat_skill: .id "bulwark_of_faith" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 4321 .target  .is_crit_valid True  .effect "Crusader Bulwark 5" "Crusader Bulwark Mark" "Crusader Bulwark Light" .is_stall_invalidating false
+// CRU-007 bulwark_of_faith: 사용 21 -> 4321. 같은 구조(방어+30·자기 표식·전투당 1회)인 나병환자 견디기는 123, 순수 자기 방어 기술 대부분이 전 열. 성스러운 돌격(34) 시작 열에서도 쓰게 함 [제작자]
 
 
 combat_move_skill: .id "move" .level 0 .type "move" .move 1 1 .launch 4321

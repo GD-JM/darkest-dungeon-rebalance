@@ -88,11 +88,12 @@ combat_skill: .id "single_out" .level 4 .type "ranged" .atk 110% .dmg -25% .crit
 // 명중 85 -> 90으로 변경 
 
 
-combat_skill: .id "serpents_sway" .level 0 .type "ranged" .atk 0% .dmg 0% .crit 0% .move 0 1 .per_battle_limit 2 .launch 321 .target  .is_crit_valid True  .effect "SB Aegis" "SB Serpent Speed 1" .is_stall_invalidating false
-combat_skill: .id "serpents_sway" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0% .move 0 1 .per_battle_limit 2 .launch 321 .target  .is_crit_valid True  .effect "SB Aegis" "SB Serpent Speed 2" .is_stall_invalidating false
-combat_skill: .id "serpents_sway" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .move 0 1 .per_battle_limit 2 .launch 321 .target  .is_crit_valid True  .effect "SB Aegis" "SB Serpent Speed 3" .is_stall_invalidating false
-combat_skill: .id "serpents_sway" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .move 0 1 .per_battle_limit 2 .launch 321 .target  .is_crit_valid True  .effect "SB Aegis" "SB Serpent Speed 4" .is_stall_invalidating false
-combat_skill: .id "serpents_sway" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .move 0 1 .per_battle_limit 2 .launch 321 .target  .is_crit_valid True  .effect "SB Aegis" "SB Serpent Speed 5" .is_stall_invalidating false
+combat_skill: .id "serpents_sway" .level 0 .type "ranged" .atk 0% .dmg 0% .crit 0% .move 0 1 .per_battle_limit 2 .launch 432 .target  .is_crit_valid True  .effect "SB Aegis" "SB Serpent Speed 1" .is_stall_invalidating false
+combat_skill: .id "serpents_sway" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0% .move 0 1 .per_battle_limit 2 .launch 432 .target  .is_crit_valid True  .effect "SB Aegis" "SB Serpent Speed 2" .is_stall_invalidating false
+combat_skill: .id "serpents_sway" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .move 0 1 .per_battle_limit 2 .launch 432 .target  .is_crit_valid True  .effect "SB Aegis" "SB Serpent Speed 3" .is_stall_invalidating false
+combat_skill: .id "serpents_sway" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .move 0 1 .per_battle_limit 2 .launch 432 .target  .is_crit_valid True  .effect "SB Aegis" "SB Serpent Speed 4" .is_stall_invalidating false
+combat_skill: .id "serpents_sway" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .move 0 1 .per_battle_limit 2 .launch 432 .target  .is_crit_valid True  .effect "SB Aegis" "SB Serpent Speed 5" .is_stall_invalidating false
+// SB-017 serpents_sway: 사용 321 -> 432. 1열에서 앞으로 1칸이 무의미해 제자리 강화(피해 2회 막기·속도)로 쓰이던 붙박이 운용 차단. 살모사의 입맞춤·꿰뚫기로 뒤로 밀린 뒤 1열 복귀용으로 [제작자: 붙박이 약/이동 고점]
 
 
 
