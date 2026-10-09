@@ -8,61 +8,66 @@
 
 // edited vanilla effect (from effects/base.effects.darkest)
 effect: .name "RB GR Dagger Dmg Marked 1" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 40%	.damage_high_multiply 40%	.on_hit true .on_miss false
-// GR-005 [trace 2026-10-05] Move accuracy setup to Poison Dart and support secondary marked-target damage. Effect: RB GR Dagger Dmg Marked 1.
+// GR-005 [trace 2026-10-05] Move accuracy setup to Poison Dart and support secondary marked-target damage. Effect: GR Dagger Dmg Marked 1.
 // edited vanilla effect (from effects/base.effects.darkest)
 effect: .name "RB GR Dagger Dmg Marked 2" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 50%	.damage_high_multiply 50%	.on_hit true .on_miss false
-// GR-005 [trace 2026-10-05] Move accuracy setup to Poison Dart and support secondary marked-target damage. Effect: RB GR Dagger Dmg Marked 2.
+// GR-005 [trace 2026-10-05] Move accuracy setup to Poison Dart and support secondary marked-target damage. Effect: GR Dagger Dmg Marked 2.
 // edited vanilla effect (from effects/base.effects.darkest)
 effect: .name "RB GR Dagger Dmg Marked 3" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 60%	.damage_high_multiply 60%	.on_hit true .on_miss false
-// GR-005 [trace 2026-10-05] Move accuracy setup to Poison Dart and support secondary marked-target damage. Effect: RB GR Dagger Dmg Marked 3.
+// GR-005 [trace 2026-10-05] Move accuracy setup to Poison Dart and support secondary marked-target damage. Effect: GR Dagger Dmg Marked 3.
 // edited vanilla effect (from effects/base.effects.darkest)
 effect: .name "RB GR Dagger Dmg Marked 4" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 70%	.damage_high_multiply 70%	.on_hit true .on_miss false
-// GR-005 [trace 2026-10-05] Move accuracy setup to Poison Dart and support secondary marked-target damage. Effect: RB GR Dagger Dmg Marked 4.
+// GR-005 [trace 2026-10-05] Move accuracy setup to Poison Dart and support secondary marked-target damage. Effect: GR Dagger Dmg Marked 4.
 // edited vanilla effect (from effects/base.effects.darkest)
 effect: .name "RB GR Dagger Dmg Marked 5" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 80%	.damage_high_multiply 80%	.on_hit true .on_miss false
-// GR-005 [trace 2026-10-05] Move accuracy setup to Poison Dart and support secondary marked-target damage. Effect: RB GR Dagger Dmg Marked 5.
+// GR-005 [trace 2026-10-05] Move accuracy setup to Poison Dart and support secondary marked-target damage. Effect: GR Dagger Dmg Marked 5.
 // edited vanilla effect (from effects/base.effects.darkest)
 effect: .name "RB GR Blight 2" .target "target" .curio_result_type "negative" .chance 110%  .dotPoison 3 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
-// GR-001 [trace 2026-10-05] Shorten DOT duration and relocate the accuracy setup to this skill. Effect: RB GR Blight 2.
+// GR-001 [trace 2026-10-05] Shorten DOT duration and relocate the accuracy setup to this skill. Effect: GR Blight 2.
 // edited vanilla effect (from effects/base.effects.darkest)
 effect: .name "RB GR Shadow Blood 1" .target "performer" .curio_result_type "positive" .cure 1 .chance 100% .duration 3 .combat_stat_buff 1 .defense_rating_add 5%	.on_hit true .on_miss true .queue true
-// GR-003 [trace 2026-10-05] Enable repeatable self upkeep with shorter and smaller defensive buffs. Effect: RB GR Shadow Blood 1.
+// GR-003 [trace 2026-10-05] Enable repeatable self upkeep with shorter and smaller defensive buffs. Effect: Shadow Blood 1.
 // edited vanilla effect (from effects/base.effects.darkest)
 effect: .name "RB GR Self Speed 1" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .combat_stat_buff 1 .speed_rating_add 1  .on_hit true .on_miss false .queue true .apply_once true
-// GR-003 [trace 2026-10-05] Enable repeatable self upkeep with shorter and smaller defensive buffs. Effect: RB GR Self Speed 1.
+// GR-003 [trace 2026-10-05] Enable repeatable self upkeep with shorter and smaller defensive buffs. Effect: GR Self Speed 1.
 // edited vanilla effect (from effects/base.effects.darkest)
 effect: .name "RB GR Shadow Blood 2" .target "performer" .curio_result_type "positive" .cure 1 .chance 100% .duration 3 .combat_stat_buff 1 .defense_rating_add 5%	.on_hit true .on_miss true .queue true
-// GR-003 [trace 2026-10-05] Enable repeatable self upkeep with shorter and smaller defensive buffs. Effect: RB GR Shadow Blood 2.
+// GR-003 [trace 2026-10-05] Enable repeatable self upkeep with shorter and smaller defensive buffs. Effect: Shadow Blood 2.
 // edited vanilla effect (from effects/base.effects.darkest)
 effect: .name "RB GR Self Speed 2" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .combat_stat_buff 1 .speed_rating_add 1  .on_hit true .on_miss false .queue true .apply_once true
-// GR-003 [trace 2026-10-05] Enable repeatable self upkeep with shorter and smaller defensive buffs. Effect: RB GR Self Speed 2.
+// GR-003 [trace 2026-10-05] Enable repeatable self upkeep with shorter and smaller defensive buffs. Effect: GR Self Speed 2.
 // edited vanilla effect (from effects/base.effects.darkest)
 effect: .name "RB GR Shadow Blood 3" .target "performer" .curio_result_type "positive" .cure 1 .chance 100% .duration 3 .combat_stat_buff 1 .defense_rating_add 6%	.on_hit true .on_miss true .queue true
-// GR-003 [trace 2026-10-05] Enable repeatable self upkeep with shorter and smaller defensive buffs. Effect: RB GR Shadow Blood 3.
+// GR-003 [trace 2026-10-05] Enable repeatable self upkeep with shorter and smaller defensive buffs. Effect: Shadow Blood 3.
 // edited vanilla effect (from effects/base.effects.darkest)
 effect: .name "RB GR Self Speed 3" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .combat_stat_buff 1 .speed_rating_add 2  .on_hit true .on_miss false .queue true .apply_once true
-// GR-003 [trace 2026-10-05] Enable repeatable self upkeep with shorter and smaller defensive buffs. Effect: RB GR Self Speed 3.
+// GR-003 [trace 2026-10-05] Enable repeatable self upkeep with shorter and smaller defensive buffs. Effect: GR Self Speed 3.
 // edited vanilla effect (from effects/base.effects.darkest)
 effect: .name "RB GR Shadow Blood 4" .target "performer" .curio_result_type "positive" .cure 1 .chance 100% .duration 3 .combat_stat_buff 1 .defense_rating_add 6%	.on_hit true .on_miss true .queue true
-// GR-003 [trace 2026-10-05] Enable repeatable self upkeep with shorter and smaller defensive buffs. Effect: RB GR Shadow Blood 4.
+// GR-003 [trace 2026-10-05] Enable repeatable self upkeep with shorter and smaller defensive buffs. Effect: Shadow Blood 4.
 // edited vanilla effect (from effects/base.effects.darkest)
 effect: .name "RB GR Self Speed 4" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .combat_stat_buff 1 .speed_rating_add 2  .on_hit true .on_miss false .queue true .apply_once true
-// GR-003 [trace 2026-10-05] Enable repeatable self upkeep with shorter and smaller defensive buffs. Effect: RB GR Self Speed 4.
+// GR-003 [trace 2026-10-05] Enable repeatable self upkeep with shorter and smaller defensive buffs. Effect: GR Self Speed 4.
 // edited vanilla effect (from effects/base.effects.darkest)
 effect: .name "RB GR Shadow Blood 5" .target "performer" .curio_result_type "positive" .cure 1 .chance 100% .duration 3 .combat_stat_buff 1 .defense_rating_add 7%	.on_hit true .on_miss true .queue true
-// GR-003 [trace 2026-10-05] Enable repeatable self upkeep with shorter and smaller defensive buffs. Effect: RB GR Shadow Blood 5.
+// GR-003 [trace 2026-10-05] Enable repeatable self upkeep with shorter and smaller defensive buffs. Effect: Shadow Blood 5.
 // edited vanilla effect (from effects/base.effects.darkest)
 effect: .name "RB GR Self Speed 5" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .combat_stat_buff 1 .speed_rating_add 2  .on_hit true .on_miss false .queue true .apply_once true
-// GR-003 [trace 2026-10-05] Enable repeatable self upkeep with shorter and smaller defensive buffs. Effect: RB GR Self Speed 5.
+// GR-003 [trace 2026-10-05] Enable repeatable self upkeep with shorter and smaller defensive buffs. Effect: GR Self Speed 5.
 
 // mod-only new effects
-effect: .name "RB GR Toxin Heal 1" .target "performer" .curio_result_type "positive" .chance 100% .heal 3 .on_hit true .on_miss false .queue true .source_heal_type hero_skill
+effect: .name "RB GR Toxin Heal 1" .target "performer" .curio_result_type "positive" .chance 100% .heal 1 .on_hit true .on_miss false .queue true .source_heal_type hero_skill
+// GR-006 Toxin Trickery self heal 3/3/4/4/5 -> 1/2/3/4/5. With cure + dodge + speed it outclassed Hellion Adrenaline Rush (cure + heal 3-7).
 // GR-003 [trace 2026-10-05] Enable repeatable self upkeep with shorter and smaller defensive buffs. Effect: RB GR Toxin Heal 1.
-effect: .name "RB GR Toxin Heal 2" .target "performer" .curio_result_type "positive" .chance 100% .heal 3 .on_hit true .on_miss false .queue true .source_heal_type hero_skill
+effect: .name "RB GR Toxin Heal 2" .target "performer" .curio_result_type "positive" .chance 100% .heal 2 .on_hit true .on_miss false .queue true .source_heal_type hero_skill
+// GR-006 Toxin Trickery self heal 3/3/4/4/5 -> 1/2/3/4/5. With cure + dodge + speed it outclassed Hellion Adrenaline Rush (cure + heal 3-7).
 // GR-003 [trace 2026-10-05] Enable repeatable self upkeep with shorter and smaller defensive buffs. Effect: RB GR Toxin Heal 2.
-effect: .name "RB GR Toxin Heal 3" .target "performer" .curio_result_type "positive" .chance 100% .heal 4 .on_hit true .on_miss false .queue true .source_heal_type hero_skill
+effect: .name "RB GR Toxin Heal 3" .target "performer" .curio_result_type "positive" .chance 100% .heal 3 .on_hit true .on_miss false .queue true .source_heal_type hero_skill
+// GR-006 Toxin Trickery self heal 3/3/4/4/5 -> 1/2/3/4/5. With cure + dodge + speed it outclassed Hellion Adrenaline Rush (cure + heal 3-7).
 // GR-003 [trace 2026-10-05] Enable repeatable self upkeep with shorter and smaller defensive buffs. Effect: RB GR Toxin Heal 3.
 effect: .name "RB GR Toxin Heal 4" .target "performer" .curio_result_type "positive" .chance 100% .heal 4 .on_hit true .on_miss false .queue true .source_heal_type hero_skill
+// GR-006 Toxin Trickery self heal 3/3/4/4/5 -> 1/2/3/4/5. With cure + dodge + speed it outclassed Hellion Adrenaline Rush (cure + heal 3-7).
 // GR-003 [trace 2026-10-05] Enable repeatable self upkeep with shorter and smaller defensive buffs. Effect: RB GR Toxin Heal 4.
 effect: .name "RB GR Toxin Heal 5" .target "performer" .curio_result_type "positive" .chance 100% .heal 5 .on_hit true .on_miss false .queue true .source_heal_type hero_skill
+// GR-006 Toxin Trickery self heal 3/3/4/4/5 -> 1/2/3/4/5. With cure + dodge + speed it outclassed Hellion Adrenaline Rush (cure + heal 3-7).
 // GR-003 [trace 2026-10-05] Enable repeatable self upkeep with shorter and smaller defensive buffs. Effect: RB GR Toxin Heal 5.

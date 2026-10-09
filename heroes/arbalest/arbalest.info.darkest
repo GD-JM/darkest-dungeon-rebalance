@@ -24,11 +24,12 @@ combat_skill: .id "sniper_shot" .level 3 .type "ranged" .atk 110% .dmg 0% .crit 
 combat_skill: .id "sniper_shot" .level 4 .type "ranged" .atk 115% .dmg 0% .crit 9% .launch 43 .target 234 .is_crit_valid True  .effect "Sniper Damage 5"
 
 
-combat_skill: .id "suppressing_fire" .level 0 .type "ranged" .atk 95% .dmg -80% .crit -10% .launch 43 .target ~34 .is_crit_valid True  .effect "Suppression 1"
-combat_skill: .id "suppressing_fire" .level 1 .type "ranged" .atk 100% .dmg -80% .crit -9% .launch 43 .target ~34 .is_crit_valid True  .effect "Suppression 2"
-combat_skill: .id "suppressing_fire" .level 2 .type "ranged" .atk 105% .dmg -80% .crit -8% .launch 43 .target ~34 .is_crit_valid True  .effect "Suppression 3"
-combat_skill: .id "suppressing_fire" .level 3 .type "ranged" .atk 110% .dmg -80% .crit -7% .launch 43 .target ~34 .is_crit_valid True  .effect "Suppression 4"
-combat_skill: .id "suppressing_fire" .level 4 .type "ranged" .atk 115% .dmg -80% .crit -6% .launch 43 .target ~34 .is_crit_valid True  .effect "Suppression 5"
+combat_skill: .id "suppressing_fire" .level 0 .type "ranged" .atk 95% .dmg -60% .crit -10% .launch 43 .target ~34 .is_crit_valid True  .effect "Suppression 1"
+combat_skill: .id "suppressing_fire" .level 1 .type "ranged" .atk 100% .dmg -60% .crit -9% .launch 43 .target ~34 .is_crit_valid True  .effect "Suppression 2"
+combat_skill: .id "suppressing_fire" .level 2 .type "ranged" .atk 105% .dmg -60% .crit -8% .launch 43 .target ~34 .is_crit_valid True  .effect "Suppression 3"
+combat_skill: .id "suppressing_fire" .level 3 .type "ranged" .atk 110% .dmg -60% .crit -7% .launch 43 .target ~34 .is_crit_valid True  .effect "Suppression 4"
+combat_skill: .id "suppressing_fire" .level 4 .type "ranged" .atk 115% .dmg -60% .crit -6% .launch 43 .target ~34 .is_crit_valid True  .effect "Suppression 5"
+// ARB-008 suppressing_fire: 피해 -80% -> -60%. 후열(3·4열) 스트레스 딜러 2명에게 피해와 명중·치명타 감소를 함께. 2·3·4열 광역안보다 기본·약화 장신구 착용 모두 높음 [제작자]
 
 
 combat_skill: .id "sniper_mark" .level 0 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 43 .target 234 .is_crit_valid False  .effect "Arb Mark Target" "Arb Mark Debuff 1" .is_stall_invalidating false
