@@ -3,5 +3,13 @@
 
 
 // mod-only new effects
-effect: .name "RB MAA Bolster Rally" .target "target" .curio_result_type "positive" .chance 100% .healstress 2 .on_hit true .on_miss true .queue true
-// MAA-005 [trace 2026-10-05] Add immediate morale recovery to a buff whose benefit otherwise accumulates later. Effect: RB MAA Bolster Rally.
+effect: .name "RB MAA Bolster Rally 1" .target "target" .curio_result_type "positive" .chance 100% .healstress 2 .on_hit true .on_miss true .queue true
+// MAA-007 Bolster party stress heal by level 2/2/3/3/4 (was flat 2). Once per battle.
+effect: .name "RB MAA Bolster Rally 2" .target "target" .curio_result_type "positive" .chance 100% .healstress 2 .on_hit true .on_miss true .queue true
+// MAA-007 Bolster party stress heal by level 2/2/3/3/4 (was flat 2). Once per battle.
+effect: .name "RB MAA Bolster Rally 3" .target "target" .curio_result_type "positive" .chance 100% .healstress 3 .on_hit true .on_miss true .queue true
+// MAA-007 Bolster party stress heal by level 2/2/3/3/4 (was flat 2). Once per battle.
+effect: .name "RB MAA Bolster Rally 4" .target "target" .curio_result_type "positive" .chance 100% .healstress 3 .on_hit true .on_miss true .queue true
+// MAA-007 Bolster party stress heal by level 2/2/3/3/4 (was flat 2). Once per battle.
+effect: .name "RB MAA Bolster Rally 5" .target "target" .curio_result_type "positive" .chance 100% .healstress 4 .on_hit true .on_miss true .queue true
+// MAA-007 Bolster party stress heal by level 2/2/3/3/4 (was flat 2). Once per battle.

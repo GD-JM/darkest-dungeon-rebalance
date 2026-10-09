@@ -66,11 +66,12 @@ combat_skill: .id "command" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .la
 combat_skill: .id "command" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 1234 .target ~@1234 .is_crit_valid True  .effect "Command 5" .is_stall_invalidating false
 
 
-combat_skill: .id "bolster" .level 0 .type "ranged" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target ~@1234 .is_crit_valid True  .effect "Bolster 1" "Bolster Stress Buff 1" "RB MAA Bolster Rally" .is_stall_invalidating false
-combat_skill: .id "bolster" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target ~@1234 .is_crit_valid True  .effect "Bolster 2" "Bolster Stress Buff 2" "RB MAA Bolster Rally" .is_stall_invalidating false
-combat_skill: .id "bolster" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target ~@1234 .is_crit_valid True  .effect "Bolster 3" "Bolster Stress Buff 3" "RB MAA Bolster Rally" .is_stall_invalidating false
-combat_skill: .id "bolster" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target ~@1234 .is_crit_valid True  .effect "Bolster 4" "Bolster Stress Buff 4" "RB MAA Bolster Rally" .is_stall_invalidating false
-combat_skill: .id "bolster" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target ~@1234 .is_crit_valid True  .effect "Bolster 5" "Bolster Stress Buff 5" "RB MAA Bolster Rally" .is_stall_invalidating false
+combat_skill: .id "bolster" .level 0 .type "ranged" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target ~@1234 .is_crit_valid True  .effect "Bolster 1" "Bolster Stress Buff 1" "RB MAA Bolster Rally 1" .is_stall_invalidating false
+combat_skill: .id "bolster" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target ~@1234 .is_crit_valid True  .effect "Bolster 2" "Bolster Stress Buff 2" "RB MAA Bolster Rally 2" .is_stall_invalidating false
+combat_skill: .id "bolster" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target ~@1234 .is_crit_valid True  .effect "Bolster 3" "Bolster Stress Buff 3" "RB MAA Bolster Rally 3" .is_stall_invalidating false
+combat_skill: .id "bolster" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target ~@1234 .is_crit_valid True  .effect "Bolster 4" "Bolster Stress Buff 4" "RB MAA Bolster Rally 4" .is_stall_invalidating false
+combat_skill: .id "bolster" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target ~@1234 .is_crit_valid True  .effect "Bolster 5" "Bolster Stress Buff 5" "RB MAA Bolster Rally 5" .is_stall_invalidating false
+// MAA-007 bolster: 아군 전체 스트레스 회복 2 -> 레벨별 2/2/3/3/4 (RB MAA Bolster Rally 1~5). 전투당 1회라 전투 전체 영향은 작음 [제작자]
 // MAA-005 [trace 2026-10-05] Add immediate morale recovery to a buff whose benefit otherwise accumulates later.
 // MAA-005 bolster: 아군 전체 스트레스 회복 2 추가(RB MAA Bolster Rally), 회피·받는 스트레스·전투당 1회는 그대로. 1회 가치 1라운드 -66 -> +20%p. 중보병의 첫 자기 회복(G-05)
 
