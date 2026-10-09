@@ -32,6 +32,7 @@ PARAM = dict(
     CORPSE=0.5,           # 시체 제거. 시뮬레이션: 메인 전략(3·4열 먼저)이면 1·2열로 끌어오는 적 0명, 무작위 처치면 0.32명 x 당기기 3.0 = 1.0 -> 중간값 0.5 (arbalest.md 참고 아님, man_at_arms.md MAA 검토)
     COND_SELF=0.6, COND_OTHER=0.3, COND_STUN=0.67,  # 조건 유지율 (hero_power.md 4-2). 적 유형 조건은 실측 비율
     LOW_HP_SELF=0.6, LOW_HP_OTHER=0.3,  # '체력 X% 이하에서만' 사용 가능 기술. 스스로 체력을 깎는 기술이 있으면 0.6 (가정, 조건 유지율과 같은 규칙)
+    FREE_ACTION=True,     # R-VALUE-11: 무료 행동(.is_continue_turn)은 행동을 대신하지 않고 더한다. 매 턴 다시 쓸 수 있어 행동당 가치 = 기술 가치 / 지속 상한
     BUFF_DUR_CAP=2,       # 강화·약화·보호 지속 상한. 전투 2.55라운드(R-STRAT-02), 사용 시점의 평균 잔여 = v1 자기 강화 규칙과 같은 2
     DEFAULT_DUR=3,
     KILL_SHARE=1.57 / 4,  # 영웅 1명이 라운드당 처치하는 적 수 (R-STRAT-01: 파티 1.57명/라운드)
@@ -1070,11 +1071,16 @@ def evaluate(mode, P=PARAM):
             launch = re.sub(r'[^1-4]', '', first(d, 'launch'))
             if sid not in sk or v > sk[sid][0]:                 # 모드별 중복(괴인 등)은 큰 쪽
                 sk[sid] = (v, parts, launch)
-        vals = sorted((v[0] for v in sk.values()), reverse=True)
+        # R-VALUE-11 무료 행동: 모드 전환 기술(전투당 제한 + 여러 모드)은 mode_plans가 따로 센다
+        free = {first(d, 'id') for l, d in H['skills'] if first(d, 'is_continue_turn') == 'true'
+                and not ('per_battle_limit' in d and len(d.get('valid_modes', [])) > 1)} if P.get('FREE_ACTION') else set()
+        vals = sorted((v[0] for s, v in sk.items() if s not in free), reverse=True)
         act = st.mean(vals[:P['ACT_TOP']])
-        plans = mode_plans(C, H, sk, P)
+        plans = mode_plans(C, H, {s: v for s, v in sk.items() if s not in free}, P)
         if plans:
             act = max(v for v, _ in plans.values())
+        free_bonus = sum(max(0.0, sk[s][0]) / P['BUFF_DUR_CAP'] for s in free)
+        act += free_bonus
         top2 = sorted(sk, key=lambda s: -sk[s][1].get('직접', 0))[:2]
 
         def pts(s):
@@ -1086,7 +1092,7 @@ def evaluate(mode, P=PARAM):
         sub = sum(1 for x in rank_pts if 0.6 * best <= x < 0.9 * best)
         rmean = st.mean(H['res'].get(k, 0) for k in RES_BASE) - st.mean(RES_BASE.values())
         surv = H['hp'] / ((P['MON_HIT'] - H['def']) / 100) * (1 + rmean / 200)
-        out[hero] = dict(act=act, surv=surv, spd=H['spd'], flex=opt + 0.5 * sub, base=base, skills=sk, rank_pts=rank_pts, plans=plans)
+        out[hero] = dict(act=act, free=free_bonus, surv=surv, spd=H['spd'], flex=opt + 0.5 * sub, base=base, skills=sk, rank_pts=rank_pts, plans=plans)
     return out
 
 
