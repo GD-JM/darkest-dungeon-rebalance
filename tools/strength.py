@@ -32,6 +32,7 @@ PARAM = dict(
     CORPSE=0.5,           # 시체 제거. 시뮬레이션: 메인 전략(3·4열 먼저)이면 1·2열로 끌어오는 적 0명, 무작위 처치면 0.32명 x 당기기 3.0 = 1.0 -> 중간값 0.5 (arbalest.md 참고 아님, man_at_arms.md MAA 검토)
     COND_SELF=0.6, COND_OTHER=0.3, COND_STUN=0.67,  # 조건 유지율 (hero_power.md 4-2). 적 유형 조건은 실측 비율
     LOW_HP_SELF=0.6, LOW_HP_OTHER=0.3,  # '체력 X% 이하에서만' 사용 가능 기술. 스스로 체력을 깎는 기술이 있으면 0.6 (가정, 조건 유지율과 같은 규칙)
+    DEBUFF_FORMATS=True,  # R-VALUE-12: 적 약화를 buff_ids·buff_type 형식으로 걸어도 센다 (받는 치명타 증가 포함)
     FREE_ACTION=True,     # R-VALUE-11: 무료 행동(.is_continue_turn)은 행동을 대신하지 않고 더한다. 매 턴 다시 쓸 수 있어 행동당 가치 = 기술 가치 / 지속 상한
     BUFF_DUR_CAP=2,       # 강화·약화·보호 지속 상한. 전투 2.55라운드(R-STRAT-02), 사용 시점의 평균 잔여 = v1 자기 강화 규칙과 같은 2
     DEFAULT_DUR=3,
@@ -779,25 +780,40 @@ def skill_value(C, l, d):
             if 'unstealth' in k:                                # R-VALUE-09: 광역이어도 가치는 은신 적 1명분
                 h_ = 1.0 if aoe else st.mean(hit(m, atk) for m in MONS)
                 add('은신 해제', h_ * P['DESTEALTH'])
+            # 적 약화: 직접 수치(combat_stat_buff)와 강화 목록(buff_ids)·buff_type 형식을 모두 센다 (R-VALUE-12)
+            mods = []                                       # (능력치, 적에게 불리한 양 x>0)
             if 'combat_stat_buff' in k:
-                v = 0.0
                 for key in k:
-                    if not key.endswith(('_add', '_multiply')):
-                        continue
-                    x = -num(first(k, key)) / 100
-                    if x <= 0:
-                        continue
-                    if key == 'speed_rating_add':           # 속도 점수 원값. 적이 늦어져 먼저 죽는다
-                        v += P['DEATH_RATE'] * dp_enemy(x * 100) * act_full
-                        continue
-                    if key.startswith('damage_'):
-                        v += P['ENEMY_ACT'] * x * 0.5
-                    elif key == 'attack_rating_add':
-                        v += P['ENEMY_ACT'] * x * 100 / 77.5
-                    elif key == 'defense_rating_add':
-                        v += P['ALLY_ATK'] * x * 100 / 82.5 * 1.5
-                    elif key == 'protection_rating_add':
-                        v += P['ALLY_ATK'] * x * 1.5
+                    if key.endswith(('_add', '_multiply')):
+                        x = -num(first(k, key)) / 100
+                        mods.append((key.replace('_add', '').replace('_multiply', ''), x * (100 if key == 'speed_rating_add' else 1)))
+            if P.get('DEBUFF_FORMATS', True):
+                for b in k.get('buff_ids', []):
+                    B = C.buffs.get(b.strip('"'), {})
+                    if B.get('stat_type') in ('combat_stat_add', 'combat_stat_multiply'):
+                        a = -B.get('amount', 0)
+                        mods.append((B.get('stat_sub_type', ''), a * 100 if B.get('stat_sub_type') == 'speed_rating' else a))
+                    elif B.get('stat_type') == 'crit_received_chance':
+                        mods.append(('crit_received', B.get('amount', 0)))
+                if first(k, 'buff_type') == 'crit_received_chance':
+                    mods.append(('crit_received', num(first(k, 'buff_amount')) / 100))
+            v = 0.0
+            for stat, x in mods:
+                if x <= 0:
+                    continue
+                if stat == 'speed_rating':                  # 속도 점수 원값. 적이 늦어져 먼저 죽는다
+                    v += P['DEATH_RATE'] * dp_enemy(x) * act_full
+                elif stat.startswith('damage_'):
+                    v += P['ENEMY_ACT'] * x * 0.5
+                elif stat == 'attack_rating':
+                    v += P['ENEMY_ACT'] * x * 100 / 77.5
+                elif stat == 'defense_rating':
+                    v += P['ALLY_ATK'] * x * 100 / 82.5 * 1.5
+                elif stat == 'protection_rating':
+                    v += P['ALLY_ATK'] * x * 1.5
+                elif stat == 'crit_received':               # 그 적을 치는 아군 공격의 치명타 확률 +x (아군 치명타 강화와 같은 환산)
+                    v += P['ALLY_ATK'] * x
+            if v:
                 add('약화', ev('debuff') * v * min(dur, P['BUFF_DUR_CAP']) * n_t * rw)
         else:
             if who == 'performer' and ('keyStatus' in k or 'monsterType' in k):
