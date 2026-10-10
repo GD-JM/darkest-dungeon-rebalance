@@ -143,7 +143,19 @@ def main(argv=None):
             errors += len(found)
     print('주석 규칙 위반 %d건' % errors if errors else
           '주석 규칙: %d명 모든 변경에 ID·설명 주석 있음 (효과는 행별 검사)' % checked_heroes)
-    return 1 if errors else 0
+    # SYS-102: modfiles.txt 크기가 실제 파일과 다르면 게임이 파일을 잘라 읽는다(노상강도 기술 선택 설정 유실, 2026-10-10).
+    stale = []
+    mf = mod / 'modfiles.txt'
+    if mf.exists():
+        for line in mf.read_text(encoding='utf-8').splitlines():
+            rel, _, size = line.strip().rpartition(' ')
+            if rel and rel != 'modfiles.txt':
+                f = mod / rel
+                if not f.exists() or str(f.stat().st_size) != size:
+                    stale.append(rel)
+    if stale:
+        print('modfiles.txt 크기 불일치 %d건 -> python tools/make_modfiles.py 실행 필요: %s' % (len(stale), ', '.join(stale[:5])))
+    return 1 if (errors or stale) else 0
 
 if __name__ == '__main__':
     raise SystemExit(main())
