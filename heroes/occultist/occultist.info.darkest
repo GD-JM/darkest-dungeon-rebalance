@@ -14,11 +14,12 @@ armour: .name "occultist_armour_3" .def 25% .prot 0 .hp 31 .spd 0 .upgradeRequir
 armour: .name "occultist_armour_4" .def 30% .prot 0 .hp 35 .spd 0 .upgradeRequirementCode 3
 
 
-combat_skill: .id "bloodlet" .level 0 .type "melee" .atk 80% .dmg 0% .crit 9% .launch 123 .target 123 .is_crit_valid True  .effect "Eldritch Killer 1"
-combat_skill: .id "bloodlet" .level 1 .type "melee" .atk 85% .dmg 0% .crit 10% .launch 123 .target 123 .is_crit_valid True  .effect "Eldritch Killer 2"
-combat_skill: .id "bloodlet" .level 2 .type "melee" .atk 90% .dmg 0% .crit 11% .launch 123 .target 123 .is_crit_valid True  .effect "Eldritch Killer 3"
-combat_skill: .id "bloodlet" .level 3 .type "melee" .atk 95% .dmg 0% .crit 12% .launch 123 .target 123 .is_crit_valid True  .effect "Eldritch Killer 4"
-combat_skill: .id "bloodlet" .level 4 .type "melee" .atk 100% .dmg 0% .crit 13% .launch 123 .target 123 .is_crit_valid True  .effect "Eldritch Killer 5"
+combat_skill: .id "bloodlet" .level 0 .type "melee" .atk 85% .dmg -10% .crit 9% .launch 123 .target 123 .is_crit_valid True  .effect "Eldritch Killer 1"
+combat_skill: .id "bloodlet" .level 1 .type "melee" .atk 90% .dmg -10% .crit 10% .launch 123 .target 123 .is_crit_valid True  .effect "Eldritch Killer 2"
+combat_skill: .id "bloodlet" .level 2 .type "melee" .atk 95% .dmg -10% .crit 11% .launch 123 .target 123 .is_crit_valid True  .effect "Eldritch Killer 3"
+combat_skill: .id "bloodlet" .level 3 .type "melee" .atk 100% .dmg -10% .crit 12% .launch 123 .target 123 .is_crit_valid True  .effect "Eldritch Killer 4"
+combat_skill: .id "bloodlet" .level 4 .type "melee" .atk 105% .dmg -10% .crit 13% .launch 123 .target 123 .is_crit_valid True  .effect "Eldritch Killer 5"
+// OCC-002 bloodlet: 명중 1렙 80 -> 85, 피해 0% -> -10%. 명중 80은 체감상 못 쓰는 수준 [제작자]. 명중 +5 = 피해 10%p(R-TRADE-02)로 같은 기술 안에서 교환
 
 
 combat_skill: .id "abyssal_artillery" .level 0 .type "ranged" .atk 85% .dmg -33% .crit 0% .launch 34 .target ~34 .is_crit_valid True  .effect "Abyssal Killer 1"
