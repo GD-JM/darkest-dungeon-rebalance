@@ -30,35 +30,40 @@ effect: .name "RB JES Jester Spotlight 5" .target "performer" .curio_result_type
 // JES-006 [trace 2026-10-05] Make front-rank mark/dodge play practical alongside Finale preparation and corpse clearing. Effect: Jester Spotlight 5.
 // JES-006 Solo dodge +5 at every level to offset front-rank mark exposure; duration and other effects retained.
 // edited vanilla effect (from effects/base.effects.darkest)
-effect: .name "RB JES Embolden Team 1" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 5% .crit_chance_add 2% .speed_rating_add 1	.on_hit true .on_miss true .apply_once false    .queue false
+effect: .name "RB JES Embolden Team 1" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 0% .crit_chance_add 4% .speed_rating_add 2	.on_hit true .on_miss true .apply_once false    .queue false
+// JES-012 Battle Ballad: team accuracy removed (Command owns accuracy), crit 4-8%, speed back to vanilla 2/2/3/3/4.
 // JES-010 Battle Ballad crit back to vanilla 2-6%%; only team speed stays reduced at 1/1/2/2/3 (JES-002 partial rollback).
 // JES-002 [trace 2026-10-05] Reduce dominant team speed and critical bonuses while retaining accuracy and Finale preparation. Effect: Embolden Team 1.
 // JES-002 [intent 2026-10-06] High-speed Jester plus party speed can dominate initiative and suppress enemy stress actions; reduce speed to preserve turn-order choices.
 // JES-002 [intent 2026-10-06] Critical bonuses also trigger class critical benefits and stress recovery; combined with Inspiring Tune this can over-supply party stress management.
 // JES-002 Team critical bonus -1% point and speed -1; approved level 1 values, accuracy retained.
 // edited vanilla effect (from effects/base.effects.darkest)
-effect: .name "RB JES Embolden Team 2" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 6% .crit_chance_add 3% .speed_rating_add 1	.on_hit true .on_miss true .apply_once false	.queue false
+effect: .name "RB JES Embolden Team 2" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 0% .crit_chance_add 5% .speed_rating_add 2	.on_hit true .on_miss true .apply_once false	.queue false
+// JES-012 Battle Ballad: team accuracy removed (Command owns accuracy), crit 4-8%, speed back to vanilla 2/2/3/3/4.
 // JES-010 Battle Ballad crit back to vanilla 2-6%%; only team speed stays reduced at 1/1/2/2/3 (JES-002 partial rollback).
 // JES-002 [trace 2026-10-05] Reduce dominant team speed and critical bonuses while retaining accuracy and Finale preparation. Effect: Embolden Team 2.
 // JES-002 [intent 2026-10-06] High-speed Jester plus party speed can dominate initiative and suppress enemy stress actions; reduce speed to preserve turn-order choices.
 // JES-002 [intent 2026-10-06] Critical bonuses also trigger class critical benefits and stress recovery; combined with Inspiring Tune this can over-supply party stress management.
 // JES-002 Team critical bonus -1% point and speed -1; approved level 2 values, accuracy retained.
 // edited vanilla effect (from effects/base.effects.darkest)
-effect: .name "RB JES Embolden Team 3" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 7% .crit_chance_add 4% .speed_rating_add 2	.on_hit true .on_miss true .apply_once false	.queue false
+effect: .name "RB JES Embolden Team 3" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 0% .crit_chance_add 6% .speed_rating_add 3	.on_hit true .on_miss true .apply_once false	.queue false
+// JES-012 Battle Ballad: team accuracy removed (Command owns accuracy), crit 4-8%, speed back to vanilla 2/2/3/3/4.
 // JES-010 Battle Ballad crit back to vanilla 2-6%%; only team speed stays reduced at 1/1/2/2/3 (JES-002 partial rollback).
 // JES-002 [trace 2026-10-05] Reduce dominant team speed and critical bonuses while retaining accuracy and Finale preparation. Effect: Embolden Team 3.
 // JES-002 [intent 2026-10-06] High-speed Jester plus party speed can dominate initiative and suppress enemy stress actions; reduce speed to preserve turn-order choices.
 // JES-002 [intent 2026-10-06] Critical bonuses also trigger class critical benefits and stress recovery; combined with Inspiring Tune this can over-supply party stress management.
 // JES-002 Team critical bonus -1% point and speed -1; approved level 3 values, accuracy retained.
 // edited vanilla effect (from effects/base.effects.darkest)
-effect: .name "RB JES Embolden Team 4" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 8% .crit_chance_add 5% .speed_rating_add 2	.on_hit true .on_miss true .apply_once false	.queue false
+effect: .name "RB JES Embolden Team 4" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 0% .crit_chance_add 7% .speed_rating_add 3	.on_hit true .on_miss true .apply_once false	.queue false
+// JES-012 Battle Ballad: team accuracy removed (Command owns accuracy), crit 4-8%, speed back to vanilla 2/2/3/3/4.
 // JES-010 Battle Ballad crit back to vanilla 2-6%%; only team speed stays reduced at 1/1/2/2/3 (JES-002 partial rollback).
 // JES-002 [trace 2026-10-05] Reduce dominant team speed and critical bonuses while retaining accuracy and Finale preparation. Effect: Embolden Team 4.
 // JES-002 [intent 2026-10-06] High-speed Jester plus party speed can dominate initiative and suppress enemy stress actions; reduce speed to preserve turn-order choices.
 // JES-002 [intent 2026-10-06] Critical bonuses also trigger class critical benefits and stress recovery; combined with Inspiring Tune this can over-supply party stress management.
 // JES-002 Team critical bonus -1% point and speed -1; approved level 4 values, accuracy retained.
 // edited vanilla effect (from effects/base.effects.darkest)
-effect: .name "RB JES Embolden Team 5" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 10% .crit_chance_add 6% .speed_rating_add 3	.on_hit true .on_miss true .apply_once false	.queue false
+effect: .name "RB JES Embolden Team 5" .target "target" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 0% .crit_chance_add 8% .speed_rating_add 4	.on_hit true .on_miss true .apply_once false	.queue false
+// JES-012 Battle Ballad: team accuracy removed (Command owns accuracy), crit 4-8%, speed back to vanilla 2/2/3/3/4.
 // JES-010 Battle Ballad crit back to vanilla 2-6%%; only team speed stays reduced at 1/1/2/2/3 (JES-002 partial rollback).
 // JES-002 [trace 2026-10-05] Reduce dominant team speed and critical bonuses while retaining accuracy and Finale preparation. Effect: Embolden Team 5.
 // JES-002 [intent 2026-10-06] High-speed Jester plus party speed can dominate initiative and suppress enemy stress actions; reduce speed to preserve turn-order choices.

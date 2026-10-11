@@ -50,6 +50,7 @@ combat_skill: .id "battle_ballad" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 
 combat_skill: .id "battle_ballad" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 34 .target @~1234 .is_crit_valid True  .effect "RB JES Embolden Team 3" "Build to Finale Song" .is_stall_invalidating false
 combat_skill: .id "battle_ballad" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 34 .target @~1234 .is_crit_valid True  .effect "RB JES Embolden Team 4" "Build to Finale Song" .is_stall_invalidating false
 combat_skill: .id "battle_ballad" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 34 .target @~1234 .is_crit_valid True  .effect "RB JES Embolden Team 5" "Build to Finale Song" .is_stall_invalidating false
+// JES-012 battle_ballad: 아군 명중 제거(명중은 중보병 지휘 몫), 치명타 4/5/6/7/8%, 속도 바닐라 2/2/3/3/4. 지휘와 버프 축 분리 [제작자]
 // JES-002 [trace 2026-10-05] Reduce dominant team speed and critical bonuses while retaining accuracy and Finale preparation.
 // JES-002 Battle Ballad team speed 1/1/2/2/3 and critical bonus 1/2/3/4/5%; accuracy and Finale-specific preparation retained.
 // JES-002 [intent 2026-10-06] High-speed Jester plus party speed can dominate initiative and suppress enemy stress actions; reduce speed to preserve turn-order choices.
