@@ -69,11 +69,12 @@ combat_skill: .id "command" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .la
 // MAA-008 command: 다른 아군 전원 기절·표식 해제(FlareClear 1, 석궁사수 결집 신호탄에서 이동) 추가. 노병이 명령으로 대열을 다잡아 기절한 동료를 깨움(P-19), 횟수 제한 없음 그대로 [제작자]
 
 
-combat_skill: .id "bolster" .level 0 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 1234 .target ~@1234 .is_crit_valid True  .effect "RB MAA Bolster 1" "RB MAA Bolster Stress Buff 1" "RB MAA Bolster Rally 1" .is_stall_invalidating false
-combat_skill: .id "bolster" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 1234 .target ~@1234 .is_crit_valid True  .effect "RB MAA Bolster 2" "RB MAA Bolster Stress Buff 2" "RB MAA Bolster Rally 2" .is_stall_invalidating false
-combat_skill: .id "bolster" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 1234 .target ~@1234 .is_crit_valid True  .effect "RB MAA Bolster 3" "RB MAA Bolster Stress Buff 3" "RB MAA Bolster Rally 3" .is_stall_invalidating false
-combat_skill: .id "bolster" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 1234 .target ~@1234 .is_crit_valid True  .effect "RB MAA Bolster 4" "RB MAA Bolster Stress Buff 4" "RB MAA Bolster Rally 4" .is_stall_invalidating false
-combat_skill: .id "bolster" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 1234 .target ~@1234 .is_crit_valid True  .effect "RB MAA Bolster 5" "RB MAA Bolster Stress Buff 5" "RB MAA Bolster Rally 5" .is_stall_invalidating false
+combat_skill: .id "bolster" .level 0 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 1234 .target ~@1234 .is_crit_valid True  .effect "RB MAA Bolster Guarded 1" "RB MAA Bolster Stress Buff 1" "RB MAA Bolster Rally 1" .is_stall_invalidating false
+combat_skill: .id "bolster" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 1234 .target ~@1234 .is_crit_valid True  .effect "RB MAA Bolster Guarded 2" "RB MAA Bolster Stress Buff 2" "RB MAA Bolster Rally 2" .is_stall_invalidating false
+combat_skill: .id "bolster" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 1234 .target ~@1234 .is_crit_valid True  .effect "RB MAA Bolster Guarded 3" "RB MAA Bolster Stress Buff 3" "RB MAA Bolster Rally 3" .is_stall_invalidating false
+combat_skill: .id "bolster" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 1234 .target ~@1234 .is_crit_valid True  .effect "RB MAA Bolster Guarded 4" "RB MAA Bolster Stress Buff 4" "RB MAA Bolster Rally 4" .is_stall_invalidating false
+combat_skill: .id "bolster" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 1234 .target ~@1234 .is_crit_valid True  .effect "RB MAA Bolster Guarded 5" "RB MAA Bolster Stress Buff 5" "RB MAA Bolster Rally 5" .is_stall_invalidating false
+// MAA-011 bolster: 회피 제거, 보호받는 아군은 받는 스트레스 회복 1.5배(효과 지속 동안), 받는 스트레스 -10% 지속 2/3/2/3/2턴. 수호자·유물수집상 날 지켜줘·조련사 경비견과 시너지 [제작자]
 // MAA-010 bolster: 전투당 1회 제한 제거 -> 상시 보조 스트레스 힐. 회복 1/1/2/2/3(아군 전체), 회피 +1~5(3턴), 받는 스트레스 -10%(2턴, 최대 2중첩 = 바닐라 -20%). 스트레스 회복원을 광대 밖으로 분산 [제작자]
 // MAA-007 bolster: 아군 전체 스트레스 회복 2 -> 레벨별 2/2/3/3/4 (RB MAA Bolster Rally 1~5). 전투당 1회라 전투 전체 영향은 작음 [제작자]
 // MAA-005 [trace 2026-10-05] Add immediate morale recovery to a buff whose benefit otherwise accumulates later.
