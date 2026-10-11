@@ -335,7 +335,7 @@
   "dur": 3,
   "eff": "Caltrops SPD Debuff 5",
   "chance": 140,
-  "skill_pp": 70
+  "skill_pp": 95
  },
  {
   "hero": "bounty_hunter",
@@ -348,7 +348,7 @@
   "dur": 3,
   "eff": "Caltrops Prey Debuff 5",
   "chance": 140,
-  "skill_pp": 70
+  "skill_pp": 95
  },
  {
   "hero": "crusader",
@@ -426,7 +426,7 @@
   "dur": 2,
   "eff": "Mark Self",
   "chance": 100,
-  "skill_pp": 26
+  "skill_pp": 22
  },
  {
   "hero": "duelist",
@@ -439,7 +439,7 @@
   "dur": 4,
   "eff": "Duelist Feint Buff 5",
   "chance": 100,
-  "skill_pp": 26
+  "skill_pp": 22
  },
  {
   "hero": "duelist",
@@ -450,9 +450,9 @@
   "cat": "명중*",
   "val": -10.0,
   "dur": 3,
-  "eff": "Duelist Feint Debuff 5",
+  "eff": "RB DUE Duelist Feint Debuff 5",
   "chance": 150,
-  "skill_pp": 26
+  "skill_pp": 22
  },
  {
   "hero": "duelist",
@@ -461,11 +461,11 @@
   "skill_ko": "feint",
   "side": "적 1명",
   "cat": "방어",
-  "val": -30.0,
+  "val": -20.0,
   "dur": 3,
-  "eff": "Duelist Feint Debuff 5",
+  "eff": "RB DUE Duelist Feint Debuff 5",
   "chance": 150,
-  "skill_pp": 26
+  "skill_pp": 22
  },
  {
   "hero": "duelist",
@@ -1518,7 +1518,7 @@
   "dur": null,
   "eff": "RB MAA Command 5",
   "chance": 100,
-  "skill_pp": 62
+  "skill_pp": 64
  },
  {
   "hero": "man_at_arms",
@@ -1526,12 +1526,12 @@
   "skill": "command",
   "skill_ko": "지휘",
   "side": "아군 전체",
-  "cat": "회피",
-  "val": 5.0,
+  "cat": "방어",
+  "val": 15.0,
   "dur": null,
   "eff": "RB MAA Command 5",
   "chance": 100,
-  "skill_pp": 62
+  "skill_pp": 64
  },
  {
   "hero": "man_at_arms",
@@ -1544,7 +1544,7 @@
   "dur": null,
   "eff": "RB MAA Command 5",
   "chance": 100,
-  "skill_pp": 62
+  "skill_pp": 64
  },
  {
   "hero": "man_at_arms",
@@ -1713,20 +1713,7 @@
   "dur": 2,
   "eff": "Musk Mark Target",
   "chance": 100,
-  "skill_pp": -4
- },
- {
-  "hero": "musketeer",
-  "hero_ko": "총사",
-  "skill": "skeet_shot",
-  "skill_ko": "스키트 사격",
-  "side": "적 1명",
-  "cat": "받는 치명타",
-  "val": 12.0,
-  "dur": 2,
-  "eff": "Musk Mark DBF 5",
-  "chance": 140,
-  "skill_pp": -4
+  "skill_pp": -43
  },
  {
   "hero": "occultist",
@@ -1981,12 +1968,12 @@
   "skill": "gods_illumination",
   "skill_ko": "광휘",
   "side": "적 1명",
-  "cat": "회피",
-  "val": -30.0,
-  "dur": null,
-  "eff": "Dodge Curse 5",
+  "cat": "받는 피해",
+  "val": 15.0,
+  "dur": 3,
+  "eff": "RB VES Illumination Exposed 5",
   "chance": 140,
-  "skill_pp": 26
+  "skill_pp": -33
  },
  {
   "hero": "vestal",
@@ -1999,7 +1986,7 @@
   "dur": null,
   "eff": "Destealth",
   "chance": 100,
-  "skill_pp": 26
+  "skill_pp": -33
  },
  {
   "hero": "vestal",
