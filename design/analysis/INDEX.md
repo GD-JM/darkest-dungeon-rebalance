@@ -1,0 +1,30 @@
+# 분석 자료 목록
+
+제작자가 "예전에 본 ○○ 보여줘"라고 하면 Claude는 **새로 만들지 않고** 이 목록에서 찾아 그 파일 내용을 보여 준다.
+- 파일 머리의 생성일·데이터 커밋을 함께 알린다. 그 뒤 데이터가 바뀌었으면 "갱신할까요?"만 묻는다.
+- 대화에서 표·비교를 새로 만들면 여기에 파일로 저장하고 한 줄을 추가한다(대화에만 남기지 않는다).
+- 수치 순위는 `python tools/strength.py`(매번 계산), 변경 기록은 `../changes/<영웅>.md`.
+
+| 파일 | 내용 | 찾는 말 | 날짜 |
+|---|---|---|---|
+| [buff_debuff_map.md](buff_debuff_map.md) | 영웅 5렙 기술의 강화·약화를 대상(적 1명/적 전체/아군/자신)×능력치로 분류. 재생성 `tools/buff_map.py` | 버프 분포, 약화 분포, 겹치는 효과, 표식 | 2026-10-11 |
+| [hero_lore.md](hero_lore.md) | 영웅 공식 설정(길드·대장간·야영 문구, 직업 치명타 버프, 전용 장신구) | 설정, 스토리, 장신구 | 2026-09-27 |
+| [hero_power_v2.md](hero_power_v2.md) | 강함 순위 모델 v2 설명 | 강함 순위, 모델 | 2026-10-05 |
+| [hero_power.md](hero_power.md) | 영웅 능력치·조건부 피해·과대 기술 | 능력치, 버프 기준선 | 2026-09-27 |
+| [hero_ranks.md](hero_ranks.md) | 영웅 주 열(기술 사용 열 기준) | 열, 위치 | 2026-09-15 |
+| [stun.md](stun.md) / [stun-reassessment.md](stun-reassessment.md) | 기절 기술 분석 / 전수 재검토(최신) | 기절 | 2026-10-05 |
+| [displacement.md](displacement.md) | 밀치기·당기기 기술 | 밀치기, 당기기, 이동기 | 2026-09-14 |
+| [dot.md](dot.md) | 출혈·중독(화상 부록) 기술 | 출혈, 중독, 지속 피해 | 2026-09-14 |
+| [aoe.md](aoe.md) | 광역 공격 기술 | 광역 | 2026-09-15 |
+| [dealers.md](dealers.md) | 딜러 비교 | 딜러 | 2026-09-15 |
+| [heal.md](heal.md) / [heal_skills.md](heal_skills.md) | 회복 분석 / 회복 기술(체력·스트레스) | 회복, 스트레스 회복 | 2026-09-15 |
+| [affliction.md](affliction.md) | 고통·미덕의 가치 (R-VALUE-06) | 고통, 붕괴, 스트레스 가치 | 2026-10-03 |
+| [resistances.md](resistances.md) | 영웅 저항 설계 축 | 저항 | 2026-09-27 |
+| [accuracy.md](accuracy.md), [accuracy_baseline.md](accuracy_baseline.md), [accuracy_budget.md](accuracy_budget.md), [accuracy_laws.md](accuracy_laws.md), [low_accuracy_skills.md](low_accuracy_skills.md) | 명중 분석 묶음 | 명중 | 2026-09-14 |
+| [trinkets_rank.md](trinkets_rank.md) | 열 조건 장신구 | 장신구 | 2026-09-14 |
+| [dlc_history.md](dlc_history.md) | DLC 영웅 패치 이력 | 패치, DLC | 2026-09-14 |
+| [wiki_notes.md](wiki_notes.md) | 위키에서 얻은 엔진 규칙 | 위키 | 2026-10-10 |
+| [leper-full-review.txt](leper-full-review.txt) | 나병환자 전수 조사 | 나병환자 | 2026-10-05 |
+| [jester-full-review.txt](jester-full-review.txt), [jester-position-buff-options.txt](jester-position-buff-options.txt) | 광대 전수 조사, 위치 버프 선택지 | 광대 | 2026-10-05 |
+| [musketeer-full-review.txt](musketeer-full-review.txt) | 총사 전수 검토 | 총사 | 2026-10-05 |
+| [comment-trace-cleanup.md](comment-trace-cleanup.md) | 주석·의도 전수 보완 기록 | 주석 | 2026-10-05 |
