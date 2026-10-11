@@ -124,36 +124,41 @@ effect: .name "MAA Riposte 5"  .target "performer" .curio_result_type "positive"
 //# ======================================================================
 //# 기술: 지휘 (command)
 //# 레벨별 효과: 1레벨 Command 1 | 2레벨 Command 2 | 3레벨 Command 3 | 4레벨 Command 4 | 5레벨 Command 5
-effect: .name "Command 1" .target "target" .curio_result_type "negative" .chance 100% .buff_ids "MAA_Command_ACC_1" "DEF5" "MAA_Command_GuardedDMGL_1" "MAA_Command_GuardedDMGH_1" .on_hit true .on_miss true .queue true
+effect: .name "Command 1" .target "target" .curio_result_type "negative" .chance 100% .buff_ids "MAA_Command_ACC_1" "PROT15" "MAA_Command_GuardedDMGL_1" "MAA_Command_GuardedDMGH_1" .on_hit true .on_miss true .queue true
 // MAA-012 Command: team crit removed (Battle Ballad owns crit), dodge +5 fixed (DEF5); accuracy 5-10 and guarded damage bonus kept.
+// MAA-013 Command: dodge +5 -> protection +15 fixed (team protection buff had no owner; dodge scales too hard).
 //#   강화 효과 수치(JSON, 참고용): MAA_Command_ACC_1 = attack_rating 0.05
 //#   강화 효과 수치(JSON, 참고용): MAA_Command_CRIT_1 = crit_chance 0.04
 //#   강화 효과 수치(JSON, 참고용): MAA_Command_GuardedDMGL_1 = damage_low 0.15 [is_guarded]
 //#   강화 효과 수치(JSON, 참고용): MAA_Command_GuardedDMGH_1 = damage_high 0.15 [is_guarded]
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Command 2" .target "target" .curio_result_type "negative" .chance 100% .buff_ids "MAA_Command_ACC_2" "DEF5" "MAA_Command_GuardedDMGL_2" "MAA_Command_GuardedDMGH_2" .on_hit true .on_miss true .queue true
+effect: .name "Command 2" .target "target" .curio_result_type "negative" .chance 100% .buff_ids "MAA_Command_ACC_2" "PROT15" "MAA_Command_GuardedDMGL_2" "MAA_Command_GuardedDMGH_2" .on_hit true .on_miss true .queue true
 // MAA-012 Command: team crit removed (Battle Ballad owns crit), dodge +5 fixed (DEF5); accuracy 5-10 and guarded damage bonus kept.
+// MAA-013 Command: dodge +5 -> protection +15 fixed (team protection buff had no owner; dodge scales too hard).
 //#   강화 효과 수치(JSON, 참고용): MAA_Command_ACC_2 = attack_rating 0.06
 //#   강화 효과 수치(JSON, 참고용): MAA_Command_CRIT_2 = crit_chance 0.05
 //#   강화 효과 수치(JSON, 참고용): MAA_Command_GuardedDMGL_2 = damage_low 0.17 [is_guarded]
 //#   강화 효과 수치(JSON, 참고용): MAA_Command_GuardedDMGH_2 = damage_high 0.17 [is_guarded]
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Command 3" .target "target" .curio_result_type "negative" .chance 100% .buff_ids "MAA_Command_ACC_3" "DEF5" "MAA_Command_GuardedDMGL_3" "MAA_Command_GuardedDMGH_3" .on_hit true .on_miss true .queue true
+effect: .name "Command 3" .target "target" .curio_result_type "negative" .chance 100% .buff_ids "MAA_Command_ACC_3" "PROT15" "MAA_Command_GuardedDMGL_3" "MAA_Command_GuardedDMGH_3" .on_hit true .on_miss true .queue true
 // MAA-012 Command: team crit removed (Battle Ballad owns crit), dodge +5 fixed (DEF5); accuracy 5-10 and guarded damage bonus kept.
+// MAA-013 Command: dodge +5 -> protection +15 fixed (team protection buff had no owner; dodge scales too hard).
 //#   강화 효과 수치(JSON, 참고용): MAA_Command_ACC_3 = attack_rating 0.07
 //#   강화 효과 수치(JSON, 참고용): MAA_Command_CRIT_3 = crit_chance 0.06
 //#   강화 효과 수치(JSON, 참고용): MAA_Command_GuardedDMGL_3 = damage_low 0.2 [is_guarded]
 //#   강화 효과 수치(JSON, 참고용): MAA_Command_GuardedDMGH_3 = damage_high 0.2 [is_guarded]
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Command 4" .target "target" .curio_result_type "negative" .chance 100% .buff_ids "MAA_Command_ACC_4" "DEF5" "MAA_Command_GuardedDMGL_4" "MAA_Command_GuardedDMGH_4" .on_hit true .on_miss true .queue true
+effect: .name "Command 4" .target "target" .curio_result_type "negative" .chance 100% .buff_ids "MAA_Command_ACC_4" "PROT15" "MAA_Command_GuardedDMGL_4" "MAA_Command_GuardedDMGH_4" .on_hit true .on_miss true .queue true
 // MAA-012 Command: team crit removed (Battle Ballad owns crit), dodge +5 fixed (DEF5); accuracy 5-10 and guarded damage bonus kept.
+// MAA-013 Command: dodge +5 -> protection +15 fixed (team protection buff had no owner; dodge scales too hard).
 //#   강화 효과 수치(JSON, 참고용): MAA_Command_ACC_4 = attack_rating 0.08
 //#   강화 효과 수치(JSON, 참고용): MAA_Command_CRIT_4 = crit_chance 0.07
 //#   강화 효과 수치(JSON, 참고용): MAA_Command_GuardedDMGL_4 = damage_low 0.22 [is_guarded]
 //#   강화 효과 수치(JSON, 참고용): MAA_Command_GuardedDMGH_4 = damage_high 0.22 [is_guarded]
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Command 5" .target "target" .curio_result_type "negative" .chance 100% .buff_ids "MAA_Command_ACC_5" "DEF5" "MAA_Command_GuardedDMGL_5" "MAA_Command_GuardedDMGH_5" .on_hit true .on_miss true .queue true
+effect: .name "Command 5" .target "target" .curio_result_type "negative" .chance 100% .buff_ids "MAA_Command_ACC_5" "PROT15" "MAA_Command_GuardedDMGL_5" "MAA_Command_GuardedDMGH_5" .on_hit true .on_miss true .queue true
 // MAA-012 Command: team crit removed (Battle Ballad owns crit), dodge +5 fixed (DEF5); accuracy 5-10 and guarded damage bonus kept.
+// MAA-013 Command: dodge +5 -> protection +15 fixed (team protection buff had no owner; dodge scales too hard).
 //#   강화 효과 수치(JSON, 참고용): MAA_Command_ACC_5 = attack_rating 0.1
 //#   강화 효과 수치(JSON, 참고용): MAA_Command_CRIT_5 = crit_chance 0.08
 //#   강화 효과 수치(JSON, 참고용): MAA_Command_GuardedDMGL_5 = damage_low 0.25 [is_guarded]

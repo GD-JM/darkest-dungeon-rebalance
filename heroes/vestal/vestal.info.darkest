@@ -82,15 +82,16 @@ combat_skill: .id "gods_comfort" .level 4 .heal 4 5 .launch 43 .target @~1234  .
 //그래서 1렙에 몰아줌 힐성능을 대신에 등차적으로 성장하게 바꿈
 
 
-combat_skill: .id "gods_illumination" .level 0 .type "ranged" .atk 95% .dmg -75% .crit 0% .launch 4321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "Dodge Curse 1" "Vestal Light 1" "Destealth"
-combat_skill: .id "gods_illumination" .level 1 .type "ranged" .atk 100% .dmg -75% .crit 0% .launch 4321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "Dodge Curse 2" "Vestal Light 2" "Destealth"
-combat_skill: .id "gods_illumination" .level 2 .type "ranged" .atk 105% .dmg -75% .crit 0% .launch 4321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "Dodge Curse 3" "Vestal Light 3" "Destealth"
-combat_skill: .id "gods_illumination" .level 3 .type "ranged" .atk 110% .dmg -75% .crit 0% .launch 4321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "Dodge Curse 4" "Vestal Light 4" "Destealth"
-combat_skill: .id "gods_illumination" .level 4 .type "ranged" .atk 115% .dmg -75% .crit 0% .launch 4321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "Dodge Curse 5" "Vestal Light 5" "Destealth"
+combat_skill: .id "gods_illumination" .level 0 .type "ranged" .atk 95% .dmg -75% .crit 0% .launch 4321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "RB VES Illumination Exposed 1" "Vestal Light 1" "Destealth"
+combat_skill: .id "gods_illumination" .level 1 .type "ranged" .atk 100% .dmg -75% .crit 0% .launch 4321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "RB VES Illumination Exposed 2" "Vestal Light 2" "Destealth"
+combat_skill: .id "gods_illumination" .level 2 .type "ranged" .atk 105% .dmg -75% .crit 0% .launch 4321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "RB VES Illumination Exposed 3" "Vestal Light 3" "Destealth"
+combat_skill: .id "gods_illumination" .level 3 .type "ranged" .atk 110% .dmg -75% .crit 0% .launch 4321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "RB VES Illumination Exposed 4" "Vestal Light 4" "Destealth"
+combat_skill: .id "gods_illumination" .level 4 .type "ranged" .atk 115% .dmg -75% .crit 0% .launch 4321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "RB VES Illumination Exposed 5" "Vestal Light 5" "Destealth"
 // VES-010 gods_illumination: 명중 1렙 90 -> 95. 효과(회피 감소·은신 해제) 본업 기술은 명중 우선 + 성녀 다른 기술이 모두 90이라 확실히 맞히는 마무리(딸피 처리) 선택지로 [제작자]
 // VES-006 [trace 2026-10-05] Provide an all-rank utility option for front Vestal play.
 //1열에 쓸게 없어서 이거 넣어야함
 //사용열 321 -> 4321
+// VES-011 gods_illumination: 회피 -20~-30 -> 받는 피해 +10/11/12/13/15%(3턴). 회피 -30은 석궁사수 저격수의 표식과 겹침. 받는 피해는 마름쇠(3·4열)뿐이라 4321열 광휘와 역할이 다름. 횃불·은신 해제 유지 [제작자]
 
 
 

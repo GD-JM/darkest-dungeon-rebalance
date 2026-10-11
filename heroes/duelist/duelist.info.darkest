@@ -24,11 +24,12 @@ combat_skill: .id "touche" .level 3 .type "melee" .atk 105% .dmg 0% .crit 4% .mo
 combat_skill: .id "touche" .level 4 .type "melee" .atk 110% .dmg 0% .crit 5% .move 1 0 .launch 4321 .target 12 .is_crit_valid True  .effect "RB DUE Duelist Touche Buff 5" .valid_modes stance_defensive
 // DUE-005 touche: 자기 회피 +40~50 4턴 -> +15/17/20/22/25 2턴(RB DUE Duelist Touche Buff). 피해 0% 평타가 중첩으로 적 명중 0%까지 가던 문제 [제작자 B안]
 
-combat_skill: .id "feint" .level 0 .type "melee" .atk 95%  .dmg -50% .crit 8% .launch 321 .target 12 .is_crit_valid True  .effect "Mark Self" "Duelist Feint Buff 1" "Duelist Feint Debuff 1" .valid_modes stance_defensive
-combat_skill: .id "feint" .level 1 .type "melee" .atk 100% .dmg -50% .crit 9% .launch 321 .target 12 .is_crit_valid True  .effect "Mark Self" "Duelist Feint Buff 2" "Duelist Feint Debuff 2" .valid_modes stance_defensive
-combat_skill: .id "feint" .level 2 .type "melee" .atk 105% .dmg -50% .crit 10% .launch 321 .target 12 .is_crit_valid True  .effect "Mark Self" "Duelist Feint Buff 3" "Duelist Feint Debuff 3" .valid_modes stance_defensive
-combat_skill: .id "feint" .level 3 .type "melee" .atk 110% .dmg -50% .crit 11% .launch 321 .target 12 .is_crit_valid True  .effect "Mark Self" "Duelist Feint Buff 4" "Duelist Feint Debuff 4" .valid_modes stance_defensive
-combat_skill: .id "feint" .level 4 .type "melee" .atk 115% .dmg -50% .crit 12% .launch 321 .target 12 .is_crit_valid True  .effect "Mark Self" "Duelist Feint Buff 5" "Duelist Feint Debuff 5" .valid_modes stance_defensive
+combat_skill: .id "feint" .level 0 .type "melee" .atk 95%  .dmg -50% .crit 8% .launch 321 .target 12 .is_crit_valid True  .effect "Mark Self" "Duelist Feint Buff 1" "RB DUE Duelist Feint Debuff 1" .valid_modes stance_defensive
+combat_skill: .id "feint" .level 1 .type "melee" .atk 100% .dmg -50% .crit 9% .launch 321 .target 12 .is_crit_valid True  .effect "Mark Self" "Duelist Feint Buff 2" "RB DUE Duelist Feint Debuff 2" .valid_modes stance_defensive
+combat_skill: .id "feint" .level 2 .type "melee" .atk 105% .dmg -50% .crit 10% .launch 321 .target 12 .is_crit_valid True  .effect "Mark Self" "Duelist Feint Buff 3" "RB DUE Duelist Feint Debuff 3" .valid_modes stance_defensive
+combat_skill: .id "feint" .level 3 .type "melee" .atk 110% .dmg -50% .crit 11% .launch 321 .target 12 .is_crit_valid True  .effect "Mark Self" "Duelist Feint Buff 4" "RB DUE Duelist Feint Debuff 4" .valid_modes stance_defensive
+combat_skill: .id "feint" .level 4 .type "melee" .atk 115% .dmg -50% .crit 12% .launch 321 .target 12 .is_crit_valid True  .effect "Mark Self" "Duelist Feint Buff 5" "RB DUE Duelist Feint Debuff 5" .valid_modes stance_defensive
+// DUE-007 feint: 방어 감소 -20/22/25/27/30% -> -10/12/15/17/20%(RB DUE Duelist Feint Debuff). 현상금 사냥꾼 죽음의 표식(-20~-30)과 같은 숫자였음, 표식의 바닐라 값으로 [제작자]
 
 combat_skill: .id "disengage" .level 0 .type "melee" .atk 95%  .dmg -50% .crit -1% .move 3 0 .launch 21 .target 12 .is_crit_valid True  .effect "Duelist Disengage Buff 1" "Duelist Disengage Any Position" .valid_modes stance_defensive
 combat_skill: .id "disengage" .level 1 .type "melee" .atk 100% .dmg -50% .crit 0%  .move 3 0 .launch 21 .target 12 .is_crit_valid True  .effect "Duelist Disengage Buff 2" "Duelist Disengage Any Position" .valid_modes stance_defensive

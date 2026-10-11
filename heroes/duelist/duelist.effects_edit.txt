@@ -54,7 +54,8 @@ effect: .name "Duelist Feint Buff 1" .target "performer" .chance 100% .duration 
 //#   강화 효과 수치(JSON, 참고용): DUELIST_FEINT_RIPOSTEDMGLBUFF1 = damage_low 0.25 [riposte]
 //#   강화 효과 수치(JSON, 참고용): DUELIST_FEINT_RIPOSTEDMGHBUFF1 = damage_high 0.25 [riposte]
 //#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
-effect: .name "Duelist Feint Debuff 1" .target "target" .chance 110% .duration 3 .buff_ids "DUELIST_FEINT_ACCDEBUFF" "DUELIST_FEINT_PROTDEBUFF1"  .on_hit true .on_miss false
+effect: .name "Duelist Feint Debuff 1" .target "target" .chance 110% .duration 3 .buff_ids "DUELIST_FEINT_ACCDEBUFF" "PROT-10"  .on_hit true .on_miss false
+// DUE-007 Feint protection shred -10% (was -20..-30, same numbers as Mark for Death); accuracy debuff kept.
 //#   강화 효과 수치(JSON, 참고용): DUELIST_FEINT_ACCDEBUFF = attack_rating -0.1 [actorStatus]
 //#   강화 효과 수치(JSON, 참고용): DUELIST_FEINT_PROTDEBUFF1 = protection_rating -0.2
 //#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
@@ -62,7 +63,8 @@ effect: .name "Duelist Feint Buff 2" .target "performer" .chance 100% .duration 
 //#   강화 효과 수치(JSON, 참고용): DUELIST_FEINT_RIPOSTEDMGLBUFF2 = damage_low 0.27 [riposte]
 //#   강화 효과 수치(JSON, 참고용): DUELIST_FEINT_RIPOSTEDMGHBUFF2 = damage_high 0.27 [riposte]
 //#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
-effect: .name "Duelist Feint Debuff 2" .target "target" .chance 120% .duration 3 .buff_ids "DUELIST_FEINT_ACCDEBUFF" "DUELIST_FEINT_PROTDEBUFF2"  .on_hit true .on_miss false
+effect: .name "Duelist Feint Debuff 2" .target "target" .chance 120% .duration 3 .buff_ids "DUELIST_FEINT_ACCDEBUFF" "RB_DUE_PROT-12"  .on_hit true .on_miss false
+// DUE-007 Feint protection shred -12% (was -20..-30, same numbers as Mark for Death); accuracy debuff kept.
 //#   강화 효과 수치(JSON, 참고용): DUELIST_FEINT_ACCDEBUFF = attack_rating -0.1 [actorStatus]
 //#   강화 효과 수치(JSON, 참고용): DUELIST_FEINT_PROTDEBUFF2 = protection_rating -0.22
 //#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
@@ -70,7 +72,8 @@ effect: .name "Duelist Feint Buff 3" .target "performer" .chance 100% .duration 
 //#   강화 효과 수치(JSON, 참고용): DUELIST_FEINT_RIPOSTEDMGLBUFF3 = damage_low 0.3 [riposte]
 //#   강화 효과 수치(JSON, 참고용): DUELIST_FEINT_RIPOSTEDMGHBUFF3 = damage_high 0.3 [riposte]
 //#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
-effect: .name "Duelist Feint Debuff 3" .target "target" .chance 130% .duration 3 .buff_ids "DUELIST_FEINT_ACCDEBUFF" "DUELIST_FEINT_PROTDEBUFF3"  .on_hit true .on_miss false
+effect: .name "Duelist Feint Debuff 3" .target "target" .chance 130% .duration 3 .buff_ids "DUELIST_FEINT_ACCDEBUFF" "TRINKET_PROT_D3"  .on_hit true .on_miss false
+// DUE-007 Feint protection shred -15% (was -20..-30, same numbers as Mark for Death); accuracy debuff kept.
 //#   강화 효과 수치(JSON, 참고용): DUELIST_FEINT_ACCDEBUFF = attack_rating -0.1 [actorStatus]
 //#   강화 효과 수치(JSON, 참고용): DUELIST_FEINT_PROTDEBUFF3 = protection_rating -0.25
 //#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
@@ -78,7 +81,8 @@ effect: .name "Duelist Feint Buff 4" .target "performer" .chance 100% .duration 
 //#   강화 효과 수치(JSON, 참고용): DUELIST_FEINT_RIPOSTEDMGLBUFF4 = damage_low 0.32 [riposte]
 //#   강화 효과 수치(JSON, 참고용): DUELIST_FEINT_RIPOSTEDMGHBUFF4 = damage_high 0.32 [riposte]
 //#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
-effect: .name "Duelist Feint Debuff 4" .target "target" .chance 140% .duration 3 .buff_ids "DUELIST_FEINT_ACCDEBUFF" "DUELIST_FEINT_PROTDEBUFF4"  .on_hit true .on_miss false
+effect: .name "Duelist Feint Debuff 4" .target "target" .chance 140% .duration 3 .buff_ids "DUELIST_FEINT_ACCDEBUFF" "RB_DUE_PROT-17"  .on_hit true .on_miss false
+// DUE-007 Feint protection shred -17% (was -20..-30, same numbers as Mark for Death); accuracy debuff kept.
 //#   강화 효과 수치(JSON, 참고용): DUELIST_FEINT_ACCDEBUFF = attack_rating -0.1 [actorStatus]
 //#   강화 효과 수치(JSON, 참고용): DUELIST_FEINT_PROTDEBUFF4 = protection_rating -0.27
 //#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
@@ -86,7 +90,8 @@ effect: .name "Duelist Feint Buff 5" .target "performer" .chance 100% .duration 
 //#   강화 효과 수치(JSON, 참고용): DUELIST_FEINT_RIPOSTEDMGLBUFF5 = damage_low 0.35 [riposte]
 //#   강화 효과 수치(JSON, 참고용): DUELIST_FEINT_RIPOSTEDMGHBUFF5 = damage_high 0.35 [riposte]
 //#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
-effect: .name "Duelist Feint Debuff 5" .target "target" .chance 150% .duration 3 .buff_ids "DUELIST_FEINT_ACCDEBUFF" "DUELIST_FEINT_PROTDEBUFF5"  .on_hit true .on_miss false
+effect: .name "Duelist Feint Debuff 5" .target "target" .chance 150% .duration 3 .buff_ids "DUELIST_FEINT_ACCDEBUFF" "PROT-20"  .on_hit true .on_miss false
+// DUE-007 Feint protection shred -20% (was -20..-30, same numbers as Mark for Death); accuracy debuff kept.
 //#   강화 효과 수치(JSON, 참고용): DUELIST_FEINT_ACCDEBUFF = attack_rating -0.1 [actorStatus]
 //#   강화 효과 수치(JSON, 참고용): DUELIST_FEINT_PROTDEBUFF5 = protection_rating -0.3
 //#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
