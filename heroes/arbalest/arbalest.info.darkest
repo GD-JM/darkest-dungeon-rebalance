@@ -2,7 +2,8 @@ resistances: .stun 40% .poison 30% .bleed 30% .disease 30% .move 40% .debuff 30%
 crit: .effects "on_crit_dmgmarked"
 
 
-weapon: .name "arbalest_weapon_0" .atk 0% .dmg 4 8 .crit 6% .spd 3
+weapon: .name "arbalest_weapon_0" .atk 0% .dmg 4 9 .crit 6% .spd 3
+// ARB-011 weapon_0: 1렙 무기 피해 4~8 -> 4~9. 성녀·도굴꾼과 같은 표라 주력 딜러인 석궁사수가 1렙에서 성녀·신비학자급으로 약하게 느껴짐(5렙과 체감 불일치) [제작자]
 weapon: .name "arbalest_weapon_1" .atk 0% .dmg 5 10 .crit 7% .spd 3 .upgradeRequirementCode 0
 weapon: .name "arbalest_weapon_2" .atk 0% .dmg 6 11 .crit 8% .spd 4 .upgradeRequirementCode 1
 weapon: .name "arbalest_weapon_3" .atk 0% .dmg 6 13 .crit 9% .spd 4 .upgradeRequirementCode 2
