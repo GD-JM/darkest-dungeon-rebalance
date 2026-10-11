@@ -24,6 +24,7 @@ PARAM = dict(
     CRIT_STRESS=3 + 3 * 0.25 * 3,   # 본인 -3 + 아군 3명 x 25% x -3 = 5.25 (R-CMB-08), 스트레스 단위
     STRESS_HP=None,       # 스트레스 1 = HP 몇? None 이면 게임 가격에서: (영지 스트레스 회복 금화/점) / (야영 식사 체력 회복 금화/점). R-VALUE-06
     CRIT_BUFF_DUR=2,      # 직업 치명타 버프 2턴 (R-CMB-08)
+    DMG_RECEIVED=True,    # R-VALUE-18: 적 받는 피해 +x = 그 적을 치는 아군 공격 피해 +x (라운드당 아군 1공격 가정, 받는 치명타와 같은 가정)
     ENEMY_ACC=True,       # R-VALUE-17: 적 명중 감소 = 그 적 명중 분포·영웅 회피·0% 바닥·스트레스 공격까지 (회피 R-VALUE-13의 거울)
     CRIT_SIDE=True,       # R-VALUE-16: 치명타 확률 강화·받는 치명타 약화에 치명타 부수 효과(스트레스 회복 + 직업 치명타 버프)를 더한다
     STUN_MULT=1.0,        # 기절 = 성공률 x 몬스터 1행동. 행동 경제 프리미엄은 민감도로만 본다
@@ -853,6 +854,8 @@ def skill_value(C, l, d):
                         mods.append((B.get('stat_sub_type', ''), a * 100 if B.get('stat_sub_type') == 'speed_rating' else a))
                     elif B.get('stat_type') == 'crit_received_chance':
                         mods.append(('crit_received', B.get('amount', 0)))
+                    elif B.get('stat_type') == 'damage_received_percent' and B.get('rule_type') in (None, 'always') and P.get('DMG_RECEIVED', True):
+                        mods.append(('dmg_received', B.get('amount', 0)))   # R-VALUE-18
                     elif B.get('stat_type') == 'resistance' and P.get('RES_DEBUFF', True):      # R-VALUE-15 저항 감소
                         mods.append(('res_' + B.get('stat_sub_type', ''), -B.get('amount', 0)))
                 if first(k, 'buff_type') == 'crit_received_chance':
@@ -875,6 +878,8 @@ def skill_value(C, l, d):
                     v += P['ALLY_ATK'] * eff_x * 1.5
                 elif stat == 'crit_received':               # 그 적을 치는 아군 공격의 치명타 확률 +x (아군 치명타 강화와 같은 환산)
                     v += (P['ALLY_ATK'] + CRIT_SIDE_HP) * x    # 추가 피해 + 스트레스 회복·직업 치명타 버프 (R-VALUE-16)
+                elif stat == 'dmg_received':                # R-VALUE-18: 아군 1공격 피해 +x (지속 피해 제외)
+                    v += P['ALLY_ATK'] * x
                 elif stat.startswith('res_'):               # R-VALUE-15: 저항 x 감소 = 아군의 그 효과 성공률 +x (라운드당 시도 RES_ATTEMPTS회 가정)
                     succ = {'res_stun': act_full * P['STUN_MULT'],
                             'res_bleed': P['RES_DOT_HP'] * P['E_DOT_SGL'], 'res_poison': P['RES_DOT_HP'] * P['E_DOT_SGL'],
