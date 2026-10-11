@@ -32,6 +32,8 @@ PARAM = dict(
     CORPSE=0.5,           # 시체 제거. 시뮬레이션: 메인 전략(3·4열 먼저)이면 1·2열로 끌어오는 적 0명, 무작위 처치면 0.32명 x 당기기 3.0 = 1.0 -> 중간값 0.5 (arbalest.md 참고 아님, man_at_arms.md MAA 검토)
     COND_SELF=0.6, COND_OTHER=0.3, COND_STUN=0.67,  # 조건 유지율 (hero_power.md 4-2). 적 유형 조건은 실측 비율
     LOW_HP_SELF=0.6, LOW_HP_OTHER=0.3,  # '체력 X% 이하에서만' 사용 가능 기술. 스스로 체력을 깎는 기술이 있으면 0.6 (가정, 조건 유지율과 같은 규칙)
+    DODGE_EHP=True,       # R-VALUE-13: 회피 강화는 적 명중 분포·영웅 회피·0% 바닥·유효 체력·스트레스를 반영
+    DODGE_STRESS=True,
     DEBUFF_FORMATS=True,  # R-VALUE-12: 적 약화를 buff_ids·buff_type 형식으로 걸어도 센다 (받는 치명타 증가 포함)
     FREE_ACTION=True,     # R-VALUE-11: 무료 행동(.is_continue_turn)은 행동을 대신하지 않고 더한다. 매 턴 다시 쓸 수 있어 행동당 가치 = 기술 가치 / 지속 상한
     BUFF_DUR_CAP=2,       # 강화·약화·보호 지속 상한. 전투 2.55라운드(R-STRAT-02), 사용 시점의 평균 잔여 = v1 자기 강화 규칙과 같은 2
@@ -442,6 +444,39 @@ def move_value(kind, dist, tranks, stress_hp, death_rate, horizon):
 
 
 # ---------------------------------------------------------------- 데이터 적재
+# ---------------------------------------------------------------- 회피 (R-VALUE-13)
+@functools.lru_cache(maxsize=None)
+def monster_attack_accs():
+    """영웅 등급 몬스터 공격 기술 명중 분포 (명중 50 이상, 근접·원거리)"""
+    out = []
+    for f in glob.glob(os.path.join(G, 'monsters', '*', '*_C', '*_C.info.darkest')) + \
+            glob.glob(os.path.join(G, 'dlc', '**', 'monsters', '**', '*_C.info.darkest'), recursive=True):
+        for l in open(f, encoding='utf-8', errors='ignore'):
+            if l.startswith('skill:') and ('"melee"' in l or '"ranged"' in l):
+                m = re.search(r'\.atk ([\d.]+)%', l)
+                if m and float(m.group(1)) >= 50:
+                    out.append(float(m.group(1)))
+    return tuple(out) or (102.5,)
+
+
+def dodge_value(base, x, dur, P):
+    """회피 +x(점수)를 dur턴 받은 영웅 1명의 가치(HP).
+    1) 적 명중 분포와 영웅 자신의 회피로 적중률 h0 -> h1 (0% 바닥 반영)
+    2) 생존 환산: 유효 체력 = 체력 / 적중률. 같은 적중률 감소도 남은 적중률이 낮을수록 가치가 커진다
+       -> 막은 피해 x (기준 적중률 / h1). 기준 적중률(77.5%)에서는 예전 직선 계산과 같다
+    3) 명중해야 들어오는 스트레스 공격도 함께 막는다 -> 받는 스트레스를 HP로 더한다"""
+    accs = monster_attack_accs()
+    h0 = st.mean(max(0.0, min(0.95, (a - base) / 100)) for a in accs)
+    h1 = st.mean(max(0.0, min(0.95, (a - base - x) / 100)) for a in accs)
+    if h0 <= 0:
+        return 0.0
+    ref = (P['MON_HIT'] - 25) / 100
+    hp_in = P['ENEMY_ACT'] * P['HITS_TAKEN'] / ref
+    stress_in = (P['STRESS_TAKEN'] or 0) * P['STRESS_HP'] / ref if P.get('DODGE_STRESS', True) else 0.0
+    weight = ref / max(h1, 0.05)
+    return (hp_in + stress_in) * (h0 - h1) * weight * dur
+
+
 def load_effects(mode):
     eff = {k: v[0] for k, v in ec.load_vanilla_effects(G).items()}
     if mode == 'rb':
@@ -603,7 +638,9 @@ class Ctx:
         if stat == 'crit_chance':
             return atk_val * amt * dur
         if stat == 'defense_rating':
-            return P['ENEMY_ACT'] * P['HITS_TAKEN'] * amt * 100 / 77.5 * dur
+            if not P.get('DODGE_EHP', True):
+                return P['ENEMY_ACT'] * P['HITS_TAKEN'] * amt * 100 / 77.5 * dur
+            return dodge_value(s.H['def'] if who == 'self' else HERO_MED_DEF, amt * 100, dur, P)
         if stat == 'protection_rating':
             return P['ENEMY_ACT'] * P['HITS_TAKEN'] * amt * dur
         if stat == 'speed_rating':                  # amt = 속도 점수(원값). 먼저 행동해 죽이는 적의 행동을 지운다
@@ -915,6 +952,7 @@ def skill_value(C, l, d):
 
 PARAM_MED_HP = 43.0      # evaluate()에서 바닐라 5레벨 체력 중앙값으로 덮어쓴다
 HERO_MED_SPD = 7.0
+HERO_MED_DEF = 25.0     # evaluate()에서 바닐라 5레벨 영웅 회피 중앙값으로 덮어쓴다
 _STRESS_CACHE = None
 
 
@@ -1059,9 +1097,10 @@ def stress_hp(mode):
 
 
 def evaluate(mode, P=PARAM):
-    global PARAM_MED_HP, HERO_MED_SPD, _STRESS_CACHE
+    global PARAM_MED_HP, HERO_MED_SPD, HERO_MED_DEF, _STRESS_CACHE
     PARAM_MED_HP = stress_hp('vanilla') * 100
     HERO_MED_SPD = st.median(load_hero(h, 'vanilla')['spd'] for h in KO)
+    HERO_MED_DEF = st.median(load_hero(h, 'vanilla')['def'] for h in KO)
     if P['STRESS_TAKEN'] is None:
         if _STRESS_CACHE is None:
             _STRESS_CACHE = 2 * monster_stress_per_action() / 4
