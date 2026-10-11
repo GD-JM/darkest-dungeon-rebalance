@@ -24,6 +24,7 @@ PARAM = dict(
     CRIT_STRESS=3 + 3 * 0.25 * 3,   # 본인 -3 + 아군 3명 x 25% x -3 = 5.25 (R-CMB-08), 스트레스 단위
     STRESS_HP=None,       # 스트레스 1 = HP 몇? None 이면 게임 가격에서: (영지 스트레스 회복 금화/점) / (야영 식사 체력 회복 금화/점). R-VALUE-06
     CRIT_BUFF_DUR=2,      # 직업 치명타 버프 2턴 (R-CMB-08)
+    ENEMY_ACC=True,       # R-VALUE-17: 적 명중 감소 = 그 적 명중 분포·영웅 회피·0% 바닥·스트레스 공격까지 (회피 R-VALUE-13의 거울)
     CRIT_SIDE=True,       # R-VALUE-16: 치명타 확률 강화·받는 치명타 약화에 치명타 부수 효과(스트레스 회복 + 직업 치명타 버프)를 더한다
     STUN_MULT=1.0,        # 기절 = 성공률 x 몬스터 1행동. 행동 경제 프리미엄은 민감도로만 본다
     SUPPORT_MULT=1.0,     # 회복·보호·스트레스 회복. 프리미엄 없음(R-STRAT-01 3) -> 민감도로만
@@ -484,6 +485,19 @@ def dodge_value(base, x, dur, P):
     return (hp_in + stress_in) * (h0 - h1) * weight * dur
 
 
+def enemy_acc_value(x, P):
+    """적 1명 명중 -x(점수), 1라운드 가치(HP). R-VALUE-17
+    그 적의 1행동이 영웅(회피 중앙값)에게 들어갈 적중률 h0 -> h1 (몬스터 명중 분포, 0% 바닥).
+    1적중 = 체력 피해(ENEMY_ACT/기준 적중률) + 스트레스(1행동 기대 스트레스 2 x STRESS_TAKEN / 기준 적중률).
+    회피와 달리 유효 체력 가중은 없다: 적 1명의 명중만 내려가 파티 전체 피격률은 거의 안 변한다"""
+    accs = monster_attack_accs()
+    h0 = st.mean(max(0.0, min(0.95, (a - HERO_MED_DEF) / 100)) for a in accs)
+    h1 = st.mean(max(0.0, min(0.95, (a - HERO_MED_DEF - x) / 100)) for a in accs)
+    ref = (P['MON_HIT'] - 25) / 100
+    per_hit = (P['ENEMY_ACT'] + 2 * (P['STRESS_TAKEN'] or 0) * P['STRESS_HP']) / ref
+    return per_hit * (h0 - h1)
+
+
 def load_effects(mode):
     eff = {k: v[0] for k, v in ec.load_vanilla_effects(G).items()}
     if mode == 'rb':
@@ -853,7 +867,7 @@ def skill_value(C, l, d):
                 elif stat.startswith('damage_'):
                     v += P['ENEMY_ACT'] * x * 0.5
                 elif stat == 'attack_rating':
-                    v += P['ENEMY_ACT'] * x * 100 / 77.5
+                    v += enemy_acc_value(x * 100, P) if P.get('ENEMY_ACC', True) else P['ENEMY_ACT'] * x * 100 / 77.5
                 elif stat == 'defense_rating':
                     v += P['ALLY_ATK'] * x * 100 / 82.5 * 1.5
                 elif stat == 'protection_rating':          # R-VALUE-14: 방어는 0 아래로 안 내려간다 -> 적의 실제 방어만큼만
