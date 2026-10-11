@@ -1,0 +1,160 @@
+{
+	"buffs": [
+		{
+			"id": "RB_OCC_STUNRESIST-16",
+			"stat_type": "resistance",
+			"stat_sub_type": "stun",
+			"amount": -0.16,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_OCC_BLIGHTRESIST-16",
+			"stat_type": "resistance",
+			"stat_sub_type": "poison",
+			"amount": -0.16,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_OCC_BLEEDRESIST-16",
+			"stat_type": "resistance",
+			"stat_sub_type": "bleed",
+			"amount": -0.16,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_OCC_DEBUFFRESIST-16",
+			"stat_type": "resistance",
+			"stat_sub_type": "debuff",
+			"amount": -0.16,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_OCC_STUNRESIST-17",
+			"stat_type": "resistance",
+			"stat_sub_type": "stun",
+			"amount": -0.17,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_OCC_BLIGHTRESIST-17",
+			"stat_type": "resistance",
+			"stat_sub_type": "poison",
+			"amount": -0.17,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_OCC_BLEEDRESIST-17",
+			"stat_type": "resistance",
+			"stat_sub_type": "bleed",
+			"amount": -0.17,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_OCC_DEBUFFRESIST-17",
+			"stat_type": "resistance",
+			"stat_sub_type": "debuff",
+			"amount": -0.17,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_OCC_STUNRESIST-18",
+			"stat_type": "resistance",
+			"stat_sub_type": "stun",
+			"amount": -0.18,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_OCC_BLIGHTRESIST-18",
+			"stat_type": "resistance",
+			"stat_sub_type": "poison",
+			"amount": -0.18,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_OCC_BLEEDRESIST-18",
+			"stat_type": "resistance",
+			"stat_sub_type": "bleed",
+			"amount": -0.18,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_OCC_DEBUFFRESIST-18",
+			"stat_type": "resistance",
+			"stat_sub_type": "debuff",
+			"amount": -0.18,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		}
+	]
+}

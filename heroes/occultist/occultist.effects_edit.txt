@@ -145,10 +145,14 @@ effect: .name "on_crit_healdone"    .target "performer" .curio_result_type "posi
 //#   원본 위치: effects/base.effects.darkest
 
 //# ======================================================================
-//# 취약화 주술 저항 감소 (OCC-003에서 재사용, OCC-004에서 지속 조정)
-effect: .name "Thing Resist Debuffs 1" .target "target" .chance 115% .duration 3 .curio_result_type "negative" .buff_ids "STUNRESIST-20" "BLIGHTRESIST-20" "BLEEDRESIST-20" "DEBUFFRESIST-20" .on_hit true .on_miss false .queue true
-// OCC-004 Duration 4 -> 3 turns to match the mark it is applied with (Mark Target lasts 3).
-effect: .name "Thing Resist Debuffs 3" .target "target" .chance 135% .duration 3 .curio_result_type "negative" .buff_ids "STUNRESIST-20" "BLIGHTRESIST-20" "BLEEDRESIST-20" "DEBUFFRESIST-20" .on_hit true .on_miss false .queue true
-// OCC-004 Duration 4 -> 3 turns to match the mark it is applied with (Mark Target lasts 3).
-effect: .name "Thing Resist Debuffs 5" .target "target" .chance 155% .duration 3 .curio_result_type "negative" .buff_ids "STUNRESIST-20" "BLIGHTRESIST-20" "BLEEDRESIST-20" "DEBUFFRESIST-20" .on_hit true .on_miss false .queue true
-// OCC-004 Duration 4 -> 3 turns to match the mark it is applied with (Mark Target lasts 3).
+//# 취약화 주술 저항 감소 (OCC-006: 레벨별 15/16/17/18/20%, 3턴)
+effect: .name "RB OCC Hex Resist 1" .target "target" .chance 115% .duration 3 .curio_result_type "negative" .buff_ids "STUNRESIST-15" "BLIGHTRESIST-15" "BLEEDRESIST-15" "DEBUFFRESIST-15" .on_hit true .on_miss false .queue true
+// OCC-006 Stun/blight/bleed/debuff resist -15% for 3 turns (was -20% at every level; now grows each level).
+effect: .name "RB OCC Hex Resist 2" .target "target" .chance 115% .duration 3 .curio_result_type "negative" .buff_ids "RB_OCC_STUNRESIST-16" "RB_OCC_BLIGHTRESIST-16" "RB_OCC_BLEEDRESIST-16" "RB_OCC_DEBUFFRESIST-16" .on_hit true .on_miss false .queue true
+// OCC-006 Stun/blight/bleed/debuff resist -16% for 3 turns (was -20% at every level; now grows each level).
+effect: .name "RB OCC Hex Resist 3" .target "target" .chance 135% .duration 3 .curio_result_type "negative" .buff_ids "RB_OCC_STUNRESIST-17" "RB_OCC_BLIGHTRESIST-17" "RB_OCC_BLEEDRESIST-17" "RB_OCC_DEBUFFRESIST-17" .on_hit true .on_miss false .queue true
+// OCC-006 Stun/blight/bleed/debuff resist -17% for 3 turns (was -20% at every level; now grows each level).
+effect: .name "RB OCC Hex Resist 4" .target "target" .chance 135% .duration 3 .curio_result_type "negative" .buff_ids "RB_OCC_STUNRESIST-18" "RB_OCC_BLIGHTRESIST-18" "RB_OCC_BLEEDRESIST-18" "RB_OCC_DEBUFFRESIST-18" .on_hit true .on_miss false .queue true
+// OCC-006 Stun/blight/bleed/debuff resist -18% for 3 turns (was -20% at every level; now grows each level).
+effect: .name "RB OCC Hex Resist 5" .target "target" .chance 155% .duration 3 .curio_result_type "negative" .buff_ids "STUNRESIST-20" "BLIGHTRESIST-20" "BLEEDRESIST-20" "DEBUFFRESIST-20" .on_hit true .on_miss false .queue true
+// OCC-006 Stun/blight/bleed/debuff resist -20% for 3 turns (was -20% at every level; now grows each level).
