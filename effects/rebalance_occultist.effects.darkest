@@ -3,3 +3,12 @@
 
 // reuse: Wyrd Bleed 5 -> Wyrd Bleed 4 (identical vanilla effect, no copy made)
 
+// edited vanilla effect (from dlc/735730_color_of_madness/effects/color_of_madness.effects.darkest)
+effect: .name "RB OCC Thing Resist Debuffs 1" .target "target" .chance 115% .duration 3 .curio_result_type "negative" .buff_ids "STUNRESIST-20" "BLIGHTRESIST-20" "BLEEDRESIST-20" "DEBUFFRESIST-20" .on_hit true .on_miss false .queue true
+// OCC-004 Duration 4 -> 3 turns to match the mark it is applied with (Mark Target lasts 3).
+// edited vanilla effect (from dlc/735730_color_of_madness/effects/color_of_madness.effects.darkest)
+effect: .name "RB OCC Thing Resist Debuffs 3" .target "target" .chance 135% .duration 3 .curio_result_type "negative" .buff_ids "STUNRESIST-20" "BLIGHTRESIST-20" "BLEEDRESIST-20" "DEBUFFRESIST-20" .on_hit true .on_miss false .queue true
+// OCC-004 Duration 4 -> 3 turns to match the mark it is applied with (Mark Target lasts 3).
+// edited vanilla effect (from dlc/735730_color_of_madness/effects/color_of_madness.effects.darkest)
+effect: .name "RB OCC Thing Resist Debuffs 5" .target "target" .chance 155% .duration 3 .curio_result_type "negative" .buff_ids "STUNRESIST-20" "BLIGHTRESIST-20" "BLEEDRESIST-20" "DEBUFFRESIST-20" .on_hit true .on_miss false .queue true
+// OCC-004 Duration 4 -> 3 turns to match the mark it is applied with (Mark Target lasts 3).

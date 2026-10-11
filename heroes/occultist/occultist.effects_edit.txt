@@ -143,3 +143,12 @@ effect: .name "on_crit_healdone"    .target "performer" .curio_result_type "posi
 //#   공유 효과: 다른 영웅 1명(성녀). 여기서 고치면 이 영웅만 바뀐다
 //#   강화 효과 수치(JSON, 참고용): on_crit_healbuff = hp_heal_percent 0.25
 //#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 취약화 주술 저항 감소 (OCC-003에서 재사용, OCC-004에서 지속 조정)
+effect: .name "Thing Resist Debuffs 1" .target "target" .chance 115% .duration 3 .curio_result_type "negative" .buff_ids "STUNRESIST-20" "BLIGHTRESIST-20" "BLEEDRESIST-20" "DEBUFFRESIST-20" .on_hit true .on_miss false .queue true
+// OCC-004 Duration 4 -> 3 turns to match the mark it is applied with (Mark Target lasts 3).
+effect: .name "Thing Resist Debuffs 3" .target "target" .chance 135% .duration 3 .curio_result_type "negative" .buff_ids "STUNRESIST-20" "BLIGHTRESIST-20" "BLEEDRESIST-20" "DEBUFFRESIST-20" .on_hit true .on_miss false .queue true
+// OCC-004 Duration 4 -> 3 turns to match the mark it is applied with (Mark Target lasts 3).
+effect: .name "Thing Resist Debuffs 5" .target "target" .chance 155% .duration 3 .curio_result_type "negative" .buff_ids "STUNRESIST-20" "BLIGHTRESIST-20" "BLEEDRESIST-20" "DEBUFFRESIST-20" .on_hit true .on_miss false .queue true
+// OCC-004 Duration 4 -> 3 turns to match the mark it is applied with (Mark Target lasts 3).
