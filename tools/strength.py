@@ -32,6 +32,11 @@ PARAM = dict(
     CORPSE=0.5,           # 시체 제거. 시뮬레이션: 메인 전략(3·4열 먼저)이면 1·2열로 끌어오는 적 0명, 무작위 처치면 0.32명 x 당기기 3.0 = 1.0 -> 중간값 0.5 (arbalest.md 참고 아님, man_at_arms.md MAA 검토)
     COND_SELF=0.6, COND_OTHER=0.3, COND_STUN=0.67,  # 조건 유지율 (hero_power.md 4-2). 적 유형 조건은 실측 비율
     LOW_HP_SELF=0.6, LOW_HP_OTHER=0.3,  # '체력 X% 이하에서만' 사용 가능 기술. 스스로 체력을 깎는 기술이 있으면 0.6 (가정, 조건 유지율과 같은 규칙)
+    RES_DEBUFF=True,      # R-VALUE-15: 적 저항 감소를 센다 (가정값: 아래 4개)
+    RES_ATTEMPTS=0.4,     # 그 적에게 아군이 해당 효과를 시도하는 횟수/라운드 (조합 1명이 40% 턴에 사용 가정)
+    RES_DOT_HP=12.0,      # 출혈·중독 1회 성공 총량 (5렙 기술 4 x 3턴 수준)
+    RES_DEBUFF_HP=3.0,    # 약화 1회 성공 가치
+    RES_MOVE_HP=2.0,      # 밀치기·당기기 1회 성공 가치
     PROT_FLOOR=True,      # R-VALUE-14: 방어 감소는 적 방어 0 아래로 안 내려간다 [제작자 확인]
     DODGE_EHP=True,       # R-VALUE-13: 회피 강화는 적 명중 분포·영웅 회피·0% 바닥·유효 체력·스트레스를 반영
     DODGE_STRESS=True,
@@ -833,6 +838,8 @@ def skill_value(C, l, d):
                         mods.append((B.get('stat_sub_type', ''), a * 100 if B.get('stat_sub_type') == 'speed_rating' else a))
                     elif B.get('stat_type') == 'crit_received_chance':
                         mods.append(('crit_received', B.get('amount', 0)))
+                    elif B.get('stat_type') == 'resistance' and P.get('RES_DEBUFF', True):      # R-VALUE-15 저항 감소
+                        mods.append(('res_' + B.get('stat_sub_type', ''), -B.get('amount', 0)))
                 if first(k, 'buff_type') == 'crit_received_chance':
                     mods.append(('crit_received', num(first(k, 'buff_amount')) / 100))
             v = 0.0
@@ -852,6 +859,11 @@ def skill_value(C, l, d):
                     v += P['ALLY_ATK'] * eff_x * 1.5
                 elif stat == 'crit_received':               # 그 적을 치는 아군 공격의 치명타 확률 +x (아군 치명타 강화와 같은 환산)
                     v += P['ALLY_ATK'] * x
+                elif stat.startswith('res_'):               # R-VALUE-15: 저항 x 감소 = 아군의 그 효과 성공률 +x (라운드당 시도 RES_ATTEMPTS회 가정)
+                    succ = {'res_stun': act_full * P['STUN_MULT'],
+                            'res_bleed': P['RES_DOT_HP'] * P['E_DOT_SGL'], 'res_poison': P['RES_DOT_HP'] * P['E_DOT_SGL'],
+                            'res_debuff': P['RES_DEBUFF_HP'], 'res_move': P['RES_MOVE_HP']}.get(stat, 0.0)
+                    v += x * P['RES_ATTEMPTS'] * succ
             if v:
                 add('약화', ev('debuff') * v * min(dur, P['BUFF_DUR_CAP']) * n_t * rw)
         else:

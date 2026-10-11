@@ -186,3 +186,16 @@ effect: .name "on_crit_bleedchance"    .target "performer" .curio_result_type "p
 //#   공유 효과: 다른 영웅 1명(고행자). 여기서 고치면 이 영웅만 바뀐다
 //#   강화 효과 수치(JSON, 참고용): on_crit_bleedchance = bleed_chance 0.2
 //#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 리밸런스 신규 효과: 휘파람 받는 치명타 증가 (HM-020)
+effect: .name "RB HM Whistle Vuln 1" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .buff_type crit_received_chance .buff_amount 15 .on_hit true .on_miss false .queue true
+// HM-020 Whistle: crits received +15% for 3 turns replaces protection shred (protection cannot go below 0).
+effect: .name "RB HM Whistle Vuln 2" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .buff_type crit_received_chance .buff_amount 16 .on_hit true .on_miss false .queue true
+// HM-020 Whistle: crits received +16% for 3 turns replaces protection shred (protection cannot go below 0).
+effect: .name "RB HM Whistle Vuln 3" .target "target" .curio_result_type "negative" .chance 150% .duration 3 .buff_type crit_received_chance .buff_amount 17 .on_hit true .on_miss false .queue true
+// HM-020 Whistle: crits received +17% for 3 turns replaces protection shred (protection cannot go below 0).
+effect: .name "RB HM Whistle Vuln 4" .target "target" .curio_result_type "negative" .chance 160% .duration 3 .buff_type crit_received_chance .buff_amount 18 .on_hit true .on_miss false .queue true
+// HM-020 Whistle: crits received +18% for 3 turns replaces protection shred (protection cannot go below 0).
+effect: .name "RB HM Whistle Vuln 5" .target "target" .curio_result_type "negative" .chance 170% .duration 3 .buff_type crit_received_chance .buff_amount 20 .on_hit true .on_miss false .queue true
+// HM-020 Whistle: crits received +20% for 3 turns replaces protection shred (protection cannot go below 0).

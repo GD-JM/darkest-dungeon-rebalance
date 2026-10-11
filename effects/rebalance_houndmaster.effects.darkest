@@ -13,28 +13,40 @@
 
 // edited vanilla effect (from effects/base.effects.darkest)
 effect: .name "RB HM Hound Bleed 1" .target "target" .curio_result_type "negative" .chance 100%  .dotBleed 1 .duration 1	.on_hit true .on_miss false .can_apply_on_death true
-// HM-010 [trace 2026-10-05] Retain conditional mark/beast specialization while reducing unconditional and bleed output. Effect: RB HM Hound Bleed 1.
+// HM-010 [trace 2026-10-05] Retain conditional mark/beast specialization while reducing unconditional and bleed output. Effect: Hound Bleed 1.
 // edited vanilla effect (from effects/base.effects.darkest)
 effect: .name "RB HM Hound Bleed 2" .target "target" .curio_result_type "negative" .chance 110%  .dotBleed 1 .duration 1	.on_hit true .on_miss false .can_apply_on_death true
-// HM-010 [trace 2026-10-05] Retain conditional mark/beast specialization while reducing unconditional and bleed output. Effect: RB HM Hound Bleed 2.
+// HM-010 [trace 2026-10-05] Retain conditional mark/beast specialization while reducing unconditional and bleed output. Effect: Hound Bleed 2.
 // edited vanilla effect (from effects/base.effects.darkest)
 effect: .name "RB HM Hound Bleed 3" .target "target" .curio_result_type "negative" .chance 120%  .dotBleed 2 .duration 1	.on_hit true .on_miss false .can_apply_on_death true
-// HM-010 [trace 2026-10-05] Retain conditional mark/beast specialization while reducing unconditional and bleed output. Effect: RB HM Hound Bleed 3.
+// HM-010 [trace 2026-10-05] Retain conditional mark/beast specialization while reducing unconditional and bleed output. Effect: Hound Bleed 3.
 // edited vanilla effect (from effects/base.effects.darkest)
 effect: .name "RB HM Hound Bleed 4" .target "target" .curio_result_type "negative" .chance 130%  .dotBleed 2 .duration 1	.on_hit true .on_miss false .can_apply_on_death true
-// HM-010 [trace 2026-10-05] Retain conditional mark/beast specialization while reducing unconditional and bleed output. Effect: RB HM Hound Bleed 4.
+// HM-010 [trace 2026-10-05] Retain conditional mark/beast specialization while reducing unconditional and bleed output. Effect: Hound Bleed 4.
 // edited vanilla effect (from effects/base.effects.darkest)
 effect: .name "RB HM Hound Bleed 5" .target "target" .curio_result_type "negative" .chance 140%  .dotBleed 3 .duration 1	.on_hit true .on_miss false .can_apply_on_death true
-// HM-010 [trace 2026-10-05] Retain conditional mark/beast specialization while reducing unconditional and bleed output. Effect: RB HM Hound Bleed 5.
+// HM-010 [trace 2026-10-05] Retain conditional mark/beast specialization while reducing unconditional and bleed output. Effect: Hound Bleed 5.
 // edited vanilla effect (from effects/base.effects.darkest)
 effect: .name "RB HM Hound Howl 1" .target "target" .curio_result_type "positive" .chance 74% .healstress 4	.on_hit true .on_miss false .queue true
-// HM-014 [trace 2026-10-05] Stabilize early stress recovery without raising the top-level effect. Effect: RB HM Hound Howl 1.
+// HM-014 [trace 2026-10-05] Stabilize early stress recovery without raising the top-level effect. Effect: Hound Howl 1.
 // edited vanilla effect (from effects/base.effects.darkest)
 effect: .name "RB HM Hound Howl 2" .target "target" .curio_result_type "positive" .chance 74% .healstress 4	.on_hit true .on_miss false .queue true
-// HM-014 [trace 2026-10-05] Stabilize early stress recovery without raising the top-level effect. Effect: RB HM Hound Howl 2.
+// HM-014 [trace 2026-10-05] Stabilize early stress recovery without raising the top-level effect. Effect: Hound Howl 2.
 // edited vanilla effect (from effects/base.effects.darkest)
 effect: .name "RB HM Hound Howl 3" .target "target" .curio_result_type "positive" .chance 74% .healstress 5	.on_hit true .on_miss false .queue true
-// HM-014 [trace 2026-10-05] Stabilize early stress recovery without raising the top-level effect. Effect: RB HM Hound Howl 3.
+// HM-014 [trace 2026-10-05] Stabilize early stress recovery without raising the top-level effect. Effect: Hound Howl 3.
 // edited vanilla effect (from effects/base.effects.darkest)
 effect: .name "RB HM Hound Howl 4" .target "target" .curio_result_type "positive" .chance 74% .healstress 5	.on_hit true .on_miss false .queue true
-// HM-014 [trace 2026-10-05] Stabilize early stress recovery without raising the top-level effect. Effect: RB HM Hound Howl 4.
+// HM-014 [trace 2026-10-05] Stabilize early stress recovery without raising the top-level effect. Effect: Hound Howl 4.
+
+// mod-only new effects
+effect: .name "RB HM Whistle Vuln 1" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .buff_type crit_received_chance .buff_amount 15 .on_hit true .on_miss false .queue true
+// HM-020 Whistle: crits received +15% for 3 turns replaces protection shred (protection cannot go below 0).
+effect: .name "RB HM Whistle Vuln 2" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .buff_type crit_received_chance .buff_amount 16 .on_hit true .on_miss false .queue true
+// HM-020 Whistle: crits received +16% for 3 turns replaces protection shred (protection cannot go below 0).
+effect: .name "RB HM Whistle Vuln 3" .target "target" .curio_result_type "negative" .chance 150% .duration 3 .buff_type crit_received_chance .buff_amount 17 .on_hit true .on_miss false .queue true
+// HM-020 Whistle: crits received +17% for 3 turns replaces protection shred (protection cannot go below 0).
+effect: .name "RB HM Whistle Vuln 4" .target "target" .curio_result_type "negative" .chance 160% .duration 3 .buff_type crit_received_chance .buff_amount 18 .on_hit true .on_miss false .queue true
+// HM-020 Whistle: crits received +18% for 3 turns replaces protection shred (protection cannot go below 0).
+effect: .name "RB HM Whistle Vuln 5" .target "target" .curio_result_type "negative" .chance 170% .duration 3 .buff_type crit_received_chance .buff_amount 20 .on_hit true .on_miss false .queue true
+// HM-020 Whistle: crits received +20% for 3 turns replaces protection shred (protection cannot go below 0).
