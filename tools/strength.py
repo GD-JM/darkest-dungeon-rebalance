@@ -32,6 +32,7 @@ PARAM = dict(
     CORPSE=0.5,           # 시체 제거. 시뮬레이션: 메인 전략(3·4열 먼저)이면 1·2열로 끌어오는 적 0명, 무작위 처치면 0.32명 x 당기기 3.0 = 1.0 -> 중간값 0.5 (arbalest.md 참고 아님, man_at_arms.md MAA 검토)
     COND_SELF=0.6, COND_OTHER=0.3, COND_STUN=0.67,  # 조건 유지율 (hero_power.md 4-2). 적 유형 조건은 실측 비율
     LOW_HP_SELF=0.6, LOW_HP_OTHER=0.3,  # '체력 X% 이하에서만' 사용 가능 기술. 스스로 체력을 깎는 기술이 있으면 0.6 (가정, 조건 유지율과 같은 규칙)
+    PROT_FLOOR=True,      # R-VALUE-14: 방어 감소는 적 방어 0 아래로 안 내려간다 [제작자 확인]
     DODGE_EHP=True,       # R-VALUE-13: 회피 강화는 적 명중 분포·영웅 회피·0% 바닥·유효 체력·스트레스를 반영
     DODGE_STRESS=True,
     DEBUFF_FORMATS=True,  # R-VALUE-12: 적 약화를 buff_ids·buff_type 형식으로 걸어도 센다 (받는 치명타 증가 포함)
@@ -846,8 +847,9 @@ def skill_value(C, l, d):
                     v += P['ENEMY_ACT'] * x * 100 / 77.5
                 elif stat == 'defense_rating':
                     v += P['ALLY_ATK'] * x * 100 / 82.5 * 1.5
-                elif stat == 'protection_rating':
-                    v += P['ALLY_ATK'] * x * 1.5
+                elif stat == 'protection_rating':          # R-VALUE-14: 방어는 0 아래로 안 내려간다 -> 적의 실제 방어만큼만
+                    eff_x = st.mean(min(x, m['prot']) for m in MONS) if P.get('PROT_FLOOR', True) else x
+                    v += P['ALLY_ATK'] * eff_x * 1.5
                 elif stat == 'crit_received':               # 그 적을 치는 아군 공격의 치명타 확률 +x (아군 치명타 강화와 같은 환산)
                     v += P['ALLY_ATK'] * x
             if v:
