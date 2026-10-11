@@ -24,6 +24,8 @@ PARAM = dict(
     CRIT_STRESS=3 + 3 * 0.25 * 3,   # 본인 -3 + 아군 3명 x 25% x -3 = 5.25 (R-CMB-08), 스트레스 단위
     STRESS_HP=None,       # 스트레스 1 = HP 몇? None 이면 게임 가격에서: (영지 스트레스 회복 금화/점) / (야영 식사 체력 회복 금화/점). R-VALUE-06
     CRIT_BUFF_DUR=2,      # 직업 치명타 버프 2턴 (R-CMB-08)
+    TGT_ATTACKS=1.5,      # R-VALUE-19: 약화 걸린 적 1명이 라운드당 받는 아군 공격 수 (v1 hero_power.md 4-2의 x1.5, 집중 공격). 회피·방어·받는 치명타·받는 피해 공통
+    ENEMY_DODGE_CAP=True, # R-VALUE-19: 적 회피 감소는 몬스터 회피 분포 + 95% 자동 명중 상한으로 센다
     DMG_RECEIVED=True,    # R-VALUE-18: 적 받는 피해 +x = 그 적을 치는 아군 공격 피해 +x (라운드당 아군 1공격 가정, 받는 치명타와 같은 가정)
     ENEMY_ACC=True,       # R-VALUE-17: 적 명중 감소 = 그 적 명중 분포·영웅 회피·0% 바닥·스트레스 공격까지 (회피 R-VALUE-13의 거울)
     CRIT_SIDE=True,       # R-VALUE-16: 치명타 확률 강화·받는 치명타 약화에 치명타 부수 효과(스트레스 회복 + 직업 치명타 버프)를 더한다
@@ -871,15 +873,20 @@ def skill_value(C, l, d):
                     v += P['ENEMY_ACT'] * x * 0.5
                 elif stat == 'attack_rating':
                     v += enemy_acc_value(x * 100, P) if P.get('ENEMY_ACC', True) else P['ENEMY_ACT'] * x * 100 / 77.5
-                elif stat == 'defense_rating':
-                    v += P['ALLY_ATK'] * x * 100 / 82.5 * 1.5
+                elif stat == 'defense_rating':             # R-VALUE-19: 명중 105 아군 공격의 적중률 증가분 (95% 이상 자동 명중)
+                    if P.get('ENEMY_DODGE_CAP', True):
+                        h0 = st.mean(hit(m, 105) for m in MONS)
+                        h1 = st.mean(hit(dict(m, dodge=m['dodge'] - x * 100), 105) for m in MONS)
+                        v += P['ALLY_ATK'] * (h1 / h0 - 1) * P['TGT_ATTACKS']
+                    else:
+                        v += P['ALLY_ATK'] * x * 100 / 82.5 * P['TGT_ATTACKS']
                 elif stat == 'protection_rating':          # R-VALUE-14: 방어는 0 아래로 안 내려간다 -> 적의 실제 방어만큼만
                     eff_x = st.mean(min(x, m['prot']) for m in MONS) if P.get('PROT_FLOOR', True) else x
-                    v += P['ALLY_ATK'] * eff_x * 1.5
+                    v += P['ALLY_ATK'] * eff_x * P['TGT_ATTACKS']
                 elif stat == 'crit_received':               # 그 적을 치는 아군 공격의 치명타 확률 +x (아군 치명타 강화와 같은 환산)
-                    v += (P['ALLY_ATK'] + CRIT_SIDE_HP) * x    # 추가 피해 + 스트레스 회복·직업 치명타 버프 (R-VALUE-16)
+                    v += (P['ALLY_ATK'] + CRIT_SIDE_HP) * x * P['TGT_ATTACKS']    # 추가 피해 + 스트레스 회복·직업 치명타 버프 (R-VALUE-16, 19)
                 elif stat == 'dmg_received':                # R-VALUE-18: 아군 1공격 피해 +x (지속 피해 제외)
-                    v += P['ALLY_ATK'] * x
+                    v += P['ALLY_ATK'] * x * P['TGT_ATTACKS']
                 elif stat.startswith('res_'):               # R-VALUE-15: 저항 x 감소 = 아군의 그 효과 성공률 +x (라운드당 시도 RES_ATTEMPTS회 가정)
                     succ = {'res_stun': act_full * P['STUN_MULT'],
                             'res_bleed': P['RES_DOT_HP'] * P['E_DOT_SGL'], 'res_poison': P['RES_DOT_HP'] * P['E_DOT_SGL'],
