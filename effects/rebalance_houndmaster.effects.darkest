@@ -40,13 +40,13 @@ effect: .name "RB HM Hound Howl 4" .target "target" .curio_result_type "positive
 // HM-014 [trace 2026-10-05] Stabilize early stress recovery without raising the top-level effect. Effect: Hound Howl 4.
 
 // mod-only new effects
-effect: .name "RB HM Whistle Vuln 1" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .buff_type crit_received_chance .buff_amount 15 .on_hit true .on_miss false .queue true
-// HM-020 Whistle: crits received +15% for 3 turns replaces protection shred (protection cannot go below 0).
-effect: .name "RB HM Whistle Vuln 2" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .buff_type crit_received_chance .buff_amount 16 .on_hit true .on_miss false .queue true
-// HM-020 Whistle: crits received +16% for 3 turns replaces protection shred (protection cannot go below 0).
-effect: .name "RB HM Whistle Vuln 3" .target "target" .curio_result_type "negative" .chance 150% .duration 3 .buff_type crit_received_chance .buff_amount 17 .on_hit true .on_miss false .queue true
-// HM-020 Whistle: crits received +17% for 3 turns replaces protection shred (protection cannot go below 0).
-effect: .name "RB HM Whistle Vuln 4" .target "target" .curio_result_type "negative" .chance 160% .duration 3 .buff_type crit_received_chance .buff_amount 18 .on_hit true .on_miss false .queue true
-// HM-020 Whistle: crits received +18% for 3 turns replaces protection shred (protection cannot go below 0).
-effect: .name "RB HM Whistle Vuln 5" .target "target" .curio_result_type "negative" .chance 170% .duration 3 .buff_type crit_received_chance .buff_amount 20 .on_hit true .on_miss false .queue true
-// HM-020 Whistle: crits received +20% for 3 turns replaces protection shred (protection cannot go below 0).
+effect: .name "RB HM Whistle Vuln 1" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .buff_type crit_received_chance .buff_amount 15% .on_hit true .on_miss false .queue true
+// HM-020 Whistle: crits received +15% for 3 turns replaces protection shred (protection cannot go below 0). Amount needs the % sign (a bare 15 reads as 1500%).
+effect: .name "RB HM Whistle Vuln 2" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .buff_type crit_received_chance .buff_amount 16% .on_hit true .on_miss false .queue true
+// HM-020 Whistle: crits received +16% for 3 turns replaces protection shred (protection cannot go below 0). Amount needs the % sign (a bare 15 reads as 1500%).
+effect: .name "RB HM Whistle Vuln 3" .target "target" .curio_result_type "negative" .chance 150% .duration 3 .buff_type crit_received_chance .buff_amount 17% .on_hit true .on_miss false .queue true
+// HM-020 Whistle: crits received +17% for 3 turns replaces protection shred (protection cannot go below 0). Amount needs the % sign (a bare 15 reads as 1500%).
+effect: .name "RB HM Whistle Vuln 4" .target "target" .curio_result_type "negative" .chance 160% .duration 3 .buff_type crit_received_chance .buff_amount 18% .on_hit true .on_miss false .queue true
+// HM-020 Whistle: crits received +18% for 3 turns replaces protection shred (protection cannot go below 0). Amount needs the % sign (a bare 15 reads as 1500%).
+effect: .name "RB HM Whistle Vuln 5" .target "target" .curio_result_type "negative" .chance 170% .duration 3 .buff_type crit_received_chance .buff_amount 20% .on_hit true .on_miss false .queue true
+// HM-020 Whistle: crits received +20% for 3 turns replaces protection shred (protection cannot go below 0). Amount needs the % sign (a bare 15 reads as 1500%).

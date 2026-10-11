@@ -841,7 +841,8 @@ def skill_value(C, l, d):
                     elif B.get('stat_type') == 'resistance' and P.get('RES_DEBUFF', True):      # R-VALUE-15 저항 감소
                         mods.append(('res_' + B.get('stat_sub_type', ''), -B.get('amount', 0)))
                 if first(k, 'buff_type') == 'crit_received_chance':
-                    mods.append(('crit_received', num(first(k, 'buff_amount')) / 100))
+                    a = str(first(k, 'buff_amount'))      # 게임 해석: '10%' -> 0.10, '0.08' -> 0.08 (% 없는 수는 배율)
+                    mods.append(('crit_received', num(a) / 100 if a.strip('"').endswith('%') else num(a)))
             v = 0.0
             for stat, x in mods:
                 if x <= 0:
