@@ -188,14 +188,14 @@ effect: .name "on_crit_bleedchance"    .target "performer" .curio_result_type "p
 //#   원본 위치: effects/base.effects.darkest
 
 //# ======================================================================
-//# 리밸런스 신규 효과: 휘파람 받는 치명타 증가 (HM-020)
-effect: .name "RB HM Whistle Vuln 1" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .buff_type crit_received_chance .buff_amount 15% .on_hit true .on_miss false .queue true
-// HM-020 Whistle: crits received +15% for 3 turns replaces protection shred (protection cannot go below 0). Amount needs the % sign (a bare 15 reads as 1500%).
-effect: .name "RB HM Whistle Vuln 2" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .buff_type crit_received_chance .buff_amount 16% .on_hit true .on_miss false .queue true
-// HM-020 Whistle: crits received +16% for 3 turns replaces protection shred (protection cannot go below 0). Amount needs the % sign (a bare 15 reads as 1500%).
-effect: .name "RB HM Whistle Vuln 3" .target "target" .curio_result_type "negative" .chance 150% .duration 3 .buff_type crit_received_chance .buff_amount 17% .on_hit true .on_miss false .queue true
-// HM-020 Whistle: crits received +17% for 3 turns replaces protection shred (protection cannot go below 0). Amount needs the % sign (a bare 15 reads as 1500%).
-effect: .name "RB HM Whistle Vuln 4" .target "target" .curio_result_type "negative" .chance 160% .duration 3 .buff_type crit_received_chance .buff_amount 18% .on_hit true .on_miss false .queue true
-// HM-020 Whistle: crits received +18% for 3 turns replaces protection shred (protection cannot go below 0). Amount needs the % sign (a bare 15 reads as 1500%).
-effect: .name "RB HM Whistle Vuln 5" .target "target" .curio_result_type "negative" .chance 170% .duration 3 .buff_type crit_received_chance .buff_amount 20% .on_hit true .on_miss false .queue true
-// HM-020 Whistle: crits received +20% for 3 turns replaces protection shred (protection cannot go below 0). Amount needs the % sign (a bare 15 reads as 1500%).
+//# 리밸런스 신규 효과: 휘파람 적 명중 감소 (HM-021, HM-020 받는 치명타 대체)
+effect: .name "RB HM Whistle Distract 1" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .combat_stat_buff 1 .attack_rating_add -25% .on_hit true .on_miss false .queue true
+// HM-021 Whistle: enemy accuracy -25 for 3 turns replaces crits received (overlapped Musketeer Skeet Shot).
+effect: .name "RB HM Whistle Distract 2" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .combat_stat_buff 1 .attack_rating_add -26% .on_hit true .on_miss false .queue true
+// HM-021 Whistle: enemy accuracy -26 for 3 turns replaces crits received (overlapped Musketeer Skeet Shot).
+effect: .name "RB HM Whistle Distract 3" .target "target" .curio_result_type "negative" .chance 150% .duration 3 .combat_stat_buff 1 .attack_rating_add -27% .on_hit true .on_miss false .queue true
+// HM-021 Whistle: enemy accuracy -27 for 3 turns replaces crits received (overlapped Musketeer Skeet Shot).
+effect: .name "RB HM Whistle Distract 4" .target "target" .curio_result_type "negative" .chance 160% .duration 3 .combat_stat_buff 1 .attack_rating_add -28% .on_hit true .on_miss false .queue true
+// HM-021 Whistle: enemy accuracy -28 for 3 turns replaces crits received (overlapped Musketeer Skeet Shot).
+effect: .name "RB HM Whistle Distract 5" .target "target" .curio_result_type "negative" .chance 170% .duration 3 .combat_stat_buff 1 .attack_rating_add -30% .on_hit true .on_miss false .queue true
+// HM-021 Whistle: enemy accuracy -30 for 3 turns replaces crits received (overlapped Musketeer Skeet Shot).
