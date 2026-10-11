@@ -3,13 +3,18 @@
 
 
 // mod-only new effects
-effect: .name "RB VES Illumination Exposed 1" .target "target" .curio_result_type "negative" .chance 100% .duration 3 .buff_ids "caltrops_dmg_received_1" .on_hit true .on_miss false .queue true
+effect: .name "RB VES Illumination Exposed 1" .target "target" .curio_result_type "negative" .chance 100% .duration 3 .buff_ids "caltrops_dmg_received_5" .on_hit true .on_miss false .queue true
 // VES-011 Illumination: damage taken +10% for 3 turns replaces dodge -20..-30 (same as Sniper's Mark).
-effect: .name "RB VES Illumination Exposed 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3 .buff_ids "RB_VES_DMG_RECEIVED_11" .on_hit true .on_miss false .queue true
+// VES-012 Damage taken raised to +20% (old dodge -30 was worth 2.9 HP/round on the R-VALUE-19 scale; +15% was only 1.6).
+effect: .name "RB VES Illumination Exposed 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3 .buff_ids "RB_VES_DMG_RECEIVED_21" .on_hit true .on_miss false .queue true
 // VES-011 Illumination: damage taken +11% for 3 turns replaces dodge -20..-30 (same as Sniper's Mark).
-effect: .name "RB VES Illumination Exposed 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3 .buff_ids "caltrops_dmg_received_2" .on_hit true .on_miss false .queue true
+// VES-012 Damage taken raised to +21% (old dodge -30 was worth 2.9 HP/round on the R-VALUE-19 scale; +15% was only 1.6).
+effect: .name "RB VES Illumination Exposed 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3 .buff_ids "RB_VES_DMG_RECEIVED_22" .on_hit true .on_miss false .queue true
 // VES-011 Illumination: damage taken +12% for 3 turns replaces dodge -20..-30 (same as Sniper's Mark).
-effect: .name "RB VES Illumination Exposed 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .buff_ids "RB_VES_DMG_RECEIVED_13" .on_hit true .on_miss false .queue true
+// VES-012 Damage taken raised to +22% (old dodge -30 was worth 2.9 HP/round on the R-VALUE-19 scale; +15% was only 1.6).
+effect: .name "RB VES Illumination Exposed 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .buff_ids "RB_VES_DMG_RECEIVED_23" .on_hit true .on_miss false .queue true
 // VES-011 Illumination: damage taken +13% for 3 turns replaces dodge -20..-30 (same as Sniper's Mark).
-effect: .name "RB VES Illumination Exposed 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .buff_ids "caltrops_dmg_received_3" .on_hit true .on_miss false .queue true
+// VES-012 Damage taken raised to +23% (old dodge -30 was worth 2.9 HP/round on the R-VALUE-19 scale; +15% was only 1.6).
+effect: .name "RB VES Illumination Exposed 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .buff_ids "RB_VES_DMG_RECEIVED_25" .on_hit true .on_miss false .queue true
 // VES-011 Illumination: damage taken +15% for 3 turns replaces dodge -20..-30 (same as Sniper's Mark).
+// VES-012 Damage taken raised to +25% (old dodge -30 was worth 2.9 HP/round on the R-VALUE-19 scale; +15% was only 1.6).

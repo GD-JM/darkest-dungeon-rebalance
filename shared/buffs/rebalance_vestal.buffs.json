@@ -1,10 +1,10 @@
 {
 	"buffs": [
 		{
-			"id": "RB_VES_DMG_RECEIVED_11",
+			"id": "RB_VES_DMG_RECEIVED_21",
 			"stat_type": "damage_received_percent",
 			"stat_sub_type": "",
-			"amount": 0.11,
+			"amount": 0.21,
 			"remove_if_not_active": false,
 			"rule_type": "always",
 			"is_false_rule": false,
@@ -14,10 +14,36 @@
 			}
 		},
 		{
-			"id": "RB_VES_DMG_RECEIVED_13",
+			"id": "RB_VES_DMG_RECEIVED_22",
 			"stat_type": "damage_received_percent",
 			"stat_sub_type": "",
-			"amount": 0.13,
+			"amount": 0.22,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_VES_DMG_RECEIVED_23",
+			"stat_type": "damage_received_percent",
+			"stat_sub_type": "",
+			"amount": 0.23,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_VES_DMG_RECEIVED_25",
+			"stat_type": "damage_received_percent",
+			"stat_sub_type": "",
+			"amount": 0.25,
 			"remove_if_not_active": false,
 			"rule_type": "always",
 			"is_false_rule": false,
