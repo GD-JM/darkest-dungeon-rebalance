@@ -244,7 +244,7 @@
   "dur": 3,
   "eff": "Arb Mark Target",
   "chance": 100,
-  "skill_pp": 10
+  "skill_pp": -11
  },
  {
   "hero": "arbalest",
@@ -257,7 +257,7 @@
   "dur": 2,
   "eff": "Arb Mark Debuff 5",
   "chance": 140,
-  "skill_pp": 10
+  "skill_pp": -11
  },
  {
   "hero": "arbalest",
@@ -335,7 +335,7 @@
   "dur": 3,
   "eff": "Caltrops SPD Debuff 5",
   "chance": 140,
-  "skill_pp": 95
+  "skill_pp": 107
  },
  {
   "hero": "bounty_hunter",
@@ -348,7 +348,7 @@
   "dur": 3,
   "eff": "Caltrops Prey Debuff 5",
   "chance": 140,
-  "skill_pp": 95
+  "skill_pp": 107
  },
  {
   "hero": "crusader",
@@ -790,7 +790,7 @@
   "dur": 3,
   "eff": "Grapeshot Vulnerability 5",
   "chance": 140,
-  "skill_pp": 29
+  "skill_pp": 50
  },
  {
   "hero": "highwayman",
@@ -1440,7 +1440,7 @@
   "dur": 3,
   "eff": "Disrupt 5",
   "chance": 140,
-  "skill_pp": 77
+  "skill_pp": 99
  },
  {
   "hero": "man_at_arms",
@@ -1453,7 +1453,7 @@
   "dur": 3,
   "eff": "Disrupt 5",
   "chance": 140,
-  "skill_pp": 77
+  "skill_pp": 99
  },
  {
   "hero": "man_at_arms",
@@ -1466,7 +1466,7 @@
   "dur": null,
   "eff": "Bellow Crit 5",
   "chance": 140,
-  "skill_pp": 77
+  "skill_pp": 99
  },
  {
   "hero": "man_at_arms",
@@ -1921,7 +1921,7 @@
   "dur": null,
   "eff": "Expose Crit Debuff 5",
   "chance": 140,
-  "skill_pp": 62
+  "skill_pp": 76
  },
  {
   "hero": "shieldbreaker",
@@ -1934,7 +1934,7 @@
   "dur": null,
   "eff": "Destealth",
   "chance": 100,
-  "skill_pp": 62
+  "skill_pp": 76
  },
  {
   "hero": "shieldbreaker",
@@ -1947,7 +1947,7 @@
   "dur": null,
   "eff": "SB Slow 5",
   "chance": 140,
-  "skill_pp": 62
+  "skill_pp": 76
  },
  {
   "hero": "shieldbreaker",
@@ -1969,11 +1969,11 @@
   "skill_ko": "광휘",
   "side": "적 1명",
   "cat": "받는 피해",
-  "val": 15.0,
+  "val": 25.0,
   "dur": 3,
   "eff": "RB VES Illumination Exposed 5",
   "chance": 140,
-  "skill_pp": -33
+  "skill_pp": 1
  },
  {
   "hero": "vestal",
@@ -1986,7 +1986,7 @@
   "dur": null,
   "eff": "Destealth",
   "chance": 100,
-  "skill_pp": -33
+  "skill_pp": 1
  },
  {
   "hero": "vestal",
