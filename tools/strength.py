@@ -24,6 +24,7 @@ PARAM = dict(
     CRIT_STRESS=3 + 3 * 0.25 * 3,   # 본인 -3 + 아군 3명 x 25% x -3 = 5.25 (R-CMB-08), 스트레스 단위
     STRESS_HP=None,       # 스트레스 1 = HP 몇? None 이면 게임 가격에서: (영지 스트레스 회복 금화/점) / (야영 식사 체력 회복 금화/점). R-VALUE-06
     CRIT_BUFF_DUR=2,      # 직업 치명타 버프 2턴 (R-CMB-08)
+    CRIT_SIDE=True,       # R-VALUE-16: 치명타 확률 강화·받는 치명타 약화에 치명타 부수 효과(스트레스 회복 + 직업 치명타 버프)를 더한다
     STUN_MULT=1.0,        # 기절 = 성공률 x 몬스터 1행동. 행동 경제 프리미엄은 민감도로만 본다
     SUPPORT_MULT=1.0,     # 회복·보호·스트레스 회복. 프리미엄 없음(R-STRAT-01 3) -> 민감도로만
     PUSH=1.0,             # 밀치기·섞기: 실측 가격표의 1/3 (stun.md 10-6)
@@ -641,8 +642,8 @@ class Ctx:
             return atk_val * amt * 0.5 * dur          # low/high 각각 절반
         if stat == 'attack_rating':
             return atk_val * amt * 100 / 82.5 * dur
-        if stat == 'crit_chance':
-            return atk_val * amt * dur
+        if stat == 'crit_chance':                   # 추가 피해 + 치명타 부수 효과 (R-VALUE-16)
+            return (atk_val + CRIT_SIDE_HP) * amt * dur
         if stat == 'defense_rating':
             if not P.get('DODGE_EHP', True):
                 return P['ENEMY_ACT'] * P['HITS_TAKEN'] * amt * 100 / 77.5 * dur
@@ -859,7 +860,7 @@ def skill_value(C, l, d):
                     eff_x = st.mean(min(x, m['prot']) for m in MONS) if P.get('PROT_FLOOR', True) else x
                     v += P['ALLY_ATK'] * eff_x * 1.5
                 elif stat == 'crit_received':               # 그 적을 치는 아군 공격의 치명타 확률 +x (아군 치명타 강화와 같은 환산)
-                    v += P['ALLY_ATK'] * x
+                    v += (P['ALLY_ATK'] + CRIT_SIDE_HP) * x    # 추가 피해 + 스트레스 회복·직업 치명타 버프 (R-VALUE-16)
                 elif stat.startswith('res_'):               # R-VALUE-15: 저항 x 감소 = 아군의 그 효과 성공률 +x (라운드당 시도 RES_ATTEMPTS회 가정)
                     succ = {'res_stun': act_full * P['STUN_MULT'],
                             'res_bleed': P['RES_DOT_HP'] * P['E_DOT_SGL'], 'res_poison': P['RES_DOT_HP'] * P['E_DOT_SGL'],
@@ -968,6 +969,7 @@ def skill_value(C, l, d):
 PARAM_MED_HP = 43.0      # evaluate()에서 바닐라 5레벨 체력 중앙값으로 덮어쓴다
 HERO_MED_SPD = 7.0
 HERO_MED_DEF = 25.0     # evaluate()에서 바닐라 5레벨 영웅 회피 중앙값으로 덮어쓴다
+CRIT_SIDE_HP = 0.0      # evaluate()에서 계산: 아군 치명타 1회의 부수 효과 = 스트레스 회복 + 직업 치명타 버프 중앙값 (R-VALUE-16)
 _STRESS_CACHE = None
 
 
@@ -1112,7 +1114,7 @@ def stress_hp(mode):
 
 
 def evaluate(mode, P=PARAM):
-    global PARAM_MED_HP, HERO_MED_SPD, HERO_MED_DEF, _STRESS_CACHE
+    global PARAM_MED_HP, HERO_MED_SPD, HERO_MED_DEF, CRIT_SIDE_HP, _STRESS_CACHE
     PARAM_MED_HP = stress_hp('vanilla') * 100
     HERO_MED_SPD = st.median(load_hero(h, 'vanilla')['spd'] for h in KO)
     HERO_MED_DEF = st.median(load_hero(h, 'vanilla')['def'] for h in KO)
@@ -1128,6 +1130,15 @@ def evaluate(mode, P=PARAM):
         P = dict(P, MARK_DAMAGE_BONUS=marked_damage_bonus())
     eff = load_effects(mode)
     buffs = ec.load_buffs(G, M_ROOT if mode == 'rb' else None)
+    CRIT_SIDE_HP = 0.0
+    if P.get('CRIT_SIDE', True):                           # R-VALUE-16: 치명타 1회 부수 효과 (영웅별 직업 버프는 중앙값)
+        cbs = []
+        for h in KO:
+            Hh = load_hero(h, mode)
+            Ch = Ctx(Hh, eff, buffs, P)
+            cbs.append(sum(Ch.buff_ids_value(kv(eff.get(n, '')).get('buff_ids', []), P['CRIT_BUFF_DUR'], 'self')
+                           for n in Hh['crit_effects']))
+        CRIT_SIDE_HP = P['CRIT_STRESS'] * P['STRESS_HP'] + st.median(cbs)
     out = {}
     for hero in KO:
         H = load_hero(hero, mode)
