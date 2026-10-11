@@ -16,12 +16,13 @@ armour: .name "arbalest_armour_3" .def 15% .prot 0 .hp 42 .spd 0 .upgradeRequire
 armour: .name "arbalest_armour_4" .def 20% .prot 0 .hp 47 .spd 0 .upgradeRequirementCode 3
 
 
-combat_skill: .id "sniper_shot" .level 0 .type "ranged" .atk 95% .dmg 0% .crit 5% .launch 43 .target 234 .is_crit_valid True  .effect "RB ARB Sniper Damage 1" .generation_guaranteed true
-combat_skill: .id "sniper_shot" .level 1 .type "ranged" .atk 100% .dmg 0% .crit 6% .launch 43 .target 234 .is_crit_valid True  .effect "RB ARB Sniper Damage 2"
-combat_skill: .id "sniper_shot" .level 2 .type "ranged" .atk 105% .dmg 0% .crit 7% .launch 43 .target 234 .is_crit_valid True  .effect "RB ARB Sniper Damage 3"
-combat_skill: .id "sniper_shot" .level 3 .type "ranged" .atk 110% .dmg 0% .crit 8% .launch 43 .target 234 .is_crit_valid True  .effect "RB ARB Sniper Damage 4"
+combat_skill: .id "sniper_shot" .level 0 .type "ranged" .atk 95% .dmg 0% .crit 6% .launch 43 .target 234 .is_crit_valid True  .effect "RB ARB Sniper Damage 1" .generation_guaranteed true
+combat_skill: .id "sniper_shot" .level 1 .type "ranged" .atk 100% .dmg 0% .crit 7% .launch 43 .target 234 .is_crit_valid True  .effect "RB ARB Sniper Damage 2"
+combat_skill: .id "sniper_shot" .level 2 .type "ranged" .atk 105% .dmg 0% .crit 8% .launch 43 .target 234 .is_crit_valid True  .effect "RB ARB Sniper Damage 3"
+combat_skill: .id "sniper_shot" .level 3 .type "ranged" .atk 110% .dmg 0% .crit 9% .launch 43 .target 234 .is_crit_valid True  .effect "RB ARB Sniper Damage 4"
 // ARB-005 [trace 2026-10-05] Support marked-target specialization; retain the existing top-level ceiling.
-combat_skill: .id "sniper_shot" .level 4 .type "ranged" .atk 115% .dmg 0% .crit 9% .launch 43 .target 234 .is_crit_valid True  .effect "Sniper Damage 5"
+combat_skill: .id "sniper_shot" .level 4 .type "ranged" .atk 115% .dmg 0% .crit 10% .launch 43 .target 234 .is_crit_valid True  .effect "Sniper Damage 5"
+// ARB-012 sniper_shot: 치명타 보정 5/6/7/8/9% -> 6/7/8/9/10%. 1렙 저격이 성녀 심판과 같은 피해라 약하게 느껴지는 문제 보완(무기 4~9안 대신) [제작자]
 
 
 combat_skill: .id "suppressing_fire" .level 0 .type "ranged" .atk 95% .dmg -60% .crit -10% .launch 43 .target ~34 .is_crit_valid True  .effect "Suppression 1"
