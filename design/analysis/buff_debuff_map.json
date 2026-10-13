@@ -1365,6 +1365,19 @@
   "skill_pp": 74
  },
  {
+  "hero": "leper",
+  "hero_ko": "나병환자",
+  "skill": "intimidate",
+  "skill_ko": "위협",
+  "side": "적 1명",
+  "cat": "방어",
+  "val": -25.0,
+  "dur": 2,
+  "eff": "RB LEP Intimidate 5",
+  "chance": 140,
+  "skill_pp": -28
+ },
+ {
   "hero": "man_at_arms",
   "hero_ko": "중보병",
   "skill": "bellow",
