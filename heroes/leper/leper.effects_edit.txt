@@ -145,3 +145,16 @@ effect: .name "Leper Hype 5" .target "performer" .curio_result_type "positive" .
 effect: .name "on_crit_acc"    .target "performer" .curio_result_type "positive" .chance 100% .buff_source_type bsrc_crit .buff_ids "on_crit_acc" .on_hit true .on_miss false .apply_once true
 //#   강화 효과 수치(JSON, 참고용): on_crit_acc = attack_rating 0.1
 //#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 리밸런스 신규 효과: 위협 방어 감소 (LEP-002)
+effect: .name "RB LEP Intimidate 1" .target "target" .curio_result_type "negative" .chance 100% .duration 2 .combat_stat_buff 1 .protection_rating_add -15% .on_hit true .on_miss false .queue true
+// LEP-002 Intimidate: protection -15% for 2 turns (short, unlike the 3-turn marks; stays below armor-pierce specialists).
+effect: .name "RB LEP Intimidate 2" .target "target" .curio_result_type "negative" .chance 110% .duration 2 .combat_stat_buff 1 .protection_rating_add -17% .on_hit true .on_miss false .queue true
+// LEP-002 Intimidate: protection -17% for 2 turns (short, unlike the 3-turn marks; stays below armor-pierce specialists).
+effect: .name "RB LEP Intimidate 3" .target "target" .curio_result_type "negative" .chance 120% .duration 2 .combat_stat_buff 1 .protection_rating_add -20% .on_hit true .on_miss false .queue true
+// LEP-002 Intimidate: protection -20% for 2 turns (short, unlike the 3-turn marks; stays below armor-pierce specialists).
+effect: .name "RB LEP Intimidate 4" .target "target" .curio_result_type "negative" .chance 130% .duration 2 .combat_stat_buff 1 .protection_rating_add -22% .on_hit true .on_miss false .queue true
+// LEP-002 Intimidate: protection -22% for 2 turns (short, unlike the 3-turn marks; stays below armor-pierce specialists).
+effect: .name "RB LEP Intimidate 5" .target "target" .curio_result_type "negative" .chance 140% .duration 2 .combat_stat_buff 1 .protection_rating_add -25% .on_hit true .on_miss false .queue true
+// LEP-002 Intimidate: protection -25% for 2 turns (short, unlike the 3-turn marks; stays below armor-pierce specialists).
