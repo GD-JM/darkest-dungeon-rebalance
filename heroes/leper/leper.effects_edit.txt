@@ -148,18 +148,23 @@ effect: .name "on_crit_acc"    .target "performer" .curio_result_type "positive"
 
 //# ======================================================================
 //# 리밸런스 신규 효과: 위협 방어 감소 (LEP-002)
-effect: .name "RB LEP Intimidate 1" .target "target" .curio_result_type "negative" .chance 100% .duration 2 .combat_stat_buff 1 .protection_rating_add -25% .on_hit true .on_miss false .queue true
+effect: .name "RB LEP Intimidate 1" .target "target" .curio_result_type "negative" .chance 100% .duration 3 .combat_stat_buff 1 .protection_rating_add -25% .on_hit true .on_miss false .queue true
 // LEP-002 Intimidate: protection -15% for 2 turns (short, unlike the 3-turn marks; stays below armor-pierce specialists).
 // LEP-003 Protection -25% (raised with the hit lowered to Purge stats: dmg -40%, acc 85-105).
-effect: .name "RB LEP Intimidate 2" .target "target" .curio_result_type "negative" .chance 110% .duration 2 .combat_stat_buff 1 .protection_rating_add -27% .on_hit true .on_miss false .queue true
+// LEP-004 Duration 2 -> 3 turns: with the hit at -40% the debuff is the reason to use the skill.
+effect: .name "RB LEP Intimidate 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3 .combat_stat_buff 1 .protection_rating_add -27% .on_hit true .on_miss false .queue true
 // LEP-002 Intimidate: protection -17% for 2 turns (short, unlike the 3-turn marks; stays below armor-pierce specialists).
 // LEP-003 Protection -27% (raised with the hit lowered to Purge stats: dmg -40%, acc 85-105).
-effect: .name "RB LEP Intimidate 3" .target "target" .curio_result_type "negative" .chance 120% .duration 2 .combat_stat_buff 1 .protection_rating_add -30% .on_hit true .on_miss false .queue true
+// LEP-004 Duration 2 -> 3 turns: with the hit at -40% the debuff is the reason to use the skill.
+effect: .name "RB LEP Intimidate 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3 .combat_stat_buff 1 .protection_rating_add -30% .on_hit true .on_miss false .queue true
 // LEP-002 Intimidate: protection -20% for 2 turns (short, unlike the 3-turn marks; stays below armor-pierce specialists).
 // LEP-003 Protection -30% (raised with the hit lowered to Purge stats: dmg -40%, acc 85-105).
-effect: .name "RB LEP Intimidate 4" .target "target" .curio_result_type "negative" .chance 130% .duration 2 .combat_stat_buff 1 .protection_rating_add -32% .on_hit true .on_miss false .queue true
+// LEP-004 Duration 2 -> 3 turns: with the hit at -40% the debuff is the reason to use the skill.
+effect: .name "RB LEP Intimidate 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .combat_stat_buff 1 .protection_rating_add -32% .on_hit true .on_miss false .queue true
 // LEP-002 Intimidate: protection -22% for 2 turns (short, unlike the 3-turn marks; stays below armor-pierce specialists).
 // LEP-003 Protection -32% (raised with the hit lowered to Purge stats: dmg -40%, acc 85-105).
-effect: .name "RB LEP Intimidate 5" .target "target" .curio_result_type "negative" .chance 140% .duration 2 .combat_stat_buff 1 .protection_rating_add -35% .on_hit true .on_miss false .queue true
+// LEP-004 Duration 2 -> 3 turns: with the hit at -40% the debuff is the reason to use the skill.
+effect: .name "RB LEP Intimidate 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .combat_stat_buff 1 .protection_rating_add -35% .on_hit true .on_miss false .queue true
 // LEP-002 Intimidate: protection -25% for 2 turns (short, unlike the 3-turn marks; stays below armor-pierce specialists).
 // LEP-003 Protection -35% (raised with the hit lowered to Purge stats: dmg -40%, acc 85-105).
+// LEP-004 Duration 2 -> 3 turns: with the hit at -40% the debuff is the reason to use the skill.
