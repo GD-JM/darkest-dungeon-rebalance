@@ -1371,11 +1371,11 @@
   "skill_ko": "위협",
   "side": "적 1명",
   "cat": "방어",
-  "val": -25.0,
+  "val": -35.0,
   "dur": 2,
   "eff": "RB LEP Intimidate 5",
   "chance": 140,
-  "skill_pp": -28
+  "skill_pp": -33
  },
  {
   "hero": "man_at_arms",
