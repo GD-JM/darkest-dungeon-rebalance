@@ -24,7 +24,7 @@ PARAM = dict(
     CRIT_STRESS=3 + 3 * 0.25 * 3,   # 본인 -3 + 아군 3명 x 25% x -3 = 5.25 (R-CMB-08), 스트레스 단위
     STRESS_HP=None,       # 스트레스 1 = HP 몇? None 이면 게임 가격에서: (영지 스트레스 회복 금화/점) / (야영 식사 체력 회복 금화/점). R-VALUE-06
     CRIT_BUFF_DUR=2,      # 직업 치명타 버프 2턴 (R-CMB-08)
-    FRONT_REACH=0.10,     # R-VALUE-20: 1·2열에서만 쓰는 기술이 3·4열을 치면 양(+)의 가치 x(1+0.10). 전열이 후열 처치에 가담하는 희소성(모델 밖 가치) [사용자 방향]
+    FRONT_REACH=(0.08, 0.15),   # R-VALUE-20: 1·2열에서만 쓰는 기술이 3열까지 치면 +8%, 4열까지 치면 +15% (양의 가치에). 전열이 후열 처치에 가담하는 희소성 [사용자 방향]
     TGT_ATTACKS=1.5,      # R-VALUE-19: 약화 걸린 적 1명이 라운드당 받는 아군 공격 수 (v1 hero_power.md 4-2의 x1.5, 집중 공격). 회피·방어·받는 치명타·받는 피해 공통
     ENEMY_DODGE_CAP=True, # R-VALUE-19: 적 회피 감소는 몬스터 회피 분포 + 95% 자동 명중 상한으로 센다
     DMG_RECEIVED=True,    # R-VALUE-18: 적 받는 피해 +x = 그 적을 치는 아군 공격 피해 +x (라운드당 아군 1공격 가정, 받는 치명타와 같은 가정)
@@ -985,7 +985,8 @@ def skill_value(C, l, d):
     add('표식 위험', -mark_risk)
     lranks = set(re.sub(r'[^1-4]', '', first(d, 'launch', '')))
     if P.get('FRONT_REACH') and enemy and lranks and lranks <= {'1', '2'} and set(str(r) for r in tranks) & {'3', '4'}:
-        add('전열→후열', P['FRONT_REACH'] * sum(v for v in parts.values() if v > 0))   # R-VALUE-20
+        fr = P['FRONT_REACH'][1] if 4 in tranks else P['FRONT_REACH'][0]
+        add('전열→후열', fr * sum(v for v in parts.values() if v > 0))   # R-VALUE-20: 4열 > 3열
     tot = sum(parts.values())
     if limit:
         tot *= min(1.0, limit / 3)
