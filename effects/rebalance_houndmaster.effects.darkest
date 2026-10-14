@@ -43,6 +43,21 @@ effect: .name "RB HM Hound Howl 3" .target "target" .curio_result_type "positive
 // edited vanilla effect (from effects/base.effects.darkest)
 effect: .name "RB HM Hound Howl 4" .target "target" .curio_result_type "positive" .chance 74% .healstress 5	.on_hit true .on_miss false .queue true
 // HM-014 [trace 2026-10-05] Stabilize early stress recovery without raising the top-level effect. Effect: Hound Howl 4.
+// edited vanilla effect (from effects/base.effects.darkest)
+effect: .name "RB HM Hound Protect 1" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 20% .duration 3 .on_hit true .on_miss false .queue true 
+// HM-025 Guard Dog self dodge +20 for 3 turns (was +10..20): houndmaster direction = less damage, more utility.
+// edited vanilla effect (from effects/base.effects.darkest)
+effect: .name "RB HM Hound Protect 2" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 22% .duration 3 .on_hit true .on_miss false .queue true
+// HM-025 Guard Dog self dodge +22 for 3 turns (was +10..20): houndmaster direction = less damage, more utility.
+// edited vanilla effect (from effects/base.effects.darkest)
+effect: .name "RB HM Hound Protect 3" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 25% .duration 3 .on_hit true .on_miss false .queue true
+// HM-025 Guard Dog self dodge +25 for 3 turns (was +10..20): houndmaster direction = less damage, more utility.
+// edited vanilla effect (from effects/base.effects.darkest)
+effect: .name "RB HM Hound Protect 4" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 27% .duration 3 .on_hit true .on_miss false .queue true
+// HM-025 Guard Dog self dodge +27 for 3 turns (was +10..20): houndmaster direction = less damage, more utility.
+// edited vanilla effect (from effects/base.effects.darkest)
+effect: .name "RB HM Hound Protect 5" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 30% .duration 3 .on_hit true .on_miss false .queue true
+// HM-025 Guard Dog self dodge +30 for 3 turns (was +10..20): houndmaster direction = less damage, more utility.
 
 // mod-only new effects
 effect: .name "RB HM Whistle Distract 1" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .combat_stat_buff 1 .attack_rating_add -25% .on_hit true .on_miss false .queue true

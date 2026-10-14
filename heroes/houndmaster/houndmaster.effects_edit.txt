@@ -130,15 +130,20 @@ effect: .name "Clear Guard Target" .target "target" .chance 100% .clearguarding 
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "HM Guard 1"  .target "target" .curio_result_type "positive" .guard 1 .on_hit true .on_miss true .duration 2
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Hound Protect 1" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 10% .duration 3 .on_hit true .on_miss false .queue true 
+effect: .name "Hound Protect 1" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 20% .duration 3 .on_hit true .on_miss false .queue true 
+// HM-025 Guard Dog self dodge +20 for 3 turns (was +10..20): houndmaster direction = less damage, more utility.
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Hound Protect 2" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 12% .duration 3 .on_hit true .on_miss false .queue true
+effect: .name "Hound Protect 2" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 22% .duration 3 .on_hit true .on_miss false .queue true
+// HM-025 Guard Dog self dodge +22 for 3 turns (was +10..20): houndmaster direction = less damage, more utility.
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Hound Protect 3" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 14% .duration 3 .on_hit true .on_miss false .queue true
+effect: .name "Hound Protect 3" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 25% .duration 3 .on_hit true .on_miss false .queue true
+// HM-025 Guard Dog self dodge +25 for 3 turns (was +10..20): houndmaster direction = less damage, more utility.
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Hound Protect 4" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 17% .duration 3 .on_hit true .on_miss false .queue true
+effect: .name "Hound Protect 4" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 27% .duration 3 .on_hit true .on_miss false .queue true
+// HM-025 Guard Dog self dodge +27 for 3 turns (was +10..20): houndmaster direction = less damage, more utility.
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Hound Protect 5" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 20% .duration 3 .on_hit true .on_miss false .queue true
+effect: .name "Hound Protect 5" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .defense_rating_add 30% .duration 3 .on_hit true .on_miss false .queue true
+// HM-025 Guard Dog self dodge +30 for 3 turns (was +10..20): houndmaster direction = less damage, more utility.
 //#   원본 위치: effects/base.effects.darkest
 
 //# ======================================================================
