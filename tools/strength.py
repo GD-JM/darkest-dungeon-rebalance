@@ -777,6 +777,10 @@ def skill_value(C, l, d):
 
     # 직접 피해 (몬스터 분포 평균, 치명타 = 최대값 x 1.5)
     p_any_crit = 0.0
+    if does_dmg and 'rank_damage_modifiers' in d and tranks:   # R-VALUE-21: 대상 열별 피해 보정(총사 산탄). 원값 순서 4·3·2·1열 (모드 툴팁: 1/2/3열 −50/−65/−80%)
+        rdm = [num(x) for x in d['rank_damage_modifiers']]
+        if len(rdm) == 4:
+            dmgm += st.mean(rdm[4 - r] for r in tranks)
     if does_dmg:
         mult = (max(0.0, 1 + dmgm) * (1 + cond_bonus)) if P.get('DMG_STACK') == 'mult' else max(0.0, 1 + dmgm + cond_bonus)
         dm = ((1 - crit) * C.avg + crit * C.max * 1.5) * mult
