@@ -60,11 +60,12 @@ combat_skill: .id "disruptive_curse" .level 4 .type "ranged" .atk 115% .dmg -100
 // OCC-006 disruptive_curse: 저항 감소 매 레벨 -20% -> -15/16/17/18/20%(RB OCC Hex Resist 1~5, 3턴, 확률 그대로). 1->2·3->4렙 성장 체감 [제작자]
 
 
-combat_skill: .id "hands_from_abyss" .level 0 .type "ranged" .atk 90% .dmg -50% .crit 9% .launch 12 .target 123 .is_crit_valid True  .effect "Abyssal Stun 1" "Darkness 1"
-combat_skill: .id "hands_from_abyss" .level 1 .type "ranged" .atk 95% .dmg -50% .crit 10% .launch 12 .target 123 .is_crit_valid True  .effect "Abyssal Stun 2" "Darkness 1"
-combat_skill: .id "hands_from_abyss" .level 2 .type "ranged" .atk 100% .dmg -50% .crit 11% .launch 12 .target 123 .is_crit_valid True  .effect "Abyssal Stun 3" "Darkness 1"
-combat_skill: .id "hands_from_abyss" .level 3 .type "ranged" .atk 105% .dmg -50% .crit 12% .launch 12 .target 123 .is_crit_valid True  .effect "Abyssal Stun 4" "Darkness 1"
-combat_skill: .id "hands_from_abyss" .level 4 .type "ranged" .atk 110% .dmg -50% .crit 13% .launch 12 .target 123 .is_crit_valid True  .effect "Abyssal Stun 5" "Darkness 1"
+combat_skill: .id "hands_from_abyss" .level 0 .type "ranged" .atk 95% .dmg -60% .crit 9% .launch 12 .target 123 .is_crit_valid True  .effect "Abyssal Stun 1" "Darkness 1"
+combat_skill: .id "hands_from_abyss" .level 1 .type "ranged" .atk 100% .dmg -60% .crit 10% .launch 12 .target 123 .is_crit_valid True  .effect "Abyssal Stun 2" "Darkness 1"
+combat_skill: .id "hands_from_abyss" .level 2 .type "ranged" .atk 105% .dmg -60% .crit 11% .launch 12 .target 123 .is_crit_valid True  .effect "Abyssal Stun 3" "Darkness 1"
+combat_skill: .id "hands_from_abyss" .level 3 .type "ranged" .atk 110% .dmg -60% .crit 12% .launch 12 .target 123 .is_crit_valid True  .effect "Abyssal Stun 4" "Darkness 1"
+combat_skill: .id "hands_from_abyss" .level 4 .type "ranged" .atk 115% .dmg -60% .crit 13% .launch 12 .target 123 .is_crit_valid True  .effect "Abyssal Stun 5" "Darkness 1"
+// OCC-008 hands_from_abyss: 1렙 명중 90 -> 95, 피해 -50% -> -60%. 대상 1·2·3열 기절은 피해를 낮게 [제작자]
 
 
 combat_skill: .id "daemons_pull" .level 0 .type "ranged" .atk 90% .dmg -50% .crit 5% .launch 234 .target 34 .is_crit_valid True  .effect "Pull 2A" "clear_corpses"

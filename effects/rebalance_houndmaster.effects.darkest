@@ -12,20 +12,25 @@
 // reuse: Hero Strong Stun 5 -> Stun 5 (identical vanilla effect, no copy made)
 
 // edited vanilla effect (from effects/base.effects.darkest)
-effect: .name "RB HM Hound Bleed 1" .target "target" .curio_result_type "negative" .chance 100%  .dotBleed 1 .duration 1	.on_hit true .on_miss false .can_apply_on_death true
+effect: .name "RB HM Hound Bleed 1" .target "target" .curio_result_type "negative" .chance 100%  .dotBleed 1 .duration 2	.on_hit true .on_miss false .can_apply_on_death true
 // HM-010 [trace 2026-10-05] Retain conditional mark/beast specialization while reducing unconditional and bleed output. Effect: Hound Bleed 1.
+// HM-023 Bleed lasts 2 turns (was 1); per-turn 1/1/2/2/3 unchanged.
 // edited vanilla effect (from effects/base.effects.darkest)
-effect: .name "RB HM Hound Bleed 2" .target "target" .curio_result_type "negative" .chance 110%  .dotBleed 1 .duration 1	.on_hit true .on_miss false .can_apply_on_death true
+effect: .name "RB HM Hound Bleed 2" .target "target" .curio_result_type "negative" .chance 110%  .dotBleed 1 .duration 2	.on_hit true .on_miss false .can_apply_on_death true
 // HM-010 [trace 2026-10-05] Retain conditional mark/beast specialization while reducing unconditional and bleed output. Effect: Hound Bleed 2.
+// HM-023 Bleed lasts 2 turns (was 1); per-turn 1/1/2/2/3 unchanged.
 // edited vanilla effect (from effects/base.effects.darkest)
-effect: .name "RB HM Hound Bleed 3" .target "target" .curio_result_type "negative" .chance 120%  .dotBleed 2 .duration 1	.on_hit true .on_miss false .can_apply_on_death true
+effect: .name "RB HM Hound Bleed 3" .target "target" .curio_result_type "negative" .chance 120%  .dotBleed 2 .duration 2	.on_hit true .on_miss false .can_apply_on_death true
 // HM-010 [trace 2026-10-05] Retain conditional mark/beast specialization while reducing unconditional and bleed output. Effect: Hound Bleed 3.
+// HM-023 Bleed lasts 2 turns (was 1); per-turn 1/1/2/2/3 unchanged.
 // edited vanilla effect (from effects/base.effects.darkest)
-effect: .name "RB HM Hound Bleed 4" .target "target" .curio_result_type "negative" .chance 130%  .dotBleed 2 .duration 1	.on_hit true .on_miss false .can_apply_on_death true
+effect: .name "RB HM Hound Bleed 4" .target "target" .curio_result_type "negative" .chance 130%  .dotBleed 2 .duration 2	.on_hit true .on_miss false .can_apply_on_death true
 // HM-010 [trace 2026-10-05] Retain conditional mark/beast specialization while reducing unconditional and bleed output. Effect: Hound Bleed 4.
+// HM-023 Bleed lasts 2 turns (was 1); per-turn 1/1/2/2/3 unchanged.
 // edited vanilla effect (from effects/base.effects.darkest)
-effect: .name "RB HM Hound Bleed 5" .target "target" .curio_result_type "negative" .chance 140%  .dotBleed 3 .duration 1	.on_hit true .on_miss false .can_apply_on_death true
+effect: .name "RB HM Hound Bleed 5" .target "target" .curio_result_type "negative" .chance 140%  .dotBleed 3 .duration 2	.on_hit true .on_miss false .can_apply_on_death true
 // HM-010 [trace 2026-10-05] Retain conditional mark/beast specialization while reducing unconditional and bleed output. Effect: Hound Bleed 5.
+// HM-023 Bleed lasts 2 turns (was 1); per-turn 1/1/2/2/3 unchanged.
 // edited vanilla effect (from effects/base.effects.darkest)
 effect: .name "RB HM Hound Howl 1" .target "target" .curio_result_type "positive" .chance 74% .healstress 4	.on_hit true .on_miss false .queue true
 // HM-014 [trace 2026-10-05] Stabilize early stress recovery without raising the top-level effect. Effect: Hound Howl 1.

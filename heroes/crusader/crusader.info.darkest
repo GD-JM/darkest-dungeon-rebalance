@@ -31,12 +31,13 @@ combat_skill: .id "zealous_accusation" .level 4 .type "ranged" .atk 110% .dmg -4
 // 레인지 표준 명중 90으로 바꿈 85 -> 90 이유는 선택성 늘리기 위해. 강타가 좋아서 고발을 쓸 이유가 많이 없는데 고발까지 있으면 명중 높일 수 있음.
 
 
-combat_skill: .id "stunning_blow" .level 0 .type "melee" .atk 90% .dmg -60% .crit 0% .launch 21 .target 12 .is_crit_valid True  .effect "Hero Strong Stun 1"
-combat_skill: .id "stunning_blow" .level 1 .type "melee" .atk 95% .dmg -60% .crit 1% .launch 21 .target 12 .is_crit_valid True  .effect "Hero Strong Stun 2"
-combat_skill: .id "stunning_blow" .level 2 .type "melee" .atk 100% .dmg -60% .crit 2% .launch 21 .target 12 .is_crit_valid True  .effect "Hero Strong Stun 3"
-combat_skill: .id "stunning_blow" .level 3 .type "melee" .atk 105% .dmg -60% .crit 3% .launch 21 .target 12 .is_crit_valid True  .effect "Hero Strong Stun 4"
-combat_skill: .id "stunning_blow" .level 4 .type "melee" .atk 110% .dmg -60% .crit 4% .launch 21 .target 12 .is_crit_valid True  .effect "Hero Strong Stun 5"
+combat_skill: .id "stunning_blow" .level 0 .type "melee" .atk 90% .dmg -40% .crit 0% .launch 21 .target 12 .is_crit_valid True  .effect "Hero Strong Stun 1"
+combat_skill: .id "stunning_blow" .level 1 .type "melee" .atk 95% .dmg -40% .crit 1% .launch 21 .target 12 .is_crit_valid True  .effect "Hero Strong Stun 2"
+combat_skill: .id "stunning_blow" .level 2 .type "melee" .atk 100% .dmg -40% .crit 2% .launch 21 .target 12 .is_crit_valid True  .effect "Hero Strong Stun 3"
+combat_skill: .id "stunning_blow" .level 3 .type "melee" .atk 105% .dmg -40% .crit 3% .launch 21 .target 12 .is_crit_valid True  .effect "Hero Strong Stun 4"
+combat_skill: .id "stunning_blow" .level 4 .type "melee" .atk 110% .dmg -40% .crit 4% .launch 21 .target 12 .is_crit_valid True  .effect "Hero Strong Stun 5"
 // CRU-003 [trace 2026-10-05] Pay for stronger front stun with lower damage; preserve the hilt-strike identity.
+// CRU-008 stunning_blow: 피해 -60% -> -40%. 1·2열 기절 기준선 정리 [제작자]
 
 // 바꿈 스트롱 스턴으로 왜냐하면 3열 공격이 안돼서 쌔야함.  대신에 데미지 낮춤 애니메이션 자체가 칼 손잡이로 때리는거라 쌔면 안됨 50 -> 60
 

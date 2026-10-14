@@ -20,8 +20,9 @@ effect: .name "Beast Killer 1" .target "performer" .chance 100% .curio_result_ty
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "HM Dmg Marked 1".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"  .combat_stat_buff 1 .damage_low_multiply 60%  .damage_high_multiply 60%  .on_hit true .on_miss false
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Hound Bleed 1" .target "target" .curio_result_type "negative" .chance 100%  .dotBleed 1 .duration 1	.on_hit true .on_miss false .can_apply_on_death true
+effect: .name "Hound Bleed 1" .target "target" .curio_result_type "negative" .chance 100%  .dotBleed 1 .duration 2	.on_hit true .on_miss false .can_apply_on_death true
 // HM-010 [trace 2026-10-05] Retain conditional mark/beast specialization while reducing unconditional and bleed output. Effect: Hound Bleed 1.
+// HM-023 Bleed lasts 2 turns (was 1); per-turn 1/1/2/2/3 unchanged.
 // HM-010 사냥개 돌진 출혈: 지속 3턴 -> 1턴. 턴당 1/1/1/2/2 -> 1/1/2/2/3 (5렙 총량 6 -> 3). 치명타 시 1->2턴
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Beast Killer 2" .target "performer" .chance 100% .curio_result_type "positive" .monsterType "beast" .combat_stat_buff 1 .damage_low_multiply 20%	.damage_high_multiply 20%	.on_hit true .on_miss false
@@ -29,8 +30,9 @@ effect: .name "Beast Killer 2" .target "performer" .chance 100% .curio_result_ty
 effect: .name "HM Dmg Marked 2".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"  .combat_stat_buff 1 .damage_low_multiply 60%  .damage_high_multiply 60%	.on_hit true .on_miss false
 // HM-018 [trace 2026-10-05] Retain the author-set flat60 marked damage instead of the historical growing bonus. Effect: HM Dmg Marked 2.
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Hound Bleed 2" .target "target" .curio_result_type "negative" .chance 110%  .dotBleed 1 .duration 1	.on_hit true .on_miss false .can_apply_on_death true
+effect: .name "Hound Bleed 2" .target "target" .curio_result_type "negative" .chance 110%  .dotBleed 1 .duration 2	.on_hit true .on_miss false .can_apply_on_death true
 // HM-010 [trace 2026-10-05] Retain conditional mark/beast specialization while reducing unconditional and bleed output. Effect: Hound Bleed 2.
+// HM-023 Bleed lasts 2 turns (was 1); per-turn 1/1/2/2/3 unchanged.
 // HM-010 지속 3 -> 1
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Beast Killer 3" .target "performer" .chance 100% .curio_result_type "positive" .monsterType "beast" .combat_stat_buff 1 .damage_low_multiply 25%	.damage_high_multiply 25%	.on_hit true .on_miss false
@@ -38,8 +40,9 @@ effect: .name "Beast Killer 3" .target "performer" .chance 100% .curio_result_ty
 effect: .name "HM Dmg Marked 3".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"  .combat_stat_buff 1 .damage_low_multiply 60%  .damage_high_multiply 60%  .on_hit true .on_miss false
 // HM-018 [trace 2026-10-05] Retain the author-set flat60 marked damage instead of the historical growing bonus. Effect: HM Dmg Marked 3.
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Hound Bleed 3" .target "target" .curio_result_type "negative" .chance 120%  .dotBleed 2 .duration 1	.on_hit true .on_miss false .can_apply_on_death true
+effect: .name "Hound Bleed 3" .target "target" .curio_result_type "negative" .chance 120%  .dotBleed 2 .duration 2	.on_hit true .on_miss false .can_apply_on_death true
 // HM-010 [trace 2026-10-05] Retain conditional mark/beast specialization while reducing unconditional and bleed output. Effect: Hound Bleed 3.
+// HM-023 Bleed lasts 2 turns (was 1); per-turn 1/1/2/2/3 unchanged.
 // HM-010 지속 3 -> 1, 턴당 1 -> 2
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Beast Killer 4" .target "performer" .chance 100% .curio_result_type "positive" .monsterType "beast" .combat_stat_buff 1 .damage_low_multiply 30%	.damage_high_multiply 30%	.on_hit true .on_miss false
@@ -47,8 +50,9 @@ effect: .name "Beast Killer 4" .target "performer" .chance 100% .curio_result_ty
 effect: .name "HM Dmg Marked 4".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"  .combat_stat_buff 1 .damage_low_multiply 60%  .damage_high_multiply 60%  .on_hit true .on_miss false
 // HM-018 [trace 2026-10-05] Retain the author-set flat60 marked damage instead of the historical growing bonus. Effect: HM Dmg Marked 4.
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Hound Bleed 4" .target "target" .curio_result_type "negative" .chance 130%  .dotBleed 2 .duration 1	.on_hit true .on_miss false .can_apply_on_death true
+effect: .name "Hound Bleed 4" .target "target" .curio_result_type "negative" .chance 130%  .dotBleed 2 .duration 2	.on_hit true .on_miss false .can_apply_on_death true
 // HM-010 [trace 2026-10-05] Retain conditional mark/beast specialization while reducing unconditional and bleed output. Effect: Hound Bleed 4.
+// HM-023 Bleed lasts 2 turns (was 1); per-turn 1/1/2/2/3 unchanged.
 // HM-010 지속 3 -> 1
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Beast Killer 5" .target "performer" .chance 100% .curio_result_type "positive" .monsterType "beast" .combat_stat_buff 1 .damage_low_multiply 35%	.damage_high_multiply 35%	.on_hit true .on_miss false
@@ -57,8 +61,9 @@ effect: .name "HM Dmg Marked 5".target "performer" .chance 100%	.curio_result_ty
 // HM-018 [trace 2026-10-05] Retain the author-set flat60 marked damage instead of the historical growing bonus. Effect: HM Dmg Marked 5.
 // MARK-01 HM Dmg Marked: 표식 피해 60~100 -> 60 고정(전 레벨). 야수 특효+출혈+개 간식과 중복, 조련사 강함 2위
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Hound Bleed 5" .target "target" .curio_result_type "negative" .chance 140%  .dotBleed 3 .duration 1	.on_hit true .on_miss false .can_apply_on_death true
+effect: .name "Hound Bleed 5" .target "target" .curio_result_type "negative" .chance 140%  .dotBleed 3 .duration 2	.on_hit true .on_miss false .can_apply_on_death true
 // HM-010 [trace 2026-10-05] Retain conditional mark/beast specialization while reducing unconditional and bleed output. Effect: Hound Bleed 5.
+// HM-023 Bleed lasts 2 turns (was 1); per-turn 1/1/2/2/3 unchanged.
 // HM-010 지속 3 -> 1, 턴당 2 -> 3
 //#   원본 위치: effects/base.effects.darkest
 

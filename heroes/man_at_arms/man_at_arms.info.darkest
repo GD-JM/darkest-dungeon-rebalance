@@ -23,13 +23,14 @@ combat_skill: .id "crush" .level 3 .type "melee" .atk 100% .dmg 0% .crit 8% .lau
 combat_skill: .id "crush" .level 4 .type "melee" .atk 105% .dmg 0% .crit 9% .launch 12 .target 123 .is_crit_valid True 
 
 
-combat_skill: .id "rampart" .level 0 .type "melee" .atk 90% .dmg -60% .crit 5% .launch 123 .target 12 .is_crit_valid True  .effect "Push 1A" "Stun 1"
-combat_skill: .id "rampart" .level 1 .type "melee" .atk 95% .dmg -60% .crit 6% .launch 123 .target 12 .is_crit_valid True  .effect "Push 1B" "Stun 2"
-combat_skill: .id "rampart" .level 2 .type "melee" .atk 100% .dmg -60% .crit 7% .launch 123 .target 12 .is_crit_valid True  .effect "Push 1C" "Stun 3"
-combat_skill: .id "rampart" .level 3 .type "melee" .atk 105% .dmg -60% .crit 8% .launch 123 .target 12 .is_crit_valid True  .effect "Push 1D" "Stun 4"
-combat_skill: .id "rampart" .level 4 .type "melee" .atk 110% .dmg -60% .crit 9% .launch 123 .target 12 .is_crit_valid True  .effect "Push 1E" "Stun 5"
+combat_skill: .id "rampart" .level 0 .type "melee" .atk 90% .dmg -50% .crit 5% .launch 123 .target 12 .is_crit_valid True  .effect "Push 1A" "Stun 1"
+combat_skill: .id "rampart" .level 1 .type "melee" .atk 95% .dmg -50% .crit 6% .launch 123 .target 12 .is_crit_valid True  .effect "Push 1B" "Stun 2"
+combat_skill: .id "rampart" .level 2 .type "melee" .atk 100% .dmg -50% .crit 7% .launch 123 .target 12 .is_crit_valid True  .effect "Push 1C" "Stun 3"
+combat_skill: .id "rampart" .level 3 .type "melee" .atk 105% .dmg -50% .crit 8% .launch 123 .target 12 .is_crit_valid True  .effect "Push 1D" "Stun 4"
+combat_skill: .id "rampart" .level 4 .type "melee" .atk 110% .dmg -50% .crit 9% .launch 123 .target 12 .is_crit_valid True  .effect "Push 1E" "Stun 5"
 // MAA-006 [current 2026-10-05] Remove Rampart self forward movement at all levels; retain -60% damage, enemy push and stun to control without displacing allies.
 // MAA-006 의도: 중보병(무거운 보병)은 이동성이 없는 게 설정에 맞음. 나병환자·성전사처럼 전열에 버팀. 자기 전진이 오히려 어울리지 않았음 [제작자]
+// MAA-014 rampart: 피해 -60% -> -50%. 사용 1·2·3열 + 밀치기 1이 성전사 강한 기절과 같은 값어치가 되게 [제작자]
 
 
 
