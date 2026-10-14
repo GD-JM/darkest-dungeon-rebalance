@@ -2,7 +2,7 @@
 사용: python tools/stun_survey.py  -> design/analysis/stun_survey.md
 손으로 고른 목록 없음 — 영웅 파일 전체에서 대상에게 .stun 을 거는 효과를 찾는다."""
 import sys, io, os, re, glob, json, statistics as st, subprocess, datetime
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+sys.stdout.reconfigure(encoding="utf-8")
 sys.path.insert(0, os.path.dirname(__file__))
 import strength as S
 
