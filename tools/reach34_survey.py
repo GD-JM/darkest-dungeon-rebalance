@@ -1,12 +1,23 @@
-"""3·4열을 칠 수 있는 영웅 기술 전수 조사 (RB, 1렙 수치 + 효과 1~5렙, 모델(5렙)).
-사용: python tools/reach34_survey.py  -> design/analysis/reach34_survey.md"""
+"""열 조건으로 영웅 기술 전수 조사 (RB, 1렙 수치 + 효과 1~5렙, 모델(5렙)).
+사용: python tools/reach34_survey.py          -> design/analysis/reach34_survey.md (3·4열을 칠 수 있는 기술)
+      python tools/reach34_survey.py aoe23    -> design/analysis/aoe23_survey.md  (2·3열을 동시에 치는 광역)"""
 import sys, io, os, re, subprocess, datetime
 sys.stdout.reconfigure(encoding="utf-8")
 sys.path.insert(0, os.path.dirname(__file__))
 import strength as S
 import stun_survey as SS
 
-OUT = os.path.join(os.path.dirname(__file__), '..', 'design', 'analysis', 'reach34_survey.md')
+MODE = sys.argv[1] if len(sys.argv) > 1 else 'reach34'
+OUT = os.path.join(os.path.dirname(__file__), '..', 'design', 'analysis', '%s_survey.md' % MODE)
+TITLE = {'reach34': '3·4열을 칠 수 있는 기술', 'aoe23': '2·3열을 동시에 치는 광역 기술'}[MODE]
+
+
+def want(tg):
+    if '@' in tg:
+        return False
+    if MODE == 'aoe23':
+        return tg.startswith('~') and '2' in tg and '3' in tg
+    return bool(re.search(r'[34]', tg))
 E = S.load_effects('rb')
 
 
@@ -41,7 +52,7 @@ def main():
         for (sid, modes), lvs in by.items():
             l0, d0 = lvs[min(lvs)]
             tg = S.first(d0, 'target', '')
-            if '@' in tg or not re.search(r'[34]', tg):
+            if not want(tg):
                 continue
             dmg = S.num(S.first(d0, 'dmg', '-100'))
             names = S.ec.effect_names_in(l0)
@@ -54,9 +65,9 @@ def main():
                              ign=' '.join(x for x in ('ignore_protection', 'ignore_guard', 'ignore_stealth') if S.first(d0, x, 'false').lower() == 'true'),
                              eff='; '.join(others), val=((sk[0] / 7.7 - 1) * 100) if sk else None,
                              parts={k: round(x / 7.7 * 100) for k, x in sk[1].items()} if sk else {}))
-    L = ['# 3·4열을 칠 수 있는 기술 전수 조사 (RB)', '',
-         '- 생성: %s, 데이터 커밋 `%s`, `python tools/reach34_survey.py`로 다시 만든다.' % (datetime.date.today(), head),
-         '- 대상 열에 3 또는 4가 들어간 적 대상 기술 전부(손으로 고른 목록 없음). 명중·치명 보정은 1렙, 지속 피해는 "턴당×턴" 1~5렙, 모델(5렙) 표준 평타 7.7 HP 기준 %p.', '']
+    L = ['# %s 전수 조사 (RB)' % TITLE, '',
+         '- 생성: %s, 데이터 커밋 `%s`, `python tools/reach34_survey.py%s`로 다시 만든다.' % (datetime.date.today(), head, '' if MODE == 'reach34' else ' ' + MODE),
+         '- 조건: %s, 적 대상 기술 전부(손으로 고른 목록 없음).' % TITLE + ' 명중·치명 보정은 1렙, 지속 피해는 "턴당×턴" 1~5렙, 모델(5렙) 표준 평타 7.7 HP 기준 %p.', '']
     for title, cond in (('피해 있는 공격', lambda r: r['dmg'] > -100), ('피해 없는 기술', lambda r: r['dmg'] <= -100)):
         sel = sorted([r for r in rows if cond(r)], key=lambda r: (r['target'].lstrip('~'), r['ko']))
         L += ['## %s %d개' % (title, len(sel)), '',

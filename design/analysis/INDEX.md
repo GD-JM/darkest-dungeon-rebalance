@@ -14,6 +14,7 @@
 | [hero_power_v2.md](hero_power_v2.md) | 강함 순위 모델 v2 설명 | 강함 순위, 모델 | 2026-10-05 |
 | [hero_power.md](hero_power.md) | 영웅 능력치·조건부 피해·과대 기술 | 능력치, 버프 기준선 | 2026-09-27 |
 | [hero_ranks.md](hero_ranks.md) | 영웅 주 열(기술 사용 열 기준) | 열, 위치 | 2026-09-15 |
+| [aoe23_survey.md](aoe23_survey.md) | 2·3열을 동시에 치는 광역 기술 전수(피해 있는 9·없는 5). 재생성 `tools/reach34_survey.py aoe23` | 2·3열 광역, 23 동시 타격 | 2026-10-15 |
 | [reach34_survey.md](reach34_survey.md) | 3·4열을 칠 수 있는 기술 전수(피해 있는 57·없는 14), 마름쇠 vs 슬픔의 비. 재생성 `tools/reach34_survey.py`(집중 비교 절은 손으로 추가) | 3·4열 공격, 후열 공격, 마름쇠, 슬픔의 비 | 2026-10-15 |
 | [front_aoe_stun.md](front_aoe_stun.md) | 1·2열 광역 기절 후보: 지금 1·2열 광역 기술 전부, 기절 추가 시 모델 값(볼라·성채의 일격 등) | 앞열 광역 스턴, 2열 광역 기절 | 2026-10-14 |
 | [stun_survey.md](stun_survey.md) | 기절 전수 조사: RB·바닐라 기절 기술 전부(1~5렙 확률·효과), 기절 확률 장신구 16개, 몬스터 열별 위협. 재생성 `tools/stun_survey.py` | 기절 전수, 스턴 목록, 스턴 장신구 | 2026-10-14 |
