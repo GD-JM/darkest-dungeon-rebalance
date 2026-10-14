@@ -13,6 +13,7 @@
 | [hero_power_v2.md](hero_power_v2.md) | 강함 순위 모델 v2 설명 | 강함 순위, 모델 | 2026-10-05 |
 | [hero_power.md](hero_power.md) | 영웅 능력치·조건부 피해·과대 기술 | 능력치, 버프 기준선 | 2026-09-27 |
 | [hero_ranks.md](hero_ranks.md) | 영웅 주 열(기술 사용 열 기준) | 열, 위치 | 2026-09-15 |
+| [stun_redesign.md](stun_redesign.md) | 기절 재설계안: 바닐라 비일관성 원인, 특징별 가격(3열 도달 등), 규칙 R-STUN 제안, 8개 기절 수치안 | 기절 재설계, 스턴 규칙, 스턴 가격 | 2026-10-14 |
 | [stun_target123.md](stun_target123.md) | 대상 1·2·3열 기절 기술 4개 비교(명중·피해·기절 확률·모델 %p) | 123열 기절, 스턴 비교 | 2026-10-14 |
 | [stun.md](stun.md) / [stun-reassessment.md](stun-reassessment.md) | 기절 기술 분석 / 전수 재검토(최신) | 기절 | 2026-10-05 |
 | [displacement.md](displacement.md) | 밀치기·당기기 기술 | 밀치기, 당기기, 이동기 | 2026-09-14 |
