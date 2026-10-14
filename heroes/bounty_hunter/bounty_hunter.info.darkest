@@ -51,15 +51,16 @@ combat_skill: .id "come_hither" .level 4 .type "ranged" .atk 115% .dmg -60% .cri
 // BH-010 come_hither: 소표식(BH Minor Mark) 삭제, 명중 +5 (1렙 90 -> 95), 피해 -70% -> -60%. 길드 "미리 표식을 새겨" / "갈고리와 섬광탄과 어퍼컷으로 열과 오를 헤집어" - 표식과 갈고리는 다른 전술. 표식은 죽음의 표식(3턴)이 맡아 표식 -> 당기기 -> 처형 3턴 연계
 // BH-009 come_hither: Pull 2 -> Pull 3 (게임 최초 당기기 3칸), dmg -80% -> -70%
 
-combat_skill: .id "uppercut" .level 0 .type "melee" .atk 95% .dmg -67% .crit 10% .launch 21 .target 1 .is_crit_valid True  .effect "Push 2A" "Hero Strong Stun 1"
-combat_skill: .id "uppercut" .level 1 .type "melee" .atk 100% .dmg -67% .crit 11% .launch 21 .target 1 .is_crit_valid True  .effect "Push 2B" "Hero Strong Stun 2"
-combat_skill: .id "uppercut" .level 2 .type "melee" .atk 105% .dmg -67% .crit 12% .launch 21 .target 1 .is_crit_valid True  .effect "Push 2C" "Hero Strong Stun 3"
-combat_skill: .id "uppercut" .level 3 .type "melee" .atk 110% .dmg -67% .crit 13% .launch 21 .target 1 .is_crit_valid True  .effect "Push 2D" "Hero Strong Stun 4"
-combat_skill: .id "uppercut" .level 4 .type "melee" .atk 115% .dmg -67% .crit 14% .launch 21 .target 1 .is_crit_valid True  .effect "Push 2E" "Hero Strong Stun 5"
+combat_skill: .id "uppercut" .level 0 .type "melee" .atk 95% .dmg -67% .crit 9% .launch 21 .target 1 .is_crit_valid True  .effect "Push 2A" "Hero Strong Stun 1"
+combat_skill: .id "uppercut" .level 1 .type "melee" .atk 100% .dmg -67% .crit 10% .launch 21 .target 1 .is_crit_valid True  .effect "Push 2B" "Hero Strong Stun 2"
+combat_skill: .id "uppercut" .level 2 .type "melee" .atk 105% .dmg -67% .crit 11% .launch 21 .target 1 .is_crit_valid True  .effect "Push 2C" "Hero Strong Stun 3"
+combat_skill: .id "uppercut" .level 3 .type "melee" .atk 110% .dmg -67% .crit 12% .launch 21 .target 1 .is_crit_valid True  .effect "Push 2D" "Hero Strong Stun 4"
+combat_skill: .id "uppercut" .level 4 .type "melee" .atk 115% .dmg -67% .crit 13% .launch 21 .target 1 .is_crit_valid True  .effect "Push 2E" "Hero Strong Stun 5"
 // BH-007 uppercut: target 12 -> 1, dmg -67% -> -45%, crit +0~4 -> +9~13 (launch 21 kept)
 // 히어로 스트롱 스턴 섬광탄 걸 빼와서 얘한테 줌. 대신에 데미지를 바닐라로 줄임
 // 이게 좋은게 또 현상금 치명타 효과가 표식 대상 데미지 증가임 -> 어퍼컷의 높은 치명타 보정으로 1턴에 치명타 내서 표식 증가 데미지 갖추고 남이 표식 찍어준거를 끝낸다는 윈플랜도 가능해짐. 
 // BH-014 uppercut: 1렙 명중 90 -> 95, 치명 보정 9~13 -> 10~14. 피해 -67% 유지. 1열 전용·밀치기 2를 치명타로 변주 [제작자]
+// BH-015 uppercut: 치명 보정 10~14 -> 9~13 되돌림(BH-014 중 치명만 취소). 1렙 명중 95 유지 [제작자]
 
 combat_move_skill: .id "move" .level 0 .type "move" .move 2 2 .launch 4321
 

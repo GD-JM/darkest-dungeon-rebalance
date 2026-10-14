@@ -75,14 +75,15 @@ combat_skill: .id "lick_wounds" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% 
 // HM-015 상처 핥기: 사용 432 -> 4321. 가장 많이 맞는 1열에서 자가 회복을 못 쓰는 구조 해소. 조련사 1열 사용 가능 기술 4개 -> 평균(4.7) 수준
 
 
-combat_skill: .id "blackjack" .level 0 .type "melee" .atk 90% .dmg -65% .crit 5% .launch 21 .target 123 .is_crit_valid True  .effect "Stun 1"
-combat_skill: .id "blackjack" .level 1 .type "melee" .atk 95% .dmg -65% .crit 6% .launch 21 .target 123 .is_crit_valid True  .effect "Stun 2"
-combat_skill: .id "blackjack" .level 2 .type "melee" .atk 100% .dmg -65% .crit 7% .launch 21 .target 123 .is_crit_valid True  .effect "Stun 3"
-combat_skill: .id "blackjack" .level 3 .type "melee" .atk 105% .dmg -65% .crit 8% .launch 21 .target 123 .is_crit_valid True  .effect "Stun 4"
-combat_skill: .id "blackjack" .level 4 .type "melee" .atk 110% .dmg -65% .crit 9% .launch 21 .target 123 .is_crit_valid True  .effect "Stun 5"
+combat_skill: .id "blackjack" .level 0 .type "melee" .atk 90% .dmg -50% .crit 5% .launch 21 .target 123 .is_crit_valid True  .effect "Stun 1"
+combat_skill: .id "blackjack" .level 1 .type "melee" .atk 95% .dmg -50% .crit 6% .launch 21 .target 123 .is_crit_valid True  .effect "Stun 2"
+combat_skill: .id "blackjack" .level 2 .type "melee" .atk 100% .dmg -50% .crit 7% .launch 21 .target 123 .is_crit_valid True  .effect "Stun 3"
+combat_skill: .id "blackjack" .level 3 .type "melee" .atk 105% .dmg -50% .crit 8% .launch 21 .target 123 .is_crit_valid True  .effect "Stun 4"
+combat_skill: .id "blackjack" .level 4 .type "melee" .atk 110% .dmg -50% .crit 9% .launch 21 .target 123 .is_crit_valid True  .effect "Stun 5"
 // HM-013 [trace 2026-10-05] Retain rank-3 control while paying with accuracy, damage and the normal stun tier.
 // HM-013 둔기 강타: 1렙 명중 95 -> 90(표준), 피해 -65% -> -80%. 대상 1/2/3 유지. 설정 "곤봉은 효과적으로 기절시키지만 진짜 치명타는 사냥개가 먹입니다" -> 3열 도달과 기절은 남기고 화력만 제거
 // HM-022 blackjack: 피해 -80% -> -65%(바닐라). 바닐라 대비 1렙 명중 -5(95 -> 90)·강한 기절(110%) -> 일반 기절(100%)만 남김. 기절 4종 특색 정리 [제작자]
+// HM-024 blackjack: 피해 -65% -> -50% [제작자]
 
 
 tag: .id "light"

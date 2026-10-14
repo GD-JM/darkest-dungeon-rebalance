@@ -17,12 +17,13 @@ combat_skill: .id "transform" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .
 combat_skill: .id "transform" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True .valid_modes human beast .human_effects switch_mode_beast_self "RB ABO beast_stress_party" beast_buff_5 beast_buff2_5 xform_damage_5 Transform_HealSelf_5 "Absolution HealStress 2" .beast_effects switch_mode_human_self "RB ABO human_stress_heal_party_1" beast_debuff_5 .is_continue_turn true .per_turn_limit 1 .per_battle_limit 2 .is_stall_invalidating false .refresh_after_each_wave true
 // ABO-004 [trace 2026-10-05] Relieve self stress during transformation while retaining the allies fear/return cost.
 // ABO-004 transform: ally fear 6, return recovery 3; self recovery 4/5/6/7/8. Preserve the attack action during a crisis.
-combat_skill: .id "manacles" .level 0 .type "ranged" .atk 90% .dmg -50% .crit 1% .launch 32 .target 123 .is_crit_valid True  .effect "Manacles Stun 1" .valid_modes human
-combat_skill: .id "manacles" .level 1 .type "ranged" .atk 95% .dmg -50% .crit 2% .launch 32 .target 123 .is_crit_valid True  .effect "Manacles Stun 2" .valid_modes human
-combat_skill: .id "manacles" .level 2 .type "ranged" .atk 100% .dmg -50% .crit 3% .launch 32 .target 123 .is_crit_valid True  .effect "Manacles Stun 3" .valid_modes human
-combat_skill: .id "manacles" .level 3 .type "ranged" .atk 105% .dmg -50% .crit 4% .launch 32 .target 123 .is_crit_valid True  .effect "Manacles Stun 4" .valid_modes human
-combat_skill: .id "manacles" .level 4 .type "ranged" .atk 110% .dmg -50% .crit 5% .launch 32 .target 123 .is_crit_valid True  .effect "Manacles Stun 5" .valid_modes human
+combat_skill: .id "manacles" .level 0 .type "ranged" .atk 90% .dmg -60% .crit 1% .launch 32 .target 123 .is_crit_valid True  .effect "Manacles Stun 1" .valid_modes human
+combat_skill: .id "manacles" .level 1 .type "ranged" .atk 95% .dmg -60% .crit 2% .launch 32 .target 123 .is_crit_valid True  .effect "Manacles Stun 2" .valid_modes human
+combat_skill: .id "manacles" .level 2 .type "ranged" .atk 100% .dmg -60% .crit 3% .launch 32 .target 123 .is_crit_valid True  .effect "Manacles Stun 3" .valid_modes human
+combat_skill: .id "manacles" .level 3 .type "ranged" .atk 105% .dmg -60% .crit 4% .launch 32 .target 123 .is_crit_valid True  .effect "Manacles Stun 4" .valid_modes human
+combat_skill: .id "manacles" .level 4 .type "ranged" .atk 110% .dmg -60% .crit 5% .launch 32 .target 123 .is_crit_valid True  .effect "Manacles Stun 5" .valid_modes human
 // ABO-005 manacles: 1렙 명중 95 -> 90, 피해 -60% -> -50%. 괴인 방향(명중 낮추고 인간 형태 기본 성능을 올림, P-23) [제작자]
+// ABO-006 manacles: 피해 -50% -> -60%(1렙 명중 90 유지). 괴인 무기(11-20)가 커서 -50이면 실제 피해가 둔기 강타의 2배를 넘음 [제작자]
 combat_skill: .id "vomit" .level 0 .type "ranged" .atk 95% .dmg -75% .crit 2% .launch 32 .target ~23 .is_crit_valid True  .effect "Abom Vomit 1" "Vomit Debuff 1" .valid_modes human
 combat_skill: .id "vomit" .level 1 .type "ranged" .atk 100% .dmg -75% .crit 3% .launch 32 .target ~23 .is_crit_valid True  .effect "Abom Vomit 2" "Vomit Debuff 2" .valid_modes human
 combat_skill: .id "vomit" .level 2 .type "ranged" .atk 105% .dmg -75% .crit 4% .launch 32 .target ~23 .is_crit_valid True  .effect "Abom Vomit 3" "Vomit Debuff 3" .valid_modes human
