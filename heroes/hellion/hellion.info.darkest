@@ -58,14 +58,15 @@ combat_skill: .id "if_it_bleeds" .level 4 .type "melee" .atk 105% .dmg -35% .cri
 
 
 combat_move_skill: .id "move" .level 0 .type "move" .move 0 1 .launch 4321
-combat_skill: .id "breakthru" .level 0 .type "melee" .atk 85% .dmg -60% .crit -1% .move 0 1 .launch 432 .target ~123 .is_crit_valid True
-combat_skill: .id "breakthru" .level 1 .type "melee" .atk 90% .dmg -60% .crit 0% .move 0 1 .launch 432 .target ~123 .is_crit_valid True
-combat_skill: .id "breakthru" .level 2 .type "melee" .atk 95% .dmg -60% .crit 1% .move 0 1 .launch 432 .target ~123 .is_crit_valid True 
-combat_skill: .id "breakthru" .level 3 .type "melee" .atk 100% .dmg -60% .crit 2% .move 0 1 .launch 432 .target ~123 .is_crit_valid True  
-combat_skill: .id "breakthru" .level 4 .type "melee" .atk 105% .dmg -60% .crit 3% .move 0 1 .launch 432 .target ~123 .is_crit_valid True 
+combat_skill: .id "breakthru" .level 0 .type "melee" .atk 85% .dmg -55% .crit -1% .move 0 1 .launch 432 .target ~123 .is_crit_valid True
+combat_skill: .id "breakthru" .level 1 .type "melee" .atk 90% .dmg -55% .crit 0% .move 0 1 .launch 432 .target ~123 .is_crit_valid True
+combat_skill: .id "breakthru" .level 2 .type "melee" .atk 95% .dmg -55% .crit 1% .move 0 1 .launch 432 .target ~123 .is_crit_valid True 
+combat_skill: .id "breakthru" .level 3 .type "melee" .atk 100% .dmg -55% .crit 2% .move 0 1 .launch 432 .target ~123 .is_crit_valid True  
+combat_skill: .id "breakthru" .level 4 .type "melee" .atk 105% .dmg -55% .crit 3% .move 0 1 .launch 432 .target ~123 .is_crit_valid True 
 // HEL-002 [trace 2026-10-05] Pay part of the exhaustion removal with lower direct damage.
 //피해량 50 -> 60
 //탈진 삭제
+// HEL-008 breakthru: 피해 -60% -> -55%(상향). 피해 있는 2·3열 광역 중 최하위(+36)라 비도·담즙 수준으로 [제작자]
 
 combat_skill: .id "adrenaline_rush" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Cureself" "RB HEL HellionHealSelf 1" .is_stall_invalidating false
 combat_skill: .id "adrenaline_rush" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "Cureself" "RB HEL HellionHealSelf 2" .is_stall_invalidating false
