@@ -48,6 +48,8 @@
 - **weapon** [FLA-007] (G-04, R-GROW-03) — Weapon speed 6/6/8/8/9 → 6/6/7/7/8. Brings an exception back to the base game's growth rule.
 - **weapon** [FLA-007] (G-04, R-GROW-03) — Weapon speed 6/6/8/8/9 → 6/6/7/7/8. Brings an exception back to the base game's growth rule.
 - **Reclaim** [FLA-005] (G-02, G-05, P-22, R-RES-02) — Match ally HOT output to the self-bleed cost across skill levels.
+- **Endure** [FLA-008] (G-05) — 
+- **Endure** [FLA-006, FLA-008] (G-05, P-14) — Reduce self stress transfer cost to support an alternative stress healer.
 
 ## Grave Robber
 - **Thrown Dagger** [GR-002, GR-005] (G-02, P-11, R-DATA-01, P-26) — thrown_dagger: GR Acc Buff moved to poison_dart

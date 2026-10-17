@@ -27,7 +27,7 @@ A small, data-backed hero rebalance. Every change below fixes a problem confirme
 [*][b]Bounty Hunter[/b]: Collect Bounty, Mark for Death, Come Hither, Uppercut, Flashbang, Finish Him, Caltrops
 [*][b]Crusader[/b]: Zealous Accusation, Stunning Blow, Bulwark of Faith, Battle Heal, Inspiring Cry
 [*][b]Duelist[/b]: touche, feint, coup_de_grace, the_boot
-[*][b]Flagellant[/b]: resists, weapon, Reclaim
+[*][b]Flagellant[/b]: resists, weapon, Reclaim, Endure
 [*][b]Grave Robber[/b]: Thrown Dagger, Poison Darts, Toxin Trickery
 [*][b]Hellion[/b]: Wicked Hack, Barbaric YAWP!, Breakthrough, Adrenaline Rush, Bleed Out
 [*][b]Highwayman[/b]: Wicked Slice, Pistol Shot, Point Blank Shot, Grapeshot Blast, Tracking Shot, Duelist's Advance, Open Vein

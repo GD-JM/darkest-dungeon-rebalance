@@ -37,46 +37,7 @@
       "en": "Kept vanilla accuracy"
     }
   ],
-  "pending": [
-    {
-      "id": "SB-011",
-      "hero": "shieldbreaker",
-      "ops": [
-        [
-          "vanilla_field",
-          "^weapon:",
-          "dmg"
-        ]
-      ],
-      "ko": "무기 피해 성장 20% → 15% — R-GROW-01 설명 후 제작자 답 대기",
-      "en": "pending"
-    },
-    {
-      "id": "SB-012",
-      "hero": "shieldbreaker",
-      "ops": [
-        [
-          "vanilla_field",
-          "^armour:",
-          "def"
-        ]
-      ],
-      "ko": "기본 회피 8 → 7.5 — 제작자 답 대기",
-      "en": "pending"
-    },
-    {
-      "id": "FLA-006",
-      "hero": "flagellant",
-      "ops": [
-        [
-          "vanilla_skill",
-          "endure"
-        ]
-      ],
-      "ko": "인내 자기 스트레스 고정 4 — 제작자 답 대기",
-      "en": "pending"
-    }
-  ],
+  "pending": [],
   "notes": {
     "SB-002": {
       "principles": [

@@ -352,3 +352,7 @@ v2 모델에서 두 기술은 고행자 상위 3기술(방혈·처벌·구제)�
 - 원본 (Flag Self Stress 5): `effect: .name "Flag Self Stress 5" .target "performer" .curio_result_type "negative" .chance 100% .stress 6	.on_hit true .on_miss false	.queue true`
 - 현재: `effect: .name "RB FLA Flag Self Stress 5" .target "performer" .curio_result_type "negative" .chance 100% .stress 4	.on_hit true .on_miss false	.queue true`
 - 출처: `effects/rebalance_flagellant.effects.darkest`, 주석 추가 전 23행; Git 원문 {"commit": "e45819b3d49885514d861ecb697f87b8e5707742", "summary": "FLA-005 재기 회복 일관화 + FLA-006 인내 자기 스트레스 4 고정"}
+
+### FLA-008 인내: 자기 스트레스 4 고정 → 4/5/6/7/8 (2026-10-17)
+- 상태: 적용 (제작자 결정, 커스텀·창작마당 공통)
+- 근거: FLA-006(4 고정)은 2018 공식 하향(바닐라 10/9/8/7/6, 1렙 순회복 0)을 출시 이상으로 되돌려 P-06과 충돌했다(창작마당 감사 X). 회복 10~14는 그대로 두고 자기 스트레스를 레벨마다 올려 순회복을 매 레벨 6으로 고정 — 저레벨부터 쓸 만한 스트레스 힐러(G-05)는 유지하면서 5렙 순회복은 바닐라 8보다 낮다.

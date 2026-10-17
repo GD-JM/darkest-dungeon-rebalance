@@ -47,6 +47,8 @@
 - **weapon** [FLA-007] (G-04, R-GROW-03) — 무기 속도 6/6/8/8/9 → 6/6/7/7/8. 원작 성장 규칙의 예외를 규칙대로.
 - **weapon** [FLA-007] (G-04, R-GROW-03) — 무기 속도 6/6/8/8/9 → 6/6/7/7/8. 원작 성장 규칙의 예외를 규칙대로.
 - **재기** [FLA-005] (G-02, G-05, P-22, R-RES-02) — Match ally HOT output to the self-bleed cost across skill levels.
+- **인내** [FLA-008] (G-05) — endure 1~3렙: 자기 스트레스 4/5/6 (4렙 7은 바닐라와 같아 바닐라 효과 재사용) [제작자]
+- **인내** [FLA-006, FLA-008] (G-05, P-14) — endure: 자기 스트레스 4 고정 -> 4/5/6/7/8(회복 10~14 그대로, 순회복 매 레벨 6). 2018 공식 하향(P-06)과의 충돌 완화 [제작자]
 
 ## 도굴꾼
 - **단검 투척** [GR-002, GR-005] (G-02, P-11, R-DATA-01, P-26) — thrown_dagger: GR Acc Buff moved to poison_dart

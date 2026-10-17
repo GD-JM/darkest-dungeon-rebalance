@@ -17,17 +17,18 @@ weapon: .name "shieldbreaker_weapon_4" .atk 0% .dmg 8 16 .crit 10% .spd 7 .upgra
 // 데미지 헤비인데 20% 20% 규칙임 -> 15% 15% 규칙으로 수정
 
 
-armour: .name "shieldbreaker_armour_0" .def 7.5% .prot 0 .hp 20 .spd 0
+armour: .name "shieldbreaker_armour_0" .def 8% .prot 0 .hp 20 .spd 0
 // SB-012 [trace 2026-10-05] Remove the author-identified unique base dodge8 exception in favor of7.5.
-armour: .name "shieldbreaker_armour_1" .def 12.5% .prot 0 .hp 24 .spd 0 .upgradeRequirementCode 0
+armour: .name "shieldbreaker_armour_1" .def 13% .prot 0 .hp 24 .spd 0 .upgradeRequirementCode 0
 // SB-012 [trace 2026-10-05] Remove the author-identified unique base dodge8 exception in favor of7.5.
-armour: .name "shieldbreaker_armour_2" .def 17.5% .prot 0 .hp 28 .spd 0 .upgradeRequirementCode 1
+armour: .name "shieldbreaker_armour_2" .def 18% .prot 0 .hp 28 .spd 0 .upgradeRequirementCode 1
 // SB-012 [trace 2026-10-05] Remove the author-identified unique base dodge8 exception in favor of7.5.
-armour: .name "shieldbreaker_armour_3" .def 22.5% .prot 0 .hp 32 .spd 0 .upgradeRequirementCode 2
+armour: .name "shieldbreaker_armour_3" .def 23% .prot 0 .hp 32 .spd 0 .upgradeRequirementCode 2
 // SB-012 [trace 2026-10-05] Remove the author-identified unique base dodge8 exception in favor of7.5.
-armour: .name "shieldbreaker_armour_4" .def 27.5% .prot 0 .hp 36 .spd 0 .upgradeRequirementCode 3
+armour: .name "shieldbreaker_armour_4" .def 28% .prot 0 .hp 36 .spd 0 .upgradeRequirementCode 3
 // SB-012 [trace 2026-10-05] Remove the author-identified unique base dodge8 exception in favor of7.5.
 //회피 괴인처럼 7.5로 바꿈 8은 혼자만 예외적인 수치
+// SB-019 armour: 회피를 바닐라(1렙 8)로 되돌림 - SB-012(7.5) 취소, 근거 없음 [제작자]
 
 
 combat_skill: .id "pierce" .level 0 .type "melee" .atk 85% .dmg -10% .crit 2% .move 0 1 .launch 321 .target 123 .is_crit_valid True .ignore_protection true  .generation_guaranteed true

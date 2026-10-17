@@ -162,6 +162,7 @@ effect: .name "Flag Super Heal 5" .target "target" .curio_result_type "positive"
 effect: .name "Flag Steal Stress 1" .target "target" .curio_result_type "positive" .chance 100% .healstress 10	.on_hit true .on_miss false .queue true
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
 effect: .name "Flag Self Stress 1" .target "performer" .curio_result_type "negative" .chance 100% .stress 4	.on_hit true .on_miss false	.queue true
+// FLA-008 Self stress 4 (was fixed 4; vanilla 10/9/8/7/6). Net relief 6 at every level.
 // FLA-006 [trace 2026-10-05] Reduce self stress transfer cost to support an alternative stress healer. Effect: Flag Self Stress 1.
 // FLA-006 인내 1레벨: 자기 스트레스 10 -> 4 고정. 순회복 0 -> 6, 광대 격려의 선율보다 항상 2 낮게. 회복량 10~14(공식 하향값)는 유지
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
@@ -169,7 +170,8 @@ effect: .name "Flag Endure Speed Buff 1" .target "performer" .curio_result_type 
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
 effect: .name "Flag Steal Stress 2" .target "target" .curio_result_type "positive" .chance 100% .healstress 11	.on_hit true .on_miss false .queue true
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
-effect: .name "Flag Self Stress 2" .target "performer" .curio_result_type "negative" .chance 100% .stress 4	.on_hit true .on_miss false	.queue true
+effect: .name "Flag Self Stress 2" .target "performer" .curio_result_type "negative" .chance 100% .stress 5	.on_hit true .on_miss false	.queue true
+// FLA-008 Self stress 5 (was fixed 4; vanilla 10/9/8/7/6). Net relief 6 at every level.
 // FLA-006 [trace 2026-10-05] Reduce self stress transfer cost to support an alternative stress healer. Effect: Flag Self Stress 2.
 // FLA-006 인내 2레벨: 자기 스트레스 9 -> 4 고정. 순회복 2 -> 7, 광대 격려의 선율보다 항상 2 낮게. 회복량 10~14(공식 하향값)는 유지
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
@@ -177,7 +179,8 @@ effect: .name "Flag Endure Speed Buff 2" .target "performer" .curio_result_type 
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
 effect: .name "Flag Steal Stress 3" .target "target" .curio_result_type "positive" .chance 100% .healstress 12	.on_hit true .on_miss false .queue true
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
-effect: .name "Flag Self Stress 3" .target "performer" .curio_result_type "negative" .chance 100% .stress 4	.on_hit true .on_miss false	.queue true
+effect: .name "Flag Self Stress 3" .target "performer" .curio_result_type "negative" .chance 100% .stress 6	.on_hit true .on_miss false	.queue true
+// FLA-008 Self stress 6 (was fixed 4; vanilla 10/9/8/7/6). Net relief 6 at every level.
 // FLA-006 [trace 2026-10-05] Reduce self stress transfer cost to support an alternative stress healer. Effect: Flag Self Stress 3.
 // FLA-006 인내 3레벨: 자기 스트레스 8 -> 4 고정. 순회복 4 -> 8, 광대 격려의 선율보다 항상 2 낮게. 회복량 10~14(공식 하향값)는 유지
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
@@ -185,7 +188,8 @@ effect: .name "Flag Endure Speed Buff 3" .target "performer" .curio_result_type 
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
 effect: .name "Flag Steal Stress 4" .target "target" .curio_result_type "positive" .chance 100% .healstress 13	.on_hit true .on_miss false .queue true
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
-effect: .name "Flag Self Stress 4" .target "performer" .curio_result_type "negative" .chance 100% .stress 4	.on_hit true .on_miss false	.queue true
+effect: .name "Flag Self Stress 4" .target "performer" .curio_result_type "negative" .chance 100% .stress 7	.on_hit true .on_miss false	.queue true
+// FLA-008 Self stress 7 (was fixed 4; vanilla 10/9/8/7/6). Net relief 6 at every level.
 // FLA-006 [trace 2026-10-05] Reduce self stress transfer cost to support an alternative stress healer. Effect: Flag Self Stress 4.
 // FLA-006 인내 4레벨: 자기 스트레스 7 -> 4 고정. 순회복 6 -> 9, 광대 격려의 선율보다 항상 2 낮게. 회복량 10~14(공식 하향값)는 유지
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
@@ -193,7 +197,8 @@ effect: .name "Flag Endure Speed Buff 4" .target "performer" .curio_result_type 
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
 effect: .name "Flag Steal Stress 5" .target "target" .curio_result_type "positive" .chance 100% .healstress 14	.on_hit true .on_miss false .queue true
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
-effect: .name "Flag Self Stress 5" .target "performer" .curio_result_type "negative" .chance 100% .stress 4	.on_hit true .on_miss false	.queue true
+effect: .name "Flag Self Stress 5" .target "performer" .curio_result_type "negative" .chance 100% .stress 8	.on_hit true .on_miss false	.queue true
+// FLA-008 Self stress 8 (was fixed 4; vanilla 10/9/8/7/6). Net relief 6 at every level.
 // FLA-006 [trace 2026-10-05] Reduce self stress transfer cost to support an alternative stress healer. Effect: Flag Self Stress 5.
 // FLA-006 인내 5레벨: 자기 스트레스 6 -> 4 고정. 순회복 8 -> 10, 광대 격려의 선율보다 항상 2 낮게. 회복량 10~14(공식 하향값)는 유지
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
