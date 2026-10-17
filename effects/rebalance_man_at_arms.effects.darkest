@@ -26,7 +26,8 @@ effect: .name "RB MAA Bolster Stress Buff 1" .target "target" .chance 100% .buff
 // MAA-011 Stress damage -10% duration by level 2/3/2/3/2 (heal rises on odd levels, duration on even).
 // MAA-010 Bolster repeatable support: party stress heal 1/1/2/2/3, dodge 1-5 for 3 turns, stress damage -10%% for 2 turns (max 2 stacks = vanilla -20%%), no per-battle limit.
 // edited vanilla effect (from effects/base.effects.darkest)
-effect: .name "RB MAA Bolster Stress Buff 2" .target "target" .chance 100% .buff_ids "STRESSDMG-10" .duration 3  .on_hit true .on_miss true .queue true
+effect: .name "RB MAA Bolster Stress Buff 2" .target "target" .chance 100% .buff_ids "STRESSDMG-10" .duration 2  .on_hit true .on_miss true .queue true
+// MAA-015 Duration 2 turns at every level (was 2/3/2/3/2 from MAA-011); author decision 2026-10-17.
 // MAA-011 Stress damage -10% duration by level 2/3/2/3/2 (heal rises on odd levels, duration on even).
 // MAA-010 Bolster repeatable support: party stress heal 1/1/2/2/3, dodge 1-5 for 3 turns, stress damage -10%% for 2 turns (max 2 stacks = vanilla -20%%), no per-battle limit.
 // edited vanilla effect (from effects/base.effects.darkest)
@@ -34,7 +35,8 @@ effect: .name "RB MAA Bolster Stress Buff 3" .target "target" .chance 100% .buff
 // MAA-011 Stress damage -10% duration by level 2/3/2/3/2 (heal rises on odd levels, duration on even).
 // MAA-010 Bolster repeatable support: party stress heal 1/1/2/2/3, dodge 1-5 for 3 turns, stress damage -10%% for 2 turns (max 2 stacks = vanilla -20%%), no per-battle limit.
 // edited vanilla effect (from effects/base.effects.darkest)
-effect: .name "RB MAA Bolster Stress Buff 4" .target "target" .chance 100% .buff_ids "STRESSDMG-10" .duration 3  .on_hit true .on_miss true .queue true
+effect: .name "RB MAA Bolster Stress Buff 4" .target "target" .chance 100% .buff_ids "STRESSDMG-10" .duration 2  .on_hit true .on_miss true .queue true
+// MAA-015 Duration 2 turns at every level (was 2/3/2/3/2 from MAA-011); author decision 2026-10-17.
 // MAA-011 Stress damage -10% duration by level 2/3/2/3/2 (heal rises on odd levels, duration on even).
 // MAA-010 Bolster repeatable support: party stress heal 1/1/2/2/3, dodge 1-5 for 3 turns, stress damage -10%% for 2 turns (max 2 stacks = vanilla -20%%), no per-battle limit.
 // edited vanilla effect (from effects/base.effects.darkest)
@@ -60,11 +62,13 @@ effect: .name "RB MAA Bolster Rally 5" .target "target" .curio_result_type "posi
 // MAA-007 Bolster party stress heal by level 2/2/3/3/4 (was flat 2). Once per battle.
 effect: .name "RB MAA Bolster Guarded 1" .target "target" .curio_result_type "positive" .chance 100% .buff_ids "RB_MAA_Bolster_Guarded_StressHeal" .duration 2 .on_hit true .on_miss true .queue true
 // MAA-011 Guarded allies receive 1.5x stress healing while this lasts (synergy with Defender, Protect Me, Guard Dog).
-effect: .name "RB MAA Bolster Guarded 2" .target "target" .curio_result_type "positive" .chance 100% .buff_ids "RB_MAA_Bolster_Guarded_StressHeal" .duration 3 .on_hit true .on_miss true .queue true
+effect: .name "RB MAA Bolster Guarded 2" .target "target" .curio_result_type "positive" .chance 100% .buff_ids "RB_MAA_Bolster_Guarded_StressHeal" .duration 2 .on_hit true .on_miss true .queue true
+// MAA-015 Duration 2 turns at every level (was 2/3/2/3/2 from MAA-011); author decision 2026-10-17.
 // MAA-011 Guarded allies receive 1.5x stress healing while this lasts (synergy with Defender, Protect Me, Guard Dog).
 effect: .name "RB MAA Bolster Guarded 3" .target "target" .curio_result_type "positive" .chance 100% .buff_ids "RB_MAA_Bolster_Guarded_StressHeal" .duration 2 .on_hit true .on_miss true .queue true
 // MAA-011 Guarded allies receive 1.5x stress healing while this lasts (synergy with Defender, Protect Me, Guard Dog).
-effect: .name "RB MAA Bolster Guarded 4" .target "target" .curio_result_type "positive" .chance 100% .buff_ids "RB_MAA_Bolster_Guarded_StressHeal" .duration 3 .on_hit true .on_miss true .queue true
+effect: .name "RB MAA Bolster Guarded 4" .target "target" .curio_result_type "positive" .chance 100% .buff_ids "RB_MAA_Bolster_Guarded_StressHeal" .duration 2 .on_hit true .on_miss true .queue true
+// MAA-015 Duration 2 turns at every level (was 2/3/2/3/2 from MAA-011); author decision 2026-10-17.
 // MAA-011 Guarded allies receive 1.5x stress healing while this lasts (synergy with Defender, Protect Me, Guard Dog).
 effect: .name "RB MAA Bolster Guarded 5" .target "target" .curio_result_type "positive" .chance 100% .buff_ids "RB_MAA_Bolster_Guarded_StressHeal" .duration 2 .on_hit true .on_miss true .queue true
 // MAA-011 Guarded allies receive 1.5x stress healing while this lasts (synergy with Defender, Protect Me, Guard Dog).

@@ -1,116 +1,52 @@
 [h1]Every Hero Worth Taking[/h1]
 [i]More heroes and more skills worth taking — without changing who the heroes are.[/i]
 
-[h2]Why this mod?[/h2]
-[b]No party should be mandatory.[/b] Early on, the game can become nearly unplayable without a Vestal, an Occultist or a Jester, because healing and stress relief belong to only a few heroes. This mod spreads healing and stress relief across the roster so that many different parties can work.
+[h2]The goal: no mandatory party[/h2]
+Early on, Darkest Dungeon can become nearly unplayable without a Vestal, an Occultist or a Jester, because healing and stress relief belong to only a few heroes. This mod spreads healing and stress relief across the roster so that many different parties can work.
 
 The same goes inside each hero: skills and ranks are rebalanced so you are no longer locked into one optimal set of four skills, repeated from one rank.
 
-Only skills where the game's own numbers show a problem were changed: a skill simply worse than another, a value that breaks the base game's own patterns, or a skill whose art and name promise something it doesn't do.
-
 [h2]How the changes were decided[/h2]
 [list]
-[*][b]Follow the base game's own rules.[/b] The original numbers have clear patterns: plain melee attacks start at 85 ACC, skills built around an effect at 90–95, bleed and blight last 3 turns, stuns that reach rank 3 deal little damage. Outliers are brought back in line.
-[*][b]Every buff has a price.[/b] Accuracy, damage and reach are traded against each other (+5 ACC costs about 10% DMG). Power is moved between skills and heroes rather than added, so overall difficulty stays the same.
-[*][b]A skill should do what it looks like.[/b] A bandage stops bleeding, flash powder burns, a war cry clears the field.
-[*][b]Stay true to the lore.[/b] Resistances and roles follow each hero's official description.
-[*][b]Keep the feel.[/b] Reliability and frequency are adjusted rather than identity, and Red Hook's own nerfs are respected.
-[*][b]Trinkets are untouched[/b], so effects that trinkets boost stay on their skills.
+[*][b]Healing and stress relief aren't owned by a few heroes.[/b]
+Example: more heroes can patch themselves up — Grave Robber's Toxin Trickery (heal 1–5), Hellion's Adrenaline Rush (3–7) and Vestal's Mace Bash (3–5) — while Man-at-Arms' Bolster becomes a repeatable party stress heal.
+[*][b]Different skills, different ranks.[/b]
+Example: a Vestal can now fight from rank 1 — Divine Grace and Illumination work from any rank — while Divine Comfort stays a back-rank reward.
+[*][b]Follow the base game's own rules.[/b] The original numbers have clear patterns; outliers are brought back in line.
+Example: Shieldbreaker's weapon speed grew faster than any base-game hero's; it now follows the standard curve.
+[*][b]Every buff has a price.[/b] Accuracy, damage and reach are traded against each other, so overall difficulty stays the same.
+Example: Grapeshot Blast gains 15 accuracy and pays for it with damage (−50% → −60%).
+[*][b]A skill should do what it looks like.[/b]
+Example: Arbalest's Battlefield Bandage now stops bleeding, and Antiquarian's Flashpowder now burns.
+[*][b]Stay true to the lore.[/b]
+Example: nothing in the Houndmaster's description explains his extra bleed and blight resist, so both return to the baseline.
+[*][b]Keep the feel.[/b] Adjust reliability and frequency, not identity; Red Hook's own nerfs are respected.
+Example: Point Blank Shot keeps its punch, but he now recoils 2 ranks, so it can't be fired every turn.
+[*][b]Trinkets are untouched.[/b]
+Example: Open Vein keeps both its debuffs because trinkets boost them; its damage was lowered instead.
 [/list]
-Values are at level 1; ranges show levels 1–5.
 
-[h2]Changes[/h2]
-[b]Abomination[/b] — transforming should be a real choice.
-• Transform: allies take 6 stress instead of 8, and he now relieves his own stress (4–8). Beast form costs 4 stress per turn instead of 6.
-• Human form trades accuracy for power: Manacles and Beast's Bile ACC 95 → 90, Beast's Bile DMG −90% → −75%.
-• Slam: usable from ranks 2–4 (was 1–3), ACC 90, full damage, no debuffs, so the beast always has a move.
-
-[b]Antiquarian[/b] — weaker in combat by design (she pays her way in gold).
-• Flashpowder now burns (1–3), so she can set up burn combos.
-
-[b]Arbalest[/b]
-• Battlefield Bandage cures bleed and heals 3–7 (its healing-received buff moved to the Crusader).
-• Rallying Flare: guaranteed party stress heal 2–4 (no longer clears stun or mark).
-• Sniper Shot: CRIT 5 → 6%, +60% vs marked (was +50%).
-• Suppressing Fire DMG −80% → −60%. Bola DMG −50% → −40%, stronger push at level 5.
-
-[b]Bounty Hunter[/b] — mark, hook, execute.
-• Come Hither pulls 3 ranks, right into Finish Him's reach; ACC 95, DMG −60%, no longer marks.
-• Uppercut: rank 1 only, ACC 95, CRIT 9%, strong stun. Flashbang: from ranks 3–4, normal stun.
-• Mark for Death: PROT −20% (was −10%), no self speed buff.
-• Finish Him: ranks 1–2, +20–33% vs bleeding. Collect Bounty +100% vs marked (was +90%). Caltrops DMG −95% → −85%.
-
-[b]Crusader[/b]
-• Stunning Blow: strong stun. Zealous Accusation ACC 85 → 90. Bulwark of Faith usable from any rank.
-• Battle Heal becomes a support heal: +20% healing received; level 5 heals 4–5 (was 5–6).
-• Inspiring Cry grows every level (9 at level 5).
-
-[b]Duelist[/b] — one of the strongest heroes, slightly trimmed.
-• Touché: dodge +15–25% for 2 turns (was +40–50% for 4; two casts made her almost unhittable).
-• Feint: PROT −10% (was −20%, identical to Mark for Death).
-• Coup de Grâce DMG −60% → −70%. The Boot DMG −40% → −60%.
-
-[b]Flagellant[/b] — back to the base game's numbers.
-• Stun and move resist 50 → 40, bleed 65 → 60. Weapon speed grows like every other hero's.
-• Endure now relieves a steady 6 stress at every level (self-stress 4 at level 1, was 10).
-
-[b]Grave Robber[/b]
-• Thrown Dagger loses its accuracy buff but hits marked targets harder (+40–80%).
-• Poison Darts gets that accuracy buff; its blight lasts 3 turns like everyone else's.
-• Toxin Trickery: no longer once per battle, heals 1–5; buffs smaller and last 3 turns.
-
-[b]Hellion[/b] — exhaustion removed; it fought her relentless lore.
-• Barbaric YAWP!: no stun; buffs her next blow, makes all enemies deal 10–20% less damage, clears corpses, no use limit.
-• Adrenaline Rush is her self-heal (3–7); its attack buff moved to YAWP.
-• Breakthrough DMG −50% → −55%. Bleed Out DMG +20% → 0%, CRIT 6 → 10%. Wicked Hack ACC 85 → 90.
-
-[b]Highwayman[/b] — ranged and melee builds both work.
-• Tracking Shot grants riposte without moving, hits any rank, no use limit, DMG −60%. Duelist's Advance gives an attack buff instead.
-• Wicked Slice reaches rank 3, used from ranks 1–2, DMG +15% → 0%. Pistol Shot ACC 85 → 90, +40% vs marked.
-• Point Blank Shot: he recoils 2 ranks, push 2.
-• Grapeshot Blast ACC 75 → 90, DMG −50% → −60%. Open Vein DMG −15% → −30%, CRIT 8%.
-
-[b]Houndmaster[/b] — less damage, more protection and support.
-• Hound's Rush from any rank: ACC 90, DMG −25%, 2-turn bleed, +60% vs marked at level 5 (was +100%).
-• Target Whistle lowers enemy ACC (−25%) instead of PROT. Guard Dog dodge +20–30%. Lick Wounds from any rank.
-• Cry Havoc is stronger and more reliable at low levels (level 1: 4 stress heal at 70%).
-• Blackjack: ACC 90, normal stun, DMG −50%. Hound's Harry: ACC 90, DMG −70%, ranks 2–4.
-• Blight and bleed resist 40 → 30 (nothing in his lore calls for more).
-
-[b]Jester[/b]
-• Solo: usable from any rank, more dodge, Finale bonus +100%, clears corpses and slows enemies.
-• Battle Ballad: CRIT +4–8%, no ACC (accuracy is Command's job now).
-• Inspiring Tune usable from rank 2.
-
-[b]Leper[/b]
-• Intimidate is now a rank-1 strike like Purge (ACC 85, DMG −40%) that cracks armor (PROT −30–50%, 2 turns). Old debuffs, self-mark and destealth removed.
-
-[b]Man-at-Arms[/b] — the veteran who holds the line.
-• Weapon damage 5–10 at level 1 (was 5–9).
-• Command: party ACC and PROT +15%, removes stun (CRIT moved to Battle Ballad).
-• Bolster: no use limit; party stress heal 1–3, −10% stress taken, guarded allies recover 50% more stress.
-• Rampart no longer moves him, DMG −50%. Retribution DMG −75% → −20%, ranks 1–2. Bellow clears corpses.
-
-[b]Occultist[/b]
-• Vulnerability Hex lowers stun, blight, bleed and debuff resist (−15–20%) instead of dodge; no damage.
-• Weakening Curse DMG −75% → −65%. Hands from the Abyss ACC 95, DMG −60%.
-• Wyrd Reconstruction: level 5 keeps level 4's bleed risk (max heal 20).
-
-[b]Plague Doctor[/b]
-• Battlefield Medicine heals 3–7 and cures blight (no longer bleed or herself). Incision ACC 85 → 90.
-
-[b]Runaway[/b]
-• Ransack no longer hits rank 4; DMG −10% → −25%.
-
-[b]Shieldbreaker[/b] — the DLC outlier, back to the base game's rules.
-• Pierce: no rank 4, ACC 85, CRIT 2% (her launch values).
-• Weapon damage and speed grow at standard rates. Stun and move resist 50 → 30 (lightly armored by lore).
-• Impale: blight from level 1 for 2 turns, DMG −70%. Expose ACC 90. Captivate ACC 90, +50–90% vs marked. Serpent Sway from ranks 2–4.
-
-[b]Vestal[/b] — a front-rank Vestal is now an option.
-• Mace Bash: self-heal 3–5 and CRIT 5% (moved from Judgement). Divine Grace from any rank, heals 5–9.
-• Illumination from any rank, ACC 95: the target takes 20–25% more damage and burns (1–3) instead of losing dodge.
-• Judgement: ACC 90, DMG 0%, no self-heal. Dazzling Light and Divine Comfort from ranks 3–4 only. Hand of Light ACC 90.
+[h2]Hero by hero[/h2]
+The images above show every changed skill, before and after.
+[b]Abomination[/b] — transforming is a real choice: Transform now relieves his own stress, and Slam works from rank 4.
+[b]Antiquarian[/b] — still weaker by design (she earns gold), but Flashpowder now burns and sets up burn combos.
+[b]Arbalest[/b] — a field medic too: Battlefield Bandage cures bleed, Rallying Flare reliably relieves party stress.
+[b]Bounty Hunter[/b] — mark, hook, execute: Come Hither pulls 3 ranks into Finish Him's reach; Uppercut is a rank-1 execution stun.
+[b]Crusader[/b] — a support healer: Battle Heal boosts healing received; Inspiring Cry grows every level.
+[b]Duelist[/b] — one of the strongest heroes, trimmed: Touché no longer makes her almost unhittable.
+[b]Flagellant[/b] — back to the base game's rules: resists and speed growth normalized; Endure relieves stress from level 1.
+[b]Grave Robber[/b] — Toxin Trickery becomes a repeatable self-heal; Thrown Dagger hits marked targets harder.
+[b]Hellion[/b] — exhaustion removed: Barbaric YAWP! fires her up and weakens every enemy; Adrenaline Rush is her self-heal.
+[b]Highwayman[/b] — ranged and melee builds both work: Tracking Shot grants riposte without moving.
+[b]Houndmaster[/b] — less damage, more protection: Target Whistle lowers enemy accuracy, Guard Dog gives more dodge, Hound's Rush works from any rank.
+[b]Jester[/b] — still the best stress healer, but Inspiring Tune works from rank 2 and Solo from any rank.
+[b]Leper[/b] — Intimidate becomes an armor-cracking strike instead of a support skill.
+[b]Man-at-Arms[/b] — the veteran who holds the line: Bolster is a repeatable party stress heal; Command adds protection.
+[b]Occultist[/b] — Vulnerability Hex lowers stun, bleed, blight and debuff resist, setting up the whole party.
+[b]Plague Doctor[/b] — Battlefield Medicine is the blight-cure heal (3–7) while the Arbalest covers bleed.
+[b]Runaway[/b] — Ransack no longer reaches rank 4.
+[b]Shieldbreaker[/b] — the DLC outlier, back in line: Pierce loses rank 4, weapon growth standardized.
+[b]Vestal[/b] — can fight from rank 1: Mace Bash heals herself, Divine Grace and Illumination work from any rank.
 
 [h2]Compatibility[/h2]
 Replaces only the hero files above (plus one effect and one buff file); conflicts with mods that replace the same heroes. Safe on existing saves.

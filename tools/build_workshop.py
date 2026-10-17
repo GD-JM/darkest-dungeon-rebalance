@@ -235,9 +235,10 @@ def main():
     # 빌드는 바뀐 기술·영웅 이름이 설명문에 전부 나오는지만 확인한다. 전체 근거는 patch_notes_*.md (포트폴리오 기록)
     for lang in ('en', 'ko'):
         d0 = rd(os.path.join(W, 'description_%s.txt' % lang)).replace('\r\n', '\n').strip()
-        absent = [nm for h, v in summary[lang].items() for nm, k in v
-                  if k.split('|')[1] not in BLOCK['en'] and nm not in d0]
-        absent += [h for h in summary[lang] if (EN_HERO[h] if lang == 'en' else S.KO[h]) not in d0]
+        # 설명문은 영웅별 방향 + 대표 변경만 쓴다 [사용자 10-17]; 기술 전부는 영웅별 이미지(hero_cards.json → make_hero_cards.py)
+        absent = [h for h in summary[lang] if (EN_HERO[h] if lang == 'en' else S.KO[h]) not in d0]
+        cards = json.load(open(os.path.join(W, 'hero_cards.json'), encoding='utf-8'))
+        absent += sorted({k for v in summary[lang].values() for _, k in v} - {s['key'] for c in cards.values() for s in c['skills']})
         assert not absent, ('설명문에 빠진 변경', lang, absent)
         open(os.path.join(W, 'description_built_%s.txt' % lang), 'w', encoding='utf-8', newline='\n').write(d0 + '\n')
         print('description', lang, len(d0), 'chars (Steam limit 8000; line breaks counted twice: %d)' % (len(d0) + d0.count('\n')))
