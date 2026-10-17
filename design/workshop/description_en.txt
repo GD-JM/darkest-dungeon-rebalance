@@ -6,6 +6,9 @@ Early on, Darkest Dungeon can become nearly unplayable without a Vestal, an Occu
 
 The same goes inside each hero: skills and ranks are rebalanced so you are no longer locked into one optimal set of four skills, repeated from one rank.
 
+[h2]One integrated patch, same overall difficulty[/h2]
+Most hero mods change one hero at a time, and that usually means making that hero stronger. This mod rebalances all 19 heroes together under one set of rules: every buff is paired with a cost or a nerf elsewhere, so the game gets neither easier nor harder overall. By our hero-strength model, total strength across the roster stays within 0.5% of vanilla, while the gap between the strongest and weakest heroes narrows: the Duelist and Houndmaster come down, the Bounty Hunter and Arbalest come up.
+
 [h2]How the changes were decided[/h2]
 [list]
 [*][b]Healing and stress relief aren't owned by a few heroes.[/b]
