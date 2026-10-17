@@ -4,142 +4,142 @@ Each entry: what changed (generated from the game data) — why (principle IDs f
 
 ## Abomination
 
-- **Transform**: party: stress +8; party: stress heal 2 → Lv1 party: stress +6; self: stress heal 4; party: stress heal 3 … Lv5 party: stress +6; self: stress heal 8; party: stress heal 3
-- **Manacles**: Accuracy 95% → 90%
-- **Beast's Bile**: Accuracy 95% → 90%; Damage -90% → -75%
-- **Slam**: Accuracy 80% → 90%; Damage -25% → 0%; Usable ranks 3·2·1 → 4·3·2; Removed: Lv1 dodge -10%, speed -2 3t … Lv5 dodge -20%, speed -6 (140%) 3t
-- **Beast form**: Beast stress per turn 6 → 4
+- **Transform**: party: stress +8; party: stress heal 2 → Lv1 party: stress +6; self: stress heal 4; party: stress heal 3 … Lv5 party: stress +6; self: stress heal 8; party: stress heal 3 — Transforming cost a lot of stress for little payoff, so almost nobody did it. Unleashing the beast now relieves the Abomination's own stress while his allies still feel a smaller fear cost, and reining it back in calms them a little more, so transforming becomes a real choice about who carries the stress. *(P-23, G-02, P-22 / ABO-004)*
+- **Manacles**: Accuracy 95% → 90% — Human-form accuracy comes down toward the beast skills (85–90) so the gap no longer discourages transforming; 90 is also the standard for damaging stuns. Damage stays as is, since his heavy weapon already makes this one of the harder-hitting stuns. *(P-23, R-STUN-03 / ABO-005, ABO-006)*
+- **Beast's Bile**: Accuracy 95% → 90%; Damage -90% → -75% — Its blight already matched the Jester's Harvest (the same rank 2–3 damage-over-time AoE), but its direct damage lagged far behind, so damage goes up. The 5-point accuracy drop pays for that and follows the human-form direction (lower accuracy, stronger base output). *(P-23, G-02, P-11 / ABO-002, ABO-007)*
+- **Slam**: Accuracy 80% → 90%; Damage -25% → 0%; Usable ranks 3·2·1 → 4·3·2; Removed: Lv1 dodge -10%, speed -2 3t … Lv5 dodge -20%, speed -6 (140%) 3t — The beast had nothing to do from rank 4, so a shuffled formation cost it whole turns; now it slams from the back and moves forward. The old debuffs are removed and accuracy/damage raised so it becomes the reliable push on ranks 1–2, distinct from Rage (reaches rank 3, high crit). *(G-03, P-19, G-02 / ABO-001, ABO-003)*
+- **Beast form**: Beast stress per turn 6 → 4 — Staying in beast form still builds stress every turn, but less, so a few turns as the beast are affordable after transforming. *(P-23, P-12 / ABO-004)*
 
 ## Antiquarian
 
-- **Flashpowder**: Added: Lv1 burn 1 … Lv5 burn 3
+- **Flashpowder**: Added: Lv1 burn 1 … Lv5 burn 3 — The skill's effect is a burst of flame, so it now burns. Before this only the Runaway could apply burn; now another hero can set up her burn-synergy skills. The amount is kept small because the Antiquarian is meant to be weaker in combat than other heroes (she pays her way in gold). *(P-19, P-25 / ANT-001)*
 
 ## Arbalest
 
-- **Sniper Shot**: Crit 5% → 6%; Lv1 vs marked: damage +50%, crit +9% 3t … Lv5 — → Lv1 vs marked: damage +60%, crit +9% 3t … Lv5 —
-- **Suppressing Fire**: Damage -80% → -60%
-- **Bola**: Damage -50% → -40%; Lv1 — … Lv5 push 1 (105%) → Lv1 — … Lv5 push 1 (115%)
-- **Battlefield Bandage**: Lv1 healing received +20% … Lv5 healing received +38% → cure bleed/blight
-- **Rallying Flare**: Lv1 party: stress heal 1 (60%) … Lv5 party: stress heal 3 (67%) → Lv1 party: stress heal 2 … Lv5 party: stress heal 4
+- **Sniper Shot**: Crit 5% → 6%; Lv1 vs marked: damage +50%, crit +9% 3t … Lv5 unchanged → Lv1 vs marked: damage +60%, crit +9% 3t … Lv5 unchanged — Mark damage is being spread across more heroes (Houndmaster down, other mark dealers up), so Sniper Shot's low-level marked bonus rises while the level-5 cap stays. The crit bump is because at level 1 it hit no harder than the Vestal's Judgement and felt weak; extra crit suits a precision shot. *(P-26, P-21, P-11 / ARB-005, ARB-012)*
+- **Suppressing Fire**: Damage -80% → -60% — It was almost never picked over her core skills. More damage on the two back-rank enemies, on top of the accuracy and crit debuff, makes it a real tool for shutting down back-line stress dealers. *(G-02, R-STRAT-01 / ARB-008)*
+- **Bola**: Damage -50% → -40%; Lv1 unchanged … Lv5 push 1 (105%) → Lv1 unchanged … Lv5 push 1 (115%) — Bola was crowded out by her four core skills, so it deals more damage. The level-5 push also now uses the stronger push effect the base game defined but never linked; before, its push chance stopped growing at level 5 and actually got less reliable as enemy resistances rose. *(G-02, P-01 / ARB-007, ARB-004)*
+- **Battlefield Bandage**: Heal 2-3 … 4-5 → 3-3 … 7-7; Lv1 healing received +20% … Lv5 healing received +38% → cure bleed — A bandage should treat bleeding, so it now cures bleed, making the Arbalest a useful healer in bleed-heavy dungeons. The healing-received amplifier it gave up moved to the Crusader's Battle Heal. *(P-19, G-05, P-11 / ARB-001, ARB-002)*
+- **Rallying Flare**: Lv1 party: remove mark, remove stun; party: stress heal 1 (60%) … Lv5 party: remove mark, remove stun; party: stress heal 3 (67%) → Lv1 party: stress heal 2 … Lv5 party: stress heal 4 — Her guild text calls her a rallying point, so the flare now gives guaranteed stress relief to the rest of the party, an alternative to relying on the Jester. To keep it from being a do-everything skill, the amount stays modest and the ally stun/mark cleanse moved to other heroes. *(G-05, P-22, P-11 / ARB-003, ARB-006, ARB-010, ARB-009)*
 
 ## Bounty Hunter
 
-- **Collect Bounty**: vs marked: damage +90% → vs marked: damage +100%
-- **Mark for Death**: Lv1 protection -10% 3t; self: speed +3 2t … Lv5 protection -20% (140%) 3t; self: speed +5 2t → Lv1 protection -20% (130%) … Lv5 protection -30% (170%)
-- **Come Hither**: Accuracy 90% → 95%; Damage -80% → -60%; Lv1 pull 2; mark 2t … Lv5 pull 2 (140%); mark 2t → Lv1 pull 3 … Lv5 pull 3 (140%)
-- **Uppercut**: Accuracy 90% → 95%; Crit 0% → 9%; Targets 1·2 → 1; Lv1 stun … Lv5 stun (140%) → Lv1 stun (110%) … Lv5 stun (150%)
-- **Flashbang**: Usable ranks 4·3·2 → 4·3; Lv1 stun (110%) … Lv5 stun (150%) → Lv1 stun … Lv5 stun (140%)
-- **Finish Him**: Usable ranks 3·2·1 → 2·1; Added: Lv1 vs bleeding: damage +20% … Lv5 vs bleeding: damage +33%
-- **Caltrops**: Damage -95% → -85%
+- **Collect Bounty**: vs marked: damage +90% → vs marked: damage +100% — His marked bonus was a flat +90% that fell behind other mark dealers' level-5 bonus; a flat +100% keeps the Bounty Hunter the go-to finisher for marked targets. *(G-01, P-24 / BH-003)*
+- **Mark for Death**: Lv1 protection -10% 3t; self: speed +3 2t … Lv5 protection -20% (140%) 3t; self: speed +5 2t → Lv1 protection -20% (130%) … Lv5 protection -30% (170%) — All marking skills were nearly identical (mark plus one small debuff). Mark for Death now specializes against armored enemies with a bigger protection cut, and gives up its self speed buff in exchange. *(G-02, P-11 / BH-013)*
+- **Come Hither**: Accuracy 90% → 95%; Damage -80% → -60%; Lv1 pull 2; mark 2t … Lv5 pull 2 (140%); mark 2t → Lv1 pull 3 … Lv5 pull 3 (140%) — Pulling 3 ranks means whatever it hooks from rank 3 or 4 lands in rank 1, where all of his finishers reach. The minor mark is gone so Mark for Death keeps its job (mark, hook, execute); accuracy and damage rise in return, since pulling is now its whole job. *(G-02, P-22, R-TRADE-02 / BH-009, BH-010)*
+- **Uppercut**: Accuracy 90% → 95%; Crit 0% → 9%; Targets 1·2 → 1; Lv1 stun … Lv5 stun (140%) → Lv1 stun (110%) … Lv5 stun (150%) — Flashbang was simply better, so Uppercut was rarely taken. It is now a rank-1-only execution stun: hitting rank 1 pushes the target to rank 3, still inside Finish Him's reach. The narrower target is paid back with accuracy, crit (a bare-fist jaw strike, which also triggers his on-crit marked-damage buff) and the strong stun taken from Flashbang. *(G-02, P-21, P-19 / BH-007, BH-014, BH-015)*
+- **Flashbang**: Usable ranks 4·3·2 → 4·3; Lv1 stun (110%) … Lv5 stun (150%) → Lv1 stun … Lv5 stun (140%) — From rank 2 it overlapped with Uppercut, which left him locked into rank 2. Now Uppercut is his front-rank stun and Flashbang his back-rank stun; the strong stun moved to Uppercut, and a 95-accuracy, no-damage stun reaching ranks 2–4 still justifies a normal stun. *(G-03, G-02 / BH-008)*
+- **Finish Him**: Usable ranks 3·2·1 → 2·1; Added: Lv1 vs bleeding: damage +20% … Lv5 vs bleeding: damage +33% — Like the Grave Robber's bonus against blighted targets, Finish Him now hits bleeding targets harder, tying the Bounty Hunter to his own Caltrops and the party's bleeders. It becomes a front-line-only execution; from rank 3 he has Collect Bounty and his back-rank tools instead. *(G-01, G-02 / BH-001, BH-017)*
+- **Caltrops**: Damage -95% → -85% — A small damage increase over the base game. An earlier, larger buff was pulled back once his other buffs landed, since bleed, slow and damage-taken together already made Caltrops the strongest back-rank bleed skill. *(P-11, G-02 / BH-005, BH-016)*
 
 ## Crusader
 
-- **Zealous Accusation**: Accuracy 85% → 90%
-- **Stunning Blow**: Lv1 stun … Lv5 stun (140%) → Lv1 stun (110%) … Lv5 stun (150%)
-- **Bulwark of Faith**: Usable ranks 2·1 → 4·3·2·1
-- **Battle Heal**: Added: healing received +20%
-- **Inspiring Cry**: Lv1 — … Lv5 stress heal 8 → Lv1 — … Lv5 stress heal 9
+- **Zealous Accusation**: Accuracy 85% → 90% — A −40% two-target attack with low accuracy on top had no reason to be picked over Smite; at 90 accuracy there are fights where it is the better choice. *(G-02 / CRU-002)*
+- **Stunning Blow**: Lv1 stun … Lv5 stun (140%) → Lv1 stun (110%) … Lv5 stun (150%) — The Crusader's signature stun can't reach rank 3 and he is slow, so it now stuns as reliably as its name says. Damage stays at the base-game value: it is a pommel strike, and only one side of the skill was raised. *(R-STUN-01, P-19 / CRU-003, CRU-009)*
+- **Bulwark of Faith**: Usable ranks 2·1 → 4·3·2·1 — The Leper's Withstand does the same job (protection buff, self mark, once per battle) from more ranks, and most pure self-defense skills work from any rank; raising a shield has no reason to need the front. He can now use it from rank 4, where Holy Lance starts. *(G-03, P-19, R-RANK-01 / CRU-007)*
+- **Battle Heal**: Heal 2-3 … 5-6 → 2-3 … 4-5; Added: healing received +20% — The Crusader becomes a support healer who boosts the healing allies receive afterward instead of competing with the Vestal and Occultist on raw healing. The amplifier came from the Arbalest's bandage. *(G-05, P-11 / CRU-001)*
+- **Inspiring Cry**: Lv1 unchanged … Lv5 stress heal 8 → Lv1 unchanged … Lv5 stress heal 9 — Demand for stress relief is huge but supply rested almost entirely on the Jester; the Crusader's single-target stress heal now grows every level so he can cover it on his own and more party setups work. *(G-05, G-00 / CRU-006)*
 
 ## Duelist
 
-- **touche**: Lv1 self: dodge +40% 4t … Lv5 self: dodge +50% 4t → Lv1 self: dodge +15% 2t … Lv5 self: dodge +25% 2t
-- **feint**: Lv1 accuracy -10%, protection -20% (110%) 3t … Lv5 accuracy -10%, protection -30% (150%) 3t → Lv1 accuracy -10%, protection -10% (110%) 3t … Lv5 accuracy -10%, protection -20% (150%) 3t
-- **coup_de_grace**: Damage -60% → -70%
-- **the_boot**: Damage -40% → -60%
+- **Touché**: Lv1 self: dodge +40% 4t … Lv5 self: dodge +50% 4t → Lv1 self: dodge +15% 2t … Lv5 self: dodge +25% 2t — A no-damage jab usable from any rank granted +40–50 dodge for 4 turns, and two casts stacked could push enemy hit chance to 0%, blocking their stuns and debuffs as well. With a smaller, 2-turn buff, even two stacks only reach what one cast used to give. *(R-CMB-01, P-12 / DUE-005)*
+- **Feint**: Lv1 accuracy -10% (while marked), protection -20% (110%) 3t … Lv5 accuracy -10% (while marked), protection -30% (150%) 3t → Lv1 accuracy -10% (while marked), protection -10% (110%) 3t … Lv5 accuracy -10% (while marked), protection -20% (150%) 3t — Its protection shred was identical to the Bounty Hunter's Mark for Death. Feint now takes the Mark's smaller original values, keeping the two skills distinct and trimming an already strong hero. *(P-14, G-01 / DUE-007)*
+- **Coup de Grâce**: Damage -60% → -70% — The Duelist is one of the strongest heroes in the base game. Coup de Grâce reaches every rank from any position, ignores protection and grants an extra action on a kill, so it now pays more in damage for all that. *(R-TRADE-02, R-STRAT-01 / DUE-010)*
+- **The Boot**: Damage -40% → -60% — A melee kick that stuns and pushes in one action gave up less damage than other stun skills and felt overpowered in play. −60% puts it inside the usual damage range of stun skills. *(R-STUN-01, R-STRAT-01 / DUE-006)*
 
 ## Flagellant
 
-- **Resistances**: Resists stun 50% → 40%; Resists bleed 65% → 60%; Resists move 50% → 40%
-- **Weapon**: Weapon spd 6 / 6 / 8 / 8 / 9 → 6 / 6 / 7 / 7 / 8
-- **Endure**: Lv1 self: stress +10 … Lv5 self: stress +6 → Lv1 self: stress +4 … Lv5 self: stress +8
+- **Resistances**: Resists stun 50% → 40%; Resists bleed 65% → 60%; Resists move 50% → 40% — His stun and move resists sat above the baseline without justification: the lore's toughness from self-inflicted wounds is offset by fighting nearly unarmored, so both return to the baseline 40. Bleed 65 was the only signature resist above the game's usual cap (baseline +30), so it now matches that cap. *(R-RES-01, P-22, G-04 / FLA-001)*
+- **Weapon**: Weapon spd 6 / 6 / 8 / 8 / 9 → 6 / 6 / 7 / 7 / 8 — Nearly every hero gains speed +0/+0/+1/+1/+2 across weapon upgrades; the Flagellant's bigger jumps were an outlier, so his growth now follows the same rule. *(R-GROW-03, G-04 / FLA-007)*
+- **Endure**: Lv1 self: stress +10 … Lv5 self: stress +6 → Lv1 self: stress +4 … Lv5 self: stress +8 — At level 1, Endure relieved 10 stress but cost him 10, a net of zero. Self stress now scales so the net relief is a steady 6 at every level: useful from the start, while level 5 stays below vanilla out of respect for the official 2018 nerf. *(G-05, P-06 / FLA-008)*
 
 ## Grave Robber
 
-- **Thrown Dagger**: Lv1 self: accuracy +5%; vs marked: damage +25% … Lv5 self: accuracy +10%; vs marked: damage +40% → Lv1 vs marked: damage +40% … Lv5 vs marked: damage +80%
-- **Poison Darts**: Lv1 blight 2×4t … Lv5 blight 4×4t (140%) → Lv1 blight 2×3t; self: accuracy +5% … Lv5 blight 4×3t (140%); self: accuracy +10%
-- **Toxin Trickery**: Uses per battle 1 → none; Lv1 self: cure bleed/blight, dodge +9% 1t; self: speed +2 1t … Lv5 self: cure bleed/blight, dodge +13% 1t; self: speed +4 1t → Lv1 self: cure bleed/blight, dodge +5% 3t; self: speed +1 3t; self: heal 1 … Lv5 self: cure bleed/blight, dodge +7% 3t; self: speed +2 3t; self: heal 5
+- **Thrown Dagger**: Lv1 self: accuracy +5%; vs marked: damage +25% … Lv5 self: accuracy +10%; vs marked: damage +40% → Lv1 vs marked: damage +40% … Lv5 vs marked: damage +80% — With a built-in accuracy buff, Thrown Dagger was the skill you always picked; that buff moved to Poison Darts. In return its bonus against marked targets is raised, so mark parties aren't limited to the Bounty Hunter and Arbalest. *(G-02, P-26 / GR-002, GR-005, MARK-01)*
+- **Poison Darts**: Lv1 blight 2×4t … Lv5 blight 4×4t (140%) → Lv1 blight 2×3t; self: accuracy +5% … Lv5 blight 4×3t (140%); self: accuracy +10% — Its 4-turn blight was the only hero damage-over-time longer than the standard 3 turns. In exchange it now carries the accuracy buff taken from Thrown Dagger, giving this former setup skill a reason to be picked. *(R-EFF-02, G-02 / GR-001, GR-002)*
+- **Toxin Trickery**: Uses per battle 1 → none; Lv1 self: cure bleed/blight, dodge +9% until combat ends; self: speed +2 until combat ends … Lv5 self: cure bleed/blight, dodge +13% until combat ends; self: speed +4 until combat ends → Lv1 self: cure bleed/blight, dodge +5% 3t; self: speed +1 3t; self: heal 1 … Lv5 self: cure bleed/blight, dodge +7% 3t; self: speed +2 3t; self: heal 5 — Once per battle and buff-only, it was almost never picked; as a 'remedy' it now also heals her and can be used freely. The buffs are smaller and last 3 turns so repeat use can't pile up all fight, and the heal is kept low so it doesn't outclass the Hellion's Adrenaline Rush. *(G-05, P-19, G-02 / GR-003, GR-006)*
 
 ## Hellion
 
-- **Wicked Hack**: Accuracy 85% → 90%
-- **Barbaric YAWP!**: Targets AoE 1·2 → AoE 1·2·3·4; Uses per battle 3 → none; Lv1 stun (110%); self: damage -20%, speed -3 … Lv5 stun (150%); self: damage -20%, speed -3 → Lv1 clear corpses; self: accuracy +5%, damage +20%; damage -10% 3t … Lv5 clear corpses; self: accuracy +10%, damage +30%; damage -20% (140%) 3t
-- **Breakthrough**: Damage -50% → -55%; Removed: self: damage -10%, speed -1
-- **Adrenaline Rush**: Lv1 self: cure bleed/blight, accuracy +5%, damage +20%; self: heal 1 … Lv5 self: cure bleed/blight, accuracy +10%, damage +30%; self: heal 4 → Lv1 self: cure bleed/blight; self: heal 3 … Lv5 self: cure bleed/blight; self: heal 7
-- **Bleed Out**: Damage 20% → 0%; Crit 6% → 10%; Removed: self: damage -20%, speed -3
+- **Wicked Hack**: Accuracy 85% → 90% — Her kit had collapsed into one fixed four-skill set. With exhaustion gone, a more reliable basic attack gives her a real alternative pick. *(G-02 / HEL-005)*
+- **Barbaric YAWP!**: Targets AoE 1·2 → AoE 1·2·3·4; Uses per battle 3 → none; Lv1 stun (110%); self: damage -20%, speed -3 … Lv5 stun (150%); self: damage -20%, speed -3 → Lv1 clear corpses; self: accuracy +5%, damage +20%; damage -10% 3t … Lv5 clear corpses; self: accuracy +10%, damage +30%; damage -20% (140%) 3t — Exhaustion that lasted the whole battle and couldn't be cleansed fought the Hellion's relentless look, and a stun didn't suit her. The roar now fires her up for the next blow and cows every enemy into hitting softer for 3 turns, a role no other skill fills; curing stays with Adrenaline Rush. *(P-19, G-02, R-STRAT-01 / HEL-001, HEL-006, HEL-007, HEL-009)*
+- **Breakthrough**: Damage -50% → -55%; Removed: self: damage -10%, speed -1 — Exhaustion is removed here as on her other skills, paid back with a small damage cut. With no side effects it was still the weakest damaging attack hitting ranks 2–3, so that cut is kept small. *(P-19, G-02 / HEL-002, HEL-008)*
+- **Adrenaline Rush**: Lv1 self: cure bleed/blight, accuracy +5%, damage +20%; self: heal 1 … Lv5 self: cure bleed/blight, accuracy +10%, damage +30%; self: heal 4 → Lv1 self: cure bleed/blight; self: heal 3 … Lv5 self: cure bleed/blight; self: heal 7 — Its attack buff moved to Barbaric YAWP!, leaving only a cure and a small heal, and nobody spends a turn to heal 4. A bigger self-heal makes it her dedicated recovery skill. *(G-05, G-02 / HEL-004)*
+- **Bleed Out**: Damage 20% → 0%; Crit 6% → 10%; Removed: self: damage -20%, speed -3 — Exhaustion removed. Its payback for hitting only rank 1 moves from damage to crit: crits lengthen the bleed, which ignores protection, giving her an answer to heavily armored late-game enemies. *(P-19, P-21 / HEL-003)*
 
 ## Highwayman
 
-- **Wicked Slice**: Damage 15% → 0%; Usable ranks 3·2·1 → 2·1; Targets 1·2 → 1·2·3
-- **Pistol Shot**: Accuracy 85% → 90%; Lv1 vs marked: damage +25% … Lv5 vs marked: damage +50% → Lv1 vs marked: damage +40% … Lv5 vs marked: damage +60%
-- **Point Blank Shot**: Move 1 0 → 2 0; Lv1 push 1 … Lv5 push 1 (140%) → Lv1 push 2 … Lv5 push 2 (140%)
-- **Grapeshot Blast**: Accuracy 75% → 90%; Damage -50% → -60%
-- **Tracking Shot**: Damage -80% → -60%; Targets 2·3·4 → 1·2·3·4; Uses per battle 1 → none; Lv1 self: accuracy +6%, crit +4%, damage +12% 1t … Lv5 self: accuracy +10%, crit +8%, damage +20% 1t → Lv1 self: damage -40%, crit +0% 3t … Lv5 self: damage -15%, crit +5% 3t
-- **Duelist's Advance**: Targets 1·2·3 → 1·2; Lv1 self: damage -40%, crit +0% 3t … Lv5 self: damage -15%, crit +5% 3t → Lv1 self: accuracy +4%, crit +2%, damage +10% 3t … Lv5 self: accuracy +8%, crit +6%, damage +14% 3t
-- **Open Vein**: Damage -15% → -30%; Crit 0% → 8%
+- **Wicked Slice**: Damage 15% → 0%; Usable ranks 3·2·1 → 2·1; Targets 1·2 → 1·2·3 — Its usable ranks are trimmed to true melee positions. It now gets the rare melee reach into rank 3, given to this plain strike rather than Duelist's Advance (which has a buff and movement and would make it redundant), and its damage drops to the standard melee value to pay for that reach. *(R-SKILL-09, G-02 / HWY-008, HWY-019)*
+- **Pistol Shot**: Accuracy 85% → 90%; Lv1 vs marked: damage +25% … Lv5 vs marked: damage +50% → Lv1 vs marked: damage +40% … Lv5 vs marked: damage +60% — Almost every ranged attack in the game starts at 90 accuracy; Pistol Shot sat at 85, leaving his ranged build behind his melee one. The bigger bonus against marked targets lets him serve as secondary damage in mark parties. *(G-02, P-26, P-03 / HWY-009, HWY-015, MARK-01)*
+- **Point Blank Shot**: Move 1 0 → 2 0; Lv1 push 1 … Lv5 push 1 (140%) → Lv1 push 2 … Lv5 push 2 (140%) — With 95 accuracy and +50% damage at no cost it was overpowered, but a flat nerf would feel bad. Instead he recoils 2 ranks (mirroring the Grave Robber's Lunge), so it is hard to fire repeatedly, and the push grows to 2 as an upside. This loosens the fixed Vestal/Jester/Highwayman/Shieldbreaker lineup. *(P-12, G-00 / HWY-001, HWY-017)*
+- **Grapeshot Blast**: Accuracy 75% → 90%; Damage -50% → -60% — Its job is to land the vulnerability debuff that sets up crits for his ripostes and other skills (its low crit is by design). Accuracy is raised so that setup lands reliably, paid for with lower damage so it stays a setup tool rather than an attack to spam. *(P-21, R-TRADE-02 / HWY-007, HWY-020)*
+- **Tracking Shot**: Damage -80% → -60%; Targets 2·3·4 → 1·2·3·4; Uses per battle 1 → none; Lv1 self: accuracy +6%, crit +4%, damage +12% until combat ends … Lv5 self: accuracy +10%, crit +8%, damage +20% until combat ends → Lv1 self: damage -40%, crit +0% 3t … Lv5 self: damage -15%, crit +5% 3t — Riposte used to come only from Duelist's Advance, which moves him forward, so a ranged build couldn't use it without breaking formation. Taking aim and reading the foe fits a counter better: Tracking Shot now grants riposte without moving, can be used every turn, and hits a bit harder to finish targets while setting up. *(G-03, P-19, G-02 / HWY-004, HWY-019)*
+- **Duelist's Advance**: Targets 1·2·3 → 1·2; Lv1 self: damage -40%, crit +0% 3t … Lv5 self: damage -15%, crit +5% 3t → Lv1 self: accuracy +4%, crit +2%, damage +10% 3t … Lv5 self: accuracy +8%, crit +6%, damage +14% 3t — Riposte moved to Tracking Shot; stepping forward into a duelist's stance now grants a self buff instead. The buff lasts 3 turns and is smaller than the old Tracking Shot buff because it stacks when used twice in a row, and rank-3 reach went to Wicked Slice so Advance doesn't make it redundant. *(G-02, P-19, P-11 / HWY-005, HWY-010, HWY-013, HWY-016, HWY-018)*
+- **Open Vein**: Damage -15% → -30%; Crit 0% → 8% — Bleed plus two debuffs at 95 accuracy cost almost no damage, making it his strongest skill. Trinkets rely on those debuffs, so instead of removing one, damage was lowered and crit raised to fit a precise cut (crits also extend the bleed). Accuracy stays high because landing its effects is its main job. *(P-20, P-21, R-TRADE-02 / HWY-006, HWY-019, HWY-020)*
 
 ## Houndmaster
 
-- **Resistances**: Resists poison 40% → 30%; Resists bleed 40% → 30%
-- **Hound's Rush**: Accuracy 85% → 90%; Damage 0% → -25%; Usable ranks 4·3·2 → 4·3·2·1; Lv1 bleed 1×3t … Lv5 vs marked: damage +100%; bleed 2×3t (140%) → Lv1 bleed 1×2t … Lv5 vs marked: damage +60%; bleed 3×2t (140%)
-- **Hound's Harry**: Accuracy 85% → 90%; Damage -75% → -70%; Usable ranks 4·3·2·1 → 4·3·2
-- **Target Whistle**: Lv1 protection -20% (130%) … Lv5 protection -30% (170%) → Lv1 accuracy -25% (130%) 3t … Lv5 accuracy -30% (170%) 3t
-- **Cry Havoc**: Lv1 stress heal 2 (66%) … Lv5 — → Lv1 stress heal 4 (70%) … Lv5 —
-- **Guard Dog**: Lv1 self: dodge +10% 3t … Lv5 self: dodge +20% 3t → Lv1 self: dodge +20% 3t … Lv5 self: dodge +30% 3t
-- **Lick Wounds**: Usable ranks 4·3·2 → 4·3·2·1
-- **Blackjack**: Accuracy 95% → 90%; Damage -65% → -50%; Lv1 stun (110%) … Lv5 stun (150%) → Lv1 stun … Lv5 stun (140%)
+- **Resistances**: Resists poison 40% → 30%; Resists bleed 40% → 30% — A hero's resistances only rise above the standard baseline when their lore gives a reason. Nothing in the Houndmaster's description (a worn uniform, dodging rather than soaking blows) explains extra blight and bleed resist, and the Highwayman, described the same way, sits at 30; his high trap resist stays because his hound stands watch at night. *(P-22, R-RES-01 / HM-017)*
+- **Hound's Rush**: Accuracy 85% → 90%; Damage 0% → -25%; Usable ranks 4·3·2 → 4·3·2·1; Lv1 bleed 1×3t … Lv5 vs marked: damage +100%; bleed 2×3t (140%) → Lv1 bleed 1×2t … Lv5 vs marked: damage +60%; bleed 3×2t (140%) — Hound's Rush can now be used from any rank, making it the Houndmaster's go-anywhere attack; in return its base damage and mark bonus are lower, because he should shine at support rather than damage (Dog Treats can still spike it). Higher accuracy and a shorter bleed that hits harder at high levels keep the lighter hit reliable. *(P-24, G-00, P-11 / HM-019, HM-016, HM-018, HM-010, HM-023, HM-011)*
+- **Hound's Harry**: Accuracy 85% → 90%; Damage -75% → -70%; Usable ranks 4·3·2·1 → 4·3·2 — Hound's Harry was almost never picked: an area bleed spreads thin, fights end before it pays off, and many enemies (skeletons, the Drowned) are nearly immune to bleed. It gets a little more damage and the standard 90 accuracy of bleed skills, and losing rank 1 makes rank 2 the one spot where Harry and Blackjack are both available. *(G-02, G-03, R-VALUE-03 / HM-012, HM-027)*
+- **Target Whistle**: Lv1 protection -20% (130%) … Lv5 protection -30% (170%) → Lv1 accuracy -25% (130%) 3t … Lv5 accuracy -30% (170%) 3t — The protection debuff did nothing to the many enemies with no protection and duplicated the Bounty Hunter's Mark for Death. Target Whistle now throws off the marked enemy's aim, a defensive mark that suits the Houndmaster's protector role and sits apart from the Arbalest's (dodge) and Bounty Hunter's (protection) marks. *(P-24, P-14, P-19 / HM-020, HM-021)*
+- **Cry Havoc**: Lv1 stress heal 2 (66%) … Lv5 unchanged → Lv1 stress heal 4 (70%) … Lv5 unchanged — Cry Havoc is the only party-wide stress heal and the only stress heal that can fail, so at low levels it was too unreliable to be worth a turn. Levels 1-4 now heal more and the chance grows every level, while level 5 is unchanged so experienced players feel no difference. *(G-05, P-12 / HM-014, HM-026)*
+- **Guard Dog**: Lv1 self: dodge +10% 3t … Lv5 self: dodge +20% 3t → Lv1 self: dodge +20% 3t … Lv5 self: dodge +30% 3t — A hero who guards an ally gets attacked about 1.6 times as often, and the old dodge bonus barely covered that risk. The bigger dodge fits his guild text ('protects the weak') and the Houndmaster's direction of less damage, more utility. *(P-24, G-02 / HM-025)*
+- **Lick Wounds**: Usable ranks 4·3·2 → 4·3·2·1 — Rank 1 takes the most hits, yet the Houndmaster couldn't heal himself there. Lick Wounds now works from any rank, fitting his lore of aiding the suffering and bringing his rank-1 options up to the average. *(G-03, P-22 / HM-015)*
+- **Blackjack**: Accuracy 95% → 90%; Damage -65% → -50%; Lv1 stun (110%) … Lv5 stun (150%) → Lv1 stun … Lv5 stun (140%) — Blackjack was the only melee stun that reached rank 3 while also having top-tier accuracy and a strong stun. It now uses the standard 90 accuracy and a normal stun, and since that is already a sizeable cut, its damage goes up in return. *(R-STUN-03, R-STUN-02, P-22 / HM-013, HM-022, HM-024)*
 
 ## Jester
 
-- **Solo**: Usable ranks 4·3 → 1·2·3·4; Lv1 self: dodge +20% 4t; self: damage +75%, crit +8% 8t … Lv5 self: dodge +30% 4t; self: damage +75%, crit +8% 8t → Lv1 clear corpses; self: dodge +30% 4t; self: damage +100%, crit +10% 8t; speed -1 3t … Lv5 clear corpses; self: dodge +40% 4t; self: damage +100%, crit +10% 8t; speed -3 (140%) 3t
-- **Battle Ballad**: Lv1 accuracy +5%, crit +2%, speed +2 … Lv5 accuracy +10%, crit +6%, speed +4 → Lv1 accuracy +0%, crit +4%, speed +2 … Lv5 accuracy +0%, crit +8%, speed +4
-- **Inspiring Tune**: Usable ranks 4·3 → 2·3·4
+- **Solo**: Usable ranks 4·3 → 1·2·3·4; Lv1 self: dodge +20% 4t; self: damage +75% (Finale only), crit +8% (Finale only) 8t … Lv5 self: dodge +30% 4t; self: damage +75% (Finale only), crit +8% (Finale only) 8t → Lv1 clear corpses; self: dodge +30% 4t; self: damage +100% (Finale only), crit +10% (Finale only) 8t; speed -1 3t; party: remove mark … Lv5 clear corpses; self: dodge +40% 4t; self: damage +100% (Finale only), crit +10% (Finale only) 8t; speed -3 (140%) 3t; party: remove mark — Solo rarely beat the Jester's other songs and attacks for a skill slot. It is now a spotlight usable from any rank: more dodge to survive drawing attention, a bigger Finale bonus, corpse clearing to pull back-rank enemies forward, and a slow on every enemy, like an audience whose eyes are all on the stage. *(G-02, P-19, G-03 / JES-005, JES-006, JES-008, JES-009, JES-001, JES-011)*
+- **Battle Ballad**: Lv1 accuracy +5%, crit +2%, speed +2 … Lv5 accuracy +10%, crit +6%, speed +4 → Lv1 accuracy +0%, crit +4%, speed +2 … Lv5 accuracy +0%, crit +8%, speed +4 — Battle Ballad and the Man-at-Arms' Command gave nearly the same party buff (accuracy plus crit). They are now split: the Ballad is about acting first and landing crits, so it drops accuracy and gives more crit, while accuracy belongs to Command. *(G-02, P-14 / JES-012)*
+- **Inspiring Tune**: Usable ranks 4·3 → 2·3·4 — This makes a rank-2 Jester possible: after stepping forward with Dirk Stab he can still heal stress without spending a turn moving back. The Jester should stay the best stress healer; the fix for over-reliance on him is giving other heroes more alternatives. *(G-03, G-05 / JES-003)*
 
 ## Leper
 
-- **Intimidate**: Accuracy 95% → 85%; Damage -85%/-85%/-85%/-80%/-80% → -40%; Crit 0% → 3%; Targets 1·2·3·4 → 1; Lv1 speed -3, damage -20% 3t; self: mark 4t; destealth; self: speed +2 … Lv5 speed -5, damage -33% (140%) 3t; self: mark 4t; destealth; self: speed +4 → Lv1 protection -30% 2t … Lv5 protection -50% (140%) 2t
+- **Intimidate**: Accuracy 95% → 85%; Damage -85%/-85%/-85%/-80%/-80% → -40%; Crit 0% → 3%; Targets 1·2·3·4 → 1; Ignores stealth true → none; Lv1 speed -3, damage -20% 3t; self: mark 4t; destealth; self: speed +2 … Lv5 speed -5, damage -33% (140%) 3t; self: mark 4t; destealth; self: speed +4 → Lv1 protection -30% 2t … Lv5 protection -50% (140%) 2t — Intimidate was a support skill (enemy debuffs, self-mark, destealth) that clashed with the Leper's identity as a king carried by his supporters, and its destealth overlapped five other skills. It is now a front-line blow with the same accuracy and damage as Purge, its twin animation, that briefly cracks the target's armor so Chop and the party can break heavily armored front-liners. *(P-19, G-02, G-01 / LEP-001, LEP-002, LEP-003, LEP-005)*
 
 ## Man At Arms
 
-- **Weapon**: Weapon dmg 5 9 / 6 10 / 7 12 / 7 13 / 8 14 → 5 10 / 6 12 / 7 13 / 7 15 / 8 16
-- **Rampart**: Damage -60% → -50%; Move 0 1 → none
-- **Bellow**: Added: clear corpses
-- **Retribution**: Damage -75% → -20%; Targets 1·2·3 → 1·2
-- **Command**: Lv1 accuracy +5%, crit +4%, damage +15% … Lv5 accuracy +10%, crit +8%, damage +25% → Lv1 accuracy +5%, protection +15%, damage +15% … Lv5 accuracy +10%, protection +15%, damage +25%
-- **Bolster**: Uses per battle 1 → none; Lv1 dodge +5% 1t; stress taken -10% 1t … Lv5 dodge +10% 1t; stress taken -20% 1t → Lv1 stress healing received +50% 2t; stress taken -10% 2t; stress heal 1 … Lv5 stress healing received +50% 2t; stress taken -10% 2t; stress heal 3
+- **Weapon**: Weapon dmg 5 9 / 6 10 / 7 12 / 7 13 / 8 14 → 5 10 / 6 12 / 7 13 / 7 15 / 8 16 — Across all heroes, the Man-at-Arms' damage sat furthest below what his HP and support kit would predict. The new range is the preset comparable heroes (Bounty Hunter, Highwayman) already use. *(G-01, R-PRESET-01 / MAA-001)*
+- **Rampart**: Damage -60% → -50%; Move 0 1 → none — The Man-at-Arms is heavy infantry who holds his ground, so Rampart no longer moves him forward and controls the enemy without shuffling your formation. Its damage is set to the standard for front-rank stuns, matching the Crusader's Stunning Blow. *(P-19, G-03, R-STUN-02 / MAA-006, MAA-014)*
+- **Bellow**: Added: clear corpses — His guild text has him crushing the enemy front line with a fierce war cry, so Bellow now also clears corpses, the second 'shout that clears the field' after the Hellion's. Its debuffs stay, since Bellow was already weaker than Command. *(P-19, P-22 / MAA-002)*
+- **Retribution**: Damage -75% → -20%; Targets 1·2·3 → 1·2 — Retribution uses the same full swing as Crush but hit for only a quarter as much, with most of its value arriving late through the riposte. It gives up rank-3 reach for a hit that lands hard up front, becoming a front-line counterattack distinct from Crush. *(P-19, G-02 / MAA-004)*
+- **Command**: Lv1 accuracy +5%, crit +4%, damage +15% (while guarded) … Lv5 accuracy +10%, crit +8%, damage +25% (while guarded) → Lv1 accuracy +5%, protection +15%, damage +15% (while guarded); remove stun … Lv5 accuracy +10%, protection +15%, damage +25% (while guarded); remove stun — Command and the Jester's Battle Ballad gave almost the same buff. Crit now belongs to the Ballad, while Command keeps accuracy and adds a party-wide protection buff, fitting the veteran who leads the line. *(G-02, P-14, P-12 / MAA-012, MAA-013, MAA-009)*
+- **Bolster**: Uses per battle 1 → none; Lv1 dodge +5% until combat ends; stress taken -10% until combat ends … Lv5 dodge +10% until combat ends; stress taken -20% until combat ends → Lv1 stress healing received +50% (while guarded) 2t; stress taken -10% 2t; stress heal 1 … Lv5 stress healing received +50% (while guarded) 2t; stress taken -10% 2t; stress heal 3 — Party stress healing leaned almost entirely on the Jester, which narrowed team choices. Bolster becomes a repeatable small party stress heal, and guarded allies recover 50% more stress, tying it to the Man-at-Arms' bodyguard role; the dodge buff was dropped because it overlapped the Antiquarian's. *(G-05, G-02 / MAA-010, MAA-011, MAA-005)*
 
 ## Occultist
 
-- **Weakening Curse**: Damage -75% → -65%
-- **Wyrd Reconstruction**: Lv1 — … Lv5 bleed 3×3t (85%) → Lv1 — … Lv5 bleed 2×3t (80%)
-- **Vulnerability Hex**: Damage -90% → -100%; Crit 5% → 0%; Can crit True → False; Lv1 dodge -15% 3t … Lv5 dodge -20% (140%) 3t → Lv1 stun res -15%, blight res -15%, bleed res -15%, debuff res -15% 3t … Lv5 stun res -20%, blight res -20%, bleed res -20%, debuff res -20% (140%) 3t
-- **Hands from the Abyss**: Accuracy 90% → 95%; Damage -50% → -60%
+- **Weakening Curse**: Damage -75% → -65% — Weakening Curse was the Occultist's weakest skill, so the damage taken out of Vulnerability Hex moves here and his overall power stays the same. *(P-11, G-02 / OCC-007)*
+- **Wyrd Reconstruction**: Heal 0-13 … 0-22 → 0-13 … 0-20; Lv1 unchanged … Lv5 bleed 3×3t (85%) → Lv1 unchanged … Lv5 bleed 2×3t (80%) — Many players stopped at level 4 because the final upgrade sharply raised the bleed risk. Level 5 now keeps the level-4 bleed and gives up a little top-end healing instead, so the last upgrade is worth buying while the skill stays a gamble. *(G-02, P-12 / OCC-001)*
+- **Vulnerability Hex**: Damage -90% → -100%; Crit 5% → 0%; Can crit True → False; Lv1 dodge -15% 3t … Lv5 dodge -20% (140%) 3t → Lv1 stun res -15%, blight res -15%, bleed res -15%, debuff res -15% 3t … Lv5 stun res -20%, blight res -20%, bleed res -20%, debuff res -20% (140%) 3t — Mark plus dodge down duplicated the Arbalest's Sniper's Mark. True to its name, the hex now lowers resistances, the only hero skill that weakens stun and debuff resist, setting up the party's stuns, blights and bleeds; like the other pure mark skills it no longer deals damage, and its values now grow every level. *(P-19, R-STRAT-01, R-SKILL-05 / OCC-003, OCC-005, OCC-006, OCC-009, OCC-004)*
+- **Hands from the Abyss**: Accuracy 90% → 95%; Damage -50% → -60% — Stuns that can reach rank 3 are kept low on damage. In exchange its accuracy goes up, so the stun itself lands more reliably. *(R-STUN-02, R-STUN-03 / OCC-008)*
 
 ## Plague Doctor
 
-- **Incision**: Accuracy 85% → 90%
-- **Battlefield Medicine**: Removed: self: cure bleed/blight
+- **Incision**: Accuracy 85% → 90% — The Plague Doctor's other skills are strong enough that Incision was rarely worth a slot. Higher accuracy gives it a reason to be picked. *(G-02 / PD-002)*
+- **Battlefield Medicine**: Heal 1-1 … 3-3 → 3-3 … 7-7; cure bleed/blight; self: cure bleed/blight → cure blight — Battlefield Medicine becomes the ally blight-cure heal while the Arbalest's bandage covers bleed, so each healer has its own dungeon niche. The free self-cleanse goes with that; the Plague Doctor now relies on items or allies to clear her own DoTs. *(G-05, G-00 / PD-001)*
 
 ## Runaway
 
-- **ransack**: Damage -10% → -25%; Targets 1·2·3·4 → 1·2·3
+- **Ransack**: Damage -10% → -25%; Targets 1·2·3·4 → 1·2·3 — A melee skill usable from any rank that hit any enemy rank, with a pull, a forward step and corpse clearing at almost no damage cost, was never a wrong choice. It loses direct reach to rank 4 (the same standard applied to other melee skills) but keeps its identity of pulling rank 3 forward, and its damage now matches other utility melee hits. *(P-10, G-02 / RUN-001)*
 
 ## Shieldbreaker
 
-- **Resistances**: Resists stun 50% → 30%; Resists move 50% → 30%
-- **Weapon**: Weapon dmg 5 10 / 6 12 / 7 14 / 8 16 / 9 18 → 5 10 / 6 12 / 7 13 / 7 15 / 8 16; Weapon spd 5 / 6 / 8 / 8 / 9 → 5 / 5 / 6 / 6 / 7
-- **Pierce**: Accuracy 90% → 85%; Crit 5% → 2%; Targets 1·2·3·4 → 1·2·3
-- **Impale**: Damage -60% → -70%; Lv1 — … Lv5 blight 2×3t (140%) → Lv1 blight 1×2t … Lv5 blight 3×2t (140%)
-- **Expose**: Accuracy 85% → 90%
-- **Captivate**: Accuracy 85% → 90%; Lv1 vs marked: damage +40% … Lv5 vs marked: damage +60% → Lv1 vs marked: damage +50% … Lv5 vs marked: damage +90%
-- **Serpent Sway**: Usable ranks 3·2·1 → 4·3·2
+- **Resistances**: Resists stun 50% → 30%; Resists move 50% → 30% — Her official description gives her only slight defensive ability and stage clothing rather than armour, and says she survives by moving fast. That is lighter than the Highwayman (30), so stun and move resists sit at 30 instead of well above the norm. *(P-22, R-RES-01 / SB-010)*
+- **Weapon**: Weapon dmg 5 10 / 6 12 / 7 14 / 8 16 / 9 18 → 5 10 / 6 12 / 7 13 / 7 15 / 8 16; Weapon spd 5 / 6 / 8 / 8 / 9 → 5 / 5 / 6 / 6 / 7 — Her weapon speed grew faster than any base-game hero's, an unexplained DLC outlier; it now follows the standard speed curve. Damage growth uses the 15% rate of the base game's heavy front-line heroes instead of 20%. *(G-04, R-GROW-03, R-GROW-01 / SB-011)*
+- **Pierce**: Accuracy 90% → 85%; Crit 5% → 2%; Targets 1·2·3·4 → 1·2·3 — Melee, armour-piercing and reaching every rank all on one cheap skill made Pierce the core of the meta Shieldbreaker; rank 4 is removed (rank 3 stays so it still beats Pick to the Face) and crit returns to its release value. Accuracy swaps with Expose: skills that carry an effect get the higher accuracy, pure damage skills the lower. *(G-04, P-07, R-TRADE-02 / SB-013, SB-002)*
+- **Impale**: Damage -60% → -70%; Lv1 unchanged … Lv5 blight 2×3t (140%) → Lv1 blight 1×2t … Lv5 blight 3×2t (140%) — Impale now sits on the same line as the Houndmaster's Hound's Harry, applying the same blight amounts from level 1 instead of only from level 3. Her weapon hits harder, so the blight lasts 2 turns instead of 3 and the skill leans on direct damage. *(G-02 / SB-018, SB-014)*
+- **Expose**: Accuracy 85% → 90% — Accuracy swaps with Pierce. Expose's job is its debuff, destealth and slow, and skills whose value is the effect should land reliably. *(R-TRADE-02, R-SKILL-09 / SB-015)*
+- **Captivate**: Accuracy 85% → 90%; Lv1 vs marked: damage +40% … Lv5 vs marked: damage +60% → Lv1 vs marked: damage +50% … Lv5 vs marked: damage +90% — Part of spreading mark-party damage beyond the Bounty Hunter and Arbalest: this secondary mark skill is locked to ranks 2-3, so it gets a bigger bonus against marked targets and better accuracy in return. *(P-26, G-03 / SB-016)*
+- **Serpent Sway**: Usable ranks 3·2·1 → 4·3·2 — Used from rank 1, the forward step did nothing, so it became a stand-still buff (two blocks plus speed) for a hero meant to be weak when rooted and strong when moving. It is now the way back to rank 1 after Adder's Kiss or Impale push her back. *(P-22, G-02 / SB-017)*
 
 ## Vestal
 
-- **Mace Bash**: Crit 0% → 5%; Added: Lv1 self: heal 3 … Lv5 self: heal 5
-- **Judgement**: Accuracy 85% → 90%; Damage -25% → 0%; Crit 5% → 0%; Removed: Lv1 self: heal 3 … Lv5 self: heal 5
-- **Dazzling Light**: Usable ranks 4·3·2 → 4·3
-- **Divine Grace**: Usable ranks 4·3 → 4·3·2·1
-- **Divine Comfort**: Usable ranks 4·3·2 → 4·3
-- **Illumination**: Accuracy 90% → 95%; Usable ranks 3·2·1 → 4·3·2·1; Lv1 dodge -20% … Lv5 dodge -30% (140%) → Lv1 damage taken +20% 3t; burn 1 … Lv5 damage taken +25% (140%) 3t; burn 3
-- **Hand of Light**: Accuracy 85% → 90%
+- **Mace Bash**: Crit 0% → 5%; Added: Lv1 self: heal 3 … Lv5 self: heal 5 — Judgement's self-heal and crit move here so a front-rank Vestal is a real option, as her vanilla melee trinkets already hint. A rear Vestal pays for staying put by losing the free self-heal. *(G-03, P-20 / VES-001)*
+- **Judgement**: Accuracy 85% → 90%; Damage -25% → 0%; Crit 5% → 0%; Removed: Lv1 self: heal 3 … Lv5 self: heal 5 — Vanilla Judgement reached rank 4 and healed her, so it was locked into every rear Vestal's four-skill rotation. With the heal moved to Mace Bash, it stays as the plain rear attack that reaches rank 4: standard ranged accuracy and no damage penalty, but still weaker than Divine Comfort. *(G-02, R-SKILL-09 / VES-002, VES-009, VES-001)*
+- **Dazzling Light**: Usable ranks 4·3·2 → 4·3 — A stun that reaches rank 3 is rare and was too strong, and it was also usable from rank 2. Limiting it to ranks 3-4 separates the rear stunner from the front Vestal; its damage stays vanilla so it remains a live rear option. *(G-02, R-STRAT-01 / VES-003, VES-008)*
+- **Divine Grace**: Usable ranks 4·3 → 4·3·2·1; Heal 4-5 … 8-9 → 5-5 … 9-9 — A front-rank Vestal still needs to heal, so her single-target heal works from any rank. *(G-03 / VES-004)*
+- **Divine Comfort**: Usable ranks 4·3·2 → 4·3; Heal 1-3 … 4-5 → 2-3 … 4-5 — Divine Comfort is her strongest skill, so it stays a rear-rank reward and a front Vestal cannot keep it. *(P-05, G-02 / VES-005)*
+- **Illumination**: Accuracy 90% → 95%; Usable ranks 3·2·1 → 4·3·2·1; Lv1 dodge -20% … Lv5 dodge -30% (140%) → Lv1 damage taken +20% 3t; burn 1 … Lv5 damage taken +25% (140%) 3t; burn 3 — A front Vestal had nothing to use in rank 1, so Illumination works from every rank, and as an effect-first skill it gets the kit's best accuracy for sure-hit finishing. Its dodge debuff duplicated the Arbalest's Sniper's Mark, so holy light now exposes and burns evil instead, a role only Caltrops partly filled and one that links into Runaway burn combos. *(P-19, G-03, R-SKILL-09 / VES-006, VES-010, VES-011, VES-012, VES-013)*
+- **Hand of Light**: Accuracy 85% → 90% — Hand of Light only grants its buff on hit, so as an effect-first ranged skill it gets the standard ranged accuracy, which also helps a front-rank Vestal. *(R-TRADE-02, G-03 / VES-007)*
 

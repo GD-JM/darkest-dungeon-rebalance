@@ -21,14 +21,18 @@ EFF_K = {
                crit_received='crits taken', dmg_received='damage taken', shuffle='shuffle', acc='accuracy', dodge='dodge', prot='protection',
                spd='speed', dmgmod='damage', critc='crit', res='resist', stun_res='stun res', blight_res='blight res', bleed_res='bleed res',
                debuff_res='debuff res', move_res='move res', heal_recv='healing received', stress_recv='stress taken',
-               stress_heal_recv='stress healing received', ignore_prot='armor piercing'),
+               stress_heal_recv='stress healing received', ignore_prot='armor piercing', cure_bleed='cure bleed', cure_poison='cure blight',
+               untag='remove mark', unstun='remove stun', clear_debuff='clear debuffs', clear_riposte='end riposte', combat_end='until combat ends',
+               is_guarded='while guarded', rule='if'),
     'ko': dict(stun='기절', bleed='출혈', poison='중독', burn='화상', heal='회복', healstress='스트레스 회복', stress='스트레스',
                push='밀치기', pull='당기기', tag='표식', unstealth='은신 해제', corpse='시체 제거', guard='보호', torch_up='횃불 +',
                torch_down='횃불 −', cure='출혈·중독 치료', self='자신', party='아군 전체', ally='아군', t='턴', chance='확률',
                crit_received='받는 치명타', dmg_received='받는 피해', shuffle='위치 섞기', acc='명중', dodge='회피', prot='방어',
                spd='속도', dmgmod='피해', critc='치명타', res='저항', stun_res='기절 저항', blight_res='중독 저항', bleed_res='출혈 저항',
                debuff_res='약화 저항', move_res='이동 저항', heal_recv='받는 회복', stress_recv='받는 스트레스',
-               stress_heal_recv='받는 스트레스 회복', ignore_prot='방어 무시'),
+               stress_heal_recv='받는 스트레스 회복', ignore_prot='방어 무시', cure_bleed='출혈 치료', cure_poison='중독 치료',
+               untag='표식 해제', unstun='기절 해제', clear_debuff='약화 해제', clear_riposte='반격 종료', combat_end='전투 끝까지',
+               is_guarded='보호받는 동안', rule='조건'),
 }
 STAT = {'attack_rating': 'acc', 'defense_rating': 'dodge', 'protection_rating': 'prot', 'speed_rating': 'spd',
         'damage_low': 'dmgmod', 'damage_high': 'dmgmod', 'crit_chance': 'critc'}
@@ -78,7 +82,9 @@ class Ctx:
         if 'shuffletarget' in k: add(L['shuffle'])
         if 'kill_enemy_types' in k: add(L['corpse'])
         if 'guard' in k: add(L['guard'])
-        if 'cure' in k or 'cure_bleed' in k or 'cure_poison' in k: add(L['cure'])
+        if 'cure' in k: add(L['cure'])
+        for key in ('cure_bleed', 'cure_poison', 'untag', 'unstun', 'clear_debuff', 'clear_riposte'):
+            if key in k: add(L[key])
         if 'torch_increase' in k: add('%s%s' % (L['torch_up'], S.first(k, 'torch_increase')))
         if 'torch_decrease' in k: add('%s%s' % (L['torch_down'], S.first(k, 'torch_decrease')))
         for key in k:
@@ -99,6 +105,20 @@ class Ctx:
             if not B:
                 continue
             st_, sub, amt = B.get('stat_type'), B.get('stat_sub_type', ''), B.get('amount', 0)
+            rt = B.get('rule_type', 'always')
+            if rt not in ('always', None, ''):
+                rd_ = B.get('rule_data', {}).get('string', '')
+                ST = {'tagged': ('marked', '표식'), 'stunned': ('stunned', '기절'), 'bleeding': ('bleeding', '출혈'), 'poisoned': ('blighted', '중독')}
+                if rt in ('actorStatus', 'is_actor_status') and rd_ in ST:
+                    rs = ('while %s' if lang == 'en' else '%s 상태일 때') % ST[rd_][0 if lang == 'en' else 1]
+                elif rt == 'skill':
+                    sn = next((v for k_, v in getattr(self, 'skill_names', {}).get(lang, {}).items() if k_.endswith('_' + rd_)), rd_.replace('_', ' ').title())
+                    rs = ('%s only' if lang == 'en' else '%s 전용') % sn
+                else:
+                    rs = L.get(rt) or '%s %s' % (L['rule'], rt)
+                add = lambda x, rs=rs: parts.append('%s (%s)' % (x, rs))
+            else:
+                add = parts.append
             if st_ in ('combat_stat_add', 'combat_stat_multiply') and STAT.get(sub):
                 if sub == 'damage_high':
                     continue
@@ -121,7 +141,9 @@ class Ctx:
             s = '%s: %s' % (who, s)
         if ch and ch.rstrip('%') not in ('100', '') and ('stun' in k or 'dotBleed' in k or 'dotPoison' in k or 'push' in k or 'pull' in k or 'buff_ids' in k or 'combat_stat_buff' in k or 'buff_type' in k or 'healstress' in k):
             s += ' (%s)' % ch
-        if dur and not ('dotBleed' in k or 'dotPoison' in k):
+        if S.first(k, 'buff_duration_type', '') == 'combat_end':
+            s += ' ' + L['combat_end']
+        elif dur and not ('dotBleed' in k or 'dotPoison' in k):
             s += ' %s%s' % (dur, L['t'] if lang == 'ko' else 't')
         return s
 

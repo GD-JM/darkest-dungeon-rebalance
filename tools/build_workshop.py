@@ -178,7 +178,7 @@ def main():
         json.dump({'buffs': need_b}, open(p, 'w', encoding='utf-8'), indent='\t')
     # 패치 노트 (영어 = 메인, 한국어): 무엇 = 바닐라 vs 출력 데이터 자동 비교(patch_notes.py), 왜 = design/workshop/why.json(검토된 근거)
     names = {}
-    for f in glob.glob(os.path.join(G, 'localization', '*.string_table.xml')) + glob.glob(os.path.join(G, 'dlc', '*', 'localization', '*.string_table.xml')):
+    for f in glob.glob(os.path.join(G, 'localization', '*.string_table.xml')) + glob.glob(os.path.join(G, 'dlc', '*', 'localization', '*.string_table.xml')) + glob.glob(os.path.join(G, 'dlc', '*', 'features', '*', 'localization', '*.string_table.xml')):
         t = rd(f)
         for lang in ('english', 'koreana'):
             i0 = t.find('<language id="%s">' % lang)
@@ -190,6 +190,7 @@ def main():
     why_p = os.path.join(W, 'why.json')
     WHY = json.load(open(why_p, encoding='utf-8')) if os.path.exists(why_p) else {}
     ctx = PN.make_ctx(OUT)
+    ctx.skill_names = {lg: {k[1]: v for k, v in names.items() if k[0] == lk} for lg, lk in (('en', 'english'), ('ko', 'koreana'))}
     EN_HERO = {h: h.replace('_', ' ').title() for h in S.KO}
     BLOCK = {'en': {'weapon': 'Weapon', 'armour': 'Armor', 'resistances': 'Resistances', 'mode': 'Beast form'},
              'ko': {'weapon': '무기', 'armour': '방어구', 'resistances': '저항', 'mode': '짐승 형태'}}

@@ -26,7 +26,7 @@ A small, data-backed hero rebalance. Every change below fixes a problem confirme
 [*][b]Arbalest[/b]: Sniper Shot, Suppressing Fire, Bola, Battlefield Bandage, Rallying Flare
 [*][b]Bounty Hunter[/b]: Collect Bounty, Mark for Death, Come Hither, Uppercut, Flashbang, Finish Him, Caltrops
 [*][b]Crusader[/b]: Zealous Accusation, Stunning Blow, Bulwark of Faith, Battle Heal, Inspiring Cry
-[*][b]Duelist[/b]: touche, feint, coup_de_grace, the_boot
+[*][b]Duelist[/b]: Touché, Feint, Coup de Grâce, The Boot
 [*][b]Flagellant[/b]: Resistances, Weapon, Endure
 [*][b]Grave Robber[/b]: Thrown Dagger, Poison Darts, Toxin Trickery
 [*][b]Hellion[/b]: Wicked Hack, Barbaric YAWP!, Breakthrough, Adrenaline Rush, Bleed Out
@@ -37,7 +37,7 @@ A small, data-backed hero rebalance. Every change below fixes a problem confirme
 [*][b]Man At Arms[/b]: Weapon, Rampart, Bellow, Retribution, Command, Bolster
 [*][b]Occultist[/b]: Weakening Curse, Wyrd Reconstruction, Vulnerability Hex, Hands from the Abyss
 [*][b]Plague Doctor[/b]: Incision, Battlefield Medicine
-[*][b]Runaway[/b]: ransack
+[*][b]Runaway[/b]: Ransack
 [*][b]Shieldbreaker[/b]: Resistances, Weapon, Pierce, Impale, Expose, Captivate, Serpent Sway
 [*][b]Vestal[/b]: Mace Bash, Judgement, Dazzling Light, Divine Grace, Divine Comfort, Illumination, Hand of Light
 [/list]

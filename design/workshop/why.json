@@ -1,0 +1,1020 @@
+{
+ "abomination|manacles": {
+  "ids": [
+   "ABO-005",
+   "ABO-006"
+  ],
+  "principles": [
+   "P-23",
+   "R-STUN-03"
+  ],
+  "en": "Human-form accuracy comes down toward the beast skills (85–90) so the gap no longer discourages transforming; 90 is also the standard for damaging stuns. Damage stays as is, since his heavy weapon already makes this one of the harder-hitting stuns.",
+  "ko": "인간 형태 명중을 변신 기술(85~90) 쪽으로 낮춰 변신을 막던 명중 격차를 줄인다. 90은 피해 있는 기절의 기준 명중이기도 하다. 괴인 무기가 커서 피해는 그대로도 기절 기술 중 높은 편이라 손대지 않았다."
+ },
+ "abomination|mode": {
+  "ids": [
+   "ABO-004"
+  ],
+  "principles": [
+   "P-23",
+   "P-12"
+  ],
+  "en": "Staying in beast form still builds stress every turn, but less, so a few turns as the beast are affordable after transforming.",
+  "ko": "야수 형태를 유지하면 여전히 매 턴 스트레스가 쌓이지만 덜 쌓여, 변신 후 몇 턴은 야수로 버틸 수 있다."
+ },
+ "abomination|slam": {
+  "ids": [
+   "ABO-001",
+   "ABO-003"
+  ],
+  "principles": [
+   "G-03",
+   "P-19",
+   "G-02"
+  ],
+  "en": "The beast had nothing to do from rank 4, so a shuffled formation cost it whole turns; now it slams from the back and moves forward. The old debuffs are removed and accuracy/damage raised so it becomes the reliable push on ranks 1–2, distinct from Rage (reaches rank 3, high crit).",
+  "ko": "야수는 4열에서 쓸 기술이 없어 열이 섞이면 한 턴을 통째로 날렸다. 이제 뒤에서 박고 앞으로 나온다. 약화를 빼고 명중·피해를 올려, 분노(3열 도달·높은 치명타)와 구분되는 '1·2열을 확실히 맞히는 밀치기'로 역할을 나눴다."
+ },
+ "abomination|transform": {
+  "ids": [
+   "ABO-004"
+  ],
+  "principles": [
+   "P-23",
+   "G-02",
+   "P-22"
+  ],
+  "en": "Transforming cost a lot of stress for little payoff, so almost nobody did it. Unleashing the beast now relieves the Abomination's own stress while his allies still feel a smaller fear cost, and reining it back in calms them a little more, so transforming becomes a real choice about who carries the stress.",
+  "ko": "변신의 스트레스 대가가 이득에 비해 커서 거의 아무도 변신하지 않았다. 이제 풀어놓으면 괴인 자신의 스트레스가 풀리고 동료는 조금 줄어든 공포를 부담하며, 다시 묶으면 동료가 조금 더 안도한다 — 변신이 '스트레스를 누가 질지' 고르는 선택이 된다."
+ },
+ "abomination|vomit": {
+  "ids": [
+   "ABO-002",
+   "ABO-007"
+  ],
+  "principles": [
+   "P-23",
+   "G-02",
+   "P-11"
+  ],
+  "en": "Its blight already matched the Jester's Harvest (the same rank 2–3 damage-over-time AoE), but its direct damage lagged far behind, so damage goes up. The 5-point accuracy drop pays for that and follows the human-form direction (lower accuracy, stronger base output).",
+  "ko": "같은 2·3열 광역 지속 피해인 광대 수확과 지속 피해량은 이미 비슷했고 직접 피해만 크게 뒤처져 피해를 올렸다. 명중 −5는 그 상향의 대가이자 인간 형태 방향(명중↓ 기본 성능↑)과 같다."
+ },
+ "antiquarian|flashpowder": {
+  "ids": [
+   "ANT-001"
+  ],
+  "principles": [
+   "P-19",
+   "P-25"
+  ],
+  "en": "The skill's effect is a burst of flame, so it now burns. Before this only the Runaway could apply burn; now another hero can set up her burn-synergy skills. The amount is kept small because the Antiquarian is meant to be weaker in combat than other heroes (she pays her way in gold).",
+  "ko": "기술 연출이 불꽃 분출이라 화상을 준다. 화상을 거는 영웅이 도망자뿐이었는데, 이제 다른 영웅도 도망자의 화상 연계 기술을 열 수 있다. 유물수집상은 전투 성능이 다른 영웅보다 낮은 컨셉(대신 돈을 번다)이라 화상량은 작게 뒀다."
+ },
+ "arbalest|battlefield_bandage": {
+  "ids": [
+   "ARB-001",
+   "ARB-002"
+  ],
+  "principles": [
+   "P-19",
+   "G-05",
+   "P-11"
+  ],
+  "en": "A bandage should treat bleeding, so it now cures bleed, making the Arbalest a useful healer in bleed-heavy dungeons. The healing-received amplifier it gave up moved to the Crusader's Battle Heal.",
+  "ko": "붕대는 출혈을 치료해야 하므로 출혈 치료를 넣어, 출혈이 많은 던전에서 석궁사수를 회복 담당으로 쓸 수 있게 했다. 대신 빠진 받는 회복 증가는 성전사 전투 치유로 옮겼다."
+ },
+ "arbalest|bola": {
+  "ids": [
+   "ARB-007",
+   "ARB-004"
+  ],
+  "principles": [
+   "G-02",
+   "P-01"
+  ],
+  "en": "Bola was crowded out by her four core skills, so it deals more damage. The level-5 push also now uses the stronger push effect the base game defined but never linked; before, its push chance stopped growing at level 5 and actually got less reliable as enemy resistances rose.",
+  "ko": "핵심 기술 4개에 밀려 쓸 일이 없어 피해를 올렸다. 5렙 밀치기는 바닐라에 정의돼 있지만 연결되지 않던 효과로 바로잡았다 — 전에는 5렙에서 확률 성장이 멈춰, 적 저항이 오를수록 오히려 밀치기가 덜 성공했다."
+ },
+ "arbalest|flare": {
+  "ids": [
+   "ARB-003",
+   "ARB-006",
+   "ARB-010",
+   "ARB-009"
+  ],
+  "principles": [
+   "G-05",
+   "P-22",
+   "P-11"
+  ],
+  "en": "Her guild text calls her a rallying point, so the flare now gives guaranteed stress relief to the rest of the party, an alternative to relying on the Jester. To keep it from being a do-everything skill, the amount stays modest and the ally stun/mark cleanse moved to other heroes.",
+  "ko": "길드 설명이 그녀를 '결집소'라 부르므로, 신호탄이 나머지 아군 전원의 스트레스를 확정으로 회복한다 — 광대에만 기대지 않는 선택지. 만능 기술이 되지 않게 회복량은 적당히 두고 아군 기절·표식 해제는 다른 영웅에게 넘겼다."
+ },
+ "arbalest|sniper_shot": {
+  "ids": [
+   "ARB-005",
+   "ARB-012"
+  ],
+  "principles": [
+   "P-26",
+   "P-21",
+   "P-11"
+  ],
+  "en": "Mark damage is being spread across more heroes (Houndmaster down, other mark dealers up), so Sniper Shot's low-level marked bonus rises while the level-5 cap stays. The crit bump is because at level 1 it hit no harder than the Vestal's Judgement and felt weak; extra crit suits a precision shot.",
+  "ko": "표식 피해를 여러 영웅에 재배분하면서(조련사 하향, 다른 표식 딜러 상향) 저격의 저레벨 표식 보너스를 올리고 5렙 상한은 그대로 뒀다. 치명타 상향은 1렙 저격이 성녀 심판과 같은 피해라 약하게 느껴졌기 때문이며, 정밀 사격이라 치명타가 어울린다."
+ },
+ "arbalest|suppressing_fire": {
+  "ids": [
+   "ARB-008"
+  ],
+  "principles": [
+   "G-02",
+   "R-STRAT-01"
+  ],
+  "en": "It was almost never picked over her core skills. More damage on the two back-rank enemies, on top of the accuracy and crit debuff, makes it a real tool for shutting down back-line stress dealers.",
+  "ko": "핵심 기술에 밀려 거의 고르지 않던 기술이다. 후열(3·4열) 두 적에게 명중·치명타 감소와 함께 피해를 더 줘서, 후열 스트레스 딜러를 묶는 실제 선택지로 만든다."
+ },
+ "bounty_hunter|collect_bounty": {
+  "ids": [
+   "BH-003"
+  ],
+  "principles": [
+   "G-01",
+   "P-24"
+  ],
+  "en": "His marked bonus was a flat +90% that fell behind other mark dealers' level-5 bonus; a flat +100% keeps the Bounty Hunter the go-to finisher for marked targets.",
+  "ko": "표식 보너스가 +90% 고정이라 5렙에서는 다른 표식 딜러(+100%)보다 낮았다. +100% 고정으로 표식 대상 마무리는 현상금 사냥꾼이 가장 확실하게 한다."
+ },
+ "bounty_hunter|come_hither": {
+  "ids": [
+   "BH-009",
+   "BH-010"
+  ],
+  "principles": [
+   "G-02",
+   "P-22",
+   "R-TRADE-02"
+  ],
+  "en": "Pulling 3 ranks means whatever it hooks from rank 3 or 4 lands in rank 1, where all of his finishers reach. The minor mark is gone so Mark for Death keeps its job (mark, hook, execute); accuracy and damage rise in return, since pulling is now its whole job.",
+  "ko": "당기기 3칸이면 3·4열 어느 적을 끌어와도 1열에 서서, 현상금 사냥꾼의 모든 처형 기술이 닿는다. 소표식은 빼서 죽음의 표식이 할 일(표식 → 당기기 → 처형)을 남기고, 당기기가 본업이 된 만큼 명중과 피해를 올렸다."
+ },
+ "bounty_hunter|finish_him": {
+  "ids": [
+   "BH-001",
+   "BH-017"
+  ],
+  "principles": [
+   "G-01",
+   "G-02"
+  ],
+  "en": "Like the Grave Robber's bonus against blighted targets, Finish Him now hits bleeding targets harder, tying the Bounty Hunter to his own Caltrops and the party's bleeders. It becomes a front-line-only execution; from rank 3 he has Collect Bounty and his back-rank tools instead.",
+  "ko": "도굴꾼의 중독 대상 추가 피해처럼, 끝장내기가 출혈 대상에게 추가 피해를 줘 자기 마름쇠와 파티 출혈 영웅과 연계한다. 처형기는 1·2열 전용으로 — 3열에서는 현상금 수거와 후열 기술을 쓰면 된다."
+ },
+ "bounty_hunter|flashbang": {
+  "ids": [
+   "BH-008"
+  ],
+  "principles": [
+   "G-03",
+   "G-02"
+  ],
+  "en": "From rank 2 it overlapped with Uppercut, which left him locked into rank 2. Now Uppercut is his front-rank stun and Flashbang his back-rank stun; the strong stun moved to Uppercut, and a 95-accuracy, no-damage stun reaching ranks 2–4 still justifies a normal stun.",
+  "ko": "2열에서 어퍼컷과 겹쳐 현상금 사냥꾼이 2열 붙박이가 됐다. 이제 1·2열은 어퍼컷, 3·4열은 섬광탄으로 갈린다. 강한 기절은 어퍼컷으로 옮겼고, 명중 95에 2~4열을 치는 섬광탄은 일반 기절로도 충분하다."
+ },
+ "bounty_hunter|hook_and_slice": {
+  "ids": [
+   "BH-005",
+   "BH-016"
+  ],
+  "principles": [
+   "P-11",
+   "G-02"
+  ],
+  "en": "A small damage increase over the base game. An earlier, larger buff was pulled back once his other buffs landed, since bleed, slow and damage-taken together already made Caltrops the strongest back-rank bleed skill.",
+  "ko": "바닐라보다 피해를 조금 올렸다. 예전의 더 큰 상향은 다른 상향이 들어간 뒤 절반가량 되돌렸다 — 출혈·속도 감소·받는 피해 증가가 함께 붙어 이미 3·4열 출혈 기술 중 최고였기 때문이다."
+ },
+ "bounty_hunter|target_tag": {
+  "ids": [
+   "BH-013"
+  ],
+  "principles": [
+   "G-02",
+   "P-11"
+  ],
+  "en": "All marking skills were nearly identical (mark plus one small debuff). Mark for Death now specializes against armored enemies with a bigger protection cut, and gives up its self speed buff in exchange.",
+  "ko": "표식 기술들이 '표식 + 작은 약화 하나'로 거의 같았다. 죽음의 표식은 방어 감소를 키워 방어 있는 적 전용 표식으로 특화하고, 그 대가로 자기 속도 강화를 뺐다."
+ },
+ "bounty_hunter|uppercut": {
+  "ids": [
+   "BH-007",
+   "BH-014",
+   "BH-015"
+  ],
+  "principles": [
+   "G-02",
+   "P-21",
+   "P-19"
+  ],
+  "en": "Flashbang was simply better, so Uppercut was rarely taken. It is now a rank-1-only execution stun: hitting rank 1 pushes the target to rank 3, still inside Finish Him's reach. The narrower target is paid back with accuracy, crit (a bare-fist jaw strike, which also triggers his on-crit marked-damage buff) and the strong stun taken from Flashbang.",
+  "ko": "섬광탄이 더 좋아서 어퍼컷을 쓸 일이 없었다. 이제 1열 전용 처형 기절기다 — 1열을 치면 밀려난 적이 3열로 가서 끝장내기 사거리 안에 남는다. 좁아진 대상은 명중·치명타(맨손 턱 타격, 치명타 시 표식 대상 피해 강화도 발동)와 섬광탄에서 가져온 강한 기절로 돌려줬다."
+ },
+ "crusader|battle_heal": {
+  "ids": [
+   "CRU-001"
+  ],
+  "principles": [
+   "G-05",
+   "P-11"
+  ],
+  "en": "The Crusader becomes a support healer who boosts the healing allies receive afterward instead of competing with the Vestal and Occultist on raw healing. The amplifier came from the Arbalest's bandage.",
+  "ko": "성전사를 회복량으로 성녀·신비학자와 겨루는 대신, 이후 받는 회복을 키워 주는 보조 힐러로 만든다. 이 증폭 효과는 석궁사수 붕대에서 옮겨 왔다."
+ },
+ "crusader|bulwark_of_faith": {
+  "ids": [
+   "CRU-007"
+  ],
+  "principles": [
+   "G-03",
+   "P-19",
+   "R-RANK-01"
+  ],
+  "en": "The Leper's Withstand does the same job (protection buff, self mark, once per battle) from more ranks, and most pure self-defense skills work from any rank; raising a shield has no reason to need the front. He can now use it from rank 4, where Holy Lance starts.",
+  "ko": "나병환자 견디기는 같은 구조(방어 강화·자기 표식·전투당 1회)인데 더 많은 열에서 쓰고, 순수 자기 방어 기술은 대부분 전 열이다. 방패를 드는 동작에 열 제약 이유가 없다. 이제 성스러운 돌격 시작 열(4열)에서도 쓸 수 있다."
+ },
+ "crusader|inspiring_cry": {
+  "ids": [
+   "CRU-006"
+  ],
+  "principles": [
+   "G-05",
+   "G-00"
+  ],
+  "en": "Demand for stress relief is huge but supply rested almost entirely on the Jester; the Crusader's single-target stress heal now grows every level so he can cover it on his own and more party setups work.",
+  "ko": "스트레스 회복 수요는 큰데 공급이 거의 광대에게만 몰려 있었다. 성전사의 단일 스트레스 회복이 매 레벨 오르게 해 혼자서도 맡을 수 있게 하고 조합 폭을 넓힌다."
+ },
+ "crusader|stunning_blow": {
+  "ids": [
+   "CRU-003",
+   "CRU-009"
+  ],
+  "principles": [
+   "R-STUN-01",
+   "P-19"
+  ],
+  "en": "The Crusader's signature stun can't reach rank 3 and he is slow, so it now stuns as reliably as its name says. Damage stays at the base-game value: it is a pommel strike, and only one side of the skill was raised.",
+  "ko": "성전사의 대표 기절은 3열에 닿지 않고 속도도 느려, 이름대로 확실히 기절시키도록 강한 기절로 바꿨다. 칼 손잡이로 치는 기술이라 피해는 바닐라 그대로 — 한쪽 축만 올렸다."
+ },
+ "crusader|zealous_accusation": {
+  "ids": [
+   "CRU-002"
+  ],
+  "principles": [
+   "G-02"
+  ],
+  "en": "A −40% two-target attack with low accuracy on top had no reason to be picked over Smite; at 90 accuracy there are fights where it is the better choice.",
+  "ko": "피해 −40% 2인 공격에 명중까지 낮아 강타 대신 고를 이유가 없었다. 명중 90이면 강타보다 나은 상황이 생긴다."
+ },
+ "duelist|coup_de_grace": {
+  "ids": [
+   "DUE-010"
+  ],
+  "principles": [
+   "R-TRADE-02",
+   "R-STRAT-01"
+  ],
+  "en": "The Duelist is one of the strongest heroes in the base game. Coup de Grâce reaches every rank from any position, ignores protection and grants an extra action on a kill, so it now pays more in damage for all that.",
+  "ko": "결투가는 원작에서 손꼽히게 강한 영웅입니다. 최후의 일격은 어느 열에서나 1~4열을 치고 방어를 무시하며 처치하면 추가 행동까지 주므로, 그만큼 피해로 대가를 더 치르게 했습니다."
+ },
+ "duelist|feint": {
+  "ids": [
+   "DUE-007"
+  ],
+  "principles": [
+   "P-14",
+   "G-01"
+  ],
+  "en": "Its protection shred was identical to the Bounty Hunter's Mark for Death. Feint now takes the Mark's smaller original values, keeping the two skills distinct and trimming an already strong hero.",
+  "ko": "방어 감소가 현상금 사냥꾼의 죽음의 표식과 숫자까지 같았습니다. 표식의 원래(더 작은) 수치를 받아 두 기술을 구분하고, 이미 강한 결투가를 조금 낮췄습니다."
+ },
+ "duelist|the_boot": {
+  "ids": [
+   "DUE-006"
+  ],
+  "principles": [
+   "R-STUN-01",
+   "R-STRAT-01"
+  ],
+  "en": "A melee kick that stuns and pushes in one action gave up less damage than other stun skills and felt overpowered in play. −60% puts it inside the usual damage range of stun skills.",
+  "ko": "기절과 밀치기를 한 번에 거는 근접기인데 다른 기절 기술보다 피해 손실이 작아 실제 플레이에서 지나치게 강했습니다. −60%는 기절 기술의 일반적인 피해 범위 안입니다."
+ },
+ "duelist|touche": {
+  "ids": [
+   "DUE-005"
+  ],
+  "principles": [
+   "R-CMB-01",
+   "P-12"
+  ],
+  "en": "A no-damage jab usable from any rank granted +40–50 dodge for 4 turns, and two casts stacked could push enemy hit chance to 0%, blocking their stuns and debuffs as well. With a smaller, 2-turn buff, even two stacks only reach what one cast used to give.",
+  "ko": "피해 없는 찌르기가 어느 열에서나 회피 +40~50을 4턴 주었고, 두 번 겹치면 적 명중률이 0%까지 떨어져 기절·약화까지 전부 막았습니다. 강화를 작게, 2턴으로 줄여 두 번 겹쳐도 예전 1회 수준에 머물게 했습니다."
+ },
+ "flagellant|endure": {
+  "ids": [
+   "FLA-008"
+  ],
+  "principles": [
+   "G-05",
+   "P-06"
+  ],
+  "en": "At level 1, Endure relieved 10 stress but cost him 10, a net of zero. Self stress now scales so the net relief is a steady 6 at every level: useful from the start, while level 5 stays below vanilla out of respect for the official 2018 nerf.",
+  "ko": "1레벨 인내는 스트레스 10을 회복하고 자신이 10을 받아 순회복이 0이었습니다. 자기 스트레스를 레벨마다 올려 순회복을 매 레벨 6으로 맞췄습니다. 저레벨부터 쓸 만하되, 2018년 공식 하향을 존중해 5레벨은 바닐라보다 낮습니다."
+ },
+ "flagellant|resistances": {
+  "ids": [
+   "FLA-001"
+  ],
+  "principles": [
+   "R-RES-01",
+   "P-22",
+   "G-04"
+  ],
+  "en": "His stun and move resists sat above the baseline without justification: the lore's toughness from self-inflicted wounds is offset by fighting nearly unarmored, so both return to the baseline 40. Bleed 65 was the only signature resist above the game's usual cap (baseline +30), so it now matches that cap.",
+  "ko": "기절·이동 저항이 근거 없이 기준보다 높았습니다. 스스로 상처 내며 단단해진다는 설정과 거의 맨몸인 외형이 상쇄되므로 기준값 40으로 맞췄습니다. 출혈 65는 대표 저항의 일반 상한(기준 +30)을 넘는 유일한 사례라 상한에 맞췄습니다."
+ },
+ "flagellant|weapon": {
+  "ids": [
+   "FLA-007"
+  ],
+  "principles": [
+   "R-GROW-03",
+   "G-04"
+  ],
+  "en": "Nearly every hero gains speed +0/+0/+1/+1/+2 across weapon upgrades; the Flagellant's bigger jumps were an outlier, so his growth now follows the same rule.",
+  "ko": "거의 모든 영웅은 무기 레벨에 따라 속도가 +0/+0/+1/+1/+2로 오르는데 고행자만 더 크게 올랐습니다. 같은 성장 규칙에 맞췄습니다."
+ },
+ "grave_robber|poison_dart": {
+  "ids": [
+   "GR-001",
+   "GR-002"
+  ],
+  "principles": [
+   "R-EFF-02",
+   "G-02"
+  ],
+  "en": "Its 4-turn blight was the only hero damage-over-time longer than the standard 3 turns. In exchange it now carries the accuracy buff taken from Thrown Dagger, giving this former setup skill a reason to be picked.",
+  "ko": "4턴 중독은 영웅 지속 피해 중 유일하게 표준(3턴)보다 길었습니다. 대신 단검 투척에서 옮겨 온 명중 강화를 붙여, 준비용이던 기술을 고를 이유를 만들었습니다."
+ },
+ "grave_robber|thrown_dagger": {
+  "ids": [
+   "GR-002",
+   "GR-005",
+   "MARK-01"
+  ],
+  "principles": [
+   "G-02",
+   "P-26"
+  ],
+  "en": "With a built-in accuracy buff, Thrown Dagger was the skill you always picked; that buff moved to Poison Darts. In return its bonus against marked targets is raised, so mark parties aren't limited to the Bounty Hunter and Arbalest.",
+  "ko": "명중 강화까지 붙은 단검 투척은 항상 고르는 기술이었습니다. 명중 강화는 맹독 다트로 옮기고, 대신 표식 대상 피해를 올려 표식 파티가 현상금 사냥꾼·석궁사수에만 묶이지 않게 했습니다."
+ },
+ "grave_robber|toxin_trickery": {
+  "ids": [
+   "GR-003",
+   "GR-006"
+  ],
+  "principles": [
+   "G-05",
+   "P-19",
+   "G-02"
+  ],
+  "en": "Once per battle and buff-only, it was almost never picked; as a 'remedy' it now also heals her and can be used freely. The buffs are smaller and last 3 turns so repeat use can't pile up all fight, and the heal is kept low so it doesn't outclass the Hellion's Adrenaline Rush.",
+  "ko": "전투당 1회에 강화만 있어 거의 고르지 않는 기술이었습니다. 이름이 '처방'인 만큼 자기 회복을 넣고 사용 제한을 없앴습니다. 반복 사용으로 전투 내내 쌓이지 않게 강화는 작게·3턴으로 줄였고, 야만인 아드레날린 분출의 상위 호환이 되지 않게 회복량은 낮게 잡았습니다."
+ },
+ "hellion|adrenaline_rush": {
+  "ids": [
+   "HEL-004"
+  ],
+  "principles": [
+   "G-05",
+   "G-02"
+  ],
+  "en": "Its attack buff moved to Barbaric YAWP!, leaving only a cure and a small heal, and nobody spends a turn to heal 4. A bigger self-heal makes it her dedicated recovery skill.",
+  "ko": "공격 강화가 야만스러운 함성!으로 옮겨 가 치료와 작은 회복만 남았고, 한 턴을 써서 4를 회복하는 기술은 아무도 고르지 않습니다. 자기 회복을 키워 야만인의 회복 전용 기술로 만들었습니다."
+ },
+ "hellion|barbaric_yawp": {
+  "ids": [
+   "HEL-001",
+   "HEL-006",
+   "HEL-007",
+   "HEL-009"
+  ],
+  "principles": [
+   "P-19",
+   "G-02",
+   "R-STRAT-01"
+  ],
+  "en": "Exhaustion that lasted the whole battle and couldn't be cleansed fought the Hellion's relentless look, and a stun didn't suit her. The roar now fires her up for the next blow and cows every enemy into hitting softer for 3 turns, a role no other skill fills; curing stays with Adrenaline Rush.",
+  "ko": "전투 끝까지 남고 해제도 안 되는 탈진은 몰아치는 야만인의 모습과 맞지 않았고, 기절도 야만인답지 않았습니다. 이제 함성은 자신의 다음 공격을 끌어올리고 기가 꺾인 적 전체의 피해를 3턴간 낮춥니다(다른 기술에 없는 역할). 치료는 아드레날린 분출에 남겼습니다."
+ },
+ "hellion|bleed_out": {
+  "ids": [
+   "HEL-003"
+  ],
+  "principles": [
+   "P-19",
+   "P-21"
+  ],
+  "en": "Exhaustion removed. Its payback for hitting only rank 1 moves from damage to crit: crits lengthen the bleed, which ignores protection, giving her an answer to heavily armored late-game enemies.",
+  "ko": "탈진을 없앴습니다. 1열만 치는 대가를 피해 대신 치명타로 보상합니다. 치명타는 방어를 무시하는 출혈을 길게 만들어 후반 고방어 적에 대한 해법이 됩니다."
+ },
+ "hellion|breakthru": {
+  "ids": [
+   "HEL-002",
+   "HEL-008"
+  ],
+  "principles": [
+   "P-19",
+   "G-02"
+  ],
+  "en": "Exhaustion is removed here as on her other skills, paid back with a small damage cut. With no side effects it was still the weakest damaging attack hitting ranks 2–3, so that cut is kept small.",
+  "ko": "다른 기술처럼 탈진을 없애고 그 대가로 피해를 조금 낮췄습니다. 부가 효과가 없어 2·3열 광역 공격 중 가장 약했기 때문에 피해 감소 폭은 작게 두었습니다."
+ },
+ "hellion|wicked_hack": {
+  "ids": [
+   "HEL-005"
+  ],
+  "principles": [
+   "G-02"
+  ],
+  "en": "Her kit had collapsed into one fixed four-skill set. With exhaustion gone, a more reliable basic attack gives her a real alternative pick.",
+  "ko": "야만인은 4개 기술로 된 고정 정답 조합만 쓰였습니다. 탈진이 사라진 기본 공격을 더 잘 맞게 해 대안으로 고를 수 있게 했습니다."
+ },
+ "highwayman|duelist_advance": {
+  "ids": [
+   "HWY-005",
+   "HWY-010",
+   "HWY-013",
+   "HWY-016",
+   "HWY-018"
+  ],
+  "principles": [
+   "G-02",
+   "P-19",
+   "P-11"
+  ],
+  "en": "Riposte moved to Tracking Shot; stepping forward into a duelist's stance now grants a self buff instead. The buff lasts 3 turns and is smaller than the old Tracking Shot buff because it stacks when used twice in a row, and rank-3 reach went to Wicked Slice so Advance doesn't make it redundant.",
+  "ko": "반격은 추적탄으로 옮기고, 앞으로 나서며 자세를 잡는 진격은 자기 강화를 줍니다. 두 번 연속 쓰면 중첩되므로 강화는 3턴 지속에 예전 추적탄 강화보다 작게 했고, 3열 도달은 사악한 칼질에 넘겨 진격이 칼질을 대체하지 않게 했습니다."
+ },
+ "highwayman|grape_shot_blast": {
+  "ids": [
+   "HWY-007",
+   "HWY-020"
+  ],
+  "principles": [
+   "P-21",
+   "R-TRADE-02"
+  ],
+  "en": "Its job is to land the vulnerability debuff that sets up crits for his ripostes and other skills (its low crit is by design). Accuracy is raised so that setup lands reliably, paid for with lower damage so it stays a setup tool rather than an attack to spam.",
+  "ko": "포도탄의 본업은 취약을 걸어 반격과 다른 기술의 치명타를 여는 것입니다(낮은 치명타는 의도된 설계). 취약이 확실히 걸리도록 명중을 올리고, 반복 공격용이 되지 않게 피해로 대가를 치르게 했습니다."
+ },
+ "highwayman|opened_vein": {
+  "ids": [
+   "HWY-006",
+   "HWY-019",
+   "HWY-020"
+  ],
+  "principles": [
+   "P-20",
+   "P-21",
+   "R-TRADE-02"
+  ],
+  "en": "Bleed plus two debuffs at 95 accuracy cost almost no damage, making it his strongest skill. Trinkets rely on those debuffs, so instead of removing one, damage was lowered and crit raised to fit a precise cut (crits also extend the bleed). Accuracy stays high because landing its effects is its main job.",
+  "ko": "명중 95에 출혈과 약화 2개를 걸면서 피해 손실이 거의 없어 키트에서 가장 강한 기술이었습니다. 장신구가 그 약화에 의존하므로 약화를 빼는 대신 피해를 낮추고, 정밀하게 긋는 칼질에 맞게 치명타를 올렸습니다(치명타는 출혈도 늘림). 효과를 거는 것이 본업이라 명중은 그대로 두었습니다."
+ },
+ "highwayman|pistol_shot": {
+  "ids": [
+   "HWY-009",
+   "HWY-015",
+   "MARK-01"
+  ],
+  "principles": [
+   "G-02",
+   "P-26",
+   "P-03"
+  ],
+  "en": "Almost every ranged attack in the game starts at 90 accuracy; Pistol Shot sat at 85, leaving his ranged build behind his melee one. The bigger bonus against marked targets lets him serve as secondary damage in mark parties.",
+  "ko": "원거리 공격은 거의 다 명중 90에서 시작하는데 권총 사격만 85라 원거리 빌드가 근접 빌드보다 약했습니다. 표식 대상 피해를 올려 표식 파티의 보조 딜러로도 쓸 수 있게 했습니다."
+ },
+ "highwayman|point_blank_shot": {
+  "ids": [
+   "HWY-001",
+   "HWY-017"
+  ],
+  "principles": [
+   "P-12",
+   "G-00"
+  ],
+  "en": "With 95 accuracy and +50% damage at no cost it was overpowered, but a flat nerf would feel bad. Instead he recoils 2 ranks (mirroring the Grave Robber's Lunge), so it is hard to fire repeatedly, and the push grows to 2 as an upside. This loosens the fixed Vestal/Jester/Highwayman/Shieldbreaker lineup.",
+  "ko": "명중 95에 대가 없는 피해 +50%로 명백히 과했지만, 수치를 그냥 깎으면 체감이 불쾌합니다. 대신 2칸 뒤로 물러나게 해(도굴꾼 돌진과 대칭) 연달아 쓰기 어렵게 하고, 밀치기를 2칸으로 늘려 쓰는 맛을 더했습니다. 성녀·광대·노상강도·방패 파괴자 고정 조합을 푸는 목적도 있습니다."
+ },
+ "highwayman|take_aim": {
+  "ids": [
+   "HWY-004",
+   "HWY-019"
+  ],
+  "principles": [
+   "G-03",
+   "P-19",
+   "G-02"
+  ],
+  "en": "Riposte used to come only from Duelist's Advance, which moves him forward, so a ranged build couldn't use it without breaking formation. Taking aim and reading the foe fits a counter better: Tracking Shot now grants riposte without moving, can be used every turn, and hits a bit harder to finish targets while setting up.",
+  "ko": "반격은 앞으로 이동하는 결투가의 진격에만 있어서 원거리 빌드는 자리를 깨지 않고는 반격을 쓸 수 없었습니다. 조준하며 상대를 간파하는 쪽이 반격에 더 어울리므로, 추적탄이 이동 없이 반격을 켜고 매 턴 쓸 수 있으며 마무리 공격을 할 만큼 피해도 조금 올렸습니다."
+ },
+ "highwayman|wicked_slice": {
+  "ids": [
+   "HWY-008",
+   "HWY-019"
+  ],
+  "principles": [
+   "R-SKILL-09",
+   "G-02"
+  ],
+  "en": "Its usable ranks are trimmed to true melee positions. It now gets the rare melee reach into rank 3, given to this plain strike rather than Duelist's Advance (which has a buff and movement and would make it redundant), and its damage drops to the standard melee value to pay for that reach.",
+  "ko": "사용 열을 근접 위치(1·2열)로 정리했습니다. 근접으로 3열을 치는 희소한 능력은 강화·이동이 있는 결투가의 진격이 아니라 단순한 칼질에 주어 역할을 나눴고, 그 대가로 피해를 근접 단일 기술 표준값으로 맞췄습니다."
+ },
+ "houndmaster|blackjack": {
+  "ids": [
+   "HM-013",
+   "HM-022",
+   "HM-024"
+  ],
+  "principles": [
+   "R-STUN-03",
+   "R-STUN-02",
+   "P-22"
+  ],
+  "en": "Blackjack was the only melee stun that reached rank 3 while also having top-tier accuracy and a strong stun. It now uses the standard 90 accuracy and a normal stun, and since that is already a sizeable cut, its damage goes up in return.",
+  "ko": "둔기 강타는 3열까지 닿는 근접 기절 중 유일하게 높은 명중과 강한 기절을 함께 가졌다. 명중은 표준 90, 기절은 일반 등급으로 내렸고 그것만으로도 큰 하향이라 대신 피해를 올려 주었다."
+ },
+ "houndmaster|guard_dog": {
+  "ids": [
+   "HM-025"
+  ],
+  "principles": [
+   "P-24",
+   "G-02"
+  ],
+  "en": "A hero who guards an ally gets attacked about 1.6 times as often, and the old dodge bonus barely covered that risk. The bigger dodge fits his guild text ('protects the weak') and the Houndmaster's direction of less damage, more utility.",
+  "ko": "아군을 보호하는 영웅은 공격을 약 1.6배 더 받는데, 기존 회피 보너스로는 그 위험을 감당하기 어려웠다. 길드 설명 '약자를 보호'와, 딜은 낮추고 유틸은 올리는 조련사 방향에 맞춰 회피를 높였다."
+ },
+ "houndmaster|hounds_harry": {
+  "ids": [
+   "HM-012",
+   "HM-027"
+  ],
+  "principles": [
+   "G-02",
+   "G-03",
+   "R-VALUE-03"
+  ],
+  "en": "Hound's Harry was almost never picked: an area bleed spreads thin, fights end before it pays off, and many enemies (skeletons, the Drowned) are nearly immune to bleed. It gets a little more damage and the standard 90 accuracy of bleed skills, and losing rank 1 makes rank 2 the one spot where Harry and Blackjack are both available.",
+  "ko": "사냥개 습격은 거의 쓰이지 않았다. 광역 출혈은 얕게 퍼져 전투가 끝나기 전에 다 들어가지 못하고, 해골·익사자처럼 출혈에 사실상 면역인 적도 많다. 피해를 조금 올리고 명중을 출혈 기술 표준인 90으로 맞췄으며, 1열 사용을 빼서 습격과 둔기 강타를 함께 쓸 수 있는 2열이 조련사의 주 자리가 되게 했다."
+ },
+ "houndmaster|hounds_rush": {
+  "ids": [
+   "HM-019",
+   "HM-016",
+   "HM-018",
+   "HM-010",
+   "HM-023",
+   "HM-011"
+  ],
+  "principles": [
+   "P-24",
+   "G-00",
+   "P-11"
+  ],
+  "en": "Hound's Rush can now be used from any rank, making it the Houndmaster's go-anywhere attack; in return its base damage and mark bonus are lower, because he should shine at support rather than damage (Dog Treats can still spike it). Higher accuracy and a shorter bleed that hits harder at high levels keep the lighter hit reliable.",
+  "ko": "사냥개 돌진을 모든 열에서 쓸 수 있게 해 어디서나 쓰는 범용 공격으로 만들었고, 조련사는 딜이 아니라 지원이 강해야 하므로 대신 기본 피해와 표식 추가 피해를 낮췄다(개 간식으로 순간 화력은 여전히 낼 수 있다). 명중을 올리고 출혈은 짧지만 고레벨에서 더 세게 해, 가벼워진 한 방도 안정적으로 들어가게 했다."
+ },
+ "houndmaster|howl": {
+  "ids": [
+   "HM-014",
+   "HM-026"
+  ],
+  "principles": [
+   "G-05",
+   "P-12"
+  ],
+  "en": "Cry Havoc is the only party-wide stress heal and the only stress heal that can fail, so at low levels it was too unreliable to be worth a turn. Levels 1-4 now heal more and the chance grows every level, while level 5 is unchanged so experienced players feel no difference.",
+  "ko": "위험 경보는 유일한 아군 전체 스트레스 회복인데 유일하게 확률형이라, 저레벨에서는 턴을 쓸 가치가 없을 만큼 불안정했다. 1~4레벨 회복량을 올리고 확률이 매 레벨 오르게 했으며, 5레벨은 그대로 두어 기존 사용자의 체감은 바뀌지 않는다."
+ },
+ "houndmaster|lick_wounds": {
+  "ids": [
+   "HM-015"
+  ],
+  "principles": [
+   "G-03",
+   "P-22"
+  ],
+  "en": "Rank 1 takes the most hits, yet the Houndmaster couldn't heal himself there. Lick Wounds now works from any rank, fitting his lore of aiding the suffering and bringing his rank-1 options up to the average.",
+  "ko": "가장 많이 맞는 1열에서 자가 회복을 못 쓰는 구조가 이상했다. 이제 모든 열에서 쓸 수 있어 '고통받는 자들을 부축한다'는 설정에 맞고, 1열에서 쓸 수 있는 기술 수도 평균 수준이 된다."
+ },
+ "houndmaster|resistances": {
+  "ids": [
+   "HM-017"
+  ],
+  "principles": [
+   "P-22",
+   "R-RES-01"
+  ],
+  "en": "A hero's resistances only rise above the standard baseline when their lore gives a reason. Nothing in the Houndmaster's description (a worn uniform, dodging rather than soaking blows) explains extra blight and bleed resist, and the Highwayman, described the same way, sits at 30; his high trap resist stays because his hound stands watch at night.",
+  "ko": "영웅 저항은 설정 문장이 있을 때만 기준치를 벗어난다. 조련사 설명(낡은 제복, 받아내기보다 회피)에는 중독·출혈 저항이 높을 근거가 없고 같은 문장 구조의 노상강도는 30이며, 함정 저항은 '사냥개를 밤에 경비로 세운다'는 설정이 있어 유지한다."
+ },
+ "houndmaster|whistle": {
+  "ids": [
+   "HM-020",
+   "HM-021"
+  ],
+  "principles": [
+   "P-24",
+   "P-14",
+   "P-19"
+  ],
+  "en": "The protection debuff did nothing to the many enemies with no protection and duplicated the Bounty Hunter's Mark for Death. Target Whistle now throws off the marked enemy's aim, a defensive mark that suits the Houndmaster's protector role and sits apart from the Arbalest's (dodge) and Bounty Hunter's (protection) marks.",
+  "ko": "방어 감소는 방어가 0인 많은 적에게 효과가 없었고 현상금 사냥꾼의 죽음의 표식과 겹쳤다. 이제 목표물 지정은 표식한 적의 명중을 떨어뜨리는 방어형 표식으로, 보호형 영웅인 조련사에 맞고 석궁사수(회피)·현상금 사냥꾼(방어) 표식과도 역할이 갈린다."
+ },
+ "jester|battle_ballad": {
+  "ids": [
+   "JES-012"
+  ],
+  "principles": [
+   "G-02",
+   "P-14"
+  ],
+  "en": "Battle Ballad and the Man-at-Arms' Command gave nearly the same party buff (accuracy plus crit). They are now split: the Ballad is about acting first and landing crits, so it drops accuracy and gives more crit, while accuracy belongs to Command.",
+  "ko": "전투의 발라드와 중보병 지휘가 거의 같은 아군 강화(명중+치명)였다. 발라드는 선턴과 치명타, 지휘는 명중과 보호 연계로 나눠, 발라드는 명중을 빼고 치명타를 올렸다."
+ },
+ "jester|inspiring_tune": {
+  "ids": [
+   "JES-003"
+  ],
+  "principles": [
+   "G-03",
+   "G-05"
+  ],
+  "en": "This makes a rank-2 Jester possible: after stepping forward with Dirk Stab he can still heal stress without spending a turn moving back. The Jester should stay the best stress healer; the fix for over-reliance on him is giving other heroes more alternatives.",
+  "ko": "2열 광대를 가능하게 한다. 단검 찌르기로 앞으로 나간 뒤에도 뒤로 물러나는 행동 없이 스트레스를 회복할 수 있다. 스트레스 회복은 광대가 가장 좋아야 하며, 쏠림은 다른 영웅에게 대체 수단을 늘려 푼다."
+ },
+ "jester|solo": {
+  "ids": [
+   "JES-005",
+   "JES-006",
+   "JES-008",
+   "JES-009",
+   "JES-001",
+   "JES-011"
+  ],
+  "principles": [
+   "G-02",
+   "P-19",
+   "G-03"
+  ],
+  "en": "Solo rarely beat the Jester's other songs and attacks for a skill slot. It is now a spotlight usable from any rank: more dodge to survive drawing attention, a bigger Finale bonus, corpse clearing to pull back-rank enemies forward, and a slow on every enemy, like an audience whose eyes are all on the stage.",
+  "ko": "독주는 광대의 다른 노래·공격에 밀려 기술 칸을 얻지 못했다. 이제 모든 열에서 쓰는 '무대 조명' 기술로, 시선을 끄는 동안 버틸 회피를 높이고, 대단원 준비 보너스를 키우고, 시체를 치워 뒤쪽 적을 앞으로 당기며, 무대에 시선을 뺏긴 적 전체의 속도를 늦춘다."
+ },
+ "leper|intimidate": {
+  "ids": [
+   "LEP-001",
+   "LEP-002",
+   "LEP-003",
+   "LEP-005"
+  ],
+  "principles": [
+   "P-19",
+   "G-02",
+   "G-01"
+  ],
+  "en": "Intimidate was a support skill (enemy debuffs, self-mark, destealth) that clashed with the Leper's identity as a king carried by his supporters, and its destealth overlapped five other skills. It is now a front-line blow with the same accuracy and damage as Purge, its twin animation, that briefly cracks the target's armor so Chop and the party can break heavily armored front-liners.",
+  "ko": "위협은 적 약화·자기 표식·은신 해제를 거는 지원 기술이라 '서포터가 받쳐 주는 왕'인 나병환자 정체성과 맞지 않았고, 은신 해제는 다른 다섯 기술과 겹쳤다. 이제 같은 모션의 축출과 명중·피해가 같은 1열 일격으로, 이름대로 적의 갑옷을 짧고 크게 깎아 토막치기와 아군 공격이 중장갑 전열을 뚫게 한다."
+ },
+ "man_at_arms|bellow": {
+  "ids": [
+   "MAA-002"
+  ],
+  "principles": [
+   "P-19",
+   "P-22"
+  ],
+  "en": "His guild text has him crushing the enemy front line with a fierce war cry, so Bellow now also clears corpses, the second 'shout that clears the field' after the Hellion's. Its debuffs stay, since Bellow was already weaker than Command.",
+  "ko": "길드 설명 '맹렬한 함성으로 적의 전열을 짓뭉갭니다'에 맞춰 포효에 시체 제거를 더했다(야만인 함성에 이은 두 번째 '함성 = 대열 정리' 기술). 이미 지휘보다 약한 기술이라 약화 효과는 그대로 둔다."
+ },
+ "man_at_arms|bolster": {
+  "ids": [
+   "MAA-010",
+   "MAA-011",
+   "MAA-005"
+  ],
+  "principles": [
+   "G-05",
+   "G-02"
+  ],
+  "en": "Party stress healing leaned almost entirely on the Jester, which narrowed team choices. Bolster becomes a repeatable small party stress heal, and guarded allies recover 50% more stress, tying it to the Man-at-Arms' bodyguard role; the dodge buff was dropped because it overlapped the Antiquarian's.",
+  "ko": "스트레스 회복이 광대에게 몰려 조합 폭이 좁았다. 고양을 반복 사용하는 소량 아군 스트레스 회복으로 바꾸고, 보호받는 아군은 회복을 1.5배 받게 해 수호자 역할과 묶었으며, 회피는 유물수집상 강화와 겹쳐 뺐다."
+ },
+ "man_at_arms|command": {
+  "ids": [
+   "MAA-012",
+   "MAA-013",
+   "MAA-009"
+  ],
+  "principles": [
+   "G-02",
+   "P-14",
+   "P-12"
+  ],
+  "en": "Command and the Jester's Battle Ballad gave almost the same buff. Crit now belongs to the Ballad, while Command keeps accuracy and adds a party-wide protection buff, fitting the veteran who leads the line.",
+  "ko": "지휘와 광대 전투의 발라드가 거의 같은 강화였다. 치명타는 발라드 몫으로 넘기고, 지휘는 명중을 유지한 채 아군 전체 방어를 올려 대열을 이끄는 노병에 맞췄다."
+ },
+ "man_at_arms|rampart": {
+  "ids": [
+   "MAA-006",
+   "MAA-014"
+  ],
+  "principles": [
+   "P-19",
+   "G-03",
+   "R-STUN-02"
+  ],
+  "en": "The Man-at-Arms is heavy infantry who holds his ground, so Rampart no longer moves him forward and controls the enemy without shuffling your formation. Its damage is set to the standard for front-rank stuns, matching the Crusader's Stunning Blow.",
+  "ko": "중보병은 자리를 지키는 무거운 보병이라 성채의 일격의 자기 전진을 없애, 아군 대열을 흔들지 않고 적을 제어하게 했다. 피해는 1·2열 기절 기술의 기준값에 맞춰 성전사 기절의 일격과 같은 구도로 두었다."
+ },
+ "man_at_arms|retribution": {
+  "ids": [
+   "MAA-004"
+  ],
+  "principles": [
+   "P-19",
+   "G-02"
+  ],
+  "en": "Retribution uses the same full swing as Crush but hit for only a quarter as much, with most of its value arriving late through the riposte. It gives up rank-3 reach for a hit that lands hard up front, becoming a front-line counterattack distinct from Crush.",
+  "ko": "응징은 분쇄와 같은 휘두르기 모션인데 피해가 분쇄의 4분의 1이었고, 가치 대부분이 나중에 반격으로 들어왔다. 3열 도달을 내주는 대신 한 방을 크게 올려 분쇄와 구분되는 전열 반격 기술로 만들었다."
+ },
+ "man_at_arms|weapon": {
+  "ids": [
+   "MAA-001"
+  ],
+  "principles": [
+   "G-01",
+   "R-PRESET-01"
+  ],
+  "en": "Across all heroes, the Man-at-Arms' damage sat furthest below what his HP and support kit would predict. The new range is the preset comparable heroes (Bounty Hunter, Highwayman) already use.",
+  "ko": "영웅 전체의 체력 대비 피해 추세에서 중보병이 지원 기술의 대가를 감안해도 가장 아래로 벗어나 있었다. 새 수치는 비슷한 조건의 현상금 사냥꾼·노상강도가 이미 쓰는 값이다."
+ },
+ "occultist|disruptive_curse": {
+  "ids": [
+   "OCC-003",
+   "OCC-005",
+   "OCC-006",
+   "OCC-009",
+   "OCC-004"
+  ],
+  "principles": [
+   "P-19",
+   "R-STRAT-01",
+   "R-SKILL-05"
+  ],
+  "en": "Mark plus dodge down duplicated the Arbalest's Sniper's Mark. True to its name, the hex now lowers resistances, the only hero skill that weakens stun and debuff resist, setting up the party's stuns, blights and bleeds; like the other pure mark skills it no longer deals damage, and its values now grow every level.",
+  "ko": "표식+회피 감소는 석궁사수 저격 표식과 겹쳤다. 이름대로 저항을 낮추게 바꿨고, 기절·약화 저항을 깎는 유일한 영웅 기술이라 아군 기절·중독·출혈을 받쳐 준다. 다른 순수 표식 기술처럼 피해를 없앴고, 수치는 매 레벨 성장하게 했다."
+ },
+ "occultist|hands_from_abyss": {
+  "ids": [
+   "OCC-008"
+  ],
+  "principles": [
+   "R-STUN-02",
+   "R-STUN-03"
+  ],
+  "en": "Stuns that can reach rank 3 are kept low on damage. In exchange its accuracy goes up, so the stun itself lands more reliably.",
+  "ko": "3열까지 닿는 기절은 피해를 낮게 둔다. 대신 명중을 올려 기절 자체는 더 확실히 들어가게 했다."
+ },
+ "occultist|weakening_curse": {
+  "ids": [
+   "OCC-007"
+  ],
+  "principles": [
+   "P-11",
+   "G-02"
+  ],
+  "en": "Weakening Curse was the Occultist's weakest skill, so the damage taken out of Vulnerability Hex moves here and his overall power stays the same.",
+  "ko": "약화 저주는 신비학자 기술 중 가장 약했다. 취약화 주술에서 뺀 피해를 이쪽으로 옮겨 신비학자 전체 힘은 유지한다."
+ },
+ "occultist|wyrd_reconstruction": {
+  "ids": [
+   "OCC-001"
+  ],
+  "principles": [
+   "G-02",
+   "P-12"
+  ],
+  "en": "Many players stopped at level 4 because the final upgrade sharply raised the bleed risk. Level 5 now keeps the level-4 bleed and gives up a little top-end healing instead, so the last upgrade is worth buying while the skill stays a gamble.",
+  "ko": "마지막 업그레이드에서 출혈 위험이 급증해 4레벨에서 멈추는 플레이어가 많았다. 5레벨 출혈을 4레벨과 같게 하고 대신 최대 회복을 조금 줄여, 도박성은 지키면서 마지막 업그레이드를 살 이유를 만들었다."
+ },
+ "plague_doctor|battlefield_medicine": {
+  "ids": [
+   "PD-001"
+  ],
+  "principles": [
+   "G-05",
+   "G-00"
+  ],
+  "en": "Battlefield Medicine becomes the ally blight-cure heal while the Arbalest's bandage covers bleed, so each healer has its own dungeon niche. The free self-cleanse goes with that; the Plague Doctor now relies on items or allies to clear her own DoTs.",
+  "ko": "야전 의술을 아군 중독 치료 회복으로 바꾸고 출혈 치료는 석궁사수 붕대가 맡아, 회복 담당마다 맞는 던전이 생기게 했다. 그에 맞춰 무료 자기 해제는 빼고, 자기 출혈·중독은 아이템이나 동료로 푼다."
+ },
+ "plague_doctor|incision": {
+  "ids": [
+   "PD-002"
+  ],
+  "principles": [
+   "G-02"
+  ],
+  "en": "The Plague Doctor's other skills are strong enough that Incision was rarely worth a slot. Higher accuracy gives it a reason to be picked.",
+  "ko": "역병 의사는 다른 기술이 좋아서 절개를 고를 이유가 약했다. 명중을 올려 선택지로 만든다."
+ },
+ "runaway|ransack": {
+  "ids": [
+   "RUN-001"
+  ],
+  "principles": [
+   "P-10",
+   "G-02"
+  ],
+  "en": "A melee skill usable from any rank that hit any enemy rank, with a pull, a forward step and corpse clearing at almost no damage cost, was never a wrong choice. It loses direct reach to rank 4 (the same standard applied to other melee skills) but keeps its identity of pulling rank 3 forward, and its damage now matches other utility melee hits.",
+  "ko": "어느 열에서든 쓰고 적 어느 열이든 때리며, 당기기·전진·시체 제거까지 붙었는데 피해 대가는 거의 없어 쓸모없는 순간이 없었다. 근접의 4열 직접 타격을 빼고(다른 근접 기술과 같은 기준), 3열을 끌어내는 정체성은 남기며, 피해는 비슷한 유틸 근접기 수준으로 맞췄다."
+ },
+ "shieldbreaker|expose": {
+  "ids": [
+   "SB-015"
+  ],
+  "principles": [
+   "R-TRADE-02",
+   "R-SKILL-09"
+  ],
+  "en": "Accuracy swaps with Pierce. Expose's job is its debuff, destealth and slow, and skills whose value is the effect should land reliably.",
+  "ko": "찌르기와 명중을 맞바꿨다. 노출의 본업은 약화·은신 해제·둔화 효과이고, 효과가 본업인 기술은 확실히 맞아야 한다."
+ },
+ "shieldbreaker|pierce": {
+  "ids": [
+   "SB-013",
+   "SB-002"
+  ],
+  "principles": [
+   "G-04",
+   "P-07",
+   "R-TRADE-02"
+  ],
+  "en": "Melee, armour-piercing and reaching every rank all on one cheap skill made Pierce the core of the meta Shieldbreaker; rank 4 is removed (rank 3 stays so it still beats Pick to the Face) and crit returns to its release value. Accuracy swaps with Expose: skills that carry an effect get the higher accuracy, pure damage skills the lower.",
+  "ko": "근접 + 방어 무시 + 전 열 도달이 한 기술에 싸게 몰려 있던 것이 방패 파괴자 문제의 핵심이었다. 4열을 빼되(얼굴 찍기보다는 나아야 해서 3열은 유지) 치명타는 출시 값으로 되돌린다. 명중은 노출과 맞바꿨다 — 효과가 있는 기술은 명중이 높고, 순수 피해 기술은 낮다."
+ },
+ "shieldbreaker|resistances": {
+  "ids": [
+   "SB-010"
+  ],
+  "principles": [
+   "P-22",
+   "R-RES-01"
+  ],
+  "en": "Her official description gives her only slight defensive ability and stage clothing rather than armour, and says she survives by moving fast. That is lighter than the Highwayman (30), so stun and move resists sit at 30 instead of well above the norm.",
+  "ko": "공식 설정은 \"약간의\" 방어 능력, 던전보다 무대에 어울리는 의복, 살려면 발 빠르게 움직여야 한다는 것이다. 노상강도(30)보다 가벼운 설정이라 기절·이동 저항을 기준보다 높은 50이 아니라 30으로 둔다."
+ },
+ "shieldbreaker|serpents_sway": {
+  "ids": [
+   "SB-017"
+  ],
+  "principles": [
+   "P-22",
+   "G-02"
+  ],
+  "en": "Used from rank 1, the forward step did nothing, so it became a stand-still buff (two blocks plus speed) for a hero meant to be weak when rooted and strong when moving. It is now the way back to rank 1 after Adder's Kiss or Impale push her back.",
+  "ko": "1열에서 쓰면 전진 1칸이 의미 없어, 붙박이로 막기 2회·속도만 받는 운용이 됐다 — \"붙박이면 약하고 움직여야 고점\"인 방패 파괴자 설정과 어긋난다. 살모사의 입맞춤·꿰뚫기로 뒤로 밀린 뒤 1열로 돌아오는 기술로 만든다."
+ },
+ "shieldbreaker|single_out": {
+  "ids": [
+   "SB-016"
+  ],
+  "principles": [
+   "P-26",
+   "G-03"
+  ],
+  "en": "Part of spreading mark-party damage beyond the Bounty Hunter and Arbalest: this secondary mark skill is locked to ranks 2-3, so it gets a bigger bonus against marked targets and better accuracy in return.",
+  "ko": "표식 조합이 현상금 사냥꾼·석궁사수에만 묶이지 않도록 서브 표식 딜러를 올리는 조정이다. 2·3열에 묶인 기술이라 그 대가로 표식 대상 추가 피해와 명중을 올렸다."
+ },
+ "shieldbreaker|spearing": {
+  "ids": [
+   "SB-018",
+   "SB-014"
+  ],
+  "principles": [
+   "G-02"
+  ],
+  "en": "Impale now sits on the same line as the Houndmaster's Hound's Harry, applying the same blight amounts from level 1 instead of only from level 3. Her weapon hits harder, so the blight lasts 2 turns instead of 3 and the skill leans on direct damage.",
+  "ko": "꿰뚫기를 조련사 사냥개 습격과 같은 줄에 맞췄다: 같은 지속 피해 수치를 3렙부터가 아니라 1렙부터 준다. 방패 파괴자 무기가 더 세서 중독은 3턴 대신 2턴, 직접 피해 쪽 기술로 갈린다."
+ },
+ "shieldbreaker|weapon": {
+  "ids": [
+   "SB-011"
+  ],
+  "principles": [
+   "G-04",
+   "R-GROW-03",
+   "R-GROW-01"
+  ],
+  "en": "Her weapon speed grew faster than any base-game hero's, an unexplained DLC outlier; it now follows the standard speed curve. Damage growth uses the 15% rate of the base game's heavy front-line heroes instead of 20%.",
+  "ko": "무기 속도 성장이 원작 영웅 누구보다 빨라 근거 없는 DLC 예외였다. 표준 속도 성장으로 맞춘다. 피해 성장도 원작 헤비 전열 영웅의 15% 규칙을 따른다(20% 대신)."
+ },
+ "vestal|dazzling_light": {
+  "ids": [
+   "VES-003",
+   "VES-008"
+  ],
+  "principles": [
+   "G-02",
+   "R-STRAT-01"
+  ],
+  "en": "A stun that reaches rank 3 is rare and was too strong, and it was also usable from rank 2. Limiting it to ranks 3-4 separates the rear stunner from the front Vestal; its damage stays vanilla so it remains a live rear option.",
+  "ko": "3열까지 닿는 기절은 희소해서 너무 강했고 2열에서도 쓸 수 있었다. 3·4열 전용으로 후열 기절과 전열 성녀를 나눈다. 피해는 바닐라 그대로 두어 후열 선택지로 남긴다."
+ },
+ "vestal|divine_grace": {
+  "ids": [
+   "VES-004"
+  ],
+  "principles": [
+   "G-03"
+  ],
+  "en": "A front-rank Vestal still needs to heal, so her single-target heal works from any rank.",
+  "ko": "1·2열 성녀도 회복은 해야 하므로 단일 회복을 모든 열에서 쓸 수 있게 했다."
+ },
+ "vestal|gods_comfort": {
+  "ids": [
+   "VES-005"
+  ],
+  "principles": [
+   "P-05",
+   "G-02"
+  ],
+  "en": "Divine Comfort is her strongest skill, so it stays a rear-rank reward and a front Vestal cannot keep it.",
+  "ko": "신성한 위무는 성녀의 가장 강한 기술이라 후열(3·4열)의 몫으로 두고, 전열 성녀는 가져가지 못하게 했다."
+ },
+ "vestal|gods_hand": {
+  "ids": [
+   "VES-007"
+  ],
+  "principles": [
+   "R-TRADE-02",
+   "G-03"
+  ],
+  "en": "Hand of Light only grants its buff on hit, so as an effect-first ranged skill it gets the standard ranged accuracy, which also helps a front-rank Vestal.",
+  "ko": "신의 손길은 맞혀야 강화가 걸리는 효과 위주 원거리 기술이라 원거리 표준 명중을 준다. 전열 성녀 강화도 겸한다."
+ },
+ "vestal|gods_illumination": {
+  "ids": [
+   "VES-006",
+   "VES-010",
+   "VES-011",
+   "VES-012",
+   "VES-013"
+  ],
+  "principles": [
+   "P-19",
+   "G-03",
+   "R-SKILL-09"
+  ],
+  "en": "A front Vestal had nothing to use in rank 1, so Illumination works from every rank, and as an effect-first skill it gets the kit's best accuracy for sure-hit finishing. Its dodge debuff duplicated the Arbalest's Sniper's Mark, so holy light now exposes and burns evil instead, a role only Caltrops partly filled and one that links into Runaway burn combos.",
+  "ko": "전열 성녀가 1열에서 쓸 기술이 없어 광휘를 전 열에서 쓰게 했고, 효과가 본업인 기술이라 확실히 맞히는 마무리용으로 명중을 키트 최고로 했다. 회피 감소는 석궁사수 저격수의 표식과 겹쳐, 성스러운 빛이 악을 드러내고(받는 피해 증가) 태우는(화상) 기술로 바꿨다. 받는 피해 증가는 마름쇠뿐이었고, 화상은 도망자 화상 연계를 연다."
+ },
+ "vestal|judgement": {
+  "ids": [
+   "VES-002",
+   "VES-009",
+   "VES-001"
+  ],
+  "principles": [
+   "G-02",
+   "R-SKILL-09"
+  ],
+  "en": "Vanilla Judgement reached rank 4 and healed her, so it was locked into every rear Vestal's four-skill rotation. With the heal moved to Mace Bash, it stays as the plain rear attack that reaches rank 4: standard ranged accuracy and no damage penalty, but still weaker than Divine Comfort.",
+  "ko": "바닐라 심판은 4열까지 닿으면서 자기 회복까지 있어 후열 성녀의 고정 기술 4개 중 하나였다. 회복을 철퇴로 넘긴 뒤에는 회복 없는 4열 도달 공격으로 남기며, 명중은 원거리 표준, 피해 감소는 없앴다. 그래도 신성한 위무를 넘지는 않는다."
+ },
+ "vestal|mace_bash": {
+  "ids": [
+   "VES-001"
+  ],
+  "principles": [
+   "G-03",
+   "P-20"
+  ],
+  "en": "Judgement's self-heal and crit move here so a front-rank Vestal is a real option, as her vanilla melee trinkets already hint. A rear Vestal pays for staying put by losing the free self-heal.",
+  "ko": "심판의 자기 회복과 치명타를 철퇴로 옮겨 1·2열 성녀를 실제 선택지로 만든다(바닐라 근접 장신구도 전열 성녀를 상정한다). 후열 붙박이 성녀는 자기 회복을 잃는 것이 대가다."
+ }
+}
