@@ -5,7 +5,7 @@
 	<ModDataPath>{MOD_DATA_PATH}</ModDataPath>
 	<Title>Rebalance (Verified)</Title>
 	<Language>english</Language>
-	<UpdateDetails/>
+	<UpdateDetails>Initial release. Full change list and principles in the description.</UpdateDetails>
 	<Visibility>private</Visibility>
 	<UploadMode>direct_upload</UploadMode>
 	<VersionMajor>1</VersionMajor>
@@ -15,5 +15,5 @@
 		<Tags>Class Tweaks</Tags>
 	</Tags>
 	<ItemDescription>{DESCRIPTION}</ItemDescription>
-	<PublishedFileId/>
+	<PublishedFileId>3821353035</PublishedFileId>
 </project>
