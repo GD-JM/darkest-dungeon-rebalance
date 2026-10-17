@@ -100,19 +100,23 @@ effect: .name "Hound Debuff 5" .target "target" .curio_result_type "negative" .c
 //# ======================================================================
 //# 기술: 위험 경보 (howl)
 //# 레벨별 효과: 1레벨 Hound Howl 1 | 2레벨 Hound Howl 2 | 3레벨 Hound Howl 3 | 4레벨 Hound Howl 4 | 5레벨 Hound Howl 5
-effect: .name "Hound Howl 1" .target "target" .curio_result_type "positive" .chance 74% .healstress 4	.on_hit true .on_miss false .queue true
+effect: .name "Hound Howl 1" .target "target" .curio_result_type "positive" .chance 70% .healstress 4	.on_hit true .on_miss false .queue true
+// HM-026 Chance 70% (was flat 74% at 1-4): every level still grows; level 5 stays 74%.
 // HM-014 [trace 2026-10-05] Stabilize early stress recovery without raising the top-level effect. Effect: Hound Howl 1.
 // HM-014 위험 경보: 회복 2 -> 4, 확률 66 -> 74. 5렙(6@74%)은 그대로 두고 저레벨 불안정성만 해소 (P-12)
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Hound Howl 2" .target "target" .curio_result_type "positive" .chance 74% .healstress 4	.on_hit true .on_miss false .queue true
+effect: .name "Hound Howl 2" .target "target" .curio_result_type "positive" .chance 71% .healstress 4	.on_hit true .on_miss false .queue true
+// HM-026 Chance 71% (was flat 74% at 1-4): every level still grows; level 5 stays 74%.
 // HM-014 [trace 2026-10-05] Stabilize early stress recovery without raising the top-level effect. Effect: Hound Howl 2.
 // HM-014 회복 3 -> 4, 확률 68 -> 74
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Hound Howl 3" .target "target" .curio_result_type "positive" .chance 74% .healstress 5	.on_hit true .on_miss false .queue true
+effect: .name "Hound Howl 3" .target "target" .curio_result_type "positive" .chance 72% .healstress 5	.on_hit true .on_miss false .queue true
+// HM-026 Chance 72% (was flat 74% at 1-4): every level still grows; level 5 stays 74%.
 // HM-014 [trace 2026-10-05] Stabilize early stress recovery without raising the top-level effect. Effect: Hound Howl 3.
 // HM-014 회복 4 -> 5, 확률 70 -> 74
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Hound Howl 4" .target "target" .curio_result_type "positive" .chance 74% .healstress 5	.on_hit true .on_miss false .queue true
+effect: .name "Hound Howl 4" .target "target" .curio_result_type "positive" .chance 73% .healstress 5	.on_hit true .on_miss false .queue true
+// HM-026 Chance 73% (was flat 74% at 1-4): every level still grows; level 5 stays 74%.
 // HM-014 [trace 2026-10-05] Stabilize early stress recovery without raising the top-level effect. Effect: Hound Howl 4.
 // HM-014 회복 5 -> 5(유지), 확률 72 -> 74
 //#   원본 위치: effects/base.effects.darkest

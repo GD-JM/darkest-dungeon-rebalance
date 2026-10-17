@@ -54,6 +54,7 @@ combat_skill: .id "howl" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .launc
 combat_skill: .id "howl" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 43 .target @~1234 .is_crit_valid True  .effect "RB HM Hound Howl 4" .is_stall_invalidating false
 // HM-014 [trace 2026-10-05] Stabilize early stress recovery without raising the top-level effect.
 combat_skill: .id "howl" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 43 .target @~1234 .is_crit_valid True  .effect "Hound Howl 5" .is_stall_invalidating false
+// HM-026 howl: 1~4렙 확률 74% 고정 -> 70/71/72/73%(5렙 74% 바닐라). 매 레벨 성장이 보이게 [제작자]
 
 
 combat_move_skill: .id "move" .level 0 .type "move" .move 2 2 .launch 4321
