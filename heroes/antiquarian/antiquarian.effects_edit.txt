@@ -173,3 +173,16 @@ effect: .name "on_crit_def"    .target "performer" .curio_result_type "positive"
 //#   공유 효과: 다른 영웅 1명(도굴꾼). 여기서 고치면 이 영웅만 바뀐다
 //#   강화 효과 수치(JSON, 참고용): on_crit_def = defense_rating 0.1
 //#   원본 위치: effects/base.effects.darkest
+
+//# ======================================================================
+//# 리밸런스 신규 효과: 섬광 가루 화상 (ANT-001)
+effect: .name "RB ANT Flash Burn 1" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 1 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+// ANT-001 Flashpowder ignites the target: burn 1 (irresistible). Small on purpose - opens Runaway synergies (Hearthlight crit vs burning, Backdraft).
+effect: .name "RB ANT Flash Burn 2" .target "target" .curio_result_type "negative" .chance 110% .dotBurn 1 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+// ANT-001 Flashpowder ignites the target: burn 1 (irresistible). Small on purpose - opens Runaway synergies (Hearthlight crit vs burning, Backdraft).
+effect: .name "RB ANT Flash Burn 3" .target "target" .curio_result_type "negative" .chance 120% .dotBurn 2 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+// ANT-001 Flashpowder ignites the target: burn 2 (irresistible). Small on purpose - opens Runaway synergies (Hearthlight crit vs burning, Backdraft).
+effect: .name "RB ANT Flash Burn 4" .target "target" .curio_result_type "negative" .chance 130% .dotBurn 2 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+// ANT-001 Flashpowder ignites the target: burn 2 (irresistible). Small on purpose - opens Runaway synergies (Hearthlight crit vs burning, Backdraft).
+effect: .name "RB ANT Flash Burn 5" .target "target" .curio_result_type "negative" .chance 140% .dotBurn 3 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+// ANT-001 Flashpowder ignites the target: burn 3 (irresistible). Small on purpose - opens Runaway synergies (Hearthlight crit vs burning, Backdraft).
