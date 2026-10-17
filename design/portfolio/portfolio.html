@@ -1,0 +1,361 @@
+<title>다키스트 던전 전 영웅 리밸런스</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700;800&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: 한 줄 읽기 폭(본문 ~68ch)의 기획서. 큰 장(章) 번호 = 실제 작업 순서. 표·이미지는 본문 폭보다 넓게 */
+:root{
+  --bg:#efede8; --paper:#f8f7f4; --fg:#1d1915; --muted:#615a52; --line:#d6d0c6;
+  --bronze:#7d5f33; --old:#9a3a2c; --new:#3d6a44; --chip:#e6e1d8;
+  --display:"Nanum Myeongjo","Batang",serif;
+  --body:"IBM Plex Sans KR","Malgun Gothic","Apple SD Gothic Neo",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#14110e; --paper:#1c1814; --fg:#e7e0d4; --muted:#a39888; --line:#3a332b;
+  --bronze:#d3b06c; --old:#d77b6a; --new:#8fc496; --chip:#2a241e; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#14110e; --paper:#1c1814; --fg:#e7e0d4; --muted:#a39888; --line:#3a332b;
+  --bronze:#d3b06c; --old:#d77b6a; --new:#8fc496; --chip:#2a241e; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:16px/1.75 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+.wrap{max-width:980px;margin:0 auto}
+.prose{max-width:68ch}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.3;margin:0}
+h1{font-size:clamp(2rem,5vw,3.1rem);font-weight:800}
+h2{font-size:1.75rem;font-weight:800}
+h3{font-size:1.18rem;font-weight:700}
+p{margin:0}
+a{color:var(--bronze)}
+.eyebrow{font:500 .78rem/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--bronze)}
+.muted{color:var(--muted)}
+.mono{font-family:var(--mono)}
+code,.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+header.hero{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:40px;align-items:center;padding-block:56px 40px;border-bottom:1px solid var(--line)}
+header.hero .lead{font-size:1.1rem;color:var(--muted);margin-top:16px;max-width:52ch}
+header.hero img{width:240px;border:1px solid var(--line)}
+.meta{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:20px;font-size:.92rem}
+.meta span b{font-weight:600}
+
+.stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0;border-bottom:1px solid var(--line)}
+.stat{padding:22px 14px 20px 0}
+.stat .n{font:500 1.9rem/1 var(--mono);font-variant-numeric:tabular-nums}
+.stat .l{font-size:.82rem;color:var(--muted);margin-top:8px;line-height:1.45}
+
+section{padding-block:56px 8px;display:grid;gap:22px}
+.chapter{display:flex;gap:14px;align-items:baseline}
+.chapter .k{font:500 .9rem var(--mono);color:var(--bronze)}
+
+.flow{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-top:6px}
+.flow div{background:var(--paper);border:1px solid var(--line);padding:10px 10px 12px;font-size:.86rem;line-height:1.45}
+.flow b{display:block;font-family:var(--display);font-size:1rem;margin-bottom:4px}
+
+.tbl{overflow-x:auto;border:1px solid var(--line);background:var(--paper)}
+table{border-collapse:collapse;width:100%;font-size:.92rem}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:600;font-size:.8rem;color:var(--muted);letter-spacing:.02em}
+tr:last-child td{border-bottom:0}
+td.v{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.old{color:var(--old)} .new{color:var(--new)}
+
+.principles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.principles div{background:var(--paper);padding:16px 18px;display:grid;gap:6px}
+.principles b{font-family:var(--display);font-size:1.05rem}
+.principles p{font-size:.92rem;color:var(--muted)}
+
+.formula{background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--bronze);padding:18px 20px;font-size:1.05rem}
+.formula .eq{font-family:var(--mono);font-size:1rem;margin-top:8px;overflow-x:auto;white-space:nowrap}
+
+.two{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:28px;align-items:start}
+figure{margin:0;display:grid;gap:8px}
+figure img{width:100%;border:1px solid var(--line);display:block}
+figcaption{font-size:.84rem;color:var(--muted)}
+ol.steps{margin:0;padding-left:1.3em;display:grid;gap:10px}
+ul.plain{margin:0;padding-left:1.1em;display:grid;gap:6px}
+
+.cases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.case{display:grid;gap:8px;align-content:start}
+.case .tag{font:500 .76rem var(--mono);color:var(--bronze);letter-spacing:.05em}
+.case p{font-size:.93rem}
+
+.loop{display:grid;gap:0;border:1px solid var(--line);background:var(--paper)}
+.loop div{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px;padding:14px 18px;border-bottom:1px solid var(--line);font-size:.93rem}
+.loop div:last-child{border-bottom:0}
+.loop .q{color:var(--muted)}
+.loop .q::before{content:"지적 · ";font:500 .78rem var(--mono);color:var(--old)}
+.loop .a::before{content:"반영 · ";font:500 .78rem var(--mono);color:var(--new)}
+
+.limits{border-top:1px solid var(--line);padding-top:16px;display:grid;gap:8px;font-size:.93rem}
+footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);font-size:.86rem;color:var(--muted);display:grid;gap:6px}
+
+@media (max-width:820px){
+  header.hero{grid-template-columns:1fr;gap:24px;padding-block:36px 28px}
+  header.hero img{width:180px}
+  .stats{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .flow{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .principles,.two,.cases{grid-template-columns:1fr}
+  .loop div{grid-template-columns:1fr;gap:6px}
+}
+@media print{
+  :root{--bg:#fff;--paper:#fff}
+  body{font-size:11pt;padding:0}
+  section{break-inside:auto;padding-block:28px 4px}
+  figure,.tbl,.formula,.principles div,.loop div,.case{break-inside:avoid}
+  h2,h3{break-after:avoid}
+}
+@media (prefers-reduced-motion:no-preference){a{transition:color .15s}}
+a:focus-visible{outline:2px solid var(--bronze);outline-offset:2px}
+</style>
+
+<div class="wrap">
+
+<header class="hero">
+  <div>
+    <div class="eyebrow">밸런스 · 전투 기획 포트폴리오</div>
+    <h1>다키스트 던전<br>전 영웅 리밸런스</h1>
+    <p class="lead">"이 영웅이 없으면 못 깬다"는 조합을 없애기 위해 19명의 영웅을 하나의 수치 규칙으로 다시 맞췄습니다. 목표를 정하고, 원작 데이터를 전수 조사해 규칙을 뽑고, 모든 효과를 같은 단위로 환산해 조정하고, 스팀 창작마당에 10개 언어로 공개했습니다.</p>
+    <div class="meta">
+      <span><b>기간</b> 2026.09.14 – 10.17</span>
+      <span><b>형태</b> 개인 모드 (스팀 창작마당 공개)</span>
+      <span><b>창작마당</b> <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3821353035">Every Hero Worth Taking – Hero Rebalance</a></span>
+    </div>
+  </div>
+  <img src="img/preview.jpg" alt="창작마당 대표 이미지: REBALANCE 제목과 영웅 19명의 초상화">
+</header>
+
+<div class="stats" aria-label="작업 규모">
+  <div class="stat"><div class="n">19</div><div class="l">조정한 영웅<br>(공개판)</div></div>
+  <div class="stat"><div class="n">84</div><div class="l">바뀐 기술·능력치<br>블록</div></div>
+  <div class="stat"><div class="n">32</div><div class="l">목표·설계 원칙<br>(G 6 + P 26)</div></div>
+  <div class="stat"><div class="n">66</div><div class="l">원작에서 측정한<br>수치 규칙</div></div>
+  <div class="stat"><div class="n">196</div><div class="l">변경 기록<br>(근거·롤백 포함)</div></div>
+  <div class="stat"><div class="n">10</div><div class="l">설명문 언어<br>(플레이어 약 93%)</div></div>
+</div>
+
+<!-- 1 -->
+<section>
+  <div class="chapter"><span class="k">01</span><h2>문제 정의</h2></div>
+  <div class="prose" style="display:grid;gap:14px">
+    <p>다키스트 던전은 원정을 수십 번 반복하는 게임이라 체력과 스트레스 관리가 전부입니다. 그런데 회복과 스트레스 회복이 성녀·신비학자·광대 몇 명에게 몰려 있어서, 초반에는 이들이 없으면 사실상 진행이 막힙니다. 파티는 늘 비슷해지고 나머지 영웅은 여관에 남습니다.</p>
+    <p>영웅 하나 안에서도 같은 일이 벌어집니다. 기술 7개 중 최적의 4개를 들고, 가장 좋은 열에 세워 같은 버튼만 누르는 플레이가 정답이 됩니다.</p>
+    <p><b>목표</b>는 그래서 하나로 정했습니다. <b>던전·적·파티 구성에 따라 여러 조합이 정답이 될 수 있게 한다(G-00).</b> 나머지 목표는 모두 이걸 위한 수단입니다: 모든 영웅과 기술에 쓸 상황을 만들고(G-01·02), 주 열 밖에서도 쓸 선택지를 주고(G-03), DLC 이상치를 원작 규칙으로 되돌리고(G-04), 회복을 여러 영웅에게 나눕니다(G-05).</p>
+  </div>
+  <div class="flow" aria-label="작업 흐름">
+    <div><b>목표</b>필수 조합 없애기</div>
+    <div><b>전수 조사</b>원작 기술·몬스터 데이터</div>
+    <div><b>규칙화</b>원칙 32개, 수치 규칙 66개</div>
+    <div><b>표준화</b>모든 효과를 피해 %p로</div>
+    <div><b>조정</b>상향마다 대가를 짝지음</div>
+    <div><b>검증</b>총량·편차·원칙 감사</div>
+    <div><b>공개·피드백</b>창작마당 10개 언어</div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section>
+  <div class="chapter"><span class="k">02</span><h2>설계 원칙과 대표 예시</h2></div>
+  <p class="prose muted">모든 변경은 아래 원칙 중 하나 이상에 근거합니다. 원칙은 처음부터 정해 둔 게 아니라, 조정하다 판단이 갈릴 때마다 기준을 글로 박아 넣으며 늘어났습니다.</p>
+  <div class="principles">
+    <div><b>회복은 몇몇 영웅의 전유물이 아니다</b><p>도굴꾼 극약처방에 자기 회복 1~5를 넣고 전투당 1회 제한을 풀었습니다. 중보병 고양은 매 턴 쓸 수 있는 파티 스트레스 회복이 됐습니다.</p></div>
+    <div><b>기술도, 서는 자리도 여러 가지로</b><p>노상강도의 반격을 앞으로 나가야 쓰는 결투가의 진격에서 추적탄으로 옮겨, 원거리 노상강도도 반격을 쓰게 했습니다.</p></div>
+    <div><b>원작이 지키는 규칙을 따른다</b><p>방패 파괴자는 무기 강화 때 속도가 원작 어떤 영웅보다 빨리 올랐습니다(5/6/8/8/9). 원작 공식대로 5/5/6/6/7로 맞췄습니다.</p></div>
+    <div><b>공짜 상향은 없다</b><p>포도탄 발사는 명중 75 → 90을 받는 대신 피해 −50% → −60%를 냈습니다. 기술의 본업인 약화 걸기를 확실하게 만든 교환입니다.</p></div>
+    <div><b>보이는 대로 작동한다</b><p>붕대를 감았으면 피가 멈춰야 합니다. 석궁사수 야전 붕대질은 출혈 치료를, 유물수집상 섬광 가루는 화상을 갖게 됐습니다.</p></div>
+    <div><b>공식 설정을 지킨다</b><p>조련사 설정에는 출혈·중독에 강할 근거가 없어, 두 저항을 기준값 40 → 30으로 내렸습니다.</p></div>
+    <div><b>손맛은 지킨다</b><p>영거리 사격의 위력은 그대로 두고, 쏜 뒤 2칸 물러나게 해 매 턴 쓰지 못하게 했습니다. 너프 대신 빈도를 조정한 예입니다.</p></div>
+    <div><b>장신구는 건드리지 않는다</b><p>정맥 절개의 약화 두 개는 장신구가 강화하는 효과라 남기고, 대신 피해를 낮췄습니다.</p></div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section>
+  <div class="chapter"><span class="k">03</span><h2>핵심: 모든 효과를 피해량 하나로 환산하기</h2></div>
+  <div class="prose" style="display:grid;gap:14px">
+    <p>"명중 +5를 줬으면 피해를 얼마나 깎아야 하나?", "기절과 스트레스 회복 중 어느 쪽이 더 비싼가?" 같은 질문에 답하려면 서로 다른 효과를 같은 저울에 올려야 합니다. 그래서 <b>모든 기술의 가치를 "피해 보정 X%짜리 평타 한 번"으로 환산</b>했습니다. 데이터 파일에서 직접 고치는 숫자가 피해 보정이라, 분석 결과가 곧 조정값이 됩니다.</p>
+  </div>
+  <div class="formula">
+    <div>기술 가치(%p) = Σ 효과별 기대 HP × 대상 열 배수 × 행동 경제 유효율 ÷ 표준 평타</div>
+    <div class="eq muted">표준 평타 = 바닐라 20명 평타(피해 보정 0%, 명중 105) 중앙값 · 1%p ≈ 0.077 HP</div>
+  </div>
+  <div class="prose" style="display:grid;gap:14px">
+    <h3>기준점: 이 게임은 행동력 싸움이다</h3>
+    <p>환산 계수는 모두 하나의 전투 모델에서 나옵니다. 적 1명을 빨리 지워 4 대 3을 만들고, 기절로 그 우위를 늘리는 쪽이 이깁니다. 영웅 등급 일반 몬스터 64종으로 계산하면 파티는 라운드당 1.57명을 처치하고, 전투는 평균 2.55라운드, 적 1명의 라운드당 사망 확률은 39.3%입니다.</p>
+  </div>
+  <div class="tbl"><table>
+    <thead><tr><th>효과</th><th>환산</th><th>근거</th></tr></thead>
+    <tbody>
+      <tr><td>명중 +5</td><td class="v">피해 10%p</td><td>빗나가면 턴 하나가 통째로 사라짐. 아래 결정 ①</td></tr>
+      <tr><td>원거리 사거리</td><td class="v">−18%p</td><td>원작 공격 기술 131개 회귀 계수 −17.7</td></tr>
+      <tr><td>스트레스 1</td><td class="v">HP 1.67</td><td>원작 가격 비율 1.22 + 붕괴(고통·미덕) 판정 0.44. 아래 결정 ②</td></tr>
+      <tr><td>기절</td><td class="v">성공률 × 10.38 HP</td><td>적 1행동의 위협도(체력 피해 + 스트레스 × 1.67)</td></tr>
+      <tr><td>치명타 1회</td><td class="v">+131%p 부수 효과</td><td>추가 피해 외에 스트레스 회복·직업 치명 버프까지 셈</td></tr>
+      <tr><td>지속 피해</td><td class="v">단일 ×0.90 · 광역 ×0.40</td><td>틱마다 적 생존율 0.608 → 3틱 합 1.20 ÷ 3</td></tr>
+      <tr><td>대상 열</td><td class="v">1열 0.83 · 4열 1.15</td><td>편성 321개 실측: 3·4열 적이 스트레스를 2.3배 줌</td></tr>
+      <tr><td>적 방어 감소</td><td class="v">적 방어 0에서 멈춤</td><td>영웅 등급 적의 56%가 방어 0</td></tr>
+      <tr><td>아군 회피</td><td class="v">유효 체력 = 체력 ÷ 적중률</td><td>회피가 높을수록 1점의 가치가 커짐(최대 약 2.5배)</td></tr>
+    </tbody>
+  </table></div>
+  <div class="two">
+    <div style="display:grid;gap:10px">
+      <h3>결정 ① 명중 +5 = 피해 10%p</h3>
+      <p>후보는 세 개였습니다. 원작이 실제로 매긴 값은 <span class="num">2.2%p</span>(회귀), 기댓값 계산은 <span class="num">7.0%p</span>(적중률 85 → 90이면 기술 전체 ×1.059)입니다. 최종으로 <span class="num">10%p</span>를 골랐습니다. 빗나가면 효과가 비례해서 줄어드는 게 아니라 행동 하나가 통째로 날아가고, 전투 하나가 16행동 남짓이라 그 손실이 기댓값보다 크기 때문입니다. 원작 가격은 명중을 싸게 매긴 것으로 판단했습니다.</p>
+    </div>
+    <div style="display:grid;gap:10px">
+      <h3>결정 ② 스트레스 1 = HP 1.67</h3>
+      <p>원 개발사가 매긴 가격으로 두 자원을 같은 금화에 놓았습니다. 스트레스 회복은 점당 22.7금화, 체력 회복은 18.5금화라 비율 1.22. 여기에 스트레스 100에서 붕괴했을 때의 비용(고통 7종·미덕 5종을 효과별로 계산)을 더했습니다. "붕괴 한 번 뜨면 원정이 무너진다"는 플레이 경험을 숫자로 옮긴 값입니다.</p>
+    </div>
+  </div>
+  <div class="prose" style="display:grid;gap:10px">
+    <h3>모델은 판정이 아니라 도구</h3>
+    <p>판단은 세 층으로 나눠 했습니다. <b>설계가</b>(원작 회귀로 본 정가에서 벗어났나), <b>실전가</b>(확률·저항·행동 경제를 다 곱하면 실제로 얼마인가), <b>맥락</b>(조합·열·장신구에서 어떻게 쓰이나, 숫자로 뭉개지 않음). 그리고 판정의 기본은 늘 같은 계열 기술을 전부 모아 놓고 비교하는 <b>전수 조사</b>였습니다. 예를 들어 기절 기술을 전부 모아 "1·2열 기절은 명중 90·피해 −50%·일반 기절"이라는 기준선을 세우고, 다른 기절은 그 기준에서 무엇을 맞바꿨는지로 판정했습니다.</p>
+  </div>
+</section>
+
+<!-- 4 -->
+<section>
+  <div class="chapter"><span class="k">04</span><h2>사례 연구: 현상금 사냥꾼</h2></div>
+  <div class="two">
+    <figure>
+      <img src="img/bounty_hunter.jpg" alt="현상금 사냥꾼 기술 7개의 바닐라 대 리밸런스 비교 이미지">
+      <figcaption>창작마당 첫 장 이미지. 게임 속 초상화·기술 아이콘으로 직접 생성했습니다.</figcaption>
+    </figure>
+    <div style="display:grid;gap:14px">
+      <p><b>문제.</b> 원작에서는 2열에 세워 두고 같은 기술만 반복하는 게 최선이었고, 그를 중심으로 짜는 표식 파티도 생각보다 약했습니다. 모델 점수 <span class="num">44</span>(20명 중 14위).</p>
+      <p><b>방향.</b> 반격도 방어 기술도 없는 영웅이니, 약해진 적을 확실하게 끝내는 처형자로 정했습니다. 표식·기절·출혈이 걸린 적이 먹잇감입니다.</p>
+      <ol class="steps">
+        <li><b>죽음의 표식</b> 방어 −10% → −20%. 단단한 적을 뚫는 수단.</li>
+        <li><b>이리 오너라</b> 당기기 2 → 3칸. 후열 적을 1열로.</li>
+        <li><b>어퍼컷</b> 1열 전용, 명중 95, 치명 9%, 강한 기절. 대상을 3열로 날려 보내고, 치명타가 나면 그의 표식 추가 피해 효과가 켜집니다.</li>
+        <li><b>끝장내기</b> 3열까지 닿고, 기절 대상에 더해 출혈 대상에게도 추가 피해. 출혈은 마름쇠가 깝니다.</li>
+      </ol>
+      <p><b>대가.</b> 어퍼컷은 1열만 치고, 섬광탄은 3~4열로 옮겼고, 끝장내기는 1~2열에서만 씁니다. 연계가 생긴 만큼 서는 자리를 고민하게 만들었습니다.</p>
+      <p><b>결과.</b> 모델 점수 <span class="num">44 → 56</span>. 2열 고정이 아니라 열을 오가는 운용이 정답이 됐습니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section>
+  <div class="chapter"><span class="k">05</span><h2>데이터가 결정을 바꾼 사례</h2></div>
+  <div class="cases">
+    <div class="case">
+      <figure><img src="img/houndmaster.jpg" alt="조련사 바닐라 대 리밸런스 비교 이미지"></figure>
+      <div class="tag">데이터 → 방향</div>
+      <h3>조련사: 방어 감소가 아무 일도 안 했다</h3>
+      <p>목표물 지정은 방어를 깎는 표식이었는데, 영웅 등급 적의 56%가 방어 0이라 절반 이상의 전투에서 효과가 없었습니다. 적 명중을 깎는 방어형 표식으로 바꾸고, "딜은 줄이고 지키는 쪽으로"라는 영웅 방향(P-24)을 세웠습니다.</p>
+    </div>
+    <div class="case">
+      <figure><img src="img/hellion_yawp.jpg" alt="야만인 야만스러운 함성 바닐라 대 리밸런스 비교 이미지"></figure>
+      <div class="tag">아트·설정 → 기능</div>
+      <h3>야만인: 함성이 자신을 지치게 했다</h3>
+      <p>전투 내내 풀리지 않는 탈진은 "끈질긴 야만인"이라는 설정과 맞지 않았습니다. 함성을 자신을 북돋우고 적 전체를 움츠러들게 하는 기술로 바꿨습니다. 기절은 빼서 대가를 냈습니다.</p>
+    </div>
+    <div class="case">
+      <figure><img src="img/vestal.jpg" alt="성녀 바닐라 대 리밸런스 비교 이미지"></figure>
+      <div class="tag">공개판 판단</div>
+      <h3>성녀: 공개판은 바닐라에 가깝게</h3>
+      <p>광휘는 "성스러운 빛이 태운다"에 맞게 화상을 주되, 나머지는 바닐라로 되돌리고 회피 감소만 5 낮췄습니다. 화상의 대가이자 석궁사수 표식과 겹치지 않게 하는 구분입니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section>
+  <div class="chapter"><span class="k">06</span><h2>검증</h2></div>
+  <div class="two">
+    <div style="display:grid;gap:12px">
+      <h3>전체 난이도는 그대로인가</h3>
+      <p>영웅 모드는 보통 한 명씩 손보다 결국 다 세지는 쪽으로 흐릅니다. 이 작업은 19명을 같은 규칙으로 한꺼번에 맞췄기 때문에, 총량이 유지되는지 직접 재 볼 수 있었습니다. 강함 모델을 창작마당 빌드에 그대로 돌렸습니다.</p>
+      <div class="tbl"><table>
+        <thead><tr><th></th><th>바닐라</th><th>공개판</th></tr></thead>
+        <tbody>
+          <tr><td>20명 총점 합</td><td class="v">981</td><td class="v">976 (−0.5%)</td></tr>
+          <tr><td>표준편차</td><td class="v">14.1</td><td class="v new">12.2</td></tr>
+          <tr><td>최강 − 최약</td><td class="v">59</td><td class="v new">55</td></tr>
+        </tbody>
+      </table></div>
+      <p class="muted" style="font-size:.9rem">내려온 영웅: 결투가 67 → 52, 조련사 60 → 53, 노상강도 56 → 50. 올라온 영웅: 현상금 사냥꾼 44 → 56, 석궁사수 35 → 42, 성녀 35 → 41.</p>
+    </div>
+    <div style="display:grid;gap:12px">
+      <h3>회복이 한쪽에 몰리지 않는가</h3>
+      <div class="tbl"><table>
+        <thead><tr><th>기술 (1레벨)</th><th>바닐라</th><th>공개판</th></tr></thead>
+        <tbody>
+          <tr><td>석궁사수 결집 신호탄</td><td class="v old">스트레스 1, 60%</td><td class="v new">2, 확정</td></tr>
+          <tr><td>조련사 위험 경보</td><td class="v old">스트레스 2, 66%</td><td class="v new">4, 70%</td></tr>
+          <tr><td>중보병 고양</td><td class="v old">회복 없음, 전투당 1회</td><td class="v new">파티 1~3, 무제한</td></tr>
+          <tr><td>도굴꾼 극약처방</td><td class="v old">자기 회복 없음</td><td class="v new">자기 회복 1~5</td></tr>
+          <tr><td>야만인 아드레날린 분출</td><td class="v old">자기 회복 1~4</td><td class="v new">3~7</td></tr>
+        </tbody>
+      </table></div>
+      <p class="muted" style="font-size:.9rem">회복을 가진 영웅 수 자체는 크게 늘지 않았습니다. 바뀐 것은 확률·횟수·양입니다. 광대·성녀가 없어도 버틸 수단이 실제로 쓸 만해졌습니다.</p>
+    </div>
+  </div>
+  <div class="limits prose">
+    <h3>측정의 한계</h3>
+    <p>총점은 영웅 개별 강함의 추정이지 실제 난이도 측정이 아닙니다. 이 작업의 최종 목표인 "필수 조합이 사라지는 효과"는 총점에 잡히지 않습니다. 명중 10%p처럼 판단으로 정한 값이 있고, 피해 공식이 곱셈이라는 가정은 게임에서 아직 검증하지 못했습니다. 그래서 숫자는 "0.5% 이내"처럼 추정치로만 공개했습니다.</p>
+  </div>
+</section>
+
+<!-- 7 -->
+<section>
+  <div class="chapter"><span class="k">07</span><h2>피드백 루프: 틀린 가정을 규칙으로 고친 기록</h2></div>
+  <p class="prose muted">모델과 원칙은 처음부터 맞지 않았습니다. 실제 플레이 감각과 어긋날 때마다 원인을 찾아 규칙으로 남겼고, 이 기록이 196개 변경 기록과 66개 수치 규칙이 됐습니다.</p>
+  <div class="loop">
+    <div><p class="q">결투가가 18위로 나온다. 실제론 최강급이다.</p><p class="a">한 턴을 쓰지 않는 무료 행동(반격 준비)을 따로 세고, 회피를 직선이 아니라 유효 체력으로 계산. 결투가 18위 → 12위 → 최종 모델에서 바닐라 2위.</p></div>
+    <div><p class="q">치명타를 왜 조정 수단으로 안 쓰나?</p><p class="a">포도탄 한 사례를 "치명은 건드리지 않는다"로 일반화한 오류. 원칙을 "치명 보정도 조정 축, 연계로 설계된 값만 보존"으로 정정.</p></div>
+    <div><p class="q">밀치기·당기기 가치가 이상하다.</p><p class="a">움직인 대상만 세던 계산을 대열 전체 재배치로 바꿈. 밀치기도 후열을 앞으로 데려오는 이득이 있음을 확인.</p></div>
+    <div><p class="q">방어를 깎는 표식이 과대평가됐다.</p><p class="a">게임에서 방어가 음수가 안 됨을 확인하고 0 바닥을 넣음. 조련사 휘파람 +13.5 → −42.6%p, 방향 전환의 근거가 됨.</p></div>
+    <div><p class="q">손으로 고른 목록으로 판단하지 말 것.</p><p class="a">기술 조사는 무조건 전 영웅·전 레벨·전 몬스터 수치 전수 조사로. 조사 스크립트(기절·3·4열 도달·광역)로 자동화.</p></div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section>
+  <div class="chapter"><span class="k">08</span><h2>공개와 현지화</h2></div>
+  <div class="two">
+    <div style="display:grid;gap:12px">
+      <h3>두 판 운영</h3>
+      <p>개인 취향이 들어간 커스텀판은 그대로 두고, 원칙과 근거가 확인된 변경만 골라 공개판을 따로 빌드했습니다. 공개 전 전체 변경을 원칙 기준으로 감사해, 근거가 없거나 원칙과 어긋나는 항목은 제외하거나 바닐라로 되돌렸습니다. 다른 제작자의 작업을 바탕으로 한 총사는 공개판에서 뺐습니다.</p>
+      <p>빌드 도구가 바닐라와 차이를 자동으로 비교해 패치 노트의 "무엇"을 만들고, 근거 문서에서 "왜"를 붙입니다. 영웅별 전후 비교 이미지 19장도 게임 원본 아이콘·초상화로 자동 생성했습니다.</p>
+    </div>
+    <div style="display:grid;gap:12px">
+      <h3>어떤 언어로 낼 것인가</h3>
+      <p>스팀 리뷰 언어 분포를 플레이어 언어의 대리 지표로 썼습니다. 비율 1% 이상인 10개 언어(플레이어 약 93%)를 번역 대상으로 정하고, 기술·영웅 이름은 게임의 공식 번역을 그대로 썼습니다.</p>
+      <div class="tbl"><table>
+        <tbody>
+          <tr><td>영어</td><td class="v">39.5%</td><td>중국어 간체</td><td class="v">22.5%</td></tr>
+          <tr><td>러시아어</td><td class="v">9.2%</td><td>한국어</td><td class="v">5.6%</td></tr>
+          <tr><td>스페인어</td><td class="v">5.2%</td><td>포르투갈어(BR)</td><td class="v">3.9%</td></tr>
+          <tr><td>프랑스어</td><td class="v">2.6%</td><td>폴란드어</td><td class="v">2.4%</td></tr>
+          <tr><td>독일어</td><td class="v">1.4%</td><td>중국어 번체</td><td class="v">1.3%</td></tr>
+        </tbody>
+      </table></div>
+      <p class="muted" style="font-size:.9rem">러시아어 등록이 조용히 실패해 원인을 찾았습니다. 스팀 설명문 한도 8000은 글자가 아니라 UTF-8 바이트였고, 키릴 문자는 2바이트라 같은 내용이 12KB였습니다. 내용을 지키며 압축하고, 빌드 검사를 바이트 기준으로 바꿨습니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 9 -->
+<section>
+  <div class="chapter"><span class="k">09</span><h2>작업 방식과 도구</h2></div>
+  <div class="prose" style="display:grid;gap:12px">
+    <p>모든 수치 결정은 제가 했고, 데이터 수집·계산·문서화·자동화는 AI(Claude)와 협업했습니다. 제가 방향과 원칙을 정하면 AI가 전수 조사와 계산으로 근거를 만들고, 결과가 플레이 감각과 다르면 어느 쪽이 틀렸는지 따져 규칙을 고치는 방식입니다.</p>
+    <ul class="plain">
+      <li><b>문서</b> 목표·설계 원칙(intent.md), 수치 규칙(rules.md), 영웅별 변경 기록 21개 문서, 분석 문서 48개. 모든 데이터 변경 줄 아래에 변경 ID 주석을 달고, 검사 스크립트로 누락을 막았습니다.</li>
+      <li><b>분석 도구</b> 강함 모델(strength.py), 기절·후열 도달·버프 전수 조사 스크립트.</li>
+      <li><b>공개 도구</b> 공개판 빌드·패치 노트 생성(build_workshop.py, patch_notes.py), 비교 이미지 생성(make_hero_cards.py, make_preview.py).</li>
+      <li><b>버전 관리</b> git 커밋 260개. 롤백한 결정도 지우지 않고 이유와 함께 남겼습니다.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <span>창작마당: <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3821353035">steamcommunity.com/sharedfiles/filedetails/?id=3821353035</a></span>
+  <span>모델 수치는 5레벨 기준 추정치, 기술 수치는 1레벨 기준입니다. Darkest Dungeon은 Red Hook Studios의 게임이며 이 모드는 비공식 팬 작업입니다.</span>
+</footer>
+
+</div>
