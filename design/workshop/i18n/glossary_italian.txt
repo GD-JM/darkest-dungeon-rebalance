@@ -1,0 +1,172 @@
+id | English | italian
+combat_skill_name_abomination_absolution | Absolution | Assoluzione
+combat_skill_name_abomination_manacles | Manacles | Catene
+combat_skill_name_abomination_move | Move | Muovere
+combat_skill_name_abomination_rage | Rage | Rabbia
+combat_skill_name_abomination_rake | Rake | Unghiata
+combat_skill_name_abomination_slam | Slam | Urto
+combat_skill_name_abomination_transform | Transform | Trasformazioni
+combat_skill_name_abomination_vomit | Beast's Bile | Vomito Bestiale
+combat_skill_name_antiquarian_cower | Get Down! | Giù la Testa!
+combat_skill_name_antiquarian_festering_vapours | Festering Vapours | Vapori Putridi
+combat_skill_name_antiquarian_flashpowder | Flashpowder | Polvere Accecante
+combat_skill_name_antiquarian_fortifying_vapours | Fortifying Vapours | Vapori Fortificanti
+combat_skill_name_antiquarian_invigorating_vapours | Invigorating Vapours | Vapori Tonificanti
+combat_skill_name_antiquarian_kris_stab | Nervous Stab | Pugnalata Nervosa
+combat_skill_name_antiquarian_move | Move | Movimento
+combat_skill_name_antiquarian_protect_me | Protect Me | Proteggimi
+combat_skill_name_arbalest_battlefield_bandage | Battlefield Bandage | Fasciatura di Battaglia
+combat_skill_name_arbalest_blindfire | Blindfire | Tiro Cieco
+combat_skill_name_arbalest_bola | Bola | Bolas
+combat_skill_name_arbalest_flare | Rallying Flare | Segnale Luminoso
+combat_skill_name_arbalest_move | Move | Muovere
+combat_skill_name_arbalest_sniper_mark | Sniper's Mark | Marchio del Tiratore
+combat_skill_name_arbalest_sniper_shot | Sniper Shot | Colpo da Cecchino
+combat_skill_name_arbalest_suppressing_fire | Suppressing Fire | Fuoco di Sbarramento
+combat_skill_name_bounty_hunter_collect_bounty | Collect Bounty | Riscuotere la Taglia
+combat_skill_name_bounty_hunter_come_hither | Come Hither | Vieni Qui
+combat_skill_name_bounty_hunter_finish_him | Finish Him | Finiscilo
+combat_skill_name_bounty_hunter_flashbang | Flashbang | Granata Accecante
+combat_skill_name_bounty_hunter_hook_and_slice | Caltrops | Chiodi
+combat_skill_name_bounty_hunter_move | Move | Muovere
+combat_skill_name_bounty_hunter_target_tag | Mark for Death | Marchiare a Morte
+combat_skill_name_bounty_hunter_uppercut | Uppercut | Gancio
+combat_skill_name_crusader_battle_heal | Battle Heal | Guarigione in Battaglia
+combat_skill_name_crusader_bulwark_of_faith | Bulwark of Faith | Bastione della Fede
+combat_skill_name_crusader_holy_lance | Holy Lance | Lancia Sacra
+combat_skill_name_crusader_inspiring_cry | Inspiring Cry | Chiamata alle Armi
+combat_skill_name_crusader_move | Move | Muovere
+combat_skill_name_crusader_smite | Smite | Punizione Divina
+combat_skill_name_crusader_stunning_blow | Stunning Blow | Colpo Stordente
+combat_skill_name_crusader_zealous_accusation | Zealous Accusation | Accusa Zelante
+combat_skill_name_duelist_anticipation | Anticipation | Anticipazione
+combat_skill_name_duelist_coup_de_grace | Coup de Grâce | Coup de grâce
+combat_skill_name_duelist_disengage | Disengage | Svincolamento
+combat_skill_name_duelist_feint | Feint | Finta
+combat_skill_name_duelist_fleche | Flèche | Flèche
+combat_skill_name_duelist_move | Move | Spostamento
+combat_skill_name_duelist_the_boot | The Boot | Stivale impietoso
+combat_skill_name_duelist_touche | Touché | Touché
+combat_skill_name_flagellant_endure | Endure | Sopporta
+combat_skill_name_flagellant_exsanguinate | Exsanguinate | Dissanguamento
+combat_skill_name_flagellant_move | Move | Muovi
+combat_skill_name_flagellant_punish | Punish | Punizione
+combat_skill_name_flagellant_rain_of_sorrows | Rain of Sorrows | Pioggia di dolore
+combat_skill_name_flagellant_reclaim | Reclaim | Rivendica
+combat_skill_name_flagellant_redeem | Redeem | Riscatta
+combat_skill_name_flagellant_suffer | Suffer | Soffri
+combat_skill_name_grave_robber_flashing_daggers | Flashing Daggers | Pugnali Fulminei
+combat_skill_name_grave_robber_lunge | Lunge | Affondo
+combat_skill_name_grave_robber_move | Move | Muovere
+combat_skill_name_grave_robber_pick | Pick to the Face | Picconata in Faccia
+combat_skill_name_grave_robber_poison_dart | Poison Darts | Dardi Avvelenati
+combat_skill_name_grave_robber_shadow_fade | Shadow Fade | Svanire
+combat_skill_name_grave_robber_thrown_dagger | Thrown Dagger | Pugnali da Lancio
+combat_skill_name_grave_robber_toxin_trickery | Toxin Trickery | Pozione dell'Inganno
+combat_skill_name_hellion_adrenaline_rush | Adrenaline Rush | Scarica d'Adrenalina
+combat_skill_name_hellion_barbaric_yawp | Barbaric YAWP! | Ruggito Barbarico
+combat_skill_name_hellion_bleed_out | Bleed Out | Dissanguare
+combat_skill_name_hellion_breakthru | Breakthrough | Sfondamento
+combat_skill_name_hellion_if_it_bleeds | If It Bleeds | Straziare
+combat_skill_name_hellion_iron_swan | Iron Swan | Cigno di Ferro
+combat_skill_name_hellion_move | Move | Muovere
+combat_skill_name_hellion_wicked_hack | Wicked Hack | Sbaragliare
+combat_skill_name_highwayman_duelist_advance | Duelist's Advance | Passo del Duellante
+combat_skill_name_highwayman_grape_shot_blast | Grapeshot Blast | Raffica
+combat_skill_name_highwayman_move | Move | Muovere
+combat_skill_name_highwayman_opened_vein | Open Vein | Squarciavene
+combat_skill_name_highwayman_pistol_shot | Pistol Shot | Colpo di Pistola
+combat_skill_name_highwayman_point_blank_shot | Point Blank Shot | Colpo a Bruciapelo
+combat_skill_name_highwayman_take_aim | Tracking Shot | Colpo Tracciante
+combat_skill_name_highwayman_wicked_slice | Wicked Slice | Fendente Infido
+combat_skill_name_houndmaster_blackjack | Blackjack | Manganello
+combat_skill_name_houndmaster_guard_dog | Guard Dog | Cane da Guardia
+combat_skill_name_houndmaster_hounds_harry | Hound's Harry | Morso del Mastino
+combat_skill_name_houndmaster_hounds_rush | Hound's Rush | Assalto del Mastino
+combat_skill_name_houndmaster_howl | Cry Havoc | Al Lupo! Al Lupo!
+combat_skill_name_houndmaster_lick_wounds | Lick Wounds | Leccarsi le Ferite
+combat_skill_name_houndmaster_move | Move | Muovere
+combat_skill_name_houndmaster_whistle | Target Whistle | Fischietto
+combat_skill_name_jester_battle_ballad | Battle Ballad | Ballata di Guerra
+combat_skill_name_jester_dirk_stab | Dirk Stab | Pugnalata
+combat_skill_name_jester_harvest | Harvest | Raccolto
+combat_skill_name_jester_heroic_end | Finale | Gran Finale
+combat_skill_name_jester_inspiring_tune | Inspiring Tune | Melodia Ispiratrice
+combat_skill_name_jester_move | Move | Muovere
+combat_skill_name_jester_slice_off | Slice Off | Falciare
+combat_skill_name_jester_solo | Solo | Assolo
+combat_skill_name_leper_chop | Chop | Spaccare
+combat_skill_name_leper_focus | Purge | Espiazione
+combat_skill_name_leper_hew | Hew | Intagliare
+combat_skill_name_leper_intimidate | Intimidate | Intimidire
+combat_skill_name_leper_move | Move | Muovere
+combat_skill_name_leper_revenge | Revenge | Vendetta
+combat_skill_name_leper_solemnity | Solemnity | Solennità
+combat_skill_name_leper_withstand | Withstand | Incrollabile
+combat_skill_name_man_at_arms_bellow | Bellow | Urlo
+combat_skill_name_man_at_arms_bolster | Bolster | Rinforzo
+combat_skill_name_man_at_arms_command | Command | Comando
+combat_skill_name_man_at_arms_crush | Crush | Schiacciare
+combat_skill_name_man_at_arms_defender | Defender | Difensore
+combat_skill_name_man_at_arms_move | Move | Muovere
+combat_skill_name_man_at_arms_rampart | Rampart | Bastione
+combat_skill_name_man_at_arms_retribution | Retribution | Rappresaglia
+combat_skill_name_occultist_abyssal_artillery | Abyssal Artillery | Artiglieria Abissale
+combat_skill_name_occultist_bloodlet | Sacrificial Stab | Pugnalata Sacrificale
+combat_skill_name_occultist_daemons_pull | Daemon's Pull | Strattone Demoniaco
+combat_skill_name_occultist_disruptive_curse | Vulnerability Hex | Malocchio
+combat_skill_name_occultist_hands_from_abyss | Hands from the Abyss | Mani dagli Abissi
+combat_skill_name_occultist_move | Move | Muovere
+combat_skill_name_occultist_weakening_curse | Weakening Curse | Avvizzimento
+combat_skill_name_occultist_wyrd_reconstruction | Wyrd Reconstruction | Rigenerazione Occulta
+combat_skill_name_plague_doctor_battlefield_medicine | Battlefield Medicine | Medicina da Battaglia
+combat_skill_name_plague_doctor_blinding_gas | Blinding Gas | Gas Accecante
+combat_skill_name_plague_doctor_disorienting_blast | Disorienting Blast | Esplosione Disorientante
+combat_skill_name_plague_doctor_emboldening_vapours | Emboldening Vapours | Tonico Ricostituente
+combat_skill_name_plague_doctor_incision | Incision | Incisione
+combat_skill_name_plague_doctor_move | Move | Muovere
+combat_skill_name_plague_doctor_noxious_blast | Noxious Blast | Esplosione Nauseante
+combat_skill_name_plague_doctor_plague_grenade | Plague Grenade | Granata Appestante
+combat_skill_name_runaway_backdraft | Backdraft | Fuoco assassino
+combat_skill_name_runaway_controlled_burn | Controlled Burn | Ustione controllata
+combat_skill_name_runaway_firefly | Firefly | Lucciola
+combat_skill_name_runaway_hearthlight | Hearthlight | Cuorleggero
+combat_skill_name_runaway_move | Move | Spostamento
+combat_skill_name_runaway_ransack | Ransack | Soqquadro
+combat_skill_name_runaway_run_and_hide | Run and Hide | Nascondino
+combat_skill_name_runaway_searing_strike | Searing Strike | Colpo virulento
+combat_skill_name_shieldbreaker_adders_kiss | Adder's Kiss | Morso della vipera
+combat_skill_name_shieldbreaker_break_guard | Puncture | Intontimento
+combat_skill_name_shieldbreaker_expose | Expose | Breccia
+combat_skill_name_shieldbreaker_move | Move | Muovi
+combat_skill_name_shieldbreaker_pierce | Pierce | Perforazione
+combat_skill_name_shieldbreaker_serpents_sway | Serpent Sway | Danza del serpente
+combat_skill_name_shieldbreaker_single_out | Captivate | Malia
+combat_skill_name_shieldbreaker_spearing | Impale | Impalamento
+combat_skill_name_vestal_dazzling_light | Dazzling Light | Luce Accecante
+combat_skill_name_vestal_divine_grace | Divine Grace | Grazia Divina
+combat_skill_name_vestal_gods_comfort | Divine Comfort | Conforto Divino
+combat_skill_name_vestal_gods_hand | Hand of Light | Mano di Luce
+combat_skill_name_vestal_gods_illumination | Illumination | Illuminazione
+combat_skill_name_vestal_judgement | Judgement | Giudizio
+combat_skill_name_vestal_mace_bash | Mace Bash | Mazzata
+combat_skill_name_vestal_move | Move | Muovere
+hero_class_name_abomination | Abomination | Abominio
+hero_class_name_antiquarian | Antiquarian | Antiquaria
+hero_class_name_arbalest | Arbalest | Balestriera
+hero_class_name_bounty_hunter | Bounty Hunter | Cacciatore di Taglie
+hero_class_name_crusader | Crusader | Crociato
+hero_class_name_duelist | Duelist | Duellante
+hero_class_name_flagellant | Flagellant | Flagellatore
+hero_class_name_grave_robber | Grave Robber | Ladra di Tombe
+hero_class_name_hellion | Hellion | Furia
+hero_class_name_highwayman | Highwayman | Fuorilegge
+hero_class_name_houndmaster | Houndmaster | Addestratore di Cani
+hero_class_name_jester | Jester | Giullare
+hero_class_name_leper | Leper | Lebbroso
+hero_class_name_man_at_arms | Man-at-Arms | Soldato
+hero_class_name_occultist | Occultist | Occultista
+hero_class_name_plague_doctor | Plague Doctor | Dottore della Peste
+hero_class_name_runaway | Runaway | Fuggitiva
+hero_class_name_shieldbreaker | Shieldbreaker | Frangiscudi
+hero_class_name_vestal | Vestal | Vestale

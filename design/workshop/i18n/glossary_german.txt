@@ -1,0 +1,172 @@
+id | English | german
+combat_skill_name_abomination_absolution | Absolution | Absolution
+combat_skill_name_abomination_manacles | Manacles | Fesseln
+combat_skill_name_abomination_move | Move | Bewegen
+combat_skill_name_abomination_rage | Rage | Rage
+combat_skill_name_abomination_rake | Rake | Klauenhieb
+combat_skill_name_abomination_slam | Slam | Schwerer Schlag
+combat_skill_name_abomination_transform | Transform | Verwandlung
+combat_skill_name_abomination_vomit | Beast's Bile | Giftschleim
+combat_skill_name_antiquarian_cower | Get Down! | In Deckung!
+combat_skill_name_antiquarian_festering_vapours | Festering Vapours | Ätzende Dämpfe
+combat_skill_name_antiquarian_flashpowder | Flashpowder | Blendpulver
+combat_skill_name_antiquarian_fortifying_vapours | Fortifying Vapours | Heilender Rauch
+combat_skill_name_antiquarian_invigorating_vapours | Invigorating Vapours | Berauschende Schwaden
+combat_skill_name_antiquarian_kris_stab | Nervous Stab | Vorsichtiger Stich
+combat_skill_name_antiquarian_move | Move | Bewegen
+combat_skill_name_antiquarian_protect_me | Protect Me | Beschützt mich!
+combat_skill_name_arbalest_battlefield_bandage | Battlefield Bandage | Erstversorgung
+combat_skill_name_arbalest_blindfire | Blindfire | Schnellschuss
+combat_skill_name_arbalest_bola | Bola | Bola
+combat_skill_name_arbalest_flare | Rallying Flare | Leuchtsignal
+combat_skill_name_arbalest_move | Move | Bewegen
+combat_skill_name_arbalest_sniper_mark | Sniper's Mark | Zielmarkierung
+combat_skill_name_arbalest_sniper_shot | Sniper Shot | Präziser Schuss
+combat_skill_name_arbalest_suppressing_fire | Suppressing Fire | Sperrfeuer
+combat_skill_name_bounty_hunter_collect_bounty | Collect Bounty | Kopfgeld einfordern
+combat_skill_name_bounty_hunter_come_hither | Come Hither | Komm her
+combat_skill_name_bounty_hunter_finish_him | Finish Him | Mach ihn fertig
+combat_skill_name_bounty_hunter_flashbang | Flashbang | Blendgranate
+combat_skill_name_bounty_hunter_hook_and_slice | Caltrops | Krähenfüße
+combat_skill_name_bounty_hunter_move | Move | Bewegen
+combat_skill_name_bounty_hunter_target_tag | Mark for Death | Du bist der Nächste
+combat_skill_name_bounty_hunter_uppercut | Uppercut | Aufwärtshaken
+combat_skill_name_crusader_battle_heal | Battle Heal | Kampfheilung
+combat_skill_name_crusader_bulwark_of_faith | Bulwark of Faith | Bollwerk des Glaubens
+combat_skill_name_crusader_holy_lance | Holy Lance | Heilige Lanze
+combat_skill_name_crusader_inspiring_cry | Inspiring Cry | Begeisternder Schlachtruf
+combat_skill_name_crusader_move | Move | Bewegen
+combat_skill_name_crusader_smite | Smite | Niederstrecken
+combat_skill_name_crusader_stunning_blow | Stunning Blow | Betäubender Schlag
+combat_skill_name_crusader_zealous_accusation | Zealous Accusation | Eifernde Anklage
+combat_skill_name_duelist_anticipation | Anticipation | Vorahnung
+combat_skill_name_duelist_coup_de_grace | Coup de Grâce | Gnadenstoß
+combat_skill_name_duelist_disengage | Disengage | Rückschritt
+combat_skill_name_duelist_feint | Feint | Finte
+combat_skill_name_duelist_fleche | Flèche | Flèche
+combat_skill_name_duelist_move | Move | Bewegung
+combat_skill_name_duelist_the_boot | The Boot | Der Stiefel
+combat_skill_name_duelist_touche | Touché | Touché
+combat_skill_name_flagellant_endure | Endure | Ertragen
+combat_skill_name_flagellant_exsanguinate | Exsanguinate | Ausbluten
+combat_skill_name_flagellant_move | Move | Bewegen
+combat_skill_name_flagellant_punish | Punish | Bestrafen
+combat_skill_name_flagellant_rain_of_sorrows | Rain of Sorrows | Trauerregen
+combat_skill_name_flagellant_reclaim | Reclaim | Fordern
+combat_skill_name_flagellant_redeem | Redeem | Erlösen
+combat_skill_name_flagellant_suffer | Suffer | Leiden
+combat_skill_name_grave_robber_flashing_daggers | Flashing Daggers | Flitzende Dolche
+combat_skill_name_grave_robber_lunge | Lunge | Ausfallschritt
+combat_skill_name_grave_robber_move | Move | Bewegen
+combat_skill_name_grave_robber_pick | Pick to the Face | Hacke ins Gesicht
+combat_skill_name_grave_robber_poison_dart | Poison Darts | Giftpfeil
+combat_skill_name_grave_robber_shadow_fade | Shadow Fade | Verschwinden
+combat_skill_name_grave_robber_thrown_dagger | Thrown Dagger | Dolchwurf
+combat_skill_name_grave_robber_toxin_trickery | Toxin Trickery | Giftlist
+combat_skill_name_hellion_adrenaline_rush | Adrenaline Rush | Adrenalinschub
+combat_skill_name_hellion_barbaric_yawp | Barbaric YAWP! | Barbarisches Gebrüll
+combat_skill_name_hellion_bleed_out | Bleed Out | Ausbluten
+combat_skill_name_hellion_breakthru | Breakthrough | Durchdringender Stoß
+combat_skill_name_hellion_if_it_bleeds | If It Bleeds | Wenn es blutet
+combat_skill_name_hellion_iron_swan | Iron Swan | Eiserner Schwan
+combat_skill_name_hellion_move | Move | Bewegen
+combat_skill_name_hellion_wicked_hack | Wicked Hack | Verruchter Stoß
+combat_skill_name_highwayman_duelist_advance | Duelist's Advance | Fechtschritt
+combat_skill_name_highwayman_grape_shot_blast | Grapeshot Blast | Streuschuss
+combat_skill_name_highwayman_move | Move | Bewegen
+combat_skill_name_highwayman_opened_vein | Open Vein | Aderlass
+combat_skill_name_highwayman_pistol_shot | Pistol Shot | Pistolenschuss
+combat_skill_name_highwayman_point_blank_shot | Point Blank Shot | Schuss aus nächster Nähe
+combat_skill_name_highwayman_take_aim | Tracking Shot | Gezielter Schuss
+combat_skill_name_highwayman_wicked_slice | Wicked Slice | Boshafter Schnitt
+combat_skill_name_houndmaster_blackjack | Blackjack | Totschläger
+combat_skill_name_houndmaster_guard_dog | Guard Dog | Wachhund
+combat_skill_name_houndmaster_hounds_harry | Hound's Harry | Hetzjagd
+combat_skill_name_houndmaster_hounds_rush | Hound's Rush | Hundebiss
+combat_skill_name_houndmaster_howl | Cry Havoc | Ruf der Zerstörung
+combat_skill_name_houndmaster_lick_wounds | Lick Wounds | Wunden lecken
+combat_skill_name_houndmaster_move | Move | Bewegen
+combat_skill_name_houndmaster_whistle | Target Whistle | Verheerender Pfiff
+combat_skill_name_jester_battle_ballad | Battle Ballad | Kampfballade
+combat_skill_name_jester_dirk_stab | Dirk Stab | Dolchstoß
+combat_skill_name_jester_harvest | Harvest | Ernte
+combat_skill_name_jester_heroic_end | Finale | Finale
+combat_skill_name_jester_inspiring_tune | Inspiring Tune | Stärkende Melodie
+combat_skill_name_jester_move | Move | Bewegen
+combat_skill_name_jester_slice_off | Slice Off | Schnitt
+combat_skill_name_jester_solo | Solo | Solo
+combat_skill_name_leper_chop | Chop | Zerhacken
+combat_skill_name_leper_focus | Purge | Läutern
+combat_skill_name_leper_hew | Hew | Zerschlagen
+combat_skill_name_leper_intimidate | Intimidate | Einschüchterung
+combat_skill_name_leper_move | Move | Bewegen
+combat_skill_name_leper_revenge | Revenge | Rache
+combat_skill_name_leper_solemnity | Solemnity | Ehrwürdigkeit
+combat_skill_name_leper_withstand | Withstand | Trotzen
+combat_skill_name_man_at_arms_bellow | Bellow | Kampfgebrüll
+combat_skill_name_man_at_arms_bolster | Bolster | Zuspruch
+combat_skill_name_man_at_arms_command | Command | Befehl
+combat_skill_name_man_at_arms_crush | Crush | Zerschmettern
+combat_skill_name_man_at_arms_defender | Defender | Verteidiger
+combat_skill_name_man_at_arms_move | Move | Bewegen
+combat_skill_name_man_at_arms_rampart | Rampart | Rempart
+combat_skill_name_man_at_arms_retribution | Retribution | Vergeltung
+combat_skill_name_occultist_abyssal_artillery | Abyssal Artillery | Artillerie aus dem Abgrund
+combat_skill_name_occultist_bloodlet | Sacrificial Stab | Opferstoß
+combat_skill_name_occultist_daemons_pull | Daemon's Pull | Dämonisches Zerren
+combat_skill_name_occultist_disruptive_curse | Vulnerability Hex | Bann der Verletzlichkeit
+combat_skill_name_occultist_hands_from_abyss | Hands from the Abyss | Berührung aus dem Abgrund
+combat_skill_name_occultist_move | Move | Bewegen
+combat_skill_name_occultist_weakening_curse | Weakening Curse | Schwächender Fluch
+combat_skill_name_occultist_wyrd_reconstruction | Wyrd Reconstruction | Schicksalhafte Heilung
+combat_skill_name_plague_doctor_battlefield_medicine | Battlefield Medicine | Gefechtsmedizin
+combat_skill_name_plague_doctor_blinding_gas | Blinding Gas | Blendgas
+combat_skill_name_plague_doctor_disorienting_blast | Disorienting Blast | Verwirrender Knall
+combat_skill_name_plague_doctor_emboldening_vapours | Emboldening Vapours | Ermutigender Dunst
+combat_skill_name_plague_doctor_incision | Incision | Präziser Schnitt
+combat_skill_name_plague_doctor_move | Move | Bewegen
+combat_skill_name_plague_doctor_noxious_blast | Noxious Blast | Giftschlag
+combat_skill_name_plague_doctor_plague_grenade | Plague Grenade | Seuchengranate
+combat_skill_name_runaway_backdraft | Backdraft | Feuersbrunst
+combat_skill_name_runaway_controlled_burn | Controlled Burn | Gezügeltes Verbrennen
+combat_skill_name_runaway_firefly | Firefly | Glühwürmchen
+combat_skill_name_runaway_hearthlight | Hearthlight | Kaminfeuer
+combat_skill_name_runaway_move | Move | Bewegung
+combat_skill_name_runaway_ransack | Ransack | Plündern
+combat_skill_name_runaway_run_and_hide | Run and Hide | Ab durch die Mitte
+combat_skill_name_runaway_searing_strike | Searing Strike | Sengender Schlag
+combat_skill_name_shieldbreaker_adders_kiss | Adder's Kiss | Kuss der Natter
+combat_skill_name_shieldbreaker_break_guard | Puncture | Verwirren
+combat_skill_name_shieldbreaker_expose | Expose | Enthüllen
+combat_skill_name_shieldbreaker_move | Move | Bewegen
+combat_skill_name_shieldbreaker_pierce | Pierce | Durchbohren
+combat_skill_name_shieldbreaker_serpents_sway | Serpent Sway | Schlangenschwung
+combat_skill_name_shieldbreaker_single_out | Captivate | Bezaubern
+combat_skill_name_shieldbreaker_spearing | Impale | Pfählen
+combat_skill_name_vestal_dazzling_light | Dazzling Light | Blendendes Licht
+combat_skill_name_vestal_divine_grace | Divine Grace | Göttliche Gnade
+combat_skill_name_vestal_gods_comfort | Divine Comfort | Göttlicher Trost
+combat_skill_name_vestal_gods_hand | Hand of Light | Hand des Lichts
+combat_skill_name_vestal_gods_illumination | Illumination | Erleuchtung
+combat_skill_name_vestal_judgement | Judgement | Richtspruch
+combat_skill_name_vestal_mace_bash | Mace Bash | Kolbenhieb
+combat_skill_name_vestal_move | Move | Bewegen
+hero_class_name_abomination | Abomination | Unhold
+hero_class_name_antiquarian | Antiquarian | Antiquarin
+hero_class_name_arbalest | Arbalest | Arbaleste
+hero_class_name_bounty_hunter | Bounty Hunter | Kopfgeldjäger
+hero_class_name_crusader | Crusader | Kreuzfahrer
+hero_class_name_duelist | Duelist | Duellantin
+hero_class_name_flagellant | Flagellant | Flagellant
+hero_class_name_grave_robber | Grave Robber | Grabräuberin
+hero_class_name_hellion | Hellion | Barbarin
+hero_class_name_highwayman | Highwayman | Wegelagerer
+hero_class_name_houndmaster | Houndmaster | Hundemeister
+hero_class_name_jester | Jester | Narr
+hero_class_name_leper | Leper | Aussätziger
+hero_class_name_man_at_arms | Man-at-Arms | Waffenknecht
+hero_class_name_occultist | Occultist | Okkultist
+hero_class_name_plague_doctor | Plague Doctor | Pestdoktorin
+hero_class_name_runaway | Runaway | Ausreißerin
+hero_class_name_shieldbreaker | Shieldbreaker | Schildbrecherin
+hero_class_name_vestal | Vestal | Vestalin

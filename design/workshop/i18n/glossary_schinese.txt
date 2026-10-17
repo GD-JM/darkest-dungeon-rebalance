@@ -1,0 +1,172 @@
+id | English | schinese
+combat_skill_name_abomination_absolution | Absolution | 赎罪
+combat_skill_name_abomination_manacles | Manacles | 锁链
+combat_skill_name_abomination_move | Move | 移动
+combat_skill_name_abomination_rage | Rage | 狂暴
+combat_skill_name_abomination_rake | Rake | 撕扯
+combat_skill_name_abomination_slam | Slam | 冲撞
+combat_skill_name_abomination_transform | Transform | 变身
+combat_skill_name_abomination_vomit | Beast's Bile | 恶兽胆汁
+combat_skill_name_antiquarian_cower | Get Down! | 卧倒！
+combat_skill_name_antiquarian_festering_vapours | Festering Vapours | 溃烂蒸汽
+combat_skill_name_antiquarian_flashpowder | Flashpowder | 闪光粉末
+combat_skill_name_antiquarian_fortifying_vapours | Fortifying Vapours | 强健蒸汽
+combat_skill_name_antiquarian_invigorating_vapours | Invigorating Vapours | 提神蒸汽
+combat_skill_name_antiquarian_kris_stab | Nervous Stab | 紧张戳击
+combat_skill_name_antiquarian_move | Move | 移动
+combat_skill_name_antiquarian_protect_me | Protect Me | 保护我
+combat_skill_name_arbalest_battlefield_bandage | Battlefield Bandage | 战场包扎
+combat_skill_name_arbalest_blindfire | Blindfire | 盲射
+combat_skill_name_arbalest_bola | Bola | 拌索
+combat_skill_name_arbalest_flare | Rallying Flare | 照明弹
+combat_skill_name_arbalest_move | Move | 移动
+combat_skill_name_arbalest_sniper_mark | Sniper's Mark | 狙击印记
+combat_skill_name_arbalest_sniper_shot | Sniper Shot | 狙击
+combat_skill_name_arbalest_suppressing_fire | Suppressing Fire | 压制射击
+combat_skill_name_bounty_hunter_collect_bounty | Collect Bounty | 收集赏金
+combat_skill_name_bounty_hunter_come_hither | Come Hither | 靠近点！
+combat_skill_name_bounty_hunter_finish_him | Finish Him | 了结一击
+combat_skill_name_bounty_hunter_flashbang | Flashbang | 闪光弹
+combat_skill_name_bounty_hunter_hook_and_slice | Caltrops | 绳钩切削
+combat_skill_name_bounty_hunter_move | Move | 移动
+combat_skill_name_bounty_hunter_target_tag | Mark for Death | 死亡标记
+combat_skill_name_bounty_hunter_uppercut | Uppercut | 上勾拳
+combat_skill_name_crusader_battle_heal | Battle Heal | 战斗治疗
+combat_skill_name_crusader_bulwark_of_faith | Bulwark of Faith | 信仰壁障
+combat_skill_name_crusader_holy_lance | Holy Lance | 圣矛
+combat_skill_name_crusader_inspiring_cry | Inspiring Cry | 激励呐喊
+combat_skill_name_crusader_move | Move | 移动
+combat_skill_name_crusader_smite | Smite | 惩戒
+combat_skill_name_crusader_stunning_blow | Stunning Blow | 晕眩击
+combat_skill_name_crusader_zealous_accusation | Zealous Accusation | 热诚控诉
+combat_skill_name_duelist_anticipation | Anticipation | 料敌机先
+combat_skill_name_duelist_coup_de_grace | Coup de Grâce | 赐死
+combat_skill_name_duelist_disengage | Disengage | 避实击虚
+combat_skill_name_duelist_feint | Feint | 佯攻
+combat_skill_name_duelist_fleche | Flèche | 迅剑突刺
+combat_skill_name_duelist_move | Move | 移动
+combat_skill_name_duelist_the_boot | The Boot | 靴踢
+combat_skill_name_duelist_touche | Touché | 一击命中
+combat_skill_name_flagellant_endure | Endure | 忍耐
+combat_skill_name_flagellant_exsanguinate | Exsanguinate | 除血
+combat_skill_name_flagellant_move | Move | 移动
+combat_skill_name_flagellant_punish | Punish | 责罚
+combat_skill_name_flagellant_rain_of_sorrows | Rain of Sorrows | 伤痛之雨
+combat_skill_name_flagellant_reclaim | Reclaim | 授教
+combat_skill_name_flagellant_redeem | Redeem | 偿赎
+combat_skill_name_flagellant_suffer | Suffer | 受难
+combat_skill_name_grave_robber_flashing_daggers | Flashing Daggers | 闪光匕首
+combat_skill_name_grave_robber_lunge | Lunge | 突刺
+combat_skill_name_grave_robber_move | Move | 移动
+combat_skill_name_grave_robber_pick | Pick to the Face | 劈头盖脸
+combat_skill_name_grave_robber_poison_dart | Poison Darts | 毒镖
+combat_skill_name_grave_robber_shadow_fade | Shadow Fade | 影遁
+combat_skill_name_grave_robber_thrown_dagger | Thrown Dagger | 投掷匕首
+combat_skill_name_grave_robber_toxin_trickery | Toxin Trickery | 敏捷药剂
+combat_skill_name_hellion_adrenaline_rush | Adrenaline Rush | 腺素飙升
+combat_skill_name_hellion_barbaric_yawp | Barbaric YAWP! | 野蛮咆哮！
+combat_skill_name_hellion_bleed_out | Bleed Out | 血溅三尺
+combat_skill_name_hellion_breakthru | Breakthrough | 突破
+combat_skill_name_hellion_if_it_bleeds | If It Bleeds | 血如泉涌
+combat_skill_name_hellion_iron_swan | Iron Swan | 钢铁天鹅
+combat_skill_name_hellion_move | Move | 移动
+combat_skill_name_hellion_wicked_hack | Wicked Hack | 邪恶劈砍
+combat_skill_name_highwayman_duelist_advance | Duelist's Advance | 决斗突刺
+combat_skill_name_highwayman_grape_shot_blast | Grapeshot Blast | 霰弹轰扫
+combat_skill_name_highwayman_move | Move | 移动
+combat_skill_name_highwayman_opened_vein | Open Vein | 切开血管
+combat_skill_name_highwayman_pistol_shot | Pistol Shot | 手枪射击
+combat_skill_name_highwayman_point_blank_shot | Point Blank Shot | 抵近射击
+combat_skill_name_highwayman_take_aim | Tracking Shot | 追踪射击
+combat_skill_name_highwayman_wicked_slice | Wicked Slice | 邪恶切割
+combat_skill_name_houndmaster_blackjack | Blackjack | 棍闷
+combat_skill_name_houndmaster_guard_dog | Guard Dog | 猎犬守护
+combat_skill_name_houndmaster_hounds_harry | Hound's Harry | 猎犬骚扰
+combat_skill_name_houndmaster_hounds_rush | Hound's Rush | 猎犬冲刺
+combat_skill_name_houndmaster_howl | Cry Havoc | 振奋吠嚎
+combat_skill_name_houndmaster_lick_wounds | Lick Wounds | 舔舐伤口
+combat_skill_name_houndmaster_move | Move | 移动
+combat_skill_name_houndmaster_whistle | Target Whistle | 标记口哨
+combat_skill_name_jester_battle_ballad | Battle Ballad | 战歌
+combat_skill_name_jester_dirk_stab | Dirk Stab | 匕首刺击
+combat_skill_name_jester_harvest | Harvest | 收割
+combat_skill_name_jester_heroic_end | Finale | 谢幕
+combat_skill_name_jester_inspiring_tune | Inspiring Tune | 鼓舞乐章
+combat_skill_name_jester_move | Move | 移动
+combat_skill_name_jester_slice_off | Slice Off | 切割
+combat_skill_name_jester_solo | Solo | 独奏
+combat_skill_name_leper_chop | Chop | 挥砍
+combat_skill_name_leper_focus | Purge | 净化
+combat_skill_name_leper_hew | Hew | 斩劈
+combat_skill_name_leper_intimidate | Intimidate | 威吓
+combat_skill_name_leper_move | Move | 移动
+combat_skill_name_leper_revenge | Revenge | 复仇
+combat_skill_name_leper_solemnity | Solemnity | 肃穆
+combat_skill_name_leper_withstand | Withstand | 抵挡
+combat_skill_name_man_at_arms_bellow | Bellow | 怒吼
+combat_skill_name_man_at_arms_bolster | Bolster | 支援
+combat_skill_name_man_at_arms_command | Command | 指挥
+combat_skill_name_man_at_arms_crush | Crush | 粉碎
+combat_skill_name_man_at_arms_defender | Defender | 保护
+combat_skill_name_man_at_arms_move | Move | 移动
+combat_skill_name_man_at_arms_rampart | Rampart | 盾击
+combat_skill_name_man_at_arms_retribution | Retribution | 报复
+combat_skill_name_occultist_abyssal_artillery | Abyssal Artillery | 深渊炮击
+combat_skill_name_occultist_bloodlet | Sacrificial Stab | 献祭刺击
+combat_skill_name_occultist_daemons_pull | Daemon's Pull | 恶魔牵引
+combat_skill_name_occultist_disruptive_curse | Vulnerability Hex | 弱点术式
+combat_skill_name_occultist_hands_from_abyss | Hands from the Abyss | 深渊之手
+combat_skill_name_occultist_move | Move | 移动
+combat_skill_name_occultist_weakening_curse | Weakening Curse | 虚弱诅咒
+combat_skill_name_occultist_wyrd_reconstruction | Wyrd Reconstruction | 命运重构
+combat_skill_name_plague_doctor_battlefield_medicine | Battlefield Medicine | 战地医疗
+combat_skill_name_plague_doctor_blinding_gas | Blinding Gas | 致盲气体
+combat_skill_name_plague_doctor_disorienting_blast | Disorienting Blast | 迷惑冲击
+combat_skill_name_plague_doctor_emboldening_vapours | Emboldening Vapours | 壮胆药雾
+combat_skill_name_plague_doctor_incision | Incision | 放血
+combat_skill_name_plague_doctor_move | Move | 移动
+combat_skill_name_plague_doctor_noxious_blast | Noxious Blast | 瘟毒炸裂
+combat_skill_name_plague_doctor_plague_grenade | Plague Grenade | 瘟疫手雷
+combat_skill_name_runaway_backdraft | Backdraft | 殃及
+combat_skill_name_runaway_controlled_burn | Controlled Burn | 烈焰缠绕
+combat_skill_name_runaway_firefly | Firefly | 萤火
+combat_skill_name_runaway_hearthlight | Hearthlight | 炉光
+combat_skill_name_runaway_move | Move | 移动
+combat_skill_name_runaway_ransack | Ransack | 洗劫
+combat_skill_name_runaway_run_and_hide | Run and Hide | 逃匿
+combat_skill_name_runaway_searing_strike | Searing Strike | 灼热打击
+combat_skill_name_shieldbreaker_adders_kiss | Adder's Kiss | 蝰蛇之吻
+combat_skill_name_shieldbreaker_break_guard | Puncture | 伏袭
+combat_skill_name_shieldbreaker_expose | Expose | 觅踪
+combat_skill_name_shieldbreaker_move | Move | 移动
+combat_skill_name_shieldbreaker_pierce | Pierce | 扎透
+combat_skill_name_shieldbreaker_serpents_sway | Serpent Sway | 毒蛇之舞
+combat_skill_name_shieldbreaker_single_out | Captivate | 诱捕
+combat_skill_name_shieldbreaker_spearing | Impale | 贯穿
+combat_skill_name_vestal_dazzling_light | Dazzling Light | 炫目圣光
+combat_skill_name_vestal_divine_grace | Divine Grace | 神圣恩惠
+combat_skill_name_vestal_gods_comfort | Divine Comfort | 神圣抚慰
+combat_skill_name_vestal_gods_hand | Hand of Light | 圣光之手
+combat_skill_name_vestal_gods_illumination | Illumination | 强光
+combat_skill_name_vestal_judgement | Judgement | 审判
+combat_skill_name_vestal_mace_bash | Mace Bash | 锤击
+combat_skill_name_vestal_move | Move | 移动
+hero_class_name_abomination | Abomination | 咒缚者
+hero_class_name_antiquarian | Antiquarian | 古董商人
+hero_class_name_arbalest | Arbalest | 弩手
+hero_class_name_bounty_hunter | Bounty Hunter | 赏金猎人
+hero_class_name_crusader | Crusader | 十字军
+hero_class_name_duelist | Duelist | 决斗家
+hero_class_name_flagellant | Flagellant | 苦修者
+hero_class_name_grave_robber | Grave Robber | 盗墓贼
+hero_class_name_hellion | Hellion | 蛮族战士
+hero_class_name_highwayman | Highwayman | 强盗
+hero_class_name_houndmaster | Houndmaster | 驯犬师
+hero_class_name_jester | Jester | 小丑
+hero_class_name_leper | Leper | 麻风剑客
+hero_class_name_man_at_arms | Man-at-Arms | 老兵
+hero_class_name_occultist | Occultist | 神秘学者
+hero_class_name_plague_doctor | Plague Doctor | 瘟疫医生
+hero_class_name_runaway | Runaway | 逃离者
+hero_class_name_shieldbreaker | Shieldbreaker | 破盾者
+hero_class_name_vestal | Vestal | 修女

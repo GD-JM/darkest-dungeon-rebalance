@@ -1,0 +1,172 @@
+id | English | czech
+combat_skill_name_abomination_absolution | Absolution | Odpuštění
+combat_skill_name_abomination_manacles | Manacles | Okovy
+combat_skill_name_abomination_move | Move | Přesun
+combat_skill_name_abomination_rage | Rage | Zuřivost
+combat_skill_name_abomination_rake | Rake | Pokropení
+combat_skill_name_abomination_slam | Slam | Třísknutí
+combat_skill_name_abomination_transform | Transform | Transformace
+combat_skill_name_abomination_vomit | Beast's Bile | Žluč stvůry
+combat_skill_name_antiquarian_cower | Get Down! | K zemi!
+combat_skill_name_antiquarian_festering_vapours | Festering Vapours | Hnisavé výpary
+combat_skill_name_antiquarian_flashpowder | Flashpowder | Třaskavina
+combat_skill_name_antiquarian_fortifying_vapours | Fortifying Vapours | Posilňující výpary
+combat_skill_name_antiquarian_invigorating_vapours | Invigorating Vapours | Povzbuzující výpary
+combat_skill_name_antiquarian_kris_stab | Nervous Stab | Nervozní bodnutí
+combat_skill_name_antiquarian_move | Move | zpět
+combat_skill_name_antiquarian_protect_me | Protect Me | Braň mě
+combat_skill_name_arbalest_battlefield_bandage | Battlefield Bandage | Bojová bandáž
+combat_skill_name_arbalest_blindfire | Blindfire | Střelba naslepo
+combat_skill_name_arbalest_bola | Bola | Bolas
+combat_skill_name_arbalest_flare | Rallying Flare | Shromažďovací světlice
+combat_skill_name_arbalest_move | Move | Přesun
+combat_skill_name_arbalest_sniper_mark | Sniper's Mark | Značka ostrostřelce
+combat_skill_name_arbalest_sniper_shot | Sniper Shot | Přesná střela
+combat_skill_name_arbalest_suppressing_fire | Suppressing Fire | Krycí palba
+combat_skill_name_bounty_hunter_collect_bounty | Collect Bounty | Vyzvednutí odměny
+combat_skill_name_bounty_hunter_come_hither | Come Hither | Pojď blíže
+combat_skill_name_bounty_hunter_finish_him | Finish Him | Doraz ho
+combat_skill_name_bounty_hunter_flashbang | Flashbang | Oslepovací granát
+combat_skill_name_bounty_hunter_hook_and_slice | Caltrops | Kovoví ježci
+combat_skill_name_bounty_hunter_move | Move | Přesun
+combat_skill_name_bounty_hunter_target_tag | Mark for Death | Znak smrti
+combat_skill_name_bounty_hunter_uppercut | Uppercut | Zvedák
+combat_skill_name_crusader_battle_heal | Battle Heal | Bojové léčení
+combat_skill_name_crusader_bulwark_of_faith | Bulwark of Faith | Záštita víry
+combat_skill_name_crusader_holy_lance | Holy Lance | Svaté kopí
+combat_skill_name_crusader_inspiring_cry | Inspiring Cry | Inspirující pokřik
+combat_skill_name_crusader_move | Move | Přesun
+combat_skill_name_crusader_smite | Smite | Úder shůry
+combat_skill_name_crusader_stunning_blow | Stunning Blow | Ochromující úder
+combat_skill_name_crusader_zealous_accusation | Zealous Accusation | Fanatické obvinění
+combat_skill_name_duelist_anticipation | Anticipation | Předtucha
+combat_skill_name_duelist_coup_de_grace | Coup de Grâce | Smrtící výstřel
+combat_skill_name_duelist_disengage | Disengage | Ústup
+combat_skill_name_duelist_feint | Feint | Finta
+combat_skill_name_duelist_fleche | Flèche | Fleš
+combat_skill_name_duelist_move | Move | Přesun
+combat_skill_name_duelist_the_boot | The Boot | Kopanec
+combat_skill_name_duelist_touche | Touché | Touché
+combat_skill_name_flagellant_endure | Endure | Vytrvání
+combat_skill_name_flagellant_exsanguinate | Exsanguinate | Vykrvení
+combat_skill_name_flagellant_move | Move | Pohyb
+combat_skill_name_flagellant_punish | Punish | Trest
+combat_skill_name_flagellant_rain_of_sorrows | Rain of Sorrows | Déšť strastí
+combat_skill_name_flagellant_reclaim | Reclaim | Vyrvání
+combat_skill_name_flagellant_redeem | Redeem | Vykoupení
+combat_skill_name_flagellant_suffer | Suffer | Utrpení
+combat_skill_name_grave_robber_flashing_daggers | Flashing Daggers | Bleskurychlé dýky
+combat_skill_name_grave_robber_lunge | Lunge | Výpad
+combat_skill_name_grave_robber_move | Move | Přesun
+combat_skill_name_grave_robber_pick | Pick to the Face | Krumpáčem do hlavy
+combat_skill_name_grave_robber_poison_dart | Poison Darts | Otrávené šipky
+combat_skill_name_grave_robber_shadow_fade | Shadow Fade | Ústup do stínů
+combat_skill_name_grave_robber_thrown_dagger | Thrown Dagger | Vržená dýka
+combat_skill_name_grave_robber_toxin_trickery | Toxin Trickery | Jedová hra
+combat_skill_name_hellion_adrenaline_rush | Adrenaline Rush | Adrenalinový rauš
+combat_skill_name_hellion_barbaric_yawp | Barbaric YAWP! | Barbarský řev!
+combat_skill_name_hellion_bleed_out | Bleed Out | Vykrvení
+combat_skill_name_hellion_breakthru | Breakthrough | Průlom
+combat_skill_name_hellion_if_it_bleeds | If It Bleeds | Když to krvácí
+combat_skill_name_hellion_iron_swan | Iron Swan | Železná labuť
+combat_skill_name_hellion_move | Move | Přesun
+combat_skill_name_hellion_wicked_hack | Wicked Hack | Šílená čepel
+combat_skill_name_highwayman_duelist_advance | Duelist's Advance | Soubojový útok
+combat_skill_name_highwayman_grape_shot_blast | Grapeshot Blast | Výstřel broky
+combat_skill_name_highwayman_move | Move | Přesun
+combat_skill_name_highwayman_opened_vein | Open Vein | Otevření žil
+combat_skill_name_highwayman_pistol_shot | Pistol Shot | Střela z pistole
+combat_skill_name_highwayman_point_blank_shot | Point Blank Shot | Výstřel zblízka
+combat_skill_name_highwayman_take_aim | Tracking Shot | Naváděná střela
+combat_skill_name_highwayman_wicked_slice | Wicked Slice | Šílené seknutí
+combat_skill_name_houndmaster_blackjack | Blackjack | Blackjack
+combat_skill_name_houndmaster_guard_dog | Guard Dog | Hlídací pes
+combat_skill_name_houndmaster_hounds_harry | Hound's Harry | Psí kámoš
+combat_skill_name_houndmaster_hounds_rush | Hound's Rush | Útok psa
+combat_skill_name_houndmaster_howl | Cry Havoc | Chaotický řev
+combat_skill_name_houndmaster_lick_wounds | Lick Wounds | Lízání ran
+combat_skill_name_houndmaster_move | Move | Přesun
+combat_skill_name_houndmaster_whistle | Target Whistle | Cílová píšťalka
+combat_skill_name_jester_battle_ballad | Battle Ballad | Bojová balada
+combat_skill_name_jester_dirk_stab | Dirk Stab | Bodnutí dýkou
+combat_skill_name_jester_harvest | Harvest | Sklizeň
+combat_skill_name_jester_heroic_end | Finale | Závěr
+combat_skill_name_jester_inspiring_tune | Inspiring Tune | Inspirující melodie
+combat_skill_name_jester_move | Move | Přesun
+combat_skill_name_jester_slice_off | Slice Off | Odříznutí
+combat_skill_name_jester_solo | Solo | Sólo
+combat_skill_name_leper_chop | Chop | Seknutí
+combat_skill_name_leper_focus | Purge | Očista
+combat_skill_name_leper_hew | Hew | Osekávání
+combat_skill_name_leper_intimidate | Intimidate | Zastrašení
+combat_skill_name_leper_move | Move | Přesun
+combat_skill_name_leper_revenge | Revenge | Pomsta
+combat_skill_name_leper_solemnity | Solemnity | Vážnost
+combat_skill_name_leper_withstand | Withstand | Výdrž
+combat_skill_name_man_at_arms_bellow | Bellow | Řev
+combat_skill_name_man_at_arms_bolster | Bolster | Upevnění
+combat_skill_name_man_at_arms_command | Command | Velení
+combat_skill_name_man_at_arms_crush | Crush | Rozdrcení
+combat_skill_name_man_at_arms_defender | Defender | Obránce
+combat_skill_name_man_at_arms_move | Move | Přesun
+combat_skill_name_man_at_arms_rampart | Rampart | Hradba
+combat_skill_name_man_at_arms_retribution | Retribution | Odplata
+combat_skill_name_occultist_abyssal_artillery | Abyssal Artillery | Kanonáda z propasti
+combat_skill_name_occultist_bloodlet | Sacrificial Stab | Obětní bodnutí
+combat_skill_name_occultist_daemons_pull | Daemon's Pull | Démonické přitažení
+combat_skill_name_occultist_disruptive_curse | Vulnerability Hex | Zaříkadlo zranitelnosti
+combat_skill_name_occultist_hands_from_abyss | Hands from the Abyss | Ruce z hlubin
+combat_skill_name_occultist_move | Move | Přesun
+combat_skill_name_occultist_weakening_curse | Weakening Curse | Oslabující prokletí
+combat_skill_name_occultist_wyrd_reconstruction | Wyrd Reconstruction | Oživení osudu
+combat_skill_name_plague_doctor_battlefield_medicine | Battlefield Medicine | Bojové léky
+combat_skill_name_plague_doctor_blinding_gas | Blinding Gas | Oslepující plyn
+combat_skill_name_plague_doctor_disorienting_blast | Disorienting Blast | Dezorientující výbuch
+combat_skill_name_plague_doctor_emboldening_vapours | Emboldening Vapours | Povzbuzující výpary
+combat_skill_name_plague_doctor_incision | Incision | Řez
+combat_skill_name_plague_doctor_move | Move | Přesun
+combat_skill_name_plague_doctor_noxious_blast | Noxious Blast | Odporný výbuch
+combat_skill_name_plague_doctor_plague_grenade | Plague Grenade | Morový granát
+combat_skill_name_runaway_backdraft | Backdraft | Sálavé teplo
+combat_skill_name_runaway_controlled_burn | Controlled Burn | Řízené spalování
+combat_skill_name_runaway_firefly | Firefly | Svatojánský oheň
+combat_skill_name_runaway_hearthlight | Hearthlight | Světlo krbu
+combat_skill_name_runaway_move | Move | Přesun
+combat_skill_name_runaway_ransack | Ransack | Vyplenit
+combat_skill_name_runaway_run_and_hide | Run and Hide | Uteč a schovej se
+combat_skill_name_runaway_searing_strike | Searing Strike | Žhavý úder
+combat_skill_name_shieldbreaker_adders_kiss | Adder's Kiss | Polibek zmije
+combat_skill_name_shieldbreaker_break_guard | Puncture | Omráčit
+combat_skill_name_shieldbreaker_expose | Expose | Probodnutí
+combat_skill_name_shieldbreaker_move | Move | Pohyb
+combat_skill_name_shieldbreaker_pierce | Pierce | Probodnout
+combat_skill_name_shieldbreaker_serpents_sway | Serpent Sway | Hadí kmitání
+combat_skill_name_shieldbreaker_single_out | Captivate | Uchvátit
+combat_skill_name_shieldbreaker_spearing | Impale | Probodnout
+combat_skill_name_vestal_dazzling_light | Dazzling Light | Oslepující světlo
+combat_skill_name_vestal_divine_grace | Divine Grace | Božská grácie
+combat_skill_name_vestal_gods_comfort | Divine Comfort | Božská útěcha
+combat_skill_name_vestal_gods_hand | Hand of Light | Ruka světla
+combat_skill_name_vestal_gods_illumination | Illumination | Iluminace
+combat_skill_name_vestal_judgement | Judgement | Rozsudek
+combat_skill_name_vestal_mace_bash | Mace Bash | Úder palcátem
+combat_skill_name_vestal_move | Move | Přesun
+hero_class_name_abomination | Abomination | Zrůda
+hero_class_name_antiquarian | Antiquarian | Vetešnice
+hero_class_name_arbalest | Arbalest | Střelkyně s kuší
+hero_class_name_bounty_hunter | Bounty Hunter | Lovec lidí
+hero_class_name_crusader | Crusader | Křižák
+hero_class_name_duelist | Duelist | Duelistka
+hero_class_name_flagellant | Flagellant | Sebemrskač
+hero_class_name_grave_robber | Grave Robber | Vykradač hrobů
+hero_class_name_hellion | Hellion | Darebačka
+hero_class_name_highwayman | Highwayman | Zbojník
+hero_class_name_houndmaster | Houndmaster | Psovod
+hero_class_name_jester | Jester | Šašek
+hero_class_name_leper | Leper | Malomocný
+hero_class_name_man_at_arms | Man-at-Arms | Muž ve zbrani
+hero_class_name_occultist | Occultist | Okultista
+hero_class_name_plague_doctor | Plague Doctor | Morová lékařka
+hero_class_name_runaway | Runaway | Uprchlice
+hero_class_name_shieldbreaker | Shieldbreaker | Ničitelka štítů
+hero_class_name_vestal | Vestal | Panna

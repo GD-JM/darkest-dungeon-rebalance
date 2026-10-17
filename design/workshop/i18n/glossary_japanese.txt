@@ -1,0 +1,172 @@
+id | English | japanese
+combat_skill_name_abomination_absolution | Absolution | 罪の赦免
+combat_skill_name_abomination_manacles | Manacles | 手かせ
+combat_skill_name_abomination_move | Move | ムーブ
+combat_skill_name_abomination_rage | Rage | 暴れる
+combat_skill_name_abomination_rake | Rake | ひっかく
+combat_skill_name_abomination_slam | Slam | 叩きつける
+combat_skill_name_abomination_transform | Transform | 変異
+combat_skill_name_abomination_vomit | Beast's Bile | ケダモノの胆汁
+combat_skill_name_antiquarian_cower | Get Down! | 伏せろ！
+combat_skill_name_antiquarian_festering_vapours | Festering Vapours | 腐敗臭
+combat_skill_name_antiquarian_flashpowder | Flashpowder | 閃光粉
+combat_skill_name_antiquarian_fortifying_vapours | Fortifying Vapours | 活力の煙
+combat_skill_name_antiquarian_invigorating_vapours | Invigorating Vapours | 激励の煙
+combat_skill_name_antiquarian_kris_stab | Nervous Stab | 神経攻撃
+combat_skill_name_antiquarian_move | Move | ムーブ
+combat_skill_name_antiquarian_protect_me | Protect Me | 我が身を護れ
+combat_skill_name_arbalest_battlefield_bandage | Battlefield Bandage | 戦場包帯法
+combat_skill_name_arbalest_blindfire | Blindfire | 乱射
+combat_skill_name_arbalest_bola | Bola | 投げ縄
+combat_skill_name_arbalest_flare | Rallying Flare | 救済の炎
+combat_skill_name_arbalest_move | Move | ムーブ
+combat_skill_name_arbalest_sniper_mark | Sniper's Mark | 狙撃標的
+combat_skill_name_arbalest_sniper_shot | Sniper Shot | 狙撃
+combat_skill_name_arbalest_suppressing_fire | Suppressing Fire | 抑え込み射撃
+combat_skill_name_bounty_hunter_collect_bounty | Collect Bounty | 獲物を狩る
+combat_skill_name_bounty_hunter_come_hither | Come Hither | 挑発
+combat_skill_name_bounty_hunter_finish_him | Finish Him | とどめを刺す
+combat_skill_name_bounty_hunter_flashbang | Flashbang | 閃光弾
+combat_skill_name_bounty_hunter_hook_and_slice | Caltrops | 鉄菱
+combat_skill_name_bounty_hunter_move | Move | ムーブ
+combat_skill_name_bounty_hunter_target_tag | Mark for Death | 死の刻印
+combat_skill_name_bounty_hunter_uppercut | Uppercut | アッパーカット
+combat_skill_name_crusader_battle_heal | Battle Heal | 戦闘回復
+combat_skill_name_crusader_bulwark_of_faith | Bulwark of Faith | 信仰の防壁
+combat_skill_name_crusader_holy_lance | Holy Lance | 聖槍
+combat_skill_name_crusader_inspiring_cry | Inspiring Cry | 気合の叫び
+combat_skill_name_crusader_move | Move | ムーブ
+combat_skill_name_crusader_smite | Smite | 強打
+combat_skill_name_crusader_stunning_blow | Stunning Blow | 会心の一撃
+combat_skill_name_crusader_zealous_accusation | Zealous Accusation | 熱心な告発
+combat_skill_name_duelist_anticipation | Anticipation | 予測
+combat_skill_name_duelist_coup_de_grace | Coup de Grâce | 慈悲の一撃
+combat_skill_name_duelist_disengage | Disengage | 離脱
+combat_skill_name_duelist_feint | Feint | フェイント
+combat_skill_name_duelist_fleche | Flèche | フレッシュ
+combat_skill_name_duelist_move | Move | 移動
+combat_skill_name_duelist_the_boot | The Boot | ブーツ
+combat_skill_name_duelist_touche | Touché | トゥシェ
+combat_skill_name_flagellant_endure | Endure | 辛抱
+combat_skill_name_flagellant_exsanguinate | Exsanguinate | 苦行者の拳
+combat_skill_name_flagellant_move | Move | ムーブ
+combat_skill_name_flagellant_punish | Punish | フレイル
+combat_skill_name_flagellant_rain_of_sorrows | Rain of Sorrows | 悲痛の雨
+combat_skill_name_flagellant_reclaim | Reclaim | 再生と犠牲
+combat_skill_name_flagellant_redeem | Redeem | 贖い
+combat_skill_name_flagellant_suffer | Suffer | 背負う苦しみ
+combat_skill_name_grave_robber_flashing_daggers | Flashing Daggers | 高速短剣投げ
+combat_skill_name_grave_robber_lunge | Lunge | 突き刺し
+combat_skill_name_grave_robber_move | Move | ムーブ
+combat_skill_name_grave_robber_pick | Pick to the Face | 顔面突き
+combat_skill_name_grave_robber_poison_dart | Poison Darts | 毒矢
+combat_skill_name_grave_robber_shadow_fade | Shadow Fade | 影かくし
+combat_skill_name_grave_robber_thrown_dagger | Thrown Dagger | 短剣投げ
+combat_skill_name_grave_robber_toxin_trickery | Toxin Trickery | 毒素中和
+combat_skill_name_hellion_adrenaline_rush | Adrenaline Rush | 高揚
+combat_skill_name_hellion_barbaric_yawp | Barbaric YAWP! | 野蛮な咆哮！
+combat_skill_name_hellion_bleed_out | Bleed Out | 出血攻撃
+combat_skill_name_hellion_breakthru | Breakthrough | 突撃
+combat_skill_name_hellion_if_it_bleeds | If It Bleeds | 流れ出る血液
+combat_skill_name_hellion_iron_swan | Iron Swan | アイアンスワン
+combat_skill_name_hellion_move | Move | ムーブ
+combat_skill_name_hellion_wicked_hack | Wicked Hack | 強烈な切り込み
+combat_skill_name_highwayman_duelist_advance | Duelist's Advance | 決闘者の前進
+combat_skill_name_highwayman_grape_shot_blast | Grapeshot Blast | ブドウ弾発射
+combat_skill_name_highwayman_move | Move | ムーブ
+combat_skill_name_highwayman_opened_vein | Open Vein | 血管炸裂
+combat_skill_name_highwayman_pistol_shot | Pistol Shot | ピストルショット
+combat_skill_name_highwayman_point_blank_shot | Point Blank Shot | 至近弾
+combat_skill_name_highwayman_take_aim | Tracking Shot | 追跡弾
+combat_skill_name_highwayman_wicked_slice | Wicked Slice | 強力なスライス
+combat_skill_name_houndmaster_blackjack | Blackjack | 棍棒打
+combat_skill_name_houndmaster_guard_dog | Guard Dog | 番犬
+combat_skill_name_houndmaster_hounds_harry | Hound's Harry | 猟犬の襲撃
+combat_skill_name_houndmaster_hounds_rush | Hound's Rush | 猟犬の急襲
+combat_skill_name_houndmaster_howl | Cry Havoc | 警告の咆哮
+combat_skill_name_houndmaster_lick_wounds | Lick Wounds | 傷を舐める
+combat_skill_name_houndmaster_move | Move | ムーブ
+combat_skill_name_houndmaster_whistle | Target Whistle | 標的への口笛
+combat_skill_name_jester_battle_ballad | Battle Ballad | バトルバラード
+combat_skill_name_jester_dirk_stab | Dirk Stab | 短剣刺し
+combat_skill_name_jester_harvest | Harvest | 刈り取り
+combat_skill_name_jester_heroic_end | Finale | フィナーレ
+combat_skill_name_jester_inspiring_tune | Inspiring Tune | 鼓舞の調べ
+combat_skill_name_jester_move | Move | ムーブ
+combat_skill_name_jester_slice_off | Slice Off | そぎ落とし
+combat_skill_name_jester_solo | Solo | ソロ
+combat_skill_name_leper_chop | Chop | ぶった切り
+combat_skill_name_leper_focus | Purge | 粛清
+combat_skill_name_leper_hew | Hew | 切り倒し
+combat_skill_name_leper_intimidate | Intimidate | 威嚇
+combat_skill_name_leper_move | Move | ムーブ
+combat_skill_name_leper_revenge | Revenge | リベンジ
+combat_skill_name_leper_solemnity | Solemnity | 儀式の執行
+combat_skill_name_leper_withstand | Withstand | 踏ん張る
+combat_skill_name_man_at_arms_bellow | Bellow | 怒声
+combat_skill_name_man_at_arms_bolster | Bolster | 士気を鼓舞
+combat_skill_name_man_at_arms_command | Command | 指令
+combat_skill_name_man_at_arms_crush | Crush | 粉砕
+combat_skill_name_man_at_arms_defender | Defender | 防衛
+combat_skill_name_man_at_arms_move | Move | ムーブ
+combat_skill_name_man_at_arms_rampart | Rampart | 防御
+combat_skill_name_man_at_arms_retribution | Retribution | 報復
+combat_skill_name_occultist_abyssal_artillery | Abyssal Artillery | 奈落の砲術
+combat_skill_name_occultist_bloodlet | Sacrificial Stab | 生贄刺し
+combat_skill_name_occultist_daemons_pull | Daemon's Pull | 悪霊の引手
+combat_skill_name_occultist_disruptive_curse | Vulnerability Hex | 弱体化の呪い
+combat_skill_name_occultist_hands_from_abyss | Hands from the Abyss | 奈落からの手
+combat_skill_name_occultist_move | Move | ムーブ
+combat_skill_name_occultist_weakening_curse | Weakening Curse | 衰弱呪
+combat_skill_name_occultist_wyrd_reconstruction | Wyrd Reconstruction | 宿命の復元
+combat_skill_name_plague_doctor_battlefield_medicine | Battlefield Medicine | 戦場医術
+combat_skill_name_plague_doctor_blinding_gas | Blinding Gas | 目つぶしガス
+combat_skill_name_plague_doctor_disorienting_blast | Disorienting Blast | 目くらまし噴射
+combat_skill_name_plague_doctor_emboldening_vapours | Emboldening Vapours | 胆力の煙
+combat_skill_name_plague_doctor_incision | Incision | 切開
+combat_skill_name_plague_doctor_move | Move | ムーブ
+combat_skill_name_plague_doctor_noxious_blast | Noxious Blast | 毒噴射
+combat_skill_name_plague_doctor_plague_grenade | Plague Grenade | ペスト手榴弾
+combat_skill_name_runaway_backdraft | Backdraft | バックドラフト
+combat_skill_name_runaway_controlled_burn | Controlled Burn | 制御された火災
+combat_skill_name_runaway_firefly | Firefly | ファイアフライ
+combat_skill_name_runaway_hearthlight | Hearthlight | 炉端の光
+combat_skill_name_runaway_move | Move | 移動
+combat_skill_name_runaway_ransack | Ransack | 簒奪
+combat_skill_name_runaway_run_and_hide | Run and Hide | 逃げ隠れ
+combat_skill_name_runaway_searing_strike | Searing Strike | 燃える一撃
+combat_skill_name_shieldbreaker_adders_kiss | Adder's Kiss | アダーの口づけ
+combat_skill_name_shieldbreaker_break_guard | Puncture | 穿孔
+combat_skill_name_shieldbreaker_expose | Expose | 看破
+combat_skill_name_shieldbreaker_move | Move | ムーブ
+combat_skill_name_shieldbreaker_pierce | Pierce | 刺突
+combat_skill_name_shieldbreaker_serpents_sway | Serpent Sway | 蛇の揺らぎ
+combat_skill_name_shieldbreaker_single_out | Captivate | 魅了
+combat_skill_name_shieldbreaker_spearing | Impale | 貫通
+combat_skill_name_vestal_dazzling_light | Dazzling Light | 神々しい光
+combat_skill_name_vestal_divine_grace | Divine Grace | 神の恵み
+combat_skill_name_vestal_gods_comfort | Divine Comfort | 神の癒し
+combat_skill_name_vestal_gods_hand | Hand of Light | 光の手
+combat_skill_name_vestal_gods_illumination | Illumination | イルミネーション
+combat_skill_name_vestal_judgement | Judgement | 審判
+combat_skill_name_vestal_mace_bash | Mace Bash | メイスの殴打
+combat_skill_name_vestal_move | Move | ムーブ
+hero_class_name_abomination | Abomination | 忌まわしき者
+hero_class_name_antiquarian | Antiquarian | 古物収集家
+hero_class_name_arbalest | Arbalest | 石弓射手
+hero_class_name_bounty_hunter | Bounty Hunter | 賞金稼ぎ
+hero_class_name_crusader | Crusader | クルセイダー
+hero_class_name_duelist | Duelist | 決闘士
+hero_class_name_flagellant | Flagellant | フラジラント
+hero_class_name_grave_robber | Grave Robber | 墓荒らし
+hero_class_name_hellion | Hellion | 荒くれ者
+hero_class_name_highwayman | Highwayman | 追い剥ぎ
+hero_class_name_houndmaster | Houndmaster | 犬使い
+hero_class_name_jester | Jester | ジェスター
+hero_class_name_leper | Leper | 没落者
+hero_class_name_man_at_arms | Man-at-Arms | 重騎兵
+hero_class_name_occultist | Occultist | 神秘主義者
+hero_class_name_plague_doctor | Plague Doctor | ペスト医師
+hero_class_name_runaway | Runaway | 逃亡者
+hero_class_name_shieldbreaker | Shieldbreaker | 盾を破りし者
+hero_class_name_vestal | Vestal | 修道女
