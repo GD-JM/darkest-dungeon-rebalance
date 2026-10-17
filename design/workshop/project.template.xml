@@ -3,9 +3,9 @@
 	<PreviewIconFile>preview_icon.png</PreviewIconFile>
 	<ItemDescriptionShort>A hero rebalance that makes more heroes and skills worth taking, following the base game's own rules.</ItemDescriptionShort>
 	<ModDataPath>{MOD_DATA_PATH}</ModDataPath>
-	<Title>All Hero Rebalance</Title>
+	<Title>Every Hero Worth Taking – Hero Rebalance</Title>
 	<Language>english</Language>
-	<UpdateDetails>Public release.</UpdateDetails>
+	<UpdateDetails>Title restored.</UpdateDetails>
 	<Visibility>public</Visibility>
 	<UploadMode>direct_upload</UploadMode>
 	<VersionMajor>1</VersionMajor>
