@@ -912,14 +912,15 @@
  },
  "shieldbreaker|spearing": {
   "ids": [
-   "SB-018",
-   "SB-014"
+   "SB-W01",
+   "SB-018"
   ],
   "principles": [
-   "G-02"
+   "G-02",
+   "P-12"
   ],
-  "en": "Impale now sits on the same line as the Houndmaster's Hound's Harry, applying the same blight amounts from level 1 instead of only from level 3. Her weapon hits harder, so the blight lasts 2 turns instead of 3 and the skill leans on direct damage.",
-  "ko": "꿰뚫기를 조련사 사냥개 습격과 같은 줄에 맞췄다: 같은 지속 피해 수치를 3렙부터가 아니라 1렙부터 준다. 방패 파괴자 무기가 더 세서 중독은 3턴 대신 2턴, 직접 피해 쪽 기술로 갈린다."
+  "en": "Blight now starts at level 1 (1/1/2/2/3 for 3 turns) instead of only from level 3, so Impale is worth taking early. Damage stays at the vanilla value.",
+  "ko": "중독이 3렙부터가 아니라 1렙부터(1/1/2/2/3, 3턴) 걸려 초반에도 쓸 만합니다. 피해는 바닐라 그대로입니다."
  },
  "shieldbreaker|weapon": {
   "ids": [
@@ -979,19 +980,17 @@
  },
  "vestal|gods_illumination": {
   "ids": [
+   "VES-W01",
    "VES-006",
-   "VES-010",
-   "VES-011",
-   "VES-012",
    "VES-013"
   ],
   "principles": [
    "P-19",
    "G-03",
-   "R-SKILL-09"
+   "P-11"
   ],
-  "en": "A front Vestal had nothing to use in rank 1, so Illumination works from every rank, and as an effect-first skill it gets the kit's best accuracy for sure-hit finishing. Its dodge debuff duplicated the Arbalest's Sniper's Mark, so holy light now exposes and burns evil instead, a role only Caltrops partly filled and one that links into Runaway burn combos.",
-  "ko": "전열 성녀가 1열에서 쓸 기술이 없어 광휘를 전 열에서 쓰게 했고, 효과가 본업인 기술이라 확실히 맞히는 마무리용으로 명중을 키트 최고로 했다. 회피 감소는 석궁사수 저격수의 표식과 겹쳐, 성스러운 빛이 악을 드러내고(받는 피해 증가) 태우는(화상) 기술로 바꿨다. 받는 피해 증가는 마름쇠뿐이었고, 화상은 도망자 화상 연계를 연다."
+  "en": "Kept as close to vanilla as possible: holy light now burns (1-3), and it can be used from rank 4 too so a back-rank Vestal can reach it. The dodge debuff is 5 lower to pay for the burn, which also sets it apart from the Arbalest's Sniper's Mark.",
+  "ko": "최대한 바닐라에 가깝게 두었습니다. 성스러운 빛이 화상(1~3)을 주고, 후열 성녀도 쓰도록 4열에서도 사용합니다. 화상의 대가로 회피 감소를 5 낮췄고, 덕분에 석궁사수 저격 표식과도 구분됩니다."
  },
  "vestal|judgement": {
   "ids": [

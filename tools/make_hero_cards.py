@@ -77,11 +77,27 @@ def render(idx, h, c):
     d.text((48, H - 52), 'Every Hero Worth Taking  ·  values at level 1, ranges = levels 1-5', font=FT['foot'], fill=DIM)
     os.makedirs(OUT, exist_ok=True)
     p = os.path.join(OUT, '%02d_%s.png' % (idx, h))
-    im.save(p, optimize=True)
+    # 탐색기 미리보기가 파일을 잠깐 잡고 있을 수 있어 임시 파일로 저장한 뒤 재시도하며 교체한다
+    import time
+    tmp_p = p + '.tmp.png'
+    im.save(tmp_p, optimize=True)
+    for _ in range(20):
+        try:
+            os.replace(tmp_p, p)
+            break
+        except OSError:
+            time.sleep(0.5)
+    else:
+        raise OSError('locked: ' + p)
     return p, os.path.getsize(p), im.size
 
 
 if __name__ == '__main__':
     data = json.load(open(os.path.join(W, 'hero_cards.json'), encoding='utf-8'))
-    for i, (h, c) in enumerate(data.items(), 1):
+    SHOWCASE = 'bounty_hunter'  # 대표 사례 영웅을 첫 장으로 (설명문 Showcase 칸과 짝)
+    order = [SHOWCASE] + [h for h in data if h != SHOWCASE]
+    for f in glob.glob(os.path.join(OUT, '*.png')):
+        os.remove(f)
+    for i, h in enumerate(order, 1):
+        c = data[h]
         print(*render(i, h, c))

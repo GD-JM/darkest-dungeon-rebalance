@@ -5,7 +5,7 @@
 	<ModDataPath>{MOD_DATA_PATH}</ModDataPath>
 	<Title>Every Hero Worth Taking – Hero Rebalance</Title>
 	<Language>english</Language>
-	<UpdateDetails>Description: goal and principles with examples. Man-at-Arms Bolster buffs now last 2 turns at every level.</UpdateDetails>
+	<UpdateDetails>Bounty Hunter showcase; Illumination and Impale moved closer to vanilla; Bolster durations restored.</UpdateDetails>
 	<Visibility>private</Visibility>
 	<UploadMode>direct_upload</UploadMode>
 	<VersionMajor>1</VersionMajor>

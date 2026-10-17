@@ -66,6 +66,16 @@ def apply_revert(lines, van, op, cid):
             new, n = re.subn(r'\.%s -?[\d.]+%%?' % field, '.%s %s' % (field, v), lines[i], count=1)
             assert n == 1, (cid, lines[i])
             lines[i] = new
+    elif kind == 'sub':
+        # ["sub", 기술id, 정규식, 바꿀 값(1개 또는 레벨별 5개)] — 창작마당판 전용 값(예: 효과 이름 교체)
+        _, sid, rx, vals = op
+        ci = [i for i, l in enumerate(lines) if re.match(r'combat_skill: \.id "%s" \.level \d' % re.escape(sid), l)]
+        assert len(ci) == 5, (cid, op)
+        for k, i in enumerate(ci):
+            v = vals[k] if isinstance(vals, list) else vals
+            new, n = re.subn(rx, v, lines[i], count=1)
+            assert n == 1, (cid, rx, lines[i])
+            lines[i] = new
     else:
         raise ValueError(kind)
 
@@ -94,7 +104,8 @@ def main():
     os.makedirs(OUT)
     van_eff = ec.load_vanilla_effects(G)
     cust_eff = {}
-    for f in glob.glob(os.path.join(M, 'effects', 'rebalance_*.effects.darkest')):
+    # 창작마당판 전용 효과(design/workshop/workshop.effects.darkest)도 같은 표에 넣어, 참조되면 출력 효과 파일로 복사된다
+    for f in glob.glob(os.path.join(M, 'effects', 'rebalance_*.effects.darkest')) + [os.path.join(W, 'workshop.effects.darkest')]:
         for l in rd(f).splitlines():
             m = re.match(r'effect:\s*\.name\s+"([^"]+)"', l)
             if m:
