@@ -7,10 +7,10 @@ import effect_common as ec
 
 G = S.G
 LBL = {
-    'en': dict(atk='Accuracy', dmg='Damage', crit='Crit', launch='Usable ranks', target='Targets', per_battle_limit='Uses per battle',
+    'en': dict(atk='Accuracy', dmg='Damage', crit='Crit', launch='Usable ranks', target='Targets', per_battle_limit='Uses per battle', per_turn_limit='Uses per turn', ignore_protection='Ignores armor', ignore_stealth='Ignores stealth', ignore_guard='Ignores guard',
                move='Move', is_crit_valid='Can crit', added='Added', removed='Removed', changed='Changed', lvl='Lv1–5',
                weapon='Weapon', armour='Armor', resistances='Resists', mode='Form', none='none'),
-    'ko': dict(atk='명중', dmg='피해', crit='치명 보정', launch='사용 열', target='대상', per_battle_limit='전투당 사용', move='이동',
+    'ko': dict(atk='명중', dmg='피해', crit='치명 보정', launch='사용 열', target='대상', per_battle_limit='전투당 사용', per_turn_limit='턴당 사용', ignore_protection='방어 무시', ignore_stealth='은신 무시', ignore_guard='보호 무시', move='이동',
                is_crit_valid='치명 가능', added='추가', removed='제거', changed='변경', lvl='1~5렙',
                weapon='무기', armour='방어구', resistances='저항', mode='형태', none='없음'),
 }
@@ -159,7 +159,14 @@ def skill_diff(sid, vl, wl, ctx, lang):
         a, b = S.first(vd[0], f, ''), S.first(wd[0], f, '')
         if a != b:
             out.append('%s %s → %s' % (L[f], fmt_ranks(a, lang), fmt_ranks(b, lang)))
-    for f in ('per_battle_limit', 'move', 'is_crit_valid'):
+    a = [' '.join(d.get('heal', [])) for d in vd]; b = [' '.join(d.get('heal', [])) for d in wd]
+    if a != b:
+        hl = 'Heal' if lang == 'en' else '회복'
+        def f1(x):
+            x = [v.replace(' ', '-') or '—' for v in x]
+            return x[0] if len(set(x)) == 1 else '%s … %s' % (x[0], x[-1])
+        out.append('%s %s → %s' % (hl, f1(a), f1(b)))
+    for f in ('per_battle_limit', 'per_turn_limit', 'move', 'is_crit_valid', 'ignore_protection', 'ignore_stealth', 'ignore_guard'):
         a = ' '.join(vd[0].get(f, [])) or L['none']; b = ' '.join(wd[0].get(f, [])) or L['none']
         if a != b:
             out.append('%s %s → %s' % (L[f], a, b))
@@ -180,7 +187,7 @@ def skill_diff(sid, vl, wl, ctx, lang):
             lv_lists = [tuple(d.get(i, [])) for i in range(len(vl))]
             if len(set(lv_lists)) == 1:
                 return '; '.join(lv_lists[0])
-            f = lambda x: '; '.join(x) if x else '—'
+            f = lambda x: '; '.join(x) if x else ('unchanged' if lang == 'en' else '변화 없음')
             return '%s1 %s … %s5 %s' % ('Lv' if lang == 'en' else '', f(lv_lists[0]), 'Lv' if lang == 'en' else '', f(lv_lists[-1])) if lang == 'en' else                    '1렙 %s … 5렙 %s' % (f(lv_lists[0]), f(lv_lists[-1]))
         r, a2 = agg(rem), agg(addd)
         if r and a2:
