@@ -225,25 +225,32 @@ def main():
                     line += ' *(%s)*' % tail
                 L.append(line)
                 summary[lang].setdefault(hero, [])
-                if nm not in summary[lang][hero]:
-                    summary[lang][hero].append(nm)
+                if (nm, '%s|%s' % (hero, blk)) not in summary[lang][hero]:
+                    summary[lang][hero].append((nm, '%s|%s' % (hero, blk)))
             L.append('')
         open(os.path.join(W, 'patch_notes_%s.md' % lang), 'w', encoding='utf-8').write('\n'.join(L) + '\n')
     if missing:
         print('근거(why) 없는 블록 %d개: %s' % (len(missing), ', '.join(missing[:12]) + (' …' if len(missing) > 12 else '')))
-    # 설명문: 원칙 + 영웅별 바뀐 항목 목록 (전체 노트는 patch_notes_*.md)
+    # 설명문 = 스팀 글 1개(8000자): 원칙 + 기술별 한 줄(핵심 수치 + 원칙 번호, design/workshop/compact.json 사람이 쓴 압축본)
+    # 전체 근거는 patch_notes_*.md (포트폴리오 기록)
+    COMPACT = json.load(open(os.path.join(W, 'compact.json'), encoding='utf-8'))
     for lang in ('en', 'ko'):
-        d0 = rd(os.path.join(W, 'description_%s.txt' % lang)).strip()
-        items = ['[*][b]%s[/b]: %s' % (EN_HERO[h] if lang == 'en' else S.KO[h], ', '.join(v)) for h, v in summary[lang].items()]
-        d0 = d0.replace('{PATCH_%s}' % lang.upper(), '[list]\n' + '\n'.join(items) + '\n[/list]')
-        open(os.path.join(W, 'description_built_%s.txt' % lang), 'w', encoding='utf-8').write(d0 + '\n')
-        print('description', lang, len(d0), 'chars (Steam limit 8000)')
-        assert len(d0) <= 8000, lang
+        d0 = rd(os.path.join(W, 'description_%s.txt' % lang)).replace('\r\n', '\n').strip()
+        lost = [k for v in summary[lang].values() for _, k in v if not COMPACT.get(k, {}).get(lang)]
+        assert not lost, ('compact.json에 없는 블록', lost)
+        stale = sorted(set(COMPACT) - {k for v in summary[lang].values() for _, k in v})
+        assert not stale, ('compact.json에만 있는 블록', stale)
+        items = ['[b]%s[/b]\n' % (EN_HERO[h] if lang == 'en' else S.KO[h]) + '\n'.join('%s: %s' % (nm, COMPACT[k][lang]) for nm, k in v)
+                 for h, v in summary[lang].items()]
+        d0 = d0.replace('{PATCH_%s}' % lang.upper(), '\n'.join(items))
+        open(os.path.join(W, 'description_built_%s.txt' % lang), 'w', encoding='utf-8', newline='\n').write(d0 + '\n')
+        print('description', lang, len(d0), 'chars (Steam limit 8000; line breaks counted twice: %d)' % (len(d0) + d0.count('\n')))
+        assert len(d0) + d0.count('\n') <= 8000, lang  # 웹 편집기가 줄바꿈을 CRLF(2자)로 세어도 넘지 않게
     shutil.copy(os.path.join(M, 'preview_icon.png'), os.path.join(OUT, 'preview_icon.png'))
     proj = rd(os.path.join(W, 'project.template.xml'))
     desc = rd(os.path.join(W, 'description_built_en.txt')).strip()
     proj = proj.replace('{MOD_DATA_PATH}', OUT.replace('\\', '/') + '/').replace('{DESCRIPTION}', desc.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;'))
-    open(os.path.join(OUT, 'project.xml'), 'w', encoding='utf-8').write(proj)
+    open(os.path.join(OUT, 'project.xml'), 'w', encoding='utf-8', newline='\n').write(proj.replace('\r\n', '\n'))
     entries = []
     for root, _, files in os.walk(OUT):
         for f in files:

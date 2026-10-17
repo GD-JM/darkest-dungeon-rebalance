@@ -1,73 +1,115 @@
-[h1]Rebalance (Verified)[/h1]
-A data-backed hero rebalance. Every change fixes a problem confirmed in the game's own data, follows a written principle, and states its reason in the patch notes (principle IDs below). Trinkets, shared vanilla files and heroes' identities are left alone.
-
-[h2]Goals[/h2]
-[list]
-[*][b]G-00[/b] Many party compositions should be right answers, depending on the dungeon, the enemies and the rest of the party.
-[*][b]G-01 / G-02[/b] Every hero and every skill should have a situation where it is worth taking. No "always pick" or "never pick" skills.
-[*][b]G-03[/b] Heroes get useful options outside their main rank, but the off-rank never replaces the main rank.
-[*][b]G-04[/b] Bring outliers back to the base game's own number rules.
-[*][b]G-05[/b] Spread healing and stress relief instead of concentrating it in a few heroes.
-[/list]
-
-[h2]Design principles[/h2]
-[list]
-[*][b]P-01 / P-03 / P-09[/b] Every change has a reason in the data or the base game's rules; only confirmed problems are fixed, and any deviation from the base rules is documented.
-[*][b]P-05[/b] An off-rank option must not outperform the hero's main rank.
-[*][b]P-06 / P-07[/b] Official nerfs are respected as the starting point; a post-launch buff that overshot may return to its launch value.
-[*][b]P-10[/b] Every accuracy, damage or reach change is checked against R-TRADE-02.
-[*][b]P-11[/b] Buffs and nerfs come in pairs: power is redistributed between skills and heroes, while overall strength and difficulty stay the same.
-[*][b]P-12[/b] Keep how a skill feels; adjust reliability and frequency rather than identity.
-[*][b]P-14[/b] Don't copy another hero's signature mechanic.
-[*][b]P-19[/b] A skill's art and name should match what it does.
-[*][b]P-20[/b] Trinkets are untouched, so skill effects that trinkets build on are kept.
-[*][b]P-21[/b] Crit is a tuning tool, except where a crit value is part of a designed combo.
-[*][b]P-22[/b] Stay inside the official hero lore.
-[*][b]P-23[/b] Abomination: human-form skills get lower accuracy but stronger base output, narrowing the gap to the beast.
-[*][b]P-24[/b] Houndmaster: less damage, more utility (protect, heal, debuff). Marked-target damage is the Bounty Hunter's job.
-[*][b]P-25[/b] The Antiquarian is weaker in combat by design; she pays her way in gold.
-[*][b]P-26[/b] Mark parties shouldn't be limited to the Bounty Hunter and Arbalest.
-[/list]
-
-[h2]Number rules (measured from the base game)[/h2]
-[list]
-[*][b]R-STRAT-01[/b] Fights are won on action economy: kill fast, then extend the lead with stuns.
-[*][b]R-TRADE-02[/b] Accuracy and damage are traded: +5 accuracy costs roughly 10% damage (more on ranged skills); extra reach is paid for with damage.
-[*][b]R-SKILL-09[/b] Base accuracy: plain single-target melee 85; skills whose job is an effect (stun, debuff, mark) 90–95.
-[*][b]R-SKILL-05[/b] Effect chance grows +10% per level; effect size grows steadily from level 1 to 5.
-[*][b]R-EFF-02[/b] Hero bleed and blight last 3 turns.
-[*][b]R-STUN-01 / R-STUN-03[/b] Baseline damaging stun: accuracy 90, normal stun; any deviation is paid for elsewhere.
-[*][b]R-STUN-02[/b] Stuns that reach rank 3 deal low damage.
-[*][b]R-CMB-01[/b] Hit chance = skill accuracy − target dodge, capped at 95%.
-[*][b]R-VALUE-03[/b] Area damage-over-time is worth less than it looks: fights end early and many enemies resist it.
-[*][b]R-RANK-01[/b] Movement skills are not a drawback; being locked to a rank is.
-[*][b]R-RES-01[/b] Resists sit at the baseline unless the hero's lore justifies a deviation.
-[*][b]R-GROW-01 / R-GROW-03 / R-PRESET-01[/b] Weapon damage and speed grow at the base game's standard rates, from one of the damage presets base-game heroes share.
-[/list]
-
-[h2]Changes[/h2]
-Full patch notes with every number and reason are in the Change Notes tab.
-[list]
-[*][b]Abomination[/b]: Transform, Manacles, Beast's Bile, Slam, Beast form
-[*][b]Antiquarian[/b]: Flashpowder
-[*][b]Arbalest[/b]: Sniper Shot, Suppressing Fire, Bola, Battlefield Bandage, Rallying Flare
-[*][b]Bounty Hunter[/b]: Collect Bounty, Mark for Death, Come Hither, Uppercut, Flashbang, Finish Him, Caltrops
-[*][b]Crusader[/b]: Zealous Accusation, Stunning Blow, Bulwark of Faith, Battle Heal, Inspiring Cry
-[*][b]Duelist[/b]: Touché, Feint, Coup de Grâce, The Boot
-[*][b]Flagellant[/b]: Resistances, Weapon, Endure
-[*][b]Grave Robber[/b]: Thrown Dagger, Poison Darts, Toxin Trickery
-[*][b]Hellion[/b]: Wicked Hack, Barbaric YAWP!, Breakthrough, Adrenaline Rush, Bleed Out
-[*][b]Highwayman[/b]: Wicked Slice, Pistol Shot, Point Blank Shot, Grapeshot Blast, Tracking Shot, Duelist's Advance, Open Vein
-[*][b]Houndmaster[/b]: Resistances, Hound's Rush, Hound's Harry, Target Whistle, Cry Havoc, Guard Dog, Lick Wounds, Blackjack
-[*][b]Jester[/b]: Solo, Battle Ballad, Inspiring Tune
-[*][b]Leper[/b]: Intimidate
-[*][b]Man-at-Arms[/b]: Weapon, Rampart, Bellow, Retribution, Command, Bolster
-[*][b]Occultist[/b]: Weakening Curse, Wyrd Reconstruction, Vulnerability Hex, Hands from the Abyss
-[*][b]Plague Doctor[/b]: Incision, Battlefield Medicine
-[*][b]Runaway[/b]: Ransack
-[*][b]Shieldbreaker[/b]: Resistances, Weapon, Pierce, Impale, Expose, Captivate, Serpent Sway
-[*][b]Vestal[/b]: Mace Bash, Judgement, Dazzling Light, Divine Grace, Divine Comfort, Illumination, Hand of Light
-[/list]
-
-[h2]Compatibility[/h2]
-Overrides only the hero files of the heroes listed above (heroes/<hero>/<hero>.info.darkest) and adds one effect file and one buff file. Conflicts with other mods that replace the same hero files. Safe to add to an existing save; skill IDs are unchanged.
+[h1]Rebalance (Verified)[/h1]
+Hero rebalance where every change fixes a problem found in the game data and cites the principles below. Trinkets and shared vanilla files are untouched. Values are level 1 unless noted.
+
+[h2]Principles[/h2]
+[b]Goals[/b] G-00 many parties can be right · G-01/02 every hero and skill has a use · G-03 useful off-rank options that don't replace the main rank · G-04 outliers back to base-game rules · G-05 spread healing and stress relief
+[b]Design[/b] P-01/03/09 change only confirmed problems, with reasons · P-05 off-rank never beats main rank · P-06/07 respect official nerfs; overshot buffs may return to launch values · P-10 accuracy/damage/reach changes follow R-TRADE-02 · P-11 buffs and nerfs are paired; total power stays · P-12 keep the feel · P-14 no copying another hero's signature · P-19 art and name match function · P-20 trinkets fixed, so effects they boost stay · P-21 crit is a tuning tool unless part of a combo · P-22 stay in official lore · P-23 Abomination: human form less accuracy, more output · P-24 Houndmaster: less damage, more utility · P-25 Antiquarian weak by design (paid in gold) · P-26 more heroes for mark parties
+[b]Number rules[/b] R-STRAT-01 win on action economy: kill fast, then stun · R-TRADE-02 +5 accuracy ≈ −10% damage; reach costs damage · R-SKILL-09 base accuracy 85 plain melee, 90–95 effect skills · R-SKILL-05 effects grow each level · R-EFF-02 DoTs last 3 turns · R-STUN-01/03 damaging stun = acc 90, normal stun · R-STUN-02 stuns reaching rank 3 deal low damage · R-CMB-01 hit = accuracy − dodge (max 95) · R-VALUE-03 AoE DoT is worth less than it looks · R-RANK-01 movement isn't a cost; rank-locking is · R-RES-01 resists at baseline unless lore says otherwise · R-GROW-01/03, R-PRESET-01 standard weapon presets and growth
+
+[h2]Changes[/h2]
+[b]Abomination[/b]
+Transform: allies' stress 8→6; heals his own stress 4–8 (P-23, P-11)
+Manacles: acc 95→90 (P-23, R-STUN-03)
+Beast's Bile: acc 95→90, dmg −90→−75% (P-23, P-11)
+Slam: ranks 4·3·2, acc 90, dmg 0%, debuffs removed — the beast can act from rank 4 (G-03, P-19)
+Beast form: stress per turn 6→4 (P-23)
+[b]Antiquarian[/b]
+Flashpowder: adds burn 1–3 to match the flame; small by design (P-19, P-25)
+[b]Arbalest[/b]
+Sniper Shot: crit 5→6%, marked dmg +50→+60% (Lv5 same) (P-26, P-21)
+Suppressing Fire: dmg −80→−60% (G-02)
+Bola: dmg −50→−40%; Lv5 push uses vanilla's unlinked stronger effect (G-02, P-01)
+Battlefield Bandage: heal 3–7; cures bleed instead of a healing-received buff (P-19, G-05)
+Rallying Flare: guaranteed party stress heal 2–4; ally stun/mark cleanse removed (G-05, P-22)
+[b]Bounty Hunter[/b]
+Collect Bounty: marked dmg +90→+100% (G-01)
+Mark for Death: protection −20% (was −10%), self speed buff removed (P-14, G-02)
+Come Hither: pull 3, acc 95, dmg −60%, mark removed — hooks into Finish Him range (G-02, R-TRADE-02)
+Uppercut: rank 1 only, acc 95, crit 9%, strong stun (G-02, P-21)
+Flashbang: ranks 4·3, normal stun — the back-rank stun (G-03, G-02)
+Finish Him: ranks 2·1, +20–33% vs bleeding (G-01, G-02)
+Caltrops: dmg −95→−85% (P-11)
+[b]Crusader[/b]
+Zealous Accusation: acc 85→90 (G-02)
+Stunning Blow: strong stun (+10%) — signature stun, no rank-3 reach (R-STUN-01, P-19)
+Bulwark of Faith: usable from any rank (G-03, R-RANK-01)
+Battle Heal: Lv5 heal 5–6→4–5, adds healing received +20% — support healer (G-05, P-11)
+Inspiring Cry: stress heal grows every level (Lv5 8→9) (G-05)
+[b]Duelist[/b]
+Touché: self dodge +40%/4t → +15%/2t; two casts reached 0% enemy hit (R-CMB-01, P-12)
+Feint: protection −20→−10% — was identical to Mark for Death (P-14)
+Coup de Grâce: dmg −60→−70% (R-TRADE-02)
+The Boot: dmg −40→−60%, into the stun damage range (R-STUN-01)
+[b]Flagellant[/b]
+Resistances: stun/move 50→40, bleed 65→60 (R-RES-01, G-04)
+Weapon: speed growth 6/6/8/8/9 → 6/6/7/7/8 (R-GROW-03)
+Endure: self stress 10→4 (Lv5 6→8): net relief 6 at every level (G-05, P-06)
+[b]Grave Robber[/b]
+Thrown Dagger: acc buff moved to Poison Darts; marked dmg +40–80% (G-02, P-26)
+Poison Darts: blight 4→3 turns; gains self acc +5–10% (R-EFF-02, G-02)
+Toxin Trickery: unlimited uses, smaller 3-turn buffs, self heal 1–5 (G-05, P-19)
+[b]Hellion[/b]
+Wicked Hack: acc 85→90 (G-02)
+Barbaric YAWP!: no stun/exhaustion; self acc/dmg buff, enemies' dmg −10–20%, clears corpses, unlimited (P-19, G-02)
+Breakthrough: exhaustion removed, dmg −50→−55% (P-19)
+Adrenaline Rush: heal 3–7; its buff moved to YAWP (G-05)
+Bleed Out: exhaustion removed; dmg +20→0%, crit 6→10% (P-19, P-21)
+[b]Highwayman[/b]
+Wicked Slice: ranks 2·1, reaches rank 3, dmg +15→0% (R-SKILL-09, G-02)
+Pistol Shot: acc 85→90, marked dmg +40% (G-02, P-26)
+Point Blank Shot: recoils 2 ranks, push 2 — hard to repeat (P-12, G-00)
+Grapeshot Blast: acc 75→90, dmg −50→−60% — a reliable crit setup (P-21, R-TRADE-02)
+Tracking Shot: now grants riposte, hits any rank, unlimited, dmg −60% (G-03, P-19)
+Duelist's Advance: self acc/crit/dmg buff instead of riposte; targets 1·2 (G-02, P-19)
+Open Vein: dmg −15→−30%, crit 8%; debuffs kept for trinkets (P-20, P-21)
+[b]Houndmaster[/b]
+Resistances: blight/bleed 40→30 (R-RES-01, P-22)
+Hound's Rush: any rank, acc 90, dmg −25%, Lv5 marked +100→+60%, bleed 2 turns (P-24, P-11)
+Hound's Harry: acc 90, dmg −75→−70%, ranks 4·3·2 (G-02, R-VALUE-03)
+Target Whistle: accuracy −25% instead of protection (P-24, P-14)
+Cry Havoc: Lv1 stress heal 2→4 at 70%; Lv5 unchanged (G-05, P-12)
+Guard Dog: self dodge +10→+20% (P-24)
+Lick Wounds: usable from any rank (G-03)
+Blackjack: acc 95→90, normal stun, dmg −65→−50% (R-STUN-03, R-STUN-02)
+[b]Jester[/b]
+Solo: any rank, more dodge, Finale +75→+100%, clears corpses, slows enemies (G-02, P-19)
+Battle Ballad: accuracy removed, crit +4–8% — split from Command (P-14)
+Inspiring Tune: usable from rank 2 (G-03, G-05)
+[b]Leper[/b]
+Intimidate: rank-1 hit like Purge (acc 85, dmg −40%), protection −30% for 2 turns; old debuffs, mark, destealth removed (P-19, G-01)
+[b]Man-at-Arms[/b]
+Weapon: dmg 5–9 → 5–10 (Lv5 8–14 → 8–16) (G-01, R-PRESET-01)
+Rampart: no self move, dmg −60→−50% (P-19, R-STUN-02)
+Bellow: also clears corpses (P-19, P-22)
+Retribution: dmg −75→−20%, targets 1·2 (P-19, G-02)
+Command: crit replaced by protection +15%; removes stun (P-14)
+Bolster: unlimited; party stress heal 1–3, stress taken −10%, +50% stress healing if guarded; no dodge (G-05, G-02)
+[b]Occultist[/b]
+Weakening Curse: dmg −75→−65% (P-11)
+Wyrd Reconstruction: Lv5 keeps the Lv4 bleed risk, max heal 22→20 (G-02, P-12)
+Vulnerability Hex: no damage; stun/blight/bleed/debuff res −15% instead of dodge (P-19, R-STRAT-01)
+Hands from the Abyss: acc 90→95, dmg −50→−60% (R-STUN-02, R-STUN-03)
+[b]Plague Doctor[/b]
+Incision: acc 85→90 (G-02)
+Battlefield Medicine: heal 3–7, cures blight only; self cure removed (G-05, G-00)
+[b]Runaway[/b]
+Ransack: no longer hits rank 4, dmg −10→−25% (P-10, G-02)
+[b]Shieldbreaker[/b]
+Resistances: stun/move 50→30 (R-RES-01, P-22)
+Weapon: dmg growth 15% (Lv5 9–18 → 8–16), standard speed curve (G-04, R-GROW-01)
+Pierce: acc 90→85, crit 5→2%, no rank 4 (P-07, G-04)
+Impale: blight from Lv1 (1–3, 2 turns), dmg −60→−70% (G-02)
+Expose: acc 85→90 (R-SKILL-09)
+Captivate: acc 85→90, marked dmg +40→+50% (P-26)
+Serpent Sway: ranks 4·3·2 — her way back to rank 1 (G-02, P-22)
+[b]Vestal[/b]
+Mace Bash: crit 5%, self heal 3–5 moved from Judgement (G-03, P-20)
+Judgement: acc 90, dmg 0%, crit 0%, no self heal (G-02, R-SKILL-09)
+Dazzling Light: ranks 4·3 (G-02)
+Divine Grace: any rank, heal 5–9 (G-03)
+Divine Comfort: ranks 4·3, Lv1 heal 1–3→2–3 (P-05)
+Illumination: any rank, acc 95; damage taken +20% and burn 1–3 instead of dodge (P-19, G-03)
+Hand of Light: acc 85→90 (R-TRADE-02)
+
+[h2]Compatibility[/h2]
+Overrides only the listed heroes' hero files and adds one effect file and one buff file. Conflicts with mods that replace the same hero files. Safe on existing saves.
