@@ -187,11 +187,13 @@ def main():
             j0 = t.find('</language>', i0)
             for m in re.finditer(r'<entry id="combat_skill_name_(\w+?)"><!\[CDATA\[(.*?)\]\]>', t[i0:j0]):
                 names.setdefault((lang, m.group(1)), m.group(2))
+            for m in re.finditer(r'<entry id="hero_class_name_(\w+?)"><!\[CDATA\[(.*?)\]\]>', t[i0:j0]):
+                names.setdefault((lang, 'hero:' + m.group(1)), m.group(2))
     why_p = os.path.join(W, 'why.json')
     WHY = json.load(open(why_p, encoding='utf-8')) if os.path.exists(why_p) else {}
     ctx = PN.make_ctx(OUT)
     ctx.skill_names = {lg: {k[1]: v for k, v in names.items() if k[0] == lk} for lg, lk in (('en', 'english'), ('ko', 'koreana'))}
-    EN_HERO = {h: h.replace('_', ' ').title() for h in S.KO}
+    EN_HERO = {h: names.get(('english', 'hero:' + h), h.replace('_', ' ').title()) for h in S.KO}
     BLOCK = {'en': {'weapon': 'Weapon', 'armour': 'Armor', 'resistances': 'Resistances', 'mode': 'Beast form'},
              'ko': {'weapon': '무기', 'armour': '방어구', 'resistances': '저항', 'mode': '짐승 형태'}}
     summary = {'en': {}, 'ko': {}}

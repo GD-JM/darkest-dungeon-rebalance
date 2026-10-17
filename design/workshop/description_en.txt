@@ -1,26 +1,53 @@
 [h1]Rebalance (Verified)[/h1]
-A small, data-backed hero rebalance. Every change below fixes a problem confirmed in the game's own data, follows a written principle, and lists its reason. Nothing else is touched: no trinkets, no shared vanilla files, no new heroes.
+A data-backed hero rebalance. Every change fixes a problem confirmed in the game's own data, follows a written principle, and states its reason in the patch notes (principle IDs below). Trinkets, shared vanilla files and heroes' identities are left alone.
 
-[h2]Core principles[/h2]
+[h2]Goals[/h2]
 [list]
-[*][b]G-01 / G-02[/b] Every hero and every skill should have a context where it is worth taking.
+[*][b]G-00[/b] Many party compositions should be right answers, depending on the dungeon, the enemies and the rest of the party.
+[*][b]G-01 / G-02[/b] Every hero and every skill should have a situation where it is worth taking. No "always pick" or "never pick" skills.
+[*][b]G-03[/b] Heroes get useful options outside their main rank, but the off-rank never replaces the main rank.
 [*][b]G-04[/b] Bring outliers back to the base game's own number rules.
 [*][b]G-05[/b] Spread healing and stress relief instead of concentrating it in a few heroes.
-[*][b]P-01[/b] Every change has a reason grounded in data or the base game's rules.
-[*][b]P-03[/b] The base game's own rules are kept; any deviation is documented.
-[*][b]P-07[/b] A post-launch patch that overshot may be rolled back to its launch value.
-[*][b]P-09[/b] Minimal change: fix only what the data shows is wrong.
-[*][b]P-12[/b] Preserve how a skill feels; adjust frequency and reliability, not identity.
+[/list]
+
+[h2]Design principles[/h2]
+[list]
+[*][b]P-01 / P-03 / P-09[/b] Every change has a reason in the data or the base game's rules; only confirmed problems are fixed, and any deviation from the base rules is documented.
+[*][b]P-05[/b] An off-rank option must not outperform the hero's main rank.
+[*][b]P-06 / P-07[/b] Official nerfs are respected as the starting point; a post-launch buff that overshot may return to its launch value.
+[*][b]P-10[/b] Every accuracy, damage or reach change is checked against R-TRADE-02.
+[*][b]P-11[/b] Buffs and nerfs come in pairs: power is redistributed between skills and heroes, while overall strength and difficulty stay the same.
+[*][b]P-12[/b] Keep how a skill feels; adjust reliability and frequency rather than identity.
+[*][b]P-14[/b] Don't copy another hero's signature mechanic.
 [*][b]P-19[/b] A skill's art and name should match what it does.
+[*][b]P-20[/b] Trinkets are untouched, so skill effects that trinkets build on are kept.
+[*][b]P-21[/b] Crit is a tuning tool, except where a crit value is part of a designed combo.
 [*][b]P-22[/b] Stay inside the official hero lore.
-[*][b]R-GROW-03[/b] Weapon speed grows as level-1 value + floor((level−1)/2).
+[*][b]P-23[/b] Abomination: human-form skills get lower accuracy but stronger base output, narrowing the gap to the beast.
+[*][b]P-24[/b] Houndmaster: less damage, more utility (protect, heal, debuff). Marked-target damage is the Bounty Hunter's job.
+[*][b]P-25[/b] The Antiquarian is weaker in combat by design; she pays her way in gold.
+[*][b]P-26[/b] Mark parties shouldn't be limited to the Bounty Hunter and Arbalest.
+[/list]
+
+[h2]Number rules (measured from the base game)[/h2]
+[list]
+[*][b]R-STRAT-01[/b] Fights are won on action economy: kill fast, then extend the lead with stuns.
+[*][b]R-TRADE-02[/b] Accuracy and damage are traded: +5 accuracy costs roughly 10% damage (more on ranged skills); extra reach is paid for with damage.
+[*][b]R-SKILL-09[/b] Base accuracy: plain single-target melee 85; skills whose job is an effect (stun, debuff, mark) 90–95.
+[*][b]R-SKILL-05[/b] Effect chance grows +10% per level; effect size grows steadily from level 1 to 5.
+[*][b]R-EFF-02[/b] Hero bleed and blight last 3 turns.
+[*][b]R-STUN-01 / R-STUN-03[/b] Baseline damaging stun: accuracy 90, normal stun; any deviation is paid for elsewhere.
+[*][b]R-STUN-02[/b] Stuns that reach rank 3 deal low damage.
+[*][b]R-CMB-01[/b] Hit chance = skill accuracy − target dodge, capped at 95%.
+[*][b]R-VALUE-03[/b] Area damage-over-time is worth less than it looks: fights end early and many enemies resist it.
+[*][b]R-RANK-01[/b] Movement skills are not a drawback; being locked to a rank is.
 [*][b]R-RES-01[/b] Resists sit at the baseline unless the hero's lore justifies a deviation.
-[*][b]R-STUN-01 / R-STUN-03[/b] Baseline damaging stun: accuracy 90, normal stun tier; deviations are paid for elsewhere.
-[*][b]R-STRAT-01[/b] The game is won by action economy: kill fast, then extend the lead with stuns.
+[*][b]R-GROW-01 / R-GROW-03 / R-PRESET-01[/b] Weapon damage and speed grow at the base game's standard rates, from one of the damage presets base-game heroes share.
 [/list]
 
 [h2]Changes[/h2]
+Full patch notes with every number and reason are in the Change Notes tab.
 {PATCH_EN}
 
 [h2]Compatibility[/h2]
-Overrides only the hero files listed above (heroes/<hero>/<hero>.info.darkest) and adds one new effect file. Conflicts with other mods that replace the same hero files. Safe to add to an existing save; skill IDs are unchanged.
+Overrides only the hero files of the heroes listed above (heroes/<hero>/<hero>.info.darkest) and adds one effect file and one buff file. Conflicts with other mods that replace the same hero files. Safe to add to an existing save; skill IDs are unchanged.

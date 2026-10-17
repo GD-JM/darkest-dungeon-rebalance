@@ -98,7 +98,7 @@ Each entry: what changed (generated from the game data) — why (principle IDs f
 
 - **Intimidate**: Accuracy 95% → 85%; Damage -85%/-85%/-85%/-80%/-80% → -40%; Crit 0% → 3%; Targets 1·2·3·4 → 1; Ignores stealth true → none; Lv1 speed -3, damage -20% 3t; self: mark 4t; destealth; self: speed +2 … Lv5 speed -5, damage -33% (140%) 3t; self: mark 4t; destealth; self: speed +4 → Lv1 protection -30% 2t … Lv5 protection -50% (140%) 2t — Intimidate was a support skill (enemy debuffs, self-mark, destealth) that clashed with the Leper's identity as a king carried by his supporters, and its destealth overlapped five other skills. It is now a front-line blow with the same accuracy and damage as Purge, its twin animation, that briefly cracks the target's armor so Chop and the party can break heavily armored front-liners. *(P-19, G-02, G-01 / LEP-001, LEP-002, LEP-003, LEP-005)*
 
-## Man At Arms
+## Man-at-Arms
 
 - **Weapon**: Weapon dmg 5 9 / 6 10 / 7 12 / 7 13 / 8 14 → 5 10 / 6 12 / 7 13 / 7 15 / 8 16 — Across all heroes, the Man-at-Arms' damage sat furthest below what his HP and support kit would predict. The new range is the preset comparable heroes (Bounty Hunter, Highwayman) already use. *(G-01, R-PRESET-01 / MAA-001)*
 - **Rampart**: Damage -60% → -50%; Move 0 1 → none — The Man-at-Arms is heavy infantry who holds his ground, so Rampart no longer moves him forward and controls the enemy without shuffling your formation. Its damage is set to the standard for front-rank stuns, matching the Crusader's Stunning Blow. *(P-19, G-03, R-STUN-02 / MAA-006, MAA-014)*
