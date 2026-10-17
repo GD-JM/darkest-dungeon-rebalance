@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project>
 	<PreviewIconFile>preview_icon.png</PreviewIconFile>
-	<ItemDescriptionShort>Data-backed hero rebalance: only verified changes, each with its principle and reason.</ItemDescriptionShort>
+	<ItemDescriptionShort>A hero rebalance that makes more heroes and skills worth taking, following the base game's own rules.</ItemDescriptionShort>
 	<ModDataPath>{MOD_DATA_PATH}</ModDataPath>
-	<Title>Rebalance (Verified)</Title>
+	<Title>Every Hero Worth Taking – Hero Rebalance</Title>
 	<Language>english</Language>
-	<UpdateDetails>Initial release. Full change list and principles in the description.</UpdateDetails>
+	<UpdateDetails>Plain-language description, new preview image, new title.</UpdateDetails>
 	<Visibility>private</Visibility>
 	<UploadMode>direct_upload</UploadMode>
 	<VersionMajor>1</VersionMajor>

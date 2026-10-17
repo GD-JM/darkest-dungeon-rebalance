@@ -242,7 +242,8 @@ def main():
         open(os.path.join(W, 'description_built_%s.txt' % lang), 'w', encoding='utf-8', newline='\n').write(d0 + '\n')
         print('description', lang, len(d0), 'chars (Steam limit 8000; line breaks counted twice: %d)' % (len(d0) + d0.count('\n')))
         assert len(d0) + d0.count('\n') <= 8000, lang  # 웹 편집기가 줄바꿈을 CRLF(2자)로 세어도 넘지 않게
-    shutil.copy(os.path.join(M, 'preview_icon.png'), os.path.join(OUT, 'preview_icon.png'))
+    icon = os.path.join(W, 'cards', 'preview.png')  # 창작마당 대표 이미지 (tools/make_preview.py), 없으면 커스텀판 아이콘
+    shutil.copy(icon if os.path.exists(icon) else os.path.join(M, 'preview_icon.png'), os.path.join(OUT, 'preview_icon.png'))
     proj = rd(os.path.join(W, 'project.template.xml'))
     desc = rd(os.path.join(W, 'description_built_en.txt')).strip()
     proj = proj.replace('{MOD_DATA_PATH}', OUT.replace('\\', '/') + '/').replace('{DESCRIPTION}', desc.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;'))
