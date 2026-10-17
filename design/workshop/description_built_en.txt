@@ -1,0 +1,47 @@
+[h1]Rebalance (Verified)[/h1]
+A small, data-backed hero rebalance. Every change below fixes a problem confirmed in the game's own data, follows a written principle, and lists its reason. Nothing else is touched: no trinkets, no shared vanilla files, no new heroes.
+
+[h2]Core principles[/h2]
+[list]
+[*][b]G-01 / G-02[/b] Every hero and every skill should have a context where it is worth taking.
+[*][b]G-04[/b] Bring outliers back to the base game's own number rules.
+[*][b]G-05[/b] Spread healing and stress relief instead of concentrating it in a few heroes.
+[*][b]P-01[/b] Every change has a reason grounded in data or the base game's rules.
+[*][b]P-03[/b] The base game's own rules are kept; any deviation is documented.
+[*][b]P-07[/b] A post-launch patch that overshot may be rolled back to its launch value.
+[*][b]P-09[/b] Minimal change: fix only what the data shows is wrong.
+[*][b]P-12[/b] Preserve how a skill feels; adjust frequency and reliability, not identity.
+[*][b]P-19[/b] A skill's art and name should match what it does.
+[*][b]P-22[/b] Stay inside the official hero lore.
+[*][b]R-GROW-03[/b] Weapon speed grows as level-1 value + floor((level−1)/2).
+[*][b]R-RES-01[/b] Resists sit at the baseline unless the hero's lore justifies a deviation.
+[*][b]R-STUN-01 / R-STUN-03[/b] Baseline damaging stun: accuracy 90, normal stun tier; deviations are paid for elsewhere.
+[*][b]R-STRAT-01[/b] The game is won by action economy: kill fast, then extend the lead with stuns.
+[/list]
+
+[h2]Changes[/h2]
+[list]
+[*][b]Shieldbreaker · Pierce[/b] (SB-002) — Target ranks 1-2-3-4 → 1-2-3, crit modifier +5–9 → +2/3/4/4/4. Melee + armor piercing + reaching every rank was the core Shieldbreaker problem; a melee skill reaching rank 4 is a rare premium, so rank 4 is removed. [i]G-04, R-VALUE-20, P-09[/i]
+[*][b]Shieldbreaker · Weapon speed[/b] (SB-011) — Weapon speed 5/6/8/8/9 → 5/5/6/6/7. Brings an exception back to the base game's growth rule (level-1 value + floor((n−1)/2)). [i]G-04, R-GROW-03[/i]
+[*][b]Flagellant · Bleed resist[/b] (FLA-001) — Bleed resist 65 → 60. Matches the base game's cap for a hero's signature resist (baseline +30). [i]G-04, R-RES-01[/i]
+[*][b]Flagellant · Weapon speed[/b] (FLA-007) — Weapon speed 6/6/8/8/9 → 6/6/7/7/8. Brings an exception back to the base game's growth rule. [i]G-04, R-GROW-03[/i]
+[*][b]Houndmaster · Blight/Bleed resist[/b] (HM-017) — Blight/Bleed resist 40 → 30. In the base game a resist only deviates from baseline when the hero's lore says so; this +10 has no such line (Trap +30 stays, backed by the guard-dog text). [i]P-22, R-RES-01[/i]
+[*][b]Houndmaster · Cry Havoc[/b] (HM-014) — Levels 1–4: stress heal 2/3/4/5 → 4/4/5/5, chance 66/68/70/72% → 70/71/72/73% (level 5 stays 74%, so every level still grows). Fixes only the low-level unreliability of the party-wide stress heal. [i]G-02, G-05, P-12[/i]
+[*][b]Houndmaster · Blackjack[/b] (HM-013) — Accuracy 95 → 90, Strong stun → normal stun (damage −65% unchanged). It was the only melee stun that both reaches rank 3 and stuns at the strong tier; now on the baseline for damaging stuns (accuracy 90, normal stun). [i]R-STUN-01, R-STUN-03, P-09[/i]
+[*][b]Man-at-Arms · Weapon damage[/b] (MAA-001) — Weapon max damage 9/10/12/13/14 → 10/12/13/15/16 (min unchanged). He sat furthest below the HP-to-damage trend across all 20 heroes; 5-10 is the existing preset of comparable heroes (Bounty Hunter, Highwayman). [i]G-01, P-03[/i]
+[*][b]Duelist · The Boot[/b] (DUE-006) — Damage −40% → −60%. A melee skill that stuns and pushes at once, yet it gave up less damage than other stuns. −60% sits inside the damage range of stun skills (−40 to −75%). [i]R-STUN-01, R-STRAT-01[/i]
+[*][b]Hellion · Barbaric YAWP![/b] (HEL-001) — Stun, exhaustion and the 3-per-battle limit removed → self buff (accuracy +5, damage +20%, once per use) + all enemies deal 10–20% less damage (3 turns) + corpse clear; targets ranks 1-2 → all ranks. The un-cleansable, battle-long exhaustion (−20% damage, −3 speed) contradicted the relentless art. [i]P-19, G-02, R-STRAT-01[/i]
+[*][b]Hellion · Breakthrough[/b] (HEL-002) — Exhaustion removed, damage −50% → −55%. It was the weakest damaging AoE hitting ranks 2 and 3 (exhaustion cost most of its value). [i]P-19, G-02[/i]
+[*][b]Hellion · Bleed Out[/b] (HEL-003) — Exhaustion removed, damage +20% → 0%, crit modifier +6–10 → +10–14. Its rank-1-only target is now paid back with crit instead of damage; crits extend the bleed, which suits late-game armored enemies. [i]P-19, P-21[/i]
+[*][b]Hellion · Adrenaline Rush[/b] (HEL-004) — Its self buff moved to YAWP, leaving cure + self heal → self heal 1/2/2/3/4 → 3/4/5/6/7. [i]G-05, P-12[/i]
+[*][b]Hellion · Wicked Hack[/b] (HEL-005) — Accuracy 85 → 90, making her basic attack reliable now that exhaustion is gone. [i]G-02[/i]
+[*][b]Arbalest · Bola[/b] (ARB-004) — Level 5 push now uses the intended effect (1D 105% → 1E 115%). Bug fix: 1E exists in the base game but was never linked. [i]P-01[/i]
+[*][b]Abomination · Beast's Bile[/b] (ABO-002) — Accuracy 95 → 90, damage −90% → −75%. Human-form accuracy comes down and base output goes up, closing the gap with beast skills (accuracy 85–90). [i]P-23, G-01[/i]
+[*][b]Abomination · Manacles[/b] (ABO-005) — Accuracy 95 → 90, the baseline for damaging stuns. Damage unchanged; his large weapon already puts it near the top of stun skills. [i]P-23, R-STUN-03[/i]
+[*][b]Abomination · Slam[/b] (ABO-001) — Usable ranks 1-2-3 → 2-3-4, debuffs removed, accuracy 80 → 90, damage −25% → 0%. The beast had nothing to do from rank 4; now it slams from the back and moves forward. [i]P-23, G-03[/i]
+[*][b]Abomination · Transform[/b] (ABO-004) — Self stress relief 4–8 on transforming; beast form stress per turn 6 → 4. The cost to allies stays — this gives a reason to transform at all. [i]P-23, P-12[/i]
+[*][b]Grave Robber · Poison Dart / Thrown Dagger[/b] (GR-001) — Poison Dart blight 4 turns → 3 (the standard DoT duration); in exchange the self accuracy buff moves from Thrown Dagger to Poison Dart. [i]R-SKILL-05, P-11[/i]
+[/list]
+
+[h2]Compatibility[/h2]
+Overrides only the hero files listed above (heroes/<hero>/<hero>.info.darkest) and adds one new effect file. Conflicts with other mods that replace the same hero files. Safe to add to an existing save; skill IDs are unchanged.

@@ -1,0 +1,26 @@
+[h1]Rebalance (Verified)[/h1]
+A small, data-backed hero rebalance. Every change below fixes a problem confirmed in the game's own data, follows a written principle, and lists its reason. Nothing else is touched: no trinkets, no shared vanilla files, no new heroes.
+
+[h2]Core principles[/h2]
+[list]
+[*][b]G-01 / G-02[/b] Every hero and every skill should have a context where it is worth taking.
+[*][b]G-04[/b] Bring outliers back to the base game's own number rules.
+[*][b]G-05[/b] Spread healing and stress relief instead of concentrating it in a few heroes.
+[*][b]P-01[/b] Every change has a reason grounded in data or the base game's rules.
+[*][b]P-03[/b] The base game's own rules are kept; any deviation is documented.
+[*][b]P-07[/b] A post-launch patch that overshot may be rolled back to its launch value.
+[*][b]P-09[/b] Minimal change: fix only what the data shows is wrong.
+[*][b]P-12[/b] Preserve how a skill feels; adjust frequency and reliability, not identity.
+[*][b]P-19[/b] A skill's art and name should match what it does.
+[*][b]P-22[/b] Stay inside the official hero lore.
+[*][b]R-GROW-03[/b] Weapon speed grows as level-1 value + floor((level−1)/2).
+[*][b]R-RES-01[/b] Resists sit at the baseline unless the hero's lore justifies a deviation.
+[*][b]R-STUN-01 / R-STUN-03[/b] Baseline damaging stun: accuracy 90, normal stun tier; deviations are paid for elsewhere.
+[*][b]R-STRAT-01[/b] The game is won by action economy: kill fast, then extend the lead with stuns.
+[/list]
+
+[h2]Changes[/h2]
+{PATCH_EN}
+
+[h2]Compatibility[/h2]
+Overrides only the hero files listed above (heroes/<hero>/<hero>.info.darkest) and adds one new effect file. Conflicts with other mods that replace the same hero files. Safe to add to an existing save; skill IDs are unchanged.
