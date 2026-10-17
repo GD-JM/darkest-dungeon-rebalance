@@ -172,9 +172,8 @@
       "ko_name": "조련사 · 둔기 강타",
       "en_name": "Houndmaster · Blackjack",
       "principles": [
-        "R-STUN-01",
         "R-STUN-03",
-        "P-09"
+        "P-11"
       ],
       "ops": [
         [
@@ -201,10 +200,16 @@
             4,
             5
           ]
+        ],
+        [
+          "skill",
+          "blackjack",
+          "dmg",
+          "-50%"
         ]
       ],
-      "ko": "명중 95 → 90, 강한 기절 → 일반 기절(피해 −65%는 그대로). 근접 기절 중 3열까지 닿으면서 강한 기절인 유일한 기술이었음 — 피해 있는 기절의 기준(명중 90·일반 기절)으로.",
-      "en": "Accuracy 95 → 90, Strong stun → normal stun (damage −65% unchanged). It was the only melee stun that both reaches rank 3 and stuns at the strong tier; now on the baseline for damaging stuns (accuracy 90, normal stun)."
+      "ko": "명중 95 → 90, 강한 기절 → 일반 기절, 피해 −65% → −50%. 근접 기절 중 3열까지 닿으면서 강한 기절인 유일한 기술이었음 — 명중과 기절 등급을 내린 대신 피해로 돌려줌.",
+      "en": "Accuracy 95 → 90, strong stun → normal stun, damage −65% → −50%. It was the only melee stun that both reaches rank 3 and stuns at the strong tier; accuracy and stun tier come down, damage goes up in return."
     },
     {
       "id": "MAA-001",
@@ -463,6 +468,110 @@
       ],
       "ko": "맹독 다트 중독 4턴 → 3턴(중독 기술 표준 지속), 대신 자기 명중 강화를 단검 투척에서 맹독 다트로 옮김.",
       "en": "Poison Dart blight 4 turns → 3 (the standard DoT duration); in exchange the self accuracy buff moves from Thrown Dagger to Poison Dart."
+    },
+    {
+      "id": "HWY-009",
+      "hero": "highwayman",
+      "ko_name": "노상강도 · 권총 사격",
+      "en_name": "Highwayman · Pistol Shot",
+      "principles": [
+        "G-02",
+        "P-03"
+      ],
+      "ops": [
+        [
+          "skill",
+          "pistol_shot",
+          "atk",
+          [
+            "90%",
+            "95%",
+            "100%",
+            "105%",
+            "110%"
+          ]
+        ]
+      ],
+      "ko": "명중 85 → 90. 바닐라 원거리 단일 피해 기술 34개의 1렙 명중 중앙값이 90인데 권총 사격만 85 — 근접 빌드에 비해 원거리 빌드가 약했다(R-TRADE-02의 명중 85 기준에서 벗어나는 예외로 기록).",
+      "en": "Accuracy 85 → 90. The median level-1 accuracy of the base game's 34 single-target damaging ranged skills is 90; Pistol Shot alone sat at 85, leaving his ranged build behind his melee one (logged as an exception to the 85 baseline of R-TRADE-02)."
+    },
+    {
+      "id": "CRU-002",
+      "hero": "crusader",
+      "ko_name": "성전사 · 광신적 고발",
+      "en_name": "Crusader · Zealous Accusation",
+      "principles": [
+        "G-02"
+      ],
+      "ops": [
+        [
+          "skill",
+          "zealous_accusation",
+          "atk",
+          [
+            "90%",
+            "95%",
+            "100%",
+            "105%",
+            "110%"
+          ]
+        ]
+      ],
+      "ko": "명중 85 → 90. 강타 대신 이 기술을 고를 상황을 만든다(피해 −40% 광역이라 명중까지 낮으면 고를 이유가 없었음).",
+      "en": "Accuracy 85 → 90, so there are fights where it beats Smite (a −40% AoE with low accuracy on top had no reason to be picked)."
+    },
+    {
+      "id": "CRU-003",
+      "hero": "crusader",
+      "ko_name": "성전사 · 기절의 일격",
+      "en_name": "Crusader · Stunning Blow",
+      "principles": [
+        "R-STUN-01",
+        "P-19"
+      ],
+      "ops": [
+        [
+          "skill_effect_swap",
+          "stunning_blow",
+          "Stun {n}",
+          "Hero Strong Stun {n}",
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        ]
+      ],
+      "ko": "일반 기절 → 강한 기절(피해 −50% 그대로). 전열 표준 기절 — 성전사의 대표 기술을 이름 그대로 확실한 기절로.",
+      "en": "Normal stun → strong stun (damage −50% unchanged). The standard front-line stun; the Crusader's signature skill now stuns as reliably as its name says."
+    },
+    {
+      "id": "VES-007",
+      "hero": "vestal",
+      "ko_name": "성녀 · 신의 손길",
+      "en_name": "Vestal · Hand of Light",
+      "principles": [
+        "R-TRADE-02",
+        "G-02"
+      ],
+      "ops": [
+        [
+          "skill",
+          "gods_hand",
+          "atk",
+          [
+            "90%",
+            "95%",
+            "100%",
+            "105%",
+            "110%"
+          ]
+        ]
+      ],
+      "ko": "명중 85 → 90. 맞혀야 아군 강화가 걸리는 효과 위주 원거리 기술 — 효과가 본업인 기술은 명중을 우선한다.",
+      "en": "Accuracy 85 → 90. A ranged skill whose job is the ally buff it applies on hit; for effect-first skills accuracy takes priority."
     }
   ]
 }
