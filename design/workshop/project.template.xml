@@ -5,8 +5,8 @@
 	<ModDataPath>{MOD_DATA_PATH}</ModDataPath>
 	<Title>All Hero Rebalance</Title>
 	<Language>english</Language>
-	<UpdateDetails>Title: All Hero Rebalance.</UpdateDetails>
-	<Visibility>private</Visibility>
+	<UpdateDetails>Public release.</UpdateDetails>
+	<Visibility>public</Visibility>
 	<UploadMode>direct_upload</UploadMode>
 	<VersionMajor>1</VersionMajor>
 	<VersionMinor>0</VersionMinor>
