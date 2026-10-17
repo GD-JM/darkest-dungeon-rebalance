@@ -1,0 +1,107 @@
+{
+  "_doc": "창작마당판 = 바닐라 + 아래 검증된 변경(W)만. tools/build_workshop.py가 이 목록으로 mods/RebalanceWorkshop을 만든다. 근거: design/analysis/audit_2026-10-17/SUMMARY.md. ops: skill(id, field, values[5] 또는 하나), skill_effect_swap(id, old, new — {n}=레벨 1~5), skill_effect_remove(id, name), weapon(field, values[5]), resist(key, value), add_effects(줄 목록).",
+  "changes": [
+    {
+      "id": "SB-002", "hero": "shieldbreaker", "skill": "pierce",
+      "ko_name": "방패 파괴자 · 찌르기", "en_name": "Shieldbreaker · Pierce",
+      "principles": ["G-04", "P-07"],
+      "ops": [["skill", "pierce", "crit", ["2%", "3%", "4%", "4%", "4%"]]],
+      "ko": "치명 보정 +5/6/7/8/9 → +2/3/4/4/4 (출시 값). 공식 패치로 과하게 오른 값을 출시 값으로 되돌림.",
+      "en": "Crit modifier +5/6/7/8/9 → +2/3/4/4/4 (launch values). Restores the launch value of a post-launch over-buff."
+    },
+    {
+      "id": "SB-011", "hero": "shieldbreaker",
+      "ko_name": "방패 파괴자 · 무기 속도", "en_name": "Shieldbreaker · Weapon speed",
+      "principles": ["G-04", "R-GROW-03"],
+      "ops": [["weapon", "spd", ["5", "5", "6", "6", "7"]]],
+      "ko": "무기 속도 5/6/8/8/9 → 5/5/6/6/7. 원작 성장 규칙(1렙 + 내림((n−1)/2))의 예외를 규칙대로.",
+      "en": "Weapon speed 5/6/8/8/9 → 5/5/6/6/7. Brings an exception back to the base game's growth rule (level-1 value + floor((n−1)/2))."
+    },
+    {
+      "id": "FLA-001", "hero": "flagellant",
+      "ko_name": "고행자 · 출혈 저항", "en_name": "Flagellant · Bleed resist",
+      "principles": ["G-04", "R-RES-01"],
+      "ops": [["resist", "bleed", "60%"]],
+      "ko": "출혈 저항 65 → 60. 원작의 대표 저항 상한(기준 +30)에 맞춤.",
+      "en": "Bleed resist 65 → 60. Matches the base game's cap for a hero's signature resist (baseline +30)."
+    },
+    {
+      "id": "FLA-007", "hero": "flagellant",
+      "ko_name": "고행자 · 무기 속도", "en_name": "Flagellant · Weapon speed",
+      "principles": ["G-04", "R-GROW-03"],
+      "ops": [["weapon", "spd", ["6", "6", "7", "7", "8"]]],
+      "ko": "무기 속도 6/6/8/8/9 → 6/6/7/7/8. 원작 성장 규칙의 예외를 규칙대로.",
+      "en": "Weapon speed 6/6/8/8/9 → 6/6/7/7/8. Brings an exception back to the base game's growth rule."
+    },
+    {
+      "id": "HM-017", "hero": "houndmaster",
+      "ko_name": "조련사 · 중독·출혈 저항", "en_name": "Houndmaster · Blight/Bleed resist",
+      "principles": ["P-22", "R-RES-01"],
+      "ops": [["resist", "poison", "30%"], ["resist", "bleed", "30%"]],
+      "ko": "중독·출혈 저항 40 → 30. 원작 저항은 설정 문장이 있을 때만 기준에서 벗어나는데, 이 +10에는 대응 문장이 없음(함정 +30은 '경비견' 문장이 있어 유지).",
+      "en": "Blight/Bleed resist 40 → 30. In the base game a resist only deviates from baseline when the hero's lore says so; this +10 has no such line (Trap +30 stays, backed by the guard-dog text)."
+    },
+    {
+      "id": "HM-014", "hero": "houndmaster", "skill": "howl",
+      "ko_name": "조련사 · 울부짖기", "en_name": "Houndmaster · Cry Havoc",
+      "principles": ["G-02", "G-05", "P-12"],
+      "ops": [["skill_effect_swap", "howl", "Hound Howl {n}", "RB HM Hound Howl {n}", [1, 2, 3, 4]],
+              ["add_effects", [
+                "effect: .name \"RB HM Hound Howl 1\" .target \"target\" .curio_result_type \"positive\" .chance 74% .healstress 4\t.on_hit true .on_miss false .queue true",
+                "effect: .name \"RB HM Hound Howl 2\" .target \"target\" .curio_result_type \"positive\" .chance 74% .healstress 4\t.on_hit true .on_miss false .queue true",
+                "effect: .name \"RB HM Hound Howl 3\" .target \"target\" .curio_result_type \"positive\" .chance 74% .healstress 5\t.on_hit true .on_miss false .queue true",
+                "effect: .name \"RB HM Hound Howl 4\" .target \"target\" .curio_result_type \"positive\" .chance 74% .healstress 5\t.on_hit true .on_miss false .queue true"]]],
+      "ko": "1~4렙 스트레스 회복 2/3/4/5 → 4/4/5/5, 확률 66~72% → 74%. 5렙은 그대로. 아군 전체 스트레스 회복의 저레벨 불안정성만 보정(5렙 체감 보존).",
+      "en": "Levels 1–4: stress heal 2/3/4/5 → 4/4/5/5, chance 66–72% → 74%. Level 5 unchanged. Fixes only the low-level unreliability of the party-wide stress heal; the rank-5 feel is kept."
+    },
+    {
+      "id": "HM-013", "hero": "houndmaster", "skill": "blackjack",
+      "ko_name": "조련사 · 둔기 강타", "en_name": "Houndmaster · Blackjack",
+      "principles": ["R-STUN-01", "R-STUN-03", "P-09"],
+      "ops": [["skill", "blackjack", "atk", ["90%", "95%", "100%", "105%", "110%"]],
+              ["skill_effect_swap", "blackjack", "Hero Strong Stun {n}", "Stun {n}", [1, 2, 3, 4, 5]]],
+      "ko": "명중 95 → 90, 강한 기절 → 일반 기절(피해 −65%는 그대로). 근접 기절 중 3열까지 닿으면서 강한 기절인 유일한 기술이었음 — 피해 있는 기절의 기준(명중 90·일반 기절)으로.",
+      "en": "Accuracy 95 → 90, Strong stun → normal stun (damage −65% unchanged). It was the only melee stun that both reaches rank 3 and stuns at the strong tier; now on the baseline for damaging stuns (accuracy 90, normal stun)."
+    },
+    {
+      "id": "MAA-001", "hero": "man_at_arms",
+      "ko_name": "중보병 · 무기 피해", "en_name": "Man-at-Arms · Weapon damage",
+      "principles": ["G-01", "P-03"],
+      "ops": [["weapon", "dmg_max", ["10", "12", "13", "15", "16"]]],
+      "ko": "무기 최대 피해 9/10/12/13/14 → 10/12/13/15/16(최소 그대로). 영웅 20명의 체력–피해 추세에서 가장 아래로 벗어나 있었음. 5-10은 같은 조건 영웅(현상금 사냥꾼·노상강도)의 기존 값.",
+      "en": "Weapon max damage 9/10/12/13/14 → 10/12/13/15/16 (min unchanged). He sat furthest below the HP-to-damage trend across all 20 heroes; 5-10 is the existing preset of comparable heroes (Bounty Hunter, Highwayman)."
+    },
+    {
+      "id": "DUE-006", "hero": "duelist", "skill": "the_boot",
+      "ko_name": "결투가 · 장화 차기", "en_name": "Duelist · The Boot",
+      "principles": ["R-STUN-01", "R-STRAT-01"],
+      "ops": [["skill", "the_boot", "dmg", "-60%"]],
+      "ko": "피해 −40% → −60%. 기절 + 밀치기를 함께 거는 근접기인데 피해 손실이 다른 기절기보다 작았음. −60%는 기절 기술 피해 가격대(−40~−75%) 안.",
+      "en": "Damage −40% → −60%. A melee skill that stuns and pushes at once, yet it gave up less damage than other stuns. −60% sits inside the damage range of stun skills (−40 to −75%)."
+    },
+    {
+      "id": "HEL-002", "hero": "hellion", "skill": "breakthru",
+      "ko_name": "야만인 · 돌파", "en_name": "Hellion · Breakthrough",
+      "principles": ["G-02", "P-19"],
+      "ops": [["skill_effect_remove", "breakthru", "Hellion Exhaust Sm"], ["skill", "breakthru", "dmg", "-55%"]],
+      "ko": "자기 탈진 제거, 피해 −50% → −55%. 피해 있는 2·3열 광역 공격 중 가장 약했음(모델 바닐라 +28: 탈진 대가 −35). 탈진을 빼고 피해 5%p를 반납.",
+      "en": "Self-exhaustion removed, damage −50% → −55%. It was the weakest damaging AoE that hits ranks 2 and 3 (exhaustion cost most of its value). Exhaustion removed, 5% damage given back."
+    },
+    {
+      "id": "ARB-004", "hero": "arbalest", "skill": "bola",
+      "ko_name": "석궁사수 · 사냥돌 발사", "en_name": "Arbalest · Bola",
+      "principles": ["P-01"],
+      "ops": [["skill_effect_swap", "bola", "Bolo Push 1D", "Bolo Push 1E", [5]]],
+      "ko": "5렙 밀치기 효과 연결 누락 수정(1D 105% → 1E 115%). 바닐라에 1E가 정의돼 있지만 연결되지 않던 버그.",
+      "en": "Level 5 push now uses the intended effect (1D 105% → 1E 115%). Bug fix: 1E exists in the base game but was never linked."
+    },
+    {
+      "id": "ABO-002", "hero": "abomination", "skill": "vomit",
+      "ko_name": "괴인 · 아수의 담즙", "en_name": "Abomination · Beast's Bile",
+      "principles": ["G-02", "P-09"],
+      "ops": [["skill", "vomit", "dmg", "-75%"]],
+      "ko": "피해 −90% → −75%. 같은 2·3열 광역 지속 피해 기술(광대 수확의 낫질)보다 처지는 것을 확인, 직접 피해만 맞춤.",
+      "en": "Damage −90% → −75%. It trailed the comparable rank 2–3 AoE damage-over-time skill (Jester's Harvest); only direct damage was adjusted."
+    }
+  ]
+}

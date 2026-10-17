@@ -1,0 +1,81 @@
+[h1]Rebalance (Verified)[/h1]
+A small, data-backed hero rebalance. Every change below fixes a problem confirmed in the game's own data, follows a written principle, and lists its reason. Nothing else is touched: no trinkets, no shared vanilla files, no new heroes.
+
+[h2]Core principles[/h2]
+[list]
+[*][b]G-01 / G-02[/b] Every hero and every skill should have a context where it is worth taking.
+[*][b]G-04[/b] Bring outliers back to the base game's own number rules.
+[*][b]G-05[/b] Spread healing and stress relief instead of concentrating it in a few heroes.
+[*][b]P-01[/b] Every change has a reason grounded in data or the base game's rules.
+[*][b]P-03[/b] The base game's own rules are kept; any deviation is documented.
+[*][b]P-07[/b] A post-launch patch that overshot may be rolled back to its launch value.
+[*][b]P-09[/b] Minimal change: fix only what the data shows is wrong.
+[*][b]P-12[/b] Preserve how a skill feels; adjust frequency and reliability, not identity.
+[*][b]P-19[/b] A skill's art and name should match what it does.
+[*][b]P-22[/b] Stay inside the official hero lore.
+[*][b]R-GROW-03[/b] Weapon speed grows as level-1 value + floor((level−1)/2).
+[*][b]R-RES-01[/b] Resists sit at the baseline unless the hero's lore justifies a deviation.
+[*][b]R-STUN-01 / R-STUN-03[/b] Baseline damaging stun: accuracy 90, normal stun tier; deviations are paid for elsewhere.
+[*][b]R-STRAT-01[/b] The game is won by action economy: kill fast, then extend the lead with stuns.
+[/list]
+
+[h2]Changes[/h2]
+[list]
+[*][b]Shieldbreaker · Pierce[/b] (SB-002) — Crit modifier +5/6/7/8/9 → +2/3/4/4/4 (launch values). Restores the launch value of a post-launch over-buff. [i]G-04, P-07[/i]
+[*][b]Shieldbreaker · Weapon speed[/b] (SB-011) — Weapon speed 5/6/8/8/9 → 5/5/6/6/7. Brings an exception back to the base game's growth rule (level-1 value + floor((n−1)/2)). [i]G-04, R-GROW-03[/i]
+[*][b]Flagellant · Bleed resist[/b] (FLA-001) — Bleed resist 65 → 60. Matches the base game's cap for a hero's signature resist (baseline +30). [i]G-04, R-RES-01[/i]
+[*][b]Flagellant · Weapon speed[/b] (FLA-007) — Weapon speed 6/6/8/8/9 → 6/6/7/7/8. Brings an exception back to the base game's growth rule. [i]G-04, R-GROW-03[/i]
+[*][b]Houndmaster · Blight/Bleed resist[/b] (HM-017) — Blight/Bleed resist 40 → 30. In the base game a resist only deviates from baseline when the hero's lore says so; this +10 has no such line (Trap +30 stays, backed by the guard-dog text). [i]P-22, R-RES-01[/i]
+[*][b]Houndmaster · Cry Havoc[/b] (HM-014) — Levels 1–4: stress heal 2/3/4/5 → 4/4/5/5, chance 66–72% → 74%. Level 5 unchanged. Fixes only the low-level unreliability of the party-wide stress heal; the rank-5 feel is kept. [i]G-02, G-05, P-12[/i]
+[*][b]Houndmaster · Blackjack[/b] (HM-013) — Accuracy 95 → 90, Strong stun → normal stun (damage −65% unchanged). It was the only melee stun that both reaches rank 3 and stuns at the strong tier; now on the baseline for damaging stuns (accuracy 90, normal stun). [i]R-STUN-01, R-STUN-03, P-09[/i]
+[*][b]Man-at-Arms · Weapon damage[/b] (MAA-001) — Weapon max damage 9/10/12/13/14 → 10/12/13/15/16 (min unchanged). He sat furthest below the HP-to-damage trend across all 20 heroes; 5-10 is the existing preset of comparable heroes (Bounty Hunter, Highwayman). [i]G-01, P-03[/i]
+[*][b]Duelist · The Boot[/b] (DUE-006) — Damage −40% → −60%. A melee skill that stuns and pushes at once, yet it gave up less damage than other stuns. −60% sits inside the damage range of stun skills (−40 to −75%). [i]R-STUN-01, R-STRAT-01[/i]
+[*][b]Hellion · Breakthrough[/b] (HEL-002) — Self-exhaustion removed, damage −50% → −55%. It was the weakest damaging AoE that hits ranks 2 and 3 (exhaustion cost most of its value). Exhaustion removed, 5% damage given back. [i]G-02, P-19[/i]
+[*][b]Arbalest · Bola[/b] (ARB-004) — Level 5 push now uses the intended effect (1D 105% → 1E 115%). Bug fix: 1E exists in the base game but was never linked. [i]P-01[/i]
+[*][b]Abomination · Beast's Bile[/b] (ABO-002) — Damage −90% → −75%. It trailed the comparable rank 2–3 AoE damage-over-time skill (Jester's Harvest); only direct damage was adjusted. [i]G-02, P-09[/i]
+[/list]
+
+[h2]Compatibility[/h2]
+Overrides only the hero files listed above (heroes/<hero>/<hero>.info.darkest) and adds one new effect file. Conflicts with other mods that replace the same hero files. Safe to add to an existing save; skill IDs are unchanged.
+
+[hr][/hr]
+
+[h1]리밸런스 (검증판)[/h1]
+게임 데이터로 문제가 확인된 부분만 고친 작은 영웅 밸런스 모드입니다. 모든 변경은 원칙 번호와 근거를 함께 적었습니다. 장신구·바닐라 공유 파일·신규 영웅은 건드리지 않습니다.
+
+[h2]핵심 원칙[/h2]
+[list]
+[*][b]G-01 / G-02[/b] 모든 영웅과 모든 기술이 쓰일 상황이 있어야 한다.
+[*][b]G-04[/b] 원작 수치 규칙에서 벗어난 값을 규칙으로 되돌린다.
+[*][b]G-05[/b] 회복·스트레스 회복을 일부 영웅에게 몰지 않는다.
+[*][b]P-01[/b] 모든 변경은 데이터나 원작 규칙에 근거한다.
+[*][b]P-03[/b] 원작 규칙은 유지하고, 벗어나면 기록한다.
+[*][b]P-07[/b] 출시 후 과하게 오른 값은 출시 값으로 되돌릴 수 있다.
+[*][b]P-09[/b] 최소 수정: 데이터로 확인된 문제만 고친다.
+[*][b]P-12[/b] 기술의 손맛은 지키고, 빈도·안정성만 조정한다.
+[*][b]P-19[/b] 그림·이름이 약속한 기능을 실제로 준다.
+[*][b]P-22[/b] 공식 영웅 설정을 벗어나지 않는다.
+[*][b]R-GROW-03[/b] 무기 속도 = 1렙 값 + 내림((레벨−1)/2).
+[*][b]R-RES-01[/b] 저항은 기준값, 설정 문장이 있을 때만 벗어난다.
+[*][b]R-STUN-01 / R-STUN-03[/b] 피해 있는 기절의 기준은 명중 90·일반 기절, 벗어나면 다른 곳에서 대가를 치른다.
+[*][b]R-STRAT-01[/b] 이 게임은 행동력 싸움 — 빨리 잡고 기절로 우위를 늘린다.
+[/list]
+
+[h2]변경 내역[/h2]
+[list]
+[*][b]방패 파괴자 · 찌르기[/b] (SB-002) — 치명 보정 +5/6/7/8/9 → +2/3/4/4/4 (출시 값). 공식 패치로 과하게 오른 값을 출시 값으로 되돌림. [i]G-04, P-07[/i]
+[*][b]방패 파괴자 · 무기 속도[/b] (SB-011) — 무기 속도 5/6/8/8/9 → 5/5/6/6/7. 원작 성장 규칙(1렙 + 내림((n−1)/2))의 예외를 규칙대로. [i]G-04, R-GROW-03[/i]
+[*][b]고행자 · 출혈 저항[/b] (FLA-001) — 출혈 저항 65 → 60. 원작의 대표 저항 상한(기준 +30)에 맞춤. [i]G-04, R-RES-01[/i]
+[*][b]고행자 · 무기 속도[/b] (FLA-007) — 무기 속도 6/6/8/8/9 → 6/6/7/7/8. 원작 성장 규칙의 예외를 규칙대로. [i]G-04, R-GROW-03[/i]
+[*][b]조련사 · 중독·출혈 저항[/b] (HM-017) — 중독·출혈 저항 40 → 30. 원작 저항은 설정 문장이 있을 때만 기준에서 벗어나는데, 이 +10에는 대응 문장이 없음(함정 +30은 '경비견' 문장이 있어 유지). [i]P-22, R-RES-01[/i]
+[*][b]조련사 · 울부짖기[/b] (HM-014) — 1~4렙 스트레스 회복 2/3/4/5 → 4/4/5/5, 확률 66~72% → 74%. 5렙은 그대로. 아군 전체 스트레스 회복의 저레벨 불안정성만 보정(5렙 체감 보존). [i]G-02, G-05, P-12[/i]
+[*][b]조련사 · 둔기 강타[/b] (HM-013) — 명중 95 → 90, 강한 기절 → 일반 기절(피해 −65%는 그대로). 근접 기절 중 3열까지 닿으면서 강한 기절인 유일한 기술이었음 — 피해 있는 기절의 기준(명중 90·일반 기절)으로. [i]R-STUN-01, R-STUN-03, P-09[/i]
+[*][b]중보병 · 무기 피해[/b] (MAA-001) — 무기 최대 피해 9/10/12/13/14 → 10/12/13/15/16(최소 그대로). 영웅 20명의 체력–피해 추세에서 가장 아래로 벗어나 있었음. 5-10은 같은 조건 영웅(현상금 사냥꾼·노상강도)의 기존 값. [i]G-01, P-03[/i]
+[*][b]결투가 · 장화 차기[/b] (DUE-006) — 피해 −40% → −60%. 기절 + 밀치기를 함께 거는 근접기인데 피해 손실이 다른 기절기보다 작았음. −60%는 기절 기술 피해 가격대(−40~−75%) 안. [i]R-STUN-01, R-STRAT-01[/i]
+[*][b]야만인 · 돌파[/b] (HEL-002) — 자기 탈진 제거, 피해 −50% → −55%. 피해 있는 2·3열 광역 공격 중 가장 약했음(모델 바닐라 +28: 탈진 대가 −35). 탈진을 빼고 피해 5%p를 반납. [i]G-02, P-19[/i]
+[*][b]석궁사수 · 사냥돌 발사[/b] (ARB-004) — 5렙 밀치기 효과 연결 누락 수정(1D 105% → 1E 115%). 바닐라에 1E가 정의돼 있지만 연결되지 않던 버그. [i]P-01[/i]
+[*][b]괴인 · 아수의 담즙[/b] (ABO-002) — 피해 −90% → −75%. 같은 2·3열 광역 지속 피해 기술(광대 수확의 낫질)보다 처지는 것을 확인, 직접 피해만 맞춤. [i]G-02, P-09[/i]
+[/list]
+
+[h2]호환성[/h2]
+위 영웅들의 영웅 파일(heroes/<영웅>/<영웅>.info.darkest)만 덮어쓰고 효과 파일 하나를 추가합니다. 같은 영웅 파일을 바꾸는 다른 모드와는 충돌합니다. 기술 ID가 그대로라 진행 중인 세이브에 넣어도 됩니다.
