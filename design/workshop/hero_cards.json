@@ -924,9 +924,9 @@
     ],
     "new": [
      "No use limit",
-     "Guarded allies: +50% stress healing",
-     "Stress taken -10% (2 turns)",
-     "Party stress heal 1-3"
+     "Party stress heal 1-3",
+     "Stress taken -10% (2-3 turns)",
+     "Guarded allies: +50% stress healing"
     ]
    }
   ]
