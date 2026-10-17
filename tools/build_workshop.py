@@ -252,8 +252,9 @@ def main():
         absent += sorted({k for v in summary[lang].values() for _, k in v} - {s['key'] for c in cards.values() for s in c['skills']})
         assert not absent, ('설명문에 빠진 변경', lang, absent)
         open(os.path.join(W, 'description_built_%s.txt' % lang), 'w', encoding='utf-8', newline='\n').write(d0 + '\n')
-        print('description', lang, len(d0), 'chars (Steam limit 8000; line breaks counted twice: %d)' % (len(d0) + d0.count('\n')))
-        assert len(d0) + d0.count('\n') <= 8000, lang  # 웹 편집기가 줄바꿈을 CRLF(2자)로 세어도 넘지 않게
+        nb = len(d0.encode('utf-8')) + d0.count('\n')
+        print('description', lang, len(d0), 'chars,', nb, 'bytes incl. CRLF (Steam limit 8000 bytes)')
+        assert nb <= 8000, lang  # 스팀 한도는 UTF-8 바이트(러시아어 6958자=12KB 저장 실패로 확인 10-17); 줄바꿈은 CRLF 2바이트로 센다
     icon = os.path.join(W, 'cards', 'preview.png')  # 창작마당 대표 이미지 (tools/make_preview.py), 없으면 커스텀판 아이콘
     shutil.copy(icon if os.path.exists(icon) else os.path.join(M, 'preview_icon.png'), os.path.join(OUT, 'preview_icon.png'))
     proj = rd(os.path.join(W, 'project.template.xml'))

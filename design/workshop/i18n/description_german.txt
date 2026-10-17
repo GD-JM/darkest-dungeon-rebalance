@@ -1,0 +1,67 @@
+[h1]Jeder Held zählt – Helden-Rebalance[/h1]
+[i]Mehr Helden und mehr Fähigkeiten, die sich lohnen – ohne zu ändern, wer die Helden sind.[/i]
+
+[h2]Das Ziel: keine Pflichtgruppe mehr[/h2]
+Am Anfang kann Darkest Dungeon ohne Vestalin, Okkultist oder Narr fast unspielbar werden, weil Heilung und Stressabbau nur bei einer Handvoll Helden liegen. Diese Mod verteilt Heilung und Stressabbau über die ganze Heldenliste, damit ganz unterschiedliche Gruppen funktionieren.
+
+Dasselbe gilt innerhalb jedes Helden: Fähigkeiten und Ränge sind so neu ausbalanciert, dass ihr nicht mehr auf ein einziges optimales Set aus vier Fähigkeiten festgenagelt seid, das ihr immer wieder vom selben Rang aus spammt.
+
+[h2]Ein Gesamtpaket, gleicher Schwierigkeitsgrad[/h2]
+Die meisten Helden-Mods nehmen sich einen Helden nach dem anderen vor – und meistens heißt das: Der Held wird stärker. Diese Mod balanciert alle 19 Helden gemeinsam nach denselben Regeln: Jeder Buff wird an anderer Stelle mit einem Preis oder Nerf bezahlt, das Spiel wird insgesamt also weder leichter noch schwerer. Laut unserem Heldenstärke-Modell bleibt die Gesamtstärke aller Helden innerhalb von 0,5 % der Vanilla-Werte, während die Lücke zwischen den stärksten und schwächsten Helden schrumpft: Duellantin und Hundemeister werden etwas schwächer, Kopfgeldjäger und Arbaleste legen zu.
+
+[h2]Wie die Änderungen entschieden wurden[/h2]
+[list]
+[*][b]Heilung und Stressabbau gehören nicht nur ein paar Helden.[/b]
+Beispiel: Mehr Helden können sich selbst zusammenflicken – Giftlist der Grabräuberin (Heilung 1–5), Adrenalinschub der Barbarin (3–7) und Kolbenhieb der Vestalin (3–5) –, während Zuspruch des Waffenknechts zur wiederholbaren Stressheilung für die ganze Gruppe wird.
+[*][b]Verschiedene Fähigkeiten, verschiedene Ränge.[/b]
+Beispiel: Der Gegenschlag des Wegelagerers ist von Fechtschritt zu Gezielter Schuss gewandert, sodass ein Fernkampf-Wegelagerer kontern kann, ohne nach vorne zu gehen.
+[*][b]Den Regeln des Grundspiels folgen.[/b] Die Originalwerte folgen klaren Mustern; Ausreißer werden wieder auf Linie gebracht.
+Beispiel: Die Waffengeschwindigkeit der Schildbrecherin stieg schneller als bei jedem Helden des Grundspiels; jetzt folgt sie der Standardkurve.
+[*][b]Jeder Buff hat seinen Preis.[/b] Präzision, Schaden und Reichweite werden gegeneinander aufgewogen, damit der Schwierigkeitsgrad insgesamt gleich bleibt.
+Beispiel: Streuschuss bekommt 15 Präzision dazu und zahlt dafür mit Schaden (−50 % → −60 %).
+[*][b]Eine Fähigkeit sollte tun, wonach sie aussieht.[/b]
+Beispiel: Erstversorgung der Arbaleste stoppt jetzt Blutungen, und Blendpulver der Antiquarin brennt jetzt wirklich.
+[*][b]Der Lore treu bleiben.[/b]
+Beispiel: Nichts in der Beschreibung des Hundemeisters erklärt seinen zusätzlichen Widerstand gegen Bluten und Gifthauch, also kehren beide auf den Grundwert zurück.
+[*][b]Das Spielgefühl bewahren.[/b] Angepasst werden Zuverlässigkeit und Häufigkeit, nicht die Identität; Red Hooks eigene Nerfs werden respektiert.
+Beispiel: Schuss aus nächster Nähe haut immer noch ordentlich rein, aber der Wegelagerer weicht danach 2 Ränge zurück und kann ihn deshalb nicht jede Runde abfeuern.
+[*][b]Accessoires bleiben unangetastet.[/b]
+Beispiel: Aderlass behält beide Schwächungen, weil Accessoires sie verstärken; stattdessen wurde sein Schaden gesenkt.
+[/list]
+
+[h2]Im Fokus: der Kopfgeldjäger[/h2]
+Früher war der beste Plan, ihn auf Rang 2 zu parken und immer dieselben Fähigkeiten zu drücken, und Markierungsgruppen waren schwächer, als sie aussahen. Jetzt ist er ein Henker, der sich die Schwachen vorknöpft: markierte, betäubte und blutende Ziele.
+[list]
+[*][b]Du bist der Nächste[/b] senkt die ABW um 20 % (vorher 10 %). Er hat weder Gegenschlag noch Verteidigungstricks – so knackt er gepanzerte Ziele.
+[*][b]Komm her[/b] zieht 3 Ränge, ein Ziel aus der hinteren Reihe landet also auf Rang 1.
+[*][b]Aufwärtshaken[/b] (nur Rang 1, PRÄ 95, KRT 9 %) betäubt es stark und schleudert es auf Rang 3; ein Krit löst außerdem seinen Bonusschaden gegen markierte Ziele aus.
+[*][b]Mach ihn fertig[/b] reicht weiterhin bis Rang 3 und trifft betäubte und jetzt auch blutende Ziele härter – die Blutung legen Krähenfüße vorher.
+[/list]
+Jeder Schritt hat seinen Preis: Aufwärtshaken trifft nur Rang 1, Blendgranate ist auf Rang 3–4 gewandert, und Mach ihn fertig wird von Rang 1–2 aus eingesetzt.
+
+[h2]Held für Held[/h2]
+Die Bilder oben zeigen jede geänderte Fähigkeit, vorher und nachher (der Kopfgeldjäger zuerst).
+[b]Unhold[/b] — sich zu verwandeln wird zur echten Entscheidung: Verwandlung baut jetzt seinen eigenen Stress ab, und Schwerer Schlag funktioniert von Rang 4 aus.
+[b]Antiquarin[/b] — weiterhin absichtlich schwächer (sie bringt Gold ein), aber Blendpulver brennt jetzt und bereitet Verbrennungs-Combos vor.
+[b]Arbaleste[/b] — jetzt auch Feldsanitäterin: Erstversorgung heilt Bluten, Leuchtsignal baut zuverlässig Gruppenstress ab.
+[b]Kopfgeldjäger[/b] — markieren, ranziehen, hinrichten: Komm her zieht 3 Ränge weit in die Reichweite von Mach ihn fertig; Aufwärtshaken ist eine Hinrichtungs-Betäubung auf Rang 1.
+[b]Kreuzfahrer[/b] — ein unterstützender Heiler: Kampfheilung erhöht die erhaltene Heilung; Begeisternder Schlachtruf wird mit jeder Stufe stärker.
+[b]Duellantin[/b] — eine der stärksten Heldinnen, etwas gestutzt: Touché macht sie nicht mehr fast unantastbar.
+[b]Flagellant[/b] — zurück zu den Regeln des Grundspiels: Widerstände und Geschwindigkeitszuwachs normalisiert; Ertragen baut ab Stufe 1 Stress ab.
+[b]Grabräuberin[/b] — Giftlist wird zur wiederholbaren Selbstheilung; Dolchwurf trifft markierte Ziele härter.
+[b]Barbarin[/b] — keine Erschöpfung mehr: Barbarisches Gebrüll heizt sie an und schwächt alle Gegner; Adrenalinschub ist ihre Selbstheilung.
+[b]Wegelagerer[/b] — Fernkampf- und Nahkampf-Builds funktionieren beide: Gezielter Schuss gibt Gegenschlag, ohne dass er sich bewegen muss.
+[b]Hundemeister[/b] — weniger Schaden, mehr Schutz: Verheerender Pfiff senkt die gegnerische Präzision, Wachhund gibt mehr Ausweichen, Hundebiss funktioniert von jedem Rang aus.
+[b]Narr[/b] — immer noch der beste Stressheiler, aber Stärkende Melodie funktioniert ab Rang 2 und Solo von jedem Rang aus.
+[b]Aussätziger[/b] — Einschüchterung wird vom Support-Skill zum rüstungsbrechenden Schlag.
+[b]Waffenknecht[/b] — der Veteran, der die Linie hält: Zuspruch ist eine wiederholbare Stressheilung für die Gruppe; Befehl gibt zusätzlich Schutz.
+[b]Okkultist[/b] — Bann der Verletzlichkeit senkt den Widerstand gegen Betäuben, Bluten, Gifthauch und Schwächung und ebnet so der ganzen Gruppe den Weg.
+[b]Pestdoktorin[/b] — Gefechtsmedizin ist die Heilung gegen Gifthauch (3–7), während sich die Arbaleste um Bluten kümmert.
+[b]Ausreißerin[/b] — Plündern erreicht Rang 4 nicht mehr.
+[b]Schildbrecherin[/b] — die DLC-Ausnahme, wieder auf Linie gebracht: Durchbohren verliert Rang 4, Waffenzuwachs standardisiert.
+[b]Vestalin[/b] — taugt auch auf Rang 2: Kolbenhieb heilt sie selbst, Göttliche Gnade und Erleuchtung funktionieren von jedem Rang aus.
+
+[h2]Kompatibilität[/h2]
+Ersetzt nur die Dateien der oben genannten Helden (plus je eine Effekt- und Buff-Datei); inkompatibel mit Mods, die dieselben Helden ersetzen. Kann bedenkenlos in laufende Spielstände eingebaut werden.
+
+Feedback ist ausdrücklich willkommen – jede Änderung hat eine schriftliche Begründung, und ich erkläre sie gern oder passe etwas an.

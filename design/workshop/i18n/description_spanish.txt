@@ -1,0 +1,67 @@
+[h1]Ningún héroe sobra[/h1]
+[i]Más héroes y más habilidades que vale la pena llevar, sin cambiar la esencia de ningún héroe.[/i]
+
+[h2]El objetivo: que ningún grupo sea obligatorio[/h2]
+Al principio, Darkest Dungeon puede volverse casi injugable sin una Vestal, un Ocultista o un Bufón, porque la curación y el alivio de estrés están en manos de unos pocos héroes. Este mod reparte la curación y el alivio de estrés entre muchos más héroes, para que funcionen grupos muy distintos.
+
+Lo mismo pasa dentro de cada héroe: las habilidades y las posiciones están rebalanceadas para que ya no estés atado a un único set óptimo de cuatro habilidades, repitiendo lo mismo desde la misma posición.
+
+[h2]Un parche integral, la misma dificultad[/h2]
+La mayoría de los mods de héroes tocan un héroe a la vez, y eso casi siempre significa hacerlo más fuerte. Este mod rebalancea los 19 héroes juntos bajo un mismo conjunto de reglas: cada buff va acompañado de un precio o de un nerfeo en otro lado, así que el juego no se vuelve ni más fácil ni más difícil en general. Según nuestro modelo de fuerza de héroes, la fuerza total de todos ellos queda a menos de un 0.5% del vanilla, mientras que la brecha entre los más fuertes y los más débiles se reduce: la Duelista y el Maestro canino bajan un poco, y el Cazarecompensas y la Arbalestera suben.
+
+[h2]Cómo se decidieron los cambios[/h2]
+[list]
+[*][b]La curación y el alivio de estrés no son exclusivos de unos pocos héroes.[/b]
+Ejemplo: más héroes pueden curarse solos —Artimañas tóxicas de la Asaltatumbas (curación 1–5), Subidón de adrenalina de la Diabla (3–7) y Mazazo de la Vestal (3–5)—, y Refuerzo del Hombre de armas pasa a ser una curación de estrés para el grupo que se puede usar una y otra vez.
+[*][b]Distintas habilidades, distintas posiciones.[/b]
+Ejemplo: la estocada del Bandolero pasa de Avance del duelista a Disparo de seguimiento, así que un Bandolero a distancia puede contraatacar sin dar un paso al frente.
+[*][b]Seguir las propias reglas del juego base.[/b] Los números originales siguen patrones claros; los valores que se salían de ellos vuelven a su sitio.
+Ejemplo: la VEL que ganaba la Rompescudos con las mejoras de arma crecía más rápido que la de cualquier héroe del juego base; ahora sigue la curva estándar.
+[*][b]Todo buff tiene un precio.[/b] Precisión, daño y alcance se intercambian entre sí, así que la dificultad general no cambia.
+Ejemplo: Explosión de metralla gana 15 de PRE y lo paga con daño (−50% → −60%).
+[*][b]Una habilidad debe hacer lo que aparenta.[/b]
+Ejemplo: Venda de batalla de la Arbalestera ahora detiene la hemorragia, y Polvos cegadores de la Anticuaria ahora sí queman.
+[*][b]Fieles al trasfondo.[/b]
+Ejemplo: nada en la descripción del Maestro canino justifica su resistencia extra a hemorragia e infección, así que ambas vuelven al valor base.
+[*][b]Conservar las sensaciones.[/b] Se ajustan la fiabilidad y la frecuencia, no la identidad; se respetan los propios nerfeos de Red Hook.
+Ejemplo: Disparo a quemarropa sigue pegando igual de fuerte, pero ahora el retroceso lo manda 2 posiciones atrás, así que no se puede disparar cada turno.
+[*][b]Los abalorios no se tocan.[/b]
+Ejemplo: Vena abierta conserva sus dos mermas porque los abalorios las potencian; lo que se le bajó fue el daño.
+[/list]
+
+[h2]Caso destacado: el Cazarecompensas[/h2]
+Antes, lo mejor era plantarlo en la posición 2 y repetir siempre las mismas habilidades, y los grupos de marcas eran más flojos de lo que parecían. Ahora es un verdugo que se ceba con los débiles: objetivos señalados, aturdidos y sangrando.
+[list]
+[*][b]Marca de la muerte[/b] reduce la PROT un 20% (antes 10%). No tiene estocada ni trucos defensivos, así que esta es su forma de lidiar con enemigos acorazados.
+[*][b]Acércate[/b] tira 3 posiciones, así que un objetivo de la retaguardia acaba en la posición 1.
+[*][b]Gancho[/b] (solo contra la posición 1, PRE 95, CRÍT 9%) lo aturde con fuerza y lo empuja hasta la posición 3; un crítico además activa su daño extra contra objetivos señalados.
+[*][b]Remate[/b] sigue llegando a la posición 3 y pega más fuerte a objetivos aturdidos y, ahora, también a los que sangran; Abrojos se encarga de preparar la hemorragia.
+[/list]
+Cada paso tiene su precio: Gancho solo golpea la posición 1, Estallido ahora se usa desde las posiciones 3–4 y Remate se lanza desde las posiciones 1–2.
+
+[h2]Héroe por héroe[/h2]
+Las imágenes de arriba muestran todas las habilidades modificadas, antes y después (empezando por el Cazarecompensas).
+[b]Abominación[/b] — transformarse por fin es una decisión real: Transformación ahora le alivia el estrés y Paliza funciona desde la posición 4.
+[b]Anticuaria[/b] — sigue siendo más débil a propósito (ella trae el oro), pero Polvos cegadores ahora queman y abren combos de quemadura.
+[b]Arbalestera[/b] — también hace de médica de campo: Venda de batalla cura la hemorragia y Bengala de concentración alivia el estrés del grupo de forma fiable.
+[b]Cazarecompensas[/b] — señalar, enganchar, ejecutar: Acércate tira 3 posiciones hasta dejar al objetivo al alcance de Remate; Gancho es un aturdimiento de ejecución contra la posición 1.
+[b]Cruzado[/b] — un sanador de apoyo: Curación de batalla aumenta la curación recibida; Grito de inspiración mejora con cada nivel.
+[b]Duelista[/b] — una de las heroínas más fuertes, recortada: Touché ya no la vuelve casi imposible de golpear.
+[b]Flagelante[/b] — de vuelta a las reglas del juego base: resistencias y crecimiento de VEL normalizados; Aguantar alivia estrés desde el nivel 1.
+[b]Asaltatumbas[/b] — Artimañas tóxicas pasa a ser una autocuración repetible; Lanzamiento de daga pega más fuerte a objetivos señalados.
+[b]Diabla[/b] — adiós al agotamiento: Graznido salvaje la enciende y debilita a todos los enemigos; Subidón de adrenalina es su autocuración.
+[b]Bandolero[/b] — funcionan tanto la build a distancia como la cuerpo a cuerpo: Disparo de seguimiento le da estocada sin moverse.
+[b]Maestro canino[/b] — menos daño, más protección: Silbido de objetivo baja la precisión enemiga, Perro guardián da más evasión y Ataque de perro funciona desde cualquier posición.
+[b]Bufón[/b] — sigue siendo el mejor curador de estrés, pero Tonada inspiradora funciona desde la posición 2 y Solo desde cualquier posición.
+[b]Leproso[/b] — Intimidación deja de ser una habilidad de apoyo y se convierte en un golpe que rompe armaduras.
+[b]Hombre de armas[/b] — el veterano que sostiene la línea: Refuerzo es una curación de estrés para el grupo repetible; Mando añade protección.
+[b]Ocultista[/b] — Maleficio de vulnerabilidad reduce la resistencia a aturdimiento, hemorragia, infección y mermas, y le prepara el terreno a todo el grupo.
+[b]Médico de la peste[/b] — Medicina del campo de batalla es la curación que quita la infección (3–7), mientras la Arbalestera se ocupa de la hemorragia.
+[b]Fugitiva[/b] — Saquear ya no alcanza la posición 4.
+[b]Rompescudos[/b] — la heroína del DLC que se salía de la norma vuelve al redil: Perforación ya no llega a la posición 4 y el crecimiento del arma se estandariza.
+[b]Vestal[/b] — puede rendir desde la posición 2: Mazazo la cura a ella misma, y Gracia divina e Iluminación funcionan desde cualquier posición.
+
+[h2]Compatibilidad[/h2]
+Solo reemplaza los archivos de los héroes de arriba (más un archivo de efectos y otro de buffs); es incompatible con mods que reemplacen esos mismos héroes. Se puede usar sin problemas en partidas ya empezadas.
+
+Cualquier comentario es bienvenido: cada cambio tiene su razón por escrito, y con gusto lo explico o lo ajusto.

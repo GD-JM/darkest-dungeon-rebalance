@@ -1,0 +1,67 @@
+[h1]Każdy bohater się liczy[/h1]
+[i]Więcej bohaterów i umiejętności, które naprawdę warto brać — a bohaterowie dalej są sobą.[/i]
+
+[h2]Cel: koniec z obowiązkowym składem[/h2]
+Na początku Darkest Dungeon potrafi być niemal niegrywalne bez Kapłanki, Okultysty albo Arlekina, bo leczenie i redukcja stresu to domena zaledwie kilku bohaterów. Ten mod rozkłada leczenie i redukcję stresu na całą ekipę, żeby sprawdzało się dużo więcej różnych drużyn.
+
+To samo dotyczy każdego bohatera z osobna: umiejętności i pozycje zostały przebalansowane, więc nie jesteś już skazany na jeden optymalny zestaw czterech umiejętności, klepanych w kółko z jednej pozycji.
+
+[h2]Jeden spójny patch, ta sama trudność[/h2]
+Większość modów na bohaterów zmienia jedną postać naraz, a to zwykle oznacza po prostu, że staje się silniejsza. Ten mod balansuje wszystkich 19 bohaterów naraz według jednego zestawu zasad: każdy buff jest okupiony kosztem albo nerfem gdzie indziej, więc gra jako całość nie robi się ani łatwiejsza, ani trudniejsza. Według naszego modelu siły bohaterów łączna siła całej ekipy różni się od vanilli o mniej niż 0.5%, a przepaść między najsilniejszymi a najsłabszymi maleje: Fechmistrzyni i Łowczy schodzą w dół, Łowca Nagród i Kuszniczka idą w górę.
+
+[h2]Jak zapadały decyzje[/h2]
+[list]
+[*][b]Leczenie i redukcja stresu to nie monopol kilku bohaterów.[/b]
+Przykład: więcej bohaterów potrafi samemu się połatać — Toksyczny Podstęp Hieny Cmentarnej (leczenie 1–5), Przypływ Adrenaliny Awanturniczki (3–7) i Cios Maczugą Kapłanki (3–5) — a Wzmocnienie Zbrojmistrza staje się redukcją stresu całej drużyny, której można używać raz za razem.
+[*][b]Różne umiejętności, różne pozycje.[/b]
+Przykład: riposta Oprycha przeszła z Doskoku Awanturnika na Strzał Śledzący, więc Oprych grający na dystans może kontratakować bez wychodzenia do przodu.
+[*][b]Trzymamy się zasad samej gry.[/b] Oryginalne liczby mają wyraźne wzorce; wartości, które od nich odstawały, wróciły do szeregu.
+Przykład: szybkość z ulepszeń broni rosła Łamaczce Tarcz szybciej niż jakiemukolwiek bohaterowi z podstawki; teraz idzie standardową krzywą.
+[*][b]Każdy buff ma swoją cenę.[/b] Celność, obrażenia i zasięg wymienia się między sobą, więc ogólna trudność zostaje taka sama.
+Przykład: Strzał Rozpryskowy zyskuje 15 celności i płaci za to obrażeniami (−50% → −60%).
+[*][b]Umiejętność ma robić to, na co wygląda.[/b]
+Przykład: Bitewny Opatrunek Kuszniczki tamuje teraz krwawienie, a Proch Błyskowy Antykwariuszki wreszcie podpala.
+[*][b]Wierność lore.[/b]
+Przykład: nic w opisie Łowczego nie tłumaczy jego podwyższonej odporności na krwawienie i zarazę, więc obie wracają do wartości bazowej.
+[*][b]Ma się grać tak samo.[/b] Zmieniamy niezawodność i częstotliwość, a nie tożsamość; oficjalne nerfy od Red Hook zostają uszanowane.
+Przykład: Strzał z bliska dalej porządnie kopie, ale teraz odrzuca Oprycha o 2 pozycje, więc nie da się z niego walić co turę.
+[*][b]Błyskotki bez zmian.[/b]
+Przykład: Puszczenie Krwi zachowuje oba osłabienia, bo wzmacniają je błyskotki; zamiast tego obniżono mu obrażenia.
+[/list]
+
+[h2]Na przykładzie: Łowca Nagród[/h2]
+Wcześniej najlepiej było postawić go na pozycji 2 i klepać w kółko te same umiejętności, a drużyny oparte na oznaczaniu były słabsze, niż się wydawało. Teraz to kat, który poluje na słabych: oznaczonych, ogłuszonych i krwawiących.
+[list]
+[*][b]Stygmat Śmierci[/b] obniża OCHR o 20% (wcześniej 10%). Łowca nie ma riposty ani obronnych sztuczek, więc to jego sposób na opancerzonych wrogów.
+[*][b]Do Mnie[/b] przyciąga o 3 pozycje, więc cel z tylnych szeregów ląduje na pozycji 1.
+[*][b]Cios z Dołu[/b] (tylko w pozycję 1, CEL 95, KRYT 9%) mocno ogłusza i odrzuca cel na pozycję 3; trafienie krytyczne odpala też jego dodatkowe obrażenia przeciw oznaczonym.
+[*][b]Egzekucja[/b] dalej sięga pozycji 3 i mocniej bije ogłuszonych, a teraz także krwawiących — o krwawienie zadba wcześniej Zapora.
+[/list]
+Każdy krok ma swoją cenę: Cios z Dołu trafia tylko w pozycję 1, Granat Błyskowy przeniesiono na pozycje 3–4, a Egzekucji używa się z pozycji 1–2.
+
+[h2]Bohater po bohaterze[/h2]
+Grafiki powyżej pokazują każdą zmienioną umiejętność przed i po (na początek Łowca Nagród).
+[b]Abominacja[/b] — przemiana to w końcu prawdziwy wybór: Transformacja zdejmuje teraz z niego stres, a Trzaśnięcie działa z pozycji 4.
+[b]Antykwariuszka[/b] — celowo dalej słabsza (jej działką jest złoto), ale Proch Błyskowy teraz podpala i otwiera kombinacje z oparzeniem.
+[b]Kuszniczka[/b] — przy okazji polowa sanitariuszka: Bitewny Opatrunek leczy krwawienie, Flara niezawodnie zdejmuje stres z drużyny.
+[b]Łowca Nagród[/b] — oznacz, przyciągnij, dobij: Do Mnie przyciąga o 3 pozycje prosto w zasięg Egzekucji; Cios z Dołu to egzekucyjne ogłuszenie na pozycję 1.
+[b]Krzyżowiec[/b] — uzdrowiciel wsparcia: Bitewne Uzdrowienie zwiększa otrzymywane leczenie, a Inspirujący Okrzyk rośnie z każdym poziomem.
+[b]Fechmistrzyni[/b] — jedna z najsilniejszych postaci, lekko przycięta: Touché nie robi jej już niemal nietrafialnej.
+[b]Flagelant[/b] — z powrotem według zasad podstawki: odporności i przyrost szybkości znormalizowane; Przetrwanie zdejmuje stres już od 1. poziomu.
+[b]Hiena Cmentarna[/b] — Toksyczny Podstęp staje się samoleczeniem do użycia raz za razem; Rzut Sztyletem mocniej trafia oznaczone cele.
+[b]Awanturniczka[/b] — koniec z wyczerpaniem: Barbarzyński Okrzyk ją nakręca i osłabia wszystkich wrogów; Przypływ Adrenaliny to jej samoleczenie.
+[b]Oprych[/b] — działa zarówno build dystansowy, jak i do walki wręcz: Strzał Śledzący daje ripostę bez ruszania się z miejsca.
+[b]Łowczy[/b] — mniej obrażeń, więcej ochrony: Gwizdek obniża celność wrogów, Pies Stróżujący daje więcej uniku, a Atak Ogara działa z każdej pozycji.
+[b]Arlekin[/b] — nadal najlepszy od zdejmowania stresu, ale Inspirująca Nuta działa z pozycji 2, a Solówka z każdej.
+[b]Trędowaty[/b] — Onieśmielenie z umiejętności wsparcia zmienia się w cios kruszący pancerz.
+[b]Zbrojmistrz[/b] — weteran, który trzyma linię: Wzmocnienie to redukcja stresu drużyny do użycia raz za razem; Rozkaz dodaje ochrony.
+[b]Okultysta[/b] — Przekleństwo obniża odporność na ogłuszenie, krwawienie, zarazę i osłabienie, szykując cel pod całą drużynę.
+[b]Badaczka Zarazy[/b] — Bitewne Panaceum to leczenie (3–7), które usuwa zarazę, a krwawienie bierze na siebie Kuszniczka.
+[b]Uciekinierka[/b] — Przetrząsanie nie sięga już pozycji 4.
+[b]Łamaczka Tarcz[/b] — odstająca bohaterka z DLC wraca do szeregu: Penetracja traci pozycję 4, rozwój broni ustandaryzowany.
+[b]Kapłanka[/b] — sprawdza się też na pozycji 2: Cios Maczugą leczy ją samą, a Boża Łaska i Oświecenie działają z każdej pozycji.
+
+[h2]Kompatybilność[/h2]
+Podmienia tylko pliki wymienionych bohaterów (plus jeden plik efektów i jeden plik buffów); gryzie się z modami, które podmieniają tych samych bohaterów. Można bezpiecznie wrzucić na istniejący zapis.
+
+Opinie mile widziane — każda zmiana ma spisane uzasadnienie, chętnie wyjaśnię albo coś poprawię.
