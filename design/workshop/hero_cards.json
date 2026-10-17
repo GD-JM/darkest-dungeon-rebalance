@@ -1,0 +1,1242 @@
+{
+ "abomination": {
+  "name": "Abomination",
+  "tagline": "Transforming should be a real choice.",
+  "skills": [
+   {
+    "key": "abomination|transform",
+    "name": "Transform",
+    "icon": "one",
+    "old": [
+     "Allies: stress +8",
+     "Self: no stress heal",
+     "Revert: allies stress heal 2"
+    ],
+    "new": [
+     "Allies: stress +6",
+     "Self: stress heal 4-8",
+     "Revert: allies stress heal 3"
+    ]
+   },
+   {
+    "key": "abomination|manacles",
+    "name": "Manacles",
+    "icon": "two",
+    "old": [
+     "ACC 95"
+    ],
+    "new": [
+     "ACC 90"
+    ]
+   },
+   {
+    "key": "abomination|vomit",
+    "name": "Beast's Bile",
+    "icon": "three",
+    "old": [
+     "ACC 95",
+     "DMG -90%"
+    ],
+    "new": [
+     "ACC 90",
+     "DMG -75%"
+    ]
+   },
+   {
+    "key": "abomination|slam",
+    "name": "Slam",
+    "icon": "seven",
+    "old": [
+     "ACC 80",
+     "DMG -25%",
+     "Use from ranks 1-3",
+     "Dodge -10 to -20% (3 turns)",
+     "SPD -2 to -6 (3 turns)"
+    ],
+    "new": [
+     "ACC 90",
+     "DMG 0%",
+     "Use from ranks 2-4",
+     "No dodge or SPD debuff"
+    ]
+   },
+   {
+    "key": "abomination|mode",
+    "name": "Beast Form",
+    "icon": null,
+    "old": [
+     "Stress +6 per turn"
+    ],
+    "new": [
+     "Stress +4 per turn"
+    ]
+   }
+  ]
+ },
+ "antiquarian": {
+  "name": "Antiquarian",
+  "tagline": "Weaker in combat by design; she pays her way in gold.",
+  "skills": [
+   {
+    "key": "antiquarian|flashpowder",
+    "name": "Flashpowder",
+    "icon": "four",
+    "old": [
+     "No burn"
+    ],
+    "new": [
+     "Burn 1-3"
+    ]
+   }
+  ]
+ },
+ "arbalest": {
+  "name": "Arbalest",
+  "tagline": "Better marked shots, a bleed cure and party stress relief.",
+  "skills": [
+   {
+    "key": "arbalest|sniper_shot",
+    "name": "Sniper Shot",
+    "icon": "one",
+    "old": [
+     "CRIT 5%",
+     "Vs marked: DMG +50-100%"
+    ],
+    "new": [
+     "CRIT 6%",
+     "Vs marked: DMG +60-100%"
+    ]
+   },
+   {
+    "key": "arbalest|suppressing_fire",
+    "name": "Suppressing Fire",
+    "icon": "two",
+    "old": [
+     "DMG -80%"
+    ],
+    "new": [
+     "DMG -60%"
+    ]
+   },
+   {
+    "key": "arbalest|bola",
+    "name": "Bola",
+    "icon": "four",
+    "old": [
+     "DMG -50%",
+     "Push chance 105% (level 5)"
+    ],
+    "new": [
+     "DMG -40%",
+     "Push chance 115% (level 5)"
+    ]
+   },
+   {
+    "key": "arbalest|battlefield_bandage",
+    "name": "Battlefield Bandage",
+    "icon": "six",
+    "old": [
+     "Heal 2-3 (level 5: 4-5)",
+     "Healing received +20-38%",
+     "No bleed cure"
+    ],
+    "new": [
+     "Heal 3 (level 5: 7)",
+     "No healing-received buff",
+     "Cures bleed"
+    ]
+   },
+   {
+    "key": "arbalest|flare",
+    "name": "Rallying Flare",
+    "icon": "seven",
+    "old": [
+     "Party: removes mark and stun",
+     "Party stress heal 1-3",
+     "Stress heal chance 60-67%"
+    ],
+    "new": [
+     "No mark or stun removal",
+     "Party stress heal 2-4",
+     "Stress heal always works"
+    ]
+   }
+  ]
+ },
+ "bounty_hunter": {
+  "name": "Bounty Hunter",
+  "tagline": "Mark, hook, execute.",
+  "skills": [
+   {
+    "key": "bounty_hunter|collect_bounty",
+    "name": "Collect Bounty",
+    "icon": "one",
+    "old": [
+     "Vs marked: DMG +90%"
+    ],
+    "new": [
+     "Vs marked: DMG +100%"
+    ]
+   },
+   {
+    "key": "bounty_hunter|target_tag",
+    "name": "Mark for Death",
+    "icon": "two",
+    "old": [
+     "Target: PROT -10 to -20%",
+     "Debuff chance 100-140%",
+     "Self: SPD +3-5 (2 turns)"
+    ],
+    "new": [
+     "Target: PROT -20 to -30%",
+     "Debuff chance 130-170%",
+     "No self SPD buff"
+    ]
+   },
+   {
+    "key": "bounty_hunter|come_hither",
+    "name": "Come Hither",
+    "icon": "three",
+    "old": [
+     "ACC 90",
+     "DMG -80%",
+     "Pull 2",
+     "Marks target (2 turns)"
+    ],
+    "new": [
+     "ACC 95",
+     "DMG -60%",
+     "Pull 3",
+     "No mark"
+    ]
+   },
+   {
+    "key": "bounty_hunter|uppercut",
+    "name": "Uppercut",
+    "icon": "four",
+    "old": [
+     "ACC 90",
+     "CRIT 0%",
+     "Hits ranks 1-2",
+     "Stun chance 100-140%"
+    ],
+    "new": [
+     "ACC 95",
+     "CRIT 9%",
+     "Hits rank 1 only",
+     "Stun chance 110-150%"
+    ]
+   },
+   {
+    "key": "bounty_hunter|flashbang",
+    "name": "Flashbang",
+    "icon": "five",
+    "old": [
+     "Use from ranks 2-4",
+     "Stun chance 110-150%"
+    ],
+    "new": [
+     "Use from ranks 3-4",
+     "Stun chance 100-140%"
+    ]
+   },
+   {
+    "key": "bounty_hunter|finish_him",
+    "name": "Finish Him",
+    "icon": "six",
+    "old": [
+     "Use from ranks 1-3",
+     "No bonus vs bleeding"
+    ],
+    "new": [
+     "Use from ranks 1-2",
+     "Vs bleeding: DMG +20-33%"
+    ]
+   },
+   {
+    "key": "bounty_hunter|hook_and_slice",
+    "name": "Caltrops",
+    "icon": "seven",
+    "old": [
+     "DMG -95%"
+    ],
+    "new": [
+     "DMG -85%"
+    ]
+   }
+  ]
+ },
+ "crusader": {
+  "name": "Crusader",
+  "tagline": "Reliable stun, flexible shield, support healing.",
+  "skills": [
+   {
+    "key": "crusader|zealous_accusation",
+    "name": "Zealous Accusation",
+    "icon": "two",
+    "old": [
+     "ACC 85"
+    ],
+    "new": [
+     "ACC 90"
+    ]
+   },
+   {
+    "key": "crusader|stunning_blow",
+    "name": "Stunning Blow",
+    "icon": "three",
+    "old": [
+     "Stun chance 100-140%"
+    ],
+    "new": [
+     "Stun chance 110-150%"
+    ]
+   },
+   {
+    "key": "crusader|bulwark_of_faith",
+    "name": "Bulwark of Faith",
+    "icon": "four",
+    "old": [
+     "Use from ranks 1-2"
+    ],
+    "new": [
+     "Use from any rank"
+    ]
+   },
+   {
+    "key": "crusader|battle_heal",
+    "name": "Battle Heal",
+    "icon": "five",
+    "old": [
+     "Heal 2-3 (level 5: 5-6)",
+     "No healing-received buff"
+    ],
+    "new": [
+     "Heal 2-3 (level 5: 4-5)",
+     "Healing received +20%"
+    ]
+   },
+   {
+    "key": "crusader|inspiring_cry",
+    "name": "Inspiring Cry",
+    "icon": "seven",
+    "old": [
+     "Stress heal 5-8"
+    ],
+    "new": [
+     "Stress heal 5-9 (up every level)"
+    ]
+   }
+  ]
+ },
+ "duelist": {
+  "name": "Duelist",
+  "tagline": "One of the strongest heroes, slightly trimmed.",
+  "skills": [
+   {
+    "key": "duelist|touche",
+    "name": "Touché",
+    "icon": "two",
+    "old": [
+     "Self: dodge +40-50%",
+     "Lasts 4 turns"
+    ],
+    "new": [
+     "Self: dodge +15-25%",
+     "Lasts 2 turns"
+    ]
+   },
+   {
+    "key": "duelist|feint",
+    "name": "Feint",
+    "icon": "three",
+    "old": [
+     "Target: PROT -20 to -30%"
+    ],
+    "new": [
+     "Target: PROT -10 to -20%"
+    ]
+   },
+   {
+    "key": "duelist|coup_de_grace",
+    "name": "Coup de Grâce",
+    "icon": "six",
+    "old": [
+     "DMG -60%"
+    ],
+    "new": [
+     "DMG -70%"
+    ]
+   },
+   {
+    "key": "duelist|the_boot",
+    "name": "The Boot",
+    "icon": "seven",
+    "old": [
+     "DMG -40%"
+    ],
+    "new": [
+     "DMG -60%"
+    ]
+   }
+  ]
+ },
+ "flagellant": {
+  "name": "Flagellant",
+  "tagline": "Back to the base game's numbers.",
+  "skills": [
+   {
+    "key": "flagellant|resistances",
+    "name": "Resistances",
+    "icon": null,
+    "old": [
+     "Stun resist 50%",
+     "Bleed resist 65%",
+     "Move resist 50%"
+    ],
+    "new": [
+     "Stun resist 40%",
+     "Bleed resist 60%",
+     "Move resist 40%"
+    ]
+   },
+   {
+    "key": "flagellant|weapon",
+    "name": "Weapon",
+    "icon": null,
+    "old": [
+     "SPD by upgrade: 6/6/8/8/9"
+    ],
+    "new": [
+     "SPD by upgrade: 6/6/7/7/8"
+    ]
+   },
+   {
+    "key": "flagellant|endure",
+    "name": "Endure",
+    "icon": "six",
+    "old": [
+     "Self: stress +10 (level 5: +6)",
+     "Net relief 0 (level 5: 8)"
+    ],
+    "new": [
+     "Self: stress +4 (level 5: +8)",
+     "Net relief 6 at every level"
+    ]
+   }
+  ]
+ },
+ "grave_robber": {
+  "name": "Grave Robber",
+  "tagline": "Her must-pick buff moves, so more skills earn a slot.",
+  "skills": [
+   {
+    "key": "grave_robber|thrown_dagger",
+    "name": "Thrown Dagger",
+    "icon": "five",
+    "old": [
+     "Self: ACC +5-10%",
+     "Vs marked: DMG +25-40%"
+    ],
+    "new": [
+     "No ACC buff",
+     "Vs marked: DMG +40-80%"
+    ]
+   },
+   {
+    "key": "grave_robber|poison_dart",
+    "name": "Poison Darts",
+    "icon": "six",
+    "old": [
+     "Blight 2-4 for 4 turns",
+     "No ACC buff"
+    ],
+    "new": [
+     "Blight 2-4 for 3 turns",
+     "Self: ACC +5-10%"
+    ]
+   },
+   {
+    "key": "grave_robber|toxin_trickery",
+    "name": "Toxin Trickery",
+    "icon": "seven",
+    "old": [
+     "1 use per battle",
+     "Self: dodge +9-13% (all battle)",
+     "Self: SPD +2-4 (all battle)",
+     "No heal"
+    ],
+    "new": [
+     "No use limit",
+     "Self: dodge +5-7% (3 turns)",
+     "Self: SPD +1-2 (3 turns)",
+     "Self: heal 1-5"
+    ]
+   }
+  ]
+ },
+ "hellion": {
+  "name": "Hellion",
+  "tagline": "Exhaustion removed; it fought her relentless lore.",
+  "skills": [
+   {
+    "key": "hellion|wicked_hack",
+    "name": "Wicked Hack",
+    "icon": "one",
+    "old": [
+     "ACC 85"
+    ],
+    "new": [
+     "ACC 90"
+    ]
+   },
+   {
+    "key": "hellion|barbaric_yawp",
+    "name": "Barbaric YAWP!",
+    "icon": "three",
+    "old": [
+     "Stuns ranks 1-2, chance 110-150%",
+     "Self: DMG -20%, SPD -3 (all battle)",
+     "No corpse clearing",
+     "3 uses per battle"
+    ],
+    "new": [
+     "Self: ACC +5-10%, DMG +20-30%",
+     "All enemies: DMG -10 to -20% (3 turns)",
+     "Clears corpses",
+     "No use limit"
+    ]
+   },
+   {
+    "key": "hellion|breakthru",
+    "name": "Breakthrough",
+    "icon": "five",
+    "old": [
+     "DMG -50%",
+     "Self: DMG -10%, SPD -1 (all battle)"
+    ],
+    "new": [
+     "DMG -55%",
+     "No self debuff"
+    ]
+   },
+   {
+    "key": "hellion|adrenaline_rush",
+    "name": "Adrenaline Rush",
+    "icon": "six",
+    "old": [
+     "Self: ACC +5-10%, DMG +20-30%",
+     "Self: heal 1-4"
+    ],
+    "new": [
+     "No attack buff",
+     "Self: heal 3-7"
+    ]
+   },
+   {
+    "key": "hellion|bleed_out",
+    "name": "Bleed Out",
+    "icon": "seven",
+    "old": [
+     "DMG +20%",
+     "CRIT 6%",
+     "Self: DMG -20%, SPD -3 (all battle)"
+    ],
+    "new": [
+     "DMG 0%",
+     "CRIT 10%",
+     "No self debuff"
+    ]
+   }
+  ]
+ },
+ "highwayman": {
+  "name": "Highwayman",
+  "tagline": "Ranged and melee builds both work.",
+  "skills": [
+   {
+    "key": "highwayman|wicked_slice",
+    "name": "Wicked Slice",
+    "icon": "one",
+    "old": [
+     "DMG +15%",
+     "Use from ranks 1-3",
+     "Hits ranks 1-2"
+    ],
+    "new": [
+     "DMG 0%",
+     "Use from ranks 1-2",
+     "Hits ranks 1-3"
+    ]
+   },
+   {
+    "key": "highwayman|pistol_shot",
+    "name": "Pistol Shot",
+    "icon": "two",
+    "old": [
+     "ACC 85",
+     "Vs marked: DMG +25-50%"
+    ],
+    "new": [
+     "ACC 90",
+     "Vs marked: DMG +40-60%"
+    ]
+   },
+   {
+    "key": "highwayman|point_blank_shot",
+    "name": "Point Blank Shot",
+    "icon": "three",
+    "old": [
+     "Self: moves back 1",
+     "Push 1"
+    ],
+    "new": [
+     "Self: moves back 2",
+     "Push 2"
+    ]
+   },
+   {
+    "key": "highwayman|grape_shot_blast",
+    "name": "Grapeshot Blast",
+    "icon": "four",
+    "old": [
+     "ACC 75",
+     "DMG -50%"
+    ],
+    "new": [
+     "ACC 90",
+     "DMG -60%"
+    ]
+   },
+   {
+    "key": "highwayman|take_aim",
+    "name": "Tracking Shot",
+    "icon": "five",
+    "old": [
+     "DMG -80%",
+     "Hits ranks 2-4",
+     "1 use per battle",
+     "Self: ACC +6-10%, CRIT +4-8%",
+     "Self: DMG +12-20% (all battle)"
+    ],
+    "new": [
+     "DMG -60%",
+     "Hits ranks 1-4",
+     "No use limit",
+     "Self: riposte (3 turns)",
+     "Riposte DMG -40 to -15%, CRIT +0-5%"
+    ]
+   },
+   {
+    "key": "highwayman|duelist_advance",
+    "name": "Duelist's Advance",
+    "icon": "six",
+    "old": [
+     "Hits ranks 1-3",
+     "Self: riposte (3 turns)",
+     "Riposte DMG -40 to -15%, CRIT +0-5%"
+    ],
+    "new": [
+     "Hits ranks 1-2",
+     "Self: ACC +4-8%, CRIT +2-6%",
+     "Self: DMG +10-14% (3 turns)"
+    ]
+   },
+   {
+    "key": "highwayman|opened_vein",
+    "name": "Open Vein",
+    "icon": "seven",
+    "old": [
+     "DMG -15%",
+     "CRIT 0%"
+    ],
+    "new": [
+     "DMG -30%",
+     "CRIT 8%"
+    ]
+   }
+  ]
+ },
+ "houndmaster": {
+  "name": "Houndmaster",
+  "tagline": "Less damage, more protection and support.",
+  "skills": [
+   {
+    "key": "houndmaster|resistances",
+    "name": "Resistances",
+    "icon": null,
+    "old": [
+     "Blight resist 40%",
+     "Bleed resist 40%"
+    ],
+    "new": [
+     "Blight resist 30%",
+     "Bleed resist 30%"
+    ]
+   },
+   {
+    "key": "houndmaster|hounds_rush",
+    "name": "Hound's Rush",
+    "icon": "one",
+    "old": [
+     "ACC 85",
+     "DMG 0%",
+     "Use from ranks 2-4",
+     "Bleed 1-2 for 3 turns",
+     "Vs marked: DMG +60-100%"
+    ],
+    "new": [
+     "ACC 90",
+     "DMG -25%",
+     "Use from any rank",
+     "Bleed 1-3 for 2 turns",
+     "Vs marked: DMG +60%"
+    ]
+   },
+   {
+    "key": "houndmaster|hounds_harry",
+    "name": "Hound's Harry",
+    "icon": "two",
+    "old": [
+     "ACC 85",
+     "DMG -75%",
+     "Use from any rank"
+    ],
+    "new": [
+     "ACC 90",
+     "DMG -70%",
+     "Use from ranks 2-4"
+    ]
+   },
+   {
+    "key": "houndmaster|whistle",
+    "name": "Target Whistle",
+    "icon": "three",
+    "old": [
+     "Target: PROT -20 to -30%"
+    ],
+    "new": [
+     "Target: ACC -25 to -30% (3 turns)"
+    ]
+   },
+   {
+    "key": "houndmaster|howl",
+    "name": "Cry Havoc",
+    "icon": "four",
+    "old": [
+     "Party stress heal 2-6",
+     "Chance 66-74%"
+    ],
+    "new": [
+     "Party stress heal 4-6",
+     "Chance 70-74%"
+    ]
+   },
+   {
+    "key": "houndmaster|guard_dog",
+    "name": "Guard Dog",
+    "icon": "five",
+    "old": [
+     "Self: dodge +10-20% (3 turns)"
+    ],
+    "new": [
+     "Self: dodge +20-30% (3 turns)"
+    ]
+   },
+   {
+    "key": "houndmaster|lick_wounds",
+    "name": "Lick Wounds",
+    "icon": "six",
+    "old": [
+     "Use from ranks 2-4"
+    ],
+    "new": [
+     "Use from any rank"
+    ]
+   },
+   {
+    "key": "houndmaster|blackjack",
+    "name": "Blackjack",
+    "icon": "seven",
+    "old": [
+     "ACC 95",
+     "DMG -65%",
+     "Stun chance 110-150%"
+    ],
+    "new": [
+     "ACC 90",
+     "DMG -50%",
+     "Stun chance 100-140%"
+    ]
+   }
+  ]
+ },
+ "jester": {
+  "name": "Jester",
+  "tagline": "Solo becomes a real pick; his buffs no longer overlap.",
+  "skills": [
+   {
+    "key": "jester|solo",
+    "name": "Solo",
+    "icon": "four",
+    "old": [
+     "Use from ranks 3-4",
+     "Self: dodge +20-30% (4 turns)",
+     "Finale: DMG +75%, CRIT +8%",
+     "No enemy slow",
+     "No corpse clearing or unmark"
+    ],
+    "new": [
+     "Use from any rank",
+     "Self: dodge +30-40% (4 turns)",
+     "Finale: DMG +100%, CRIT +10%",
+     "All enemies: SPD -1 to -3 (3 turns)",
+     "Clears corpses; party: removes mark"
+    ]
+   },
+   {
+    "key": "jester|battle_ballad",
+    "name": "Battle Ballad",
+    "icon": "six",
+    "old": [
+     "Party: ACC +5-10%",
+     "Party: CRIT +2-6%"
+    ],
+    "new": [
+     "Party: no ACC buff",
+     "Party: CRIT +4-8%"
+    ]
+   },
+   {
+    "key": "jester|inspiring_tune",
+    "name": "Inspiring Tune",
+    "icon": "seven",
+    "old": [
+     "Use from ranks 3-4"
+    ],
+    "new": [
+     "Use from ranks 2-4"
+    ]
+   }
+  ]
+ },
+ "leper": {
+  "name": "Leper",
+  "tagline": "Intimidate becomes a real strike that cracks armor.",
+  "skills": [
+   {
+    "key": "leper|intimidate",
+    "name": "Intimidate",
+    "icon": "seven",
+    "old": [
+     "ACC 95, DMG -85%, CRIT 0%",
+     "Hits any rank, ignores stealth",
+     "Target: DMG -20 to -33% (3 turns)",
+     "Target: SPD -3 to -5 (3 turns)",
+     "Self-mark, self SPD +2-4, destealth"
+    ],
+    "new": [
+     "ACC 85, DMG -40%, CRIT 3%",
+     "Hits rank 1 only (no stealth bypass)",
+     "Target: PROT -30 to -50% (2 turns)",
+     "No SPD debuff",
+     "No self-mark, SPD buff or destealth"
+    ]
+   }
+  ]
+ },
+ "man_at_arms": {
+  "name": "Man-at-Arms",
+  "tagline": "The veteran who holds the line.",
+  "skills": [
+   {
+    "key": "man_at_arms|weapon",
+    "name": "Weapon",
+    "icon": null,
+    "old": [
+     "Weapon DMG 5-9 (max upgrade 8-14)"
+    ],
+    "new": [
+     "Weapon DMG 5-10 (max upgrade 8-16)"
+    ]
+   },
+   {
+    "key": "man_at_arms|rampart",
+    "name": "Rampart",
+    "icon": "two",
+    "old": [
+     "DMG -60%",
+     "Self: moves forward 1"
+    ],
+    "new": [
+     "DMG -50%",
+     "Self: stays in place"
+    ]
+   },
+   {
+    "key": "man_at_arms|bellow",
+    "name": "Bellow",
+    "icon": "three",
+    "old": [
+     "No corpse clearing"
+    ],
+    "new": [
+     "Clears corpses"
+    ]
+   },
+   {
+    "key": "man_at_arms|retribution",
+    "name": "Retribution",
+    "icon": "five",
+    "old": [
+     "DMG -75%",
+     "Hits ranks 1-3"
+    ],
+    "new": [
+     "DMG -20%",
+     "Hits ranks 1-2"
+    ]
+   },
+   {
+    "key": "man_at_arms|command",
+    "name": "Command",
+    "icon": "six",
+    "old": [
+     "Party: CRIT +4-8%",
+     "No PROT buff",
+     "No stun removal"
+    ],
+    "new": [
+     "Party: no CRIT buff",
+     "Party: PROT +15%",
+     "Party: removes stun"
+    ]
+   },
+   {
+    "key": "man_at_arms|bolster",
+    "name": "Bolster",
+    "icon": "seven",
+    "old": [
+     "1 use per battle",
+     "Party: dodge +5-10% (all battle)",
+     "Stress taken -10 to -20% (all battle)",
+     "No stress heal"
+    ],
+    "new": [
+     "No use limit",
+     "Guarded allies: +50% stress healing",
+     "Stress taken -10% (2 turns)",
+     "Party stress heal 1-3"
+    ]
+   }
+  ]
+ },
+ "occultist": {
+  "name": "Occultist",
+  "tagline": "Vulnerability Hex now sets up stuns, blights and bleeds.",
+  "skills": [
+   {
+    "key": "occultist|weakening_curse",
+    "name": "Weakening Curse",
+    "icon": "three",
+    "old": [
+     "DMG -75%"
+    ],
+    "new": [
+     "DMG -65%"
+    ]
+   },
+   {
+    "key": "occultist|wyrd_reconstruction",
+    "name": "Wyrd Reconstruction",
+    "icon": "four",
+    "old": [
+     "Heal 0-22 (level 5)",
+     "Bleed 3, 85% chance (level 5)"
+    ],
+    "new": [
+     "Heal 0-20 (level 5)",
+     "Bleed 2, 80% chance (level 5)"
+    ]
+   },
+   {
+    "key": "occultist|disruptive_curse",
+    "name": "Vulnerability Hex",
+    "icon": "five",
+    "old": [
+     "DMG -90%",
+     "CRIT 5%",
+     "Target: dodge -15 to -20% (3 turns)"
+    ],
+    "new": [
+     "DMG -100%",
+     "CRIT 0%, can't crit",
+     "Target resists -15 to -20%:",
+     "stun, blight, bleed, debuff (3 turns)"
+    ]
+   },
+   {
+    "key": "occultist|hands_from_abyss",
+    "name": "Hands from the Abyss",
+    "icon": "six",
+    "old": [
+     "ACC 90",
+     "DMG -50%"
+    ],
+    "new": [
+     "ACC 95",
+     "DMG -60%"
+    ]
+   }
+  ]
+ },
+ "plague_doctor": {
+  "name": "Plague Doctor",
+  "tagline": "Battlefield Medicine becomes her ally blight-cure heal.",
+  "skills": [
+   {
+    "key": "plague_doctor|incision",
+    "name": "Incision",
+    "icon": "four",
+    "old": [
+     "ACC 85"
+    ],
+    "new": [
+     "ACC 90"
+    ]
+   },
+   {
+    "key": "plague_doctor|battlefield_medicine",
+    "name": "Battlefield Medicine",
+    "icon": "five",
+    "old": [
+     "Heal 1 (level 5: 3)",
+     "Cures bleed and blight",
+     "Self: cures bleed and blight"
+    ],
+    "new": [
+     "Heal 3 (level 5: 7)",
+     "Cures blight only",
+     "No self-cure"
+    ]
+   }
+  ]
+ },
+ "runaway": {
+  "name": "Runaway",
+  "tagline": "Ransack keeps its pull but loses reach to rank 4.",
+  "skills": [
+   {
+    "key": "runaway|ransack",
+    "name": "Ransack",
+    "icon": "four",
+    "old": [
+     "DMG -10%",
+     "Hits ranks 1-4"
+    ],
+    "new": [
+     "DMG -25%",
+     "Hits ranks 1-3"
+    ]
+   }
+  ]
+ },
+ "shieldbreaker": {
+  "name": "Shieldbreaker",
+  "tagline": "The DLC outlier, back to the base game's rules.",
+  "skills": [
+   {
+    "key": "shieldbreaker|resistances",
+    "name": "Resistances",
+    "icon": null,
+    "old": [
+     "Stun resist 50%",
+     "Move resist 50%"
+    ],
+    "new": [
+     "Stun resist 30%",
+     "Move resist 30%"
+    ]
+   },
+   {
+    "key": "shieldbreaker|weapon",
+    "name": "Weapon",
+    "icon": null,
+    "old": [
+     "Weapon DMG 5-10 (max upgrade 9-18)",
+     "SPD by upgrade: 5/6/8/8/9"
+    ],
+    "new": [
+     "Weapon DMG 5-10 (max upgrade 8-16)",
+     "SPD by upgrade: 5/5/6/6/7"
+    ]
+   },
+   {
+    "key": "shieldbreaker|pierce",
+    "name": "Pierce",
+    "icon": "one",
+    "old": [
+     "ACC 90",
+     "CRIT 5%",
+     "Hits ranks 1-4"
+    ],
+    "new": [
+     "ACC 85",
+     "CRIT 2%",
+     "Hits ranks 1-3"
+    ]
+   },
+   {
+    "key": "shieldbreaker|spearing",
+    "name": "Impale",
+    "icon": "four",
+    "old": [
+     "DMG -60%",
+     "Blight from level 3 only",
+     "Blight 1-2 for 3 turns"
+    ],
+    "new": [
+     "DMG -70%",
+     "Blight from level 1",
+     "Blight 1-3 for 2 turns"
+    ]
+   },
+   {
+    "key": "shieldbreaker|expose",
+    "name": "Expose",
+    "icon": "five",
+    "old": [
+     "ACC 85"
+    ],
+    "new": [
+     "ACC 90"
+    ]
+   },
+   {
+    "key": "shieldbreaker|single_out",
+    "name": "Captivate",
+    "icon": "six",
+    "old": [
+     "ACC 85",
+     "Vs marked: DMG +40-60%"
+    ],
+    "new": [
+     "ACC 90",
+     "Vs marked: DMG +50-90%"
+    ]
+   },
+   {
+    "key": "shieldbreaker|serpents_sway",
+    "name": "Serpent Sway",
+    "icon": "seven",
+    "old": [
+     "Use from ranks 1-3"
+    ],
+    "new": [
+     "Use from ranks 2-4"
+    ]
+   }
+  ]
+ },
+ "vestal": {
+  "name": "Vestal",
+  "tagline": "A front-rank Vestal is now an option.",
+  "skills": [
+   {
+    "key": "vestal|mace_bash",
+    "name": "Mace Bash",
+    "icon": "two",
+    "old": [
+     "CRIT 0%",
+     "No self-heal"
+    ],
+    "new": [
+     "CRIT 5%",
+     "Self: heal 3-5"
+    ]
+   },
+   {
+    "key": "vestal|judgement",
+    "name": "Judgement",
+    "icon": "one",
+    "old": [
+     "ACC 85",
+     "DMG -25%",
+     "CRIT 5%",
+     "Self: heal 3-5"
+    ],
+    "new": [
+     "ACC 90",
+     "DMG 0%",
+     "CRIT 0%",
+     "No self-heal"
+    ]
+   },
+   {
+    "key": "vestal|dazzling_light",
+    "name": "Dazzling Light",
+    "icon": "three",
+    "old": [
+     "Use from ranks 2-4"
+    ],
+    "new": [
+     "Use from ranks 3-4"
+    ]
+   },
+   {
+    "key": "vestal|divine_grace",
+    "name": "Divine Grace",
+    "icon": "four",
+    "old": [
+     "Use from ranks 3-4",
+     "Heal 4-5 (level 5: 8-9)"
+    ],
+    "new": [
+     "Use from any rank",
+     "Heal 5 (level 5: 9)"
+    ]
+   },
+   {
+    "key": "vestal|gods_comfort",
+    "name": "Divine Comfort",
+    "icon": "five",
+    "old": [
+     "Use from ranks 2-4",
+     "Party heal 1-3"
+    ],
+    "new": [
+     "Use from ranks 3-4",
+     "Party heal 2-3"
+    ]
+   },
+   {
+    "key": "vestal|gods_illumination",
+    "name": "Illumination",
+    "icon": "six",
+    "old": [
+     "ACC 90",
+     "Use from ranks 1-3",
+     "Target: dodge -20 to -30%",
+     "No burn"
+    ],
+    "new": [
+     "ACC 95",
+     "Use from any rank",
+     "Target: DMG taken +20-25% (3 turns)",
+     "Burn 1-3"
+    ]
+   },
+   {
+    "key": "vestal|gods_hand",
+    "name": "Hand of Light",
+    "icon": "seven",
+    "old": [
+     "ACC 85"
+    ],
+    "new": [
+     "ACC 90"
+    ]
+   }
+  ]
+ }
+}
