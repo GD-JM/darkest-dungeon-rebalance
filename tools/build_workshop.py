@@ -231,18 +231,14 @@ def main():
         open(os.path.join(W, 'patch_notes_%s.md' % lang), 'w', encoding='utf-8').write('\n'.join(L) + '\n')
     if missing:
         print('근거(why) 없는 블록 %d개: %s' % (len(missing), ', '.join(missing[:12]) + (' …' if len(missing) > 12 else '')))
-    # 설명문 = 스팀 글 1개(8000자): 원칙 + 기술별 한 줄(핵심 수치 + 원칙 번호, design/workshop/compact.json 사람이 쓴 압축본)
-    # 전체 근거는 patch_notes_*.md (포트폴리오 기록)
-    COMPACT = json.load(open(os.path.join(W, 'compact.json'), encoding='utf-8'))
+    # 설명문 = 스팀 글 1개(8000자), 사람이 읽는 자연어로 손으로 쓴다(description_en/ko.txt) [사용자 10-17: 원칙 코드 금지]
+    # 빌드는 바뀐 기술·영웅 이름이 설명문에 전부 나오는지만 확인한다. 전체 근거는 patch_notes_*.md (포트폴리오 기록)
     for lang in ('en', 'ko'):
         d0 = rd(os.path.join(W, 'description_%s.txt' % lang)).replace('\r\n', '\n').strip()
-        lost = [k for v in summary[lang].values() for _, k in v if not COMPACT.get(k, {}).get(lang)]
-        assert not lost, ('compact.json에 없는 블록', lost)
-        stale = sorted(set(COMPACT) - {k for v in summary[lang].values() for _, k in v})
-        assert not stale, ('compact.json에만 있는 블록', stale)
-        items = ['[b]%s[/b]\n' % (EN_HERO[h] if lang == 'en' else S.KO[h]) + '\n'.join('%s: %s' % (nm, COMPACT[k][lang]) for nm, k in v)
-                 for h, v in summary[lang].items()]
-        d0 = d0.replace('{PATCH_%s}' % lang.upper(), '\n'.join(items))
+        absent = [nm for h, v in summary[lang].items() for nm, k in v
+                  if k.split('|')[1] not in BLOCK['en'] and nm not in d0]
+        absent += [h for h in summary[lang] if (EN_HERO[h] if lang == 'en' else S.KO[h]) not in d0]
+        assert not absent, ('설명문에 빠진 변경', lang, absent)
         open(os.path.join(W, 'description_built_%s.txt' % lang), 'w', encoding='utf-8', newline='\n').write(d0 + '\n')
         print('description', lang, len(d0), 'chars (Steam limit 8000; line breaks counted twice: %d)' % (len(d0) + d0.count('\n')))
         assert len(d0) + d0.count('\n') <= 8000, lang  # 웹 편집기가 줄바꿈을 CRLF(2자)로 세어도 넘지 않게
