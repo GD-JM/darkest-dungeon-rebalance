@@ -213,15 +213,4 @@ effect: .name "RB GR Toxin Heal 2" .target "performer" .curio_result_type "posit
 // GR-006 Toxin Trickery self heal 3/3/4/4/5 -> 1/2/3/4/5. With cure + dodge + speed it outclassed Hellion Adrenaline Rush (cure + heal 3-7).
 // GR-003 [trace 2026-10-05] Enable repeatable self upkeep with shorter and smaller defensive buffs. Effect: RB GR Toxin Heal 2.
 // GR-003 극약처방 2레벨 자기 회복 3 (신규, GR-006에서 2로 변경). 도굴꾼 체력 20/24/28/32/36 대비 13~15%로 레벨마다 일정. 괴인 사면(3->5)과 같은 대역, 야만인 아드레날린(3->7)·조련사 상처 핥기(4->8)보다 낮음(치료·버프가 같이 있으므로)
-effect: .name "RB GR Toxin Heal 3" .target "performer" .curio_result_type "positive" .chance 100% .heal 3 .on_hit true .on_miss false .queue true .source_heal_type hero_skill
-// GR-006 Toxin Trickery self heal 3/3/4/4/5 -> 1/2/3/4/5. With cure + dodge + speed it outclassed Hellion Adrenaline Rush (cure + heal 3-7).
-// GR-003 [trace 2026-10-05] Enable repeatable self upkeep with shorter and smaller defensive buffs. Effect: RB GR Toxin Heal 3.
-// GR-003 극약처방 3레벨 자기 회복 4 (신규, GR-006에서 3로 변경). 도굴꾼 체력 20/24/28/32/36 대비 13~15%로 레벨마다 일정. 괴인 사면(3->5)과 같은 대역, 야만인 아드레날린(3->7)·조련사 상처 핥기(4->8)보다 낮음(치료·버프가 같이 있으므로)
-effect: .name "RB GR Toxin Heal 4" .target "performer" .curio_result_type "positive" .chance 100% .heal 4 .on_hit true .on_miss false .queue true .source_heal_type hero_skill
-// GR-006 Toxin Trickery self heal 3/3/4/4/5 -> 1/2/3/4/5. With cure + dodge + speed it outclassed Hellion Adrenaline Rush (cure + heal 3-7).
-// GR-003 [trace 2026-10-05] Enable repeatable self upkeep with shorter and smaller defensive buffs. Effect: RB GR Toxin Heal 4.
-// GR-003 극약처방 4레벨 자기 회복 4 (신규, GR-006에서 4로 변경). 도굴꾼 체력 20/24/28/32/36 대비 13~15%로 레벨마다 일정. 괴인 사면(3->5)과 같은 대역, 야만인 아드레날린(3->7)·조련사 상처 핥기(4->8)보다 낮음(치료·버프가 같이 있으므로)
-effect: .name "RB GR Toxin Heal 5" .target "performer" .curio_result_type "positive" .chance 100% .heal 5 .on_hit true .on_miss false .queue true .source_heal_type hero_skill
-// GR-006 Toxin Trickery self heal 3/3/4/4/5 -> 1/2/3/4/5. With cure + dodge + speed it outclassed Hellion Adrenaline Rush (cure + heal 3-7).
-// GR-003 [trace 2026-10-05] Enable repeatable self upkeep with shorter and smaller defensive buffs. Effect: RB GR Toxin Heal 5.
-// GR-003 극약처방 5레벨 자기 회복 5 (신규, GR-006에서 5로 변경). 도굴꾼 체력 20/24/28/32/36 대비 13~15%로 레벨마다 일정. 괴인 사면(3->5)과 같은 대역, 야만인 아드레날린(3->7)·조련사 상처 핥기(4->8)보다 낮음(치료·버프가 같이 있으므로)
+// GR-006 R-DATA-01: Lv3-5 heal 3/4/5 reuses vanilla HealSelf 1/2/3 (identical effect), so RB GR Toxin Heal 3-5 were removed.

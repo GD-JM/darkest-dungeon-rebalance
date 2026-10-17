@@ -63,10 +63,11 @@ combat_skill: .id "poison_dart" .level 4 .type "ranged" .atk 115% .dmg -60% .cri
 
 combat_skill: .id "toxin_trickery" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "RB GR Shadow Blood 1" "RB GR Self Speed 1" "RB GR Toxin Heal 1" .is_stall_invalidating false
 combat_skill: .id "toxin_trickery" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "RB GR Shadow Blood 2" "RB GR Self Speed 2" "RB GR Toxin Heal 2" .is_stall_invalidating false
-combat_skill: .id "toxin_trickery" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "RB GR Shadow Blood 3" "RB GR Self Speed 3" "RB GR Toxin Heal 3" .is_stall_invalidating false
-combat_skill: .id "toxin_trickery" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "RB GR Shadow Blood 4" "RB GR Self Speed 4" "RB GR Toxin Heal 4" .is_stall_invalidating false
-combat_skill: .id "toxin_trickery" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "RB GR Shadow Blood 5" "RB GR Self Speed 5" "RB GR Toxin Heal 5" .is_stall_invalidating false
+combat_skill: .id "toxin_trickery" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "RB GR Shadow Blood 3" "RB GR Self Speed 3" "HealSelf 1" .is_stall_invalidating false
+combat_skill: .id "toxin_trickery" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "RB GR Shadow Blood 4" "RB GR Self Speed 4" "HealSelf 2" .is_stall_invalidating false
+combat_skill: .id "toxin_trickery" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True  .effect "RB GR Shadow Blood 5" "RB GR Self Speed 5" "HealSelf 3" .is_stall_invalidating false
 // GR-003 [trace 2026-10-05] Enable repeatable self upkeep with shorter and smaller defensive buffs.
+// GR-006 R-DATA-01: Lv3-5 heal 3/4/5 reuses vanilla HealSelf 1/2/3 (identical effect); Lv1-2 heal 1/2 keep RB GR Toxin Heal 1/2.
 // GR-003 toxin_trickery: 전투당 1회 제한 삭제, 자기 회복 추가(3/3/4/4/5 → GR-006: 현재 1/2/3/4/5), 회피·속도 버프 절반 + 전투 끝까지 -> 3턴. G-05(모든 영웅 자기 회복), P-19(이름 "극약처방" = 처방·치료)
 
 

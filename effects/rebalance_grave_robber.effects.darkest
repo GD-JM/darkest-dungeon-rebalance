@@ -62,12 +62,4 @@ effect: .name "RB GR Toxin Heal 1" .target "performer" .curio_result_type "posit
 effect: .name "RB GR Toxin Heal 2" .target "performer" .curio_result_type "positive" .chance 100% .heal 2 .on_hit true .on_miss false .queue true .source_heal_type hero_skill
 // GR-006 Toxin Trickery self heal 3/3/4/4/5 -> 1/2/3/4/5. With cure + dodge + speed it outclassed Hellion Adrenaline Rush (cure + heal 3-7).
 // GR-003 [trace 2026-10-05] Enable repeatable self upkeep with shorter and smaller defensive buffs. Effect: RB GR Toxin Heal 2.
-effect: .name "RB GR Toxin Heal 3" .target "performer" .curio_result_type "positive" .chance 100% .heal 3 .on_hit true .on_miss false .queue true .source_heal_type hero_skill
-// GR-006 Toxin Trickery self heal 3/3/4/4/5 -> 1/2/3/4/5. With cure + dodge + speed it outclassed Hellion Adrenaline Rush (cure + heal 3-7).
-// GR-003 [trace 2026-10-05] Enable repeatable self upkeep with shorter and smaller defensive buffs. Effect: RB GR Toxin Heal 3.
-effect: .name "RB GR Toxin Heal 4" .target "performer" .curio_result_type "positive" .chance 100% .heal 4 .on_hit true .on_miss false .queue true .source_heal_type hero_skill
-// GR-006 Toxin Trickery self heal 3/3/4/4/5 -> 1/2/3/4/5. With cure + dodge + speed it outclassed Hellion Adrenaline Rush (cure + heal 3-7).
-// GR-003 [trace 2026-10-05] Enable repeatable self upkeep with shorter and smaller defensive buffs. Effect: RB GR Toxin Heal 4.
-effect: .name "RB GR Toxin Heal 5" .target "performer" .curio_result_type "positive" .chance 100% .heal 5 .on_hit true .on_miss false .queue true .source_heal_type hero_skill
-// GR-006 Toxin Trickery self heal 3/3/4/4/5 -> 1/2/3/4/5. With cure + dodge + speed it outclassed Hellion Adrenaline Rush (cure + heal 3-7).
-// GR-003 [trace 2026-10-05] Enable repeatable self upkeep with shorter and smaller defensive buffs. Effect: RB GR Toxin Heal 5.
+// GR-006 R-DATA-01: Lv3-5 heal 3/4/5 reuses vanilla HealSelf 1/2/3 (identical effect), so RB GR Toxin Heal 3-5 were removed.
