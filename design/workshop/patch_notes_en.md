@@ -1,137 +1,145 @@
-# Rebalance — Patch notes (full)
+# Rebalance — Patch notes
 
+Each entry: what changed (generated from the game data) — why (principle IDs from the mod description).
 
 ## Abomination
-- **Transform** [ABO-004] (P-23, P-12) — Self stress relief 4–8 on transforming; beast form stress per turn 6 → 4. The cost to allies stays — this gives a reason to transform at all.
-- **Manacles** [ABO-005, ABO-006] (P-23, R-STUN-03) — Accuracy 95 → 90, the baseline for damaging stuns. Damage unchanged; his large weapon already puts it near the top of stun skills.
-- **Beast's Bile** [ABO-002, ABO-007] (P-23, G-01) — Accuracy 95 → 90, damage −90% → −75%. Human-form accuracy comes down and base output goes up, closing the gap with beast skills (accuracy 85–90).
-- **Slam** [ABO-001, ABO-003] (P-23, G-03) — Usable ranks 1-2-3 → 2-3-4, debuffs removed, accuracy 80 → 90, damage −25% → 0%. The beast had nothing to do from rank 4; now it slams from the back and moves forward.
-- **mode** [ABO-004] (P-23, P-12) — Self stress relief 4–8 on transforming; beast form stress per turn 6 → 4. The cost to allies stays — this gives a reason to transform at all.
+
+- **Transform**: party: stress +8; party: stress heal 2 → Lv1 party: stress +6; self: stress heal 4; party: stress heal 3 … Lv5 party: stress +6; self: stress heal 8; party: stress heal 3
+- **Manacles**: Accuracy 95% → 90%
+- **Beast's Bile**: Accuracy 95% → 90%; Damage -90% → -75%
+- **Slam**: Accuracy 80% → 90%; Damage -25% → 0%; Usable ranks 3·2·1 → 4·3·2; Removed: Lv1 dodge -10%, speed -2 3t … Lv5 dodge -20%, speed -6 (140%) 3t
+- **Beast form**: Beast stress per turn 6 → 4
 
 ## Antiquarian
-- **Flashpowder** [ANT-001] (P-19, P-25) — 
+
+- **Flashpowder**: Added: Lv1 burn 1 … Lv5 burn 3
 
 ## Arbalest
-- **Sniper Shot** [ARB-005] — Support marked-target specialization; retain the existing top-level ceiling.
-- **Sniper Shot** [ARB-012] (P-21, P-19) — 
-- **Suppressing Fire** [ARB-008] (R-STRAT-01) — 
-- **Bola** [ARB-007, ARB-004] (P-01) — Level 5 push now uses the intended effect (1D 105% → 1E 115%). Bug fix: 1E exists in the base game but was never linked.
-- **Battlefield Bandage** [ARB-001, ARB-002] (G-05, G-00, P-18, P-15) — battlefield_bandage: heal 2-3/4-5 -> 3-3/6-7, Arb Stacking Heal -> RB ARB Cure Bleed
-- **Rallying Flare** [ARB-009, MAA-008, ARB-006, ARB-003] (G-00, P-11, G-05, P-22) — Rallying Flare stress recovery guaranteed at all levels; keep other-ally amounts 3/3/4/4/5 and utility effects unchanged.
-// ARB-003 [trace 2026-10-05] Add an alternative party stress recovery option with stable low-level chance.
+
+- **Sniper Shot**: Crit 5% → 6%; Lv1 vs marked: damage +50%, crit +9% 3t … Lv5 — → Lv1 vs marked: damage +60%, crit +9% 3t … Lv5 —
+- **Suppressing Fire**: Damage -80% → -60%
+- **Bola**: Damage -50% → -40%; Lv1 — … Lv5 push 1 (105%) → Lv1 — … Lv5 push 1 (115%)
+- **Battlefield Bandage**: Lv1 healing received +20% … Lv5 healing received +38% → cure bleed/blight
+- **Rallying Flare**: Lv1 party: stress heal 1 (60%) … Lv5 party: stress heal 3 (67%) → Lv1 party: stress heal 2 … Lv5 party: stress heal 4
 
 ## Bounty Hunter
-- **Collect Bounty** [BH-003] (R-EFF-05, G-01) — [2026-10-06] Keep current marked-target specialization and restored rank layout; attach the existing change ID without changing skill data.
-- **Mark for Death** [BH-013] — 
-- **Come Hither** [BH-010, BH-009] (G-02, P-22, R-TRADE-01, R-STRAT-01, G-01) — 
-- **Uppercut** [BH-007, BH-014, BH-015] (G-02, G-03, G-01, P-19, R-CMB-08) — uppercut: target 12 -> 1, dmg -67% -> -45%, crit +0~4 -> +9~13 (launch 21 kept)
-- **Flashbang** [BH-008] (G-03, G-02, P-19, P-11) — [2026-10-06] Keep rank34 flash control separate from front Uppercut, paying with normal stun; restore the missing trace ID only.
-- **Finish Him** [-] — 
-- **Caltrops** [BH-005, BH-016] (R-TRADE-01, G-02, G-03, R-RANK-01) — 
+
+- **Collect Bounty**: vs marked: damage +90% → vs marked: damage +100%
+- **Mark for Death**: Lv1 protection -10% 3t; self: speed +3 2t … Lv5 protection -20% (140%) 3t; self: speed +5 2t → Lv1 protection -20% (130%) … Lv5 protection -30% (170%)
+- **Come Hither**: Accuracy 90% → 95%; Damage -80% → -60%; Lv1 pull 2; mark 2t … Lv5 pull 2 (140%); mark 2t → Lv1 pull 3 … Lv5 pull 3 (140%)
+- **Uppercut**: Accuracy 90% → 95%; Crit 0% → 9%; Targets 1·2 → 1; Lv1 stun … Lv5 stun (140%) → Lv1 stun (110%) … Lv5 stun (150%)
+- **Flashbang**: Usable ranks 4·3·2 → 4·3; Lv1 stun (110%) … Lv5 stun (150%) → Lv1 stun … Lv5 stun (140%)
+- **Finish Him**: Usable ranks 3·2·1 → 2·1; Added: Lv1 vs bleeding: damage +20% … Lv5 vs bleeding: damage +33%
+- **Caltrops**: Damage -95% → -85%
 
 ## Crusader
-- **Zealous Accusation** [CRU-002] (G-02) — Accuracy 85 → 90, so there are fights where it beats Smite (a −40% AoE with low accuracy on top had no reason to be picked).
-- **Stunning Blow** [CRU-003, CRU-008, CRU-009] (R-STUN-01, P-19) — Normal stun → strong stun (damage −50% unchanged). The standard front-line stun; the Crusader's signature skill now stuns as reliably as its name says.
-- **Bulwark of Faith** [CRU-007] (P-19) — 
-- **Battle Heal** [CRU-001] (G-05, G-00, P-11, R-VALUE-11, R-VALUE-12) — Trade immediate healing for followup healing received on the target.
-- **Inspiring Cry** [CRU-006] (G-00, P-11) — [2026-10-06] Inspiring Cry stress recovery 5/5/6/7/8 -> 5/6/7/8/9; improve non-Jester concentrated support and preserve healing, torch and targeting.
+
+- **Zealous Accusation**: Accuracy 85% → 90%
+- **Stunning Blow**: Lv1 stun … Lv5 stun (140%) → Lv1 stun (110%) … Lv5 stun (150%)
+- **Bulwark of Faith**: Usable ranks 2·1 → 4·3·2·1
+- **Battle Heal**: Added: healing received +20%
+- **Inspiring Cry**: Lv1 — … Lv5 stress heal 8 → Lv1 — … Lv5 stress heal 9
 
 ## Duelist
-- **touche** [DUE-005] — 
-- **feint** [DUE-007] — 
-- **coup_de_grace** [DUE-010] — 
-- **the_boot** [DUE-006, DUE-004, DUE-001, DUE-003, DUE-002, DUE-008, DUE-009] (R-STUN-01, R-STRAT-01, G-02, G-03, P-11) — Damage −40% → −60%. A melee skill that stuns and pushes at once, yet it gave up less damage than other stuns. −60% sits inside the damage range of stun skills (−40 to −75%).
+
+- **touche**: Lv1 self: dodge +40% 4t … Lv5 self: dodge +50% 4t → Lv1 self: dodge +15% 2t … Lv5 self: dodge +25% 2t
+- **feint**: Lv1 accuracy -10%, protection -20% (110%) 3t … Lv5 accuracy -10%, protection -30% (150%) 3t → Lv1 accuracy -10%, protection -10% (110%) 3t … Lv5 accuracy -10%, protection -20% (150%) 3t
+- **coup_de_grace**: Damage -60% → -70%
+- **the_boot**: Damage -40% → -60%
 
 ## Flagellant
-- **resistances** [FLA-001] (G-04, R-RES-01) — Bleed resist 65 → 60. Matches the base game's cap for a hero's signature resist (baseline +30).
-- **weapon** [FLA-007] (G-04, R-GROW-03) — Weapon speed 6/6/8/8/9 → 6/6/7/7/8. Brings an exception back to the base game's growth rule.
-- **weapon** [FLA-007] (G-04, R-GROW-03) — Weapon speed 6/6/8/8/9 → 6/6/7/7/8. Brings an exception back to the base game's growth rule.
-- **weapon** [FLA-007] (G-04, R-GROW-03) — Weapon speed 6/6/8/8/9 → 6/6/7/7/8. Brings an exception back to the base game's growth rule.
-- **Reclaim** [FLA-005] (G-02, G-05, P-22, R-RES-02) — Match ally HOT output to the self-bleed cost across skill levels.
-- **Endure** [FLA-008] (G-05) — 
-- **Endure** [FLA-006, FLA-008] (G-05, P-14) — Reduce self stress transfer cost to support an alternative stress healer.
+
+- **Resistances**: Resists stun 50% → 40%; Resists bleed 65% → 60%; Resists move 50% → 40%
+- **Weapon**: Weapon spd 6 / 6 / 8 / 8 / 9 → 6 / 6 / 7 / 7 / 8
+- **Endure**: Lv1 self: stress +10 … Lv5 self: stress +6 → Lv1 self: stress +4 … Lv5 self: stress +8
 
 ## Grave Robber
-- **Thrown Dagger** [GR-002, GR-005] (G-02, P-11, R-DATA-01, P-26) — thrown_dagger: GR Acc Buff moved to poison_dart
-- **Poison Darts** [GR-001, GR-002] (R-SKILL-05, P-11, G-02, R-DATA-01) — Poison Dart blight 4 turns → 3 (the standard DoT duration); in exchange the self accuracy buff moves from Thrown Dagger to Poison Dart.
-- **Toxin Trickery** [GR-003] (G-05, G-02, P-19) — Enable repeatable self upkeep with shorter and smaller defensive buffs.
+
+- **Thrown Dagger**: Lv1 self: accuracy +5%; vs marked: damage +25% … Lv5 self: accuracy +10%; vs marked: damage +40% → Lv1 vs marked: damage +40% … Lv5 vs marked: damage +80%
+- **Poison Darts**: Lv1 blight 2×4t … Lv5 blight 4×4t (140%) → Lv1 blight 2×3t; self: accuracy +5% … Lv5 blight 4×3t (140%); self: accuracy +10%
+- **Toxin Trickery**: Uses per battle 1 → none; Lv1 self: cure bleed/blight, dodge +9% 1t; self: speed +2 1t … Lv5 self: cure bleed/blight, dodge +13% 1t; self: speed +4 1t → Lv1 self: cure bleed/blight, dodge +5% 3t; self: speed +1 3t; self: heal 1 … Lv5 self: cure bleed/blight, dodge +7% 3t; self: speed +2 3t; self: heal 5
 
 ## Hellion
-- **Wicked Hack** [HEL-005] (G-02) — Accuracy 85 → 90, making her basic attack reliable now that exhaustion is gone.
-- **Barbaric YAWP!** [HEL-009, HEL-008, HEL-001, HEL-006] (P-19, G-02, R-STRAT-01, P-20) — Stun, exhaustion and the 3-per-battle limit removed → self buff (accuracy +5, damage +20%, once per use) + all enemies deal 10–20% less damage (3 turns) + corpse clear; targets ranks 1-2 → all ranks. The un-cleansable, battle-long exhaustion (−20% damage, −3 speed) contradicted the relentless art.
-- **Breakthrough** [HEL-002, HEL-008] (P-19, G-02) — Exhaustion removed, damage −50% → −55%. It was the weakest damaging AoE hitting ranks 2 and 3 (exhaustion cost most of its value).
-- **Adrenaline Rush** [HEL-004] (G-05, P-12) — Its self buff moved to YAWP, leaving cure + self heal → self heal 1/2/2/3/4 → 3/4/5/6/7.
-- **Bleed Out** [HEL-003] (P-19, P-21) — Exhaustion removed, damage +20% → 0%, crit modifier +6–10 → +10–14. Its rank-1-only target is now paid back with crit instead of damage; crits extend the bleed, which suits late-game armored enemies.
+
+- **Wicked Hack**: Accuracy 85% → 90%
+- **Barbaric YAWP!**: Targets AoE 1·2 → AoE 1·2·3·4; Uses per battle 3 → none; Lv1 stun (110%); self: damage -20%, speed -3 … Lv5 stun (150%); self: damage -20%, speed -3 → Lv1 clear corpses; self: accuracy +5%, damage +20%; damage -10% 3t … Lv5 clear corpses; self: accuracy +10%, damage +30%; damage -20% (140%) 3t
+- **Breakthrough**: Damage -50% → -55%; Removed: self: damage -10%, speed -1
+- **Adrenaline Rush**: Lv1 self: cure bleed/blight, accuracy +5%, damage +20%; self: heal 1 … Lv5 self: cure bleed/blight, accuracy +10%, damage +30%; self: heal 4 → Lv1 self: cure bleed/blight; self: heal 3 … Lv5 self: cure bleed/blight; self: heal 7
+- **Bleed Out**: Damage 20% → 0%; Crit 6% → 10%; Removed: self: damage -20%, speed -3
 
 ## Highwayman
-- **Wicked Slice** [HWY-019, HWY-008, HWY-014, HWY-011] (R-SKILL-09, R-TRADE-02) — Keep a front melee alternative with the latest author-set accuracy and damage budget.
-- **Pistol Shot** [HWY-009, HWY-015, HWY-012] (G-02, P-03, R-TRADE-02) — Accuracy 85 → 90. The median level-1 accuracy of the base game's 34 single-target damaging ranged skills is 90; Pistol Shot alone sat at 85, leaving his ranged build behind his melee one (logged as an exception to the 85 baseline of R-TRADE-02).
-- **Point Blank Shot** [HWY-017, HWY-001] (R-TRADE-01, P-12, P-20, P-21) — Limit easy repeat cycles through two-rank retreat while preserving the heavy shot feel.
-- **Grapeshot Blast** [HWY-020, HWY-007] (R-VALUE-12, P-21) — Trade damage for accurate critical-vulnerability setup instead of repeated AOE damage.
-- **Tracking Shot** [HWY-019, HWY-004] (R-SKILL-09, G-02, G-03, P-19, P-11) — Enable stationary ranged riposte play instead of tying riposte to melee advance.
-- **Duelist's Advance** [HWY-018, HWY-016, HWY-005, HWY-013] (G-02, G-03, P-19, P-11, R-CMB-09, R-STRAT-01) — Use advance for smaller self setup after transferring riposte to Tracking Shot.
-- **Open Vein** [HWY-020, HWY-019, HWY-006] (R-VALUE-12, R-SKILL-09, G-02, P-21, P-20, R-CMB-08) — Retain bleed/debuff identity while recording the latest author-set accuracy/damage trade.
+
+- **Wicked Slice**: Damage 15% → 0%; Usable ranks 3·2·1 → 2·1; Targets 1·2 → 1·2·3
+- **Pistol Shot**: Accuracy 85% → 90%; Lv1 vs marked: damage +25% … Lv5 vs marked: damage +50% → Lv1 vs marked: damage +40% … Lv5 vs marked: damage +60%
+- **Point Blank Shot**: Move 1 0 → 2 0; Lv1 push 1 … Lv5 push 1 (140%) → Lv1 push 2 … Lv5 push 2 (140%)
+- **Grapeshot Blast**: Accuracy 75% → 90%; Damage -50% → -60%
+- **Tracking Shot**: Damage -80% → -60%; Targets 2·3·4 → 1·2·3·4; Uses per battle 1 → none; Lv1 self: accuracy +6%, crit +4%, damage +12% 1t … Lv5 self: accuracy +10%, crit +8%, damage +20% 1t → Lv1 self: damage -40%, crit +0% 3t … Lv5 self: damage -15%, crit +5% 3t
+- **Duelist's Advance**: Targets 1·2·3 → 1·2; Lv1 self: damage -40%, crit +0% 3t … Lv5 self: damage -15%, crit +5% 3t → Lv1 self: accuracy +4%, crit +2%, damage +10% 3t … Lv5 self: accuracy +8%, crit +6%, damage +14% 3t
+- **Open Vein**: Damage -15% → -30%; Crit 0% → 8%
 
 ## Houndmaster
-- **resistances** [HM-017] (P-22, R-RES-01) — Blight/Bleed resist 40 → 30. In the base game a resist only deviates from baseline when the hero's lore says so; this +10 has no such line (Trap +30 stays, backed by the guard-dog text).
-- **Hound's Rush** [HM-019, HM-011, HM-010, HM-016, HM-018, MARK-01, HM-023] (G-00, P-11, G-04, R-VALUE-03, G-01, R-CMB-08, P-12, R-STRAT-02, R-TRADE-02, P-24, R-EFF-05) — [2026-10-06] Target all enemy ranks from all ally ranks; retain damage -25 and flat marked bonus +60 to favor versatility and support over sustained damage. Supersedes HM-011 target234.
-- **Hound's Harry** [HM-012] (G-04, R-VALUE-04) — Support the rear AOE bleed option after removing front-rank launch.
-- **Target Whistle** [HM-020, HM-021] (P-19, R-VALUE-17) — 
-- **Cry Havoc** [HM-014] (G-02, G-05, P-12) — Levels 1–4: stress heal 2/3/4/5 → 4/4/5/5, chance 66/68/70/72% → 70/71/72/73% (level 5 stays 74%, so every level still grows). Fixes only the low-level unreliability of the party-wide stress heal.
-- **Guard Dog** [HM-025] (P-24) — 
-- **Lick Wounds** [HM-015] (G-04, R-STRAT-02) — Allow self recovery in the front rank where incoming damage is frequent.
-- **Blackjack** [HM-013, HM-022, HM-024] (R-STUN-03, P-11, R-STUN-02) — Accuracy 95 → 90, strong stun → normal stun, damage −65% → −50%. It was the only melee stun that both reaches rank 3 and stuns at the strong tier; accuracy and stun tier come down, damage goes up in return.
+
+- **Resistances**: Resists poison 40% → 30%; Resists bleed 40% → 30%
+- **Hound's Rush**: Accuracy 85% → 90%; Damage 0% → -25%; Usable ranks 4·3·2 → 4·3·2·1; Lv1 bleed 1×3t … Lv5 vs marked: damage +100%; bleed 2×3t (140%) → Lv1 bleed 1×2t … Lv5 vs marked: damage +60%; bleed 3×2t (140%)
+- **Hound's Harry**: Accuracy 85% → 90%; Damage -75% → -70%; Usable ranks 4·3·2·1 → 4·3·2
+- **Target Whistle**: Lv1 protection -20% (130%) … Lv5 protection -30% (170%) → Lv1 accuracy -25% (130%) 3t … Lv5 accuracy -30% (170%) 3t
+- **Cry Havoc**: Lv1 stress heal 2 (66%) … Lv5 — → Lv1 stress heal 4 (70%) … Lv5 —
+- **Guard Dog**: Lv1 self: dodge +10% 3t … Lv5 self: dodge +20% 3t → Lv1 self: dodge +20% 3t … Lv5 self: dodge +30% 3t
+- **Lick Wounds**: Usable ranks 4·3·2 → 4·3·2·1
+- **Blackjack**: Accuracy 95% → 90%; Damage -65% → -50%; Lv1 stun (110%) … Lv5 stun (150%) → Lv1 stun … Lv5 stun (140%)
 
 ## Jester
-- **Solo** [JES-011, JES-008, JES-009, JES-007, JES-001, JES-005, JES-006] (P-19, R-DATA-01) — Solo dodge 25/27/30/32/35 via dedicated effects; JES-005 all-rank launch and two uses retained. / Solo usable from ranks 1/2/3/4; improve front-rank dodge/mark use and skill selection. Existing effects, forward 3 and two uses per battle retained.
-- **Battle Ballad** [JES-012, JES-002] (P-11) — Battle Ballad team speed 1/1/2/2/3 and critical bonus 1/2/3/4/5%; accuracy and Finale-specific preparation retained. / [intent 2026-10-06] High-speed Jester plus party speed can dominate initiative and suppress enemy stress actions; reduce speed to preserve turn-order choices. / [intent 2026-10-06] Critical bonuses also trigger class critical benefits and stress recovery; combined with Inspiring Tune this can over-supply party stress management.
-- **Inspiring Tune** [JES-003] (G-03, G-05) — Inspiring Tune usable from ranks 2/3/4; stress healing and stress resistance retained.
+
+- **Solo**: Usable ranks 4·3 → 1·2·3·4; Lv1 self: dodge +20% 4t; self: damage +75%, crit +8% 8t … Lv5 self: dodge +30% 4t; self: damage +75%, crit +8% 8t → Lv1 clear corpses; self: dodge +30% 4t; self: damage +100%, crit +10% 8t; speed -1 3t … Lv5 clear corpses; self: dodge +40% 4t; self: damage +100%, crit +10% 8t; speed -3 (140%) 3t
+- **Battle Ballad**: Lv1 accuracy +5%, crit +2%, speed +2 … Lv5 accuracy +10%, crit +6%, speed +4 → Lv1 accuracy +0%, crit +4%, speed +2 … Lv5 accuracy +0%, crit +8%, speed +4
+- **Inspiring Tune**: Usable ranks 4·3 → 2·3·4
 
 ## Leper
-- **Intimidate** [LEP-001, LEP-002, LEP-003, LEP-004, LEP-005] — 
+
+- **Intimidate**: Accuracy 95% → 85%; Damage -85%/-85%/-85%/-80%/-80% → -40%; Crit 0% → 3%; Targets 1·2·3·4 → 1; Lv1 speed -3, damage -20% 3t; self: mark 4t; destealth; self: speed +2 … Lv5 speed -5, damage -33% (140%) 3t; self: mark 4t; destealth; self: speed +4 → Lv1 protection -30% 2t … Lv5 protection -50% (140%) 2t
 
 ## Man At Arms
-- **weapon** [MAA-001] (G-01, P-03) — Weapon max damage 9/10/12/13/14 → 10/12/13/15/16 (min unchanged). He sat furthest below the HP-to-damage trend across all 20 heroes; 5-10 is the existing preset of comparable heroes (Bounty Hunter, Highwayman).
-- **weapon** [MAA-001] (G-01, P-03) — Weapon max damage 9/10/12/13/14 → 10/12/13/15/16 (min unchanged). He sat furthest below the HP-to-damage trend across all 20 heroes; 5-10 is the existing preset of comparable heroes (Bounty Hunter, Highwayman).
-- **weapon** [MAA-001] (G-01, P-03) — Weapon max damage 9/10/12/13/14 → 10/12/13/15/16 (min unchanged). He sat furthest below the HP-to-damage trend across all 20 heroes; 5-10 is the existing preset of comparable heroes (Bounty Hunter, Highwayman).
-- **weapon** [MAA-001] (G-01, P-03) — Weapon max damage 9/10/12/13/14 → 10/12/13/15/16 (min unchanged). He sat furthest below the HP-to-damage trend across all 20 heroes; 5-10 is the existing preset of comparable heroes (Bounty Hunter, Highwayman).
-- **weapon** [MAA-001] (G-01, P-03) — Weapon max damage 9/10/12/13/14 → 10/12/13/15/16 (min unchanged). He sat furthest below the HP-to-damage trend across all 20 heroes; 5-10 is the existing preset of comparable heroes (Bounty Hunter, Highwayman).
-- **Rampart** [MAA-006, MAA-014] (G-01, G-02, G-03, P-19) — [current 2026-10-05] Remove Rampart self forward movement at all levels; retain -60% damage, enemy push and stun to control without displacing allies.
-- **Bellow** [MAA-002, HEL-001] (P-19, R-VALUE-05, R-VALUE-01, R-TRADE-01, R-TRADE-02, R-VALUE-02, G-02, R-STRAT-01) — Stun, exhaustion and the 3-per-battle limit removed → self buff (accuracy +5, damage +20%, once per use) + all enemies deal 10–20% less damage (3 turns) + corpse clear; targets ranks 1-2 → all ranks. The un-cleansable, battle-long exhaustion (−20% damage, −3 speed) contradicted the relentless art.
-- **Retribution** [MAA-004] (P-19, R-VALUE-07, G-02) — Trade rank-3 reach for front riposte damage while preserving the three-turn support loop.
-- **Command** [MAA-012, MAA-009, MAA-008] (P-19) — 
-- **Bolster** [MAA-011, MAA-010, MAA-007, MAA-005] (P-19, P-22, P-14, G-05) — Add immediate morale recovery to a buff whose benefit otherwise accumulates later.
+
+- **Weapon**: Weapon dmg 5 9 / 6 10 / 7 12 / 7 13 / 8 14 → 5 10 / 6 12 / 7 13 / 7 15 / 8 16
+- **Rampart**: Damage -60% → -50%; Move 0 1 → none
+- **Bellow**: Added: clear corpses
+- **Retribution**: Damage -75% → -20%; Targets 1·2·3 → 1·2
+- **Command**: Lv1 accuracy +5%, crit +4%, damage +15% … Lv5 accuracy +10%, crit +8%, damage +25% → Lv1 accuracy +5%, protection +15%, damage +15% … Lv5 accuracy +10%, protection +15%, damage +25%
+- **Bolster**: Uses per battle 1 → none; Lv1 dodge +5% 1t; stress taken -10% 1t … Lv5 dodge +10% 1t; stress taken -20% 1t → Lv1 stress healing received +50% 2t; stress taken -10% 2t; stress heal 1 … Lv5 stress healing received +50% 2t; stress taken -10% 2t; stress heal 3
 
 ## Occultist
-- **Weakening Curse** [OCC-007] — 
-- **Wyrd Reconstruction** [OCC-001] — wyrd level 5: heal 0-22 -> 0-20; reuse level 4 bleed (2 x 3, 80%). Preserve gambling identity and remove the final upgrade cost spike.
-- **Vulnerability Hex** [OCC-003, OCC-004, OCC-005, OCC-006, OCC-009] (R-VALUE-15, R-VALUE-16, R-SKILL-05) — 
-- **Hands from the Abyss** [OCC-008] — 
+
+- **Weakening Curse**: Damage -75% → -65%
+- **Wyrd Reconstruction**: Lv1 — … Lv5 bleed 3×3t (85%) → Lv1 — … Lv5 bleed 2×3t (80%)
+- **Vulnerability Hex**: Damage -90% → -100%; Crit 5% → 0%; Can crit True → False; Lv1 dodge -15% 3t … Lv5 dodge -20% (140%) 3t → Lv1 stun res -15%, blight res -15%, bleed res -15%, debuff res -15% 3t … Lv5 stun res -20%, blight res -20%, bleed res -20%, debuff res -20% (140%) 3t
+- **Hands from the Abyss**: Accuracy 90% → 95%; Damage -50% → -60%
 
 ## Plague Doctor
-- **Incision** [PD-002] — 
-- **Battlefield Medicine** [PD-001] (G-05, G-00, P-18, P-15) — Differentiate allied blight treatment from the Arbalest bleed-heal option.
+
+- **Incision**: Accuracy 85% → 90%
+- **Battlefield Medicine**: Removed: self: cure bleed/blight
 
 ## Runaway
-- **ransack** [RUN-001] — 
+
+- **ransack**: Damage -10% → -25%; Targets 1·2·3·4 → 1·2·3
 
 ## Shieldbreaker
-- **resistances** [SB-010] (P-22, R-RES-01) — Use the documented light-armour lore comparison for stun and movement resistance.
-- **weapon** [SB-011] (G-04, R-GROW-03) — Weapon speed 5/6/8/8/9 → 5/5/6/6/7. Brings an exception back to the base game's growth rule (level-1 value + floor((n−1)/2)).
-- **weapon** [SB-011] (G-04, R-GROW-03) — Weapon speed 5/6/8/8/9 → 5/5/6/6/7. Brings an exception back to the base game's growth rule (level-1 value + floor((n−1)/2)).
-- **weapon** [SB-011] (G-04, R-GROW-03) — Weapon speed 5/6/8/8/9 → 5/5/6/6/7. Brings an exception back to the base game's growth rule (level-1 value + floor((n−1)/2)).
-- **weapon** [SB-011] (G-04, R-GROW-03) — Weapon speed 5/6/8/8/9 → 5/5/6/6/7. Brings an exception back to the base game's growth rule (level-1 value + floor((n−1)/2)).
-- **Pierce** [SB-013, SB-002] (G-04, R-VALUE-20, P-09) — Target ranks 1-2-3-4 → 1-2-3, crit modifier +5–9 → +2/3/4/4/4. Melee + armor piercing + reaching every rank was the core Shieldbreaker problem; a melee skill reaching rank 4 is a rare premium, so rank 4 is removed.
-- **Impale** [SB-014, SB-018] — Record the author-set accuracy exchange and early-level DOT addition without applying old release proposals.
-- **Expose** [SB-015] — Trade accuracy with Pierce to favor the effect-bearing control skill.
-- **Captivate** [SB-016] — Support the author-set accuracy exchange and secondary marked-target damage role.
-- **Serpent Sway** [SB-017] — 
+
+- **Resistances**: Resists stun 50% → 30%; Resists move 50% → 30%
+- **Weapon**: Weapon dmg 5 10 / 6 12 / 7 14 / 8 16 / 9 18 → 5 10 / 6 12 / 7 13 / 7 15 / 8 16; Weapon spd 5 / 6 / 8 / 8 / 9 → 5 / 5 / 6 / 6 / 7
+- **Pierce**: Accuracy 90% → 85%; Crit 5% → 2%; Targets 1·2·3·4 → 1·2·3
+- **Impale**: Damage -60% → -70%; Lv1 — … Lv5 blight 2×3t (140%) → Lv1 blight 1×2t … Lv5 blight 3×2t (140%)
+- **Expose**: Accuracy 85% → 90%
+- **Captivate**: Accuracy 85% → 90%; Lv1 vs marked: damage +40% … Lv5 vs marked: damage +60% → Lv1 vs marked: damage +50% … Lv5 vs marked: damage +90%
+- **Serpent Sway**: Usable ranks 3·2·1 → 4·3·2
 
 ## Vestal
-- **Mace Bash** [VES-001] — Move self healing to the front attack to enable a front support build.
-- **Judgement** [VES-002, VES-009, VES-001] — Keep a rear-reaching damage choice after moving self healing to Mace Bash.
-- **Dazzling Light** [VES-003, VES-008] — Separate rear stun from front play without removing its vanilla damage.
-- **Divine Grace** [VES-004] — Offer predictable healing and allow front-rank support.
-- **Divine Comfort** [VES-005] — Keep strong party healing rear-only and smooth early upgrade values.
-- **Illumination** [VES-010, VES-006, VES-011, VES-012, VES-013] (R-SKILL-09, P-20, P-19, R-VALUE-19, R-DATA-01) — Provide an all-rank utility option for front Vestal play.
-- **Hand of Light** [VES-007] (R-TRADE-02, G-02) — Accuracy 85 → 90. A ranged skill whose job is the ally buff it applies on hit; for effect-first skills accuracy takes priority.
+
+- **Mace Bash**: Crit 0% → 5%; Added: Lv1 self: heal 3 … Lv5 self: heal 5
+- **Judgement**: Accuracy 85% → 90%; Damage -25% → 0%; Crit 5% → 0%; Removed: Lv1 self: heal 3 … Lv5 self: heal 5
+- **Dazzling Light**: Usable ranks 4·3·2 → 4·3
+- **Divine Grace**: Usable ranks 4·3 → 4·3·2·1
+- **Divine Comfort**: Usable ranks 4·3·2 → 4·3
+- **Illumination**: Accuracy 90% → 95%; Usable ranks 3·2·1 → 4·3·2·1; Lv1 dodge -20% … Lv5 dodge -30% (140%) → Lv1 damage taken +20% 3t; burn 1 … Lv5 damage taken +25% (140%) 3t; burn 3
+- **Hand of Light**: Accuracy 85% → 90%
+

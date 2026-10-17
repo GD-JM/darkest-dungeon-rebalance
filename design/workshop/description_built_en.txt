@@ -21,24 +21,24 @@ A small, data-backed hero rebalance. Every change below fixes a problem confirme
 
 [h2]Changes[/h2]
 [list]
-[*][b]Abomination[/b]: Transform, Manacles, Beast's Bile, Slam, form
+[*][b]Abomination[/b]: Transform, Manacles, Beast's Bile, Slam, Beast form
 [*][b]Antiquarian[/b]: Flashpowder
 [*][b]Arbalest[/b]: Sniper Shot, Suppressing Fire, Bola, Battlefield Bandage, Rallying Flare
 [*][b]Bounty Hunter[/b]: Collect Bounty, Mark for Death, Come Hither, Uppercut, Flashbang, Finish Him, Caltrops
 [*][b]Crusader[/b]: Zealous Accusation, Stunning Blow, Bulwark of Faith, Battle Heal, Inspiring Cry
 [*][b]Duelist[/b]: touche, feint, coup_de_grace, the_boot
-[*][b]Flagellant[/b]: resists, weapon, Reclaim, Endure
+[*][b]Flagellant[/b]: Resistances, Weapon, Endure
 [*][b]Grave Robber[/b]: Thrown Dagger, Poison Darts, Toxin Trickery
 [*][b]Hellion[/b]: Wicked Hack, Barbaric YAWP!, Breakthrough, Adrenaline Rush, Bleed Out
 [*][b]Highwayman[/b]: Wicked Slice, Pistol Shot, Point Blank Shot, Grapeshot Blast, Tracking Shot, Duelist's Advance, Open Vein
-[*][b]Houndmaster[/b]: resists, Hound's Rush, Hound's Harry, Target Whistle, Cry Havoc, Guard Dog, Lick Wounds, Blackjack
+[*][b]Houndmaster[/b]: Resistances, Hound's Rush, Hound's Harry, Target Whistle, Cry Havoc, Guard Dog, Lick Wounds, Blackjack
 [*][b]Jester[/b]: Solo, Battle Ballad, Inspiring Tune
 [*][b]Leper[/b]: Intimidate
-[*][b]Man At Arms[/b]: weapon, Rampart, Bellow, Retribution, Command, Bolster
+[*][b]Man At Arms[/b]: Weapon, Rampart, Bellow, Retribution, Command, Bolster
 [*][b]Occultist[/b]: Weakening Curse, Wyrd Reconstruction, Vulnerability Hex, Hands from the Abyss
 [*][b]Plague Doctor[/b]: Incision, Battlefield Medicine
 [*][b]Runaway[/b]: ransack
-[*][b]Shieldbreaker[/b]: resists, weapon, Pierce, Impale, Expose, Captivate, Serpent Sway
+[*][b]Shieldbreaker[/b]: Resistances, Weapon, Pierce, Impale, Expose, Captivate, Serpent Sway
 [*][b]Vestal[/b]: Mace Bash, Judgement, Dazzling Light, Divine Grace, Divine Comfort, Illumination, Hand of Light
 [/list]
 

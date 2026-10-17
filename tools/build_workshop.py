@@ -21,6 +21,7 @@ W = os.path.join(M, 'design', 'workshop')
 sys.path.insert(0, os.path.join(M, 'tools'))
 import effect_common as ec
 import strength as S
+import patch_notes as PN
 
 
 def rd(p):
@@ -175,7 +176,7 @@ def main():
         p = os.path.join(OUT, 'shared', 'buffs', 'rebalance_workshop.buffs.json')
         os.makedirs(os.path.dirname(p), exist_ok=True)
         json.dump({'buffs': need_b}, open(p, 'w', encoding='utf-8'), indent='\t')
-    # 패치 노트 (전체, ko/en)
+    # 패치 노트 (영어 = 메인, 한국어): 무엇 = 바닐라 vs 출력 데이터 자동 비교(patch_notes.py), 왜 = design/workshop/why.json(검토된 근거)
     names = {}
     for f in glob.glob(os.path.join(G, 'localization', '*.string_table.xml')) + glob.glob(os.path.join(G, 'dlc', '*', 'localization', '*.string_table.xml')):
         t = rd(f)
@@ -186,41 +187,51 @@ def main():
             j0 = t.find('</language>', i0)
             for m in re.finditer(r'<entry id="combat_skill_name_(\w+?)"><!\[CDATA\[(.*?)\]\]>', t[i0:j0]):
                 names.setdefault((lang, m.group(1)), m.group(2))
+    why_p = os.path.join(W, 'why.json')
+    WHY = json.load(open(why_p, encoding='utf-8')) if os.path.exists(why_p) else {}
+    ctx = PN.make_ctx(OUT)
     EN_HERO = {h: h.replace('_', ' ').title() for h in S.KO}
+    BLOCK = {'en': {'weapon': 'Weapon', 'armour': 'Armor', 'resistances': 'Resistances', 'mode': 'Beast form'},
+             'ko': {'weapon': '무기', 'armour': '방어구', 'resistances': '저항', 'mode': '짐승 형태'}}
+    summary = {'en': {}, 'ko': {}}
+    missing = []
     for lang, lk in (('en', 'english'), ('ko', 'koreana')):
-        L = ['# Rebalance — %s' % ('Patch notes (full)' if lang == 'en' else '패치 노트 (전체)'), '']
-        cur = None
-        for hero, key, ids, en, ko in notes:
-            if hero != cur:
-                L += ['', '## %s' % (EN_HERO[hero] if lang == 'en' else S.KO[hero])]; cur = hero
-            nm = names.get((lk, '%s_%s' % (hero, key)), key)
-            pr = []
-            for x in ids:
-                for y in notes_over.get(x, {}).get('principles') or principles_of(hero, x):
-                    if y not in pr:
-                        pr.append(y)
-            text = []
-            for x in ids:
-                if x in notes_over and notes_over[x].get(lang):
-                    text.append(notes_over[x][lang])
-            if not text:
-                text = [re.sub(r'^\w+-\d+(·\w+-\d+)* ', '', c) for c in (en if lang == 'en' else (ko or en)) if '[trace' not in c] or \
-                       [re.sub(r'^.*?\] ', '', c) for c in en]
-            L.append('- **%s** [%s]%s — %s' % (nm, ', '.join(ids) or '-', (' (%s)' % ', '.join(pr)) if pr else '', ' / '.join(text)))
+        L = ['# Rebalance — Patch notes' if lang == 'en' else '# 리밸런스 — 패치 노트', '',
+             'Each entry: what changed (generated from the game data) — why (principle IDs from the mod description).' if lang == 'en'
+             else '항목마다: 무엇이 바뀌었나(게임 데이터에서 자동 생성) — 왜(설명문의 원칙 번호).', '']
+        for hero in heroes:
+            wf = os.path.join(OUT, 'heroes', hero, hero + '.info.darkest')
+            diffs = PN.hero_diff(hero, wf, ctx, lang)
+            if not diffs:
+                continue
+            L += ['## ' + (EN_HERO[hero] if lang == 'en' else S.KO[hero]), '']
+            for key, what in diffs:
+                blk = key[1] or key[0]
+                nm = names.get((lk, '%s_%s' % (hero, blk)), BLOCK[lang].get(blk, blk))
+                w = WHY.get('%s|%s' % (hero, blk), {})
+                reason = w.get(lang, '')
+                if not reason and lang == 'en':
+                    missing.append('%s|%s' % (hero, blk))
+                pr = ', '.join(w.get('principles', []))
+                ids = ', '.join(w.get('ids', []))
+                line = '- **%s**: %s' % (nm, '; '.join(what))
+                if reason:
+                    line += ' — %s' % reason
+                tail = ' / '.join(x for x in (pr, ids) if x)
+                if tail:
+                    line += ' *(%s)*' % tail
+                L.append(line)
+                summary[lang].setdefault(hero, [])
+                if nm not in summary[lang][hero]:
+                    summary[lang][hero].append(nm)
+            L.append('')
         open(os.path.join(W, 'patch_notes_%s.md' % lang), 'w', encoding='utf-8').write('\n'.join(L) + '\n')
-    # 설명문: 원칙 + 영웅별 바뀐 기술 요약 (전체 노트는 patch_notes_*.md → 창작마당 토론 글/변경 기록)
-    for lang, lk in (('en', 'english'), ('ko', 'koreana')):
+    if missing:
+        print('근거(why) 없는 블록 %d개: %s' % (len(missing), ', '.join(missing[:12]) + (' …' if len(missing) > 12 else '')))
+    # 설명문: 원칙 + 영웅별 바뀐 항목 목록 (전체 노트는 patch_notes_*.md)
+    for lang in ('en', 'ko'):
         d0 = rd(os.path.join(W, 'description_%s.txt' % lang)).strip()
-        by = {}
-        for hero, key, ids, en, ko in notes:
-            nm = names.get((lk, '%s_%s' % (hero, key)), key)
-            if key in ('weapon', 'armour', 'resistances', 'mode', 'tag', 'generation'):
-                nm = {'weapon': 'weapon' if lang == 'en' else '무기', 'armour': 'armor' if lang == 'en' else '방어구',
-                      'resistances': 'resists' if lang == 'en' else '저항', 'mode': 'form' if lang == 'en' else '형태'}.get(key, key)
-            by.setdefault(hero, [])
-            if nm not in by[hero]:
-                by[hero].append(nm)
-        items = ['[*][b]%s[/b]: %s' % (EN_HERO[h] if lang == 'en' else S.KO[h], ', '.join(v)) for h, v in by.items()]
+        items = ['[*][b]%s[/b]: %s' % (EN_HERO[h] if lang == 'en' else S.KO[h], ', '.join(v)) for h, v in summary[lang].items()]
         d0 = d0.replace('{PATCH_%s}' % lang.upper(), '[list]\n' + '\n'.join(items) + '\n[/list]')
         open(os.path.join(W, 'description_built_%s.txt' % lang), 'w', encoding='utf-8').write(d0 + '\n')
         print('description', lang, len(d0), 'chars (Steam limit 8000)')
