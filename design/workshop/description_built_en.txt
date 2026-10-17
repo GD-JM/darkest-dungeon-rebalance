@@ -21,30 +21,25 @@ A small, data-backed hero rebalance. Every change below fixes a problem confirme
 
 [h2]Changes[/h2]
 [list]
-[*][b]Shieldbreaker · Pierce[/b] (SB-002) — Target ranks 1-2-3-4 → 1-2-3, crit modifier +5–9 → +2/3/4/4/4. Melee + armor piercing + reaching every rank was the core Shieldbreaker problem; a melee skill reaching rank 4 is a rare premium, so rank 4 is removed. [i]G-04, R-VALUE-20, P-09[/i]
-[*][b]Shieldbreaker · Weapon speed[/b] (SB-011) — Weapon speed 5/6/8/8/9 → 5/5/6/6/7. Brings an exception back to the base game's growth rule (level-1 value + floor((n−1)/2)). [i]G-04, R-GROW-03[/i]
-[*][b]Flagellant · Bleed resist[/b] (FLA-001) — Bleed resist 65 → 60. Matches the base game's cap for a hero's signature resist (baseline +30). [i]G-04, R-RES-01[/i]
-[*][b]Flagellant · Weapon speed[/b] (FLA-007) — Weapon speed 6/6/8/8/9 → 6/6/7/7/8. Brings an exception back to the base game's growth rule. [i]G-04, R-GROW-03[/i]
-[*][b]Houndmaster · Blight/Bleed resist[/b] (HM-017) — Blight/Bleed resist 40 → 30. In the base game a resist only deviates from baseline when the hero's lore says so; this +10 has no such line (Trap +30 stays, backed by the guard-dog text). [i]P-22, R-RES-01[/i]
-[*][b]Houndmaster · Cry Havoc[/b] (HM-014) — Levels 1–4: stress heal 2/3/4/5 → 4/4/5/5, chance 66/68/70/72% → 70/71/72/73% (level 5 stays 74%, so every level still grows). Fixes only the low-level unreliability of the party-wide stress heal. [i]G-02, G-05, P-12[/i]
-[*][b]Houndmaster · Blackjack[/b] (HM-013) — Accuracy 95 → 90, strong stun → normal stun, damage −65% → −50%. It was the only melee stun that both reaches rank 3 and stuns at the strong tier; accuracy and stun tier come down, damage goes up in return. [i]R-STUN-03, P-11[/i]
-[*][b]Man-at-Arms · Weapon damage[/b] (MAA-001) — Weapon max damage 9/10/12/13/14 → 10/12/13/15/16 (min unchanged). He sat furthest below the HP-to-damage trend across all 20 heroes; 5-10 is the existing preset of comparable heroes (Bounty Hunter, Highwayman). [i]G-01, P-03[/i]
-[*][b]Duelist · The Boot[/b] (DUE-006) — Damage −40% → −60%. A melee skill that stuns and pushes at once, yet it gave up less damage than other stuns. −60% sits inside the damage range of stun skills (−40 to −75%). [i]R-STUN-01, R-STRAT-01[/i]
-[*][b]Hellion · Barbaric YAWP![/b] (HEL-001) — Stun, exhaustion and the 3-per-battle limit removed → self buff (accuracy +5, damage +20%, once per use) + all enemies deal 10–20% less damage (3 turns) + corpse clear; targets ranks 1-2 → all ranks. The un-cleansable, battle-long exhaustion (−20% damage, −3 speed) contradicted the relentless art. [i]P-19, G-02, R-STRAT-01[/i]
-[*][b]Hellion · Breakthrough[/b] (HEL-002) — Exhaustion removed, damage −50% → −55%. It was the weakest damaging AoE hitting ranks 2 and 3 (exhaustion cost most of its value). [i]P-19, G-02[/i]
-[*][b]Hellion · Bleed Out[/b] (HEL-003) — Exhaustion removed, damage +20% → 0%, crit modifier +6–10 → +10–14. Its rank-1-only target is now paid back with crit instead of damage; crits extend the bleed, which suits late-game armored enemies. [i]P-19, P-21[/i]
-[*][b]Hellion · Adrenaline Rush[/b] (HEL-004) — Its self buff moved to YAWP, leaving cure + self heal → self heal 1/2/2/3/4 → 3/4/5/6/7. [i]G-05, P-12[/i]
-[*][b]Hellion · Wicked Hack[/b] (HEL-005) — Accuracy 85 → 90, making her basic attack reliable now that exhaustion is gone. [i]G-02[/i]
-[*][b]Arbalest · Bola[/b] (ARB-004) — Level 5 push now uses the intended effect (1D 105% → 1E 115%). Bug fix: 1E exists in the base game but was never linked. [i]P-01[/i]
-[*][b]Abomination · Beast's Bile[/b] (ABO-002) — Accuracy 95 → 90, damage −90% → −75%. Human-form accuracy comes down and base output goes up, closing the gap with beast skills (accuracy 85–90). [i]P-23, G-01[/i]
-[*][b]Abomination · Manacles[/b] (ABO-005) — Accuracy 95 → 90, the baseline for damaging stuns. Damage unchanged; his large weapon already puts it near the top of stun skills. [i]P-23, R-STUN-03[/i]
-[*][b]Abomination · Slam[/b] (ABO-001) — Usable ranks 1-2-3 → 2-3-4, debuffs removed, accuracy 80 → 90, damage −25% → 0%. The beast had nothing to do from rank 4; now it slams from the back and moves forward. [i]P-23, G-03[/i]
-[*][b]Abomination · Transform[/b] (ABO-004) — Self stress relief 4–8 on transforming; beast form stress per turn 6 → 4. The cost to allies stays — this gives a reason to transform at all. [i]P-23, P-12[/i]
-[*][b]Grave Robber · Poison Dart / Thrown Dagger[/b] (GR-001) — Poison Dart blight 4 turns → 3 (the standard DoT duration); in exchange the self accuracy buff moves from Thrown Dagger to Poison Dart. [i]R-SKILL-05, P-11[/i]
-[*][b]Highwayman · Pistol Shot[/b] (HWY-009) — Accuracy 85 → 90. The median level-1 accuracy of the base game's 34 single-target damaging ranged skills is 90; Pistol Shot alone sat at 85, leaving his ranged build behind his melee one (logged as an exception to the 85 baseline of R-TRADE-02). [i]G-02, P-03[/i]
-[*][b]Crusader · Zealous Accusation[/b] (CRU-002) — Accuracy 85 → 90, so there are fights where it beats Smite (a −40% AoE with low accuracy on top had no reason to be picked). [i]G-02[/i]
-[*][b]Crusader · Stunning Blow[/b] (CRU-003) — Normal stun → strong stun (damage −50% unchanged). The standard front-line stun; the Crusader's signature skill now stuns as reliably as its name says. [i]R-STUN-01, P-19[/i]
-[*][b]Vestal · Hand of Light[/b] (VES-007) — Accuracy 85 → 90. A ranged skill whose job is the ally buff it applies on hit; for effect-first skills accuracy takes priority. [i]R-TRADE-02, G-02[/i]
+[*][b]Abomination[/b]: Transform, Manacles, Beast's Bile, Slam, form
+[*][b]Antiquarian[/b]: Flashpowder
+[*][b]Arbalest[/b]: Sniper Shot, Suppressing Fire, Bola, Battlefield Bandage, Rallying Flare
+[*][b]Bounty Hunter[/b]: Collect Bounty, Mark for Death, Come Hither, Uppercut, Flashbang, Finish Him, Caltrops
+[*][b]Crusader[/b]: Zealous Accusation, Stunning Blow, Bulwark of Faith, Battle Heal, Inspiring Cry
+[*][b]Duelist[/b]: touche, feint, coup_de_grace, the_boot
+[*][b]Flagellant[/b]: resists, weapon, Reclaim
+[*][b]Grave Robber[/b]: Thrown Dagger, Poison Darts, Toxin Trickery
+[*][b]Hellion[/b]: Wicked Hack, Barbaric YAWP!, Breakthrough, Adrenaline Rush, Bleed Out
+[*][b]Highwayman[/b]: Wicked Slice, Pistol Shot, Point Blank Shot, Grapeshot Blast, Tracking Shot, Duelist's Advance, Open Vein
+[*][b]Houndmaster[/b]: resists, Hound's Rush, Hound's Harry, Target Whistle, Cry Havoc, Guard Dog, Lick Wounds, Blackjack
+[*][b]Jester[/b]: Solo, Battle Ballad, Inspiring Tune
+[*][b]Leper[/b]: Intimidate
+[*][b]Man At Arms[/b]: weapon, Rampart, Bellow, Retribution, Command, Bolster
+[*][b]Occultist[/b]: Weakening Curse, Wyrd Reconstruction, Vulnerability Hex, Hands from the Abyss
+[*][b]Plague Doctor[/b]: Incision, Battlefield Medicine
+[*][b]Runaway[/b]: ransack
+[*][b]Shieldbreaker[/b]: resists, weapon, Pierce, Impale, Expose, Captivate, Serpent Sway
+[*][b]Vestal[/b]: Mace Bash, Judgement, Dazzling Light, Divine Grace, Divine Comfort, Illumination, Hand of Light
 [/list]
 
 [h2]Compatibility[/h2]

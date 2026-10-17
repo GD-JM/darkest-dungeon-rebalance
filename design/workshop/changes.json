@@ -1,577 +1,274 @@
 {
-  "_doc": "창작마당판 = 바닐라 + 아래 검증된 변경(W)만. tools/build_workshop.py가 이 목록으로 mods/RebalanceWorkshop을 만든다. 근거: design/analysis/audit_2026-10-17/SUMMARY.md. ops: skill(id, field, values[5] 또는 하나), skill_effect_swap(id, old, new — {n}=레벨 1~5), skill_effect_remove(id, name), weapon(field, values[5]), resist(key, value), add_effects(줄 목록).",
-  "changes": [
+  "_doc": "창작마당판 = 커스텀판 − 아래 제외(2026-10-17 제작자 결정). tools/build_workshop.py 참조. revert: 바닐라로 되돌림, pending: 제작자 답 대기(빌드에선 되돌림).",
+  "exclude_heroes": [
+    "musketeer"
+  ],
+  "revert": [
     {
-      "id": "SB-002",
+      "id": "OCC-002",
+      "hero": "occultist",
+      "ops": [
+        [
+          "vanilla_skill",
+          "bloodlet"
+        ]
+      ],
+      "ko": "제물 암습 피해 하향은 근거가 없어 창작마당판 제외(제작자)",
+      "en": "Excluded: no recorded reason"
+    },
+    {
+      "id": "JES-004",
+      "hero": "jester",
+      "ops": [
+        [
+          "skill",
+          "dirk_stab",
+          "atk",
+          [
+            "85%",
+            "90%",
+            "95%",
+            "100%",
+            "105%"
+          ]
+        ]
+      ],
+      "ko": "단검 찌르기 명중은 바닐라(제작자: 원본 해도 됨)",
+      "en": "Kept vanilla accuracy"
+    }
+  ],
+  "pending": [
+    {
+      "id": "SB-011",
       "hero": "shieldbreaker",
-      "skill": "pierce",
-      "ko_name": "방패 파괴자 · 찌르기",
-      "en_name": "Shieldbreaker · Pierce",
+      "ops": [
+        [
+          "vanilla_field",
+          "^weapon:",
+          "dmg"
+        ]
+      ],
+      "ko": "무기 피해 성장 20% → 15% — R-GROW-01 설명 후 제작자 답 대기",
+      "en": "pending"
+    },
+    {
+      "id": "SB-012",
+      "hero": "shieldbreaker",
+      "ops": [
+        [
+          "vanilla_field",
+          "^armour:",
+          "def"
+        ]
+      ],
+      "ko": "기본 회피 8 → 7.5 — 제작자 답 대기",
+      "en": "pending"
+    },
+    {
+      "id": "FLA-006",
+      "hero": "flagellant",
+      "ops": [
+        [
+          "vanilla_skill",
+          "endure"
+        ]
+      ],
+      "ko": "인내 자기 스트레스 고정 4 — 제작자 답 대기",
+      "en": "pending"
+    }
+  ],
+  "notes": {
+    "SB-002": {
       "principles": [
         "G-04",
         "R-VALUE-20",
         "P-09"
       ],
-      "ops": [
-        [
-          "skill",
-          "pierce",
-          "target",
-          "123"
-        ],
-        [
-          "skill",
-          "pierce",
-          "crit",
-          [
-            "2%",
-            "3%",
-            "4%",
-            "4%",
-            "4%"
-          ]
-        ]
-      ],
       "ko": "대상 열 1·2·3·4 → 1·2·3, 치명 보정 +5~9 → +2/3/4/4/4. 근접 + 방어 무시 + 전 열(4열까지)이 함께 붙은 것이 방패 파괴자 문제의 핵심이었다 — 근접 기술이 4열까지 닿는 건 드문 가치라 4열을 뺀다.",
       "en": "Target ranks 1-2-3-4 → 1-2-3, crit modifier +5–9 → +2/3/4/4/4. Melee + armor piercing + reaching every rank was the core Shieldbreaker problem; a melee skill reaching rank 4 is a rare premium, so rank 4 is removed."
     },
-    {
-      "id": "SB-011",
-      "hero": "shieldbreaker",
-      "ko_name": "방패 파괴자 · 무기 속도",
-      "en_name": "Shieldbreaker · Weapon speed",
+    "SB-011": {
       "principles": [
         "G-04",
         "R-GROW-03"
-      ],
-      "ops": [
-        [
-          "weapon",
-          "spd",
-          [
-            "5",
-            "5",
-            "6",
-            "6",
-            "7"
-          ]
-        ]
       ],
       "ko": "무기 속도 5/6/8/8/9 → 5/5/6/6/7. 원작 성장 규칙(1렙 + 내림((n−1)/2))의 예외를 규칙대로.",
       "en": "Weapon speed 5/6/8/8/9 → 5/5/6/6/7. Brings an exception back to the base game's growth rule (level-1 value + floor((n−1)/2))."
     },
-    {
-      "id": "FLA-001",
-      "hero": "flagellant",
-      "ko_name": "고행자 · 출혈 저항",
-      "en_name": "Flagellant · Bleed resist",
+    "FLA-001": {
       "principles": [
         "G-04",
         "R-RES-01"
-      ],
-      "ops": [
-        [
-          "resist",
-          "bleed",
-          "60%"
-        ]
       ],
       "ko": "출혈 저항 65 → 60. 원작의 대표 저항 상한(기준 +30)에 맞춤.",
       "en": "Bleed resist 65 → 60. Matches the base game's cap for a hero's signature resist (baseline +30)."
     },
-    {
-      "id": "FLA-007",
-      "hero": "flagellant",
-      "ko_name": "고행자 · 무기 속도",
-      "en_name": "Flagellant · Weapon speed",
+    "FLA-007": {
       "principles": [
         "G-04",
         "R-GROW-03"
       ],
-      "ops": [
-        [
-          "weapon",
-          "spd",
-          [
-            "6",
-            "6",
-            "7",
-            "7",
-            "8"
-          ]
-        ]
-      ],
       "ko": "무기 속도 6/6/8/8/9 → 6/6/7/7/8. 원작 성장 규칙의 예외를 규칙대로.",
       "en": "Weapon speed 6/6/8/8/9 → 6/6/7/7/8. Brings an exception back to the base game's growth rule."
     },
-    {
-      "id": "HM-017",
-      "hero": "houndmaster",
-      "ko_name": "조련사 · 중독·출혈 저항",
-      "en_name": "Houndmaster · Blight/Bleed resist",
+    "HM-017": {
       "principles": [
         "P-22",
         "R-RES-01"
       ],
-      "ops": [
-        [
-          "resist",
-          "poison",
-          "30%"
-        ],
-        [
-          "resist",
-          "bleed",
-          "30%"
-        ]
-      ],
       "ko": "중독·출혈 저항 40 → 30. 원작 저항은 설정 문장이 있을 때만 기준에서 벗어나는데, 이 +10에는 대응 문장이 없음(함정 +30은 '경비견' 문장이 있어 유지).",
       "en": "Blight/Bleed resist 40 → 30. In the base game a resist only deviates from baseline when the hero's lore says so; this +10 has no such line (Trap +30 stays, backed by the guard-dog text)."
     },
-    {
-      "id": "HM-014",
-      "hero": "houndmaster",
-      "skill": "howl",
-      "ko_name": "조련사 · 울부짖기",
-      "en_name": "Houndmaster · Cry Havoc",
+    "HM-014": {
       "principles": [
         "G-02",
         "G-05",
         "P-12"
-      ],
-      "ops": [
-        [
-          "skill_effect_swap",
-          "howl",
-          "Hound Howl {n}",
-          "RB HM Hound Howl {n}",
-          [
-            1,
-            2,
-            3,
-            4
-          ]
-        ],
-        [
-          "add_effects",
-          [
-            "effect: .name \"RB HM Hound Howl 1\" .target \"target\" .curio_result_type \"positive\" .chance 70% .healstress 4\t.on_hit true .on_miss false .queue true",
-            "effect: .name \"RB HM Hound Howl 2\" .target \"target\" .curio_result_type \"positive\" .chance 71% .healstress 4\t.on_hit true .on_miss false .queue true",
-            "effect: .name \"RB HM Hound Howl 3\" .target \"target\" .curio_result_type \"positive\" .chance 72% .healstress 5\t.on_hit true .on_miss false .queue true",
-            "effect: .name \"RB HM Hound Howl 4\" .target \"target\" .curio_result_type \"positive\" .chance 73% .healstress 5\t.on_hit true .on_miss false .queue true"
-          ]
-        ]
       ],
       "ko": "1~4렙 스트레스 회복 2/3/4/5 → 4/4/5/5, 확률 66/68/70/72% → 70/71/72/73%(5렙 74% 그대로, 매 레벨 성장). 아군 전체 스트레스 회복의 저레벨 불안정성만 보정.",
       "en": "Levels 1–4: stress heal 2/3/4/5 → 4/4/5/5, chance 66/68/70/72% → 70/71/72/73% (level 5 stays 74%, so every level still grows). Fixes only the low-level unreliability of the party-wide stress heal."
     },
-    {
-      "id": "HM-013",
-      "hero": "houndmaster",
-      "skill": "blackjack",
-      "ko_name": "조련사 · 둔기 강타",
-      "en_name": "Houndmaster · Blackjack",
+    "HM-013": {
       "principles": [
         "R-STUN-03",
         "P-11"
       ],
-      "ops": [
-        [
-          "skill",
-          "blackjack",
-          "atk",
-          [
-            "90%",
-            "95%",
-            "100%",
-            "105%",
-            "110%"
-          ]
-        ],
-        [
-          "skill_effect_swap",
-          "blackjack",
-          "Hero Strong Stun {n}",
-          "Stun {n}",
-          [
-            1,
-            2,
-            3,
-            4,
-            5
-          ]
-        ],
-        [
-          "skill",
-          "blackjack",
-          "dmg",
-          "-50%"
-        ]
-      ],
       "ko": "명중 95 → 90, 강한 기절 → 일반 기절, 피해 −65% → −50%. 근접 기절 중 3열까지 닿으면서 강한 기절인 유일한 기술이었음 — 명중과 기절 등급을 내린 대신 피해로 돌려줌.",
       "en": "Accuracy 95 → 90, strong stun → normal stun, damage −65% → −50%. It was the only melee stun that both reaches rank 3 and stuns at the strong tier; accuracy and stun tier come down, damage goes up in return."
     },
-    {
-      "id": "MAA-001",
-      "hero": "man_at_arms",
-      "ko_name": "중보병 · 무기 피해",
-      "en_name": "Man-at-Arms · Weapon damage",
+    "MAA-001": {
       "principles": [
         "G-01",
         "P-03"
       ],
-      "ops": [
-        [
-          "weapon",
-          "dmg_max",
-          [
-            "10",
-            "12",
-            "13",
-            "15",
-            "16"
-          ]
-        ]
-      ],
       "ko": "무기 최대 피해 9/10/12/13/14 → 10/12/13/15/16(최소 그대로). 영웅 20명의 체력–피해 추세에서 가장 아래로 벗어나 있었음. 5-10은 같은 조건 영웅(현상금 사냥꾼·노상강도)의 기존 값.",
       "en": "Weapon max damage 9/10/12/13/14 → 10/12/13/15/16 (min unchanged). He sat furthest below the HP-to-damage trend across all 20 heroes; 5-10 is the existing preset of comparable heroes (Bounty Hunter, Highwayman)."
     },
-    {
-      "id": "DUE-006",
-      "hero": "duelist",
-      "skill": "the_boot",
-      "ko_name": "결투가 · 장화 차기",
-      "en_name": "Duelist · The Boot",
+    "DUE-006": {
       "principles": [
         "R-STUN-01",
         "R-STRAT-01"
-      ],
-      "ops": [
-        [
-          "skill",
-          "the_boot",
-          "dmg",
-          "-60%"
-        ]
       ],
       "ko": "피해 −40% → −60%. 기절 + 밀치기를 함께 거는 근접기인데 피해 손실이 다른 기절기보다 작았음. −60%는 기절 기술 피해 가격대(−40~−75%) 안.",
       "en": "Damage −40% → −60%. A melee skill that stuns and pushes at once, yet it gave up less damage than other stuns. −60% sits inside the damage range of stun skills (−40 to −75%)."
     },
-    {
-      "id": "HEL-001",
-      "hero": "hellion",
-      "ko_name": "야만인 · 야만스러운 함성!",
-      "en_name": "Hellion · Barbaric YAWP!",
+    "HEL-001": {
       "principles": [
         "P-19",
         "G-02",
         "R-STRAT-01"
       ],
-      "ops": [
-        [
-          "custom_skill",
-          "barbaric_yawp"
-        ]
-      ],
       "ko": "기절·탈진·전투당 3회 제한 제거 → 자기 강화(명중 +5·피해 +20%, 사용 1회당 1번) + 적 전체 피해 감소(10~20%, 3턴) + 시체 제거, 대상 광역 1·2 → 광역 1·2·3·4. 전투 끝까지 남는 해제 불가 탈진(피해 −20%·속도 −3)이 '몰아치는' 그림과 반대였다.",
       "en": "Stun, exhaustion and the 3-per-battle limit removed → self buff (accuracy +5, damage +20%, once per use) + all enemies deal 10–20% less damage (3 turns) + corpse clear; targets ranks 1-2 → all ranks. The un-cleansable, battle-long exhaustion (−20% damage, −3 speed) contradicted the relentless art."
     },
-    {
-      "id": "HEL-002",
-      "hero": "hellion",
-      "ko_name": "야만인 · 돌파",
-      "en_name": "Hellion · Breakthrough",
+    "HEL-002": {
       "principles": [
         "P-19",
         "G-02"
-      ],
-      "ops": [
-        [
-          "custom_skill",
-          "breakthru"
-        ]
       ],
       "ko": "탈진 제거, 피해 −50% → −55%. 피해 있는 2·3열 광역 중 가장 약했음(탈진 대가가 가치 대부분을 깎음).",
       "en": "Exhaustion removed, damage −50% → −55%. It was the weakest damaging AoE hitting ranks 2 and 3 (exhaustion cost most of its value)."
     },
-    {
-      "id": "HEL-003",
-      "hero": "hellion",
-      "ko_name": "야만인 · 출혈",
-      "en_name": "Hellion · Bleed Out",
+    "HEL-003": {
       "principles": [
         "P-19",
         "P-21"
       ],
-      "ops": [
-        [
-          "custom_skill",
-          "bleed_out"
-        ]
-      ],
       "ko": "탈진 제거, 피해 +20% → 0%, 치명 보정 +6~10 → +10~14. 대상이 1열뿐인 대가를 피해 대신 치명타로 — 치명타는 출혈 지속을 늘려 후반 고방어 적에게 맞는다.",
       "en": "Exhaustion removed, damage +20% → 0%, crit modifier +6–10 → +10–14. Its rank-1-only target is now paid back with crit instead of damage; crits extend the bleed, which suits late-game armored enemies."
     },
-    {
-      "id": "HEL-004",
-      "hero": "hellion",
-      "ko_name": "야만인 · 아드레날린 분출",
-      "en_name": "Hellion · Adrenaline Rush",
+    "HEL-004": {
       "principles": [
         "G-05",
         "P-12"
       ],
-      "ops": [
-        [
-          "custom_skill",
-          "adrenaline_rush"
-        ]
-      ],
       "ko": "자기 강화가 함성으로 옮겨가 치료 + 자기 회복만 남음 → 자기 회복 1/2/2/3/4 → 3/4/5/6/7.",
       "en": "Its self buff moved to YAWP, leaving cure + self heal → self heal 1/2/2/3/4 → 3/4/5/6/7."
     },
-    {
-      "id": "HEL-005",
-      "hero": "hellion",
-      "ko_name": "야만인 · 사악한 칼질",
-      "en_name": "Hellion · Wicked Hack",
+    "HEL-005": {
       "principles": [
         "G-02"
-      ],
-      "ops": [
-        [
-          "custom_skill",
-          "wicked_hack"
-        ]
       ],
       "ko": "명중 85 → 90. 탈진이 없어진 기본 공격을 쓰기 편하게.",
       "en": "Accuracy 85 → 90, making her basic attack reliable now that exhaustion is gone."
     },
-    {
-      "id": "ARB-004",
-      "hero": "arbalest",
-      "skill": "bola",
-      "ko_name": "석궁사수 · 사냥돌 발사",
-      "en_name": "Arbalest · Bola",
+    "ARB-004": {
       "principles": [
         "P-01"
-      ],
-      "ops": [
-        [
-          "skill_effect_swap",
-          "bola",
-          "Bolo Push 1D",
-          "Bolo Push 1E",
-          [
-            5
-          ]
-        ]
       ],
       "ko": "5렙 밀치기 효과 연결 누락 수정(1D 105% → 1E 115%). 바닐라에 1E가 정의돼 있지만 연결되지 않던 버그.",
       "en": "Level 5 push now uses the intended effect (1D 105% → 1E 115%). Bug fix: 1E exists in the base game but was never linked."
     },
-    {
-      "id": "ABO-002",
-      "hero": "abomination",
-      "ko_name": "괴인 · 아수의 담즙",
-      "en_name": "Abomination · Beast's Bile",
+    "ABO-002": {
       "principles": [
         "P-23",
         "G-01"
       ],
-      "ops": [
-        [
-          "custom_skill",
-          "vomit"
-        ]
-      ],
       "ko": "명중 95 → 90, 피해 −90% → −75%. 인간 형태 명중을 낮추고 기본 성능을 올려 변신 기술(명중 85~90)과의 격차를 줄인다.",
       "en": "Accuracy 95 → 90, damage −90% → −75%. Human-form accuracy comes down and base output goes up, closing the gap with beast skills (accuracy 85–90)."
     },
-    {
-      "id": "ABO-005",
-      "hero": "abomination",
-      "ko_name": "괴인 · 사슬질",
-      "en_name": "Abomination · Manacles",
+    "ABO-005": {
       "principles": [
         "P-23",
         "R-STUN-03"
       ],
-      "ops": [
-        [
-          "custom_skill",
-          "manacles"
-        ]
-      ],
       "ko": "명중 95 → 90. 피해 있는 기절의 기준 명중(90). 괴인 무기가 커서 피해는 그대로도 기절 기술 중 상위.",
       "en": "Accuracy 95 → 90, the baseline for damaging stuns. Damage unchanged; his large weapon already puts it near the top of stun skills."
     },
-    {
-      "id": "ABO-001",
-      "hero": "abomination",
-      "ko_name": "괴인 · 박치기",
-      "en_name": "Abomination · Slam",
+    "ABO-001": {
       "principles": [
         "P-23",
         "G-03"
       ],
-      "ops": [
-        [
-          "custom_skill",
-          "slam"
-        ]
-      ],
       "ko": "사용 열 1·2·3 → 2·3·4, 약화 제거, 명중 80 → 90, 피해 −25% → 0%. 짐승은 4열에서 쓸 기술이 없어 한 턴을 날렸다 — 4열에서 박고 앞으로 나오는 길.",
       "en": "Usable ranks 1-2-3 → 2-3-4, debuffs removed, accuracy 80 → 90, damage −25% → 0%. The beast had nothing to do from rank 4; now it slams from the back and moves forward."
     },
-    {
-      "id": "ABO-004",
-      "hero": "abomination",
-      "ko_name": "괴인 · 변신",
-      "en_name": "Abomination · Transform",
+    "ABO-004": {
       "principles": [
         "P-23",
         "P-12"
       ],
-      "ops": [
-        [
-          "custom_skill",
-          "transform"
-        ],
-        [
-          "custom_line",
-          "^mode: \\.id beast"
-        ]
-      ],
       "ko": "변신 중 자기 스트레스 회복 4~8, 짐승 형태 턴당 스트레스 6 → 4. 아군 공포·복귀 비용은 유지 — 변신을 고를 이유를 준다.",
       "en": "Self stress relief 4–8 on transforming; beast form stress per turn 6 → 4. The cost to allies stays — this gives a reason to transform at all."
     },
-    {
-      "id": "GR-001",
-      "hero": "grave_robber",
-      "ko_name": "도굴꾼 · 맹독 다트 / 단검 투척",
-      "en_name": "Grave Robber · Poison Dart / Thrown Dagger",
+    "GR-001": {
       "principles": [
         "R-SKILL-05",
         "P-11"
       ],
-      "ops": [
-        [
-          "custom_skill",
-          "poison_dart"
-        ],
-        [
-          "skill_effect_remove",
-          "thrown_dagger",
-          "GR Acc Buff {n}"
-        ]
-      ],
       "ko": "맹독 다트 중독 4턴 → 3턴(중독 기술 표준 지속), 대신 자기 명중 강화를 단검 투척에서 맹독 다트로 옮김.",
       "en": "Poison Dart blight 4 turns → 3 (the standard DoT duration); in exchange the self accuracy buff moves from Thrown Dagger to Poison Dart."
     },
-    {
-      "id": "HWY-009",
-      "hero": "highwayman",
-      "ko_name": "노상강도 · 권총 사격",
-      "en_name": "Highwayman · Pistol Shot",
+    "HWY-009": {
       "principles": [
         "G-02",
         "P-03"
       ],
-      "ops": [
-        [
-          "skill",
-          "pistol_shot",
-          "atk",
-          [
-            "90%",
-            "95%",
-            "100%",
-            "105%",
-            "110%"
-          ]
-        ]
-      ],
       "ko": "명중 85 → 90. 바닐라 원거리 단일 피해 기술 34개의 1렙 명중 중앙값이 90인데 권총 사격만 85 — 근접 빌드에 비해 원거리 빌드가 약했다(R-TRADE-02의 명중 85 기준에서 벗어나는 예외로 기록).",
       "en": "Accuracy 85 → 90. The median level-1 accuracy of the base game's 34 single-target damaging ranged skills is 90; Pistol Shot alone sat at 85, leaving his ranged build behind his melee one (logged as an exception to the 85 baseline of R-TRADE-02)."
     },
-    {
-      "id": "CRU-002",
-      "hero": "crusader",
-      "ko_name": "성전사 · 광신적 고발",
-      "en_name": "Crusader · Zealous Accusation",
+    "CRU-002": {
       "principles": [
         "G-02"
-      ],
-      "ops": [
-        [
-          "skill",
-          "zealous_accusation",
-          "atk",
-          [
-            "90%",
-            "95%",
-            "100%",
-            "105%",
-            "110%"
-          ]
-        ]
       ],
       "ko": "명중 85 → 90. 강타 대신 이 기술을 고를 상황을 만든다(피해 −40% 광역이라 명중까지 낮으면 고를 이유가 없었음).",
       "en": "Accuracy 85 → 90, so there are fights where it beats Smite (a −40% AoE with low accuracy on top had no reason to be picked)."
     },
-    {
-      "id": "CRU-003",
-      "hero": "crusader",
-      "ko_name": "성전사 · 기절의 일격",
-      "en_name": "Crusader · Stunning Blow",
+    "CRU-003": {
       "principles": [
         "R-STUN-01",
         "P-19"
       ],
-      "ops": [
-        [
-          "skill_effect_swap",
-          "stunning_blow",
-          "Stun {n}",
-          "Hero Strong Stun {n}",
-          [
-            1,
-            2,
-            3,
-            4,
-            5
-          ]
-        ]
-      ],
       "ko": "일반 기절 → 강한 기절(피해 −50% 그대로). 전열 표준 기절 — 성전사의 대표 기술을 이름 그대로 확실한 기절로.",
       "en": "Normal stun → strong stun (damage −50% unchanged). The standard front-line stun; the Crusader's signature skill now stuns as reliably as its name says."
     },
-    {
-      "id": "VES-007",
-      "hero": "vestal",
-      "ko_name": "성녀 · 신의 손길",
-      "en_name": "Vestal · Hand of Light",
+    "VES-007": {
       "principles": [
         "R-TRADE-02",
         "G-02"
       ],
-      "ops": [
-        [
-          "skill",
-          "gods_hand",
-          "atk",
-          [
-            "90%",
-            "95%",
-            "100%",
-            "105%",
-            "110%"
-          ]
-        ]
-      ],
       "ko": "명중 85 → 90. 맞혀야 아군 강화가 걸리는 효과 위주 원거리 기술 — 효과가 본업인 기술은 명중을 우선한다.",
       "en": "Accuracy 85 → 90. A ranged skill whose job is the ally buff it applies on hit; for effect-first skills accuracy takes priority."
     }
-  ]
+  }
 }

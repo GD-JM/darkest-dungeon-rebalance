@@ -58,6 +58,7 @@ combat_skill: .id "disruptive_curse" .level 4 .type "ranged" .atk 115% .dmg -100
 // OCC-004 disruptive_curse: 저항 감소 지속 4 -> 3턴(RB OCC Thing Resist Debuffs 사본), 함께 거는 표식(3턴)과 같게. 중첩 유지 시간 단축 [제작자]
 // OCC-005 disruptive_curse: 피해 -90% -> -100%, 치명타 5~9% -> 0(치명타 불가). 다른 표식 기술(저격 표식·죽음의 표식·휘파람)과 같은 순수 약화 기술 형식 [제작자]
 // OCC-006 disruptive_curse: 저항 감소 매 레벨 -20% -> -15/16/17/18/20%(RB OCC Hex Resist 1~5, 3턴, 확률 그대로). 1->2·3->4렙 성장 체감 [제작자]
+// OCC-009 disruptive_curse: 저항 감소 확률 115/115/135/135/155% -> 100/110/120/130/140%(바닐라 진행). 몬스터 효과에서 물려받은 값이었음 [제작자]
 
 
 combat_skill: .id "hands_from_abyss" .level 0 .type "ranged" .atk 95% .dmg -60% .crit 9% .launch 12 .target 123 .is_crit_valid True  .effect "Abyssal Stun 1" "Darkness 1"

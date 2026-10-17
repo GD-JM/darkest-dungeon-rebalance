@@ -45,11 +45,12 @@ combat_skill: .id "fleche" .level 2 .type "melee" .atk 100% .dmg 25% .crit 11% .
 combat_skill: .id "fleche" .level 3 .type "melee" .atk 105% .dmg 25% .crit 12% .move 0 2 .launch 432 .target 123 .is_crit_valid True  .effect "Mark Self" .valid_modes stance_aggressive
 combat_skill: .id "fleche" .level 4 .type "melee" .atk 110% .dmg 25% .crit 13% .move 0 2 .launch 432 .target 123 .is_crit_valid True  .effect "Mark Self" .valid_modes stance_aggressive
 
-combat_skill: .id "coup_de_grace" .level 0 .type "ranged" .atk 95%  .dmg -60% .crit 7% .launch 4321 .target 1234 .is_crit_valid True .ignore_protection true .effect "Duelist Kill Bonus Action" "Duelist Coup CRIT vs Stunned" .valid_modes stance_aggressive
-combat_skill: .id "coup_de_grace" .level 1 .type "ranged" .atk 100% .dmg -60% .crit 8% .launch 4321 .target 1234 .is_crit_valid True .ignore_protection true .effect "Duelist Kill Bonus Action" "Duelist Coup CRIT vs Stunned" .valid_modes stance_aggressive
-combat_skill: .id "coup_de_grace" .level 2 .type "ranged" .atk 105% .dmg -60% .crit 9% .launch 4321 .target 1234 .is_crit_valid True .ignore_protection true .effect "Duelist Kill Bonus Action" "Duelist Coup CRIT vs Stunned" .valid_modes stance_aggressive
-combat_skill: .id "coup_de_grace" .level 3 .type "ranged" .atk 110% .dmg -60% .crit 10% .launch 4321 .target 1234 .is_crit_valid True .ignore_protection true .effect "Duelist Kill Bonus Action" "Duelist Coup CRIT vs Stunned" .valid_modes stance_aggressive
-combat_skill: .id "coup_de_grace" .level 4 .type "ranged" .atk 115% .dmg -60% .crit 11% .launch 4321 .target 1234 .is_crit_valid True .ignore_protection true .effect "Duelist Kill Bonus Action" "Duelist Coup CRIT vs Stunned" .valid_modes stance_aggressive
+combat_skill: .id "coup_de_grace" .level 0 .type "ranged" .atk 95%  .dmg -70% .crit 7% .launch 4321 .target 1234 .is_crit_valid True .ignore_protection true .effect "Duelist Kill Bonus Action" "Duelist Coup CRIT vs Stunned" .valid_modes stance_aggressive
+combat_skill: .id "coup_de_grace" .level 1 .type "ranged" .atk 100% .dmg -70% .crit 8% .launch 4321 .target 1234 .is_crit_valid True .ignore_protection true .effect "Duelist Kill Bonus Action" "Duelist Coup CRIT vs Stunned" .valid_modes stance_aggressive
+combat_skill: .id "coup_de_grace" .level 2 .type "ranged" .atk 105% .dmg -70% .crit 9% .launch 4321 .target 1234 .is_crit_valid True .ignore_protection true .effect "Duelist Kill Bonus Action" "Duelist Coup CRIT vs Stunned" .valid_modes stance_aggressive
+combat_skill: .id "coup_de_grace" .level 3 .type "ranged" .atk 110% .dmg -70% .crit 10% .launch 4321 .target 1234 .is_crit_valid True .ignore_protection true .effect "Duelist Kill Bonus Action" "Duelist Coup CRIT vs Stunned" .valid_modes stance_aggressive
+combat_skill: .id "coup_de_grace" .level 4 .type "ranged" .atk 115% .dmg -70% .crit 11% .launch 4321 .target 1234 .is_crit_valid True .ignore_protection true .effect "Duelist Kill Bonus Action" "Duelist Coup CRIT vs Stunned" .valid_modes stance_aggressive
+// DUE-010 coup_de_grace: 피해 -60% -> -70%. 결투가 하향(어디서든 1~4열 + 방어 무시 + 처치 시 추가 행동) [제작자]
 
 combat_skill: .id "the_boot" .level 0 .type "melee" .atk 95%  .dmg -60% .crit 1% .move 0 1 .launch 321 .target 12 .is_crit_valid True  .effect "Stun 1" "Push 1B" .valid_modes stance_aggressive
 combat_skill: .id "the_boot" .level 1 .type "melee" .atk 100% .dmg -60% .crit 2% .move 0 1 .launch 321 .target 12 .is_crit_valid True  .effect "Stun 2" "Push 1C" .valid_modes stance_aggressive
