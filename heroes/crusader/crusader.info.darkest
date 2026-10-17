@@ -40,7 +40,7 @@ combat_skill: .id "stunning_blow" .level 4 .type "melee" .atk 110% .dmg -50% .cr
 // CRU-008 stunning_blow: 피해 -60% -> -40%. 1·2열 기절 기준선 정리 [제작자]
 // CRU-009 stunning_blow: 피해 -40% -> -50%(바닐라). 강한 기절만 남김 - 두 축(기절 등급·피해) 동시 상향 정리 [제작자]
 
-// 바꿈 스트롱 스턴으로 왜냐하면 3열 공격이 안돼서 쌔야함.  대신에 데미지 낮춤 애니메이션 자체가 칼 손잡이로 때리는거라 쌔면 안됨 50 -> 60
+// 바꿈 스트롱 스턴으로 왜냐하면 3열 공격이 안돼서 쌔야함.  대신에 데미지 낮춤 애니메이션 자체가 칼 손잡이로 때리는거라 쌔면 안됨 50 -> 60 (CRU-008 -40 → CRU-009 바닐라 -50 복귀, 현재 -50% + 강한 기절)
 
 
 combat_skill: .id "bulwark_of_faith" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 4321 .target  .is_crit_valid True  .effect "Crusader Bulwark 1" "Crusader Bulwark Mark" "Crusader Bulwark Light" .is_stall_invalidating false
@@ -62,7 +62,7 @@ combat_skill: .id "battle_heal" .level 4 .heal 4 5 .launch 1234 .target @1234  .
 // CRU-001 [trace 2026-10-05] Trade immediate healing for followup healing received on the target.
 
 
-// CRU-001 battle_heal: heal 2-3/5-6 -> 2-3/4-5, added RB CRU Stacking Heal (+20% healing received)
+// CRU-001 battle_heal: heal 1렙/5렙 2-3/5-6 -> 2-3/4-5 (레벨별 2-3/3-3/3-4/4-4/4-5), 받는 회복 +20%는 바닐라 Stacking Heal 1 전 레벨 재사용 (RB 사본 없음, R-DATA-01)
 // 보조 힐러로써 역할 하도록 높임
 
 

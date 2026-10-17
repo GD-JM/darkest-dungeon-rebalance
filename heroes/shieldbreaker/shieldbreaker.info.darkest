@@ -39,7 +39,7 @@ combat_skill: .id "pierce" .level 4 .type "melee" .atk 105% .dmg -10% .crit 4% .
 // SB-013 [trace 2026-10-05] Limit all-rank protection bypass while preserving a useful front reach against the paired skill.
 //이전 패치 버전으로 롤백, 사유 1,2,열에서 상대 전열 공격은 너무 사기 야만인의 정체성을 훼손
 // 노출 이란 기술과 명중 변경 -> 효과가 있으면 명중이 높고 없으면 낮다는 닼던 명중 기본 공식에 충실
-// SB-002 release: target ranks 1-2, dmg -20%, crit 2/3/4/4/4
+// SB-002 release: target ranks 1-2, dmg -20%, crit 2/3/4/4/4 → SB-013: 대상 1·2·3열, 피해 −10% (치명 2/3/4/4/4 유지)
 // 도굴꾼 얼굴찍기보다는 좋아야 해서 123열 타격으로 변경, 데미지 -20에서 -10로 변경
 
 

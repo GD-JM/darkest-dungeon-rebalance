@@ -30,9 +30,9 @@ combat_skill: .id "wicked_slice" .level 3 .type "melee" .atk 100% .dmg 0% .crit 
 combat_skill: .id "wicked_slice" .level 4 .type "melee" .atk 105% .dmg 0% .crit 9% .launch 21 .target 123 .is_crit_valid True 
 // HWY-019 wicked_slice: 명중 1렙 90 -> 85, 피해 +15% -> 0%, 대상 12 -> 123. 근접 3열 도달은 버프·이동 없는 칼질만 가짐(진격은 1·2열 유지). 1열에서도 쓰는 기본 근접기 [제작자]
 // HWY-008 [trace 2026-10-05] Keep a front melee alternative with the latest author-set accuracy and damage budget.
-// HWY-008 wicked_slice: 사용 321 -> 21(근접 사거리), 명중 1렙 85 -> 90, dmg 0% -> +15%(바닐라 원복)
+// HWY-008 wicked_slice: 사용 321 -> 21(근접 사거리), 명중 1렙 85 -> 90, dmg 0% -> +15%(바닐라 원복) → HWY-019: 현재 명중 1렙 85, 피해 0% (사용 21은 유지)
 //표준으로 바꿈 데미지 보정 15 -> 0
-// HWY-014 wicked_slice: dmg 0% -> +15% 복귀 (HWY-011 철회, 제작자 결정 명중 90 / 피해 +15)
+// HWY-014 wicked_slice: dmg 0% -> +15% 복귀 (HWY-011 철회, 제작자 결정 명중 90 / 피해 +15) → HWY-019에서 다시 명중 85 / 피해 0% (현재)
 
 
 combat_skill: .id "pistol_shot" .level 0 .type "ranged" .atk 90% .dmg -15% .crit 7.5% .launch 432 .target 234 .is_crit_valid True  .effect "RB HWY HW Pistol Dmg Marked 1" .generation_guaranteed true
@@ -65,11 +65,11 @@ combat_skill: .id "grape_shot_blast" .level 3 .type "ranged" .atk 105% .dmg -60%
 combat_skill: .id "grape_shot_blast" .level 4 .type "ranged" .atk 110% .dmg -60% .crit -5% .launch 23 .target ~123 .is_crit_valid True  .effect "Grapeshot Vulnerability 5"
 // HWY-020 grape_shot_blast: 피해 -70% -> -60%. 취약 반영 후에도 최하위(-0.9). 명중 90은 취약 적중(본업)을 위해 유지 [제작자]
 // HWY-007 [trace 2026-10-05] Trade damage for accurate critical-vulnerability setup instead of repeated AOE damage.
-// HWY-007 grape_shot_blast: 명중 1렙 75 -> 90, dmg -75% -> -70% (치명타 -5 유지 = 설계된 값, P-21)
+// HWY-007 grape_shot_blast: 명중 1렙 75 -> 90, dmg -75% -> -70% (치명타 -5 유지 = 설계된 값, P-21) → HWY-020: 피해 -60% (현재, 명중 90 유지)
 //돌파와 직접 비교 기술 치명타 낮은것과 약화거는 것을 동률이라 보고
 //명중을 높이는 대신 데미지를 깎겠다. 데미지 깎는 이유 -> 포도탄 반복하면서 치명타 확률만 높이는 편법 배제?
 //명중 높이는 이유 -> 부가효과가 있으면 명중이 올라간다
-//데미지 50 -> 70
+//데미지 50 -> 70 (HWY-020에서 -60으로 변경, 현재 -60%)
 
 combat_move_skill: .id "move" .level 0 .type "move" .move 2 2 .launch 4321
 
@@ -81,7 +81,7 @@ combat_skill: .id "take_aim" .level 3 .type "ranged" .atk 110% .dmg -60% .crit 0
 combat_skill: .id "take_aim" .level 4 .type "ranged" .atk 115% .dmg -60% .crit 1% .launch 4321 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "Hwy Riposte 5" "Destealth"
 // HWY-019 take_aim: 피해 -75% -> -60%, 결투가 결정타(-60%)와 같게 [제작자]
 // HWY-004 [trace 2026-10-05] Enable stationary ranged riposte play instead of tying riposte to melee advance.
-// HWY-004 take_aim: Hwy Riposte, 전투당 1회 제거, dmg -80% -> -75% ->중보병꺼랑 데미지 바꿈 대상 234 -> 1234
+// HWY-004 take_aim: Hwy Riposte, 전투당 1회 제거, dmg -80% -> -75% ->중보병꺼랑 데미지 바꿈 대상 234 -> 1234 → HWY-019: 피해 -60% (현재)
 
 
 combat_skill: .id "duelist_advance" .level 0 .type "melee" .atk 90% .dmg -20% .crit 5% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "RB HWY Tracking Buff 1"
@@ -91,9 +91,9 @@ combat_skill: .id "duelist_advance" .level 3 .type "melee" .atk 105% .dmg -20% .
 combat_skill: .id "duelist_advance" .level 4 .type "melee" .atk 110% .dmg -20% .crit 9% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "RB HWY Tracking Buff 5"
 // HWY-018 duelist_advance: 피해 -40% -> -20%. 3열 도달 제거 보상으로 걸었던 피해 감소가 버프 축소(HWY-016)와 이중 대가였음. 버프는 레벨당 +1 규칙값(명중 4~8, 치명타 2~6, 피해 10~14%) [제작자]
 // HWY-005 [trace 2026-10-05] Use advance for smaller self setup after transferring riposte to Tracking Shot.
-// HWY-005 duelist_advance: 명중 1렙 90 -> 95, dmg -20% 유지 (반격 상실 -47 / 축소 버프 +11.5 보상)
-// HWY-005 duelist_advance: Hwy Riposte -> Tracking Buff(축소), dmg -20% -> -40%
-// HWY-013 duelist_advance: 명중 1렙 95 -> 90, dmg -20% -> -40%, 대상 123 -> 12(3열 도달 제거), Tracking Buff 바닐라 수치 복원(3턴 지속 유지)
+// HWY-005 duelist_advance: 명중 1렙 90 -> 95, dmg -20% 유지 (반격 상실 -47 / 축소 버프 +11.5 보상) → HWY-013: 명중 1렙 90 (현재)
+// HWY-005 duelist_advance: Hwy Riposte -> Tracking Buff(축소), dmg -20% -> -40% → HWY-018: 피해 -20% 복귀 (현재)
+// HWY-013 duelist_advance: 명중 1렙 95 -> 90, dmg -20% -> -40%, 대상 123 -> 12(3열 도달 제거), Tracking Buff 바닐라 수치 복원(3턴 지속 유지) → HWY-016(x0.75) → HWY-018: 현재 피해 -20%, 버프 레벨당 +1(명중 4~8, 치명타 2~6, 피해 10~14%, 3턴)
 
 
 combat_skill: .id "opened_vein" .level 0 .type "melee" .atk 95% .dmg -30% .crit 8% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 1" "HW Open Vein Bleed Debuff 1" "HW Open Vein SPD Debuff 1"
@@ -102,9 +102,9 @@ combat_skill: .id "opened_vein" .level 2 .type "melee" .atk 105% .dmg -30% .crit
 combat_skill: .id "opened_vein" .level 3 .type "melee" .atk 110% .dmg -30% .crit 11% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 4" "HW Open Vein Bleed Debuff 4" "HW Open Vein SPD Debuff 4"
 combat_skill: .id "opened_vein" .level 4 .type "melee" .atk 115% .dmg -30% .crit 12% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 5" "HW Open Vein Bleed Debuff 5" "HW Open Vein SPD Debuff 5"
 // HWY-020 opened_vein: 피해 -25% -> -30%. 약화 형식 반영 모델에서 키트 1위(+115.4)가 되어 조정. 명중 95는 효과 본업 원칙으로 유지 [제작자]
-// HWY-019 opened_vein: 피해 -40% -> -25% [제작자]
+// HWY-019 opened_vein: 피해 -40% -> -25% [제작자] → HWY-020: -30% (현재)
 // HWY-006 [trace 2026-10-05] Retain bleed/debuff identity while recording the latest author-set accuracy/damage trade.
-// HWY-006 opened_vein: 치명타 보정 1렙 +0 -> +8, dmg -15% -> -40% (명중 1렙 95, 약화 2개 유지)
+// HWY-006 opened_vein: 치명타 보정 1렙 +0 -> +8, dmg -15% -> -40% (명중 1렙 95, 약화 2개 유지) → HWY-019 -25% → HWY-020: 피해 -30% (현재)
 //명중 95 -> 90 , 출혈 기술은 5 올리는 게 국룰, 약화 까지 달려서 10 올라간 거 같은 데 그러면 데미지를 까야함.
 //데미지 15 -> 25 로 바꿈 대신 명중 5만 깎음. 명중 안 깎으면 데미지 35까지 내려야할듯?
 

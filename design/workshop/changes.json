@@ -51,10 +51,11 @@
     "SB-011": {
       "principles": [
         "G-04",
-        "R-GROW-03"
+        "R-GROW-03",
+        "R-GROW-01"
       ],
-      "ko": "무기 속도 5/6/8/8/9 → 5/5/6/6/7. 원작 성장 규칙(1렙 + 내림((n−1)/2))의 예외를 규칙대로.",
-      "en": "Weapon speed 5/6/8/8/9 → 5/5/6/6/7. Brings an exception back to the base game's growth rule (level-1 value + floor((n−1)/2))."
+      "ko": "무기 속도 5/6/8/8/9 → 5/5/6/6/7. 원작 성장 규칙(1렙 + 내림((n−1)/2))의 예외를 규칙대로. 무기 피해 5-10 … 9-18 → 5-10 … 8-16: 성장률 15%는 R-GROW-01 예외(헤비 전열 계열이라 20% 대신 15%), 속도는 표준 곡선을 따른다.",
+      "en": "Weapon speed 5/6/8/8/9 → 5/5/6/6/7. Brings an exception back to the base game's growth rule (level-1 value + floor((n−1)/2)). Weapon damage 5-10 … 9-18 → 5-10 … 8-16: the 15% growth is a recorded exception to R-GROW-01 (heavy front-liner, 15% instead of 20%); speed follows the standard curve."
     },
     "FLA-001": {
       "principles": [

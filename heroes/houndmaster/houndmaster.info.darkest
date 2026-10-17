@@ -25,7 +25,7 @@ combat_skill: .id "hounds_rush" .level 4 .type "ranged" .atk 110% .dmg -25% .cri
 // HM-010 HM-011 HM-016 HM-018 [trace 2026-10-05] Retain conditional mark/beast specialization while reducing unconditional and bleed output.
 // HM-016 hounds_rush: 피해 0% -> -25%. 표식(+60%)+야수(+35%) 중첩 시 실전가 226%(조련사 1위). 조정 후 조건 없을 때 92%(평타 수준), 조건 충족 시 188%로 조건부 아키타입을 선명하게
 // HM-011 사냥개 돌진: 사용 432 -> 4321(1열 추가), 대상 1234 -> 234(1열 제거). 설정 "후열에 접근해" / 1열에서도 쓰되 1열이 메인이 되지 않게. 출혈 너프(HM-010)와 상쇄되어 피해 보정 0% 유지
-// MARK-01 hounds_rush: 표식 피해 60~100 -> 40~60 (RB HM Dmg Marked). 야수 특효+출혈과 중복, 조련사 강함 2위
+// MARK-01 hounds_rush: 표식 피해 60~100 -> 40~60 (RB HM Dmg Marked). 야수 특효+출혈과 중복, 조련사 강함 2위 → HM-018: 현재 전 레벨 바닐라 HM Dmg Marked 1(+60% 고정) 재사용, RB 사본 없음
 // HM-023 hounds_rush: 1렙 명중 85 -> 90, 출혈 1/1/2/2/3 지속 1 -> 2턴(RB HM Hound Bleed). 피해 -25%로 크게 낮춘 만큼 [제작자]
 
 
@@ -83,7 +83,7 @@ combat_skill: .id "blackjack" .level 2 .type "melee" .atk 100% .dmg -50% .crit 7
 combat_skill: .id "blackjack" .level 3 .type "melee" .atk 105% .dmg -50% .crit 8% .launch 21 .target 123 .is_crit_valid True  .effect "Stun 4"
 combat_skill: .id "blackjack" .level 4 .type "melee" .atk 110% .dmg -50% .crit 9% .launch 21 .target 123 .is_crit_valid True  .effect "Stun 5"
 // HM-013 [trace 2026-10-05] Retain rank-3 control while paying with accuracy, damage and the normal stun tier.
-// HM-013 둔기 강타: 1렙 명중 95 -> 90(표준), 피해 -65% -> -80%. 대상 1/2/3 유지. 설정 "곤봉은 효과적으로 기절시키지만 진짜 치명타는 사냥개가 먹입니다" -> 3열 도달과 기절은 남기고 화력만 제거
+// HM-013 둔기 강타: 1렙 명중 95 -> 90(표준), 피해 -65% -> -80%. 대상 1/2/3 유지. 설정 "곤봉은 효과적으로 기절시키지만 진짜 치명타는 사냥개가 먹입니다" -> 3열 도달과 기절은 남기고 화력만 제거 → HM-022 -65% → HM-024 -50% (현재 피해 -50%, 일반 기절 Stun 1~5)
 // HM-022 blackjack: 피해 -80% -> -65%(바닐라). 바닐라 대비 1렙 명중 -5(95 -> 90)·강한 기절(110%) -> 일반 기절(100%)만 남김. 기절 4종 특색 정리 [제작자]
 // HM-024 blackjack: 피해 -65% -> -50% [제작자]
 

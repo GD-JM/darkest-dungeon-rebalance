@@ -76,8 +76,8 @@ effect: .name "Grapeshot Vulnerability 5" .target "target" .curio_result_type "n
 //# 레벨별 효과: 1레벨 Tracking Buff 1, Destealth | 2레벨 Tracking Buff 2, Destealth | 3레벨 Tracking Buff 3, Destealth | 4레벨 Tracking Buff 4, Destealth | 5레벨 Tracking Buff 5, Destealth
 effect: .name "Tracking Buff 1" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 4%  .crit_chance_add 2% .damage_low_multiply 10% .damage_high_multiply 10%  .on_hit true .on_miss true .duration 3
 // HWY-018 Even progression: acc 4-8, crit 2-6, dmg 10-14% (+1 per level; was rounded x0.75 of vanilla 5/5/6/7/8, 3/4/5/5/6, 9/11/12/14/15).
-// HWY-016 Stacking confirmed in game: scale vanilla Tracking Buff to x0.75 (2 stacks = 1.5x vanilla peak).
-// HWY-013 Restore vanilla Tracking Buff values (acc/crit/dmg); keep the 3-turn duration from HWY-010.
+// HWY-016 Stacking confirmed in game: scale vanilla Tracking Buff to x0.75 (2 stacks = 1.5x vanilla peak). Superseded by HWY-018.
+// HWY-013 Restore vanilla Tracking Buff values (acc/crit/dmg); keep the 3-turn duration from HWY-010. Values superseded by HWY-016/HWY-018.
 // HWY-010 [2026-10-06] Limit Advance self setup to three turns instead of combat end; preserve accuracy, critical and damage bonuses.
 // HWY-005 [trace 2026-10-05] Use advance for smaller self setup after transferring riposte to Tracking Shot. Effect: Tracking Buff 1.
 //#   원본 위치: effects/base.effects.darkest
@@ -86,34 +86,34 @@ effect: .name "Destealth" .target "target" .chance 100% .unstealth 1 .on_hit tru
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Tracking Buff 2" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 5%  .crit_chance_add 3% .damage_low_multiply 11% .damage_high_multiply 11%  .on_hit true .on_miss true .duration 3
 // HWY-018 Even progression: acc 4-8, crit 2-6, dmg 10-14% (+1 per level; was rounded x0.75 of vanilla 5/5/6/7/8, 3/4/5/5/6, 9/11/12/14/15).
-// HWY-016 Stacking confirmed in game: scale vanilla Tracking Buff to x0.75 (2 stacks = 1.5x vanilla peak).
-// HWY-013 Restore vanilla Tracking Buff values (acc/crit/dmg); keep the 3-turn duration from HWY-010.
+// HWY-016 Stacking confirmed in game: scale vanilla Tracking Buff to x0.75 (2 stacks = 1.5x vanilla peak). Superseded by HWY-018.
+// HWY-013 Restore vanilla Tracking Buff values (acc/crit/dmg); keep the 3-turn duration from HWY-010. Values superseded by HWY-016/HWY-018.
 // HWY-010 [2026-10-06] Limit Advance self setup to three turns instead of combat end; preserve accuracy, critical and damage bonuses.
 // HWY-005 [trace 2026-10-05] Use advance for smaller self setup after transferring riposte to Tracking Shot. Effect: Tracking Buff 2.
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Tracking Buff 3" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 6%  .crit_chance_add 4% .damage_low_multiply 12% .damage_high_multiply 12%  .on_hit true .on_miss true .duration 3
 // HWY-018 Even progression: acc 4-8, crit 2-6, dmg 10-14% (+1 per level; was rounded x0.75 of vanilla 5/5/6/7/8, 3/4/5/5/6, 9/11/12/14/15).
-// HWY-016 Stacking confirmed in game: scale vanilla Tracking Buff to x0.75 (2 stacks = 1.5x vanilla peak).
-// HWY-013 Restore vanilla Tracking Buff values (acc/crit/dmg); keep the 3-turn duration from HWY-010.
+// HWY-016 Stacking confirmed in game: scale vanilla Tracking Buff to x0.75 (2 stacks = 1.5x vanilla peak). Superseded by HWY-018.
+// HWY-013 Restore vanilla Tracking Buff values (acc/crit/dmg); keep the 3-turn duration from HWY-010. Values superseded by HWY-016/HWY-018.
 // HWY-010 [2026-10-06] Limit Advance self setup to three turns instead of combat end; preserve accuracy, critical and damage bonuses.
 // HWY-005 [trace 2026-10-05] Use advance for smaller self setup after transferring riposte to Tracking Shot. Effect: Tracking Buff 3.
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Tracking Buff 4" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 7%  .crit_chance_add 5% .damage_low_multiply 13% .damage_high_multiply 13%  .on_hit true .on_miss true .duration 3
 // HWY-018 Even progression: acc 4-8, crit 2-6, dmg 10-14% (+1 per level; was rounded x0.75 of vanilla 5/5/6/7/8, 3/4/5/5/6, 9/11/12/14/15).
-// HWY-016 Stacking confirmed in game: scale vanilla Tracking Buff to x0.75 (2 stacks = 1.5x vanilla peak).
-// HWY-013 Restore vanilla Tracking Buff values (acc/crit/dmg); keep the 3-turn duration from HWY-010.
+// HWY-016 Stacking confirmed in game: scale vanilla Tracking Buff to x0.75 (2 stacks = 1.5x vanilla peak). Superseded by HWY-018.
+// HWY-013 Restore vanilla Tracking Buff values (acc/crit/dmg); keep the 3-turn duration from HWY-010. Values superseded by HWY-016/HWY-018.
 // HWY-010 [2026-10-06] Limit Advance self setup to three turns instead of combat end; preserve accuracy, critical and damage bonuses.
 // HWY-005 [trace 2026-10-05] Use advance for smaller self setup after transferring riposte to Tracking Shot. Effect: Tracking Buff 4.
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Tracking Buff 5" .target "performer" .curio_result_type "positive" .chance 100%  .combat_stat_buff 1 .attack_rating_add 8% .crit_chance_add 6% .damage_low_multiply 14% .damage_high_multiply 14%  .on_hit true .on_miss true .duration 3
 // HWY-018 Even progression: acc 4-8, crit 2-6, dmg 10-14% (+1 per level; was rounded x0.75 of vanilla 5/5/6/7/8, 3/4/5/5/6, 9/11/12/14/15).
-// HWY-016 Stacking confirmed in game: scale vanilla Tracking Buff to x0.75 (2 stacks = 1.5x vanilla peak).
-// HWY-013 Restore vanilla Tracking Buff values (acc/crit/dmg); keep the 3-turn duration from HWY-010.
+// HWY-016 Stacking confirmed in game: scale vanilla Tracking Buff to x0.75 (2 stacks = 1.5x vanilla peak). Superseded by HWY-018.
+// HWY-013 Restore vanilla Tracking Buff values (acc/crit/dmg); keep the 3-turn duration from HWY-010. Values superseded by HWY-016/HWY-018.
 // HWY-010 [2026-10-06] Limit Advance self setup to three turns instead of combat end; preserve accuracy, critical and damage bonuses.
 // HWY-005 [trace 2026-10-05] Use advance for smaller self setup after transferring riposte to Tracking Shot. Effect: Tracking Buff 5.
 // HWY-004 Tracking Buff 축소: 명중 6~10 -> 3~5, 치명타 4~8 -> 3~5, 피해 12~20%% -> 6~10%% (전투당 1회 제한 해제 대가)
 // HWY-013 축소 철회: 바닐라 수치(명중 6~10, 치명타 4~8, 피해 12~20%) 복원. 3턴 지속(HWY-010)이 누적 문제를 막으므로 축소 이유가 사라짐
-// HWY-016 게임에서 같은 버프 중첩 확인 -> 바닐라 x0.75: 명중 5/5/6/7/8, 치명타 3/4/5/5/6, 피해 9/11/12/14/15%. 4->3->2열 2중첩 상한이 바닐라 1회분의 1.5배
+// HWY-016 게임에서 같은 버프 중첩 확인 -> 바닐라 x0.75: 명중 5/5/6/7/8, 치명타 3/4/5/5/6, 피해 9/11/12/14/15%. 4->3->2열 2중첩 상한이 바닐라 1회분의 1.5배 -> HWY-018: 현재 명중 4~8, 치명타 2~6, 피해 10~14% (레벨당 +1)
 //#   원본 위치: effects/base.effects.darkest
 
 //# ======================================================================
