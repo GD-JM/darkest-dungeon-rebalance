@@ -5,7 +5,7 @@
 	<ModDataPath>{MOD_DATA_PATH}</ModDataPath>
 	<Title>Every Hero Worth Taking – Hero Rebalance</Title>
 	<Language>english</Language>
-	<UpdateDetails>Bounty Hunter showcase; Illumination and Impale moved closer to vanilla; Bolster durations restored.</UpdateDetails>
+	<UpdateDetails>Description: Vestal example replaced (rank 2, not rank 1).</UpdateDetails>
 	<Visibility>private</Visibility>
 	<UploadMode>direct_upload</UploadMode>
 	<VersionMajor>1</VersionMajor>
