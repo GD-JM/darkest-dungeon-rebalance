@@ -2,7 +2,11 @@
 [i]More heroes and more skills worth taking — without changing who the heroes are.[/i]
 
 [h2]Why this mod?[/h2]
-In Darkest Dungeon a few skills end up on every hero's bar while others are never picked, and single heroes carry whole roles alone (the Jester for stress, the Vestal for healing). This mod goes through every hero skill and changes only the ones where the game's own numbers show a problem: a skill that is simply worse than another, a value that breaks the patterns the base game follows everywhere else, or a skill whose art and name promise something it doesn't do.
+[b]No party should be mandatory.[/b] Early on, the game can become nearly unplayable without a Vestal, an Occultist or a Jester, because healing and stress relief belong to only a few heroes. This mod spreads healing and stress relief across the roster so that many different parties can work.
+
+The same goes inside each hero: skills and ranks are rebalanced so you are no longer locked into one optimal set of four skills, repeated from one rank.
+
+Only skills where the game's own numbers show a problem were changed: a skill simply worse than another, a value that breaks the base game's own patterns, or a skill whose art and name promise something it doesn't do.
 
 [h2]How the changes were decided[/h2]
 [list]
@@ -12,7 +16,6 @@ In Darkest Dungeon a few skills end up on every hero's bar while others are neve
 [*][b]Stay true to the lore.[/b] Resistances and roles follow each hero's official description.
 [*][b]Keep the feel.[/b] Reliability and frequency are adjusted rather than identity, and Red Hook's own nerfs are respected.
 [*][b]Trinkets are untouched[/b], so effects that trinkets boost stay on their skills.
-[*][b]More parties that work.[/b] Healing and stress relief are spread across more heroes, mark parties aren't limited to Bounty Hunter and Arbalest, and heroes get useful options outside their main rank.
 [/list]
 Values are at level 1; ranges show levels 1–5.
 
@@ -110,6 +113,6 @@ Values are at level 1; ranges show levels 1–5.
 • Judgement: ACC 90, DMG 0%, no self-heal. Dazzling Light and Divine Comfort from ranks 3–4 only. Hand of Light ACC 90.
 
 [h2]Compatibility[/h2]
-Replaces only the hero files of the heroes above and adds one effect file and one buff file. Conflicts with mods that replace the same hero files. Safe on existing saves.
+Replaces only the hero files above (plus one effect and one buff file); conflicts with mods that replace the same heroes. Safe on existing saves.
 
-Feedback is very welcome — every change has a written reason, and I'm happy to explain or adjust.
+Feedback is welcome — every change has a written reason, and I'm happy to explain or adjust.
