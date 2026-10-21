@@ -2,3 +2,8 @@
 [list]
 [*][b]Flushing Shot[/b] now hits enemy ranks 2-3 and pushes both back 1 (100-140%), drawing the back-liner forward. In 2.0 it targeted rank 4 only, and an enemy in rank 4 cannot be pushed any further, so the knockback did nothing. Sorry about that.
 [/list]
+
+[b]更新 2.0.1 — 火枪手修正[/b]
+[list]
+[*][b]驱赶射击[/b]现在命中敌方2-3号位，并将两者击退1格（100-140%），把后排敌人拉向前方。2.0中它只瞄准4号位，而4号位的敌人无法再被往后击退，所以击退没有任何效果。抱歉。
+[/list]
