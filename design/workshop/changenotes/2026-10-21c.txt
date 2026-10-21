@@ -1,0 +1,7 @@
+[b]Update 2.0.2 — Small tuning[/b]
+[list]
+[*]Highwayman — Duelist's Advance buff: ACC +5-10%, crit +1-5%, damage +10-15% (3 turns).
+[*]Man-at-Arms — Command: party protection now grows with level, +10-15% (was a flat +15%).
+[*]Occultist — Vulnerability Hex: resists -20 to -25% (was -15 to -20%).
+[*]Shieldbreaker — Pierce: crit back to vanilla 5-9%.
+[/list]

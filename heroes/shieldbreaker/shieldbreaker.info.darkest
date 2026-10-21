@@ -31,11 +31,13 @@ armour: .name "shieldbreaker_armour_4" .def 28% .prot 0 .hp 36 .spd 0 .upgradeRe
 // SB-019 armour: 회피를 바닐라(1렙 8)로 되돌림 - SB-012(7.5) 취소, 근거 없음 [제작자]
 
 
-combat_skill: .id "pierce" .level 0 .type "melee" .atk 85% .dmg -10% .crit 2% .move 0 1 .launch 321 .target 123 .is_crit_valid True .ignore_protection true  .generation_guaranteed true
-combat_skill: .id "pierce" .level 1 .type "melee" .atk 90% .dmg -10% .crit 3% .move 0 1 .launch 321 .target 123 .is_crit_valid True .ignore_protection true 
-combat_skill: .id "pierce" .level 2 .type "melee" .atk 95% .dmg -10% .crit 4% .move 0 1 .launch 321 .target 123 .is_crit_valid True .ignore_protection true 
-combat_skill: .id "pierce" .level 3 .type "melee" .atk 100% .dmg -10% .crit 4% .move 0 1 .launch 321 .target 123 .is_crit_valid True .ignore_protection true 
-combat_skill: .id "pierce" .level 4 .type "melee" .atk 105% .dmg -10% .crit 4% .move 0 1 .launch 321 .target 123 .is_crit_valid True .ignore_protection true 
+combat_skill: .id "pierce" .level 0 .type "melee" .atk 85% .dmg -10% .crit 5% .move 0 1 .launch 321 .target 123 .is_crit_valid True .ignore_protection true  .generation_guaranteed true
+combat_skill: .id "pierce" .level 1 .type "melee" .atk 90% .dmg -10% .crit 6% .move 0 1 .launch 321 .target 123 .is_crit_valid True .ignore_protection true 
+combat_skill: .id "pierce" .level 2 .type "melee" .atk 95% .dmg -10% .crit 7% .move 0 1 .launch 321 .target 123 .is_crit_valid True .ignore_protection true 
+combat_skill: .id "pierce" .level 3 .type "melee" .atk 100% .dmg -10% .crit 8% .move 0 1 .launch 321 .target 123 .is_crit_valid True .ignore_protection true 
+combat_skill: .id "pierce" .level 4 .type "melee" .atk 105% .dmg -10% .crit 9% .move 0 1 .launch 321 .target 123 .is_crit_valid True .ignore_protection true 
+// SB-021 pierce: crit back to vanilla 5..9% (SB-013 lowered it to 2..4%). Accuracy 85 and ranks 1-3 stay.
+// SB-021 찌르기 치명 바닐라 복귀 5~9%(SB-013에서 2~4%로 낮췄던 것). 명중 85·대상 1~3열은 유지 [제작자 10-21]
 // SB-013 [trace 2026-10-05] Limit all-rank protection bypass while preserving a useful front reach against the paired skill.
 //이전 패치 버전으로 롤백, 사유 1,2,열에서 상대 전열 공격은 너무 사기 야만인의 정체성을 훼손
 // 노출 이란 기술과 명중 변경 -> 효과가 있으면 명중이 높고 없으면 낮다는 닼던 명중 기본 공식에 충실

@@ -668,8 +668,8 @@
     ],
     "new": [
      "Hits ranks 1-2",
-     "Self: ACC +4-8%, CRIT +2-6%",
-     "Self: DMG +10-14% (3 turns)"
+     "Self: ACC +5-10%, CRIT +1-5%",
+     "Self: DMG +10-15% (3 turns)"
     ]
    }
   ]
@@ -939,7 +939,7 @@
     ],
     "new": [
      "Party: no CRIT buff",
-     "Party: PROT +15%",
+     "Party: PROT +10-15%",
      "Party: removes stun"
     ]
    },
@@ -1002,7 +1002,7 @@
     "new": [
      "DMG -100%",
      "CRIT 0%, can't crit",
-     "Target resists -15 to -20%:",
+     "Target resists -20 to -25%:",
      "stun, blight, bleed, debuff (3 turns)"
     ]
    }
@@ -1095,12 +1095,10 @@
     "icon": "one",
     "old": [
      "ACC 90",
-     "CRIT 5%",
      "Hits ranks 1-4"
     ],
     "new": [
      "ACC 85",
-     "CRIT 2%",
      "Hits ranks 1-3"
     ]
    },

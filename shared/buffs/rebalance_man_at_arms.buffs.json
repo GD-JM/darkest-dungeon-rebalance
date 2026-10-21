@@ -12,6 +12,71 @@
 				"float": 0,
 				"string": ""
 			}
+		},
+		{
+			"id": "RB_MAA_COMMAND_PROT_1",
+			"stat_type": "combat_stat_add",
+			"stat_sub_type": "protection_rating",
+			"amount": 0.1,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_MAA_COMMAND_PROT_2",
+			"stat_type": "combat_stat_add",
+			"stat_sub_type": "protection_rating",
+			"amount": 0.11,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_MAA_COMMAND_PROT_3",
+			"stat_type": "combat_stat_add",
+			"stat_sub_type": "protection_rating",
+			"amount": 0.12,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_MAA_COMMAND_PROT_4",
+			"stat_type": "combat_stat_add",
+			"stat_sub_type": "protection_rating",
+			"amount": 0.13,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_MAA_COMMAND_PROT_5",
+			"stat_type": "combat_stat_add",
+			"stat_sub_type": "protection_rating",
+			"amount": 0.15,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
 		}
 	]
 }

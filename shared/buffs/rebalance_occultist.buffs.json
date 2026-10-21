@@ -155,6 +155,266 @@
 				"float": 0,
 				"string": ""
 			}
+		},
+		{
+			"id": "RB_OCC_HEX_STUN_1",
+			"stat_type": "resistance",
+			"stat_sub_type": "stun",
+			"amount": -0.2,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_OCC_HEX_BLIGHT_1",
+			"stat_type": "resistance",
+			"stat_sub_type": "poison",
+			"amount": -0.2,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_OCC_HEX_BLEED_1",
+			"stat_type": "resistance",
+			"stat_sub_type": "bleed",
+			"amount": -0.2,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_OCC_HEX_DEBUFF_1",
+			"stat_type": "resistance",
+			"stat_sub_type": "debuff",
+			"amount": -0.2,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_OCC_HEX_STUN_2",
+			"stat_type": "resistance",
+			"stat_sub_type": "stun",
+			"amount": -0.21,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_OCC_HEX_BLIGHT_2",
+			"stat_type": "resistance",
+			"stat_sub_type": "poison",
+			"amount": -0.21,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_OCC_HEX_BLEED_2",
+			"stat_type": "resistance",
+			"stat_sub_type": "bleed",
+			"amount": -0.21,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_OCC_HEX_DEBUFF_2",
+			"stat_type": "resistance",
+			"stat_sub_type": "debuff",
+			"amount": -0.21,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_OCC_HEX_STUN_3",
+			"stat_type": "resistance",
+			"stat_sub_type": "stun",
+			"amount": -0.22,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_OCC_HEX_BLIGHT_3",
+			"stat_type": "resistance",
+			"stat_sub_type": "poison",
+			"amount": -0.22,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_OCC_HEX_BLEED_3",
+			"stat_type": "resistance",
+			"stat_sub_type": "bleed",
+			"amount": -0.22,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_OCC_HEX_DEBUFF_3",
+			"stat_type": "resistance",
+			"stat_sub_type": "debuff",
+			"amount": -0.22,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_OCC_HEX_STUN_4",
+			"stat_type": "resistance",
+			"stat_sub_type": "stun",
+			"amount": -0.23,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_OCC_HEX_BLIGHT_4",
+			"stat_type": "resistance",
+			"stat_sub_type": "poison",
+			"amount": -0.23,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_OCC_HEX_BLEED_4",
+			"stat_type": "resistance",
+			"stat_sub_type": "bleed",
+			"amount": -0.23,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_OCC_HEX_DEBUFF_4",
+			"stat_type": "resistance",
+			"stat_sub_type": "debuff",
+			"amount": -0.23,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_OCC_HEX_STUN_5",
+			"stat_type": "resistance",
+			"stat_sub_type": "stun",
+			"amount": -0.25,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_OCC_HEX_BLIGHT_5",
+			"stat_type": "resistance",
+			"stat_sub_type": "poison",
+			"amount": -0.25,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_OCC_HEX_BLEED_5",
+			"stat_type": "resistance",
+			"stat_sub_type": "bleed",
+			"amount": -0.25,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_OCC_HEX_DEBUFF_5",
+			"stat_type": "resistance",
+			"stat_sub_type": "debuff",
+			"amount": -0.25,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
 		}
 	]
 }

@@ -5,7 +5,7 @@
 [*][b]Piercing Ball[/b] (Aimed Shot): reaches every rank, armor piercing 10-30%; small bonus vs marked targets.
 [*][b]Smokescreen[/b]: stuns enemy ranks 1-2, brief accuracy debuff, hides the Musketeer. 3 per battle.
 [*][b]Mark the Quarry[/b] (Call the Shot): mark, self speed +3-5, crit vs large monsters.
-[*][b]Flushing Shot[/b] (Buckshot): knocks back the enemy in rank 4, which throws it to the front.
+[*][b]Flushing Shot[/b] (Buckshot): hits ranks 2-3 and pushes both back 1 (corrected in 2.0.1).
 [*][b]Sidearm[/b]: shoot the enemy in front, then step back one rank.
 [*][b]Patch Up[/b]: same healing, plus a little stress relief.
 [*][b]Covering Smoke[/b] (Skeet Shot): hides one ally for 2 turns.
