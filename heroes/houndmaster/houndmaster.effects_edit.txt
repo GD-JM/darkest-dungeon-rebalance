@@ -203,13 +203,18 @@ effect: .name "on_crit_bleedchance"    .target "performer" .curio_result_type "p
 
 //# ======================================================================
 //# 리밸런스 신규 효과: 휘파람 적 명중 감소 (HM-021, HM-020 받는 치명타 대체)
-effect: .name "RB HM Whistle Distract 1" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .combat_stat_buff 1 .attack_rating_add -25% .on_hit true .on_miss false .queue true
+effect: .name "RB HM Whistle Distract 1" .target "target" .curio_result_type "negative" .chance 100% .duration 3 .combat_stat_buff 1 .attack_rating_add -25% .on_hit true .on_miss false .queue true
+// HM-028 Whistle debuff chance 100% (was 130%): normal 100..140 scale; the 130..170 of vanilla Hound Debuff had no reason to carry over.
 // HM-021 Whistle: enemy accuracy -25 for 3 turns replaces crits received (overlapped Musketeer Skeet Shot).
-effect: .name "RB HM Whistle Distract 2" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .combat_stat_buff 1 .attack_rating_add -26% .on_hit true .on_miss false .queue true
+effect: .name "RB HM Whistle Distract 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3 .combat_stat_buff 1 .attack_rating_add -26% .on_hit true .on_miss false .queue true
+// HM-028 Whistle debuff chance 110% (was 140%): normal 100..140 scale; the 130..170 of vanilla Hound Debuff had no reason to carry over.
 // HM-021 Whistle: enemy accuracy -26 for 3 turns replaces crits received (overlapped Musketeer Skeet Shot).
-effect: .name "RB HM Whistle Distract 3" .target "target" .curio_result_type "negative" .chance 150% .duration 3 .combat_stat_buff 1 .attack_rating_add -27% .on_hit true .on_miss false .queue true
+effect: .name "RB HM Whistle Distract 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3 .combat_stat_buff 1 .attack_rating_add -27% .on_hit true .on_miss false .queue true
+// HM-028 Whistle debuff chance 120% (was 150%): normal 100..140 scale; the 130..170 of vanilla Hound Debuff had no reason to carry over.
 // HM-021 Whistle: enemy accuracy -27 for 3 turns replaces crits received (overlapped Musketeer Skeet Shot).
-effect: .name "RB HM Whistle Distract 4" .target "target" .curio_result_type "negative" .chance 160% .duration 3 .combat_stat_buff 1 .attack_rating_add -28% .on_hit true .on_miss false .queue true
+effect: .name "RB HM Whistle Distract 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .combat_stat_buff 1 .attack_rating_add -28% .on_hit true .on_miss false .queue true
+// HM-028 Whistle debuff chance 130% (was 160%): normal 100..140 scale; the 130..170 of vanilla Hound Debuff had no reason to carry over.
 // HM-021 Whistle: enemy accuracy -28 for 3 turns replaces crits received (overlapped Musketeer Skeet Shot).
-effect: .name "RB HM Whistle Distract 5" .target "target" .curio_result_type "negative" .chance 170% .duration 3 .combat_stat_buff 1 .attack_rating_add -30% .on_hit true .on_miss false .queue true
+effect: .name "RB HM Whistle Distract 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .combat_stat_buff 1 .attack_rating_add -30% .on_hit true .on_miss false .queue true
+// HM-028 Whistle debuff chance 140% (was 170%): normal 100..140 scale; the 130..170 of vanilla Hound Debuff had no reason to carry over.
 // HM-021 Whistle: enemy accuracy -30 for 3 turns replaces crits received (overlapped Musketeer Skeet Shot).

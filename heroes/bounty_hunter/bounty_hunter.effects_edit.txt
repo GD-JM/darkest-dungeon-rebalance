@@ -243,3 +243,17 @@ effect: .name "RB BH Bleed Killer 4" .target "performer" .chance 100% .curio_res
 effect: .name "RB BH Bleed Killer 5" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "bleeding" .combat_stat_buff 1 .damage_low_multiply 33% .damage_high_multiply 33% .on_hit true .on_miss false
 // BH-001 [trace 2026-10-05] Reward allied bleed/stun setup while retaining the author-set front launch and rank-3 followup. Effect: RB BH Bleed Killer 5.
 // BH-001 finish_him: +33% dmg vs bleeding (level 5, mirrors GR Poison Killer 5)
+
+
+//# ======================================================================
+//# 죽음의 표식 방어 감소 (BH-013 → BH-018 확률 정상화)
+effect: .name "BH Mark Debuff 1" .target "target" .curio_result_type "negative" .chance 100% .duration 3 .combat_stat_buff 1 .protection_rating_add -20.0% .on_hit true .on_miss false .queue true
+// BH-018 Death's Mark protection -20% at 100% for 3 turns (vanilla -10..-20%; Hound Debuff values kept, its 130..170% chance normalized to 100..140).
+effect: .name "BH Mark Debuff 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3 .combat_stat_buff 1 .protection_rating_add -22.0% .on_hit true .on_miss false .queue true
+// BH-018 Death's Mark protection -22% at 110% for 3 turns (vanilla -10..-20%; Hound Debuff values kept, its 130..170% chance normalized to 100..140).
+effect: .name "BH Mark Debuff 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3 .combat_stat_buff 1 .protection_rating_add -25.0% .on_hit true .on_miss false .queue true
+// BH-018 Death's Mark protection -25% at 120% for 3 turns (vanilla -10..-20%; Hound Debuff values kept, its 130..170% chance normalized to 100..140).
+effect: .name "BH Mark Debuff 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .combat_stat_buff 1 .protection_rating_add -27.0% .on_hit true .on_miss false .queue true
+// BH-018 Death's Mark protection -27% at 130% for 3 turns (vanilla -10..-20%; Hound Debuff values kept, its 130..170% chance normalized to 100..140).
+effect: .name "BH Mark Debuff 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .combat_stat_buff 1 .protection_rating_add -30.0% .on_hit true .on_miss false .queue true
+// BH-018 Death's Mark protection -30% at 140% for 3 turns (vanilla -10..-20%; Hound Debuff values kept, its 130..170% chance normalized to 100..140).

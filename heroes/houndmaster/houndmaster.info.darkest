@@ -44,6 +44,8 @@ combat_skill: .id "whistle" .level 1 .type "ranged" .atk 105% .dmg -100% .crit 0
 combat_skill: .id "whistle" .level 2 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 4321 .target 1234 .is_crit_valid False  .effect "HM Mark Target" "RB HM Whistle Distract 3" .is_stall_invalidating false
 combat_skill: .id "whistle" .level 3 .type "ranged" .atk 115% .dmg -100% .crit 0% .launch 4321 .target 1234 .is_crit_valid False  .effect "HM Mark Target" "RB HM Whistle Distract 4" .is_stall_invalidating false
 combat_skill: .id "whistle" .level 4 .type "ranged" .atk 120% .dmg -100% .crit 0% .launch 4321 .target 1234 .is_crit_valid False  .effect "HM Mark Target" "RB HM Whistle Distract 5" .is_stall_invalidating false
+// HM-028 whistle: accuracy debuff chance 130..170% -> 100..140% (normal scale), still -25..-30% for 3 turns.
+// HM-028 목표물 지정 명중 감소 확률 130~170% → 100~140%. 의도: 조련사만 높은 확률을 갖는 근거 없음, 정상화 [제작자 10-21]
 // HM-020 whistle: 방어 -20~-30% -> 받는 치명타 +15/16/17/18/20%(3턴). 방어는 0 아래로 안 내려가 방어 0인 적(56%)에게 효과가 없었음. 방어 감소는 현상금 사냥꾼 죽음의 표식 몫 [제작자]
 // HM-021 whistle: 받는 치명타 +15~20% -> 적 명중 -25/26/27/28/30(3턴). 받는 치명타는 총사 스키트 사격과 겹침. 표식 3종 -30 짝(석궁 회피·현상금 방어·조련사 명중), 방어형 표식 [제작자]
 
