@@ -1,0 +1,689 @@
+
+######## abomination 괴인  (WS)
+  resistances: .stun 40% .poison 60% .bleed 30% .disease 20% .move 40% .debuff 20% .death_blow 67% .trap 10%
+  crit: .effects "on_crit_dmg"
+  weapon: .name "abomination_weapon_0" .atk 0% .dmg 6 11 .crit 2% .spd 7
+  weapon: .name "abomination_weapon_4" .atk 0% .dmg 11 20 .crit 6% .spd 9 .upgradeRequirementCode 3
+  armour: .name "abomination_armour_0" .def 7.5% .prot 0 .hp 26 .spd 0
+  armour: .name "abomination_armour_4" .def 27.5% .prot 0 .hp 46 .spd 0 .upgradeRequirementCode 3
+  combat_move_skill: .id "move" .level 0 .type "move" .move 2 1 .launch 4321 .valid_modes human beast
+  tag: .id "light"
+  tag: .id "non-religious"
+  tag: .id "outsiders_bonfire"
+  deaths_door: .buffs deathsdoorACCDebuff deathsdoorDMGLowDebuff deathsdoorDMGHighDebuff deathsdoorSPDDebuff deathsdoorSRDebuff .recovery_buffs mortalityACCDebuff mortalityDMGLowDebuff mortalityDMGHighDebuff mortalitySPDDebuff mortalitySRDebuff .recovery_heart_attack_buffs heartattackACCDebuff heartattackDMGLowDebuff heartattackDMGHighDebuff heartattackSPDDebuff heartattackSRDebuff
+  mode: .id human .is_raid_default true
+  mode: .id beast .bark_override_id str_beast_bark .affliction_combat_skill_id transform .battle_complete_combat_skill_id transform .stress_damage_per_turn 4
+ * transform 변신 [human] | L1 type="ranged" atk=0% dmg=0% crit=0% launch=4321 target= is_crit_valid=True human_effects=switch_mode_beast_self,"RB,ABO,beast_stress_party",beast_buff_1,beast_buff2_1,xform_damage_1,Transform_HealSelf_1,"RB,ABO,Transform,HealStress,1" beast_effects=switch_mode_human_self,"RB,ABO,human_stress_heal_party_1",beast_debuff_1 is_continue_turn=true per_turn_limit=1 per_battle_limit=2 is_stall_invalidating=false refresh_after_each_wave=true
+     L1 eff: self{set_mode=beast chance=100%} ; allies-other{chance=100% stress=6} ; self{chance=100% speed_rating_add=1 duration=4} ; self{chance=100% buff_ids=beast_blight_buff_1 duration=4} ; self{chance=100% damage_low_multiply=10% damage_high_multiply=10% duration=3} ; self{chance=100% heal=5} ; self{chance=100% healstress=4} ; self{set_mode=human chance=100%} ; allies-other{chance=100% healstress=3} ; self{chance=100% speed_rating_add=-4}
+     L5 eff: self{set_mode=beast chance=100%} ; allies-other{chance=100% stress=6} ; self{chance=100% speed_rating_add=5 duration=4} ; self{chance=100% buff_ids=beast_blight_buff_5 duration=4} ; self{chance=100% damage_low_multiply=25% damage_high_multiply=25% duration=3} ; self{chance=100% heal=10} ; self{chance=100% healstress=8} ; self{set_mode=human chance=100%} ; allies-other{chance=100% healstress=3} ; self{chance=100% speed_rating_add=0}  | L5 atk=0% dmg=0% crit=0% heal=
+ * manacles 사슬질 [human] | L1 type="ranged" atk=90% dmg=-60% crit=1% launch=32 target=123 is_crit_valid=True
+     L1 eff: target{chance=90% stun=1}
+     L5 eff: target{chance=130% stun=1}  | L5 atk=110% dmg=-60% crit=5% heal=
+ * vomit 아수의 담즙 [human] | L1 type="ranged" atk=90% dmg=-75% crit=2% launch=32 target=~23 is_crit_valid=True
+     L1 eff: target{chance=100% dotPoison=2 duration=3 can_apply_on_death=true} ; target{chance=100% buff_ids=Vomit,BlightResist,Debuff,1}
+     L5 eff: target{chance=140% dotPoison=5 duration=3 can_apply_on_death=true} ; target{chance=140% buff_ids=Vomit,BlightResist,Debuff,5}  | L5 atk=110% dmg=-75% crit=6% heal=
+ * absolution 참회 [human] | L1 type="ranged" atk=0% dmg=0% crit=0% launch=4321 target= is_crit_valid=True is_stall_invalidating=false
+     L1 eff: self{chance=100% healstress=7} ; self{chance=100% heal=3 source_heal_type=hero_skill}
+     L5 eff: self{chance=100% healstress=10} ; self{chance=100% heal=5 source_heal_type=hero_skill}  | L5 atk=0% dmg=0% crit=0% heal=
+ * rake 할퀴기 [beast] | L1 type="melee" atk=90% dmg=-50% crit=-3% launch=21 target=~12 is_crit_valid=True
+     L1 eff: self{duration=4 chance=100% buff_ids=rake_buff_1l,rake_buff_1h}
+     L5 eff: self{duration=4 chance=100% buff_ids=rake_buff_5l,rake_buff_5h}  | L5 atk=110% dmg=-50% crit=1% heal=
+ * rage 분노 [beast] | L1 type="melee" atk=85% dmg=0% crit=7.5% launch=21 target=123 is_crit_valid=True
+     L1 eff: 
+     L5 eff:   | L5 atk=105% dmg=0% crit=11.5% heal=
+ * slam 박치기 [beast] | L1 type="melee" atk=90% dmg=0% crit=1% move=0,1 launch=432 target=12 is_crit_valid=True
+     L1 eff: target{push=2 chance=100% can_apply_on_death=true}
+     L5 eff: target{push=2 chance=140% can_apply_on_death=true}  | L5 atk=110% dmg=0% crit=5% heal=
+
+######## antiquarian 유물수집상  (WS)
+  resistances: .stun 20% .poison 20% .bleed 20% .disease 20% .move 20% .debuff 20% .death_blow 67% .trap 10%
+  crit: .effects "on_crit_def"
+  weapon: .name "antiquarian_weapon_0" .atk 0% .dmg 3 5 .crit 1% .spd 5
+  weapon: .name "antiquarian_weapon_4" .atk 0% .dmg 5 9 .crit 5% .spd 7 .upgradeRequirementCode 3
+  armour: .name "antiquarian_armour_0" .def 10% .prot 0 .hp 17 .spd 0
+  armour: .name "antiquarian_armour_4" .def 30% .prot 0 .hp 29 .spd 0 .upgradeRequirementCode 3
+  combat_move_skill: .id "move" .level 0 .type "move" .move 2 2 .launch 4321
+  tag: .id "light"
+  tag: .id "non-religious"
+  tag: .id "library"
+  deaths_door: .buffs deathsdoorACCDebuff deathsdoorDMGLowDebuff deathsdoorDMGHighDebuff deathsdoorSPDDebuff deathsdoorSRDebuff .recovery_buffs mortalityACCDebuff mortalityDMGLowDebuff mortalityDMGHighDebuff mortalitySPDDebuff mortalitySRDebuff .recovery_heart_attack_buffs heartattackACCDebuff heartattackDMGLowDebuff heartattackDMGHighDebuff heartattackSPDDebuff heartattackSRDebuff
+ * kris_stab 서툰 칼질  | L1 type="melee" atk=85% dmg=0% crit=3% launch=4321 target=123 is_crit_valid=True
+     L1 eff: 
+     L5 eff:   | L5 atk=105% dmg=0% crit=7% heal=
+ * festering_vapours 부패의 연막  | L1 type="ranged" atk=95% dmg=-75% crit=0% launch=4321 target=1234 is_crit_valid=True
+     L1 eff: target{chance=100% dotPoison=1 duration=3 can_apply_on_death=true} ; target{chance=100% duration=3 buff_ids=antiq_blight_debuff_1}
+     L5 eff: target{chance=140% dotPoison=4 duration=3 can_apply_on_death=true} ; target{chance=140% duration=3 buff_ids=antiq_blight_debuff_5}  | L5 atk=115% dmg=-75% crit=4% heal=
+ * cower 엎드려!  | L1 type="ranged" atk=0% dmg=0% crit=0% move=2,0 launch=4321 target= is_crit_valid=True is_stall_invalidating=false
+     L1 eff: self{chance=100% defense_rating_add=15%} ; self{chance=100% speed_rating_add=1} ; self{chance=100% duration=4 buff_ids=antiq_blight_buff_1}
+     L5 eff: self{chance=100% defense_rating_add=25%} ; self{chance=100% speed_rating_add=5} ; self{chance=100% duration=4 buff_ids=antiq_blight_buff_5}  | L5 atk=0% dmg=0% crit=0% heal=
+ * flashpowder 섬광 가루  | L1 type="ranged" atk=95% dmg=-100% crit=0% launch=4321 target=1234 is_crit_valid=False ignore_stealth=true is_stall_invalidating=false
+     L1 eff: target{chance=100% duration=2 attack_rating_add=-10%} ; target{chance=100% dotBurn=1 dot_irresistible=true can_apply_on_death=true} ; target{chance=100% unstealth=1}
+     L5 eff: target{chance=140% duration=2 attack_rating_add=-15%} ; target{chance=140% dotBurn=3 dot_irresistible=true can_apply_on_death=true} ; target{chance=100% unstealth=1}  | L5 atk=115% dmg=-100% crit=0% heal=
+ * fortifying_vapours 강화의 연막  | L1 heal=1,1 launch=43 target=@1234 is_stall_invalidating=false
+     L1 eff: target{chance=100% duration=3 buff_ids=BLEEDRESIST10,BLIGHTRESIST10}
+     L5 eff: target{chance=100% duration=3 buff_ids=BLEEDRESIST15,BLIGHTRESIST15}  | L5 atk=- dmg=- crit=- heal=3,3
+ * invigorating_vapours 고양의 연막  | L1 type="ranged" atk=0% dmg=0% crit=0% launch=43 target=~@1234 is_crit_valid=True is_stall_invalidating=false
+     L1 eff: target{chance=100% duration=3 defense_rating_add=3%}
+     L5 eff: target{chance=100% duration=3 defense_rating_add=10%}  | L5 atk=0% dmg=0% crit=0% heal=
+ * protect_me 동료 방패  | L1 type="ranged" atk=0% dmg=0% crit=0% self_target_valid=false per_battle_limit=3 launch=4321 target=@1234 is_crit_valid=True generation_guaranteed=true is_stall_invalidating=false
+     L1 eff: target{chance=100% defense_rating_add=4% protection_rating_add=10%} ; target{chance=100% tag=1 duration=3} ; self{chance=100% clearguarding=1 clearguarded=1 duration=2 has_description=false} ; target{chance=100% clearguarding=1 clearguarded=1 duration=2 has_description=false} ; target{swap_source_and_target=true chance=100% guard=1 duration=2}
+     L5 eff: target{chance=100% defense_rating_add=8% protection_rating_add=20%} ; target{chance=100% tag=1 duration=3} ; self{chance=100% clearguarding=1 clearguarded=1 duration=2 has_description=false} ; target{chance=100% clearguarding=1 clearguarded=1 duration=2 has_description=false} ; target{swap_source_and_target=true chance=100% guard=1 duration=2}  | L5 atk=0% dmg=0% crit=0% heal=
+
+######## arbalest 석궁사수  (WS)
+  resistances: .stun 40% .poison 30% .bleed 30% .disease 30% .move 40% .debuff 30% .death_blow 67% .trap 10%
+  crit: .effects "on_crit_dmgmarked"
+  weapon: .name "arbalest_weapon_0" .atk 0% .dmg 4 8 .crit 6% .spd 3
+  weapon: .name "arbalest_weapon_4" .atk 0% .dmg 7 14 .crit 10% .spd 5 .upgradeRequirementCode 3
+  armour: .name "arbalest_armour_0" .def 0% .prot 0 .hp 27 .spd 0
+  armour: .name "arbalest_armour_4" .def 20% .prot 0 .hp 47 .spd 0 .upgradeRequirementCode 3
+  combat_move_skill: .id "move" .level 0 .type "move" .move 2 0 .launch 4321
+  tag: .id "heavy"
+  tag: .id "non-religious"
+  tag: .id "training_ring"
+  deaths_door: .buffs deathsdoorACCDebuff deathsdoorDMGLowDebuff deathsdoorDMGHighDebuff deathsdoorSPDDebuff deathsdoorSRDebuff .recovery_buffs mortalityACCDebuff mortalityDMGLowDebuff mortalityDMGHighDebuff mortalitySPDDebuff mortalitySRDebuff .recovery_heart_attack_buffs heartattackACCDebuff heartattackDMGLowDebuff heartattackDMGHighDebuff heartattackSPDDebuff heartattackSRDebuff
+ * sniper_shot 저격  | L1 type="ranged" atk=95% dmg=0% crit=6% launch=43 target=234 is_crit_valid=True generation_guaranteed=true
+     L1 eff: self{chance=100% keyStatus=tagged duration=3 damage_low_multiply=60% damage_high_multiply=60% crit_chance_add=9%}
+     L5 eff: self{chance=100% keyStatus=tagged duration=3 damage_low_multiply=100% damage_high_multiply=100% crit_chance_add=13%}  | L5 atk=115% dmg=0% crit=10% heal=
+ * suppressing_fire 제압 사격  | L1 type="ranged" atk=95% dmg=-60% crit=-10% launch=43 target=~34 is_crit_valid=True
+     L1 eff: target{chance=100% duration=2 attack_rating_add=-15% crit_chance_add=-15%}
+     L5 eff: target{chance=140% duration=2 attack_rating_add=-20% crit_chance_add=-19%}  | L5 atk=115% dmg=-60% crit=-6% heal=
+ * sniper_mark 저격수의 표식  | L1 type="ranged" atk=100% dmg=-100% crit=0% launch=43 target=234 is_crit_valid=False is_stall_invalidating=false
+     L1 eff: target{chance=100% tag=1 duration=3} ; target{chance=100% duration=2 defense_rating_add=-20%}
+     L5 eff: target{chance=100% tag=1 duration=3} ; target{chance=140% duration=2 defense_rating_add=-30%}  | L5 atk=120% dmg=-100% crit=0% heal=
+ * bola 사냥돌 발사  | L1 type="ranged" atk=95% dmg=-40% crit=2% launch=43 target=~12 is_crit_valid=True
+     L1 eff: target{push=1 chance=75% can_apply_on_death=true}
+     L5 eff: target{push=1 chance=115% can_apply_on_death=true}  | L5 atk=115% dmg=-40% crit=6% heal=
+ * blindfire 무차별 사격  | L1 type="ranged" atk=75% dmg=-10% crit=0% launch=4321 target=?1234 is_crit_valid=True
+     L1 eff: self{chance=100% speed_rating_add=3}
+     L5 eff: self{chance=100% speed_rating_add=5}  | L5 atk=95% dmg=-10% crit=4% heal=
+ * battlefield_bandage 야전 붕대질  | L1 heal=3,3 launch=43 target=@1234 is_stall_invalidating=false
+     L1 eff: target{chance=100% cure_bleed=1}
+     L5 eff: target{chance=100% cure_bleed=1}  | L5 atk=- dmg=- crit=- heal=7,7
+ * flare 결집 신호탄  | L1 type="ranged" atk=95% dmg=-100% crit=0% launch=4321 target=~1234 is_crit_valid=False ignore_stealth=true is_stall_invalidating=false
+     L1 eff: global{chance=100% torch_increase=3} ; target{chance=100% unstealth=1} ; allies-other{chance=100% healstress=2}
+     L5 eff: global{chance=100% torch_increase=7} ; target{chance=100% unstealth=1} ; allies-other{chance=100% healstress=4}  | L5 atk=115% dmg=-100% crit=0% heal=
+
+######## bounty_hunter 현상금 사냥꾼  (WS)
+  resistances: .stun 40% .poison 30% .bleed 30% .disease 20% .move 40% .debuff 30% .death_blow 67% .trap 40%
+  crit: .effects "on_crit_dmgmarked"
+  weapon: .name "bounty_hunter_weapon_0" .atk 0% .dmg 5 10 .crit 4% .spd 5
+  weapon: .name "bounty_hunter_weapon_4" .atk 0% .dmg 8 16 .crit 8% .spd 7 .upgradeRequirementCode 3
+  armour: .name "bounty_hunter_armour_0" .def 5% .prot 0 .hp 25 .spd 0
+  armour: .name "bounty_hunter_armour_4" .def 25% .prot 0 .hp 45 .spd 0 .upgradeRequirementCode 3
+  combat_move_skill: .id "move" .level 0 .type "move" .move 2 2 .launch 4321
+  riposte_skill: .id "riposte1" .level 0 .type "melee" .atk 85% .dmg 0% .crit 5% .launch 1234 .target 1234 .is_crit_valid True 
+  tag: .id "heavy"
+  tag: .id "non-religious"
+  tag: .id "house_of_the_yellow_hand"
+  deaths_door: .buffs deathsdoorACCDebuff deathsdoorDMGLowDebuff deathsdoorDMGHighDebuff deathsdoorSPDDebuff deathsdoorSRDebuff .recovery_buffs mortalityACCDebuff mortalityDMGLowDebuff mortalityDMGHighDebuff mortalitySPDDebuff mortalitySRDebuff .recovery_heart_attack_buffs heartattackACCDebuff heartattackDMGLowDebuff heartattackDMGHighDebuff heartattackSPDDebuff heartattackSRDebuff
+ * collect_bounty 현상금 수거  | L1 type="melee" atk=85% dmg=0% crit=7% launch=321 target=12 is_crit_valid=True generation_guaranteed=true
+     L1 eff: self{chance=100% keyStatus=tagged damage_low_multiply=100% damage_high_multiply=100%} ; self{chance=100% monsterType=man damage_low_multiply=15% damage_high_multiply=15%}
+     L5 eff: self{chance=100% keyStatus=tagged damage_low_multiply=100% damage_high_multiply=100%} ; self{chance=100% monsterType=man damage_low_multiply=35% damage_high_multiply=35%}  | L5 atk=105% dmg=0% crit=11% heal=
+ * target_tag 죽음의 표식  | L1 type="ranged" atk=100% dmg=-100% crit=0% launch=4321 target=1234 is_crit_valid=False is_stall_invalidating=false
+     L1 eff: target{chance=100% tag=1 duration=3} ; target{chance=130% protection_rating_add=-20%}
+     L5 eff: target{chance=100% tag=1 duration=3} ; target{chance=170% protection_rating_add=-30%}  | L5 atk=120% dmg=-100% crit=0% heal=
+ * come_hither 이리 오너라  | L1 type="ranged" atk=95% dmg=-60% crit=0% launch=4321 target=34 is_crit_valid=True
+     L1 eff: target{pull=3 chance=100% can_apply_on_death=true}
+     L5 eff: target{pull=3 chance=140% can_apply_on_death=true}  | L5 atk=115% dmg=-60% crit=4% heal=
+ * uppercut 어퍼컷  | L1 type="melee" atk=95% dmg=-67% crit=9% launch=21 target=1 is_crit_valid=True
+     L1 eff: target{push=2 chance=100% can_apply_on_death=true} ; target{chance=110% stun=1}
+     L5 eff: target{push=2 chance=140% can_apply_on_death=true} ; target{chance=150% stun=1}  | L5 atk=115% dmg=-67% crit=13% heal=
+ * flashbang 섬광탄  | L1 type="ranged" atk=95% dmg=-100% crit=0% launch=43 target=234 is_crit_valid=False is_stall_invalidating=false
+     L1 eff: target{chance=100% stun=1} ; target{shuffletarget= chance=100% can_apply_on_death=true}
+     L5 eff: target{chance=140% stun=1} ; target{shuffletarget= chance=140% can_apply_on_death=true}  | L5 atk=115% dmg=-100% crit=0% heal=
+ * finish_him 끝장내기  | L1 type="melee" atk=85% dmg=0% crit=5% launch=21 target=123 is_crit_valid=True
+     L1 eff: self{chance=100% keyStatus=stunned damage_low_multiply=25% damage_high_multiply=60%} ; self{chance=100% keyStatus=bleeding damage_low_multiply=20% damage_high_multiply=20%}
+     L5 eff: self{chance=100% keyStatus=stunned damage_low_multiply=60% damage_high_multiply=100%} ; self{chance=100% keyStatus=bleeding damage_low_multiply=33% damage_high_multiply=33%}  | L5 atk=105% dmg=0% crit=9% heal=
+ * hook_and_slice 마름쇠  | L1 type="ranged" atk=90% dmg=-85% crit=5% launch=234 target=34 is_crit_valid=True
+     L1 eff: target{chance=100% dotBleed=2 duration=3 can_apply_on_death=true} ; target{chance=100% duration=3 speed_rating_add=-4} ; target{chance=100% buff_ids=caltrops_dmg_received_1 duration=3}
+     L5 eff: target{chance=140% dotBleed=4 duration=3 can_apply_on_death=true} ; target{chance=140% duration=3 speed_rating_add=-8} ; target{chance=140% buff_ids=caltrops_dmg_received_5 duration=3}  | L5 atk=110% dmg=-85% crit=9% heal=
+
+######## crusader 성전사  (WS)
+  resistances: .stun 40% .poison 30% .bleed 30% .disease 30% .move 40% .debuff 30% .death_blow 67% .trap 10%
+  crit: .effects "on_crit_prot"
+  weapon: .name "crusader_weapon_0" .atk 0% .dmg 6 12 .crit 3% .spd 1
+  weapon: .name "crusader_weapon_4" .atk 0% .dmg 10 19 .crit 7% .spd 3 .upgradeRequirementCode 3
+  armour: .name "crusader_armour_0" .def 5% .prot 0 .hp 33 .spd 0
+  armour: .name "crusader_armour_4" .def 25% .prot 0 .hp 61 .spd 0 .upgradeRequirementCode 3
+  combat_move_skill: .id "move" .level 0 .type "move" .move 1 1 .launch 4321
+  tag: .id "heavy"
+  tag: .id "religious"
+  tag: .id "altar_of_light"
+  deaths_door: .buffs deathsdoorACCDebuff deathsdoorDMGLowDebuff deathsdoorDMGHighDebuff deathsdoorSPDDebuff deathsdoorSRDebuff .recovery_buffs mortalityACCDebuff mortalityDMGLowDebuff mortalityDMGHighDebuff mortalitySPDDebuff mortalitySRDebuff .recovery_heart_attack_buffs heartattackACCDebuff heartattackDMGLowDebuff heartattackDMGHighDebuff heartattackSPDDebuff heartattackSRDebuff
+ * smite 강타  | L1 type="melee" atk=85% dmg=0% crit=0% launch=21 target=12 is_crit_valid=True generation_guaranteed=true
+     L1 eff: self{chance=100% monsterType=unholy damage_low_multiply=15% damage_high_multiply=15%}
+     L5 eff: self{chance=100% monsterType=unholy damage_low_multiply=35% damage_high_multiply=35%}  | L5 atk=105% dmg=0% crit=4% heal=
+ * zealous_accusation 광신적 고발  | L1 type="ranged" atk=90% dmg=-40% crit=-4% launch=21 target=~12 is_crit_valid=True
+     L1 eff: 
+     L5 eff:   | L5 atk=110% dmg=-40% crit=0% heal=
+ * stunning_blow 기절의 일격  | L1 type="melee" atk=90% dmg=-50% crit=0% launch=21 target=12 is_crit_valid=True
+     L1 eff: target{chance=110% stun=1}
+     L5 eff: target{chance=150% stun=1}  | L5 atk=110% dmg=-50% crit=4% heal=
+ * bulwark_of_faith 신앙의 방패  | L1 type="melee" atk=0% dmg=0% crit=0% per_battle_limit=1 launch=4321 target= is_crit_valid=True is_stall_invalidating=false
+     L1 eff: self{chance=100% duration=1 buff_duration_type=combat_end protection_rating_add=20%} ; self{chance=100% tag=1 duration=1 buff_duration_type=combat_end} ; global{chance=100% torch_increase=24}
+     L5 eff: self{chance=100% duration=1 buff_duration_type=combat_end protection_rating_add=30%} ; self{chance=100% tag=1 duration=1 buff_duration_type=combat_end} ; global{chance=100% torch_increase=24}  | L5 atk=0% dmg=0% crit=0% heal=
+ * battle_heal 전투 치유  | L1 heal=2,3 launch=1234 target=@1234 is_stall_invalidating=false
+     L1 eff: target{chance=100% buff_type=hp_heal_received_percent buff_amount=20%}
+     L5 eff: target{chance=100% buff_type=hp_heal_received_percent buff_amount=20%}  | L5 atk=- dmg=- crit=- heal=4,5
+ * holy_lance 성스러운 돌격  | L1 type="melee" atk=85% dmg=0% crit=6.5% move=0,1 launch=34 target=234 is_crit_valid=True
+     L1 eff: self{chance=100% monsterType=unholy damage_low_multiply=15% damage_high_multiply=15%}
+     L5 eff: self{chance=100% monsterType=unholy damage_low_multiply=35% damage_high_multiply=35%}  | L5 atk=105% dmg=0% crit=10.5% heal=
+ * inspiring_cry 격려의 함성  | L1 heal=1,1 launch=1234 target=@1234 is_stall_invalidating=false
+     L1 eff: target{chance=100% healstress=5} ; global{chance=100% torch_increase=5}
+     L5 eff: target{chance=100% healstress=9} ; global{chance=100% torch_increase=10}  | L5 atk=- dmg=- crit=- heal=2,2
+
+######## duelist 결투가  (WS)
+  resistances: .stun 30% .poison 30% .bleed 30% .disease 30% .move 30% .debuff 40% .death_blow 67% .trap 10%
+  crit: .effects "on_crit_duelist_def"
+  weapon: .name "duelist_weapon_0" .atk 0% .dmg 5 7 .crit 5% .spd 6
+  weapon: .name "duelist_weapon_4" .atk 0% .dmg 8 13 .crit 9% .spd 8 .upgradeRequirementCode 3
+  armour: .name "duelist_armour_0" .def 5% .prot 0 .hp 21 .spd 0
+  armour: .name "duelist_armour_4" .def 25% .prot 0 .hp 37 .spd 0 .upgradeRequirementCode 3
+  combat_move_skill: .id "move" .level 0 .type "move" .move 3 3 .launch 4321 .valid_modes stance_defensive stance_aggressive
+  riposte_skill: .id "riposte1" .level 0 .type "melee" .atk 100% .dmg 0% .crit 4% .launch 1234 .target 1234 .is_crit_valid True 
+  tag: .id "light"
+  tag: .id "non-religious"
+  tag: .id "conservatory_of_steel"
+  deaths_door: .buffs deathsdoorACCDebuff deathsdoorDMGLowDebuff deathsdoorDMGHighDebuff deathsdoorSPDDebuff deathsdoorSRDebuff .recovery_buffs mortalityACCDebuff mortalityDMGLowDebuff mortalityDMGHighDebuff mortalitySPDDebuff mortalitySRDebuff .recovery_heart_attack_buffs heartattackACCDebuff heartattackDMGLowDebuff heartattackDMGHighDebuff heartattackSPDDebuff heartattackSRDebuff
+  mode: .id stance_defensive .is_raid_default true .battle_start_effect_ids "Duelist Combat Start Riposte" "Duelist Combat Start Debuff"
+  mode: .id stance_aggressive .is_raid_default true .battle_start_effect_ids "Duelist Combat Start Riposte" "Duelist Combat Start Debuff"
+ * anticipation 예상 [stance_defensive] | L1 type="ranged" atk=0% dmg=0% crit=0% launch=4321 target= is_crit_valid=True stance_defensive_effects=switch_mode_stance_aggressive_self,duelist_aggressive_buff1 stance_aggressive_effects=switch_mode_stance_defensive_self,duelist_defensive_buff1 is_continue_turn=true per_turn_limit=1 is_stall_invalidating=false
+     L1 eff: self{chance=100% riposte=1 riposte_on_hit_chance_add=100% riposte_on_miss_chance_add=100% duration=2}
+     L5 eff: self{chance=100% riposte=1 riposte_on_hit_chance_add=100% riposte_on_miss_chance_add=100% duration=2}  | L5 atk=0% dmg=0% crit=0% heal=
+ * touche 찌르기 [stance_defensive] | L1 type="melee" atk=90% dmg=0% crit=1% move=1,0 launch=4321 target=12 is_crit_valid=True
+     L1 eff: self{chance=100% defense_rating_add=15% duration=2}
+     L5 eff: self{chance=100% defense_rating_add=25% duration=2}  | L5 atk=110% dmg=0% crit=5% heal=
+ * feint 눈속임 [stance_defensive] | L1 type="melee" atk=95% dmg=-50% crit=8% launch=321 target=12 is_crit_valid=True
+     L1 eff: self{chance=100% tag=1 duration=2} ; self{chance=100% duration=4 buff_ids=DUELIST_FEINT_RIPOSTEDMGLBUFF1,DUELIST_FEINT_RIPOSTEDMGHBUFF1} ; target{chance=110% duration=3 buff_ids=DUELIST_FEINT_ACCDEBUFF,PROT-10}
+     L5 eff: self{chance=100% tag=1 duration=2} ; self{chance=100% duration=4 buff_ids=DUELIST_FEINT_RIPOSTEDMGLBUFF5,DUELIST_FEINT_RIPOSTEDMGHBUFF5} ; target{chance=150% duration=3 buff_ids=DUELIST_FEINT_ACCDEBUFF,PROT-20}  | L5 atk=115% dmg=-50% crit=12% heal=
+ * disengage 회수 [stance_defensive] | L1 type="melee" atk=95% dmg=-50% crit=-1% move=3,0 launch=21 target=12 is_crit_valid=True
+     L1 eff: self{chance=100% buff_ids=DUELIST_DISENGAGE_ACCBUFF,DUELIST_DISENGAGE_SPDBUFF1,DUELIST_DISENGAGE_DODGEBUFF1 duration=4} ; self{chance=100% buff_ids=ATTACKS_ANY_LAUNCH_RANK,ATTACKS_ANY_TARGET_RANK duration=2}
+     L5 eff: self{chance=100% buff_ids=DUELIST_DISENGAGE_ACCBUFF,DUELIST_DISENGAGE_SPDBUFF5,DUELIST_DISENGAGE_DODGEBUFF5 duration=4} ; self{chance=100% buff_ids=ATTACKS_ANY_LAUNCH_RANK,ATTACKS_ANY_TARGET_RANK duration=2}  | L5 atk=115% dmg=-50% crit=3% heal=
+ * fleche 날쌘 돌진 [stance_aggressive] | L1 type="melee" atk=90% dmg=25% crit=9% move=0,2 launch=432 target=123 is_crit_valid=True
+     L1 eff: self{chance=100% tag=1 duration=2}
+     L5 eff: self{chance=100% tag=1 duration=2}  | L5 atk=110% dmg=25% crit=13% heal=
+ * coup_de_grace 최후의 일격 [stance_aggressive] | L1 type="ranged" atk=95% dmg=-70% crit=7% launch=4321 target=1234 is_crit_valid=True ignore_protection=true
+     L1 eff: self{chance=100% initiative_change=1 bonus_action_next_turn=true requires_kill_target=true} ; self{chance=100% keyStatus=stunned crit_chance_add=100%}
+     L5 eff: self{chance=100% initiative_change=1 bonus_action_next_turn=true requires_kill_target=true} ; self{chance=100% keyStatus=stunned crit_chance_add=100%}  | L5 atk=115% dmg=-70% crit=11% heal=
+ * the_boot 부츠 [stance_aggressive] | L1 type="melee" atk=95% dmg=-60% crit=1% move=0,1 launch=321 target=12 is_crit_valid=True
+     L1 eff: target{chance=100% stun=1} ; target{push=1 chance=110% can_apply_on_death=true}
+     L5 eff: target{chance=140% stun=1} ; target{push=1 chance=150% can_apply_on_death=true}  | L5 atk=115% dmg=-60% crit=5% heal=
+
+######## flagellant 고행자  (WS)
+  resistances: .stun 40% .poison 30% .bleed 60% .disease 40% .move 40% .debuff 30% .death_blow 73% .trap 0%
+  crit: .effects "on_crit_bleedchance"
+  weapon: .name "flagellant_weapon_0" .atk 0% .dmg 3 6 .crit 2% .spd 6
+  weapon: .name "flagellant_weapon_4" .atk 0% .dmg 5 11 .crit 6% .spd 8 .upgradeRequirementCode 3
+  armour: .name "flagellant_armour_0" .def 0% .prot 0 .hp 22 .spd 0
+  armour: .name "flagellant_armour_4" .def 20% .prot 0 .hp 38 .spd 0 .upgradeRequirementCode 3
+  combat_move_skill: .id "move" .level 0 .type "move" .move 1 3 .launch 4321
+  tag: .id "religious"
+  tag: .id "light"
+  tag: .id "flagellant"
+  tag: .id "altar_of_light"
+  deaths_door: .buffs FdeathsdoorACCbuff FdeathsdoorDMGLowBuff FdeathsdoorDMGHighBuff FdeathsdoorSPDBuff FdeathsdoorSTUNRESISTBuff FdeathsdoorBLIGHTRESISTBuff FdeathsdoorBLEEDRESISTBuff FdeathsdoorDEBUFFRESISTBuff .recovery_buffs .recovery_heart_attack_buffs heartattackACCDebuff heartattackDMGLowDebuff heartattackDMGHighDebuff heartattackSPDDebuff heartattackSRDebuff .enter_effects flagellant_death_door_enter .enter_effect_round_cooldown 1
+ * punish 처벌  | L1 type="melee" atk=95% dmg=0% crit=5% launch=12 target=12 is_crit_valid=True generation_guaranteed=true
+     L1 eff: target{chance=100% dotBleed=4 duration=3 can_apply_on_death=true} ; target{chance=100% buff_ids=bleed_debuff_1}
+     L5 eff: target{chance=140% dotBleed=6 duration=3 can_apply_on_death=true} ; target{chance=140% buff_ids=bleed_debuff_5}  | L5 atk=115% dmg=0% crit=9% heal=
+ * rain_of_sorrows 슬픔의 비  | L1 type="melee" atk=95% dmg=-67% crit=2% launch=12 target=~34 is_crit_valid=True
+     L1 eff: target{chance=100% dotBleed=3 duration=3 can_apply_on_death=true} ; target{chance=100% buff_ids=bleed_debuff_1}
+     L5 eff: target{chance=140% dotBleed=5 duration=3 can_apply_on_death=true} ; target{chance=140% buff_ids=bleed_debuff_5}  | L5 atk=115% dmg=-67% crit=6% heal=
+ * exsanguinate 방혈  | L1 type="melee" atk=90% dmg=0% crit=3% required_performer_hp_range=0,0.40 per_battle_limit=3 launch=12 target=12 is_crit_valid=True
+     L1 eff: target{chance=100% dotBleed=5 duration=3 can_apply_on_death=true} ; self{chance=100% heal_percent=0.35} ; self{chance=100% buff_ids=flag_exhaust_heal_done_debuff,flag_exhaust_heal_recvd_debuff,flag_exhaust_spd_debuff}
+     L5 eff: target{chance=140% dotBleed=9 duration=3 can_apply_on_death=true} ; self{chance=100% heal_percent=0.50} ; self{chance=100% buff_ids=flag_exhaust_heal_done_debuff,flag_exhaust_heal_recvd_debuff,flag_exhaust_spd_debuff}  | L5 atk=110% dmg=0% crit=7% heal=
+ * reclaim 재기  | L1 type="melee" atk=0% dmg=0% crit=0% self_target_valid=false launch=1234 target=@1234 is_crit_valid=True is_stall_invalidating=false
+     L1 eff: target{chance=100% dotHpHeal=2 duration=3} ; self{chance=120% dotBleed=3 duration=2 can_apply_on_death=true}
+     L5 eff: target{chance=100% dotHpHeal=4 duration=3} ; self{chance=160% dotBleed=7 duration=2 can_apply_on_death=true}  | L5 atk=0% dmg=0% crit=0% heal=
+ * redeem 구제  | L1 type="melee" atk=0% dmg=0% crit=0% self_target_valid=false required_performer_hp_range=0,0.40 per_battle_limit=2 launch=1234 target=@1234 is_crit_valid=True is_stall_invalidating=false
+     L1 eff: target{chance=100% heal_percent=0.33} ; self{chance=100% heal_percent=0.35} ; self{chance=100% buff_ids=flag_exhaust_heal_done_debuff,flag_exhaust_heal_recvd_debuff,flag_exhaust_spd_debuff}
+     L5 eff: target{chance=100% heal_percent=0.43} ; self{chance=100% heal_percent=0.50} ; self{chance=100% buff_ids=flag_exhaust_heal_done_debuff,flag_exhaust_heal_recvd_debuff,flag_exhaust_spd_debuff}  | L5 atk=0% dmg=0% crit=0% heal=
+ * endure 인내  | L1 type="melee" atk=0% dmg=0% crit=0% self_target_valid=false launch=1234 target=@1234 is_crit_valid=True is_stall_invalidating=false
+     L1 eff: target{chance=100% healstress=12} ; self{chance=100% stress=4}
+     L5 eff: target{chance=100% healstress=16} ; self{chance=100% stress=8}  | L5 atk=0% dmg=0% crit=0% heal=
+ * suffer 고통  | L1 type="melee" atk=0% dmg=0% crit=0% self_target_valid=false launch=1234 target=@1234 is_crit_valid=True is_stall_invalidating=false
+     L1 eff: target{chance=100% untag=1} ; self{chance=100% tag=1 duration=2} ; target{chance=100% steal_buff_stat_type=hp_dot_bleed} ; target{chance=100% steal_buff_stat_type=hp_dot_poison} ; self{chance=100% duration=4 buff_ids=flag_grit_stress_1,flag_grit_deathblow_buff_1} ; target{chance=100% clear_debuff=1} ; self{chance=100% speed_rating_add=3 duration=3}
+     L5 eff: target{chance=100% untag=1} ; self{chance=100% tag=1 duration=2} ; target{chance=100% steal_buff_stat_type=hp_dot_bleed} ; target{chance=100% steal_buff_stat_type=hp_dot_poison} ; self{chance=100% duration=4 buff_ids=flag_grit_stress_5,flag_grit_deathblow_buff_5} ; target{chance=100% clear_debuff=1} ; self{chance=100% speed_rating_add=5 duration=3}  | L5 atk=0% dmg=0% crit=0% heal=
+
+######## grave_robber 도굴꾼  (WS)
+  resistances: .stun 20% .poison 50% .bleed 30% .disease 30% .move 20% .debuff 30% .death_blow 67% .trap 50%
+  crit: .effects "on_crit_def"
+  weapon: .name "grave_robber_weapon_0" .atk 0% .dmg 4 8 .crit 6% .spd 8
+  weapon: .name "grave_robber_weapon_4" .atk 0% .dmg 7 14 .crit 10% .spd 10 .upgradeRequirementCode 3
+  armour: .name "grave_robber_armour_0" .def 10% .prot 0 .hp 20 .spd 0
+  armour: .name "grave_robber_armour_4" .def 30% .prot 0 .hp 36 .spd 0 .upgradeRequirementCode 3
+  combat_move_skill: .id "move" .level 0 .type "move" .move 2 2 .launch 4321
+  tag: .id "light"
+  tag: .id "non-religious"
+  tag: .id "house_of_the_yellow_hand"
+  deaths_door: .buffs deathsdoorACCDebuff deathsdoorDMGLowDebuff deathsdoorDMGHighDebuff deathsdoorSPDDebuff deathsdoorSRDebuff .recovery_buffs mortalityACCDebuff mortalityDMGLowDebuff mortalityDMGHighDebuff mortalitySPDDebuff mortalitySRDebuff .recovery_heart_attack_buffs heartattackACCDebuff heartattackDMGLowDebuff heartattackDMGHighDebuff heartattackSPDDebuff heartattackSRDebuff
+ * pick 얼굴 찍기  | L1 type="melee" atk=90% dmg=-15% crit=1% launch=321 target=12 is_crit_valid=True ignore_protection=true
+     L1 eff: 
+     L5 eff:   | L5 atk=110% dmg=-15% crit=5% heal=
+ * lunge 돌진  | L1 type="melee" atk=95% dmg=40% crit=8% move=0,2 launch=43 target=123 is_crit_valid=True
+     L1 eff: self{chance=100% keyStatus=poisoned damage_low_multiply=20% damage_high_multiply=20%}
+     L5 eff: self{chance=100% keyStatus=poisoned damage_low_multiply=33% damage_high_multiply=33%}  | L5 atk=115% dmg=40% crit=12% heal=
+ * flashing_daggers 번뜩이는 비도  | L1 type="ranged" atk=90% dmg=-33% crit=-5% launch=432 target=~23 is_crit_valid=True
+     L1 eff: target{chance=100% buff_ids=bleed_debuff_1 duration=3}
+     L5 eff: target{chance=140% buff_ids=bleed_debuff_5 duration=3}  | L5 atk=110% dmg=-33% crit=-1% heal=
+ * shadow_fade 그림자 은신  | L1 type="melee" atk=95% dmg=-100% crit=0% move=2,0 launch=21 target= is_crit_valid=False generation_guaranteed=true is_stall_invalidating=false
+     L1 eff: self{chance=100% stealth=1 duration=2} ; self{chance=100% duration=2 damage_low_multiply=80% damage_high_multiply=80% crit_chance_add=4%} ; self{chance=100% duration=4 defense_rating_add=10%}
+     L5 eff: self{chance=100% stealth=1 duration=2} ; self{chance=100% duration=2 damage_low_multiply=100% damage_high_multiply=100% crit_chance_add=8%} ; self{chance=100% duration=4 defense_rating_add=15%}  | L5 atk=115% dmg=-100% crit=0% heal=
+ * thrown_dagger 단검 투척  | L1 type="ranged" atk=90% dmg=-10% crit=8% launch=432 target=234 is_crit_valid=True
+     L1 eff: self{chance=100% keyStatus=tagged damage_low_multiply=40% damage_high_multiply=40%} ; self{chance=100% keyStatus=poisoned damage_low_multiply=20% damage_high_multiply=20%}
+     L5 eff: self{chance=100% keyStatus=tagged damage_low_multiply=80% damage_high_multiply=80%} ; self{chance=100% keyStatus=poisoned damage_low_multiply=33% damage_high_multiply=33%}  | L5 atk=110% dmg=-10% crit=12% heal=
+ * poison_dart 맹독 다트  | L1 type="ranged" atk=95% dmg=-60% crit=7.5% launch=432 target=1234 is_crit_valid=True
+     L1 eff: target{chance=100% dotPoison=2 duration=3 can_apply_on_death=true} ; target{chance=100% duration=3 buff_ids=blight_debuff_1} ; self{chance=100% attack_rating_add=5%}
+     L5 eff: target{chance=140% dotPoison=4 duration=3 can_apply_on_death=true} ; target{chance=140% duration=3 buff_ids=blight_debuff_5} ; self{chance=100% attack_rating_add=10%}  | L5 atk=115% dmg=-60% crit=11.5% heal=
+ * toxin_trickery 극약처방  | L1 type="melee" atk=0% dmg=0% crit=0% launch=4321 target= is_crit_valid=True is_stall_invalidating=false
+     L1 eff: self{cure=1 chance=100% duration=3 defense_rating_add=5%} ; self{chance=100% duration=3 speed_rating_add=1} ; self{chance=100% heal=1 source_heal_type=hero_skill}
+     L5 eff: self{cure=1 chance=100% duration=3 defense_rating_add=7%} ; self{chance=100% duration=3 speed_rating_add=2} ; self{chance=100% heal=5 source_heal_type=hero_skill}  | L5 atk=0% dmg=0% crit=0% heal=
+
+######## hellion 야만인  (WS)
+  resistances: .stun 40% .poison 40% .bleed 40% .disease 30% .move 40% .debuff 30% .death_blow 67% .trap 20%
+  crit: .effects "on_crit_dmgbleeding"
+  weapon: .name "hellion_weapon_0" .atk 0% .dmg 6 12 .crit 5% .spd 4
+  weapon: .name "hellion_weapon_4" .atk 0% .dmg 10 19 .crit 9% .spd 6 .upgradeRequirementCode 3
+  armour: .name "hellion_armour_0" .def 10% .prot 0 .hp 26 .spd 0
+  armour: .name "hellion_armour_4" .def 30% .prot 0 .hp 46 .spd 0 .upgradeRequirementCode 3
+  combat_move_skill: .id "move" .level 0 .type "move" .move 0 1 .launch 4321
+  tag: .id "non-religious"
+  tag: .id "heavy"
+  tag: .id "outsiders_bonfire"
+  deaths_door: .buffs deathsdoorACCDebuff deathsdoorDMGLowDebuff deathsdoorDMGHighDebuff deathsdoorSPDDebuff deathsdoorSRDebuff .recovery_buffs mortalityACCDebuff mortalityDMGLowDebuff mortalityDMGHighDebuff mortalitySPDDebuff mortalitySRDebuff .recovery_heart_attack_buffs heartattackACCDebuff heartattackDMGLowDebuff heartattackDMGHighDebuff heartattackSPDDebuff heartattackSRDebuff
+ * wicked_hack 사악한 난도질  | L1 type="melee" atk=90% dmg=0% crit=4% launch=21 target=12 is_crit_valid=True generation_guaranteed=true
+     L1 eff: 
+     L5 eff:   | L5 atk=110% dmg=0% crit=8% heal=
+ * iron_swan 강철의 추모곡  | L1 type="melee" atk=85% dmg=0% crit=5% launch=1 target=4 is_crit_valid=True
+     L1 eff: 
+     L5 eff:   | L5 atk=105% dmg=0% crit=9% heal=
+ * barbaric_yawp 야만스러운 함성!  | L1 type="melee" atk=95% dmg=-100% crit=0% launch=21 target=~1234 is_crit_valid=False is_stall_invalidating=false
+     L1 eff: tgt-group{chance=100% kill_enemy_types=corpse can_apply_on_death=true} ; self{chance=100% attack_rating_add=5% damage_low_multiply=20% damage_high_multiply=20%} ; target{chance=100% duration=3 damage_low_multiply=-10% damage_high_multiply=-10%}
+     L5 eff: tgt-group{chance=100% kill_enemy_types=corpse can_apply_on_death=true} ; self{chance=100% attack_rating_add=10% damage_low_multiply=30% damage_high_multiply=30%} ; target{chance=140% duration=3 damage_low_multiply=-20% damage_high_multiply=-20%}  | L5 atk=115% dmg=-100% crit=0% heal=
+ * if_it_bleeds 유혈사태  | L1 type="melee" atk=85% dmg=-35% crit=0% launch=321 target=23 is_crit_valid=True
+     L1 eff: target{chance=100% dotBleed=2 duration=3 can_apply_on_death=true}
+     L5 eff: target{chance=140% dotBleed=4 duration=3 can_apply_on_death=true}  | L5 atk=105% dmg=-35% crit=4% heal=
+ * breakthru 돌파  | L1 type="melee" atk=85% dmg=-55% crit=-1% move=0,1 launch=432 target=~123 is_crit_valid=True
+     L1 eff: 
+     L5 eff:   | L5 atk=105% dmg=-55% crit=3% heal=
+ * adrenaline_rush 아드레날린 분출  | L1 type="melee" atk=0% dmg=0% crit=0% launch=4321 target= is_crit_valid=True is_stall_invalidating=false
+     L1 eff: self{chance=100% cure=1} ; self{chance=100% heal=3 source_heal_type=hero_skill}
+     L5 eff: self{chance=100% cure=1} ; self{chance=100% heal=7 source_heal_type=hero_skill}  | L5 atk=0% dmg=0% crit=0% heal=
+ * bleed_out 출혈  | L1 type="melee" atk=85% dmg=0% crit=10% launch=1 target=1 is_crit_valid=True
+     L1 eff: target{chance=100% dotBleed=3 duration=3 can_apply_on_death=true}
+     L5 eff: target{chance=140% dotBleed=5 duration=3 can_apply_on_death=true}  | L5 atk=105% dmg=0% crit=14% heal=
+
+######## highwayman 노상강도  (WS)
+  resistances: .stun 30% .poison 30% .bleed 30% .disease 30% .move 30% .debuff 30% .death_blow 67% .trap 40%
+  crit: .effects "on_crit_speed"
+  weapon: .name "highwayman_weapon_0" .atk 0% .dmg 5 10 .crit 5% .spd 5
+  weapon: .name "highwayman_weapon_4" .atk 0% .dmg 9 16 .crit 9% .spd 7 .upgradeRequirementCode 3
+  armour: .name "highwayman_armour_0" .def 10% .prot 0 .hp 23 .spd 0
+  armour: .name "highwayman_armour_4" .def 30% .prot 0 .hp 43 .spd 0 .upgradeRequirementCode 3
+  combat_move_skill: .id "move" .level 0 .type "move" .move 2 2 .launch 4321
+  riposte_skill: .id "riposte1" .level 0 .type "melee" .atk 85% .dmg 0% .crit 5% .launch 1234 .target 1234 .is_crit_valid True 
+  tag: .id "light"
+  tag: .id "non-religious"
+  tag: .id "house_of_the_yellow_hand"
+  deaths_door: .buffs deathsdoorACCDebuff deathsdoorDMGLowDebuff deathsdoorDMGHighDebuff deathsdoorSPDDebuff deathsdoorSRDebuff .recovery_buffs mortalityACCDebuff mortalityDMGLowDebuff mortalityDMGHighDebuff mortalitySPDDebuff mortalitySRDebuff .recovery_heart_attack_buffs heartattackACCDebuff heartattackDMGLowDebuff heartattackDMGHighDebuff heartattackSPDDebuff heartattackSRDebuff
+ * wicked_slice 사악한 칼질  | L1 type="melee" atk=85% dmg=0% crit=5% launch=21 target=123 is_crit_valid=True
+     L1 eff: 
+     L5 eff:   | L5 atk=105% dmg=0% crit=9% heal=
+ * pistol_shot 권총 사격  | L1 type="ranged" atk=90% dmg=-15% crit=7.5% launch=432 target=234 is_crit_valid=True generation_guaranteed=true
+     L1 eff: self{chance=100% keyStatus=tagged damage_low_multiply=40% damage_high_multiply=40%}
+     L5 eff: self{chance=100% keyStatus=tagged damage_low_multiply=60% damage_high_multiply=60%}  | L5 atk=110% dmg=-15% crit=11.5% heal=
+ * point_blank_shot 영거리 사격  | L1 type="ranged" atk=95% dmg=50% crit=5% move=2,0 launch=1 target=1 is_crit_valid=True
+     L1 eff: target{push=2 chance=100% can_apply_on_death=true}
+     L5 eff: target{push=2 chance=140% can_apply_on_death=true}  | L5 atk=115% dmg=50% crit=9% heal=
+ * grape_shot_blast 포도탄 발사  | L1 type="ranged" atk=90% dmg=-60% crit=-9% launch=23 target=~123 is_crit_valid=True
+     L1 eff: target{chance=100% duration=3 buff_type=crit_received_chance buff_amount=4%}
+     L5 eff: target{chance=140% duration=3 buff_type=crit_received_chance buff_amount=8%}  | L5 atk=110% dmg=-60% crit=-5% heal=
+ * take_aim 추적탄  | L1 type="ranged" atk=95% dmg=-60% crit=0% launch=4321 target=1234 is_crit_valid=True ignore_stealth=true
+     L1 eff: self{chance=100% riposte=1 riposte_on_hit_chance_add=100% riposte_on_miss_chance_add=100% duration=3 damage_low_multiply=-40% damage_high_multiply=-40% crit_chance_add=0%} ; target{chance=100% unstealth=1}
+     L5 eff: self{chance=100% riposte=1 riposte_on_hit_chance_add=100% riposte_on_miss_chance_add=100% duration=3 damage_low_multiply=-15% damage_high_multiply=-15% crit_chance_add=5%} ; target{chance=100% unstealth=1}  | L5 atk=115% dmg=-60% crit=1% heal=
+ * duelist_advance 결투가의 진격  | L1 type="melee" atk=90% dmg=-20% crit=5% move=0,1 launch=432 target=12 is_crit_valid=True
+     L1 eff: self{chance=100% attack_rating_add=4% crit_chance_add=2% damage_low_multiply=10% damage_high_multiply=10% duration=3}
+     L5 eff: self{chance=100% attack_rating_add=8% crit_chance_add=6% damage_low_multiply=14% damage_high_multiply=14% duration=3}  | L5 atk=110% dmg=-20% crit=9% heal=
+ * opened_vein 정맥 절개  | L1 type="melee" atk=95% dmg=-30% crit=8% launch=321 target=12 is_crit_valid=True
+     L1 eff: target{chance=100% dotBleed=2 duration=3 can_apply_on_death=true} ; target{chance=100% duration=3 buff_ids=bleed_debuff_1} ; target{chance=100% duration=3 buff_ids=SPD-1}
+     L5 eff: target{chance=140% dotBleed=4 duration=3 can_apply_on_death=true} ; target{chance=140% duration=3 buff_ids=bleed_debuff_5} ; target{chance=140% duration=3 buff_ids=SPD-3}  | L5 atk=115% dmg=-30% crit=12% heal=
+
+######## houndmaster 조련사  (WS)
+  resistances: .stun 40% .poison 30% .bleed 30% .disease 30% .move 40% .debuff 30% .death_blow 67% .trap 40%
+  crit: .effects "on_crit_bleedchance"
+  weapon: .name "houndmaster_weapon_0" .atk 0% .dmg 4 7 .crit 4% .spd 5
+  weapon: .name "houndmaster_weapon_4" .atk 0% .dmg 7 13 .crit 8% .spd 7 .upgradeRequirementCode 3
+  armour: .name "houndmaster_armour_0" .def 10% .prot 0 .hp 21 .spd 0
+  armour: .name "houndmaster_armour_4" .def 30% .prot 0 .hp 37 .spd 0 .upgradeRequirementCode 3
+  combat_move_skill: .id "move" .level 0 .type "move" .move 2 2 .launch 4321
+  tag: .id "light"
+  tag: .id "non-religious"
+  tag: .id "training_ring"
+  deaths_door: .buffs deathsdoorACCDebuff deathsdoorDMGLowDebuff deathsdoorDMGHighDebuff deathsdoorSPDDebuff deathsdoorSRDebuff .recovery_buffs mortalityACCDebuff mortalityDMGLowDebuff mortalityDMGHighDebuff mortalitySPDDebuff mortalitySRDebuff .recovery_heart_attack_buffs heartattackACCDebuff heartattackDMGLowDebuff heartattackDMGHighDebuff heartattackSPDDebuff heartattackSRDebuff
+ * hounds_rush 사냥개 돌진  | L1 type="ranged" atk=90% dmg=-25% crit=5% launch=4321 target=1234 is_crit_valid=True generation_guaranteed=true
+     L1 eff: self{chance=100% monsterType=beast damage_low_multiply=15% damage_high_multiply=15%} ; self{chance=100% keyStatus=tagged damage_low_multiply=60% damage_high_multiply=60%} ; target{chance=100% dotBleed=1 duration=2 can_apply_on_death=true}
+     L5 eff: self{chance=100% monsterType=beast damage_low_multiply=35% damage_high_multiply=35%} ; self{chance=100% keyStatus=tagged damage_low_multiply=60% damage_high_multiply=60%} ; target{chance=140% dotBleed=3 duration=2 can_apply_on_death=true}  | L5 atk=110% dmg=-25% crit=9% heal=
+ * hounds_harry 사냥개 습격  | L1 type="ranged" atk=90% dmg=-70% crit=-5% launch=432 target=~1234 is_crit_valid=True
+     L1 eff: target{chance=110% dotBleed=1 duration=3 can_apply_on_death=true}
+     L5 eff: target{chance=150% dotBleed=3 duration=3 can_apply_on_death=true}  | L5 atk=110% dmg=-70% crit=-1% heal=
+ * whistle 목표물 지정  | L1 type="ranged" atk=100% dmg=-100% crit=0% launch=4321 target=1234 is_crit_valid=False is_stall_invalidating=false
+     L1 eff: target{chance=100% tag=1 duration=3} ; target{chance=130% duration=3 attack_rating_add=-25%}
+     L5 eff: target{chance=100% tag=1 duration=3} ; target{chance=170% duration=3 attack_rating_add=-30%}  | L5 atk=120% dmg=-100% crit=0% heal=
+ * howl 위험 경보  | L1 type="ranged" atk=0% dmg=0% crit=0% launch=43 target=@~1234 is_crit_valid=True is_stall_invalidating=false
+     L1 eff: target{chance=70% healstress=4}
+     L5 eff: target{chance=74% healstress=6}  | L5 atk=0% dmg=0% crit=0% heal=
+ * guard_dog 경비견  | L1 type="melee" atk=0% dmg=0% crit=0% self_target_valid=false launch=4321 target=@1234 is_crit_valid=True
+     L1 eff: self{chance=100% clearguarding=1 clearguarded=1 has_description=false} ; target{chance=100% clearguarding=1 clearguarded=1 has_description=false} ; target{guard=1 duration=2} ; self{chance=100% defense_rating_add=20% duration=3}
+     L5 eff: self{chance=100% clearguarding=1 clearguarded=1 has_description=false} ; target{chance=100% clearguarding=1 clearguarded=1 has_description=false} ; target{guard=1 duration=2} ; self{chance=100% defense_rating_add=30% duration=3}  | L5 atk=0% dmg=0% crit=0% heal=
+ * lick_wounds 상처 핥기  | L1 type="melee" atk=0% dmg=0% crit=0% launch=4321 target= is_crit_valid=True is_stall_invalidating=false
+     L1 eff: self{chance=100% heal=4 source_heal_type=hero_skill}
+     L5 eff: self{chance=100% heal=8 source_heal_type=hero_skill}  | L5 atk=0% dmg=0% crit=0% heal=
+ * blackjack 둔기 강타  | L1 type="melee" atk=90% dmg=-50% crit=5% launch=21 target=123 is_crit_valid=True
+     L1 eff: target{chance=100% stun=1}
+     L5 eff: target{chance=140% stun=1}  | L5 atk=110% dmg=-50% crit=9% heal=
+
+######## jester 광대  (WS)
+  resistances: .stun 20% .poison 40% .bleed 30% .disease 20% .move 20% .debuff 40% .death_blow 67% .trap 30%
+  crit: .effects "on_crit_stresshealdone"
+  weapon: .name "jester_weapon_0" .atk 0% .dmg 4 7 .crit 4% .spd 7
+  weapon: .name "jester_weapon_4" .atk 0% .dmg 7 13 .crit 8% .spd 9 .upgradeRequirementCode 3
+  armour: .name "jester_armour_0" .def 15% .prot 0 .hp 19 .spd 0
+  armour: .name "jester_armour_4" .def 35% .prot 0 .hp 35 .spd 0 .upgradeRequirementCode 3
+  combat_move_skill: .id "move" .level 0 .type "move" .move 3 3 .launch 4321
+  tag: .id "light"
+  tag: .id "non-religious"
+  tag: .id "theater"
+  deaths_door: .buffs deathsdoorACCDebuff deathsdoorDMGLowDebuff deathsdoorDMGHighDebuff deathsdoorSPDDebuff deathsdoorSRDebuff .recovery_buffs mortalityACCDebuff mortalityDMGLowDebuff mortalityDMGHighDebuff mortalitySPDDebuff mortalitySRDebuff .recovery_heart_attack_buffs heartattackACCDebuff heartattackDMGLowDebuff heartattackDMGHighDebuff heartattackSPDDebuff heartattackSRDebuff
+ * dirk_stab 단검 찌르기  | L1 type="melee" atk=85% dmg=0% crit=5% move=0,1 launch=4321 target=123 is_crit_valid=True ignore_guard=true
+     L1 eff: self{chance=100% buff_ids=build_to_finale_dmgL,build_to_finale_dmgH duration=8}
+     L5 eff: self{chance=100% buff_ids=build_to_finale_dmgL,build_to_finale_dmgH duration=8}  | L5 atk=105% dmg=0% crit=9% heal=
+ * harvest 수확의 낫질  | L1 type="melee" atk=90% dmg=-50% crit=0% launch=32 target=~23 is_crit_valid=True generation_guaranteed=true
+     L1 eff: target{chance=100% dotBleed=2 duration=3 can_apply_on_death=true} ; self{chance=100% buff_ids=build_to_finale_dmgL,build_to_finale_dmgH duration=8}
+     L5 eff: target{chance=140% dotBleed=4 duration=3 can_apply_on_death=true} ; self{chance=100% buff_ids=build_to_finale_dmgL,build_to_finale_dmgH duration=8}  | L5 atk=110% dmg=-50% crit=4% heal=
+ * heroic_end 대단원  | L1 type="melee" atk=140% dmg=50% crit=5% move=3,0 per_battle_limit=1 launch=12 target=1234 is_crit_valid=True
+     L1 eff: self{defense_rating_add=-25% speed_rating_add=-3 duration=1 buff_duration_type=combat_end buff_is_clear_debuff_valid=false} ; self{chance=100% buff_ids=mortal_weakness_stress buff_is_clear_debuff_valid=false}
+     L5 eff: self{defense_rating_add=-25% speed_rating_add=-3 duration=1 buff_duration_type=combat_end buff_is_clear_debuff_valid=false} ; self{chance=100% buff_ids=mortal_weakness_stress buff_is_clear_debuff_valid=false}  | L5 atk=160% dmg=50% crit=9% heal=
+ * solo 독주  | L1 type="ranged" atk=125% dmg=-100% crit=0% move=0,3 per_battle_limit=2 launch=1234 target=~1234 is_crit_valid=False
+     L1 eff: self{chance=100% tag=1 duration=3} ; tgt-group{chance=100% kill_enemy_types=corpse can_apply_on_death=true} ; self{chance=100% defense_rating_add=30% duration=4} ; self{chance=100% buff_ids=RB_JES_build_to_finale2_dmgL,RB_JES_build_to_finale2_dmgH,RB_JES_build_to_finale2_crit duration=8} ; target{chance=100% duration=3 buff_ids=SPD-1} ; allies-other{chance=100% untag=1}
+     L5 eff: self{chance=100% tag=1 duration=3} ; tgt-group{chance=100% kill_enemy_types=corpse can_apply_on_death=true} ; self{chance=100% defense_rating_add=40% duration=4} ; self{chance=100% buff_ids=RB_JES_build_to_finale2_dmgL,RB_JES_build_to_finale2_dmgH,RB_JES_build_to_finale2_crit duration=8} ; target{chance=140% duration=3 buff_ids=SPD-3} ; allies-other{chance=100% untag=1}  | L5 atk=145% dmg=-100% crit=0% heal=
+ * slice_off 저며내기  | L1 type="melee" atk=95% dmg=-33% crit=8% launch=32 target=23 is_crit_valid=True
+     L1 eff: target{chance=100% dotBleed=3 duration=3 can_apply_on_death=true} ; self{chance=100% buff_ids=build_to_finale_dmgL,build_to_finale_dmgH duration=8}
+     L5 eff: target{chance=140% dotBleed=5 duration=3 can_apply_on_death=true} ; self{chance=100% buff_ids=build_to_finale_dmgL,build_to_finale_dmgH duration=8}  | L5 atk=115% dmg=-33% crit=12% heal=
+ * battle_ballad 전투의 발라드  | L1 type="ranged" atk=0% dmg=0% crit=0% launch=34 target=@~1234 is_crit_valid=True is_stall_invalidating=false
+     L1 eff: target{chance=100% attack_rating_add=0% crit_chance_add=4% speed_rating_add=2} ; self{chance=100% buff_ids=build_to_finale_dmgL,build_to_finale_dmgH,build_to_finale_crit duration=8}
+     L5 eff: target{chance=100% attack_rating_add=0% crit_chance_add=8% speed_rating_add=4} ; self{chance=100% buff_ids=build_to_finale_dmgL,build_to_finale_dmgH,build_to_finale_crit duration=8}  | L5 atk=0% dmg=0% crit=0% heal=
+ * inspiring_tune 격려의 선율  | L1 type="ranged" atk=0% dmg=0% crit=0% launch=234 target=@1234 is_crit_valid=True is_stall_invalidating=false
+     L1 eff: target{chance=100% healstress=8} ; target{chance=100% buff_ids=JESTTuneStressResistance1} ; self{chance=100% buff_ids=build_to_finale_dmgL,build_to_finale_dmgH,build_to_finale_crit duration=8}
+     L5 eff: target{chance=100% healstress=12} ; target{chance=100% buff_ids=JESTTuneStressResistance5} ; self{chance=100% buff_ids=build_to_finale_dmgL,build_to_finale_dmgH,build_to_finale_crit duration=8}  | L5 atk=0% dmg=0% crit=0% heal=
+
+######## leper 나병환자  (WS)
+  resistances: .stun 60% .poison 40% .bleed 10% .disease 20% .move 60% .debuff 40% .death_blow 67% .trap 10%
+  crit: .effects "on_crit_acc"
+  weapon: .name "leper_weapon_0" .atk 0% .dmg 8 16 .crit 1% .spd 2
+  weapon: .name "leper_weapon_4" .atk 0% .dmg 13 26 .crit 5% .spd 4 .upgradeRequirementCode 3
+  armour: .name "leper_armour_0" .def 0% .prot 0 .hp 35 .spd 0
+  armour: .name "leper_armour_4" .def 20% .prot 0 .hp 63 .spd 0 .upgradeRequirementCode 3
+  combat_move_skill: .id "move" .level 0 .type "move" .move 0 1 .launch 4321
+  tag: .id "heavy"
+  tag: .id "religious"
+  tag: .id "outsiders_bonfire"
+  deaths_door: .buffs deathsdoorACCDebuff deathsdoorDMGLowDebuff deathsdoorDMGHighDebuff deathsdoorSPDDebuff deathsdoorSRDebuff .recovery_buffs mortalityACCDebuff mortalityDMGLowDebuff mortalityDMGHighDebuff mortalitySPDDebuff mortalitySRDebuff .recovery_heart_attack_buffs heartattackACCDebuff heartattackDMGLowDebuff heartattackDMGHighDebuff heartattackSPDDebuff heartattackSRDebuff
+ * chop 토막치기  | L1 type="melee" atk=75% dmg=0% crit=3% launch=12 target=12 is_crit_valid=True generation_guaranteed=true
+     L1 eff: 
+     L5 eff:   | L5 atk=95% dmg=0% crit=7% heal=
+ * hew 가르기  | L1 type="melee" atk=75% dmg=-50% crit=-4% launch=12 target=~12 is_crit_valid=True
+     L1 eff: 
+     L5 eff:   | L5 atk=95% dmg=-50% crit=0% heal=
+ * focus 축출  | L1 type="melee" atk=85% dmg=-40% crit=0% launch=1 target=1 is_crit_valid=True
+     L1 eff: target{push=3 chance=100% can_apply_on_death=true} ; tgt-group{chance=100% kill_enemy_types=corpse can_apply_on_death=true} ; self{chance=100% duration=4 buff_ids=ACC5}
+     L5 eff: target{push=3 chance=140% can_apply_on_death=true} ; tgt-group{chance=100% kill_enemy_types=corpse can_apply_on_death=true} ; self{chance=100% duration=4 buff_ids=ACC5}  | L5 atk=105% dmg=-40% crit=4% heal=
+ * revenge 복수  | L1 type="melee" atk=0% dmg=0% crit=0% per_battle_limit=1 launch=1234 target= is_crit_valid=True
+     L1 eff: self{chance=100% duration=1 buff_duration_type=combat_end attack_rating_add=10% damage_low_multiply=25% damage_high_multiply=25% crit_chance_add=7%} ; self{chance=100% duration=1 buff_duration_type=combat_end buff_ids=LeperDEFVuln,LeperDMGVuln}
+     L5 eff: self{chance=100% duration=1 buff_duration_type=combat_end attack_rating_add=15% damage_low_multiply=35% damage_high_multiply=35% crit_chance_add=11%} ; self{chance=100% duration=1 buff_duration_type=combat_end buff_ids=LeperDEFVuln,LeperDMGVuln}  | L5 atk=0% dmg=0% crit=0% heal=
+ * withstand 인내  | L1 type="melee" atk=0% dmg=0% crit=0% per_battle_limit=1 launch=123 target= is_crit_valid=True is_stall_invalidating=false
+     L1 eff: self{chance=100% duration=1 buff_duration_type=combat_end protection_rating_add=20%} ; self{chance=100% duration=1 buff_duration_type=combat_end buff_ids=leper_blight_resist,leper_bleed_resist,leper_debuff_resist,leper_move_resist} ; self{chance=100% tag=1 duration=1 buff_duration_type=combat_end}
+     L5 eff: self{chance=100% duration=1 buff_duration_type=combat_end protection_rating_add=30%} ; self{chance=100% duration=1 buff_duration_type=combat_end buff_ids=leper_blight_resist,leper_bleed_resist,leper_debuff_resist,leper_move_resist} ; self{chance=100% tag=1 duration=1 buff_duration_type=combat_end}  | L5 atk=0% dmg=0% crit=0% heal=
+ * solemnity 평온  | L1 type="melee" atk=0% dmg=0% crit=0% launch=12 target= is_crit_valid=True is_stall_invalidating=false
+     L1 eff: self{chance=100% heal=6 source_heal_type=hero_skill} ; self{chance=100% healstress=5}
+     L5 eff: self{chance=100% heal=10 source_heal_type=hero_skill} ; self{chance=100% healstress=7}  | L5 atk=0% dmg=0% crit=0% heal=
+ * intimidate 위협  | L1 type="melee" atk=85% dmg=-40% crit=3% launch=1 target=1 is_crit_valid=True
+     L1 eff: target{chance=100% duration=2 protection_rating_add=-30%}
+     L5 eff: target{chance=140% duration=2 protection_rating_add=-50%}  | L5 atk=105% dmg=-40% crit=7% heal=
+
+######## man_at_arms 중보병  (WS)
+  resistances: .stun 40% .poison 30% .bleed 40% .disease 30% .move 40% .debuff 30% .death_blow 67% .trap 10%
+  crit: .effects "on_crit_stressresist"
+  weapon: .name "man_at_arms_weapon_0" .atk 0% .dmg 5 10 .crit 2% .spd 3
+  weapon: .name "man_at_arms_weapon_4" .atk 0% .dmg 8 16 .crit 6% .spd 5 .upgradeRequirementCode 3
+  armour: .name "man_at_arms_armour_0" .def 5% .prot 0 .hp 31 .spd 0
+  armour: .name "man_at_arms_armour_4" .def 25% .prot 0 .hp 55 .spd 0 .upgradeRequirementCode 3
+  combat_move_skill: .id "move" .level 0 .type "move" .move 2 2 .launch 4321
+  riposte_skill: .id "riposte1" .level 0 .type "melee" .atk 90% .dmg 0% .crit 0% .launch 1234 .target 1234 .is_crit_valid True 
+  tag: .id "heavy"
+  tag: .id "non-religious"
+  tag: .id "training_ring"
+  deaths_door: .buffs deathsdoorACCDebuff deathsdoorDMGLowDebuff deathsdoorDMGHighDebuff deathsdoorSPDDebuff deathsdoorSRDebuff .recovery_buffs mortalityACCDebuff mortalityDMGLowDebuff mortalityDMGHighDebuff mortalitySPDDebuff mortalitySRDebuff .recovery_heart_attack_buffs heartattackACCDebuff heartattackDMGLowDebuff heartattackDMGHighDebuff heartattackSPDDebuff heartattackSRDebuff
+ * crush 분쇄  | L1 type="melee" atk=85% dmg=0% crit=5% launch=12 target=123 is_crit_valid=True generation_guaranteed=true
+     L1 eff: 
+     L5 eff:   | L5 atk=105% dmg=0% crit=9% heal=
+ * rampart 성채의 일격  | L1 type="melee" atk=90% dmg=-50% crit=5% launch=123 target=12 is_crit_valid=True
+     L1 eff: target{push=1 chance=100% can_apply_on_death=true} ; target{chance=100% stun=1}
+     L5 eff: target{push=1 chance=140% can_apply_on_death=true} ; target{chance=140% stun=1}  | L5 atk=110% dmg=-50% crit=9% heal=
+ * bellow 포효  | L1 type="ranged" atk=90% dmg=-100% crit=0% launch=1234 target=~1234 is_crit_valid=False is_stall_invalidating=false
+     L1 eff: target{chance=100% duration=3 defense_rating_add=-5% speed_rating_add=-5} ; tgt-group{chance=100% kill_enemy_types=corpse can_apply_on_death=true} ; target{chance=100% buff_ids=MAA_Bellow_CritReceived_1}
+     L5 eff: target{chance=140% duration=3 defense_rating_add=-10% speed_rating_add=-7} ; tgt-group{chance=100% kill_enemy_types=corpse can_apply_on_death=true} ; target{chance=140% buff_ids=MAA_Bellow_CritReceived_1}  | L5 atk=110% dmg=-100% crit=0% heal=
+ * defender 수호자  | L1 type="melee" atk=0% dmg=0% crit=0% self_target_valid=false launch=1234 target=@1234 is_crit_valid=True is_stall_invalidating=false
+     L1 eff: self{chance=100% clearguarding=1 clearguarded=1 has_description=false} ; target{chance=100% clearguarding=1 clearguarded=1 has_description=false} ; target{guard=1 duration=3} ; self{chance=100% protection_rating_add=15%}
+     L5 eff: self{chance=100% clearguarding=1 clearguarded=1 has_description=false} ; target{chance=100% clearguarding=1 clearguarded=1 has_description=false} ; target{guard=1 duration=3} ; self{chance=100% protection_rating_add=30%}  | L5 atk=0% dmg=0% crit=0% heal=
+ * retribution 응징  | L1 type="melee" atk=85% dmg=-20% crit=2.5% launch=123 target=12 is_crit_valid=True
+     L1 eff: self{chance=100% riposte=1 riposte_on_hit_chance_add=100% riposte_on_miss_chance_add=100% duration=3 damage_low_multiply=-40% damage_high_multiply=-40% crit_chance_add=0%} ; self{chance=100% tag=1 duration=2}
+     L5 eff: self{chance=100% riposte=1 riposte_on_hit_chance_add=100% riposte_on_miss_chance_add=100% duration=3 damage_low_multiply=-20% damage_high_multiply=-20% crit_chance_add=4%} ; self{chance=100% tag=1 duration=2}  | L5 atk=105% dmg=-20% crit=6.5% heal=
+ * command 지휘  | L1 type="ranged" atk=0% dmg=0% crit=0% launch=1234 target=~@1234 is_crit_valid=True is_stall_invalidating=false
+     L1 eff: target{chance=100% buff_ids=MAA_Command_ACC_1,PROT15,MAA_Command_GuardedDMGL_1,MAA_Command_GuardedDMGH_1} ; target{chance=100% unstun=1}
+     L5 eff: target{chance=100% buff_ids=MAA_Command_ACC_5,PROT15,MAA_Command_GuardedDMGL_5,MAA_Command_GuardedDMGH_5} ; target{chance=100% unstun=1}  | L5 atk=0% dmg=0% crit=0% heal=
+ * bolster 고양  | L1 type="ranged" atk=0% dmg=0% crit=0% launch=1234 target=~@1234 is_crit_valid=True is_stall_invalidating=false
+     L1 eff: target{chance=100% buff_ids=RB_MAA_Bolster_Guarded_StressHeal duration=2} ; target{chance=100% buff_ids=STRESSDMG-10 duration=2} ; target{chance=100% healstress=1}
+     L5 eff: target{chance=100% buff_ids=RB_MAA_Bolster_Guarded_StressHeal duration=2} ; target{chance=100% buff_ids=STRESSDMG-10 duration=2} ; target{chance=100% healstress=3}  | L5 atk=0% dmg=0% crit=0% heal=
+
+######## musketeer 총사  (VANILLA)
+  resistances: .stun 40% .poison 30% .bleed 30% .disease 30% .move 40% .debuff 30% .death_blow 67% .trap 10%
+  crit: .effects "on_crit_dmgmarked"
+  weapon: .name "musketeer_weapon_0" .atk 0% .dmg 4 8 .crit 6% .spd 3
+  weapon: .name "musketeer_weapon_4" .atk 0% .dmg 7 14 .crit 10% .spd 5 .upgradeRequirementCode 3
+  armour: .name "musketeer_armour_0" .def 0% .prot 0 .hp 27 .spd 0
+  armour: .name "musketeer_armour_4" .def 20% .prot 0 .hp 47 .spd 0 .upgradeRequirementCode 3
+  combat_move_skill: .id "move" .level 0 .type "move" .move 2 0 .launch 4321
+  tag: .id "heavy"
+  tag: .id "non-religious"
+  tag: .id "training_ring"
+  deaths_door: .buffs deathsdoorACCDebuff deathsdoorDMGLowDebuff deathsdoorDMGHighDebuff deathsdoorSPDDebuff deathsdoorSRDebuff .recovery_buffs mortalityACCDebuff mortalityDMGLowDebuff mortalityDMGHighDebuff mortalitySPDDebuff mortalitySRDebuff .recovery_heart_attack_buffs heartattackACCDebuff heartattackDMGLowDebuff heartattackDMGHighDebuff heartattackSPDDebuff heartattackSRDebuff
+ * aimed_shot 조준사격  | L1 type="ranged" atk=95% dmg=0% crit=5% launch=43 target=234 is_crit_valid=True generation_guaranteed=true
+     L1 eff: self{chance=100% keyStatus=tagged duration=3 damage_low_multiply=50% damage_high_multiply=50% crit_chance_add=9%}
+     L5 eff: self{chance=100% keyStatus=tagged duration=3 damage_low_multiply=100% damage_high_multiply=100% crit_chance_add=13%}  | L5 atk=115% dmg=0% crit=9% heal=
+ * smokescreen 연막탄  | L1 type="ranged" atk=95% dmg=-80% crit=-10% launch=43 target=~34 is_crit_valid=True
+     L1 eff: target{chance=100% duration=2 attack_rating_add=-15% crit_chance_add=-15%}
+     L5 eff: target{chance=140% duration=2 attack_rating_add=-20% crit_chance_add=-19%}  | L5 atk=115% dmg=-80% crit=-6% heal=
+ * call_the_shot 신호탄  | L1 type="ranged" atk=100% dmg=-100% crit=0% launch=43 target=234 is_crit_valid=False is_stall_invalidating=false
+     L1 eff: target{chance=100% tag=1 duration=3} ; target{chance=100% duration=2 defense_rating_add=-20%}
+     L5 eff: target{chance=100% tag=1 duration=3} ; target{chance=140% duration=2 defense_rating_add=-30%}  | L5 atk=120% dmg=-100% crit=0% heal=
+ * buckshot 산탄  | L1 type="ranged" atk=95% dmg=-50% crit=2% launch=43 target=~12 is_crit_valid=True
+     L1 eff: target{push=1 chance=75% can_apply_on_death=true}
+     L5 eff: target{push=1 chance=105% can_apply_on_death=true}  | L5 atk=115% dmg=-50% crit=6% heal=
+ * sidearm 권총사격  | L1 type="ranged" atk=75% dmg=-10% crit=0% launch=4321 target=?1234 is_crit_valid=True
+     L1 eff: self{chance=100% speed_rating_add=3}
+     L5 eff: self{chance=100% speed_rating_add=5}  | L5 atk=95% dmg=-10% crit=4% heal=
+ * patch_up 응급처치  | L1 heal=2,3 launch=43 target=@1234 is_stall_invalidating=false
+     L1 eff: target{chance=100% buff_type=hp_heal_received_percent buff_amount=20%}
+     L5 eff: target{chance=100% buff_type=hp_heal_received_percent buff_amount=38%}  | L5 atk=- dmg=- crit=- heal=4,5
+ * skeet_shot 스키트 사격  | L1 type="ranged" atk=95% dmg=-100% crit=0% launch=4321 target=~1234 is_crit_valid=False ignore_stealth=true is_stall_invalidating=false
+     L1 eff: allies-other{chance=100% unstun=1 untag=1} ; global{chance=100% torch_increase=3} ; target{chance=100% unstealth=1} ; allies-other{chance=60% healstress=1}
+     L5 eff: allies-other{chance=100% unstun=1 untag=1} ; global{chance=100% torch_increase=7} ; target{chance=100% unstealth=1} ; allies-other{chance=67% healstress=3}  | L5 atk=115% dmg=-100% crit=0% heal=
+
+######## occultist 신비학자  (WS)
+  resistances: .stun 20% .poison 30% .bleed 40% .disease 40% .move 20% .debuff 60% .death_blow 67% .trap 10%
+  crit: .effects "on_crit_healdone"
+  weapon: .name "occultist_weapon_0" .atk 0% .dmg 4 7 .crit 6% .spd 6
+  weapon: .name "occultist_weapon_4" .atk 0% .dmg 7 13 .crit 10% .spd 8 .upgradeRequirementCode 3
+  armour: .name "occultist_armour_0" .def 10% .prot 0 .hp 19 .spd 0
+  armour: .name "occultist_armour_4" .def 30% .prot 0 .hp 35 .spd 0 .upgradeRequirementCode 3
+  combat_move_skill: .id "move" .level 0 .type "move" .move 2 2 .launch 4321
+  tag: .id "light"
+  tag: .id "non-religious"
+  tag: .id "library"
+  deaths_door: .buffs deathsdoorACCDebuff deathsdoorDMGLowDebuff deathsdoorDMGHighDebuff deathsdoorSPDDebuff deathsdoorSRDebuff .recovery_buffs mortalityACCDebuff mortalityDMGLowDebuff mortalityDMGHighDebuff mortalitySPDDebuff mortalitySRDebuff .recovery_heart_attack_buffs heartattackACCDebuff heartattackDMGLowDebuff heartattackDMGHighDebuff heartattackSPDDebuff heartattackSRDebuff
+ * bloodlet 제물 암습  | L1 type="melee" atk=80% dmg=0% crit=9% launch=123 target=123 is_crit_valid=True
+     L1 eff: self{chance=100% monsterType=eldritch damage_low_multiply=15% damage_high_multiply=15%}
+     L5 eff: self{chance=100% monsterType=eldritch damage_low_multiply=35% damage_high_multiply=35%}  | L5 atk=100% dmg=0% crit=13% heal=
+ * abyssal_artillery 심연의 포격  | L1 type="ranged" atk=85% dmg=-33% crit=0% launch=34 target=~34 is_crit_valid=True
+     L1 eff: self{chance=100% monsterType=eldritch damage_low_multiply=15% damage_high_multiply=15%}
+     L5 eff: self{chance=100% monsterType=eldritch damage_low_multiply=25% damage_high_multiply=25%}  | L5 atk=105% dmg=-33% crit=4% heal=
+ * weakening_curse 약화 저주  | L1 type="ranged" atk=95% dmg=-65% crit=5% launch=1234 target=1234 is_crit_valid=True
+     L1 eff: target{chance=100% duration=3 damage_low_multiply=-10% damage_high_multiply=-10%} ; target{chance=100% duration=3 protection_rating_add=-10%}
+     L5 eff: target{chance=140% duration=3 damage_low_multiply=-20% damage_high_multiply=-20%} ; target{chance=140% duration=3 protection_rating_add=-20%}  | L5 atk=115% dmg=-65% crit=9% heal=
+ * wyrd_reconstruction 기괴한 재구축  | L1 heal=0,13 launch=1234 target=@1234 generation_guaranteed=true is_stall_invalidating=false
+     L1 eff: target{chance=60% dotBleed=1 duration=3 can_apply_on_death=true}
+     L5 eff: target{chance=80% dotBleed=2 duration=3 can_apply_on_death=true}  | L5 atk=- dmg=- crit=- heal=0,20
+ * disruptive_curse 취약화 주술  | L1 type="ranged" atk=95% dmg=-100% crit=0% launch=1234 target=1234 is_crit_valid=False is_stall_invalidating=false
+     L1 eff: target{chance=100% duration=3 buff_ids=STUNRESIST-15,BLIGHTRESIST-15,BLEEDRESIST-15,DEBUFFRESIST-15} ; target{chance=100% tag=1 duration=3}
+     L5 eff: target{chance=140% duration=3 buff_ids=STUNRESIST-20,BLIGHTRESIST-20,BLEEDRESIST-20,DEBUFFRESIST-20} ; target{chance=100% tag=1 duration=3}  | L5 atk=115% dmg=-100% crit=0% heal=
+ * hands_from_abyss 심연에서의 손아귀  | L1 type="ranged" atk=90% dmg=-50% crit=9% launch=12 target=123 is_crit_valid=True
+     L1 eff: target{chance=110% stun=1} ; global{chance=100% torch_decrease=5}
+     L5 eff: target{chance=150% stun=1} ; global{chance=100% torch_decrease=5}  | L5 atk=110% dmg=-50% crit=13% heal=
+ * daemons_pull 악마의 아귀팔  | L1 type="ranged" atk=90% dmg=-50% crit=5% launch=234 target=34 is_crit_valid=True
+     L1 eff: target{pull=2 chance=100% can_apply_on_death=true} ; tgt-group{chance=100% kill_enemy_types=corpse can_apply_on_death=true}
+     L5 eff: target{pull=2 chance=140% can_apply_on_death=true} ; tgt-group{chance=100% kill_enemy_types=corpse can_apply_on_death=true}  | L5 atk=110% dmg=-50% crit=9% heal=
+
+######## plague_doctor 역병 의사  (WS)
+  resistances: .stun 20% .poison 60% .bleed 20% .disease 50% .move 20% .debuff 50% .death_blow 67% .trap 20%
+  crit: .effects "on_crit_blightchance"
+  weapon: .name "plague_doctor_weapon_0" .atk 0% .dmg 4 7 .crit 2% .spd 7
+  weapon: .name "plague_doctor_weapon_4" .atk 0% .dmg 7 13 .crit 6% .spd 9 .upgradeRequirementCode 3
+  armour: .name "plague_doctor_armour_0" .def 0% .prot 0 .hp 22 .spd 0
+  armour: .name "plague_doctor_armour_4" .def 20% .prot 0 .hp 38 .spd 0 .upgradeRequirementCode 3
+  combat_move_skill: .id "move" .level 0 .type "move" .move 1 1 .launch 4321
+  tag: .id "light"
+  tag: .id "non-religious"
+  tag: .id "library"
+  deaths_door: .buffs deathsdoorACCDebuff deathsdoorDMGLowDebuff deathsdoorDMGHighDebuff deathsdoorSPDDebuff deathsdoorSRDebuff .recovery_buffs mortalityACCDebuff mortalityDMGLowDebuff mortalityDMGHighDebuff mortalitySPDDebuff mortalitySRDebuff .recovery_heart_attack_buffs heartattackACCDebuff heartattackDMGLowDebuff heartattackDMGHighDebuff heartattackSPDDebuff heartattackSRDebuff
+ * noxious_blast 유독기체 폭발  | L1 type="ranged" atk=95% dmg=-80% crit=5% launch=432 target=12 is_crit_valid=True
+     L1 eff: target{chance=100% dotPoison=5 duration=3 can_apply_on_death=true} ; target{chance=100% duration=3 attack_rating_add=-5%}
+     L5 eff: target{chance=140% dotPoison=7 duration=3 can_apply_on_death=true} ; target{chance=140% duration=3 attack_rating_add=-7%}  | L5 atk=115% dmg=-80% crit=9% heal=
+ * plague_grenade 역병 수류탄  | L1 type="ranged" atk=95% dmg=-90% crit=0% launch=43 target=~34 is_crit_valid=True generation_guaranteed=true
+     L1 eff: target{chance=100% dotPoison=4 duration=3 can_apply_on_death=true}
+     L5 eff: target{chance=140% dotPoison=6 duration=3 can_apply_on_death=true}  | L5 atk=115% dmg=-90% crit=4% heal=
+ * blinding_gas 실명 기체  | L1 type="ranged" atk=95% dmg=-100% crit=0% per_battle_limit=3 launch=43 target=~34 is_crit_valid=False is_stall_invalidating=false
+     L1 eff: target{chance=100% stun=1}
+     L5 eff: target{chance=140% stun=1}  | L5 atk=115% dmg=-100% crit=0% heal=
+ * incision 절개  | L1 type="melee" atk=90% dmg=0% crit=5% launch=321 target=12 is_crit_valid=True
+     L1 eff: target{chance=100% dotBleed=2 duration=3 can_apply_on_death=true}
+     L5 eff: target{chance=140% dotBleed=4 duration=3 can_apply_on_death=true}  | L5 atk=110% dmg=0% crit=9% heal=
+ * battlefield_medicine 야전 의술  | L1 heal=3,3 launch=43 target=@1234 is_stall_invalidating=false
+     L1 eff: target{chance=100% cure_poison=1}
+     L5 eff: target{chance=100% cure_poison=1}  | L5 atk=- dmg=- crit=- heal=7,7
+ * emboldening_vapours 강화 작용제  | L1 type="melee" atk=0% dmg=0% crit=0% per_battle_limit=2 launch=4321 target=@1234 is_crit_valid=True
+     L1 eff: target{chance=100% buff_duration_type=combat_end duration=1 damage_low_multiply=20% damage_high_multiply=20% speed_rating_add=3}
+     L5 eff: target{chance=100% buff_duration_type=combat_end duration=1 damage_low_multiply=25% damage_high_multiply=25% speed_rating_add=5}  | L5 atk=0% dmg=0% crit=0% heal=
+ * disorienting_blast 혼란 기체 폭발  | L1 type="ranged" atk=95% dmg=-100% crit=0% launch=432 target=234 is_crit_valid=False is_stall_invalidating=false
+     L1 eff: target{shuffletarget= chance=100% can_apply_on_death=true} ; tgt-group{chance=100% kill_enemy_types=corpse can_apply_on_death=true} ; target{chance=100% stun=1}
+     L5 eff: target{shuffletarget= chance=140% can_apply_on_death=true} ; tgt-group{chance=100% kill_enemy_types=corpse can_apply_on_death=true} ; target{chance=140% stun=1}  | L5 atk=115% dmg=-100% crit=0% heal=
+
+######## runaway 도망자  (WS)
+  resistances: .stun 20% .poison 40% .bleed 40% .disease 30% .move 30% .debuff 20% .death_blow 67% .trap 30%
+  crit: .effects "on_crit_speed"
+  weapon: .name "runaway_weapon_0" .atk 0% .dmg 4 7 .crit 4% .spd 5
+  weapon: .name "runaway_weapon_4" .atk 0% .dmg 7 13 .crit 8% .spd 7 .upgradeRequirementCode 3
+  armour: .name "runaway_armour_0" .def 5% .prot 0 .hp 22 .spd 0
+  armour: .name "runaway_armour_4" .def 25% .prot 0 .hp 38 .spd 0 .upgradeRequirementCode 3
+  combat_move_skill: .id "move" .level 0 .type "move" .move 2 1 .launch 4321
+  tag: .id "light"
+  tag: .id "non-religious"
+  tag: .id "outsiders_bonfire"
+  deaths_door: .buffs deathsdoorACCDebuff deathsdoorDMGLowDebuff deathsdoorDMGHighDebuff deathsdoorSPDDebuff deathsdoorSRDebuff .recovery_buffs mortalityACCDebuff mortalityDMGLowDebuff mortalityDMGHighDebuff mortalitySPDDebuff mortalitySRDebuff .recovery_heart_attack_buffs heartattackACCDebuff heartattackDMGLowDebuff heartattackDMGHighDebuff heartattackSPDDebuff heartattackSRDebuff
+ * searing_strike 작열하는 타격  | L1 type="melee" atk=85% dmg=0% crit=2% launch=21 target=123 is_crit_valid=True generation_guaranteed=true
+     L1 eff: target{chance=100% dotBurn=3 dot_irresistible=true can_apply_on_death=true} ; self{chance=100% keyStatus=burning damage_low_multiply=15% damage_high_multiply=15%}
+     L5 eff: target{chance=100% dotBurn=5 dot_irresistible=true can_apply_on_death=true} ; self{chance=100% keyStatus=burning damage_low_multiply=35% damage_high_multiply=35%}  | L5 atk=105% dmg=0% crit=6% heal=
+ * firefly 흩날리는 불티  | L1 type="ranged" atk=85% dmg=-75% crit=3% launch=43 target=234 is_crit_valid=True
+     L1 eff: target{chance=100% dotBurn=7 dot_irresistible=true buff_ids=rw_burn_decay_debuff duration=2 can_apply_on_death=true} ; self{chance=100% torch_increase=4}
+     L5 eff: target{chance=140% dotBurn=9 dot_irresistible=true buff_ids=rw_burn_decay_debuff duration=2 can_apply_on_death=true} ; self{chance=100% torch_increase=6}  | L5 atk=105% dmg=-75% crit=7% heal=
+ * run_and_hide 도피  | L1 type="ranged" atk=0% dmg=0% crit=0% move=2,0 launch=4321 target= is_crit_valid=False is_stall_invalidating=false
+     L1 eff: self{chance=100% buff_ids=rw_run_conditional_stealth,rw_in_rank_1_clear_run_and_hide,rw_in_rank_2_clear_run_and_hide duration=4} ; self{chance=100% buff_ids=rw_run_hot_1 duration=2}
+     L5 eff: self{chance=100% buff_ids=rw_run_conditional_stealth,rw_in_rank_1_clear_run_and_hide,rw_in_rank_2_clear_run_and_hide duration=4} ; self{chance=100% buff_ids=rw_run_hot_5 duration=3}  | L5 atk=0% dmg=0% crit=0% heal=
+ * ransack 판 뒤엎기  | L1 type="melee" atk=85% dmg=-25% crit=2% move=0,1 launch=4321 target=123 is_crit_valid=True
+     L1 eff: target{pull=1 chance=100% can_apply_on_death=true} ; tgt-group{chance=100% kill_enemy_types=corpse can_apply_on_death=true} ; self{chance=100% buff_ids=rw_acc_stealthed}
+     L5 eff: target{pull=1 chance=140% can_apply_on_death=true} ; tgt-group{chance=100% kill_enemy_types=corpse can_apply_on_death=true} ; self{chance=100% buff_ids=rw_acc_stealthed}  | L5 atk=105% dmg=-25% crit=6% heal=
+ * hearthlight 화톳불  | L1 type="ranged" atk=100% dmg=-100% crit=0% launch=4321 target=~1234 is_crit_valid=False ignore_stealth=true is_stall_invalidating=false
+     L1 eff: target{chance=100% unstealth=1} ; self{chance=100% torch_increase=6} ; party{chance=100% attack_rating_add=5% duration=3} ; party{chance=100% buff_ids=rw_hearthlight_crit_vs_burning_1 duration=3}
+     L5 eff: target{chance=100% unstealth=1} ; self{chance=100% torch_increase=8} ; party{chance=100% attack_rating_add=10% duration=3} ; party{chance=100% buff_ids=rw_hearthlight_crit_vs_burning_5 duration=3}  | L5 atk=120% dmg=-100% crit=0% heal=
+ * controlled_burn 통제된 화상  | L1 type="ranged" atk=95% dmg=-100% crit=0% launch=321 target=123 is_crit_valid=False ignore_stealth=true per_battle_limit=2 refresh_after_each_wave=true
+     L1 eff: self{chance=100% torch_increase=6} ; target{chance=100% dotBurn=6 dot_irresistible=true can_apply_on_death=true} ; target{chance=100% controlled_burn_amount=2 controlled_burn_duration=3}
+     L5 eff: self{chance=100% torch_increase=6} ; target{chance=100% dotBurn=6 dot_irresistible=true can_apply_on_death=true} ; target{chance=100% controlled_burn_amount=4 controlled_burn_duration=3}  | L5 atk=115% dmg=-100% crit=0% heal=
+ * backdraft 불길 역류  | L1 type="ranged" atk=95% dmg=-50% crit=7% launch=321 target=12 is_crit_valid=True ignore_guard=true requires_burning=true dmg_per_burn_stack=0.25 copy_burn_behind=true
+     L1 eff: 
+     L5 eff:   | L5 atk=115% dmg=-50% crit=11% heal=
+
+######## shieldbreaker 방패 파괴자  (WS)
+  resistances: .stun 30% .poison 20% .bleed 30% .disease 30% .move 30% .debuff 30% .death_blow 67% .trap 20%
+  crit: .effects "on_crit_prot"
+  weapon: .name "shieldbreaker_weapon_0" .atk 0% .dmg 5 10 .crit 6% .spd 5
+  weapon: .name "shieldbreaker_weapon_4" .atk 0% .dmg 8 16 .crit 10% .spd 7 .upgradeRequirementCode 3
+  armour: .name "shieldbreaker_armour_0" .def 8% .prot 0 .hp 20 .spd 0
+  armour: .name "shieldbreaker_armour_4" .def 28% .prot 0 .hp 36 .spd 0 .upgradeRequirementCode 3
+  combat_move_skill: .id "move" .level 0 .type "move" .move 2 2 .launch 4321
+  tag: .id "heavy"
+  tag: .id "non-religious"
+  tag: .id "training_ring"
+  deaths_door: .buffs deathsdoorACCDebuff deathsdoorDMGLowDebuff deathsdoorDMGHighDebuff deathsdoorSPDDebuff deathsdoorSRDebuff .recovery_buffs mortalityACCDebuff mortalityDMGLowDebuff mortalityDMGHighDebuff mortalitySPDDebuff mortalitySRDebuff .recovery_heart_attack_buffs heartattackACCDebuff heartattackDMGLowDebuff heartattackDMGHighDebuff heartattackSPDDebuff heartattackSRDebuff
+ * pierce 찌르기  | L1 type="melee" atk=85% dmg=-10% crit=2% move=0,1 launch=321 target=123 is_crit_valid=True ignore_protection=true generation_guaranteed=true
+     L1 eff: 
+     L5 eff:   | L5 atk=105% dmg=-10% crit=4% heal=
+ * break_guard 구멍내기  | L1 type="ranged" atk=90% dmg=-50% crit=0% move=0,1 launch=4321 target=1234 is_crit_valid=True ignore_guard=true
+     L1 eff: target{chance=100% clearguarded=1} ; target{chance=500% buff_ids=block_guard duration=2} ; target{pull=2 chance=100% can_apply_on_death=true} ; target{chance=100% speed_rating_add=-1}
+     L5 eff: target{chance=100% clearguarded=1} ; target{chance=500% buff_ids=block_guard duration=2} ; target{pull=2 chance=140% can_apply_on_death=true} ; target{chance=140% speed_rating_add=-3}  | L5 atk=110% dmg=-50% crit=0% heal=
+ * adders_kiss 살모사의 입맞춤  | L1 type="melee" atk=90% dmg=0% crit=5% move=1,0 launch=1 target=12 is_crit_valid=True
+     L1 eff: target{chance=100% dotPoison=3 duration=3 can_apply_on_death=true}
+     L5 eff: target{chance=140% dotPoison=5 duration=3 can_apply_on_death=true}  | L5 atk=110% dmg=0% crit=9% heal=
+ * spearing 꿰뚫기  | L1 type="ranged" atk=90% dmg=-60% crit=-6% move=1,0 launch=1 target=~1234 is_crit_valid=True
+     L1 eff: target{chance=100% dotPoison=1 duration=3 can_apply_on_death=true}
+     L5 eff: target{chance=140% dotPoison=3 duration=3 can_apply_on_death=true}  | L5 atk=110% dmg=-60% crit=-2% heal=
+ * expose 노출  | L1 type="melee" atk=90% dmg=-40% crit=2.5% move=1,0 launch=321 target=123 is_crit_valid=True ignore_stealth=true
+     L1 eff: target{chance=100% buff_type=crit_received_chance buff_amount=8%} ; target{chance=100% unstealth=1} ; target{chance=100% speed_rating_add=-4}
+     L5 eff: target{chance=140% buff_type=crit_received_chance buff_amount=10%} ; target{chance=100% unstealth=1} ; target{chance=140% speed_rating_add=-8}  | L5 atk=110% dmg=-40% crit=6.5% heal=
+ * single_out 휘감기  | L1 type="ranged" atk=90% dmg=-25% crit=4% launch=32 target=23 is_crit_valid=True
+     L1 eff: self{chance=100% keyStatus=tagged damage_low_multiply=50% damage_high_multiply=50%} ; target{chance=100% dotPoison=3 duration=3 can_apply_on_death=true}
+     L5 eff: self{chance=100% keyStatus=tagged damage_low_multiply=90% damage_high_multiply=90%} ; target{chance=140% dotPoison=5 duration=3 can_apply_on_death=true}  | L5 atk=110% dmg=-25% crit=8% heal=
+ * serpents_sway 뱀의 형상  | L1 type="ranged" atk=0% dmg=0% crit=0% move=0,1 per_battle_limit=2 launch=432 target= is_crit_valid=True is_stall_invalidating=false
+     L1 eff: self{chance=100% health_damage_blocks=2} ; self{chance=100% speed_rating_add=1}
+     L5 eff: self{chance=100% health_damage_blocks=2} ; self{chance=100% speed_rating_add=4}  | L5 atk=0% dmg=0% crit=0% heal=
+
+######## vestal 성녀  (WS)
+  resistances: .stun 30% .poison 30% .bleed 40% .disease 30% .move 30% .debuff 30% .death_blow 67% .trap 10%
+  crit: .effects "on_crit_healdone"
+  weapon: .name "vestal_weapon_0" .atk 0% .dmg 4 8 .crit 1% .spd 4
+  weapon: .name "vestal_weapon_4" .atk 0% .dmg 7 14 .crit 5% .spd 6 .upgradeRequirementCode 3
+  armour: .name "vestal_armour_0" .def 0% .prot 0 .hp 24 .spd 0
+  armour: .name "vestal_armour_4" .def 20% .prot 0 .hp 44 .spd 0 .upgradeRequirementCode 3
+  combat_move_skill: .id "move" .level 0 .type "move" .move 1 1 .launch 4321
+  tag: .id "religious"
+  tag: .id "heavy"
+  tag: .id "altar_of_light"
+  deaths_door: .buffs deathsdoorACCDebuff deathsdoorDMGLowDebuff deathsdoorDMGHighDebuff deathsdoorSPDDebuff deathsdoorSRDebuff .recovery_buffs mortalityACCDebuff mortalityDMGLowDebuff mortalityDMGHighDebuff mortalitySPDDebuff mortalitySRDebuff .recovery_heart_attack_buffs heartattackACCDebuff heartattackDMGLowDebuff heartattackDMGHighDebuff heartattackSPDDebuff heartattackSRDebuff
+ * mace_bash 철퇴 후려치기  | L1 type="melee" atk=85% dmg=0% crit=5% launch=21 target=12 is_crit_valid=True
+     L1 eff: self{chance=100% monsterType=unholy damage_low_multiply=15% damage_high_multiply=15%} ; self{chance=100% heal=3 source_heal_type=hero_skill}
+     L5 eff: self{chance=100% monsterType=unholy damage_low_multiply=35% damage_high_multiply=35%} ; self{chance=100% heal=5 source_heal_type=hero_skill}  | L5 atk=105% dmg=0% crit=9% heal=
+ * judgement 심판  | L1 type="ranged" atk=90% dmg=0% crit=0% launch=43 target=1234 is_crit_valid=True
+     L1 eff: 
+     L5 eff:   | L5 atk=110% dmg=0% crit=4% heal=
+ * dazzling_light 눈부신 광채  | L1 type="ranged" atk=90% dmg=-75% crit=5% launch=43 target=123 is_crit_valid=True
+     L1 eff: target{chance=100% stun=1} ; global{chance=100% torch_increase=6}
+     L5 eff: target{chance=140% stun=1} ; global{chance=100% torch_increase=6}  | L5 atk=110% dmg=-75% crit=9% heal=
+ * divine_grace 신성한 은총  | L1 heal=5,5 launch=4321 target=@4321 generation_guaranteed=true is_stall_invalidating=false
+     L1 eff: 
+     L5 eff:   | L5 atk=- dmg=- crit=- heal=9,9
+ * gods_comfort 신성한 위무  | L1 heal=2,3 launch=43 target=@~1234 is_stall_invalidating=false
+     L1 eff: 
+     L5 eff:   | L5 atk=- dmg=- crit=- heal=4,5
+ * gods_illumination 광휘  | L1 type="ranged" atk=90% dmg=-75% crit=0% launch=4321 target=1234 is_crit_valid=False ignore_stealth=true
+     L1 eff: target{chance=100% defense_rating_add=-15%} ; target{chance=100% dotBurn=1 dot_irresistible=true can_apply_on_death=true} ; global{chance=100% torch_increase=5} ; target{chance=100% unstealth=1}
+     L5 eff: target{chance=140% defense_rating_add=-25%} ; target{chance=140% dotBurn=3 dot_irresistible=true can_apply_on_death=true} ; global{chance=100% torch_increase=10} ; target{chance=100% unstealth=1}  | L5 atk=110% dmg=-75% crit=0% heal=
+ * gods_hand 빛의 손길  | L1 type="ranged" atk=90% dmg=-50% crit=1% launch=12 target=123 is_crit_valid=True
+     L1 eff: self{chance=100% attack_rating_add=6% damage_low_multiply=25% damage_high_multiply=25%} ; self{chance=100% monsterType=unholy damage_low_multiply=15% damage_high_multiply=15%}
+     L5 eff: self{chance=100% attack_rating_add=10% damage_low_multiply=35% damage_high_multiply=35%} ; self{chance=100% monsterType=unholy damage_low_multiply=35% damage_high_multiply=35%}  | L5 atk=110% dmg=-50% crit=5% heal=
