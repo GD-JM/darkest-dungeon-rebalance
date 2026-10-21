@@ -1,0 +1,15 @@
+effect: .name "RB MUS Pierce Tagged 1" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 15% .damage_high_multiply 15% .on_hit true .on_miss false
+effect: .name "RB MUS Pierce Tagged 2" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 20% .damage_high_multiply 20% .on_hit true .on_miss false
+effect: .name "RB MUS Pierce Tagged 3" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 25% .damage_high_multiply 25% .on_hit true .on_miss false
+effect: .name "RB MUS Pierce Tagged 4" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 30% .damage_high_multiply 30% .on_hit true .on_miss false
+effect: .name "RB MUS Pierce Tagged 5" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 35% .damage_high_multiply 35% .on_hit true .on_miss false
+effect: .name "RB MUS Prey 1" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .buff_ids RB_MUS_PREY_ACC_1 RB_MUS_PREY_CRIT_1 .on_hit true .on_miss true
+effect: .name "RB MUS Prey 2" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .buff_ids RB_MUS_PREY_ACC_2 RB_MUS_PREY_CRIT_2 .on_hit true .on_miss true
+effect: .name "RB MUS Prey 3" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .buff_ids RB_MUS_PREY_ACC_3 RB_MUS_PREY_CRIT_3 .on_hit true .on_miss true
+effect: .name "RB MUS Prey 4" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .buff_ids RB_MUS_PREY_ACC_4 RB_MUS_PREY_CRIT_4 .on_hit true .on_miss true
+effect: .name "RB MUS Prey 5" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .buff_ids RB_MUS_PREY_ACC_5 RB_MUS_PREY_CRIT_5 .on_hit true .on_miss true
+effect: .name "RB MUS Patch Destress 1" .target "target" .curio_result_type "positive" .chance 100% .healstress 2 .on_hit true .on_miss false .queue true
+effect: .name "RB MUS Patch Destress 2" .target "target" .curio_result_type "positive" .chance 100% .healstress 2 .on_hit true .on_miss false .queue true
+effect: .name "RB MUS Patch Destress 3" .target "target" .curio_result_type "positive" .chance 100% .healstress 3 .on_hit true .on_miss false .queue true
+effect: .name "RB MUS Patch Destress 4" .target "target" .curio_result_type "positive" .chance 100% .healstress 3 .on_hit true .on_miss false .queue true
+effect: .name "RB MUS Patch Destress 5" .target "target" .curio_result_type "positive" .chance 100% .healstress 4 .on_hit true .on_miss false .queue true

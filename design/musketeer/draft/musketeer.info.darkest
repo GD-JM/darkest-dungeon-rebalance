@@ -1,0 +1,57 @@
+resistances: .stun 40% .poison 30% .bleed 30% .disease 30% .move 40% .debuff 30% .death_blow 67% .trap 10%
+crit: .effects "on_crit_dmgmarked"
+weapon: .name "musketeer_weapon_0" .atk 0% .dmg 4 8 .crit 6% .spd 2
+weapon: .name "musketeer_weapon_1" .atk 0% .dmg 5 10 .crit 7% .spd 2 .upgradeRequirementCode 0
+weapon: .name "musketeer_weapon_2" .atk 0% .dmg 6 11 .crit 8% .spd 3 .upgradeRequirementCode 1
+weapon: .name "musketeer_weapon_3" .atk 0% .dmg 6 13 .crit 9% .spd 3 .upgradeRequirementCode 2
+weapon: .name "musketeer_weapon_4" .atk 0% .dmg 7 14 .crit 10% .spd 4 .upgradeRequirementCode 3
+armour: .name "musketeer_armour_0" .def 0% .prot 0 .hp 24 .spd 0
+armour: .name "musketeer_armour_1" .def 5% .prot 0 .hp 28 .spd 0 .upgradeRequirementCode 0
+armour: .name "musketeer_armour_2" .def 10% .prot 0 .hp 33 .spd 0 .upgradeRequirementCode 1
+armour: .name "musketeer_armour_3" .def 15% .prot 0 .hp 37 .spd 0 .upgradeRequirementCode 2
+armour: .name "musketeer_armour_4" .def 20% .prot 0 .hp 42 .spd 0 .upgradeRequirementCode 3
+combat_skill: .id "aimed_shot" .level 0 .type "ranged" .atk 85% .dmg -25% .crit 5% .launch 43 .target 1234 .is_crit_valid True .ignore_protection true .effect "RB MUS Pierce Tagged 1" .generation_guaranteed true
+combat_skill: .id "aimed_shot" .level 1 .type "ranged" .atk 90% .dmg -25% .crit 6% .launch 43 .target 1234 .is_crit_valid True .ignore_protection true .effect "RB MUS Pierce Tagged 2"
+combat_skill: .id "aimed_shot" .level 2 .type "ranged" .atk 95% .dmg -25% .crit 7% .launch 43 .target 1234 .is_crit_valid True .ignore_protection true .effect "RB MUS Pierce Tagged 3"
+combat_skill: .id "aimed_shot" .level 3 .type "ranged" .atk 100% .dmg -25% .crit 8% .launch 43 .target 1234 .is_crit_valid True .ignore_protection true .effect "RB MUS Pierce Tagged 4"
+combat_skill: .id "aimed_shot" .level 4 .type "ranged" .atk 105% .dmg -25% .crit 9% .launch 43 .target 1234 .is_crit_valid True .ignore_protection true .effect "RB MUS Pierce Tagged 5"
+combat_skill: .id "smokescreen" .level 0 .type "ranged" .atk 95% .dmg -100% .crit 0% .launch 43 .target ~12 .is_crit_valid False .per_battle_limit 2 .effect "Stun 1" "Suppression 1" "stealth_self"
+combat_skill: .id "smokescreen" .level 1 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 43 .target ~12 .is_crit_valid False .per_battle_limit 2 .effect "Stun 2" "Suppression 2" "stealth_self"
+combat_skill: .id "smokescreen" .level 2 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 43 .target ~12 .is_crit_valid False .per_battle_limit 2 .effect "Stun 3" "Suppression 3" "stealth_self"
+combat_skill: .id "smokescreen" .level 3 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 43 .target ~12 .is_crit_valid False .per_battle_limit 2 .effect "Stun 4" "Suppression 4" "stealth_self"
+combat_skill: .id "smokescreen" .level 4 .type "ranged" .atk 115% .dmg -100% .crit 0% .launch 43 .target ~12 .is_crit_valid False .per_battle_limit 2 .effect "Stun 5" "Suppression 5" "stealth_self"
+combat_skill: .id "call_the_shot" .level 0 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 43 .target 1234 .is_crit_valid False .effect "Arb Mark Target" "RB MUS Prey 1" .is_stall_invalidating false
+combat_skill: .id "call_the_shot" .level 1 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 43 .target 1234 .is_crit_valid False .effect "Arb Mark Target" "RB MUS Prey 2" .is_stall_invalidating false
+combat_skill: .id "call_the_shot" .level 2 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 43 .target 1234 .is_crit_valid False .effect "Arb Mark Target" "RB MUS Prey 3" .is_stall_invalidating false
+combat_skill: .id "call_the_shot" .level 3 .type "ranged" .atk 115% .dmg -100% .crit 0% .launch 43 .target 1234 .is_crit_valid False .effect "Arb Mark Target" "RB MUS Prey 4" .is_stall_invalidating false
+combat_skill: .id "call_the_shot" .level 4 .type "ranged" .atk 120% .dmg -100% .crit 0% .launch 43 .target 1234 .is_crit_valid False .effect "Arb Mark Target" "RB MUS Prey 5" .is_stall_invalidating false
+combat_skill: .id "buckshot" .level 0 .type "ranged" .atk 95% .dmg -50% .crit 2% .launch 43 .target 4 .is_crit_valid True .effect "Push 1A"
+combat_skill: .id "buckshot" .level 1 .type "ranged" .atk 100% .dmg -50% .crit 3% .launch 43 .target 4 .is_crit_valid True .effect "Push 1B"
+combat_skill: .id "buckshot" .level 2 .type "ranged" .atk 105% .dmg -50% .crit 4% .launch 43 .target 4 .is_crit_valid True .effect "Push 1C"
+combat_skill: .id "buckshot" .level 3 .type "ranged" .atk 110% .dmg -50% .crit 5% .launch 43 .target 4 .is_crit_valid True .effect "Push 1D"
+combat_skill: .id "buckshot" .level 4 .type "ranged" .atk 115% .dmg -50% .crit 6% .launch 43 .target 4 .is_crit_valid True .effect "Push 1E"
+combat_skill: .id "sidearm" .level 0 .type "ranged" .atk 90% .dmg -40% .crit 3% .move 1 0 .launch 321 .target 123 .is_crit_valid True
+combat_skill: .id "sidearm" .level 1 .type "ranged" .atk 95% .dmg -40% .crit 4% .move 1 0 .launch 321 .target 123 .is_crit_valid True
+combat_skill: .id "sidearm" .level 2 .type "ranged" .atk 100% .dmg -40% .crit 5% .move 1 0 .launch 321 .target 123 .is_crit_valid True
+combat_skill: .id "sidearm" .level 3 .type "ranged" .atk 105% .dmg -40% .crit 6% .move 1 0 .launch 321 .target 123 .is_crit_valid True
+combat_skill: .id "sidearm" .level 4 .type "ranged" .atk 110% .dmg -40% .crit 7% .move 1 0 .launch 321 .target 123 .is_crit_valid True
+combat_skill: .id "patch_up" .level 0 .heal 2 3 .launch 43 .target @1234 .effect "RB MUS Patch Destress 1" .is_stall_invalidating false
+combat_skill: .id "patch_up" .level 1 .heal 3 3 .launch 43 .target @1234 .effect "RB MUS Patch Destress 2" .is_stall_invalidating false
+combat_skill: .id "patch_up" .level 2 .heal 3 4 .launch 43 .target @1234 .effect "RB MUS Patch Destress 3" .is_stall_invalidating false
+combat_skill: .id "patch_up" .level 3 .heal 4 4 .launch 43 .target @1234 .effect "RB MUS Patch Destress 4" .is_stall_invalidating false
+combat_skill: .id "patch_up" .level 4 .heal 4 5 .launch 43 .target @1234 .effect "RB MUS Patch Destress 5" .is_stall_invalidating false
+combat_skill: .id "skeet_shot" .level 0 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target @1234 .self_target_valid false .is_crit_valid False .effect "Stealth2" .is_stall_invalidating false
+combat_skill: .id "skeet_shot" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target @1234 .self_target_valid false .is_crit_valid False .effect "Stealth2" .is_stall_invalidating false
+combat_skill: .id "skeet_shot" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target @1234 .self_target_valid false .is_crit_valid False .effect "Stealth2" .is_stall_invalidating false
+combat_skill: .id "skeet_shot" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target @1234 .self_target_valid false .is_crit_valid False .effect "Stealth2" .is_stall_invalidating false
+combat_skill: .id "skeet_shot" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target @1234 .self_target_valid false .is_crit_valid False .effect "Stealth2" .is_stall_invalidating false
+combat_move_skill: .id "move" .level 0 .type "move" .move 2 0 .launch 4321
+tag: .id "heavy"
+tag: .id "non-religious"
+tag: .id "training_ring"
+deaths_door: .buffs deathsdoorACCDebuff deathsdoorDMGLowDebuff deathsdoorDMGHighDebuff deathsdoorSPDDebuff deathsdoorSRDebuff .recovery_buffs mortalityACCDebuff mortalityDMGLowDebuff mortalityDMGHighDebuff mortalitySPDDebuff mortalitySRDebuff .recovery_heart_attack_buffs heartattackACCDebuff heartattackDMGLowDebuff heartattackDMGHighDebuff heartattackSPDDebuff heartattackSRDebuff
+controlled: .target_rank 4
+id_index: .index 15
+skill_selection: .can_select_combat_skills true .number_of_selected_combat_skills_max 4
+progression: .has_caretaker_goals false
+generation:  .is_generation_enabled false .number_of_positive_quirks_min 1 .number_of_positive_quirks_max 2 .number_of_negative_quirks_min 1 .number_of_negative_quirks_max 2 .number_of_class_specific_camping_skills 2 .number_of_shared_camping_skills 1 .number_of_random_combat_skills 4 .number_of_cards_in_deck 3 .card_chance 1.0 .reduce_number_of_cards_in_deck_hero_class_id arbalest .reduce_number_of_cards_in_deck_amount 3

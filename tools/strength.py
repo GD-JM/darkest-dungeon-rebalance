@@ -34,6 +34,7 @@ PARAM = dict(
     SUPPORT_MULT=1.0,     # 회복·보호·스트레스 회복. 프리미엄 없음(R-STRAT-01 3) -> 민감도로만
     PUSH=1.0,             # 밀치기·섞기: 실측 가격표의 1/3 (stun.md 10-6)
     PULL=3.0,             # 당기기: 후열 스트레스 발생원을 끌어냄 [사용자]
+    STEALTH=1.0,          # 영웅 은신 = 보호(guard)와 같은 값 [가정 10-21]: 광역은 맞지만 보호도 대신 맞는 사람이 있으므로 같게 둔다
     PUSH_WRAP=True,       # V-18 [제작자 확인 10-21]: 밀치기가 맨 뒤를 넘으면 맨 앞으로 돈다 (4열 밀치기 1 -> 4열이 1열, 1·2·3열은 한 칸씩 뒤로)
     MARK_PARTY=2.0,       # 표식 파티 활용분 (hero_power.md 4-2)
     CORPSE=0.5,           # 시체 제거. 시뮬레이션: 메인 전략(3·4열 먼저)이면 1·2열로 끌어오는 적 0명, 무작위 처치면 0.32명 x 당기기 3.0 = 1.0 -> 중간값 0.5 (arbalest.md 참고 아님, man_at_arms.md MAA 검토)
@@ -134,10 +135,11 @@ def load_monsters():
             continue
         prot = d.get('prot', 0)
         typ = re.search(r'enemy_type:\s*\.id\s*"?(\w+)', t)
+        sz = re.search(r'^display:.*?\.size\s+(\d+)', t, re.M)
         mons.append(dict(name=os.path.basename(f).split('.')[0], dodge=d['def'], prot=prot if prot <= 1 else prot / 100, spd=d.get('spd', 0),
                          stun=d.get('stun_resist', 0), poison=d.get('poison_resist', 0), bleed=d.get('bleed_resist', 0),
                          debuff=d.get('debuff_resist', 0), move=d.get('move_resist', 0),
-                         type=typ.group(1) if typ else '?'))
+                         type=typ.group(1) if typ else '?', size=int(sz.group(1)) if sz else 1))
     return mons
 
 
@@ -147,6 +149,11 @@ N_MON = len(MONS)
 
 def type_share(t):
     return sum(1 for m in MONS if m['type'] == t) / N_MON
+
+
+def size_share(n):
+    """버프 규칙 monsterSize n: 크기 n 이상 몬스터 비율 (현상금 사냥꾼 계획된 습격 '대형 몬스터'와 같은 규칙)"""
+    return sum(1 for m in MONS if m['size'] >= n) / N_MON
 
 
 def hit(m, acc):
@@ -689,6 +696,8 @@ class Ctx:
             if not B:
                 continue
             cm = 1.0 if B.get('rule_type') in (None, 'always') else s.P['COND_OTHER']
+            if B.get('rule_type') == 'monsterSize':           # 대형 대상 조건 = 그 크기 이상 몬스터 비율
+                cm = size_share((B.get('rule_data') or {}).get('float', 2))
             if B.get('stat_type') == 'stress_dmg_received_percent':
                 v += cm * s.stress_resist_value(B['amount'], dur)
             elif B.get('stat_type') == 'hp_heal_received_percent':
@@ -928,6 +937,8 @@ def skill_value(C, l, d):
                 add('회복', x * base_hp * ch * (1 if who == 'performer' else heal_n) * sm)
             if 'guard' in k:
                 add('보호', P['ENEMY_ACT'] * P['HITS_TAKEN'] * min(dur, P['BUFF_DUR_CAP']) * ch * sm)
+            if 'stealth' in k:                               # 은신: 단일 공격 대상에서 빠진다. 보호와 같은 값으로 센다 (P STEALTH)
+                add('보호', P['STEALTH'] * P['ENEMY_ACT'] * P['HITS_TAKEN'] * min(dur, P['BUFF_DUR_CAP']) * ch * sm)
             if 'health_damage_blocks' in k:
                 add('보호', P['ENEMY_ACT'] * num(first(k, 'health_damage_blocks')) * ch * sm)
             if 'riposte' in k:
