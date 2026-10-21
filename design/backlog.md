@@ -8,3 +8,8 @@
 - 근거: 이리 오너라(당기기 3)·어퍼컷(밀치기 2)·섬광탄(섞기)이 잘 들어감. 영웅 등급 몬스터 이동 저항 중앙값 65. 적 이동 저항 감소는 아무도 안 하는 빈 역할.
 - 변형: B 기절 저항 감소(신비학자와 겹침), C 이동+기절 저항 동시(바닐라 해골 방어병 Axeblade 선례, 가장 강함), D 받는 치명 증가(3명과 겹침).
 - 상태: 보류. 지금은 창작마당판(방어 −20~−30%) 유지.
+
+## BL-02 영웅별 단독판(standalone) — 3.0 예정 (2026-10-21 공지)
+- 요청: 댓글 RJ "class standalone plz", Rio "다른 영웅은 바닐라로 두고 일부만". 창작마당 댓글·토론("Standalone hero versions (planned for 3.0)")에 "다음 주나 다다음 주쯤 3.0" 공지 [제작자].
+- 주의: 전체가 한 세트로 맞춰져 있어(상향·대가가 영웅 사이에 짝지어짐) 단독으로 쓰면 강약이 달라질 수 있다 — 토론글에 명시함. 공유 효과(RB 효과를 다른 영웅이 빌려 쓰는 경우: 성녀 광휘 = 유물수집상 RB ANT Flash Burn)는 단독판마다 같이 넣어야 한다.
+- 토론 주제 3개 개설(10-21): Bug reports & compatibility / Balance feedback (hero by hero, Musketeer included) / Standalone hero versions (planned for 3.0).
