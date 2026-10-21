@@ -321,14 +321,27 @@
  },
  "flagellant|endure": {
   "ids": [
-   "FLA-008"
+   "FLA-008",
+   "FLA-009",
+   "FLA-011"
   ],
   "principles": [
    "G-05",
    "P-06"
   ],
-  "en": "At level 1, Endure relieved 10 stress but cost him 10, a net of zero. Self stress now scales so the net relief is a steady 6 at every level: useful from the start, while level 5 stays below vanilla out of respect for the official 2018 nerf.",
-  "ko": "1레벨 인내는 스트레스 10을 회복하고 자신이 10을 받아 순회복이 0이었습니다. 자기 스트레스를 레벨마다 올려 순회복을 매 레벨 6으로 맞췄습니다. 저레벨부터 쓸 만하되, 2018년 공식 하향을 존중해 5레벨은 바닐라보다 낮습니다."
+  "en": "Endure is now a pure stress heal: the self speed buff is gone and the heal is higher instead. After his own stress cost it relieves a steady 8 stress at every level, so it is useful from level 1.",
+  "ko": "인내는 이제 순수 스트레스 회복 기술입니다. 자기 속도 버프를 빼는 대신 회복량을 올려, 자기 스트레스를 빼고도 모든 레벨에서 8씩 회복합니다. 1레벨부터 쓸 만합니다."
+ },
+ "flagellant|reclaim": {
+  "ids": [
+   "FLA-010"
+  ],
+  "principles": [
+   "P-19",
+   "G-05"
+  ],
+  "en": "Reclaim's self-bleed is how the Flagellant drops himself to 40% HP for Redeem and Exsanguinate, so it now bleeds harder over 2 turns instead of 3 and gets him there a turn sooner. The heal lasts 3 turns at every level with the base game's amounts. Bleed-resist trinkets still let you run it as a pure healer.",
+  "ko": "재기의 자해 출혈은 고행자가 스스로 체력 40%를 만들어 구제·방혈을 여는 장치라, 3턴 대신 2턴에 세게 들어가 한 턴 빨리 40%에 닿게 했습니다. 회복은 모든 레벨 3턴 지속에 원작 회복량을 씁니다. 출혈 저항 장신구를 끼면 여전히 순수 회복기로 쓸 수 있습니다."
  },
  "flagellant|resistances": {
   "ids": [
@@ -787,17 +800,6 @@
   ],
   "en": "Mark plus dodge down duplicated the Arbalest's Sniper's Mark. True to its name, the hex now lowers resistances, the only hero skill that weakens stun and debuff resist, setting up the party's stuns, blights and bleeds; like the other pure mark skills it no longer deals damage, and its values now grow every level.",
   "ko": "표식+회피 감소는 석궁사수 저격 표식과 겹쳤다. 이름대로 저항을 낮추게 바꿨고, 기절·약화 저항을 깎는 유일한 영웅 기술이라 아군 기절·중독·출혈을 받쳐 준다. 다른 순수 표식 기술처럼 피해를 없앴고, 수치는 매 레벨 성장하게 했다."
- },
- "occultist|hands_from_abyss": {
-  "ids": [
-   "OCC-008"
-  ],
-  "principles": [
-   "R-STUN-02",
-   "R-STUN-03"
-  ],
-  "en": "Stuns that can reach rank 3 are kept low on damage. In exchange its accuracy goes up, so the stun itself lands more reliably.",
-  "ko": "3열까지 닿는 기절은 피해를 낮게 둔다. 대신 명중을 올려 기절 자체는 더 확실히 들어가게 했다."
  },
  "occultist|weakening_curse": {
   "ids": [

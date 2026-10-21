@@ -73,6 +73,7 @@ class Ctx:
             if key in k: add('%s %s×%s%s' % (L[nm], S.first(k, key), dur or '3', L['t'] if lang == 'ko' else 't'))
         if 'dotBurn' in k: add('%s %s' % (L['burn'], S.first(k, 'dotBurn')))
         if 'heal' in k: add('%s %s' % (L['heal'], S.first(k, 'heal')))
+        if 'dotHpHeal' in k: add('%s %s×%s%s' % (L['heal'], S.first(k, 'dotHpHeal'), dur or '3', L['t'] if lang == 'ko' else 't'))
         if 'healstress' in k: add('%s %s' % (L['healstress'], S.first(k, 'healstress')))
         if 'stress' in k: add('%s +%s' % (L['stress'], S.first(k, 'stress')))
         if 'push' in k: add('%s %s' % (L['push'], S.first(k, 'push')))
@@ -143,7 +144,7 @@ class Ctx:
             s += ' (%s)' % ch
         if S.first(k, 'buff_duration_type', '') == 'combat_end':
             s += ' ' + L['combat_end']
-        elif dur and not ('dotBleed' in k or 'dotPoison' in k):
+        elif dur and not ('dotBleed' in k or 'dotPoison' in k or 'dotHpHeal' in k):
             s += ' %s%s' % (dur, L['t'] if lang == 'ko' else 't')
         return s
 
