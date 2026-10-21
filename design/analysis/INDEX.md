@@ -38,7 +38,6 @@
 | [wiki_notes.md](wiki_notes.md) | 위키에서 얻은 엔진 규칙 | 위키 | 2026-10-10 |
 | [leper-full-review.txt](leper-full-review.txt) | 나병환자 전수 조사 | 나병환자 | 2026-10-05 |
 | [jester-full-review.txt](jester-full-review.txt), [jester-position-buff-options.txt](jester-position-buff-options.txt) | 광대 전수 조사, 위치 버프 선택지 | 광대 | 2026-10-05 |
-| [musketeer-full-review.txt](musketeer-full-review.txt) | 총사 전수 검토 | 총사 | 2026-10-05 |
 | [comment-trace-cleanup.md](comment-trace-cleanup.md) | 주석·의도 전수 보완 기록 | 주석 | 2026-10-05 |
 | [musketeer_identity.md](musketeer_identity.md), [musketeer_identity_dump.txt](musketeer_identity_dump.txt) | 총사 정체성: 창작마당판 빈 역할 전수 조사 | 총사, 정체성 | 2026-10-21 |
 | [mark_survey.md](mark_survey.md) | 표식 전수 조사(영웅·직업 치명타·장신구·몬스터, 바닐라 대비) | 표식 | 2026-10-21 |

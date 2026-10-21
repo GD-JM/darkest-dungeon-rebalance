@@ -140,11 +140,9 @@ File → Add local repository → `C:\Program Files (x86)\Steam\steamapps\common
 주석 정리는 수치 수정 승인이 아니다. 편집 사본과 설치 데이터가 다르면 각각 기록하고 전역 효과 적용을 자동 실행하지 않는다. 검사 `python tools/check_comments.py`는 효과 행별 주석·ID·설명·문서 연결과 게임용 파생 효과까지 확인하고, 위반 시 종료 코드1을 반환한다. 기존 자연어 메모만 있는 작업 중 파일은 의도 ID 주석을 덧붙여 보존한다.
 
 
-## 총사 편집 (MUS-001)
+## 총사 (MUS-101~111, 2026-10-21)
 
-총사는 설치된 YAMR을 전체 편입했다. heroes/musketeer의 info/vanilla/effects_edit 파일을 다른 영웅처럼 사용한다. 바닐라 시트는 실제 바닐라이며, 고정 YAMR 비교 원본은 design/imports/musketeer에 있다. 효과 정리는 외부 개조 효과도 원본으로 인식한다. 반격/재충전/장신구 추가 효과의 참조도 함께 갱신하고 되돌릴 수 있다. 적용은 tools/apply_effect_edits.py musketeer, 주석 확인은 tools/check_comments.py musketeer. 기존 편집 사본은 --force로 덮어쓰지 않는다.
-
-독립 통합본을 쓸 때 기존 YAMR·다른 총사 리워크·Trinket Separator·Trinkets Plus를 끄고 Rebalance를 우선 적용한다. 총사 DLC 등 게임 제공 자원은 계속 사용한다. JSON/이미지/번역 바이너리의 // 의도 기록은 design/imports/musketeer/intents.txt에 있으며 JSON 안에 불법 주석을 넣지 않는다. 새 밸런스 후보는 이 편입에 포함되지 않았다.
+총사는 자체 리워크다(설계: analysis/musketeer_identity.md, 변경: changes/musketeer.md). 데이터는 다른 영웅과 같이 heroes/musketeer, 효과 effects/rebalance_musketeer.effects.darkest, 강화 shared/buffs/rebalance_musketeer.buffs.json, 기술 이름 localization/rebalance_musketeer.string_table.xml(→ tools/make_loc.py). 2026-10-05~10-21에 다른 제작자의 총사 모드(YAMR)를 편입해 썼던 파일은 저작권 문제로 저장소 기록 전체에서 제거했다(2026-10-21).
 
 ### 재적용 안전장치 (SYS-101, 2026-10-06)
 효과 정리 도구는 요청한 모든 영웅의 이름/신규 참조 검증을 먼저 끝낸 뒤 파일을 쓴다. 잘못된 효과 이름이나 누락된 신규 효과가 있으면 종료 코드1로 끝나며 해당 요청의 게임 파일·파일 목록은 변경하지 않는다. 경고는 별도로 표시한다. `--dry-run`은 정상/오류 여부를 확인하고 아무 파일도 쓰지 않는다. 파일 쓰기 도중 운영체제 오류에 대한 트랜잭션까지 보장하는 것은 아니다.
