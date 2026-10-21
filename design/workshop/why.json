@@ -340,8 +340,8 @@
    "P-19",
    "G-05"
   ],
-  "en": "Reclaim's self-bleed is how the Flagellant drops himself to 40% HP for Redeem and Exsanguinate, so it now bleeds harder over 2 turns instead of 3 and gets him there a turn sooner. The heal lasts 3 turns at every level with the base game's amounts. Bleed-resist trinkets still let you run it as a pure healer.",
-  "ko": "재기의 자해 출혈은 고행자가 스스로 체력 40%를 만들어 구제·방혈을 여는 장치라, 3턴 대신 2턴에 세게 들어가 한 턴 빨리 40%에 닿게 했습니다. 회복은 모든 레벨 3턴 지속에 원작 회복량을 씁니다. 출혈 저항 장신구를 끼면 여전히 순수 회복기로 쓸 수 있습니다."
+  "en": "Reclaim's self-bleed is how the Flagellant drops himself to 40% HP for Redeem and Exsanguinate, so it now bleeds over 2 turns instead of 3 and gets him there sooner, growing every level (3-7). The heal lasts 3 turns at every level with the base game's amounts. Bleed-resist trinkets still let you run it as a pure healer.",
+  "ko": "재기의 자해 출혈은 고행자가 스스로 체력 40%를 만들어 구제·방혈을 여는 장치라, 3턴 대신 2턴에 몰아 더 빨리 40%에 닿게 했고 레벨마다 1씩(3~7) 오릅니다. 회복은 모든 레벨 3턴 지속에 원작 회복량을 씁니다. 출혈 저항 장신구를 끼면 여전히 순수 회복기로 쓸 수 있습니다."
  },
  "flagellant|resistances": {
   "ids": [
@@ -354,6 +354,17 @@
   ],
   "en": "His stun and move resists sat above the baseline without justification: the lore's toughness from self-inflicted wounds is offset by fighting nearly unarmored, so both return to the baseline 40. Bleed 65 was the only signature resist above the game's usual cap (baseline +30), so it now matches that cap.",
   "ko": "기절·이동 저항이 근거 없이 기준보다 높았습니다. 스스로 상처 내며 단단해진다는 설정과 거의 맨몸인 외형이 상쇄되므로 기준값 40으로 맞췄습니다. 출혈 65는 대표 저항의 일반 상한(기준 +30)을 넘는 유일한 사례라 상한에 맞췄습니다."
+ },
+ "flagellant|suffer": {
+  "ids": [
+   "FLA-012"
+  ],
+  "principles": [
+   "P-19",
+   "G-05"
+  ],
+  "en": "Suffer means taking an ally's pain onto himself. It already took their bleed and blight; now it also clears their other debuffs, which makes the Flagellant an ally cleanser from any rank.",
+  "ko": "고통은 아군의 고통을 대신 짊어지는 기술입니다. 원래 출혈·중독을 가져왔는데, 이제 나머지 약화도 걷어내서 어느 열에서든 아군을 정화합니다."
  },
  "flagellant|weapon": {
   "ids": [

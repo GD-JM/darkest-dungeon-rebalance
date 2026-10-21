@@ -112,32 +112,32 @@ effect: .name "Flag HealSelf 5" .target "performer" .curio_result_type "positive
 effect: .name "Flag Healdot 1" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 2 .duration 3	.on_hit true .on_miss true
 // FLA-010 reclaim HOT 2 x 3 turns (FLA-005 3/3/4/4/5 x3 rolled back: Lv1 9 HP was the biggest single-ally heal; self-bleed is a benefit for Flagellant, not a cost). Heal 2/2/3/3/4 x3 = 6/6/9/9/12, Lv5 = vanilla.
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
-effect: .name "Flag Self Wound 1" .target "performer" .chance 120%  .dotBleed 5 .duration 2	.on_hit true .on_miss true .can_apply_on_death true
-// FLA-010 reclaim self-bleed 5 x 2 turns (was 3/3/4/4/5 x3): similar total, reaches 40% HP one turn sooner for Redeem/Exsanguinate. Chance unchanged so bleed-resist trinkets still turn Reclaim into a pure healer.
+effect: .name "Flag Self Wound 1" .target "performer" .chance 120%  .dotBleed 3 .duration 2	.on_hit true .on_miss true .can_apply_on_death true
+// FLA-010 reclaim self-bleed 3 x 2 turns (was 3/3/4/4/5 x3). Intent: self-bleed exists so the Flagellant can drop himself to 40% HP for Redeem/Exsanguinate; 2 turns gets there faster, and the bleed grows every level (3/4/5/6/7) so each upgrade changes something. Chance unchanged: bleed-resist trinkets still make Reclaim a pure healer.
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
 effect: .name "Flag Healdot 2" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 2 .duration 3	.on_hit true .on_miss true
 // FLA-010 reclaim HOT 2 x 3 turns (FLA-005 3/3/4/4/5 x3 rolled back: Lv1 9 HP was the biggest single-ally heal; self-bleed is a benefit for Flagellant, not a cost). Heal 2/2/3/3/4 x3 = 6/6/9/9/12, Lv5 = vanilla.
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
-effect: .name "Flag Self Wound 2" .target "performer" .chance 130%  .dotBleed 5 .duration 2	.on_hit true .on_miss true .can_apply_on_death true
-// FLA-010 reclaim self-bleed 5 x 2 turns (was 3/3/4/4/5 x3): similar total, reaches 40% HP one turn sooner for Redeem/Exsanguinate. Chance unchanged so bleed-resist trinkets still turn Reclaim into a pure healer.
+effect: .name "Flag Self Wound 2" .target "performer" .chance 130%  .dotBleed 4 .duration 2	.on_hit true .on_miss true .can_apply_on_death true
+// FLA-010 reclaim self-bleed 4 x 2 turns (was 3/3/4/4/5 x3). Intent: self-bleed exists so the Flagellant can drop himself to 40% HP for Redeem/Exsanguinate; 2 turns gets there faster, and the bleed grows every level (3/4/5/6/7) so each upgrade changes something. Chance unchanged: bleed-resist trinkets still make Reclaim a pure healer.
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
 effect: .name "Flag Healdot 3" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 3 .duration 3	.on_hit true .on_miss true
 // FLA-010 reclaim HOT 3 x 3 turns (FLA-005 3/3/4/4/5 x3 rolled back: Lv1 9 HP was the biggest single-ally heal; self-bleed is a benefit for Flagellant, not a cost). Heal 2/2/3/3/4 x3 = 6/6/9/9/12, Lv5 = vanilla.
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
-effect: .name "Flag Self Wound 3" .target "performer" .chance 140%  .dotBleed 6 .duration 2	.on_hit true .on_miss true .can_apply_on_death true
-// FLA-010 reclaim self-bleed 6 x 2 turns (was 3/3/4/4/5 x3): similar total, reaches 40% HP one turn sooner for Redeem/Exsanguinate. Chance unchanged so bleed-resist trinkets still turn Reclaim into a pure healer.
+effect: .name "Flag Self Wound 3" .target "performer" .chance 140%  .dotBleed 5 .duration 2	.on_hit true .on_miss true .can_apply_on_death true
+// FLA-010 reclaim self-bleed 5 x 2 turns (was 3/3/4/4/5 x3). Intent: self-bleed exists so the Flagellant can drop himself to 40% HP for Redeem/Exsanguinate; 2 turns gets there faster, and the bleed grows every level (3/4/5/6/7) so each upgrade changes something. Chance unchanged: bleed-resist trinkets still make Reclaim a pure healer.
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
 effect: .name "Flag Healdot 4" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 3 .duration 3	.on_hit true .on_miss true
 // FLA-010 reclaim HOT 3 x 3 turns (FLA-005 3/3/4/4/5 x3 rolled back: Lv1 9 HP was the biggest single-ally heal; self-bleed is a benefit for Flagellant, not a cost). Heal 2/2/3/3/4 x3 = 6/6/9/9/12, Lv5 = vanilla.
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
 effect: .name "Flag Self Wound 4" .target "performer" .chance 150%  .dotBleed 6 .duration 2	.on_hit true .on_miss true .can_apply_on_death true
-// FLA-010 reclaim self-bleed 6 x 2 turns (was 3/3/4/4/5 x3): similar total, reaches 40% HP one turn sooner for Redeem/Exsanguinate. Chance unchanged so bleed-resist trinkets still turn Reclaim into a pure healer.
+// FLA-010 reclaim self-bleed 6 x 2 turns (was 3/3/4/4/5 x3). Intent: self-bleed exists so the Flagellant can drop himself to 40% HP for Redeem/Exsanguinate; 2 turns gets there faster, and the bleed grows every level (3/4/5/6/7) so each upgrade changes something. Chance unchanged: bleed-resist trinkets still make Reclaim a pure healer.
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
 effect: .name "Flag Healdot 5" .target "target" .curio_result_type "positive" .chance 100% .dotHpHeal 4 .duration 3	.on_hit true .on_miss true
 // FLA-010 reclaim HOT 4 x 3 turns (FLA-005 3/3/4/4/5 x3 rolled back: Lv1 9 HP was the biggest single-ally heal; self-bleed is a benefit for Flagellant, not a cost). Heal 2/2/3/3/4 x3 = 6/6/9/9/12, Lv5 = vanilla.
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
 effect: .name "Flag Self Wound 5" .target "performer" .chance 160%  .dotBleed 7 .duration 2	.on_hit true .on_miss true .can_apply_on_death true
-// FLA-010 reclaim self-bleed 7 x 2 turns (was 3/3/4/4/5 x3): similar total, reaches 40% HP one turn sooner for Redeem/Exsanguinate. Chance unchanged so bleed-resist trinkets still turn Reclaim into a pure healer.
+// FLA-010 reclaim self-bleed 7 x 2 turns (was 3/3/4/4/5 x3). Intent: self-bleed exists so the Flagellant can drop himself to 40% HP for Redeem/Exsanguinate; 2 turns gets there faster, and the bleed grows every level (3/4/5/6/7) so each upgrade changes something. Chance unchanged: bleed-resist trinkets still make Reclaim a pure healer.
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
 
 

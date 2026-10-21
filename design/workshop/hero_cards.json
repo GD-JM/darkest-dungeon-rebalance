@@ -436,7 +436,20 @@
     ],
     "new": [
      "Ally heal 2-4 per turn, 3 turns",
-     "Self: bleed 5-7 for 2 turns"
+     "Self: bleed 3-7 for 2 turns"
+    ]
+   },
+   {
+    "key": "flagellant|suffer",
+    "name": "Suffer",
+    "icon": "seven",
+    "old": [
+     "Takes ally bleed and blight",
+     "No debuff cleanse"
+    ],
+    "new": [
+     "Takes ally bleed and blight",
+     "Clears ally debuffs"
     ]
    }
   ]
