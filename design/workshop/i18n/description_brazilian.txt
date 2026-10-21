@@ -62,6 +62,7 @@ As imagens acima mostram cada habilidade alterada, antes e depois (começando pe
 [b]Vestal[/b] — dá conta da posição 2: Golpe de Maça cura ela mesma, e Graça Divina e Iluminação funcionam de qualquer posição.
 
 [h2]Compatibilidade[/h2]
+[b]Requer os DLCs dos heróis alterados:[/b] The Crimson Court, The Shieldbreaker, Duelist e Runaway. Sem eles, o jogo pode não abrir.
 Substitui só os arquivos dos heróis acima (mais um arquivo de efeitos e um de buffs); é incompatível com mods que substituem os mesmos heróis. Pode ser usado sem problemas em saves já em andamento.
 
 Feedback é sempre bem-vindo: toda mudança tem um motivo registrado, e explico ou ajusto com prazer.

@@ -62,6 +62,7 @@ Die Bilder oben zeigen jede geänderte Fähigkeit, vorher und nachher (der Kopfg
 [b]Vestalin[/b] — taugt auch auf Rang 2: Kolbenhieb heilt sie selbst, Göttliche Gnade und Erleuchtung funktionieren von jedem Rang aus.
 
 [h2]Kompatibilität[/h2]
+[b]Benötigt die DLC-Helden, die geändert werden:[/b] The Crimson Court, The Shieldbreaker, Duelist und Runaway. Ohne sie startet das Spiel eventuell nicht.
 Ersetzt nur die Dateien der oben genannten Helden (plus je eine Effekt- und Buff-Datei); inkompatibel mit Mods, die dieselben Helden ersetzen. Kann bedenkenlos in laufende Spielstände eingebaut werden.
 
 Feedback ist ausdrücklich willkommen – jede Änderung hat eine schriftliche Begründung, und ich erkläre sie gern oder passe etwas an.

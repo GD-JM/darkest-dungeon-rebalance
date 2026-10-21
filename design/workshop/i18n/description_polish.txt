@@ -62,6 +62,7 @@ Grafiki powyżej pokazują każdą zmienioną umiejętność przed i po (na pocz
 [b]Kapłanka[/b] — sprawdza się też na pozycji 2: Cios Maczugą leczy ją samą, a Boża Łaska i Oświecenie działają z każdej pozycji.
 
 [h2]Kompatybilność[/h2]
+[b]Wymaga DLC ze zmienianymi bohaterami:[/b] The Crimson Court, The Shieldbreaker, Duelist i Runaway. Bez nich gra może się nie uruchomić.
 Podmienia tylko pliki wymienionych bohaterów (plus jeden plik efektów i jeden plik buffów); gryzie się z modami, które podmieniają tych samych bohaterów. Można bezpiecznie wrzucić na istniejący zapis.
 
 Opinie mile widziane — każda zmiana ma spisane uzasadnienie, chętnie wyjaśnię albo coś poprawię.

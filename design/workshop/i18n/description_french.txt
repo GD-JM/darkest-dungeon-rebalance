@@ -62,6 +62,7 @@ Les images ci-dessus montrent chaque compétence modifiée, avant et après (le 
 [b]Vestale[/b] — peut jouer depuis le rang 2 : Coupe de masse la soigne elle-même, Grâce divine et Illumination fonctionnent depuis n'importe quel rang.
 
 [h2]Compatibilité[/h2]
-Remplace uniquement les fichiers des héros ci-dessus (plus un fichier d'effets et un fichier de buffs) ; incompatible avec les mods qui remplacent les mêmes héros. Peut être ajouté sans risque à une sauvegarde en cours.
+[b]DLC requis :[/b] The Crimson Court, The Shieldbreaker, Duelist, Runaway (sinon le jeu peut ne pas se lancer).
+Remplace uniquement les fichiers des héros ci-dessus (plus un fichier d'effets et un fichier de buffs) ; incompatible avec les mods qui remplacent les mêmes héros. Compatible avec les sauvegardes en cours.
 
-Les retours sont les bienvenus — chaque changement a une justification écrite, et je me ferai un plaisir de l'expliquer ou de l'ajuster.
+Vos retours sont les bienvenus : chaque changement a une justification écrite.

@@ -62,6 +62,7 @@ The images above show every changed skill, before and after (Bounty Hunter first
 [b]Vestal[/b] — can work from rank 2: Mace Bash heals herself, Divine Grace and Illumination work from any rank.
 
 [h2]Compatibility[/h2]
+[b]Requires the DLC heroes it changes:[/b] The Crimson Court (Flagellant), The Shieldbreaker, Duelist and Runaway. Without them the game may fail to load.
 Replaces only the hero files above (plus one effect and one buff file); conflicts with mods that replace the same heroes. Safe on existing saves.
 
 Feedback is welcome — every change has a written reason, and I'm happy to explain or adjust.

@@ -62,6 +62,7 @@ Las imágenes de arriba muestran todas las habilidades modificadas, antes y desp
 [b]Vestal[/b] — puede rendir desde la posición 2: Mazazo la cura a ella misma, y Gracia divina e Iluminación funcionan desde cualquier posición.
 
 [h2]Compatibilidad[/h2]
+[b]Requiere los DLC de los héroes que cambia:[/b] The Crimson Court, The Shieldbreaker, Duelist y Runaway. Sin ellos, el juego puede no cargar.
 Solo reemplaza los archivos de los héroes de arriba (más un archivo de efectos y otro de buffs); es incompatible con mods que reemplacen esos mismos héroes. Se puede usar sin problemas en partidas ya empezadas.
 
 Cualquier comentario es bienvenido: cada cambio tiene su razón por escrito, y con gusto lo explico o lo ajusto.
