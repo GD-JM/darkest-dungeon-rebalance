@@ -1074,13 +1074,14 @@
  },
  "musketeer|buckshot": {
   "ids": [
-   "MUS-106"
+   "MUS-106",
+   "MUS-112"
   ],
   "principles": [
    "P-19"
   ],
-  "en": "A hunter's drive: knocking back the enemy in rank 4 throws it to the front and shoves the rest of their line back.",
-  "ko": "사냥의 몰이. 4열 적을 밀면 맨 앞으로 튀어나오고 나머지 적 대열이 한 칸씩 밀린다."
+  "en": "A hunter's drive: the shot pushes the enemies in ranks 2-3 back, pulling the back-liner forward.",
+  "ko": "사냥의 몰이. 2·3열 적을 뒤로 밀어 뒤에 숨은 적을 앞으로 끌어낸다."
  },
  "musketeer|sidearm": {
   "ids": [

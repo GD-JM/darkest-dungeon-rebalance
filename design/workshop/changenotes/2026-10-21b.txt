@@ -1,0 +1,7 @@
+[b]Update 1.2 — Musketeer fix[/b]
+[list]
+[*][b]Flushing Shot[/b] now hits enemy ranks 2-3 and pushes both back 1 (100-140%), drawing the back-liner forward. In 1.1 it targeted rank 4 only, and an enemy in rank 4 cannot be pushed any further, so the knockback did nothing. Sorry about that.
+[/list]
+
+[b]업데이트 1.2 — 총사 수정[/b]
+몰이 사격이 이제 적 2·3열을 함께 치고 한 칸씩 뒤로 밉니다(100~140%). 1.1에서는 4열만 노렸는데, 4열 적은 더 뒤로 밀릴 칸이 없어서 밀치기가 아무 효과가 없었습니다. 죄송합니다.
