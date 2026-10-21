@@ -8,8 +8,8 @@
 	<UpdateDetails>{UPDATE_DETAILS}</UpdateDetails>
 	<Visibility>public</Visibility>
 	<UploadMode>direct_upload</UploadMode>
-	<VersionMajor>1</VersionMajor>
-	<VersionMinor>1</VersionMinor>
+	<VersionMajor>2</VersionMajor>
+	<VersionMinor>0</VersionMinor>
 	<TargetBuild>0</TargetBuild>
 	<Tags>
 		<Tags>Class Tweaks</Tags>
