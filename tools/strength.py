@@ -761,6 +761,10 @@ def skill_value(C, l, d):
     ign_prot = first(d, 'ignore_protection', 'false').lower() == 'true'
     limit = num(first(d, 'per_battle_limit', '0'))
     effs = [C.eff.get(n, '') for n in ec.effect_names_in(l)]
+    # 방어 관통 x% (버프 stat ignore_protection, 이번 공격에만 거는 skill_instant 자기 강화). V-19 가정: 방어에서 x%p를 뺀다
+    ap = sum(C.buffs.get(b.strip('"'), {}).get('amount', 0) for e in effs for k in [kv(e)]
+             if first(k, 'target') == 'performer' and first(k, 'skill_instant') == 'true'
+             for b in k.get('buff_ids', []) if C.buffs.get(b.strip('"'), {}).get('stat_type') == 'ignore_protection')
     parts = {}
 
     def add(k, v):
@@ -797,7 +801,7 @@ def skill_value(C, l, d):
     if does_dmg:
         mult = (max(0.0, 1 + dmgm) * (1 + cond_bonus)) if P.get('DMG_STACK') == 'mult' else max(0.0, 1 + dmgm + cond_bonus)
         dm = ((1 - crit) * C.avg + crit * C.max * 1.5) * mult
-        per = st.mean(hit(m, atk) * dm * (1 if ign_prot else 1 - m['prot']) for m in MONS)
+        per = st.mean(hit(m, atk) * dm * (1 if ign_prot else 1 - max(0.0, m['prot'] - ap)) for m in MONS)
         add('직접', per * n_t * (P['E_AOE'] if aoe else P['E_SGL']) * rw)
         ph = st.mean(hit(m, atk) for m in MONS) * crit
         p_any_crit = 1 - (1 - ph) ** n_t

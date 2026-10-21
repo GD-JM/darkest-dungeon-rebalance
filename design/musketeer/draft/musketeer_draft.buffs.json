@@ -1,36 +1,10 @@
 {
  "buffs": [
   {
-   "id": "RB_MUS_PREY_ACC_1",
-   "stat_type": "combat_stat_add",
-   "stat_sub_type": "attack_rating",
-   "amount": 0.1,
-   "remove_if_not_active": false,
-   "rule_type": "monsterSize",
-   "is_false_rule": false,
-   "rule_data": {
-    "float": 2,
-    "string": ""
-   }
-  },
-  {
    "id": "RB_MUS_PREY_CRIT_1",
    "stat_type": "combat_stat_add",
    "stat_sub_type": "crit_chance",
    "amount": 0.04,
-   "remove_if_not_active": false,
-   "rule_type": "monsterSize",
-   "is_false_rule": false,
-   "rule_data": {
-    "float": 2,
-    "string": ""
-   }
-  },
-  {
-   "id": "RB_MUS_PREY_ACC_2",
-   "stat_type": "combat_stat_add",
-   "stat_sub_type": "attack_rating",
-   "amount": 0.12,
    "remove_if_not_active": false,
    "rule_type": "monsterSize",
    "is_false_rule": false,
@@ -53,36 +27,10 @@
    }
   },
   {
-   "id": "RB_MUS_PREY_ACC_3",
-   "stat_type": "combat_stat_add",
-   "stat_sub_type": "attack_rating",
-   "amount": 0.14,
-   "remove_if_not_active": false,
-   "rule_type": "monsterSize",
-   "is_false_rule": false,
-   "rule_data": {
-    "float": 2,
-    "string": ""
-   }
-  },
-  {
    "id": "RB_MUS_PREY_CRIT_3",
    "stat_type": "combat_stat_add",
    "stat_sub_type": "crit_chance",
    "amount": 0.06,
-   "remove_if_not_active": false,
-   "rule_type": "monsterSize",
-   "is_false_rule": false,
-   "rule_data": {
-    "float": 2,
-    "string": ""
-   }
-  },
-  {
-   "id": "RB_MUS_PREY_ACC_4",
-   "stat_type": "combat_stat_add",
-   "stat_sub_type": "attack_rating",
-   "amount": 0.16,
    "remove_if_not_active": false,
    "rule_type": "monsterSize",
    "is_false_rule": false,
@@ -105,19 +53,6 @@
    }
   },
   {
-   "id": "RB_MUS_PREY_ACC_5",
-   "stat_type": "combat_stat_add",
-   "stat_sub_type": "attack_rating",
-   "amount": 0.18,
-   "remove_if_not_active": false,
-   "rule_type": "monsterSize",
-   "is_false_rule": false,
-   "rule_data": {
-    "float": 2,
-    "string": ""
-   }
-  },
-  {
    "id": "RB_MUS_PREY_CRIT_5",
    "stat_type": "combat_stat_add",
    "stat_sub_type": "crit_chance",
@@ -127,6 +62,71 @@
    "is_false_rule": false,
    "rule_data": {
     "float": 2,
+    "string": ""
+   }
+  },
+  {
+   "id": "RB_MUS_AP_1",
+   "stat_type": "ignore_protection",
+   "stat_sub_type": "",
+   "amount": 0.1,
+   "remove_if_not_active": false,
+   "rule_type": "always",
+   "is_false_rule": false,
+   "rule_data": {
+    "float": 0,
+    "string": ""
+   }
+  },
+  {
+   "id": "RB_MUS_AP_2",
+   "stat_type": "ignore_protection",
+   "stat_sub_type": "",
+   "amount": 0.15,
+   "remove_if_not_active": false,
+   "rule_type": "always",
+   "is_false_rule": false,
+   "rule_data": {
+    "float": 0,
+    "string": ""
+   }
+  },
+  {
+   "id": "RB_MUS_AP_3",
+   "stat_type": "ignore_protection",
+   "stat_sub_type": "",
+   "amount": 0.2,
+   "remove_if_not_active": false,
+   "rule_type": "always",
+   "is_false_rule": false,
+   "rule_data": {
+    "float": 0,
+    "string": ""
+   }
+  },
+  {
+   "id": "RB_MUS_AP_4",
+   "stat_type": "ignore_protection",
+   "stat_sub_type": "",
+   "amount": 0.25,
+   "remove_if_not_active": false,
+   "rule_type": "always",
+   "is_false_rule": false,
+   "rule_data": {
+    "float": 0,
+    "string": ""
+   }
+  },
+  {
+   "id": "RB_MUS_AP_5",
+   "stat_type": "ignore_protection",
+   "stat_sub_type": "",
+   "amount": 0.3,
+   "remove_if_not_active": false,
+   "rule_type": "always",
+   "is_false_rule": false,
+   "rule_data": {
+    "float": 0,
     "string": ""
    }
   }

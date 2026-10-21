@@ -10,31 +10,31 @@ armour: .name "musketeer_armour_1" .def 5% .prot 0 .hp 28 .spd 0 .upgradeRequire
 armour: .name "musketeer_armour_2" .def 10% .prot 0 .hp 33 .spd 0 .upgradeRequirementCode 1
 armour: .name "musketeer_armour_3" .def 15% .prot 0 .hp 37 .spd 0 .upgradeRequirementCode 2
 armour: .name "musketeer_armour_4" .def 20% .prot 0 .hp 42 .spd 0 .upgradeRequirementCode 3
-combat_skill: .id "aimed_shot" .level 0 .type "ranged" .atk 85% .dmg -25% .crit 5% .launch 43 .target 1234 .is_crit_valid True .ignore_protection true .effect "RB MUS Pierce Tagged 1" .generation_guaranteed true
-combat_skill: .id "aimed_shot" .level 1 .type "ranged" .atk 90% .dmg -25% .crit 6% .launch 43 .target 1234 .is_crit_valid True .ignore_protection true .effect "RB MUS Pierce Tagged 2"
-combat_skill: .id "aimed_shot" .level 2 .type "ranged" .atk 95% .dmg -25% .crit 7% .launch 43 .target 1234 .is_crit_valid True .ignore_protection true .effect "RB MUS Pierce Tagged 3"
-combat_skill: .id "aimed_shot" .level 3 .type "ranged" .atk 100% .dmg -25% .crit 8% .launch 43 .target 1234 .is_crit_valid True .ignore_protection true .effect "RB MUS Pierce Tagged 4"
-combat_skill: .id "aimed_shot" .level 4 .type "ranged" .atk 105% .dmg -25% .crit 9% .launch 43 .target 1234 .is_crit_valid True .ignore_protection true .effect "RB MUS Pierce Tagged 5"
-combat_skill: .id "smokescreen" .level 0 .type "ranged" .atk 95% .dmg -100% .crit 0% .launch 43 .target ~12 .is_crit_valid False .per_battle_limit 2 .effect "Stun 1" "Suppression 1" "stealth_self"
-combat_skill: .id "smokescreen" .level 1 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 43 .target ~12 .is_crit_valid False .per_battle_limit 2 .effect "Stun 2" "Suppression 2" "stealth_self"
-combat_skill: .id "smokescreen" .level 2 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 43 .target ~12 .is_crit_valid False .per_battle_limit 2 .effect "Stun 3" "Suppression 3" "stealth_self"
-combat_skill: .id "smokescreen" .level 3 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 43 .target ~12 .is_crit_valid False .per_battle_limit 2 .effect "Stun 4" "Suppression 4" "stealth_self"
-combat_skill: .id "smokescreen" .level 4 .type "ranged" .atk 115% .dmg -100% .crit 0% .launch 43 .target ~12 .is_crit_valid False .per_battle_limit 2 .effect "Stun 5" "Suppression 5" "stealth_self"
-combat_skill: .id "call_the_shot" .level 0 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 43 .target 1234 .is_crit_valid False .effect "Arb Mark Target" "RB MUS Prey 1" .is_stall_invalidating false
-combat_skill: .id "call_the_shot" .level 1 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 43 .target 1234 .is_crit_valid False .effect "Arb Mark Target" "RB MUS Prey 2" .is_stall_invalidating false
-combat_skill: .id "call_the_shot" .level 2 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 43 .target 1234 .is_crit_valid False .effect "Arb Mark Target" "RB MUS Prey 3" .is_stall_invalidating false
-combat_skill: .id "call_the_shot" .level 3 .type "ranged" .atk 115% .dmg -100% .crit 0% .launch 43 .target 1234 .is_crit_valid False .effect "Arb Mark Target" "RB MUS Prey 4" .is_stall_invalidating false
-combat_skill: .id "call_the_shot" .level 4 .type "ranged" .atk 120% .dmg -100% .crit 0% .launch 43 .target 1234 .is_crit_valid False .effect "Arb Mark Target" "RB MUS Prey 5" .is_stall_invalidating false
+combat_skill: .id "aimed_shot" .level 0 .type "ranged" .atk 90% .dmg 0% .crit 5% .launch 43 .target 1234 .is_crit_valid True .effect "RB MUS Pierce Tagged 1" "RB MUS Armor Pierce 1" .generation_guaranteed true
+combat_skill: .id "aimed_shot" .level 1 .type "ranged" .atk 95% .dmg 0% .crit 6% .launch 43 .target 1234 .is_crit_valid True .effect "RB MUS Pierce Tagged 2" "RB MUS Armor Pierce 2"
+combat_skill: .id "aimed_shot" .level 2 .type "ranged" .atk 100% .dmg 0% .crit 7% .launch 43 .target 1234 .is_crit_valid True .effect "RB MUS Pierce Tagged 3" "RB MUS Armor Pierce 3"
+combat_skill: .id "aimed_shot" .level 3 .type "ranged" .atk 105% .dmg 0% .crit 8% .launch 43 .target 1234 .is_crit_valid True .effect "RB MUS Pierce Tagged 4" "RB MUS Armor Pierce 4"
+combat_skill: .id "aimed_shot" .level 4 .type "ranged" .atk 110% .dmg 0% .crit 9% .launch 43 .target 1234 .is_crit_valid True .effect "RB MUS Pierce Tagged 5" "RB MUS Armor Pierce 5"
+combat_skill: .id "smokescreen" .level 0 .type "ranged" .atk 95% .dmg -100% .crit 0% .launch 43 .target ~12 .is_crit_valid False .per_battle_limit 2 .effect "Stun 1" "RB MUS Smoke Blind 1" "stealth_self"
+combat_skill: .id "smokescreen" .level 1 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 43 .target ~12 .is_crit_valid False .per_battle_limit 2 .effect "Stun 2" "RB MUS Smoke Blind 2" "stealth_self"
+combat_skill: .id "smokescreen" .level 2 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 43 .target ~12 .is_crit_valid False .per_battle_limit 2 .effect "Stun 3" "RB MUS Smoke Blind 3" "stealth_self"
+combat_skill: .id "smokescreen" .level 3 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 43 .target ~12 .is_crit_valid False .per_battle_limit 2 .effect "Stun 4" "RB MUS Smoke Blind 4" "stealth_self"
+combat_skill: .id "smokescreen" .level 4 .type "ranged" .atk 115% .dmg -100% .crit 0% .launch 43 .target ~12 .is_crit_valid False .per_battle_limit 2 .effect "Stun 5" "RB MUS Smoke Blind 5" "stealth_self"
+combat_skill: .id "call_the_shot" .level 0 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 43 .target 1234 .is_crit_valid False .effect "Arb Mark Target" "RB MUS Prey 1" "RB MUS Prey Speed 1" .is_stall_invalidating false
+combat_skill: .id "call_the_shot" .level 1 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 43 .target 1234 .is_crit_valid False .effect "Arb Mark Target" "RB MUS Prey 2" "RB MUS Prey Speed 2" .is_stall_invalidating false
+combat_skill: .id "call_the_shot" .level 2 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 43 .target 1234 .is_crit_valid False .effect "Arb Mark Target" "RB MUS Prey 3" "RB MUS Prey Speed 3" .is_stall_invalidating false
+combat_skill: .id "call_the_shot" .level 3 .type "ranged" .atk 115% .dmg -100% .crit 0% .launch 43 .target 1234 .is_crit_valid False .effect "Arb Mark Target" "RB MUS Prey 4" "RB MUS Prey Speed 4" .is_stall_invalidating false
+combat_skill: .id "call_the_shot" .level 4 .type "ranged" .atk 120% .dmg -100% .crit 0% .launch 43 .target 1234 .is_crit_valid False .effect "Arb Mark Target" "RB MUS Prey 5" "RB MUS Prey Speed 5" .is_stall_invalidating false
 combat_skill: .id "buckshot" .level 0 .type "ranged" .atk 95% .dmg -50% .crit 2% .launch 43 .target 4 .is_crit_valid True .effect "Push 1A"
 combat_skill: .id "buckshot" .level 1 .type "ranged" .atk 100% .dmg -50% .crit 3% .launch 43 .target 4 .is_crit_valid True .effect "Push 1B"
 combat_skill: .id "buckshot" .level 2 .type "ranged" .atk 105% .dmg -50% .crit 4% .launch 43 .target 4 .is_crit_valid True .effect "Push 1C"
 combat_skill: .id "buckshot" .level 3 .type "ranged" .atk 110% .dmg -50% .crit 5% .launch 43 .target 4 .is_crit_valid True .effect "Push 1D"
 combat_skill: .id "buckshot" .level 4 .type "ranged" .atk 115% .dmg -50% .crit 6% .launch 43 .target 4 .is_crit_valid True .effect "Push 1E"
-combat_skill: .id "sidearm" .level 0 .type "ranged" .atk 90% .dmg -40% .crit 3% .move 1 0 .launch 321 .target 123 .is_crit_valid True
-combat_skill: .id "sidearm" .level 1 .type "ranged" .atk 95% .dmg -40% .crit 4% .move 1 0 .launch 321 .target 123 .is_crit_valid True
-combat_skill: .id "sidearm" .level 2 .type "ranged" .atk 100% .dmg -40% .crit 5% .move 1 0 .launch 321 .target 123 .is_crit_valid True
-combat_skill: .id "sidearm" .level 3 .type "ranged" .atk 105% .dmg -40% .crit 6% .move 1 0 .launch 321 .target 123 .is_crit_valid True
-combat_skill: .id "sidearm" .level 4 .type "ranged" .atk 110% .dmg -40% .crit 7% .move 1 0 .launch 321 .target 123 .is_crit_valid True
+combat_skill: .id "sidearm" .level 0 .type "ranged" .atk 90% .dmg -40% .crit 3% .move 1 0 .launch 321 .target 12 .is_crit_valid True
+combat_skill: .id "sidearm" .level 1 .type "ranged" .atk 95% .dmg -40% .crit 4% .move 1 0 .launch 321 .target 12 .is_crit_valid True
+combat_skill: .id "sidearm" .level 2 .type "ranged" .atk 100% .dmg -40% .crit 5% .move 1 0 .launch 321 .target 12 .is_crit_valid True
+combat_skill: .id "sidearm" .level 3 .type "ranged" .atk 105% .dmg -40% .crit 6% .move 1 0 .launch 321 .target 12 .is_crit_valid True
+combat_skill: .id "sidearm" .level 4 .type "ranged" .atk 110% .dmg -40% .crit 7% .move 1 0 .launch 321 .target 12 .is_crit_valid True
 combat_skill: .id "patch_up" .level 0 .heal 2 3 .launch 43 .target @1234 .effect "RB MUS Patch Destress 1" .is_stall_invalidating false
 combat_skill: .id "patch_up" .level 1 .heal 3 3 .launch 43 .target @1234 .effect "RB MUS Patch Destress 2" .is_stall_invalidating false
 combat_skill: .id "patch_up" .level 2 .heal 3 4 .launch 43 .target @1234 .effect "RB MUS Patch Destress 3" .is_stall_invalidating false
