@@ -5,19 +5,24 @@
 effect: .name "RB BH Dmg Marked"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged"	.combat_stat_buff 1 .damage_low_multiply 100%	.damage_high_multiply 100%	.on_hit true .on_miss false
 // BH-003 [trace 2026-10-05] Retain the author-set marked-target finisher at the front. Effect: BH Dmg Marked.
 // edited vanilla effect (from effects/base.effects.darkest)
-effect: .name "RB BH Stun Killer 1"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 25% .damage_high_multiply 60%	.on_hit true .on_miss false
+effect: .name "RB BH Stun Killer 1"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 60% .damage_high_multiply 60%	.on_hit true .on_miss false
+// BH-019 Finish Him vs stunned: min and max damage both +60% (BH-002 had raised only the max; the tooltip showed the unchanged min).
 // BH-002 [trace 2026-10-05] Reward allied bleed/stun setup while retaining the author-set front launch and rank-3 followup. Effect: Stun Killer 1.
 // edited vanilla effect (from effects/base.effects.darkest)
-effect: .name "RB BH Stun Killer 2"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 33% .damage_high_multiply 70%	.on_hit true .on_miss false
+effect: .name "RB BH Stun Killer 2"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 70% .damage_high_multiply 70%	.on_hit true .on_miss false
+// BH-019 Finish Him vs stunned: min and max damage both +70% (BH-002 had raised only the max; the tooltip showed the unchanged min).
 // BH-002 [trace 2026-10-05] Reward allied bleed/stun setup while retaining the author-set front launch and rank-3 followup. Effect: Stun Killer 2.
 // edited vanilla effect (from effects/base.effects.darkest)
-effect: .name "RB BH Stun Killer 3"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 40% .damage_high_multiply 80%	.on_hit true .on_miss false
+effect: .name "RB BH Stun Killer 3"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 80% .damage_high_multiply 80%	.on_hit true .on_miss false
+// BH-019 Finish Him vs stunned: min and max damage both +80% (BH-002 had raised only the max; the tooltip showed the unchanged min).
 // BH-002 [trace 2026-10-05] Reward allied bleed/stun setup while retaining the author-set front launch and rank-3 followup. Effect: Stun Killer 3.
 // edited vanilla effect (from effects/base.effects.darkest)
-effect: .name "RB BH Stun Killer 4"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 50% .damage_high_multiply 90%	.on_hit true .on_miss false
+effect: .name "RB BH Stun Killer 4"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 90% .damage_high_multiply 90%	.on_hit true .on_miss false
+// BH-019 Finish Him vs stunned: min and max damage both +90% (BH-002 had raised only the max; the tooltip showed the unchanged min).
 // BH-002 [trace 2026-10-05] Reward allied bleed/stun setup while retaining the author-set front launch and rank-3 followup. Effect: Stun Killer 4.
 // edited vanilla effect (from effects/base.effects.darkest)
-effect: .name "RB BH Stun Killer 5"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 60% .damage_high_multiply 100%	.on_hit true .on_miss false
+effect: .name "RB BH Stun Killer 5"	.target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "stunned"	.combat_stat_buff 1	.damage_low_multiply 100% .damage_high_multiply 100%	.on_hit true .on_miss false
+// BH-019 Finish Him vs stunned: min and max damage both +100% (BH-002 had raised only the max; the tooltip showed the unchanged min).
 // BH-002 [trace 2026-10-05] Reward allied bleed/stun setup while retaining the author-set front launch and rank-3 followup. Effect: Stun Killer 5.
 // edited vanilla effect (from effects/base.effects.darkest)
 effect: .name "RB BH Mark Debuff 1" .target "target" .curio_result_type "negative" .chance 100% .duration 3 .combat_stat_buff 1 .protection_rating_add -20.0% .on_hit true .on_miss false .queue true
