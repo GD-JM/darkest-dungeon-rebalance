@@ -12,35 +12,34 @@ Most hero mods change one hero at a time, and that usually means making that her
 [h2]How the changes were decided[/h2]
 [list]
 [*][b]Healing and stress relief aren't owned by a few heroes.[/b]
-Example: more heroes can patch themselves up — Grave Robber's Toxin Trickery (heal 1–5), Hellion's Adrenaline Rush (3–7) and Vestal's Mace Bash (3–5) — while Man-at-Arms' Bolster becomes a repeatable party stress heal.
-[*][b]Different skills, different ranks.[/b]
+Example: Hellion's Adrenaline Rush (heal 3–7) and Grave Robber's Toxin Trickery (1–5) became real self-heals, and Man-at-Arms' Bolster became a party stress heal usable every turn.
+[*][b]No "correct" four skills, no "correct" rank.[/b] Skills and ranks are tuned so many combinations actually work instead of one locked build.
 Example: the Highwayman's riposte moved from Duelist's Advance to Tracking Shot, so a ranged Highwayman can counterattack without stepping forward.
-[*][b]Follow the base game's own rules.[/b] The original numbers have clear patterns; outliers are brought back in line.
-Example: Shieldbreaker's weapon speed grew faster than any base-game hero's; it now follows the standard curve.
-[*][b]Every buff has a price.[/b] Accuracy, damage and reach are traded against each other, so overall difficulty stays the same.
-Example: Grapeshot Blast gains 15 accuracy and pays for it with damage (−50% → −60%).
-[*][b]A skill should do what it looks like.[/b]
-Example: Arbalest's Battlefield Bandage now stops bleeding, and Antiquarian's Flashpowder now burns.
-[*][b]Stay true to the lore.[/b]
-Example: nothing in the Houndmaster's description explains his extra bleed and blight resist, so both return to the baseline.
-[*][b]Keep the feel.[/b] Adjust reliability and frequency, not identity; Red Hook's own nerfs are respected.
-Example: Point Blank Shot keeps its punch, but he now recoils 2 ranks, so it can't be fired every turn.
-[*][b]Trinkets are untouched.[/b]
+[*][b]Follow the base game's own rules.[/b]
+Example: base-game heroes gain only 2 speed over all weapon upgrades (Arbalest 3→5); Shieldbreaker (5→9) and Flagellant (6→9) were the outliers. Both now gain 2.
+[*][b]Every buff has a price.[/b] What goes up somewhere comes down elsewhere, so overall difficulty neither inflates nor deflates.
+Example: Vestal's Judgement went from −25% to 0% damage, and Houndmaster's Hound's Rush from 0% to −25%.
+[*][b]A skill should do what it looks like.[/b] Art and function match at a glance.
+Example: a bandage stops bleeding (Arbalest's Battlefield Bandage), and the Hellion, who never tires, no longer gets exhausted.
+[*][b]The lore sets the direction.[/b]
+Example: the Leper was once a king, so Intimidate became a strike that leads the fight by cracking armor instead of a support debuff. The Antiquarian earns gold rather than fights, so she stays weak, and nothing in the Houndmaster's lore justifies extra bleed and blight resist.
+[*][b]Trinkets stay fixed; the patch fits around them.[/b] This keeps them compatible.
 Example: the Musketeer's trinkets boost debuff chance, so her new Smokescreen still carries a small accuracy debuff.
 [/list]
 
-[h2]Showcase: the Bounty Hunter[/h2]
-Before, the best play was to park him in rank 2 and repeat the same skills, and mark parties were weaker than they looked. Now he is an executioner who preys on the weak: marked, stunned and bleeding targets.
+[h2]Showcase: the Musketeer[/h2]
+The original Musketeer was an exact copy of the Arbalest, so she was rebuilt from her official lore: a celebrated sharpshooter who wants to become a legend by hunting monsters after a disappointing tournament, and who keeps her distance for lack of real combat experience.
 [list]
-[*][b]Mark for Death[/b] cuts PROT by 20% (was 10%). He has no riposte or defensive tricks, so this is how he handles armored targets.
-[*][b]Come Hither[/b] pulls 3 ranks, so a back-rank target lands in rank 1.
-[*][b]Uppercut[/b] (rank 1 only, ACC 95, CRIT 9%) strongly stuns it and knocks it to rank 3; a crit also triggers his bonus damage against marked targets.
-[*][b]Finish Him[/b] still reaches rank 3 and hits stunned and now bleeding targets harder, with Caltrops setting up the bleed.
+[*][b]Piercing Ball[/b] (ACC 90): reaches every rank and pierces 10–30% armor; her bonus vs marked targets is far smaller than the Arbalest's.
+[*][b]Smokescreen[/b] (3 per battle): stuns enemy ranks 1–2 and hides her in the smoke.
+[*][b]Covering Smoke[/b]: hides one ally for 2 turns so enemies can't single them out — protection without anyone taking the hits.
+[*][b]Mark the Quarry[/b]: "This prize is mine!" She marks her prey, gets faster for 3 turns and crits large monsters more often.
+[*][b]Flushing Shot, Sidearm, Patch Up[/b]: drives ranks 2–3 back, shoots and steps back when pushed forward, and adds a little stress relief to healing.
 [/list]
-Each step has a price: Uppercut hits only rank 1, Flashbang moved to ranks 3–4, and Finish Him is used from ranks 1–2.
+The price: lower HP (24 vs the Arbalest's 27) and speed (2 vs 3). She can change ranks, so she is tuned slightly below the rank-locked Arbalest.
 
 [h2]Hero by hero[/h2]
-The images above show every changed skill, before and after (Bounty Hunter first).
+The images above show every changed skill, before and after.
 [b]Abomination[/b] — transforming is a real choice: Transform now relieves his own stress, and Slam works from rank 4.
 [b]Antiquarian[/b] — still weaker by design (she earns gold), but Flashpowder now burns and sets up burn combos.
 [b]Arbalest[/b] — a field medic too: Battlefield Bandage cures bleed, Rallying Flare reliably relieves party stress.
@@ -58,12 +57,12 @@ The images above show every changed skill, before and after (Bounty Hunter first
 [b]Occultist[/b] — Vulnerability Hex lowers stun, bleed, blight and debuff resist, setting up the whole party.
 [b]Plague Doctor[/b] — Battlefield Medicine is the blight-cure heal (3–7) while the Arbalest covers bleed.
 [b]Runaway[/b] — Ransack no longer reaches rank 4.
-[b]Musketeer[/b] — no longer an Arbalest copy, but a hunter: Piercing Ball cuts through armor, Smokescreen stuns the front ranks, and Covering Smoke hides an ally from enemy attacks.
+[b]Musketeer[/b] — see the showcase above.
 [b]Shieldbreaker[/b] — the DLC outlier, back in line: Pierce loses rank 4, weapon growth standardized.
 [b]Vestal[/b] — can work from rank 2: Mace Bash heals herself, Divine Grace and Illumination work from any rank.
 
 [h2]Compatibility[/h2]
 [b]Requires the DLC heroes it changes:[/b] The Crimson Court (Flagellant), The Shieldbreaker, Duelist, Runaway and The Musketeer (free). Without them the game may fail to load.
-Replaces only the hero files above (plus one effect and one buff file); conflicts with mods that replace the same heroes. Safe on existing saves.
+Replaces only the hero files above (plus effect, buff and skill-name files); conflicts with mods that replace the same heroes. Safe on existing saves.
 
 Feedback is welcome — every change has a written reason, and I'm happy to explain or adjust.
