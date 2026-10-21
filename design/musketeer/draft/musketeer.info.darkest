@@ -15,11 +15,11 @@ combat_skill: .id "aimed_shot" .level 1 .type "ranged" .atk 95% .dmg 0% .crit 6%
 combat_skill: .id "aimed_shot" .level 2 .type "ranged" .atk 100% .dmg 0% .crit 7% .launch 43 .target 1234 .is_crit_valid True .effect "RB MUS Pierce Tagged 3" "RB MUS Armor Pierce 3"
 combat_skill: .id "aimed_shot" .level 3 .type "ranged" .atk 105% .dmg 0% .crit 8% .launch 43 .target 1234 .is_crit_valid True .effect "RB MUS Pierce Tagged 4" "RB MUS Armor Pierce 4"
 combat_skill: .id "aimed_shot" .level 4 .type "ranged" .atk 110% .dmg 0% .crit 9% .launch 43 .target 1234 .is_crit_valid True .effect "RB MUS Pierce Tagged 5" "RB MUS Armor Pierce 5"
-combat_skill: .id "smokescreen" .level 0 .type "ranged" .atk 95% .dmg -100% .crit 0% .launch 43 .target ~12 .is_crit_valid False .per_battle_limit 2 .effect "Stun 1" "RB MUS Smoke Blind 1" "stealth_self"
-combat_skill: .id "smokescreen" .level 1 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 43 .target ~12 .is_crit_valid False .per_battle_limit 2 .effect "Stun 2" "RB MUS Smoke Blind 2" "stealth_self"
-combat_skill: .id "smokescreen" .level 2 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 43 .target ~12 .is_crit_valid False .per_battle_limit 2 .effect "Stun 3" "RB MUS Smoke Blind 3" "stealth_self"
-combat_skill: .id "smokescreen" .level 3 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 43 .target ~12 .is_crit_valid False .per_battle_limit 2 .effect "Stun 4" "RB MUS Smoke Blind 4" "stealth_self"
-combat_skill: .id "smokescreen" .level 4 .type "ranged" .atk 115% .dmg -100% .crit 0% .launch 43 .target ~12 .is_crit_valid False .per_battle_limit 2 .effect "Stun 5" "RB MUS Smoke Blind 5" "stealth_self"
+combat_skill: .id "smokescreen" .level 0 .type "ranged" .atk 95% .dmg -100% .crit 0% .launch 43 .target ~12 .is_crit_valid False .per_battle_limit 3 .effect "Stun 1" "RB MUS Smoke Blind 1" "stealth_self"
+combat_skill: .id "smokescreen" .level 1 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 43 .target ~12 .is_crit_valid False .per_battle_limit 3 .effect "Stun 2" "RB MUS Smoke Blind 2" "stealth_self"
+combat_skill: .id "smokescreen" .level 2 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 43 .target ~12 .is_crit_valid False .per_battle_limit 3 .effect "Stun 3" "RB MUS Smoke Blind 3" "stealth_self"
+combat_skill: .id "smokescreen" .level 3 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 43 .target ~12 .is_crit_valid False .per_battle_limit 3 .effect "Stun 4" "RB MUS Smoke Blind 4" "stealth_self"
+combat_skill: .id "smokescreen" .level 4 .type "ranged" .atk 115% .dmg -100% .crit 0% .launch 43 .target ~12 .is_crit_valid False .per_battle_limit 3 .effect "Stun 5" "RB MUS Smoke Blind 5" "stealth_self"
 combat_skill: .id "call_the_shot" .level 0 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 43 .target 1234 .is_crit_valid False .effect "Arb Mark Target" "RB MUS Prey 1" "RB MUS Prey Speed 1" .is_stall_invalidating false
 combat_skill: .id "call_the_shot" .level 1 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 43 .target 1234 .is_crit_valid False .effect "Arb Mark Target" "RB MUS Prey 2" "RB MUS Prey Speed 2" .is_stall_invalidating false
 combat_skill: .id "call_the_shot" .level 2 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 43 .target 1234 .is_crit_valid False .effect "Arb Mark Target" "RB MUS Prey 3" "RB MUS Prey Speed 3" .is_stall_invalidating false
