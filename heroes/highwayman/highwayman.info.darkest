@@ -44,11 +44,13 @@ combat_skill: .id "pistol_shot" .level 4 .type "ranged" .atk 110% .dmg -15% .cri
 //명중 원거리 표준 90으로 변경 85 -> 90
 // HWY-015 pistol_shot: 명중 1렙 85 -> 90 복귀 (HWY-012 철회, 제작자 결정: 공격 기술 명중 90 정렬, 표식 피해 상향 유지)
 
-combat_skill: .id "point_blank_shot" .level 0 .type "ranged" .atk 95% .dmg 50% .crit 5% .move 2 0 .launch 1 .target 1 .is_crit_valid True  .effect "Push 2A"
-combat_skill: .id "point_blank_shot" .level 1 .type "ranged" .atk 100% .dmg 50% .crit 6% .move 2 0 .launch 1 .target 1 .is_crit_valid True  .effect "Push 2B"
-combat_skill: .id "point_blank_shot" .level 2 .type "ranged" .atk 105% .dmg 50% .crit 7% .move 2 0 .launch 1 .target 1 .is_crit_valid True  .effect "Push 2C"
-combat_skill: .id "point_blank_shot" .level 3 .type "ranged" .atk 110% .dmg 50% .crit 8% .move 2 0 .launch 1 .target 1 .is_crit_valid True  .effect "Push 2D"
-combat_skill: .id "point_blank_shot" .level 4 .type "ranged" .atk 115% .dmg 50% .crit 9% .move 2 0 .launch 1 .target 1 .is_crit_valid True  .effect "Push 2E"
+combat_skill: .id "point_blank_shot" .level 0 .type "ranged" .atk 95% .dmg 50% .crit 8% .move 2 0 .launch 1 .target 1 .is_crit_valid True  .effect "Push 2A"
+combat_skill: .id "point_blank_shot" .level 1 .type "ranged" .atk 100% .dmg 50% .crit 9% .move 2 0 .launch 1 .target 1 .is_crit_valid True  .effect "Push 2B"
+combat_skill: .id "point_blank_shot" .level 2 .type "ranged" .atk 105% .dmg 50% .crit 10% .move 2 0 .launch 1 .target 1 .is_crit_valid True  .effect "Push 2C"
+combat_skill: .id "point_blank_shot" .level 3 .type "ranged" .atk 110% .dmg 50% .crit 11% .move 2 0 .launch 1 .target 1 .is_crit_valid True  .effect "Push 2D"
+combat_skill: .id "point_blank_shot" .level 4 .type "ranged" .atk 115% .dmg 50% .crit 12% .move 2 0 .launch 1 .target 1 .is_crit_valid True  .effect "Push 2E"
+// HWY-021 point_blank_shot: crit 5..9% -> 8..12% (same as Grave Robber Lunge). Stepping back 2 ranks after each shot is a real cost.
+// HWY-021 영거리 사격 치명 5~9% → 8~12%(도굴꾼 돌진과 같음). 의도: 쏘고 2칸 밀려나는 대가가 커서 한 방의 맛을 보상 [제작자 2026-10-21]
 // HWY-017 point_blank_shot: 명중 1렙 90 -> 95, 피해 +40% -> +50% 바닐라 수치로 복귀(HWY-001 수치 너프 철회). 뒤로 2칸 후퇴·밀치기 2칸 구조는 유지 [제작자 직접 편집 2026-10-09]
 // HWY-001 [trace 2026-10-05] Limit easy repeat cycles through two-rank retreat while preserving the heavy shot feel.
 //명중 95, 아무런 패널티 없는 스킬데미지 50, 높은 크리 확률 명백한 사기스킬임 사실 떡너프가 맞으나, 순수 성능 너프를 때리면 유저 체감이 불쾌해짐. 
