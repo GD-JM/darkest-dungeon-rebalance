@@ -40,7 +40,7 @@ Avant, le meilleur plan était de le planter au rang 2 et de répéter les même
 Chaque étape a un prix : Uppercut ne frappe que le rang 1, Grenade aveuglante passe aux rangs 3–4, et Coup de grâce s'utilise depuis les rangs 1–2.
 
 [h2]Héros par héros[/h2]
-Les images ci-dessus montrent chaque compétence modifiée, avant et après (le Chasseur de primes en premier).
+Les images ci-dessus montrent chaque compétence modifiée, avant et après.
 [b]Abomination[/b] — se transformer devient un vrai choix : Transformation soulage désormais son propre stress, et Charge fonctionne depuis le rang 4.
 [b]Antiquaire[/b] — toujours plus faible par design (elle rapporte de l'or), mais Poudre aveuglante brûle désormais et prépare les combos de brûlure.
 [b]Arbalétrière[/b] — médecin de terrain en prime : Bandages militaires soigne le saignement, Fusée de ralliement soulage le stress du groupe de façon fiable.
