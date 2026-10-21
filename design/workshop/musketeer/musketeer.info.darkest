@@ -1,0 +1,75 @@
+resistances: .stun 40% .poison 30% .bleed 30% .disease 30% .move 40% .debuff 30% .death_blow 67% .trap 10%
+crit: .effects "on_crit_dmgmarked"
+weapon: .name "musketeer_weapon_0" .atk 0% .dmg 4 8 .crit 6% .spd 2
+weapon: .name "musketeer_weapon_1" .atk 0% .dmg 5 10 .crit 7% .spd 2 .upgradeRequirementCode 0
+weapon: .name "musketeer_weapon_2" .atk 0% .dmg 6 11 .crit 8% .spd 3 .upgradeRequirementCode 1
+weapon: .name "musketeer_weapon_3" .atk 0% .dmg 6 13 .crit 9% .spd 3 .upgradeRequirementCode 2
+weapon: .name "musketeer_weapon_4" .atk 0% .dmg 7 14 .crit 10% .spd 4 .upgradeRequirementCode 3
+// MUS-101 Speed 2/2/3/3/4 (Arbalest 3/3/4/4/5): the matchlock is a slow gun; a hero who can change ranks must be weaker than a fixed one.
+// MUS-101 속도 2/2/3/3/4 (석궁 3/3/4/4/5). 의도: 손은 빨라도 화승총은 원래 느린 무기. 열을 옮겨다닐 수 있는 영웅은 붙박이(석궁)보다 약해야 한다.
+armour: .name "musketeer_armour_0" .def 0% .prot 0 .hp 24 .spd 0
+armour: .name "musketeer_armour_1" .def 5% .prot 0 .hp 28 .spd 0 .upgradeRequirementCode 0
+armour: .name "musketeer_armour_2" .def 10% .prot 0 .hp 33 .spd 0 .upgradeRequirementCode 1
+armour: .name "musketeer_armour_3" .def 15% .prot 0 .hp 37 .spd 0 .upgradeRequirementCode 2
+armour: .name "musketeer_armour_4" .def 20% .prot 0 .hp 42 .spd 0 .upgradeRequirementCode 3
+// MUS-102 HP 24/28/33/37/42 (Arbalest 27..47): a tournament entrant's vest, not a deserter's plate.
+// MUS-102 체력 24/28/33/37/42 (석궁 27~47). 의도: "참가자의 조끼"와 판금 "생존자"의 차이. 실전 경험 부족.
+combat_skill: .id "aimed_shot" .level 0 .type "ranged" .atk 90% .dmg 0% .crit 5% .launch 43 .target 1234 .is_crit_valid True .effect "RB MUS Pierce Tagged 1" "RB MUS Armor Pierce 1" .generation_guaranteed true
+combat_skill: .id "aimed_shot" .level 1 .type "ranged" .atk 95% .dmg 0% .crit 6% .launch 43 .target 1234 .is_crit_valid True .effect "RB MUS Pierce Tagged 2" "RB MUS Armor Pierce 2"
+combat_skill: .id "aimed_shot" .level 2 .type "ranged" .atk 100% .dmg 0% .crit 7% .launch 43 .target 1234 .is_crit_valid True .effect "RB MUS Pierce Tagged 3" "RB MUS Armor Pierce 3"
+combat_skill: .id "aimed_shot" .level 3 .type "ranged" .atk 105% .dmg 0% .crit 8% .launch 43 .target 1234 .is_crit_valid True .effect "RB MUS Pierce Tagged 4" "RB MUS Armor Pierce 4"
+combat_skill: .id "aimed_shot" .level 4 .type "ranged" .atk 110% .dmg 0% .crit 9% .launch 43 .target 1234 .is_crit_valid True .effect "RB MUS Pierce Tagged 5" "RB MUS Armor Pierce 5"
+// MUS-103 Piercing Ball: acc 90, dmg 0%, ranks 3-4 to 1-4, armor piercing 10/15/20/25/30%, vs marked +25..40% dmg and +9..13% crit (Arbalest +60..100%).
+// MUS-103 관통탄: 명중 90, 피해 0%, 3·4열→1~4열, 방어 관통 10~30%, 표식 대상 피해 +25~40%·치명 +9~13%(석궁 +60~100%). 의도: 특수탄으로 방어를 뚫는 꾸준한 딜러. 방어 관통이 있어 표식 딜은 낮게.
+combat_skill: .id "smokescreen" .level 0 .type "ranged" .atk 95% .dmg -100% .crit 0% .launch 43 .target ~12 .is_crit_valid False .per_battle_limit 3 .effect "Stun 1" "RB MUS Smoke Blind 1" "stealth_self" .is_stall_invalidating false
+combat_skill: .id "smokescreen" .level 1 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 43 .target ~12 .is_crit_valid False .per_battle_limit 3 .effect "Stun 2" "RB MUS Smoke Blind 2" "stealth_self" .is_stall_invalidating false
+combat_skill: .id "smokescreen" .level 2 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 43 .target ~12 .is_crit_valid False .per_battle_limit 3 .effect "Stun 3" "RB MUS Smoke Blind 3" "stealth_self" .is_stall_invalidating false
+combat_skill: .id "smokescreen" .level 3 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 43 .target ~12 .is_crit_valid False .per_battle_limit 3 .effect "Stun 4" "RB MUS Smoke Blind 4" "stealth_self" .is_stall_invalidating false
+combat_skill: .id "smokescreen" .level 4 .type "ranged" .atk 115% .dmg -100% .crit 0% .launch 43 .target ~12 .is_crit_valid False .per_battle_limit 3 .effect "Stun 5" "RB MUS Smoke Blind 5" "stealth_self" .is_stall_invalidating false
+// MUS-104 Smokescreen: ranks 3-4 to AoE 1-2, no damage, stun 100..140%, acc -10..-15% for 1 turn, self stealth 2 turns, 3 per battle.
+// MUS-104 연막탄: 3·4열→광역 1·2열, 피해 없음, 기절 100~140%, 명중 −10~−15%(1턴), 자신 은신 2턴, 전투당 3회(바닐라 함성·실명 기체와 같음). 의도: 기술 이름이 약속한 연기. 약화는 장신구(약화 확률) 때문에 작게 남긴다(석궁 제압 사격과 겹치지 않게 1턴).
+combat_skill: .id "call_the_shot" .level 0 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 43 .target 1234 .is_crit_valid False .effect "Arb Mark Target" "RB MUS Prey 1" "RB MUS Prey Speed 1" .is_stall_invalidating false
+combat_skill: .id "call_the_shot" .level 1 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 43 .target 1234 .is_crit_valid False .effect "Arb Mark Target" "RB MUS Prey 2" "RB MUS Prey Speed 2" .is_stall_invalidating false
+combat_skill: .id "call_the_shot" .level 2 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 43 .target 1234 .is_crit_valid False .effect "Arb Mark Target" "RB MUS Prey 3" "RB MUS Prey Speed 3" .is_stall_invalidating false
+combat_skill: .id "call_the_shot" .level 3 .type "ranged" .atk 115% .dmg -100% .crit 0% .launch 43 .target 1234 .is_crit_valid False .effect "Arb Mark Target" "RB MUS Prey 4" "RB MUS Prey Speed 4" .is_stall_invalidating false
+combat_skill: .id "call_the_shot" .level 4 .type "ranged" .atk 120% .dmg -100% .crit 0% .launch 43 .target 1234 .is_crit_valid False .effect "Arb Mark Target" "RB MUS Prey 5" "RB MUS Prey Speed 5" .is_stall_invalidating false
+// MUS-105 Mark the Quarry: mark 3 turns + self 3 turns speed +3/3/4/4/5 and crit +4..8% vs large monsters.
+// MUS-105 사냥감 지정: 표식 3턴 + 자신 3턴 속도 +3/3/4/4/5, 대형 몬스터 상대 치명 +4~8%. 의도: "이놈은 내 거야!" — 사냥으로 다급하게 증명하려는 설정. 속도는 무차별 사격 수치를 옮겼다.
+combat_skill: .id "buckshot" .level 0 .type "ranged" .atk 95% .dmg -50% .crit 2% .launch 43 .target 4 .is_crit_valid True .effect "Push 1A"
+combat_skill: .id "buckshot" .level 1 .type "ranged" .atk 100% .dmg -50% .crit 3% .launch 43 .target 4 .is_crit_valid True .effect "Push 1B"
+combat_skill: .id "buckshot" .level 2 .type "ranged" .atk 105% .dmg -50% .crit 4% .launch 43 .target 4 .is_crit_valid True .effect "Push 1C"
+combat_skill: .id "buckshot" .level 3 .type "ranged" .atk 110% .dmg -50% .crit 5% .launch 43 .target 4 .is_crit_valid True .effect "Push 1D"
+combat_skill: .id "buckshot" .level 4 .type "ranged" .atk 115% .dmg -50% .crit 6% .launch 43 .target 4 .is_crit_valid True .effect "Push 1E"
+// MUS-106 Flushing Shot: rank 4 only, dmg -50%, push 1 (100..140%). Pushing rank 4 sends it to rank 1 (V-18).
+// MUS-106 몰이 사격: 4열만, 피해 −50%, 밀치기 1(100~140%). 의도: 맨 뒤를 밀면 맨 앞으로 튀어나온다(V-18). 짧은 한 줄로 대열 전체를 흔든다.
+combat_skill: .id "sidearm" .level 0 .type "ranged" .atk 90% .dmg -40% .crit 3% .move 1 0 .launch 321 .target 12 .is_crit_valid True
+combat_skill: .id "sidearm" .level 1 .type "ranged" .atk 95% .dmg -40% .crit 4% .move 1 0 .launch 321 .target 12 .is_crit_valid True
+combat_skill: .id "sidearm" .level 2 .type "ranged" .atk 100% .dmg -40% .crit 5% .move 1 0 .launch 321 .target 12 .is_crit_valid True
+combat_skill: .id "sidearm" .level 3 .type "ranged" .atk 105% .dmg -40% .crit 6% .move 1 0 .launch 321 .target 12 .is_crit_valid True
+combat_skill: .id "sidearm" .level 4 .type "ranged" .atk 110% .dmg -40% .crit 7% .move 1 0 .launch 321 .target 12 .is_crit_valid True
+// MUS-107 Sidearm: ranks 1-2-3 to 1-2, dmg -40%, then step back 1.
+// MUS-107 권총사격: 1·2·3열→1·2열, 피해 −40%, 쏜 뒤 자신 뒤로 1칸. 의도: 적과 거리를 두는 성격. 밀려났을 때 제자리로 돌아가는 도구(뒤로 2칸은 과해서 1칸).
+combat_skill: .id "patch_up" .level 0 .heal 2 3 .launch 43 .target @1234 .effect "RB MUS Patch Destress 1" .is_stall_invalidating false
+combat_skill: .id "patch_up" .level 1 .heal 3 3 .launch 43 .target @1234 .effect "RB MUS Patch Destress 2" .is_stall_invalidating false
+combat_skill: .id "patch_up" .level 2 .heal 3 4 .launch 43 .target @1234 .effect "RB MUS Patch Destress 3" .is_stall_invalidating false
+combat_skill: .id "patch_up" .level 3 .heal 4 4 .launch 43 .target @1234 .effect "RB MUS Patch Destress 4" .is_stall_invalidating false
+combat_skill: .id "patch_up" .level 4 .heal 4 5 .launch 43 .target @1234 .effect "RB MUS Patch Destress 5" .is_stall_invalidating false
+// MUS-108 Patch Up: vanilla heal, stress heal 2/2/3/3/4 instead of the stacking heal-received buff.
+// MUS-108 응급처치: 회복 바닐라, 받는 회복량 누적 대신 스트레스 회복 2/2/3/3/4. 의도: 성전사 격려의 반대(회복 많고 스트레스 조금). 받는 회복량은 성전사 전투 치유 몫.
+combat_skill: .id "skeet_shot" .level 0 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target @1234 .self_target_valid false .is_crit_valid False .effect "Stealth2" .is_stall_invalidating false
+combat_skill: .id "skeet_shot" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target @1234 .self_target_valid false .is_crit_valid False .effect "Stealth2" .is_stall_invalidating false
+combat_skill: .id "skeet_shot" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target @1234 .self_target_valid false .is_crit_valid False .effect "Stealth2" .is_stall_invalidating false
+combat_skill: .id "skeet_shot" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target @1234 .self_target_valid false .is_crit_valid False .effect "Stealth2" .is_stall_invalidating false
+combat_skill: .id "skeet_shot" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target @1234 .self_target_valid false .is_crit_valid False .effect "Stealth2" .is_stall_invalidating false
+// MUS-109 Covering Smoke: any rank, one ally other than self gains stealth for 2 turns.
+// MUS-109 엄호 연막: 어디서든 자신을 뺀 아군 1명 은신 2턴. 의도: 대신 맞는 보호와 다른 지키기 — 죽어가는 아군을 숨긴다. 버프는 넣지 않는다(은신만으로 충분히 셈).
+combat_move_skill: .id "move" .level 0 .type "move" .move 2 0 .launch 4321
+tag: .id "heavy"
+tag: .id "non-religious"
+tag: .id "training_ring"
+deaths_door: .buffs deathsdoorACCDebuff deathsdoorDMGLowDebuff deathsdoorDMGHighDebuff deathsdoorSPDDebuff deathsdoorSRDebuff .recovery_buffs mortalityACCDebuff mortalityDMGLowDebuff mortalityDMGHighDebuff mortalitySPDDebuff mortalitySRDebuff .recovery_heart_attack_buffs heartattackACCDebuff heartattackDMGLowDebuff heartattackDMGHighDebuff heartattackSPDDebuff heartattackSRDebuff
+controlled: .target_rank 4
+id_index: .index 15
+skill_selection: .can_select_combat_skills true .number_of_selected_combat_skills_max 4
+progression: .has_caretaker_goals false
+generation:  .is_generation_enabled false .number_of_positive_quirks_min 1 .number_of_positive_quirks_max 2 .number_of_negative_quirks_min 1 .number_of_negative_quirks_max 2 .number_of_class_specific_camping_skills 2 .number_of_shared_camping_skills 1 .number_of_random_combat_skills 4 .number_of_cards_in_deck 3 .card_chance 1.0 .reduce_number_of_cards_in_deck_hero_class_id arbalest .reduce_number_of_cards_in_deck_amount 3

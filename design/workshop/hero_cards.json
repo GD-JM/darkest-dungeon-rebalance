@@ -1250,5 +1250,134 @@
     ]
    }
   ]
+ },
+ "musketeer": {
+  "name": "Musketeer",
+  "tagline": "No longer an Arbalest copy: a hunter who pierces armor and hides her allies in smoke.",
+  "skills": [
+   {
+    "key": "musketeer|aimed_shot",
+    "name": "Piercing Ball",
+    "icon": "one",
+    "old": [
+     "Aimed Shot",
+     "Targets ranks 2-4",
+     "ACC 95",
+     "Marked: DMG +50-100%"
+    ],
+    "new": [
+     "Targets ranks 1-4",
+     "ACC 90",
+     "Armor piercing 10-30%",
+     "Marked: DMG +25-40%, crit +9-13%"
+    ]
+   },
+   {
+    "key": "musketeer|smokescreen",
+    "name": "Smokescreen",
+    "icon": "two",
+    "old": [
+     "DMG -80% to ranks 3-4",
+     "ACC/crit -15% (2 turns)"
+    ],
+    "new": [
+     "No damage, ranks 1-2",
+     "Stun, ACC -10% (1 turn)",
+     "Self stealth (2 turns)",
+     "3 per battle"
+    ]
+   },
+   {
+    "key": "musketeer|call_the_shot",
+    "name": "Mark the Quarry",
+    "icon": "three",
+    "old": [
+     "Call the Shot",
+     "Mark + dodge -20%"
+    ],
+    "new": [
+     "Mark, targets ranks 1-4",
+     "Self SPD +3-5 (3 turns)",
+     "Crit +4-8% vs large (3 turns)"
+    ]
+   },
+   {
+    "key": "musketeer|buckshot",
+    "name": "Flushing Shot",
+    "icon": "four",
+    "old": [
+     "Buckshot",
+     "AoE ranks 1-2, push 1 (75%)"
+    ],
+    "new": [
+     "Rank 4 only",
+     "Push 1 (100%):",
+     "rank 4 jumps to rank 1"
+    ]
+   },
+   {
+    "key": "musketeer|sidearm",
+    "name": "Sidearm",
+    "icon": "five",
+    "old": [
+     "Any rank, random target",
+     "ACC 75, self SPD +3"
+    ],
+    "new": [
+     "Use ranks 1-3, target 1-2",
+     "ACC 90, DMG -40%",
+     "Then step back 1"
+    ]
+   },
+   {
+    "key": "musketeer|patch_up",
+    "name": "Patch Up",
+    "icon": "six",
+    "old": [
+     "Heal 2-3",
+     "Healing received +20%"
+    ],
+    "new": [
+     "Heal 2-3",
+     "Stress heal 2-4"
+    ]
+   },
+   {
+    "key": "musketeer|skeet_shot",
+    "name": "Covering Smoke",
+    "icon": "seven",
+    "old": [
+     "Skeet Shot",
+     "Party stress heal 1 (60%)",
+     "Light, destealth"
+    ],
+    "new": [
+     "One ally (not self)",
+     "Stealth for 2 turns"
+    ]
+   },
+   {
+    "key": "musketeer|weapon",
+    "name": "Speed",
+    "icon": null,
+    "old": [
+     "SPD 3 / 5"
+    ],
+    "new": [
+     "SPD 2 / 4"
+    ]
+   },
+   {
+    "key": "musketeer|armour",
+    "name": "Health",
+    "icon": null,
+    "old": [
+     "HP 27 / 47"
+    ],
+    "new": [
+     "HP 24 / 42"
+    ]
+   }
+  ]
  }
 }

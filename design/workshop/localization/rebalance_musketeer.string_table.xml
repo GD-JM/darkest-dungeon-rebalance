@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<!-- MUS-110 창작마당판 총사 기술 이름 (2026-10-21). 연막탄·권총사격·응급처치는 바닐라 이름 그대로라 넣지 않는다 -->
+  <language id="english">
+    <entry id="combat_skill_name_musketeer_aimed_shot"><![CDATA[Piercing Ball]]></entry>
+    <entry id="upgrade_tree_name_musketeer.aimed_shot"><![CDATA[Piercing Ball]]></entry>
+    <entry id="combat_skill_name_musketeer_call_the_shot"><![CDATA[Mark the Quarry]]></entry>
+    <entry id="upgrade_tree_name_musketeer.call_the_shot"><![CDATA[Mark the Quarry]]></entry>
+    <entry id="combat_skill_name_musketeer_buckshot"><![CDATA[Flushing Shot]]></entry>
+    <entry id="upgrade_tree_name_musketeer.buckshot"><![CDATA[Flushing Shot]]></entry>
+    <entry id="combat_skill_name_musketeer_skeet_shot"><![CDATA[Covering Smoke]]></entry>
+    <entry id="upgrade_tree_name_musketeer.skeet_shot"><![CDATA[Covering Smoke]]></entry>
+  </language>
+  <language id="koreana">
+    <entry id="combat_skill_name_musketeer_aimed_shot"><![CDATA[관통탄]]></entry>
+    <entry id="upgrade_tree_name_musketeer.aimed_shot"><![CDATA[관통탄]]></entry>
+    <entry id="combat_skill_name_musketeer_call_the_shot"><![CDATA[사냥감 지정]]></entry>
+    <entry id="upgrade_tree_name_musketeer.call_the_shot"><![CDATA[사냥감 지정]]></entry>
+    <entry id="combat_skill_name_musketeer_buckshot"><![CDATA[몰이 사격]]></entry>
+    <entry id="upgrade_tree_name_musketeer.buckshot"><![CDATA[몰이 사격]]></entry>
+    <entry id="combat_skill_name_musketeer_skeet_shot"><![CDATA[엄호 연막]]></entry>
+    <entry id="upgrade_tree_name_musketeer.skeet_shot"><![CDATA[엄호 연막]]></entry>
+  </language>
+  <language id="koreanb">
+    <entry id="combat_skill_name_musketeer_aimed_shot"><![CDATA[관통탄]]></entry>
+    <entry id="upgrade_tree_name_musketeer.aimed_shot"><![CDATA[관통탄]]></entry>
+    <entry id="combat_skill_name_musketeer_call_the_shot"><![CDATA[사냥감 지정]]></entry>
+    <entry id="upgrade_tree_name_musketeer.call_the_shot"><![CDATA[사냥감 지정]]></entry>
+    <entry id="combat_skill_name_musketeer_buckshot"><![CDATA[몰이 사격]]></entry>
+    <entry id="upgrade_tree_name_musketeer.buckshot"><![CDATA[몰이 사격]]></entry>
+    <entry id="combat_skill_name_musketeer_skeet_shot"><![CDATA[엄호 연막]]></entry>
+    <entry id="upgrade_tree_name_musketeer.skeet_shot"><![CDATA[엄호 연막]]></entry>
+  </language>
+  <language id="schinese">
+    <entry id="combat_skill_name_musketeer_aimed_shot"><![CDATA[贯穿弹]]></entry>
+    <entry id="upgrade_tree_name_musketeer.aimed_shot"><![CDATA[贯穿弹]]></entry>
+    <entry id="combat_skill_name_musketeer_call_the_shot"><![CDATA[指定猎物]]></entry>
+    <entry id="upgrade_tree_name_musketeer.call_the_shot"><![CDATA[指定猎物]]></entry>
+    <entry id="combat_skill_name_musketeer_buckshot"><![CDATA[驱赶射击]]></entry>
+    <entry id="upgrade_tree_name_musketeer.buckshot"><![CDATA[驱赶射击]]></entry>
+    <entry id="combat_skill_name_musketeer_skeet_shot"><![CDATA[掩护烟幕]]></entry>
+    <entry id="upgrade_tree_name_musketeer.skeet_shot"><![CDATA[掩护烟幕]]></entry>
+  </language>
+  <language id="russian">
+    <entry id="combat_skill_name_musketeer_aimed_shot"><![CDATA[Пробивная пуля]]></entry>
+    <entry id="upgrade_tree_name_musketeer.aimed_shot"><![CDATA[Пробивная пуля]]></entry>
+    <entry id="combat_skill_name_musketeer_call_the_shot"><![CDATA[Метка добычи]]></entry>
+    <entry id="upgrade_tree_name_musketeer.call_the_shot"><![CDATA[Метка добычи]]></entry>
+    <entry id="combat_skill_name_musketeer_buckshot"><![CDATA[Загонный выстрел]]></entry>
+    <entry id="upgrade_tree_name_musketeer.buckshot"><![CDATA[Загонный выстрел]]></entry>
+    <entry id="combat_skill_name_musketeer_skeet_shot"><![CDATA[Дымовое прикрытие]]></entry>
+    <entry id="upgrade_tree_name_musketeer.skeet_shot"><![CDATA[Дымовое прикрытие]]></entry>
+  </language>
+  <language id="spanish">
+    <entry id="combat_skill_name_musketeer_aimed_shot"><![CDATA[Bala penetrante]]></entry>
+    <entry id="upgrade_tree_name_musketeer.aimed_shot"><![CDATA[Bala penetrante]]></entry>
+    <entry id="combat_skill_name_musketeer_call_the_shot"><![CDATA[Marcar la presa]]></entry>
+    <entry id="upgrade_tree_name_musketeer.call_the_shot"><![CDATA[Marcar la presa]]></entry>
+    <entry id="combat_skill_name_musketeer_buckshot"><![CDATA[Disparo de batida]]></entry>
+    <entry id="upgrade_tree_name_musketeer.buckshot"><![CDATA[Disparo de batida]]></entry>
+    <entry id="combat_skill_name_musketeer_skeet_shot"><![CDATA[Humo de cobertura]]></entry>
+    <entry id="upgrade_tree_name_musketeer.skeet_shot"><![CDATA[Humo de cobertura]]></entry>
+  </language>
+  <language id="brazilian">
+    <entry id="combat_skill_name_musketeer_aimed_shot"><![CDATA[Bala Penetrante]]></entry>
+    <entry id="upgrade_tree_name_musketeer.aimed_shot"><![CDATA[Bala Penetrante]]></entry>
+    <entry id="combat_skill_name_musketeer_call_the_shot"><![CDATA[Marcar a Presa]]></entry>
+    <entry id="upgrade_tree_name_musketeer.call_the_shot"><![CDATA[Marcar a Presa]]></entry>
+    <entry id="combat_skill_name_musketeer_buckshot"><![CDATA[Tiro de Batida]]></entry>
+    <entry id="upgrade_tree_name_musketeer.buckshot"><![CDATA[Tiro de Batida]]></entry>
+    <entry id="combat_skill_name_musketeer_skeet_shot"><![CDATA[Fumaça de Cobertura]]></entry>
+    <entry id="upgrade_tree_name_musketeer.skeet_shot"><![CDATA[Fumaça de Cobertura]]></entry>
+  </language>
+  <language id="french">
+    <entry id="combat_skill_name_musketeer_aimed_shot"><![CDATA[Balle perçante]]></entry>
+    <entry id="upgrade_tree_name_musketeer.aimed_shot"><![CDATA[Balle perçante]]></entry>
+    <entry id="combat_skill_name_musketeer_call_the_shot"><![CDATA[Désigner la proie]]></entry>
+    <entry id="upgrade_tree_name_musketeer.call_the_shot"><![CDATA[Désigner la proie]]></entry>
+    <entry id="combat_skill_name_musketeer_buckshot"><![CDATA[Tir de rabat]]></entry>
+    <entry id="upgrade_tree_name_musketeer.buckshot"><![CDATA[Tir de rabat]]></entry>
+    <entry id="combat_skill_name_musketeer_skeet_shot"><![CDATA[Fumée de couverture]]></entry>
+    <entry id="upgrade_tree_name_musketeer.skeet_shot"><![CDATA[Fumée de couverture]]></entry>
+  </language>
+  <language id="german">
+    <entry id="combat_skill_name_musketeer_aimed_shot"><![CDATA[Durchschlagende Kugel]]></entry>
+    <entry id="upgrade_tree_name_musketeer.aimed_shot"><![CDATA[Durchschlagende Kugel]]></entry>
+    <entry id="combat_skill_name_musketeer_call_the_shot"><![CDATA[Beute markieren]]></entry>
+    <entry id="upgrade_tree_name_musketeer.call_the_shot"><![CDATA[Beute markieren]]></entry>
+    <entry id="combat_skill_name_musketeer_buckshot"><![CDATA[Treibschuss]]></entry>
+    <entry id="upgrade_tree_name_musketeer.buckshot"><![CDATA[Treibschuss]]></entry>
+    <entry id="combat_skill_name_musketeer_skeet_shot"><![CDATA[Deckungsrauch]]></entry>
+    <entry id="upgrade_tree_name_musketeer.skeet_shot"><![CDATA[Deckungsrauch]]></entry>
+  </language>
+  <language id="polish">
+    <entry id="combat_skill_name_musketeer_aimed_shot"><![CDATA[Kula Przebijająca]]></entry>
+    <entry id="upgrade_tree_name_musketeer.aimed_shot"><![CDATA[Kula Przebijająca]]></entry>
+    <entry id="combat_skill_name_musketeer_call_the_shot"><![CDATA[Wskazanie Zwierzyny]]></entry>
+    <entry id="upgrade_tree_name_musketeer.call_the_shot"><![CDATA[Wskazanie Zwierzyny]]></entry>
+    <entry id="combat_skill_name_musketeer_buckshot"><![CDATA[Strzał Nagonki]]></entry>
+    <entry id="upgrade_tree_name_musketeer.buckshot"><![CDATA[Strzał Nagonki]]></entry>
+    <entry id="combat_skill_name_musketeer_skeet_shot"><![CDATA[Dym Osłonowy]]></entry>
+    <entry id="upgrade_tree_name_musketeer.skeet_shot"><![CDATA[Dym Osłonowy]]></entry>
+  </language>
+  <language id="czech">
+    <entry id="combat_skill_name_musketeer_aimed_shot"><![CDATA[Průrazná kule]]></entry>
+    <entry id="upgrade_tree_name_musketeer.aimed_shot"><![CDATA[Průrazná kule]]></entry>
+    <entry id="combat_skill_name_musketeer_call_the_shot"><![CDATA[Označit kořist]]></entry>
+    <entry id="upgrade_tree_name_musketeer.call_the_shot"><![CDATA[Označit kořist]]></entry>
+    <entry id="combat_skill_name_musketeer_buckshot"><![CDATA[Vyháněcí výstřel]]></entry>
+    <entry id="upgrade_tree_name_musketeer.buckshot"><![CDATA[Vyháněcí výstřel]]></entry>
+    <entry id="combat_skill_name_musketeer_skeet_shot"><![CDATA[Krycí dým]]></entry>
+    <entry id="upgrade_tree_name_musketeer.skeet_shot"><![CDATA[Krycí dým]]></entry>
+  </language>
+  <language id="italian">
+    <entry id="combat_skill_name_musketeer_aimed_shot"><![CDATA[Palla Perforante]]></entry>
+    <entry id="upgrade_tree_name_musketeer.aimed_shot"><![CDATA[Palla Perforante]]></entry>
+    <entry id="combat_skill_name_musketeer_call_the_shot"><![CDATA[Segnare la Preda]]></entry>
+    <entry id="upgrade_tree_name_musketeer.call_the_shot"><![CDATA[Segnare la Preda]]></entry>
+    <entry id="combat_skill_name_musketeer_buckshot"><![CDATA[Tiro di Battuta]]></entry>
+    <entry id="upgrade_tree_name_musketeer.buckshot"><![CDATA[Tiro di Battuta]]></entry>
+    <entry id="combat_skill_name_musketeer_skeet_shot"><![CDATA[Fumo di Copertura]]></entry>
+    <entry id="upgrade_tree_name_musketeer.skeet_shot"><![CDATA[Fumo di Copertura]]></entry>
+  </language>
+  <language id="japanese">
+    <entry id="combat_skill_name_musketeer_aimed_shot"><![CDATA[貫通弾]]></entry>
+    <entry id="upgrade_tree_name_musketeer.aimed_shot"><![CDATA[貫通弾]]></entry>
+    <entry id="combat_skill_name_musketeer_call_the_shot"><![CDATA[獲物指定]]></entry>
+    <entry id="upgrade_tree_name_musketeer.call_the_shot"><![CDATA[獲物指定]]></entry>
+    <entry id="combat_skill_name_musketeer_buckshot"><![CDATA[追い出し射撃]]></entry>
+    <entry id="upgrade_tree_name_musketeer.buckshot"><![CDATA[追い出し射撃]]></entry>
+    <entry id="combat_skill_name_musketeer_skeet_shot"><![CDATA[援護煙幕]]></entry>
+    <entry id="upgrade_tree_name_musketeer.skeet_shot"><![CDATA[援護煙幕]]></entry>
+  </language>
+</root>

@@ -1,0 +1,135 @@
+{
+	"_doc": "창작마당판 전용 강화 (MUS-103 관통, MUS-105 대형 치명). build_workshop.py가 참조되는 것만 복사.",
+	"buffs": [
+		{
+			"id": "RB_MUS_PREY_CRIT_1",
+			"stat_type": "combat_stat_add",
+			"stat_sub_type": "crit_chance",
+			"amount": 0.04,
+			"remove_if_not_active": false,
+			"rule_type": "monsterSize",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 2,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_MUS_PREY_CRIT_2",
+			"stat_type": "combat_stat_add",
+			"stat_sub_type": "crit_chance",
+			"amount": 0.05,
+			"remove_if_not_active": false,
+			"rule_type": "monsterSize",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 2,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_MUS_PREY_CRIT_3",
+			"stat_type": "combat_stat_add",
+			"stat_sub_type": "crit_chance",
+			"amount": 0.06,
+			"remove_if_not_active": false,
+			"rule_type": "monsterSize",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 2,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_MUS_PREY_CRIT_4",
+			"stat_type": "combat_stat_add",
+			"stat_sub_type": "crit_chance",
+			"amount": 0.07,
+			"remove_if_not_active": false,
+			"rule_type": "monsterSize",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 2,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_MUS_PREY_CRIT_5",
+			"stat_type": "combat_stat_add",
+			"stat_sub_type": "crit_chance",
+			"amount": 0.08,
+			"remove_if_not_active": false,
+			"rule_type": "monsterSize",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 2,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_MUS_AP_1",
+			"stat_type": "ignore_protection",
+			"stat_sub_type": "",
+			"amount": 0.1,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_MUS_AP_2",
+			"stat_type": "ignore_protection",
+			"stat_sub_type": "",
+			"amount": 0.15,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_MUS_AP_3",
+			"stat_type": "ignore_protection",
+			"stat_sub_type": "",
+			"amount": 0.2,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_MUS_AP_4",
+			"stat_type": "ignore_protection",
+			"stat_sub_type": "",
+			"amount": 0.25,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_MUS_AP_5",
+			"stat_type": "ignore_protection",
+			"stat_sub_type": "",
+			"amount": 0.3,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		}
+	]
+}

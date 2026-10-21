@@ -1,8 +1,6 @@
 {
  "_doc": "창작마당판 = 커스텀판 − 아래 제외(2026-10-17 제작자 결정). tools/build_workshop.py 참조. revert: 바닐라로 되돌림, pending: 제작자 답 대기(빌드에선 되돌림).",
- "exclude_heroes": [
-  "musketeer"
- ],
+ "exclude_heroes": [],
  "revert": [
   {
    "id": "OCC-002",
@@ -282,5 +280,8 @@
    "ko": "명중 85 → 90. 맞혀야 아군 강화가 걸리는 효과 위주 원거리 기술 — 효과가 본업인 기술은 명중을 우선한다.",
    "en": "Accuracy 85 → 90. A ranged skill whose job is the ally buff it applies on hit; for effect-first skills accuracy takes priority."
   }
+ },
+ "replace_heroes": {
+  "musketeer": "design/workshop/musketeer"
  }
 }

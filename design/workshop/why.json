@@ -1029,5 +1029,97 @@
   ],
   "en": "Judgement's self-heal and crit move here so a front-rank Vestal is a real option, as her vanilla melee trinkets already hint. A rear Vestal pays for staying put by losing the free self-heal.",
   "ko": "심판의 자기 회복과 치명타를 철퇴로 옮겨 1·2열 성녀를 실제 선택지로 만든다(바닐라 근접 장신구도 전열 성녀를 상정한다). 후열 붙박이 성녀는 자기 회복을 잃는 것이 대가다."
+ },
+ "musketeer|weapon": {
+  "ids": [
+   "MUS-101"
+  ],
+  "principles": [
+   "P-19"
+  ],
+  "en": "Her matchlock is a slow gun, and since she can change ranks she should not outclass the rank-locked Arbalest, so she is one point slower.",
+  "ko": "화승총은 원래 느린 총이고, 자리를 옮길 수 있는 영웅은 붙박이인 석궁사수보다 강하면 안 되니 속도를 1 낮췄다."
+ },
+ "musketeer|armour": {
+  "ids": [
+   "MUS-102"
+  ],
+  "principles": [
+   "P-19"
+  ],
+  "en": "A tournament entrant's vest is not a deserter's plate: less health than the Arbalest.",
+  "ko": "대회 참가자의 조끼는 탈영병의 판금이 아니다. 석궁사수보다 체력을 낮췄다."
+ },
+ "musketeer|aimed_shot": {
+  "ids": [
+   "MUS-103"
+  ],
+  "principles": [
+   "P-19",
+   "R-TRADE-02"
+  ],
+  "en": "Special ammunition from her lore: the shot now reaches every rank and pierces 10-30% armor, so she is a steady dealer against tough enemies. Because of the piercing, her bonus against marked targets is far smaller than the Arbalest's.",
+  "ko": "설정 속 특수탄. 모든 열에 닿고 방어를 10~30% 뚫는 꾸준한 딜러가 됐다. 방어를 뚫는 만큼 표식 대상 추가 피해는 석궁사수보다 훨씬 낮다."
+ },
+ "musketeer|smokescreen": {
+  "ids": [
+   "MUS-104"
+  ],
+  "principles": [
+   "P-19",
+   "P-20"
+  ],
+  "en": "A smoke grenade should hide and blind: it now stuns the front two enemies, blinds them briefly and hides the Musketeer in the smoke, three times per battle like the original Barbaric Yawp.",
+  "ko": "연막탄이면 가리고 숨어야 한다. 적 앞 두 열을 기절시키고 잠깐 눈을 가리며 총사는 연기 속에 숨는다. 원작 야만스러운 함성처럼 전투당 3번."
+ },
+ "musketeer|call_the_shot": {
+  "ids": [
+   "MUS-105"
+  ],
+  "principles": [
+   "P-19"
+  ],
+  "en": "\"This prize is mine!\" She marks her quarry and hurries to prove herself: faster for three turns and deadlier against large monsters.",
+  "ko": "\"이놈은 내 거야!\" 사냥감을 찍고 증명하려 서두른다. 3턴 동안 빨라지고 큰 사냥감에게 치명타가 잘 터진다."
+ },
+ "musketeer|buckshot": {
+  "ids": [
+   "MUS-106"
+  ],
+  "principles": [
+   "P-19"
+  ],
+  "en": "A hunter's drive: knocking back the enemy in rank 4 throws it to the front and shoves the rest of their line back.",
+  "ko": "사냥의 몰이. 4열 적을 밀면 맨 앞으로 튀어나오고 나머지 적 대열이 한 칸씩 밀린다."
+ },
+ "musketeer|sidearm": {
+  "ids": [
+   "MUS-107"
+  ],
+  "principles": [
+   "P-19"
+  ],
+  "en": "She keeps her distance: fire the pistol at the enemy in front, then step back one rank.",
+  "ko": "거리를 두는 성격 그대로. 앞의 적에게 권총을 쏘고 한 칸 물러난다."
+ },
+ "musketeer|patch_up": {
+  "ids": [
+   "MUS-108"
+  ],
+  "principles": [
+   "G-01"
+  ],
+  "en": "The opposite of the Crusader's Inspiring Cry: same healing, plus a little stress relief. The healing-received bonus now belongs to the Crusader's Battle Heal.",
+  "ko": "성전사 격려의 함성의 반대. 회복은 그대로, 스트레스도 조금 덜어 준다. 받는 회복량 증가는 성전사 전투 치유 몫이다."
+ },
+ "musketeer|skeet_shot": {
+  "ids": [
+   "MUS-109"
+  ],
+  "principles": [
+   "P-19"
+  ],
+  "en": "A new way to protect: an airburst smoke shell hides one ally for two turns, so enemies cannot single them out. Nobody has to take the hits for them.",
+  "ko": "새로운 방식의 지키기. 공중에서 터진 연막이 아군 한 명을 2턴 숨겨 적이 직접 노리지 못한다. 누가 대신 맞아 줄 필요가 없다."
  }
 }

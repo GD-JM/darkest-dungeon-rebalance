@@ -3,6 +3,9 @@
 규칙 (2026-10-17 제작자 결정): 커스텀판 변경 중 원칙 위배·근거 없음·타 제작자 콘텐츠만 뺀다.
 - design/workshop/changes.json
   - exclude_heroes: 통째로 빼는 영웅(바닐라 유지 = 파일을 넣지 않음)
+  - replace_heroes: {영웅: 폴더} — 커스텀판 대신 창작마당판 전용 원본을 쓴다(총사 MUS-101~110: 커스텀판은 YAMR).
+      폴더의 <영웅>.info.darkest(주석 포함)와 <영웅>.art.darkest를 그대로 넣는다. 되돌리기(revert)는 적용하지 않는다.
+- design/workshop/workshop.buffs.json: 창작마당판 전용 강화. design/workshop/localization/*.string_table.xml: 기술 이름 → loc2 컴파일
   - revert: [{id, hero, ops, ko, en}] — 커스텀판 줄을 바닐라로 되돌림.
       ops: ["vanilla_skill", 기술id] / ["vanilla_line", 정규식] / ["skill", 기술id, 필드, 값(5개 또는 1개)]
   - pending: 제작자 답을 기다리는 항목(빌드에서는 revert와 같게 처리)
@@ -97,6 +100,7 @@ def principles_of(hero, cid):
 def main():
     spec = json.load(open(os.path.join(W, 'changes.json'), encoding='utf-8'))
     excl = set(spec.get('exclude_heroes', []))
+    repl = {h: os.path.join(M, d) for h, d in spec.get('replace_heroes', {}).items()}
     reverts = spec.get('revert', []) + spec.get('pending', [])
     notes_over = spec.get('notes', {})
     if os.path.exists(OUT):
@@ -113,7 +117,7 @@ def main():
     notes = []      # (hero, 대상, [ID], en 주석들, ko 주석들)
     heroes = []
     for hero in S.KO:
-        cf = os.path.join(M, 'heroes', hero, hero + '.info.darkest')
+        cf = os.path.join(repl[hero], hero + '.info.darkest') if hero in repl else os.path.join(M, 'heroes', hero, hero + '.info.darkest')
         if hero in excl or not os.path.exists(cf):
             continue
         raw = rd(cf)
@@ -121,7 +125,7 @@ def main():
         lines = raw.split(eol)
         van = rd(ec.vanilla_hero_file(G, hero)).splitlines()
         for r in reverts:
-            if r['hero'] == hero:
+            if r['hero'] == hero and hero not in repl:
                 for op in r['ops']:
                     apply_revert(lines, van, op, r['id'])
         data = [l for l in lines if l.strip() and not l.startswith('//')]
@@ -156,6 +160,9 @@ def main():
         dst = os.path.join(OUT, 'heroes', hero, hero + '.info.darkest')
         os.makedirs(os.path.dirname(dst), exist_ok=True)
         open(dst, 'wb').write(eol.join(lines).encode('utf-8'))
+        art = os.path.join(repl.get(hero, ''), hero + '.art.darkest')
+        if hero in repl and os.path.exists(art):
+            shutil.copy(art, os.path.join(os.path.dirname(dst), hero + '.art.darkest'))
     # 의존 효과·강화
     need = []
     for hero in heroes:
@@ -168,7 +175,7 @@ def main():
     effects = [cust_eff[n] for n in need]
     van_buffs = ec.load_buffs(G)
     cust_buffs = {}
-    for f in glob.glob(os.path.join(M, 'shared', 'buffs', 'rebalance_*.buffs.json')):
+    for f in glob.glob(os.path.join(M, 'shared', 'buffs', 'rebalance_*.buffs.json')) + [os.path.join(W, 'workshop.buffs.json')]:
         for b in json.load(open(f, encoding='utf-8-sig'))['buffs']:
             cust_buffs[b['id']] = b
     need_b = []
@@ -187,6 +194,23 @@ def main():
         p = os.path.join(OUT, 'shared', 'buffs', 'rebalance_workshop.buffs.json')
         os.makedirs(os.path.dirname(p), exist_ok=True)
         json.dump({'buffs': need_b}, open(p, 'w', encoding='utf-8'), indent='\t')
+    # 기술 이름 현지화: string_table.xml → localization.exe → rebalance_<언어>.loc2 (memory: dd-korean-patches 방식)
+    xmls = glob.glob(os.path.join(W, 'localization', '*.string_table.xml'))
+    if xmls:
+        import tempfile, subprocess
+        tmp = tempfile.mkdtemp(prefix='rb_loc_')
+        loc = os.path.join(tmp, 'localization'); os.makedirs(loc); os.makedirs(os.path.join(tmp, 'colours'))
+        for f in glob.glob(os.path.join(G, 'colours', '*.colours.darkest')):
+            shutil.copy(f, os.path.join(tmp, 'colours'))
+        for f in xmls:
+            shutil.copy(f, loc)
+        open(os.path.join(loc, 'project_paths.txt'), 'w').write('..')
+        res = subprocess.run([os.path.join(G, '_windows', 'win32', 'localization.exe')], cwd=loc, input=b'\n', capture_output=True).stdout.decode('cp949', 'ignore')
+        assert 'SUCCESS' in res and 'Error' not in res, res
+        od = os.path.join(OUT, 'localization'); os.makedirs(od, exist_ok=True)
+        for f in glob.glob(os.path.join(loc, '*.loc2')):
+            shutil.copy(f, os.path.join(od, 'rebalance_' + os.path.basename(f)))
+        shutil.rmtree(tmp)
     # 패치 노트 (영어 = 메인, 한국어): 무엇 = 바닐라 vs 출력 데이터 자동 비교(patch_notes.py), 왜 = design/workshop/why.json(검토된 근거)
     names = {}
     for f in glob.glob(os.path.join(G, 'localization', '*.string_table.xml')) + glob.glob(os.path.join(G, 'dlc', '*', 'localization', '*.string_table.xml')) + glob.glob(os.path.join(G, 'dlc', '*', 'features', '*', 'localization', '*.string_table.xml')):
@@ -200,6 +224,14 @@ def main():
                 names.setdefault((lang, m.group(1)), m.group(2))
             for m in re.finditer(r'<entry id="hero_class_name_(\w+?)"><!\[CDATA\[(.*?)\]\]>', t[i0:j0]):
                 names.setdefault((lang, 'hero:' + m.group(1)), m.group(2))
+    # 창작마당판에서 바꾼 기술 이름(MUS-110): 패치 노트에는 "새 이름 (원래 이름)"
+    for f in glob.glob(os.path.join(W, 'localization', '*.string_table.xml')):
+        tx = rd(f)
+        for lang in ('english', 'koreana'):
+            m0 = re.search(r'<language id="%s">(.*?)</language>' % lang, tx, re.S)
+            for k, v in re.findall(r'<entry id="combat_skill_name_(\w+?)"><!\[CDATA\[(.*?)\]\]>', m0.group(1) if m0 else ''):
+                old = names.get((lang, k))
+                names[(lang, k)] = '%s (%s)' % (v, old) if old and old != v else v
     why_p = os.path.join(W, 'why.json')
     WHY = json.load(open(why_p, encoding='utf-8')) if os.path.exists(why_p) else {}
     ctx = PN.make_ctx(OUT)

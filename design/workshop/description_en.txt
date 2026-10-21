@@ -7,7 +7,7 @@ Early on, Darkest Dungeon can become nearly unplayable without a Vestal, an Occu
 The same goes inside each hero: skills and ranks are rebalanced so you are no longer locked into one optimal set of four skills, repeated from one rank.
 
 [h2]One integrated patch, same overall difficulty[/h2]
-Most hero mods change one hero at a time, and that usually means making that hero stronger. This mod rebalances all 19 heroes together under one set of rules: every buff is paired with a cost or a nerf elsewhere, so the game gets neither easier nor harder overall. By our hero-strength model, total strength across the roster stays within 0.5% of vanilla, while the gap between the strongest and weakest heroes narrows: the Duelist and Houndmaster come down, the Bounty Hunter and Arbalest come up.
+Most hero mods change one hero at a time, and that usually means making that hero stronger. This mod rebalances all 20 heroes together under one set of rules: every buff is paired with a cost or a nerf elsewhere, so the game gets neither easier nor harder overall. By our hero-strength model, total strength across the roster stays within 1% of vanilla, while the gap between the strongest and weakest heroes narrows: the Duelist and Houndmaster come down, the Bounty Hunter and Arbalest come up.
 
 [h2]How the changes were decided[/h2]
 [list]
@@ -58,11 +58,12 @@ The images above show every changed skill, before and after (Bounty Hunter first
 [b]Occultist[/b] — Vulnerability Hex lowers stun, bleed, blight and debuff resist, setting up the whole party.
 [b]Plague Doctor[/b] — Battlefield Medicine is the blight-cure heal (3–7) while the Arbalest covers bleed.
 [b]Runaway[/b] — Ransack no longer reaches rank 4.
+[b]Musketeer[/b] — no longer an Arbalest copy, but a hunter: Piercing Ball cuts through armor, Smokescreen stuns the front ranks, and Covering Smoke hides an ally from enemy attacks.
 [b]Shieldbreaker[/b] — the DLC outlier, back in line: Pierce loses rank 4, weapon growth standardized.
 [b]Vestal[/b] — can work from rank 2: Mace Bash heals herself, Divine Grace and Illumination work from any rank.
 
 [h2]Compatibility[/h2]
-[b]Requires the DLC heroes it changes:[/b] The Crimson Court (Flagellant), The Shieldbreaker, Duelist and Runaway. Without them the game may fail to load.
+[b]Requires the DLC heroes it changes:[/b] The Crimson Court (Flagellant), The Shieldbreaker, Duelist, Runaway and The Musketeer (free). Without them the game may fail to load.
 Replaces only the hero files above (plus one effect and one buff file); conflicts with mods that replace the same heroes. Safe on existing saves.
 
 Feedback is welcome — every change has a written reason, and I'm happy to explain or adjust.

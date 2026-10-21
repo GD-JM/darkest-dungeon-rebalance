@@ -23,17 +23,19 @@ EFF_K = {
                debuff_res='debuff res', move_res='move res', heal_recv='healing received', stress_recv='stress taken',
                stress_heal_recv='stress healing received', ignore_prot='armor piercing', cure_bleed='cure bleed', cure_poison='cure blight',
                untag='remove mark', unstun='remove stun', clear_debuff='clear debuffs', clear_riposte='end riposte', combat_end='until combat ends',
-               is_guarded='while guarded', rule='if'),
+               is_guarded='while guarded', rule='if', stealth='stealth', monsterSize='vs large monsters', back='back', fwd='forward'),
     'ko': dict(stun='기절', bleed='출혈', poison='중독', burn='화상', heal='회복', healstress='스트레스 회복', stress='스트레스',
                push='밀치기', pull='당기기', tag='표식', unstealth='은신 해제', corpse='시체 제거', guard='보호', torch_up='횃불 +',
                torch_down='횃불 −', cure='출혈·중독 치료', self='자신', party='아군 전체', ally='아군', t='턴', chance='확률',
                crit_received='받는 치명타', dmg_received='받는 피해', shuffle='위치 섞기', acc='명중', dodge='회피', prot='방어',
                spd='속도', dmgmod='피해', critc='치명타', res='저항', stun_res='기절 저항', blight_res='중독 저항', bleed_res='출혈 저항',
                debuff_res='약화 저항', move_res='이동 저항', heal_recv='받는 회복', stress_recv='받는 스트레스',
-               stress_heal_recv='받는 스트레스 회복', ignore_prot='방어 무시', cure_bleed='출혈 치료', cure_poison='중독 치료',
+               stress_heal_recv='받는 스트레스 회복', ignore_prot='방어 관통', cure_bleed='출혈 치료', cure_poison='중독 치료',
                untag='표식 해제', unstun='기절 해제', clear_debuff='약화 해제', clear_riposte='반격 종료', combat_end='전투 끝까지',
-               is_guarded='보호받는 동안', rule='조건'),
+               is_guarded='보호받는 동안', rule='조건', stealth='은신', monsterSize='대형 상대', back='뒤로', fwd='앞으로'),
 }
+FN = {'en': dict(dmg='damage', crit='crit', spd='speed', hp='HP', prot='protection'), 'ko': dict(dmg='피해', crit='치명', spd='속도', hp='체력', prot='방어'), }
+FN['en']['def'] = 'dodge'; FN['ko']['def'] = '회피'
 STAT = {'attack_rating': 'acc', 'defense_rating': 'dodge', 'protection_rating': 'prot', 'speed_rating': 'spd',
         'damage_low': 'dmgmod', 'damage_high': 'dmgmod', 'crit_chance': 'critc'}
 RES = {'stun': 'stun_res', 'poison': 'blight_res', 'bleed': 'bleed_res', 'debuff': 'debuff_res', 'move': 'move_res'}
@@ -80,6 +82,7 @@ class Ctx:
         if 'pull' in k: add('%s %s' % (L['pull'], S.first(k, 'pull')))
         if 'tag' in k: add(L['tag'])
         if 'unstealth' in k: add(L['unstealth'])
+        if 'stealth' in k: add(L['stealth'])            # MUS-104/109 은신 (자신·아군)
         if 'shuffletarget' in k: add(L['shuffle'])
         if 'kill_enemy_types' in k: add(L['corpse'])
         if 'guard' in k: add(L['guard'])
@@ -191,6 +194,15 @@ def skill_diff(sid, vl, wl, ctx, lang):
         out.append('%s %s → %s' % (hl, f1(a), f1(b)))
     for f in ('per_battle_limit', 'per_turn_limit', 'move', 'is_crit_valid', 'ignore_protection', 'ignore_stealth', 'ignore_guard'):
         a = ' '.join(vd[0].get(f, [])) or L['none']; b = ' '.join(wd[0].get(f, [])) or L['none']
+        if f == 'move':                                    # ".move 뒤 앞" -> "뒤로 1칸" (MUS-107)
+            E_ = EFF_K[lang]
+            def mv(x):
+                if x == L['none']:
+                    return x
+                bk, fw = (x.split() + ['0', '0'])[:2]
+                s_ = [('%s %s' % (E_['back'], bk)) if bk != '0' else '', ('%s %s' % (E_['fwd'], fw)) if fw != '0' else '']
+                return ', '.join(z for z in s_ if z) or L['none']
+            a, b = mv(a), mv(b)
         if a != b:
             out.append('%s %s → %s' % (L[f], a, b))
     # 효과: 레벨마다 요약 목록을 만들고 차이를 모은다
@@ -229,12 +241,12 @@ def line_diff(kind, vl, wl, lang):
         for f in ('dmg', 'crit', 'spd'):
             a = [' '.join(S.kv(l).get(f, [])) for l in vl]; b = [' '.join(S.kv(l).get(f, [])) for l in wl]
             if a != b:
-                out.append('%s %s %s → %s' % (L['weapon'], f, ' / '.join(a), ' / '.join(b)))
+                out.append('%s %s %s → %s' % (L['weapon'], FN[lang].get(f, f), ' / '.join(a), ' / '.join(b)))
     elif kind == 'armour':
         for f in ('def', 'prot', 'hp', 'spd'):
             a = [' '.join(S.kv(l).get(f, [])) for l in vl]; b = [' '.join(S.kv(l).get(f, [])) for l in wl]
             if a != b:
-                out.append('%s %s %s → %s' % (L['armour'], f, ' / '.join(a), ' / '.join(b)))
+                out.append('%s %s %s → %s' % (L['armour'], FN[lang].get(f, f), ' / '.join(a), ' / '.join(b)))
     elif kind == 'resistances':
         a, b = S.kv(vl[0]), S.kv(wl[0])
         for k in a:
