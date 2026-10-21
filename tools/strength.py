@@ -34,6 +34,7 @@ PARAM = dict(
     SUPPORT_MULT=1.0,     # 회복·보호·스트레스 회복. 프리미엄 없음(R-STRAT-01 3) -> 민감도로만
     PUSH=1.0,             # 밀치기·섞기: 실측 가격표의 1/3 (stun.md 10-6)
     PULL=3.0,             # 당기기: 후열 스트레스 발생원을 끌어냄 [사용자]
+    PUSH_WRAP=True,       # V-18 [사용자 관찰, 미검증]: 밀치기가 맨 뒤를 넘으면 맨 앞으로 돈다 (4열 밀치기 1 -> 4열이 1열, 1·2·3열은 한 칸씩 뒤로)
     MARK_PARTY=2.0,       # 표식 파티 활용분 (hero_power.md 4-2)
     CORPSE=0.5,           # 시체 제거. 시뮬레이션: 메인 전략(3·4열 먼저)이면 1·2열로 끌어오는 적 0명, 무작위 처치면 0.32명 x 당기기 3.0 = 1.0 -> 중간값 0.5 (arbalest.md 참고 아님, man_at_arms.md MAA 검토)
     COND_SELF=0.6, COND_OTHER=0.3, COND_STUN=0.67,  # 조건 유지율 (hero_power.md 4-2). 적 유형 조건은 실측 비율
@@ -441,7 +442,10 @@ def move_value(kind, dist, tranks, stress_hp, death_rate, horizon):
                 if 1 + sum(u[0] for u in us[:i]) not in tranks:
                     continue
                 mv = list(us); x = mv.pop(i)
-                mv.insert(min(len(mv), i + dist) if kind == 'push' else max(0, i - dist), x)
+                if kind == 'push' and PARAM['PUSH_WRAP'] and i + dist > len(mv):
+                    mv.insert(i + dist - len(us), x)   # V-18: 맨 뒤를 넘은 만큼 맨 앞에서 다시 센다
+                else:
+                    mv.insert(min(len(mv), i + dist) if kind == 'push' else max(0, i - dist), x)
                 g = lineup(us) - lineup(mv)
                 best = g if best is None else max(best, g)
             if best is not None:
