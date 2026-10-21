@@ -63,14 +63,15 @@ combat_skill: .id "redeem" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .self
 combat_skill: .id "redeem" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false.required_performer_hp_range 0 0.40 .per_battle_limit 2 .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Super Heal 5" "Flag HealSelf 5" "Flagellant Exhaust" .is_stall_invalidating false
 
 
-combat_skill: .id "endure" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Steal Stress 1" "RB FLA Flag Self Stress 1" "Flag Endure Speed Buff 1" .is_stall_invalidating false
-combat_skill: .id "endure" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Steal Stress 2" "RB FLA Flag Self Stress 2" "Flag Endure Speed Buff 2" .is_stall_invalidating false
-combat_skill: .id "endure" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Steal Stress 3" "RB FLA Flag Self Stress 3" "Flag Endure Speed Buff 3" .is_stall_invalidating false
+combat_skill: .id "endure" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Steal Stress 1" "RB FLA Flag Self Stress 1" .is_stall_invalidating false
+combat_skill: .id "endure" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Steal Stress 2" "RB FLA Flag Self Stress 2" .is_stall_invalidating false
+combat_skill: .id "endure" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Steal Stress 3" "RB FLA Flag Self Stress 3" .is_stall_invalidating false
 // FLA-008 endure 1~3렙: 자기 스트레스 4/5/6 (4렙 7은 바닐라와 같아 바닐라 효과 재사용) [제작자]
-combat_skill: .id "endure" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Steal Stress 4" "Flag Self Stress 4" "Flag Endure Speed Buff 4" .is_stall_invalidating false
-combat_skill: .id "endure" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Steal Stress 5" "RB FLA Flag Self Stress 5" "Flag Endure Speed Buff 5" .is_stall_invalidating false
+combat_skill: .id "endure" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Steal Stress 4" "Flag Self Stress 4" .is_stall_invalidating false
+combat_skill: .id "endure" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Steal Stress 5" "RB FLA Flag Self Stress 5" .is_stall_invalidating false
 // FLA-006 [trace 2026-10-05] Reduce self stress transfer cost to support an alternative stress healer.
 // FLA-008 endure: 자기 스트레스 4 고정 -> 4/5/6/7/8(회복 10~14 그대로, 순회복 매 레벨 6). 2018 공식 하향(P-06)과의 충돌 완화 [제작자]
+// FLA-009 endure: 자기 속도 강화(Flag Endure Speed Buff 1~5, 속도 +1/1/2/2/3) 제거 -> 순수 스트레스 회복 기술 (제작자 2026-10-21)
 
 
 combat_skill: .id "suffer" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Clear Marked Target" "Mark Self" "Flag Steal Bleed" "Flag Steal Blight" "Flag Grit 1" .is_stall_invalidating false

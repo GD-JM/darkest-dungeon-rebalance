@@ -51,7 +51,7 @@ Each entry: what changed (generated from the game data) — why (principle IDs f
 
 - **Resistances**: Resists stun 50% → 40%; Resists bleed 65% → 60%; Resists move 50% → 40% — His stun and move resists sat above the baseline without justification: the lore's toughness from self-inflicted wounds is offset by fighting nearly unarmored, so both return to the baseline 40. Bleed 65 was the only signature resist above the game's usual cap (baseline +30), so it now matches that cap. *(R-RES-01, P-22, G-04 / FLA-001)*
 - **Weapon**: Weapon spd 6 / 6 / 8 / 8 / 9 → 6 / 6 / 7 / 7 / 8 — Nearly every hero gains speed +0/+0/+1/+1/+2 across weapon upgrades; the Flagellant's bigger jumps were an outlier, so his growth now follows the same rule. *(R-GROW-03, G-04 / FLA-007)*
-- **Endure**: Lv1 self: stress +10 … Lv5 self: stress +6 → Lv1 self: stress +4 … Lv5 self: stress +8 — At level 1, Endure relieved 10 stress but cost him 10, a net of zero. Self stress now scales so the net relief is a steady 6 at every level: useful from the start, while level 5 stays below vanilla out of respect for the official 2018 nerf. *(G-05, P-06 / FLA-008)*
+- **Endure**: Lv1 self: stress +10; self: speed +1 … Lv5 self: stress +6; self: speed +3 → Lv1 self: stress +4 … Lv5 self: stress +8 — At level 1, Endure relieved 10 stress but cost him 10, a net of zero. Self stress now scales so the net relief is a steady 6 at every level: useful from the start, while level 5 stays below vanilla out of respect for the official 2018 nerf. *(G-05, P-06 / FLA-008)*
 
 ## Grave Robber
 
@@ -112,7 +112,6 @@ Each entry: what changed (generated from the game data) — why (principle IDs f
 - **Weakening Curse**: Damage -75% → -65% — Weakening Curse was the Occultist's weakest skill, so the damage taken out of Vulnerability Hex moves here and his overall power stays the same. *(P-11, G-02 / OCC-007)*
 - **Wyrd Reconstruction**: Heal 0-13 … 0-22 → 0-13 … 0-20; Lv1 unchanged … Lv5 bleed 3×3t (85%) → Lv1 unchanged … Lv5 bleed 2×3t (80%) — Many players stopped at level 4 because the final upgrade sharply raised the bleed risk. Level 5 now keeps the level-4 bleed and gives up a little top-end healing instead, so the last upgrade is worth buying while the skill stays a gamble. *(G-02, P-12 / OCC-001)*
 - **Vulnerability Hex**: Damage -90% → -100%; Crit 5% → 0%; Can crit True → False; Lv1 dodge -15% 3t … Lv5 dodge -20% (140%) 3t → Lv1 stun res -15%, blight res -15%, bleed res -15%, debuff res -15% 3t … Lv5 stun res -20%, blight res -20%, bleed res -20%, debuff res -20% (140%) 3t — Mark plus dodge down duplicated the Arbalest's Sniper's Mark. True to its name, the hex now lowers resistances, the only hero skill that weakens stun and debuff resist, setting up the party's stuns, blights and bleeds; like the other pure mark skills it no longer deals damage, and its values now grow every level. *(P-19, R-STRAT-01, R-SKILL-05 / OCC-003, OCC-005, OCC-006, OCC-009, OCC-004)*
-- **Hands from the Abyss**: Accuracy 90% → 95%; Damage -50% → -60% — Stuns that can reach rank 3 are kept low on damage. In exchange its accuracy goes up, so the stun itself lands more reliably. *(R-STUN-02, R-STUN-03 / OCC-008)*
 
 ## Plague Doctor
 
