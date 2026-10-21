@@ -7,7 +7,7 @@ Al principio, Darkest Dungeon puede volverse casi injugable sin una Vestal, un O
 Lo mismo pasa dentro de cada héroe: las habilidades y las posiciones están rebalanceadas para que ya no estés atado a un único set óptimo de cuatro habilidades, repitiendo lo mismo desde la misma posición.
 
 [h2]Un parche integral, la misma dificultad[/h2]
-La mayoría de los mods de héroes tocan un héroe a la vez, y eso casi siempre significa hacerlo más fuerte. Este mod rebalancea los 19 héroes juntos bajo un mismo conjunto de reglas: cada buff va acompañado de un precio o de un nerfeo en otro lado, así que el juego no se vuelve ni más fácil ni más difícil en general. Según nuestro modelo de fuerza de héroes, la fuerza total de todos ellos queda a menos de un 0.5% del vanilla, mientras que la brecha entre los más fuertes y los más débiles se reduce: la Duelista y el Maestro canino bajan un poco, y el Cazarecompensas y la Arbalestera suben.
+Este mod rebalancea los 20 héroes juntos bajo un mismo conjunto de reglas: cada buff va acompañado de un precio o de un nerfeo en otro lado, así que el juego no se vuelve ni más fácil ni más difícil en general. Según nuestro modelo de fuerza de héroes, la fuerza total de todos ellos queda a menos de un 1% del vanilla, mientras que la brecha entre los más fuertes y los más débiles se reduce: la Duelista y el Maestro canino bajan un poco, y el Cazarecompensas y la Arbalestera suben.
 
 [h2]Cómo se decidieron los cambios[/h2]
 [list]
@@ -26,7 +26,7 @@ Ejemplo: nada en la descripción del Maestro canino justifica su resistencia ext
 [*][b]Conservar las sensaciones.[/b] Se ajustan la fiabilidad y la frecuencia, no la identidad; se respetan los propios nerfeos de Red Hook.
 Ejemplo: Disparo a quemarropa sigue pegando igual de fuerte, pero ahora el retroceso lo manda 2 posiciones atrás, así que no se puede disparar cada turno.
 [*][b]Los abalorios no se tocan.[/b]
-Ejemplo: Vena abierta conserva sus dos mermas porque los abalorios las potencian; lo que se le bajó fue el daño.
+Ejemplo: los abalorios de la Mosquetera suben la probabilidad de merma, así que su Cortina de humo aún baja un poco la precisión.
 [/list]
 
 [h2]Caso destacado: el Cazarecompensas[/h2]
@@ -53,16 +53,17 @@ Las imágenes de arriba muestran todas las habilidades modificadas, antes y desp
 [b]Bandolero[/b] — funcionan tanto la build a distancia como la cuerpo a cuerpo: Disparo de seguimiento le da estocada sin moverse.
 [b]Maestro canino[/b] — menos daño, más protección: Silbido de objetivo baja la precisión enemiga, Perro guardián da más evasión y Ataque de perro funciona desde cualquier posición.
 [b]Bufón[/b] — sigue siendo el mejor curador de estrés, pero Tonada inspiradora funciona desde la posición 2 y Solo desde cualquier posición.
-[b]Leproso[/b] — Intimidación deja de ser una habilidad de apoyo y se convierte en un golpe que rompe armaduras.
+[b]Leproso[/b] — Intimidación rompe armaduras, y el coste de Venganza crece con el nivel: sirve desde el principio.
 [b]Hombre de armas[/b] — el veterano que sostiene la línea: Refuerzo es una curación de estrés para el grupo repetible; Mando añade protección.
 [b]Ocultista[/b] — Maleficio de vulnerabilidad reduce la resistencia a aturdimiento, hemorragia, infección y mermas, y le prepara el terreno a todo el grupo.
 [b]Médico de la peste[/b] — Medicina del campo de batalla es la curación que quita la infección (3–7), mientras la Arbalestera se ocupa de la hemorragia.
 [b]Fugitiva[/b] — Saquear ya no alcanza la posición 4.
-[b]Rompescudos[/b] — la heroína del DLC que se salía de la norma vuelve al redil: Perforación ya no llega a la posición 4 y el crecimiento del arma se estandariza.
+[b]Mosquetera[/b] — deja de ser copia de la Arbalestera y pasa a cazadora: Bala penetrante atraviesa armaduras, Cortina de humo aturde el frente y Humo de cobertura oculta a un aliado.
+[b]Rompescudos[/b] — la heroína del DLC vuelve a la norma: Perforación ya no llega a la posición 4 y el arma crece de forma estándar.
 [b]Vestal[/b] — puede rendir desde la posición 2: Mazazo la cura a ella misma, y Gracia divina e Iluminación funcionan desde cualquier posición.
 
 [h2]Compatibilidad[/h2]
-[b]Requiere los DLC de los héroes que cambia:[/b] The Crimson Court, The Shieldbreaker, Duelist y Runaway. Sin ellos, el juego puede no cargar.
-Solo reemplaza los archivos de los héroes de arriba (más un archivo de efectos y otro de buffs); es incompatible con mods que reemplacen esos mismos héroes. Se puede usar sin problemas en partidas ya empezadas.
+[b]Requiere los DLC de los héroes que cambia:[/b] The Crimson Court, The Shieldbreaker, Duelist, Runaway y The Musketeer (gratis). Sin ellos, el juego puede no cargar.
+Es incompatible con mods que reemplacen esos mismos héroes. Se puede usar en partidas ya empezadas.
 
 Cualquier comentario es bienvenido: cada cambio tiene su razón por escrito, y con gusto lo explico o lo ajusto.

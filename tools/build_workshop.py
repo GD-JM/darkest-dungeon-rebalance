@@ -280,6 +280,10 @@ def main():
     shutil.copy(icon if os.path.exists(icon) else os.path.join(M, 'preview_icon.png'), os.path.join(OUT, 'preview_icon.png'))
     proj = rd(os.path.join(W, 'project.template.xml'))
     desc = rd(os.path.join(W, 'description_built_en.txt')).strip()
+    # 변경 사항(Change Notes): design/workshop/changenotes/ 에서 가장 최근 파일 → 업로더 UpdateDetails (창작마당 '변경 사항' 탭에 날짜별로 남는다)
+    cns = sorted(glob.glob(os.path.join(W, 'changenotes', '*.txt')))
+    cn = rd(cns[-1]).strip() if cns else 'Update'
+    proj = proj.replace('{UPDATE_DETAILS}', cn.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;'))
     proj = proj.replace('{MOD_DATA_PATH}', OUT.replace('\\', '/') + '/').replace('{DESCRIPTION}', desc.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;'))
     open(os.path.join(OUT, 'project.xml'), 'w', encoding='utf-8', newline='\n').write(proj.replace('\r\n', '\n'))
     entries = []

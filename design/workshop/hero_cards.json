@@ -189,7 +189,6 @@
     ],
     "new": [
      "Target: PROT -20 to -30%",
-     "Debuff chance 130-170%",
      "No self SPD buff"
     ]
    },
@@ -343,7 +342,7 @@
     ],
     "new": [
      "Self: dodge +15-25%",
-     "Lasts 2 turns"
+     "Lasts 3 turns"
     ]
    },
    {
@@ -617,11 +616,13 @@
     "icon": "three",
     "old": [
      "Self: moves back 1",
-     "Push 1"
+     "Push 1",
+     "Crit 5-9%"
     ],
     "new": [
      "Self: moves back 2",
-     "Push 2"
+     "Push 2",
+     "Crit 8-12%"
     ]
    },
    {
@@ -669,19 +670,6 @@
      "Hits ranks 1-2",
      "Self: ACC +4-8%, CRIT +2-6%",
      "Self: DMG +10-14% (3 turns)"
-    ]
-   },
-   {
-    "key": "highwayman|opened_vein",
-    "name": "Open Vein",
-    "icon": "seven",
-    "old": [
-     "DMG -15%",
-     "CRIT 0%"
-    ],
-    "new": [
-     "DMG -30%",
-     "CRIT 8%"
     ]
    }
   ]
@@ -851,7 +839,7 @@
  },
  "leper": {
   "name": "Leper",
-  "tagline": "Intimidate becomes a real strike that cracks armor.",
+  "tagline": "Intimidate cracks armor, and Revenge is usable from level 1.",
   "skills": [
    {
     "key": "leper|intimidate",
@@ -870,6 +858,20 @@
      "Target: PROT -30 to -50% (2 turns)",
      "No SPD debuff",
      "No self-mark, SPD buff or destealth"
+    ]
+   },
+   {
+    "key": "leper|revenge",
+    "name": "Revenge",
+    "icon": "four",
+    "old": [
+     "Cost: dodge -10%,",
+     "damage taken +25% at every level"
+    ],
+    "new": [
+     "Cost grows with level:",
+     "dodge -6 to -10%,",
+     "damage taken +15 to +25%"
     ]
    }
   ]
@@ -1354,6 +1356,17 @@
     "new": [
      "One ally (not self)",
      "Stealth for 2 turns"
+    ]
+   },
+   {
+    "key": "musketeer|crit",
+    "name": "Crit Bonus",
+    "icon": null,
+    "old": [
+     "DMG +33% vs marked (2 turns)"
+    ],
+    "new": [
+     "Armor piercing +20% (2 turns)"
     ]
    },
    {

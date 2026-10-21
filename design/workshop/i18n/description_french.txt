@@ -4,10 +4,10 @@
 [h2]L'objectif : plus de groupe imposé[/h2]
 En début de partie, Darkest Dungeon peut devenir quasi injouable sans Vestale, Occultiste ou Bouffon, parce que les soins et le soulagement du stress sont réservés à une poignée de héros. Ce mod répartit les soins et la réduction de stress sur tout l'effectif, pour que des groupes très différents puissent tenir la route.
 
-Même chose au sein de chaque héros : compétences et rangs sont rééquilibrés pour que vous ne soyez plus coincé avec un seul set optimal de quatre compétences, spammées depuis un seul et même rang.
+Même chose au sein de chaque héros : plus besoin de spammer les quatre mêmes compétences depuis un seul rang.
 
 [h2]Un patch global, une difficulté inchangée[/h2]
-La plupart des mods de héros retouchent un héros à la fois, et en général, ça revient à le rendre plus fort. Ce mod rééquilibre les 19 héros ensemble, selon les mêmes règles : chaque buff est compensé par un coût ou un nerf ailleurs, donc le jeu ne devient ni plus facile ni plus dur dans l'ensemble. D'après notre modèle de puissance des héros, la puissance totale de l'effectif reste à moins de 0,5 % de la vanilla, tandis que l'écart entre les plus forts et les plus faibles se resserre : la Duelliste et le Maître-chien redescendent, le Chasseur de primes et l'Arbalétrière remontent.
+Ce mod rééquilibre les 20 héros ensemble, selon les mêmes règles : chaque buff est compensé par un coût ou un nerf ailleurs, donc le jeu ne devient ni plus facile ni plus dur dans l'ensemble. D'après notre modèle de puissance des héros, la puissance totale de l'effectif reste à moins de 1 % de la vanilla, tandis que l'écart entre les plus forts et les plus faibles se resserre : la Duelliste et le Maître-chien redescendent, le Chasseur de primes et l'Arbalétrière remontent.
 
 [h2]Comment les changements ont été décidés[/h2]
 [list]
@@ -26,7 +26,7 @@ Exemple : rien dans la description du Maître-chien n'explique ses résistances 
 [*][b]Garder les sensations.[/b] On ajuste la fiabilité et la fréquence, pas l'identité ; les nerfs de Red Hook eux-mêmes sont respectés.
 Exemple : Tir à bout portant garde toute sa patate, mais le Bandit recule désormais de 2 rangs, donc impossible de l'enchaîner à chaque tour.
 [*][b]On ne touche pas aux breloques.[/b]
-Exemple : Ouvre-veine garde ses deux malus, car des breloques les amplifient ; ce sont ses dégâts qui ont été revus à la baisse.
+Exemple : les breloques de la Mousquetaire augmentent les malus, donc son Écran de fumée garde un petit malus de précision.
 [/list]
 
 [h2]Zoom sur le Chasseur de primes[/h2]
@@ -53,16 +53,17 @@ Les images ci-dessus montrent chaque compétence modifiée, avant et après.
 [b]Bandit[/b] — les builds à distance comme au corps à corps tiennent la route : Tir de pistage donne la riposte sans bouger.
 [b]Maître-chien[/b] — moins de dégâts, plus de protection : Sifflet de ciblage baisse la précision ennemie, Chien de garde donne plus d'esquive, Assaut canin fonctionne depuis n'importe quel rang.
 [b]Bouffon[/b] — toujours le meilleur soigneur de stress, mais Mélodie exaltante fonctionne depuis le rang 2 et Solo depuis n'importe quel rang.
-[b]Lépreux[/b] — Intimider passe de compétence de soutien à frappe qui brise l'armure.
+[b]Lépreux[/b] — Intimider brise l'armure, et le coût de Vengeance grandit avec le niveau : utile dès le début.
 [b]Homme d'armes[/b] — le vétéran qui tient la ligne : Soutien est un soin de stress de groupe réutilisable ; Ordre ajoute de la protection.
 [b]Occultiste[/b] — Sort de vulnérabilité baisse les résistances à l'étourdissement, au saignement, à l'infection et aux malus, ce qui prépare le terrain pour tout le groupe.
 [b]Médecin de peste[/b] — Soins militaires est le soin qui guérit l'infection (3–7), tandis que l'Arbalétrière s'occupe du saignement.
 [b]Évadée[/b] — Fouiller n'atteint plus le rang 4.
+[b]Mousquetaire[/b] — plus une copie de l'Arbalétrière mais une chasseuse : Balle perçante traverse l'armure, Écran de fumée étourdit le front, Fumée de couverture cache un allié.
 [b]Brise-bouclier[/b] — l'exception du DLC, remise dans le rang : Transpercer perd le rang 4, progression d'arme standardisée.
 [b]Vestale[/b] — peut jouer depuis le rang 2 : Coupe de masse la soigne elle-même, Grâce divine et Illumination fonctionnent depuis n'importe quel rang.
 
 [h2]Compatibilité[/h2]
-[b]DLC requis :[/b] The Crimson Court, The Shieldbreaker, Duelist, Runaway (sinon le jeu peut ne pas se lancer).
-Remplace uniquement les fichiers des héros ci-dessus (plus un fichier d'effets et un fichier de buffs) ; incompatible avec les mods qui remplacent les mêmes héros. Compatible avec les sauvegardes en cours.
+[b]DLC requis :[/b] The Crimson Court, The Shieldbreaker, Duelist, Runaway, The Musketeer (gratuit) (sinon le jeu peut ne pas se lancer).
+Incompatible avec les mods qui remplacent les mêmes héros. Compatible avec les sauvegardes en cours.
 
 Vos retours sont les bienvenus : chaque changement a une justification écrite.

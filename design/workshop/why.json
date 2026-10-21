@@ -196,14 +196,15 @@
  },
  "bounty_hunter|target_tag": {
   "ids": [
-   "BH-013"
+   "BH-013",
+   "BH-018"
   ],
   "principles": [
    "G-02",
    "P-11"
   ],
-  "en": "All marking skills were nearly identical (mark plus one small debuff). Mark for Death now specializes against armored enemies with a bigger protection cut, and gives up its self speed buff in exchange.",
-  "ko": "표식 기술들이 '표식 + 작은 약화 하나'로 거의 같았다. 죽음의 표식은 방어 감소를 키워 방어 있는 적 전용 표식으로 특화하고, 그 대가로 자기 속도 강화를 뺐다."
+  "en": "All marking skills were nearly identical (mark plus one small debuff). Mark for Death now specializes against armored enemies with a bigger protection cut, and gives up its self speed buff in exchange. Its debuff chance is the usual 100-140%.",
+  "ko": "표식 기술들이 '표식 + 작은 약화 하나'로 거의 같았다. 죽음의 표식은 방어 감소를 키워 방어 있는 적 전용 표식으로 특화하고, 그 대가로 자기 속도 강화를 뺐다. 약화 확률은 다른 기술과 같은 100~140%."
  },
  "bounty_hunter|uppercut": {
   "ids": [
@@ -310,14 +311,15 @@
  },
  "duelist|touche": {
   "ids": [
-   "DUE-005"
+   "DUE-005",
+   "DUE-011"
   ],
   "principles": [
    "R-CMB-01",
    "P-12"
   ],
-  "en": "A no-damage jab usable from any rank granted +40–50 dodge for 4 turns, and two casts stacked could push enemy hit chance to 0%, blocking their stuns and debuffs as well. With a smaller, 2-turn buff, even two stacks only reach what one cast used to give.",
-  "ko": "피해 없는 찌르기가 어느 열에서나 회피 +40~50을 4턴 주었고, 두 번 겹치면 적 명중률이 0%까지 떨어져 기절·약화까지 전부 막았습니다. 강화를 작게, 2턴으로 줄여 두 번 겹쳐도 예전 1회 수준에 머물게 했습니다."
+  "en": "A no-damage jab usable from any rank granted +40–50 dodge for 4 turns, and two casts stacked could push enemy hit chance to 0%, blocking their stuns and debuffs as well. With a smaller, 2-turn buff, even two stacks only reach what one cast used to give. The buff now lasts 3 turns; two stacks stay below one vanilla use.",
+  "ko": "피해 없는 찌르기가 어느 열에서나 회피 +40~50을 4턴 주었고, 두 번 겹치면 적 명중률이 0%까지 떨어져 기절·약화까지 전부 막았습니다. 강화를 작게, 2턴으로 줄여 두 번 겹쳐도 예전 1회 수준에 머물게 했습니다. 지속은 3턴, 두 번 겹쳐도 바닐라 1회보다 낮다."
  },
  "flagellant|endure": {
   "ids": [
@@ -503,20 +505,6 @@
   "en": "Its job is to land the vulnerability debuff that sets up crits for his ripostes and other skills (its low crit is by design). Accuracy is raised so that setup lands reliably, paid for with lower damage so it stays a setup tool rather than an attack to spam.",
   "ko": "포도탄의 본업은 취약을 걸어 반격과 다른 기술의 치명타를 여는 것입니다(낮은 치명타는 의도된 설계). 취약이 확실히 걸리도록 명중을 올리고, 반복 공격용이 되지 않게 피해로 대가를 치르게 했습니다."
  },
- "highwayman|opened_vein": {
-  "ids": [
-   "HWY-006",
-   "HWY-019",
-   "HWY-020"
-  ],
-  "principles": [
-   "P-20",
-   "P-21",
-   "R-TRADE-02"
-  ],
-  "en": "Bleed plus two debuffs at 95 accuracy cost almost no damage, making it his strongest skill. Trinkets rely on those debuffs, so instead of removing one, damage was lowered and crit raised to fit a precise cut (crits also extend the bleed). Accuracy stays high because landing its effects is its main job.",
-  "ko": "명중 95에 출혈과 약화 2개를 걸면서 피해 손실이 거의 없어 키트에서 가장 강한 기술이었습니다. 장신구가 그 약화에 의존하므로 약화를 빼는 대신 피해를 낮추고, 정밀하게 긋는 칼질에 맞게 치명타를 올렸습니다(치명타는 출혈도 늘림). 효과를 거는 것이 본업이라 명중은 그대로 두었습니다."
- },
  "highwayman|pistol_shot": {
   "ids": [
    "HWY-009",
@@ -534,14 +522,15 @@
  "highwayman|point_blank_shot": {
   "ids": [
    "HWY-001",
-   "HWY-017"
+   "HWY-017",
+   "HWY-021"
   ],
   "principles": [
    "P-12",
    "G-00"
   ],
-  "en": "With 95 accuracy and +50% damage at no cost it was overpowered, but a flat nerf would feel bad. Instead he recoils 2 ranks (mirroring the Grave Robber's Lunge), so it is hard to fire repeatedly, and the push grows to 2 as an upside. This loosens the fixed Vestal/Jester/Highwayman/Shieldbreaker lineup.",
-  "ko": "명중 95에 대가 없는 피해 +50%로 명백히 과했지만, 수치를 그냥 깎으면 체감이 불쾌합니다. 대신 2칸 뒤로 물러나게 해(도굴꾼 돌진과 대칭) 연달아 쓰기 어렵게 하고, 밀치기를 2칸으로 늘려 쓰는 맛을 더했습니다. 성녀·광대·노상강도·방패 파괴자 고정 조합을 푸는 목적도 있습니다."
+  "en": "With 95 accuracy and +50% damage at no cost it was overpowered, but a flat nerf would feel bad. Instead he recoils 2 ranks (mirroring the Grave Robber's Lunge), so it is hard to fire repeatedly, and the push grows to 2 as an upside. This loosens the fixed Vestal/Jester/Highwayman/Shieldbreaker lineup. Crit rises to 8-12% (same as Lunge) to reward the two-rank retreat.",
+  "ko": "명중 95에 대가 없는 피해 +50%로 명백히 과했지만, 수치를 그냥 깎으면 체감이 불쾌합니다. 대신 2칸 뒤로 물러나게 해(도굴꾼 돌진과 대칭) 연달아 쓰기 어렵게 하고, 밀치기를 2칸으로 늘려 쓰는 맛을 더했습니다. 성녀·광대·노상강도·방패 파괴자 고정 조합을 푸는 목적도 있습니다. 2칸 밀려나는 대가가 커서 치명을 8~12%(돌진과 같음)로 올렸다."
  },
  "highwayman|take_aim": {
   "ids": [
@@ -660,15 +649,16 @@
  "houndmaster|whistle": {
   "ids": [
    "HM-020",
-   "HM-021"
+   "HM-021",
+   "HM-028"
   ],
   "principles": [
    "P-24",
    "P-14",
    "P-19"
   ],
-  "en": "The protection debuff did nothing to the many enemies with no protection and duplicated the Bounty Hunter's Mark for Death. Target Whistle now throws off the marked enemy's aim, a defensive mark that suits the Houndmaster's protector role and sits apart from the Arbalest's (dodge) and Bounty Hunter's (protection) marks.",
-  "ko": "방어 감소는 방어가 0인 많은 적에게 효과가 없었고 현상금 사냥꾼의 죽음의 표식과 겹쳤다. 이제 목표물 지정은 표식한 적의 명중을 떨어뜨리는 방어형 표식으로, 보호형 영웅인 조련사에 맞고 석궁사수(회피)·현상금 사냥꾼(방어) 표식과도 역할이 갈린다."
+  "en": "The protection debuff did nothing to the many enemies with no protection and duplicated the Bounty Hunter's Mark for Death. Target Whistle now throws off the marked enemy's aim, a defensive mark that suits the Houndmaster's protector role and sits apart from the Arbalest's (dodge) and Bounty Hunter's (protection) marks. Its debuff chance is the usual 100-140%.",
+  "ko": "방어 감소는 방어가 0인 많은 적에게 효과가 없었고 현상금 사냥꾼의 죽음의 표식과 겹쳤다. 이제 목표물 지정은 표식한 적의 명중을 떨어뜨리는 방어형 표식으로, 보호형 영웅인 조련사에 맞고 석궁사수(회피)·현상금 사냥꾼(방어) 표식과도 역할이 갈린다. 약화 확률은 다른 기술과 같은 100~140%."
  },
  "jester|battle_ballad": {
   "ids": [
@@ -1121,5 +1111,25 @@
   ],
   "en": "A new way to protect: an airburst smoke shell hides one ally for two turns, so enemies cannot single them out. Nobody has to take the hits for them.",
   "ko": "새로운 방식의 지키기. 공중에서 터진 연막이 아군 한 명을 2턴 숨겨 적이 직접 노리지 못한다. 누가 대신 맞아 줄 필요가 없다."
+ },
+ "leper|revenge": {
+  "ids": [
+   "LEP-006"
+  ],
+  "principles": [
+   "G-01"
+  ],
+  "en": "Revenge was rarely used early because damage taken +25% is a heavy price at level 1. Its cost now grows with level like its buff (dodge -6 to -10%, damage taken +15 to +25%), so it is a real option from the start and unchanged at level 5.",
+  "ko": "복수는 1렙부터 받는 피해 +25%가 너무 무거워 초반엔 거의 안 썼다. 대가도 강화처럼 레벨마다 커지게(회피 −6~−10%, 받는 피해 +15~25%) 바꿔 초반부터 고려할 만한 선택지로 만들었다. 5렙은 그대로."
+ },
+ "musketeer|crit": {
+  "ids": [
+   "MUS-111"
+  ],
+  "principles": [
+   "P-19"
+  ],
+  "en": "Her crit bonus no longer adds damage against marked targets (that is the Arbalest's and Bounty Hunter's job). A crit now gives armor piercing +20% for two turns.",
+  "ko": "치명타 버프가 더는 표식 대상 피해(석궁사수·현상금 사냥꾼 몫)가 아니다. 치명타가 터지면 2턴 동안 방어 관통 +20%."
  }
 }

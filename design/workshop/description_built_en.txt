@@ -26,7 +26,7 @@ Example: nothing in the Houndmaster's description explains his extra bleed and b
 [*][b]Keep the feel.[/b] Adjust reliability and frequency, not identity; Red Hook's own nerfs are respected.
 Example: Point Blank Shot keeps its punch, but he now recoils 2 ranks, so it can't be fired every turn.
 [*][b]Trinkets are untouched.[/b]
-Example: Open Vein keeps both its debuffs because trinkets boost them; its damage was lowered instead.
+Example: the Musketeer's trinkets boost debuff chance, so her new Smokescreen still carries a small accuracy debuff.
 [/list]
 
 [h2]Showcase: the Bounty Hunter[/h2]
@@ -53,7 +53,7 @@ The images above show every changed skill, before and after (Bounty Hunter first
 [b]Highwayman[/b] — ranged and melee builds both work: Tracking Shot grants riposte without moving.
 [b]Houndmaster[/b] — less damage, more protection: Target Whistle lowers enemy accuracy, Guard Dog gives more dodge, Hound's Rush works from any rank.
 [b]Jester[/b] — still the best stress healer, but Inspiring Tune works from rank 2 and Solo from any rank.
-[b]Leper[/b] — Intimidate becomes an armor-cracking strike instead of a support skill.
+[b]Leper[/b] — Intimidate becomes an armor-cracking strike, and Revenge's cost now grows with level, so it is usable early.
 [b]Man-at-Arms[/b] — the veteran who holds the line: Bolster is a repeatable party stress heal; Command adds protection.
 [b]Occultist[/b] — Vulnerability Hex lowers stun, bleed, blight and debuff resist, setting up the whole party.
 [b]Plague Doctor[/b] — Battlefield Medicine is the blight-cure heal (3–7) while the Arbalest covers bleed.

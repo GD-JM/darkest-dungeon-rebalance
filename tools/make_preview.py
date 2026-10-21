@@ -8,7 +8,8 @@ M = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 F = 'C:/Windows/Fonts/'
 BG, LINE, GOLD, DIM = (18, 15, 13), (88, 70, 48), (214, 180, 112), (150, 140, 124)
 HEROES = ['crusader', 'highwayman', 'plague_doctor', 'vestal', 'leper', 'hellion', 'bounty_hunter', 'occultist', 'grave_robber',
-          'jester', 'man_at_arms', 'houndmaster', 'arbalest', 'antiquarian', 'abomination', 'flagellant', 'shieldbreaker', 'runaway', 'duelist']
+          'jester', 'man_at_arms', 'houndmaster', 'arbalest', 'antiquarian', 'abomination', 'flagellant', 'shieldbreaker', 'runaway', 'duelist', 'musketeer']
+NEW = {'musketeer'}   # 새로 리워크한 영웅은 금색 테두리로 살짝 강조 [제작자 10-21]
 
 
 def portrait(h):
@@ -43,16 +44,24 @@ def main(bg_path=None):
     s = 'every hero worth taking'
     w = d.textlength(s, font=sf)
     d.text(((S - w) / 2, 238), s, font=sf, fill=DIM)
-    # 초상화 격자 5-5-5-4
+    # 초상화 격자 5-5-5-5 (20명)
     size, gap = 140, 20
-    rows = [HEROES[0:5], HEROES[5:10], HEROES[10:15], HEROES[15:19]]
+    rows = [HEROES[i:i + 5] for i in range(0, len(HEROES), 5)]
     y = 322
     for r in rows:
         x0 = (S - (len(r) * size + (len(r) - 1) * gap)) / 2
         for i, h in enumerate(r):
             x = int(x0 + i * (size + gap))
             im.paste(portrait(h).resize((size, size), Image.LANCZOS), (x, y))
-            d.rectangle((x - 2, y - 2, x + size + 1, y + size + 1), outline=LINE, width=3)
+            if h in NEW:
+                glow = Image.new('L', (S, S), 0)
+                ImageDraw.Draw(glow).rectangle((x - 10, y - 10, x + size + 9, y + size + 9), fill=150)
+                im.paste(Image.new('RGB', (S, S), GOLD), (0, 0), glow.filter(ImageFilter.GaussianBlur(9)))
+                im.paste(portrait(h).resize((size, size), Image.LANCZOS), (x, y))
+                d = ImageDraw.Draw(im)
+                d.rectangle((x - 3, y - 3, x + size + 2, y + size + 2), outline=GOLD, width=4)
+            else:
+                d.rectangle((x - 2, y - 2, x + size + 1, y + size + 1), outline=LINE, width=3)
         y += size + gap
     out = os.path.join(M, 'design', 'workshop', 'cards', 'preview.png')
     os.makedirs(os.path.dirname(out), exist_ok=True)

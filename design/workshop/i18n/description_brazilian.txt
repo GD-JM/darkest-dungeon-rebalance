@@ -7,7 +7,7 @@ No começo, Darkest Dungeon pode ficar quase injogável sem uma Vestal, um Ocult
 O mesmo vale dentro de cada herói: habilidades e posições foram rebalanceadas para você não ficar mais preso a um único conjunto ideal de quatro habilidades, repetido sempre da mesma posição.
 
 [h2]Um patch integrado, a mesma dificuldade[/h2]
-A maioria dos mods de heróis mexe em um herói por vez, e isso quase sempre significa deixá-lo mais forte. Este mod rebalanceia os 19 heróis juntos, seguindo as mesmas regras: todo buff vem acompanhado de um custo ou de um nerf em outro lugar, então o jogo não fica nem mais fácil nem mais difícil no geral. Pelo nosso modelo de força dos heróis, a força total do elenco fica a menos de 0.5% do vanilla, enquanto a distância entre os heróis mais fortes e os mais fracos diminui: a Duelista e o Mestre dos Cães caem um pouco, e o Mercenário e a Atiradora sobem.
+A maioria dos mods de heróis mexe em um herói por vez, e isso quase sempre significa deixá-lo mais forte. Este mod rebalanceia os 20 heróis juntos, seguindo as mesmas regras: todo buff vem acompanhado de um custo ou de um nerf em outro lugar, então o jogo não fica nem mais fácil nem mais difícil no geral. Pelo nosso modelo de força dos heróis, a força total do elenco fica a menos de 1% do vanilla, enquanto a distância entre os heróis mais fortes e os mais fracos diminui: a Duelista e o Mestre dos Cães caem um pouco, e o Mercenário e a Atiradora sobem.
 
 [h2]Como as mudanças foram decididas[/h2]
 [list]
@@ -26,7 +26,7 @@ Exemplo: nada na descrição do Mestre dos Cães justifica a resistência extra 
 [*][b]Manter a sensação de jogo.[/b] Mexemos na consistência e na frequência, não na identidade; os próprios nerfs da Red Hook são respeitados.
 Exemplo: o Tiro de Perto continua batendo forte, mas agora o coice joga o Bandido 2 posições para trás, então não dá para usar todo turno.
 [*][b]As preciosidades ficam intactas.[/b]
-Exemplo: Veia Aberta mantém as duas penalidades porque as preciosidades as potencializam; o que foi reduzido foi o dano.
+Exemplo: as preciosidades da Mosqueteira aumentam a chance de penalidade, então a nova Cortina de Fumaça ainda reduz um pouco a precisão.
 [/list]
 
 [h2]Em destaque: o Mercenário[/h2]
@@ -53,16 +53,17 @@ As imagens acima mostram cada habilidade alterada, antes e depois (começando pe
 [b]Bandido[/b] — builds à distância e corpo a corpo funcionam: Tiro Rastreante dá revide sem sair do lugar.
 [b]Mestre dos Cães[/b] — menos dano, mais proteção: Apito de Alvo reduz a precisão inimiga, Cão de Guarda dá mais esquiva, e Investida do Cão funciona de qualquer posição.
 [b]Bufão[/b] — continua sendo o melhor curador de estresse, mas Canção Inspiradora funciona da posição 2 e Solo de qualquer posição.
-[b]Leproso[/b] — Intimidar deixa de ser uma habilidade de suporte e vira um golpe que racha armadura.
+[b]Leproso[/b] — Intimidar vira um golpe que racha armadura, e o custo de Vingança cresce com o nível, então já vale usar no começo.
 [b]Soldado[/b] — o veterano que segura a linha: Reforçar é uma cura de estresse em grupo repetível; Comandar adiciona proteção.
 [b]Ocultista[/b] — Feitiço da Vulnerabilidade reduz a resistência a atordoamento, sangramento, peste e penalidades, preparando o terreno para o grupo inteiro.
 [b]Médica da Peste[/b] — Medicina de Batalha é a cura que remove peste (3–7), enquanto a Atiradora cuida do sangramento.
 [b]Fugitiva[/b] — Saquear não alcança mais a posição 4.
+[b]Mosqueteira[/b] — deixa de ser cópia da Atiradora e vira caçadora: Bala Penetrante atravessa armadura, Cortina de Fumaça atordoa a linha de frente e Fumaça de Cobertura esconde um aliado dos ataques.
 [b]Destruidora[/b] — a heroína do DLC que fugia da curva volta à linha: Perfurar não alcança mais a posição 4, e o crescimento da arma foi padronizado.
 [b]Vestal[/b] — dá conta da posição 2: Golpe de Maça cura ela mesma, e Graça Divina e Iluminação funcionam de qualquer posição.
 
 [h2]Compatibilidade[/h2]
-[b]Requer os DLCs dos heróis alterados:[/b] The Crimson Court, The Shieldbreaker, Duelist e Runaway. Sem eles, o jogo pode não abrir.
+[b]Requer os DLCs dos heróis alterados:[/b] The Crimson Court, The Shieldbreaker, Duelist, Runaway e The Musketeer (grátis). Sem eles, o jogo pode não abrir.
 Substitui só os arquivos dos heróis acima (mais um arquivo de efeitos e um de buffs); é incompatível com mods que substituem os mesmos heróis. Pode ser usado sem problemas em saves já em andamento.
 
 Feedback é sempre bem-vindo: toda mudança tem um motivo registrado, e explico ou ajusto com prazer.

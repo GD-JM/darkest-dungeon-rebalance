@@ -1,0 +1,25 @@
+[b]Update 1.1 — The Musketeer joins (20 heroes)[/b]
+
+[b]Musketeer — new rework, no longer an Arbalest copy.[/b] A tournament sharpshooter out to prove herself as a monster hunter.
+[list]
+[*][b]Piercing Ball[/b] (Aimed Shot): reaches every rank, armor piercing 10-30%; small bonus vs marked targets.
+[*][b]Smokescreen[/b]: stuns enemy ranks 1-2, brief accuracy debuff, hides the Musketeer. 3 per battle.
+[*][b]Mark the Quarry[/b] (Call the Shot): mark, self speed +3-5, crit vs large monsters.
+[*][b]Flushing Shot[/b] (Buckshot): knocks back the enemy in rank 4, which throws it to the front.
+[*][b]Sidearm[/b]: shoot the enemy in front, then step back one rank.
+[*][b]Patch Up[/b]: same healing, plus a little stress relief.
+[*][b]Covering Smoke[/b] (Skeet Shot): hides one ally for 2 turns.
+[*]Lower HP and speed than the Arbalest; crit bonus is now armor piercing.
+[/list]
+[b]Other changes[/b]
+[list]
+[*]Leper — Revenge: its cost now grows with level (damage taken +15% at level 1, +25% at level 5), so it is usable early.
+[*]Duelist — Touché: dodge lasts 3 turns (two stacks still stay below one vanilla use).
+[*]Highwayman — Point Blank Shot crit 8-12%; Open Vein back to vanilla.
+[*]Bounty Hunter Mark for Death, Houndmaster Target Whistle: debuff chance 100-140% like every other debuff.
+[/list]
+Requires The Musketeer DLC (free).
+
+[b]업데이트 1.1 — 총사 합류 (20명)[/b]
+총사를 석궁사수 복제판에서 독자 영웅으로 새로 만들었습니다: 관통탄(방어 관통), 연막탄(앞열 기절·자신 은신), 사냥감 지정, 몰이 사격(4열을 맨 앞으로), 권총사격(쏘고 물러나기), 응급처치(스트레스 회복 추가), 엄호 연막(아군 은신).
+그 밖에: 나병환자 복수 대가가 레벨 따라 커짐, 결투가 찌르기 회피 3턴, 노상강도 영거리 사격 치명 8~12%·정맥 절개 바닐라, 현상금 사냥꾼·조련사 표식 약화 확률 100~140%. 총사 DLC(무료)가 필요합니다.
