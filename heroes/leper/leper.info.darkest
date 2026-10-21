@@ -35,11 +35,13 @@ combat_skill: .id "focus" .level 3 .type "melee" .atk 100% .dmg -40% .crit 3% .l
 combat_skill: .id "focus" .level 4 .type "melee" .atk 105% .dmg -40% .crit 4% .launch 1 .target 1 .is_crit_valid True  .effect "Push 3E" "clear_corpses" "Leper Acc"
 
 
-combat_skill: .id "revenge" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target  .is_crit_valid True  .effect "Leper Strength 1" "Leper Vulnerability"
-combat_skill: .id "revenge" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target  .is_crit_valid True  .effect "Leper Strength 2" "Leper Vulnerability"
-combat_skill: .id "revenge" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target  .is_crit_valid True  .effect "Leper Strength 3" "Leper Vulnerability"
-combat_skill: .id "revenge" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target  .is_crit_valid True  .effect "Leper Strength 4" "Leper Vulnerability"
-combat_skill: .id "revenge" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target  .is_crit_valid True  .effect "Leper Strength 5" "Leper Vulnerability"
+combat_skill: .id "revenge" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target  .is_crit_valid True  .effect "Leper Strength 1" "RB LEP Vulnerability 1"
+combat_skill: .id "revenge" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target  .is_crit_valid True  .effect "Leper Strength 2" "RB LEP Vulnerability 2"
+combat_skill: .id "revenge" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target  .is_crit_valid True  .effect "Leper Strength 3" "RB LEP Vulnerability 3"
+combat_skill: .id "revenge" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target  .is_crit_valid True  .effect "Leper Strength 4" "RB LEP Vulnerability 4"
+combat_skill: .id "revenge" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target  .is_crit_valid True  .effect "Leper Strength 5" "RB LEP Vulnerability 5"
+// LEP-006 revenge: cost scales with level (dodge -6..-10%, damage taken +15..+25%), level 5 equals vanilla. Early levels can now use it as a real option.
+// LEP-006 복수 대가를 레벨별 성장으로: 회피 −6/7/8/9/10%, 받는 피해 +15/17/20/22/25%(전투 끝까지). 5렙 = 바닐라. 의도: 초반엔 받피 +25%가 부담돼 거의 안 쓰고 후반에만 가끔 씀 → 초반에도 전략적으로 고려되게 [제작자 10-21]
 
 
 combat_move_skill: .id "move" .level 0 .type "move" .move 0 1 .launch 4321

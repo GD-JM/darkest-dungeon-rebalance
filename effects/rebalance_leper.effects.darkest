@@ -28,3 +28,13 @@ effect: .name "RB LEP Intimidate 5" .target "target" .curio_result_type "negativ
 // LEP-003 Protection -35% (raised with the hit lowered to Purge stats: dmg -40%, acc 85-105).
 // LEP-004 Duration 2 -> 3 turns: with the hit at -40% the debuff is the reason to use the skill.
 // LEP-005 Back to 2 turns with a heavier shred: protection -50%.
+effect: .name "RB LEP Vulnerability 1" .target "performer" .curio_result_type "negative" .chance 100% .duration 1 .buff_duration_type combat_end .buff_ids "RB_LEP_DEF_VULN_1" "RB_LEP_DMG_VULN_1" .apply_once true .on_hit true .on_miss true .queue true
+// LEP-006 Revenge cost grows with level like its buff: dodge -6%, damage taken +15% until combat ends (vanilla -10% / +25% at every level).
+effect: .name "RB LEP Vulnerability 2" .target "performer" .curio_result_type "negative" .chance 100% .duration 1 .buff_duration_type combat_end .buff_ids "RB_LEP_DEF_VULN_2" "RB_LEP_DMG_VULN_2" .apply_once true .on_hit true .on_miss true .queue true
+// LEP-006 Revenge cost grows with level like its buff: dodge -7%, damage taken +17% until combat ends (vanilla -10% / +25% at every level).
+effect: .name "RB LEP Vulnerability 3" .target "performer" .curio_result_type "negative" .chance 100% .duration 1 .buff_duration_type combat_end .buff_ids "RB_LEP_DEF_VULN_3" "RB_LEP_DMG_VULN_3" .apply_once true .on_hit true .on_miss true .queue true
+// LEP-006 Revenge cost grows with level like its buff: dodge -8%, damage taken +20% until combat ends (vanilla -10% / +25% at every level).
+effect: .name "RB LEP Vulnerability 4" .target "performer" .curio_result_type "negative" .chance 100% .duration 1 .buff_duration_type combat_end .buff_ids "RB_LEP_DEF_VULN_4" "RB_LEP_DMG_VULN_4" .apply_once true .on_hit true .on_miss true .queue true
+// LEP-006 Revenge cost grows with level like its buff: dodge -9%, damage taken +22% until combat ends (vanilla -10% / +25% at every level).
+effect: .name "RB LEP Vulnerability 5" .target "performer" .curio_result_type "negative" .chance 100% .duration 1 .buff_duration_type combat_end .buff_ids "RB_LEP_DEF_VULN_5" "RB_LEP_DMG_VULN_5" .apply_once true .on_hit true .on_miss true .queue true
+// LEP-006 Revenge cost grows with level like its buff: dodge -10%, damage taken +25% until combat ends (vanilla -10% / +25% at every level).

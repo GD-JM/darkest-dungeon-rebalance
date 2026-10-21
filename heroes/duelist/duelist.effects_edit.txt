@@ -22,23 +22,28 @@ effect: .name "duelist_riposte"  .target "performer" .curio_result_type "positiv
 //# ======================================================================
 //# 기술: 찌르기 (touche)
 //# 레벨별 효과: 1레벨 Duelist Touche Buff 1 | 2레벨 Duelist Touche Buff 2 | 3레벨 Duelist Touche Buff 3 | 4레벨 Duelist Touche Buff 4 | 5레벨 Duelist Touche Buff 5
-effect: .name "Duelist Touche Buff 1" .target "performer" .chance 100% .curio_result_type "positive" .combat_stat_buff 1 .defense_rating_add 15% .duration 2  .on_hit true .on_miss true
+effect: .name "Duelist Touche Buff 1" .target "performer" .chance 100% .curio_result_type "positive" .combat_stat_buff 1 .defense_rating_add 15% .duration 3  .on_hit true .on_miss true
+// DUE-011 Touche dodge lasts 3 turns (was 2). Two stacks are +30..+50%, still below the old single-use +40..+50% (DUE-005).
 // DUE-005 Touche dodge 40-50 for 4 turns -> 15/17/20/22/25 for 2 turns. A 0% dmg basic attack stacking to 0% enemy hit chance; 2 stacks now equal the old single use.
 //#   강화 효과 수치(JSON, 참고용): DUELIST_TOUCHE_DODGE_1 = defense_rating 0.4
 //#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
-effect: .name "Duelist Touche Buff 2" .target "performer" .chance 100% .curio_result_type "positive" .combat_stat_buff 1 .defense_rating_add 17% .duration 2  .on_hit true .on_miss true
+effect: .name "Duelist Touche Buff 2" .target "performer" .chance 100% .curio_result_type "positive" .combat_stat_buff 1 .defense_rating_add 17% .duration 3  .on_hit true .on_miss true
+// DUE-011 Touche dodge lasts 3 turns (was 2). Two stacks are +30..+50%, still below the old single-use +40..+50% (DUE-005).
 // DUE-005 Touche dodge 40-50 for 4 turns -> 15/17/20/22/25 for 2 turns. A 0% dmg basic attack stacking to 0% enemy hit chance; 2 stacks now equal the old single use.
 //#   강화 효과 수치(JSON, 참고용): DUELIST_TOUCHE_DODGE_2 = defense_rating 0.42
 //#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
-effect: .name "Duelist Touche Buff 3" .target "performer" .chance 100% .curio_result_type "positive" .combat_stat_buff 1 .defense_rating_add 20% .duration 2  .on_hit true .on_miss true
+effect: .name "Duelist Touche Buff 3" .target "performer" .chance 100% .curio_result_type "positive" .combat_stat_buff 1 .defense_rating_add 20% .duration 3  .on_hit true .on_miss true
+// DUE-011 Touche dodge lasts 3 turns (was 2). Two stacks are +30..+50%, still below the old single-use +40..+50% (DUE-005).
 // DUE-005 Touche dodge 40-50 for 4 turns -> 15/17/20/22/25 for 2 turns. A 0% dmg basic attack stacking to 0% enemy hit chance; 2 stacks now equal the old single use.
 //#   강화 효과 수치(JSON, 참고용): DUELIST_TOUCHE_DODGE_3 = defense_rating 0.45
 //#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
-effect: .name "Duelist Touche Buff 4" .target "performer" .chance 100% .curio_result_type "positive" .combat_stat_buff 1 .defense_rating_add 22% .duration 2  .on_hit true .on_miss true
+effect: .name "Duelist Touche Buff 4" .target "performer" .chance 100% .curio_result_type "positive" .combat_stat_buff 1 .defense_rating_add 22% .duration 3  .on_hit true .on_miss true
+// DUE-011 Touche dodge lasts 3 turns (was 2). Two stacks are +30..+50%, still below the old single-use +40..+50% (DUE-005).
 // DUE-005 Touche dodge 40-50 for 4 turns -> 15/17/20/22/25 for 2 turns. A 0% dmg basic attack stacking to 0% enemy hit chance; 2 stacks now equal the old single use.
 //#   강화 효과 수치(JSON, 참고용): DUELIST_TOUCHE_DODGE_4 = defense_rating 0.47
 //#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
-effect: .name "Duelist Touche Buff 5" .target "performer" .chance 100% .curio_result_type "positive" .combat_stat_buff 1 .defense_rating_add 25% .duration 2  .on_hit true .on_miss true
+effect: .name "Duelist Touche Buff 5" .target "performer" .chance 100% .curio_result_type "positive" .combat_stat_buff 1 .defense_rating_add 25% .duration 3  .on_hit true .on_miss true
+// DUE-011 Touche dodge lasts 3 turns (was 2). Two stacks are +30..+50%, still below the old single-use +40..+50% (DUE-005).
 // DUE-005 Touche dodge 40-50 for 4 turns -> 15/17/20/22/25 for 2 turns. A 0% dmg basic attack stacking to 0% enemy hit chance; 2 stacks now equal the old single use.
 //#   강화 효과 수치(JSON, 참고용): DUELIST_TOUCHE_DODGE_5 = defense_rating 0.5
 //#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
