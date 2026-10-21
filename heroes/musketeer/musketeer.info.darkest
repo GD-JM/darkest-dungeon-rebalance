@@ -1,5 +1,7 @@
 resistances: .stun 40% .poison 30% .bleed 30% .disease 30% .move 40% .debuff 30% .death_blow 67% .trap 10%
-crit: .effects "on_crit_dmgmarked"
+crit: .effects "RB MUS on_crit_pierce"
+// MUS-111 Class crit buff: armor piercing +20% for 2 turns instead of damage +33% vs marked (her mark damage is meant to stay low).
+// MUS-111 직업 치명타 버프: 표식 대상 피해 +33% → 방어 관통 +20%(2턴). 의도: 총사는 표식 딜이 아니라 관통 사수. 수치는 바닐라 방패 파괴자 야영 관통 20% [제작자 10-21]
 weapon: .name "musketeer_weapon_0" .atk 0% .dmg 4 8 .crit 6% .spd 2
 weapon: .name "musketeer_weapon_1" .atk 0% .dmg 5 10 .crit 7% .spd 2 .upgradeRequirementCode 0
 weapon: .name "musketeer_weapon_2" .atk 0% .dmg 6 11 .crit 8% .spd 3 .upgradeRequirementCode 1

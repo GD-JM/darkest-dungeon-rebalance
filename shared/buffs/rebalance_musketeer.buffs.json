@@ -129,6 +129,19 @@
 				"float": 0,
 				"string": ""
 			}
+		},
+		{
+			"id": "RB_MUS_CRIT_AP",
+			"stat_type": "ignore_protection",
+			"stat_sub_type": "",
+			"amount": 0.2,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
 		}
 	]
 }

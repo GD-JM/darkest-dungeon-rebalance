@@ -59,3 +59,5 @@ effect: .name "RB MUS Patch Destress 4" .target "target" .curio_result_type "pos
 // MUS-108 Patch Up: stress heal 2/2/3/3/4.
 effect: .name "RB MUS Patch Destress 5" .target "target" .curio_result_type "positive" .chance 100% .healstress 4 .on_hit true .on_miss false .queue true
 // MUS-108 Patch Up: stress heal 2/2/3/3/4.
+effect: .name "RB MUS on_crit_pierce" .target "performer" .curio_result_type "positive" .chance 100% .buff_source_type bsrc_crit .buff_ids "RB_MUS_CRIT_AP" .duration 3 .on_hit true .on_miss false .apply_once true
+// MUS-111 Class crit buff: armor piercing +20% (2 turns, same duration rule as vanilla on_crit buffs).
