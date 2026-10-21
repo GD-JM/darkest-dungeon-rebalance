@@ -357,14 +357,15 @@
  },
  "flagellant|suffer": {
   "ids": [
-   "FLA-012"
+   "FLA-012",
+   "FLA-013"
   ],
   "principles": [
    "P-19",
    "G-05"
   ],
-  "en": "Suffer means taking an ally's pain onto himself. It already took their bleed and blight; now it also clears their other debuffs, which makes the Flagellant an ally cleanser from any rank.",
-  "ko": "고통은 아군의 고통을 대신 짊어지는 기술입니다. 원래 출혈·중독을 가져왔는데, 이제 나머지 약화도 걷어내서 어느 열에서든 아군을 정화합니다."
+  "en": "Suffer means taking an ally's pain onto himself. It already took their bleed and blight; now it also clears their other debuffs, and it speeds him up (+3 to +5 for 3 turns) so that, once the stolen damage drops him low, he can act early with Redeem or Exsanguinate.",
+  "ko": "고통은 아군의 고통을 대신 짊어지는 기술입니다. 원래 출혈·중독을 가져왔는데, 이제 나머지 약화도 걷어내고 자기 속도를 올려(3턴 +3~5), 가져온 피해로 체력이 내려갔을 때 구제·방혈을 먼저 쓸 수 있게 했습니다."
  },
  "flagellant|weapon": {
   "ids": [

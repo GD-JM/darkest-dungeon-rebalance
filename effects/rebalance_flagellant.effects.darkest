@@ -50,3 +50,15 @@ effect: .name "RB FLA Flag Steal Stress 5" .target "target" .curio_result_type "
 effect: .name "RB FLA Flag Self Stress 5" .target "performer" .curio_result_type "negative" .chance 100% .stress 8	.on_hit true .on_miss false	.queue true
 // FLA-008 Self stress 8 (was fixed 4; vanilla 10/9/8/7/6). Net relief 6 at every level.
 // FLA-006 [trace 2026-10-05] Reduce self stress transfer cost to support an alternative stress healer. Effect: Flag Self Stress 5.
+
+// mod-only new effects
+effect: .name "RB FLA Suffer Speed 1" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 3 .duration 3	.on_hit true .on_miss true .queue true
+// FLA-013 suffer self speed +3 for 3 turns. Intent: after taking an ally's bleed/blight he drops toward 40% HP; acting early next round lets him use Redeem/Exsanguinate before enemies. DoTs tick once per round regardless of speed, so speed adds no extra DoT damage. Grows every level.
+effect: .name "RB FLA Suffer Speed 2" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 3 .duration 3	.on_hit true .on_miss true .queue true
+// FLA-013 suffer self speed +3 for 3 turns. Intent: after taking an ally's bleed/blight he drops toward 40% HP; acting early next round lets him use Redeem/Exsanguinate before enemies. DoTs tick once per round regardless of speed, so speed adds no extra DoT damage. Grows every level.
+effect: .name "RB FLA Suffer Speed 3" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 4 .duration 3	.on_hit true .on_miss true .queue true
+// FLA-013 suffer self speed +4 for 3 turns. Intent: after taking an ally's bleed/blight he drops toward 40% HP; acting early next round lets him use Redeem/Exsanguinate before enemies. DoTs tick once per round regardless of speed, so speed adds no extra DoT damage. Grows every level.
+effect: .name "RB FLA Suffer Speed 4" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 4 .duration 3	.on_hit true .on_miss true .queue true
+// FLA-013 suffer self speed +4 for 3 turns. Intent: after taking an ally's bleed/blight he drops toward 40% HP; acting early next round lets him use Redeem/Exsanguinate before enemies. DoTs tick once per round regardless of speed, so speed adds no extra DoT damage. Grows every level.
+effect: .name "RB FLA Suffer Speed 5" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 5 .duration 3	.on_hit true .on_miss true .queue true
+// FLA-013 suffer self speed +5 for 3 turns. Intent: after taking an ally's bleed/blight he drops toward 40% HP; acting early next round lets him use Redeem/Exsanguinate before enemies. DoTs tick once per round regardless of speed, so speed adds no extra DoT damage. Grows every level.

@@ -238,6 +238,16 @@ effect: .name "Flag Grit 4" .target "performer" .curio_result_type "positive" .c
 effect: .name "Flag Grit 5" .target "performer" .curio_result_type "positive" .chance 100% .duration 4 .buff_ids flag_grit_stress_5  flag_grit_deathblow_buff_5	.on_hit true .on_miss true .queue true
 //#   강화 효과 수치(JSON, 참고용): flag_grit_stress_5 = stress_dmg_received_percent -0.4
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+effect: .name "RB FLA Suffer Speed 1" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 3 .duration 3	.on_hit true .on_miss true .queue true
+// FLA-013 suffer self speed +3 for 3 turns. Intent: after taking an ally's bleed/blight he drops toward 40% HP; acting early next round lets him use Redeem/Exsanguinate before enemies. DoTs tick once per round regardless of speed, so speed adds no extra DoT damage. Grows every level.
+effect: .name "RB FLA Suffer Speed 2" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 3 .duration 3	.on_hit true .on_miss true .queue true
+// FLA-013 suffer self speed +3 for 3 turns. Intent: after taking an ally's bleed/blight he drops toward 40% HP; acting early next round lets him use Redeem/Exsanguinate before enemies. DoTs tick once per round regardless of speed, so speed adds no extra DoT damage. Grows every level.
+effect: .name "RB FLA Suffer Speed 3" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 4 .duration 3	.on_hit true .on_miss true .queue true
+// FLA-013 suffer self speed +4 for 3 turns. Intent: after taking an ally's bleed/blight he drops toward 40% HP; acting early next round lets him use Redeem/Exsanguinate before enemies. DoTs tick once per round regardless of speed, so speed adds no extra DoT damage. Grows every level.
+effect: .name "RB FLA Suffer Speed 4" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 4 .duration 3	.on_hit true .on_miss true .queue true
+// FLA-013 suffer self speed +4 for 3 turns. Intent: after taking an ally's bleed/blight he drops toward 40% HP; acting early next round lets him use Redeem/Exsanguinate before enemies. DoTs tick once per round regardless of speed, so speed adds no extra DoT damage. Grows every level.
+effect: .name "RB FLA Suffer Speed 5" .target "performer" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .speed_rating_add 5 .duration 3	.on_hit true .on_miss true .queue true
+// FLA-013 suffer self speed +5 for 3 turns. Intent: after taking an ally's bleed/blight he drops toward 40% HP; acting early next round lets him use Redeem/Exsanguinate before enemies. DoTs tick once per round regardless of speed, so speed adds no extra DoT damage. Grows every level.
 
 //# ======================================================================
 //# 기술 외 효과 (치명타 발동, 자세·모드 등)

@@ -449,7 +449,8 @@
     ],
     "new": [
      "Takes ally bleed and blight",
-     "Clears ally debuffs"
+     "Clears ally debuffs",
+     "Self: SPD +3-5 (3 turns)"
     ]
    }
   ]
