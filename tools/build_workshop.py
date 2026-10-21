@@ -3,9 +3,10 @@
 규칙 (2026-10-17 제작자 결정): 커스텀판 변경 중 원칙 위배·근거 없음·타 제작자 콘텐츠만 뺀다.
 - design/workshop/changes.json
   - exclude_heroes: 통째로 빼는 영웅(바닐라 유지 = 파일을 넣지 않음)
-  - replace_heroes: {영웅: 폴더} — 커스텀판 대신 창작마당판 전용 원본을 쓴다(총사 MUS-101~110: 커스텀판은 YAMR).
+  - replace_heroes: {영웅: 폴더} — 커스텀판 대신 창작마당판 전용 원본을 쓴다(2026-10-21 통합 후 비어 있음).
       폴더의 <영웅>.info.darkest(주석 포함)와 <영웅>.art.darkest를 그대로 넣는다. 되돌리기(revert)는 적용하지 않는다.
-- design/workshop/workshop.buffs.json: 창작마당판 전용 강화. design/workshop/localization/*.string_table.xml: 기술 이름 → loc2 컴파일
+- 영웅 폴더의 <영웅>.art.darkest가 있으면 같이 넣는다(총사 엄호 연막 이펙트). design/workshop/workshop.buffs.json: 창작마당판 전용 강화.
+- 기술 이름: localization/*.string_table.xml → tools/make_loc.py → loc2
   - revert: [{id, hero, ops, ko, en}] — 커스텀판 줄을 바닐라로 되돌림.
       ops: ["vanilla_skill", 기술id] / ["vanilla_line", 정규식] / ["skill", 기술id, 필드, 값(5개 또는 1개)]
   - pending: 제작자 답을 기다리는 항목(빌드에서는 revert와 같게 처리)
@@ -160,8 +161,8 @@ def main():
         dst = os.path.join(OUT, 'heroes', hero, hero + '.info.darkest')
         os.makedirs(os.path.dirname(dst), exist_ok=True)
         open(dst, 'wb').write(eol.join(lines).encode('utf-8'))
-        art = os.path.join(repl.get(hero, ''), hero + '.art.darkest')
-        if hero in repl and os.path.exists(art):
+        art = os.path.join(repl[hero] if hero in repl else os.path.dirname(cf), hero + '.art.darkest')
+        if os.path.exists(art):
             shutil.copy(art, os.path.join(os.path.dirname(dst), hero + '.art.darkest'))
     # 의존 효과·강화
     need = []
@@ -194,23 +195,11 @@ def main():
         p = os.path.join(OUT, 'shared', 'buffs', 'rebalance_workshop.buffs.json')
         os.makedirs(os.path.dirname(p), exist_ok=True)
         json.dump({'buffs': need_b}, open(p, 'w', encoding='utf-8'), indent='\t')
-    # 기술 이름 현지화: string_table.xml → localization.exe → rebalance_<언어>.loc2 (memory: dd-korean-patches 방식)
-    xmls = glob.glob(os.path.join(W, 'localization', '*.string_table.xml'))
-    if xmls:
-        import tempfile, subprocess
-        tmp = tempfile.mkdtemp(prefix='rb_loc_')
-        loc = os.path.join(tmp, 'localization'); os.makedirs(loc); os.makedirs(os.path.join(tmp, 'colours'))
-        for f in glob.glob(os.path.join(G, 'colours', '*.colours.darkest')):
-            shutil.copy(f, os.path.join(tmp, 'colours'))
-        for f in xmls:
-            shutil.copy(f, loc)
-        open(os.path.join(loc, 'project_paths.txt'), 'w').write('..')
-        res = subprocess.run([os.path.join(G, '_windows', 'win32', 'localization.exe')], cwd=loc, input=b'\n', capture_output=True).stdout.decode('cp949', 'ignore')
-        assert 'SUCCESS' in res and 'Error' not in res, res
+    # 기술 이름 현지화(MUS-110): 커스텀판 localization/*.string_table.xml을 컴파일(tools/make_loc.py)해 loc2만 복사
+    import make_loc
+    for f in make_loc.main():
         od = os.path.join(OUT, 'localization'); os.makedirs(od, exist_ok=True)
-        for f in glob.glob(os.path.join(loc, '*.loc2')):
-            shutil.copy(f, os.path.join(od, 'rebalance_' + os.path.basename(f)))
-        shutil.rmtree(tmp)
+        shutil.copy(f, od)
     # 패치 노트 (영어 = 메인, 한국어): 무엇 = 바닐라 vs 출력 데이터 자동 비교(patch_notes.py), 왜 = design/workshop/why.json(검토된 근거)
     names = {}
     for f in glob.glob(os.path.join(G, 'localization', '*.string_table.xml')) + glob.glob(os.path.join(G, 'dlc', '*', 'localization', '*.string_table.xml')) + glob.glob(os.path.join(G, 'dlc', '*', 'features', '*', 'localization', '*.string_table.xml')):
@@ -225,7 +214,7 @@ def main():
             for m in re.finditer(r'<entry id="hero_class_name_(\w+?)"><!\[CDATA\[(.*?)\]\]>', t[i0:j0]):
                 names.setdefault((lang, 'hero:' + m.group(1)), m.group(2))
     # 창작마당판에서 바꾼 기술 이름(MUS-110): 패치 노트에는 "새 이름 (원래 이름)"
-    for f in glob.glob(os.path.join(W, 'localization', '*.string_table.xml')):
+    for f in glob.glob(os.path.join(M, 'localization', '*.string_table.xml')):
         tx = rd(f)
         for lang in ('english', 'koreana'):
             m0 = re.search(r'<language id="%s">(.*?)</language>' % lang, tx, re.S)

@@ -10,13 +10,13 @@ armour: .name "jester_armour_1" .def 20% .prot 0 .hp 23 .spd 0 .upgradeRequireme
 armour: .name "jester_armour_2" .def 25% .prot 0 .hp 27 .spd 0 .upgradeRequirementCode 1
 armour: .name "jester_armour_3" .def 30% .prot 0 .hp 31 .spd 0 .upgradeRequirementCode 2
 armour: .name "jester_armour_4" .def 35% .prot 0 .hp 35 .spd 0 .upgradeRequirementCode 3
-combat_skill: .id "dirk_stab" .level 0 .type "melee" .atk 90% .dmg 0% .crit 5% .move 0 1 .launch 4321 .target 123 .is_crit_valid True .ignore_guard true  .effect "Build to Finale"
-combat_skill: .id "dirk_stab" .level 1 .type "melee" .atk 95% .dmg 0% .crit 6% .move 0 1 .launch 4321 .target 123 .is_crit_valid True .ignore_guard true  .effect "Build to Finale"
-combat_skill: .id "dirk_stab" .level 2 .type "melee" .atk 100% .dmg 0% .crit 7% .move 0 1 .launch 4321 .target 123 .is_crit_valid True .ignore_guard true  .effect "Build to Finale"
-combat_skill: .id "dirk_stab" .level 3 .type "melee" .atk 105% .dmg 0% .crit 8% .move 0 1 .launch 4321 .target 123 .is_crit_valid True .ignore_guard true  .effect "Build to Finale"
-combat_skill: .id "dirk_stab" .level 4 .type "melee" .atk 110% .dmg 0% .crit 9% .move 0 1 .launch 4321 .target 123 .is_crit_valid True .ignore_guard true  .effect "Build to Finale"
-// JES-004 [trace 2026-10-05] Improve the reliable moving attack alternative without changing its other effects.
-// JES-004 Dirk Stab accuracy +5 at every level; damage, critical modifier, guard bypass, movement and Finale preparation retained.
+combat_skill: .id "dirk_stab" .level 0 .type "melee" .atk 85% .dmg 0% .crit 5% .move 0 1 .launch 4321 .target 123 .is_crit_valid True .ignore_guard true  .effect "Build to Finale"
+combat_skill: .id "dirk_stab" .level 1 .type "melee" .atk 90% .dmg 0% .crit 6% .move 0 1 .launch 4321 .target 123 .is_crit_valid True .ignore_guard true  .effect "Build to Finale"
+combat_skill: .id "dirk_stab" .level 2 .type "melee" .atk 95% .dmg 0% .crit 7% .move 0 1 .launch 4321 .target 123 .is_crit_valid True .ignore_guard true  .effect "Build to Finale"
+combat_skill: .id "dirk_stab" .level 3 .type "melee" .atk 100% .dmg 0% .crit 8% .move 0 1 .launch 4321 .target 123 .is_crit_valid True .ignore_guard true  .effect "Build to Finale"
+combat_skill: .id "dirk_stab" .level 4 .type "melee" .atk 105% .dmg 0% .crit 9% .move 0 1 .launch 4321 .target 123 .is_crit_valid True .ignore_guard true  .effect "Build to Finale"
+// JES-013 dirk_stab: back to vanilla accuracy (JES-004 withdrawn). Unified with the Workshop build.
+// JES-013 단검 찌르기 명중 바닐라 복귀(JES-004 철회). 창작마당판과 통합 [제작자 10-21]
 combat_skill: .id "harvest" .level 0 .type "melee" .atk 90% .dmg -50% .crit 0% .launch 32 .target ~23 .is_crit_valid True  .effect "Bleed 1" "Build to Finale" .generation_guaranteed true
 combat_skill: .id "harvest" .level 1 .type "melee" .atk 95% .dmg -50% .crit 1% .launch 32 .target ~23 .is_crit_valid True  .effect "Bleed 2" "Build to Finale"
 combat_skill: .id "harvest" .level 2 .type "melee" .atk 100% .dmg -50% .crit 2% .launch 32 .target ~23 .is_crit_valid True  .effect "Bleed 3" "Build to Finale"

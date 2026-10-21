@@ -13,7 +13,7 @@ For each hero:
 Only the hero's own files are touched. Vanilla effect files are never overridden.
 Usage: python tools/apply_effect_edits.py [--mod PATH] [--game PATH] [--dry-run] [hero ...]
 """
-import os, re, sys, subprocess
+import os, glob, re, sys, subprocess
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from effect_common import (ABBR, P, paths, load_vanilla_effects, norm_ws, EFFECT_LIST, EFFECT_TOKEN,
                            effect_names_in, reuse_candidate, vanilla_index,
@@ -208,7 +208,12 @@ for hero in sorted(d for d in os.listdir(os.path.join(M, 'heroes')) if os.path.i
         if l.startswith('//'):
             continue
         refs.update(x for x in effect_names_in(nrm(l)) if x.startswith('RB ') and base_of(x) not in EFF)
-    for nm in sorted(refs - set(custom)):
+    # 다른 영웅의 RB 효과를 그대로 빌려 쓰는 참조는 허용(VES-013 광휘 = 유물수집상 RB ANT Flash Burn 재사용, R-DATA-01)
+    other_rb = set()
+    for f in glob.glob(os.path.join(M, 'effects', 'rebalance_*.effects.darkest')):
+        if os.path.basename(f) != 'rebalance_%s.effects.darkest' % hero:
+            other_rb.update(re.findall(r'^effect:\s*\.name\s+"([^"]+)"', open(f, encoding='utf-8', errors='ignore').read(), re.M))
+    for nm in sorted(refs - set(custom) - other_rb):
         errors.append('기술이 참조하는 신규 효과가 편집 사본에 없음: %s' % nm)
     for nm in sorted(set(custom) - refs):
         errors.append('(경고) 편집 사본의 신규 효과를 쓰는 기술이 없음: %s' % nm)

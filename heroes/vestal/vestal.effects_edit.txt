@@ -76,26 +76,31 @@ effect: .name "Vestal Stun 5" .target "target" .curio_result_type "negative" .ch
 //# ======================================================================
 //# 기술: 광휘 (gods_illumination)
 //# 레벨별 효과: 1레벨 Dodge Curse 1, Vestal Light 1, Destealth | 2레벨 Dodge Curse 2, Vestal Light 2, Destealth | 3레벨 Dodge Curse 3, Vestal Light 3, Destealth | 4레벨 Dodge Curse 4, Vestal Light 4, Destealth | 5레벨 Dodge Curse 5, Vestal Light 5, Destealth
-effect: .name "Dodge Curse 1" .target "target" .curio_result_type "negative" .chance 100% .combat_stat_buff 1 .defense_rating_add -20% .on_hit true .on_miss false
+effect: .name "Dodge Curse 1" .target "target" .curio_result_type "negative" .chance 100% .combat_stat_buff 1 .defense_rating_add -15% .on_hit true .on_miss false
+// VES-014 Illumination dodge -15% (vanilla -20..-30, lowered by 5 so it differs from Sniper's Mark).
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Vestal Light 1" .target "global" .chance 100% .curio_result_type "positive" .torch_increase 5	.on_hit true .on_miss true .apply_once true .queue true
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Destealth" .target "target" .chance 100% .unstealth 1 .on_hit true .on_miss false
 //#   공유 효과: 다른 영웅 7명(유물수집상, 석궁사수, 노상강도, 나병환자, 총사, 도망자, 방패 파괴자). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Dodge Curse 2" .target "target" .curio_result_type "negative" .chance 110% .combat_stat_buff 1 .defense_rating_add -23% .on_hit true .on_miss false
+effect: .name "Dodge Curse 2" .target "target" .curio_result_type "negative" .chance 110% .combat_stat_buff 1 .defense_rating_add -18% .on_hit true .on_miss false
+// VES-014 Illumination dodge -18% (vanilla -20..-30, lowered by 5 so it differs from Sniper's Mark).
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Vestal Light 2" .target "global" .chance 100% .curio_result_type "positive" .torch_increase 6	.on_hit true .on_miss true .apply_once true .queue true
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Dodge Curse 3" .target "target" .curio_result_type "negative" .chance 120% .combat_stat_buff 1 .defense_rating_add -25% .on_hit true .on_miss false
+effect: .name "Dodge Curse 3" .target "target" .curio_result_type "negative" .chance 120% .combat_stat_buff 1 .defense_rating_add -20% .on_hit true .on_miss false
+// VES-014 Illumination dodge -20% (vanilla -20..-30, lowered by 5 so it differs from Sniper's Mark).
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Vestal Light 3" .target "global" .chance 100% .curio_result_type "positive" .torch_increase 7	.on_hit true .on_miss true .apply_once true .queue true
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Dodge Curse 4" .target "target" .curio_result_type "negative" .chance 130% .combat_stat_buff 1 .defense_rating_add -27% .on_hit true .on_miss false
+effect: .name "Dodge Curse 4" .target "target" .curio_result_type "negative" .chance 130% .combat_stat_buff 1 .defense_rating_add -22% .on_hit true .on_miss false
+// VES-014 Illumination dodge -22% (vanilla -20..-30, lowered by 5 so it differs from Sniper's Mark).
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Vestal Light 4" .target "global" .chance 100% .curio_result_type "positive" .torch_increase 8	.on_hit true .on_miss true .apply_once true .queue true
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Dodge Curse 5" .target "target" .curio_result_type "negative" .chance 140% .combat_stat_buff 1 .defense_rating_add -30% .on_hit true .on_miss false
+effect: .name "Dodge Curse 5" .target "target" .curio_result_type "negative" .chance 140% .combat_stat_buff 1 .defense_rating_add -25% .on_hit true .on_miss false
+// VES-014 Illumination dodge -25% (vanilla -20..-30, lowered by 5 so it differs from Sniper's Mark).
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Vestal Light 5" .target "global" .chance 100% .curio_result_type "positive" .torch_increase 10	.on_hit true .on_miss true .apply_once true .queue true 
 //#   원본 위치: effects/base.effects.darkest
@@ -121,21 +126,3 @@ effect: .name "on_crit_healdone"    .target "performer" .curio_result_type "posi
 //#   공유 효과: 다른 영웅 1명(신비학자). 여기서 고치면 이 영웅만 바뀐다
 //#   강화 효과 수치(JSON, 참고용): on_crit_healbuff = hp_heal_percent 0.25
 //#   원본 위치: effects/base.effects.darkest
-
-//# ======================================================================
-//# 리밸런스 신규 효과: 광휘 받는 피해 증가 (VES-011)
-effect: .name "RB VES Illumination Exposed 1" .target "target" .curio_result_type "negative" .chance 100% .duration 3 .buff_ids "caltrops_dmg_received_5" .on_hit true .on_miss false .queue true
-// VES-011 Illumination: damage taken +10% for 3 turns replaces dodge -20..-30 (same as Sniper's Mark).
-// VES-012 Damage taken raised to +20% (old dodge -30 was worth 2.9 HP/round on the R-VALUE-19 scale; +15% was only 1.6).
-effect: .name "RB VES Illumination Exposed 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3 .buff_ids "RB_VES_DMG_RECEIVED_21" .on_hit true .on_miss false .queue true
-// VES-011 Illumination: damage taken +11% for 3 turns replaces dodge -20..-30 (same as Sniper's Mark).
-// VES-012 Damage taken raised to +21% (old dodge -30 was worth 2.9 HP/round on the R-VALUE-19 scale; +15% was only 1.6).
-effect: .name "RB VES Illumination Exposed 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3 .buff_ids "RB_VES_DMG_RECEIVED_22" .on_hit true .on_miss false .queue true
-// VES-011 Illumination: damage taken +12% for 3 turns replaces dodge -20..-30 (same as Sniper's Mark).
-// VES-012 Damage taken raised to +22% (old dodge -30 was worth 2.9 HP/round on the R-VALUE-19 scale; +15% was only 1.6).
-effect: .name "RB VES Illumination Exposed 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .buff_ids "RB_VES_DMG_RECEIVED_23" .on_hit true .on_miss false .queue true
-// VES-011 Illumination: damage taken +13% for 3 turns replaces dodge -20..-30 (same as Sniper's Mark).
-// VES-012 Damage taken raised to +23% (old dodge -30 was worth 2.9 HP/round on the R-VALUE-19 scale; +15% was only 1.6).
-effect: .name "RB VES Illumination Exposed 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .buff_ids "RB_VES_DMG_RECEIVED_25" .on_hit true .on_miss false .queue true
-// VES-011 Illumination: damage taken +15% for 3 turns replaces dodge -20..-30 (same as Sniper's Mark).
-// VES-012 Damage taken raised to +25% (old dodge -30 was worth 2.9 HP/round on the R-VALUE-19 scale; +15% was only 1.6).
