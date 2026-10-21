@@ -197,9 +197,7 @@ def main():
         json.dump({'buffs': need_b}, open(p, 'w', encoding='utf-8'), indent='\t')
     # 기술 이름 현지화(MUS-110): 커스텀판 localization/*.string_table.xml을 컴파일(tools/make_loc.py)해 loc2만 복사
     import make_loc
-    for f in make_loc.main():
-        od = os.path.join(OUT, 'localization'); os.makedirs(od, exist_ok=True)
-        shutil.copy(f, od)
+    make_loc.main(out_dir=os.path.join(OUT, 'localization'), local=False)   # 창작마당판: 언어별 원문 그대로
     # 패치 노트 (영어 = 메인, 한국어): 무엇 = 바닐라 vs 출력 데이터 자동 비교(patch_notes.py), 왜 = design/workshop/why.json(검토된 근거)
     names = {}
     for f in glob.glob(os.path.join(G, 'localization', '*.string_table.xml')) + glob.glob(os.path.join(G, 'dlc', '*', 'localization', '*.string_table.xml')) + glob.glob(os.path.join(G, 'dlc', '*', 'features', '*', 'localization', '*.string_table.xml')):
