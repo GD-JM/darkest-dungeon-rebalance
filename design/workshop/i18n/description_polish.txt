@@ -9,35 +9,34 @@ To samo dotyczy każdego bohatera z osobna: umiejętności i pozycje zostały pr
 [h2]Jeden spójny patch, ta sama trudność[/h2]
 Większość modów na bohaterów zmienia jedną postać naraz, a to zwykle oznacza po prostu, że staje się silniejsza. Ten mod balansuje wszystkich 20 bohaterów naraz według jednego zestawu zasad: każdy buff jest okupiony kosztem albo nerfem gdzie indziej, więc gra jako całość nie robi się ani łatwiejsza, ani trudniejsza. Według naszego modelu siły bohaterów łączna siła całej ekipy różni się od vanilli o mniej niż 1%, a przepaść między najsilniejszymi a najsłabszymi maleje: Fechmistrzyni i Łowczy schodzą w dół, Łowca Nagród i Kuszniczka idą w górę.
 
-[h2]Jak zapadały decyzje[/h2]
+[h2]Jak podejmowano decyzje[/h2]
 [list]
-[*][b]Leczenie i redukcja stresu to nie monopol kilku bohaterów.[/b]
-Przykład: więcej bohaterów potrafi samemu się połatać — Toksyczny Podstęp Hieny Cmentarnej (leczenie 1–5), Przypływ Adrenaliny Awanturniczki (3–7) i Cios Maczugą Kapłanki (3–5) — a Wzmocnienie Zbrojmistrza staje się redukcją stresu całej drużyny, której można używać raz za razem.
-[*][b]Różne umiejętności, różne pozycje.[/b]
-Przykład: riposta Oprycha przeszła z Doskoku Awanturnika na Strzał Śledzący, więc Oprych grający na dystans może kontratakować bez wychodzenia do przodu.
-[*][b]Trzymamy się zasad samej gry.[/b] Oryginalne liczby mają wyraźne wzorce; wartości, które od nich odstawały, wróciły do szeregu.
-Przykład: szybkość z ulepszeń broni rosła Łamaczce Tarcz szybciej niż jakiemukolwiek bohaterowi z podstawki; teraz idzie standardową krzywą.
-[*][b]Każdy buff ma swoją cenę.[/b] Celność, obrażenia i zasięg wymienia się między sobą, więc ogólna trudność zostaje taka sama.
-Przykład: Strzał Rozpryskowy zyskuje 15 celności i płaci za to obrażeniami (−50% → −60%).
-[*][b]Umiejętność ma robić to, na co wygląda.[/b]
-Przykład: Bitewny Opatrunek Kuszniczki tamuje teraz krwawienie, a Proch Błyskowy Antykwariuszki wreszcie podpala.
-[*][b]Wierność lore.[/b]
-Przykład: nic w opisie Łowczego nie tłumaczy jego podwyższonej odporności na krwawienie i zarazę, więc obie wracają do wartości bazowej.
-[*][b]Ma się grać tak samo.[/b] Zmieniamy niezawodność i częstotliwość, a nie tożsamość; oficjalne nerfy od Red Hook zostają uszanowane.
-Przykład: Strzał z bliska dalej porządnie kopie, ale teraz odrzuca Oprycha o 2 pozycje, więc nie da się z niego walić co turę.
-[*][b]Błyskotki bez zmian.[/b]
+[*][b]Leczenie i stres to nie monopol kilku bohaterów.[/b]
+Przykład: Przypływ Adrenaliny Awanturniczki (leczenie 3–7) i Toksyczny Podstęp Hieny Cmentarnej (1–5) to prawdziwe samoleczenie, a Wzmocnienie Zbrojmistrza co turę zdejmuje stres z drużyny.
+[*][b]Bez „właściwej” czwórki umiejętności i „właściwej” pozycji.[/b] Działa wiele kombinacji, a nie jeden sztywny build.
+Przykład: riposta Oprycha przeszła z Doskoku Awanturnika na Strzał Śledzący, więc kontratakuje z dystansu bez wychodzenia do przodu.
+[*][b]Trzymamy się zasad samej gry.[/b]
+Przykład: w podstawce broń na maksa daje tylko 2 szybkości (Kuszniczka 3→5); Łamaczka Tarcz (5→9) i Flagelant (6→9) odstawali. Teraz obaj +2.
+[*][b]Każdy buff ma cenę.[/b] Co rośnie w jednym miejscu, spada w innym – trudność ani nie puchnie, ani nie maleje.
+Przykład: Wyrok Kapłanki z −25% na 0% obrażeń, a Atak Ogara Łowczego z 0% na −25%.
+[*][b]Umiejętność robi to, na co wygląda.[/b] Grafika i działanie pasują od razu.
+Przykład: opatrunek tamuje krwawienie, a niestrudzona Awanturniczka nie jest już wyczerpana.
+[*][b]Kierunek wyznacza oficjalny lore.[/b]
+Przykład: Trędowaty był kiedyś królem, więc Onieśmielenie to cios prowadzący walkę i kruszący pancerz, a nie osłabienie wsparcia. Antykwariuszka zarabia złoto zamiast walczyć i zostaje słaba; nic w lore Łowczego nie uzasadnia dodatkowych odporności.
+[*][b]Błyskotki zostają, łatka się do nich dopasowuje.[/b] Dla kompatybilności.
 Przykład: błyskotki Muszkieterki zwiększają szansę osłabienia, więc jej nowa Zasłona Dymna wciąż lekko obniża celność.
 [/list]
 
-[h2]Na przykładzie: Łowca Nagród[/h2]
-Wcześniej najlepiej było postawić go na pozycji 2 i klepać w kółko te same umiejętności, a drużyny oparte na oznaczaniu były słabsze, niż się wydawało. Teraz to kat, który poluje na słabych: oznaczonych, ogłuszonych i krwawiących.
+[h2]Wzorcowy przykład: Muszkieterka[/h2]
+Oryginalna Muszkieterka była kopią Kuszniczki, więc zbudowaliśmy ją od nowa z oficjalnego lore: słynna strzelczyni, która po rozczarowującym turnieju chce zostać legendą łowów na potwory, a bez doświadczenia bojowego trzyma dystans.
 [list]
-[*][b]Stygmat Śmierci[/b] obniża OCHR o 20% (wcześniej 10%). Łowca nie ma riposty ani obronnych sztuczek, więc to jego sposób na opancerzonych wrogów.
-[*][b]Do Mnie[/b] przyciąga o 3 pozycje, więc cel z tylnych szeregów ląduje na pozycji 1.
-[*][b]Cios z Dołu[/b] (tylko w pozycję 1, CEL 95, KRYT 9%) mocno ogłusza i odrzuca cel na pozycję 3; trafienie krytyczne odpala też jego dodatkowe obrażenia przeciw oznaczonym.
-[*][b]Egzekucja[/b] dalej sięga pozycji 3 i mocniej bije ogłuszonych, a teraz także krwawiących — o krwawienie zadba wcześniej Zapora.
+[*][b]Kula Przebijająca[/b] (CEL 90): sięga każdej pozycji i przebija 10–30% pancerza; premia na oznaczonych dużo niższa niż u Kuszniczki.
+[*][b]Zasłona Dymna[/b] (3 na walkę): ogłusza pozycje 1–2 wroga i ukrywa ją w dymie.
+[*][b]Dym Osłonowy[/b]: ukrywa sojusznika na 2 tury – ochrona bez tego, by ktoś przyjmował ciosy.
+[*][b]Wskazanie Zwierzyny[/b]: „Ta zdobycz jest moja!” Oznacza, przyspiesza na 3 tury i częściej trafia krytycznie duże potwory.
+[*][b]Strzał Nagonki, Gnat, Opatrunek[/b]: spycha pozycje 2–3 do tyłu, strzela i się cofa, a leczenie zdejmuje trochę stresu.
 [/list]
-Każdy krok ma swoją cenę: Cios z Dołu trafia tylko w pozycję 1, Granat Błyskowy przeniesiono na pozycje 3–4, a Egzekucji używa się z pozycji 1–2.
+Cena: mniej zdrowia (24 zamiast 27) i szybkości (2 zamiast 3). Może zmieniać pozycję, więc jest nieco słabsza od Kuszniczki.
 
 [h2]Bohater po bohaterze[/h2]
 Grafiki powyżej pokazują każdą zmienioną umiejętność przed i po (na początek Łowca Nagród).
@@ -58,7 +57,7 @@ Grafiki powyżej pokazują każdą zmienioną umiejętność przed i po (na pocz
 [b]Okultysta[/b] — Przekleństwo obniża odporność na ogłuszenie, krwawienie, zarazę i osłabienie, szykując cel pod całą drużynę.
 [b]Badaczka Zarazy[/b] — Bitewne Panaceum to leczenie (3–7), które usuwa zarazę, a krwawienie bierze na siebie Kuszniczka.
 [b]Uciekinierka[/b] — Przetrząsanie nie sięga już pozycji 4.
-[b]Muszkieterka[/b] — już nie kopia Kuszniczki, tylko łowczyni: Kula Przebijająca przebija pancerz, Zasłona Dymna ogłusza przednie pozycje, a Dym Osłonowy ukrywa sojusznika przed atakami.
+[b]Muszkieterka[/b] — patrz wzorcowy przykład wyżej.
 [b]Łamaczka Tarcz[/b] — odstająca bohaterka z DLC wraca do szeregu: Penetracja traci pozycję 4, rozwój broni ustandaryzowany.
 [b]Kapłanka[/b] — sprawdza się też na pozycji 2: Cios Maczugą leczy ją samą, a Boża Łaska i Oświecenie działają z każdej pozycji.
 

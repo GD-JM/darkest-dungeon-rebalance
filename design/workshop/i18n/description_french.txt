@@ -9,35 +9,34 @@ Même chose au sein de chaque héros : plus besoin de spammer les quatre mêmes 
 [h2]Un patch global, une difficulté inchangée[/h2]
 Ce mod rééquilibre les 20 héros ensemble, selon les mêmes règles : chaque buff est compensé par un coût ou un nerf ailleurs, donc le jeu ne devient ni plus facile ni plus dur dans l'ensemble. D'après notre modèle de puissance des héros, la puissance totale de l'effectif reste à moins de 1 % de la vanilla, tandis que l'écart entre les plus forts et les plus faibles se resserre : la Duelliste et le Maître-chien redescendent, le Chasseur de primes et l'Arbalétrière remontent.
 
-[h2]Comment les changements ont été décidés[/h2]
+[h2]Comment les choix ont été faits[/h2]
 [list]
-[*][b]Les soins et le soulagement du stress ne sont pas le monopole de quelques héros.[/b]
-Exemple : plus de héros peuvent se rafistoler eux-mêmes — Toxines astucieuses de la Pilleuse de tombes (soin 1–5), Montée d'adrénaline de la Furie (3–7) et Coupe de masse de la Vestale (3–5) — tandis que Soutien de l'Homme d'armes devient un soin de stress de groupe réutilisable.
-[*][b]Des compétences variées, des rangs variés.[/b]
-Exemple : la riposte du Bandit passe d'Avancée de duelliste à Tir de pistage, si bien qu'un Bandit à distance peut contre-attaquer sans avancer.
-[*][b]Suivre les règles du jeu de base.[/b] Les valeurs d'origine suivent des schémas clairs ; les valeurs aberrantes sont remises dans le rang.
-Exemple : la vitesse d'arme de la Brise-bouclier progressait plus vite que celle de n'importe quel héros du jeu de base ; elle suit désormais la courbe standard.
-[*][b]Chaque buff a un prix.[/b] Précision, dégâts et portée s'échangent les uns contre les autres, pour que la difficulté globale reste la même.
-Exemple : Mitraille gagne 15 de précision et le paie en dégâts (−50 % → −60 %).
-[*][b]Une compétence doit faire ce qu'elle a l'air de faire.[/b]
-Exemple : Bandages militaires de l'Arbalétrière arrête désormais les saignements, et Poudre aveuglante de l'Antiquaire brûle pour de vrai.
-[*][b]Rester fidèle au lore.[/b]
-Exemple : rien dans la description du Maître-chien n'explique ses résistances supplémentaires au saignement et à l'infection, donc les deux reviennent à la valeur de base.
-[*][b]Garder les sensations.[/b] On ajuste la fiabilité et la fréquence, pas l'identité ; les nerfs de Red Hook eux-mêmes sont respectés.
-Exemple : Tir à bout portant garde toute sa patate, mais le Bandit recule désormais de 2 rangs, donc impossible de l'enchaîner à chaque tour.
-[*][b]On ne touche pas aux breloques.[/b]
+[*][b]Soins et stress ne sont pas réservés à quelques héros.[/b]
+Exemple : Montée d'adrénaline de la Furie (soin 3–7) et Toxines astucieuses de la Pilleuse de tombes (1–5) deviennent de vrais autosoins, et Soutien de l'Homme d'armes soulage le stress du groupe à chaque tour.
+[*][b]Pas de « bonnes » quatre compétences ni de « bon » rang.[/b] Beaucoup de combinaisons marchent, pas un seul build figé.
+Exemple : la riposte du Bandit passe d'Avancée de duelliste à Tir de pistage : il contre-attaque à distance sans avancer.
+[*][b]Suivre les règles du jeu de base.[/b]
+Exemple : une arme améliorée au maximum ne donne que 2 de vitesse (Arbalétrière 3→5) ; Brise-bouclier (5→9) et Flagellant (6→9) faisaient exception. Les deux gagnent désormais 2.
+[*][b]Chaque buff a un prix.[/b] Ce qui monte ici descend ailleurs : la difficulté ne gonfle ni ne baisse.
+Exemple : Jugement de la Vestale passe de −25 % à 0 % de dégâts, Assaut canin du Maître-chien de 0 % à −25 %.
+[*][b]Une compétence fait ce qu'elle montre.[/b] L'image et l'effet concordent.
+Exemple : un bandage arrête le saignement, et la Furie, infatigable, n'est plus épuisée.
+[*][b]Le lore donne la direction.[/b]
+Exemple : le Lépreux fut roi ; Intimider devient une frappe qui mène le combat en brisant l'armure. L'Antiquaire gagne de l'or plutôt que de combattre et reste faible ; rien dans le lore du Maître-chien ne justifie ses résistances en plus.
+[*][b]Les breloques restent fixes ; le patch s'y adapte.[/b] Pour la compatibilité.
 Exemple : les breloques de la Mousquetaire augmentent les malus, donc son Écran de fumée garde un petit malus de précision.
 [/list]
 
-[h2]Zoom sur le Chasseur de primes[/h2]
-Avant, le meilleur plan était de le planter au rang 2 et de répéter les mêmes compétences, et les groupes axés sur la marque étaient plus faibles qu'ils n'en avaient l'air. Désormais, c'est un bourreau qui s'acharne sur les plus faibles : cibles marquées, étourdies et qui saignent.
+[h2]Exemple phare : la Mousquetaire[/h2]
+La Mousquetaire d'origine copiait l'Arbalétrière ; elle est reconstruite d'après son lore : tireuse célèbre qui, après un tournoi décevant, veut devenir une légende en chassant les monstres et garde ses distances faute d'expérience au combat.
 [list]
-[*][b]Marque de mort[/b] réduit la PROT de 20 % (contre 10 % avant). Il n'a ni riposte ni astuces défensives : c'est comme ça qu'il gère les cibles en armure.
-[*][b]Viens plus près[/b] attire de 3 rangs, donc une cible du fond atterrit au rang 1.
-[*][b]Uppercut[/b] (rang 1 uniquement, PRÉ 95, CRIT 9 %) l'étourdit lourdement et l'envoie valser au rang 3 ; un critique déclenche aussi son bonus de dégâts contre les cibles marquées.
-[*][b]Coup de grâce[/b] atteint toujours le rang 3 et frappe plus fort les cibles étourdies et, désormais, celles qui saignent, avec Chausse-trappes pour poser le saignement.
+[*][b]Balle perçante[/b] (PRÉ 90) : atteint tous les rangs, perce 10–30 % d'armure ; bonus contre les marqués bien moindre que l'Arbalétrière.
+[*][b]Écran de fumée[/b] (3 par combat) : étourdit les rangs 1–2 et la cache dans la fumée.
+[*][b]Fumée de couverture[/b] : cache un allié 2 tours — une protection où personne n'encaisse à sa place.
+[*][b]Désigner la proie[/b] : « Cette proie est à moi ! » Marque, vitesse pendant 3 tours, plus de critiques contre les grands monstres.
+[*][b]Tir de rabat, Arme d'appoint, Rafistolage[/b] : repousse les rangs 2–3, tire puis recule, et soulage un peu de stress en soignant.
 [/list]
-Chaque étape a un prix : Uppercut ne frappe que le rang 1, Grenade aveuglante passe aux rangs 3–4, et Coup de grâce s'utilise depuis les rangs 1–2.
+Le prix : moins de PV (24 contre 27) et de vitesse (2 contre 3). Elle peut changer de rang, donc reste un peu sous l'Arbalétrière.
 
 [h2]Héros par héros[/h2]
 Les images ci-dessus montrent chaque compétence modifiée, avant et après.
@@ -58,7 +57,7 @@ Les images ci-dessus montrent chaque compétence modifiée, avant et après.
 [b]Occultiste[/b] — Sort de vulnérabilité baisse les résistances à l'étourdissement, au saignement, à l'infection et aux malus, ce qui prépare le terrain pour tout le groupe.
 [b]Médecin de peste[/b] — Soins militaires est le soin qui guérit l'infection (3–7), tandis que l'Arbalétrière s'occupe du saignement.
 [b]Évadée[/b] — Fouiller n'atteint plus le rang 4.
-[b]Mousquetaire[/b] — plus une copie de l'Arbalétrière mais une chasseuse : Balle perçante traverse l'armure, Écran de fumée étourdit le front, Fumée de couverture cache un allié.
+[b]Mousquetaire[/b] — voir l'exemple phare.
 [b]Brise-bouclier[/b] — l'exception du DLC, remise dans le rang : Transpercer perd le rang 4, progression d'arme standardisée.
 [b]Vestale[/b] — peut jouer depuis le rang 2 : Coupe de masse la soigne elle-même, Grâce divine et Illumination fonctionnent depuis n'importe quel rang.
 

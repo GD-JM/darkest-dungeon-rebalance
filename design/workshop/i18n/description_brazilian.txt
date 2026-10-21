@@ -12,32 +12,31 @@ A maioria dos mods de heróis mexe em um herói por vez, e isso quase sempre sig
 [h2]Como as mudanças foram decididas[/h2]
 [list]
 [*][b]Cura e alívio de estresse não são exclusividade de poucos heróis.[/b]
-Exemplo: mais heróis conseguem se curar sozinhos — Truques Tóxicos da Ladra de Cova (cura 1–5), Surto de Adrenalina da Infernal (3–7) e Golpe de Maça da Vestal (3–5) — e o Reforçar do Soldado vira uma cura de estresse em grupo que dá para usar várias vezes.
-[*][b]Habilidades diferentes, posições diferentes.[/b]
-Exemplo: o revide do Bandido saiu do Avanço do Duelista e foi para o Tiro Rastreante, então um Bandido à distância pode contra-atacar sem dar um passo à frente.
-[*][b]Seguir as regras do próprio jogo base.[/b] Os números originais têm padrões claros; os valores fora da curva voltam para a linha.
-Exemplo: a VEL que a Destruidora ganhava com as melhorias de arma crescia mais rápido que a de qualquer herói do jogo base; agora segue a curva padrão.
-[*][b]Todo buff tem um preço.[/b] Precisão, dano e alcance são trocados entre si, então a dificuldade geral continua a mesma.
-Exemplo: Explosão de Metralha ganha 15 de PRE e paga com dano (−50% → −60%).
-[*][b]Uma habilidade deve fazer o que parece.[/b]
-Exemplo: a Bandagem de Batalha da Atiradora agora estanca o sangramento, e a Pólvora Ofuscante da Antiquária agora queima de verdade.
-[*][b]Fiel à lore.[/b]
-Exemplo: nada na descrição do Mestre dos Cães justifica a resistência extra dele a sangramento e peste, então as duas voltam ao valor base.
-[*][b]Manter a sensação de jogo.[/b] Mexemos na consistência e na frequência, não na identidade; os próprios nerfs da Red Hook são respeitados.
-Exemplo: o Tiro de Perto continua batendo forte, mas agora o coice joga o Bandido 2 posições para trás, então não dá para usar todo turno.
-[*][b]As preciosidades ficam intactas.[/b]
+Exemplo: Surto de Adrenalina da Infernal (cura 3–7) e Truques Tóxicos da Ladra de Cova (1–5) viraram autocuras de verdade, e Reforçar do Soldado alivia o estresse do grupo todo turno.
+[*][b]Sem quatro habilidades nem posição "certas".[/b] Várias combinações funcionam de verdade, em vez de uma build travada.
+Exemplo: o contra-ataque do Bandido saiu do Avanço do Duelista e foi para o Tiro Rastreante, então o Bandido à distância contra-ataca sem avançar.
+[*][b]Seguir as regras do próprio jogo.[/b]
+Exemplo: no jogo base, a arma no máximo dá só 2 de velocidade (Atiradora 3→5); Destruidora (5→9) e Flagelante (6→9) fugiam disso. Agora os dois ganham 2.
+[*][b]Todo buff tem um preço.[/b] O que sobe num lugar desce em outro, então a dificuldade geral não infla nem desinfla.
+Exemplo: Julgamento da Vestal foi de −25% para 0% de dano, e Investida do Cão do Mestre dos Cães de 0% para −25%.
+[*][b]A habilidade faz o que parece.[/b] Arte e função batem à primeira vista.
+Exemplo: bandagem estanca sangramento, e a Infernal, que nunca se cansa, não fica mais exausta.
+[*][b]A direção vem do lore oficial.[/b]
+Exemplo: o Leproso já foi rei, então Intimidar virou um golpe que lidera a luta rachando armadura, em vez de uma penalidade de suporte. A Antiquária ganha ouro em vez de lutar e continua fraca, e nada no lore do Mestre dos Cães justifica resistência extra a sangramento e veneno.
+[*][b]Preciosidades ficam fixas; o patch se ajusta a elas.[/b] Pela compatibilidade.
 Exemplo: as preciosidades da Mosqueteira aumentam a chance de penalidade, então a nova Cortina de Fumaça ainda reduz um pouco a precisão.
 [/list]
 
-[h2]Em destaque: o Mercenário[/h2]
-Antes, o melhor era estacionar ele na posição 2 e repetir sempre as mesmas habilidades, e os grupos de marcação eram mais fracos do que pareciam. Agora ele é um carrasco que caça os fracos: alvos marcados, atordoados e sangrando.
+[h2]Destaque: a Mosqueteira[/h2]
+A Mosqueteira original era uma cópia exata da Atiradora, então foi refeita a partir do lore oficial: uma atiradora famosa que, depois de um torneio decepcionante, quer virar lenda caçando monstros e, sem experiência real de combate, mantém distância.
 [list]
-[*][b]Marca da Morte[/b] reduz a PROT em 20% (antes 10%). Ele não tem revide nem truques defensivos, então é assim que ele lida com alvos blindados.
-[*][b]Venha Aqui[/b] puxa 3 posições, então um alvo da retaguarda cai direto na posição 1.
-[*][b]Direto[/b] (só contra a posição 1, PRE 95, CRIT 9%) atordoa com força e joga o alvo para a posição 3; um crítico também ativa o dano extra dele contra alvos marcados.
-[*][b]Acabe com Ele[/b] ainda alcança a posição 3 e bate mais forte em alvos atordoados e, agora, também nos que estão sangrando, com os Estrepes preparando o sangramento.
+[*][b]Bala Penetrante[/b] (PRE 90): alcança todas as posições e perfura 10–30% de armadura; o bônus contra marcados é bem menor que o da Atiradora.
+[*][b]Cortina de Fumaça[/b] (3 por batalha): atordoa as posições 1–2 inimigas e a esconde na fumaça.
+[*][b]Fumaça de Cobertura[/b]: esconde um aliado por 2 turnos para que os inimigos não o mirem — proteção sem ninguém apanhar no lugar.
+[*][b]Marcar a Presa[/b]: "Essa presa é minha!" Marca, fica mais rápida por 3 turnos e acerta mais críticos em monstros grandes.
+[*][b]Tiro de Batida, Arma Secundária, Remendar[/b]: empurra as posições 2–3 para trás, atira e recua quando empurrada para frente, e alivia um pouco de estresse ao curar.
 [/list]
-Cada passo tem um preço: Direto só acerta a posição 1, a Granada Atordoante agora é usada das posições 3–4 e Acabe com Ele é usado das posições 1–2.
+O preço: menos vida (24 contra 27 da Atiradora) e velocidade (2 contra 3). Ela pode trocar de posição, então fica um pouco abaixo da Atiradora, que é fixa.
 
 [h2]Herói por herói[/h2]
 As imagens acima mostram cada habilidade alterada, antes e depois (começando pelo Mercenário).
@@ -58,7 +57,7 @@ As imagens acima mostram cada habilidade alterada, antes e depois (começando pe
 [b]Ocultista[/b] — Feitiço da Vulnerabilidade reduz a resistência a atordoamento, sangramento, peste e penalidades, preparando o terreno para o grupo inteiro.
 [b]Médica da Peste[/b] — Medicina de Batalha é a cura que remove peste (3–7), enquanto a Atiradora cuida do sangramento.
 [b]Fugitiva[/b] — Saquear não alcança mais a posição 4.
-[b]Mosqueteira[/b] — deixa de ser cópia da Atiradora e vira caçadora: Bala Penetrante atravessa armadura, Cortina de Fumaça atordoa a linha de frente e Fumaça de Cobertura esconde um aliado dos ataques.
+[b]Mosqueteira[/b] — veja o destaque acima.
 [b]Destruidora[/b] — a heroína do DLC que fugia da curva volta à linha: Perfurar não alcança mais a posição 4, e o crescimento da arma foi padronizado.
 [b]Vestal[/b] — dá conta da posição 2: Golpe de Maça cura ela mesma, e Graça Divina e Iluminação funcionam de qualquer posição.
 

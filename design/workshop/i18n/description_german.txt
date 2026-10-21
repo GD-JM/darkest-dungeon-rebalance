@@ -11,36 +11,35 @@ Die meisten Helden-Mods nehmen sich einen Helden nach dem anderen vor – und me
 
 [h2]Wie die Änderungen entschieden wurden[/h2]
 [list]
-[*][b]Heilung und Stressabbau gehören nicht nur ein paar Helden.[/b]
-Beispiel: Mehr Helden können sich selbst zusammenflicken – Giftlist der Grabräuberin (Heilung 1–5), Adrenalinschub der Barbarin (3–7) und Kolbenhieb der Vestalin (3–5) –, während Zuspruch des Waffenknechts zur wiederholbaren Stressheilung für die ganze Gruppe wird.
-[*][b]Verschiedene Fähigkeiten, verschiedene Ränge.[/b]
-Beispiel: Der Gegenschlag des Wegelagerers ist von Fechtschritt zu Gezielter Schuss gewandert, sodass ein Fernkampf-Wegelagerer kontern kann, ohne nach vorne zu gehen.
-[*][b]Den Regeln des Grundspiels folgen.[/b] Die Originalwerte folgen klaren Mustern; Ausreißer werden wieder auf Linie gebracht.
-Beispiel: Die Waffengeschwindigkeit der Schildbrecherin stieg schneller als bei jedem Helden des Grundspiels; jetzt folgt sie der Standardkurve.
-[*][b]Jeder Buff hat seinen Preis.[/b] Präzision, Schaden und Reichweite werden gegeneinander aufgewogen, damit der Schwierigkeitsgrad insgesamt gleich bleibt.
-Beispiel: Streuschuss bekommt 15 Präzision dazu und zahlt dafür mit Schaden (−50 % → −60 %).
-[*][b]Eine Fähigkeit sollte tun, wonach sie aussieht.[/b]
-Beispiel: Erstversorgung der Arbaleste stoppt jetzt Blutungen, und Blendpulver der Antiquarin brennt jetzt wirklich.
-[*][b]Der Lore treu bleiben.[/b]
-Beispiel: Nichts in der Beschreibung des Hundemeisters erklärt seinen zusätzlichen Widerstand gegen Bluten und Gifthauch, also kehren beide auf den Grundwert zurück.
-[*][b]Das Spielgefühl bewahren.[/b] Angepasst werden Zuverlässigkeit und Häufigkeit, nicht die Identität; Red Hooks eigene Nerfs werden respektiert.
-Beispiel: Schuss aus nächster Nähe haut immer noch ordentlich rein, aber der Wegelagerer weicht danach 2 Ränge zurück und kann ihn deshalb nicht jede Runde abfeuern.
-[*][b]Accessoires bleiben unangetastet.[/b]
-Beispiel: Die Accessoires der Musketierin erhöhen die Schwächungschance, daher senkt ihre neue Rauchwand weiterhin leicht die Treffsicherheit.
+[*][b]Heilung und Stressabbau gehören nicht nur wenigen Helden.[/b]
+Beispiel: Adrenalinschub der Barbarin (Heilung 3–7) und Giftlist der Grabräuberin (1–5) sind echte Selbstheilungen, Zuspruch des Waffenknechts baut jede Runde Gruppenstress ab.
+[*][b]Keine „richtigen“ vier Fähigkeiten, kein „richtiger“ Rang.[/b] Viele Kombinationen funktionieren, nicht ein starrer Build.
+Beispiel: Die Riposte des Wegelagerers wanderte von Fechtschritt zu Gezielter Schuss – er kontert auf Distanz, ohne vorzurücken.
+[*][b]Den eigenen Regeln des Spiels folgen.[/b]
+Beispiel: Grundspiel-Helden gewinnen über alle Waffenstufen nur 2 Tempo (Arbaleste 3→5); Schildbrecherin (5→9) und Flagellant (6→9) fielen heraus. Beide jetzt +2.
+[*][b]Jeder Buff hat seinen Preis.[/b] Was hier steigt, sinkt anderswo – die Schwierigkeit bläht sich weder auf noch schrumpft sie.
+Beispiel: Richtspruch der Vestalin geht von −25 % auf 0 % Schaden, Hundebiss des Hundemeisters von 0 % auf −25 %.
+[*][b]Eine Fähigkeit tut, wonach sie aussieht.[/b] Bild und Funktion passen auf einen Blick.
+Beispiel: Ein Verband stillt Blutungen, und die unermüdliche Barbarin wird nicht mehr erschöpft.
+[*][b]Die Richtung kommt aus der offiziellen Geschichte.[/b]
+Beispiel: Der Aussätzige war einst König, daher wird Einschüchterung zum rüstungsbrechenden Schlag statt einer Support-Schwächung. Die Antiquarin verdient Gold statt zu kämpfen und bleibt schwach; nichts im Hundemeister-Lore rechtfertigt Extra-Resistenzen.
+[*][b]Accessoires bleiben fix; der Patch passt sich an.[/b] Für die Kompatibilität.
+Beispiel: Die Accessoires der Musketierin erhöhen die Schwächungschance, daher senkt ihre Rauchwand weiterhin leicht die Treffsicherheit.
 [/list]
 
-[h2]Im Fokus: der Kopfgeldjäger[/h2]
-Früher war der beste Plan, ihn auf Rang 2 zu parken und immer dieselben Fähigkeiten zu drücken, und Markierungsgruppen waren schwächer, als sie aussahen. Jetzt ist er ein Henker, der sich die Schwachen vorknöpft: markierte, betäubte und blutende Ziele.
+[h2]Paradebeispiel: die Musketierin[/h2]
+Die originale Musketierin war eine Kopie der Arbaleste, daher wurde sie aus ihrem Lore neu gebaut: eine gefeierte Schützin, die nach einem enttäuschenden Turnier als Monsterjägerin zur Legende werden will und mangels Kampferfahrung Abstand hält.
 [list]
-[*][b]Du bist der Nächste[/b] senkt die ABW um 20 % (vorher 10 %). Er hat weder Gegenschlag noch Verteidigungstricks – so knackt er gepanzerte Ziele.
-[*][b]Komm her[/b] zieht 3 Ränge, ein Ziel aus der hinteren Reihe landet also auf Rang 1.
-[*][b]Aufwärtshaken[/b] (nur Rang 1, PRÄ 95, KRT 9 %) betäubt es stark und schleudert es auf Rang 3; ein Krit löst außerdem seinen Bonusschaden gegen markierte Ziele aus.
-[*][b]Mach ihn fertig[/b] reicht weiterhin bis Rang 3 und trifft betäubte und jetzt auch blutende Ziele härter – die Blutung legen Krähenfüße vorher.
+[*][b]Durchschlagende Kugel[/b] (TRF 90): trifft jeden Rang, durchdringt 10–30 % Rüstung; ihr Bonus gegen Markierte ist viel kleiner als bei der Arbaleste.
+[*][b]Rauchwand[/b] (3 pro Kampf): betäubt die gegnerischen Ränge 1–2 und versteckt sie im Rauch.
+[*][b]Deckungsrauch[/b]: verbirgt einen Verbündeten 2 Runden – Schutz, ohne dass jemand die Treffer einsteckt.
+[*][b]Beute markieren[/b]: „Diese Beute gehört mir!“ Markiert, 3 Runden schneller, mehr Krits gegen große Monster.
+[*][b]Treibschuss, Pistolenschuss, Zusammenflicken[/b]: treibt die Ränge 2–3 zurück, schießt und weicht zurück, heilt mit etwas Stressabbau.
 [/list]
-Jeder Schritt hat seinen Preis: Aufwärtshaken trifft nur Rang 1, Blendgranate ist auf Rang 3–4 gewandert, und Mach ihn fertig wird von Rang 1–2 aus eingesetzt.
+Der Preis: weniger LP (24 statt 27) und Tempo (2 statt 3). Sie kann den Rang wechseln und liegt daher knapp unter der Arbaleste.
 
 [h2]Held für Held[/h2]
-Die Bilder oben zeigen jede geänderte Fähigkeit, vorher und nachher (der Kopfgeldjäger zuerst).
+Die Bilder oben zeigen jede geänderte Fähigkeit, vorher und nachher.
 [b]Unhold[/b] — sich zu verwandeln wird zur echten Entscheidung: Verwandlung baut jetzt seinen eigenen Stress ab, und Schwerer Schlag funktioniert von Rang 4 aus.
 [b]Antiquarin[/b] — weiterhin absichtlich schwächer (sie bringt Gold ein), aber Blendpulver brennt jetzt und bereitet Verbrennungs-Combos vor.
 [b]Arbaleste[/b] — jetzt auch Feldsanitäterin: Erstversorgung heilt Bluten, Leuchtsignal baut zuverlässig Gruppenstress ab.
@@ -58,7 +57,7 @@ Die Bilder oben zeigen jede geänderte Fähigkeit, vorher und nachher (der Kopfg
 [b]Okkultist[/b] — Bann der Verletzlichkeit senkt den Widerstand gegen Betäuben, Bluten, Gifthauch und Schwächung und ebnet so der ganzen Gruppe den Weg.
 [b]Pestdoktorin[/b] — Gefechtsmedizin ist die Heilung gegen Gifthauch (3–7), während sich die Arbaleste um Bluten kümmert.
 [b]Ausreißerin[/b] — Plündern erreicht Rang 4 nicht mehr.
-[b]Musketierin[/b] — keine Kopie der Arbaleste mehr, sondern eine Jägerin: Durchschlagende Kugel durchdringt Rüstung, Rauchwand betäubt die vorderen Reihen, Deckungsrauch verbirgt einen Verbündeten vor Angriffen.
+[b]Musketierin[/b] — siehe Paradebeispiel oben.
 [b]Schildbrecherin[/b] — die DLC-Ausnahme, wieder auf Linie gebracht: Durchbohren verliert Rang 4, Waffenzuwachs standardisiert.
 [b]Vestalin[/b] — taugt auch auf Rang 2: Kolbenhieb heilt sie selbst, Göttliche Gnade und Erleuchtung funktionieren von jedem Rang aus.
 

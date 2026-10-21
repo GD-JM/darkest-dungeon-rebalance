@@ -1,0 +1,11 @@
+[b]Update 2.0.3 — Finish Him fix, new description[/b]
+[list]
+[*]Bounty Hunter — Finish Him: the bonus vs stunned targets is now +60-100% on both minimum and maximum damage. Before, only the maximum had been raised and the minimum (the number the tooltip shows) was still +25-60%.
+[*]Description rewritten: clearer rules with examples, and the Musketeer is the new showcase.
+[/list]
+
+[b]更新 2.0.3 — 了结一击修正、简介改版[/b]
+[list]
+[*]赏金猎人——了结一击：对被击晕目标的加成现在最低和最高伤害都是+60-100%。之前只提高了最高伤害，最低伤害（也就是提示里显示的数值）仍是+25-60%。
+[*]简介重写：规则和例子更清楚，代表案例改为火枪手。
+[/list]

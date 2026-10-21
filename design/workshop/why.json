@@ -162,14 +162,16 @@
  "bounty_hunter|finish_him": {
   "ids": [
    "BH-001",
-   "BH-017"
+   "BH-002",
+   "BH-017",
+   "BH-019"
   ],
   "principles": [
    "G-01",
    "G-02"
   ],
-  "en": "Like the Grave Robber's bonus against blighted targets, Finish Him now hits bleeding targets harder, tying the Bounty Hunter to his own Caltrops and the party's bleeders. It becomes a front-line-only execution; from rank 3 he has Collect Bounty and his back-rank tools instead.",
-  "ko": "도굴꾼의 중독 대상 추가 피해처럼, 끝장내기가 출혈 대상에게 추가 피해를 줘 자기 마름쇠와 파티 출혈 영웅과 연계한다. 처형기는 1·2열 전용으로 — 3열에서는 현상금 수거와 후열 기술을 쓰면 된다."
+  "en": "Like the Grave Robber's bonus against blighted targets, Finish Him now hits bleeding targets harder, tying the Bounty Hunter to his own Caltrops and the party's bleeders. It becomes a front-line-only execution; from rank 3 he has Collect Bounty and his back-rank tools instead. Against stunned targets it deals +60-100% damage, since a stun has to land first.",
+  "ko": "도굴꾼의 중독 대상 추가 피해처럼, 끝장내기가 출혈 대상에게 추가 피해를 줘 자기 마름쇠와 파티 출혈 영웅과 연계한다. 처형기는 1·2열 전용으로 — 3열에서는 현상금 수거와 후열 기술을 쓰면 된다. 기절 대상 추가 피해는 +60~100%(기절은 판정을 통과해야 걸리는 조건이라)."
  },
  "bounty_hunter|flashbang": {
   "ids": [
