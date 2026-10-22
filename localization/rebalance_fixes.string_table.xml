@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<!-- FIX-001 공식 한국어 오타 수정: "약화 네거" → "약화 제거" (effect_tooltip_cure_debuff, 고행자 고통 등 약화 해제 툴팁). 오타는 아레나 DLC 한국어 파일에서 옴 (2026-10-23) -->
+  <language id="english">
+    <entry id="effect_tooltip_cure_debuff"><![CDATA[Clear {colour_start|debuff}Debuffs{colour_end}]]></entry>
+  </language>
+  <language id="koreana">
+    <entry id="effect_tooltip_cure_debuff"><![CDATA[{colour_start|debuff}약화{colour_end} 제거]]></entry>
+  </language>
+  <language id="koreanb">
+    <entry id="effect_tooltip_cure_debuff"><![CDATA[{colour_start|debuff}약화{colour_end} 제거]]></entry>
+  </language>
+</root>
