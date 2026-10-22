@@ -18,7 +18,7 @@ Example: the Highwayman's riposte moved from Duelist's Advance to Tracking Shot,
 [*][b]Follow the base game's own rules.[/b]
 Example: base-game heroes gain only 2 speed over all weapon upgrades (Arbalest 3→5); Shieldbreaker (5→9) and Flagellant (6→9) were the outliers. Both now gain 2.
 [*][b]Every buff has a price.[/b] What goes up somewhere comes down elsewhere, so overall difficulty neither inflates nor deflates.
-Example: Vestal's Judgement went from −25% to 0% damage, and Houndmaster's Hound's Rush from 0% to −25%.
+Example: Vestal's Judgement went from −25% to 0% damage, and Houndmaster's Hound's Rush from 0% to −50% (its bleed went up instead).
 [*][b]A skill should do what it looks like.[/b] Art and function match at a glance.
 Example: a bandage stops bleeding (Arbalest's Battlefield Bandage), and the Hellion, who never tires, no longer gets exhausted.
 [*][b]The lore sets the direction.[/b]
@@ -30,10 +30,10 @@ Example: the Musketeer's trinkets boost debuff chance, so her new Smokescreen st
 [h2]Showcase: the Musketeer[/h2]
 The original Musketeer was an exact copy of the Arbalest, so she was rebuilt from her official lore: a celebrated sharpshooter who wants to become a legend by hunting monsters after a disappointing tournament, and who keeps her distance for lack of real combat experience.
 [list]
-[*][b]Piercing Ball[/b] (ACC 90): reaches every rank and pierces 10–30% armor; her bonus vs marked targets is far smaller than the Arbalest's.
+[*][b]Piercing Ball[/b] (ACC 95): reaches every rank and pierces 10–30% armor; her bonus vs marked targets is far smaller than the Arbalest's.
 [*][b]Smokescreen[/b] (3 per battle): stuns enemy ranks 1–2; stunned enemies vanish in the smoke, so the party strikes the back line.
 [*][b]Covering Smoke[/b]: hides one ally for 2 turns so enemies can't single them out — protection without anyone taking the hits.
-[*][b]Mark the Quarry[/b]: "This prize is mine!" She marks her prey, which takes more crits, and gains accuracy and speed for 3 turns.
+[*][b]Mark the Quarry[/b]: "This prize is mine!" She marks her prey, strips 10–20% of its armor and gains speed for 3 turns.
 [*][b]Flushing Shot, Sidearm, Patch Up[/b]: drives ranks 2–3 back, shoots and steps back when pushed forward, and adds a little stress relief to healing.
 [/list]
 The price: lower HP (24 vs the Arbalest's 27) and speed (2 vs 3). She can change ranks, so she is tuned slightly below the rank-locked Arbalest.
@@ -43,14 +43,14 @@ The images above show every changed skill, before and after.
 [b]Abomination[/b] — transforming is a real choice: Transform now relieves his own stress, and Slam works from rank 4.
 [b]Antiquarian[/b] — still weaker by design (she earns gold), but Flashpowder now burns and sets up burn combos.
 [b]Arbalest[/b] — a field medic too: Battlefield Bandage cures bleed, Rallying Flare reliably relieves party stress.
-[b]Bounty Hunter[/b] — mark, hook, execute: Come Hither pulls 3 ranks into Finish Him's reach; Uppercut is a rank-1 execution stun.
+[b]Bounty Hunter[/b] — mark, hook, execute: Mark for Death makes the target take more damage, Come Hither pulls 3 ranks into Finish Him's reach; Uppercut is a rank-1 execution stun.
 [b]Crusader[/b] — a support healer: Battle Heal boosts healing received; Inspiring Cry grows every level.
 [b]Duelist[/b] — one of the strongest heroes, trimmed: Touché no longer makes her almost unhittable.
 [b]Flagellant[/b] — back to the base game's rules: resists and speed growth normalized; Endure relieves stress from level 1.
 [b]Grave Robber[/b] — Toxin Trickery becomes a repeatable self-heal; Thrown Dagger hits marked targets harder.
 [b]Hellion[/b] — exhaustion removed: Barbaric YAWP! fires her up and weakens every enemy; Adrenaline Rush is her self-heal.
 [b]Highwayman[/b] — ranged and melee builds both work: Tracking Shot grants riposte without moving.
-[b]Houndmaster[/b] — less damage, more protection: Target Whistle lowers enemy accuracy, Guard Dog gives more dodge, Hound's Rush works from any rank.
+[b]Houndmaster[/b] — a ranged bleed specialist: his hounds bite any rank and make it bleed; Target Whistle makes the prey take more crits.
 [b]Jester[/b] — still the best stress healer, but Inspiring Tune works from rank 2 and Solo from any rank.
 [b]Leper[/b] — Intimidate is now Sunder, an armor-cracking strike, and Revenge's cost now grows with level, so it is usable early.
 [b]Man-at-Arms[/b] — the veteran who holds the line: Bolster is a repeatable party stress heal; Command adds protection.
