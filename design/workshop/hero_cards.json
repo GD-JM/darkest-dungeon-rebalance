@@ -206,6 +206,7 @@
      "ACC 95",
      "DMG -60%",
      "Pull 3",
+     "Target: SPD -4 to -8 (3 turns)",
      "No mark"
     ]
    },
@@ -259,10 +260,15 @@
     "name": "Caltrops",
     "icon": "seven",
     "old": [
-     "DMG -95%"
+     "Ranks 3-4, one target",
+     "DMG -95%",
+     "Bleed, SPD -4 to -8, dmg taken +10-20%"
     ],
     "new": [
-     "DMG -85%"
+     "Ranks 3-4 together",
+     "DMG -85%",
+     "Bleed + damage taken +10-20%",
+     "(SPD debuff moved to Come Hither)"
     ]
    }
   ]
@@ -1281,7 +1287,7 @@
     ],
     "new": [
      "No damage, ranks 1-2",
-     "Stun, ACC -10% (1 turn)",
+     "Stun, ACC -10% (2 turns)",
      "Stunned enemies hide in smoke",
      "3 per battle"
     ]
@@ -1353,7 +1359,8 @@
     ],
     "new": [
      "One ally (not self)",
-     "Stealth for 2 turns"
+     "Stealth for 2 turns",
+     "Dodge +15-25% (2 turns)"
     ]
    },
    {

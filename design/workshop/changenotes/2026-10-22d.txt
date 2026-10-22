@@ -1,0 +1,15 @@
+[b]Update 2.0.6 — Caltrops, Come Hither, Musketeer smoke[/b]
+[list]
+[*]Bounty Hunter — Caltrops now hits enemy ranks 3 and 4 together: bleed and +10-20% damage taken on both. Before, it hit only one target, so there was little reason to use it.
+[*]Bounty Hunter — Come Hither now also slows the pulled enemy (SPD -4 to -8 for 3 turns), so you have time to finish it at rank 1. The slow was moved from Caltrops.
+[*]Musketeer — Smokescreen's accuracy debuff lasts 2 turns (was 1), so it still matters after the stun wears off.
+[*]Musketeer — Covering Smoke also gives the hidden ally +15-25% dodge for 2 turns. Stealth stops single-target attacks; the dodge helps against area attacks.
+[/list]
+
+[b]更新 2.0.6 — 绳钩切削、靠近点！、火枪手烟幕[/b]
+[list]
+[*]赏金猎人——绳钩切削现在同时命中敌方3号和4号位：两者都会流血，并且受到的伤害+10-20%。之前只能打一个目标，几乎没有使用理由。
+[*]赏金猎人——靠近点！现在还会让被拉过来的敌人减速（速度-4至-8，持续3回合），让你有时间在1号位将其解决。减速效果从绳钩切削移到了这里。
+[*]火枪手——烟幕弹的命中减益持续2回合（原为1回合），眩晕结束后依然有效。
+[*]火枪手——掩护烟幕还会让被隐藏的队友获得+15-25%闪避，持续2回合。隐身挡住单体攻击，闪避应对范围攻击。
+[/list]
