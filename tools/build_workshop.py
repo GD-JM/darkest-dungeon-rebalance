@@ -297,7 +297,9 @@ def main():
     print('built', OUT, '| heroes:', len(heroes), ', '.join(heroes), '| notes:', len(notes), '| effects:', len(effects), '| buffs:', len(need_b))
     # 창작마당 이미지 보관 [제작자 10-22]: 버전마다 그때 올린 이미지 전체를 design/workshop/cards_history/<버전>/ 에 남긴다
     m = re.search(r'Update ([\d.]+)', cn)
-    if m:
+    import subprocess
+    branch = subprocess.run(['git', 'rev-parse', '--abbrev-ref', 'HEAD'], cwd=M, capture_output=True, text=True).stdout.strip()
+    if m and branch == 'main':                               # test 빌드가 이미 올린 버전 폴더를 덮지 않게 main에서만
         snap = os.path.join(W, 'cards_history', m.group(1))
         shutil.copytree(os.path.join(W, 'cards'), snap, dirs_exist_ok=True)
         shutil.copy(os.path.join(OUT, 'preview_icon.png'), os.path.join(snap, 'preview_icon.png'))
