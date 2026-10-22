@@ -28,6 +28,7 @@ PARAM = dict(
     TGT_ATTACKS=1.5,      # R-VALUE-19: 약화 걸린 적 1명이 라운드당 받는 아군 공격 수 (v1 hero_power.md 4-2의 x1.5, 집중 공격). 회피·방어·받는 치명타·받는 피해 공통
     ENEMY_DODGE_CAP=True, # R-VALUE-19: 적 회피 감소는 몬스터 회피 분포 + 95% 자동 명중 상한으로 센다
     DMG_RECEIVED=True,    # R-VALUE-18: 적 받는 피해 +x = 그 적을 치는 아군 공격 피해 +x (라운드당 아군 1공격 가정, 받는 치명타와 같은 가정)
+    BURN_TIMING=True,     # R-VALUE-24: 화상은 라운드 끝에 터진다(게임 설명문). 건 라운드에 대상이 아직 행동 전이면(0.5) 출혈·중독(대상 턴 시작)과 달리 첫 틱이 그 행동 뒤 -> 첫 틱 몫을 한 라운드 늦은 가치(1 - DEATH_RATE)로
     DEBUFF_TIMING=True,   # R-VALUE-23: 적 약화 턴별 유효율 = 첫 턴 DEBUFF_W1(이미 행동했을 수 있음) x 이후 턴 (1 - DEATH_RATE)^k (처치 우선 대상이 죽음). 약화로 못 잡은 만큼 맞는다(기회비용) [제작자]
     DEBUFF_W1=0.5,
     ENEMY_CRIT=True,      # R-VALUE-22: 적 치명 감소 = 몬스터 공격별 적중률 x 줄어든 치명(그 기술 치명 아래로 못 내려감) x (치명 추가 피해 + 받는 스트레스 17.5)
@@ -885,6 +886,8 @@ def skill_value(C, l, d):
             if 'dotBurn' in k:                                  # R-VALUE-08: 중첩 절반 감소, 저항 무시
                 slow = any(C.buffs.get(b.strip('"'), {}).get('stat_type') == 'hp_dot_burn_decay_percent' for b in k.get('buff_ids', []))
                 bt = burn_total(num(first(k, 'dotBurn')), dur if slow else 0, P)
+                if P.get('BURN_TIMING', True) and bt:               # R-VALUE-24 첫 틱이 대상 행동 뒤 (절반의 경우)
+                    bt *= 1 - 0.5 * min(int(num(first(k, 'dotBurn'))), bt) / bt * P['DEATH_RATE']
                 add('화상', ev(None, fn=lambda a, c: a * bt) * n_t * (P['E_DOT_AOE'] if aoe else P['E_DOT_SGL']) * rw)
             if 'controlled_burn_amount' in k:                   # 통제된 화상 열 효과 (빗나가도 걸림)
                 zb = burn_zone(num(first(k, 'controlled_burn_amount')), num(first(k, 'controlled_burn_duration', '3')), P)
