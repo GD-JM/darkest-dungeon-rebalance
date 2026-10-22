@@ -42,3 +42,4 @@
 | [musketeer_identity.md](musketeer_identity.md), [musketeer_identity_dump.txt](musketeer_identity_dump.txt) | 총사 정체성: 창작마당판 빈 역할 전수 조사 | 총사, 정체성 | 2026-10-21 |
 | [mark_survey.md](mark_survey.md) | 표식 전수 조사(영웅·직업 치명타·장신구·몬스터, 바닐라 대비) | 표식 | 2026-10-21 |
 | [../backlog.md](../backlog.md) | 보류 아이디어 목록 (BL-01 현상금 이동 저항) | 보류 | 2026-10-21 |
+| [lore_audit_A.md](lore_audit_A.md), [lore_audit_B.md](lore_audit_B.md), [lore_audit_C.md](lore_audit_C.md) | 공식 설정·전용 장신구·야영 기술 vs 현재 설계 전수 대조 (총사 제외 19명; A 괴인·유물·석궁·현상금·성전사·결투가 / B 고행자·도굴꾼·야만인·노상·조련사·광대 / C 나병·중보병·신비·역병·도망자·방패·성녀) | 설정, 장신구, 야영 | 2026-10-22 |
