@@ -68,11 +68,13 @@ combat_skill: .id "patch_up" .level 3 .heal 4 4 .launch 43 .target @1234 .effect
 combat_skill: .id "patch_up" .level 4 .heal 4 5 .launch 43 .target @1234 .effect "RB MUS Patch Destress 5" .is_stall_invalidating false
 // MUS-108 Patch Up: vanilla heal, stress heal 2/2/3/3/4 instead of the stacking heal-received buff.
 // MUS-108 응급처치: 회복 바닐라, 받는 회복량 누적 대신 스트레스 회복 2/2/3/3/4. 의도: 성전사 격려의 반대(회복 많고 스트레스 조금). 받는 회복량은 성전사 전투 치유 몫.
-combat_skill: .id "skeet_shot" .level 0 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target @1234 .self_target_valid false .is_crit_valid False .effect "Stealth2" .is_stall_invalidating false
-combat_skill: .id "skeet_shot" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target @1234 .self_target_valid false .is_crit_valid False .effect "Stealth2" .is_stall_invalidating false
-combat_skill: .id "skeet_shot" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target @1234 .self_target_valid false .is_crit_valid False .effect "Stealth2" .is_stall_invalidating false
-combat_skill: .id "skeet_shot" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target @1234 .self_target_valid false .is_crit_valid False .effect "Stealth2" .is_stall_invalidating false
-combat_skill: .id "skeet_shot" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target @1234 .self_target_valid false .is_crit_valid False .effect "Stealth2" .is_stall_invalidating false
+combat_skill: .id "skeet_shot" .level 0 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target @1234 .self_target_valid false .is_crit_valid False .effect "Stealth2" "RB MUS Cover Dodge 1" .is_stall_invalidating false
+combat_skill: .id "skeet_shot" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target @1234 .self_target_valid false .is_crit_valid False .effect "Stealth2" "RB MUS Cover Dodge 2" .is_stall_invalidating false
+combat_skill: .id "skeet_shot" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target @1234 .self_target_valid false .is_crit_valid False .effect "Stealth2" "RB MUS Cover Dodge 3" .is_stall_invalidating false
+combat_skill: .id "skeet_shot" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target @1234 .self_target_valid false .is_crit_valid False .effect "Stealth2" "RB MUS Cover Dodge 4" .is_stall_invalidating false
+combat_skill: .id "skeet_shot" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 4321 .target @1234 .self_target_valid false .is_crit_valid False .effect "Stealth2" "RB MUS Cover Dodge 5" .is_stall_invalidating false
+// MUS-117 Covering Smoke: + ally dodge +15/17/20/22/25% for 2 turns.
+// MUS-117 엄호 연막: 아군 회피 +15/17/20/22/25%(2턴, 은신과 같은 지속) 추가. 의도: 은신은 단일 공격만 막는다 — 연기 속이라 맞히기 어려운 회피로 광역 공격도 받아 준다. 단일 대상이라 유물수집상 전체 회피(+3~10)보다 높게, 결투가 찌르기 자기 회피(+15~25, 3턴)와 같은 수열 [제작자 10-22 "단일이라 훨씬 더 높아도 된다", 수치 Claude]
 // MUS-109 Covering Smoke: any rank, one ally other than self gains stealth for 2 turns.
 // MUS-109 엄호 연막: 어디서든 자신을 뺀 아군 1명 은신 2턴. 의도: 대신 맞는 보호와 다른 지키기 — 죽어가는 아군을 숨긴다. 버프는 넣지 않는다(은신만으로 충분히 셈).
 combat_move_skill: .id "move" .level 0 .type "move" .move 2 0 .launch 4321

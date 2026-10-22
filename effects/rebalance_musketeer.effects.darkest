@@ -78,3 +78,13 @@ effect: .name "RB MUS Sidearm Crit 5" .target "target" .curio_result_type "negat
 // MUS-114 Sidearm: enemy crit -10/11/12/13/15% for 2 turns (the half of Suppressing Fire that Smokescreen does not take).
 effect: .name "RB MUS Smoke Hide" .target "target" .curio_result_type "negative" .chance 500% .duration 1 .buff_ids RB_MUS_SMOKE_HIDE .on_hit true .on_miss false .queue true
 // MUS-115 Smokescreen: the stunned target is stealthed while stunned (buff rule is_actor_status stunned, removed when not active); 500% so resist never blocks it.
+effect: .name "RB MUS Cover Dodge 1" .target "target" .curio_result_type "positive" .chance 100% .duration 2 .combat_stat_buff 1 .defense_rating_add 15% .on_hit true .on_miss true
+// MUS-117 Covering Smoke: ally dodge +15/17/20/22/25% for 2 turns (same as stealth; Duelist Touche self dodge is +15..25% 3 turns).
+effect: .name "RB MUS Cover Dodge 2" .target "target" .curio_result_type "positive" .chance 100% .duration 2 .combat_stat_buff 1 .defense_rating_add 17% .on_hit true .on_miss true
+// MUS-117 Covering Smoke: ally dodge +15/17/20/22/25% for 2 turns (same as stealth; Duelist Touche self dodge is +15..25% 3 turns).
+effect: .name "RB MUS Cover Dodge 3" .target "target" .curio_result_type "positive" .chance 100% .duration 2 .combat_stat_buff 1 .defense_rating_add 20% .on_hit true .on_miss true
+// MUS-117 Covering Smoke: ally dodge +15/17/20/22/25% for 2 turns (same as stealth; Duelist Touche self dodge is +15..25% 3 turns).
+effect: .name "RB MUS Cover Dodge 4" .target "target" .curio_result_type "positive" .chance 100% .duration 2 .combat_stat_buff 1 .defense_rating_add 22% .on_hit true .on_miss true
+// MUS-117 Covering Smoke: ally dodge +15/17/20/22/25% for 2 turns (same as stealth; Duelist Touche self dodge is +15..25% 3 turns).
+effect: .name "RB MUS Cover Dodge 5" .target "target" .curio_result_type "positive" .chance 100% .duration 2 .combat_stat_buff 1 .defense_rating_add 25% .on_hit true .on_miss true
+// MUS-117 Covering Smoke: ally dodge +15/17/20/22/25% for 2 turns (same as stealth; Duelist Touche self dodge is +15..25% 3 turns).
