@@ -1,0 +1,13 @@
+[b]Update 2.0.5 — Smokescreen fix, Duelist, Leper[/b]
+[list]
+[*]Musketeer — Smokescreen: fixed. It hid the Musketeer herself instead of the enemies. Now stunned enemies vanish in the smoke while they are stunned, so the party strikes the back line.
+[*]Duelist — Disengage now lowers the target's damage by 10-15% for 2 turns. Feint was her only debuff, so the Academy's Ring had almost nothing to boost.
+[*]Leper — Intimidate is renamed Sunder. It no longer intimidates; it cracks armor.
+[/list]
+
+[b]更新 2.0.5 — 烟幕弹修正、决斗家、麻风剑客[/b]
+[list]
+[*]火枪手——烟幕弹：已修正。之前隐身的是火枪手自己而不是敌人。现在被击晕的敌人在昏迷期间隐入烟雾，让队伍集火后排。
+[*]决斗家——避实击虚现在使目标伤害降低10-15%，持续2回合。之前她唯一的减益是佯攻，提高减益几率的饰品几乎没有用武之地。
+[*]麻风剑客——“威吓”改名为“破甲”。它不再是威吓，而是击碎护甲。
+[/list]

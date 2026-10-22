@@ -66,6 +66,19 @@
 			}
 		},
 		{
+			"id": "RB_MUS_SMOKE_HIDE",
+			"stat_type": "stealth",
+			"stat_sub_type": "",
+			"amount": 1,
+			"remove_if_not_active": true,
+			"rule_type": "is_actor_status",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": "stunned"
+			}
+		},
+		{
 			"id": "RB_MUS_CRIT_AP",
 			"stat_type": "ignore_protection",
 			"stat_sub_type": "",

@@ -359,6 +359,17 @@
     ]
    },
    {
+    "key": "duelist|disengage",
+    "name": "Disengage",
+    "icon": "four",
+    "old": [
+     "No debuff"
+    ],
+    "new": [
+     "Target: DMG -10 to -15% (2 turns)"
+    ]
+   },
+   {
     "key": "duelist|coup_de_grace",
     "name": "Coup de Grâce",
     "icon": "six",
@@ -841,13 +852,14 @@
  },
  "leper": {
   "name": "Leper",
-  "tagline": "Intimidate cracks armor, and Revenge is usable from level 1.",
+  "tagline": "Sunder (was Intimidate) cracks armor, and Revenge is usable from level 1.",
   "skills": [
    {
     "key": "leper|intimidate",
-    "name": "Intimidate",
+    "name": "Sunder",
     "icon": "seven",
     "old": [
+     "Intimidate",
      "ACC 95, DMG -85%, CRIT 0%",
      "Hits any rank, ignores stealth",
      "Target: DMG -20 to -33% (3 turns)",
@@ -1270,7 +1282,7 @@
     "new": [
      "No damage, ranks 1-2",
      "Stun, ACC -10% (1 turn)",
-     "Self stealth (2 turns)",
+     "Stunned enemies hide in smoke",
      "3 per battle"
     ]
    },

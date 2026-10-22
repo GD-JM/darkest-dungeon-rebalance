@@ -33,11 +33,13 @@ combat_skill: .id "feint" .level 3 .type "melee" .atk 110% .dmg -50% .crit 11% .
 combat_skill: .id "feint" .level 4 .type "melee" .atk 115% .dmg -50% .crit 12% .launch 321 .target 12 .is_crit_valid True  .effect "Mark Self" "Duelist Feint Buff 5" "RB DUE Duelist Feint Debuff 5" .valid_modes stance_defensive
 // DUE-007 feint: 방어 감소 -20/22/25/27/30% -> -10/12/15/17/20%(RB DUE Duelist Feint Debuff). 현상금 사냥꾼 죽음의 표식(-20~-30)과 같은 숫자였음, 표식의 바닐라 값으로 [제작자]
 
-combat_skill: .id "disengage" .level 0 .type "melee" .atk 95%  .dmg -50% .crit -1% .move 3 0 .launch 21 .target 12 .is_crit_valid True  .effect "Duelist Disengage Buff 1" "Duelist Disengage Any Position" .valid_modes stance_defensive
-combat_skill: .id "disengage" .level 1 .type "melee" .atk 100% .dmg -50% .crit 0%  .move 3 0 .launch 21 .target 12 .is_crit_valid True  .effect "Duelist Disengage Buff 2" "Duelist Disengage Any Position" .valid_modes stance_defensive
-combat_skill: .id "disengage" .level 2 .type "melee" .atk 105% .dmg -50% .crit 1%  .move 3 0 .launch 21 .target 12 .is_crit_valid True  .effect "Duelist Disengage Buff 3" "Duelist Disengage Any Position" .valid_modes stance_defensive
-combat_skill: .id "disengage" .level 3 .type "melee" .atk 110% .dmg -50% .crit 2%  .move 3 0 .launch 21 .target 12 .is_crit_valid True  .effect "Duelist Disengage Buff 4" "Duelist Disengage Any Position" .valid_modes stance_defensive
-combat_skill: .id "disengage" .level 4 .type "melee" .atk 115% .dmg -50% .crit 3%  .move 3 0 .launch 21 .target 12 .is_crit_valid True  .effect "Duelist Disengage Buff 5" "Duelist Disengage Any Position" .valid_modes stance_defensive
+combat_skill: .id "disengage" .level 0 .type "melee" .atk 95%  .dmg -50% .crit -1% .move 3 0 .launch 21 .target 12 .is_crit_valid True  .effect "Duelist Disengage Buff 1" "Duelist Disengage Any Position" "RB DUE Disengage Weaken 1" .valid_modes stance_defensive
+combat_skill: .id "disengage" .level 1 .type "melee" .atk 100% .dmg -50% .crit 0%  .move 3 0 .launch 21 .target 12 .is_crit_valid True  .effect "Duelist Disengage Buff 2" "Duelist Disengage Any Position" "RB DUE Disengage Weaken 2" .valid_modes stance_defensive
+combat_skill: .id "disengage" .level 2 .type "melee" .atk 105% .dmg -50% .crit 1%  .move 3 0 .launch 21 .target 12 .is_crit_valid True  .effect "Duelist Disengage Buff 3" "Duelist Disengage Any Position" "RB DUE Disengage Weaken 3" .valid_modes stance_defensive
+combat_skill: .id "disengage" .level 3 .type "melee" .atk 110% .dmg -50% .crit 2%  .move 3 0 .launch 21 .target 12 .is_crit_valid True  .effect "Duelist Disengage Buff 4" "Duelist Disengage Any Position" "RB DUE Disengage Weaken 4" .valid_modes stance_defensive
+combat_skill: .id "disengage" .level 4 .type "melee" .atk 115% .dmg -50% .crit 3%  .move 3 0 .launch 21 .target 12 .is_crit_valid True  .effect "Duelist Disengage Buff 5" "Duelist Disengage Any Position" "RB DUE Disengage Weaken 5" .valid_modes stance_defensive
+// DUE-012 Disengage: enemy damage -10/11/12/13/15% for 2 turns (chance 100..140%).
+// DUE-012 이탈: 적 피해 −10/11/12/13/15% 2턴 추가(확률 100~140%). 의도: 아카데미 반지(약화 확률 +35%)가 쓸 약화가 페인트 하나뿐이었음. 칼을 쳐내고 물러나는 방어 자세 기술에 "무장 해제" 성격. 전용 기술인 약화의 저주(−10~20%, 3턴)보다 작게 [제작자 10-22]
 
 combat_move_skill: .id "move" .level 0 .type "move" .move 3 3 .launch 4321 .valid_modes stance_defensive stance_aggressive
 
