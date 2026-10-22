@@ -44,3 +44,4 @@
 | [../backlog.md](../backlog.md) | 보류 아이디어 목록 (BL-01 현상금 이동 저항) | 보류 | 2026-10-21 |
 | [lore_audit_A.md](lore_audit_A.md), [lore_audit_B.md](lore_audit_B.md), [lore_audit_C.md](lore_audit_C.md) | 공식 설정·전용 장신구·야영 기술 vs 현재 설계 전수 대조 (총사 제외 19명; A 괴인·유물·석궁·현상금·성전사·결투가 / B 고행자·도굴꾼·야만인·노상·조련사·광대 / C 나병·중보병·신비·역병·도망자·방패·성녀) | 설정, 장신구, 야영 | 2026-10-22 |
 | [strength_2026-10-22.md](strength_2026-10-22.md) | 강함 순위 (R-VALUE-23 약화 기회비용 반영 후, 2.0.5 기준) | 순위, 모델 | 2026-10-22 |
+| [bleed_distribution.md](bleed_distribution.md) | 출혈 기술 13개 열·형태·수치 분포, 출혈 대상 보너스, 조련사 출혈 특화 판단 | 출혈, 조련사 | 2026-10-23 |
