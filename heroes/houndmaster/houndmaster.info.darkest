@@ -17,10 +17,12 @@ armour: .name "houndmaster_armour_4" .def 30% .prot 0 .hp 37 .spd 0 .upgradeRequ
 
 
 combat_skill: .id "hounds_rush" .level 0 .type "ranged" .atk 90% .dmg -50% .crit 5% .launch 4321 .target 1234 .is_crit_valid True  .effect "Beast Killer 1" "HM Dmg Marked 1" "RB HM Hound Bleed 1" .generation_guaranteed true
-combat_skill: .id "hounds_rush" .level 1 .type "ranged" .atk 95% .dmg -50% .crit 6% .launch 4321 .target 1234 .is_crit_valid True  .effect "Beast Killer 2" "HM Dmg Marked 1" "RB HM Hound Bleed 2"
-combat_skill: .id "hounds_rush" .level 2 .type "ranged" .atk 100% .dmg -50% .crit 7% .launch 4321 .target 1234 .is_crit_valid True  .effect "Beast Killer 3" "HM Dmg Marked 1" "RB HM Hound Bleed 3"
-combat_skill: .id "hounds_rush" .level 3 .type "ranged" .atk 105% .dmg -50% .crit 8% .launch 4321 .target 1234 .is_crit_valid True  .effect "Beast Killer 4" "HM Dmg Marked 1" "RB HM Hound Bleed 4"
-combat_skill: .id "hounds_rush" .level 4 .type "ranged" .atk 110% .dmg -50% .crit 9% .launch 4321 .target 1234 .is_crit_valid True  .effect "Beast Killer 5" "HM Dmg Marked 1" "RB HM Hound Bleed 5"
+combat_skill: .id "hounds_rush" .level 1 .type "ranged" .atk 95% .dmg -50% .crit 6% .launch 4321 .target 1234 .is_crit_valid True  .effect "Beast Killer 2" "HM Dmg Marked 2" "RB HM Hound Bleed 2"
+combat_skill: .id "hounds_rush" .level 2 .type "ranged" .atk 100% .dmg -50% .crit 7% .launch 4321 .target 1234 .is_crit_valid True  .effect "Beast Killer 3" "HM Dmg Marked 3" "RB HM Hound Bleed 3"
+combat_skill: .id "hounds_rush" .level 3 .type "ranged" .atk 105% .dmg -50% .crit 8% .launch 4321 .target 1234 .is_crit_valid True  .effect "Beast Killer 4" "HM Dmg Marked 4" "RB HM Hound Bleed 4"
+combat_skill: .id "hounds_rush" .level 4 .type "ranged" .atk 110% .dmg -50% .crit 9% .launch 4321 .target 1234 .is_crit_valid True  .effect "Beast Killer 5" "HM Dmg Marked 5" "RB HM Hound Bleed 5"
+// HM-032 hounds_rush: marked bonus back to vanilla +60/70/80/90/100% (MARK-01 fixed +60). Base damage is now -50%, so a marked hit is still weaker than vanilla.
+// HM-032 사냥개 돌진: 표식 보너스 +60% 고정 → 바닐라 +60~100%. 의도: 기본 피해가 −50%라 표식 한 방도 바닐라보다 약함(5렙 1.0배 vs 2.0배) — 바닐라를 최대한 지킴 [제작자 10-23]
 // HM-019 [2026-10-06] Target all enemy ranks from all ally ranks; retain damage -25 and flat marked bonus +60 to favor versatility and support over sustained damage. Supersedes HM-011 target234.
 // HM-010 HM-011 HM-016 HM-018 [trace 2026-10-05] Retain conditional mark/beast specialization while reducing unconditional and bleed output.
 // HM-016 hounds_rush: 피해 0% -> -25%. 표식(+60%)+야수(+35%) 중첩 시 실전가 226%(조련사 1위). 조정 후 조건 없을 때 92%(평타 수준), 조건 충족 시 188%로 조건부 아키타입을 선명하게
@@ -31,11 +33,13 @@ combat_skill: .id "hounds_rush" .level 4 .type "ranged" .atk 110% .dmg -50% .cri
 // HM-023 hounds_rush: 1렙 명중 85 -> 90, 출혈 1/1/2/2/3 지속 1 -> 2턴(RB HM Hound Bleed). 피해 -25%로 크게 낮춘 만큼 [제작자]
 
 
-combat_skill: .id "hounds_harry" .level 0 .type "ranged" .atk 90% .dmg -80% .crit -5% .launch 432 .target ~1234 .is_crit_valid True  .effect "RB HM Harry Bleed 1"
-combat_skill: .id "hounds_harry" .level 1 .type "ranged" .atk 95% .dmg -80% .crit -4% .launch 432 .target ~1234 .is_crit_valid True  .effect "RB HM Harry Bleed 2"
-combat_skill: .id "hounds_harry" .level 2 .type "ranged" .atk 100% .dmg -80% .crit -3% .launch 432 .target ~1234 .is_crit_valid True  .effect "RB HM Harry Bleed 3"
-combat_skill: .id "hounds_harry" .level 3 .type "ranged" .atk 105% .dmg -80% .crit -2% .launch 432 .target ~1234 .is_crit_valid True  .effect "RB HM Harry Bleed 4"
-combat_skill: .id "hounds_harry" .level 4 .type "ranged" .atk 110% .dmg -80% .crit -1% .launch 432 .target ~1234 .is_crit_valid True  .effect "RB HM Harry Bleed 5"
+combat_skill: .id "hounds_harry" .level 0 .type "ranged" .atk 85% .dmg -80% .crit -5% .launch 432 .target ~1234 .is_crit_valid True  .effect "RB HM Harry Bleed 1"
+combat_skill: .id "hounds_harry" .level 1 .type "ranged" .atk 90% .dmg -80% .crit -4% .launch 432 .target ~1234 .is_crit_valid True  .effect "RB HM Harry Bleed 2"
+combat_skill: .id "hounds_harry" .level 2 .type "ranged" .atk 95% .dmg -80% .crit -3% .launch 432 .target ~1234 .is_crit_valid True  .effect "RB HM Harry Bleed 3"
+combat_skill: .id "hounds_harry" .level 3 .type "ranged" .atk 100% .dmg -80% .crit -2% .launch 432 .target ~1234 .is_crit_valid True  .effect "RB HM Harry Bleed 4"
+combat_skill: .id "hounds_harry" .level 4 .type "ranged" .atk 105% .dmg -80% .crit -1% .launch 432 .target ~1234 .is_crit_valid True  .effect "RB HM Harry Bleed 5"
+// HM-033 hounds_harry: accuracy 90 -> 85 (vanilla; area attacks sit 5 below single-target, as Hound's Rush 90).
+// HM-033 사냥개 습격: 명중 90 → 85(바닐라). 의도: 광역은 단일(돌진 90)보다 5 낮게 — 방패 파괴자 꿰뚫기와 대칭 [제작자 10-23]
 // HM-012 [trace 2026-10-05] Support the rear AOE bleed option after removing front-rank launch.
 // HM-012 사냥개 습격: 사용 4321 -> 432(1열 제거, 2열 메인 구조), 피해 -75% -> -70%. 광역 지속 피해는 전투 2.55라운드 안에 40%만 회수되어 R-STRAT-01에 역행 -> 실사용률 최하위. 사용 열 축소의 대가로 화력 보상
 // 명중 85 ->90 , 사유 : 출혈 기술 표준치가 90임
@@ -43,11 +47,13 @@ combat_skill: .id "hounds_harry" .level 4 .type "ranged" .atk 110% .dmg -80% .cr
 // HM-030 사냥개 습격: 피해 −70% → −80%, 출혈 1/1/2/2/3 → 2/2/3/3/4(3턴, 확률 110~150% 유지). 의도: 적 전체에 출혈을 깔아 두는 원거리 출혈 부여자. 기술 가치는 거의 그대로(모델(5렙) +85 → +87%p), 출혈 비중만 올림 [제작자 10-23]
 
 
-combat_skill: .id "whistle" .level 0 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 4321 .target 1234 .is_crit_valid False  .effect "HM Mark Target" "RB HM Whistle Distract 1" .is_stall_invalidating false
-combat_skill: .id "whistle" .level 1 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 4321 .target 1234 .is_crit_valid False  .effect "HM Mark Target" "RB HM Whistle Distract 2" .is_stall_invalidating false
-combat_skill: .id "whistle" .level 2 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 4321 .target 1234 .is_crit_valid False  .effect "HM Mark Target" "RB HM Whistle Distract 3" .is_stall_invalidating false
-combat_skill: .id "whistle" .level 3 .type "ranged" .atk 115% .dmg -100% .crit 0% .launch 4321 .target 1234 .is_crit_valid False  .effect "HM Mark Target" "RB HM Whistle Distract 4" .is_stall_invalidating false
-combat_skill: .id "whistle" .level 4 .type "ranged" .atk 120% .dmg -100% .crit 0% .launch 4321 .target 1234 .is_crit_valid False  .effect "HM Mark Target" "RB HM Whistle Distract 5" .is_stall_invalidating false
+combat_skill: .id "whistle" .level 0 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 4321 .target 1234 .is_crit_valid False  .effect "HM Mark Target" "RB HM Whistle Crit 1" .is_stall_invalidating false
+combat_skill: .id "whistle" .level 1 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 4321 .target 1234 .is_crit_valid False  .effect "HM Mark Target" "RB HM Whistle Crit 2" .is_stall_invalidating false
+combat_skill: .id "whistle" .level 2 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 4321 .target 1234 .is_crit_valid False  .effect "HM Mark Target" "RB HM Whistle Crit 3" .is_stall_invalidating false
+combat_skill: .id "whistle" .level 3 .type "ranged" .atk 115% .dmg -100% .crit 0% .launch 4321 .target 1234 .is_crit_valid False  .effect "HM Mark Target" "RB HM Whistle Crit 4" .is_stall_invalidating false
+combat_skill: .id "whistle" .level 4 .type "ranged" .atk 120% .dmg -100% .crit 0% .launch 4321 .target 1234 .is_crit_valid False  .effect "HM Mark Target" "RB HM Whistle Crit 5" .is_stall_invalidating false
+// HM-031 Target Whistle: accuracy debuff replaced by crit received +10/11/12/13/15% (3 turns).
+// HM-031 휘파람: 적 명중 감소 → 받는 치명 +10/11/12/13/15%(3턴). 의도: 원거리 출혈 부여자와 시너지 — 치명은 출혈 적용 +20%p·지속 1.5배, 조련사 직업 치명은 출혈 확률 +20. 조련사 전용 장신구에 약화 확률 없음(P-20 무관) [제작자 10-23 "10~15"]
 // HM-028 whistle: accuracy debuff chance 130..170% -> 100..140% (normal scale), still -25..-30% for 3 turns.
 // HM-028 목표물 지정 명중 감소 확률 130~170% → 100~140%. 의도: 조련사만 높은 확률을 갖는 근거 없음, 정상화 [제작자 10-21]
 // HM-020 whistle: 방어 -20~-30% -> 받는 치명타 +15/16/17/18/20%(3턴). 방어는 0 아래로 안 내려가 방어 0인 적(56%)에게 효과가 없었음. 방어 감소는 현상금 사냥꾼 죽음의 표식 몫 [제작자]

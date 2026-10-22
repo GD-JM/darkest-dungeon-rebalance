@@ -19,31 +19,6 @@ effect: .name "RB MUS Armor Pierce 4" .target "performer" .chance 100% .skill_in
 // MUS-103 Piercing Ball armor piercing 10/15/20/25/30% for this shot only (skill_instant buff ignore_protection).
 effect: .name "RB MUS Armor Pierce 5" .target "performer" .chance 100% .skill_instant true .duration 1 .buff_ids RB_MUS_AP_5 .on_hit true .on_miss true .apply_once true
 // MUS-103 Piercing Ball armor piercing 10/15/20/25/30% for this shot only (skill_instant buff ignore_protection).
-effect: .name "RB MUS Prey 1" .target "target" .curio_result_type "negative" .chance 100% .duration 3 .buff_type crit_received_chance .buff_amount 5% .on_hit true .on_miss false
-// MUS-114 Mark the Quarry: target receives +5/6/7/8/10% crit for 3 turns (replaces self crit vs large; below Shieldbreaker Expose 8..10% because marked crit already stacks).
-effect: .name "RB MUS Prey 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3 .buff_type crit_received_chance .buff_amount 6% .on_hit true .on_miss false
-// MUS-114 Mark the Quarry: target receives +5/6/7/8/10% crit for 3 turns (replaces self crit vs large; below Shieldbreaker Expose 8..10% because marked crit already stacks).
-effect: .name "RB MUS Prey 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3 .buff_type crit_received_chance .buff_amount 7% .on_hit true .on_miss false
-// MUS-114 Mark the Quarry: target receives +5/6/7/8/10% crit for 3 turns (replaces self crit vs large; below Shieldbreaker Expose 8..10% because marked crit already stacks).
-effect: .name "RB MUS Prey 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .buff_type crit_received_chance .buff_amount 8% .on_hit true .on_miss false
-// MUS-114 Mark the Quarry: target receives +5/6/7/8/10% crit for 3 turns (replaces self crit vs large; below Shieldbreaker Expose 8..10% because marked crit already stacks).
-effect: .name "RB MUS Prey 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .buff_type crit_received_chance .buff_amount 10% .on_hit true .on_miss false
-// MUS-114 Mark the Quarry: target receives +5/6/7/8/10% crit for 3 turns (replaces self crit vs large; below Shieldbreaker Expose 8..10% because marked crit already stacks).
-effect: .name "RB MUS Prey Speed 1" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .combat_stat_buff 1 .speed_rating_add 3 .attack_rating_add 5% .on_hit true .on_miss true
-// MUS-105 Mark the Quarry: self speed +3/3/4/4/5 for 3 turns.
-// MUS-114 Mark the Quarry: self accuracy +5/6/7/8/10 added (same series as Duelist's Advance).
-effect: .name "RB MUS Prey Speed 2" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .combat_stat_buff 1 .speed_rating_add 3 .attack_rating_add 6% .on_hit true .on_miss true
-// MUS-105 Mark the Quarry: self speed +3/3/4/4/5 for 3 turns.
-// MUS-114 Mark the Quarry: self accuracy +5/6/7/8/10 added (same series as Duelist's Advance).
-effect: .name "RB MUS Prey Speed 3" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .combat_stat_buff 1 .speed_rating_add 4 .attack_rating_add 7% .on_hit true .on_miss true
-// MUS-105 Mark the Quarry: self speed +3/3/4/4/5 for 3 turns.
-// MUS-114 Mark the Quarry: self accuracy +5/6/7/8/10 added (same series as Duelist's Advance).
-effect: .name "RB MUS Prey Speed 4" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .combat_stat_buff 1 .speed_rating_add 4 .attack_rating_add 8% .on_hit true .on_miss true
-// MUS-105 Mark the Quarry: self speed +3/3/4/4/5 for 3 turns.
-// MUS-114 Mark the Quarry: self accuracy +5/6/7/8/10 added (same series as Duelist's Advance).
-effect: .name "RB MUS Prey Speed 5" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .combat_stat_buff 1 .speed_rating_add 5 .attack_rating_add 10% .on_hit true .on_miss true
-// MUS-105 Mark the Quarry: self speed +3/3/4/4/5 for 3 turns.
-// MUS-114 Mark the Quarry: self accuracy +5/6/7/8/10 added (same series as Duelist's Advance).
 effect: .name "RB MUS Smoke Blind 1" .target "target" .curio_result_type "negative" .chance 100% .duration 2 .combat_stat_buff 1 .attack_rating_add -10% .on_hit true .on_miss false
 // MUS-104 Smokescreen: accuracy -10/10/12/12/15% (small, so it does not copy Suppressing Fire). MUS-116: 1 -> 2 turns.
 effect: .name "RB MUS Smoke Blind 2" .target "target" .curio_result_type "negative" .chance 110% .duration 2 .combat_stat_buff 1 .attack_rating_add -10% .on_hit true .on_miss false
@@ -88,3 +63,13 @@ effect: .name "RB MUS Cover Dodge 4" .target "target" .curio_result_type "positi
 // MUS-117 Covering Smoke: ally dodge +15/17/20/22/25% for 2 turns (same as stealth; Duelist Touche self dodge is +15..25% 3 turns).
 effect: .name "RB MUS Cover Dodge 5" .target "target" .curio_result_type "positive" .chance 100% .duration 2 .combat_stat_buff 1 .defense_rating_add 25% .on_hit true .on_miss true
 // MUS-117 Covering Smoke: ally dodge +15/17/20/22/25% for 2 turns (same as stealth; Duelist Touche self dodge is +15..25% 3 turns).
+effect: .name "RB MUS Prey Speed 1" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .combat_stat_buff 1 .speed_rating_add 3 .on_hit true .on_miss true
+// MUS-105 Mark the Quarry: self speed +3/3/4/4/5 for 3 turns. MUS-118: self accuracy removed.
+effect: .name "RB MUS Prey Speed 2" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .combat_stat_buff 1 .speed_rating_add 3 .on_hit true .on_miss true
+// MUS-105 Mark the Quarry: self speed +3/3/4/4/5 for 3 turns. MUS-118: self accuracy removed.
+effect: .name "RB MUS Prey Speed 3" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .combat_stat_buff 1 .speed_rating_add 4 .on_hit true .on_miss true
+// MUS-105 Mark the Quarry: self speed +3/3/4/4/5 for 3 turns. MUS-118: self accuracy removed.
+effect: .name "RB MUS Prey Speed 4" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .combat_stat_buff 1 .speed_rating_add 4 .on_hit true .on_miss true
+// MUS-105 Mark the Quarry: self speed +3/3/4/4/5 for 3 turns. MUS-118: self accuracy removed.
+effect: .name "RB MUS Prey Speed 5" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .combat_stat_buff 1 .speed_rating_add 5 .on_hit true .on_miss true
+// MUS-105 Mark the Quarry: self speed +3/3/4/4/5 for 3 turns. MUS-118: self accuracy removed.

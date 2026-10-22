@@ -34,11 +34,13 @@ combat_skill: .id "smokescreen" .level 4 .type "ranged" .atk 115% .dmg -100% .cr
 // MUS-116 연막탄: 명중 감소 1턴 → 2턴. 의도: 1턴이면 기절이 풀리는 순간 같이 사라져 아무 효과가 없다 [제작자 10-22]. YAMR 연막은 명중 감소 없이 속도 −2~−4(기본 지속)를 걸었다.
 // MUS-115 Smokescreen: self stealth removed; stunned enemies are hidden in the smoke (stealth only while stunned).
 // MUS-115 연막탄: 자신 은신 삭제 → 기절한 적이 연기 속에 숨는다(기절 동안만 은신, 풀리면 사라짐). 의도: 원래 결정 "적 연막 = 1·2열 기절 + 은신"을 잘못 구현(자신 은신)한 것 수정 [제작자 10-22]. 아군이 기절한 앞열 대신 후열에 화력을 모으게 된다(R-STRAT-01).
-combat_skill: .id "call_the_shot" .level 0 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 43 .target 1234 .is_crit_valid False .effect "Arb Mark Target" "RB MUS Prey 1" "RB MUS Prey Speed 1" .is_stall_invalidating false
-combat_skill: .id "call_the_shot" .level 1 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 43 .target 1234 .is_crit_valid False .effect "Arb Mark Target" "RB MUS Prey 2" "RB MUS Prey Speed 2" .is_stall_invalidating false
-combat_skill: .id "call_the_shot" .level 2 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 43 .target 1234 .is_crit_valid False .effect "Arb Mark Target" "RB MUS Prey 3" "RB MUS Prey Speed 3" .is_stall_invalidating false
-combat_skill: .id "call_the_shot" .level 3 .type "ranged" .atk 115% .dmg -100% .crit 0% .launch 43 .target 1234 .is_crit_valid False .effect "Arb Mark Target" "RB MUS Prey 4" "RB MUS Prey Speed 4" .is_stall_invalidating false
-combat_skill: .id "call_the_shot" .level 4 .type "ranged" .atk 120% .dmg -100% .crit 0% .launch 43 .target 1234 .is_crit_valid False .effect "Arb Mark Target" "RB MUS Prey 5" "RB MUS Prey Speed 5" .is_stall_invalidating false
+combat_skill: .id "call_the_shot" .level 0 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 43 .target 1234 .is_crit_valid False .effect "Arb Mark Target" "BH Mark Debuff 1" "RB MUS Prey Speed 1" .is_stall_invalidating false
+combat_skill: .id "call_the_shot" .level 1 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 43 .target 1234 .is_crit_valid False .effect "Arb Mark Target" "BH Mark Debuff 2" "RB MUS Prey Speed 2" .is_stall_invalidating false
+combat_skill: .id "call_the_shot" .level 2 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 43 .target 1234 .is_crit_valid False .effect "Arb Mark Target" "BH Mark Debuff 3" "RB MUS Prey Speed 3" .is_stall_invalidating false
+combat_skill: .id "call_the_shot" .level 3 .type "ranged" .atk 115% .dmg -100% .crit 0% .launch 43 .target 1234 .is_crit_valid False .effect "Arb Mark Target" "BH Mark Debuff 4" "RB MUS Prey Speed 4" .is_stall_invalidating false
+combat_skill: .id "call_the_shot" .level 4 .type "ranged" .atk 120% .dmg -100% .crit 0% .launch 43 .target 1234 .is_crit_valid False .effect "Arb Mark Target" "BH Mark Debuff 5" "RB MUS Prey Speed 5" .is_stall_invalidating false
+// MUS-118 Mark the Quarry: target PROT -10/12/15/17/20% (vanilla Bounty Hunter mark debuff, reused) instead of crit received; self accuracy removed, speed kept.
+// MUS-118 사냥감 지정: 대상 받는 치명 → 방어 −10~−20%(바닐라 현상금 사냥꾼 표식 약화 재사용, 3턴). 자신 명중 삭제, 속도 유지. 의도: 관통탄의 % 방어 관통과 같은 "갑옷 뚫는 사냥꾼" 축, 표식별 대표 약화 분배(총사 방어·현상금 받는 피해·조련사 받는 치명) [제작자 10-23]
 // MUS-105 Mark the Quarry: mark 3 turns + self 3 turns speed +3/3/4/4/5 and crit +4..8% vs large monsters.
 // MUS-105 사냥감 지정: 표식 3턴 + 자신 3턴 속도 +3/3/4/4/5, 대형 몬스터 상대 치명 +4~8%. 의도: "이놈은 내 거야!" — 사냥으로 다급하게 증명하려는 설정. 속도는 무차별 사격 수치를 옮겼다.
 // MUS-114 Mark the Quarry: large-monster crit replaced by target crit received +5/6/7/8/10% (3 turns); self accuracy +5/6/7/8/10 added to the speed buff.

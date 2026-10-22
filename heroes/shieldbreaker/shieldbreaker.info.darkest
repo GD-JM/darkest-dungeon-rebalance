@@ -60,11 +60,13 @@ combat_skill: .id "adders_kiss" .level 3 .type "melee" .atk 105% .dmg 0% .crit 8
 combat_skill: .id "adders_kiss" .level 4 .type "melee" .atk 110% .dmg 0% .crit 9% .move 1 0 .launch 1 .target 12 .is_crit_valid True  .effect "SB Adder Blight 5"
 
 
-combat_skill: .id "spearing" .level 0 .type "ranged" .atk 90% .dmg -60% .crit -6% .move 1 0 .launch 1 .target ~1234 .is_crit_valid True  .effect "SB Spearing Blight 1"
-combat_skill: .id "spearing" .level 1 .type "ranged" .atk 95% .dmg -60% .crit -5% .move 1 0 .launch 1 .target ~1234 .is_crit_valid True  .effect "SB Spearing Blight 2"
-combat_skill: .id "spearing" .level 2 .type "ranged" .atk 100% .dmg -60% .crit -4% .move 1 0 .launch 1 .target ~1234 .is_crit_valid True  .effect "RB SB Spearing Blight 3"
-combat_skill: .id "spearing" .level 3 .type "ranged" .atk 105% .dmg -60% .crit -3% .move 1 0 .launch 1 .target ~1234 .is_crit_valid True  .effect "RB SB Spearing Blight 4"
-combat_skill: .id "spearing" .level 4 .type "ranged" .atk 110% .dmg -60% .crit -2% .move 1 0 .launch 1 .target ~1234 .is_crit_valid True  .effect "RB SB Spearing Blight 5"
+combat_skill: .id "spearing" .level 0 .type "ranged" .atk 85% .dmg -60% .crit -6% .move 1 0 .launch 1 .target ~1234 .is_crit_valid True  .effect "SB Spearing Blight 1"
+combat_skill: .id "spearing" .level 1 .type "ranged" .atk 90% .dmg -60% .crit -5% .move 1 0 .launch 1 .target ~1234 .is_crit_valid True  .effect "SB Spearing Blight 2"
+combat_skill: .id "spearing" .level 2 .type "ranged" .atk 95% .dmg -60% .crit -4% .move 1 0 .launch 1 .target ~1234 .is_crit_valid True  .effect "RB SB Spearing Blight 3"
+combat_skill: .id "spearing" .level 3 .type "ranged" .atk 100% .dmg -60% .crit -3% .move 1 0 .launch 1 .target ~1234 .is_crit_valid True  .effect "RB SB Spearing Blight 4"
+combat_skill: .id "spearing" .level 4 .type "ranged" .atk 105% .dmg -60% .crit -2% .move 1 0 .launch 1 .target ~1234 .is_crit_valid True  .effect "RB SB Spearing Blight 5"
+// SB-022 Impale: accuracy 90 -> 85 (area line attack sits 5 below single-target Adder's Kiss 90).
+// SB-022 꿰뚫기: 명중 90 → 85. 의도: 광역(일렬 관통)은 단일 독사의 입맞춤(90)보다 5 낮게 — 사냥개 습격(85)과 대칭: 꿰뚫기 피해 −60%·중독 1~3, 습격 피해 −80%·출혈 2~4 [제작자 10-23]
 // SB-020 spearing: vanilla damage -60%; blight 1/1/2/2/3 for 3 turns from level 1 (SB-018 -70% withdrawn). Unified with the Workshop build.
 // SB-020 꿰뚫기: 피해 바닐라(−60%), 중독 1/1/2/2/3 3턴(1렙부터). SB-018의 −70%·2턴 철회. 창작마당판(SB-W01)과 통합 [제작자 10-21 "최대한 바닐라처럼"]
 

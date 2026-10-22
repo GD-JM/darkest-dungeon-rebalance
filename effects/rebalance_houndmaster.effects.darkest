@@ -69,28 +69,23 @@ effect: .name "RB HM Hound Protect 5" .target "performer" .curio_result_type "po
 // HM-025 Guard Dog self dodge +30 for 3 turns (was +10..20): houndmaster direction = less damage, more utility.
 
 // mod-only new effects
-effect: .name "RB HM Whistle Distract 1" .target "target" .curio_result_type "negative" .chance 100% .duration 3 .combat_stat_buff 1 .attack_rating_add -25% .on_hit true .on_miss false .queue true
-// HM-028 Whistle debuff chance 100% (was 130%): normal 100..140 scale; the 130..170 of vanilla Hound Debuff had no reason to carry over.
-// HM-021 Whistle: enemy accuracy -25 for 3 turns replaces crits received (overlapped Musketeer Skeet Shot).
-effect: .name "RB HM Whistle Distract 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3 .combat_stat_buff 1 .attack_rating_add -26% .on_hit true .on_miss false .queue true
-// HM-028 Whistle debuff chance 110% (was 140%): normal 100..140 scale; the 130..170 of vanilla Hound Debuff had no reason to carry over.
-// HM-021 Whistle: enemy accuracy -26 for 3 turns replaces crits received (overlapped Musketeer Skeet Shot).
-effect: .name "RB HM Whistle Distract 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3 .combat_stat_buff 1 .attack_rating_add -27% .on_hit true .on_miss false .queue true
-// HM-028 Whistle debuff chance 120% (was 150%): normal 100..140 scale; the 130..170 of vanilla Hound Debuff had no reason to carry over.
-// HM-021 Whistle: enemy accuracy -27 for 3 turns replaces crits received (overlapped Musketeer Skeet Shot).
-effect: .name "RB HM Whistle Distract 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .combat_stat_buff 1 .attack_rating_add -28% .on_hit true .on_miss false .queue true
-// HM-028 Whistle debuff chance 130% (was 160%): normal 100..140 scale; the 130..170 of vanilla Hound Debuff had no reason to carry over.
-// HM-021 Whistle: enemy accuracy -28 for 3 turns replaces crits received (overlapped Musketeer Skeet Shot).
-effect: .name "RB HM Whistle Distract 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .combat_stat_buff 1 .attack_rating_add -30% .on_hit true .on_miss false .queue true
-// HM-028 Whistle debuff chance 140% (was 170%): normal 100..140 scale; the 130..170 of vanilla Hound Debuff had no reason to carry over.
-// HM-021 Whistle: enemy accuracy -30 for 3 turns replaces crits received (overlapped Musketeer Skeet Shot).
-effect: .name "RB HM Harry Bleed 1" .target "target" .curio_result_type "negative" .chance 110% .dotBleed 2 .duration 3 .on_hit true .on_miss false .can_apply_on_death true
-// HM-030 Hound's Harry bleed 2/2/3/3/4 for 3 turns (vanilla Harry Bleed 1/1/2/2/3, chance 110..150% kept).
-effect: .name "RB HM Harry Bleed 2" .target "target" .curio_result_type "negative" .chance 120% .dotBleed 2 .duration 3 .on_hit true .on_miss false .can_apply_on_death true
-// HM-030 Hound's Harry bleed 2/2/3/3/4 for 3 turns (vanilla Harry Bleed 1/1/2/2/3, chance 110..150% kept).
-effect: .name "RB HM Harry Bleed 3" .target "target" .curio_result_type "negative" .chance 130% .dotBleed 3 .duration 3 .on_hit true .on_miss false .can_apply_on_death true
-// HM-030 Hound's Harry bleed 2/2/3/3/4 for 3 turns (vanilla Harry Bleed 1/1/2/2/3, chance 110..150% kept).
-effect: .name "RB HM Harry Bleed 4" .target "target" .curio_result_type "negative" .chance 140% .dotBleed 3 .duration 3 .on_hit true .on_miss false .can_apply_on_death true
-// HM-030 Hound's Harry bleed 2/2/3/3/4 for 3 turns (vanilla Harry Bleed 1/1/2/2/3, chance 110..150% kept).
-effect: .name "RB HM Harry Bleed 5" .target "target" .curio_result_type "negative" .chance 150% .dotBleed 4 .duration 3 .on_hit true .on_miss false .can_apply_on_death true
-// HM-030 Hound's Harry bleed 2/2/3/3/4 for 3 turns (vanilla Harry Bleed 1/1/2/2/3, chance 110..150% kept).
+effect: .name "RB HM Harry Bleed 1" .target "target" .curio_result_type "negative" .chance 100% .dotBleed 2 .duration 3 .on_hit true .on_miss false .can_apply_on_death true
+// HM-030 Hound's Harry bleed 2/2/3/3/4 for 3 turns (vanilla Harry Bleed 1/1/2/2/3). HM-034: chance 110..150% -> 100..140% (no reason for the vanilla extra 10%).
+effect: .name "RB HM Harry Bleed 2" .target "target" .curio_result_type "negative" .chance 110% .dotBleed 2 .duration 3 .on_hit true .on_miss false .can_apply_on_death true
+// HM-030 Hound's Harry bleed 2/2/3/3/4 for 3 turns (vanilla Harry Bleed 1/1/2/2/3). HM-034: chance 110..150% -> 100..140% (no reason for the vanilla extra 10%).
+effect: .name "RB HM Harry Bleed 3" .target "target" .curio_result_type "negative" .chance 120% .dotBleed 3 .duration 3 .on_hit true .on_miss false .can_apply_on_death true
+// HM-030 Hound's Harry bleed 2/2/3/3/4 for 3 turns (vanilla Harry Bleed 1/1/2/2/3). HM-034: chance 110..150% -> 100..140% (no reason for the vanilla extra 10%).
+effect: .name "RB HM Harry Bleed 4" .target "target" .curio_result_type "negative" .chance 130% .dotBleed 3 .duration 3 .on_hit true .on_miss false .can_apply_on_death true
+// HM-030 Hound's Harry bleed 2/2/3/3/4 for 3 turns (vanilla Harry Bleed 1/1/2/2/3). HM-034: chance 110..150% -> 100..140% (no reason for the vanilla extra 10%).
+effect: .name "RB HM Harry Bleed 5" .target "target" .curio_result_type "negative" .chance 140% .dotBleed 4 .duration 3 .on_hit true .on_miss false .can_apply_on_death true
+// HM-030 Hound's Harry bleed 2/2/3/3/4 for 3 turns (vanilla Harry Bleed 1/1/2/2/3). HM-034: chance 110..150% -> 100..140% (no reason for the vanilla extra 10%).
+effect: .name "RB HM Whistle Crit 1" .target "target" .curio_result_type "negative" .chance 100% .duration 3 .buff_type crit_received_chance .buff_amount 10% .on_hit true .on_miss false
+// HM-031 Target Whistle: crit received +10/11/12/13/15% for 3 turns.
+effect: .name "RB HM Whistle Crit 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3 .buff_type crit_received_chance .buff_amount 11% .on_hit true .on_miss false
+// HM-031 Target Whistle: crit received +10/11/12/13/15% for 3 turns.
+effect: .name "RB HM Whistle Crit 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3 .buff_type crit_received_chance .buff_amount 12% .on_hit true .on_miss false
+// HM-031 Target Whistle: crit received +10/11/12/13/15% for 3 turns.
+effect: .name "RB HM Whistle Crit 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .buff_type crit_received_chance .buff_amount 13% .on_hit true .on_miss false
+// HM-031 Target Whistle: crit received +10/11/12/13/15% for 3 turns.
+effect: .name "RB HM Whistle Crit 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .buff_type crit_received_chance .buff_amount 15% .on_hit true .on_miss false
+// HM-031 Target Whistle: crit received +10/11/12/13/15% for 3 turns.
