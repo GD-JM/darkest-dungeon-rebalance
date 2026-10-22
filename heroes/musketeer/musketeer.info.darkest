@@ -44,13 +44,15 @@ combat_skill: .id "buckshot" .level 3 .type "ranged" .atk 110% .dmg -50% .crit 5
 combat_skill: .id "buckshot" .level 4 .type "ranged" .atk 115% .dmg -50% .crit 6% .launch 43 .target ~23 .is_crit_valid True .effect "Push 1E"
 // MUS-112 Flushing Shot: AoE ranks 2-3, dmg -50%, push 1 (100..140%). Rank 4 cannot be pushed further (V-18 was wrong), so it now drives the middle ranks back.
 // MUS-112 몰이 사격: 4열 단일 → 광역 2·3열 밀치기 1(피해 −50%, 100~140%). 의도: 4열은 더 뒤로 안 밀림(V-18 틀림, 제작자 확인). 2·3열을 뒤로 몰아 4열 적이 앞으로 당겨지게 한다 [제작자 10-21]
-combat_skill: .id "sidearm" .level 0 .type "ranged" .atk 90% .dmg -40% .crit 3% .move 1 0 .launch 321 .target 12 .is_crit_valid True
-combat_skill: .id "sidearm" .level 1 .type "ranged" .atk 95% .dmg -40% .crit 4% .move 1 0 .launch 321 .target 12 .is_crit_valid True
-combat_skill: .id "sidearm" .level 2 .type "ranged" .atk 100% .dmg -40% .crit 5% .move 1 0 .launch 321 .target 12 .is_crit_valid True
-combat_skill: .id "sidearm" .level 3 .type "ranged" .atk 105% .dmg -40% .crit 6% .move 1 0 .launch 321 .target 12 .is_crit_valid True
-combat_skill: .id "sidearm" .level 4 .type "ranged" .atk 110% .dmg -40% .crit 7% .move 1 0 .launch 321 .target 12 .is_crit_valid True
+combat_skill: .id "sidearm" .level 0 .type "ranged" .atk 90% .dmg -40% .crit 3% .move 1 0 .launch 321 .target 123 .is_crit_valid True
+combat_skill: .id "sidearm" .level 1 .type "ranged" .atk 95% .dmg -40% .crit 4% .move 1 0 .launch 321 .target 123 .is_crit_valid True
+combat_skill: .id "sidearm" .level 2 .type "ranged" .atk 100% .dmg -40% .crit 5% .move 1 0 .launch 321 .target 123 .is_crit_valid True
+combat_skill: .id "sidearm" .level 3 .type "ranged" .atk 105% .dmg -40% .crit 6% .move 1 0 .launch 321 .target 123 .is_crit_valid True
+combat_skill: .id "sidearm" .level 4 .type "ranged" .atk 110% .dmg -40% .crit 7% .move 1 0 .launch 321 .target 123 .is_crit_valid True
 // MUS-107 Sidearm: ranks 1-2-3 to 1-2, dmg -40%, then step back 1.
 // MUS-107 권총사격: 1·2·3열→1·2열, 피해 −40%, 쏜 뒤 자신 뒤로 1칸. 의도: 적과 거리를 두는 성격. 밀려났을 때 제자리로 돌아가는 도구(뒤로 2칸은 과해서 1칸).
+// MUS-113 Sidearm: targets 1-2 -> 1-2-3 (same reach as Shieldbreaker Expose); dmg -40% kept.
+// MUS-113 권총사격: 대상 1·2열 → 1·2·3열, 피해 −40% 유지. 의도: 같은 조건(1·2·3열 사용, −40%, 뒤로 1칸)인 방패 파괴자 폭로보다 대상이 좁아 완전 하위 호환이었음 [제작자 10-22: 123→123, 피해 0%는 반대]
 combat_skill: .id "patch_up" .level 0 .heal 2 3 .launch 43 .target @1234 .effect "RB MUS Patch Destress 1" .is_stall_invalidating false
 combat_skill: .id "patch_up" .level 1 .heal 3 3 .launch 43 .target @1234 .effect "RB MUS Patch Destress 2" .is_stall_invalidating false
 combat_skill: .id "patch_up" .level 2 .heal 3 4 .launch 43 .target @1234 .effect "RB MUS Patch Destress 3" .is_stall_invalidating false
