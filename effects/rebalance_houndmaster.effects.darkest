@@ -84,3 +84,13 @@ effect: .name "RB HM Whistle Distract 4" .target "target" .curio_result_type "ne
 effect: .name "RB HM Whistle Distract 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .combat_stat_buff 1 .attack_rating_add -30% .on_hit true .on_miss false .queue true
 // HM-028 Whistle debuff chance 140% (was 170%): normal 100..140 scale; the 130..170 of vanilla Hound Debuff had no reason to carry over.
 // HM-021 Whistle: enemy accuracy -30 for 3 turns replaces crits received (overlapped Musketeer Skeet Shot).
+effect: .name "RB HM Harry Bleed 1" .target "target" .curio_result_type "negative" .chance 110% .dotBleed 2 .duration 3 .on_hit true .on_miss false .can_apply_on_death true
+// HM-030 Hound's Harry bleed 2/2/3/3/4 for 3 turns (vanilla Harry Bleed 1/1/2/2/3, chance 110..150% kept).
+effect: .name "RB HM Harry Bleed 2" .target "target" .curio_result_type "negative" .chance 120% .dotBleed 2 .duration 3 .on_hit true .on_miss false .can_apply_on_death true
+// HM-030 Hound's Harry bleed 2/2/3/3/4 for 3 turns (vanilla Harry Bleed 1/1/2/2/3, chance 110..150% kept).
+effect: .name "RB HM Harry Bleed 3" .target "target" .curio_result_type "negative" .chance 130% .dotBleed 3 .duration 3 .on_hit true .on_miss false .can_apply_on_death true
+// HM-030 Hound's Harry bleed 2/2/3/3/4 for 3 turns (vanilla Harry Bleed 1/1/2/2/3, chance 110..150% kept).
+effect: .name "RB HM Harry Bleed 4" .target "target" .curio_result_type "negative" .chance 140% .dotBleed 3 .duration 3 .on_hit true .on_miss false .can_apply_on_death true
+// HM-030 Hound's Harry bleed 2/2/3/3/4 for 3 turns (vanilla Harry Bleed 1/1/2/2/3, chance 110..150% kept).
+effect: .name "RB HM Harry Bleed 5" .target "target" .curio_result_type "negative" .chance 150% .dotBleed 4 .duration 3 .on_hit true .on_miss false .can_apply_on_death true
+// HM-030 Hound's Harry bleed 2/2/3/3/4 for 3 turns (vanilla Harry Bleed 1/1/2/2/3, chance 110..150% kept).
