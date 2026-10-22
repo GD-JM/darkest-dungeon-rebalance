@@ -295,6 +295,13 @@ def main():
         size = len((body + '\nmodfiles.txt %d' % size).encode('utf-8'))
     open(os.path.join(OUT, 'modfiles.txt'), 'w', encoding='utf-8', newline='\n').write(body + '\nmodfiles.txt %d' % size)
     print('built', OUT, '| heroes:', len(heroes), ', '.join(heroes), '| notes:', len(notes), '| effects:', len(effects), '| buffs:', len(need_b))
+    # 창작마당 이미지 보관 [제작자 10-22]: 버전마다 그때 올린 이미지 전체를 design/workshop/cards_history/<버전>/ 에 남긴다
+    m = re.search(r'Update ([\d.]+)', cn)
+    if m:
+        snap = os.path.join(W, 'cards_history', m.group(1))
+        shutil.copytree(os.path.join(W, 'cards'), snap, dirs_exist_ok=True)
+        shutil.copy(os.path.join(OUT, 'preview_icon.png'), os.path.join(snap, 'preview_icon.png'))
+        print('cards snapshot', snap)
 
 
 if __name__ == '__main__':
