@@ -19,26 +19,31 @@ effect: .name "RB MUS Armor Pierce 4" .target "performer" .chance 100% .skill_in
 // MUS-103 Piercing Ball armor piercing 10/15/20/25/30% for this shot only (skill_instant buff ignore_protection).
 effect: .name "RB MUS Armor Pierce 5" .target "performer" .chance 100% .skill_instant true .duration 1 .buff_ids RB_MUS_AP_5 .on_hit true .on_miss true .apply_once true
 // MUS-103 Piercing Ball armor piercing 10/15/20/25/30% for this shot only (skill_instant buff ignore_protection).
-effect: .name "RB MUS Prey 1" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .buff_ids RB_MUS_PREY_CRIT_1 .on_hit true .on_miss true
-// MUS-105 Mark the Quarry: crit +4..8% vs large monsters for 3 turns (buff rule monsterSize 2).
-effect: .name "RB MUS Prey 2" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .buff_ids RB_MUS_PREY_CRIT_2 .on_hit true .on_miss true
-// MUS-105 Mark the Quarry: crit +4..8% vs large monsters for 3 turns (buff rule monsterSize 2).
-effect: .name "RB MUS Prey 3" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .buff_ids RB_MUS_PREY_CRIT_3 .on_hit true .on_miss true
-// MUS-105 Mark the Quarry: crit +4..8% vs large monsters for 3 turns (buff rule monsterSize 2).
-effect: .name "RB MUS Prey 4" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .buff_ids RB_MUS_PREY_CRIT_4 .on_hit true .on_miss true
-// MUS-105 Mark the Quarry: crit +4..8% vs large monsters for 3 turns (buff rule monsterSize 2).
-effect: .name "RB MUS Prey 5" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .buff_ids RB_MUS_PREY_CRIT_5 .on_hit true .on_miss true
-// MUS-105 Mark the Quarry: crit +4..8% vs large monsters for 3 turns (buff rule monsterSize 2).
-effect: .name "RB MUS Prey Speed 1" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .combat_stat_buff 1 .speed_rating_add 3 .on_hit true .on_miss true
+effect: .name "RB MUS Prey 1" .target "target" .curio_result_type "negative" .chance 100% .duration 3 .buff_type crit_received_chance .buff_amount 5% .on_hit true .on_miss false
+// MUS-114 Mark the Quarry: target receives +5/6/7/8/10% crit for 3 turns (replaces self crit vs large; below Shieldbreaker Expose 8..10% because marked crit already stacks).
+effect: .name "RB MUS Prey 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3 .buff_type crit_received_chance .buff_amount 6% .on_hit true .on_miss false
+// MUS-114 Mark the Quarry: target receives +5/6/7/8/10% crit for 3 turns (replaces self crit vs large; below Shieldbreaker Expose 8..10% because marked crit already stacks).
+effect: .name "RB MUS Prey 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3 .buff_type crit_received_chance .buff_amount 7% .on_hit true .on_miss false
+// MUS-114 Mark the Quarry: target receives +5/6/7/8/10% crit for 3 turns (replaces self crit vs large; below Shieldbreaker Expose 8..10% because marked crit already stacks).
+effect: .name "RB MUS Prey 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .buff_type crit_received_chance .buff_amount 8% .on_hit true .on_miss false
+// MUS-114 Mark the Quarry: target receives +5/6/7/8/10% crit for 3 turns (replaces self crit vs large; below Shieldbreaker Expose 8..10% because marked crit already stacks).
+effect: .name "RB MUS Prey 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .buff_type crit_received_chance .buff_amount 10% .on_hit true .on_miss false
+// MUS-114 Mark the Quarry: target receives +5/6/7/8/10% crit for 3 turns (replaces self crit vs large; below Shieldbreaker Expose 8..10% because marked crit already stacks).
+effect: .name "RB MUS Prey Speed 1" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .combat_stat_buff 1 .speed_rating_add 3 .attack_rating_add 5% .on_hit true .on_miss true
 // MUS-105 Mark the Quarry: self speed +3/3/4/4/5 for 3 turns.
-effect: .name "RB MUS Prey Speed 2" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .combat_stat_buff 1 .speed_rating_add 3 .on_hit true .on_miss true
+// MUS-114 Mark the Quarry: self accuracy +5/6/7/8/10 added (same series as Duelist's Advance).
+effect: .name "RB MUS Prey Speed 2" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .combat_stat_buff 1 .speed_rating_add 3 .attack_rating_add 6% .on_hit true .on_miss true
 // MUS-105 Mark the Quarry: self speed +3/3/4/4/5 for 3 turns.
-effect: .name "RB MUS Prey Speed 3" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .combat_stat_buff 1 .speed_rating_add 4 .on_hit true .on_miss true
+// MUS-114 Mark the Quarry: self accuracy +5/6/7/8/10 added (same series as Duelist's Advance).
+effect: .name "RB MUS Prey Speed 3" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .combat_stat_buff 1 .speed_rating_add 4 .attack_rating_add 7% .on_hit true .on_miss true
 // MUS-105 Mark the Quarry: self speed +3/3/4/4/5 for 3 turns.
-effect: .name "RB MUS Prey Speed 4" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .combat_stat_buff 1 .speed_rating_add 4 .on_hit true .on_miss true
+// MUS-114 Mark the Quarry: self accuracy +5/6/7/8/10 added (same series as Duelist's Advance).
+effect: .name "RB MUS Prey Speed 4" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .combat_stat_buff 1 .speed_rating_add 4 .attack_rating_add 8% .on_hit true .on_miss true
 // MUS-105 Mark the Quarry: self speed +3/3/4/4/5 for 3 turns.
-effect: .name "RB MUS Prey Speed 5" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .combat_stat_buff 1 .speed_rating_add 5 .on_hit true .on_miss true
+// MUS-114 Mark the Quarry: self accuracy +5/6/7/8/10 added (same series as Duelist's Advance).
+effect: .name "RB MUS Prey Speed 5" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .combat_stat_buff 1 .speed_rating_add 5 .attack_rating_add 10% .on_hit true .on_miss true
 // MUS-105 Mark the Quarry: self speed +3/3/4/4/5 for 3 turns.
+// MUS-114 Mark the Quarry: self accuracy +5/6/7/8/10 added (same series as Duelist's Advance).
 effect: .name "RB MUS Smoke Blind 1" .target "target" .curio_result_type "negative" .chance 100% .duration 1 .combat_stat_buff 1 .attack_rating_add -10% .on_hit true .on_miss false
 // MUS-104 Smokescreen: accuracy -10/10/12/12/15% for 1 turn (small, so it does not copy Suppressing Fire).
 effect: .name "RB MUS Smoke Blind 2" .target "target" .curio_result_type "negative" .chance 110% .duration 1 .combat_stat_buff 1 .attack_rating_add -10% .on_hit true .on_miss false
@@ -61,3 +66,13 @@ effect: .name "RB MUS Patch Destress 5" .target "target" .curio_result_type "pos
 // MUS-108 Patch Up: stress heal 2/2/3/3/4.
 effect: .name "RB MUS on_crit_pierce" .target "performer" .curio_result_type "positive" .chance 100% .buff_source_type bsrc_crit .buff_ids "RB_MUS_CRIT_AP" .duration 3 .on_hit true .on_miss false .apply_once true
 // MUS-111 Class crit buff: armor piercing +20% (2 turns, same duration rule as vanilla on_crit buffs).
+effect: .name "RB MUS Sidearm Crit 1" .target "target" .curio_result_type "negative" .chance 100% .duration 2 .combat_stat_buff 1 .crit_chance_add -10% .on_hit true .on_miss false
+// MUS-114 Sidearm: enemy crit -10/11/12/13/15% for 2 turns (the half of Suppressing Fire that Smokescreen does not take).
+effect: .name "RB MUS Sidearm Crit 2" .target "target" .curio_result_type "negative" .chance 110% .duration 2 .combat_stat_buff 1 .crit_chance_add -11% .on_hit true .on_miss false
+// MUS-114 Sidearm: enemy crit -10/11/12/13/15% for 2 turns (the half of Suppressing Fire that Smokescreen does not take).
+effect: .name "RB MUS Sidearm Crit 3" .target "target" .curio_result_type "negative" .chance 120% .duration 2 .combat_stat_buff 1 .crit_chance_add -12% .on_hit true .on_miss false
+// MUS-114 Sidearm: enemy crit -10/11/12/13/15% for 2 turns (the half of Suppressing Fire that Smokescreen does not take).
+effect: .name "RB MUS Sidearm Crit 4" .target "target" .curio_result_type "negative" .chance 130% .duration 2 .combat_stat_buff 1 .crit_chance_add -13% .on_hit true .on_miss false
+// MUS-114 Sidearm: enemy crit -10/11/12/13/15% for 2 turns (the half of Suppressing Fire that Smokescreen does not take).
+effect: .name "RB MUS Sidearm Crit 5" .target "target" .curio_result_type "negative" .chance 140% .duration 2 .combat_stat_buff 1 .crit_chance_add -15% .on_hit true .on_miss false
+// MUS-114 Sidearm: enemy crit -10/11/12/13/15% for 2 turns (the half of Suppressing Fire that Smokescreen does not take).
