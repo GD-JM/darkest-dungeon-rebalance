@@ -22,7 +22,7 @@ Exemplo: Julgamento da Vestal foi de −25% para 0% de dano, e Investida do Cão
 [*][b]A habilidade faz o que parece.[/b] Arte e função batem à primeira vista.
 Exemplo: bandagem estanca sangramento, e a Infernal, que nunca se cansa, não fica mais exausta.
 [*][b]A direção vem do lore oficial.[/b]
-Exemplo: o Leproso já foi rei, então Intimidar virou um golpe que lidera a luta rachando armadura, em vez de uma penalidade de suporte. A Antiquária ganha ouro em vez de lutar e continua fraca, e nada no lore do Mestre dos Cães justifica resistência extra a sangramento e veneno.
+Exemplo: o Leproso já foi rei, então Intimidar virou Quebra-armadura, um golpe que lidera a luta rachando armadura, em vez de uma penalidade de suporte. A Antiquária ganha ouro em vez de lutar e continua fraca, e nada no lore do Mestre dos Cães justifica resistência extra a sangramento e veneno.
 [*][b]Preciosidades ficam fixas; o patch se ajusta a elas.[/b] Pela compatibilidade.
 Exemplo: as preciosidades da Mosqueteira aumentam a chance de penalidade, então a nova Cortina de Fumaça ainda reduz um pouco a precisão.
 [/list]
@@ -31,7 +31,7 @@ Exemplo: as preciosidades da Mosqueteira aumentam a chance de penalidade, então
 A Mosqueteira original era uma cópia exata da Atiradora, então foi refeita a partir do lore oficial: uma atiradora famosa que, depois de um torneio decepcionante, quer virar lenda caçando monstros e, sem experiência real de combate, mantém distância.
 [list]
 [*][b]Bala Penetrante[/b] (PRE 90): alcança todas as posições e perfura 10–30% de armadura; o bônus contra marcados é bem menor que o da Atiradora.
-[*][b]Cortina de Fumaça[/b] (3 por batalha): atordoa as posições 1–2 inimigas e a esconde na fumaça.
+[*][b]Cortina de Fumaça[/b] (3 por batalha): atordoa as posições 1–2 inimigas; os atordoados somem na fumaça e o grupo foca a retaguarda.
 [*][b]Fumaça de Cobertura[/b]: esconde um aliado por 2 turnos para que os inimigos não o mirem — proteção sem ninguém apanhar no lugar.
 [*][b]Marcar a Presa[/b]: "Essa presa é minha!" Marca a presa, que sofre mais críticos, e ganha precisão e velocidade por 3 turnos.
 [*][b]Tiro de Batida, Arma Secundária, Remendar[/b]: empurra as posições 2–3 para trás, atira e recua quando empurrada para frente, e alivia um pouco de estresse ao curar.
@@ -52,7 +52,7 @@ As imagens acima mostram cada habilidade alterada, antes e depois (começando pe
 [b]Bandido[/b] — builds à distância e corpo a corpo funcionam: Tiro Rastreante dá revide sem sair do lugar.
 [b]Mestre dos Cães[/b] — menos dano, mais proteção: Apito de Alvo reduz a precisão inimiga, Cão de Guarda dá mais esquiva, e Investida do Cão funciona de qualquer posição.
 [b]Bufão[/b] — continua sendo o melhor curador de estresse, mas Canção Inspiradora funciona da posição 2 e Solo de qualquer posição.
-[b]Leproso[/b] — Intimidar vira um golpe que racha armadura, e o custo de Vingança cresce com o nível, então já vale usar no começo.
+[b]Leproso[/b] — Intimidar vira Quebra-armadura, um golpe que racha armadura, e o custo de Vingança cresce com o nível, então já vale usar no começo.
 [b]Soldado[/b] — o veterano que segura a linha: Reforçar é uma cura de estresse em grupo repetível; Comandar adiciona proteção.
 [b]Ocultista[/b] — Feitiço da Vulnerabilidade reduz a resistência a atordoamento, sangramento, peste e penalidades, preparando o terreno para o grupo inteiro.
 [b]Médica da Peste[/b] — Medicina de Batalha é a cura que remove peste (3–7), enquanto a Atiradora cuida do sangramento.

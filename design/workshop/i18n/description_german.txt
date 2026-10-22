@@ -22,7 +22,7 @@ Beispiel: Richtspruch der Vestalin geht von −25 % auf 0 % Schaden, Hundebiss d
 [*][b]Eine Fähigkeit tut, wonach sie aussieht.[/b] Bild und Funktion passen auf einen Blick.
 Beispiel: Ein Verband stillt Blutungen, und die unermüdliche Barbarin wird nicht mehr erschöpft.
 [*][b]Die Richtung kommt aus der offiziellen Geschichte.[/b]
-Beispiel: Der Aussätzige war einst König, daher wird Einschüchterung zum rüstungsbrechenden Schlag statt einer Support-Schwächung. Die Antiquarin verdient Gold statt zu kämpfen und bleibt schwach; nichts im Hundemeister-Lore rechtfertigt Extra-Resistenzen.
+Beispiel: Der Aussätzige war einst König, daher wird Einschüchterung zu Rüstungsbrecher, einem Schlag statt einer Support-Schwächung. Die Antiquarin verdient Gold statt zu kämpfen und bleibt schwach; nichts im Hundemeister-Lore rechtfertigt Extra-Resistenzen.
 [*][b]Accessoires bleiben fix; der Patch passt sich an.[/b] Für die Kompatibilität.
 Beispiel: Die Accessoires der Musketierin erhöhen die Schwächungschance, daher senkt ihre Rauchwand weiterhin leicht die Treffsicherheit.
 [/list]
@@ -31,7 +31,7 @@ Beispiel: Die Accessoires der Musketierin erhöhen die Schwächungschance, daher
 Die originale Musketierin war eine Kopie der Arbaleste, daher wurde sie aus ihrem Lore neu gebaut: eine gefeierte Schützin, die nach einem enttäuschenden Turnier als Monsterjägerin zur Legende werden will und mangels Kampferfahrung Abstand hält.
 [list]
 [*][b]Durchschlagende Kugel[/b] (TRF 90): trifft jeden Rang, durchdringt 10–30 % Rüstung; ihr Bonus gegen Markierte ist viel kleiner als bei der Arbaleste.
-[*][b]Rauchwand[/b] (3 pro Kampf): betäubt die gegnerischen Ränge 1–2 und versteckt sie im Rauch.
+[*][b]Rauchwand[/b] (3 pro Kampf): betäubt die gegnerischen Ränge 1–2; Betäubte verschwinden im Rauch, die Gruppe trifft die hinteren Reihen.
 [*][b]Deckungsrauch[/b]: verbirgt einen Verbündeten 2 Runden – Schutz, ohne dass jemand die Treffer einsteckt.
 [*][b]Beute markieren[/b]: „Diese Beute gehört mir!“ Markiert die Beute, die mehr Krits einsteckt; 3 Runden mehr Treffsicherheit und Tempo.
 [*][b]Treibschuss, Pistolenschuss, Zusammenflicken[/b]: treibt die Ränge 2–3 zurück, schießt und weicht zurück, heilt mit etwas Stressabbau.
@@ -52,7 +52,7 @@ Die Bilder oben zeigen jede geänderte Fähigkeit, vorher und nachher.
 [b]Wegelagerer[/b] — Fernkampf- und Nahkampf-Builds funktionieren beide: Gezielter Schuss gibt Gegenschlag, ohne dass er sich bewegen muss.
 [b]Hundemeister[/b] — weniger Schaden, mehr Schutz: Verheerender Pfiff senkt die gegnerische Präzision, Wachhund gibt mehr Ausweichen, Hundebiss funktioniert von jedem Rang aus.
 [b]Narr[/b] — immer noch der beste Stressheiler, aber Stärkende Melodie funktioniert ab Rang 2 und Solo von jedem Rang aus.
-[b]Aussätziger[/b] — Einschüchterung bricht Rüstung, und die Kosten von Rache wachsen mit dem Level – schon früh nutzbar.
+[b]Aussätziger[/b] — Einschüchterung heißt jetzt Rüstungsbrecher und bricht Rüstung, und die Kosten von Rache wachsen mit dem Level – schon früh nutzbar.
 [b]Waffenknecht[/b] — der Veteran, der die Linie hält: Zuspruch ist eine wiederholbare Stressheilung für die Gruppe; Befehl gibt zusätzlich Schutz.
 [b]Okkultist[/b] — Bann der Verletzlichkeit senkt den Widerstand gegen Betäuben, Bluten, Gifthauch und Schwächung und ebnet so der ganzen Gruppe den Weg.
 [b]Pestdoktorin[/b] — Gefechtsmedizin ist die Heilung gegen Gifthauch (3–7), während sich die Arbaleste um Bluten kümmert.

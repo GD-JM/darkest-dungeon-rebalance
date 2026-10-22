@@ -22,7 +22,7 @@ Przykład: Wyrok Kapłanki z −25% na 0% obrażeń, a Atak Ogara Łowczego z 0%
 [*][b]Umiejętność robi to, na co wygląda.[/b] Grafika i działanie pasują od razu.
 Przykład: opatrunek tamuje krwawienie, a niestrudzona Awanturniczka nie jest już wyczerpana.
 [*][b]Kierunek wyznacza oficjalny lore.[/b]
-Przykład: Trędowaty był kiedyś królem, więc Onieśmielenie to cios prowadzący walkę i kruszący pancerz, a nie osłabienie wsparcia. Antykwariuszka zarabia złoto zamiast walczyć i zostaje słaba; nic w lore Łowczego nie uzasadnia dodatkowych odporności.
+Przykład: Trędowaty był kiedyś królem, więc Onieśmielenie to teraz Łamacz pancerza – cios prowadzący walkę i kruszący pancerz, a nie osłabienie wsparcia. Antykwariuszka zarabia złoto zamiast walczyć i zostaje słaba; nic w lore Łowczego nie uzasadnia dodatkowych odporności.
 [*][b]Błyskotki zostają, łatka się do nich dopasowuje.[/b] Dla kompatybilności.
 Przykład: błyskotki Muszkieterki zwiększają szansę osłabienia, więc jej nowa Zasłona Dymna wciąż lekko obniża celność.
 [/list]
@@ -31,7 +31,7 @@ Przykład: błyskotki Muszkieterki zwiększają szansę osłabienia, więc jej n
 Oryginalna Muszkieterka była kopią Kuszniczki, więc zbudowaliśmy ją od nowa z oficjalnego lore: słynna strzelczyni, która po rozczarowującym turnieju chce zostać legendą łowów na potwory, a bez doświadczenia bojowego trzyma dystans.
 [list]
 [*][b]Kula Przebijająca[/b] (CEL 90): sięga każdej pozycji i przebija 10–30% pancerza; premia na oznaczonych dużo niższa niż u Kuszniczki.
-[*][b]Zasłona Dymna[/b] (3 na walkę): ogłusza pozycje 1–2 wroga i ukrywa ją w dymie.
+[*][b]Zasłona Dymna[/b] (3 na walkę): ogłusza pozycje 1–2 wroga; ogłuszeni znikają w dymie, a drużyna bije tyły.
 [*][b]Dym Osłonowy[/b]: ukrywa sojusznika na 2 tury – ochrona bez tego, by ktoś przyjmował ciosy.
 [*][b]Wskazanie Zwierzyny[/b]: „Ta zdobycz jest moja!” Oznacza zwierzynę, która częściej obrywa krytycznie, i zyskuje celność oraz szybkość na 3 tury.
 [*][b]Strzał Nagonki, Gnat, Opatrunek[/b]: spycha pozycje 2–3 do tyłu, strzela i się cofa, a leczenie zdejmuje trochę stresu.
@@ -52,7 +52,7 @@ Grafiki powyżej pokazują każdą zmienioną umiejętność przed i po (na pocz
 [b]Oprych[/b] — działa zarówno build dystansowy, jak i do walki wręcz: Strzał Śledzący daje ripostę bez ruszania się z miejsca.
 [b]Łowczy[/b] — mniej obrażeń, więcej ochrony: Gwizdek obniża celność wrogów, Pies Stróżujący daje więcej uniku, a Atak Ogara działa z każdej pozycji.
 [b]Arlekin[/b] — nadal najlepszy od zdejmowania stresu, ale Inspirująca Nuta działa z pozycji 2, a Solówka z każdej.
-[b]Trędowaty[/b] — Onieśmielenie kruszy pancerz, a koszt Zemsty rośnie z poziomem, więc opłaca się od początku.
+[b]Trędowaty[/b] — Onieśmielenie to teraz Łamacz pancerza, a koszt Zemsty rośnie z poziomem, więc opłaca się od początku.
 [b]Zbrojmistrz[/b] — weteran, który trzyma linię: Wzmocnienie to redukcja stresu drużyny do użycia raz za razem; Rozkaz dodaje ochrony.
 [b]Okultysta[/b] — Przekleństwo obniża odporność na ogłuszenie, krwawienie, zarazę i osłabienie, szykując cel pod całą drużynę.
 [b]Badaczka Zarazy[/b] — Bitewne Panaceum to leczenie (3–7), które usuwa zarazę, a krwawienie bierze na siebie Kuszniczka.

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<!-- LEP-005 나병환자 위협 → 갑옷 쪼개기/Sunder (2026-10-22). 기능(적 방어 감소)에 맞는 이름 [제작자] -->
+  <language id="english">
+    <entry id="combat_skill_name_leper_intimidate"><![CDATA[Sunder]]></entry>
+    <entry id="upgrade_tree_name_leper.intimidate"><![CDATA[Sunder]]></entry>
+  </language>
+  <language id="koreana">
+    <entry id="combat_skill_name_leper_intimidate"><![CDATA[갑옷 쪼개기]]></entry>
+    <entry id="upgrade_tree_name_leper.intimidate"><![CDATA[갑옷 쪼개기]]></entry>
+  </language>
+  <language id="koreanb">
+    <entry id="combat_skill_name_leper_intimidate"><![CDATA[갑옷 쪼개기]]></entry>
+    <entry id="upgrade_tree_name_leper.intimidate"><![CDATA[갑옷 쪼개기]]></entry>
+  </language>
+  <language id="schinese">
+    <entry id="combat_skill_name_leper_intimidate"><![CDATA[破甲]]></entry>
+    <entry id="upgrade_tree_name_leper.intimidate"><![CDATA[破甲]]></entry>
+  </language>
+  <language id="russian">
+    <entry id="combat_skill_name_leper_intimidate"><![CDATA[Раскол брони]]></entry>
+    <entry id="upgrade_tree_name_leper.intimidate"><![CDATA[Раскол брони]]></entry>
+  </language>
+  <language id="spanish">
+    <entry id="combat_skill_name_leper_intimidate"><![CDATA[Rompearmaduras]]></entry>
+    <entry id="upgrade_tree_name_leper.intimidate"><![CDATA[Rompearmaduras]]></entry>
+  </language>
+  <language id="brazilian">
+    <entry id="combat_skill_name_leper_intimidate"><![CDATA[Quebra-armadura]]></entry>
+    <entry id="upgrade_tree_name_leper.intimidate"><![CDATA[Quebra-armadura]]></entry>
+  </language>
+  <language id="french">
+    <entry id="combat_skill_name_leper_intimidate"><![CDATA[Brise-armure]]></entry>
+    <entry id="upgrade_tree_name_leper.intimidate"><![CDATA[Brise-armure]]></entry>
+  </language>
+  <language id="german">
+    <entry id="combat_skill_name_leper_intimidate"><![CDATA[Rüstungsbrecher]]></entry>
+    <entry id="upgrade_tree_name_leper.intimidate"><![CDATA[Rüstungsbrecher]]></entry>
+  </language>
+  <language id="polish">
+    <entry id="combat_skill_name_leper_intimidate"><![CDATA[Łamacz pancerza]]></entry>
+    <entry id="upgrade_tree_name_leper.intimidate"><![CDATA[Łamacz pancerza]]></entry>
+  </language>
+  <language id="czech">
+    <entry id="combat_skill_name_leper_intimidate"><![CDATA[Průraz zbroje]]></entry>
+    <entry id="upgrade_tree_name_leper.intimidate"><![CDATA[Průraz zbroje]]></entry>
+  </language>
+  <language id="italian">
+    <entry id="combat_skill_name_leper_intimidate"><![CDATA[Spezzarmature]]></entry>
+    <entry id="upgrade_tree_name_leper.intimidate"><![CDATA[Spezzarmature]]></entry>
+  </language>
+  <language id="japanese">
+    <entry id="combat_skill_name_leper_intimidate"><![CDATA[鎧割り]]></entry>
+    <entry id="upgrade_tree_name_leper.intimidate"><![CDATA[鎧割り]]></entry>
+  </language>
+</root>
