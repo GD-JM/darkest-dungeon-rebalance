@@ -33,7 +33,7 @@ A Mosqueteira original era uma cópia exata da Atiradora, então foi refeita a p
 [*][b]Bala Penetrante[/b] (PRE 90): alcança todas as posições e perfura 10–30% de armadura; o bônus contra marcados é bem menor que o da Atiradora.
 [*][b]Cortina de Fumaça[/b] (3 por batalha): atordoa as posições 1–2 inimigas e a esconde na fumaça.
 [*][b]Fumaça de Cobertura[/b]: esconde um aliado por 2 turnos para que os inimigos não o mirem — proteção sem ninguém apanhar no lugar.
-[*][b]Marcar a Presa[/b]: "Essa presa é minha!" Marca, fica mais rápida por 3 turnos e acerta mais críticos em monstros grandes.
+[*][b]Marcar a Presa[/b]: "Essa presa é minha!" Marca a presa, que sofre mais críticos, e ganha precisão e velocidade por 3 turnos.
 [*][b]Tiro de Batida, Arma Secundária, Remendar[/b]: empurra as posições 2–3 para trás, atira e recua quando empurrada para frente, e alivia um pouco de estresse ao curar.
 [/list]
 O preço: menos vida (24 contra 27 da Atiradora) e velocidade (2 contra 3). Ela pode trocar de posição, então fica um pouco abaixo da Atiradora, que é fixa.
@@ -64,5 +64,6 @@ As imagens acima mostram cada habilidade alterada, antes e depois (começando pe
 [h2]Compatibilidade[/h2]
 [b]Requer os DLCs dos heróis alterados:[/b] The Crimson Court, The Shieldbreaker, Duelist, Runaway e The Musketeer (grátis). Sem eles, o jogo pode não abrir.
 Substitui só os arquivos dos heróis acima (mais um arquivo de efeitos e um de buffs); é incompatível com mods que substituem os mesmos heróis. Pode ser usado sem problemas em saves já em andamento.
+Com o [i]UI Enhancement[/i], as habilidades da Mosqueteira mostram os nomes originais (funcionam normalmente).
 
 Feedback é sempre bem-vindo: toda mudança tem um motivo registrado, e explico ou ajusto com prazer.

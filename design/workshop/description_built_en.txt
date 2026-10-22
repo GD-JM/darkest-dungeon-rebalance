@@ -33,7 +33,7 @@ The original Musketeer was an exact copy of the Arbalest, so she was rebuilt fro
 [*][b]Piercing Ball[/b] (ACC 90): reaches every rank and pierces 10–30% armor; her bonus vs marked targets is far smaller than the Arbalest's.
 [*][b]Smokescreen[/b] (3 per battle): stuns enemy ranks 1–2 and hides her in the smoke.
 [*][b]Covering Smoke[/b]: hides one ally for 2 turns so enemies can't single them out — protection without anyone taking the hits.
-[*][b]Mark the Quarry[/b]: "This prize is mine!" She marks her prey, gets faster for 3 turns and crits large monsters more often.
+[*][b]Mark the Quarry[/b]: "This prize is mine!" She marks her prey, which takes more crits, and gains accuracy and speed for 3 turns.
 [*][b]Flushing Shot, Sidearm, Patch Up[/b]: drives ranks 2–3 back, shoots and steps back when pushed forward, and adds a little stress relief to healing.
 [/list]
 The price: lower HP (24 vs the Arbalest's 27) and speed (2 vs 3). She can change ranks, so she is tuned slightly below the rank-locked Arbalest.
@@ -64,5 +64,6 @@ The images above show every changed skill, before and after.
 [h2]Compatibility[/h2]
 [b]Requires the DLC heroes it changes:[/b] The Crimson Court (Flagellant), The Shieldbreaker, Duelist, Runaway and The Musketeer (free). Without them the game may fail to load.
 Replaces only the hero files above (plus effect, buff and skill-name files); conflicts with mods that replace the same heroes. Safe on existing saves.
+With [i]UI Enhancement[/i], the Musketeer's skills show their original names (they still work as described).
 
 Feedback is welcome — every change has a written reason, and I'm happy to explain or adjust.

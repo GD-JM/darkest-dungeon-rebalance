@@ -33,7 +33,7 @@ Die originale Musketierin war eine Kopie der Arbaleste, daher wurde sie aus ihre
 [*][b]Durchschlagende Kugel[/b] (TRF 90): trifft jeden Rang, durchdringt 10–30 % Rüstung; ihr Bonus gegen Markierte ist viel kleiner als bei der Arbaleste.
 [*][b]Rauchwand[/b] (3 pro Kampf): betäubt die gegnerischen Ränge 1–2 und versteckt sie im Rauch.
 [*][b]Deckungsrauch[/b]: verbirgt einen Verbündeten 2 Runden – Schutz, ohne dass jemand die Treffer einsteckt.
-[*][b]Beute markieren[/b]: „Diese Beute gehört mir!“ Markiert, 3 Runden schneller, mehr Krits gegen große Monster.
+[*][b]Beute markieren[/b]: „Diese Beute gehört mir!“ Markiert die Beute, die mehr Krits einsteckt; 3 Runden mehr Treffsicherheit und Tempo.
 [*][b]Treibschuss, Pistolenschuss, Zusammenflicken[/b]: treibt die Ränge 2–3 zurück, schießt und weicht zurück, heilt mit etwas Stressabbau.
 [/list]
 Der Preis: weniger LP (24 statt 27) und Tempo (2 statt 3). Sie kann den Rang wechseln und liegt daher knapp unter der Arbaleste.
@@ -64,5 +64,6 @@ Die Bilder oben zeigen jede geänderte Fähigkeit, vorher und nachher.
 [h2]Kompatibilität[/h2]
 [b]Benötigt die DLC-Helden, die geändert werden:[/b] The Crimson Court, The Shieldbreaker, Duelist, Runaway und The Musketeer (kostenlos). Ohne sie startet das Spiel eventuell nicht.
 Inkompatibel mit Mods, die dieselben Helden ersetzen. Kann in laufende Spielstände eingebaut werden.
+Mit [i]UI Enhancement[/i] zeigen die Fertigkeiten der Musketierin ihre Originalnamen (sie wirken trotzdem wie beschrieben).
 
 Feedback ist willkommen – jede Änderung hat eine schriftliche Begründung.

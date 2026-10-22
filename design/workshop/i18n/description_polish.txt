@@ -33,7 +33,7 @@ Oryginalna Muszkieterka była kopią Kuszniczki, więc zbudowaliśmy ją od nowa
 [*][b]Kula Przebijająca[/b] (CEL 90): sięga każdej pozycji i przebija 10–30% pancerza; premia na oznaczonych dużo niższa niż u Kuszniczki.
 [*][b]Zasłona Dymna[/b] (3 na walkę): ogłusza pozycje 1–2 wroga i ukrywa ją w dymie.
 [*][b]Dym Osłonowy[/b]: ukrywa sojusznika na 2 tury – ochrona bez tego, by ktoś przyjmował ciosy.
-[*][b]Wskazanie Zwierzyny[/b]: „Ta zdobycz jest moja!” Oznacza, przyspiesza na 3 tury i częściej trafia krytycznie duże potwory.
+[*][b]Wskazanie Zwierzyny[/b]: „Ta zdobycz jest moja!” Oznacza zwierzynę, która częściej obrywa krytycznie, i zyskuje celność oraz szybkość na 3 tury.
 [*][b]Strzał Nagonki, Gnat, Opatrunek[/b]: spycha pozycje 2–3 do tyłu, strzela i się cofa, a leczenie zdejmuje trochę stresu.
 [/list]
 Cena: mniej zdrowia (24 zamiast 27) i szybkości (2 zamiast 3). Może zmieniać pozycję, więc jest nieco słabsza od Kuszniczki.
@@ -64,5 +64,6 @@ Grafiki powyżej pokazują każdą zmienioną umiejętność przed i po (na pocz
 [h2]Kompatybilność[/h2]
 [b]Wymaga DLC ze zmienianymi bohaterami:[/b] The Crimson Court, The Shieldbreaker, Duelist, Runaway i The Musketeer (darmowy). Bez nich gra może się nie uruchomić.
 Podmienia tylko pliki wymienionych bohaterów (plus jeden plik efektów i jeden plik buffów); gryzie się z modami, które podmieniają tych samych bohaterów. Można bezpiecznie wrzucić na istniejący zapis.
+Z [i]UI Enhancement[/i] umiejętności Muszkieterki mają oryginalne nazwy (działają normalnie).
 
 Opinie mile widziane — każda zmiana ma spisane uzasadnienie, chętnie wyjaśnię albo coś poprawię.

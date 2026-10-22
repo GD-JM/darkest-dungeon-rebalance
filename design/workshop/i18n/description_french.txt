@@ -33,7 +33,7 @@ La Mousquetaire d'origine copiait l'Arbalétrière ; elle est reconstruite d'apr
 [*][b]Balle perçante[/b] (PRÉ 90) : atteint tous les rangs, perce 10–30 % d'armure ; bonus contre les marqués bien moindre que l'Arbalétrière.
 [*][b]Écran de fumée[/b] (3 par combat) : étourdit les rangs 1–2 et la cache dans la fumée.
 [*][b]Fumée de couverture[/b] : cache un allié 2 tours — une protection où personne n'encaisse à sa place.
-[*][b]Désigner la proie[/b] : « Cette proie est à moi ! » Marque, vitesse pendant 3 tours, plus de critiques contre les grands monstres.
+[*][b]Désigner la proie[/b] : « Cette proie est à moi ! » Marque la proie, qui subit plus de critiques ; précision et vitesse pendant 3 tours.
 [*][b]Tir de rabat, Arme d'appoint, Rafistolage[/b] : repousse les rangs 2–3, tire puis recule, et soulage un peu de stress en soignant.
 [/list]
 Le prix : moins de PV (24 contre 27) et de vitesse (2 contre 3). Elle peut changer de rang, donc reste un peu sous l'Arbalétrière.
@@ -64,5 +64,6 @@ Les images ci-dessus montrent chaque compétence modifiée, avant et après.
 [h2]Compatibilité[/h2]
 [b]DLC requis :[/b] The Crimson Court, The Shieldbreaker, Duelist, Runaway, The Musketeer (gratuit) (sinon le jeu peut ne pas se lancer).
 Incompatible avec les mods qui remplacent les mêmes héros. Compatible avec les sauvegardes en cours.
+Avec [i]UI Enhancement[/i], les compétences de la Mousquetaire gardent leurs noms d'origine (elles fonctionnent normalement).
 
 Vos retours sont les bienvenus : chaque changement a une justification écrite.

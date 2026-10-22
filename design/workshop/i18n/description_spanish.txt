@@ -33,7 +33,7 @@ La Mosquetera original era una copia exacta de la Arbalestera, así que la rehic
 [*][b]Bala penetrante[/b] (PRE 90): llega a todas las posiciones y perfora un 10–30% de armadura; su bonus contra marcados es muy inferior al de la Arbalestera.
 [*][b]Cortina de humo[/b] (3 por combate): aturde las posiciones 1–2 y la oculta en el humo.
 [*][b]Humo de cobertura[/b]: oculta a un aliado 2 turnos para que no lo apunten — protección sin que nadie reciba los golpes.
-[*][b]Marcar la presa[/b]: "¡Esta presa es mía!" Marca, gana velocidad 3 turnos y critica más a monstruos grandes.
+[*][b]Marcar la presa[/b]: "¡Esta presa es mía!" Marca la presa, que recibe más críticos, y gana precisión y velocidad 3 turnos.
 [*][b]Disparo de batida, Arma corta, Zurcir heridas[/b]: echa atrás las posiciones 2–3, dispara y retrocede, y alivia algo de estrés al curar.
 [/list]
 El precio: menos vida (24 frente a 27) y velocidad (2 frente a 3). Puede cambiar de posición, así que queda un poco por debajo de la Arbalestera.
@@ -64,5 +64,6 @@ Las imágenes de arriba muestran todas las habilidades modificadas, antes y desp
 [h2]Compatibilidad[/h2]
 [b]Requiere los DLC de los héroes que cambia:[/b] The Crimson Court, The Shieldbreaker, Duelist, Runaway y The Musketeer (gratis). Sin ellos, el juego puede no cargar.
 Es incompatible con mods que reemplacen esos mismos héroes. Se puede usar en partidas ya empezadas.
+Con [i]UI Enhancement[/i], las habilidades de la Mosquetera muestran sus nombres originales (funcionan igual).
 
 Cualquier comentario es bienvenido: cada cambio tiene su razón por escrito, y con gusto lo explico o lo ajusto.

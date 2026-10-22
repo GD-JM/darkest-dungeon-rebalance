@@ -1,0 +1,17 @@
+[b]Update 2.0.4 — Musketeer tuning, Occultist curses[/b]
+[list]
+[*]Musketeer — Sidearm: targets ranks 1-3 (was 1-2), damage -20% (was -40%), and now lowers the target's crit chance by 10-15% for 2 turns. It was a strictly weaker version of the Shieldbreaker's Expose.
+[*]Musketeer — Mark the Quarry: the marked prey takes +5-10% more crits for 3 turns, and she gains +5-10 accuracy along with the speed. The crit bonus vs large monsters is gone.
+[*]Occultist — Vulnerability Hex: damage back to vanilla (-90%) and it can crit again (5-9%), so it hits with some impact. The resist reduction stays.
+[*]Occultist — Weakening Curse: back to vanilla damage (-75%).
+[*]Using UI Enhancement? It replaces the Musketeer's skill names with the original ones. The skills still work as described.
+[/list]
+
+[b]更新 2.0.4 — 火枪手调整、神秘学者诅咒[/b]
+[list]
+[*]火枪手——副手枪击：目标改为1-3号位（原为1-2），伤害-20%（原为-40%），并使目标暴击率降低10-15%，持续2回合。之前它完全是破盾者“觅踪”的弱化版。
+[*]火枪手——指定猎物：被标记的猎物3回合内受到暴击的几率+5-10%，她自己在加速的同时命中+5-10。取消了对大型怪物的暴击加成。
+[*]神秘学者——弱点术式：伤害恢复原版（-90%），重新可以暴击（5-9%），打起来更有手感。降低抗性的效果保留。
+[*]神秘学者——虚弱诅咒：伤害恢复原版（-75%）。
+[*]如果同时使用 UI Enhancement，它会把火枪手的技能名换回原名，技能效果不受影响。
+[/list]
