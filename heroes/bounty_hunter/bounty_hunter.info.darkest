@@ -45,11 +45,13 @@ combat_skill: .id "target_tag" .level 4 .type "ranged" .atk 120% .dmg -100% .cri
 // BH-018 죽음의 표식 방어 감소 확률 130~170% → 100~140%. 의도: 바닐라 조련사 휘파람의 높은 확률을 근거 없이 따라온 것 정상화(다른 약화는 100~140) [제작자 10-21]
 // BH-013 target_tag: 방어 -10~-20% -> 조련사 휘파람 효과(Hound Debuff, 방어 -20/22/25/27/30%) 재사용, 자기 속도 제거. 방어 있는 적 전용 표식 [제작자]
 
-combat_skill: .id "come_hither" .level 0 .type "ranged" .atk 95% .dmg -60% .crit 0% .launch 4321 .target 34 .is_crit_valid True  .effect "Pull 3A"
-combat_skill: .id "come_hither" .level 1 .type "ranged" .atk 100% .dmg -60% .crit 1% .launch 4321 .target 34 .is_crit_valid True  .effect "Pull 3B"
-combat_skill: .id "come_hither" .level 2 .type "ranged" .atk 105% .dmg -60% .crit 2% .launch 4321 .target 34 .is_crit_valid True  .effect "Pull 3C"
-combat_skill: .id "come_hither" .level 3 .type "ranged" .atk 110% .dmg -60% .crit 3% .launch 4321 .target 34 .is_crit_valid True  .effect "Pull 3D"
-combat_skill: .id "come_hither" .level 4 .type "ranged" .atk 115% .dmg -60% .crit 4% .launch 4321 .target 34 .is_crit_valid True  .effect "Pull 3E"
+combat_skill: .id "come_hither" .level 0 .type "ranged" .atk 95% .dmg -60% .crit 0% .launch 4321 .target 34 .is_crit_valid True  .effect "Pull 3A" "Caltrops SPD Debuff 1"
+combat_skill: .id "come_hither" .level 1 .type "ranged" .atk 100% .dmg -60% .crit 1% .launch 4321 .target 34 .is_crit_valid True  .effect "Pull 3B" "Caltrops SPD Debuff 2"
+combat_skill: .id "come_hither" .level 2 .type "ranged" .atk 105% .dmg -60% .crit 2% .launch 4321 .target 34 .is_crit_valid True  .effect "Pull 3C" "Caltrops SPD Debuff 3"
+combat_skill: .id "come_hither" .level 3 .type "ranged" .atk 110% .dmg -60% .crit 3% .launch 4321 .target 34 .is_crit_valid True  .effect "Pull 3D" "Caltrops SPD Debuff 4"
+combat_skill: .id "come_hither" .level 4 .type "ranged" .atk 115% .dmg -60% .crit 4% .launch 4321 .target 34 .is_crit_valid True  .effect "Pull 3E" "Caltrops SPD Debuff 5"
+// BH-021 come_hither: + target SPD -4/5/6/7/8 (3 turns, vanilla Caltrops SPD Debuff moved from Caltrops). The pulled enemy acts later, so it can be killed at rank 1 before it hits.
+// BH-021 이리 오너라: 마름쇠의 속도 감소(−4~−8, 3턴, 바닐라 효과 재사용)를 옮겨 옴. 끌려온 적이 늦게 행동해 1열에서 처치할 시간을 번다 [제작자 10-22]
 // BH-010 come_hither: 소표식(BH Minor Mark) 삭제, 명중 +5 (1렙 90 -> 95), 피해 -70% -> -60%. 길드 "미리 표식을 새겨" / "갈고리와 섬광탄과 어퍼컷으로 열과 오를 헤집어" - 표식과 갈고리는 다른 전술. 표식은 죽음의 표식(3턴)이 맡아 표식 -> 당기기 -> 처형 3턴 연계
 // BH-009 come_hither: Pull 2 -> Pull 3 (게임 최초 당기기 3칸), dmg -80% -> -70%
 
@@ -88,12 +90,14 @@ combat_skill: .id "finish_him" .level 4 .type "melee" .atk 105% .dmg 0% .crit 9%
 
 
 
-combat_skill: .id "hook_and_slice" .level 0 .type "ranged" .atk 90% .dmg -85% .crit 5% .launch 234 .target 34 .is_crit_valid True  .effect "Bleed 1" "Caltrops SPD Debuff 1" "Caltrops Prey Debuff 1"
-combat_skill: .id "hook_and_slice" .level 1 .type "ranged" .atk 95% .dmg -85% .crit 6% .launch 234 .target 34 .is_crit_valid True  .effect "Bleed 2" "Caltrops SPD Debuff 2" "Caltrops Prey Debuff 2"
-combat_skill: .id "hook_and_slice" .level 2 .type "ranged" .atk 100% .dmg -85% .crit 7% .launch 234 .target 34 .is_crit_valid True  .effect "Bleed 3" "Caltrops SPD Debuff 3" "Caltrops Prey Debuff 3"
-combat_skill: .id "hook_and_slice" .level 3 .type "ranged" .atk 105% .dmg -85% .crit 8% .launch 234 .target 34 .is_crit_valid True  .effect "Bleed 4" "Caltrops SPD Debuff 4" "Caltrops Prey Debuff 4"
-combat_skill: .id "hook_and_slice" .level 4 .type "ranged" .atk 110% .dmg -85% .crit 9% .launch 234 .target 34 .is_crit_valid True  .effect "Bleed 5" "Caltrops SPD Debuff 5" "Caltrops Prey Debuff 5"
+combat_skill: .id "hook_and_slice" .level 0 .type "ranged" .atk 90% .dmg -85% .crit 5% .launch 234 .target ~34 .is_crit_valid True  .effect "Bleed 1" "Caltrops Prey Debuff 1"
+combat_skill: .id "hook_and_slice" .level 1 .type "ranged" .atk 95% .dmg -85% .crit 6% .launch 234 .target ~34 .is_crit_valid True  .effect "Bleed 2" "Caltrops Prey Debuff 2"
+combat_skill: .id "hook_and_slice" .level 2 .type "ranged" .atk 100% .dmg -85% .crit 7% .launch 234 .target ~34 .is_crit_valid True  .effect "Bleed 3" "Caltrops Prey Debuff 3"
+combat_skill: .id "hook_and_slice" .level 3 .type "ranged" .atk 105% .dmg -85% .crit 8% .launch 234 .target ~34 .is_crit_valid True  .effect "Bleed 4" "Caltrops Prey Debuff 4"
+combat_skill: .id "hook_and_slice" .level 4 .type "ranged" .atk 110% .dmg -85% .crit 9% .launch 234 .target ~34 .is_crit_valid True  .effect "Bleed 5" "Caltrops Prey Debuff 5"
 // BH-005 hook_and_slice(마름쇠): dmg -80% -> -70% (vanilla -95%)
+// BH-020 hook_and_slice: ranks 3-4 single -> AoE ranks 3-4; speed debuff moved to Come Hither; bleed and damage taken kept.
+// BH-020 마름쇠: 3·4열 단일 → 3·4열 동시. 출혈 2~4(3턴)·받는 피해 +10~20%(3턴) 유지, 속도 감소는 이리 오너라로. 의도: 바닥에 뿌리는 쇠못(P-19). 단일·피해 −85%·약화 셋은 쓸 이유가 없었음 [제작자 10-22]
 // BH-016 hook_and_slice: 피해 -70% -> -85%(바닐라 -95%와 BH-005 사이). 출혈·속도 감소·받는 피해 셋이 얹혀 3·4열 출혈 중 최고였음 [제작자]
 
 

@@ -44,16 +44,16 @@ effect: .name "RB MUS Prey Speed 4" .target "performer" .curio_result_type "posi
 effect: .name "RB MUS Prey Speed 5" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .combat_stat_buff 1 .speed_rating_add 5 .attack_rating_add 10% .on_hit true .on_miss true
 // MUS-105 Mark the Quarry: self speed +3/3/4/4/5 for 3 turns.
 // MUS-114 Mark the Quarry: self accuracy +5/6/7/8/10 added (same series as Duelist's Advance).
-effect: .name "RB MUS Smoke Blind 1" .target "target" .curio_result_type "negative" .chance 100% .duration 1 .combat_stat_buff 1 .attack_rating_add -10% .on_hit true .on_miss false
-// MUS-104 Smokescreen: accuracy -10/10/12/12/15% for 1 turn (small, so it does not copy Suppressing Fire).
-effect: .name "RB MUS Smoke Blind 2" .target "target" .curio_result_type "negative" .chance 110% .duration 1 .combat_stat_buff 1 .attack_rating_add -10% .on_hit true .on_miss false
-// MUS-104 Smokescreen: accuracy -10/10/12/12/15% for 1 turn (small, so it does not copy Suppressing Fire).
-effect: .name "RB MUS Smoke Blind 3" .target "target" .curio_result_type "negative" .chance 120% .duration 1 .combat_stat_buff 1 .attack_rating_add -12% .on_hit true .on_miss false
-// MUS-104 Smokescreen: accuracy -10/10/12/12/15% for 1 turn (small, so it does not copy Suppressing Fire).
-effect: .name "RB MUS Smoke Blind 4" .target "target" .curio_result_type "negative" .chance 130% .duration 1 .combat_stat_buff 1 .attack_rating_add -12% .on_hit true .on_miss false
-// MUS-104 Smokescreen: accuracy -10/10/12/12/15% for 1 turn (small, so it does not copy Suppressing Fire).
-effect: .name "RB MUS Smoke Blind 5" .target "target" .curio_result_type "negative" .chance 140% .duration 1 .combat_stat_buff 1 .attack_rating_add -15% .on_hit true .on_miss false
-// MUS-104 Smokescreen: accuracy -10/10/12/12/15% for 1 turn (small, so it does not copy Suppressing Fire).
+effect: .name "RB MUS Smoke Blind 1" .target "target" .curio_result_type "negative" .chance 100% .duration 2 .combat_stat_buff 1 .attack_rating_add -10% .on_hit true .on_miss false
+// MUS-104 Smokescreen: accuracy -10/10/12/12/15% (small, so it does not copy Suppressing Fire). MUS-116: 1 -> 2 turns.
+effect: .name "RB MUS Smoke Blind 2" .target "target" .curio_result_type "negative" .chance 110% .duration 2 .combat_stat_buff 1 .attack_rating_add -10% .on_hit true .on_miss false
+// MUS-104 Smokescreen: accuracy -10/10/12/12/15% (small, so it does not copy Suppressing Fire). MUS-116: 1 -> 2 turns.
+effect: .name "RB MUS Smoke Blind 3" .target "target" .curio_result_type "negative" .chance 120% .duration 2 .combat_stat_buff 1 .attack_rating_add -12% .on_hit true .on_miss false
+// MUS-104 Smokescreen: accuracy -10/10/12/12/15% (small, so it does not copy Suppressing Fire). MUS-116: 1 -> 2 turns.
+effect: .name "RB MUS Smoke Blind 4" .target "target" .curio_result_type "negative" .chance 130% .duration 2 .combat_stat_buff 1 .attack_rating_add -12% .on_hit true .on_miss false
+// MUS-104 Smokescreen: accuracy -10/10/12/12/15% (small, so it does not copy Suppressing Fire). MUS-116: 1 -> 2 turns.
+effect: .name "RB MUS Smoke Blind 5" .target "target" .curio_result_type "negative" .chance 140% .duration 2 .combat_stat_buff 1 .attack_rating_add -15% .on_hit true .on_miss false
+// MUS-104 Smokescreen: accuracy -10/10/12/12/15% (small, so it does not copy Suppressing Fire). MUS-116: 1 -> 2 turns.
 effect: .name "RB MUS Patch Destress 1" .target "target" .curio_result_type "positive" .chance 100% .healstress 2 .on_hit true .on_miss false .queue true
 // MUS-108 Patch Up: stress heal 2/2/3/3/4.
 effect: .name "RB MUS Patch Destress 2" .target "target" .curio_result_type "positive" .chance 100% .healstress 2 .on_hit true .on_miss false .queue true
