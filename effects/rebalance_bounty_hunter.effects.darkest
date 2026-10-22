@@ -43,12 +43,12 @@ effect: .name "RB BH Bleed Killer 5" .target "performer" .chance 100% .curio_res
 // BH-001 [trace 2026-10-05] Reward allied bleed/stun setup while retaining the author-set front launch and rank-3 followup. Effect: RB BH Bleed Killer 5.
 // BH-001 finish_him: +33% dmg vs bleeding (level 5, mirrors GR Poison Killer 5)
 effect: .name "RB BH Mark Wound 1" .target "target" .curio_result_type "negative" .chance 100% .duration 3 .buff_ids RB_BH_MARK_DMGRECV_1 .on_hit true .on_miss false .queue true
-// BH-022 Mark for Death: target damage taken +10/11/12/13/15% for 3 turns.
+// BH-022 Mark for Death: target damage taken for 3 turns. BH-023: +15/17/20/22/25%.
 effect: .name "RB BH Mark Wound 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3 .buff_ids RB_BH_MARK_DMGRECV_2 .on_hit true .on_miss false .queue true
-// BH-022 Mark for Death: target damage taken +10/11/12/13/15% for 3 turns.
+// BH-022 Mark for Death: target damage taken for 3 turns. BH-023: +15/17/20/22/25%.
 effect: .name "RB BH Mark Wound 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3 .buff_ids RB_BH_MARK_DMGRECV_3 .on_hit true .on_miss false .queue true
-// BH-022 Mark for Death: target damage taken +10/11/12/13/15% for 3 turns.
+// BH-022 Mark for Death: target damage taken for 3 turns. BH-023: +15/17/20/22/25%.
 effect: .name "RB BH Mark Wound 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .buff_ids RB_BH_MARK_DMGRECV_4 .on_hit true .on_miss false .queue true
-// BH-022 Mark for Death: target damage taken +10/11/12/13/15% for 3 turns.
+// BH-022 Mark for Death: target damage taken for 3 turns. BH-023: +15/17/20/22/25%.
 effect: .name "RB BH Mark Wound 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .buff_ids RB_BH_MARK_DMGRECV_5 .on_hit true .on_miss false .queue true
-// BH-022 Mark for Death: target damage taken +10/11/12/13/15% for 3 turns.
+// BH-022 Mark for Death: target damage taken for 3 turns. BH-023: +15/17/20/22/25%.

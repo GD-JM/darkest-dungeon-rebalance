@@ -16,11 +16,13 @@ armour: .name "musketeer_armour_3" .def 15% .prot 0 .hp 37 .spd 0 .upgradeRequir
 armour: .name "musketeer_armour_4" .def 20% .prot 0 .hp 42 .spd 0 .upgradeRequirementCode 3
 // MUS-102 HP 24/28/33/37/42 (Arbalest 27..47): a tournament entrant's vest, not a deserter's plate.
 // MUS-102 체력 24/28/33/37/42 (석궁 27~47). 의도: "참가자의 조끼"와 판금 "생존자"의 차이. 실전 경험 부족.
-combat_skill: .id "aimed_shot" .level 0 .type "ranged" .atk 90% .dmg 0% .crit 5% .launch 43 .target 1234 .is_crit_valid True .effect "RB MUS Pierce Tagged 1" "RB MUS Armor Pierce 1" .generation_guaranteed true
-combat_skill: .id "aimed_shot" .level 1 .type "ranged" .atk 95% .dmg 0% .crit 6% .launch 43 .target 1234 .is_crit_valid True .effect "RB MUS Pierce Tagged 2" "RB MUS Armor Pierce 2"
-combat_skill: .id "aimed_shot" .level 2 .type "ranged" .atk 100% .dmg 0% .crit 7% .launch 43 .target 1234 .is_crit_valid True .effect "RB MUS Pierce Tagged 3" "RB MUS Armor Pierce 3"
-combat_skill: .id "aimed_shot" .level 3 .type "ranged" .atk 105% .dmg 0% .crit 8% .launch 43 .target 1234 .is_crit_valid True .effect "RB MUS Pierce Tagged 4" "RB MUS Armor Pierce 4"
-combat_skill: .id "aimed_shot" .level 4 .type "ranged" .atk 110% .dmg 0% .crit 9% .launch 43 .target 1234 .is_crit_valid True .effect "RB MUS Pierce Tagged 5" "RB MUS Armor Pierce 5"
+combat_skill: .id "aimed_shot" .level 0 .type "ranged" .atk 95% .dmg 0% .crit 5% .launch 43 .target 1234 .is_crit_valid True .effect "RB MUS Pierce Tagged 1" "RB MUS Armor Pierce 1" .generation_guaranteed true
+combat_skill: .id "aimed_shot" .level 1 .type "ranged" .atk 100% .dmg 0% .crit 6% .launch 43 .target 1234 .is_crit_valid True .effect "RB MUS Pierce Tagged 2" "RB MUS Armor Pierce 2"
+combat_skill: .id "aimed_shot" .level 2 .type "ranged" .atk 105% .dmg 0% .crit 7% .launch 43 .target 1234 .is_crit_valid True .effect "RB MUS Pierce Tagged 3" "RB MUS Armor Pierce 3"
+combat_skill: .id "aimed_shot" .level 3 .type "ranged" .atk 110% .dmg 0% .crit 8% .launch 43 .target 1234 .is_crit_valid True .effect "RB MUS Pierce Tagged 4" "RB MUS Armor Pierce 4"
+combat_skill: .id "aimed_shot" .level 4 .type "ranged" .atk 115% .dmg 0% .crit 9% .launch 43 .target 1234 .is_crit_valid True .effect "RB MUS Pierce Tagged 5" "RB MUS Armor Pierce 5"
+// MUS-119 Piercing Ball: accuracy 90 -> 95 (single-target main shot, as Arbalest Sniper Shot 95).
+// MUS-119 관통탄: 명중 90 → 95. 의도: 단일 주력 사격은 95, 광역(몰이 사격)은 90 — 석궁사수 저격(95)과 대칭 [제작자 10-23]
 // MUS-103 Piercing Ball: acc 90, dmg 0%, ranks 3-4 to 1-4, armor piercing 10/15/20/25/30%, vs marked +25..40% dmg and +9..13% crit (Arbalest +60..100%).
 // MUS-103 관통탄: 명중 90, 피해 0%, 3·4열→1~4열, 방어 관통 10~30%, 표식 대상 피해 +25~40%·치명 +9~13%(석궁 +60~100%). 의도: 특수탄으로 방어를 뚫는 꾸준한 딜러. 방어 관통이 있어 표식 딜은 낮게.
 combat_skill: .id "smokescreen" .level 0 .type "ranged" .atk 95% .dmg -100% .crit 0% .launch 43 .target ~12 .is_crit_valid False .per_battle_limit 3 .effect "Stun 1" "RB MUS Smoke Blind 1" "RB MUS Smoke Hide" .is_stall_invalidating false
@@ -45,11 +47,13 @@ combat_skill: .id "call_the_shot" .level 4 .type "ranged" .atk 120% .dmg -100% .
 // MUS-105 사냥감 지정: 표식 3턴 + 자신 3턴 속도 +3/3/4/4/5, 대형 몬스터 상대 치명 +4~8%. 의도: "이놈은 내 거야!" — 사냥으로 다급하게 증명하려는 설정. 속도는 무차별 사격 수치를 옮겼다.
 // MUS-114 Mark the Quarry: large-monster crit replaced by target crit received +5/6/7/8/10% (3 turns); self accuracy +5/6/7/8/10 added to the speed buff.
 // MUS-114 사냥감 지정: 대형 상대 치명 삭제 → 대상 받는 치명 +5/6/7/8/10%(3턴, 약화). 자신 명중 +5/6/7/8/10 추가(속도와 같은 3턴). 의도: 사냥감을 확실히 잡는 명사수("백발백중") + 약화 장신구가 쓸 약화 [제작자 10-22]
-combat_skill: .id "buckshot" .level 0 .type "ranged" .atk 95% .dmg -50% .crit 2% .launch 43 .target ~23 .is_crit_valid True .effect "Push 1A"
-combat_skill: .id "buckshot" .level 1 .type "ranged" .atk 100% .dmg -50% .crit 3% .launch 43 .target ~23 .is_crit_valid True .effect "Push 1B"
-combat_skill: .id "buckshot" .level 2 .type "ranged" .atk 105% .dmg -50% .crit 4% .launch 43 .target ~23 .is_crit_valid True .effect "Push 1C"
-combat_skill: .id "buckshot" .level 3 .type "ranged" .atk 110% .dmg -50% .crit 5% .launch 43 .target ~23 .is_crit_valid True .effect "Push 1D"
-combat_skill: .id "buckshot" .level 4 .type "ranged" .atk 115% .dmg -50% .crit 6% .launch 43 .target ~23 .is_crit_valid True .effect "Push 1E"
+combat_skill: .id "buckshot" .level 0 .type "ranged" .atk 90% .dmg -50% .crit 2% .launch 43 .target ~23 .is_crit_valid True .effect "Push 1A"
+combat_skill: .id "buckshot" .level 1 .type "ranged" .atk 95% .dmg -50% .crit 3% .launch 43 .target ~23 .is_crit_valid True .effect "Push 1B"
+combat_skill: .id "buckshot" .level 2 .type "ranged" .atk 100% .dmg -50% .crit 4% .launch 43 .target ~23 .is_crit_valid True .effect "Push 1C"
+combat_skill: .id "buckshot" .level 3 .type "ranged" .atk 105% .dmg -50% .crit 5% .launch 43 .target ~23 .is_crit_valid True .effect "Push 1D"
+combat_skill: .id "buckshot" .level 4 .type "ranged" .atk 110% .dmg -50% .crit 6% .launch 43 .target ~23 .is_crit_valid True .effect "Push 1E"
+// MUS-119 Flushing Shot: accuracy 95 -> 90 (area attack 5 below the single-target shot).
+// MUS-119 몰이 사격: 명중 95 → 90. 의도: 광역은 단일(관통탄 95)보다 5 낮게 [제작자 10-23]
 // MUS-112 Flushing Shot: AoE ranks 2-3, dmg -50%, push 1 (100..140%). Rank 4 cannot be pushed further (V-18 was wrong), so it now drives the middle ranks back.
 // MUS-112 몰이 사격: 4열 단일 → 광역 2·3열 밀치기 1(피해 −50%, 100~140%). 의도: 4열은 더 뒤로 안 밀림(V-18 틀림, 제작자 확인). 2·3열을 뒤로 몰아 4열 적이 앞으로 당겨지게 한다 [제작자 10-21]
 combat_skill: .id "sidearm" .level 0 .type "ranged" .atk 90% .dmg -20% .crit 3% .move 1 0 .launch 321 .target 123 .is_crit_valid True .effect "RB MUS Sidearm Crit 1"
