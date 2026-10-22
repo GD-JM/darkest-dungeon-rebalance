@@ -28,6 +28,8 @@ PARAM = dict(
     TGT_ATTACKS=1.5,      # R-VALUE-19: 약화 걸린 적 1명이 라운드당 받는 아군 공격 수 (v1 hero_power.md 4-2의 x1.5, 집중 공격). 회피·방어·받는 치명타·받는 피해 공통
     ENEMY_DODGE_CAP=True, # R-VALUE-19: 적 회피 감소는 몬스터 회피 분포 + 95% 자동 명중 상한으로 센다
     DMG_RECEIVED=True,    # R-VALUE-18: 적 받는 피해 +x = 그 적을 치는 아군 공격 피해 +x (라운드당 아군 1공격 가정, 받는 치명타와 같은 가정)
+    DEBUFF_TIMING=True,   # R-VALUE-23: 적 약화 턴별 유효율 = 첫 턴 DEBUFF_W1(이미 행동했을 수 있음) x 이후 턴 (1 - DEATH_RATE)^k (처치 우선 대상이 죽음). 약화로 못 잡은 만큼 맞는다(기회비용) [제작자]
+    DEBUFF_W1=0.5,
     ENEMY_CRIT=True,      # R-VALUE-22: 적 치명 감소 = 몬스터 공격별 적중률 x 줄어든 치명(그 기술 치명 아래로 못 내려감) x (치명 추가 피해 + 받는 스트레스 17.5)
     CRIT_RECV_STRESS=17.5,  # 영웅이 치명타를 맞으면 +10, 다른 파티원 3명 각 50%로 +5 (R-CMB-08)
     ENEMY_ACC=True,       # R-VALUE-17: 적 명중 감소 = 그 적 명중 분포·영웅 회피·0% 바닥·스트레스 공격까지 (회피 R-VALUE-13의 거울)
@@ -531,6 +533,16 @@ def monster_crit_skills():
     return tuple(out)
 
 
+def debuff_rounds(dur, P):
+    """R-VALUE-23 적 약화가 실제로 일하는 턴 수. 지속 상한(BUFF_DUR_CAP)까지 턴별 가중 합:
+    첫 턴은 그 적이 이미 행동했을 수 있어 DEBUFF_W1, k번째 이후 턴은 그 적이 살아 있을 확률 (1 - DEATH_RATE)^(k-1).
+    끄면 예전처럼 min(dur, 상한)"""
+    n = int(min(dur, P['BUFF_DUR_CAP']))
+    if not P.get('DEBUFF_TIMING', True):
+        return min(dur, P['BUFF_DUR_CAP'])
+    return sum(P['DEBUFF_W1'] if k == 0 else (1 - P['DEATH_RATE']) ** k for k in range(n))
+
+
 def enemy_crit_value(x, P):
     """적 1명 치명 -x(점수), 1행동 가치(HP). R-VALUE-22
     몬스터 공격 기술마다: 적중률(영웅 회피 중앙값) x 줄어든 치명 min(x, 그 기술 치명) x
@@ -949,7 +961,7 @@ def skill_value(C, l, d):
                             'res_debuff': P['RES_DEBUFF_HP'], 'res_move': P['RES_MOVE_HP']}.get(stat, 0.0)
                     v += x * P['RES_ATTEMPTS'] * succ
             if v:
-                add('약화', ev('debuff') * v * min(dur, P['BUFF_DUR_CAP']) * n_t * rw)
+                add('약화', ev('debuff') * v * debuff_rounds(dur, P) * n_t * rw)
         else:
             if who == 'performer' and ('keyStatus' in k or 'monsterType' in k):
                 continue                                       # 조건부 피해 (위에서 처리)
