@@ -28,6 +28,8 @@ PARAM = dict(
     TGT_ATTACKS=1.5,      # R-VALUE-19: 약화 걸린 적 1명이 라운드당 받는 아군 공격 수 (v1 hero_power.md 4-2의 x1.5, 집중 공격). 회피·방어·받는 치명타·받는 피해 공통
     ENEMY_DODGE_CAP=True, # R-VALUE-19: 적 회피 감소는 몬스터 회피 분포 + 95% 자동 명중 상한으로 센다
     DMG_RECEIVED=True,    # R-VALUE-18: 적 받는 피해 +x = 그 적을 치는 아군 공격 피해 +x (라운드당 아군 1공격 가정, 받는 치명타와 같은 가정)
+    ENEMY_CRIT=True,      # R-VALUE-22: 적 치명 감소 = 몬스터 공격별 적중률 x 줄어든 치명(그 기술 치명 아래로 못 내려감) x (치명 추가 피해 + 받는 스트레스 17.5)
+    CRIT_RECV_STRESS=17.5,  # 영웅이 치명타를 맞으면 +10, 다른 파티원 3명 각 50%로 +5 (R-CMB-08)
     ENEMY_ACC=True,       # R-VALUE-17: 적 명중 감소 = 그 적 명중 분포·영웅 회피·0% 바닥·스트레스 공격까지 (회피 R-VALUE-13의 거울)
     CRIT_SIDE=True,       # R-VALUE-16: 치명타 확률 강화·받는 치명타 약화에 치명타 부수 효과(스트레스 회복 + 직업 치명타 버프)를 더한다
     STUN_MULT=1.0,        # 기절 = 성공률 x 몬스터 1행동. 행동 경제 프리미엄은 민감도로만 본다
@@ -513,6 +515,36 @@ def enemy_acc_value(x, P):
     return per_hit * (h0 - h1)
 
 
+def monster_crit_skills():
+    """영웅 등급 몬스터 공격 기술 (명중, 치명, 최소 피해, 최대 피해). 치명 불가 기술은 치명 0"""
+    out = []
+    for f in glob.glob(os.path.join(G, 'monsters', '*', '*_C', '*_C.info.darkest')) + \
+            glob.glob(os.path.join(G, 'dlc', '**', 'monsters', '**', '*_C.info.darkest'), recursive=True):
+        for l in open(f, encoding='utf-8', errors='ignore'):
+            if l.startswith('skill:') and ('"melee"' in l or '"ranged"' in l):
+                a =re.search(r'\.atk ([\d.]+)%', l)
+                d = re.search(r'\.dmg ([\d.]+) ([\d.]+)', l)
+                c = re.search(r'\.crit ([\d.]+)%', l)
+                if a and d and float(a.group(1)) >= 50:
+                    crit = 0.0 if '.is_crit_valid False' in l or not c else float(c.group(1))
+                    out.append((float(a.group(1)), crit, float(d.group(1)), float(d.group(2))))
+    return tuple(out)
+
+
+def enemy_crit_value(x, P):
+    """적 1명 치명 -x(점수), 1행동 가치(HP). R-VALUE-22
+    몬스터 공격 기술마다: 적중률(영웅 회피 중앙값) x 줄어든 치명 min(x, 그 기술 치명) x
+    (치명 피해 최대x1.5 - 평균 피해 + 받는 스트레스 CRIT_RECV_STRESS x STRESS_HP). 치명 0% 기술에는 효과 없음"""
+    sk = monster_crit_skills()
+    if not sk:
+        return 0.0
+    v = 0.0
+    for a, c, lo, hi in sk:
+        h = max(0.0, min(0.95, (a - HERO_MED_DEF) / 100))
+        v += h * min(x, c) / 100 * (1.5 * hi - (lo + hi) / 2 + P['CRIT_RECV_STRESS'] * P['STRESS_HP'])
+    return v / len(sk)
+
+
 def load_effects(mode):
     eff = {k: v[0] for k, v in ec.load_vanilla_effects(G).items()}
     if mode == 'rb':
@@ -895,6 +927,8 @@ def skill_value(C, l, d):
                     v += P['ENEMY_ACT'] * x * 0.5
                 elif stat == 'attack_rating':
                     v += enemy_acc_value(x * 100, P) if P.get('ENEMY_ACC', True) else P['ENEMY_ACT'] * x * 100 / 77.5
+                elif stat == 'crit_chance' and P.get('ENEMY_CRIT', True):   # R-VALUE-22 적 치명 감소
+                    v += enemy_crit_value(x * 100, P)
                 elif stat == 'defense_rating':             # R-VALUE-19: 명중 105 아군 공격의 적중률 증가분 (95% 이상 자동 명중)
                     if P.get('ENEMY_DODGE_CAP', True):
                         h0 = st.mean(hit(m, 105) for m in MONS)
