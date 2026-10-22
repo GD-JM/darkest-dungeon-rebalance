@@ -18,7 +18,7 @@ Beispiel: Die Riposte des Wegelagerers wanderte von Fechtschritt zu Gezielter Sc
 [*][b]Den eigenen Regeln des Spiels folgen.[/b]
 Beispiel: Grundspiel-Helden gewinnen über alle Waffenstufen nur 2 Tempo (Arbaleste 3→5); Schildbrecherin (5→9) und Flagellant (6→9) fielen heraus. Beide jetzt +2.
 [*][b]Jeder Buff hat seinen Preis.[/b] Was hier steigt, sinkt anderswo – die Schwierigkeit bläht sich weder auf noch schrumpft sie.
-Beispiel: Richtspruch der Vestalin geht von −25 % auf 0 % Schaden, Hundebiss des Hundemeisters von 0 % auf −25 %.
+Beispiel: Richtspruch der Vestalin geht von −25 % auf 0 % Schaden, Hundebiss des Hundemeisters von 0 % auf −50 % (dafür mehr Blutung).
 [*][b]Eine Fähigkeit tut, wonach sie aussieht.[/b] Bild und Funktion passen auf einen Blick.
 Beispiel: Ein Verband stillt Blutungen, und die unermüdliche Barbarin wird nicht mehr erschöpft.
 [*][b]Die Richtung kommt aus der offiziellen Geschichte.[/b]
@@ -30,10 +30,10 @@ Beispiel: Die Accessoires der Musketierin erhöhen die Schwächungschance, daher
 [h2]Paradebeispiel: die Musketierin[/h2]
 Die originale Musketierin war eine Kopie der Arbaleste, daher wurde sie aus ihrem Lore neu gebaut: eine gefeierte Schützin, die nach einem enttäuschenden Turnier als Monsterjägerin zur Legende werden will und mangels Kampferfahrung Abstand hält.
 [list]
-[*][b]Durchschlagende Kugel[/b] (TRF 90): trifft jeden Rang, durchdringt 10–30 % Rüstung; ihr Bonus gegen Markierte ist viel kleiner als bei der Arbaleste.
+[*][b]Durchschlagende Kugel[/b] (TRF 95): trifft jeden Rang, durchdringt 10–30 % Rüstung; ihr Bonus gegen Markierte ist viel kleiner als bei der Arbaleste.
 [*][b]Rauchwand[/b] (3 pro Kampf): betäubt die gegnerischen Ränge 1–2; Betäubte verschwinden im Rauch, die Gruppe trifft die hinteren Reihen.
 [*][b]Deckungsrauch[/b]: verbirgt einen Verbündeten 2 Runden – Schutz, ohne dass jemand die Treffer einsteckt.
-[*][b]Beute markieren[/b]: „Diese Beute gehört mir!“ Markiert die Beute, die mehr Krits einsteckt; 3 Runden mehr Treffsicherheit und Tempo.
+[*][b]Beute markieren[/b]: „Diese Beute gehört mir!“ Markiert die Beute, senkt ihre Rüstung um 10–20 %; 3 Runden mehr Tempo.
 [*][b]Treibschuss, Pistolenschuss, Zusammenflicken[/b]: treibt die Ränge 2–3 zurück, schießt und weicht zurück, heilt mit etwas Stressabbau.
 [/list]
 Der Preis: weniger LP (24 statt 27) und Tempo (2 statt 3). Sie kann den Rang wechseln und liegt daher knapp unter der Arbaleste.
@@ -50,7 +50,7 @@ Die Bilder oben zeigen jede geänderte Fähigkeit, vorher und nachher.
 [b]Grabräuberin[/b] — Giftlist wird zur wiederholbaren Selbstheilung; Dolchwurf trifft markierte Ziele härter.
 [b]Barbarin[/b] — keine Erschöpfung mehr: Barbarisches Gebrüll heizt sie an und schwächt alle Gegner; Adrenalinschub ist ihre Selbstheilung.
 [b]Wegelagerer[/b] — Fernkampf- und Nahkampf-Builds funktionieren beide: Gezielter Schuss gibt Gegenschlag, ohne dass er sich bewegen muss.
-[b]Hundemeister[/b] — weniger Schaden, mehr Schutz: Verheerender Pfiff senkt die gegnerische Präzision, Wachhund gibt mehr Ausweichen, Hundebiss funktioniert von jedem Rang aus.
+[b]Hundemeister[/b] — Blutungsspezialist auf Distanz: seine Hunde beißen jeden Rang; Verheerender Pfiff lässt die Beute mehr Krits einstecken.
 [b]Narr[/b] — immer noch der beste Stressheiler, aber Stärkende Melodie funktioniert ab Rang 2 und Solo von jedem Rang aus.
 [b]Aussätziger[/b] — Einschüchterung heißt jetzt Rüstungsbrecher und bricht Rüstung, und die Kosten von Rache wachsen mit dem Level – schon früh nutzbar.
 [b]Waffenknecht[/b] — der Veteran, der die Linie hält: Zuspruch ist eine wiederholbare Stressheilung für die Gruppe; Befehl gibt zusätzlich Schutz.

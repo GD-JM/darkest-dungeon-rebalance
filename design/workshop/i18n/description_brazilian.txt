@@ -18,7 +18,7 @@ Exemplo: o contra-ataque do Bandido saiu do Avanço do Duelista e foi para o Tir
 [*][b]Seguir as regras do próprio jogo.[/b]
 Exemplo: no jogo base, a arma no máximo dá só 2 de velocidade (Atiradora 3→5); Destruidora (5→9) e Flagelante (6→9) fugiam disso. Agora os dois ganham 2.
 [*][b]Todo buff tem um preço.[/b] O que sobe num lugar desce em outro, então a dificuldade geral não infla nem desinfla.
-Exemplo: Julgamento da Vestal foi de −25% para 0% de dano, e Investida do Cão do Mestre dos Cães de 0% para −25%.
+Exemplo: Julgamento da Vestal foi de −25% para 0% de dano, e Investida do Cão do Mestre dos Cães de 0% para −50% (o sangramento subiu no lugar).
 [*][b]A habilidade faz o que parece.[/b] Arte e função batem à primeira vista.
 Exemplo: bandagem estanca sangramento, e a Infernal, que nunca se cansa, não fica mais exausta.
 [*][b]A direção vem do lore oficial.[/b]
@@ -30,10 +30,10 @@ Exemplo: as preciosidades da Mosqueteira aumentam a chance de penalidade, então
 [h2]Destaque: a Mosqueteira[/h2]
 A Mosqueteira original era uma cópia exata da Atiradora, então foi refeita a partir do lore oficial: uma atiradora famosa que, depois de um torneio decepcionante, quer virar lenda caçando monstros e, sem experiência real de combate, mantém distância.
 [list]
-[*][b]Bala Penetrante[/b] (PRE 90): alcança todas as posições e perfura 10–30% de armadura; o bônus contra marcados é bem menor que o da Atiradora.
+[*][b]Bala Penetrante[/b] (PRE 95): alcança todas as posições e perfura 10–30% de armadura; o bônus contra marcados é bem menor que o da Atiradora.
 [*][b]Cortina de Fumaça[/b] (3 por batalha): atordoa as posições 1–2 inimigas; os atordoados somem na fumaça e o grupo foca a retaguarda.
 [*][b]Fumaça de Cobertura[/b]: esconde um aliado por 2 turnos para que os inimigos não o mirem — proteção sem ninguém apanhar no lugar.
-[*][b]Marcar a Presa[/b]: "Essa presa é minha!" Marca a presa, que sofre mais críticos, e ganha precisão e velocidade por 3 turnos.
+[*][b]Marcar a Presa[/b]: "Essa presa é minha!" Marca a presa, tira 10–20% da armadura dela e ganha velocidade por 3 turnos.
 [*][b]Tiro de Batida, Arma Secundária, Remendar[/b]: empurra as posições 2–3 para trás, atira e recua quando empurrada para frente, e alivia um pouco de estresse ao curar.
 [/list]
 O preço: menos vida (24 contra 27 da Atiradora) e velocidade (2 contra 3). Ela pode trocar de posição, então fica um pouco abaixo da Atiradora, que é fixa.
@@ -50,7 +50,7 @@ As imagens acima mostram cada habilidade alterada, antes e depois (começando pe
 [b]Ladra de Cova[/b] — Truques Tóxicos vira uma autocura repetível; Adaga Arremessada bate mais forte em alvos marcados.
 [b]Infernal[/b] — adeus, exaustão: PANCADA Bárbara! deixa ela pilhada e enfraquece todos os inimigos; Surto de Adrenalina é a autocura dela.
 [b]Bandido[/b] — builds à distância e corpo a corpo funcionam: Tiro Rastreante dá revide sem sair do lugar.
-[b]Mestre dos Cães[/b] — menos dano, mais proteção: Apito de Alvo reduz a precisão inimiga, Cão de Guarda dá mais esquiva, e Investida do Cão funciona de qualquer posição.
+[b]Mestre dos Cães[/b] — especialista em sangramento à distância: os cães mordem qualquer posição; Apito de Alvo faz a presa sofrer mais críticos.
 [b]Bufão[/b] — continua sendo o melhor curador de estresse, mas Canção Inspiradora funciona da posição 2 e Solo de qualquer posição.
 [b]Leproso[/b] — Intimidar vira Quebra-armadura, um golpe que racha armadura, e o custo de Vingança cresce com o nível, então já vale usar no começo.
 [b]Soldado[/b] — o veterano que segura a linha: Reforçar é uma cura de estresse em grupo repetível; Comandar adiciona proteção.

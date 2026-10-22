@@ -1,0 +1,25 @@
+[b]Update 2.0.7 — Houndmaster becomes a ranged bleed specialist, mark signatures[/b]
+[list]
+[*]Houndmaster — Hound's Rush: damage -50% (was -25%), bleed 3-5 for 3 turns (was 1-3 for 2). The hounds bite any rank from any rank; the bleed is now the main damage. Marked bonus back to vanilla (+60-100%).
+[*]Houndmaster — Hound's Harry: damage -80% (was -70%), bleed 2-4 (was 1-3). Accuracy back to vanilla 85; bleed chance 100-140% (the extra +10% is gone).
+[*]Houndmaster — Target Whistle: the marked target takes +10-15% more crits for 3 turns (was an accuracy debuff). Crits make bleeds land more often and last longer.
+[*]Houndmaster — Blackjack: damage back to vanilla (-65%).
+[*]Bounty Hunter — Mark for Death: the marked target takes +15-25% more damage for 3 turns (was an armor debuff).
+[*]Musketeer — Mark the Quarry: strips 10-20% of the target's armor (the vanilla Bounty Hunter mark) and gives her speed. Piercing Ball accuracy 95 (was 90).
+[*]Shieldbreaker — Impale: accuracy 85 (was 90). Area attacks sit 5 below single-target ones.
+[*]Korean text fix: the debuff-cure tooltip typo ("약화 네거") now reads "약화 제거".
+[/list]
+Thanks to Rlver for the Houndmaster feedback.
+
+[b]更新 2.0.7 — 驯犬师改为远程流血专家，各英雄标记效果分工[/b]
+[list]
+[*]驯犬师——猎犬冲刺：伤害-50%（原为-25%），流血3-5持续3回合（原为1-3持续2回合）。猎犬可从任何位置咬任何位置，流血成为主要伤害。对被标记目标的加成恢复原版（+60-100%）。
+[*]驯犬师——猎犬骚扰：伤害-80%（原为-70%），流血2-4（原为1-3）。命中恢复原版85；流血几率改为100-140%（去掉了额外的+10%）。
+[*]驯犬师——标记口哨：被标记的目标3回合内受到暴击的几率+10-15%（原为降低命中）。暴击让流血更容易生效、持续更久。
+[*]驯犬师——棍闷：伤害恢复原版（-65%）。
+[*]赏金猎人——死亡标记：被标记的目标3回合内受到的伤害+15-25%（原为降低护甲）。
+[*]火枪手——指定猎物：削减目标10-20%护甲（原版赏金猎人标记的效果）并让自己加速。贯穿弹命中改为95（原为90）。
+[*]破盾者——贯穿：命中改为85（原为90）。范围攻击比单体攻击低5点命中。
+[*]韩文修正：解除减益的提示文字错别字已修正。
+[/list]
+感谢 Rlver 对驯犬师的建议。

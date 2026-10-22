@@ -18,7 +18,7 @@ Exemple : la riposte du Bandit passe d'Avancée de duelliste à Tir de pistage :
 [*][b]Suivre les règles du jeu de base.[/b]
 Exemple : une arme améliorée au maximum ne donne que 2 de vitesse (Arbalétrière 3→5) ; Brise-bouclier (5→9) et Flagellant (6→9) faisaient exception. Les deux gagnent désormais 2.
 [*][b]Chaque buff a un prix.[/b] Ce qui monte ici descend ailleurs : la difficulté ne gonfle ni ne baisse.
-Exemple : Jugement de la Vestale passe de −25 % à 0 % de dégâts, Assaut canin du Maître-chien de 0 % à −25 %.
+Exemple : Jugement de la Vestale passe de −25 % à 0 % de dégâts, Assaut canin du Maître-chien de 0 % à −50 % (le saignement a augmenté à la place).
 [*][b]Une compétence fait ce qu'elle montre.[/b] L'image et l'effet concordent.
 Exemple : un bandage arrête le saignement, et la Furie, infatigable, n'est plus épuisée.
 [*][b]Le lore donne la direction.[/b]
@@ -30,10 +30,10 @@ Exemple : les breloques de la Mousquetaire augmentent les malus, donc son Écran
 [h2]Exemple phare : la Mousquetaire[/h2]
 La Mousquetaire d'origine copiait l'Arbalétrière ; elle est reconstruite d'après son lore : tireuse célèbre qui, après un tournoi décevant, veut devenir une légende en chassant les monstres et garde ses distances faute d'expérience au combat.
 [list]
-[*][b]Balle perçante[/b] (PRÉ 90) : atteint tous les rangs, perce 10–30 % d'armure ; bonus contre les marqués bien moindre que l'Arbalétrière.
+[*][b]Balle perçante[/b] (PRÉ 95) : atteint tous les rangs, perce 10–30 % d'armure ; bonus contre les marqués bien moindre que l'Arbalétrière.
 [*][b]Écran de fumée[/b] (3 par combat) : étourdit les rangs 1–2 ; les étourdis disparaissent dans la fumée et le groupe frappe l'arrière.
 [*][b]Fumée de couverture[/b] : cache un allié 2 tours — une protection où personne n'encaisse à sa place.
-[*][b]Désigner la proie[/b] : « Cette proie est à moi ! » Marque la proie, qui subit plus de critiques ; précision et vitesse pendant 3 tours.
+[*][b]Désigner la proie[/b] : « Cette proie est à moi ! » Marque la proie, lui retire 10–20 % d'armure ; vitesse pendant 3 tours.
 [*][b]Tir de rabat, Arme d'appoint, Rafistolage[/b] : repousse les rangs 2–3, tire puis recule, et soulage un peu de stress en soignant.
 [/list]
 Le prix : moins de PV (24 contre 27) et de vitesse (2 contre 3). Elle peut changer de rang, donc reste un peu sous l'Arbalétrière.
@@ -50,7 +50,7 @@ Les images ci-dessus montrent chaque compétence modifiée, avant et après.
 [b]Pilleuse de tombes[/b] — Toxines astucieuses devient un auto-soin réutilisable ; Lancer de dague frappe plus fort les cibles marquées.
 [b]Furie[/b] — fini l'épuisement : Cri barbare la galvanise et affaiblit tous les ennemis ; Montée d'adrénaline est son auto-soin.
 [b]Bandit[/b] — les builds à distance comme au corps à corps tiennent la route : Tir de pistage donne la riposte sans bouger.
-[b]Maître-chien[/b] — moins de dégâts, plus de protection : Sifflet de ciblage baisse la précision ennemie, Chien de garde donne plus d'esquive, Assaut canin fonctionne depuis n'importe quel rang.
+[b]Maître-chien[/b] — spécialiste du saignement à distance : ses chiens mordent n'importe quel rang ; Sifflet de ciblage fait subir plus de critiques à la proie.
 [b]Bouffon[/b] — toujours le meilleur soigneur de stress, mais Mélodie exaltante fonctionne depuis le rang 2 et Solo depuis n'importe quel rang.
 [b]Lépreux[/b] — Intimider devient Brise-armure, et le coût de Vengeance grandit avec le niveau : utile dès le début.
 [b]Homme d'armes[/b] — le vétéran qui tient la ligne : Soutien est un soin de stress de groupe réutilisable ; Ordre ajoute de la protection.

@@ -18,7 +18,7 @@ Ejemplo: la réplica del Bandolero pasó de Avance del duelista a Disparo de seg
 [*][b]Respetar las reglas del propio juego.[/b]
 Ejemplo: en el juego base el arma mejorada al máximo solo da 2 de velocidad (Arbalestera 3→5); Rompescudos (5→9) y Flagelante (6→9) eran la excepción. Ahora ambos ganan 2.
 [*][b]Todo buff tiene precio.[/b] Lo que sube en un lado baja en otro: la dificultad ni se infla ni se desinfla.
-Ejemplo: Juicio de la Vestal pasa de −25% a 0% de daño, y Ataque de perro del Maestro canino de 0% a −25%.
+Ejemplo: Juicio de la Vestal pasa de −25% a 0% de daño, y Ataque de perro del Maestro canino de 0% a −50% (a cambio, más sangrado).
 [*][b]Una habilidad hace lo que parece.[/b] Arte y función coinciden a simple vista.
 Ejemplo: una venda corta el sangrado, y la Diabla, que nunca se cansa, ya no se agota.
 [*][b]El lore marca el rumbo.[/b]
@@ -30,10 +30,10 @@ Ejemplo: los abalorios de la Mosquetera suben la probabilidad de merma, así que
 [h2]Caso destacado: la Mosquetera[/h2]
 La Mosquetera original era una copia exacta de la Arbalestera, así que la rehicimos desde su lore: una tiradora célebre que, tras un torneo decepcionante, quiere ser leyenda cazando monstruos y, sin experiencia real de combate, mantiene la distancia.
 [list]
-[*][b]Bala penetrante[/b] (PRE 90): llega a todas las posiciones y perfora un 10–30% de armadura; su bonus contra marcados es muy inferior al de la Arbalestera.
+[*][b]Bala penetrante[/b] (PRE 95): llega a todas las posiciones y perfora un 10–30% de armadura; su bonus contra marcados es muy inferior al de la Arbalestera.
 [*][b]Cortina de humo[/b] (3 por combate): aturde las posiciones 1–2; los aturdidos desaparecen en el humo y el grupo golpea la retaguardia.
 [*][b]Humo de cobertura[/b]: oculta a un aliado 2 turnos para que no lo apunten — protección sin que nadie reciba los golpes.
-[*][b]Marcar la presa[/b]: "¡Esta presa es mía!" Marca la presa, que recibe más críticos, y gana precisión y velocidad 3 turnos.
+[*][b]Marcar la presa[/b]: "¡Esta presa es mía!" Marca la presa, le quita un 10–20% de armadura y gana velocidad 3 turnos.
 [*][b]Disparo de batida, Arma corta, Zurcir heridas[/b]: echa atrás las posiciones 2–3, dispara y retrocede, y alivia algo de estrés al curar.
 [/list]
 El precio: menos vida (24 frente a 27) y velocidad (2 frente a 3). Puede cambiar de posición, así que queda un poco por debajo de la Arbalestera.
@@ -50,7 +50,7 @@ Las imágenes de arriba muestran todas las habilidades modificadas, antes y desp
 [b]Asaltatumbas[/b] — Artimañas tóxicas pasa a ser una autocuración repetible; Lanzamiento de daga pega más fuerte a objetivos señalados.
 [b]Diabla[/b] — adiós al agotamiento: Graznido salvaje la enciende y debilita a todos los enemigos; Subidón de adrenalina es su autocuración.
 [b]Bandolero[/b] — funcionan tanto la build a distancia como la cuerpo a cuerpo: Disparo de seguimiento le da estocada sin moverse.
-[b]Maestro canino[/b] — menos daño, más protección: Silbido de objetivo baja la precisión enemiga, Perro guardián da más evasión y Ataque de perro funciona desde cualquier posición.
+[b]Maestro canino[/b] — especialista en sangrado a distancia: sus perros muerden cualquier posición; Silbido de objetivo hace que la presa reciba más críticos.
 [b]Bufón[/b] — sigue siendo el mejor curador de estrés, pero Tonada inspiradora funciona desde la posición 2 y Solo desde cualquier posición.
 [b]Leproso[/b] — Intimidación pasa a ser Rompearmaduras, y el coste de Venganza crece con el nivel: sirve desde el principio.
 [b]Hombre de armas[/b] — el veterano que sostiene la línea: Refuerzo es una curación de estrés para el grupo repetible; Mando añade protección.
