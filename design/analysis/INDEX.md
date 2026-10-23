@@ -47,3 +47,4 @@
 | [bleed_distribution.md](bleed_distribution.md) | 출혈 기술 13개 열·형태·수치 분포, 출혈 대상 보너스, 조련사 출혈 특화 판단 | 출혈, 조련사 | 2026-10-23 |
 | [trinket_direction_A.md](trinket_direction_A.md), [trinket_direction_B.md](trinket_direction_B.md), [trinket_direction_C.md](trinket_direction_C.md) | 장신구가 제시하는 방향(버프)·가드레일(패널티)로 본 19명(조련사 제외) 기술 대조, 최소 수정 제안 | 장신구, 방향, 가드레일 | 2026-10-23 |
 | [trinket_viability_A.md](trinket_viability_A.md), [trinket_viability_B.md](trinket_viability_B.md), [trinket_viability_C.md](trinket_viability_C.md) | 전용 장신구 전수(20명) 바닐라 대비 현재 가치: 살아있음/약해짐/버려짐, 원인 ID·최소 수정안 (가드레일 = 버려지는 장신구 없게) | 장신구, 가드레일 | 2026-10-23 |
+| [abomination_transform_stress.md](abomination_transform_stress.md) | 괴인 변신 스트레스 수지(억제의 자물쇠 포함), "깎으려고 변신" 방지 계산, ABO-008 | 괴인, 스트레스, 장신구 | 2026-10-23 |
