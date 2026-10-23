@@ -30,7 +30,7 @@ Exemple : les breloques de la Mousquetaire augmentent les malus, donc son Écran
 [h2]Exemple phare : la Mousquetaire[/h2]
 La Mousquetaire d'origine copiait l'Arbalétrière ; elle est reconstruite d'après son lore : tireuse célèbre qui, après un tournoi décevant, veut devenir une légende en chassant les monstres et garde ses distances faute d'expérience au combat.
 [list]
-[*][b]Balle perçante[/b] (PRÉ 95) : atteint tous les rangs, perce 10–30 % d'armure ; bonus contre les marqués bien moindre que l'Arbalétrière.
+[*][b]Balle perçante[/b] (PRÉ 95) : atteint tous les rangs, perce 25–50 % d'armure ; bonus contre les marqués bien moindre que l'Arbalétrière.
 [*][b]Écran de fumée[/b] (3 par combat) : étourdit les rangs 1–2 ; les étourdis disparaissent dans la fumée et le groupe frappe l'arrière.
 [*][b]Fumée de couverture[/b] : cache un allié 2 tours — une protection où personne n'encaisse à sa place.
 [*][b]Désigner la proie[/b] : « Cette proie est à moi ! » Marque la proie, lui retire 10–20 % d'armure ; vitesse pendant 3 tours.

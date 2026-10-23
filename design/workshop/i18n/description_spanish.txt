@@ -30,7 +30,7 @@ Ejemplo: los abalorios de la Mosquetera suben la probabilidad de merma, así que
 [h2]Caso destacado: la Mosquetera[/h2]
 La Mosquetera original era una copia exacta de la Arbalestera, así que la rehicimos desde su lore: una tiradora célebre que, tras un torneo decepcionante, quiere ser leyenda cazando monstruos y, sin experiencia real de combate, mantiene la distancia.
 [list]
-[*][b]Bala penetrante[/b] (PRE 95): llega a todas las posiciones y perfora un 10–30% de armadura; su bonus contra marcados es muy inferior al de la Arbalestera.
+[*][b]Bala penetrante[/b] (PRE 95): llega a todas las posiciones y perfora un 25–50% de armadura; su bonus contra marcados es muy inferior al de la Arbalestera.
 [*][b]Cortina de humo[/b] (3 por combate): aturde las posiciones 1–2; los aturdidos desaparecen en el humo y el grupo golpea la retaguardia.
 [*][b]Humo de cobertura[/b]: oculta a un aliado 2 turnos para que no lo apunten — protección sin que nadie reciba los golpes.
 [*][b]Marcar la presa[/b]: "¡Esta presa es mía!" Marca la presa, le quita un 10–20% de armadura y gana velocidad 3 turnos.

@@ -30,7 +30,7 @@ Exemplo: as preciosidades da Mosqueteira aumentam a chance de penalidade, então
 [h2]Destaque: a Mosqueteira[/h2]
 A Mosqueteira original era uma cópia exata da Atiradora, então foi refeita a partir do lore oficial: uma atiradora famosa que, depois de um torneio decepcionante, quer virar lenda caçando monstros e, sem experiência real de combate, mantém distância.
 [list]
-[*][b]Bala Penetrante[/b] (PRE 95): alcança todas as posições e perfura 10–30% de armadura; o bônus contra marcados é bem menor que o da Atiradora.
+[*][b]Bala Penetrante[/b] (PRE 95): alcança todas as posições e perfura 25–50% de armadura; o bônus contra marcados é bem menor que o da Atiradora.
 [*][b]Cortina de Fumaça[/b] (3 por batalha): atordoa as posições 1–2 inimigas; os atordoados somem na fumaça e o grupo foca a retaguarda.
 [*][b]Fumaça de Cobertura[/b]: esconde um aliado por 2 turnos para que os inimigos não o mirem — proteção sem ninguém apanhar no lugar.
 [*][b]Marcar a Presa[/b]: "Essa presa é minha!" Marca a presa, tira 10–20% da armadura dela e ganha velocidade por 3 turnos.

@@ -10,15 +10,15 @@ effect: .name "RB MUS Pierce Tagged 4" .target "performer" .chance 100% .curio_r
 effect: .name "RB MUS Pierce Tagged 5" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 40% .damage_high_multiply 40% .crit_chance_add 13% .on_hit true .on_miss false
 // MUS-103 Piercing Ball vs marked: +9..13% crit (Arbalest Sniper Shot is +50..100%). MUS-120: damage +25/28/31/34/40% (vanilla Sniper Damage curve 50/60/70/80/100 scaled to 25..40).
 effect: .name "RB MUS Armor Pierce 1" .target "performer" .chance 100% .skill_instant true .duration 1 .buff_ids RB_MUS_AP_1 .on_hit true .on_miss true .apply_once true
-// MUS-103 Piercing Ball armor piercing 10/15/20/25/30% for this shot only (skill_instant buff ignore_protection).
+// MUS-103 Piercing Ball armor piercing for this shot only (skill_instant buff ignore_protection). MUS-121: 25/30/35/40/50% (was 10..30).
 effect: .name "RB MUS Armor Pierce 2" .target "performer" .chance 100% .skill_instant true .duration 1 .buff_ids RB_MUS_AP_2 .on_hit true .on_miss true .apply_once true
-// MUS-103 Piercing Ball armor piercing 10/15/20/25/30% for this shot only (skill_instant buff ignore_protection).
+// MUS-103 Piercing Ball armor piercing for this shot only (skill_instant buff ignore_protection). MUS-121: 25/30/35/40/50% (was 10..30).
 effect: .name "RB MUS Armor Pierce 3" .target "performer" .chance 100% .skill_instant true .duration 1 .buff_ids RB_MUS_AP_3 .on_hit true .on_miss true .apply_once true
-// MUS-103 Piercing Ball armor piercing 10/15/20/25/30% for this shot only (skill_instant buff ignore_protection).
+// MUS-103 Piercing Ball armor piercing for this shot only (skill_instant buff ignore_protection). MUS-121: 25/30/35/40/50% (was 10..30).
 effect: .name "RB MUS Armor Pierce 4" .target "performer" .chance 100% .skill_instant true .duration 1 .buff_ids RB_MUS_AP_4 .on_hit true .on_miss true .apply_once true
-// MUS-103 Piercing Ball armor piercing 10/15/20/25/30% for this shot only (skill_instant buff ignore_protection).
+// MUS-103 Piercing Ball armor piercing for this shot only (skill_instant buff ignore_protection). MUS-121: 25/30/35/40/50% (was 10..30).
 effect: .name "RB MUS Armor Pierce 5" .target "performer" .chance 100% .skill_instant true .duration 1 .buff_ids RB_MUS_AP_5 .on_hit true .on_miss true .apply_once true
-// MUS-103 Piercing Ball armor piercing 10/15/20/25/30% for this shot only (skill_instant buff ignore_protection).
+// MUS-103 Piercing Ball armor piercing for this shot only (skill_instant buff ignore_protection). MUS-121: 25/30/35/40/50% (was 10..30).
 effect: .name "RB MUS Smoke Blind 1" .target "target" .curio_result_type "negative" .chance 100% .duration 2 .combat_stat_buff 1 .attack_rating_add -10% .on_hit true .on_miss false
 // MUS-104 Smokescreen: accuracy -10/10/12/12/15% (small, so it does not copy Suppressing Fire). MUS-116: 1 -> 2 turns.
 effect: .name "RB MUS Smoke Blind 2" .target "target" .curio_result_type "negative" .chance 110% .duration 2 .combat_stat_buff 1 .attack_rating_add -10% .on_hit true .on_miss false

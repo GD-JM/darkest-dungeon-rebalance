@@ -21,6 +21,8 @@ combat_skill: .id "aimed_shot" .level 1 .type "ranged" .atk 100% .dmg 0% .crit 6
 combat_skill: .id "aimed_shot" .level 2 .type "ranged" .atk 105% .dmg 0% .crit 7% .launch 43 .target 1234 .is_crit_valid True .effect "RB MUS Pierce Tagged 3" "RB MUS Armor Pierce 3"
 combat_skill: .id "aimed_shot" .level 3 .type "ranged" .atk 110% .dmg 0% .crit 8% .launch 43 .target 1234 .is_crit_valid True .effect "RB MUS Pierce Tagged 4" "RB MUS Armor Pierce 4"
 combat_skill: .id "aimed_shot" .level 4 .type "ranged" .atk 115% .dmg 0% .crit 9% .launch 43 .target 1234 .is_crit_valid True .effect "RB MUS Pierce Tagged 5" "RB MUS Armor Pierce 5"
+// MUS-121 Piercing Ball: armor piercing 10/15/20/25/30% -> 25/30/35/40/50%.
+// MUS-121 관통탄: 방어 관통 10/15/20/25/30% → 25/30/35/40/50%. 의도: 1렙에서 갑옷 적(영웅 등급 28/64종, 방어 중간값 약 30%)을 거의 뚫게 — 이름이 약속한 관통(P-19). 곡선은 바닐라 저격 모양(0/20/40/60/100%). 완전 관통(곡괭이·찌르기·결정타)은 근접·조건부라 원거리 1~4열은 부분 관통 [제작자 10-23 "창작마당 메인으로 바로"]
 // MUS-120 Piercing Ball vs marked: damage +25/29/33/37/40% -> +25/28/31/34/40% (vanilla curve shape).
 // MUS-120 관통탄 표식 대상 피해: +25/29/33/37/40% → +25/28/31/34/40%. 의도: 증가 폭이 4·4·4·3으로 들쭉날쭉했음 — 바닐라 석궁 저격(50/60/70/80/100, 5렙에서 크게 오름) 곡선을 25~40 범위에 그대로 축소. 1렙 25%는 은 화승총 탄환 하한(P-27) [제작자 10-23 "약간 이상하게 증가"]
 // MUS-119 Piercing Ball: accuracy 90 -> 95 (single-target main shot, as Arbalest Sniper Shot 95).

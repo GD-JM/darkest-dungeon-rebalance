@@ -30,7 +30,7 @@ Beispiel: Die Accessoires der Musketierin erhöhen die Schwächungschance, daher
 [h2]Paradebeispiel: die Musketierin[/h2]
 Die originale Musketierin war eine Kopie der Arbaleste, daher wurde sie aus ihrem Lore neu gebaut: eine gefeierte Schützin, die nach einem enttäuschenden Turnier als Monsterjägerin zur Legende werden will und mangels Kampferfahrung Abstand hält.
 [list]
-[*][b]Durchschlagende Kugel[/b] (TRF 95): trifft jeden Rang, durchdringt 10–30 % Rüstung; ihr Bonus gegen Markierte ist viel kleiner als bei der Arbaleste.
+[*][b]Durchschlagende Kugel[/b] (TRF 95): trifft jeden Rang, durchdringt 25–50 % Rüstung; ihr Bonus gegen Markierte ist viel kleiner als bei der Arbaleste.
 [*][b]Rauchwand[/b] (3 pro Kampf): betäubt die gegnerischen Ränge 1–2; Betäubte verschwinden im Rauch, die Gruppe trifft die hinteren Reihen.
 [*][b]Deckungsrauch[/b]: verbirgt einen Verbündeten 2 Runden – Schutz, ohne dass jemand die Treffer einsteckt.
 [*][b]Beute markieren[/b]: „Diese Beute gehört mir!“ Markiert die Beute, senkt ihre Rüstung um 10–20 %; 3 Runden mehr Tempo.
