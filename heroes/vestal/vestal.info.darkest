@@ -46,11 +46,13 @@ combat_skill: .id "judgement" .level 4 .type "ranged" .atk 110% .dmg 0% .crit 4%
 // VES-009 피해 -25 -> 0. 자기 회복이 철퇴로 갔으니(VES-001) 회복 없는 4열 도달 공격으로 남긴다. 가치 +2 -> +33%p, 위무(+73)는 못 넘음
 
 
-combat_skill: .id "dazzling_light" .level 0 .type "ranged" .atk 90% .dmg -75% .crit 5% .launch 43 .target 123 .is_crit_valid True  .effect "Vestal Stun 1" "Dazzling Light 1"
-combat_skill: .id "dazzling_light" .level 1 .type "ranged" .atk 95% .dmg -75% .crit 6% .launch 43 .target 123 .is_crit_valid True  .effect "Vestal Stun 2" "Dazzling Light 1"
-combat_skill: .id "dazzling_light" .level 2 .type "ranged" .atk 100% .dmg -75% .crit 7% .launch 43 .target 123 .is_crit_valid True  .effect "Vestal Stun 3" "Dazzling Light 1"
-combat_skill: .id "dazzling_light" .level 3 .type "ranged" .atk 105% .dmg -75% .crit 8% .launch 43 .target 123 .is_crit_valid True  .effect "Vestal Stun 4" "Dazzling Light 1"
-combat_skill: .id "dazzling_light" .level 4 .type "ranged" .atk 110% .dmg -75% .crit 9% .launch 43 .target 123 .is_crit_valid True  .effect "Vestal Stun 5" "Dazzling Light 1"
+combat_skill: .id "dazzling_light" .level 0 .type "ranged" .atk 90% .dmg -75% .crit 5% .launch 432 .target 12 .is_crit_valid True  .effect "Vestal Stun 1" "Dazzling Light 1"
+combat_skill: .id "dazzling_light" .level 1 .type "ranged" .atk 95% .dmg -75% .crit 6% .launch 432 .target 12 .is_crit_valid True  .effect "Vestal Stun 2" "Dazzling Light 1"
+combat_skill: .id "dazzling_light" .level 2 .type "ranged" .atk 100% .dmg -75% .crit 7% .launch 432 .target 12 .is_crit_valid True  .effect "Vestal Stun 3" "Dazzling Light 1"
+combat_skill: .id "dazzling_light" .level 3 .type "ranged" .atk 105% .dmg -75% .crit 8% .launch 432 .target 12 .is_crit_valid True  .effect "Vestal Stun 4" "Dazzling Light 1"
+combat_skill: .id "dazzling_light" .level 4 .type "ranged" .atk 110% .dmg -75% .crit 9% .launch 432 .target 12 .is_crit_valid True  .effect "Vestal Stun 5" "Dazzling Light 1"
+// VES-015 Dazzling Light: use ranks 4-3 -> 4-3-2 (vanilla), targets 1-2-3 -> 1-2.
+// VES-015 눈부신 광채: 사용 3·4 → 2·3·4열(바닐라), 대상 1·2·3 → 1·2열. 의도: 2열 성녀도 기절을 쓰게 해 핏빛 궁정 세트(기절 +35%p)가 1·2열에서 살아남게(장신구 가드레일 P-27). 3열까지 닿으면 심판·광채·회복 2개가 "정답 4개"로 굳어 다른 기술을 안 쓴다 → 3열 제외 [제작자 10-23]
 // VES-003 VES-008 [trace 2026-10-05] Separate rear stun from front play without removing its vanilla damage.
 //3,4열과 1,2열 분리 위해 432 -> 43으로 변경
 // VES-008 피해 -100 -> -75 롤백(바닐라). 사용 열 43 분리(VES-003)만으로 하향은 충분, 피해까지 없애면 키트 최하위(-19%p)라 후열 선택지에서 빠짐. 가치 -19 -> +24%p
