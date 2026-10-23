@@ -1,0 +1,9 @@
+[b]Update 2.5.1 — Piercing Ball pierces for real[/b]
+[list]
+[*]Musketeer — Piercing Ball: armor piercing 25/30/35/40/50% (was 10-30%). At level 1 it now gets through most armored enemies (their armor is around 30%), and her Mark the Quarry and crit bonus stack on top.
+[/list]
+
+[b]更新 2.5.1 — 贯穿弹名副其实[/b]
+[list]
+[*]火枪手——贯穿弹：护甲穿透25/30/35/40/50%（原为10-30%）。1级就能穿透大多数有护甲的敌人（护甲约30%），指定猎物和暴击加成还能叠加。
+[/list]
