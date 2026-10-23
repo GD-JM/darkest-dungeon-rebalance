@@ -16,8 +16,10 @@ combat_skill: .id "kris_stab" .level 2 .type "melee" .atk 95% .dmg 0% .crit 5% .
 combat_skill: .id "kris_stab" .level 3 .type "melee" .atk 100% .dmg 0% .crit 6% .launch 4321 .target 123 .is_crit_valid True 
 combat_skill: .id "kris_stab" .level 4 .type "melee" .atk 105% .dmg 0% .crit 7% .launch 4321 .target 123 .is_crit_valid True 
 combat_skill: .id "festering_vapours" .level 0 .type "ranged" .atk 95% .dmg -75% .crit 0% .launch 4321 .target 1234 .is_crit_valid True  .effect "RB ANT Blight 1" "Antiq Blight Debuff 1"
+// ANT-002 부패의 연막 1렙: 중독 1 → 2 (RB ANT Blight 1).
 combat_skill: .id "festering_vapours" .level 1 .type "ranged" .atk 100% .dmg -75% .crit 1% .launch 4321 .target 1234 .is_crit_valid True  .effect "Antiq Blight 2" "Antiq Blight Debuff 2"
 combat_skill: .id "festering_vapours" .level 2 .type "ranged" .atk 105% .dmg -75% .crit 2% .launch 4321 .target 1234 .is_crit_valid True  .effect "RB ANT Blight 3" "Antiq Blight Debuff 3"
+// ANT-002 부패의 연막 3렙: 중독 2 → 3 (RB ANT Blight 3).
 combat_skill: .id "festering_vapours" .level 3 .type "ranged" .atk 110% .dmg -75% .crit 3% .launch 4321 .target 1234 .is_crit_valid True  .effect "Antiq Blight 4" "Antiq Blight Debuff 4"
 combat_skill: .id "festering_vapours" .level 4 .type "ranged" .atk 115% .dmg -75% .crit 4% .launch 4321 .target 1234 .is_crit_valid True  .effect "Antiq Blight 5" "Antiq Blight Debuff 5"
 // ANT-002 festering_vapours: blight 1/2/2/3/4 -> 2/2/3/3/4 (3 turns; levels 2/4/5 keep vanilla effects).
