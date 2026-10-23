@@ -30,7 +30,7 @@ Example: the Musketeer's trinkets boost debuff chance, so her new Smokescreen st
 [h2]Showcase: the Musketeer[/h2]
 The original Musketeer was an exact copy of the Arbalest, so she was rebuilt from her official lore: a celebrated sharpshooter who wants to become a legend by hunting monsters after a disappointing tournament, and who keeps her distance for lack of real combat experience.
 [list]
-[*][b]Piercing Ball[/b] (ACC 95): reaches every rank and pierces 10–30% armor; her bonus vs marked targets is far smaller than the Arbalest's.
+[*][b]Piercing Ball[/b] (ACC 95): reaches every rank and pierces 25–50% armor; her bonus vs marked targets is far smaller than the Arbalest's.
 [*][b]Smokescreen[/b] (3 per battle): stuns enemy ranks 1–2; stunned enemies vanish in the smoke, so the party strikes the back line.
 [*][b]Covering Smoke[/b]: hides one ally for 2 turns so enemies can't single them out — protection without anyone taking the hits.
 [*][b]Mark the Quarry[/b]: "This prize is mine!" She marks her prey, strips 10–20% of its armor and gains speed for 3 turns.
