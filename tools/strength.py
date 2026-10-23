@@ -29,6 +29,7 @@ PARAM = dict(
     ENEMY_DODGE_CAP=True, # R-VALUE-19: 적 회피 감소는 몬스터 회피 분포 + 95% 자동 명중 상한으로 센다
     DMG_RECEIVED=True,    # R-VALUE-18: 적 받는 피해 +x = 그 적을 치는 아군 공격 피해 +x (라운드당 아군 1공격 가정, 받는 치명타와 같은 가정)
     BURN_TIMING=True,     # R-VALUE-24: 화상은 라운드 끝에 터진다(게임 설명문). 건 라운드에 대상이 아직 행동 전이면(0.5) 출혈·중독(대상 턴 시작)과 달리 첫 틱이 그 행동 뒤 -> 첫 틱 몫을 한 라운드 늦은 가치(1 - DEATH_RATE)로
+    BUFF_TIMING=True,     # R-VALUE-25: 아군·파티 강화와 호위·은신도 약화와 같은 턴별 유효율(첫 턴 0.5 — 아군 절반은 이미 행동, 이후 0.607 — 전투가 끝나 가는 몫). 자기 강화는 예전 규칙(상한 2) 유지
     DEBUFF_TIMING=True,   # R-VALUE-23: 적 약화 턴별 유효율 = 첫 턴 DEBUFF_W1(이미 행동했을 수 있음) x 이후 턴 (1 - DEATH_RATE)^k (처치 우선 대상이 죽음). 약화로 못 잡은 만큼 맞는다(기회비용) [제작자]
     DEBUFF_W1=0.5,
     ENEMY_CRIT=True,      # R-VALUE-22: 적 치명 감소 = 몬스터 공격별 적중률 x 줄어든 치명(그 기술 치명 아래로 못 내려감) x (치명 추가 피해 + 받는 스트레스 17.5)
@@ -534,6 +535,13 @@ def monster_crit_skills():
     return tuple(out)
 
 
+def buff_rounds(dur, P):
+    """R-VALUE-25 아군·파티 강화가 실제로 일하는 턴 수(약화와 같은 가중). 끄면 min(dur, 상한)"""
+    if not P.get('BUFF_TIMING', True):
+        return min(dur, P['BUFF_DUR_CAP'])
+    return debuff_rounds(dur, dict(P, DEBUFF_TIMING=True))
+
+
 def debuff_rounds(dur, P):
     """R-VALUE-23 적 약화가 실제로 일하는 턴 수. 지속 상한(BUFF_DUR_CAP)까지 턴별 가중 합:
     첫 턴은 그 적이 이미 행동했을 수 있어 DEBUFF_W1, k번째 이후 턴은 그 적이 살아 있을 확률 (1 - DEATH_RATE)^(k-1).
@@ -989,9 +997,9 @@ def skill_value(C, l, d):
                 base_hp = H['hp'] if who == 'performer' else C.med_hp
                 add('회복', x * base_hp * ch * (1 if who == 'performer' else heal_n) * sm)
             if 'guard' in k:
-                add('보호', P['ENEMY_ACT'] * P['HITS_TAKEN'] * min(dur, P['BUFF_DUR_CAP']) * ch * sm)
+                add('보호', P['ENEMY_ACT'] * P['HITS_TAKEN'] * buff_rounds(dur, P) * ch * sm)
             if 'stealth' in k:                               # 은신: 단일 공격 대상에서 빠진다. 보호와 같은 값으로 센다 (P STEALTH)
-                add('보호', P['STEALTH'] * P['ENEMY_ACT'] * P['HITS_TAKEN'] * min(dur, P['BUFF_DUR_CAP']) * ch * sm)
+                add('보호', P['STEALTH'] * P['ENEMY_ACT'] * P['HITS_TAKEN'] * buff_rounds(dur, P) * ch * sm)
             if 'health_damage_blocks' in k:
                 add('보호', P['ENEMY_ACT'] * num(first(k, 'health_damage_blocks')) * ch * sm)
             if 'riposte' in k:
@@ -1009,7 +1017,7 @@ def skill_value(C, l, d):
             if 'combat_stat_buff' in k:
                 cm = P['COND_OTHER'] if 'keyStatus' in k else 1.0
                 wh = 'self' if tgt_n == 1 and who == 'performer' else 'ally'
-                dd = min(dur, P['BUFF_DUR_CAP'])
+                dd = min(dur, P['BUFF_DUR_CAP']) if wh == 'self' else buff_rounds(dur, P)
                 for key in k:
                     x = num(first(k, key)) / 100
                     if key == 'speed_rating_add':
@@ -1020,7 +1028,7 @@ def skill_value(C, l, d):
                         add('강화' if x > 0 else '대가', C.stat_value(stat, x, dd, wh) * tgt_n * ch * cm)
             if 'buff_ids' in k:
                 wh = 'self' if who == 'performer' else 'ally'
-                v = C.buff_ids_value(k['buff_ids'], min(dur, P['BUFF_DUR_CAP']), wh) * tgt_n * ch
+                v = C.buff_ids_value(k['buff_ids'], min(dur, P['BUFF_DUR_CAP']) if wh == 'self' else buff_rounds(dur, P), wh) * tgt_n * ch
                 add('강화' if v > 0 else '대가', v)
                 for b in k['buff_ids']:                           # 턴당 회복 강화 (도망자 도피: 은신 중에만)
                     B = C.buffs.get(b.strip('"'), {})
@@ -1029,7 +1037,7 @@ def skill_value(C, l, d):
                         add('회복', B['amount'] * ticks * tgt_n * ch * P['SUPPORT_MULT'])
             if first(k, 'buff_type') == 'hp_heal_received_percent':
                 add('회복 증폭', C.stat_value('hp_heal_received_percent', num(first(k, 'buff_amount')) / 100,
-                                             min(dur, P['BUFF_DUR_CAP']), 'ally') * tgt_n * ch)
+                                             buff_rounds(dur, P), 'ally') * tgt_n * ch)
             if who == 'performer':                          # 자해 지속 피해(고행자 재기)는 자기 저항 적용 후 대가
                 for key, rk in (('dotBleed', 'bleed'), ('dotPoison', 'poison')):
                     if key in k:
