@@ -66,13 +66,13 @@ effect: .name "RB MAA Bolster Rally 5" .target "target" .curio_result_type "posi
 effect: .name "RB MAA Bolster Guarded 1" .target "target" .curio_result_type "positive" .chance 100% .buff_ids "RB_MAA_Bolster_Guarded_StressHeal_1" .duration 2 .on_hit true .on_miss true .queue true
 // MAA-017 Bolster: guarded allies stress heal received +15/17/20/22/25%% (was +50%%).
 // MAA-011 Guarded allies receive 1.5x stress healing while this lasts (synergy with Defender, Protect Me, Guard Dog).
-effect: .name "RB MAA Bolster Guarded 2" .target "target" .curio_result_type "positive" .chance 100% .buff_ids "RB_MAA_Bolster_Guarded_StressHeal_2" .duration 3 .on_hit true .on_miss true .queue true
+effect: .name "RB MAA Bolster Guarded 2" .target "target" .curio_result_type "positive" .chance 100% .buff_ids "RB_MAA_Bolster_Guarded_StressHeal_2" .duration 2 .on_hit true .on_miss true .queue true
 // MAA-017 Bolster: guarded allies stress heal received +15/17/20/22/25%% (was +50%%).
 // MAA-011 Guarded allies receive 1.5x stress healing while this lasts (synergy with Defender, Protect Me, Guard Dog).
 effect: .name "RB MAA Bolster Guarded 3" .target "target" .curio_result_type "positive" .chance 100% .buff_ids "RB_MAA_Bolster_Guarded_StressHeal_3" .duration 2 .on_hit true .on_miss true .queue true
 // MAA-017 Bolster: guarded allies stress heal received +15/17/20/22/25%% (was +50%%).
 // MAA-011 Guarded allies receive 1.5x stress healing while this lasts (synergy with Defender, Protect Me, Guard Dog).
-effect: .name "RB MAA Bolster Guarded 4" .target "target" .curio_result_type "positive" .chance 100% .buff_ids "RB_MAA_Bolster_Guarded_StressHeal_4" .duration 3 .on_hit true .on_miss true .queue true
+effect: .name "RB MAA Bolster Guarded 4" .target "target" .curio_result_type "positive" .chance 100% .buff_ids "RB_MAA_Bolster_Guarded_StressHeal_4" .duration 2 .on_hit true .on_miss true .queue true
 // MAA-017 Bolster: guarded allies stress heal received +15/17/20/22/25%% (was +50%%).
 // MAA-011 Guarded allies receive 1.5x stress healing while this lasts (synergy with Defender, Protect Me, Guard Dog).
 effect: .name "RB MAA Bolster Guarded 5" .target "target" .curio_result_type "positive" .chance 100% .buff_ids "RB_MAA_Bolster_Guarded_StressHeal_5" .duration 2 .on_hit true .on_miss true .queue true

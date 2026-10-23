@@ -13,3 +13,7 @@ effect: .name "RB ANT Flash Burn 4" .target "target" .curio_result_type "negativ
 // ANT-001 Flashpowder ignites the target: burn 2 (irresistible). Small on purpose - opens Runaway synergies (Hearthlight crit vs burning, Backdraft). Shared: Vestal gods_illumination (VES-013) uses these same effects - changing them changes both.
 effect: .name "RB ANT Flash Burn 5" .target "target" .curio_result_type "negative" .chance 140% .dotBurn 3 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
 // ANT-001 Flashpowder ignites the target: burn 3 (irresistible). Small on purpose - opens Runaway synergies (Hearthlight crit vs burning, Backdraft). Shared: Vestal gods_illumination (VES-013) uses these same effects - changing them changes both.
+effect: .name "RB ANT Blight 1" .target "target" .curio_result_type "negative" .chance 100% .dotPoison 2 .duration 3 .on_hit true .on_miss false .can_apply_on_death true
+// ANT-002 Festering Vapours level 1 blight 2 (vanilla 1).
+effect: .name "RB ANT Blight 3" .target "target" .curio_result_type "negative" .chance 120% .dotPoison 3 .duration 3 .on_hit true .on_miss false .can_apply_on_death true
+// ANT-002 Festering Vapours level 3 blight 3 (vanilla 2).
