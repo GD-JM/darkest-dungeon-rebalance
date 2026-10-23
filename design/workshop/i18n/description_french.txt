@@ -18,7 +18,7 @@ Exemple : la riposte du Bandit passe d'Avancée de duelliste à Tir de pistage :
 [*][b]Suivre les règles du jeu de base.[/b]
 Exemple : une arme améliorée au maximum ne donne que 2 de vitesse (Arbalétrière 3→5) ; Brise-bouclier (5→9) et Flagellant (6→9) faisaient exception. Les deux gagnent désormais 2.
 [*][b]Chaque buff a un prix.[/b] Ce qui monte ici descend ailleurs : la difficulté ne gonfle ni ne baisse.
-Exemple : Jugement de la Vestale passe de −25 % à 0 % de dégâts, Assaut canin du Maître-chien de 0 % à −50 % (le saignement a augmenté à la place).
+Exemple : Jugement de la Vestale passe de −25 % à 0 % de dégâts, Assaut canin du Maître-chien de 0 % à −40 % (le saignement a augmenté à la place).
 [*][b]Une compétence fait ce qu'elle montre.[/b] L'image et l'effet concordent.
 Exemple : un bandage arrête le saignement, et la Furie, infatigable, n'est plus épuisée.
 [*][b]Le lore donne la direction.[/b]

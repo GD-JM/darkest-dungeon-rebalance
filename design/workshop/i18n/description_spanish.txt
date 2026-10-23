@@ -18,7 +18,7 @@ Ejemplo: la réplica del Bandolero pasó de Avance del duelista a Disparo de seg
 [*][b]Respetar las reglas del propio juego.[/b]
 Ejemplo: en el juego base el arma mejorada al máximo solo da 2 de velocidad (Arbalestera 3→5); Rompescudos (5→9) y Flagelante (6→9) eran la excepción. Ahora ambos ganan 2.
 [*][b]Todo buff tiene precio.[/b] Lo que sube en un lado baja en otro: la dificultad ni se infla ni se desinfla.
-Ejemplo: Juicio de la Vestal pasa de −25% a 0% de daño, y Ataque de perro del Maestro canino de 0% a −50% (a cambio, más sangrado).
+Ejemplo: Juicio de la Vestal pasa de −25% a 0% de daño, y Ataque de perro del Maestro canino de 0% a −40% (a cambio, más sangrado).
 [*][b]Una habilidad hace lo que parece.[/b] Arte y función coinciden a simple vista.
 Ejemplo: una venda corta el sangrado, y la Diabla, que nunca se cansa, ya no se agota.
 [*][b]El lore marca el rumbo.[/b]

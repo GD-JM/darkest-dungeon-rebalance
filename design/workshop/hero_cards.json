@@ -10,11 +10,13 @@
     "old": [
      "Allies: stress +8",
      "Self: no stress heal",
+     "Self: heal 5-10",
      "Revert: allies stress heal 2"
     ],
     "new": [
      "Allies: stress +6",
-     "Self: stress heal 4-8",
+     "Self: stress heal 4",
+     "Self: heal 6-10",
      "Revert: allies stress heal 3"
     ]
    },
@@ -464,11 +466,13 @@
     "icon": "seven",
     "old": [
      "Takes ally bleed and blight",
-     "No debuff cleanse"
+     "No debuff cleanse",
+     "No stress heal"
     ],
     "new": [
      "Takes ally bleed and blight",
      "Clears ally debuffs",
+     "Ally: stress heal 4-6",
      "Self: SPD +3-5 (3 turns)"
     ]
    }
@@ -723,9 +727,9 @@
     ],
     "new": [
      "ACC 90",
-     "DMG -50%",
+     "DMG -40%",
      "Use from any rank",
-     "Bleed 3-5 for 3 turns"
+     "Bleed 2-4 for 3 turns"
     ]
    },
    {
@@ -1195,10 +1199,12 @@
     "name": "Dazzling Light",
     "icon": "three",
     "old": [
-     "Use from ranks 2-4"
+     "Use from ranks 2-4",
+     "Targets ranks 1-3"
     ],
     "new": [
-     "Use from ranks 3-4"
+     "Use from ranks 2-4",
+     "Targets ranks 1-2 only"
     ]
    },
    {

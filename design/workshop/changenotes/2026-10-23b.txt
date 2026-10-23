@@ -1,0 +1,19 @@
+[b]Update 2.5 — Every class trinket stays useful[/b]
+A new rule for the whole patch: no hero's class trinket may become worthless. We checked every class trinket of all 20 heroes against vanilla, and tuned the heroes so each one is still a real choice. This update finishes the work started in 2.0.7.
+[list]
+[*]Houndmaster — Hound's Rush: damage -40% (2.0.7 had -50%), bleed 2-4 for 3 turns. The Spiked Collar (+20% damage) and the Lawman's Badge set (+25% damage vs bleeding) keep their value, and Hound's Harry still spreads bleed across the whole enemy line.
+[*]Vestal — Dazzling Light: usable from rank 2 again (vanilla), but it now reaches ranks 1-2 only. A rank-2 Vestal can stun, so her Crimson Court set (+35% stun) works at the front, and the "Judgement + Dazzling Light + two heals" lock is loosened.
+[*]Abomination — Transform: self stress heal is 4 at every level (was 4-8), self heal 6/7/8/9/10 (was 5/6/7/8/10). With the Restraining Padlock, transforming now ends near zero stress instead of becoming a way to farm stress relief.
+[*]Flagellant — Suffer also relieves 4-6 stress from the ally whose bleed, blight and debuffs he takes on.
+[*]Musketeer — Piercing Ball vs marked: +25/28/31/34/40% damage, following the Arbalest's Sniper Shot curve.
+[/list]
+
+[b]更新 2.5 — 每件职业饰品都有用武之地[/b]
+本次补丁的新原则：任何英雄的职业饰品都不能变成废品。我们把20名英雄的全部职业饰品与原版逐一对比，并调整英雄，使每件饰品仍是真正的选择。本次更新完成了2.0.7开始的工作。
+[list]
+[*]驯犬师——猎犬冲刺：伤害-40%（2.0.7为-50%），流血2-4持续3回合。尖刺项圈（伤害+20%）和执法者徽章套装（对流血目标伤害+25%）保住了价值，猎犬骚扰依然能让整排敌人流血。
+[*]修女——炫目圣光：恢复可在2号位使用（原版），但现在只能打到1-2号位。2号位修女也能眩晕，血色宫廷套装（眩晕+35%）在前排也有用，"审判+炫目圣光+两个治疗"的固定搭配被打破。
+[*]咒缚者——变身：自身减压在所有等级都是4（原为4-8），自身治疗6/7/8/9/10（原为5/6/7/8/10）。佩戴禁锢之锁时，变身的压力收支接近零，而不会变成刷减压的手段。
+[*]苦修者——受难：替队友承受流血、腐蚀和减益的同时，还为该队友减压4-6。
+[*]火枪手——贯穿弹对被标记目标：伤害+25/28/31/34/40%，沿用弩手狙击射击的成长曲线。
+[/list]

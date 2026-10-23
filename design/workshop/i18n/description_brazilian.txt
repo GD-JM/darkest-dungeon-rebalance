@@ -18,7 +18,7 @@ Exemplo: o contra-ataque do Bandido saiu do Avanço do Duelista e foi para o Tir
 [*][b]Seguir as regras do próprio jogo.[/b]
 Exemplo: no jogo base, a arma no máximo dá só 2 de velocidade (Atiradora 3→5); Destruidora (5→9) e Flagelante (6→9) fugiam disso. Agora os dois ganham 2.
 [*][b]Todo buff tem um preço.[/b] O que sobe num lugar desce em outro, então a dificuldade geral não infla nem desinfla.
-Exemplo: Julgamento da Vestal foi de −25% para 0% de dano, e Investida do Cão do Mestre dos Cães de 0% para −50% (o sangramento subiu no lugar).
+Exemplo: Julgamento da Vestal foi de −25% para 0% de dano, e Investida do Cão do Mestre dos Cães de 0% para −40% (o sangramento subiu no lugar).
 [*][b]A habilidade faz o que parece.[/b] Arte e função batem à primeira vista.
 Exemplo: bandagem estanca sangramento, e a Infernal, que nunca se cansa, não fica mais exausta.
 [*][b]A direção vem do lore oficial.[/b]

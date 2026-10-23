@@ -18,7 +18,7 @@ Przykład: riposta Oprycha przeszła z Doskoku Awanturnika na Strzał Śledzący
 [*][b]Trzymamy się zasad samej gry.[/b]
 Przykład: w podstawce broń na maksa daje tylko 2 szybkości (Kuszniczka 3→5); Łamaczka Tarcz (5→9) i Flagelant (6→9) odstawali. Teraz obaj +2.
 [*][b]Każdy buff ma cenę.[/b] Co rośnie w jednym miejscu, spada w innym – trudność ani nie puchnie, ani nie maleje.
-Przykład: Wyrok Kapłanki z −25% na 0% obrażeń, a Atak Ogara Łowczego z 0% na −50% (w zamian większe krwawienie).
+Przykład: Wyrok Kapłanki z −25% na 0% obrażeń, a Atak Ogara Łowczego z 0% na −40% (w zamian większe krwawienie).
 [*][b]Umiejętność robi to, na co wygląda.[/b] Grafika i działanie pasują od razu.
 Przykład: opatrunek tamuje krwawienie, a niestrudzona Awanturniczka nie jest już wyczerpana.
 [*][b]Kierunek wyznacza oficjalny lore.[/b]

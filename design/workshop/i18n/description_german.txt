@@ -18,7 +18,7 @@ Beispiel: Die Riposte des Wegelagerers wanderte von Fechtschritt zu Gezielter Sc
 [*][b]Den eigenen Regeln des Spiels folgen.[/b]
 Beispiel: Grundspiel-Helden gewinnen über alle Waffenstufen nur 2 Tempo (Arbaleste 3→5); Schildbrecherin (5→9) und Flagellant (6→9) fielen heraus. Beide jetzt +2.
 [*][b]Jeder Buff hat seinen Preis.[/b] Was hier steigt, sinkt anderswo – die Schwierigkeit bläht sich weder auf noch schrumpft sie.
-Beispiel: Richtspruch der Vestalin geht von −25 % auf 0 % Schaden, Hundebiss des Hundemeisters von 0 % auf −50 % (dafür mehr Blutung).
+Beispiel: Richtspruch der Vestalin geht von −25 % auf 0 % Schaden, Hundebiss des Hundemeisters von 0 % auf −40 % (dafür mehr Blutung).
 [*][b]Eine Fähigkeit tut, wonach sie aussieht.[/b] Bild und Funktion passen auf einen Blick.
 Beispiel: Ein Verband stillt Blutungen, und die unermüdliche Barbarin wird nicht mehr erschöpft.
 [*][b]Die Richtung kommt aus der offiziellen Geschichte.[/b]
