@@ -18,7 +18,7 @@ Example: the Highwayman's riposte moved from Duelist's Advance to Tracking Shot,
 [*][b]Follow the base game's own rules.[/b]
 Example: base-game heroes gain only 2 speed over all weapon upgrades (Arbalest 3→5); Shieldbreaker (5→9) and Flagellant (6→9) were the outliers. Both now gain 2.
 [*][b]Every buff has a price.[/b] What goes up somewhere comes down elsewhere, so overall difficulty neither inflates nor deflates.
-Example: Vestal's Judgement went from −25% to 0% damage, and Houndmaster's Hound's Rush from 0% to −50% (its bleed went up instead).
+Example: Vestal's Judgement went from −25% to 0% damage, and Houndmaster's Hound's Rush from 0% to −40% (its bleed went up instead).
 [*][b]A skill should do what it looks like.[/b] Art and function match at a glance.
 Example: a bandage stops bleeding (Arbalest's Battlefield Bandage), and the Hellion, who never tires, no longer gets exhausted.
 [*][b]The lore sets the direction.[/b]
