@@ -14,3 +14,11 @@ effect: .name "RB ABO human_stress_heal_party_1" .target "performer_group_other"
 effect: .name "RB ABO Transform HealStress 1"  .target "performer" .curio_result_type "positive" .chance 100%  .healstress 4	.on_hit true .on_miss false .queue true
 // ABO-004 [trace 2026-10-05] Relieve self stress during transformation while retaining the allies fear/return cost. Effect: RB ABO Transform HealStress 1.
 // ABO-004 transform: self stress recovery 4 at skill level 1; crisis relief without spending the attack action.
+effect: .name "RB ABO Transform Heal 1" .target "performer" .curio_result_type "positive" .chance 100% .heal 6 .on_hit true .on_miss false .queue true
+// ABO-009 Transform self heal 6/7/8/9 at levels 1-4 (vanilla 5/6/7/8; level 5 stays vanilla 10).
+effect: .name "RB ABO Transform Heal 2" .target "performer" .curio_result_type "positive" .chance 100% .heal 7 .on_hit true .on_miss false .queue true
+// ABO-009 Transform self heal 6/7/8/9 at levels 1-4 (vanilla 5/6/7/8; level 5 stays vanilla 10).
+effect: .name "RB ABO Transform Heal 3" .target "performer" .curio_result_type "positive" .chance 100% .heal 8 .on_hit true .on_miss false .queue true
+// ABO-009 Transform self heal 6/7/8/9 at levels 1-4 (vanilla 5/6/7/8; level 5 stays vanilla 10).
+effect: .name "RB ABO Transform Heal 4" .target "performer" .curio_result_type "positive" .chance 100% .heal 9 .on_hit true .on_miss false .queue true
+// ABO-009 Transform self heal 6/7/8/9 at levels 1-4 (vanilla 5/6/7/8; level 5 stays vanilla 10).
