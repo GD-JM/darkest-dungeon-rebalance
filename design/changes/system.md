@@ -14,3 +14,8 @@
 - 원인: info 파일을 스크립트로 직접 고친 뒤 `modfiles.txt`를 다시 만들지 않아, 목록의 크기(노상강도 12,982)가 실제(13,685)보다 작았다. 게임이 목록 크기만큼만 읽어 파일 끝쪽의 `skill_selection`(최대 4개 선택)이 잘렸고, 설정이 없으면 "선택 불가·전부 사용"으로 처리된다. 야만인·신비학자 info도 크기가 어긋나 있었다(끝쪽 줄 유실 가능).
 - 조치: `make_modfiles.py` 재실행으로 3건 해소. `check_comments.py`가 modfiles 크기 불일치를 검사해 실패로 처리하게 함 → 커밋 전 검사에서 걸린다.
 - 남은 일: 이미 7개로 저장된 노상강도 2명·도망자 1명은 이제 기술 선택이 가능해지므로 마을에서 3개씩 해제한다.
+
+### FIX-001 한국어 오타: "약화 네거" → "약화 제거" (2026-10-23)
+- 키: `effect_tooltip_cure_debuff` (약화 해제 툴팁, 고행자 고통 등). `localization/rebalance_fixes.string_table.xml`(english·koreana·koreanb).
+- 근거: 오타는 공식 아레나 DLC 한국어 파일(arena_koreana.loc2)에서 오고, YAMR·Trinkets Plus가 같은 문장을 복사해 갖고 있다. 제작자가 고통 툴팁 스크린샷으로 지적.
+- 미확인: 다른 모드가 같은 키를 먼저 덮으면 그대로 보일 수 있음(UI Enhancement 사례) → 게임 확인 필요.

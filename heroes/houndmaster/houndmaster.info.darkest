@@ -40,6 +40,8 @@ combat_skill: .id "hounds_harry" .level 1 .type "ranged" .atk 90% .dmg -80% .cri
 combat_skill: .id "hounds_harry" .level 2 .type "ranged" .atk 95% .dmg -80% .crit -3% .launch 432 .target ~1234 .is_crit_valid True  .effect "RB HM Harry Bleed 3"
 combat_skill: .id "hounds_harry" .level 3 .type "ranged" .atk 100% .dmg -80% .crit -2% .launch 432 .target ~1234 .is_crit_valid True  .effect "RB HM Harry Bleed 4"
 combat_skill: .id "hounds_harry" .level 4 .type "ranged" .atk 105% .dmg -80% .crit -1% .launch 432 .target ~1234 .is_crit_valid True  .effect "RB HM Harry Bleed 5"
+// HM-034 hounds_harry: bleed chance 110..150% -> 100..140% (RB HM Harry Bleed).
+// HM-034 사냥개 습격: 출혈 확률 110~150% → 100~140%. 의도: 바닐라의 +10% 특혜 정상화(HM-028 휘파람과 같은 원칙). 근거: 출혈 확률 장신구(징 박힌 목걸이 +30%, 허물송곳니 호루라기 +50%)가 이미 받쳐 줌 [제작자 10-23 "왜 특혜 줬는지 이해 안 된다, 출혈 장신구 많아서 괜찮다"]
 // HM-033 hounds_harry: accuracy 90 -> 85 (vanilla; area attacks sit 5 below single-target, as Hound's Rush 90).
 // HM-033 사냥개 습격: 명중 90 → 85(바닐라). 의도: 광역은 단일(돌진 90)보다 5 낮게 — 방패 파괴자 꿰뚫기와 대칭 [제작자 10-23]
 // HM-012 [trace 2026-10-05] Support the rear AOE bleed option after removing front-rank launch.
