@@ -31,6 +31,8 @@ combat_skill: .id "feint" .level 1 .type "melee" .atk 100% .dmg -50% .crit 9% .l
 combat_skill: .id "feint" .level 2 .type "melee" .atk 105% .dmg -50% .crit 10% .launch 321 .target 12 .is_crit_valid True  .effect "Mark Self" "Duelist Feint Buff 3" "RB DUE Duelist Feint Debuff 3" .valid_modes stance_defensive
 combat_skill: .id "feint" .level 3 .type "melee" .atk 110% .dmg -50% .crit 11% .launch 321 .target 12 .is_crit_valid True  .effect "Mark Self" "Duelist Feint Buff 4" "RB DUE Duelist Feint Debuff 4" .valid_modes stance_defensive
 combat_skill: .id "feint" .level 4 .type "melee" .atk 115% .dmg -50% .crit 12% .launch 321 .target 12 .is_crit_valid True  .effect "Mark Self" "Duelist Feint Buff 5" "RB DUE Duelist Feint Debuff 5" .valid_modes stance_defensive
+// DUE-013 feint: target PROT -10/12/15/17/20% -> -15/17/20/22/25% (3 turns).
+// DUE-013 페인트: 방어 감소 −10~−20% → −15/17/20/22/25%(3턴). 의도: 죽음의 표식이 받는 피해로 바뀌어(BH-022) 숫자 겹침(DUE-007 이유)이 사라짐 — 바닐라(−20~−30)와 DUE-007 사이로 [제작자 10-23]
 // DUE-007 feint: 방어 감소 -20/22/25/27/30% -> -10/12/15/17/20%(RB DUE Duelist Feint Debuff). 현상금 사냥꾼 죽음의 표식(-20~-30)과 같은 숫자였음, 표식의 바닐라 값으로 [제작자]
 
 combat_skill: .id "disengage" .level 0 .type "melee" .atk 95%  .dmg -50% .crit -1% .move 3 0 .launch 21 .target 12 .is_crit_valid True  .effect "Duelist Disengage Buff 1" "Duelist Disengage Any Position" "RB DUE Disengage Weaken 1" .valid_modes stance_defensive

@@ -22,20 +22,20 @@ effect: .name "RB DUE Duelist Touche Buff 5" .target "performer" .chance 100% .c
 // DUE-011 Touche dodge lasts 3 turns (was 2). Two stacks are +30..+50%, still below the old single-use +40..+50% (DUE-005).
 // DUE-005 Touche dodge 40-50 for 4 turns -> 15/17/20/22/25 for 2 turns. A 0% dmg basic attack stacking to 0% enemy hit chance; 2 stacks now equal the old single use.
 // edited vanilla effect (from dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest)
-effect: .name "RB DUE Duelist Feint Debuff 1" .target "target" .chance 110% .duration 3 .buff_ids "DUELIST_FEINT_ACCDEBUFF" "PROT-10"  .on_hit true .on_miss false
+effect: .name "RB DUE Duelist Feint Debuff 1" .target "target" .chance 110% .duration 3 .buff_ids "DUELIST_FEINT_ACCDEBUFF" "TRINKET_PROT_D3"  .on_hit true .on_miss false
 // DUE-007 Feint protection shred -10% (was -20..-30, same numbers as Mark for Death); accuracy debuff kept.
 // edited vanilla effect (from dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest)
-effect: .name "RB DUE Duelist Feint Debuff 2" .target "target" .chance 120% .duration 3 .buff_ids "DUELIST_FEINT_ACCDEBUFF" "RB_DUE_PROT-12"  .on_hit true .on_miss false
+effect: .name "RB DUE Duelist Feint Debuff 2" .target "target" .chance 120% .duration 3 .buff_ids "DUELIST_FEINT_ACCDEBUFF" "RB_DUE_PROT-17"  .on_hit true .on_miss false
 // DUE-007 Feint protection shred -12% (was -20..-30, same numbers as Mark for Death); accuracy debuff kept.
 // edited vanilla effect (from dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest)
-effect: .name "RB DUE Duelist Feint Debuff 3" .target "target" .chance 130% .duration 3 .buff_ids "DUELIST_FEINT_ACCDEBUFF" "TRINKET_PROT_D3"  .on_hit true .on_miss false
+effect: .name "RB DUE Duelist Feint Debuff 3" .target "target" .chance 130% .duration 3 .buff_ids "DUELIST_FEINT_ACCDEBUFF" "PROT-20"  .on_hit true .on_miss false
 // DUE-007 Feint protection shred -15% (was -20..-30, same numbers as Mark for Death); accuracy debuff kept.
 // edited vanilla effect (from dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest)
-effect: .name "RB DUE Duelist Feint Debuff 4" .target "target" .chance 140% .duration 3 .buff_ids "DUELIST_FEINT_ACCDEBUFF" "RB_DUE_PROT-17"  .on_hit true .on_miss false
+effect: .name "RB DUE Duelist Feint Debuff 4" .target "target" .chance 140% .duration 3 .buff_ids "DUELIST_FEINT_ACCDEBUFF" "RB_DUE_PROT-22"  .on_hit true .on_miss false
 // DUE-007 Feint protection shred -17% (was -20..-30, same numbers as Mark for Death); accuracy debuff kept.
 // edited vanilla effect (from dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest)
-effect: .name "RB DUE Duelist Feint Debuff 5" .target "target" .chance 150% .duration 3 .buff_ids "DUELIST_FEINT_ACCDEBUFF" "PROT-20"  .on_hit true .on_miss false
-// DUE-007 Feint protection shred -20% (was -20..-30, same numbers as Mark for Death); accuracy debuff kept.
+effect: .name "RB DUE Duelist Feint Debuff 5" .target "target" .chance 150% .duration 3 .buff_ids "DUELIST_FEINT_ACCDEBUFF" "RB_DUE_PROT-25"  .on_hit true .on_miss false
+// DUE-007 Feint protection shred; accuracy debuff kept. DUE-013: -15/17/20/22/25%.
 effect: .name "RB DUE Disengage Weaken 1" .target "target" .curio_result_type "negative" .chance 100% .duration 2 .combat_stat_buff 1 .damage_low_multiply -10% .damage_high_multiply -10% .on_hit true .on_miss false
 // DUE-012 Disengage: enemy damage -10/11/12/13/15% for 2 turns.
 effect: .name "RB DUE Disengage Weaken 2" .target "target" .curio_result_type "negative" .chance 110% .duration 2 .combat_stat_buff 1 .damage_low_multiply -11% .damage_high_multiply -11% .on_hit true .on_miss false
