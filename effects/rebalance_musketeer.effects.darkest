@@ -1,14 +1,14 @@
 // Rebalance - Musketeer (MUS-103..108), original rework 2026-10-21
 effect: .name "RB MUS Pierce Tagged 1" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 25% .damage_high_multiply 25% .crit_chance_add 9% .on_hit true .on_miss false
-// MUS-103 Piercing Ball vs marked: +25/29/33/37/40% damage, +9..13% crit (Arbalest Sniper Shot is +60..100%).
-effect: .name "RB MUS Pierce Tagged 2" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 29% .damage_high_multiply 29% .crit_chance_add 10% .on_hit true .on_miss false
-// MUS-103 Piercing Ball vs marked: +25/29/33/37/40% damage, +9..13% crit (Arbalest Sniper Shot is +60..100%).
-effect: .name "RB MUS Pierce Tagged 3" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 33% .damage_high_multiply 33% .crit_chance_add 11% .on_hit true .on_miss false
-// MUS-103 Piercing Ball vs marked: +25/29/33/37/40% damage, +9..13% crit (Arbalest Sniper Shot is +60..100%).
-effect: .name "RB MUS Pierce Tagged 4" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 37% .damage_high_multiply 37% .crit_chance_add 12% .on_hit true .on_miss false
-// MUS-103 Piercing Ball vs marked: +25/29/33/37/40% damage, +9..13% crit (Arbalest Sniper Shot is +60..100%).
+// MUS-103 Piercing Ball vs marked: +9..13% crit (Arbalest Sniper Shot is +50..100%). MUS-120: damage +25/28/31/34/40% (vanilla Sniper Damage curve 50/60/70/80/100 scaled to 25..40).
+effect: .name "RB MUS Pierce Tagged 2" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 28% .damage_high_multiply 28% .crit_chance_add 10% .on_hit true .on_miss false
+// MUS-103 Piercing Ball vs marked: +9..13% crit (Arbalest Sniper Shot is +50..100%). MUS-120: damage +25/28/31/34/40% (vanilla Sniper Damage curve 50/60/70/80/100 scaled to 25..40).
+effect: .name "RB MUS Pierce Tagged 3" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 31% .damage_high_multiply 31% .crit_chance_add 11% .on_hit true .on_miss false
+// MUS-103 Piercing Ball vs marked: +9..13% crit (Arbalest Sniper Shot is +50..100%). MUS-120: damage +25/28/31/34/40% (vanilla Sniper Damage curve 50/60/70/80/100 scaled to 25..40).
+effect: .name "RB MUS Pierce Tagged 4" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 34% .damage_high_multiply 34% .crit_chance_add 12% .on_hit true .on_miss false
+// MUS-103 Piercing Ball vs marked: +9..13% crit (Arbalest Sniper Shot is +50..100%). MUS-120: damage +25/28/31/34/40% (vanilla Sniper Damage curve 50/60/70/80/100 scaled to 25..40).
 effect: .name "RB MUS Pierce Tagged 5" .target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 40% .damage_high_multiply 40% .crit_chance_add 13% .on_hit true .on_miss false
-// MUS-103 Piercing Ball vs marked: +25/29/33/37/40% damage, +9..13% crit (Arbalest Sniper Shot is +60..100%).
+// MUS-103 Piercing Ball vs marked: +9..13% crit (Arbalest Sniper Shot is +50..100%). MUS-120: damage +25/28/31/34/40% (vanilla Sniper Damage curve 50/60/70/80/100 scaled to 25..40).
 effect: .name "RB MUS Armor Pierce 1" .target "performer" .chance 100% .skill_instant true .duration 1 .buff_ids RB_MUS_AP_1 .on_hit true .on_miss true .apply_once true
 // MUS-103 Piercing Ball armor piercing 10/15/20/25/30% for this shot only (skill_instant buff ignore_protection).
 effect: .name "RB MUS Armor Pierce 2" .target "performer" .chance 100% .skill_instant true .duration 1 .buff_ids RB_MUS_AP_2 .on_hit true .on_miss true .apply_once true
