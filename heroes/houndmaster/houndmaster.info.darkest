@@ -16,11 +16,13 @@ armour: .name "houndmaster_armour_3" .def 25% .prot 0 .hp 33 .spd 0 .upgradeRequ
 armour: .name "houndmaster_armour_4" .def 30% .prot 0 .hp 37 .spd 0 .upgradeRequirementCode 3
 
 
-combat_skill: .id "hounds_rush" .level 0 .type "ranged" .atk 90% .dmg -50% .crit 5% .launch 4321 .target 1234 .is_crit_valid True  .effect "Beast Killer 1" "HM Dmg Marked 1" "RB HM Hound Bleed 1" .generation_guaranteed true
-combat_skill: .id "hounds_rush" .level 1 .type "ranged" .atk 95% .dmg -50% .crit 6% .launch 4321 .target 1234 .is_crit_valid True  .effect "Beast Killer 2" "HM Dmg Marked 2" "RB HM Hound Bleed 2"
-combat_skill: .id "hounds_rush" .level 2 .type "ranged" .atk 100% .dmg -50% .crit 7% .launch 4321 .target 1234 .is_crit_valid True  .effect "Beast Killer 3" "HM Dmg Marked 3" "RB HM Hound Bleed 3"
-combat_skill: .id "hounds_rush" .level 3 .type "ranged" .atk 105% .dmg -50% .crit 8% .launch 4321 .target 1234 .is_crit_valid True  .effect "Beast Killer 4" "HM Dmg Marked 4" "RB HM Hound Bleed 4"
-combat_skill: .id "hounds_rush" .level 4 .type "ranged" .atk 110% .dmg -50% .crit 9% .launch 4321 .target 1234 .is_crit_valid True  .effect "Beast Killer 5" "HM Dmg Marked 5" "RB HM Hound Bleed 5"
+combat_skill: .id "hounds_rush" .level 0 .type "ranged" .atk 90% .dmg -40% .crit 5% .launch 4321 .target 1234 .is_crit_valid True  .effect "Beast Killer 1" "HM Dmg Marked 1" "RB HM Hound Bleed 1" .generation_guaranteed true
+combat_skill: .id "hounds_rush" .level 1 .type "ranged" .atk 95% .dmg -40% .crit 6% .launch 4321 .target 1234 .is_crit_valid True  .effect "Beast Killer 2" "HM Dmg Marked 2" "RB HM Hound Bleed 2"
+combat_skill: .id "hounds_rush" .level 2 .type "ranged" .atk 100% .dmg -40% .crit 7% .launch 4321 .target 1234 .is_crit_valid True  .effect "Beast Killer 3" "HM Dmg Marked 3" "RB HM Hound Bleed 3"
+combat_skill: .id "hounds_rush" .level 3 .type "ranged" .atk 105% .dmg -40% .crit 8% .launch 4321 .target 1234 .is_crit_valid True  .effect "Beast Killer 4" "HM Dmg Marked 4" "RB HM Hound Bleed 4"
+combat_skill: .id "hounds_rush" .level 4 .type "ranged" .atk 110% .dmg -40% .crit 9% .launch 4321 .target 1234 .is_crit_valid True  .effect "Beast Killer 5" "HM Dmg Marked 5" "RB HM Hound Bleed 5"
+// HM-036 hounds_rush: dmg -50% -> -40%, bleed 3/3/4/4/5 -> 2/2/3/3/4 (3 turns).
+// HM-036 사냥개 돌진: 피해 −50% → −40%, 출혈 3/3/4/4/5 → 2/2/3/3/4(3턴). 의도: 피해 % 장신구(징 박힌 목걸이 +20%, 보안관 배지 세트 출혈 대상 +25%)가 퇴색하지 않게(바닐라 대비 50% → 60%, P-27). 출혈 정체성은 사냥개 습격(적 전체 2~4)이 지킴 [제작자 10-23]
 // HM-032 hounds_rush: marked bonus back to vanilla +60/70/80/90/100% (MARK-01 fixed +60). Base damage is now -50%, so a marked hit is still weaker than vanilla.
 // HM-032 사냥개 돌진: 표식 보너스 +60% 고정 → 바닐라 +60~100%. 의도: 기본 피해가 −50%라 표식 한 방도 바닐라보다 약함(5렙 1.0배 vs 2.0배) — 바닐라를 최대한 지킴 [제작자 10-23]
 // HM-019 [2026-10-06] Target all enemy ranks from all ally ranks; retain damage -25 and flat marked bonus +60 to favor versatility and support over sustained damage. Supersedes HM-011 target234.

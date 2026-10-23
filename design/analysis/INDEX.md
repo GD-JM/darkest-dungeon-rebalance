@@ -45,3 +45,6 @@
 | [lore_audit_A.md](lore_audit_A.md), [lore_audit_B.md](lore_audit_B.md), [lore_audit_C.md](lore_audit_C.md) | 공식 설정·전용 장신구·야영 기술 vs 현재 설계 전수 대조 (총사 제외 19명; A 괴인·유물·석궁·현상금·성전사·결투가 / B 고행자·도굴꾼·야만인·노상·조련사·광대 / C 나병·중보병·신비·역병·도망자·방패·성녀) | 설정, 장신구, 야영 | 2026-10-22 |
 | [strength_2026-10-22.md](strength_2026-10-22.md) | 강함 순위 (R-VALUE-23 약화 기회비용 반영 후, 2.0.5 기준) | 순위, 모델 | 2026-10-22 |
 | [bleed_distribution.md](bleed_distribution.md) | 출혈 기술 13개 열·형태·수치 분포, 출혈 대상 보너스, 조련사 출혈 특화 판단 | 출혈, 조련사 | 2026-10-23 |
+| [trinket_direction_A.md](trinket_direction_A.md), [trinket_direction_B.md](trinket_direction_B.md), [trinket_direction_C.md](trinket_direction_C.md) | 장신구가 제시하는 방향(버프)·가드레일(패널티)로 본 19명(조련사 제외) 기술 대조, 최소 수정 제안 | 장신구, 방향, 가드레일 | 2026-10-23 |
+| [trinket_viability_A.md](trinket_viability_A.md), [trinket_viability_B.md](trinket_viability_B.md), [trinket_viability_C.md](trinket_viability_C.md) | 전용 장신구 전수(20명) 바닐라 대비 현재 가치: 살아있음/약해짐/버려짐, 원인 ID·최소 수정안 (가드레일 = 버려지는 장신구 없게) | 장신구, 가드레일 | 2026-10-23 |
+| [abomination_transform_stress.md](abomination_transform_stress.md) | 괴인 변신 스트레스 수지(억제의 자물쇠 포함), "깎으려고 변신" 방지 계산, ABO-008 | 괴인, 스트레스, 장신구 | 2026-10-23 |
