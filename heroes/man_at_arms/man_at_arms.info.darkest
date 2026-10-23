@@ -76,6 +76,8 @@ combat_skill: .id "bolster" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0% .la
 combat_skill: .id "bolster" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 1234 .target ~@1234 .is_crit_valid True  .effect "RB MAA Bolster Guarded 3" "RB MAA Bolster Stress Buff 3" "RB MAA Bolster Rally 3" .is_stall_invalidating false
 combat_skill: .id "bolster" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 1234 .target ~@1234 .is_crit_valid True  .effect "RB MAA Bolster Guarded 4" "RB MAA Bolster Stress Buff 4" "RB MAA Bolster Rally 4" .is_stall_invalidating false
 combat_skill: .id "bolster" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 1234 .target ~@1234 .is_crit_valid True  .effect "RB MAA Bolster Guarded 5" "RB MAA Bolster Stress Buff 5" "RB MAA Bolster Rally 5" .is_stall_invalidating false
+// MAA-017 bolster: guarded allies stress heal received +50% -> +15/17/20/22/25%.
+// MAA-017 고양: 호위받는 아군 받는 스트레스 회복 +50% → +15/17/20/22/25%. 의도: 중보병이 바닐라 49 → 60점으로 강해진 주요인(고양 −76 → +81%p) 중 호위 연계 배율이 과함 [제작자 10-23 "50% 너무 과하다, 15~25"]
 // MAA-011 bolster: 회피 제거, 보호받는 아군은 받는 스트레스 회복 1.5배(효과 지속 동안), 받는 스트레스 -10% 지속 2/3/2/3/2턴. 수호자·유물수집상 날 지켜줘·조련사 경비견과 시너지 [제작자]
 // MAA-010 bolster: 전투당 1회 제한 제거 -> 상시 보조 스트레스 힐. 회복 1/1/2/2/3(아군 전체), 회피 +1~5(3턴), 받는 스트레스 -10%(2턴, 최대 2중첩 = 바닐라 -20%). 스트레스 회복원을 광대 밖으로 분산 [제작자]
 // MAA-007 bolster: 아군 전체 스트레스 회복 2 -> 레벨별 2/2/3/3/4 (RB MAA Bolster Rally 1~5). 전투당 1회라 전투 전체 영향은 작음 [제작자]
