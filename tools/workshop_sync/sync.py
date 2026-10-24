@@ -13,6 +13,8 @@ import time
 import uuid
 from urllib.request import Request, urlopen
 from urllib.parse import urlsplit, parse_qs
+from urllib.error import HTTPError
+from email.utils import parsedate_to_datetime
 
 from common import read_json, sha256, write_json, WorkerLock
 from git_source import GitSource
@@ -146,6 +148,12 @@ def publish(config, job, release, images_only=False, metadata_only=False):
     return journal
 
 
+class PublicRateLimited(SteamError):
+    def __init__(self, retry_seconds):
+        self.retry_seconds = max(1, retry_seconds)
+        super().__init__('Steam public-page HTTP 429; verification deferred')
+
+
 def verify_public(item_id):
     # WS-SYNC-004: API visibility=public does not imply moderation has released it.
     # Read the public page without account cookies; never alter content to evade review.
@@ -161,6 +169,20 @@ def verify_public(item_id):
         if len(raw) > 2_000_000:
             raise SteamError('Public-page response exceeded verification limit')
         html = raw.decode('utf-8', errors='replace')
+    except HTTPError as exc:
+        if exc.code == 429:
+            delay = 900
+            retry = (exc.headers or {}).get('Retry-After')
+            if retry:
+                try:
+                    delay = int(retry)
+                except ValueError:
+                    try:
+                        delay = parsedate_to_datetime(retry).timestamp() - time.time()
+                    except (ValueError, TypeError):
+                        pass
+            raise PublicRateLimited(delay) from exc
+        raise SteamError('Public access could not be verified: ' + str(exc)) from exc
     except SteamError:
         raise
     except Exception as exc:
@@ -177,6 +199,8 @@ def publish_batch(config, job, release, module_releases):
     # Keep per-item checkpoints and never mark the whole release successful until all finish.
     outcomes = {}
     errors = []
+    cooldown_path = Path(config['state_dir']) / 'public-check-cooldown.json'
+    cooldown_until = read_json(cooldown_path, {}).get('until_epoch', 0)
     targets = [(key, job / 'modules' / key, value) for key, value in module_releases.items()]
     targets.append(('all_dlc', job, release))
     for key, target_job, target_release in targets:
@@ -190,14 +214,22 @@ def publish_batch(config, job, release, module_releases):
                         dependency = steam.add_dependency(module_releases['base']['item_id'])
                     write_json(dependency_path, dependency)
             publish(config, target_job, target_release)
+            outcomes[key] = {'upload_complete': True}
+            if time.time() < cooldown_until:
+                raise SteamError('Public verification deferred until Steam HTTP cooldown expires')
             if verify_public(target_release.get('item_id', ITEM_ID)):
                 outcomes[key] = {'status': 'complete', 'public_access_verified': True}
             else:
                 outcomes[key] = {'status': 'awaiting_public_review', 'upload_complete': True}
                 errors.append(key + ': uploaded but public page remains hidden')
+        except PublicRateLimited as exc:
+            cooldown_until = time.time() + exc.retry_seconds
+            write_json(cooldown_path, {'until_epoch': cooldown_until, 'reason': str(exc), 'at': now()})
+            outcomes[key].update(status='verification_deferred', error=str(exc))
+            errors.append(key + ': ' + str(exc))
         except SteamError as exc:
             # Only remote Steam failures are isolated. Validation/ownership failures abort.
-            outcomes[key] = {'status': 'blocked', 'error': str(exc)}
+            outcomes[key] = dict(outcomes.get(key, {}), status='blocked', error=str(exc))
             errors.append(key + ': ' + str(exc))
         write_json(job / 'batch-state.json', {'updated': now(), 'items': outcomes})
     if errors:

@@ -1,0 +1,9 @@
+{
+  "id": "WS-SYNC-006",
+  "decision": "adopted",
+  "original_quote": "준비됐어 스팀 창 띄워놨으니까 접근 거부 원인 해결하고 전체판이랑 선택형 전부 배포하고 댓글까지 마무리해줘",
+  "rationale_ko": "공개 접근 검증 중 공식 Steam 페이지가 HTTP 429를 반환했다. 배포 마무리 작업에서 요청 제한을 존중하기 위해 Retry-After 또는 기본 15분 대기를 기록하고 같은 실행의 뒤 항목 및 다음 실행에서도 확인 요청을 반복하지 않는다. 업로드 완료 여부는 검증 보류와 별도로 보존한다. 요청 제한을 다른 경로나 계정으로 우회하지 않는다.",
+  "source": {"product":"codex","reference":"현재 사용자 배포 마무리 요청 및 실제 공개 페이지 검증의 HTTP 429 응답","session_id":null,"message_id":null,"event_id":null},
+  "files": ["tools/workshop_sync/sync.py", "tools/workshop_sync/tests/test_sync.py"],
+  "supersedes": []
+}

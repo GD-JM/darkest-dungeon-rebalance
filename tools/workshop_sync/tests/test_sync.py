@@ -8,7 +8,7 @@ import sys
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from common import LANGUAGES, read_json, sha256, write_json
 from release import load_intents, validate_editor, is_game_file, next_version, merge_editorial, apply_description_patches, inherit_published_editorial
-from sync import publish, publish_batch, verify_public, once, metadata_with_marker, verify_phase, relevant
+from sync import publish, publish_batch, verify_public, PublicRateLimited, once, metadata_with_marker, verify_phase, relevant
 from steam import SteamError, SubmissionUnknown
 
 
@@ -311,6 +311,17 @@ class SyncTests(unittest.TestCase):
             with self.assertRaisesRegex(SteamError, '429'):
                 verify_public(123)
             request.assert_called_once()
+
+    def test_public_rate_limit_defers_later_checks_and_persists_across_batches(self):
+        self.public_checker.side_effect=PublicRateLimited(900)
+        with patch('sync.publish') as pub:
+            for _ in range(2):
+                with self.assertRaises(SteamError):
+                    publish_batch({'state_dir':str(self.root)}, self.root, {}, {'base':{}})
+        self.assertEqual(pub.call_count, 4)
+        self.public_checker.assert_called_once()
+        self.assertTrue(read_json(self.root/'public-check-cooldown.json')['until_epoch'] > 0)
+        self.assertTrue(read_json(self.root/'batch-state.json')['items']['all_dlc']['upload_complete'])
 
 
 if __name__ == '__main__': unittest.main()
