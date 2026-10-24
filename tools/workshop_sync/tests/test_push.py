@@ -305,7 +305,7 @@ class PushTests(unittest.TestCase):
         write_json(self.runtime / 'state.json', dict(
             last_seen_sha=baseline, last_published_sha=baseline, pending_sha=old))
         self.publisher.side_effect = sync.once
-        with patch('sync.GitSource') as source, patch('sync.prepare') as prepare, patch('sync.publish') as publish:
+        with patch('sync.GitSource') as source, patch('sync.prepare') as prepare, patch('sync.publish') as publish, patch('sync.verify_public', return_value=True):
             git = source.return_value
             git.remote_sha.return_value = git.fetch.return_value = SHA
             git.changed_files.return_value = ['heroes/jester/jester.info.darkest']

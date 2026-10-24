@@ -8,7 +8,7 @@ import sys
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from common import LANGUAGES, read_json, sha256, write_json
 from release import load_intents, validate_editor, is_game_file, next_version, merge_editorial, apply_description_patches, inherit_published_editorial
-from sync import publish, publish_batch, once, metadata_with_marker, verify_phase, relevant
+from sync import publish, publish_batch, verify_public, once, metadata_with_marker, verify_phase, relevant
 from steam import SteamError, SubmissionUnknown
 
 
@@ -47,6 +47,9 @@ class SyncTests(unittest.TestCase):
         root.mkdir(exist_ok=True)
         self.temp = tempfile.TemporaryDirectory(dir=root)
         self.root = Path(self.temp.name)
+        public_patch = patch('sync.verify_public', return_value=True)
+        self.public_checker = public_patch.start()
+        self.addCleanup(public_patch.stop)
     def tearDown(self): self.temp.cleanup()
 
     def image_release(self):
@@ -280,6 +283,34 @@ class SyncTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'ownership mismatch'):
                 publish_batch({'state_dir':str(self.root)}, self.root, {}, {'base':{}})
         self.assertEqual(pub.call_count, 1)
+
+    def test_uploaded_hidden_item_cannot_complete_release(self):
+        self.public_checker.return_value = False
+        with patch('sync.publish'):
+            with self.assertRaisesRegex(SteamError, 'public page remains hidden'):
+                publish_batch({'state_dir':str(self.root)}, self.root, {}, {})
+        item=read_json(self.root/'batch-state.json')['items']['all_dlc']
+        self.assertEqual(item['status'], 'awaiting_public_review')
+        self.assertTrue(item['upload_complete'])
+
+    def test_public_check_distinguishes_subscription_from_hidden_or_unknown(self):
+        with patch('sync.urlopen') as request:
+            response=request.return_value.__enter__.return_value
+            response.geturl.return_value='https://steamcommunity.com/sharedfiles/filedetails/?id=123&l=english'
+            response.read.return_value=b'<a id="SubscribeItemBtn">Subscribe</a>'
+            self.assertTrue(verify_public(123))
+            response.read.return_value=b'The item is either marked as hidden or you do not have permission to view it.'
+            self.assertFalse(verify_public(123))
+            response.read.return_value=b'Service unavailable'
+            with self.assertRaisesRegex(SteamError, 'unconfirmed'):
+                verify_public(123)
+
+    def test_public_rate_limit_is_not_retried_or_reported_as_success(self):
+        from urllib.error import HTTPError
+        with patch('sync.urlopen', side_effect=HTTPError('https://steamcommunity.com/',429,'Too Many Requests',{},None)) as request:
+            with self.assertRaisesRegex(SteamError, '429'):
+                verify_public(123)
+            request.assert_called_once()
 
 
 if __name__ == '__main__': unittest.main()

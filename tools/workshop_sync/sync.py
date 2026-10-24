@@ -11,6 +11,8 @@ import re
 import sys
 import time
 import uuid
+from urllib.request import Request, urlopen
+from urllib.parse import urlsplit, parse_qs
 
 from common import read_json, sha256, write_json, WorkerLock
 from git_source import GitSource
@@ -144,6 +146,32 @@ def publish(config, job, release, images_only=False, metadata_only=False):
     return journal
 
 
+def verify_public(item_id):
+    # WS-SYNC-004: API visibility=public does not imply moderation has released it.
+    # Read the public page without account cookies; never alter content to evade review.
+    url = 'https://steamcommunity.com/sharedfiles/filedetails/?id=' + str(item_id) + '&l=english'
+    try:
+        with urlopen(Request(url, headers={'User-Agent': 'WorkshopSync/1.0'}), timeout=30) as response:
+            address = urlsplit(response.geturl())
+            if (address.scheme != 'https' or address.hostname != 'steamcommunity.com'
+                    or address.path != '/sharedfiles/filedetails/'
+                    or parse_qs(address.query).get('id') != [str(item_id)]):
+                raise SteamError('Unexpected public-page redirect')
+            raw = response.read(2_000_001)
+        if len(raw) > 2_000_000:
+            raise SteamError('Public-page response exceeded verification limit')
+        html = raw.decode('utf-8', errors='replace')
+    except SteamError:
+        raise
+    except Exception as exc:
+        raise SteamError('Public access could not be verified: ' + str(exc)) from exc
+    if 'The item is either marked as hidden or you do not have permission to view it.' in html:
+        return False
+    if 'id="SubscribeItemBtn"' not in html:
+        raise SteamError('Public subscription control not found; access unconfirmed')
+    return True
+
+
 def publish_batch(config, job, release, module_releases):
     # WS-SYNC-004: one Steam item under review must not block independent items.
     # Keep per-item checkpoints and never mark the whole release successful until all finish.
@@ -162,7 +190,11 @@ def publish_batch(config, job, release, module_releases):
                         dependency = steam.add_dependency(module_releases['base']['item_id'])
                     write_json(dependency_path, dependency)
             publish(config, target_job, target_release)
-            outcomes[key] = {'status': 'complete'}
+            if verify_public(target_release.get('item_id', ITEM_ID)):
+                outcomes[key] = {'status': 'complete', 'public_access_verified': True}
+            else:
+                outcomes[key] = {'status': 'awaiting_public_review', 'upload_complete': True}
+                errors.append(key + ': uploaded but public page remains hidden')
         except SteamError as exc:
             # Only remote Steam failures are isolated. Validation/ownership failures abort.
             outcomes[key] = {'status': 'blocked', 'error': str(exc)}

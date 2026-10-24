@@ -1,0 +1,9 @@
+{
+  "id": "WS-SYNC-005",
+  "decision": "adopted",
+  "original_quote": "준비됐어 스팀 창 띄워놨으니까 접근 거부 원인 해결하고 전체판이랑 선택형 전부 배포하고 댓글까지 마무리해줘",
+  "rationale_ko": "배포 완료는 이용자가 실제 공개 페이지에 접근할 수 있음을 포함한다. 선택형 패키지들은 API 공개 플래그와 업로드 성공 응답에도 비로그인 화면에서 숨김 오류를 표시했다. 따라서 공식 Steam 공개 페이지를 쿠키 없이 읽고 해당 항목의 구독 버튼을 확인하는 검증을 추가한다. 숨김이면 업로드 완료와 공개 대기를 구분해 기록하며 전체 성공으로 승격하지 않는다. 내용 수정이나 재생성으로 검토를 우회하지 않는다.",
+  "source": {"product":"codex","reference":"현재 사용자 배포 마무리 요청과 Steam 소유자 화면의 자동 검토 안내, 비로그인 선택형 6개 접근 확인","session_id":null,"message_id":null,"event_id":null},
+  "files": ["tools/workshop_sync/sync.py", "tools/workshop_sync/tests/test_sync.py", "tools/workshop_sync/tests/test_push.py", "tools/workshop_sync/agent-contract.md"],
+  "supersedes": []
+}
