@@ -3,6 +3,33 @@
 
 // reuse: Wyrd Bleed 5 -> Wyrd Bleed 4 (identical vanilla effect, no copy made)
 
+// edited vanilla effect (from effects/base.effects.darkest)
+effect: .name "RB OCC Occ Weaken Prot 1" .target "target" .curio_result_type "negative" .chance 100% .duration 3 .combat_stat_buff 1 .protection_rating_add -25% .on_hit true .on_miss false .queue true
+// OCC-015 PROT -10% -> -25%: armor breaking is the primary role; support direct physical attackers while retaining 100-140% debuff chance and fixed trinkets.
+// edited vanilla effect (from effects/base.effects.darkest)
+effect: .name "RB OCC Occ Weakening Curse 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3 .combat_stat_buff 1 .damage_low_multiply -11% .damage_high_multiply -11%	.on_hit true .on_miss false
+// OCC-015 Enemy DMG -12% -> -11%: secondary protection; reduce repeated damage suppression in exchange for stronger armor breaking. Stacking is not disabled.
+// edited vanilla effect (from effects/base.effects.darkest)
+effect: .name "RB OCC Occ Weaken Prot 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3 .combat_stat_buff 1 .protection_rating_add -27% .on_hit true .on_miss false .queue true
+// OCC-015 PROT -13% -> -27%: armor breaking is the primary role; support direct physical attackers while retaining 100-140% debuff chance and fixed trinkets.
+// edited vanilla effect (from effects/base.effects.darkest)
+effect: .name "RB OCC Occ Weakening Curse 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3 .combat_stat_buff 1 .damage_low_multiply -12% .damage_high_multiply -12%	.on_hit true .on_miss false
+// OCC-015 Enemy DMG -15% -> -12%: secondary protection; reduce repeated damage suppression in exchange for stronger armor breaking. Stacking is not disabled.
+// edited vanilla effect (from effects/base.effects.darkest)
+effect: .name "RB OCC Occ Weaken Prot 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3 .combat_stat_buff 1 .protection_rating_add -30% .on_hit true .on_miss false .queue true
+// OCC-015 PROT -15% -> -30%: armor breaking is the primary role; support direct physical attackers while retaining 100-140% debuff chance and fixed trinkets.
+// edited vanilla effect (from effects/base.effects.darkest)
+effect: .name "RB OCC Occ Weakening Curse 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .combat_stat_buff 1 .damage_low_multiply -13% .damage_high_multiply -13%	.on_hit true .on_miss false
+// OCC-015 Enemy DMG -17% -> -13%: secondary protection; reduce repeated damage suppression in exchange for stronger armor breaking. Stacking is not disabled.
+// edited vanilla effect (from effects/base.effects.darkest)
+effect: .name "RB OCC Occ Weaken Prot 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .combat_stat_buff 1 .protection_rating_add -32% .on_hit true .on_miss false .queue true
+// OCC-015 PROT -17% -> -32%: armor breaking is the primary role; support direct physical attackers while retaining 100-140% debuff chance and fixed trinkets.
+// edited vanilla effect (from effects/base.effects.darkest)
+effect: .name "RB OCC Occ Weakening Curse 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .combat_stat_buff 1 .damage_low_multiply -15% .damage_high_multiply -15%	.on_hit true .on_miss false
+// OCC-015 Enemy DMG -20% -> -15%: secondary protection; reduce repeated damage suppression in exchange for stronger armor breaking. Stacking is not disabled.
+// edited vanilla effect (from effects/base.effects.darkest)
+effect: .name "RB OCC Occ Weaken Prot 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .combat_stat_buff 1 .protection_rating_add -35% .on_hit true .on_miss false .queue true
+// OCC-015 PROT -20% -> -35%: armor breaking is the primary role; support direct physical attackers while retaining 100-140% debuff chance and fixed trinkets.
 
 // mod-only new effects
 effect: .name "RB OCC Hex Resist 1" .target "target" .chance 100% .duration 3 .curio_result_type "negative"  .buff_ids "RB_OCC_HEX_STUN_1" "RB_OCC_HEX_BLIGHT_1" "RB_OCC_HEX_BLEED_1" "RB_OCC_HEX_DEBUFF_1" .on_hit true .on_miss false .queue true

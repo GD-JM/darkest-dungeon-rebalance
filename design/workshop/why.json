@@ -813,14 +813,16 @@
  },
  "occultist|weakening_curse": {
   "ids": [
-   "OCC-007"
+   "OCC-007",
+   "OCC-014",
+   "OCC-015"
   ],
   "principles": [
    "P-11",
    "G-02"
   ],
-  "en": "Weakening Curse was the Occultist's weakest skill, so the damage taken out of Vulnerability Hex moves here and his overall power stays the same.",
-  "ko": "약화 저주는 신비학자 기술 중 가장 약했다. 취약화 주술에서 뺀 피해를 이쪽으로 옮겨 신비학자 전체 힘은 유지한다."
+  "en": "Weakening Curse now primarily breaks armor to support direct physical attackers: PROT reduction rises from 10-20% to 25-35%, while enemy damage reduction falls from 10-20% to 10-15% to limit repeated suppression. Its 100-140% debuff chance preserves the value of debuff trinkets. Vulnerability Hex is unchanged; direct damage remains -75%.",
+  "ko": "방어 감소를 10~20%p에서 25~35%p로 높여 일반 물리 딜러의 고방어 대응을 지원한다. 적 공격 감소는 10~20%에서 10~15%로 낮춰 중첩 억제를 부효과로 둔다. 약화 확률 100~140%를 유지해 약화 장신구의 역할을 살리며, 취약화 주술은 그대로다. 직접 피해는 OCC-014의 -75%를 유지한다."
  },
  "occultist|wyrd_reconstruction": {
   "ids": [

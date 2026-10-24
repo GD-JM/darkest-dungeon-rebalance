@@ -45,24 +45,44 @@ effect: .name "Abyssal Killer 5" .target "performer" .chance 100% .curio_result_
 //# 기술: 약화 저주 (weakening_curse)
 //# 레벨별 효과: 1레벨 Occ Weakening Curse 1, Occ Weaken Prot 1 | 2레벨 Occ Weakening Curse 2, Occ Weaken Prot 2 | 3레벨 Occ Weakening Curse 3, Occ Weaken Prot 3 | 4레벨 Occ Weakening Curse 4, Occ Weaken Prot 4 | 5레벨 Occ Weakening Curse 5, Occ Weaken Prot 5
 effect: .name "Occ Weakening Curse 1" .target "target" .curio_result_type "negative" .chance 100% .duration 3 .combat_stat_buff 1 .damage_low_multiply -10% .damage_high_multiply -10%	.on_hit true .on_miss false
+// OCC-015 Enemy DMG -10% -> -10%: secondary protection; reduce repeated damage suppression in exchange for stronger armor breaking. Stacking is not disabled.
+// OCC-015 적 공격 감소는 부효과로 둔다. 방어 감소 상향과 맞물려 중첩 피해 억제량을 낮추되 중첩 규칙 자체는 바꾸지 않는다.
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Occ Weaken Prot 1" .target "target" .curio_result_type "negative" .chance 100% .duration 3 .combat_stat_buff 1 .protection_rating_add -10% .on_hit true .on_miss false .queue true
+effect: .name "Occ Weaken Prot 1" .target "target" .curio_result_type "negative" .chance 100% .duration 3 .combat_stat_buff 1 .protection_rating_add -25% .on_hit true .on_miss false .queue true
+// OCC-015 PROT -10% -> -25%: armor breaking is the primary role; support direct physical attackers while retaining 100-140% debuff chance and fixed trinkets.
+// OCC-015 방어 감소를 주효과로 강화해 일반 물리 딜러의 고방어 대응을 지원한다. 기본 확률은 유지해 약화 장신구의 역할을 보존한다.
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Occ Weakening Curse 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3 .combat_stat_buff 1 .damage_low_multiply -12% .damage_high_multiply -12%	.on_hit true .on_miss false
+effect: .name "Occ Weakening Curse 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3 .combat_stat_buff 1 .damage_low_multiply -11% .damage_high_multiply -11%	.on_hit true .on_miss false
+// OCC-015 Enemy DMG -12% -> -11%: secondary protection; reduce repeated damage suppression in exchange for stronger armor breaking. Stacking is not disabled.
+// OCC-015 적 공격 감소는 부효과로 둔다. 방어 감소 상향과 맞물려 중첩 피해 억제량을 낮추되 중첩 규칙 자체는 바꾸지 않는다.
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Occ Weaken Prot 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3 .combat_stat_buff 1 .protection_rating_add -13% .on_hit true .on_miss false .queue true
+effect: .name "Occ Weaken Prot 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3 .combat_stat_buff 1 .protection_rating_add -27% .on_hit true .on_miss false .queue true
+// OCC-015 PROT -13% -> -27%: armor breaking is the primary role; support direct physical attackers while retaining 100-140% debuff chance and fixed trinkets.
+// OCC-015 방어 감소를 주효과로 강화해 일반 물리 딜러의 고방어 대응을 지원한다. 기본 확률은 유지해 약화 장신구의 역할을 보존한다.
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Occ Weakening Curse 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3 .combat_stat_buff 1 .damage_low_multiply -15% .damage_high_multiply -15%	.on_hit true .on_miss false
+effect: .name "Occ Weakening Curse 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3 .combat_stat_buff 1 .damage_low_multiply -12% .damage_high_multiply -12%	.on_hit true .on_miss false
+// OCC-015 Enemy DMG -15% -> -12%: secondary protection; reduce repeated damage suppression in exchange for stronger armor breaking. Stacking is not disabled.
+// OCC-015 적 공격 감소는 부효과로 둔다. 방어 감소 상향과 맞물려 중첩 피해 억제량을 낮추되 중첩 규칙 자체는 바꾸지 않는다.
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Occ Weaken Prot 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3 .combat_stat_buff 1 .protection_rating_add -15% .on_hit true .on_miss false .queue true
+effect: .name "Occ Weaken Prot 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3 .combat_stat_buff 1 .protection_rating_add -30% .on_hit true .on_miss false .queue true
+// OCC-015 PROT -15% -> -30%: armor breaking is the primary role; support direct physical attackers while retaining 100-140% debuff chance and fixed trinkets.
+// OCC-015 방어 감소를 주효과로 강화해 일반 물리 딜러의 고방어 대응을 지원한다. 기본 확률은 유지해 약화 장신구의 역할을 보존한다.
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Occ Weakening Curse 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .combat_stat_buff 1 .damage_low_multiply -17% .damage_high_multiply -17%	.on_hit true .on_miss false
+effect: .name "Occ Weakening Curse 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .combat_stat_buff 1 .damage_low_multiply -13% .damage_high_multiply -13%	.on_hit true .on_miss false
+// OCC-015 Enemy DMG -17% -> -13%: secondary protection; reduce repeated damage suppression in exchange for stronger armor breaking. Stacking is not disabled.
+// OCC-015 적 공격 감소는 부효과로 둔다. 방어 감소 상향과 맞물려 중첩 피해 억제량을 낮추되 중첩 규칙 자체는 바꾸지 않는다.
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Occ Weaken Prot 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .combat_stat_buff 1 .protection_rating_add -17% .on_hit true .on_miss false .queue true
+effect: .name "Occ Weaken Prot 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .combat_stat_buff 1 .protection_rating_add -32% .on_hit true .on_miss false .queue true
+// OCC-015 PROT -17% -> -32%: armor breaking is the primary role; support direct physical attackers while retaining 100-140% debuff chance and fixed trinkets.
+// OCC-015 방어 감소를 주효과로 강화해 일반 물리 딜러의 고방어 대응을 지원한다. 기본 확률은 유지해 약화 장신구의 역할을 보존한다.
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Occ Weakening Curse 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .combat_stat_buff 1 .damage_low_multiply -20% .damage_high_multiply -20%	.on_hit true .on_miss false
+effect: .name "Occ Weakening Curse 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .combat_stat_buff 1 .damage_low_multiply -15% .damage_high_multiply -15%	.on_hit true .on_miss false
+// OCC-015 Enemy DMG -20% -> -15%: secondary protection; reduce repeated damage suppression in exchange for stronger armor breaking. Stacking is not disabled.
+// OCC-015 적 공격 감소는 부효과로 둔다. 방어 감소 상향과 맞물려 중첩 피해 억제량을 낮추되 중첩 규칙 자체는 바꾸지 않는다.
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Occ Weaken Prot 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .combat_stat_buff 1 .protection_rating_add -20% .on_hit true .on_miss false .queue true
+effect: .name "Occ Weaken Prot 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .combat_stat_buff 1 .protection_rating_add -35% .on_hit true .on_miss false .queue true
+// OCC-015 PROT -20% -> -35%: armor breaking is the primary role; support direct physical attackers while retaining 100-140% debuff chance and fixed trinkets.
+// OCC-015 방어 감소를 주효과로 강화해 일반 물리 딜러의 고방어 대응을 지원한다. 기본 확률은 유지해 약화 장신구의 역할을 보존한다.
 //#   원본 위치: effects/base.effects.darkest
 
 //# ======================================================================

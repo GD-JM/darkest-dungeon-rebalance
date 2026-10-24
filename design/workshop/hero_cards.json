@@ -992,6 +992,19 @@
   "tagline": "Vulnerability Hex now sets up stuns, blights and bleeds.",
   "skills": [
    {
+    "key": "occultist|weakening_curse",
+    "name": "Weakening Curse",
+    "icon": "three",
+    "old": [
+     "Target: PROT -10 to -20% (3 turns)",
+     "Target: DMG -10 to -20% (3 turns)"
+    ],
+    "new": [
+     "Target: PROT -25 to -35% (3 turns)",
+     "Target: DMG -10 to -15% (3 turns)"
+    ]
+   },
+   {
     "key": "occultist|wyrd_reconstruction",
     "name": "Wyrd Reconstruction",
     "icon": "four",

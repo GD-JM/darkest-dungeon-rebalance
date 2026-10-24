@@ -30,11 +30,13 @@ combat_skill: .id "abyssal_artillery" .level 3 .type "ranged" .atk 100% .dmg -33
 combat_skill: .id "abyssal_artillery" .level 4 .type "ranged" .atk 105% .dmg -33% .crit 4% .launch 34 .target ~34 .is_crit_valid True  .effect "Abyssal Killer 5"
 
 
-combat_skill: .id "weakening_curse" .level 0 .type "ranged" .atk 95% .dmg -75% .crit 5% .launch 1234 .target 1234 .is_crit_valid True  .effect "Occ Weakening Curse 1" "Occ Weaken Prot 1"
-combat_skill: .id "weakening_curse" .level 1 .type "ranged" .atk 100% .dmg -75% .crit 6% .launch 1234 .target 1234 .is_crit_valid True  .effect "Occ Weakening Curse 2" "Occ Weaken Prot 2"
-combat_skill: .id "weakening_curse" .level 2 .type "ranged" .atk 105% .dmg -75% .crit 7% .launch 1234 .target 1234 .is_crit_valid True  .effect "Occ Weakening Curse 3" "Occ Weaken Prot 3"
-combat_skill: .id "weakening_curse" .level 3 .type "ranged" .atk 110% .dmg -75% .crit 8% .launch 1234 .target 1234 .is_crit_valid True  .effect "Occ Weakening Curse 4" "Occ Weaken Prot 4"
-combat_skill: .id "weakening_curse" .level 4 .type "ranged" .atk 115% .dmg -75% .crit 9% .launch 1234 .target 1234 .is_crit_valid True  .effect "Occ Weakening Curse 5" "Occ Weaken Prot 5"
+combat_skill: .id "weakening_curse" .level 0 .type "ranged" .atk 95% .dmg -75% .crit 5% .launch 1234 .target 1234 .is_crit_valid True  .effect "Occ Weakening Curse 1" "RB OCC Occ Weaken Prot 1"
+combat_skill: .id "weakening_curse" .level 1 .type "ranged" .atk 100% .dmg -75% .crit 6% .launch 1234 .target 1234 .is_crit_valid True  .effect "RB OCC Occ Weakening Curse 2" "RB OCC Occ Weaken Prot 2"
+combat_skill: .id "weakening_curse" .level 2 .type "ranged" .atk 105% .dmg -75% .crit 7% .launch 1234 .target 1234 .is_crit_valid True  .effect "RB OCC Occ Weakening Curse 3" "RB OCC Occ Weaken Prot 3"
+combat_skill: .id "weakening_curse" .level 3 .type "ranged" .atk 110% .dmg -75% .crit 8% .launch 1234 .target 1234 .is_crit_valid True  .effect "RB OCC Occ Weakening Curse 4" "RB OCC Occ Weaken Prot 4"
+combat_skill: .id "weakening_curse" .level 4 .type "ranged" .atk 115% .dmg -75% .crit 9% .launch 1234 .target 1234 .is_crit_valid True  .effect "RB OCC Occ Weakening Curse 5" "RB OCC Occ Weaken Prot 5"
+// OCC-015 Weakening Curse: PROT -25/27/30/32/35%; enemy DMG -10/11/12/13/15%. Armor breaking supports physical parties; damage suppression is secondary. Chance, duration, direct damage, crit and ranks retained.
+// OCC-015 약화 저주는 일반 물리 딜러의 고방어 대응을 돕는 방어 감소 중심 기술로 재편. 공격 감소의 중첩 억제력은 낮추고 취약화 주술 및 약화 장신구는 유지.
 // OCC-014 weakening_curse: damage back to vanilla -75% (OCC-007 withdrawn together with OCC-005: the 10%p moved from Vulnerability Hex goes back).
 // OCC-014 약화 저주 피해 −65% → 바닐라 −75%. 의도: 취약화 주술 피해를 바닐라로 되돌렸으니(OCC-013) 거기서 옮겨 왔던 10%p도 되돌린다 [제작자 10-22]
 
