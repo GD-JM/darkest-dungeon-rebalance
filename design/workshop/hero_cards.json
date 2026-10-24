@@ -248,11 +248,13 @@
     "name": "Finish Him",
     "icon": "six",
     "old": [
+     "DMG 0%",
      "Use from ranks 1-3",
      "Vs stunned: DMG +25-60%",
      "No bonus vs bleeding"
     ],
     "new": [
+     "DMG -10%",
      "Use from ranks 1-2",
      "Vs stunned: DMG +60-100%",
      "Vs bleeding: DMG +20-33%"

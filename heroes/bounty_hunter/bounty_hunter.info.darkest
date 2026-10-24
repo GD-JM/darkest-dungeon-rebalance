@@ -85,11 +85,13 @@ combat_skill: .id "flashbang" .level 4 .type "ranged" .atk 115% .dmg -100% .crit
 //대신에 스트롱 스턴을 그냥 스턴으로 바꿈 근거는 명중이 95임 명중 90을 표준이라 두면, 명중 +5, 데미지 없는 것 + 3,4열 타격가능 + 자리바꿈 3개가 추가되면 데미지 없는 걸 상쇄함. 물론 치명타 안뜨는 것도 포함되서 상쇄되는것 
 
 
-combat_skill: .id "finish_him" .level 0 .type "melee" .atk 85% .dmg 0% .crit 5% .launch 21 .target 123 .is_crit_valid True  .effect "RB BH Stun Killer 1" "RB BH Bleed Killer 1"
-combat_skill: .id "finish_him" .level 1 .type "melee" .atk 90% .dmg 0% .crit 6% .launch 21 .target 123 .is_crit_valid True  .effect "RB BH Stun Killer 2" "RB BH Bleed Killer 2"
-combat_skill: .id "finish_him" .level 2 .type "melee" .atk 95% .dmg 0% .crit 7% .launch 21 .target 123 .is_crit_valid True  .effect "RB BH Stun Killer 3" "RB BH Bleed Killer 3"
-combat_skill: .id "finish_him" .level 3 .type "melee" .atk 100% .dmg 0% .crit 8% .launch 21 .target 123 .is_crit_valid True  .effect "RB BH Stun Killer 4" "RB BH Bleed Killer 4"
-combat_skill: .id "finish_him" .level 4 .type "melee" .atk 105% .dmg 0% .crit 9% .launch 21 .target 123 .is_crit_valid True  .effect "RB BH Stun Killer 5" "RB BH Bleed Killer 5"
+combat_skill: .id "finish_him" .level 0 .type "melee" .atk 85% .dmg -10% .crit 5% .launch 21 .target 123 .is_crit_valid True  .effect "RB BH Stun Killer 1" "RB BH Bleed Killer 1"
+combat_skill: .id "finish_him" .level 1 .type "melee" .atk 90% .dmg -10% .crit 6% .launch 21 .target 123 .is_crit_valid True  .effect "RB BH Stun Killer 2" "RB BH Bleed Killer 2"
+combat_skill: .id "finish_him" .level 2 .type "melee" .atk 95% .dmg -10% .crit 7% .launch 21 .target 123 .is_crit_valid True  .effect "RB BH Stun Killer 3" "RB BH Bleed Killer 3"
+combat_skill: .id "finish_him" .level 3 .type "melee" .atk 100% .dmg -10% .crit 8% .launch 21 .target 123 .is_crit_valid True  .effect "RB BH Stun Killer 4" "RB BH Bleed Killer 4"
+combat_skill: .id "finish_him" .level 4 .type "melee" .atk 105% .dmg -10% .crit 9% .launch 21 .target 123 .is_crit_valid True  .effect "RB BH Stun Killer 5" "RB BH Bleed Killer 5"
+// BH-026 Finish Him damage 0% -> -10% at all levels: pay for rank-3 reach and bleed/stun execution, preserving Collect Bounty as the stronger ordinary front-target attack. Ranks and conditional bonuses unchanged.
+// BH-026 끝장내기 기본 피해를 -10%로 조정. 상태이상 없는 전열에는 현상금 수거, 출혈·기절 대상과 3열에는 끝장내기를 선택하도록 차별화한다. 사용열 1·2와 기존 효과는 유지.
 
 // BH-001 finish_him: + RB BH Bleed Killer 1-5 (dmg vs bleeding target, mirrors GR Poison Killer)
 // 사용열 변경 123 -> 12 사유는 어퍼컷 때문에 3열 때릴 수 있어야함 연계되려면

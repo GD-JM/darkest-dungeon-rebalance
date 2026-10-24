@@ -1,0 +1,28 @@
+{
+  "id": "BH-026",
+  "decision": "adopted",
+  "original_quote": "끝장내기 피해 -10으로 가자 사용열은 유지하고 의도 주석 남기고 커밋까지 해 푸시는 하지 말고",
+  "rationale_ko": "현상금 수거와 끝장내기를 함께 기용할 이유를 만들기 위해 끝장내기의 기본 피해만 낮춘다. 조건 없는 전열 공격과 상태이상 처형·3열 도달의 역할을 분리하고, 표식·인간 대상 현상금 수거를 추가 상향하지 않는다.",
+  "source": {
+    "product": "codex",
+    "reference": "현재 대화 2026-10-24, 나병환자 방어 감소 및 현상금 사냥꾼 사용열·공격 비교 답변 직후 사용자 승인 메시지 첫 문장",
+    "session_id": null,
+    "message_id": null,
+    "event_id": null
+  },
+  "context_quotes": [
+    {
+      "role": "user",
+      "quote": "현상금 수거와 끝장내기를 둘 다 기용하는 경우의 수가 나름의 차별성을 가지게 만들고 싶거든",
+      "reference": "현재 대화 직전 사용자 비교 요청 중 발췌"
+    }
+  ],
+  "files": [
+    "heroes/bounty_hunter/bounty_hunter.info.darkest",
+    "design/changes/bounty_hunter.md",
+    "design/workshop/why.json",
+    "design/workshop/hero_cards.json"
+  ],
+  "supersedes": [],
+  "publication": "Local commit only. No push or Workshop upload."
+}
