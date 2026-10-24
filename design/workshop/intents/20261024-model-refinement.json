@@ -1,0 +1,30 @@
+{
+  "id": "R-AUDIT-24-model-refinement",
+  "decision": "adopted",
+  "original_quote": "수정 제안 모델에 반영하고 다른 AI 모델도 이해할 수 있게 잘 적어놔줘 회피도 EHP 고려해서 다르게 계산했던 것처럼 스턴도 실제 데미지량을 고려해서 모델을 정밀히 조정하라는 거야 똑같은 -60 % 라도 성전사가 쓰는거랑 조련사가 쓰는게 실제 데미지가 다르잖아 기본 데미지 차이가 있으니까. 그래서 바닐라 값이 모든 스턴 기술의 실제 피해가 1렙 부터 5렙까지 어떻게 설정되어 있는지 평균 값 무엇인지 파악하고 그로부터 밸런스 튀는 부분을 내가 조정하면 되잖아. 그래서 바닐라 해당 공식 반영해서 밸런스 튀는 부분 찾아볼래?\n",
+  "rationale_ko": "기존 독립 감사의 수정 제안을 구현하고, 영웅별 무기 피해·치명·정수 처리와 스턴의 공동 결과로 1–5단계 바닐라 평균/편차를 비교한다. EHP는 별도 지표로 유지한다. 영웅/효과 수치 자체는 변경하지 않는다.",
+  "source": {
+    "product": "codex",
+    "reference": "C:\\Users\\lemm1\\.codex\\sessions\\2026\\10\\22\\rollout-2026-10-22T21-51-50-01a163aa-f5ae-7f82-add4-693eaf06ed8a.jsonl",
+    "session_id": "01a163aa-f5ae-7f82-add4-693eaf06ed8a",
+    "message_id": "msg_01a16b6a-164b-7582-be74-e40fbb03e69c",
+    "event_id": "6e5c3ba43165e8352248ea3a4b05582026c2fe558aa66eef80ecc45ad2ee553c"
+  },
+  "context_quotes": [
+    {
+      "role": "assistant",
+      "quote": "현재 판정에서 수정이 필요한 핵심은 두 가지입니다. 회피의 EHP 배수는 고정된 전투 기간에 막는 피해량과 다른 지표를 섞고 있고, 회피와 스트레스 감소를 각각 원래 유입량 기준으로 더하면 일부 가치를 중복 계산합니다. 반면 HP 피해와 스트레스 피해를 함께 세는 것 자체는 중복이 아닙니다. 이 구분과 수치 반례를 보고서에 기록했습니다.\n",
+      "event_id": "e8bbd4e686838d7e120f178dfdf3ff3607de32ed95d4648cea408cb8292fba1c"
+    }
+  ],
+  "files": [
+    "tools/strength.py",
+    "design/analysis/hero_power_v2.md",
+    "design/analysis/model-refinement-20261024.md",
+    "design/analysis/vanilla-stun-20261024.md"
+  ],
+  "supersedes": [
+    "audit:20261023-ehp-joint-stress-recommendation"
+  ],
+  "limits": "Approval is model corrections and analysis, not live hero balance changes or publication. Detailed implementation parameters are analyst choices under this scope."
+}

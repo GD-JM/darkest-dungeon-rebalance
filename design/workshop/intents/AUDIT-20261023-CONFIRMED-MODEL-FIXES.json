@@ -1,0 +1,16 @@
+{
+  "id": "AUDIT-20261023-CONFIRMED-MODEL-FIXES",
+  "decision": "adopted",
+  "original_quote": "그럼 확실히 오류라고 확인된 것부터 수정하고, REA로 실제 명중 판정도 끝까지 확인해줘. 수정 전후 잔차가 얼마나 달라지는지 비교하고, 아직 가정인 부분은 따로 표시해서 이어담에도 연결해줘.",
+  "rationale_ko": "독립 감사에서 재현한 계산기 구현 오류를 고치고 동일 입력의 피해량 환산값을 비교하라는 작업 승인이다. 게임 밸런스 수치나 미확인 가치 계수의 새 채택은 아니다. 엔진 관측, 구현 오류, 모델 가정을 분리해 근거와 함께 기록한다.",
+  "source": {
+    "product": "codex",
+    "reference": "이어담 read_evidence: 8ef9135632a95ead4ffab1d3befd242d5a3f29267e2c08846407ede228a3f987; 2026-10-23T13:21:56.610Z; role=user",
+    "session_id": "01a163aa-f5ae-7f82-add4-693eaf06ed8a",
+    "message_id": "msg_01a168ec-df81-78b0-8c5f-2bb96a71e8a8",
+    "event_id": "8ef9135632a95ead4ffab1d3befd242d5a3f29267e2c08846407ede228a3f987"
+  },
+  "files": ["tools/strength.py"],
+  "supersedes": [],
+  "scope": "Analysis calculator only; gameplay assets and adopted balance coefficients unchanged. Full scope and unresolved assumptions are recorded in design/analysis/residual-audit-20261023.md."
+}

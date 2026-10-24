@@ -5,7 +5,7 @@
 - 모든 가치는 HP 환산. 기술 목록은 평타 배수(R-VALUE-02)로도 표기.
 - 파라미터와 출처는 PARAM 에 모아 둔다. 바꾸면 design/analysis/hero_power_v2.md 도 갱신할 것.
 """
-import os, re, glob, sys, io, math, argparse, json, functools, statistics as st
+import os, re, glob, sys, io, math, argparse, json, functools, struct, statistics as st
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import effect_common as ec
 
@@ -14,7 +14,7 @@ M_ROOT, G = ec.paths()
 # ---------------------------------------------------------------- 파라미터 (출처)
 PARAM = dict(
     MON_HIT=102.5,        # 몬스터 명중 중앙값 (hero_power.md 4-1)
-    ENEMY_ACT=4.26,       # 몬스터 1행동 = 5.5 x (102.5-25)% (R-STRAT-01)
+    ENEMY_ACT=4.26,       # R-STRAT-01 채택 행동가치 상수(과거 5.5x.775로 보정). 실제 명중확률 수정과 별도이며 자동 재보정하지 않음
     ALLY_ATK=7.17,        # 아군 1공격 가치 (hero_power.md 4-1)
     E_SGL=1.00, E_DOT_SGL=0.90, E_AOE=0.85, E_DOT_AOE=0.40,   # 행동 경제 유효율 (R-STRAT-02)
     AOE_PER_RANK=0.8,     # 적 광역 대상 = 칸 수 x 0.8 -> 4칸 3.2명 (R-STRAT-02)
@@ -34,7 +34,7 @@ PARAM = dict(
     DEBUFF_W1=0.5,
     ENEMY_CRIT=True,      # R-VALUE-22: 적 치명 감소 = 몬스터 공격별 적중률 x 줄어든 치명(그 기술 치명 아래로 못 내려감) x (치명 추가 피해 + 받는 스트레스 17.5)
     CRIT_RECV_STRESS=17.5,  # 영웅이 치명타를 맞으면 +10, 다른 파티원 3명 각 50%로 +5 (R-CMB-08)
-    ENEMY_ACC=True,       # R-VALUE-17: 적 명중 감소 = 그 적 명중 분포·영웅 회피·0% 바닥·스트레스 공격까지 (회피 R-VALUE-13의 거울)
+    ENEMY_ACC=True,       # R-VALUE-17: 적 명중 분포·영웅 회피·REA 일반 명중확률·스트레스 공격 (회피 R-VALUE-13의 거울)
     CRIT_SIDE=True,       # R-VALUE-16: 치명타 확률 강화·받는 치명타 약화에 치명타 부수 효과(스트레스 회복 + 직업 치명타 버프)를 더한다
     STUN_MULT=1.0,        # 기절 = 성공률 x 몬스터 1행동. 행동 경제 프리미엄은 민감도로만 본다
     SUPPORT_MULT=1.0,     # 회복·보호·스트레스 회복. 프리미엄 없음(R-STRAT-01 3) -> 민감도로만
@@ -52,7 +52,11 @@ PARAM = dict(
     RES_DEBUFF_HP=3.0,    # 약화 1회 성공 가치
     RES_MOVE_HP=2.0,      # 밀치기·당기기 1회 성공 가치
     PROT_FLOOR=True,      # R-VALUE-14: 방어 감소는 적 방어 0 아래로 안 내려간다 [제작자 확인]
-    DODGE_EHP=True,       # R-VALUE-13: 회피 강화는 적 명중 분포·영웅 회피·0% 바닥·유효 체력·스트레스를 반영
+    DODGE_EHP=False,      # R-AUDIT-24: 유한 노출의 예방 HP+스트레스가 기본. True는 과거 EHP 프리미엄 민감도만
+    JOINT_SUPPORT=True,  # 같은 대상/기간의 확정 회피+스트레스 저항 중복을 공동 노출 모형으로 제거
+    ENGINE_DAMAGE=True,  # 확인된 기본 피해 float32/ceil/roundf. 조건부 보너스의 기대값 합성은 여전히 근사
+    STUN_TARGET_HP=None, # None=생존 조건부 점수. 숫자=모든 대상의 현재 HP를 같게 놓는 명시적 시나리오
+    STUN_ACTION_AVAILABLE=1.0, # 유효한 다음 행동 기회 비율 가정. 실제 관측/속도 계산값 아님
     DODGE_STRESS=True,
     DEBUFF_FORMATS=True,  # R-VALUE-12: 적 약화를 buff_ids·buff_type 형식으로 걸어도 센다 (받는 치명타 증가 포함)
     FREE_ACTION=True,     # R-VALUE-11: 무료 행동(.is_continue_turn)은 행동을 대신하지 않고 더한다. 매 턴 다시 쓸 수 있어 행동당 가치 = 기술 가치 / 지속 상한
@@ -77,7 +81,7 @@ PARAM = dict(
     FIGHT_ACTS=2.55,      # 전투 2.55라운드 = 영웅 1명의 행동 수 (R-STRAT-02). 전투당 1회 꾸러미를 행동당으로 나눈다
     # R-VALUE-06 개정(2026-10-03): 스트레스 = 가격 비율 + 고통(붕괴) 비용. 스트레스 100에서 75% 고통 / 25% 미덕
     AFFLICT_ROUNDS=10,    # 고통이 유지되는 라운드 (남은 원정 약 4전투 x 2.55, 영지 귀환 전까지 대개 유지) [가정]
-    AFFLICT_EVENTS=1.0,   # 라운드당 고통 영웅이 반응할 사건 수 (적중·빗나감·이동 등) [가정]
+    AFFLICT_EVENTS=1.0,   # 고통 반응 사건 빈도 배수(피격·빗나감·이동·회복/강화 거부). 1=기존 빈도, 턴 시작 행동은 제외 [가정]
     FOCUS_FIRE=True,      # R-VALUE-07 개정: 이동 가치는 우선 처치(닿는 적 중 위협이 큰 적부터 집중)로 센다
     # 2026-10-03 wiki.gg 대조 (analysis/wiki_notes.md)
     DMG_STACK='mult',     # V-01: 기술 피해 보정 x (1 + 강화·조건부 보너스) [위키 계산 예시]. 'add' = 이전 가산 가정(민감도)
@@ -121,6 +125,62 @@ def first(d, k, default=''):
     return v[0].strip('"') if v else default
 
 
+def f32(x):
+    return struct.unpack('<f', struct.pack('<f', x))[0]
+
+
+def percent32(x):
+    """REA FUN_14036cff0: strtod -> float32 -> float32(.01) multiply."""
+    return f32(f32(x) * f32(.01))
+
+
+def roundf_positive(x):
+    return math.floor(x + .5)
+
+
+def damage_distribution(weapon, modifier_pct, prot=0.0, bonus=0.0, stack='mult'):
+    """Normal integer outcomes and final critical HP loss, conditional on hit.
+
+    REA 1405add70: normal ceil endpoints / raw max*1.5 critical;
+    1405f0930: final HP roundf. PROT reduction roundf, positive minimum 1.
+    Exact baseline: no damage_taken/other modifiers. Expected conditional bonuses
+    are scenario approximations, not a recovered full engine modifier pipeline.
+    """
+    modifier = percent32(modifier_pct)
+    mult = f32(max(0.0, f32(1 + modifier)))
+    mult = f32(mult * f32(1 + bonus)) if stack == 'mult' else f32(max(0, f32(1 + modifier + bonus)))
+    lo, hi = (f32(f32(x) * mult) for x in weapon)
+    def hp(raw):
+        reduction = max(1, roundf_positive(f32(f32(prot) * raw))) if prot > 0 and raw > 0 else 0
+        return max(0, roundf_positive(f32(raw - reduction)))
+    normal = tuple(hp(float(n)) for n in range(math.ceil(lo), math.ceil(hi) + 1))
+    return normal, hp(f32(hi * f32(1.5)))
+
+
+def damage_mean(weapon, modifier_pct, crit, prot=0.0, bonus=0.0, stack='mult', current_hp=None):
+    normal, critical = damage_distribution(weapon, modifier_pct, prot, bonus, stack)
+    if current_hp is not None:
+        if current_hp < 0: raise ValueError('current_hp must be nonnegative')
+        normal = tuple(min(d, current_hp) for d in normal)
+        critical = min(critical, current_hp)
+    return (1 - crit) * st.mean(normal) + crit * critical
+
+
+def stun_joint_probability(hit_rate, crit, normal_damage, critical_damage, chance, resistance,
+                           current_hp=None, action_available=1.0, crit_bonus=.2):
+    """One target: hit AND survives damage AND effect succeeds AND action exists.
+    current_hp=None deliberately reports conditional-on-survival value; no invented enemy HP.
+    Crit branch survival and success stay correlated. No separate kill action credit.
+    """
+    if not 0 <= action_available <= 1:
+        raise ValueError('action_available must be in [0,1]')
+    q0 = max(0, min(1, chance - resistance))
+    q1 = max(0, min(1, chance + crit_bonus - resistance))
+    s0 = 1 if current_hp is None else st.mean(float(d < current_hp) for d in normal_damage)
+    s1 = 1 if current_hp is None else float(critical_damage < current_hp)
+    return hit_rate * ((1 - crit) * s0 * q0 + crit * s1 * q1) * action_available
+
+
 # ---------------------------------------------------------------- 몬스터 모집단
 def load_monsters():
     fs = glob.glob(os.path.join(G, 'monsters', '**', '*_C.info.darkest'), recursive=True) + \
@@ -162,11 +222,27 @@ def size_share(n):
     return sum(1 for m in MONS if m['size'] >= n) / N_MON
 
 
+with open(os.path.join(G, 'shared', 'rules.json'), encoding='utf-8-sig') as _rules_file:
+    _HIT_RULES = json.load(_rules_file)
+HIT_ALWAYS_MISS = _HIT_RULES['cutoffAlwaysMiss']
+HIT_ALWAYS_HIT = _HIT_RULES['cutoffAlwaysHit']
+
+
+def hit_probability(acc, dodge):
+    """REA로 확인한 일반 명중 분기의 연속 균등 난수 기대값(특수 보정 없는 기준).
+
+    Darkest.exe SHA256 4d78fbfaa65b7d002d2208d02da809200f4a5723119521180e30100d6f1a75f2,
+    FUN_1405add70 (2026-10-23 static evidence 007-attack-roll):
+    roll<=cutoffAlwaysMiss: miss; roll>=cutoffAlwaysHit: hit; otherwise roll<net accuracy.
+    현재 cutoff 0/.95이면 .05+clamp((acc-dodge)/100,0,.95). cutoff는 확률 상한이 아니라 난수 구간이다.
+    난수의 유한 정밀도/끝점, 빗나감 이력 보정, fated, 강제 명중·회피 등은 이 기준식 밖이다.
+    """
+    net = (acc - dodge) / 100
+    return (1.0 - HIT_ALWAYS_HIT) + max(0.0, min(HIT_ALWAYS_HIT, net) - HIT_ALWAYS_MISS)
+
+
 def hit(m, acc):
-    """적중 = 명중 − 회피. 95% 이상이면 무조건 명중(rules.json cutoffAlwaysHit 0.95), 0 이하면 빗나감(cutoffAlwaysMiss 0).
-    위키의 '숨은 명중 +5'는 데이터 근거가 없어 넣지 않는다(V-15)."""
-    x = acc - m['dodge']
-    return 1.0 if x >= 95 else max(0.0, x) / 100
+    return hit_probability(acc, m['dodge'])
 
 
 def burn_total(n, keep_rounds=0, P=None):
@@ -260,7 +336,7 @@ def monster_stress_per_action():
             d = kv(l)
             tgt = first(d, 'target')
             nt = len(re.sub('[^1-4]', '', tgt)) * 0.8 if '~' in tgt else 1
-            h = max(0, min(95, num(first(d, 'atk')) - 25)) / 100
+            h = hit_probability(num(first(d, 'atk')), 25)
             sv = 0.0
             for en in ec.effect_names_in(l):
                 k = kv(eff.get(en, ''))
@@ -322,7 +398,7 @@ def _monster_profile(mid):
         d = kv(l)
         tgt = first(d, 'target')
         nt = len(re.sub('[^1-4]', '', tgt)) * 0.8 if '~' in tgt else 1
-        h = max(0, min(95, num(first(d, 'atk')) - 25)) / 100
+        h = hit_probability(num(first(d, 'atk')), 25)
         dm = d.get('dmg') or ['0']
         lo, hi = num(dm[0]), num(dm[-1])
         cr = num(first(d, 'crit')) / 100 if hi > 0 and first(d, 'is_crit_valid', 'True').lower() == 'true' else 0
@@ -414,7 +490,8 @@ def formation_lineups(stress_hp):
 
 
 @functools.lru_cache(maxsize=None)
-def move_value(kind, dist, tranks, stress_hp, death_rate, horizon):
+def move_value(kind, dist, tranks, stress_hp, death_rate, horizon,
+               focus_fire=PARAM['FOCUS_FIRE'], kill_share=PARAM['KILL_SHARE'], push_wrap=PARAM['PUSH_WRAP']):
     """당기기·밀치기 1회 성공의 가치(HP). R-VALUE-07 개정(2026-10-03, 제작자 지적):
     대상만이 아니라 **대열 전체**를 다시 세운다 — 대상이 dist칸 움직이면 사이의 적들이 반대로 한 칸씩 움직인다
     (앞열 적을 밀면 3열 적이 2열 근접 사거리로 들어온다 / 뒤 적을 당기면 앞열 적이 뒤로 밀려난다).
@@ -437,9 +514,9 @@ def move_value(kind, dist, tranks, stress_hp, death_rate, horizon):
             ranks = list(range(r, min(4, r + size - 1) + 1))
             pos.append((r, _threat_at(sk, ranks, stress_hp)))
             r += size
-        if PARAM['FOCUS_FIRE']:
+        if focus_fire:
             # 우선 처치: 파티(라운드당 1.57명 처치)가 '위협 x 도달률'이 큰 적부터 집중한다 (R-STRAT-01)
-            K = PARAM['KILL_SHARE'] * 4
+            K = kill_share * 4
             dd = [0.0] * len(pos)
             for i in sorted(range(len(pos)), key=lambda i: -pos[i][1] * rho[pos[i][0]]):
                 dd[i] = min(0.95, K * rho[pos[i][0]] / rmax)
@@ -455,7 +532,7 @@ def move_value(kind, dist, tranks, stress_hp, death_rate, horizon):
                 if 1 + sum(u[0] for u in us[:i]) not in tranks:
                     continue
                 mv = list(us); x = mv.pop(i)
-                if kind == 'push' and PARAM['PUSH_WRAP'] and i + dist > len(mv):
+                if kind == 'push' and push_wrap and i + dist > len(mv):
                     mv.insert(i + dist - len(us), x)   # V-18: 맨 뒤를 넘은 만큼 맨 앞에서 다시 센다
                 else:
                     mv.insert(min(len(mv), i + dist) if kind == 'push' else max(0, i - dist), x)
@@ -476,10 +553,13 @@ def move_value(kind, dist, tranks, stress_hp, death_rate, horizon):
 # ---------------------------------------------------------------- 회피 (R-VALUE-13)
 @functools.lru_cache(maxsize=None)
 def monster_attack_accs():
-    """영웅 등급 몬스터 공격 기술 명중 분포 (명중 50 이상, 근접·원거리)"""
+    """MONS와 같은 일반 영웅 등급 모집단의 공격행 명중 분포 (명중 50 이상, 근접·원거리; AI 가중 아님)"""
     out = []
+    names = {m['name'] for m in MONS}
     for f in glob.glob(os.path.join(G, 'monsters', '*', '*_C', '*_C.info.darkest')) + \
             glob.glob(os.path.join(G, 'dlc', '**', 'monsters', '**', '*_C.info.darkest'), recursive=True):
+        if 'arena' in ec.P(f) or '/modes/' in ec.P(f) or os.path.basename(f).split('.')[0] not in names:
+            continue
         for l in open(f, encoding='utf-8', errors='ignore'):
             if l.startswith('skill:') and ('"melee"' in l or '"ranged"' in l):
                 m = re.search(r'\.atk ([\d.]+)%', l)
@@ -489,41 +569,52 @@ def monster_attack_accs():
 
 
 def dodge_value(base, x, dur, P):
-    """회피 +x(점수)를 dur턴 받은 영웅 1명의 가치(HP).
-    1) 적 명중 분포와 영웅 자신의 회피로 적중률 h0 -> h1 (0% 바닥 반영)
-    2) 생존 환산: 유효 체력 = 체력 / 적중률. 같은 적중률 감소도 남은 적중률이 낮을수록 가치가 커진다
-       -> 막은 피해 x (기준 적중률 / h1). 기준 적중률(77.5%)에서는 예전 직선 계산과 같다
-    3) 명중해야 들어오는 스트레스 공격도 함께 막는다 -> 받는 스트레스를 HP로 더한다"""
+    """유한 기간 예방 HP+스트레스. EHP 프리미엄은 기본값에서 제외.
+    HP 노출은 기존 ENEMY_ACT 보정 유지. 스트레스는 같은 명중 표본의 회피25 노출로
+    정규화한다. AI 가중 사건별 스트레스/비명중 스트레스 분리는 아직 미해결 근사다.
+    EHP 자체는 evaluate의 surv와 dodge_diagnostics에서 별도로 확인한다."""
     accs = monster_attack_accs()
-    h0 = st.mean(max(0.0, min(0.95, (a - base) / 100)) for a in accs)
-    h1 = st.mean(max(0.0, min(0.95, (a - base - x) / 100)) for a in accs)
+    h0 = st.mean(hit_probability(a, base) for a in accs)
+    h1 = st.mean(hit_probability(a, base + x) for a in accs)
     if h0 <= 0:
         return 0.0
-    ref = (P['MON_HIT'] - 25) / 100
+    ref = hit_probability(P['MON_HIT'], 25)
     hp_in = P['ENEMY_ACT'] * P['HITS_TAKEN'] / ref
-    stress_in = (P['STRESS_TAKEN'] or 0) * P['STRESS_HP'] / ref if P.get('DODGE_STRESS', True) else 0.0
-    weight = ref / max(h1, 0.05)
+    stress_ref = st.mean(hit_probability(a, 25) for a in accs)
+    stress_in = (P['STRESS_TAKEN'] or 0) * P['STRESS_HP'] / stress_ref if P.get('DODGE_STRESS', True) else 0.0
+    weight = ref / max(h1, 0.05) if P.get('DODGE_EHP', False) else 1.0
     return (hp_in + stress_in) * (h0 - h1) * weight * dur
+
+
+def dodge_diagnostics(base, x, hp=100):
+    accs = monster_attack_accs()
+    h0 = st.mean(hit_probability(a, base) for a in accs)
+    h1 = st.mean(hit_probability(a, base + x) for a in accs)
+    return dict(hit_before=h0, hit_after=h1, ehp_before=hp/h0,
+                ehp_after=hp/h1, relative_ehp_gain=h0/h1-1)
 
 
 def enemy_acc_value(x, P):
     """적 1명 명중 -x(점수), 1라운드 가치(HP). R-VALUE-17
-    그 적의 1행동이 영웅(회피 중앙값)에게 들어갈 적중률 h0 -> h1 (몬스터 명중 분포, 0% 바닥).
+    그 적의 1행동이 영웅(회피 중앙값)에게 들어갈 적중률 h0 -> h1 (몬스터 명중 분포, 공통 REA 기준 확률).
     1적중 = 체력 피해(ENEMY_ACT/기준 적중률) + 스트레스(1행동 기대 스트레스 2 x STRESS_TAKEN / 기준 적중률).
     회피와 달리 유효 체력 가중은 없다: 적 1명의 명중만 내려가 파티 전체 피격률은 거의 안 변한다"""
     accs = monster_attack_accs()
-    h0 = st.mean(max(0.0, min(0.95, (a - HERO_MED_DEF) / 100)) for a in accs)
-    h1 = st.mean(max(0.0, min(0.95, (a - HERO_MED_DEF - x) / 100)) for a in accs)
-    ref = (P['MON_HIT'] - 25) / 100
+    h0 = st.mean(hit_probability(a, HERO_MED_DEF) for a in accs)
+    h1 = st.mean(hit_probability(a - x, HERO_MED_DEF) for a in accs)
+    ref = hit_probability(P['MON_HIT'], 25)
     per_hit = (P['ENEMY_ACT'] + 2 * (P['STRESS_TAKEN'] or 0) * P['STRESS_HP']) / ref
     return per_hit * (h0 - h1)
 
 
 def monster_crit_skills():
-    """영웅 등급 몬스터 공격 기술 (명중, 치명, 최소 피해, 최대 피해). 치명 불가 기술은 치명 0"""
+    """MONS와 같은 일반 영웅 등급 공격행 (명중, 치명, 최소 피해, 최대 피해). 치명 불가는 0; AI 가중 아님"""
     out = []
+    names = {m['name'] for m in MONS}
     for f in glob.glob(os.path.join(G, 'monsters', '*', '*_C', '*_C.info.darkest')) + \
             glob.glob(os.path.join(G, 'dlc', '**', 'monsters', '**', '*_C.info.darkest'), recursive=True):
+        if 'arena' in ec.P(f) or '/modes/' in ec.P(f) or os.path.basename(f).split('.')[0] not in names:
+            continue
         for l in open(f, encoding='utf-8', errors='ignore'):
             if l.startswith('skill:') and ('"melee"' in l or '"ranged"' in l):
                 a =re.search(r'\.atk ([\d.]+)%', l)
@@ -561,7 +652,7 @@ def enemy_crit_value(x, P):
         return 0.0
     v = 0.0
     for a, c, lo, hi in sk:
-        h = max(0.0, min(0.95, (a - HERO_MED_DEF) / 100))
+        h = hit_probability(a, HERO_MED_DEF)
         v += h * min(x, c) / 100 * (1.5 * hi - (lo + hi) / 2 + P['CRIT_RECV_STRESS'] * P['STRESS_HP'])
     return v / len(sk)
 
@@ -611,7 +702,7 @@ def load_hero(hero, mode):
 
 # ---------------------------------------------------------------- 가치 계산
 @functools.lru_cache(maxsize=None)
-def followup_heal_amount():
+def followup_heal_amount(heal_crit_sgl=PARAM['HEAL_CRIT_SGL']):
     """각 영웅의 최대 단일 아군 직접 회복 평균을 1개씩 집계. 미래 회복 사용 빈도는 별도 가정이다."""
     amounts = []
     for hero in KO:
@@ -619,7 +710,7 @@ def followup_heal_amount():
                 if len(d.get('heal', [])) >= 2 and '@' in first(d, 'target') and '~' not in first(d, 'target')]
         if vals:
             amounts.append(max(vals))
-    return st.median(amounts) * (1 + PARAM['HEAL_CRIT_SGL']) if amounts else 0.0
+    return st.median(amounts) * (1 + heal_crit_sgl) if amounts else 0.0
 
 
 @functools.lru_cache(maxsize=None)
@@ -647,7 +738,7 @@ def marked_damage_bonus():
                 continue
             low, high = num(damage[0]), num(damage[-1]); crit = num(first(d, 'crit')) / 100
             if first(d, 'is_crit_valid', 'true').lower() == 'false': crit = 0.0
-            hit_rate = max(0.0, min(0.95, (num(first(d, 'atk')) - 25) / 100))
+            hit_rate = hit_probability(num(first(d, 'atk')), 25)
             amount = ((low + high) / 2 * (1 - crit) + high * 1.5 * crit) * hit_rate
             bonus = 0.0
             for name in ec.effect_names_in(line):
@@ -717,7 +808,7 @@ class Ctx:
         P = s.P
         if stat == 'hp_heal_received_percent':
             packet = P['HEAL_FOLLOWUP_AMOUNT']
-            if packet is None: packet = followup_heal_amount()
+            if packet is None: packet = followup_heal_amount(P['HEAL_CRIT_SGL'])
             return amt * packet * P['HEAL_FOLLOWUP_RATE'] * dur * P['SUPPORT_MULT']
         atk_val = s.avg * 0.8 * 0.83 if who == 'self' else P['ALLY_ATK']
         if stat in ('damage_low', 'damage_high'):
@@ -727,8 +818,6 @@ class Ctx:
         if stat == 'crit_chance':                   # 추가 피해 + 치명타 부수 효과 (R-VALUE-16)
             return (atk_val + CRIT_SIDE_HP) * amt * dur
         if stat == 'defense_rating':
-            if not P.get('DODGE_EHP', True):
-                return P['ENEMY_ACT'] * P['HITS_TAKEN'] * amt * 100 / 77.5 * dur
             return dodge_value(s.H['def'] if who == 'self' else HERO_MED_DEF, amt * 100, dur, P)
         if stat == 'protection_rating':
             return P['ENEMY_ACT'] * P['HITS_TAKEN'] * amt * dur
@@ -738,9 +827,12 @@ class Ctx:
             return P['KILL_SHARE'] * dp_self(h, amt) * act * dur
         return 0.0
 
-    def stress_resist_value(s, amt, dur):
-        """받는 스트레스 amt(음수 = 감소) -> HP. 대상 1명, dur 턴"""
-        return -amt * s.P['STRESS_TAKEN'] * dur * s.P['STRESS_HP']
+    def stress_resist_value(s, amt, dur, who='ally'):
+        """동일 pooled 노출 모형: 받는 스트레스 amt(음수=감소), 대상 1명."""
+        base = s.H['def'] if who == 'self' else HERO_MED_DEF
+        accs = monster_attack_accs()
+        ratio = st.mean(hit_probability(a, base) for a in accs) / st.mean(hit_probability(a, 25) for a in accs)
+        return -amt * s.P['STRESS_TAKEN'] * ratio * dur * s.P['STRESS_HP']
 
     def buff_ids_value(s, ids, dur, who):
         v = 0.0
@@ -752,7 +844,7 @@ class Ctx:
             if B.get('rule_type') == 'monsterSize':           # 대형 대상 조건 = 그 크기 이상 몬스터 비율
                 cm = size_share((B.get('rule_data') or {}).get('float', 2))
             if B.get('stat_type') == 'stress_dmg_received_percent':
-                v += cm * s.stress_resist_value(B['amount'], dur)
+                v += cm * s.stress_resist_value(B['amount'], dur, who)
             elif B.get('stat_type') == 'hp_heal_received_percent':
                 v += cm * s.stat_value(B['stat_type'], B['amount'], dur, who)
             elif B.get('stat_type') in ('combat_stat_add', 'combat_stat_multiply'):
@@ -790,16 +882,66 @@ def self_mark_value(C, effects):
     bonus = P['MARK_DAMAGE_BONUS']
     if bonus is None: bonus = marked_damage_bonus()
     incoming = P['ENEMY_ACT'] * P['HITS_TAKEN']
-    ref_hit = max(0.05, (P['MON_HIT'] - 25) / 100)
+    ref_hit = max(0.05, hit_probability(P['MON_HIT'], 25))
     redirect = risk = 0.0
     for start, end in zip(bounds, bounds[1:]):
         prot = max(0.0, min(0.8, H.get('prot', 0) + sum(p for duration, p, _ in defenses if duration > start)))
         dodge = H['def'] + sum(v for duration, _, v in defenses if duration > start)
-        hit_ratio = max(0.0, min(0.95, (P['MON_HIT'] - dodge) / 100)) / ref_hit
+        hit_ratio = hit_probability(P['MON_HIT'], dodge) / ref_hit
         remaining = hit_ratio * (1 - prot)
         redirect += incoming * max(0.0, P['MARK_DRAW'] - 1) * (end - start) * (1 - remaining)
         risk += incoming * P['MARK_DRAW'] * (end - start) * bonus * remaining
     return redirect * mark_chance, risk * mark_chance
+
+
+def joint_support_overlap(C, effects, ally, self_only, n_t):
+    """Subtract overlap only for guaranteed, unconditional buffs on identical recipients.
+    Uses existing effective durations, partitioned at expiry. Probabilistic/conditional
+    effect correlations and actual integer stress/source-type applicability are unresolved.
+    This is a pooled expected-exposure correction, not a game-engine stress simulation.
+    """
+    if not C.P.get('JOINT_SUPPORT', True) or not C.P.get('DODGE_STRESS', True):
+        return 0.0
+    groups = {}
+    for e in effects:
+        k = kv(e); who = first(k, 'target', 'target')
+        if who not in ('performer', 'performer_group', 'performer_group_other', 'target'):
+            continue
+        if who == 'target' and not (ally or self_only):
+            continue
+        if num(first(k, 'chance', '100')) != 100 or any(x in k for x in ('keyStatus', 'monsterType', 'requires_kill_target')):
+            continue
+        target_count = 1 if who == 'performer' or self_only or not ally else n_t
+        if who == 'performer_group': target_count = 4
+        if who == 'performer_group_other': target_count = 3
+        target_kind = 'self' if who == 'performer' else 'ally'
+        dur = effect_duration(k, C.P)
+        dur = min(dur, C.P['BUFF_DUR_CAP']) if target_kind == 'self' else buff_rounds(dur, C.P)
+        dx = num(first(k, 'defense_rating_add')) if 'combat_stat_buff' in k else 0.0
+        sr = 0.0
+        for b in k.get('buff_ids', []):
+            B = C.buffs.get(b.strip('"'), {})
+            if B.get('rule_type') not in (None, 'always'): continue
+            if B.get('stat_type') == 'combat_stat_add' and B.get('stat_sub_type') == 'defense_rating': dx += B['amount'] * 100
+            if B.get('stat_type') == 'stress_dmg_received_percent': sr -= B['amount']
+        groups.setdefault((who, target_kind, target_count), []).append((dur, dx, sr))
+    groups = {key: rows for key, rows in groups.items()
+              if any(dx for _, dx, _ in rows) and any(sr for _, _, sr in rows)}
+    if not groups:
+        return 0.0
+    overlap = 0.0
+    accs = monster_attack_accs()
+    stress_ref = st.mean(hit_probability(a, 25) for a in accs)
+    for (_, target_kind, count), rows in groups.items():
+        base = C.H['def'] if target_kind == 'self' else HERO_MED_DEF
+        h0 = st.mean(hit_probability(a, base) for a in accs)
+        bounds = sorted({0.0, *(d for d, _, _ in rows)})
+        for start, end in zip(bounds, bounds[1:]):
+            dx = sum(x for d, x, _ in rows if d > start)
+            sr = sum(r for d, _, r in rows if d > start)
+            h1 = st.mean(hit_probability(a, base + dx) for a in accs)
+            overlap += count * (end-start) * sr * (h0-h1) / stress_ref * C.P['STRESS_TAKEN'] * C.P['STRESS_HP']
+    return overlap
 
 
 def skill_value(C, l, d):
@@ -810,7 +952,7 @@ def skill_value(C, l, d):
     ranks = len(re.sub(r'[^1-4]', '', tgt))
     atk = num(first(d, 'atk', '0')); dmgm = num(first(d, 'dmg', '0')) / 100
     crit_valid = first(d, 'is_crit_valid', 'True').lower() == 'true'
-    crit = (num(first(d, 'crit', '0')) + H['wcrit']) / 100 if crit_valid else 0.0
+    crit = max(0.0, min(1.0, f32(percent32(num(first(d, 'crit', '0'))) + percent32(H['wcrit'])))) if crit_valid else 0.0
     ign_prot = first(d, 'ignore_protection', 'false').lower() == 'true'
     limit = num(first(d, 'per_battle_limit', '0'))
     effs = [C.eff.get(n, '') for n in ec.effect_names_in(l)]
@@ -854,7 +996,12 @@ def skill_value(C, l, d):
     if does_dmg:
         mult = (max(0.0, 1 + dmgm) * (1 + cond_bonus)) if P.get('DMG_STACK') == 'mult' else max(0.0, 1 + dmgm + cond_bonus)
         dm = ((1 - crit) * C.avg + crit * C.max * 1.5) * mult
-        per = st.mean(hit(m, atk) * dm * (1 if ign_prot else 1 - max(0.0, m['prot'] - ap)) for m in MONS)
+        if P.get('ENGINE_DAMAGE', True):
+            per = st.mean(hit(m, atk) * damage_mean(H['dmg'], dmgm*100, crit,
+                          0 if ign_prot else max(0.0, m['prot']-ap), cond_bonus, P.get('DMG_STACK'),
+                          P.get('STUN_TARGET_HP')) for m in MONS)
+        else:
+            per = st.mean(hit(m, atk) * dm * (1 if ign_prot else 1 - max(0.0, m['prot'] - ap)) for m in MONS)
         add('직접', per * n_t * (P['E_AOE'] if aoe else P['E_SGL']) * rw)
         ph = st.mean(hit(m, atk) for m in MONS) * crit
         p_any_crit = 1 - (1 - ph) ** n_t
@@ -880,11 +1027,20 @@ def skill_value(C, l, d):
                 for m in MONS:
                     h = hit(m, atk) if (on_hit and atk > 0) else 1.0
                     a0 = apply_rate(m, chance, res_key)
-                    a1 = apply_rate(m, chance + P['CRIT_EFF'] * 100, res_key)
+                    bonus = 0 if first(k, 'crit_doesnt_apply_to_roll').lower() == 'true' else P['CRIT_EFF'] * 100
+                    a1 = apply_rate(m, chance + bonus, res_key)
                     tot += h * ((1 - crit) * (fn(a0, False) if fn else a0) + crit * (fn(a1, True) if fn else a1))
                 return tot / N_MON
             if 'stun' in k:
-                add('기절', ev('stun') * act_full * P['STUN_MULT'] * n_t * rw)
+                joint = []
+                for m in MONS:
+                    normal, critical = damage_distribution(H['dmg'], dmgm*100,
+                        0 if ign_prot else max(0.0, m['prot']-ap), cond_bonus, P.get('DMG_STACK')) if does_dmg else ((0,), 0)
+                    joint.append(stun_joint_probability(hit(m, atk) if on_hit and atk > 0 else 1.0,
+                        crit, normal, critical, chance/100, m['stun']/100,
+                        P.get('STUN_TARGET_HP'), P.get('STUN_ACTION_AVAILABLE', 1.0),
+                        0 if first(k, 'crit_doesnt_apply_to_roll').lower() == 'true' else P['CRIT_EFF']))
+                add('기절', st.mean(joint) * act_full * P['STUN_MULT'] * n_t * rw)
             for key, rk, nm in (('dotBleed', 'bleed', '출혈'), ('dotPoison', 'poison', '중독')):
                 if key in k:
                     per_tick = num(first(k, key))
@@ -903,7 +1059,8 @@ def skill_value(C, l, d):
                 add('화상', h_ * zb * P['E_DOT_SGL'] * rw)
             if P['RANK_MODEL'] and ('push' in k or 'pull' in k) and tranks:
                 kind = 'pull' if 'pull' in k else 'push'
-                mv = move_value(kind, int(num(first(k, kind))), tranks, P['STRESS_HP'], P['DEATH_RATE'], int(P['BUFF_DUR_CAP']))
+                mv = move_value(kind, int(num(first(k, kind))), tranks, P['STRESS_HP'], P['DEATH_RATE'], int(P['BUFF_DUR_CAP']),
+                                P['FOCUS_FIRE'], P['KILL_SHARE'], P['PUSH_WRAP'])
                 add('이동', ev('move') * mv * n_t)
             elif 'push' in k or 'shuffletarget' in k:
                 add('이동', ev('move') * P['PUSH'] * n_t)
@@ -913,8 +1070,12 @@ def skill_value(C, l, d):
                 pass
             if 'tag' in k:
                 add('표식', st.mean(hit(m, atk) for m in MONS) * P['MARK_PARTY'] * n_t * rw)
-            if 'kill_enemy_types' in k:
-                add('시체', P['CORPSE'])
+            if 'corpse' in [v.strip('"') for v in k.get('kill_enemy_types', [])]:
+                # CORPSE remains an encounter-value prior; explicit activation is not optional.
+                h_ = st.mean(hit(m, atk) for m in MONS) if atk > 0 else 1.0
+                on_miss = first(k, 'on_miss', 'false').lower() == 'true'
+                activation = (h_ if on_hit else 0.0) + (1 - h_ if on_miss else 0.0)
+                add('시체', P['CORPSE'] * max(0.0, min(1.0, chance / 100)) * activation)
             if 'unstealth' in k:                                # R-VALUE-09: 광역이어도 가치는 은신 적 1명분
                 h_ = 1.0 if aoe else st.mean(hit(m, atk) for m in MONS)
                 add('은신 해제', h_ * P['DESTEALTH'])
@@ -930,7 +1091,8 @@ def skill_value(C, l, d):
                     B = C.buffs.get(b.strip('"'), {})
                     if B.get('stat_type') in ('combat_stat_add', 'combat_stat_multiply'):
                         a = -B.get('amount', 0)
-                        mods.append((B.get('stat_sub_type', ''), a * 100 if B.get('stat_sub_type') == 'speed_rating' else a))
+                        # JSON speed_rating amounts are raw points (SPD-3 = -3), as in ally buffs.
+                        mods.append((B.get('stat_sub_type', ''), a))
                     elif B.get('stat_type') == 'crit_received_chance':
                         mods.append(('crit_received', B.get('amount', 0)))
                     elif B.get('stat_type') == 'damage_received_percent' and B.get('rule_type') in (None, 'always') and P.get('DMG_RECEIVED', True):
@@ -949,6 +1111,7 @@ def skill_value(C, l, d):
                 elif stat.startswith('damage_'):
                     v += P['ENEMY_ACT'] * x * 0.5
                 elif stat == 'attack_rating':
+                    # ENEMY_ACC=False intentionally keeps the historical .775 calibration as a sensitivity case.
                     v += enemy_acc_value(x * 100, P) if P.get('ENEMY_ACC', True) else P['ENEMY_ACT'] * x * 100 / 77.5
                 elif stat == 'crit_chance' and P.get('ENEMY_CRIT', True):   # R-VALUE-22 적 치명 감소
                     v += enemy_crit_value(x * 100, P)
@@ -1012,7 +1175,7 @@ def skill_value(C, l, d):
                         md = min(effect_duration(k2, P), rd)
                 hits = P['HITS_TAKEN'] * (md * P['MARK_DRAW'] + (rd - md))
                 # 반격은 빗나간 공격에도 발동한다(riposte_on_miss_chance_add 100%) -> 맞은 횟수가 아니라 받은 공격 수
-                hits /= max(0.05, (P['MON_HIT'] - H['def']) / 100)
+                hits /= max(0.05, hit_probability(P['MON_HIT'], H['def']))
                 add('반격', C.riposte(k) * hits * ch)
             if 'combat_stat_buff' in k:
                 cm = P['COND_OTHER'] if 'keyStatus' in k else 1.0
@@ -1047,6 +1210,7 @@ def skill_value(C, l, d):
                 add('대가', -num(first(k, 'stress')) * ch * P['STRESS_HP'])
             if 'stress' in k and who in ('performer_group_other', 'performer_group'):   # 아군에게 주는 스트레스 (괴인 변신)
                 add('대가', -num(first(k, 'stress')) * ch * tgt_n * P['STRESS_HP'])
+    add('공동 노출 보정', -joint_support_overlap(C, effs, ally, self_only, n_t))
     if 'heal' in d and len(d['heal']) >= 2:                  # 기술 줄의 .heal lo hi
         amt = (num(d['heal'][0]) + num(d['heal'][1])) / 2
         hn = n_t * (P['ALLY_AOE_HEAL'] if n_t > 1 else 1) if ally else 1
@@ -1067,14 +1231,16 @@ def skill_value(C, l, d):
     if P.get('FRONT_REACH') and enemy and lranks and lranks <= {'1', '2'} and set(str(r) for r in tranks) & {'3', '4'}:
         fr = P['FRONT_REACH'][1] if 4 in tranks else P['FRONT_REACH'][0]
         add('전열→후열', fr * sum(v for v in parts.values() if v > 0))   # R-VALUE-20: 4열 > 3열
-    tot = sum(parts.values())
+    availability = 1.0
     if limit:
-        tot *= min(1.0, limit / 3)
+        availability *= min(1.0, limit / 3)
     if first(d, 'requires_burning').lower() == 'true':      # 화상 걸린 대상이 있어야 쓸 수 있다: 자기 상태 조건 유지율
-        tot *= P['COND_SELF']
+        availability *= P['COND_SELF']
     if 'required_performer_hp_range' in d:
-        tot *= P['LOW_HP_SELF'] if C.self_wound else P['LOW_HP_OTHER']
-    return tot, parts
+        availability *= P['LOW_HP_SELF'] if C.self_wound else P['LOW_HP_OTHER']
+    # Report the same amortized action value in the total and every component.
+    parts = {k: v * availability for k, v in parts.items()}
+    return sum(parts.values()), parts
 
 
 PARAM_MED_HP = 43.0      # evaluate()에서 바닐라 5레벨 체력 중앙값으로 덮어쓴다
@@ -1156,7 +1322,7 @@ def stress_price_ratio():
     return gold_per_stress / gold_per_hp, gold_per_stress, gold_per_hp
 
 
-def affliction_margin(P=PARAM, sh0=None):
+def affliction_margin(P=PARAM, sh0=None, median_hp=None):
     """R-VALUE-06 개정(2026-10-03). 스트레스 1점이 고통(붕괴)·미덕 판정으로 더하는 HP. 고통 7종·미덕 5종을 효과별로 센다.
     고통 1회(라운드당 x AFFLICT_ROUNDS): 비아냥 스트레스(턴 시작 + 사건 반응 x masterBarkChance, 1회 +6)
       + 행동 손실(명령 무시·임의 명령·자리 이탈) x 영웅 1행동 + 아군 공격·자기 공격·자기 표식 + 능력치 변화 + 회복·강화·이동 거부.
@@ -1167,10 +1333,14 @@ def affliction_margin(P=PARAM, sh0=None):
     master = rules.get('masterBarkChance', 0.5)
     buffs = ec.load_buffs(G)
     d = json.loads(re.sub(r',\s*([}\]])', r'\1', open(os.path.join(G, 'shared', 'trait', 'trait_library.json'), encoding='utf-8-sig').read()))
-    std, hero_act, hp_med = 7.65, 13.2, PARAM_MED_HP          # 표준 평타·영웅 1행동(바닐라 중앙)·체력 중앙
-    hit_on_me = P['HITS_TAKEN']; att_on_me = hit_on_me / ((P['MON_HIT'] - 25) / 100)
+    # Resolve from explicit input/data, never from a previous evaluate() call's mutable state.
+    hp_med = stress_hp('vanilla') * 100 if median_hp is None else median_hp
+    std, hero_act = 7.65, 13.2          # 표준 평타·영웅 1행동(바닐라 중앙)
+    hit_on_me = P['HITS_TAKEN']; att_on_me = hit_on_me / hit_probability(P['MON_HIT'], 25)
     ev = dict(comment_self_hit=hit_on_me, comment_self_missed=att_on_me - hit_on_me, comment_ally_hit=3 * hit_on_me,
               comment_ally_missed=3 * (att_on_me - hit_on_me), comment_ally_attack_hit=2.25, comment_ally_attack_missed=0.75, comment_move=0.3)
+    reaction_frequency = P['AFFLICT_EVENTS']
+    ev = {k: v * reaction_frequency for k, v in ev.items()}
 
     def bf(tr):
         o = {}
@@ -1194,14 +1364,16 @@ def affliction_margin(P=PARAM, sh0=None):
             bark = (3 * (p(('bark_stress',)) + sum(ev.get(k, 0) * c * master for k, c in re_.items() if k in own))
                     + sum(ev.get(k, 0) * c * master for k, c in re_.items() if k.startswith('comment_') and k not in own))
             dmg = (b.get('damage_low', 0) + b.get('damage_high', 0)) / 2
+            # Legacy trait price approximations below retain /77.5; not an engine-derived probability.
             per = (bark * 6 * sh0 + p(('ignore_command', 'random_command', 'change_pos', 'retreat_from_combat')) * hero_act
                    + afw / tot * (hero_act + std) + p(('attack_self',)) * 0.1 * hp_med + p(('mark_self',)) * (P['MARK_DRAW'] - 1) * hit_on_me * 8
                    - dmg * std * 0.75 - b.get('attack_rating', 0) * std - b.get('defense_rating', 0) * P['ENEMY_ACT'] * hit_on_me * 100 / 77.5
                    - b.get('speed_rating', 0) * 0.3 + 0.1 * P['ENEMY_ACT'] * hit_on_me * 0.5
-                   + re_.get('block_heal', 0) * 0.35 * 6 + re_.get('block_buff', 0) * 0.6 + re_.get('block_move', 0) * 0.1 * hero_act)
+                   + reaction_frequency * (re_.get('block_heal', 0) * 0.35 * 6 + re_.get('block_buff', 0) * 0.6 + re_.get('block_move', 0) * 0.1 * hero_act))
             aff.append(per * P['AFFLICT_ROUNDS'])
         elif tr['overstress_type'] == 'virtue':
             tot = sum(a['chance'] for a in ao)
+            # 10/77.5 here remains the historical buff valuation calibration.
             av = dict(stress_heal_self=15 * sh0, stress_heal_party=4 * 4 * sh0 * 0.7, buff_random_party_member=(10 / 77.5 + 0.10) * std,
                       buff_party=0.15 * std * 0.75 * 4, heal_self=0.1 * hp_med)
             dmg = (b.get('damage_low', 0) + b.get('damage_high', 0)) / 2
@@ -1214,9 +1386,9 @@ def affliction_margin(P=PARAM, sh0=None):
     return (pa * ca - (1 - pa) * cv) / 100, ca, cv
 
 
-def stress_value(P=PARAM):
+def stress_value(P=PARAM, median_hp=None):
     sh0 = stress_price_ratio()[0]
-    return sh0 + affliction_margin(P, sh0)[0]
+    return sh0 + affliction_margin(P, sh0, median_hp=median_hp)[0]
 
 
 def stress_hp(mode):
@@ -1234,9 +1406,9 @@ def evaluate(mode, P=PARAM):
             _STRESS_CACHE = 2 * monster_stress_per_action() / 4
         P = dict(P, STRESS_TAKEN=_STRESS_CACHE)
     if P['STRESS_HP'] is None:
-        P = dict(P, STRESS_HP=stress_value(P))             # R-VALUE-06 가격 비율 + 고통 비용
+        P = dict(P, STRESS_HP=stress_value(P, median_hp=PARAM_MED_HP))   # R-VALUE-06 가격 비율 + 고통 비용
     if P['HEAL_FOLLOWUP_AMOUNT'] is None:
-        P = dict(P, HEAL_FOLLOWUP_AMOUNT=followup_heal_amount())
+        P = dict(P, HEAL_FOLLOWUP_AMOUNT=followup_heal_amount(P['HEAL_CRIT_SGL']))
     if P['MARK_DAMAGE_BONUS'] is None:
         P = dict(P, MARK_DAMAGE_BONUS=marked_damage_bonus())
     eff = load_effects(mode)
@@ -1255,7 +1427,8 @@ def evaluate(mode, P=PARAM):
         H = load_hero(hero, mode)
         C = Ctx(H, eff, buffs, P)
         wc = H['wcrit'] / 100
-        base = st.mean(hit(m, 105) * ((1 - wc) * C.avg + wc * C.max * 1.5) * (1 - m['prot']) for m in MONS)
+        base = st.mean(hit(m, 105) * (damage_mean(H['dmg'], 0, wc, m['prot']) if P.get('ENGINE_DAMAGE', True)
+                       else ((1 - wc) * C.avg + wc * C.max * 1.5) * (1 - m['prot'])) for m in MONS)
         sk = {}
         for l, d in H['skills']:
             sid = first(d, 'id')
@@ -1283,7 +1456,7 @@ def evaluate(mode, P=PARAM):
         opt = sum(1 for x in rank_pts if x >= 0.9 * best)
         sub = sum(1 for x in rank_pts if 0.6 * best <= x < 0.9 * best)
         rmean = st.mean(H['res'].get(k, 0) for k in RES_BASE) - st.mean(RES_BASE.values())
-        surv = H['hp'] / ((P['MON_HIT'] - H['def']) / 100) * (1 + rmean / 200)
+        surv = H['hp'] / hit_probability(P['MON_HIT'], H['def']) * (1 + rmean / 200)
         out[hero] = dict(act=act, free=free_bonus, surv=surv, spd=H['spd'], flex=opt + 0.5 * sub, base=base, skills=sk, rank_pts=rank_pts, plans=plans)
     return out
 
