@@ -11,7 +11,7 @@ from pathlib import Path
 import re
 import shutil
 import xml.etree.ElementTree as ET
-from common import LANGUAGES, read_json, sha256, write_json
+from common import LANGUAGES, read_json, sha256, write_json, run
 from release import validate_payload
 
 DLC = {'duelist':'4964110_fires_edge/features/duelist',
@@ -145,6 +145,28 @@ def descriptions(key, registry):
     return result
 
 
+def compile_localization(source, child, payload, key, game):
+    # WS-MODULAR-001: Musketeer renames belong only to her optional patch.
+    scopes={'rebalance_fixes.string_table.xml':'base','rebalance_leper.string_table.xml':'base',
+            'rebalance_musketeer.string_table.xml':'musketeer'}
+    xmls=list((source/'localization').glob('*.string_table.xml'))
+    unknown={p.name for p in xmls}-set(scopes)
+    if unknown: raise ValueError('New localization source needs explicit package scope: '+str(unknown))
+    selected=[p for p in xmls if scopes[p.name]==key]
+    if not selected: return
+    build=child/'localization-build'; loc=build/'localization'; loc.mkdir(parents=True)
+    shutil.copytree(game/'colours',build/'colours')
+    for p in selected: shutil.copy2(p,loc/p.name)
+    (loc/'project_paths.txt').write_text('..',encoding='utf-8')
+    result=run([game/'_windows/win32/localization.exe'],cwd=loc,timeout=120,input='\n')
+    (build/'compile.log').write_text(result,encoding='utf-8')
+    if 'SUCCESS' not in result or 'Error' in result: raise ValueError('Module localization compilation failed')
+    out=payload/'localization'; out.mkdir()
+    files=list(loc.glob('*.loc2'))
+    if not files: raise ValueError('Module localization compiler returned no files')
+    for p in files: shutil.copy2(p,out/(str(APPROVED[key])+'_'+p.name))
+
+
 def prepare_modules(config, job, release, registry):
     if set(registry)!=set(KEYS) or any(int(registry[k]['item_id'])!=APPROVED[k] for k in KEYS):
         raise ValueError('Module registry differs from the six explicitly approved items')
@@ -152,8 +174,14 @@ def prepare_modules(config, job, release, registry):
     if validate_payload(aio)!=release['payload_hashes']: raise ValueError('AIO payload changed')
     for rel in release['payload_hashes']:
         if rel in {'project.xml','modfiles.txt','preview_icon.png'}: continue
-        if rel.startswith(('heroes/','effects/','shared/buffs/','localization/')): continue
+        p=Path(rel)
+        if rel.startswith('heroes/'): continue
+        if len(p.parts)==2 and p.parts[0]=='effects' and p.name.endswith('.effects.darkest'): continue
+        if len(p.parts)==3 and p.parts[:2]==('shared','buffs') and p.suffix=='.json': continue
+        if len(p.parts)==2 and p.parts[0]=='localization' and p.suffix=='.loc2': continue
         raise ValueError('New payload category requires an explicit module packaging rule: '+rel)
+    for image in release['images']:
+        if sha256(Path(release['image_dir'])/image['path'])!=image['sha256']: raise ValueError('AIO image changed')
     all_heroes={p.name for p in (aio/'heroes').iterdir() if p.is_dir()}
     if len(all_heroes)!=20 or not set(DLC)<=all_heroes: raise ValueError('Expected approved 20-hero roster')
     groups={k:({k} if k!='base' else all_heroes-set(DLC)) for k in KEYS}
@@ -183,6 +211,9 @@ def prepare_modules(config, job, release, registry):
         previous=read_json(child/'release.json')
         if previous:
             if previous.get('parent_digest')!=release['digest'] or previous.get('item_id')!=APPROVED[key]: raise ValueError('Prepared module input changed')
+            if previous.get('recipe_hash')!=sha256(__file__): raise ValueError('Module implementation changed since preparation')
+            body={k:v for k,v in previous.items() if k!='digest'}
+            if hashlib.sha256(json.dumps(body,sort_keys=True,ensure_ascii=False).encode()).hexdigest()!=previous['digest']: raise ValueError('Prepared module release record changed')
             if validate_payload(Path(previous['payload']))!=previous['payload_hashes']: raise ValueError('Prepared module payload changed')
             for image in previous['images']:
                 if sha256(Path(previous['image_dir'])/image['path'])!=image['sha256']: raise ValueError('Prepared module image changed')
@@ -191,7 +222,7 @@ def prepare_modules(config, job, release, registry):
         if payload.exists(): raise ValueError('Incomplete module build exists; inspect before retry: '+str(payload))
         payload.mkdir()
         for hero in sorted(groups[key]): shutil.copytree(aio/'heroes'/hero,payload/'heroes'/hero)
-        if key=='base' and (aio/'localization').exists(): shutil.copytree(aio/'localization',payload/'localization')
+        compile_localization(job/'source',child,payload,key,game)
         (payload/'effects').mkdir()
         (payload/'effects'/f'rebalance_{key}_module.effects.darkest').write_text('\n'.join(custom_e[n] for n in sorted(needs[key][0]))+'\n',encoding='utf-8')
         write_json(payload/'shared/buffs'/f'rebalance_{key}_module.buffs.json',{'buffs':[custom_b[n] for n in sorted(needs[key][1])]})
@@ -213,7 +244,7 @@ def prepare_modules(config, job, release, registry):
             shutil.copy2(src,image_dir/src.name); images.append(dict(image,path=src.name))
         if not images: raise ValueError('Module has no corresponding hero images')
         child_release={k:release[k] for k in ('source_sha','previous_sha','version','note')}
-        child_release.update(item_id=APPROVED[key],parent_digest=release['digest'],descriptions=desc,images=images,
+        child_release.update(item_id=APPROVED[key],parent_digest=release['digest'],recipe_hash=sha256(__file__),descriptions=desc,images=images,
                              image_dir=str(image_dir.resolve()),payload=str(payload.resolve()),payload_hashes=manifest(payload))
         child_release['digest']=hashlib.sha256(json.dumps(child_release,sort_keys=True,ensure_ascii=False).encode()).hexdigest()
         write_json(child/'release.json',child_release); releases[key]=child_release

@@ -361,5 +361,15 @@
     "heroes/musketeer/musketeer.art.darkest": true,
     "heroes/musketeer/musketeer.info.darkest": true
   },
-  "draft_only": true
+  "draft_only": true,
+  "localization_scopes": {
+    "base": [
+      "rebalance_fixes.string_table.xml",
+      "rebalance_leper.string_table.xml"
+    ],
+    "musketeer": [
+      "rebalance_musketeer.string_table.xml"
+    ]
+  },
+  "retry_hash_identical": true
 }

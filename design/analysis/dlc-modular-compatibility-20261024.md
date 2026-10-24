@@ -22,3 +22,5 @@
 패키지별 이미지/설명/업데이트 노트와 제출 체크포인트를 각각 기록한다. 새 항목 생성은 승인된 6개만, 불명확한 생성 결과는 자동 재시도하지 않는다. main push 성공 후 선택형들과 기존 전체판까지 모두 제출 완료되어야 배포 성공으로 기록한다. test push는 여전히 게시하지 않는다.
 
 Steam API 자료: https://partner.steamgames.com/doc/api/ISteamUGC 및 ValveSoftware/source-sdk-2013/src/public/steam/isteamugc.h의 Win64 콜백 정의. Chrome 로그인이나 쿠키를 사용하지 않고 현재 Steam 클라이언트 공식 API를 사용한다.
+
+총사 기술명 현지화는 총사 선택 패치에만 포함한다. 본편판에 총사 이름을 넣으면 DLC만 켜고 패치를 쓰지 않는 플레이어의 원본 명칭까지 바뀌므로 분리했다. 준비된 패키지 재사용 시 부모 이미지·child release digest·빌더 해시를 모두 검사하며 모르는 파일 형식은 배포 전에 거부한다. 최종 초안 32조합 및 동일 입력 재시도 해시 일치를 확인했다.
