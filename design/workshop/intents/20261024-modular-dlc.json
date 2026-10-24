@@ -1,0 +1,57 @@
+{
+  "id": "WS-MODULAR-001",
+  "decision": "adopted",
+  "original_quote": "별도 선택형 패키지 제공 허용",
+  "context_quotes": [
+    {
+      "speaker": "assistant",
+      "quote": "기존 창작마당은 전체 DLC용으로 유지하고, ‘본편 15영웅판 + 선택 DLC 영웅 패치 5개’를 별도 제공하는 것입니다.",
+      "source": "현재 대화 2026-10-24 선택형 배포 승인 질문"
+    }
+  ],
+  "rationale_ko": "기존 전체판 구독자의 구성을 유지하면서 DLC를 일부만 보유/활성화한 플레이어가 본편판과 해당 영웅 패치만 선택하도록 제공한다. 공개 항목 6개 추가와 main push 동기화 범위를 허용한다. 기술 수치는 보존한다. FLA-015는 교차 DLC 누락 참조, SYS-103은 기존 치명타 효과 포장 누락을 수정한다. 사용자는 현재 플레이 중이므로 파일 검증부터 진행하라고 지정했다.",
+  "source": {
+    "product": "codex",
+    "reference": "현재 대화 2026-10-24 선택형 패키지 승인 응답 및 파일 검증 우선 응답",
+    "session_id": null,
+    "message_id": null,
+    "event_id": null
+  },
+  "files": [
+    "design/analysis/dlc-modular-compatibility-20261024.md",
+    "design/analysis/dlc-modular-static-validation.json",
+    "design/changes/flagellant.md",
+    "design/changes/system.md",
+    "design/workshop/modules.json",
+    "design/workshop/why.json",
+    "effects/rebalance_flagellant.effects.darkest",
+    "heroes/flagellant/flagellant.effects_edit.txt",
+    "heroes/flagellant/flagellant.info.darkest",
+    "tools/build_workshop.py",
+    "tools/effect_common.py",
+    "tools/workshop_sync/README-MODULES.md",
+    "tools/workshop_sync/README.md",
+    "tools/workshop_sync/agent-contract.md",
+    "tools/workshop_sync/build.py",
+    "tools/workshop_sync/cards.py",
+    "tools/workshop_sync/common.py",
+    "tools/workshop_sync/config.example.json",
+    "tools/workshop_sync/connect-agents.py",
+    "tools/workshop_sync/create_modules.py",
+    "tools/workshop_sync/git_source.py",
+    "tools/workshop_sync/modules.py",
+    "tools/workshop_sync/push.py",
+    "tools/workshop_sync/release.py",
+    "tools/workshop_sync/steam.py",
+    "tools/workshop_sync/sync.py",
+    "tools/workshop_sync/tests/test_cards.py",
+    "tools/workshop_sync/tests/test_modules.py",
+    "tools/workshop_sync/tests/test_push.py",
+    "tools/workshop_sync/tests/test_steam.py",
+    "tools/workshop_sync/tests/test_sync.py",
+    "tools/workshop_sync/tests/test_text_budget.py",
+    "tools/workshop_sync/text_budget.py",
+    "tools/workshop_sync/verify-live-release.py"
+  ],
+  "supersedes": []
+}

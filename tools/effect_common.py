@@ -10,7 +10,7 @@ ABBR = dict(abomination='ABO', antiquarian='ANT', arbalest='ARB', bounty_hunter=
 P = lambda p: p.replace('\\', '/')
 norm_ws = lambda s: re.sub(r'\s+', ' ', s.strip())
 # effect names are usually quoted, but some vanilla lines use bare names (duelist: .effect duelist_riposte)
-EFFECT_LIST = re.compile(r'(\.(?:effects?|human_effects|beast_effects))((?:\s+(?:"[^"]*"|(?!\.)[^\s"]+))+)')
+EFFECT_LIST = re.compile(r'(\.(?:effects?|human_effects|beast_effects|battle_start_effect_ids|stance_defensive_effects|stance_aggressive_effects|enter_effects))((?:\s+(?:"[^"]*"|(?!\.)[^\s"]+))+)')
 EFFECT_TOKEN = re.compile(r'"([^"]*)"|([^\s"]+)')
 
 
@@ -32,9 +32,11 @@ def load_vanilla_effects(G):
     for f in effect_files(G):
         for raw in open(f, encoding='utf-8', errors='replace'):
             if raw.startswith('effect:'):
-                m = re.search(r'\.name\s+"([^"]+)"', raw)
-                if m and m.group(1) not in eff:
-                    eff[m.group(1)] = (raw.rstrip('\r\n'), P(os.path.relpath(f, G)))
+                # SYS-103: vanilla reaction effects may use unquoted names too.
+                m = re.search(r'\.name\s+(?:"([^"]+)"|(\S+))', raw)
+                name = (m.group(1) or m.group(2)) if m else None
+                if name and name not in eff:
+                    eff[name] = (raw.rstrip('\r\n'), P(os.path.relpath(f, G)))
     return eff
 
 

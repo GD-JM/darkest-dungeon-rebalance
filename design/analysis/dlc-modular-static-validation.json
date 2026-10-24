@@ -1,0 +1,365 @@
+{
+  "source_sha": "26547e4-draft-uncommitted",
+  "runtime_tested": false,
+  "combinations": [
+    {
+      "dlc_heroes": [],
+      "hero_count": 15,
+      "effects": 173,
+      "buffs": 54,
+      "passed": true
+    },
+    {
+      "dlc_heroes": [
+        "duelist"
+      ],
+      "hero_count": 16,
+      "effects": 188,
+      "buffs": 57,
+      "passed": true
+    },
+    {
+      "dlc_heroes": [
+        "runaway"
+      ],
+      "hero_count": 16,
+      "effects": 173,
+      "buffs": 54,
+      "passed": true
+    },
+    {
+      "dlc_heroes": [
+        "flagellant"
+      ],
+      "hero_count": 16,
+      "effects": 198,
+      "buffs": 54,
+      "passed": true
+    },
+    {
+      "dlc_heroes": [
+        "shieldbreaker"
+      ],
+      "hero_count": 16,
+      "effects": 181,
+      "buffs": 54,
+      "passed": true
+    },
+    {
+      "dlc_heroes": [
+        "musketeer"
+      ],
+      "hero_count": 16,
+      "effects": 210,
+      "buffs": 61,
+      "passed": true
+    },
+    {
+      "dlc_heroes": [
+        "duelist",
+        "runaway"
+      ],
+      "hero_count": 17,
+      "effects": 188,
+      "buffs": 57,
+      "passed": true
+    },
+    {
+      "dlc_heroes": [
+        "duelist",
+        "flagellant"
+      ],
+      "hero_count": 17,
+      "effects": 213,
+      "buffs": 57,
+      "passed": true
+    },
+    {
+      "dlc_heroes": [
+        "duelist",
+        "shieldbreaker"
+      ],
+      "hero_count": 17,
+      "effects": 196,
+      "buffs": 57,
+      "passed": true
+    },
+    {
+      "dlc_heroes": [
+        "duelist",
+        "musketeer"
+      ],
+      "hero_count": 17,
+      "effects": 225,
+      "buffs": 64,
+      "passed": true
+    },
+    {
+      "dlc_heroes": [
+        "runaway",
+        "flagellant"
+      ],
+      "hero_count": 17,
+      "effects": 198,
+      "buffs": 54,
+      "passed": true
+    },
+    {
+      "dlc_heroes": [
+        "runaway",
+        "shieldbreaker"
+      ],
+      "hero_count": 17,
+      "effects": 181,
+      "buffs": 54,
+      "passed": true
+    },
+    {
+      "dlc_heroes": [
+        "runaway",
+        "musketeer"
+      ],
+      "hero_count": 17,
+      "effects": 210,
+      "buffs": 61,
+      "passed": true
+    },
+    {
+      "dlc_heroes": [
+        "flagellant",
+        "shieldbreaker"
+      ],
+      "hero_count": 17,
+      "effects": 206,
+      "buffs": 54,
+      "passed": true
+    },
+    {
+      "dlc_heroes": [
+        "flagellant",
+        "musketeer"
+      ],
+      "hero_count": 17,
+      "effects": 235,
+      "buffs": 61,
+      "passed": true
+    },
+    {
+      "dlc_heroes": [
+        "shieldbreaker",
+        "musketeer"
+      ],
+      "hero_count": 17,
+      "effects": 218,
+      "buffs": 61,
+      "passed": true
+    },
+    {
+      "dlc_heroes": [
+        "duelist",
+        "runaway",
+        "flagellant"
+      ],
+      "hero_count": 18,
+      "effects": 213,
+      "buffs": 57,
+      "passed": true
+    },
+    {
+      "dlc_heroes": [
+        "duelist",
+        "runaway",
+        "shieldbreaker"
+      ],
+      "hero_count": 18,
+      "effects": 196,
+      "buffs": 57,
+      "passed": true
+    },
+    {
+      "dlc_heroes": [
+        "duelist",
+        "runaway",
+        "musketeer"
+      ],
+      "hero_count": 18,
+      "effects": 225,
+      "buffs": 64,
+      "passed": true
+    },
+    {
+      "dlc_heroes": [
+        "duelist",
+        "flagellant",
+        "shieldbreaker"
+      ],
+      "hero_count": 18,
+      "effects": 221,
+      "buffs": 57,
+      "passed": true
+    },
+    {
+      "dlc_heroes": [
+        "duelist",
+        "flagellant",
+        "musketeer"
+      ],
+      "hero_count": 18,
+      "effects": 250,
+      "buffs": 64,
+      "passed": true
+    },
+    {
+      "dlc_heroes": [
+        "duelist",
+        "shieldbreaker",
+        "musketeer"
+      ],
+      "hero_count": 18,
+      "effects": 233,
+      "buffs": 64,
+      "passed": true
+    },
+    {
+      "dlc_heroes": [
+        "runaway",
+        "flagellant",
+        "shieldbreaker"
+      ],
+      "hero_count": 18,
+      "effects": 206,
+      "buffs": 54,
+      "passed": true
+    },
+    {
+      "dlc_heroes": [
+        "runaway",
+        "flagellant",
+        "musketeer"
+      ],
+      "hero_count": 18,
+      "effects": 235,
+      "buffs": 61,
+      "passed": true
+    },
+    {
+      "dlc_heroes": [
+        "runaway",
+        "shieldbreaker",
+        "musketeer"
+      ],
+      "hero_count": 18,
+      "effects": 218,
+      "buffs": 61,
+      "passed": true
+    },
+    {
+      "dlc_heroes": [
+        "flagellant",
+        "shieldbreaker",
+        "musketeer"
+      ],
+      "hero_count": 18,
+      "effects": 243,
+      "buffs": 61,
+      "passed": true
+    },
+    {
+      "dlc_heroes": [
+        "duelist",
+        "runaway",
+        "flagellant",
+        "shieldbreaker"
+      ],
+      "hero_count": 19,
+      "effects": 221,
+      "buffs": 57,
+      "passed": true
+    },
+    {
+      "dlc_heroes": [
+        "duelist",
+        "runaway",
+        "flagellant",
+        "musketeer"
+      ],
+      "hero_count": 19,
+      "effects": 250,
+      "buffs": 64,
+      "passed": true
+    },
+    {
+      "dlc_heroes": [
+        "duelist",
+        "runaway",
+        "shieldbreaker",
+        "musketeer"
+      ],
+      "hero_count": 19,
+      "effects": 233,
+      "buffs": 64,
+      "passed": true
+    },
+    {
+      "dlc_heroes": [
+        "duelist",
+        "flagellant",
+        "shieldbreaker",
+        "musketeer"
+      ],
+      "hero_count": 19,
+      "effects": 258,
+      "buffs": 64,
+      "passed": true
+    },
+    {
+      "dlc_heroes": [
+        "runaway",
+        "flagellant",
+        "shieldbreaker",
+        "musketeer"
+      ],
+      "hero_count": 19,
+      "effects": 243,
+      "buffs": 61,
+      "passed": true
+    },
+    {
+      "dlc_heroes": [
+        "duelist",
+        "runaway",
+        "flagellant",
+        "shieldbreaker",
+        "musketeer"
+      ],
+      "hero_count": 20,
+      "effects": 258,
+      "buffs": 64,
+      "passed": true
+    }
+  ],
+  "hero_byte_parity": {
+    "heroes/abomination/abomination.info.darkest": true,
+    "heroes/antiquarian/antiquarian.info.darkest": true,
+    "heroes/arbalest/arbalest.info.darkest": true,
+    "heroes/bounty_hunter/bounty_hunter.info.darkest": true,
+    "heroes/crusader/crusader.info.darkest": true,
+    "heroes/grave_robber/grave_robber.info.darkest": true,
+    "heroes/hellion/hellion.info.darkest": true,
+    "heroes/highwayman/highwayman.info.darkest": true,
+    "heroes/houndmaster/houndmaster.info.darkest": true,
+    "heroes/jester/jester.info.darkest": true,
+    "heroes/leper/leper.info.darkest": true,
+    "heroes/man_at_arms/man_at_arms.info.darkest": true,
+    "heroes/occultist/occultist.info.darkest": true,
+    "heroes/plague_doctor/plague_doctor.info.darkest": true,
+    "heroes/vestal/vestal.info.darkest": true,
+    "heroes/duelist/duelist.info.darkest": true,
+    "heroes/runaway/runaway.info.darkest": true,
+    "heroes/flagellant/flagellant.info.darkest": true,
+    "heroes/shieldbreaker/shieldbreaker.info.darkest": true,
+    "heroes/musketeer/musketeer.art.darkest": true,
+    "heroes/musketeer/musketeer.info.darkest": true
+  },
+  "draft_only": true
+}

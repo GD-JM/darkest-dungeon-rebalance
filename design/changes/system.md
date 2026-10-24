@@ -19,3 +19,8 @@
 - 키: `effect_tooltip_cure_debuff` (약화 해제 툴팁, 고행자 고통 등). `localization/rebalance_fixes.string_table.xml`(english·koreana·koreanb).
 - 근거: 오타는 공식 아레나 DLC 한국어 파일(arena_koreana.loc2)에서 오고, YAMR·Trinkets Plus가 같은 문장을 복사해 갖고 있다. 제작자가 고통 툴팁 스크린샷으로 지적.
 - 미확인: 다른 모드가 같은 키를 먼저 덮으면 그대로 보일 수 있음(UI Enhancement 사례) → 게임 확인 필요.
+
+### SYS-103 창작마당 기술 외 효과 누락 방지 (2026-10-24)
+- 빌더가 combat_skill만 읽어 총사 `crit: .effects "RB MUS on_crit_pierce"`와 연결 버프를 배포하지 않던 문제를 수정한다. 주석을 제외한 영웅 데이터 전체의 effect/effects 및 모드 효과 목록을 수집한다.
+- 기존 승인된 효과 정의를 포장하는 수정이며 치명타 효과 수치를 새로 조정하지 않는다. 파일 검증과 게임 내 발동 검증은 구분한다.
+- SYS-103 추가 확인: 전투 시작/자세/죽음의 문턱 효과 목록과 바닐라의 따옴표 없는 효과 이름도 처리한다. 선택형 검사는 버프 해제 목록까지 재귀적으로 검사한다.

@@ -261,3 +261,6 @@ effect: .name "Flag Last Gift" .target "target" .curio_result_type "positive" .c
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
 effect: .name "Flag Last Insult" .target "target" .curio_result_type "negative" .chance 125% .stun 1	.on_hit true .on_miss false .queue true
 //#   원본 위치: dlc/580100_crimson_court/features/flagellant/effects/flagellant.effects.darkest
+
+effect: .name "RB FLA Cure Debuffs" .target "target" .chance 100% .clear_debuff 1 .on_hit true .on_miss false
+// FLA-015 동일한 약화 해제를 모드 전용 이름으로 제공해 방패 파괴자 DLC 비활성 환경의 누락 참조를 제거한다. 공유 원본 효과는 수정하지 않는다.

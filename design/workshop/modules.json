@@ -1,0 +1,25 @@
+{
+  "base": {
+    "item_id": 3826129567
+  },
+  "duelist": {
+    "item_id": 3826129595,
+    "dlc_id": 4964110
+  },
+  "runaway": {
+    "item_id": 3826129618,
+    "dlc_id": 4964110
+  },
+  "flagellant": {
+    "item_id": 3826129642,
+    "dlc_id": 580100
+  },
+  "shieldbreaker": {
+    "item_id": 3826129659,
+    "dlc_id": 702540
+  },
+  "musketeer": {
+    "item_id": 3826129680,
+    "dlc_id": 445700
+  }
+}

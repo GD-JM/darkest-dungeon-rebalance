@@ -168,7 +168,8 @@ def main():
     need = []
     for hero in heroes:
         for l in rd(os.path.join(OUT, 'heroes', hero, hero + '.info.darkest')).splitlines():
-            if l.startswith('combat_skill:'):
+            # SYS-103: crit/mode/reaction effects are runtime dependencies too.
+            if l.strip() and not l.lstrip().startswith('//'):
                 for n in ec.effect_names_in(l):
                     if n not in van_eff and n not in need:
                         assert n in cust_eff, ('정의 없는 효과', hero, n)

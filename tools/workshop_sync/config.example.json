@@ -1,0 +1,6 @@
+{
+  "game_root": "C:/path/to/DarkestDungeon",
+  "state_dir": "C:/path/to/private/workshop-runtime",
+  "codex": "C:/path/to/codex.exe",
+  "max_image_height": 1500
+}
