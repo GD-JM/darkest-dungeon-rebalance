@@ -15,7 +15,7 @@ import uuid
 from common import read_json, sha256, write_json, WorkerLock
 from git_source import GitSource
 from release import prepare, is_release_input, validate_payload
-from steam import Steam, SubmissionUnknown, ITEM_ID
+from steam import Steam, SteamError, SubmissionUnknown, ITEM_ID
 
 ROOT = Path(__file__).resolve().parent
 
@@ -144,6 +144,35 @@ def publish(config, job, release, images_only=False, metadata_only=False):
     return journal
 
 
+def publish_batch(config, job, release, module_releases):
+    # WS-SYNC-004: one Steam item under review must not block independent items.
+    # Keep per-item checkpoints and never mark the whole release successful until all finish.
+    outcomes = {}
+    errors = []
+    targets = [(key, job / 'modules' / key, value) for key, value in module_releases.items()]
+    targets.append(('all_dlc', job, release))
+    for key, target_job, target_release in targets:
+        if (Path(config['state_dir']) / 'stop.request').exists():
+            raise RuntimeError('Stop requested between Workshop items')
+        try:
+            if key not in ('base', 'all_dlc'):
+                dependency_path = target_job / 'dependency.json'
+                if not dependency_path.exists():
+                    with Steam(config['game_root'], target_release['item_id']) as steam:
+                        dependency = steam.add_dependency(module_releases['base']['item_id'])
+                    write_json(dependency_path, dependency)
+            publish(config, target_job, target_release)
+            outcomes[key] = {'status': 'complete'}
+        except SteamError as exc:
+            # Only remote Steam failures are isolated. Validation/ownership failures abort.
+            outcomes[key] = {'status': 'blocked', 'error': str(exc)}
+            errors.append(key + ': ' + str(exc))
+        write_json(job / 'batch-state.json', {'updated': now(), 'items': outcomes})
+    if errors:
+        raise SteamError('Publication incomplete; completed items retained. ' + ' | '.join(errors))
+    return outcomes
+
+
 def once(config, publish_enabled=False, expected_sha=None):
     root = Path(config['state_dir']).resolve()
     git = GitSource(root)
@@ -188,16 +217,7 @@ def once(config, publish_enabled=False, expected_sha=None):
         return 'prepared; stop requested before publication'
     state.update(pending_sha=sha, checked_at=now())
     write_json(state_path, state)
-    for key, module_release in module_releases.items():
-        if key != 'base':
-            # Steam's required-item link is idempotent; persist its confirmed callback.
-            dependency_path = job / 'modules' / key / 'dependency.json'
-            if not dependency_path.exists():
-                with Steam(config['game_root'], module_release['item_id']) as steam:
-                    dependency = steam.add_dependency(module_releases['base']['item_id'])
-                write_json(dependency_path, dependency)
-        publish(config, job / 'modules' / key, module_release)
-    publish(config, job, release)
+    publish_batch(config, job, release, module_releases)
     state.update(last_published_sha=sha, last_seen_sha=sha, pending_sha=None,
                  last_release={'version': release['version'], 'digest': release['digest'], 'job': str(job)},
                  published_at=now(), last_error=None)

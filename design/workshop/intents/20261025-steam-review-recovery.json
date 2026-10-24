@@ -1,0 +1,15 @@
+{
+  "id": "WS-SYNC-004",
+  "decision": "adopted",
+  "original_quote": "준비됐어 스팀 창 띄워놨으니까 접근 거부 원인 해결하고 전체판이랑 선택형 전부 배포하고 댓글까지 마무리해줘",
+  "rationale_ko": "사용자는 모든 승인된 배포의 마무리를 요청했다. 소유자 화면에서 본편판이 Steam 자동 콘텐츠 검토 대기로 숨김 처리됨을 확인했다. 한 항목의 원격 제출 오류가 나머지 독립적인 승인 항목을 막지 않도록 오류를 항목별 기록하고 계속 진행한다. 전체 성공 표시는 모든 항목 완료 시에만 허용한다. 이는 요청을 수행하기 위한 오류 처리 수정이며 새 밸런스 결정이 아니다. 검토 우회나 항목 재생성은 하지 않는다.",
+  "source": {
+    "product": "codex",
+    "reference": "현재 대화의 사용자 메시지: 준비됐어 스팀 창 띄워놨으니까... 및 Steam 소유자 본편판 3826129567에 표시된 자동 콘텐츠 검토 안내",
+    "session_id": null,
+    "message_id": null,
+    "event_id": null
+  },
+  "files": ["tools/workshop_sync/sync.py", "tools/workshop_sync/tests/test_sync.py", "tools/workshop_sync/agent-contract.md"],
+  "supersedes": []
+}

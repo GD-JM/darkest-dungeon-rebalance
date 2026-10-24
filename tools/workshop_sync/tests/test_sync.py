@@ -8,8 +8,8 @@ import sys
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from common import LANGUAGES, read_json, sha256, write_json
 from release import load_intents, validate_editor, is_game_file, next_version, merge_editorial, apply_description_patches, inherit_published_editorial
-from sync import publish, once, metadata_with_marker, verify_phase, relevant
-from steam import SubmissionUnknown
+from sync import publish, publish_batch, once, metadata_with_marker, verify_phase, relevant
+from steam import SteamError, SubmissionUnknown
 
 
 class FakeSteam:
@@ -260,6 +260,26 @@ class SyncTests(unittest.TestCase):
         state=read_json(self.root/'state.json')
         self.assertEqual(state['last_published_sha'],'a'*40)
         self.assertEqual(state['pending_sha'],'b'*40)
+
+    def test_steam_hold_does_not_block_other_items_or_report_batch_success(self):
+        modules = {'base': {'item_id': 123}, 'duelist': {'item_id': 456}}
+        write_json(self.root/'modules/duelist/dependency.json', {'parent':456,'child':123})
+        with patch('sync.publish', side_effect=[SubmissionUnknown('review hold'), {}, {}]) as pub:
+            with self.assertRaisesRegex(SteamError, 'Publication incomplete'):
+                publish_batch({'state_dir':str(self.root),'game_root':'game'}, self.root, {}, modules)
+        self.assertEqual(pub.call_count, 3)
+        self.assertEqual([c.args[1] for c in pub.call_args_list],
+                         [self.root/'modules/base',self.root/'modules/duelist',self.root])
+        items=read_json(self.root/'batch-state.json')['items']
+        self.assertEqual(items['base']['status'], 'blocked')
+        self.assertEqual(items['duelist']['status'], 'complete')
+        self.assertEqual(items['all_dlc']['status'], 'complete')
+
+    def test_validation_failure_still_aborts_other_items(self):
+        with patch('sync.publish', side_effect=ValueError('ownership mismatch')) as pub:
+            with self.assertRaisesRegex(ValueError, 'ownership mismatch'):
+                publish_batch({'state_dir':str(self.root)}, self.root, {}, {'base':{}})
+        self.assertEqual(pub.call_count, 1)
 
 
 if __name__ == '__main__': unittest.main()
