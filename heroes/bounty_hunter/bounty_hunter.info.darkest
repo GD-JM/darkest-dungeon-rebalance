@@ -96,11 +96,13 @@ combat_skill: .id "finish_him" .level 4 .type "melee" .atk 105% .dmg 0% .crit 9%
 
 
 
-combat_skill: .id "hook_and_slice" .level 0 .type "ranged" .atk 90% .dmg -85% .crit 5% .launch 234 .target ~34 .is_crit_valid True  .effect "Bleed 1" "Caltrops Prey Debuff 1"
-combat_skill: .id "hook_and_slice" .level 1 .type "ranged" .atk 95% .dmg -85% .crit 6% .launch 234 .target ~34 .is_crit_valid True  .effect "Bleed 2" "Caltrops Prey Debuff 2"
-combat_skill: .id "hook_and_slice" .level 2 .type "ranged" .atk 100% .dmg -85% .crit 7% .launch 234 .target ~34 .is_crit_valid True  .effect "Bleed 3" "Caltrops Prey Debuff 3"
-combat_skill: .id "hook_and_slice" .level 3 .type "ranged" .atk 105% .dmg -85% .crit 8% .launch 234 .target ~34 .is_crit_valid True  .effect "Bleed 4" "Caltrops Prey Debuff 4"
-combat_skill: .id "hook_and_slice" .level 4 .type "ranged" .atk 110% .dmg -85% .crit 9% .launch 234 .target ~34 .is_crit_valid True  .effect "Bleed 5" "Caltrops Prey Debuff 5"
+combat_skill: .id "hook_and_slice" .level 0 .type "ranged" .atk 90% .dmg -85% .crit 5% .launch 1234 .target ~34 .is_crit_valid True  .effect "Bleed 1" "Caltrops Prey Debuff 1"
+combat_skill: .id "hook_and_slice" .level 1 .type "ranged" .atk 95% .dmg -85% .crit 6% .launch 1234 .target ~34 .is_crit_valid True  .effect "Bleed 2" "Caltrops Prey Debuff 2"
+combat_skill: .id "hook_and_slice" .level 2 .type "ranged" .atk 100% .dmg -85% .crit 7% .launch 1234 .target ~34 .is_crit_valid True  .effect "Bleed 3" "Caltrops Prey Debuff 3"
+combat_skill: .id "hook_and_slice" .level 3 .type "ranged" .atk 105% .dmg -85% .crit 8% .launch 1234 .target ~34 .is_crit_valid True  .effect "Bleed 4" "Caltrops Prey Debuff 4"
+combat_skill: .id "hook_and_slice" .level 4 .type "ranged" .atk 110% .dmg -85% .crit 9% .launch 1234 .target ~34 .is_crit_valid True  .effect "Bleed 5" "Caltrops Prey Debuff 5"
+// BH-025 [2026-10-24] Caltrops launch 234 -> 1234: enable rank-1 back-rank pressure and bleeding setup for Finish Him; all other skill fields retained.
+// BH-025 마름쇠를 1열에서도 사용: 1열 현상금 사냥꾼에게 후열 견제·출혈 연계 선택지를 제공한다. 3·4열 동시 공격·피해 -85%·출혈·받는 피해 증가는 유지.
 // BH-005 hook_and_slice(마름쇠): dmg -80% -> -70% (vanilla -95%)
 // BH-020 hook_and_slice: ranks 3-4 single -> AoE ranks 3-4; speed debuff moved to Come Hither; bleed and damage taken kept.
 // BH-020 마름쇠: 3·4열 단일 → 3·4열 동시. 출혈 2~4(3턴)·받는 피해 +10~20%(3턴) 유지, 속도 감소는 이리 오너라로. 의도: 바닥에 뿌리는 쇠못(P-19). 단일·피해 −85%·약화 셋은 쓸 이유가 없었음 [제작자 10-22]

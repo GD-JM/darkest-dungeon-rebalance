@@ -1,0 +1,45 @@
+{
+  "id": "BH-025",
+  "decision": "adopted",
+  "original_quote": "그럼 마름쇠 전열 사용 가능하게 하자 의도 주석 남기고 커밋까지 해 푸시는 하지 말고",
+  "rationale_ko": "마름쇠는 적 3·4열을 동시에 공격해 출혈과 받는 피해 증가를 걸며, 속도 감소는 이리 오너라로 옮겼다. 피해 -85%는 유지한다. 이제 1~4열 어디서든 사용해 1열 현상금 사냥꾼도 후열을 견제하고 끝장내기 출혈 연계를 준비하며 2열 자리를 다른 영웅에게 내줄 수 있게 한다.",
+  "source": {
+    "product": "codex",
+    "reference": "현재 대화 2026-10-24: 1열 현상금 사냥꾼 조정안 직후 마름쇠 전 열 사용 승인",
+    "session_id": null,
+    "message_id": null,
+    "event_id": null
+  },
+  "context_quotes": [
+    {
+      "role": "user",
+      "quote": "현상금 사냥꾼 1열에서도 충분히 쓸만하게 만들고 싶은데 조정 방안 뭐가 있을까?",
+      "reference": "현재 대화 직전 사용자 메시지"
+    },
+    {
+      "role": "assistant",
+      "quote": "사용 열 **2·3·4 → 전 열**, 나머지는 유지.",
+      "reference": "현재 대화 직전 답변 조정안 ①"
+    }
+  ],
+  "files": [
+    "heroes/bounty_hunter/bounty_hunter.info.darkest",
+    "design/changes/bounty_hunter.md",
+    "design/workshop/why.json",
+    "design/workshop/hero_cards.json"
+  ],
+  "supersedes": [],
+  "previous_editorial": {
+    "ids": [
+      "BH-005",
+      "BH-016"
+    ],
+    "principles": [
+      "P-11",
+      "G-02"
+    ],
+    "en": "A small damage increase over the base game. An earlier, larger buff was pulled back once his other buffs landed, since bleed, slow and damage-taken together already made Caltrops the strongest back-rank bleed skill.",
+    "ko": "바닐라보다 피해를 조금 올렸다. 예전의 더 큰 상향은 다른 상향이 들어간 뒤 절반가량 되돌렸다 — 출혈·속도 감소·받는 피해 증가가 함께 붙어 이미 3·4열 출혈 기술 중 최고였기 때문이다."
+  },
+  "publication": "Local commit only. No push or Workshop upload."
+}

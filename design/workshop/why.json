@@ -188,14 +188,17 @@
  "bounty_hunter|hook_and_slice": {
   "ids": [
    "BH-005",
-   "BH-016"
+   "BH-016",
+   "BH-020",
+   "BH-021",
+   "BH-025"
   ],
   "principles": [
    "P-11",
    "G-02"
   ],
-  "en": "A small damage increase over the base game. An earlier, larger buff was pulled back once his other buffs landed, since bleed, slow and damage-taken together already made Caltrops the strongest back-rank bleed skill.",
-  "ko": "바닐라보다 피해를 조금 올렸다. 예전의 더 큰 상향은 다른 상향이 들어간 뒤 절반가량 되돌렸다 — 출혈·속도 감소·받는 피해 증가가 함께 붙어 이미 3·4열 출혈 기술 중 최고였기 때문이다."
+  "en": "Caltrops hits enemy ranks 3-4 together with bleed and increased damage taken; its speed debuff moved to Come Hither. Damage remains -85%. It can now be used from any rank so a rank-1 Bounty Hunter can pressure the back line and set up bleeding for Finish Him, leaving rank 2 available for another hero.",
+  "ko": "마름쇠는 적 3·4열을 동시에 공격해 출혈과 받는 피해 증가를 걸며, 속도 감소는 이리 오너라로 옮겼다. 피해 -85%는 유지한다. 이제 1~4열 어디서든 사용해 1열 현상금 사냥꾼도 후열을 견제하고 끝장내기 출혈 연계를 준비하며 2열 자리를 다른 영웅에게 내줄 수 있게 한다."
  },
  "bounty_hunter|target_tag": {
   "ids": [

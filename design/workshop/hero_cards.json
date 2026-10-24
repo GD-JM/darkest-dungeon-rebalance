@@ -263,11 +263,13 @@
     "name": "Caltrops",
     "icon": "seven",
     "old": [
+     "Use from ranks 2-4",
      "Ranks 3-4, one target",
      "DMG -95%",
      "Bleed, SPD -4 to -8, dmg taken +10-20%"
     ],
     "new": [
+     "Use from any rank",
      "Ranks 3-4 together",
      "DMG -85%",
      "Bleed + damage taken +10-20%",
