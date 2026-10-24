@@ -1,0 +1,34 @@
+{
+  "id": "BH-024",
+  "decision": "adopted",
+  "original_quote": "현상금 사냥꾼 섬광탄 사용 가능열 2열도 추가하자 2열에서 어퍼컷 섬광탄 둘 다 사용가능 이게 맞아보여 커밋까지 해 푸시는 말고",
+  "rationale_ko": "섬광탄의 사용 열을 2·3·4열로 넓혀 2열에서 어퍼컷과 함께 선택한다. 어퍼컷은 적 1열, 섬광탄은 적 2·3·4열을 제어한다. 섬광탄 일반 기절·뒤섞기와 어퍼컷 강한 기절은 유지하며, 과거 전열/후열 사용 위치 분리만 번복한다.",
+  "source": {
+    "product": "codex",
+    "reference": "현재 대화 2026-10-24: 섬광탄 2열 추가 및 커밋만 요청한 사용자 메시지",
+    "session_id": null,
+    "message_id": null,
+    "event_id": null
+  },
+  "files": [
+    "heroes/bounty_hunter/bounty_hunter.info.darkest",
+    "design/changes/bounty_hunter.md",
+    "design/workshop/why.json",
+    "design/workshop/hero_cards.json"
+  ],
+  "supersedes": [
+    "BH-008 (launch-rank separation only)"
+  ],
+  "previous_editorial": {
+    "ids": [
+      "BH-008"
+    ],
+    "principles": [
+      "G-03",
+      "G-02"
+    ],
+    "en": "From rank 2 it overlapped with Uppercut, which left him locked into rank 2. Now Uppercut is his front-rank stun and Flashbang his back-rank stun; the strong stun moved to Uppercut, and a 95-accuracy, no-damage stun reaching ranks 2–4 still justifies a normal stun.",
+    "ko": "2열에서 어퍼컷과 겹쳐 현상금 사냥꾼이 2열 붙박이가 됐다. 이제 1·2열은 어퍼컷, 3·4열은 섬광탄으로 갈린다. 강한 기절은 어퍼컷으로 옮겼고, 명중 95에 2~4열을 치는 섬광탄은 일반 기절로도 충분하다."
+  },
+  "publication": "Local commit only; user explicitly prohibits push."
+}

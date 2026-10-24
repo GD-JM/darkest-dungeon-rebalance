@@ -175,14 +175,15 @@
  },
  "bounty_hunter|flashbang": {
   "ids": [
-   "BH-008"
+   "BH-008",
+   "BH-024"
   ],
   "principles": [
    "G-03",
    "G-02"
   ],
-  "en": "From rank 2 it overlapped with Uppercut, which left him locked into rank 2. Now Uppercut is his front-rank stun and Flashbang his back-rank stun; the strong stun moved to Uppercut, and a 95-accuracy, no-damage stun reaching ranks 2–4 still justifies a normal stun.",
-  "ko": "2열에서 어퍼컷과 겹쳐 현상금 사냥꾼이 2열 붙박이가 됐다. 이제 1·2열은 어퍼컷, 3·4열은 섬광탄으로 갈린다. 강한 기절은 어퍼컷으로 옮겼고, 명중 95에 2~4열을 치는 섬광탄은 일반 기절로도 충분하다."
+  "en": "Flashbang can again be used from rank 2, allowing a choice with Uppercut: Uppercut controls enemy rank 1, while Flashbang controls ranks 2-4. Flashbang retains its normal stun and shuffle; Uppercut retains its strong stun. This supersedes the earlier front/back launch-rank separation.",
+  "ko": "섬광탄의 사용 열을 2·3·4열로 넓혀 2열에서 어퍼컷과 함께 선택한다. 어퍼컷은 적 1열, 섬광탄은 적 2·3·4열을 제어한다. 섬광탄 일반 기절·뒤섞기와 어퍼컷 강한 기절은 유지하며, 과거 전열/후열 사용 위치 분리만 번복한다."
  },
  "bounty_hunter|hook_and_slice": {
   "ids": [

@@ -73,11 +73,13 @@ combat_skill: .id "uppercut" .level 4 .type "melee" .atk 115% .dmg -67% .crit 13
 combat_move_skill: .id "move" .level 0 .type "move" .move 2 2 .launch 4321
 
 
-combat_skill: .id "flashbang" .level 0 .type "ranged" .atk 95% .dmg -100% .crit 0% .launch 43 .target 234 .is_crit_valid False  .effect "Stun 1" "Disorient 1" .is_stall_invalidating false
-combat_skill: .id "flashbang" .level 1 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 43 .target 234 .is_crit_valid False  .effect "Stun 2" "Disorient 2" .is_stall_invalidating false
-combat_skill: .id "flashbang" .level 2 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 43 .target 234 .is_crit_valid False  .effect "Stun 3" "Disorient 3" .is_stall_invalidating false
-combat_skill: .id "flashbang" .level 3 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 43 .target 234 .is_crit_valid False  .effect "Stun 4" "Disorient 4" .is_stall_invalidating false
-combat_skill: .id "flashbang" .level 4 .type "ranged" .atk 115% .dmg -100% .crit 0% .launch 43 .target 234 .is_crit_valid False  .effect "Stun 5" "Disorient 5" .is_stall_invalidating false
+combat_skill: .id "flashbang" .level 0 .type "ranged" .atk 95% .dmg -100% .crit 0% .launch 432 .target 234 .is_crit_valid False  .effect "Stun 1" "Disorient 1" .is_stall_invalidating false
+combat_skill: .id "flashbang" .level 1 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 432 .target 234 .is_crit_valid False  .effect "Stun 2" "Disorient 2" .is_stall_invalidating false
+combat_skill: .id "flashbang" .level 2 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 432 .target 234 .is_crit_valid False  .effect "Stun 3" "Disorient 3" .is_stall_invalidating false
+combat_skill: .id "flashbang" .level 3 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 432 .target 234 .is_crit_valid False  .effect "Stun 4" "Disorient 4" .is_stall_invalidating false
+combat_skill: .id "flashbang" .level 4 .type "ranged" .atk 115% .dmg -100% .crit 0% .launch 432 .target 234 .is_crit_valid False  .effect "Stun 5" "Disorient 5" .is_stall_invalidating false
+// BH-024 [2026-10-24] Flashbang launch 43 -> 432 at all levels: rank 2 can choose Uppercut for enemy rank 1 or Flashbang for ranks 2-4; normal stun and shuffle retained.
+// BH-024 섬광탄 사용 3·4열 -> 2·3·4열. 2열에서 어퍼컷과 섬광탄을 함께 선택하도록 확장. BH-008의 사용 열 분리만 번복하며 기존 메모는 이력으로 보존.
 // BH-008 [2026-10-06] Keep rank34 flash control separate from front Uppercut, paying with normal stun; restore the missing trace ID only.
 //사용열 432 -> 43 이유 2열에서 어퍼컷이랑 겹침. 다양한 열에서 영웅이 사용될 수 있게
 //대신에 스트롱 스턴을 그냥 스턴으로 바꿈 근거는 명중이 95임 명중 90을 표준이라 두면, 명중 +5, 데미지 없는 것 + 3,4열 타격가능 + 자리바꿈 3개가 추가되면 데미지 없는 걸 상쇄함. 물론 치명타 안뜨는 것도 포함되서 상쇄되는것 
