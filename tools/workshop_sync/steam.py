@@ -183,18 +183,24 @@ class Steam:
         if metadata is not None:
             set_string('SetItemMetadata', metadata)
         if replace_previews is not None:
-            # WS-STEAM-002: replace only explicitly owned image names; preserve user videos/other previews.
+            # WS-GALLERY-001: update existing owned slots in place. Removing and re-adding
+            # identical images left live registrations pointing at missing backing files.
+            # Keep unrelated images/videos and remove only surplus owned slots.
             old_names, paths = replace_previews
             indices = [p['index'] for p in current['previews'] if p['type'] == 0 and p['filename'] in old_names]
-            for index in sorted(indices, reverse=True):
-                if not self.fn('ISteamUGC_RemoveItemPreview', C.c_bool, C.c_void_p, C.c_uint64, C.c_uint32)(self.ugc, h, index):
-                    raise SteamError('Could not stage old preview removal')
-            for path in paths:
+            for position, path in enumerate(paths):
                 path = Path(path).resolve(strict=True)
                 if path.suffix.lower() != '.png' or not 0 < path.stat().st_size < 1_000_000:
                     raise SteamError('PNG preview must be smaller than 1MB: ' + str(path))
-                if not self.fn('ISteamUGC_AddItemPreviewFile', C.c_bool, C.c_void_p, C.c_uint64, C.c_char_p, C.c_int)(self.ugc, h, _bytes(path), 0):
+                if position < len(indices):
+                    ok = self.fn('ISteamUGC_UpdateItemPreviewFile', C.c_bool, C.c_void_p, C.c_uint64, C.c_uint32, C.c_char_p)(self.ugc, h, indices[position], _bytes(path))
+                else:
+                    ok = self.fn('ISteamUGC_AddItemPreviewFile', C.c_bool, C.c_void_p, C.c_uint64, C.c_char_p, C.c_int)(self.ugc, h, _bytes(path), 0)
+                if not ok:
                     raise SteamError('Steam rejected additional preview: ' + path.name)
+            for index in sorted(indices[len(paths):], reverse=True):
+                if not self.fn('ISteamUGC_RemoveItemPreview', C.c_bool, C.c_void_p, C.c_uint64, C.c_uint32)(self.ugc, h, index):
+                    raise SteamError('Could not stage surplus preview removal')
         # Durable state must say "submitting" BEFORE the only irreversible API call.
         if before_submit:
             before_submit()

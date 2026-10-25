@@ -1,0 +1,24 @@
+{
+  "id": "WS-GALLERY-001",
+  "date": "2026-10-25",
+  "status": "adopted",
+  "user_quote": "그리고 선택형 패키지 창작마당에 쓸데 없는거 전부 없애주고 이거는 내꺼 창작모드 메인인건데 들어가보니 이거 왜 이미지가 없니 5개밖에 없어 지금 우리가 하는 성녀 작업까지 마무리 하고 푸쉬한 다음에 다 올리자",
+  "intent": "메인 창작마당 이미지 누락 복구와 실제 공개 확인. 기존 슬롯 갱신으로 삭제/재등록 경로를 제거하고 등록 수만으로 완료 처리하지 않는다. 재발 방지 구현은 위 요청을 수행하기 위한 기술적 판단이다.",
+  "source": {
+    "product": "codex",
+    "reference": "현재 대화의 성녀 명중95 및 메인 이미지5개 누락 복구 요청",
+    "session_id": null,
+    "message_id": null,
+    "event_id": null
+  },
+  "files": [
+    "tools/workshop_sync/steam.py",
+    "tools/workshop_sync/sync.py",
+    "tools/workshop_sync/verify-live-release.py",
+    "tools/workshop_sync/agent-contract.md",
+    "tools/workshop_sync/tests/test_steam.py",
+    "tools/workshop_sync/tests/test_sync.py",
+    "design/analysis/workshop-gallery-repair-2026-10-25.md"
+  ],
+  "supersedes": []
+}

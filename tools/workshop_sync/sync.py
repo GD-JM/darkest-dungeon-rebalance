@@ -11,6 +11,7 @@ import re
 import sys
 import time
 import uuid
+from html.parser import HTMLParser
 from urllib.request import Request, urlopen
 from urllib.parse import urlsplit, parse_qs
 from urllib.error import HTTPError
@@ -157,7 +158,31 @@ class PublicRateLimited(SteamError):
         super().__init__('Steam public-page HTTP 429; verification deferred')
 
 
-def verify_public(item_id):
+def public_gallery_paths(body):
+    """WS-GALLERY-001: only real public gallery images count, not API registrations."""
+    class Gallery(HTMLParser):
+        def __init__(self):
+            super().__init__()
+            self.paths = set()
+            self.parents = []
+        def handle_starttag(self, tag, attributes):
+            attrs = dict(attributes)
+            if tag == 'img' and (re.fullmatch(r'previewImage\d+', attrs.get('id', '')) or
+                    any(re.fullmatch(r'thumb_screenshot_\d+', parent) for _, parent in self.parents)):
+                self.paths.add(urlsplit(attrs.get('src', '')).path.rstrip('/'))
+            if tag not in {'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'param', 'source', 'track', 'wbr'}:
+                self.parents.append((tag, attrs.get('id', '')))
+        def handle_endtag(self, tag):
+            for index in range(len(self.parents)-1, -1, -1):
+                if self.parents[index][0] == tag:
+                    del self.parents[index:]
+                    break
+    parser = Gallery()
+    parser.feed(body)
+    return parser.paths
+
+
+def verify_public(item_id, expected_preview_urls=None):
     # WS-SYNC-004: API visibility=public does not imply moderation has released it.
     # Read the public page without account cookies; never alter content to evade review.
     url = 'https://steamcommunity.com/sharedfiles/filedetails/?id=' + str(item_id) + '&l=english'
@@ -190,10 +215,21 @@ def verify_public(item_id):
         raise
     except Exception as exc:
         raise SteamError('Public access could not be verified: ' + str(exc)) from exc
+    return verify_public_html(html, expected_preview_urls)
+
+
+def verify_public_html(html, expected_preview_urls=None):
+    """Validate either an HTTP response or a separately captured public browser DOM."""
     if 'The item is either marked as hidden or you do not have permission to view it.' in html:
         return False
     if 'id="SubscribeItemBtn"' not in html:
         raise SteamError('Public subscription control not found; access unconfirmed')
+    if expected_preview_urls is not None:
+        expected = {urlsplit(url).path.rstrip('/') for url in expected_preview_urls}
+        present = public_gallery_paths(html)
+        missing = expected - present
+        if missing:
+            raise SteamError(f'Public gallery missing {len(missing)}/{len(expected)} prepared images; API registrations alone are insufficient')
     return True
 
 
@@ -222,7 +258,13 @@ def publish_batch(config, job, release, module_releases):
             outcomes[key] = {'upload_complete': True}
             if time.time() < cooldown_until:
                 raise SteamError('Public verification deferred until Steam HTTP cooldown expires')
-            if verify_public(target_release.get('item_id', ITEM_ID)):
+            # WS-GALLERY-001: a successful upload can still leave missing public previews.
+            remote = read_json(target_job / 'steam-after.json', {})
+            expected_names = {Path(image['path']).name for image in target_release.get('images', [])}
+            expected_urls = [p['url'] for p in remote.get('previews', []) if p['filename'] in expected_names]
+            if expected_names and len(expected_urls) != len(expected_names):
+                raise SteamError('Cannot verify public gallery: missing uploaded preview evidence')
+            if verify_public(target_release.get('item_id', ITEM_ID), expected_urls):
                 outcomes[key] = {'status': 'complete', 'public_access_verified': True}
             else:
                 outcomes[key] = {'status': 'awaiting_public_review', 'upload_complete': True}

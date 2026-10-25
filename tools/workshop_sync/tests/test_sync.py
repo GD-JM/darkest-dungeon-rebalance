@@ -303,6 +303,22 @@ class SyncTests(unittest.TestCase):
                 verify_public(123)
             request.assert_called_once()
 
+    def test_gallery_requires_every_expected_image_not_just_subscribe_or_thumbnails(self):
+        urls = ['https://images.steamusercontent.com/ugc/1/A/', 'https://images.steamusercontent.com/ugc/2/B/']
+        with patch('sync.urlopen') as request:
+            response = request.return_value.__enter__.return_value
+            response.geturl.return_value = 'https://steamcommunity.com/sharedfiles/filedetails/?id=123&l=english'
+            body = '<a id="SubscribeItemBtn">Subscribe</a><img id="previewImage10" src="https://images.steamusercontent.com/ugc/1/A/?imw=637"><img id="previewImageMain" src="https://images.steamusercontent.com/ugc/2/B/">'
+            response.read.return_value = body.encode()
+            with self.assertRaisesRegex(SteamError, 'missing 1/2'):
+                verify_public(123, urls)
+            response.read.return_value = (body + '<img id="previewImage11" src="https://images.steamusercontent.com/ugc/2/B/?imw=637">').encode()
+            self.assertTrue(verify_public(123, urls))
+            response.read.return_value = ('<a id="SubscribeItemBtn">Subscribe</a>'
+                '<div id="thumb_screenshot_10"><img src="https://images.steamusercontent.com/ugc/1/A/?imw=116"></div>'
+                '<div id="thumb_screenshot_11"><img src="https://images.steamusercontent.com/ugc/2/B/?imw=116"></div>').encode()
+            self.assertTrue(verify_public(123, urls))
+
     def test_public_rate_limit_defers_later_checks_and_persists_across_batches(self):
         self.public_checker.side_effect=PublicRateLimited(900)
         with patch('sync.publish') as pub:

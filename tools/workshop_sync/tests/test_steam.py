@@ -2,12 +2,41 @@ import ctypes as C
 from pathlib import Path
 import sys
 import unittest
+import tempfile
 from unittest.mock import Mock
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from steam import Steam, SteamError, SubmissionUnknown, _DetailsHead, _CreateResult, _DependencyResult, APP_ID, ITEM_ID
+from steam import Steam, SteamError, SubmissionUnknown, _DetailsHead, _CreateResult, _DependencyResult, _SubmitResult, APP_ID, ITEM_ID
 
 
 class SteamTests(unittest.TestCase):
+    def test_preview_update_preserves_slots_and_user_video_without_delete_readd(self):
+        client=object.__new__(Steam)
+        client.ugc,client.utils=1,2
+        client._wait=Mock()
+        client.query=Mock(return_value={'owned':True,'previews':[
+            {'index':0,'type':0,'filename':'old.png'},
+            {'index':1,'type':1,'filename':'video'},
+            {'index':2,'type':0,'filename':'surplus.png'}]})
+        calls=[]
+        def binder(name,*_):
+            def call(*args):
+                calls.append((name,args))
+                if name=='ISteamUtils_GetAPICallResult':
+                    result=_SubmitResult(result=1,needs_agreement=False,id=ITEM_ID)
+                    C.memmove(args[2],C.byref(result),C.sizeof(result))
+                return 1
+            return call
+        client.fn=binder
+        with tempfile.TemporaryDirectory(dir=Path.cwd()) as folder:
+            image=Path(folder)/'current.png'
+            image.write_bytes(b'valid size fixture')
+            client.update(replace_previews=({'old.png','surplus.png'},[image]))
+        updates=[args[2] for name,args in calls if name=='ISteamUGC_UpdateItemPreviewFile']
+        removals=[args[2] for name,args in calls if name=='ISteamUGC_RemoveItemPreview']
+        self.assertEqual(updates,[0])
+        self.assertEqual(removals,[2])
+        self.assertFalse(any(name=='ISteamUGC_AddItemPreviewFile' for name,_ in calls))
+
     def test_new_item_callback_abi_and_durable_order(self):
         self.assertEqual(C.sizeof(_CreateResult), 24)
         self.assertEqual(_CreateResult.id.offset, 8)
