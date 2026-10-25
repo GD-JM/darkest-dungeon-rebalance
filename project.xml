@@ -12,7 +12,10 @@
 	<VersionMinor>1</VersionMinor>
 	<TargetBuild>0</TargetBuild>
 	<Tags>
+		<Tags>Overhauls</Tags>
+		<Tags>Gameplay Tweaks</Tags>
 		<Tags>Class Tweaks</Tags>
+		<Tags>New Class</Tags>
 	</Tags>
 	<ItemDescription>Rebalance based on the original game's own growth and base-stat rules. Change log with reasons: changelog.md</ItemDescription>
 	<PublishedFileId/>
