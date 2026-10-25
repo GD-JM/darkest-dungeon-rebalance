@@ -186,3 +186,15 @@ effect: .name "RB ANT Flash Burn 4" .target "target" .curio_result_type "negativ
 // ANT-001 Flashpowder ignites the target: burn 2 (irresistible). Small on purpose - opens Runaway synergies (Hearthlight crit vs burning, Backdraft). Shared: Vestal gods_illumination (VES-013) uses these same effects - changing them changes both.
 effect: .name "RB ANT Flash Burn 5" .target "target" .curio_result_type "negative" .chance 140% .dotBurn 3 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
 // ANT-001 Flashpowder ignites the target: burn 3 (irresistible). Small on purpose - opens Runaway synergies (Hearthlight crit vs burning, Backdraft). Shared: Vestal gods_illumination (VES-013) uses these same effects - changing them changes both.
+
+// ANT-004 approved replacement effects; legacy burn definitions retained as history, no longer used by these skills.
+effect: .name "RB ANT Flash Armor 1" .target "target" .curio_result_type "negative" .chance 100% .duration 2 .combat_stat_buff 1 .protection_rating_add -15% .on_hit true .on_miss false .queue true
+// ANT-004 섬광 가루: PROT -15%p for 2 turns; replace burn with physical-party support; existing other effects retained.
+effect: .name "RB ANT Flash Armor 2" .target "target" .curio_result_type "negative" .chance 110% .duration 2 .combat_stat_buff 1 .protection_rating_add -16% .on_hit true .on_miss false .queue true
+// ANT-004 섬광 가루: PROT -16%p for 2 turns; replace burn with physical-party support; existing other effects retained.
+effect: .name "RB ANT Flash Armor 3" .target "target" .curio_result_type "negative" .chance 120% .duration 2 .combat_stat_buff 1 .protection_rating_add -17% .on_hit true .on_miss false .queue true
+// ANT-004 섬광 가루: PROT -17%p for 2 turns; replace burn with physical-party support; existing other effects retained.
+effect: .name "RB ANT Flash Armor 4" .target "target" .curio_result_type "negative" .chance 130% .duration 2 .combat_stat_buff 1 .protection_rating_add -19% .on_hit true .on_miss false .queue true
+// ANT-004 섬광 가루: PROT -19%p for 2 turns; replace burn with physical-party support; existing other effects retained.
+effect: .name "RB ANT Flash Armor 5" .target "target" .curio_result_type "negative" .chance 140% .duration 2 .combat_stat_buff 1 .protection_rating_add -20% .on_hit true .on_miss false .queue true
+// ANT-004 섬광 가루: PROT -20%p for 2 turns; replace burn with physical-party support; existing other effects retained.

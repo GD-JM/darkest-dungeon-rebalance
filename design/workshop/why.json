@@ -62,14 +62,15 @@
  },
  "antiquarian|flashpowder": {
   "ids": [
-   "ANT-001"
+   "ANT-001",
+   "ANT-004"
   ],
   "principles": [
    "P-19",
    "P-25"
   ],
-  "en": "The skill's effect is a burst of flame, so it now burns. Before this only the Runaway could apply burn; now another hero can set up her burn-synergy skills. The amount is kept small because the Antiquarian is meant to be weaker in combat than other heroes (she pays her way in gold).",
-  "ko": "기술 연출이 불꽃 분출이라 화상을 준다. 화상을 거는 영웅이 도망자뿐이었는데, 이제 다른 영웅도 도망자의 화상 연계 기술을 열 수 있다. 유물수집상은 전투 성능이 다른 영웅보다 낮은 컨셉(대신 돈을 번다)이라 화상량은 작게 뒀다."
+  "en": "Flashpowder replaces burn with a short 15-20 point PROT debuff to help physical allies, while keeping its accuracy debuff and destealth.",
+  "ko": "화상을 제거하고 짧은 방어도 감소로 교체한다. 명중 감소와 은신 해제를 유지하여 유물수집상이 물리 딜러를 보조하도록 한다."
  },
  "arbalest|battlefield_bandage": {
   "ids": [
@@ -726,14 +727,15 @@
  },
  "man_at_arms|bellow": {
   "ids": [
-   "MAA-002"
+   "MAA-002",
+   "MAA-019"
   ],
   "principles": [
    "P-19",
    "P-22"
   ],
-  "en": "His guild text has him crushing the enemy front line with a fierce war cry, so Bellow now also clears corpses, the second 'shout that clears the field' after the Hellion's. Its debuffs stay, since Bellow was already weaker than Command.",
-  "ko": "길드 설명 '맹렬한 함성으로 적의 전열을 짓뭉갭니다'에 맞춰 포효에 시체 제거를 더했다(야만인 함성에 이은 두 번째 '함성 = 대열 정리' 기술). 이미 지휘보다 약한 기술이라 약화 효과는 그대로 둔다."
+  "en": "Bellow replaces dodge reduction with a smaller party-wide PROT debuff on enemies. Command already supplies accuracy; speed reduction, marked-target critical vulnerability and corpse clearing remain.",
+  "ko": "지휘에 이미 아군 명중 증가가 있으므로 포효의 적 회피 감소를 방어도 감소로 교체한다. 속도 감소·표식 대상 받는 치명 증가·시체 제거는 유지한다."
  },
  "man_at_arms|bolster": {
   "ids": [
@@ -999,15 +1001,16 @@
   "ids": [
    "VES-W01",
    "VES-006",
-   "VES-013"
+   "VES-013",
+   "VES-020"
   ],
   "principles": [
    "P-19",
    "G-03",
    "P-11"
   ],
-  "en": "Kept as close to vanilla as possible: holy light now burns (1-3), and it can be used from rank 4 too so a back-rank Vestal can reach it. The dodge debuff is 5 lower to pay for the burn, which also sets it apart from the Arbalest's Sniper's Mark.",
-  "ko": "최대한 바닐라에 가깝게 두었습니다. 성스러운 빛이 화상(1~3)을 주고, 후열 성녀도 쓰도록 4열에서도 사용합니다. 화상의 대가로 회피 감소를 5 낮췄고, 덕분에 석궁사수 저격 표식과도 구분됩니다."
+  "en": "Illumination replaces burn with a 15-25 point PROT debuff for three turns, helping direct physical attackers. Dodge reduction, destealth and torch gain remain; Occultist retains the larger single-target shred.",
+  "ko": "화상 1/1/2/2/3을 제거하고 방어도 감소로 교체한다. 직접 화상 피해 대신 아군 물리 공격을 지원하며 회피 감소·은신 해제·횃불을 유지한다."
  },
  "vestal|judgement": {
   "ids": [

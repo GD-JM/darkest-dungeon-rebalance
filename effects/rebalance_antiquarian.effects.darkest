@@ -27,3 +27,18 @@ effect: .name "RB ANT Fortify 4" .target "target" .curio_result_type "positive" 
 // ANT-003 Fortifying Vapours: bleed, blight, stun and debuff resist +14% for 3 turns (vanilla had bleed and blight only).
 effect: .name "RB ANT Fortify 5" .target "target" .curio_result_type "positive" .chance 100% .duration 3 .buff_ids "BLEEDRESIST15" "BLIGHTRESIST15" "STUNRESIST15" "DEBUFFRESIST15" .on_hit true .on_miss true .queue true
 // ANT-003 Fortifying Vapours: bleed, blight, stun and debuff resist +15% for 3 turns (vanilla had bleed and blight only).
+
+effect: .name "RB ANT Flash Armor 1" .target "target" .curio_result_type "negative" .chance 100% .duration 2 .combat_stat_buff 1 .protection_rating_add -15% .on_hit true .on_miss false .queue true
+// ANT-004 섬광 가루: PROT -15%p for 2 turns; replace burn with physical-party support; existing other effects retained.
+
+effect: .name "RB ANT Flash Armor 2" .target "target" .curio_result_type "negative" .chance 110% .duration 2 .combat_stat_buff 1 .protection_rating_add -16% .on_hit true .on_miss false .queue true
+// ANT-004 섬광 가루: PROT -16%p for 2 turns; replace burn with physical-party support; existing other effects retained.
+
+effect: .name "RB ANT Flash Armor 3" .target "target" .curio_result_type "negative" .chance 120% .duration 2 .combat_stat_buff 1 .protection_rating_add -17% .on_hit true .on_miss false .queue true
+// ANT-004 섬광 가루: PROT -17%p for 2 turns; replace burn with physical-party support; existing other effects retained.
+
+effect: .name "RB ANT Flash Armor 4" .target "target" .curio_result_type "negative" .chance 130% .duration 2 .combat_stat_buff 1 .protection_rating_add -19% .on_hit true .on_miss false .queue true
+// ANT-004 섬광 가루: PROT -19%p for 2 turns; replace burn with physical-party support; existing other effects retained.
+
+effect: .name "RB ANT Flash Armor 5" .target "target" .curio_result_type "negative" .chance 140% .duration 2 .combat_stat_buff 1 .protection_rating_add -20% .on_hit true .on_miss false .queue true
+// ANT-004 섬광 가루: PROT -20%p for 2 turns; replace burn with physical-party support; existing other effects retained.

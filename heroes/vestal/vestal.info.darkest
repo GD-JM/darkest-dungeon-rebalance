@@ -84,11 +84,12 @@ combat_skill: .id "gods_comfort" .level 4 .heal 4 5 .launch 43 .target @~1234  .
 //그래서 1렙에 몰아줌 힐성능을 대신에 등차적으로 성장하게 바꿈
 
 
-combat_skill: .id "gods_illumination" .level 0 .type "ranged" .atk 90% .dmg -75% .crit 0% .launch 4321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "RB VES Dodge Curse 1" "RB ANT Flash Burn 1" "Vestal Light 1" "Destealth"
-combat_skill: .id "gods_illumination" .level 1 .type "ranged" .atk 95% .dmg -75% .crit 0% .launch 4321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "RB VES Dodge Curse 2" "RB ANT Flash Burn 2" "Vestal Light 2" "Destealth"
-combat_skill: .id "gods_illumination" .level 2 .type "ranged" .atk 100% .dmg -75% .crit 0% .launch 4321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "RB VES Dodge Curse 3" "RB ANT Flash Burn 3" "Vestal Light 3" "Destealth"
-combat_skill: .id "gods_illumination" .level 3 .type "ranged" .atk 105% .dmg -75% .crit 0% .launch 4321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "RB VES Dodge Curse 4" "RB ANT Flash Burn 4" "Vestal Light 4" "Destealth"
-combat_skill: .id "gods_illumination" .level 4 .type "ranged" .atk 110% .dmg -75% .crit 0% .launch 4321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "RB VES Dodge Curse 5" "RB ANT Flash Burn 5" "Vestal Light 5" "Destealth"
+combat_skill: .id "gods_illumination" .level 0 .type "ranged" .atk 90% .dmg -75% .crit 0% .launch 4321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "RB VES Dodge Curse 1" "RB VES Illumination Armor 1" "Vestal Light 1" "Destealth"
+combat_skill: .id "gods_illumination" .level 1 .type "ranged" .atk 95% .dmg -75% .crit 0% .launch 4321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "RB VES Dodge Curse 2" "RB VES Illumination Armor 2" "Vestal Light 2" "Destealth"
+combat_skill: .id "gods_illumination" .level 2 .type "ranged" .atk 100% .dmg -75% .crit 0% .launch 4321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "RB VES Dodge Curse 3" "RB VES Illumination Armor 3" "Vestal Light 3" "Destealth"
+combat_skill: .id "gods_illumination" .level 3 .type "ranged" .atk 105% .dmg -75% .crit 0% .launch 4321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "RB VES Dodge Curse 4" "RB VES Illumination Armor 4" "Vestal Light 4" "Destealth"
+combat_skill: .id "gods_illumination" .level 4 .type "ranged" .atk 110% .dmg -75% .crit 0% .launch 4321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "RB VES Dodge Curse 5" "RB VES Illumination Armor 5" "Vestal Light 5" "Destealth"
+// VES-020 (2026-10-25, test): 화상 1/1/2/2/3을 제거하고 방어도 감소로 교체한다. 직접 화상 피해 대신 아군 물리 공격을 지원하며 회피 감소·은신 해제·횃불을 유지한다. 방어 감소 15/17/20/22/25%p, 3턴; 명중·피해·치명·사거리 유지.
 // VES-014 gods_illumination: vanilla accuracy 90 and dodge debuff back, lowered by 5 (-15..-25) so it differs from Sniper's Mark; any-rank use and burn kept.
 // VES-014 광휘: 명중 바닐라(90), 받는 피해 증가 대신 회피 감소 복귀(−15~−25, 석궁 저격수의 표식과 구분하려 바닐라보다 5 낮춤). 4321열 사용(VES-006)·화상 유지. 창작마당판(VES-W01)과 통합 [제작자 10-21]
 
