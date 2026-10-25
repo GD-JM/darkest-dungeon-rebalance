@@ -557,14 +557,15 @@
  "highwayman|wicked_slice": {
   "ids": [
    "HWY-008",
-   "HWY-019"
+   "HWY-019",
+   "HWY-024"
   ],
   "principles": [
    "R-SKILL-09",
    "G-02"
   ],
-  "en": "Its usable ranks are trimmed to true melee positions. It now gets the rare melee reach into rank 3, given to this plain strike rather than Duelist's Advance (which has a buff and movement and would make it redundant), and its damage drops to the standard melee value to pay for that reach.",
-  "ko": "사용 열을 근접 위치(1·2열)로 정리했습니다. 근접으로 3열을 치는 희소한 능력은 강화·이동이 있는 결투가의 진격이 아니라 단순한 칼질에 주어 역할을 나눴고, 그 대가로 피해를 근접 단일 기술 표준값으로 맞췄습니다."
+  "en": "Wicked Slice retains its rank-3 reach and standard damage, but gives five points of skill CRIT to Open Vein to separate reach from bleed-focused pressure.",
+  "ko": "사악한 칼질의 3열 도달·기본 피해를 유지하고 기술 치명 5%p를 정맥절개로 옮긴다. 칼질은 사거리, 정맥절개는 출혈이 통하는 장갑 적 대응으로 역할을 나눈다."
  },
  "houndmaster|blackjack": {
   "ids": [
@@ -1144,5 +1145,17 @@
   ],
   "en": "Her crit bonus no longer adds damage against marked targets (that is the Arbalest's and Bounty Hunter's job). A crit now gives armor piercing +20% for two turns.",
   "ko": "치명타 버프가 더는 표식 대상 피해(석궁사수·현상금 사냥꾼 몫)가 아니다. 치명타가 터지면 2턴 동안 방어 관통 +20%."
+ },
+ "highwayman|opened_vein": {
+  "ids": [
+   "HWY-024"
+  ],
+  "principles": [
+   "G-02",
+   "P-11",
+   "P-21"
+  ],
+  "en": "Open Vein gains five points of skill CRIT from Wicked Slice to support its bleed role against armoured enemies. Accuracy, damage, bleed and debuffs are unchanged; this is not protection piercing.",
+  "ko": "칼질에서 기술 치명 5%p를 받아 출혈이 통하는 장갑 적 대응을 강조한다. 기존 명중·피해·출혈·출혈 저항 감소·속도 감소는 유지한다. 치명타 자체에 방어 관통을 추가하는 변경은 아니다."
  }
 }

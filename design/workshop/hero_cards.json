@@ -617,12 +617,14 @@
     "old": [
      "DMG +15%",
      "Use from ranks 1-3",
-     "Hits ranks 1-2"
+     "Hits ranks 1-2",
+     "CRIT 5%"
     ],
     "new": [
      "DMG 0%",
      "Use from ranks 1-2",
-     "Hits ranks 1-3"
+     "Hits ranks 1-3",
+     "CRIT 0%"
     ]
    },
    {
@@ -698,6 +700,17 @@
      "Hits ranks 1-2",
      "Self: ACC +5-10%, CRIT +1-5%",
      "Self: DMG +10-15% (3 turns)"
+    ]
+   },
+   {
+    "key": "highwayman|opened_vein",
+    "name": "Open Vein",
+    "icon": "seven",
+    "old": [
+     "CRIT 0%"
+    ],
+    "new": [
+     "CRIT 5%"
     ]
    }
   ]
