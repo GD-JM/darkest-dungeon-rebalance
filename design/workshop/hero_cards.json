@@ -14,9 +14,9 @@
      "Revert: allies stress heal 2"
     ],
     "new": [
-     "Allies: stress +6",
-     "Self: stress heal 4",
-     "Self: heal 6-10",
+     "Allies: stress +4",
+     "Self: stress +15",
+     "Self: heal 8-12",
      "Revert: allies stress heal 3"
     ]
    },
@@ -57,20 +57,31 @@
     ],
     "new": [
      "ACC 90",
-     "DMG 0%",
+     "DMG -20%",
      "Use from ranks 2-4",
      "No dodge or SPD debuff"
     ]
    },
    {
-    "key": "abomination|mode",
-    "name": "Beast Form",
-    "icon": null,
+    "key": "abomination|rake",
+    "name": "Rake",
+    "icon": "five",
     "old": [
-     "Stress +6 per turn"
+     "DMG -50%"
     ],
     "new": [
-     "Stress +4 per turn"
+     "DMG -40%"
+    ]
+   },
+   {
+    "key": "abomination|rage",
+    "name": "Rage",
+    "icon": "six",
+    "old": [
+     "No armor piercing"
+    ],
+    "new": [
+     "Armor piercing 20-35%"
     ]
    }
   ]
@@ -457,12 +468,10 @@
     "icon": "seven",
     "old": [
      "Takes ally bleed and blight",
-     "No debuff cleanse",
      "No stress heal"
     ],
     "new": [
      "Takes ally bleed and blight",
-     "Clears ally debuffs",
      "Ally: stress heal 4-6",
      "Self: SPD +3-5 (3 turns)"
     ]
@@ -936,12 +945,12 @@
     "old": [
      "No corpse clearing",
      "Target: dodge -5 to -10% (3 turns)",
-     "No PROT debuff"
+     "No ACC debuff"
     ],
     "new": [
      "Clears corpses",
      "No dodge debuff",
-     "Target: PROT -10 to -15% (3 turns)"
+     "Target: ACC -3 to -5 (2 turns)"
     ]
    },
    {
@@ -950,11 +959,13 @@
     "icon": "five",
     "old": [
      "DMG -75%",
-     "Hits ranks 1-3"
+     "Hits ranks 1-3",
+     "No PROT debuff"
     ],
     "new": [
-     "DMG -20%",
-     "Hits ranks 1-2"
+     "DMG -40%",
+     "Hits ranks 1-2",
+     "Target: PROT -15 to -25% (3 turns)"
     ]
    },
    {

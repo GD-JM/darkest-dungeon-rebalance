@@ -1,0 +1,83 @@
+{
+  "id": "ABO-010-013_MAA-020-021_FLA-017",
+  "decision": "adopted",
+  "original_quote": "포효에 명중감소를 넣자 회피감소는 왜 있는지 모르겠네 응징에 방어감소 15 25?\n\n괴인은 변신할 때 자기 스트레스 15로 가자 20은 솔직히 말도 안됨.  아님 너가 적정치 생각해봐 야수 유지 스트레스를 늘리자 6정도로? 아님 각 수치 얼만큼 해야 우리가 원하는 기획 효과 나올 수 있는지 너가 수치 제안해줘 분노 방관 나는 더 높이고 싶은데 너무 크니? 변신 대가가 커진만큼 효과도 확실하면 좋겠는데  피회복도 좋아 다 반영하고\n\n고통은 그냥 냅두자 약화제거 없애자 고통에서\n\n총사 연막은 일단 기존 아이콘들 전부 분석해봐 그런다음에 아트스타일 뽑아보고 그다음 만들었으면 좋겠어 그리고 아군 은신이기 때문에 아군 은신 이펙트가 어두운 파란색과 검은색 섞인 이펙트라 그런 컬러 계열이면 좋겠어",
+  "rationale_ko": "변신 비용을 자신에게 집중하고 폭발력을 보상한다. 포효는 명중 약화, 응징은 낮아진 첫 타격과 단일 방어 약화. 고통 약화 해제 철회. 상세 수열은 사용자 위임에 따른 설계 선택이다.",
+  "delegated_values": {
+    "transform_self_stress": 15,
+    "beast_stress": 6,
+    "ally_fear": 4,
+    "return_ally_heal": 3,
+    "self_heal": [
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "rage_pierce": [
+      20,
+      23,
+      27,
+      30,
+      35
+    ],
+    "rake_damage": -40,
+    "slam_damage": -20,
+    "bellow_acc": [
+      3,
+      3,
+      4,
+      4,
+      5
+    ],
+    "bellow_acc_duration": 2,
+    "retribution_damage": -40,
+    "retribution_prot": [
+      15,
+      17,
+      20,
+      22,
+      25
+    ]
+  },
+  "source": {
+    "product": "codex",
+    "reference": "local-knowledge read_evidence, full text confirmed; 2026-10-25T09:18:01.783Z",
+    "session_id": "01a10741-76da-7e43-9500-98474ab3f383",
+    "message_id": "msg_01a1725a-4837-7941-8f6b-4253d6de7432",
+    "event_id": "0e6e0fa660eeb8dea66d27543fafe2d157955fc8c9f5190b8c268cdd5978c093"
+  },
+  "files": [
+    "design/analysis/self-cost-and-defensive-bellow-20261025.md",
+    "design/changes/abomination-buffs-intents.txt",
+    "design/changes/abomination.md",
+    "design/changes/flagellant.md",
+    "design/changes/man_at_arms.md",
+    "design/workshop/hero_cards.json",
+    "design/workshop/why.json",
+    "effects/rebalance_abomination.effects.darkest",
+    "effects/rebalance_flagellant.effects.darkest",
+    "effects/rebalance_man_at_arms.effects.darkest",
+    "heroes/abomination/abomination.effects_edit.txt",
+    "heroes/abomination/abomination.info.darkest",
+    "heroes/flagellant/flagellant.effects_edit.txt",
+    "heroes/flagellant/flagellant.info.darkest",
+    "heroes/man_at_arms/man_at_arms.effects_edit.txt",
+    "heroes/man_at_arms/man_at_arms.info.darkest",
+    "shared/buffs/rebalance_abomination.buffs.json",
+    "design/analysis/self-cost-and-defensive-bellow-20261025.json"
+  ],
+  "supersedes": [
+    "ABO-008",
+    "ABO-009",
+    "MAA-019",
+    "FLA-015"
+  ],
+  "limits": [
+    "AP engine semantics/runtime not verified; REA timeout",
+    "Workshop sources updated locally only; no push or publish",
+    "Icon draft only; no asset replacement",
+    "Earlier Korean comments preserved as historical records"
+  ]
+}

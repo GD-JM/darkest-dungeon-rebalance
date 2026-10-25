@@ -35,11 +35,12 @@ combat_skill: .id "rampart" .level 4 .type "melee" .atk 110% .dmg -50% .crit 9% 
 
 
 
-combat_skill: .id "bellow" .level 0 .type "ranged" .atk 90% .dmg -100% .crit 0% .launch 1234 .target ~1234 .is_crit_valid False  .effect "RB MAA Disrupt 1" "clear_corpses" "Bellow Crit 1" .is_stall_invalidating false
-combat_skill: .id "bellow" .level 1 .type "ranged" .atk 95% .dmg -100% .crit 0% .launch 1234 .target ~1234 .is_crit_valid False  .effect "RB MAA Disrupt 2" "clear_corpses" "Bellow Crit 2" .is_stall_invalidating false
-combat_skill: .id "bellow" .level 2 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 1234 .target ~1234 .is_crit_valid False  .effect "RB MAA Disrupt 3" "clear_corpses" "Bellow Crit 3" .is_stall_invalidating false
-combat_skill: .id "bellow" .level 3 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 1234 .target ~1234 .is_crit_valid False  .effect "RB MAA Disrupt 4" "clear_corpses" "Bellow Crit 4" .is_stall_invalidating false
-combat_skill: .id "bellow" .level 4 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 1234 .target ~1234 .is_crit_valid False  .effect "RB MAA Disrupt 5" "clear_corpses" "Bellow Crit 5" .is_stall_invalidating false
+combat_skill: .id "bellow" .level 0 .type "ranged" .atk 90% .dmg -100% .crit 0% .launch 1234 .target ~1234 .is_crit_valid False  .effect "RB MAA Disrupt 1" "RB MAA Bellow Blind 1" "clear_corpses" "Bellow Crit 1" .is_stall_invalidating false
+combat_skill: .id "bellow" .level 1 .type "ranged" .atk 95% .dmg -100% .crit 0% .launch 1234 .target ~1234 .is_crit_valid False  .effect "RB MAA Disrupt 2" "RB MAA Bellow Blind 2" "clear_corpses" "Bellow Crit 2" .is_stall_invalidating false
+combat_skill: .id "bellow" .level 2 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 1234 .target ~1234 .is_crit_valid False  .effect "RB MAA Disrupt 3" "RB MAA Bellow Blind 3" "clear_corpses" "Bellow Crit 3" .is_stall_invalidating false
+combat_skill: .id "bellow" .level 3 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 1234 .target ~1234 .is_crit_valid False  .effect "RB MAA Disrupt 4" "RB MAA Bellow Blind 4" "clear_corpses" "Bellow Crit 4" .is_stall_invalidating false
+combat_skill: .id "bellow" .level 4 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 1234 .target ~1234 .is_crit_valid False  .effect "RB MAA Disrupt 5" "RB MAA Bellow Blind 5" "clear_corpses" "Bellow Crit 5" .is_stall_invalidating false
+// MAA-020 포효: 방어 감소를 제거하고 명중−3/3/4/4/5(2턴)를 추가. 지휘의 명중 지원과 중복되는 회피 감소는 복원하지 않으며 속도 약화3턴은 보존.
 // MAA-019 (2026-10-25, test): 지휘에 이미 아군 명중 증가가 있으므로 포효의 적 회피 감소를 방어도 감소로 교체한다. 속도 감소·표식 대상 받는 치명 증가·시체 제거는 유지한다. 방어 감소 10/11/12/14/15%p, 3턴; 명중·피해·치명·사거리 유지.
 // MAA-002 [trace 2026-10-05] Add front formation cleanup while retaining the original debuffs.
 // MAA-002 bellow: 시체 제거 추가(약화는 그대로). 길드 "철퇴, 버클러와 맹렬한 함성으로 적의 전열을 짓뭉갭니다". 야만인 함성(HEL-001)에 이은 두 번째 "함성 = 대열 정리" 기술
@@ -53,11 +54,12 @@ combat_skill: .id "defender" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .se
 combat_move_skill: .id "move" .level 0 .type "move" .move 2 2 .launch 4321
 
 
-combat_skill: .id "retribution" .level 0 .type "melee" .atk 85% .dmg -20% .crit 2.5% .launch 123 .target 12 .is_crit_valid True  .effect "MAA Riposte 1" "Mark Self"
-combat_skill: .id "retribution" .level 1 .type "melee" .atk 90% .dmg -20% .crit 3.5% .launch 123 .target 12 .is_crit_valid True  .effect "MAA Riposte 2" "Mark Self"
-combat_skill: .id "retribution" .level 2 .type "melee" .atk 95% .dmg -20% .crit 4.5% .launch 123 .target 12 .is_crit_valid True  .effect "MAA Riposte 3" "Mark Self"
-combat_skill: .id "retribution" .level 3 .type "melee" .atk 100% .dmg -20% .crit 5.5% .launch 123 .target 12 .is_crit_valid True  .effect "MAA Riposte 4" "Mark Self"
-combat_skill: .id "retribution" .level 4 .type "melee" .atk 105% .dmg -20% .crit 6.5% .launch 123 .target 12 .is_crit_valid True  .effect "MAA Riposte 5" "Mark Self"
+combat_skill: .id "retribution" .level 0 .type "melee" .atk 85% .dmg -40% .crit 2.5% .launch 123 .target 12 .is_crit_valid True  .effect "MAA Riposte 1" "Mark Self" "RB MAA Retribution Armor 1"
+combat_skill: .id "retribution" .level 1 .type "melee" .atk 90% .dmg -40% .crit 3.5% .launch 123 .target 12 .is_crit_valid True  .effect "MAA Riposte 2" "Mark Self" "RB MAA Retribution Armor 2"
+combat_skill: .id "retribution" .level 2 .type "melee" .atk 95% .dmg -40% .crit 4.5% .launch 123 .target 12 .is_crit_valid True  .effect "MAA Riposte 3" "Mark Self" "RB MAA Retribution Armor 3"
+combat_skill: .id "retribution" .level 3 .type "melee" .atk 100% .dmg -40% .crit 5.5% .launch 123 .target 12 .is_crit_valid True  .effect "MAA Riposte 4" "Mark Self" "RB MAA Retribution Armor 4"
+combat_skill: .id "retribution" .level 4 .type "melee" .atk 105% .dmg -40% .crit 6.5% .launch 123 .target 12 .is_crit_valid True  .effect "MAA Riposte 5" "Mark Self" "RB MAA Retribution Armor 5"
+// MAA-021 응징: 첫 타격 피해−20→−40, 방어−15/17/20/22/25(3턴, 기본확률100~140%). 반격에는 방어 약화를 추가하지 않는다; 낮은 즉발 피해와 후속 물리 지원을 교환한다.
 // MAA-004 [trace 2026-10-05] Trade rank-3 reach for front riposte damage while preserving the three-turn support loop.
 // MAA-004 retribution: 대상 123 -> 12, 피해 -75% -> -20% (반격 3턴 유지). 분쇄와 같은 휘두르기 모션인데 한 방이 분쇄의 25%였다(P-19) -> 80%. 3열 도달(피해 약 20%p 가치)을 내주고 전열 전용 반격·도발 기술로 분쇄와 역할 분리. 1라운드 +15 -> +41%p, 지원 루프(응징-수호자-지휘) +14%
 

@@ -1,0 +1,69 @@
+{
+  "buffs": [
+    {
+      "id": "RB_ABO_AP_1",
+      "stat_type": "ignore_protection",
+      "stat_sub_type": "",
+      "amount": 0.2,
+      "remove_if_not_active": false,
+      "rule_type": "always",
+      "is_false_rule": false,
+      "rule_data": {
+        "float": 0,
+        "string": ""
+      }
+    },
+    {
+      "id": "RB_ABO_AP_2",
+      "stat_type": "ignore_protection",
+      "stat_sub_type": "",
+      "amount": 0.23,
+      "remove_if_not_active": false,
+      "rule_type": "always",
+      "is_false_rule": false,
+      "rule_data": {
+        "float": 0,
+        "string": ""
+      }
+    },
+    {
+      "id": "RB_ABO_AP_3",
+      "stat_type": "ignore_protection",
+      "stat_sub_type": "",
+      "amount": 0.27,
+      "remove_if_not_active": false,
+      "rule_type": "always",
+      "is_false_rule": false,
+      "rule_data": {
+        "float": 0,
+        "string": ""
+      }
+    },
+    {
+      "id": "RB_ABO_AP_4",
+      "stat_type": "ignore_protection",
+      "stat_sub_type": "",
+      "amount": 0.3,
+      "remove_if_not_active": false,
+      "rule_type": "always",
+      "is_false_rule": false,
+      "rule_data": {
+        "float": 0,
+        "string": ""
+      }
+    },
+    {
+      "id": "RB_ABO_AP_5",
+      "stat_type": "ignore_protection",
+      "stat_sub_type": "",
+      "amount": 0.35,
+      "remove_if_not_active": false,
+      "rule_type": "always",
+      "is_false_rule": false,
+      "rule_data": {
+        "float": 0,
+        "string": ""
+      }
+    }
+  ]
+}

@@ -62,5 +62,6 @@ effect: .name "RB FLA Suffer Relief 4" .target "target" .curio_result_type "posi
 effect: .name "RB FLA Suffer Relief 5" .target "target" .curio_result_type "positive" .chance 100% .healstress 6 .on_hit true .on_miss true .queue true
 // FLA-014 Suffer: ally stress heal 4/4/5/5/6.
 
-effect: .name "RB FLA Cure Debuffs" .target "target" .chance 100% .clear_debuff 1 .on_hit true .on_miss false
+// FLA-017 고통에서 사용하지 않는 전용 약화 해제 효과 제거. 아래 주석은 FLA-015 과거 기록이다.
+// FLA-017 고통에서 사용하지 않는 전용 약화 해제 효과 제거. 아래 주석은 FLA-015 과거 기록이다.
 // FLA-015 동일한 약화 해제를 모드 전용 이름으로 제공해 방패 파괴자 DLC 비활성 환경의 누락 참조를 제거한다. 공유 원본 효과는 수정하지 않는다.

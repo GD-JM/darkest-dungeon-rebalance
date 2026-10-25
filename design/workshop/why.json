@@ -13,39 +13,40 @@
  },
  "abomination|mode": {
   "ids": [
-   "ABO-004"
+   "ABO-010"
   ],
   "principles": [
    "P-23",
    "P-12"
   ],
-  "en": "Staying in beast form still builds stress every turn, but less, so a few turns as the beast are affordable after transforming.",
-  "ko": "야수 형태를 유지하면 여전히 매 턴 스트레스가 쌓이지만 덜 쌓여, 변신 후 몇 턴은 야수로 버틸 수 있다."
+  "en": "Beast maintenance returns to vanilla 6 stress per turn, adding an increasing cost after the 15-stress transformation.",
+  "ko": "야수 유지 스트레스를 바닐라6으로 복원한다. 자기 진입 비용15와 합쳐 오래 유지할수록 비용이 커진다."
  },
  "abomination|slam": {
   "ids": [
    "ABO-001",
-   "ABO-003"
+   "ABO-003",
+   "ABO-013"
   ],
   "principles": [
    "G-03",
    "P-19",
    "G-02"
   ],
-  "en": "The beast had nothing to do from rank 4, so a shuffled formation cost it whole turns; now it slams from the back and moves forward. The old debuffs are removed and accuracy/damage raised so it becomes the reliable push on ranks 1–2, distinct from Rage (reaches rank 3, high crit).",
-  "ko": "야수는 4열에서 쓸 기술이 없어 열이 섞이면 한 턴을 통째로 날렸다. 이제 뒤에서 박고 앞으로 나온다. 약화를 빼고 명중·피해를 올려, 분노(3열 도달·높은 치명타)와 구분되는 '1·2열을 확실히 맞히는 밀치기'로 역할을 나눴다."
+  "en": "Slam retains rear-rank access, forward movement and knockback. Lower direct damage distinguishes its formation role from Rage.",
+  "ko": "박치기는 뒤에서 앞으로 복귀하고 적을 미는 이동기로 남긴다. 즉발 피해를20%p 낮춰 분노의 주력 공격 정체성과 분리한다."
  },
  "abomination|transform": {
   "ids": [
-   "ABO-004"
+   "ABO-010"
   ],
   "principles": [
    "P-23",
    "G-02",
    "P-22"
   ],
-  "en": "Transforming cost a lot of stress for little payoff, so almost nobody did it. Unleashing the beast now relieves the Abomination's own stress while his allies still feel a smaller fear cost, and reining it back in calms them a little more, so transforming becomes a real choice about who carries the stress.",
-  "ko": "변신의 스트레스 대가가 이득에 비해 커서 거의 아무도 변신하지 않았다. 이제 풀어놓으면 괴인 자신의 스트레스가 풀리고 동료는 조금 줄어든 공포를 부담하며, 다시 묶으면 동료가 조금 더 안도한다 — 변신이 '스트레스를 누가 질지' 고르는 선택이 된다."
+  "en": "The Abomination pays 15 stress to transform and 6 per beast turn, managing the cost with Absolution. Higher healing and beast offense reward the risk; ally fear falls to 4 with 3 recovered on return.",
+  "ko": "변신 비용을 괴인 자신에게 집중한다. 자기 스트레스15와 유지6을 참회로 관리하는 대신 체력8~12와 야수 공격력을 얻으며, 동료는 공포4와 복귀3으로 부담을 줄인다."
  },
  "abomination|vomit": {
   "ids": [
@@ -371,14 +372,14 @@
   "ids": [
    "FLA-012",
    "FLA-013",
-   "FLA-015"
+   "FLA-017"
   ],
   "principles": [
    "P-19",
    "G-05"
   ],
-  "en": "Suffer means taking an ally's pain onto himself. It already took their bleed and blight; now it also clears their other debuffs, and it speeds him up (+3 to +5 for 3 turns) so that, once the stolen damage drops him low, he can act early with Redeem or Exsanguinate. Its debuff cleanse now uses an identical dedicated effect so it does not require the Shieldbreaker DLC.",
-  "ko": "고통은 아군의 고통을 대신 짊어지는 기술입니다. 원래 출혈·중독을 가져왔는데, 이제 나머지 약화도 걷어내고 자기 속도를 올려(3턴 +3~5), 가져온 피해로 체력이 내려갔을 때 구제·방혈을 먼저 쓸 수 있게 했습니다. 약화 해제는 방패 파괴자 DLC 없이도 동일하게 작동하도록 전용 효과로 분리했다."
+  "en": "Debuff cleansing is removed. Suffer still takes allied bleed and blight, relieves allied stress and speeds up the Flagellant.",
+  "ko": "사용자가 고통의 약화 해제를 철회했다. 출혈·중독을 대신 받고 아군 스트레스를 낮추며 자신을 가속하는 나머지 역할은 유지한다."
  },
  "flagellant|weapon": {
   "ids": [
@@ -729,14 +730,14 @@
  "man_at_arms|bellow": {
   "ids": [
    "MAA-002",
-   "MAA-019"
+   "MAA-020"
   ],
   "principles": [
    "P-19",
    "P-22"
   ],
-  "en": "Bellow replaces dodge reduction with a smaller party-wide PROT debuff on enemies. Command already supplies accuracy; speed reduction, marked-target critical vulnerability and corpse clearing remain.",
-  "ko": "지휘에 이미 아군 명중 증가가 있으므로 포효의 적 회피 감소를 방어도 감소로 교체한다. 속도 감소·표식 대상 받는 치명 증가·시체 제거는 유지한다."
+  "en": "Bellow supports defense by lowering enemy accuracy and speed. Its short, modest accuracy penalty limits area value; armor reduction moves to Retribution instead of duplicating Command with dodge reduction.",
+  "ko": "포효는 적 명중과 속도를 낮추는 방어 지원으로 전환한다. 지휘와 중복되는 회피 감소는 복원하지 않는다. 광역 명중 약화는3~5/2턴으로 제한하고 방어 감소는 응징으로 옮긴다."
  },
  "man_at_arms|bolster": {
   "ids": [
@@ -780,14 +781,15 @@
  },
  "man_at_arms|retribution": {
   "ids": [
-   "MAA-004"
+   "MAA-004",
+   "MAA-021"
   ],
   "principles": [
    "P-19",
    "G-02"
   ],
-  "en": "Retribution uses the same full swing as Crush but hit for only a quarter as much, with most of its value arriving late through the riposte. It gives up rank-3 reach for a hit that lands hard up front, becoming a front-line counterattack distinct from Crush.",
-  "ko": "응징은 분쇄와 같은 휘두르기 모션인데 피해가 분쇄의 4분의 1이었고, 가치 대부분이 나중에 반격으로 들어왔다. 3열 도달을 내주는 대신 한 방을 크게 올려 분쇄와 구분되는 전열 반격 기술로 만들었다."
+  "en": "The opening hit trades 20 percentage points of damage for 15-25% PROT reduction, supporting physical allies and subsequent counters. Counters do not apply the debuff again.",
+  "ko": "첫 타격 피해를20%p 줄이는 대신 방어15~25를 깎아 물리 아군과 후속 반격을 돕는다. 방어 약화는 응징 첫 타격에만 적용한다."
  },
  "man_at_arms|weapon": {
   "ids": [
@@ -1180,5 +1182,25 @@
   ],
   "en": "Puncture keeps pull, guard bypass/removal/blocking and its short PROT reduction. Damage falls to -60% to charge more for this combined utility on a strong weapon.",
   "ko": "당기기·보호 무시/해제/차단·방어도 감소를 겸하는 지원기의 직접 피해 대가를 늘린다. 방패 파괴자의 높은 기본 공격력까지 고려한다. 전 레벨 피해-60%; 다른 효과와 범위 유지. 기존 모델의 전후 잔차가 0에 가깝다는 설명은 현 수치의 총량 보존 증거로 재사용하지 않는다."
+ },
+ "abomination|rage": {
+  "principles": [
+   "P-11"
+  ],
+  "ids": [
+   "ABO-011"
+  ],
+  "ko": "변신 비용 증가의 보상은 치명 확대 대신 분노 부분 관통20~35로 지급한다. 방어 적에게 순수 공격기의 정체성을 주되 방어 약화 서포터의 여지를 남긴다.",
+  "en": "Partial armor piercing rewards the higher transformation cost without adding more critical stress recovery. Rage becomes the focused attack against armored enemies."
+ },
+ "abomination|rake": {
+  "principles": [
+   "P-11"
+  ],
+  "ids": [
+   "ABO-012"
+  ],
+  "ko": "자기 스트레스 비용이 커진 변신의 광역 화력을 보상한다. 기존 할퀴기 누적 강화는 유지한다.",
+  "en": "Rake gains direct area damage to reward the higher personal stress cost, keeping its existing stacking damage buff."
  }
 }

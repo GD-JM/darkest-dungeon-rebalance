@@ -19,7 +19,8 @@
 //# Self stress recovery by skill level: 4/5/6/7/8; ally fear 6; ally return recovery 3.
 effect: .name "switch_mode_beast_self" .target "performer" .set_mode beast .chance 100% .on_hit true .on_miss false .queue false
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "beast_stress_party" .target "performer_group_other" .chance 100% .stress 6 .on_hit true .on_miss false .queue true
+effect: .name "beast_stress_party" .target "performer_group_other" .chance 100% .stress 4 .on_hit true .on_miss false .queue true
+// ABO-010 동료 공포6→4; 복귀3과의 차이1만 남기고 변신 비용은 괴인 자신에게 집중한다.
 // ABO-004 [trace 2026-10-05] Relieve self stress during transformation while retaining the allies fear/return cost. Effect: beast_stress_party.
 // ABO-004 transform: ally fear 8 -> 6; suppression remains a fixed trinket constraint.
 //#   원본 위치: effects/base.effects.darkest
@@ -235,6 +236,40 @@ effect: .name "on_crit_dmg"    .target "performer" .curio_result_type "positive"
 
 //# ======================================================================
 //# 모드 신규 효과
-effect: .name "RB ABO Transform HealStress 1"  .target "performer" .curio_result_type "positive" .chance 100%  .healstress 4	.on_hit true .on_miss false .queue true
+// ABO-010 기존 자기 스트레스 회복4 효과 제거. 아래 과거 주석은 결정 이력이며 현재 효과가 아니다.
+// ABO-010 기존 자기 스트레스 회복4 효과 제거. 아래 과거 주석은 결정 이력이며 현재 효과가 아니다.
 // ABO-004 [trace 2026-10-05] Relieve self stress during transformation while retaining the allies fear/return cost. Effect: RB ABO Transform HealStress 1.
 // ABO-004 transform: self stress recovery 4 at skill level 1; crisis relief without spending the attack action.
+
+effect: .name "RB ABO Transform Self Stress" .target "performer" .chance 100% .stress 15 .on_hit true .on_miss false .queue true
+// ABO-010 변신 자기 스트레스15. 사용자가20을 거부하고15를 제안; 유지6과 조합해 단기 진입/장기 비용을 분리한다.
+
+effect: .name "RB ABO Transform Heal 1" .target "performer" .curio_result_type "positive" .chance 100% .heal 8 .on_hit true .on_miss false .queue true
+// ABO-010 변신 체력8/9/10/11/12: 스트레스15와 유지6의 대가로 위기에서 회복하며 공격할 여지를 준다.
+
+effect: .name "RB ABO Rage Pierce 1" .target "performer" .chance 100% .skill_instant true .duration 1 .buff_ids RB_ABO_AP_1 .on_hit true .on_miss true .apply_once true
+// ABO-011 분노 전용 순간 관통20/23/27/30/35. 총사 버프와 분리하여 향후 편집 결합을 막는다; V-19 엔진 검증 대기.
+
+effect: .name "RB ABO Transform Heal 2" .target "performer" .curio_result_type "positive" .chance 100% .heal 9 .on_hit true .on_miss false .queue true
+// ABO-010 변신 체력8/9/10/11/12: 스트레스15와 유지6의 대가로 위기에서 회복하며 공격할 여지를 준다.
+
+effect: .name "RB ABO Rage Pierce 2" .target "performer" .chance 100% .skill_instant true .duration 1 .buff_ids RB_ABO_AP_2 .on_hit true .on_miss true .apply_once true
+// ABO-011 분노 전용 순간 관통20/23/27/30/35. 총사 버프와 분리하여 향후 편집 결합을 막는다; V-19 엔진 검증 대기.
+
+effect: .name "RB ABO Transform Heal 3" .target "performer" .curio_result_type "positive" .chance 100% .heal 10 .on_hit true .on_miss false .queue true
+// ABO-010 변신 체력8/9/10/11/12: 스트레스15와 유지6의 대가로 위기에서 회복하며 공격할 여지를 준다.
+
+effect: .name "RB ABO Rage Pierce 3" .target "performer" .chance 100% .skill_instant true .duration 1 .buff_ids RB_ABO_AP_3 .on_hit true .on_miss true .apply_once true
+// ABO-011 분노 전용 순간 관통20/23/27/30/35. 총사 버프와 분리하여 향후 편집 결합을 막는다; V-19 엔진 검증 대기.
+
+effect: .name "RB ABO Transform Heal 4" .target "performer" .curio_result_type "positive" .chance 100% .heal 11 .on_hit true .on_miss false .queue true
+// ABO-010 변신 체력8/9/10/11/12: 스트레스15와 유지6의 대가로 위기에서 회복하며 공격할 여지를 준다.
+
+effect: .name "RB ABO Rage Pierce 4" .target "performer" .chance 100% .skill_instant true .duration 1 .buff_ids RB_ABO_AP_4 .on_hit true .on_miss true .apply_once true
+// ABO-011 분노 전용 순간 관통20/23/27/30/35. 총사 버프와 분리하여 향후 편집 결합을 막는다; V-19 엔진 검증 대기.
+
+effect: .name "RB ABO Transform Heal 5" .target "performer" .curio_result_type "positive" .chance 100% .heal 12 .on_hit true .on_miss false .queue true
+// ABO-010 변신 체력8/9/10/11/12: 스트레스15와 유지6의 대가로 위기에서 회복하며 공격할 여지를 준다.
+
+effect: .name "RB ABO Rage Pierce 5" .target "performer" .chance 100% .skill_instant true .duration 1 .buff_ids RB_ABO_AP_5 .on_hit true .on_miss true .apply_once true
+// ABO-011 분노 전용 순간 관통20/23/27/30/35. 총사 버프와 분리하여 향후 편집 결합을 막는다; V-19 엔진 검증 대기.
