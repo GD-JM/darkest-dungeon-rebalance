@@ -1,0 +1,19 @@
+{
+  "id": "LEP-007-AA",
+  "decision": "adopted",
+  "original_quote": "살짝 이질감이 있어 왜냐하면 이미지가 약간 픽셀이 깨져있어 다른 아이콘에 비해서 해당 부분 수정해볼래?",
+  "rationale_ko": "게임 화면에서 갑옷 쪼개기 아이콘이 다른 아이콘보다 픽셀이 깨져 보인다는 지적. 원인은 72px에서 최근접 보간으로 방패를 줄이고 회전한 것(Claude 진단). 4배 크기 작업 후 축소와 약한 선명화로 고쳤고, 구도·색·번개 세기는 LEP-007에서 승인한 A안 그대로 유지했다. 기술 수치 변경 없음. test 판에만 적용.",
+  "source": {
+    "product": "claude",
+    "reference": "Claude Code session cc3c95a9-aeea-4409-9feb-eb162a738694, 2026-10-25 user message with in-game screenshot",
+    "session_id": "cc3c95a9-aeea-4409-9feb-eb162a738694",
+    "message_id": null,
+    "event_id": null
+  },
+  "files": [
+    "heroes/leper/leper.ability.seven.png",
+    "tools/make_sunder_icon.py",
+    "design/changes/leper.md"
+  ],
+  "supersedes": []
+}

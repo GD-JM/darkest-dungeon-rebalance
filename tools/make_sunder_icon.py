@@ -59,31 +59,41 @@ for y in range(N):
         if shield_mask.getpixel((x, y)):
             c = six.getpixel((x, y)); h, s, v = hsv(c)
             ps[x, y] = c if s < 0.25 else (int(v*40), int(v*38), int(v*34), 255)
-sw = int(N * 0.86)  # shrink so both tilted halves stay inside the frame
-tmp = Image.new('RGBA', (N, N), (0, 0, 0, 0)); tmp.paste(shield.resize((sw, sw), Image.NEAREST), ((N - sw)//2, (N - sw)//2 + 3)); shield = tmp
+# Foreground (shield halves + bolt) is built at S x size and downsampled, like vanilla art painted large and reduced;
+# shrinking/rotating at 72px with nearest-neighbour broke the ink outlines into stair-steps.
+S = 4; B = N * S
+def up(im, size): return im.convert('RGBa').resize(size, Image.LANCZOS).convert('RGBA')  # premultiplied: no dark fringes
+sw = int(B * 0.86)  # shrink so both tilted halves stay inside the frame
+small = up(shield, (sw, sw))
+shield = Image.new('RGBA', (B, B), (0, 0, 0, 0)); shield.paste(small, ((B - sw)//2, (B - sw)//2 + 3*S))
 
-crack = [(36, 0), (37, 14), (34, 22), (38, 31), (33, 40), (37, 49), (35, 58), (36, N)]
+crack = [(x*S, y*S) for x, y in [(36, 0), (37, 14), (34, 22), (38, 31), (33, 40), (37, 49), (35, 58), (36, N)]]
 def half(left):
-    m = Image.new('L', (N, N), 0)
-    ImageDraw.Draw(m).polygon(([(0, 0)] + crack + [(0, N)]) if left else ([(N, 0)] + crack + [(N, N)]), fill=255)
-    h = Image.new('RGBA', (N, N), (0, 0, 0, 0)); h.paste(shield, (0, 0), m)
-    a = h.getchannel('A'); edge = ImageChops.subtract(a.filter(ImageFilter.MaxFilter(3)), a)
-    ol = Image.new('RGBA', (N, N), (0, 0, 0, 255)); ol.putalpha(edge); ol.alpha_composite(h); return ol
-left = half(True).rotate(11, resample=Image.NEAREST, center=(14, 64), translate=(-3, 0))
-right = half(False).rotate(-11, resample=Image.NEAREST, center=(58, 64), translate=(3, 0))
+    m = Image.new('L', (B, B), 0)
+    ImageDraw.Draw(m).polygon(([(0, 0)] + crack + [(0, B)]) if left else ([(B, 0)] + crack + [(B, B)]), fill=255)
+    h = Image.new('RGBA', (B, B), (0, 0, 0, 0)); h.paste(shield, (0, 0), ImageChops.multiply(m, shield.getchannel('A')))
+    a = h.getchannel('A').point(lambda v: 255 if v > 96 else 0)
+    edge = ImageChops.subtract(a.filter(ImageFilter.MaxFilter(2*S+1)), a)  # 1px ink at final size along the broken edge
+    ol = Image.new('RGBA', (B, B), (0, 0, 0, 255)); ol.putalpha(edge); ol.alpha_composite(h); return ol
+left = half(True).rotate(11, resample=Image.BICUBIC, center=(14*S, 64*S), translate=(-3*S, 0))
+right = half(False).rotate(-11, resample=Image.BICUBIC, center=(58*S, 64*S), translate=(3*S, 0))
 
-img = back.copy()
 random.seed(11)
-bolt = [(36, 6), (35, 16), (37, 26), (34, 36), (37, 46), (35, 56), (36, 66)]
-lay = Image.new('RGBA', (N, N), (0, 0, 0, 0)); ld = ImageDraw.Draw(lay)
-ld.line(bolt, fill=BOLT_RIM, width=4)
-ld.line(bolt, fill=BOLT_CORE, width=2)
-pl = lay.load()
-for y in range(N):  # grain so the stroke reads hand-painted like vanilla light
+bolt = [(x*S, y*S) for x, y in [(36, 6), (35, 16), (37, 26), (34, 36), (37, 46), (35, 56), (36, 66)]]
+fg = Image.new('RGBA', (B, B), (0, 0, 0, 0)); ld = ImageDraw.Draw(fg)
+ld.line(bolt, fill=BOLT_RIM, width=4*S, joint='curve')
+ld.line(bolt, fill=BOLT_CORE, width=2*S, joint='curve')
+grain = Image.new('L', (N, N), 0); pg = grain.load()
+for y in range(N):  # grain on the final pixel grid so the stroke reads hand-painted like vanilla light
     for x in range(N):
-        if pl[x, y][3] and random.random() < 0.18: pl[x, y] = BOLT_GRAIN
-img.alpha_composite(lay)
-img.alpha_composite(left); img.alpha_composite(right)
+        if random.random() < 0.18: pg[x, y] = 255
+gl = Image.new('RGBA', (B, B), BOLT_GRAIN); gl.putalpha(ImageChops.multiply(grain.resize((B, B), Image.NEAREST), fg.getchannel('A')))
+fg.alpha_composite(gl)
+fg.alpha_composite(left); fg.alpha_composite(right)
+fg = up(fg, (N, N))
+# mild sharpen: resampling softens the parchment grain/ink that vanilla icons keep crisp
+fg = Image.merge('RGBA', (*fg.convert('RGB').filter(ImageFilter.UnsharpMask(1, 70, 2)).split(), fg.getchannel('A')))
+img = back.copy(); img.alpha_composite(fg)
 
 out = one.copy(); box = (IN, IN, N-IN, N-IN); out.paste(img.crop(box), box[:2])
 out.save(os.path.join(MOD, 'heroes', 'leper', 'leper.ability.seven.png'))
