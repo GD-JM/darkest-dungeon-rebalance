@@ -877,14 +877,15 @@
  "shieldbreaker|expose": {
   "ids": [
    "SB-015",
-   "SB-024"
+   "SB-024",
+   "SB-026"
   ],
   "principles": [
    "R-TRADE-02",
    "R-SKILL-09"
   ],
-  "en": "Expose reaches rank 4 to answer back-rank stealth. Damage falls to -45%, while accuracy, critical vulnerability, slow and backward movement remain. Initial stealth-rank coverage and direct damage are included in the residual comparison.",
-  "ko": "4열 은신 적 대응을 위해 대상 범위를 넓히고 피해를 -45%로 낮춘다. 명중·받는 치명 증가·속도 약화·은신 해제·후퇴는 유지한다. 초기 은신 편성 도달률과 실제 피해 차이를 잔차에 포함한다."
+  "en": "Expose keeps rank-4 reach for back-rank stealth, critical vulnerability, slow and retreat. Damage falls to -50% as an additional cost for its support and reach.",
+  "ko": "4열 은신 대응 사거리와 기존 약화를 유지하면서 직접 피해를 추가로 낮춘다. 지원 기능 확대의 대가를 더 명확하게 만든다. 전 레벨 피해-50%; 다른 효과와 범위 유지. 기존 모델의 전후 잔차가 0에 가깝다는 설명은 현 수치의 총량 보존 증거로 재사용하지 않는다."
  },
  "shieldbreaker|pierce": {
   "ids": [
@@ -1171,13 +1172,14 @@
  },
  "shieldbreaker|break_guard": {
   "ids": [
-   "SB-023"
+   "SB-023",
+   "SB-025"
   ],
   "principles": [
    "P-11",
    "P-21"
   ],
-  "en": "Preserve guard ignoring, guard removal, guard blocking, pull and forward movement. Exchange slow and rank-4 access for a short 30-40 point PROT debuff, with damage reduced to -55%. The same-target damage model is near the previous budget in its default scenario; physical follow-ups create the payoff.",
-  "ko": "보호 무시·보호 해체·보호 차단·당기기2·전진1을 보존한다. 속도 약화와 4열 접근을 짧은 방어도 감소30~40%p로 교환하고 피해를 -55%로 낮춘다. 기본 잔차는 거의 같으며 물리 아군의 후속 집중 공격이 이득을 만든다."
+  "en": "Puncture keeps pull, guard bypass/removal/blocking and its short PROT reduction. Damage falls to -60% to charge more for this combined utility on a strong weapon.",
+  "ko": "당기기·보호 무시/해제/차단·방어도 감소를 겸하는 지원기의 직접 피해 대가를 늘린다. 방패 파괴자의 높은 기본 공격력까지 고려한다. 전 레벨 피해-60%; 다른 효과와 범위 유지. 기존 모델의 전후 잔차가 0에 가깝다는 설명은 현 수치의 총량 보존 증거로 재사용하지 않는다."
  }
 }

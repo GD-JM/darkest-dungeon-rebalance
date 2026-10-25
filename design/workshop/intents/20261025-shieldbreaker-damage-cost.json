@@ -1,0 +1,46 @@
+[
+  {
+    "id": "SB-025",
+    "decision": "adopted",
+    "original_quote": "실브 구멍내기는 -60으로 바꿔, 개사기잖아 당겨오기에 보호해제에 방어감소까지 있잖아. 실브가 기본 공격력도 강하기에 -60 한다 쳐도 실제 HP 소모량은 적지 않을 텐데 역병 같은 애로 치면 -30 정도 밖에 안될텐데? 노출도 그냥 깔끔하게 -50으로 하자 근데 캐릭 설계를 뭔가 이상하게 해놨네 왜 노출이 근접이고 구멍내기가 원거리야? ㅋㅋ 바닐라 설계가 좀 이상하긴 해 은신은 죄다 4열에 있는데 3열까지만 닿는 근접으로 노출 만들면 어쩌란거야... 무슨 생각일까 ",
+    "rationale_ko": "당기기·보호 무시/해제/차단·방어도 감소를 겸하는 지원기의 직접 피해 대가를 늘린다. 방패 파괴자의 높은 기본 공격력까지 고려한다.",
+    "source": {
+      "product": "codex",
+      "reference": "이어담 read_evidence e3813a311e07edd981f76d92761abab8a4dafb7a6c60b86601c836980b86b866; 2026-10-25T07:34:27.140Z",
+      "session_id": "01a10741-76da-7e43-9500-98474ab3f383",
+      "message_id": "msg_01a171fb-7444-7282-a24f-62107ba2b071",
+      "event_id": "e3813a311e07edd981f76d92761abab8a4dafb7a6c60b86601c836980b86b866"
+    },
+    "files": [
+      "heroes/shieldbreaker/shieldbreaker.info.darkest",
+      "design/changes/shieldbreaker.md",
+      "design/workshop/hero_cards.json",
+      "design/workshop/why.json"
+    ],
+    "supersedes": [
+      "SB-023 damage modifier only"
+    ]
+  },
+  {
+    "id": "SB-026",
+    "decision": "adopted",
+    "original_quote": "실브 구멍내기는 -60으로 바꿔, 개사기잖아 당겨오기에 보호해제에 방어감소까지 있잖아. 실브가 기본 공격력도 강하기에 -60 한다 쳐도 실제 HP 소모량은 적지 않을 텐데 역병 같은 애로 치면 -30 정도 밖에 안될텐데? 노출도 그냥 깔끔하게 -50으로 하자 근데 캐릭 설계를 뭔가 이상하게 해놨네 왜 노출이 근접이고 구멍내기가 원거리야? ㅋㅋ 바닐라 설계가 좀 이상하긴 해 은신은 죄다 4열에 있는데 3열까지만 닿는 근접으로 노출 만들면 어쩌란거야... 무슨 생각일까 ",
+    "rationale_ko": "4열 은신 대응 사거리와 기존 약화를 유지하면서 직접 피해를 추가로 낮춘다. 지원 기능 확대의 대가를 더 명확하게 만든다.",
+    "source": {
+      "product": "codex",
+      "reference": "이어담 read_evidence e3813a311e07edd981f76d92761abab8a4dafb7a6c60b86601c836980b86b866; 2026-10-25T07:34:27.140Z",
+      "session_id": "01a10741-76da-7e43-9500-98474ab3f383",
+      "message_id": "msg_01a171fb-7444-7282-a24f-62107ba2b071",
+      "event_id": "e3813a311e07edd981f76d92761abab8a4dafb7a6c60b86601c836980b86b866"
+    },
+    "files": [
+      "heroes/shieldbreaker/shieldbreaker.info.darkest",
+      "design/changes/shieldbreaker.md",
+      "design/workshop/hero_cards.json",
+      "design/workshop/why.json"
+    ],
+    "supersedes": [
+      "SB-024 damage modifier only"
+    ]
+  }
+]

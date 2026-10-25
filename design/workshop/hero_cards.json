@@ -1153,7 +1153,7 @@
      "No PROT debuff"
     ],
     "new": [
-     "DMG -55%",
+     "DMG -60%",
      "Hits ranks 1-3",
      "No SPD debuff",
      "Target: PROT -30 to -40% (2 turns)"
@@ -1185,7 +1185,7 @@
     ],
     "new": [
      "ACC 90",
-     "DMG -45%",
+     "DMG -50%",
      "Hits ranks 1-4"
     ]
    },
