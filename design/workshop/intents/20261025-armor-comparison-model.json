@@ -1,0 +1,25 @@
+{
+  "id": "R-AUDIT-26",
+  "decision": "adopted",
+  "original_quote": "그럼 개선한 모델로 방어도 감소 기술들 전부 비교해봐 신비학자 약화 저주랑 나병 위협까지 포함해서 명중 피해 사거리 지속 장신구까지 다 계산하고 지금 수치가 적절한지 봐줘\n\n첨부 이미지처럼 보여주라고 100% 평타 한방 데미지 대비해서 얼만큼의 효과인지 계산한거고 너는 EHP로 했던 거 같은데 맞아? 그렇게 해도 괜찮아 왜냐면 EHP가 캐릭터 별 존재하는 기본 공격력의 차별이 반영된 거라 비교하는 데 더 정확할 거라 보긴하거든 어쨌든 더 좋은 방식 모든 스킬의 모든 항목을 전부 일원화해서 나타낼 수 있는 모델을 만들고 그 일원화에 어떤 수치 어떤 방식이 가장 적절할지는 너가 판단해 그리고 그 모델에 흡수시킬 각 항목 별 산정 공식을 정밀화 해나가는 것이 이 작업의 핵심이야 그냥 감으로 때리는 게 아니라",
+  "rationale_ko": "사용자가 요청한 방어도 감소 기술 전수 비교를 위해 고정 표준 평타 HP 환산 모델을 정밀화했다. 영웅별 무기를 분자에 유지하고 광역 후속 공격 예산·동일 대상 상호작용·효과 조건·등급별 표본·장신구·유한 HP 손익분기를 계산한다. 수치 변경 권고는 분석 판단이며 게임 밸런스 수치의 새 채택이 아니다. 가정·미검증 항목을 보고서에 명시한다.",
+  "source": {
+    "product": "codex",
+    "reference": "design/analysis/armor-support-full-comparison-20261025-user.txt — 2026-10-25 현재 사용자의 직접 요청 원문. 수집 event ID는 확인되지 않음.",
+    "session_id": null,
+    "message_id": null,
+    "event_id": null
+  },
+  "files": [
+    "tools/armor_valuation.py",
+    "tools/armor_inventory.py",
+    "tools/armor_audit.py",
+    "tools/armor_scenarios.py",
+    "tools/test_armor_valuation.py",
+    "design/analysis/armor-support-full-comparison-20261025.md",
+    "design/analysis/armor-support-full-comparison-20261025.json",
+    "design/analysis/armor-support-full-comparison-20261025-user.txt"
+  ],
+  "supersedes": [],
+  "game_balance_changes": false
+}
