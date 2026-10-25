@@ -452,19 +452,6 @@
     ]
    },
    {
-    "key": "flagellant|reclaim",
-    "name": "Reclaim",
-    "icon": "four",
-    "old": [
-     "Ally heal 2 per turn, 2-3 turns",
-     "Self: bleed 3-5 for 3 turns"
-    ],
-    "new": [
-     "Ally heal 2-4 per turn, 3 turns",
-     "Self: bleed 3-7 for 2 turns"
-    ]
-   },
-   {
     "key": "flagellant|suffer",
     "name": "Suffer",
     "icon": "seven",

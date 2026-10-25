@@ -347,14 +347,13 @@
  },
  "flagellant|reclaim": {
   "ids": [
-   "FLA-010"
+   "FLA-016"
   ],
   "principles": [
-   "P-19",
-   "G-05"
+   "P-04"
   ],
-  "en": "Reclaim's self-bleed is how the Flagellant drops himself to 40% HP for Redeem and Exsanguinate, so it now bleeds over 2 turns instead of 3 and gets him there sooner, growing every level (3-7). The heal lasts 3 turns at every level with the base game's amounts. Bleed-resist trinkets still let you run it as a pure healer.",
-  "ko": "재기의 자해 출혈은 고행자가 스스로 체력 40%를 만들어 구제·방혈을 여는 장치라, 3턴 대신 2턴에 몰아 더 빨리 40%에 닿게 했고 레벨마다 1씩(3~7) 오릅니다. 회복은 모든 레벨 3턴 지속에 원작 회복량을 씁니다. 출혈 저항 장신구를 끼면 여전히 순수 회복기로 쓸 수 있습니다."
+  "en": "Reclaim has been restored to the base game at every skill level, including regeneration duration and self-bleed. This replaces the earlier faster self-bleed design; the other Flagellant changes remain.",
+  "ko": "사용자 요청으로 재기의 회복 지속과 자해 출혈을 모든 레벨에서 바닐라로 복원합니다. 이전의 빠른 자해 출혈 설계를 철회하며, 고행자의 다른 변경은 유지합니다."
  },
  "flagellant|resistances": {
   "ids": [

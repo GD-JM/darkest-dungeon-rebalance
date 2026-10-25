@@ -45,11 +45,13 @@ combat_skill: .id "exsanguinate" .level 3 .type "melee" .atk 105% .dmg 0% .crit 
 combat_skill: .id "exsanguinate" .level 4 .type "melee" .atk 110% .dmg 0% .crit 7%.required_performer_hp_range 0 0.40 .per_battle_limit 3 .launch 12 .target 12 .is_crit_valid True  .effect "Exsanguinate 5" "Flag HealSelf 5" "Flagellant Exhaust"
 
 
-combat_skill: .id "reclaim" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Healdot 2" "RB FLA Flag Self Wound 1" .is_stall_invalidating false
-combat_skill: .id "reclaim" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Healdot 2" "RB FLA Flag Self Wound 2" .is_stall_invalidating false
-combat_skill: .id "reclaim" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Healdot 4" "RB FLA Flag Self Wound 3" .is_stall_invalidating false
-combat_skill: .id "reclaim" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Healdot 4" "RB FLA Flag Self Wound 4" .is_stall_invalidating false
-combat_skill: .id "reclaim" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Healdot 5" "RB FLA Flag Self Wound 5" .is_stall_invalidating false
+combat_skill: .id "reclaim" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Healdot 1" "Flag Self Wound 1" .is_stall_invalidating false
+combat_skill: .id "reclaim" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Healdot 2" "Flag Self Wound 2" .is_stall_invalidating false
+combat_skill: .id "reclaim" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Healdot 3" "Flag Self Wound 3" .is_stall_invalidating false
+combat_skill: .id "reclaim" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Healdot 4" "Flag Self Wound 4" .is_stall_invalidating false
+combat_skill: .id "reclaim" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .self_target_valid false .launch 1234 .target @1234 .is_crit_valid True  .effect "Flag Healdot 5" "Flag Self Wound 5" .is_stall_invalidating false
+// FLA-016 Reclaim restored to installed vanilla at all five levels by user request (2026-10-25). Supersedes FLA-005/010; historical Korean notes below are retained.
+// FLA-016 Heal 2x2 / 2x3 / 3x2 / 3x3 / 4x3; self bleed 3/3/4/4/5 x3 at 120/130/140/150/160%.
 // FLA-010 reclaim: 지속 회복 2/2/3/3/4 x 3턴(6/6/9/9/12, 5렙 = 바닐라). FLA-005의 1렙 3x3=9는 게임 최대 단일 아군 회복이었고, 자해 출혈을 대가로 봤지만 고행자에게 출혈은 체력 40%를 만들어 구제·방혈을 여는 이득이라 철회.
 // FLA-010 reclaim: 자해 출혈 3/4/5/6/7 x 2턴(기존 3/3/4/4/5 x 3턴). 의도: 자해 출혈은 스스로 40%를 만들기 위한 장치라 2턴에 몰아 더 빨리 도달시키고, 레벨마다 무언가는 오르도록 매 레벨 1씩 증가. 확률은 그대로 둬 출혈 저항 장신구로 순수 힐러 운용도 가능 (제작자 2026-10-21)
 

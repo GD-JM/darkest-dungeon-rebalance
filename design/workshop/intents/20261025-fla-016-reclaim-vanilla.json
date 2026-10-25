@@ -1,0 +1,25 @@
+{
+  "id": "FLA-016",
+  "decision": "adopted",
+  "original_quote": "고행자 재기는 그냥 바닐라로 바꾸자",
+  "rationale_ko": "재기를 바닐라로 복원한다는 명시적 결정. 다른 검토 중 기술은 이번 승인 범위가 아니다.",
+  "source": {
+    "product": "codex",
+    "reference": "현재 세션 2026-10-25T08:08:26.422Z 사용자 메시지; 이어담 원문 전체 확인",
+    "session_id": "01a10741-76da-7e43-9500-98474ab3f383",
+    "message_id": "msg_01a1721a-9236-7482-b507-2de32d6698dd",
+    "event_id": "adf9747aec71217ce414f6f6b957a3e587c35a8263562094d17d2c732c0711e5"
+  },
+  "files": [
+    "heroes/flagellant/flagellant.info.darkest",
+    "heroes/flagellant/flagellant.effects_edit.txt",
+    "effects/rebalance_flagellant.effects.darkest",
+    "design/changes/flagellant.md",
+    "design/workshop/why.json",
+    "design/workshop/hero_cards.json"
+  ],
+  "supersedes": [
+    "FLA-005",
+    "FLA-010"
+  ]
+}
