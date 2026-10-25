@@ -236,6 +236,23 @@ def validate_editor(result, original_cards, intents):
     return cards
 
 
+def changed_design_evidence(diff, changed):
+    """WS-EDITOR-003: retain changed rationale hunks, not duplicate entire histories.
+
+    The immutable snapshot retains complete documents. The editor already receives
+    the complete release diff, exact approved intents and complete hero data.
+    Never truncate a hunk or raise the review bound to accommodate old history.
+    """
+    allowed = {p for p in changed if p.startswith('design/changes/') and p.endswith('.md')}
+    records = {}
+    for part in re.split(r'(?=^diff --git )', diff, flags=re.M):
+        header = part.splitlines()[0] if part else ''
+        for path in allowed:
+            if header == f'diff --git a/{path} b/{path}':
+                records[path] = part
+    return records
+
+
 def edit_release(source, job, config, sha, previous, changed, diff, intents, previous_release=None):
     w = source / 'design/workshop'
     cards = read_json(w / 'hero_cards.json')
@@ -246,9 +263,7 @@ def edit_release(source, job, config, sha, previous, changed, diff, intents, pre
                'current_reasons': read_json(w / 'why.json'), 'design_records': {}}
     # WS-MODULAR-002: old source snapshots must not advertise retired Workshop IDs.
     context['optional_packages'] = None
-    for rel in changed:
-        if rel.startswith('design/changes/') and rel.endswith('.md') and (source / rel).is_file():
-            context['design_records'][rel] = (source / rel).read_text(encoding='utf-8-sig')
+    context['design_records'] = changed_design_evidence(diff, changed)
     # Include committed source, vanilla reference and effects for changed heroes; never a live test file.
     context['hero_data'] = {}
     for hero in cards:

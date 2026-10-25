@@ -1,0 +1,18 @@
+{
+  "id": "WS-EDITOR-003",
+  "decision": "adopted",
+  "original_quote": "그럼 이제 test에 쌓인 변경 전부 메인에 반영해서 푸시하고 창작마당 업데이트 노트랑 이미지까지 수정해줘 이미지 누락 없는지도 끝까지 확인하고",
+  "rationale_ko": "승인된 전체 배포 수행 중 과거 영웅 변경 문서 전체를 중복 첨부하여 650000자 검토 제한을 초과했다. 새 설계나 수치 변경 없이 배포 장애를 복구한다. 변경 문서의 전체 diff hunk를 보존하고 이미 입력되는 원문 의도·런타임·바닐라·효과 데이터와 함께 검토한다. 원본 전체 문서는 SHA snapshot에 유지하며 검토 상한이나 승인 검사를 완화하지 않는다.",
+  "source": {
+    "reference": "2026-10-25 현재 대화: 전체 main 배포 및 끝까지 검증 요청",
+    "event_id": null,
+    "session_id": "01a10741-76da-7e43-9500-98474ab3f383",
+    "product": "codex",
+    "message_id": null
+  },
+  "files": [
+    "tools/workshop_sync/release.py",
+    "tools/workshop_sync/tests/test_editor_evidence.py"
+  ],
+  "supersedes": []
+}
