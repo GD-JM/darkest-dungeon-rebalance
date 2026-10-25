@@ -987,14 +987,15 @@
   "ids": [
    "VES-007",
    "VES-017",
-   "VES-018"
+   "VES-018",
+   "VES-019"
   ],
   "principles": [
    "R-TRADE-02",
    "G-03"
   ],
-  "en": "Hand of Light uses ACC 90 at level 1 while Illumination stays at 95. Its self-buff is configured to apply even on a miss and prepares later attacks; damage stays at -50%. Mace Bash retains immediate damage and self-healing. No compensating damage or buff increase is added.",
-  "ko": "광휘는 명중95를 유지하고 신의 손길만90으로 낮춘다. 손길은 빗나가도 발동하도록 설정된 자기 강화로 후속 공격을 준비한다. 피해-50%와 기존 강화는 유지하며, 명중을 내리는 대신 피해나 강화를 추가로 올리지 않는다. 철퇴의 즉시 피해·자가 회복 역할도 유지한다."
+  "en": "Hand of Light keeps ACC 90 at level 1 and improves its damage modifier from -50% to -40%. The stronger initial hit reduces the cost of preparing later attacks and helps finish weakened enemies. Its existing self-buff, critical chance and ranks stay unchanged; Illumination stays at ACC 95. Mace Bash retains immediate damage and self-healing.",
+  "ko": "신의 손길은 기술1레벨 명중90을 유지하고 피해를 -50%에서 -40%로 높인다. 첫 타격의 손해를 줄여 빈사 적을 마무리하면서 후속 공격을 준비하게 한다. 자기 강화·치명·열은 유지해 강화 중첩 자체를 더 키우지 않는다. 광휘95와 철퇴의 즉시 피해·자가 회복 역할은 그대로 둔다."
  },
  "vestal|gods_illumination": {
   "ids": [

@@ -1,0 +1,30 @@
+{
+  "id": "VES-019",
+  "decision": "adopted",
+  "original_quote": "그럼 손길 피해 -40으로 가자 광휘는 그대로 두고 의도 주석 남겨서 커밋까지 해 푸시는 아직 하지 말고",
+  "rationale_ko": "명중90을 유지하고 손길의 첫 타격 피해를 보충하여 준비 행동 손해를 줄인다. 광휘 및 자기 강화는 유지한다. 커밋만 승인했으며 푸시는 금지했다.",
+  "context_quotes": [
+    {
+      "speaker": "assistant",
+      "quote": "내 추천은 광휘는 그대로, 손길은 피해 −50→−40%를 시험하는 안이야.",
+      "reference": "직전 답변의 추천 문장; Markdown 강조 제거"
+    }
+  ],
+  "source": {
+    "product": "codex",
+    "reference": "현재 대화의 손길 피해-40 승인 및 커밋/푸시 금지 요청 (2026-10-25)",
+    "session_id": null,
+    "message_id": null,
+    "event_id": null
+  },
+  "files": [
+    "heroes/vestal/vestal.info.darkest",
+    "design/changes/vestal.md",
+    "design/workshop/hero_cards.json",
+    "design/workshop/why.json"
+  ],
+  "supersedes": [
+    "VES-018"
+  ],
+  "supersedes_scope": "피해-50 유지 결정만 대체; 명중90 및 광휘95 유지"
+}

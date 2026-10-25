@@ -1272,10 +1272,12 @@
     "name": "Hand of Light",
     "icon": "seven",
     "old": [
-     "ACC 85"
+     "ACC 85",
+     "DMG -50%"
     ],
     "new": [
-     "ACC 90"
+     "ACC 90",
+     "DMG -40%"
     ]
    }
   ]
