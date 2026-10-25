@@ -246,42 +246,33 @@ class SyncTests(unittest.TestCase):
         prep.assert_not_called(); pub.assert_not_called()
         self.assertEqual(read_json(self.root/'state.json'),state)
 
-    def test_module_failure_keeps_release_pending_and_does_not_publish_aio(self):
+    def test_stale_registry_cannot_reactivate_retired_modules(self):
         import types
         write_json(self.root/'state.json',dict(last_seen_sha='a'*40,last_published_sha='a'*40))
         job=self.root/'jobs'/('b'*40)
-        write_json(job/'source/design/workshop/modules.json',{'base':{'item_id':123}})
+        write_json(job/'source/design/workshop/modules.json',{'base':{'item_id':3826129567}})
         fake=types.ModuleType('modules')
-        fake.prepare_modules=lambda *a:{'base':{'item_id':123,'digest':'module'}}
-        with patch.dict(sys.modules,{'modules':fake}), patch('sync.GitSource') as source, patch('sync.prepare',return_value={'digest':'aio'}), patch('sync.publish',side_effect=RuntimeError('module failed')) as pub:
+        def forbidden(*args): raise AssertionError('retired module builder called')
+        fake.prepare_modules=forbidden
+        with patch.dict(sys.modules,{'modules':fake}), patch('sync.GitSource') as source, patch('sync.prepare',return_value={'digest':'aio','version':'2.5.4'}), patch('sync.publish') as pub:
             source.return_value.remote_sha.return_value=source.return_value.fetch.return_value='b'*40
             source.return_value.changed_files.return_value=['design/workshop/modules.json']
-            with self.assertRaisesRegex(RuntimeError,'module failed'):
-                once({'state_dir':str(self.root)},True)
-        self.assertEqual(pub.call_count,1)
-        self.assertEqual(pub.call_args.args[1],job/'modules/base')
-        state=read_json(self.root/'state.json')
-        self.assertEqual(state['last_published_sha'],'a'*40)
-        self.assertEqual(state['pending_sha'],'b'*40)
+            self.assertTrue(once({'state_dir':str(self.root)},True).startswith('published '))
+        pub.assert_called_once()
+        self.assertEqual(pub.call_args.args[1],job)
 
-    def test_steam_hold_does_not_block_other_items_or_report_batch_success(self):
-        modules = {'base': {'item_id': 123}, 'duelist': {'item_id': 456}}
-        write_json(self.root/'modules/duelist/dependency.json', {'parent':456,'child':123})
-        with patch('sync.publish', side_effect=[SubmissionUnknown('review hold'), {}, {}]) as pub:
-            with self.assertRaisesRegex(SteamError, 'Publication incomplete'):
-                publish_batch({'state_dir':str(self.root),'game_root':'game'}, self.root, {}, modules)
-        self.assertEqual(pub.call_count, 3)
-        self.assertEqual([c.args[1] for c in pub.call_args_list],
-                         [self.root/'modules/base',self.root/'modules/duelist',self.root])
-        items=read_json(self.root/'batch-state.json')['items']
-        self.assertEqual(items['base']['status'], 'blocked')
-        self.assertEqual(items['duelist']['status'], 'complete')
-        self.assertEqual(items['all_dlc']['status'], 'complete')
+    def test_retired_batch_and_direct_publication_fail_before_remote_writes(self):
+        with patch('sync.publish') as pub:
+            with self.assertRaisesRegex(ValueError,'retired'):
+                publish_batch({'state_dir':str(self.root)},self.root,{}, {'base':{'item_id':3826129567}})
+        pub.assert_not_called()
+        with self.assertRaisesRegex(ValueError,'retired'):
+            publish({},self.root,{'item_id':3826129567})
 
     def test_validation_failure_still_aborts_other_items(self):
         with patch('sync.publish', side_effect=ValueError('ownership mismatch')) as pub:
             with self.assertRaisesRegex(ValueError, 'ownership mismatch'):
-                publish_batch({'state_dir':str(self.root)}, self.root, {}, {'base':{}})
+                publish_batch({'state_dir':str(self.root)}, self.root, {}, {})
         self.assertEqual(pub.call_count, 1)
 
     def test_uploaded_hidden_item_cannot_complete_release(self):
@@ -317,8 +308,8 @@ class SyncTests(unittest.TestCase):
         with patch('sync.publish') as pub:
             for _ in range(2):
                 with self.assertRaises(SteamError):
-                    publish_batch({'state_dir':str(self.root)}, self.root, {}, {'base':{}})
-        self.assertEqual(pub.call_count, 4)
+                    publish_batch({'state_dir':str(self.root)}, self.root, {}, {})
+        self.assertEqual(pub.call_count, 2)
         self.public_checker.assert_called_once()
         self.assertTrue(read_json(self.root/'public-check-cooldown.json')['until_epoch'] > 0)
         self.assertTrue(read_json(self.root/'batch-state.json')['items']['all_dlc']['upload_complete'])

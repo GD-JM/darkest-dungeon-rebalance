@@ -14,6 +14,8 @@ DLC = {'duelist':4964110, 'runaway':4964110, 'flagellant':580100,
 
 
 def register(config, output):
+    # WS-MODULAR-002: explicit user rollback, not a transient publishing failure.
+    raise SteamError('Optional packages retired on 2026-10-25; creation is disabled')
     root = Path(config['state_dir'])
     path = root / 'modules-create.json'
     state = read_json(path, {})

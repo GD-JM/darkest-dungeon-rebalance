@@ -230,14 +230,15 @@
  },
  "crusader|battle_heal": {
   "ids": [
-   "CRU-001"
+   "CRU-001",
+   "CRU-010"
   ],
   "principles": [
    "G-05",
    "P-11"
   ],
-  "en": "The Crusader becomes a support healer who boosts the healing allies receive afterward instead of competing with the Vestal and Occultist on raw healing. The amplifier came from the Arbalest's bandage.",
-  "ko": "성전사를 회복량으로 성녀·신비학자와 겨루는 대신, 이후 받는 회복을 키워 주는 보조 힐러로 만든다. 이 증폭 효과는 석궁사수 붕대에서 옮겨 왔다."
+  "en": "Higher immediate healing lets healing-trinket investment support a primary healer Crusader. Healing received stays at +20%: improve the first heal and switching targets rather than relying on stronger repeated-heal amplification. This is a healing buff, not a demonstrated power-neutral trade.",
+  "ko": "단독 회복 담당을 목표로 사용자가 두 안 중 선택·적용을 위임했다. 기본 회복 3–4/4–4/4–5/5–6/6–7, 받는 회복 +20% 고정을 선택한다. 첫 치료와 대상 전환의 안정성, 회복 장신구 효율을 우선하며 5–6/+38% 성장안은 미채택이다. 성녀의 즉시·광역 회복 우위는 유지한다. 실제 상향이며 다른 기술의 미승인 너프로 상쇄하지 않는다."
  },
  "crusader|bulwark_of_faith": {
   "ids": [
@@ -984,28 +985,30 @@
  },
  "vestal|gods_hand": {
   "ids": [
-   "VES-007"
+   "VES-007",
+   "VES-017"
   ],
   "principles": [
    "R-TRADE-02",
    "G-03"
   ],
-  "en": "Hand of Light only grants its buff on hit, so as an effect-first ranged skill it gets the standard ranged accuracy, which also helps a front-rank Vestal.",
-  "ko": "신의 손길은 맞혀야 강화가 걸리는 효과 위주 원거리 기술이라 원거리 표준 명중을 준다. 전열 성녀 강화도 겸한다."
+  "en": "Accuracy 95 makes Hand of Light a reliable finisher that also prepares later attacks. Its self-buff is configured to apply even on a miss; damage stays at -50%, preserving Mace Bash as the immediate damage and self-heal option.",
+  "ko": "명중 95로 빈사 적을 마무리하면서 후속 공격을 준비하는 선택지를 만든다. 자기 강화는 빗나가도 발동하도록 설정돼 있다. 피해 -50%를 유지해 철퇴의 즉시 피해·자가 회복 역할을 남긴다."
  },
  "vestal|gods_illumination": {
   "ids": [
-   "VES-W01",
    "VES-006",
-   "VES-013"
+   "VES-013",
+   "VES-014",
+   "VES-016"
   ],
   "principles": [
    "P-19",
    "G-03",
    "P-11"
   ],
-  "en": "Kept as close to vanilla as possible: holy light now burns (1-3), and it can be used from rank 4 too so a back-rank Vestal can reach it. The dodge debuff is 5 lower to pay for the burn, which also sets it apart from the Arbalest's Sniper's Mark.",
-  "ko": "최대한 바닐라에 가깝게 두었습니다. 성스러운 빛이 화상(1~3)을 주고, 후열 성녀도 쓰도록 4열에서도 사용합니다. 화상의 대가로 회피 감소를 5 낮췄고, 덕분에 석궁사수 저격 표식과도 구분됩니다."
+  "en": "Accuracy 95 makes Illumination a more reliable finisher and utility attack alongside Judgement. Damage remains -75%, with the existing dodge reduction, burn and stealth removal retained.",
+  "ko": "명중 95로 심판보다 정확한 마무리·지원 공격 역할을 준다. 피해 -75%와 기존 회피 감소·화상·은신 해제는 유지한다."
  },
  "vestal|judgement": {
   "ids": [

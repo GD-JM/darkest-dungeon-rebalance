@@ -241,7 +241,8 @@ def edit_release(source, job, config, sha, previous, changed, diff, intents, pre
                'changed_files': changed, 'diff': diff, 'user_intents': intents,
                'current_cards': cards, 'current_descriptions': descriptions(source),
                'current_reasons': read_json(w / 'why.json'), 'design_records': {}}
-    context['optional_packages'] = read_json(w / 'modules.json')
+    # WS-MODULAR-002: old source snapshots must not advertise retired Workshop IDs.
+    context['optional_packages'] = None
     for rel in changed:
         if rel.startswith('design/changes/') and rel.endswith('.md') and (source / rel).is_file():
             context['design_records'][rel] = (source / rel).read_text(encoding='utf-8-sig')
@@ -273,7 +274,7 @@ Unchanged committed text/cards are existing approved material: preserve them ins
 For descriptions return only exact old_text -> new_text replacements of passages affected by this release, with their language.
 Preserve every unrelated paragraph verbatim. Never rewrite entire descriptions or change titles. Every old_text must occur exactly once.
 Apply relevant factual updates consistently across the ten languages. Presentation-only image splitting needs NO description patches unless explicitly requested.
-When optional_packages is present, update the compatibility section to distinguish this existing ALL-DLC edition from the separate no-DLC base edition and optional hero patches. Link the base package by its actual item_id. Never claim runtime testing: the user is playing, so validation is static only. Keep paragraphs short enough for the existing byte budget.
+Only the original all-DLC Workshop item 3821353035 remains. Optional packages were retired by the user. Remove obsolete optional-package links and promises; keep the requirement to enable all five DLC heroes. Never claim runtime testing. Keep paragraphs short enough for the existing byte budget.
 No internal change IDs in public prose. Each fully patched description must stay strictly below8000 UTF-8 bytes counting CRLF.
 Return reasons only when changed, with matching source IDs. Account for all adopted intent IDs.
 Skill reasons must use actual hero|skill keys from current_cards or card_updates. Presentation-only reasons may use hero_cards|image_split.

@@ -1,0 +1,64 @@
+{
+  "id": "CRU-010",
+  "decision": "adopted",
+  "original_quote": "둘 중에 뭐가 더 좋아? 더 좋은 쪽으로 가자 회복 효율은 높으면 좋으니까",
+  "rationale_ko": "단독 회복 담당을 목표로 사용자가 두 안 중 선택·적용을 위임했다. 기본 회복 3–4/4–4/4–5/5–6/6–7, 받는 회복 +20% 고정을 선택한다. 첫 치료와 대상 전환의 안정성, 회복 장신구 효율을 우선하며 5–6/+38% 성장안은 미채택이다. 성녀의 즉시·광역 회복 우위는 유지한다. 실제 상향이며 다른 기술의 미승인 너프로 상쇄하지 않는다.",
+  "source": {
+    "product": "codex",
+    "reference": "현재 대화: 전투 치유 두 조정안 비교 직후 사용자가 더 좋은 안의 선택 및 적용을 위임한 메시지 (2026-10-25)",
+    "session_id": null,
+    "message_id": null,
+    "event_id": null
+  },
+  "context_quotes": [
+    {
+      "speaker": "user",
+      "quote": "성전사 전투 치유 장신구까지 포함해서 검토 마저 해봐 다른 회복기랑 비교해서 지금 수치가 적절한지 봐줘 단독 힐 기술로 활약할 수 있게 설정"
+    },
+    {
+      "speaker": "assistant",
+      "quote": "성전사를 파티의 유일한 회복 담당으로도 기용하려면, 현재 전투 치유는 상향하는 게 맞습니다. 제 추천은 1레벨 3–4 → 5레벨 6–7, 받는 회복 +20% 유지입니다."
+    }
+  ],
+  "selected_values": {
+    "heal": [
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "healing_received_percent": [
+      20,
+      20,
+      20,
+      20,
+      20
+    ]
+  },
+  "files": [
+    "heroes/crusader/crusader.info.darkest",
+    "design/changes/crusader.md",
+    "design/workshop/why.json",
+    "design/workshop/hero_cards.json"
+  ],
+  "supersedes": [
+    "CRU-001"
+  ],
+  "supersedes_scope": "기본 회복량과 보조 힐러 전용 의도만 대체; +20% 효과는 유지"
+}

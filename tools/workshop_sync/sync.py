@@ -74,6 +74,9 @@ def verify_phase(details, release, phase):
 
 
 def publish(config, job, release, images_only=False, metadata_only=False):
+    # WS-MODULAR-002: the user retired all six optional items; never revive cached jobs.
+    if int(release.get('item_id', ITEM_ID)) != ITEM_ID:
+        raise ValueError('Optional Workshop packages retired; only 3821353035 may publish')
     journal_path = job / 'publish-state.json'
     journal = read_json(journal_path, {'digest': release['digest'], 'completed': [], 'phase': None, 'status': 'ready'})
     if journal['digest'] != release['digest']:
@@ -195,6 +198,8 @@ def verify_public(item_id):
 
 
 def publish_batch(config, job, release, module_releases):
+    if module_releases:
+        raise ValueError('Optional Workshop packages retired; only the original main item remains')
     # WS-SYNC-004: one Steam item under review must not block independent items.
     # Keep per-item checkpoints and never mark the whole release successful until all finish.
     outcomes = {}
@@ -269,12 +274,8 @@ def once(config, publish_enabled=False, expected_sha=None):
     release = read_json(job / 'release.json')
     if release is None:
         release = prepare(config, git, previous, sha, job, state.get('last_release'))
-    # WS-MODULAR-001: validate all packages before writing any Workshop item.
-    registry = read_json(job / 'source/design/workshop/modules.json')
+    # WS-MODULAR-002: ignore even historical registries in already prepared snapshots.
     module_releases = {}
-    if registry:
-        from modules import prepare_modules
-        module_releases = prepare_modules(config, job, release, registry)
     if not publish_enabled:
         return 'prepared ' + str(job / 'release.json')
     if (root / 'stop.request').exists():

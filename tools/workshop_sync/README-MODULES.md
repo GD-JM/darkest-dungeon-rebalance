@@ -1,7 +1,5 @@
-# WS-MODULAR-001
+# WS-MODULAR-002 — optional packages retired
 
-This directory versions the local deployment program. The installed launcher remains the workshop-sync/push.py path in agent-contract.md. After changing this tracked code, copy the changed program files to that runtime before pushing. Never copy private config.json, runtime/, logs, or account data into Git. No daemon or poller is required.
+On 2026-10-25 the owner withdrew the optional-package release and requested deletion of its six Workshop items. Only the original main item 3821353035 remains. Historical splitting helpers and evidence are retained, but registry-driven deployment and item creation are disabled. Old cached jobs cannot publish to optional IDs.
 
-Main push validates all six optional packages before publication; optional items publish first, then the existing all-DLC item. Per-item journals prevent duplicate notes. Test pushes remain GitHub-only. create_modules.py is a one-time explicitly approved registration tool, not part of recurring pushes. Registered IDs are fixed in modules.py and design/workshop/modules.json.
-
-File verification covers 32 DLC-hero selections; it is not an in-game launch test. The owner requested no interruption of ongoing gameplay.
+The installed launcher is still workshop-sync/push.py; main publishes the original item, test remains GitHub-only. Source changes must be synchronized to this PC runtime. No daemon or periodic monitor is used.

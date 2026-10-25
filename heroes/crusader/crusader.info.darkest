@@ -54,11 +54,13 @@ combat_skill: .id "bulwark_of_faith" .level 4 .type "melee" .atk 0% .dmg 0% .cri
 combat_move_skill: .id "move" .level 0 .type "move" .move 1 1 .launch 4321
 
 
-combat_skill: .id "battle_heal" .level 0 .heal 2 3 .launch 1234 .target @1234  .effect "Stacking Heal 1" .is_stall_invalidating false
-combat_skill: .id "battle_heal" .level 1 .heal 3 3 .launch 1234 .target @1234  .effect "Stacking Heal 1" .is_stall_invalidating false
-combat_skill: .id "battle_heal" .level 2 .heal 3 4 .launch 1234 .target @1234  .effect "Stacking Heal 1" .is_stall_invalidating false
-combat_skill: .id "battle_heal" .level 3 .heal 4 4 .launch 1234 .target @1234  .effect "Stacking Heal 1" .is_stall_invalidating false
-combat_skill: .id "battle_heal" .level 4 .heal 4 5 .launch 1234 .target @1234  .effect "Stacking Heal 1" .is_stall_invalidating false
+combat_skill: .id "battle_heal" .level 0 .heal 3 4 .launch 1234 .target @1234  .effect "Stacking Heal 1" .is_stall_invalidating false
+combat_skill: .id "battle_heal" .level 1 .heal 4 4 .launch 1234 .target @1234  .effect "Stacking Heal 1" .is_stall_invalidating false
+combat_skill: .id "battle_heal" .level 2 .heal 4 5 .launch 1234 .target @1234  .effect "Stacking Heal 1" .is_stall_invalidating false
+combat_skill: .id "battle_heal" .level 3 .heal 5 6 .launch 1234 .target @1234  .effect "Stacking Heal 1" .is_stall_invalidating false
+combat_skill: .id "battle_heal" .level 4 .heal 6 7 .launch 1234 .target @1234  .effect "Stacking Heal 1" .is_stall_invalidating false
+// CRU-010 (2026-10-25) battle_heal: heal 3-4/4-4/4-5/5-6/6-7; retain +20% healing received. Improve first and split-target healing so healing-trinket investment supports a primary healer build.
+// CRU-010: 아래 CRU-001 보조 회복량 기록은 역사이며 현재 회복량은 CRU-010이 대체한다. 증폭 성장보다 즉시 회복을 선택; 총량 보존이 입증된 변경은 아니다.
 // CRU-001 [trace 2026-10-05] Trade immediate healing for followup healing received on the target.
 
 

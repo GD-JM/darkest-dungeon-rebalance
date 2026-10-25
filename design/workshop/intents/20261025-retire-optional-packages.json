@@ -1,0 +1,34 @@
+{
+  "id": "WS-MODULAR-002",
+  "decision": "adopted",
+  "original_quote": "야 어제 작업한 게 이거 같은데 엄청 많네 그냥 다 롤백해서 없애줘 일단은 원래 있던 메인 하나만 남겨줘",
+  "rationale_ko": "선택형 패키지가 여러 창작마당 항목으로 늘어난 구성을 철회한다. 기존 전체판 3821353035만 남기고 본편판 및 DLC 패치 5개를 삭제한다. 생성·배포 경로와 과거 대기 작업을 차단하고 메인 설명의 폐기 링크를 제거한다. 영웅 수치 및 오늘 적용한 CRU-010은 보존한다.",
+  "source": {
+    "product": "codex",
+    "reference": "현재 대화의 7개 창작마당 카드 이미지와 함께 보낸 삭제·메인만 유지 요청 (2026-10-25)",
+    "session_id": null,
+    "message_id": null,
+    "event_id": null
+  },
+  "files": [
+    "design/workshop/modules.json",
+    "tools/workshop_sync/sync.py",
+    "tools/workshop_sync/release.py",
+    "tools/workshop_sync/create_modules.py",
+    "tools/workshop_sync/agent-contract.md",
+    "tools/workshop_sync/tests/test_sync.py",
+    "tools/workshop_sync/README-MODULES.md"
+  ],
+  "supersedes": [
+    "WS-MODULAR-001"
+  ],
+  "retired_item_ids": [
+    3826129567,
+    3826129595,
+    3826129618,
+    3826129642,
+    3826129659,
+    3826129680
+  ],
+  "preserved_item_id": 3821353035
+}
