@@ -56,8 +56,8 @@
      "SPD -2 to -6 (3 turns)"
     ],
     "new": [
-     "ACC 90",
-     "DMG -20%",
+     "ACC 95",
+     "DMG -15%",
      "Use from ranks 2-4",
      "No dodge or SPD debuff"
     ]
@@ -950,7 +950,7 @@
     "new": [
      "Clears corpses",
      "No dodge debuff",
-     "Target: ACC -3 to -5 (2 turns)"
+     "Target: ACC -5 to -10 (2 turns)"
     ]
    },
    {

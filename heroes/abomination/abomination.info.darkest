@@ -55,11 +55,12 @@ combat_skill: .id "rage" .level 2 .type "melee" .atk 95% .dmg 0% .crit 9.5% .lau
 combat_skill: .id "rage" .level 3 .type "melee" .atk 100% .dmg 0% .crit 10.5% .launch 21 .target 123 .is_crit_valid True  .effect "RB ABO Rage Pierce 4" .valid_modes beast
 combat_skill: .id "rage" .level 4 .type "melee" .atk 105% .dmg 0% .crit 11.5% .launch 21 .target 123 .is_crit_valid True  .effect "RB ABO Rage Pierce 5" .valid_modes beast
 // ABO-011 분노: 전용 순간 관통20/23/27/30/35 추가. 자기 스트레스 비용의 대가로 방어 적에게 폭발력을 주되 완전관통은 피한다. 총사와 같은 skill_instant 구조; 실제 관통 계산/누출은 게임 검증 필요.
-combat_skill: .id "slam" .level 0 .type "melee" .atk 90% .dmg -20% .crit 1% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "Push 2A" .valid_modes beast
-combat_skill: .id "slam" .level 1 .type "melee" .atk 95% .dmg -20% .crit 2% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "Push 2B" .valid_modes beast
-combat_skill: .id "slam" .level 2 .type "melee" .atk 100% .dmg -20% .crit 3% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "Push 2C" .valid_modes beast
-combat_skill: .id "slam" .level 3 .type "melee" .atk 105% .dmg -20% .crit 4% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "Push 2D" .valid_modes beast
-combat_skill: .id "slam" .level 4 .type "melee" .atk 110% .dmg -20% .crit 5% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "Push 2E" .valid_modes beast
+combat_skill: .id "slam" .level 0 .type "melee" .atk 95% .dmg -15% .crit 1% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "Push 2A" .valid_modes beast
+combat_skill: .id "slam" .level 1 .type "melee" .atk 100% .dmg -15% .crit 2% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "Push 2B" .valid_modes beast
+combat_skill: .id "slam" .level 2 .type "melee" .atk 105% .dmg -15% .crit 3% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "Push 2C" .valid_modes beast
+combat_skill: .id "slam" .level 3 .type "melee" .atk 110% .dmg -15% .crit 4% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "Push 2D" .valid_modes beast
+combat_skill: .id "slam" .level 4 .type "melee" .atk 115% .dmg -15% .crit 5% .move 0 1 .launch 432 .target 12 .is_crit_valid True  .effect "Push 2E" .valid_modes beast
+// ABO-014 박치기: 명중90~110→95~115, 피해−20→−15. 사용자가 이전 감산안을 수정하여 이동기의 적중 신뢰도와 직접 피해를 함께 높였다. 전진1·밀치기2·열·치명 유지.
 // ABO-013 박치기 피해0→−20: 높은 명중·전진·밀치기는 이동/진형 기술에, 순수 공격력은 분노에 배분한다.
 // ABO-001 ABO-003 [trace 2026-10-05] Restore beast rear-rank mobility and give reliable front control without the old debuffs.
 // ABO-001 slam: 사용 열 321 -> 432. 야수는 4열에서 쓸 기술이 없어 열이 섞이면 한 턴을 통째로 날린다. 4열에서 박고 앞으로 1칸 -> 3열 -> 2열로 복귀하는 길. 1열 사용은 포기(1열엔 분노·할퀴기, 1열에서 2칸 밀치기는 오히려 손해). 기술 1회 가치 변화 없음(대상 12 그대로)

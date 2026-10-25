@@ -1,0 +1,28 @@
+{
+  "id": "MAA-022_ABO-014",
+  "decision": "adopted",
+  "original_quote": "포효 명중 감소 3~5는 너무 약한 거 아니야? 그냥 바닐라 회피랑 똑같은 수치로 해  그럼 괴인 장신구 끼면 15에도 40프로  변신 유지 스트레스도 40 프로 팀원 스트레스도 40 프로 되는거야? 박치기는 왜 -20 넣었냐 -15 넣고 명중 95로 하던가",
+  "rationale_ko": "포효의 체감 약화량을 바닐라 수열로 높이고 박치기 신뢰도·피해를 상향한다. 기존 후보와 등가라고 주장하지 않는다. 변신 스트레스와 모델 단위는 분석만 진행한다.",
+  "source": {
+    "product": "codex",
+    "reference": "local-knowledge read_evidence full text; 2026-10-25T10:34:36.799Z",
+    "session_id": "01a10741-76da-7e43-9500-98474ab3f383",
+    "message_id": "msg_01a172a0-657f-7ba3-89d0-a95d6310e484",
+    "event_id": "463b712980009c3ed7dd075386336162b9cbca8a2abbef3afa05669c99eec20f"
+  },
+  "files": [
+    "effects/rebalance_man_at_arms.effects.darkest",
+    "heroes/man_at_arms/man_at_arms.effects_edit.txt",
+    "heroes/abomination/abomination.info.darkest",
+    "design/workshop/hero_cards.json",
+    "design/workshop/why.json",
+    "design/changes/man_at_arms.md",
+    "design/changes/abomination.md",
+    "design/analysis/hp-units-and-beast-cost-20261025.md",
+    "design/analysis/hp-units-and-beast-cost-20261025.json"
+  ],
+  "supersedes": [
+    "MAA-020 accuracy magnitude only",
+    "ABO-013"
+  ]
+}

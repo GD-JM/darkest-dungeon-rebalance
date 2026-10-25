@@ -26,15 +26,15 @@
   "ids": [
    "ABO-001",
    "ABO-003",
-   "ABO-013"
+   "ABO-014"
   ],
   "principles": [
    "G-03",
    "P-19",
    "G-02"
   ],
-  "en": "Slam retains rear-rank access, forward movement and knockback. Lower direct damage distinguishes its formation role from Rage.",
-  "ko": "박치기는 뒤에서 앞으로 복귀하고 적을 미는 이동기로 남긴다. 즉발 피해를20%p 낮춰 분노의 주력 공격 정체성과 분리한다."
+  "en": "Slam repositions the beast and knocks enemies back. Its revised 95 base accuracy and -15% damage make the movement attack more reliable, while Rage retains its armor-piercing role.",
+  "ko": "박치기는 후열에서 앞으로 복귀하고 적을 미는 이동기다. 사용자가 피해−20안을 수정하여−15와 명중95를 함께 지정했다. 분노의 관통과 구분되는 안정적인 이동·밀치기이며 이전안 대비 순상향이다."
  },
  "abomination|transform": {
   "ids": [
@@ -730,14 +730,15 @@
  "man_at_arms|bellow": {
   "ids": [
    "MAA-002",
-   "MAA-020"
+   "MAA-020",
+   "MAA-022"
   ],
   "principles": [
    "P-19",
    "P-22"
   ],
-  "en": "Bellow supports defense by lowering enemy accuracy and speed. Its short, modest accuracy penalty limits area value; armor reduction moves to Retribution instead of duplicating Command with dodge reduction.",
-  "ko": "포효는 적 명중과 속도를 낮추는 방어 지원으로 전환한다. 지휘와 중복되는 회피 감소는 복원하지 않는다. 광역 명중 약화는3~5/2턴으로 제한하고 방어 감소는 응징으로 옮긴다."
+  "en": "Bellow lowers enemy accuracy and speed. The accuracy penalty now uses the vanilla dodge-debuff progression, 5/6/7/8/10, for a more noticeable defensive effect. Accuracy lasts 2 turns; the existing speed penalty lasts 3.",
+  "ko": "포효는 적 명중과 속도를 낮추는 방어 지원이다. 사용자가 명중 감소3~5를 너무 약하다고 보고 바닐라 회피 감소 수열5/6/7/8/10으로 올렸다. 명중 감소2턴과 속도 감소3턴을 구분한다. 지휘와 중복되는 회피 감소는 복원하지 않는다."
  },
  "man_at_arms|bolster": {
   "ids": [
