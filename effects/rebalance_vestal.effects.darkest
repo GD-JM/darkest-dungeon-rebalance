@@ -16,3 +16,18 @@ effect: .name "RB VES Dodge Curse 4" .target "target" .curio_result_type "negati
 // edited vanilla effect (from effects/base.effects.darkest)
 effect: .name "RB VES Dodge Curse 5" .target "target" .curio_result_type "negative" .chance 140% .combat_stat_buff 1 .defense_rating_add -25% .on_hit true .on_miss false
 // VES-014 Illumination dodge -25% (vanilla -20..-30, lowered by 5 so it differs from Sniper's Mark).
+
+effect: .name "RB VES Illumination Armor 1" .target "target" .curio_result_type "negative" .chance 100% .duration 3 .combat_stat_buff 1 .protection_rating_add -15% .on_hit true .on_miss false .queue true
+// VES-020 광휘: PROT -15%p for 3 turns; replace burn with physical-party support; existing other effects retained.
+
+effect: .name "RB VES Illumination Armor 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3 .combat_stat_buff 1 .protection_rating_add -17% .on_hit true .on_miss false .queue true
+// VES-020 광휘: PROT -17%p for 3 turns; replace burn with physical-party support; existing other effects retained.
+
+effect: .name "RB VES Illumination Armor 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3 .combat_stat_buff 1 .protection_rating_add -20% .on_hit true .on_miss false .queue true
+// VES-020 광휘: PROT -20%p for 3 turns; replace burn with physical-party support; existing other effects retained.
+
+effect: .name "RB VES Illumination Armor 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .combat_stat_buff 1 .protection_rating_add -22% .on_hit true .on_miss false .queue true
+// VES-020 광휘: PROT -22%p for 3 turns; replace burn with physical-party support; existing other effects retained.
+
+effect: .name "RB VES Illumination Armor 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .combat_stat_buff 1 .protection_rating_add -25% .on_hit true .on_miss false .queue true
+// VES-020 광휘: PROT -25%p for 3 turns; replace burn with physical-party support; existing other effects retained.

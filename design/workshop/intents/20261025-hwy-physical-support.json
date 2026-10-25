@@ -1,0 +1,37 @@
+[
+  {
+    "id": "HWY-024",
+    "decision": "adopted",
+    "original_quote": "일단 노상강도 치명타는 서로 바꾸자 칼질 0 정맥절개 5로 의도 주석 남기고 test에 적용해서 커밋까지 해",
+    "context_quotes": [
+      {
+        "speaker": "user",
+        "quote": "노상강도 개편하고 싶어 개편안은 다음과 같아 정맥절개로 방어도 캐릭 상대 사악한 칼질은 3열까지 닿는 일반 평타 근데 지금은 사악한 칼질이 3열 닿고 치명타율도 정맥절개보다 높아서, 정맥 절개가 쓸 이유가 없어졌어. 나는 정맥절개가 치명타 더ㅏ 높았으면 하거든 정맥 절개이고, 방어도 상대 취약점을 정맥절개 치명타 도트딜로 이겨나갔으면 해서 그래서 사악한 칼질을 3열까지로 어마어마하게 버프했으니 치명타를 정맥절개에 넘기려고 해 어느정도가 적당할까?",
+        "source": {
+          "product": "codex",
+          "reference": "2026-10-25 현재 대화: 노상강도 치명타 교환 및 서포터 방어도 감소 채택 요청",
+          "session_id": null,
+          "message_id": null,
+          "event_id": null
+        }
+      }
+    ],
+    "rationale_ko": "칼질에서 기술 치명 5%p를 받아 출혈이 통하는 장갑 적 대응을 강조한다. 기존 명중·피해·출혈·출혈 저항 감소·속도 감소는 유지한다. 치명타 자체에 방어 관통을 추가하는 변경은 아니다.",
+    "source": {
+      "product": "codex",
+      "reference": "2026-10-25 현재 대화: 노상강도 치명타 교환 및 서포터 방어도 감소 채택 요청",
+      "session_id": null,
+      "message_id": null,
+      "event_id": null
+    },
+    "files": [
+      "heroes/highwayman/highwayman.info.darkest",
+      "design/changes/highwayman.md",
+      "design/workshop/hero_cards.json",
+      "design/workshop/why.json"
+    ],
+    "supersedes": [
+      "HWY-022 (critical chance only)"
+    ]
+  }
+]

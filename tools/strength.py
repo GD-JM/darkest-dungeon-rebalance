@@ -8,6 +8,7 @@
 import os, re, glob, sys, io, math, argparse, json, functools, struct, statistics as st
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import effect_common as ec
+import damage_support
 
 M_ROOT, G = ec.paths()
 
@@ -54,6 +55,11 @@ PARAM = dict(
     PROT_FLOOR=True,      # R-VALUE-14: 방어 감소는 적 방어 0 아래로 안 내려간다 [제작자 확인]
     DODGE_EHP=False,      # R-AUDIT-24: 유한 노출의 예방 HP+스트레스가 기본. True는 과거 EHP 프리미엄 민감도만
     JOINT_SUPPORT=True,  # 같은 대상/기간의 확정 회피+스트레스 저항 중복을 공동 노출 모형으로 제거
+    EXACT_OFFENSIVE_SUPPORT=True, # R-AUDIT-25 same-target joint HP counterfactual; legacy switch for audit only
+    SUPPORT_HORIZON=3,   # Actual debuff duration, at most 3 future round windows; distinct from ally buff horizon
+    SUPPORT_OPENING_SURVIVAL=True, # Full monster HP unless explicit SUPPORT_TARGET_HP; future death remains a prior
+    SUPPORT_MARKED=0.3,  # Scenario assumption, NOT measured marked uptime
+    DESTEALTH_REACH=True, # R-AUDIT-25 actual initial stealth-rank coverage; absolute HP price remains a prior
     ENGINE_DAMAGE=True,  # 확인된 기본 피해 float32/ceil/roundf. 조건부 보너스의 기대값 합성은 여전히 근사
     STUN_TARGET_HP=None, # None=생존 조건부 점수. 숫자=모든 대상의 현재 HP를 같게 놓는 명시적 시나리오
     STUN_ACTION_AVAILABLE=1.0, # 유효한 다음 행동 기회 비율 가정. 실제 관측/속도 계산값 아님
@@ -182,9 +188,10 @@ def stun_joint_probability(hit_rate, crit, normal_damage, critical_damage, chanc
 
 
 # ---------------------------------------------------------------- 몬스터 모집단
-def load_monsters():
-    fs = glob.glob(os.path.join(G, 'monsters', '**', '*_C.info.darkest'), recursive=True) + \
-         glob.glob(os.path.join(G, 'dlc', '**', 'monsters', '**', '*_C.info.darkest'), recursive=True)
+def load_monsters(tier='C'):
+    if tier not in ('A', 'B', 'C'): raise ValueError('tier must be A, B or C')
+    fs = glob.glob(os.path.join(G, 'monsters', '**', f'*_{tier}.info.darkest'), recursive=True) + \
+         glob.glob(os.path.join(G, 'dlc', '**', 'monsters', '**', f'*_{tier}.info.darkest'), recursive=True)
     mons = []
     for f in fs:
         pf = ec.P(f)
@@ -204,7 +211,7 @@ def load_monsters():
         sz = re.search(r'^display:.*?\.size\s+(\d+)', t, re.M)
         mons.append(dict(name=os.path.basename(f).split('.')[0], dodge=d['def'], prot=prot if prot <= 1 else prot / 100, spd=d.get('spd', 0),
                          stun=d.get('stun_resist', 0), poison=d.get('poison_resist', 0), bleed=d.get('bleed_resist', 0),
-                         debuff=d.get('debuff_resist', 0), move=d.get('move_resist', 0),
+                         debuff=d.get('debuff_resist', 0), move=d.get('move_resist', 0), hp=d.get('hp', 0),
                          type=typ.group(1) if typ else '?', size=int(sz.group(1)) if sz else 1))
     return mons
 
@@ -669,6 +676,7 @@ def load_effects(mode):
     return eff
 
 
+@functools.lru_cache(maxsize=None)
 def hero_file(hero, mode):
     if mode == 'vanilla':
         return ec.vanilla_hero_file(G, hero)
@@ -676,16 +684,24 @@ def hero_file(hero, mode):
     return f if os.path.exists(f) else ec.vanilla_hero_file(G, hero)   # MUS-001: 편입한 총사는 RB 파일, 미편입 영웅만 원본
 
 
-def load_hero(hero, mode):
-    t = open(hero_file(hero, mode), encoding='utf-8', errors='ignore').read()
+def load_hero(hero, mode, level=4):
+    if level not in range(5): raise ValueError("level must be 0..4")
+    with open(hero_file(hero, mode), encoding='utf-8', errors='ignore') as src:
+        t = src.read()
+    return parse_hero(hero, t, level)
+
+
+def parse_hero(hero, t, level=4):
+    """Read a frozen Git source without changing the installed checkout."""
+    if level not in range(5): raise ValueError("level must be 0..4")
     H = dict(id=hero, skills=[], crit_effects=[], modes={})
     for l in t.splitlines():
         if l.strip().startswith('//'):
             continue
         d = kv(l)
-        if l.startswith('weapon:') and '_weapon_4' in l:
+        if l.startswith('weapon:') and f'_weapon_{level}' in l:
             H['dmg'] = (num(d['dmg'][0]), num(d['dmg'][1])); H['wcrit'] = num(d['crit'][0]); H['spd'] = num(d['spd'][0])
-        elif l.startswith('armour:') and '_armour_4' in l:
+        elif l.startswith('armour:') and f'_armour_{level}' in l:
             H['def'] = num(d['def'][0]); H['hp'] = num(d['hp'][0]); H['prot'] = num(first(d, 'prot', '0'))
         elif l.startswith('resistances:'):
             H['res'] = {k: num(v[0]) for k, v in d.items()}
@@ -695,7 +711,7 @@ def load_hero(hero, mode):
             H['modes'][first(d, 'id')] = d
         elif l.startswith('crit:'):
             H['crit_effects'] = ec.effect_names_in(l.replace('.effects', '.effect'))
-        elif l.startswith('combat_skill:') and first(d, 'level') == '4':
+        elif l.startswith('combat_skill:') and first(d, 'level') == str(level):
             H['skills'].append((l, d))
     return H
 
@@ -1078,7 +1094,8 @@ def skill_value(C, l, d):
                 add('시체', P['CORPSE'] * max(0.0, min(1.0, chance / 100)) * activation)
             if 'unstealth' in k:                                # R-VALUE-09: 광역이어도 가치는 은신 적 1명분
                 h_ = 1.0 if aoe else st.mean(hit(m, atk) for m in MONS)
-                add('은신 해제', h_ * P['DESTEALTH'])
+                cover = damage_support.destealth_coverage(sys.modules[__name__], tranks)['fraction'] if P.get('DESTEALTH_REACH', True) else 1.
+                add('은신 해제', h_ * P['DESTEALTH'] * cover)
             # 적 약화: 직접 수치(combat_stat_buff)와 강화 목록(buff_ids)·buff_type 형식을 모두 센다 (R-VALUE-12)
             mods = []                                       # (능력치, 적에게 불리한 양 x>0)
             if 'combat_stat_buff' in k:
@@ -1105,6 +1122,9 @@ def skill_value(C, l, d):
             v = 0.0
             for stat, x in mods:
                 if x <= 0:
+                    continue
+                # R-AUDIT-25: jointly evaluated once below; do not add marginal terms twice.
+                if P.get('EXACT_OFFENSIVE_SUPPORT', True) and stat in damage_support.OFFENSIVE:
                     continue
                 if stat == 'speed_rating':                  # 속도 점수 원값. 적이 늦어져 먼저 죽는다
                     v += P['DEATH_RATE'] * dp_enemy(x) * act_full
@@ -1210,6 +1230,10 @@ def skill_value(C, l, d):
                 add('대가', -num(first(k, 'stress')) * ch * P['STRESS_HP'])
             if 'stress' in k and who in ('performer_group_other', 'performer_group'):   # 아군에게 주는 스트레스 (괴인 변신)
                 add('대가', -num(first(k, 'stress')) * ch * tgt_n * P['STRESS_HP'])
+    if enemy and P.get('EXACT_OFFENSIVE_SUPPORT', True):
+        gain, critical_side = damage_support.support_value(sys.modules[__name__], C, l, d, effs)
+        add('후속 직접 피해', gain * n_t * rw)
+        add('후속 치명 부수효과', critical_side * n_t * rw)
     add('공동 노출 보정', -joint_support_overlap(C, effs, ally, self_only, n_t))
     if 'heal' in d and len(d['heal']) >= 2:                  # 기술 줄의 .heal lo hi
         amt = (num(d['heal'][0]) + num(d['heal'][1])) / 2

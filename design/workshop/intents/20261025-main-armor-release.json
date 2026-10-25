@@ -1,0 +1,59 @@
+{
+  "id": "WS-MAIN-20261025-ARMOR",
+  "decision": "adopted",
+  "original_quote": "그럼 이제 test에 쌓인 변경 전부 메인에 반영해서 푸시하고 창작마당 업데이트 노트랑 이미지까지 수정해줘 이미지 누락 없는지도 끝까지 확인하고",
+  "context_quotes": [
+    {
+      "speaker": "user",
+      "quote": "화상은 없애",
+      "source": {
+        "product": "codex",
+        "reference": "현재 대화 main 승격 요청 뒤 추가 지시",
+        "session_id": "01a10741-76da-7e43-9500-98474ab3f383",
+        "message_id": null,
+        "event_id": null
+      }
+    },
+    {
+      "speaker": "user",
+      "quote": "화상 없애고 광휘 명중 95 손길 명중 90으로 올려",
+      "source": {
+        "product": "codex",
+        "reference": "현재 대화 main 승격 요청 뒤 추가 지시",
+        "session_id": "01a10741-76da-7e43-9500-98474ab3f383",
+        "message_id": null,
+        "event_id": null
+      }
+    },
+    {
+      "speaker": "user",
+      "quote": "광휘 회피 감소랑 방어감소 둘다",
+      "source": {
+        "product": "codex",
+        "reference": "현재 대화 main 승격 요청 뒤 추가 지시",
+        "session_id": "01a10741-76da-7e43-9500-98474ab3f383",
+        "message_id": null,
+        "event_id": null
+      }
+    }
+  ],
+  "rationale_ko": "test 전체 승인 변경을 main에 승격한다. 기존 main 성전사 회복과 성녀 광휘95/손길90·피해-40 및 배포 안전장치를 보존한다. 광휘는 화상 제거, 회피 감소와 방어도 감소 모두 유지한다. 섬광가루도 승인된 방어도 감소로 화상을 대체한다. 노상강도 치명 교환, 방패 파괴자 구멍내기/노출, 포효, 나병 아이콘, 판뒤엎기 바닐라 복귀를 함께 게시한다. 판뒤엎기의 과거 test 한정 보류는 이번 전체 승격으로 해제된다. 선택형은 재생성하지 않는다. 영웅 이미지 전체와 노트·10개 언어·구독 파일을 검증한다.",
+  "source": {
+    "product": "codex",
+    "reference": "2026-10-25 현재 대화: test 전체 main 반영·푸시·창작마당 노트와 이미지 검증 요청",
+    "session_id": "01a10741-76da-7e43-9500-98474ab3f383",
+    "message_id": null,
+    "event_id": null
+  },
+  "files": [
+    "heroes/vestal/vestal.info.darkest",
+    "design/changes/vestal.md",
+    "design/workshop/why.json",
+    "design/workshop/hero_cards.json",
+    "heroes/runaway/runaway.info.darkest"
+  ],
+  "supersedes": [
+    "VES-020 test-only publication scope",
+    "RUN-004 test-only publication scope"
+  ]
+}

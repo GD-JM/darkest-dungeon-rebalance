@@ -126,3 +126,15 @@ effect: .name "on_crit_healdone"    .target "performer" .curio_result_type "posi
 //#   공유 효과: 다른 영웅 1명(신비학자). 여기서 고치면 이 영웅만 바뀐다
 //#   강화 효과 수치(JSON, 참고용): on_crit_healbuff = hp_heal_percent 0.25
 //#   원본 위치: effects/base.effects.darkest
+
+// VES-020 approved replacement effects; legacy burn definitions retained as history, no longer used by these skills.
+effect: .name "RB VES Illumination Armor 1" .target "target" .curio_result_type "negative" .chance 100% .duration 3 .combat_stat_buff 1 .protection_rating_add -15% .on_hit true .on_miss false .queue true
+// VES-020 광휘: PROT -15%p for 3 turns; replace burn with physical-party support; existing other effects retained.
+effect: .name "RB VES Illumination Armor 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3 .combat_stat_buff 1 .protection_rating_add -17% .on_hit true .on_miss false .queue true
+// VES-020 광휘: PROT -17%p for 3 turns; replace burn with physical-party support; existing other effects retained.
+effect: .name "RB VES Illumination Armor 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3 .combat_stat_buff 1 .protection_rating_add -20% .on_hit true .on_miss false .queue true
+// VES-020 광휘: PROT -20%p for 3 turns; replace burn with physical-party support; existing other effects retained.
+effect: .name "RB VES Illumination Armor 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .combat_stat_buff 1 .protection_rating_add -22% .on_hit true .on_miss false .queue true
+// VES-020 광휘: PROT -22%p for 3 turns; replace burn with physical-party support; existing other effects retained.
+effect: .name "RB VES Illumination Armor 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .combat_stat_buff 1 .protection_rating_add -25% .on_hit true .on_miss false .queue true
+// VES-020 광휘: PROT -25%p for 3 turns; replace burn with physical-party support; existing other effects retained.

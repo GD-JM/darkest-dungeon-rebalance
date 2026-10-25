@@ -156,3 +156,14 @@ effect: .name "on_crit_prot"    .target "performer" .curio_result_type "positive
 //#   공유 효과: 다른 영웅 1명(성전사). 여기서 고치면 이 영웅만 바뀐다
 //#   강화 효과 수치(JSON, 참고용): on_crit_prot = protection_rating 0.15
 //#   원본 위치: effects/base.effects.darkest
+
+effect: .name "RB SB Puncture Armor 1" .target "target" .curio_result_type "negative" .chance 100% .duration 2 .combat_stat_buff 1 .protection_rating_add -30% .on_hit true .on_miss false .queue true
+// SB-023 PROT -30%p for 2 turns replaces Puncture slow; keep guard removal/block and pull, pay with reduced reach/damage. Residual audit 20261025 residual model; no original shared effects changed.
+effect: .name "RB SB Puncture Armor 2" .target "target" .curio_result_type "negative" .chance 110% .duration 2 .combat_stat_buff 1 .protection_rating_add -32% .on_hit true .on_miss false .queue true
+// SB-023 PROT -32%p for 2 turns replaces Puncture slow; keep guard removal/block and pull, pay with reduced reach/damage. Residual audit 20261025 residual model; no original shared effects changed.
+effect: .name "RB SB Puncture Armor 3" .target "target" .curio_result_type "negative" .chance 120% .duration 2 .combat_stat_buff 1 .protection_rating_add -35% .on_hit true .on_miss false .queue true
+// SB-023 PROT -35%p for 2 turns replaces Puncture slow; keep guard removal/block and pull, pay with reduced reach/damage. Residual audit 20261025 residual model; no original shared effects changed.
+effect: .name "RB SB Puncture Armor 4" .target "target" .curio_result_type "negative" .chance 130% .duration 2 .combat_stat_buff 1 .protection_rating_add -37% .on_hit true .on_miss false .queue true
+// SB-023 PROT -37%p for 2 turns replaces Puncture slow; keep guard removal/block and pull, pay with reduced reach/damage. Residual audit 20261025 residual model; no original shared effects changed.
+effect: .name "RB SB Puncture Armor 5" .target "target" .curio_result_type "negative" .chance 140% .duration 2 .combat_stat_buff 1 .protection_rating_add -40% .on_hit true .on_miss false .queue true
+// SB-023 PROT -40%p for 2 turns replaces Puncture slow; keep guard removal/block and pull, pay with reduced reach/damage. Residual audit 20261025 residual model; no original shared effects changed.

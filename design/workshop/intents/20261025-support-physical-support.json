@@ -1,0 +1,113 @@
+[
+  {
+    "id": "VES-020",
+    "decision": "adopted",
+    "original_quote": "방어도 감소는 넣어야 해 너 말처럼 광휘와 섬광가루에 방어도 감소 넣는 거 추천해 화상 없애고 그리고 포효에 회피 감소 없애고 방어 감소 넣자 근거는 이미 지휘에 명중 증가가 있어",
+    "context_quotes": [
+      {
+        "speaker": "assistant",
+        "quote": "15→25%p, 3턴",
+        "source": {
+          "product": "codex",
+          "reference": "현재 대화의 직전 답변 후보 표, 광휘 방어도 감소 후보 셀",
+          "session_id": null,
+          "message_id": null,
+          "event_id": null
+        }
+      }
+    ],
+    "rationale_ko": "화상 1/1/2/2/3을 제거하고 방어도 감소로 교체한다. 직접 화상 피해 대신 아군 물리 공격을 지원하며 회피 감소·은신 해제·횃불을 유지한다. 기술 1~5레벨 [15, 17, 20, 22, 25]%p, 3턴. 중간 수열은 구현 선택.",
+    "source": {
+      "product": "codex",
+      "reference": "2026-10-25 현재 대화: 노상강도 치명타 교환 및 서포터 방어도 감소 채택 요청",
+      "session_id": null,
+      "message_id": null,
+      "event_id": null
+    },
+    "files": [
+      "heroes/vestal/vestal.info.darkest",
+      "heroes/vestal/vestal.effects_edit.txt",
+      "effects/rebalance_vestal.effects.darkest",
+      "design/changes/vestal.md",
+      "design/workshop/hero_cards.json",
+      "design/workshop/why.json"
+    ],
+    "supersedes": [
+      "VES-013"
+    ]
+  },
+  {
+    "id": "ANT-004",
+    "decision": "adopted",
+    "original_quote": "방어도 감소는 넣어야 해 너 말처럼 광휘와 섬광가루에 방어도 감소 넣는 거 추천해 화상 없애고 그리고 포효에 회피 감소 없애고 방어 감소 넣자 근거는 이미 지휘에 명중 증가가 있어",
+    "context_quotes": [
+      {
+        "speaker": "assistant",
+        "quote": "15→20%p, 2턴",
+        "source": {
+          "product": "codex",
+          "reference": "현재 대화의 직전 답변 후보 표, 섬광 가루 방어도 감소 후보 셀",
+          "session_id": null,
+          "message_id": null,
+          "event_id": null
+        }
+      }
+    ],
+    "rationale_ko": "화상을 제거하고 짧은 방어도 감소로 교체한다. 명중 감소와 은신 해제를 유지하여 유물수집상이 물리 딜러를 보조하도록 한다. 기술 1~5레벨 [15, 16, 17, 19, 20]%p, 2턴. 중간 수열은 구현 선택.",
+    "source": {
+      "product": "codex",
+      "reference": "2026-10-25 현재 대화: 노상강도 치명타 교환 및 서포터 방어도 감소 채택 요청",
+      "session_id": null,
+      "message_id": null,
+      "event_id": null
+    },
+    "files": [
+      "heroes/antiquarian/antiquarian.info.darkest",
+      "heroes/antiquarian/antiquarian.effects_edit.txt",
+      "effects/rebalance_antiquarian.effects.darkest",
+      "design/changes/antiquarian.md",
+      "design/workshop/hero_cards.json",
+      "design/workshop/why.json"
+    ],
+    "supersedes": [
+      "ANT-001"
+    ]
+  },
+  {
+    "id": "MAA-019",
+    "decision": "adopted",
+    "original_quote": "방어도 감소는 넣어야 해 너 말처럼 광휘와 섬광가루에 방어도 감소 넣는 거 추천해 화상 없애고 그리고 포효에 회피 감소 없애고 방어 감소 넣자 근거는 이미 지휘에 명중 증가가 있어",
+    "context_quotes": [
+      {
+        "speaker": "assistant",
+        "quote": "10→15%p, 3턴, 광역",
+        "source": {
+          "product": "codex",
+          "reference": "현재 대화의 직전 답변 후보 표, 포효 방어도 감소 후보 셀",
+          "session_id": null,
+          "message_id": null,
+          "event_id": null
+        }
+      }
+    ],
+    "rationale_ko": "지휘에 이미 아군 명중 증가가 있으므로 포효의 적 회피 감소를 방어도 감소로 교체한다. 속도 감소·표식 대상 받는 치명 증가·시체 제거는 유지한다. 기술 1~5레벨 [10, 11, 12, 14, 15]%p, 3턴. 중간 수열은 구현 선택.",
+    "source": {
+      "product": "codex",
+      "reference": "2026-10-25 현재 대화: 노상강도 치명타 교환 및 서포터 방어도 감소 채택 요청",
+      "session_id": null,
+      "message_id": null,
+      "event_id": null
+    },
+    "files": [
+      "heroes/man_at_arms/man_at_arms.info.darkest",
+      "heroes/man_at_arms/man_at_arms.effects_edit.txt",
+      "effects/rebalance_man_at_arms.effects.darkest",
+      "design/changes/man_at_arms.md",
+      "design/workshop/hero_cards.json",
+      "design/workshop/why.json"
+    ],
+    "supersedes": [
+      "MAA-002 (dodge debuff retained only)"
+    ]
+  }
+]

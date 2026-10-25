@@ -25,3 +25,14 @@ effect: .name "RB SB Dmg Marked 4"	.target "performer" .chance 100% .curio_resul
 // edited vanilla effect (from dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest)
 effect: .name "RB SB Dmg Marked 5"	.target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 90%	.damage_high_multiply 90% .on_hit true .on_miss false
 // SB-016 [trace 2026-10-05] Support the author-set accuracy exchange and secondary marked-target damage role. Effect: SB Dmg Marked 5.
+
+effect: .name "RB SB Puncture Armor 1" .target "target" .curio_result_type "negative" .chance 100% .duration 2 .combat_stat_buff 1 .protection_rating_add -30% .on_hit true .on_miss false .queue true
+// SB-023 PROT -30%p for 2 turns replaces Puncture slow; keep guard removal/block and pull, pay with reduced reach/damage. Residual audit 20261025 residual model; no original shared effects changed.
+effect: .name "RB SB Puncture Armor 2" .target "target" .curio_result_type "negative" .chance 110% .duration 2 .combat_stat_buff 1 .protection_rating_add -32% .on_hit true .on_miss false .queue true
+// SB-023 PROT -32%p for 2 turns replaces Puncture slow; keep guard removal/block and pull, pay with reduced reach/damage. Residual audit 20261025 residual model; no original shared effects changed.
+effect: .name "RB SB Puncture Armor 3" .target "target" .curio_result_type "negative" .chance 120% .duration 2 .combat_stat_buff 1 .protection_rating_add -35% .on_hit true .on_miss false .queue true
+// SB-023 PROT -35%p for 2 turns replaces Puncture slow; keep guard removal/block and pull, pay with reduced reach/damage. Residual audit 20261025 residual model; no original shared effects changed.
+effect: .name "RB SB Puncture Armor 4" .target "target" .curio_result_type "negative" .chance 130% .duration 2 .combat_stat_buff 1 .protection_rating_add -37% .on_hit true .on_miss false .queue true
+// SB-023 PROT -37%p for 2 turns replaces Puncture slow; keep guard removal/block and pull, pay with reduced reach/damage. Residual audit 20261025 residual model; no original shared effects changed.
+effect: .name "RB SB Puncture Armor 5" .target "target" .curio_result_type "negative" .chance 140% .duration 2 .combat_stat_buff 1 .protection_rating_add -40% .on_hit true .on_miss false .queue true
+// SB-023 PROT -40%p for 2 turns replaces Puncture slow; keep guard removal/block and pull, pay with reduced reach/damage. Residual audit 20261025 residual model; no original shared effects changed.

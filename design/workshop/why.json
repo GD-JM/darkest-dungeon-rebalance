@@ -62,14 +62,16 @@
  },
  "antiquarian|flashpowder": {
   "ids": [
-   "ANT-001"
+   "ANT-001",
+   "ANT-004",
+   "ANT-005"
   ],
   "principles": [
    "P-19",
    "P-25"
   ],
-  "en": "The skill's effect is a burst of flame, so it now burns. Before this only the Runaway could apply burn; now another hero can set up her burn-synergy skills. The amount is kept small because the Antiquarian is meant to be weaker in combat than other heroes (she pays her way in gold).",
-  "ko": "기술 연출이 불꽃 분출이라 화상을 준다. 화상을 거는 영웅이 도망자뿐이었는데, 이제 다른 영웅도 도망자의 화상 연계 기술을 열 수 있다. 유물수집상은 전투 성능이 다른 영웅보다 낮은 컨셉(대신 돈을 번다)이라 화상량은 작게 뒀다."
+  "en": "Flashpowder keeps accuracy reduction and destealth. Its short PROT debuff falls to 10-15 points rather than matching dedicated armor breakers; the old burn remains removed.",
+  "ko": "명중 약화·은신 해제와 화상 제거를 유지하며 방어도 감소만10~15%p로 낮춰 전담 방어 약화 기술과 구분한다. 지속2턴, 약화 확률100~140%는 유지한다."
  },
  "arbalest|battlefield_bandage": {
   "ids": [
@@ -558,14 +560,15 @@
  "highwayman|wicked_slice": {
   "ids": [
    "HWY-008",
-   "HWY-019"
+   "HWY-019",
+   "HWY-024"
   ],
   "principles": [
    "R-SKILL-09",
    "G-02"
   ],
-  "en": "Its usable ranks are trimmed to true melee positions. It now gets the rare melee reach into rank 3, given to this plain strike rather than Duelist's Advance (which has a buff and movement and would make it redundant), and its damage drops to the standard melee value to pay for that reach.",
-  "ko": "사용 열을 근접 위치(1·2열)로 정리했습니다. 근접으로 3열을 치는 희소한 능력은 강화·이동이 있는 결투가의 진격이 아니라 단순한 칼질에 주어 역할을 나눴고, 그 대가로 피해를 근접 단일 기술 표준값으로 맞췄습니다."
+  "en": "Wicked Slice retains its rank-3 reach and standard damage, but gives five points of skill CRIT to Open Vein to separate reach from bleed-focused pressure.",
+  "ko": "사악한 칼질의 3열 도달·기본 피해를 유지하고 기술 치명 5%p를 정맥절개로 옮긴다. 칼질은 사거리, 정맥절개는 출혈이 통하는 장갑 적 대응으로 역할을 나눈다."
  },
  "houndmaster|blackjack": {
   "ids": [
@@ -726,14 +729,15 @@
  },
  "man_at_arms|bellow": {
   "ids": [
-   "MAA-002"
+   "MAA-002",
+   "MAA-019"
   ],
   "principles": [
    "P-19",
    "P-22"
   ],
-  "en": "His guild text has him crushing the enemy front line with a fierce war cry, so Bellow now also clears corpses, the second 'shout that clears the field' after the Hellion's. Its debuffs stay, since Bellow was already weaker than Command.",
-  "ko": "길드 설명 '맹렬한 함성으로 적의 전열을 짓뭉갭니다'에 맞춰 포효에 시체 제거를 더했다(야만인 함성에 이은 두 번째 '함성 = 대열 정리' 기술). 이미 지휘보다 약한 기술이라 약화 효과는 그대로 둔다."
+  "en": "Bellow replaces dodge reduction with a smaller party-wide PROT debuff on enemies. Command already supplies accuracy; speed reduction, marked-target critical vulnerability and corpse clearing remain.",
+  "ko": "지휘에 이미 아군 명중 증가가 있으므로 포효의 적 회피 감소를 방어도 감소로 교체한다. 속도 감소·표식 대상 받는 치명 증가·시체 제거는 유지한다."
  },
  "man_at_arms|bolster": {
   "ids": [
@@ -860,25 +864,27 @@
  },
  "runaway|ransack": {
   "ids": [
-   "RUN-001"
+   "RUN-001",
+   "RUN-004"
   ],
   "principles": [
    "P-10",
    "G-02"
   ],
-  "en": "A melee skill usable from any rank that hit any enemy rank, with a pull, a forward step and corpse clearing at almost no damage cost, was never a wrong choice. It loses direct reach to rank 4 (the same standard applied to other melee skills) but keeps its identity of pulling rank 3 forward, and its damage now matches other utility melee hits.",
-  "ko": "어느 열에서든 쓰고 적 어느 열이든 때리며, 당기기·전진·시체 제거까지 붙었는데 피해 대가는 거의 없어 쓸모없는 순간이 없었다. 근접의 4열 직접 타격을 빼고(다른 근접 기술과 같은 기준), 3열을 끌어내는 정체성은 남기며, 피해는 비슷한 유틸 근접기 수준으로 맞췄다."
+  "en": "Test branch only: restore Ransack to vanilla damage -10% and targets 1-4 for comparison. This is not an adoption for main or the Workshop release; its original movement and effects are preserved.",
+  "ko": "test에서만 바닐라 피해-10%와 대상1~4열로 복원하여 직접 비교 시험한다. main/창작마당 채택은 아니며 기존 이동·당기기 등 원본 효과는 유지한다."
  },
  "shieldbreaker|expose": {
   "ids": [
-   "SB-015"
+   "SB-015",
+   "SB-024"
   ],
   "principles": [
    "R-TRADE-02",
    "R-SKILL-09"
   ],
-  "en": "Accuracy swaps with Pierce. Expose's job is its debuff, destealth and slow, and skills whose value is the effect should land reliably.",
-  "ko": "찌르기와 명중을 맞바꿨다. 노출의 본업은 약화·은신 해제·둔화 효과이고, 효과가 본업인 기술은 확실히 맞아야 한다."
+  "en": "Expose reaches rank 4 to answer back-rank stealth. Damage falls to -45%, while accuracy, critical vulnerability, slow and backward movement remain. Initial stealth-rank coverage and direct damage are included in the residual comparison.",
+  "ko": "4열 은신 적 대응을 위해 대상 범위를 넓히고 피해를 -45%로 낮춘다. 명중·받는 치명 증가·속도 약화·은신 해제·후퇴는 유지한다. 초기 은신 편성 도달률과 실제 피해 차이를 잔차에 포함한다."
  },
  "shieldbreaker|pierce": {
   "ids": [
@@ -1002,15 +1008,17 @@
    "VES-006",
    "VES-013",
    "VES-014",
-   "VES-016"
+   "VES-016",
+   "VES-020",
+   "VES-021"
   ],
   "principles": [
    "P-19",
    "G-03",
    "P-11"
   ],
-  "en": "Accuracy 95 makes Illumination a more reliable finisher and utility attack alongside Judgement. Damage remains -75%, with the existing dodge reduction, burn and stealth removal retained.",
-  "ko": "명중 95로 심판보다 정확한 마무리·지원 공격 역할을 준다. 피해 -75%와 기존 회피 감소·화상·은신 해제는 유지한다."
+  "en": "Accuracy 95 makes Illumination reliable for finishing and support. Burn is replaced with PROT -15 to -25 points for three turns; dodge -15 to -25, stealth removal and torch gain remain. This helps physical allies without changing Hand of Light accuracy90 or damage-40%.",
+  "ko": "광휘 명중95를 유지하며 화상을 방어도 감소15~25%p(3턴)로 교체한다. 회피 감소15~25·은신 해제·횃불도 유지하여 물리 딜러를 지원한다. 손길 명중90·피해-40%·자기 강화는 보존한다."
  },
  "vestal|judgement": {
   "ids": [
@@ -1148,5 +1156,28 @@
   ],
   "en": "Her crit bonus no longer adds damage against marked targets (that is the Arbalest's and Bounty Hunter's job). A crit now gives armor piercing +20% for two turns.",
   "ko": "치명타 버프가 더는 표식 대상 피해(석궁사수·현상금 사냥꾼 몫)가 아니다. 치명타가 터지면 2턴 동안 방어 관통 +20%."
+ },
+ "highwayman|opened_vein": {
+  "ids": [
+   "HWY-024"
+  ],
+  "principles": [
+   "G-02",
+   "P-11",
+   "P-21"
+  ],
+  "en": "Open Vein gains five points of skill CRIT from Wicked Slice to support its bleed role against armoured enemies. Accuracy, damage, bleed and debuffs are unchanged; this is not protection piercing.",
+  "ko": "칼질에서 기술 치명 5%p를 받아 출혈이 통하는 장갑 적 대응을 강조한다. 기존 명중·피해·출혈·출혈 저항 감소·속도 감소는 유지한다. 치명타 자체에 방어 관통을 추가하는 변경은 아니다."
+ },
+ "shieldbreaker|break_guard": {
+  "ids": [
+   "SB-023"
+  ],
+  "principles": [
+   "P-11",
+   "P-21"
+  ],
+  "en": "Preserve guard ignoring, guard removal, guard blocking, pull and forward movement. Exchange slow and rank-4 access for a short 30-40 point PROT debuff, with damage reduced to -55%. The same-target damage model is near the previous budget in its default scenario; physical follow-ups create the payoff.",
+  "ko": "보호 무시·보호 해체·보호 차단·당기기2·전진1을 보존한다. 속도 약화와 4열 접근을 짧은 방어도 감소30~40%p로 교환하고 피해를 -55%로 낮춘다. 기본 잔차는 거의 같으며 물리 아군의 후속 집중 공격이 이득을 만든다."
  }
 }

@@ -1,0 +1,24 @@
+{
+  "id": "RUN-004",
+  "decision": "adopted",
+  "scope": "test-only; no main/Workshop adoption",
+  "original_quote": "야 판뒤엎기 테스트에만 바닐라로 돌려봐",
+  "rationale_ko": "판 뒤엎기를 test에서만 바닐라로 복원하여 비교 시험한다. 영구 상향이나 공개 배포 승인이 아니다.",
+  "source": {
+    "product": "codex",
+    "reference": "현재 대화의 판뒤엎기 test 한정 바닐라 복원 요청",
+    "session_id": null,
+    "message_id": null,
+    "event_id": null
+  },
+  "files": [
+    "heroes/runaway/runaway.info.darkest",
+    "design/changes/runaway.md",
+    "design/workshop/hero_cards.json",
+    "design/workshop/why.json"
+  ],
+  "supersedes": [
+    "RUN-001"
+  ],
+  "supersedes_scope": "test의 판 뒤엎기만; main 및 공개 배포는 유지"
+}
