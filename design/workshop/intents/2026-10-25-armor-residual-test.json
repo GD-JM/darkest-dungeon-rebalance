@@ -1,0 +1,96 @@
+[
+  {
+    "id": "SB-023",
+    "decision": "adopted",
+    "original_quote": "아니 구멍내기 기존 효과 유지하면서 방어구 감소 까지 넣는거지 대신에 피해량을 줄이라고 아니면 속도 약화를 구멍내기에서 빼버려. 섬광가루는 10 ~15 로 하자 조련사는 빼자 일단 다 반영하는 데 너 지금 너무 감각으로 하고 있어 그게 아니라 잔차로 해야돼 모델을 더욱 더 갈고 닦아서 모델에 근거해서 해야지 그렇게 진행해봐 전부 피해량이나 EHP로 일원화하는 공식을 실제와 들어맞게 갈고 닦아서 수치 기반으로 근거 제시하도록 해",
+    "rationale_ko": "보호 무시·보호 해체·보호 차단·당기기2·전진1을 보존한다. 속도 약화와 4열 접근을 짧은 방어도 감소30~40%p로 교환하고 피해를 -55%로 낮춘다. 기본 잔차는 거의 같으며 물리 아군의 후속 집중 공격이 이득을 만든다.",
+    "implementation_choice": "Exact damage/range/armor values selected by the assistant within the user-authorized model-based test implementation; not a verbatim user numeric instruction.",
+    "source": {
+      "product": "codex",
+      "reference": "2026-10-25 현재 대화: 구멍내기 기존 보호/당기기 유지·속도 교환 허용, 섬광가루10~15, 조련사 제외, 잔차 모델 개선 요청",
+      "session_id": null,
+      "message_id": null,
+      "event_id": null
+    },
+    "files": [
+      "heroes/shieldbreaker/shieldbreaker.info.darkest",
+      "design/changes/shieldbreaker.md",
+      "design/workshop/hero_cards.json",
+      "design/workshop/why.json",
+      "heroes/shieldbreaker/shieldbreaker.effects_edit.txt",
+      "effects/rebalance_shieldbreaker.effects.darkest"
+    ],
+    "supersedes": []
+  },
+  {
+    "id": "SB-024",
+    "decision": "adopted",
+    "original_quote": "아니 구멍내기 기존 효과 유지하면서 방어구 감소 까지 넣는거지 대신에 피해량을 줄이라고 아니면 속도 약화를 구멍내기에서 빼버려. 섬광가루는 10 ~15 로 하자 조련사는 빼자 일단 다 반영하는 데 너 지금 너무 감각으로 하고 있어 그게 아니라 잔차로 해야돼 모델을 더욱 더 갈고 닦아서 모델에 근거해서 해야지 그렇게 진행해봐 전부 피해량이나 EHP로 일원화하는 공식을 실제와 들어맞게 갈고 닦아서 수치 기반으로 근거 제시하도록 해",
+    "rationale_ko": "4열 은신 적 대응을 위해 대상 범위를 넓히고 피해를 -45%로 낮춘다. 명중·받는 치명 증가·속도 약화·은신 해제·후퇴는 유지한다. 초기 은신 편성 도달률과 실제 피해 차이를 잔차에 포함한다.",
+    "implementation_choice": "Exact damage/range/armor values selected by the assistant within the user-authorized model-based test implementation; not a verbatim user numeric instruction.",
+    "source": {
+      "product": "codex",
+      "reference": "2026-10-25 현재 대화: 구멍내기 기존 보호/당기기 유지·속도 교환 허용, 섬광가루10~15, 조련사 제외, 잔차 모델 개선 요청",
+      "session_id": null,
+      "message_id": null,
+      "event_id": null
+    },
+    "files": [
+      "heroes/shieldbreaker/shieldbreaker.info.darkest",
+      "design/changes/shieldbreaker.md",
+      "design/workshop/hero_cards.json",
+      "design/workshop/why.json"
+    ],
+    "supersedes": []
+  },
+  {
+    "id": "ANT-005",
+    "decision": "adopted",
+    "original_quote": "아니 구멍내기 기존 효과 유지하면서 방어구 감소 까지 넣는거지 대신에 피해량을 줄이라고 아니면 속도 약화를 구멍내기에서 빼버려. 섬광가루는 10 ~15 로 하자 조련사는 빼자 일단 다 반영하는 데 너 지금 너무 감각으로 하고 있어 그게 아니라 잔차로 해야돼 모델을 더욱 더 갈고 닦아서 모델에 근거해서 해야지 그렇게 진행해봐 전부 피해량이나 EHP로 일원화하는 공식을 실제와 들어맞게 갈고 닦아서 수치 기반으로 근거 제시하도록 해",
+    "rationale_ko": "명중 약화·은신 해제와 화상 제거를 유지하며 방어도 감소만10~15%p로 낮춰 전담 방어 약화 기술과 구분한다. 지속2턴, 약화 확률100~140%는 유지한다.",
+    "implementation_choice": "Exact damage/range/armor values selected by the assistant within the user-authorized model-based test implementation; not a verbatim user numeric instruction.",
+    "source": {
+      "product": "codex",
+      "reference": "2026-10-25 현재 대화: 구멍내기 기존 보호/당기기 유지·속도 교환 허용, 섬광가루10~15, 조련사 제외, 잔차 모델 개선 요청",
+      "session_id": null,
+      "message_id": null,
+      "event_id": null
+    },
+    "files": [
+      "heroes/antiquarian/antiquarian.info.darkest",
+      "design/changes/antiquarian.md",
+      "design/workshop/hero_cards.json",
+      "design/workshop/why.json",
+      "heroes/antiquarian/antiquarian.effects_edit.txt",
+      "effects/rebalance_antiquarian.effects.darkest"
+    ],
+    "supersedes": [
+      "ANT-004 magnitude only"
+    ]
+  },
+  {
+    "id": "R-AUDIT-25",
+    "decision": "adopted",
+    "original_quote": "아니 구멍내기 기존 효과 유지하면서 방어구 감소 까지 넣는거지 대신에 피해량을 줄이라고 아니면 속도 약화를 구멍내기에서 빼버려. 섬광가루는 10 ~15 로 하자 조련사는 빼자 일단 다 반영하는 데 너 지금 너무 감각으로 하고 있어 그게 아니라 잔차로 해야돼 모델을 더욱 더 갈고 닦아서 모델에 근거해서 해야지 그렇게 진행해봐 전부 피해량이나 EHP로 일원화하는 공식을 실제와 들어맞게 갈고 닦아서 수치 기반으로 근거 제시하도록 해",
+    "rationale_ko": "감각적 수치 선택 대신 실제 피해 커널을 쓰는 동일 대상 약화 비교, 과잉 피해·조건·저항·중복 효과·2/3턴·사거리 검산 및 수치/가정 분리.",
+    "source": {
+      "product": "codex",
+      "reference": "2026-10-25 현재 대화: 구멍내기 기존 보호/당기기 유지·속도 교환 허용, 섬광가루10~15, 조련사 제외, 잔차 모델 개선 요청",
+      "session_id": null,
+      "message_id": null,
+      "event_id": null
+    },
+    "files": [
+      "tools/strength.py",
+      "tools/damage_support.py",
+      "tools/test_damage_support.py",
+      "tools/armor_support_audit.py",
+      "design/analysis/armor-support-20261025.md",
+      "design/analysis/armor-support-20261025.json",
+      "design/analysis/hero_power_v2.md"
+    ],
+    "supersedes": [
+      "R-AUDIT-24 offensive debuff valuation only"
+    ]
+  }
+]

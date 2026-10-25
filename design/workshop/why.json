@@ -63,14 +63,15 @@
  "antiquarian|flashpowder": {
   "ids": [
    "ANT-001",
-   "ANT-004"
+   "ANT-004",
+   "ANT-005"
   ],
   "principles": [
    "P-19",
    "P-25"
   ],
-  "en": "Flashpowder replaces burn with a short 15-20 point PROT debuff to help physical allies, while keeping its accuracy debuff and destealth.",
-  "ko": "화상을 제거하고 짧은 방어도 감소로 교체한다. 명중 감소와 은신 해제를 유지하여 유물수집상이 물리 딜러를 보조하도록 한다."
+  "en": "Flashpowder keeps accuracy reduction and destealth. Its short PROT debuff falls to 10-15 points rather than matching dedicated armor breakers; the old burn remains removed.",
+  "ko": "명중 약화·은신 해제와 화상 제거를 유지하며 방어도 감소만10~15%p로 낮춰 전담 방어 약화 기술과 구분한다. 지속2턴, 약화 확률100~140%는 유지한다."
  },
  "arbalest|battlefield_bandage": {
   "ids": [
@@ -874,14 +875,15 @@
  },
  "shieldbreaker|expose": {
   "ids": [
-   "SB-015"
+   "SB-015",
+   "SB-024"
   ],
   "principles": [
    "R-TRADE-02",
    "R-SKILL-09"
   ],
-  "en": "Accuracy swaps with Pierce. Expose's job is its debuff, destealth and slow, and skills whose value is the effect should land reliably.",
-  "ko": "찌르기와 명중을 맞바꿨다. 노출의 본업은 약화·은신 해제·둔화 효과이고, 효과가 본업인 기술은 확실히 맞아야 한다."
+  "en": "Expose reaches rank 4 to answer back-rank stealth. Damage falls to -45%, while accuracy, critical vulnerability, slow and backward movement remain. Initial stealth-rank coverage and direct damage are included in the residual comparison.",
+  "ko": "4열 은신 적 대응을 위해 대상 범위를 넓히고 피해를 -45%로 낮춘다. 명중·받는 치명 증가·속도 약화·은신 해제·후퇴는 유지한다. 초기 은신 편성 도달률과 실제 피해 차이를 잔차에 포함한다."
  },
  "shieldbreaker|pierce": {
   "ids": [
@@ -1160,5 +1162,16 @@
   ],
   "en": "Open Vein gains five points of skill CRIT from Wicked Slice to support its bleed role against armoured enemies. Accuracy, damage, bleed and debuffs are unchanged; this is not protection piercing.",
   "ko": "칼질에서 기술 치명 5%p를 받아 출혈이 통하는 장갑 적 대응을 강조한다. 기존 명중·피해·출혈·출혈 저항 감소·속도 감소는 유지한다. 치명타 자체에 방어 관통을 추가하는 변경은 아니다."
+ },
+ "shieldbreaker|break_guard": {
+  "ids": [
+   "SB-023"
+  ],
+  "principles": [
+   "P-11",
+   "P-21"
+  ],
+  "en": "Preserve guard ignoring, guard removal, guard blocking, pull and forward movement. Exchange slow and rank-4 access for a short 30-40 point PROT debuff, with damage reduced to -55%. The same-target damage model is near the previous budget in its default scenario; physical follow-ups create the payoff.",
+  "ko": "보호 무시·보호 해체·보호 차단·당기기2·전진1을 보존한다. 속도 약화와 4열 접근을 짧은 방어도 감소30~40%p로 교환하고 피해를 -55%로 낮춘다. 기본 잔차는 거의 같으며 물리 아군의 후속 집중 공격이 이득을 만든다."
  }
 }

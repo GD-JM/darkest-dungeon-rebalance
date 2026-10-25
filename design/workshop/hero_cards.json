@@ -87,7 +87,7 @@
      "No PROT debuff"
     ],
     "new": [
-     "Target: PROT -15 to -20% (2 turns)"
+     "Target: PROT -10 to -15% (2 turns)"
     ]
    }
   ]
@@ -1143,6 +1143,23 @@
     ]
    },
    {
+    "key": "shieldbreaker|break_guard",
+    "name": "Puncture",
+    "icon": "two",
+    "old": [
+     "DMG -50%",
+     "Hits ranks 1-4",
+     "Target: SPD -1 to -3",
+     "No PROT debuff"
+    ],
+    "new": [
+     "DMG -55%",
+     "Hits ranks 1-3",
+     "No SPD debuff",
+     "Target: PROT -30 to -40% (2 turns)"
+    ]
+   },
+   {
     "key": "shieldbreaker|spearing",
     "name": "Impale",
     "icon": "four",
@@ -1162,10 +1179,14 @@
     "name": "Expose",
     "icon": "five",
     "old": [
-     "ACC 85"
+     "ACC 85",
+     "DMG -40%",
+     "Hits ranks 1-3"
     ],
     "new": [
-     "ACC 90"
+     "ACC 90",
+     "DMG -45%",
+     "Hits ranks 1-4"
     ]
    },
    {

@@ -34,6 +34,7 @@ combat_skill: .id "flashpowder" .level 1 .type "ranged" .atk 100% .dmg -100% .cr
 combat_skill: .id "flashpowder" .level 2 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 4321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "Antiq Distract 3" "RB ANT Flash Armor 3" "Destealth" .is_stall_invalidating false
 combat_skill: .id "flashpowder" .level 3 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 4321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "Antiq Distract 4" "RB ANT Flash Armor 4" "Destealth" .is_stall_invalidating false
 combat_skill: .id "flashpowder" .level 4 .type "ranged" .atk 115% .dmg -100% .crit 0% .launch 4321 .target 1234 .is_crit_valid False .ignore_stealth true  .effect "Antiq Distract 5" "RB ANT Flash Armor 5" "Destealth" .is_stall_invalidating false
+// ANT-005 (2026-10-25, test): 방어도 감소15/16/17/19/20->10/11/12/14/15%p, 2턴 유지. 명중 약화·은신 해제 유지, 조련사는 제외. ANT-004의 방어 감소 크기만 낮춘다. 20261025 residual model 후속 실제 피해로 검산.
 // ANT-004 (2026-10-25, test): 화상을 제거하고 짧은 방어도 감소로 교체한다. 명중 감소와 은신 해제를 유지하여 유물수집상이 물리 딜러를 보조하도록 한다. 방어 감소 15/16/17/19/20%p, 2턴; 명중·피해·치명·사거리 유지.
 // ANT-001 flashpowder: 화상 1/1/2/2/3 추가(저항 무시, 확률 100~140%). 대상 fx가 불꽃 분출이라 아트와 일치(P-19), 도망자 화톳불·불길 역류 연계를 연다. 유물수집상은 모든 기술이 다른 영웅보다 낮은 컨셉(P-25)이라 화상량은 작게 [제작자]
 combat_move_skill: .id "move" .level 0 .type "move" .move 2 2 .launch 4321
