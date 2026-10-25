@@ -12,7 +12,10 @@
 	<VersionMinor>0</VersionMinor>
 	<TargetBuild>0</TargetBuild>
 	<Tags>
+		<Tags>Overhauls</Tags>
+		<Tags>Gameplay Tweaks</Tags>
 		<Tags>Class Tweaks</Tags>
+		<Tags>New Class</Tags>
 	</Tags>
 	<ItemDescription>{DESCRIPTION}</ItemDescription>
 	<PublishedFileId>3821353035</PublishedFileId>
