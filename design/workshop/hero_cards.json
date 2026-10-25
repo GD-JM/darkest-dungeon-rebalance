@@ -1065,7 +1065,7 @@
  },
  "runaway": {
   "name": "Runaway",
-  "tagline": "Ransack keeps its pull but loses reach to rank 4.",
+  "tagline": "Test build: Ransack restored to vanilla.",
   "skills": [
    {
     "key": "runaway|ransack",
@@ -1076,8 +1076,8 @@
      "Hits ranks 1-4"
     ],
     "new": [
-     "DMG -25%",
-     "Hits ranks 1-3"
+     "DMG -10%",
+     "Hits ranks 1-4"
     ]
    }
   ]

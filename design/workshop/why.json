@@ -859,14 +859,15 @@
  },
  "runaway|ransack": {
   "ids": [
-   "RUN-001"
+   "RUN-001",
+   "RUN-004"
   ],
   "principles": [
    "P-10",
    "G-02"
   ],
-  "en": "A melee skill usable from any rank that hit any enemy rank, with a pull, a forward step and corpse clearing at almost no damage cost, was never a wrong choice. It loses direct reach to rank 4 (the same standard applied to other melee skills) but keeps its identity of pulling rank 3 forward, and its damage now matches other utility melee hits.",
-  "ko": "어느 열에서든 쓰고 적 어느 열이든 때리며, 당기기·전진·시체 제거까지 붙었는데 피해 대가는 거의 없어 쓸모없는 순간이 없었다. 근접의 4열 직접 타격을 빼고(다른 근접 기술과 같은 기준), 3열을 끌어내는 정체성은 남기며, 피해는 비슷한 유틸 근접기 수준으로 맞췄다."
+  "en": "Test branch only: restore Ransack to vanilla damage -10% and targets 1-4 for comparison. This is not an adoption for main or the Workshop release; its original movement and effects are preserved.",
+  "ko": "test에서만 바닐라 피해-10%와 대상1~4열로 복원하여 직접 비교 시험한다. main/창작마당 채택은 아니며 기존 이동·당기기 등 원본 효과는 유지한다."
  },
  "shieldbreaker|expose": {
   "ids": [

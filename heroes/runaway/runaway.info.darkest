@@ -25,11 +25,13 @@ combat_skill: .id "run_and_hide" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0
 combat_skill: .id "run_and_hide" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .move 2 0 .launch 4321 .target .is_crit_valid False .effect "RW Stealth" "RW Run HoT 3" .is_stall_invalidating false
 combat_skill: .id "run_and_hide" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .move 2 0 .launch 4321 .target .is_crit_valid False .effect "RW Stealth" "RW Run HoT 4" .is_stall_invalidating false
 combat_skill: .id "run_and_hide" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .move 2 0 .launch 4321 .target .is_crit_valid False .effect "RW Stealth" "RW Run HoT 5" .is_stall_invalidating false
-combat_skill: .id "ransack" .level 0 .type "melee" .atk 85%  .dmg -25% .crit 2% .move 0 1 .launch 4321 .target 123 .is_crit_valid True .effect "Pull 1A" "clear_corpses" "RW Ransack ACC Stealthed"
-combat_skill: .id "ransack" .level 1 .type "melee" .atk 90%  .dmg -25% .crit 3% .move 0 1 .launch 4321 .target 123 .is_crit_valid True .effect "Pull 1B" "clear_corpses" "RW Ransack ACC Stealthed"
-combat_skill: .id "ransack" .level 2 .type "melee" .atk 95%  .dmg -25% .crit 4% .move 0 1 .launch 4321 .target 123 .is_crit_valid True .effect "Pull 1C" "clear_corpses" "RW Ransack ACC Stealthed"
-combat_skill: .id "ransack" .level 3 .type "melee" .atk 100% .dmg -25% .crit 5% .move 0 1 .launch 4321 .target 123 .is_crit_valid True .effect "Pull 1D" "clear_corpses" "RW Ransack ACC Stealthed"
-combat_skill: .id "ransack" .level 4 .type "melee" .atk 105% .dmg -25% .crit 6% .move 0 1 .launch 4321 .target 123 .is_crit_valid True .effect "Pull 1E" "clear_corpses" "RW Ransack ACC Stealthed"
+combat_skill: .id "ransack" .level 0 .type "melee" .atk 85%  .dmg -10% .crit 2% .move 0 1 .launch 4321 .target 1234 .is_crit_valid True .effect "Pull 1A" "clear_corpses" "RW Ransack ACC Stealthed"
+combat_skill: .id "ransack" .level 1 .type "melee" .atk 90%  .dmg -10% .crit 3% .move 0 1 .launch 4321 .target 1234 .is_crit_valid True .effect "Pull 1B" "clear_corpses" "RW Ransack ACC Stealthed"
+combat_skill: .id "ransack" .level 2 .type "melee" .atk 95%  .dmg -10% .crit 4% .move 0 1 .launch 4321 .target 1234 .is_crit_valid True .effect "Pull 1C" "clear_corpses" "RW Ransack ACC Stealthed"
+combat_skill: .id "ransack" .level 3 .type "melee" .atk 100% .dmg -10% .crit 5% .move 0 1 .launch 4321 .target 1234 .is_crit_valid True .effect "Pull 1D" "clear_corpses" "RW Ransack ACC Stealthed"
+combat_skill: .id "ransack" .level 4 .type "melee" .atk 105% .dmg -10% .crit 6% .move 0 1 .launch 4321 .target 1234 .is_crit_valid True .effect "Pull 1E" "clear_corpses" "RW Ransack ACC Stealthed"
+// RUN-004 (2026-10-25, test only): 판 뒤엎기 전 레벨 바닐라 복원: 피해 -25% -> -10%, 대상 123 -> 1234. 원작 성능을 직접 시험하기 위한 임시 복원이며 main/창작마당 채택이 아니다.
+// RUN-004: 사용열·명중·치명·전진·당기기·시체 제거·은신 명중 효과는 원본 그대로. 아래 RUN-001은 이전 하향의 의도 기록으로 보존한다.
 // RUN-001 ransack: 대상 1234 -> 123, 피해 -10% -> -25%. 근접으로 적 4열 직접 타격은 메인 플랜에서 가장 희소한 능력(진격 HWY-013과 같은 기준). 당기기로 3열을 끌어내는 정체성은 유지, 피해는 사냥개 돌진(-25)과 같은 선 [제작자]
 combat_skill: .id "hearthlight" .level 0 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 4321 .target ~1234 .is_crit_valid False .ignore_stealth true .effect "Destealth" "RW Hearthlight Torch 1" "RW Hearthlight ACC Buff 1" "RW Hearthlight CRIT Buff 1" .is_stall_invalidating false
 combat_skill: .id "hearthlight" .level 1 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 4321 .target ~1234 .is_crit_valid False .ignore_stealth true .effect "Destealth" "RW Hearthlight Torch 1" "RW Hearthlight ACC Buff 2" "RW Hearthlight CRIT Buff 2" .is_stall_invalidating false
