@@ -1,0 +1,19 @@
+{
+  "id": "WS-EDITOR-002",
+  "decision": "adopted",
+  "original_quote": "이제 성녀 변경한 거 메인에 푸시하고 창작마당 업데이트 노트랑 이미지까지 반영해줘 이미지 27장 누락 없는지도 끝까지 확인하고",
+  "rationale_ko": "승인된 성녀 배포를 막는 생성기의 근거 범위 혼동을 수정한다. 사용자는 배포 완료를 승인했고 구체적인 도구 수정 방식은 분석자의 구현 판단이다. 게임 입력의 의도 검증은 유지한다.",
+  "source": {
+    "product": "codex",
+    "reference": "현재 대화의 성녀 main 푸시·노트·27장 이미지 검증 요청",
+    "session_id": null,
+    "message_id": null,
+    "event_id": null
+  },
+  "files": [
+    "tools/workshop_sync/release.py",
+    "tools/workshop_sync/tests/test_release_intents.py",
+    "design/analysis/workshop-editor-scope-2026-10-25.md"
+  ],
+  "supersedes": []
+}
