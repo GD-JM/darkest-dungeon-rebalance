@@ -369,7 +369,7 @@ def image_refresh(config, publish_enabled=False, reconcile=False):
         from release import inherit_published_editorial
         inherit_published_editorial(source, git, sha, sha, state.get('last_release'), job)
         image_dir = job / ('images-' + uuid.uuid4().hex[:12])
-        images = render_cards(read_json(source / 'design/workshop/hero_cards.json'), Path(config['game_root']), image_dir, max_height=config.get('max_image_height', 1500))
+        images = render_cards(read_json(source / 'design/workshop/hero_cards.json'), Path(config['game_root']), image_dir, max_height=config.get('max_image_height', 1500), mod_root=source)
         release = {'source_sha': sha, 'images': images, 'image_dir': str(image_dir),
                    'descriptions': list(descriptions(source).values()) if reconcile else []}
         release['digest'] = hashlib.sha256(json.dumps(release, sort_keys=True).encode()).hexdigest()

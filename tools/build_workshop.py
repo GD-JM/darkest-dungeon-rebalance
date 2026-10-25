@@ -161,6 +161,9 @@ def main():
         dst = os.path.join(OUT, 'heroes', hero, hero + '.info.darkest')
         os.makedirs(os.path.dirname(dst), exist_ok=True)
         open(dst, 'wb').write(eol.join(lines).encode('utf-8'))
+        # WS-ASSET-001: keep approved custom skill art in the actual upload.
+        from workshop_assets import copy_skill_icons
+        copy_skill_icons(os.path.dirname(cf), os.path.dirname(dst), hero)
         art = os.path.join(repl[hero] if hero in repl else os.path.dirname(cf), hero + '.art.darkest')
         if os.path.exists(art):
             shutil.copy(art, os.path.join(os.path.dirname(dst), hero + '.art.darkest'))

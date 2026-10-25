@@ -292,7 +292,16 @@ def _draw_page(layout, blocks, fonts, portrait, icons, page, pages):
     return image
 
 
-def render_cards(cards: dict, game_root: Path, out_dir: Path, max_height: int = 1500) -> list[dict]:
+def _skill_art(folder, game_root, hero, icon, mod_root=None):
+    # WS-ASSET-001: use committed custom skill art, with vanilla fallback.
+    if mod_root is not None:
+        candidate = Path(mod_root) / 'heroes' / hero / f'{hero}.ability.{icon}.png'
+        if candidate.exists():
+            return _art(_within(candidate, Path(mod_root).resolve(strict=True)), (72, 72))
+    return _art(_within(folder / f'{hero}.ability.{icon}.png', game_root), (72, 72))
+
+
+def render_cards(cards: dict, game_root: Path, out_dir: Path, max_height: int = 1500, mod_root: Path | None = None) -> list[dict]:
     """Render one or two readable PNGs per hero; return relative-path manifest.
 
     Short cards stay on one page. Long cards use the ordered skill boundary
@@ -317,7 +326,7 @@ def render_cards(cards: dict, game_root: Path, out_dir: Path, max_height: int = 
             pages = _paginate(hero, layout, max_height)
             folder = _hero_dir(game_root, hero)
             portrait = _art(_within(folder / f"{hero}_A" / f"{hero}_portrait_roster.png", game_root), (120, 120))
-            icons = {b.icon: _art(_within(folder / f"{hero}.ability.{b.icon}.png", game_root), (72, 72))
+            icons = {b.icon: _skill_art(folder, game_root, hero, b.icon, mod_root)
                      for b in layout.blocks if b.icon is not None}
             for page, blocks in enumerate(pages, 1):
                 image = _draw_page(layout, blocks, fonts, portrait, icons, page, len(pages))
@@ -350,11 +359,12 @@ def main(argv=None) -> int:
     parser.add_argument("--game-root", required=True, type=Path)
     parser.add_argument("--out", required=True, type=Path)
     parser.add_argument("--max-height", type=int, default=1500)
+    parser.add_argument("--mod-root", type=Path)
     args = parser.parse_args(argv)
     try:
         with args.input.open(encoding="utf-8-sig") as source:
             data = json.load(source)
-        manifest = render_cards(data, args.game_root, args.out, args.max_height)
+        manifest = render_cards(data, args.game_root, args.out, args.max_height, mod_root=args.mod_root)
     except (OSError, ValueError) as exc:
         parser.exit(1, f"cards: {exc}\n")
     print(json.dumps(manifest, ensure_ascii=True, indent=2))

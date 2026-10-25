@@ -25,6 +25,9 @@ def is_game_file(path):
 
 
 def is_release_input(path):
+    # WS-ASSET-001: packaging/render changes can fix missing player-facing assets.
+    if path in {'tools/build_workshop.py', 'tools/workshop_assets.py', 'tools/workshop_sync/cards.py'}:
+        return True
     if is_game_file(path):
         return True
     if path in {'design/workshop/description_en.txt', 'design/workshop/description_ko.txt',
@@ -379,7 +382,7 @@ def prepare(config, git, previous, sha, job, previous_release=None):
     output = run([sys.executable, ROOT / 'build.py', '--source', source, '--game-root', config['game_root'], '--output', job / 'payload'], timeout=180)
     (job / 'build.log').write_text(output, encoding='utf-8')
     image_dir = job / ('images-' + uuid.uuid4().hex[:12])
-    images = render_cards(cards, Path(config['game_root']), image_dir, max_height=config.get('max_image_height', 1500))
+    images = render_cards(cards, Path(config['game_root']), image_dir, max_height=config.get('max_image_height', 1500), mod_root=source)
     files = validate_payload(job / 'payload')
     release = dict(source_sha=sha, previous_sha=previous, version=version, note=note,
                    descriptions=edited['descriptions'], images=images, image_dir=str(image_dir), payload=str(job / 'payload'),

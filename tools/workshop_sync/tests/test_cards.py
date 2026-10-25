@@ -76,6 +76,18 @@ class CardTests(unittest.TestCase):
             self.assertEqual(item["width"], 1200)
             self.assertEqual(im.getpixel((70, 70)), (80, 35, 15))
 
+    def test_committed_skill_icon_overrides_vanilla_without_changing_it(self):
+        folder = self.game / 'heroes/example'
+        original = (folder/'example.ability.one.png').read_bytes()
+        mod = self.root/'source'
+        custom = mod/'heroes/example/example.ability.one.png'
+        custom.parent.mkdir(parents=True)
+        Image.new('RGB',(72,72),(5,99,201)).save(custom)
+        art = cards._skill_art(folder,self.game,'example','one',mod)
+        self.assertEqual(art.getpixel((30,30)),(5,99,201))
+        self.assertEqual((folder/'example.ability.one.png').read_bytes(),original)
+        self.assertEqual(cards._skill_art(folder,self.game,'example','one').getpixel((30,30)),(110,70,20))
+
     def test_requested_steam_cards_split_even_under_height_cap(self):
         for hero in cards.TWO_PAGE_HEROES:
             self.asset(hero)

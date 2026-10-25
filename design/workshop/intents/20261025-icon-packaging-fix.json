@@ -1,0 +1,24 @@
+{
+  "id": "WS-ASSET-001",
+  "decision": "adopted",
+  "original_quote": "그럼 이제 test에 쌓인 변경 전부 메인에 반영해서 푸시하고 창작마당 업데이트 노트랑 이미지까지 수정해줘 이미지 누락 없는지도 끝까지 확인하고",
+  "rationale_ko": "전체 배포 검증에서 승인된 LEP-007 갑옷 쪼개기 아이콘이 Git에는 있지만 기존 빌더가 info/art만 복사해 실제 창작마당 파일에서 누락됨을 발견했다. 기술 아이콘을 실제 배포물에 포함하고 영웅 비교 카드도 같은 커밋의 아이콘을 사용하도록 복구한다. 원래 test에서 확정된 아이콘 자체와 게임 수치는 바꾸지 않는다. 이번 배포 노트에는 누락된 아이콘 복구만 안내하며 기존 밸런스 노트를 반복하지 않는다.",
+  "source": {
+    "product": "codex",
+    "reference": "2026-10-25 현재 대화: test 전체 main 승격과 이미지 누락까지 검증 요청. 승인된 아이콘 근거는 design/workshop/intents/20261025-lep007-sunder-icon.json 및 20261025-lep007-sunder-icon-aa.json.",
+    "session_id": "01a10741-76da-7e43-9500-98474ab3f383",
+    "event_id": null,
+    "message_id": null
+  },
+  "files": [
+    "tools/build_workshop.py",
+    "tools/workshop_assets.py",
+    "tools/test_workshop_assets.py",
+    "tools/workshop_sync/cards.py",
+    "tools/workshop_sync/release.py",
+    "tools/workshop_sync/sync.py",
+    "tools/workshop_sync/tests/test_cards.py",
+    "heroes/leper/leper.ability.seven.png"
+  ],
+  "supersedes": []
+}
