@@ -1,0 +1,30 @@
+{
+  "id": "VES-018",
+  "decision": "adopted",
+  "original_quote": "그럼 광휘 95 유지하고 손길만 90으로 바꾸자 그거에 맞춰서 전부 성능 조절해봐",
+  "context_quotes": [
+    {
+      "speaker": "assistant",
+      "quote": "내 권장은 광휘 95 유지, 손길만 90/95/100/105/110으로 조정하고 나머지 수치는 우선 유지야.",
+      "reference": "직전 답변의 권장안; Markdown 강조만 제거"
+    }
+  ],
+  "rationale_ko": "광휘95를 유지하고 손길만90으로 내려 두 기술의 적중 기반 지원/자기 강화 역할을 구분한다. 앞선 유지 제안에 따라 피해·강화·치명·열은 그대로 둔다.",
+  "source": {
+    "product": "codex",
+    "reference": "현재 대화의 광휘95 유지·손길90 변경 승인 (2026-10-25)",
+    "session_id": null,
+    "message_id": null,
+    "event_id": null
+  },
+  "files": [
+    "heroes/vestal/vestal.info.darkest",
+    "design/changes/vestal.md",
+    "design/workshop/why.json",
+    "design/workshop/hero_cards.json"
+  ],
+  "supersedes": [
+    "VES-017"
+  ],
+  "supersedes_scope": "신의 손길 명중만; 광휘와 다른 성능 유지"
+}

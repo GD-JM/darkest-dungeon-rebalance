@@ -986,14 +986,15 @@
  "vestal|gods_hand": {
   "ids": [
    "VES-007",
-   "VES-017"
+   "VES-017",
+   "VES-018"
   ],
   "principles": [
    "R-TRADE-02",
    "G-03"
   ],
-  "en": "Accuracy 95 makes Hand of Light a reliable finisher that also prepares later attacks. Its self-buff is configured to apply even on a miss; damage stays at -50%, preserving Mace Bash as the immediate damage and self-heal option.",
-  "ko": "명중 95로 빈사 적을 마무리하면서 후속 공격을 준비하는 선택지를 만든다. 자기 강화는 빗나가도 발동하도록 설정돼 있다. 피해 -50%를 유지해 철퇴의 즉시 피해·자가 회복 역할을 남긴다."
+  "en": "Hand of Light uses ACC 90 at level 1 while Illumination stays at 95. Its self-buff is configured to apply even on a miss and prepares later attacks; damage stays at -50%. Mace Bash retains immediate damage and self-healing. No compensating damage or buff increase is added.",
+  "ko": "광휘는 명중95를 유지하고 신의 손길만90으로 낮춘다. 손길은 빗나가도 발동하도록 설정된 자기 강화로 후속 공격을 준비한다. 피해-50%와 기존 강화는 유지하며, 명중을 내리는 대신 피해나 강화를 추가로 올리지 않는다. 철퇴의 즉시 피해·자가 회복 역할도 유지한다."
  },
  "vestal|gods_illumination": {
   "ids": [

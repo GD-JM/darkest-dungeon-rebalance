@@ -96,11 +96,13 @@ combat_skill: .id "gods_illumination" .level 4 .type "ranged" .atk 115% .dmg -75
 
 
 
-combat_skill: .id "gods_hand" .level 0 .type "ranged" .atk 95% .dmg -50% .crit 1% .launch 12 .target 123 .is_crit_valid True  .effect "Vestal Inspiration 1" "Unholy Killer 1"
-combat_skill: .id "gods_hand" .level 1 .type "ranged" .atk 100% .dmg -50% .crit 2% .launch 12 .target 123 .is_crit_valid True  .effect "Vestal Inspiration 2" "Unholy Killer 2"
-combat_skill: .id "gods_hand" .level 2 .type "ranged" .atk 105% .dmg -50% .crit 3% .launch 12 .target 123 .is_crit_valid True  .effect "Vestal Inspiration 3" "Unholy Killer 3"
-combat_skill: .id "gods_hand" .level 3 .type "ranged" .atk 110% .dmg -50% .crit 4% .launch 12 .target 123 .is_crit_valid True  .effect "Vestal Inspiration 4" "Unholy Killer 4"
-combat_skill: .id "gods_hand" .level 4 .type "ranged" .atk 115% .dmg -50% .crit 5% .launch 12 .target 123 .is_crit_valid True  .effect "Vestal Inspiration 5" "Unholy Killer 5"
+combat_skill: .id "gods_hand" .level 0 .type "ranged" .atk 90% .dmg -50% .crit 1% .launch 12 .target 123 .is_crit_valid True  .effect "Vestal Inspiration 1" "Unholy Killer 1"
+combat_skill: .id "gods_hand" .level 1 .type "ranged" .atk 95% .dmg -50% .crit 2% .launch 12 .target 123 .is_crit_valid True  .effect "Vestal Inspiration 2" "Unholy Killer 2"
+combat_skill: .id "gods_hand" .level 2 .type "ranged" .atk 100% .dmg -50% .crit 3% .launch 12 .target 123 .is_crit_valid True  .effect "Vestal Inspiration 3" "Unholy Killer 3"
+combat_skill: .id "gods_hand" .level 3 .type "ranged" .atk 105% .dmg -50% .crit 4% .launch 12 .target 123 .is_crit_valid True  .effect "Vestal Inspiration 4" "Unholy Killer 4"
+combat_skill: .id "gods_hand" .level 4 .type "ranged" .atk 110% .dmg -50% .crit 5% .launch 12 .target 123 .is_crit_valid True  .effect "Vestal Inspiration 5" "Unholy Killer 5"
+// VES-018 (2026-10-25): 신의 손길 명중 95/100/105/110/115 -> 90/95/100/105/110. 광휘는 95 유지. 빗나가도 발동하는 자기 강화로 후속 공격을 준비하는 역할을 살리고, 광휘의 적중 기반 지원과 구분한다.
+// VES-018: 피해 -50%, 자기 명중 +6~10/피해 +25~35%, 치명·사용열·대상열은 유지. 아래 VES-017의 손길 명중95 결정만 대체하며 이전 원문 주석은 보존한다.
 // VES-017 (2026-10-25): ACC 90/95/100/105/110 -> 95/100/105/110/115. Reliable finishing attack with utility; damage, critical, ranks and effects unchanged.
 // VES-017: 정확한 마무리와 강화·약화 전달을 선택 이유로 삼는다. 피해 상향 후보(광휘 -60, 손길 -35)는 미채택. 아래 이전 명중 설명은 역사 기록.
 // VES-007 [trace 2026-10-05] Improve the front support attack using the author-set ranged accuracy.
