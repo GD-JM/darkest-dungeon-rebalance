@@ -1,0 +1,41 @@
+{
+  "id": "WS-DESC-004",
+  "decision": "adopted",
+  "original_quote": "그 내용이 있었음 좋겠어 스팀 창작마당 소개글에 이 모드는 지속적으로 업데이트 해나갈 것이다. 완벽한 밸런스를 찾기 위해 계속 정진할 예정이다. 지금까지 업데이트 얼만큼 많이 했는지 써주고 댓글 일일이 참고하여 합리적인 내용은 수용하여 반영하겠다가 적히면 좋겠어 그리고 지금 빌드 내용 바탕으로 스팀 창작마당 설명을 다시 조정해줘 ",
+  "rationale_ko": "지속적인 개선과 모든 댓글 검토·합리적 제안 반영 의사를 소개글 앞에 명시한다. 공개 이력은 2026-10-26 확인한 Steam change-note entries 33건이며 개별 게임 패치 33회라고 확대하지 않는다. 공개 2.5.7의 회복 선택지·방어 감소 지원·열 운용을 중심으로 10언어를 통일한다. 총량·난이도 동일성은 설계 목표이며 1% 이내 동일하다는 과거 모델 단정을 제거한다. 로컬 미배포 괴인/중보병/고행자/실브 변경과 HP 모델 코드는 게시하지 않는다. 모든 게임 수치·이미지·제목·기존 업데이트 노트는 유지하며 설명만 갱신한다.",
+  "source": {
+    "product": "codex",
+    "reference": "local-knowledge event 102cf0be99f4e67f6868c651e097188db0cb5433b166f91f037295b10e85df17",
+    "session_id": "01a10741-76da-7e43-9500-98474ab3f383",
+    "message_id": "msg_01a17832-61c8-72c2-a386-2db63bdbc398",
+    "event_id": "102cf0be99f4e67f6868c651e097188db0cb5433b166f91f037295b10e85df17"
+  },
+  "files": [
+    "design/workshop/description_en.txt",
+    "design/workshop/description_ko.txt",
+    "design/workshop/i18n/description_schinese.txt",
+    "design/workshop/i18n/description_tchinese.txt",
+    "design/workshop/i18n/description_french.txt",
+    "design/workshop/i18n/description_german.txt",
+    "design/workshop/i18n/description_russian.txt",
+    "design/workshop/i18n/description_spanish.txt",
+    "design/workshop/i18n/description_polish.txt",
+    "design/workshop/i18n/description_brazilian.txt"
+  ],
+  "supersedes": [],
+  "published_baseline": {
+    "version": "2.5.7",
+    "source_sha": "83e4cc9e5c9885aaea8b8df03e7ecea099aeb275"
+  },
+  "public_history": {
+    "count": 33,
+    "metric": "public change-note entries, including balance/content/repair notes",
+    "observed_date": "2026-10-26",
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/changelog/3821353035"
+  },
+  "editorial_corrections": [
+    "Remove unsupported global within-1-percent balance claim and mandatory-healer absolute",
+    "Use current armor-reduction effects, Ransack restoration and Vestal 95/90 accuracy",
+    "Retain all-five-DLC requirement, retired optional packages and included Musketeer rework"
+  ]
+}

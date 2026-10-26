@@ -1,69 +1,38 @@
-[h1]Jeder Held zählt – Helden-Rebalance[/h1]
-[i]Mehr Helden und mehr Fähigkeiten, die sich lohnen – ohne zu ändern, wer die Helden sind.[/i]
+[h1]Every Hero Worth Taking[/h1]
+[i]Den Charakter der Helden bewahren und mehr Helden, Fähigkeiten und Gruppen eine echte Aufgabe geben.[/i]
 
-[h2]Das Ziel: keine Pflichtgruppe mehr[/h2]
-Am Anfang kann Darkest Dungeon ohne Vestalin, Okkultist oder Narr fast unspielbar werden, weil Heilung und Stressabbau nur bei einer Handvoll Helden liegen. Diese Mod verteilt Heilung und Stressabbau über die ganze Heldenliste, damit ganz unterschiedliche Gruppen funktionieren.
+Eine gemeinsame Balance-Überarbeitung von 20 Helden für vielfältigere Gruppen. Lieblingshelden sollen zusammen funktionieren, ohne auf einen bestimmten Heiler oder stets dieselben vier Fähigkeiten angewiesen zu sein. Mehr Heilung und Stressabbau, Rüstungsschwächung für physische Angreifer und zusätzliche Positionsoptionen eröffnen andere Spielweisen.
 
-Dasselbe gilt innerhalb jedes Helden: Fähigkeiten und Ränge sind so neu ausbalanciert, dass ihr nicht mehr auf ein einziges optimales Set aus vier Fähigkeiten festgenagelt seid, das ihr immer wieder vom selben Rang aus spammt.
+[h2]Weitere Updates. Ein offenes Ohr für Feedback.[/h2]
+[b]Am 26. Oktober 2026 enthält dieser Workshop-Eintrag 33 öffentliche Änderungsnotizen.[/b] Dazu gehören Balance-Anpassungen, Fehlerkorrekturen sowie verbesserte Beschreibungen und Vergleichsbilder. [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3821353035]Update-Verlauf ansehen[/url]
 
-[h2]Ein Gesamtpaket, gleicher Schwierigkeitsgrad[/h2]
-Die meisten Helden-Mods nehmen sich einen Helden nach dem anderen vor – und meistens heißt das: Der Held wird stärker. Diese Mod balanciert alle 20 Helden gemeinsam nach denselben Regeln: Jeder Buff wird an anderer Stelle mit einem Preis oder Nerf bezahlt, das Spiel wird insgesamt also weder leichter noch schwerer. Laut unserem Heldenstärke-Modell bleibt die Gesamtstärke aller Helden innerhalb von 1 % der Vanilla-Werte, während die Lücke zwischen den stärksten und schwächsten Helden schrumpft: Duellantin und Hundemeister werden etwas schwächer, Kopfgeldjäger und Arbaleste legen zu.
+Ich werde weiter spielen, prüfen und überarbeiten, mit perfekter Balance als Ziel. Die aktuellen Werte sind keine endgültige Antwort.
 
-[h2]Wie die Änderungen entschieden wurden[/h2]
+[b]Ich werde jeden Kommentar lesen und berücksichtigen.[/b] Begründete Vorschläge, die zu den Zielen der Mod passen, werde ich aufnehmen und umsetzen. Meldet zu starke, zu schwache oder kaum lohnende Fähigkeiten ebenso wie gelungene Kombinationen. Helden- und Fähigkeitsstufen, Schmuckstücke, Gruppe und Kampfsituation helfen bei der Bewertung. Änderungen bekommen eine Begründung; fällt das Ergebnis im Spiel anders aus, werden sie erneut geprüft.
+
+[h2]Mehr Auswahl, vertraute Spannung[/h2]
 [list]
-[*][b]Heilung und Stressabbau gehören nicht nur wenigen Helden.[/b]
-Beispiel: Adrenalinschub der Barbarin (Heilung 3–7) und Giftlist der Grabräuberin (1–5) sind echte Selbstheilungen, Zuspruch des Waffenknechts baut jede Runde Gruppenstress ab.
-[*][b]Keine „richtigen“ vier Fähigkeiten, kein „richtiger“ Rang.[/b] Viele Kombinationen funktionieren, nicht ein starrer Build.
-Beispiel: Die Riposte des Wegelagerers wanderte von Fechtschritt zu Gezielter Schuss – er kontert auf Distanz, ohne vorzurücken.
-[*][b]Den eigenen Regeln des Spiels folgen.[/b]
-Beispiel: Grundspiel-Helden gewinnen über alle Waffenstufen nur 2 Tempo (Arbaleste 3→5); Schildbrecherin (5→9) und Flagellant (6→9) fielen heraus. Beide jetzt +2.
-[*][b]Jeder Buff hat seinen Preis.[/b] Was hier steigt, sinkt anderswo – die Schwierigkeit bläht sich weder auf noch schrumpft sie.
-Beispiel: Richtspruch der Vestalin geht von −25 % auf 0 % Schaden, Hundebiss des Hundemeisters von 0 % auf −40 % (dafür mehr Blutung).
-[*][b]Eine Fähigkeit tut, wonach sie aussieht.[/b] Bild und Funktion passen auf einen Blick.
-Beispiel: Ein Verband stillt Blutungen, und die unermüdliche Barbarin wird nicht mehr erschöpft.
-[*][b]Die Richtung kommt aus der offiziellen Geschichte.[/b]
-Beispiel: Der Aussätzige war einst König, daher wird Einschüchterung zu Rüstungsbrecher, einem Schlag statt einer Support-Schwächung. Die Antiquarin verdient Gold statt zu kämpfen und bleibt schwach; nichts im Hundemeister-Lore rechtfertigt Extra-Resistenzen.
-[*][b]Accessoires bleiben fix; der Patch passt sich an.[/b] Für die Kompatibilität.
-Beispiel: Die Accessoires der Musketierin erhöhen die Schwächungschance, daher senkt ihre Rauchwand weiterhin leicht die Treffsicherheit.
+[*][b]Verstärkungen und Abschwächungen gehören zusammen.[/b] Schaden, Genauigkeit, Reichweite und Unterstützung haben ihren Preis. Die Umverteilung von Stärke soll den allgemeinen Schwierigkeitsgrad und die Spannung des Originals erhalten.
+[*][b]Heldenidentität und Klassenschmuck bleiben wichtig.[/b] Vertraute Fähigkeiten und Hintergrundgeschichte bilden die Grundlage; vorhandene Klassenschmuckstücke sollen sinnvolle Einsätze behalten.
+[*][b]Berechnung und Spielerfahrung ergänzen sich.[/b] Ein Modell vergleicht Schaden, Heilung, PROT-Senkung und Handlungsmöglichkeiten. Spieltests und Rückmeldungen helfen, seine Aussagen weiter zu verbessern.
 [/list]
 
-[h2]Paradebeispiel: die Musketierin[/h2]
-Die originale Musketierin war eine Kopie der Arbaleste, daher wurde sie aus ihrem Lore neu gebaut: eine gefeierte Schützin, die nach einem enttäuschenden Turnier als Monsterjägerin zur Legende werden will und mangels Kampferfahrung Abstand hält.
+[h2]Was die veröffentlichte Fassung verändert[/h2]
+Bereiche gelten für Fähigkeitsstufen 1–5. ACC und CRIT beziehen sich sonst auf Fähigkeitsstufe 1. Die englischen Fähigkeitsnamen dienen zur eindeutigen Zuordnung.
 [list]
-[*][b]Durchschlagende Kugel[/b] (TRF 95): trifft jeden Rang, durchdringt 25–50 % Rüstung; ihr Bonus gegen Markierte ist viel kleiner als bei der Arbaleste.
-[*][b]Rauchwand[/b] (3 pro Kampf): betäubt die gegnerischen Ränge 1–2; Betäubte verschwinden im Rauch, die Gruppe trifft die hinteren Reihen.
-[*][b]Deckungsrauch[/b]: verbirgt einen Verbündeten 2 Runden – Schutz, ohne dass jemand die Treffer einsteckt.
-[*][b]Beute markieren[/b]: „Diese Beute gehört mir!“ Markiert die Beute, senkt ihre Rüstung um 10–20 %; 3 Runden mehr Tempo.
-[*][b]Treibschuss, Pistolenschuss, Zusammenflicken[/b]: treibt die Ränge 2–3 zurück, schießt und weicht zurück, heilt mit etwas Stressabbau.
+[*][b]Mehr Möglichkeiten zur Gruppenversorgung.[/b] Crusaders Battle Heal heilt 3–4→6–7 LP und gewährt +20% erhaltene Heilung: mit Heilschmuck eine Option als Hauptheiler. Antiquarians Fortifying Vapours verbindet Heilung mit Blutungs-, Gift-, Betäubungs- und Schwächungsresistenz. Arbalests Bandage heilt Blutungen, Rallying Flare baut zuverlässig Stress ab; Man-at-Arms kann Bolster wiederholt einsetzen.
+[*][b]Unterstützung gegen Rüstung.[/b] Occultists Weakening Curse senkt PROT um 25–35 Prozentpunkte. Vestals Illumination behält Ausweichsenkung und Tarnungsaufhebung und senkt PROT um 15–25 Punkte; Antiquarians Flashpowder um 10–15. Beide Fähigkeiten verursachen keine Verbrennung mehr. Shieldbreakers Puncture kombiniert Heranziehen und Aufheben von Schutz mit 30–40 Punkten PROT-Senkung; Man-at-Arms' Bellow senkt den PROT aller Gegner um 10–15 Punkte.
+[*][b]Bekannte Helden, andere Spielweisen.[/b] Highwaymans Tracking Shot ermöglicht Riposte ohne Bewegung. Wicked Slice erreicht Position 3, Open Vein bietet mehr CRIT und Blutungsdruck (Fähigkeits-CRIT 0% / 5%). Bounty Hunter kann Flashbang von Position 2–4 und Caltrops von jeder Position nutzen. Jesters Inspiring Tune funktioniert auch von Position 2, Solo von überall.
+[*][b]Vestal wählt Unterstützung oder Vorbereitung.[/b] Illumination: ACC 95, Ausweich- und PROT-Senkung. Hand of Light: ACC 90, Schaden −40%; greift an und stärkt spätere Angriffe.
+[*][b]Musketeer mit eigener Rolle.[/b] Piercing Ball durchdringt Rüstung, Smokescreen kontrolliert die gegnerische Front. Covering Smoke gewährt einem Verbündeten für 2 Runden Tarnung und +15–25 Ausweichen. Flächenangriffe bleiben gefährlich.
 [/list]
-Der Preis: weniger LP (24 statt 27) und Tempo (2 statt 3). Sie kann den Rang wechseln und liegt daher knapp unter der Arbaleste.
 
-[h2]Held für Held[/h2]
-Die Bilder oben zeigen jede geänderte Fähigkeit, vorher und nachher.
-[b]Unhold[/b] — sich zu verwandeln wird zur echten Entscheidung: Verwandlung baut jetzt seinen eigenen Stress ab, und Schwerer Schlag funktioniert von Rang 4 aus.
-[b]Antiquarin[/b] — weiterhin absichtlich schwächer (sie bringt Gold ein), aber Blendpulver brennt jetzt und bereitet Verbrennungs-Combos vor.
-[b]Arbaleste[/b] — jetzt auch Feldsanitäterin: Erstversorgung heilt Bluten, Leuchtsignal baut zuverlässig Gruppenstress ab.
-[b]Kopfgeldjäger[/b] — markieren, ranziehen, hinrichten: Komm her zieht 3 Ränge weit in die Reichweite von Mach ihn fertig; Aufwärtshaken ist eine Hinrichtungs-Betäubung auf Rang 1.
-[b]Kreuzfahrer[/b] — ein unterstützender Heiler: Kampfheilung erhöht die erhaltene Heilung; Begeisternder Schlachtruf wird mit jeder Stufe stärker.
-[b]Duellantin[/b] — eine der stärksten Heldinnen, etwas gestutzt: Touché macht sie nicht mehr fast unantastbar.
-[b]Flagellant[/b] — zurück zu den Regeln des Grundspiels: Widerstände und Geschwindigkeitszuwachs normalisiert; Ertragen baut ab Stufe 1 Stress ab.
-[b]Grabräuberin[/b] — Giftlist wird zur wiederholbaren Selbstheilung; Dolchwurf trifft markierte Ziele härter.
-[b]Barbarin[/b] — keine Erschöpfung mehr: Barbarisches Gebrüll heizt sie an und schwächt alle Gegner; Adrenalinschub ist ihre Selbstheilung.
-[b]Wegelagerer[/b] — Fernkampf- und Nahkampf-Builds funktionieren beide: Gezielter Schuss gibt Gegenschlag, ohne dass er sich bewegen muss.
-[b]Hundemeister[/b] — Blutungsspezialist auf Distanz: seine Hunde beißen jeden Rang; Verheerender Pfiff lässt die Beute mehr Krits einstecken.
-[b]Narr[/b] — immer noch der beste Stressheiler, aber Stärkende Melodie funktioniert ab Rang 2 und Solo von jedem Rang aus.
-[b]Aussätziger[/b] — Einschüchterung heißt jetzt Rüstungsbrecher und bricht Rüstung, und die Kosten von Rache wachsen mit dem Level – schon früh nutzbar.
-[b]Waffenknecht[/b] — der Veteran, der die Linie hält: Zuspruch ist eine wiederholbare Stressheilung für die Gruppe; Befehl gibt zusätzlich Schutz.
-[b]Okkultist[/b] — Bann der Verletzlichkeit senkt den Widerstand gegen Betäuben, Bluten, Gifthauch und Schwächung und ebnet so der ganzen Gruppe den Weg.
-[b]Pestdoktorin[/b] — Gefechtsmedizin ist die Heilung gegen Gifthauch (3–7), während sich die Arbaleste um Bluten kümmert.
-[b]Ausreißerin[/b] — Plündern erreicht Rang 4 nicht mehr.
-[b]Musketierin[/b] — siehe Paradebeispiel oben.
-[b]Schildbrecherin[/b] — die DLC-Ausnahme, wieder auf Linie gebracht: Durchbohren verliert Rang 4, Waffenzuwachs standardisiert.
-[b]Vestalin[/b] — taugt auch auf Rang 2: Kolbenhieb heilt sie selbst, Göttliche Gnade und Erleuchtung funktionieren von jedem Rang aus.
+[h2]Alle 20 Helden in Vergleichsbildern[/h2]
+Die [b]27 Bilder[/b] oben vergleichen Original und veröffentlichte Fassung. Umfangreiche Heldenübersichten verteilen sich auf zwei Bilder. Zuletzt wurde außerdem Runaways Ransack auf das Original zurückgesetzt; Shieldbreakers Expose erreicht nun getarnte Gegner auf Position 4.
 
-[h2]Kompatibilität[/h2]
-[b]Benötigt die DLC-Helden, die geändert werden:[/b] The Crimson Court, The Shieldbreaker, Duelist, Runaway und The Musketeer (kostenlos). Ohne sie startet das Spiel eventuell nicht.
-Inkompatibel mit Mods, die dieselben Helden ersetzen. Kann in laufende Spielstände eingebaut werden.
-Mit [i]UI Enhancement[/i] zeigen die Fertigkeiten der Musketierin ihre Originalnamen (sie wirken trotzdem wie beschrieben).
+[h2]Installation und Kompatibilität[/h2]
+[b]Alle fünf DLC-Helden aktivieren:[/b] Flagellant (The Crimson Court), Shieldbreaker, Duelist, Runaway und Musketeer (kostenlos). Dies ist die gemeinsame 20-Helden-Fassung; separate optionale Pakete werden nicht mehr angeboten. Die Musketeer-Überarbeitung ist enthalten, eine externe YAMR-Mod ist nicht nötig.
 
-Feedback ist willkommen – jede Änderung hat eine schriftliche Begründung.
+In bestehenden Anwesen aktivierbar. Andere Überarbeitungen derselben Helden-, Effekt- oder Buff-Dateien können Konflikte verursachen. Mit UI Enhancement können Musketeer-Fähigkeiten ihre ursprünglichen Namen anzeigen.
+
+[b]Jeder Held soll einen Grund haben, mitzukommen. Eure Spielerfahrung hilft bei den nächsten Verbesserungen.[/b]

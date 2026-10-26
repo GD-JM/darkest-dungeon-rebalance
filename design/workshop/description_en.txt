@@ -1,69 +1,38 @@
 [h1]Every Hero Worth Taking[/h1]
-[i]More heroes and more skills worth taking — without changing who the heroes are.[/i]
+[i]Keep each hero's identity. Give more heroes, skills and parties a reason to be chosen.[/i]
 
-[h2]The goal: no mandatory party[/h2]
-Early on, Darkest Dungeon can become nearly unplayable without a Vestal, an Occultist or a Jester, because healing and stress relief belong to only a few heroes. This mod spreads healing and stress relief across the roster so that many different parties can work.
+An integrated rebalance of 20 heroes, built around party variety. The goal is to make your favorite heroes work together without relying on a particular healer or the same four skills. Broader healing and stress relief, armor-breaking support for physical attackers, and more useful rank choices open new ways to play.
 
-The same goes inside each hero: skills and ranks are rebalanced so you are no longer locked into one optimal set of four skills, repeated from one rank.
+[h2]Still updating. Still listening.[/h2]
+[b]As of 26 October 2026, this Workshop item has 33 public change-note entries.[/b] The work includes balance revisions, bug fixes, and improvements to descriptions and comparison images. [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3821353035]Read the update history[/url]
 
-[h2]One integrated patch, same overall difficulty[/h2]
-Most hero mods change one hero at a time, and that usually means making that hero stronger. This mod rebalances all 20 heroes together under one set of rules: every buff is paired with a cost or a nerf elsewhere, so the game gets neither easier nor harder overall. By our hero-strength model, total strength across the roster stays within 1% of vanilla, while the gap between the strongest and weakest heroes narrows: the Duelist and Houndmaster come down, the Bounty Hunter and Arbalest come up.
+I will keep playing, testing and refining this mod in pursuit of perfect balance. The current numbers are not a final answer.
 
-[h2]How the changes were decided[/h2]
+[b]I will read and consider every comment.[/b] Reasoned suggestions that fit the mod's goals will be taken on board and incorporated. Tell me about skills that feel too strong, too weak or not worth equipping, and combinations that work well. Hero and skill levels, trinkets, party composition and battle context help me evaluate feedback. I will document why changes are made and revisit them when play reveals a different result.
+
+[h2]More choices, familiar tension[/h2]
 [list]
-[*][b]Healing and stress relief aren't owned by a few heroes.[/b]
-Example: Hellion's Adrenaline Rush (heal 3–7) and Grave Robber's Toxin Trickery (1–5) became real self-heals, and Man-at-Arms' Bolster became a party stress heal usable every turn.
-[*][b]No "correct" four skills, no "correct" rank.[/b] Skills and ranks are tuned so many combinations actually work instead of one locked build.
-Example: the Highwayman's riposte moved from Duelist's Advance to Tracking Shot, so a ranged Highwayman can counterattack without stepping forward.
-[*][b]Follow the base game's own rules.[/b]
-Example: base-game heroes gain only 2 speed over all weapon upgrades (Arbalest 3→5); Shieldbreaker (5→9) and Flagellant (6→9) were the outliers. Both now gain 2.
-[*][b]Every buff has a price.[/b] What goes up somewhere comes down elsewhere, so overall difficulty neither inflates nor deflates.
-Example: Vestal's Judgement went from −25% to 0% damage, and Houndmaster's Hound's Rush from 0% to −40% (its bleed went up instead).
-[*][b]A skill should do what it looks like.[/b] Art and function match at a glance.
-Example: a bandage stops bleeding (Arbalest's Battlefield Bandage), and the Hellion, who never tires, no longer gets exhausted.
-[*][b]The lore sets the direction.[/b]
-Example: the Leper was once a king, so Intimidate became Sunder, a strike that leads the fight by cracking armor instead of a support debuff. The Antiquarian earns gold rather than fights, so she stays weak, and nothing in the Houndmaster's lore justifies extra bleed and blight resist.
-[*][b]Trinkets stay fixed; the patch fits around them.[/b] This keeps them compatible.
-Example: the Musketeer's trinkets boost debuff chance, so her new Smokescreen still carries a small accuracy debuff.
+[*][b]Buffs and nerfs are designed together.[/b] Damage, accuracy, reach and support have trade-offs. Redistributing power across the roster aims to preserve the base game's overall difficulty and tension.
+[*][b]Hero identity and class trinkets matter.[/b] Changes respect familiar skills and lore, while checking that existing class trinkets retain meaningful uses.
+[*][b]Numbers inform playtesting.[/b] A comparison model evaluates damage, healing, PROT reduction and action opportunities. Its calculations guide decisions; real play and feedback keep improving them.
 [/list]
 
-[h2]Showcase: the Musketeer[/h2]
-The original Musketeer was an exact copy of the Arbalest, so she was rebuilt from her official lore: a celebrated sharpshooter who wants to become a legend by hunting monsters after a disappointing tournament, and who keeps her distance for lack of real combat experience.
+[h2]What the published build changes[/h2]
+Ranges below cover skill levels 1–5. ACC and CRIT are level-1 skill values unless stated otherwise.
 [list]
-[*][b]Piercing Ball[/b] (ACC 95): reaches every rank and pierces 25–50% armor; her bonus vs marked targets is far smaller than the Arbalest's.
-[*][b]Smokescreen[/b] (3 per battle): stuns enemy ranks 1–2; stunned enemies vanish in the smoke, so the party strikes the back line.
-[*][b]Covering Smoke[/b]: hides one ally for 2 turns so enemies can't single them out — protection without anyone taking the hits.
-[*][b]Mark the Quarry[/b]: "This prize is mine!" She marks her prey, strips 10–20% of its armor and gains speed for 3 turns.
-[*][b]Flushing Shot, Sidearm, Patch Up[/b]: drives ranks 2–3 back, shoots and steps back when pushed forward, and adds a little stress relief to healing.
+[*][b]More ways to sustain a party.[/b] Crusader's Battle Heal restores 3–4→6–7 HP and adds +20% healing received, supporting a primary-healer build with healing trinkets. Antiquarian's Fortifying Vapours combines healing with bleed, blight, stun and debuff resistance. Arbalest brings a bleed-curing bandage and guaranteed stress relief from Rallying Flare; Man-at-Arms brings repeatable Bolster.
+[*][b]Support opens armored targets to physical attackers.[/b] Occultist's Weakening Curse reduces PROT by 25–35 percentage points. Vestal's Illumination retains dodge reduction and destealth while reducing PROT by 15–25 points; Antiquarian's Flashpowder reduces it by 10–15. Both skills have lost their burn effect. Shieldbreaker's Puncture combines pull and guard removal with 30–40 points of PROT reduction; Man-at-Arms' Bellow reduces all enemies' PROT by 10–15 points.
+[*][b]Different builds for familiar heroes.[/b] Highwayman's Tracking Shot prepares riposte without moving. Wicked Slice reaches rank 3, while Open Vein offers higher CRIT and bleed pressure (skill CRIT 0% / 5%). Bounty Hunter can use Flashbang from ranks 2–4 and Caltrops from any rank. Jester can use Inspiring Tune from rank 2 and Solo from any rank.
+[*][b]Vestal chooses between support and setup.[/b] Illumination has ACC 95 and reduces dodge and PROT; Hand of Light has ACC 90 and DMG −40%, dealing damage while preparing her next attacks.
+[*][b]Musketeer has her own role.[/b] Piercing Ball's armor penetration, Smokescreen's front-line control, and Covering Smoke's 2-turn ally stealth and +15–25 dodge give her distinct support tools. Stealth does not protect against area attacks.
 [/list]
-The price: lower HP (24 vs the Arbalest's 27) and speed (2 vs 3). She can change ranks, so she is tuned slightly below the rank-locked Arbalest.
 
-[h2]Hero by hero[/h2]
-The images above show every changed skill, before and after.
-[b]Abomination[/b] — transforming is a real choice: Transform now relieves his own stress, and Slam works from rank 4.
-[b]Antiquarian[/b] — still weaker by design (she earns gold), but Flashpowder now burns and sets up burn combos.
-[b]Arbalest[/b] — a field medic too: Battlefield Bandage cures bleed, Rallying Flare reliably relieves party stress.
-[b]Bounty Hunter[/b] — mark, hook, execute: Mark for Death makes the target take more damage, Come Hither pulls 3 ranks into Finish Him's reach; Uppercut is a rank-1 execution stun.
-[b]Crusader[/b] — a support healer: Battle Heal boosts healing received; Inspiring Cry grows every level.
-[b]Duelist[/b] — one of the strongest heroes, trimmed: Touché no longer makes her almost unhittable.
-[b]Flagellant[/b] — back to the base game's rules: resists and speed growth normalized; Endure relieves stress from level 1.
-[b]Grave Robber[/b] — Toxin Trickery becomes a repeatable self-heal; Thrown Dagger hits marked targets harder.
-[b]Hellion[/b] — exhaustion removed: Barbaric YAWP! fires her up and weakens every enemy; Adrenaline Rush is her self-heal.
-[b]Highwayman[/b] — ranged and melee builds both work: Tracking Shot grants riposte without moving.
-[b]Houndmaster[/b] — a ranged bleed specialist: his hounds bite any rank and make it bleed; Target Whistle makes the prey take more crits.
-[b]Jester[/b] — still the best stress healer, but Inspiring Tune works from rank 2 and Solo from any rank.
-[b]Leper[/b] — Intimidate is now Sunder, an armor-cracking strike, and Revenge's cost now grows with level, so it is usable early.
-[b]Man-at-Arms[/b] — the veteran who holds the line: Bolster is a repeatable party stress heal; Command adds protection.
-[b]Occultist[/b] — Vulnerability Hex lowers stun, bleed, blight and debuff resist, setting up the whole party.
-[b]Plague Doctor[/b] — Battlefield Medicine is the blight-cure heal (3–7) while the Arbalest covers bleed.
-[b]Runaway[/b] — Ransack no longer reaches rank 4.
-[b]Musketeer[/b] — see the showcase above.
-[b]Shieldbreaker[/b] — the DLC outlier, back in line: Pierce loses rank 4, weapon growth standardized.
-[b]Vestal[/b] — can work from rank 2: Mace Bash heals herself, Divine Grace and Illumination work from any rank.
+[h2]See all 20 heroes in the comparison images[/h2]
+The [b]27 images[/b] above compare vanilla with the published build. Longer hero summaries are split into two images. Recent changes also restore Runaway's Ransack to vanilla and let Shieldbreaker's Expose answer stealth in enemy rank 4.
 
-[h2]Compatibility[/h2]
-[b]Requires the DLC heroes it changes:[/b] The Crimson Court (Flagellant), The Shieldbreaker, Duelist, Runaway and The Musketeer (free). Without them the game may fail to load.
-Replaces only the hero files above (plus effect, buff and skill-name files); conflicts with mods that replace the same heroes. Safe on existing saves.
-With [i]UI Enhancement[/i], the Musketeer's skills show their original names (they still work as described).
+[h2]Installation and compatibility[/h2]
+[b]Enable all five DLC heroes:[/b] Flagellant (The Crimson Court), Shieldbreaker, Duelist, Runaway and Musketeer (free). This is the integrated 20-hero edition; separate optional packages are no longer offered. The Musketeer rework is included; an external YAMR mod is not required.
 
-Feedback is welcome — every change has a written reason, and I'm happy to explain or adjust.
+Can be enabled in an existing estate. Other reworks replacing the same hero, effect or buff files may conflict. With UI Enhancement, Musketeer skills may display their original names.
+
+[b]Every hero deserves a reason to join the party. Your play experience helps shape what comes next.[/b]

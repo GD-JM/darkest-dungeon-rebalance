@@ -1,69 +1,38 @@
-[h1]Tous les héros ont leur place – Rééquilibrage des héros[/h1]
-[i]Plus de héros et plus de compétences qui valent le coup — sans changer qui sont les héros.[/i]
+[h1]Every Hero Worth Taking[/h1]
+[i]Préserver l'identité de chaque héros et donner une raison de choisir davantage de héros, de compétences et d'équipes.[/i]
 
-[h2]L'objectif : plus de groupe imposé[/h2]
-En début de partie, Darkest Dungeon peut devenir quasi injouable sans Vestale, Occultiste ou Bouffon, parce que les soins et le soulagement du stress sont réservés à une poignée de héros. Ce mod répartit les soins et la réduction de stress sur tout l'effectif, pour que des groupes très différents puissent tenir la route.
+Un rééquilibrage intégré de 20 héros, conçu pour varier les compositions. L'objectif est de faire jouer ensemble vos héros préférés sans dépendre d'un soigneur précis ni des mêmes quatre compétences. Plus d'options de soin et de réduction du stress, du soutien contre l'armure pour les attaquants physiques et des positions plus utiles ouvrent d'autres styles de jeu.
 
-Même chose au sein de chaque héros : plus besoin de spammer les quatre mêmes compétences depuis un seul rang.
+[h2]Des mises à jour régulières, des retours écoutés[/h2]
+[b]Au 26 octobre 2026, cette page Workshop compte 33 notes de mise à jour publiques.[/b] Elles couvrent l'équilibrage, les corrections de bugs et l'amélioration des descriptions et images comparatives. [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3821353035]Consulter l'historique[/url]
 
-[h2]Un patch global, une difficulté inchangée[/h2]
-Ce mod rééquilibre les 20 héros ensemble, selon les mêmes règles : chaque buff est compensé par un coût ou un nerf ailleurs, donc le jeu ne devient ni plus facile ni plus dur dans l'ensemble. D'après notre modèle de puissance des héros, la puissance totale de l'effectif reste à moins de 1 % de la vanilla, tandis que l'écart entre les plus forts et les plus faibles se resserre : la Duelliste et le Maître-chien redescendent, le Chasseur de primes et l'Arbalétrière remontent.
+Je continuerai à jouer, tester et améliorer ce mod avec un équilibre parfait pour objectif. Les valeurs actuelles ne sont pas une réponse définitive.
 
-[h2]Comment les choix ont été faits[/h2]
+[b]Je lirai et examinerai chaque commentaire.[/b] Les suggestions argumentées et cohérentes avec les objectifs du mod seront retenues et intégrées. Signalez les compétences trop fortes, trop faibles ou peu intéressantes, ainsi que les combinaisons réussies. Préciser les niveaux, les colifichets, la composition et la situation de combat aide à juger. J'expliquerai les changements et les réexaminerai si leur résultat en jeu diffère de l'intention.
+
+[h2]Plus de choix, une tension familière[/h2]
 [list]
-[*][b]Soins et stress ne sont pas réservés à quelques héros.[/b]
-Exemple : Montée d'adrénaline de la Furie (soin 3–7) et Toxines astucieuses de la Pilleuse de tombes (1–5) deviennent de vrais autosoins, et Soutien de l'Homme d'armes soulage le stress du groupe à chaque tour.
-[*][b]Pas de « bonnes » quatre compétences ni de « bon » rang.[/b] Beaucoup de combinaisons marchent, pas un seul build figé.
-Exemple : la riposte du Bandit passe d'Avancée de duelliste à Tir de pistage : il contre-attaque à distance sans avancer.
-[*][b]Suivre les règles du jeu de base.[/b]
-Exemple : une arme améliorée au maximum ne donne que 2 de vitesse (Arbalétrière 3→5) ; Brise-bouclier (5→9) et Flagellant (6→9) faisaient exception. Les deux gagnent désormais 2.
-[*][b]Chaque buff a un prix.[/b] Ce qui monte ici descend ailleurs : la difficulté ne gonfle ni ne baisse.
-Exemple : Jugement de la Vestale passe de −25 % à 0 % de dégâts, Assaut canin du Maître-chien de 0 % à −40 % (le saignement a augmenté à la place).
-[*][b]Une compétence fait ce qu'elle montre.[/b] L'image et l'effet concordent.
-Exemple : un bandage arrête le saignement, et la Furie, infatigable, n'est plus épuisée.
-[*][b]Le lore donne la direction.[/b]
-Exemple : le Lépreux fut roi ; Intimider devient Brise-armure, une frappe qui mène le combat en brisant l'armure. L'Antiquaire gagne de l'or plutôt que de combattre et reste faible ; rien dans le lore du Maître-chien ne justifie ses résistances en plus.
-[*][b]Les breloques restent fixes ; le patch s'y adapte.[/b] Pour la compatibilité.
-Exemple : les breloques de la Mousquetaire augmentent les malus, donc son Écran de fumée garde un petit malus de précision.
+[*][b]Améliorations et réductions de puissance vont ensemble.[/b] Dégâts, précision, portée et soutien impliquent des compromis. Redistribuer la puissance vise à conserver la difficulté globale et la tension du jeu original.
+[*][b]L'identité et les colifichets de classe comptent.[/b] Les compétences familières et l'histoire guident les changements ; les colifichets existants doivent conserver des usages pertinents.
+[*][b]Calculs et pratique se complètent.[/b] Un modèle compare dégâts, soins, réduction de PROT et possibilités d'action. Les parties et les retours permettent d'affiner ses conclusions.
 [/list]
 
-[h2]Exemple phare : la Mousquetaire[/h2]
-La Mousquetaire d'origine copiait l'Arbalétrière ; elle est reconstruite d'après son lore : tireuse célèbre qui, après un tournoi décevant, veut devenir une légende en chassant les monstres et garde ses distances faute d'expérience au combat.
+[h2]Ce que change la version publiée[/h2]
+Les plages couvrent les niveaux de compétence 1–5. ACC et CRIT sont indiqués au niveau 1 sauf précision. Les noms anglais des compétences facilitent leur identification.
 [list]
-[*][b]Balle perçante[/b] (PRÉ 95) : atteint tous les rangs, perce 25–50 % d'armure ; bonus contre les marqués bien moindre que l'Arbalétrière.
-[*][b]Écran de fumée[/b] (3 par combat) : étourdit les rangs 1–2 ; les étourdis disparaissent dans la fumée et le groupe frappe l'arrière.
-[*][b]Fumée de couverture[/b] : cache un allié 2 tours — une protection où personne n'encaisse à sa place.
-[*][b]Désigner la proie[/b] : « Cette proie est à moi ! » Marque la proie, lui retire 10–20 % d'armure ; vitesse pendant 3 tours.
-[*][b]Tir de rabat, Arme d'appoint, Rafistolage[/b] : repousse les rangs 2–3, tire puis recule, et soulage un peu de stress en soignant.
+[*][b]Davantage de soutien pour l'équipe.[/b] Battle Heal du Croisé soigne 3–4→6–7 PV et ajoute +20% aux soins reçus : avec des colifichets de soin, il peut devenir le soigneur principal. Fortifying Vapours de l'Antiquaire combine soin et résistances au saignement, au poison, à l'étourdissement et aux affaiblissements. L'Arbalétrière soigne le saignement avec son bandage et réduit assurément le stress avec Rallying Flare ; l'Homme d'armes peut répéter Bolster.
+[*][b]Le soutien ouvre les armures aux attaquants physiques.[/b] Weakening Curse de l'Occultiste réduit la PROT de 25–35 points de pourcentage. Illumination de la Vestale conserve la baisse d'esquive et la révélation, avec −15–25 points de PROT ; Flashpowder de l'Antiquaire inflige −10–15 points. Leurs effets de brûlure ont été supprimés. Puncture de la Brise-bouclier combine attraction, suppression de garde et −30–40 points de PROT ; Bellow de l'Homme d'armes réduit la PROT de tous les ennemis de 10–15 points.
+[*][b]Des héros familiers, d'autres façons de jouer.[/b] Tracking Shot du Bandit prépare la riposte sans déplacement. Wicked Slice atteint le rang 3 ; Open Vein privilégie le critique et le saignement (CRIT de compétence 0% / 5%). Le Chasseur de primes utilise Flashbang depuis les rangs 2–4 et Caltrops depuis n'importe quel rang. Inspiring Tune du Bouffon fonctionne au rang 2 et Solo partout.
+[*][b]La Vestale choisit soutien ou préparation.[/b] Illumination : ACC 95, réduction d'esquive et de PROT. Hand of Light : ACC 90, dégâts −40%, pour attaquer et préparer ses prochaines attaques.
+[*][b]Un rôle propre à la Mousquetaire.[/b] Piercing Ball pénètre l'armure, Smokescreen contrôle le front adverse, et Covering Smoke accorde à un allié 2 tours de furtivité et +15–25 esquive. La furtivité ne protège pas des attaques de zone.
 [/list]
-Le prix : moins de PV (24 contre 27) et de vitesse (2 contre 3). Elle peut changer de rang, donc reste un peu sous l'Arbalétrière.
 
-[h2]Héros par héros[/h2]
-Les images ci-dessus montrent chaque compétence modifiée, avant et après.
-[b]Abomination[/b] — se transformer devient un vrai choix : Transformation soulage désormais son propre stress, et Charge fonctionne depuis le rang 4.
-[b]Antiquaire[/b] — toujours plus faible par design (elle rapporte de l'or), mais Poudre aveuglante brûle désormais et prépare les combos de brûlure.
-[b]Arbalétrière[/b] — médecin de terrain en prime : Bandages militaires soigne le saignement, Fusée de ralliement soulage le stress du groupe de façon fiable.
-[b]Chasseur de primes[/b] — marquer, crocheter, exécuter : Viens plus près attire de 3 rangs, à portée de Coup de grâce ; Uppercut devient un étourdissement d'exécution au rang 1.
-[b]Croisé[/b] — un soigneur de soutien : Soins de combat augmente les soins reçus ; Cri de ralliement se renforce à chaque niveau.
-[b]Duelliste[/b] — l'une des héroïnes les plus fortes, un peu rabotée : Touche ne la rend plus quasi intouchable.
-[b]Flagellant[/b] — retour aux règles du jeu de base : résistances et progression de vitesse normalisées ; Endurer soulage le stress dès le niveau 1.
-[b]Pilleuse de tombes[/b] — Toxines astucieuses devient un auto-soin réutilisable ; Lancer de dague frappe plus fort les cibles marquées.
-[b]Furie[/b] — fini l'épuisement : Cri barbare la galvanise et affaiblit tous les ennemis ; Montée d'adrénaline est son auto-soin.
-[b]Bandit[/b] — les builds à distance comme au corps à corps tiennent la route : Tir de pistage donne la riposte sans bouger.
-[b]Maître-chien[/b] — spécialiste du saignement à distance : ses chiens mordent n'importe quel rang ; Sifflet de ciblage fait subir plus de critiques à la proie.
-[b]Bouffon[/b] — toujours le meilleur soigneur de stress, mais Mélodie exaltante fonctionne depuis le rang 2 et Solo depuis n'importe quel rang.
-[b]Lépreux[/b] — Intimider devient Brise-armure, et le coût de Vengeance grandit avec le niveau : utile dès le début.
-[b]Homme d'armes[/b] — le vétéran qui tient la ligne : Soutien est un soin de stress de groupe réutilisable ; Ordre ajoute de la protection.
-[b]Occultiste[/b] — Sort de vulnérabilité baisse les résistances à l'étourdissement, au saignement, à l'infection et aux malus, ce qui prépare le terrain pour tout le groupe.
-[b]Médecin de peste[/b] — Soins militaires est le soin qui guérit l'infection (3–7), tandis que l'Arbalétrière s'occupe du saignement.
-[b]Évadée[/b] — Fouiller n'atteint plus le rang 4.
-[b]Mousquetaire[/b] — voir l'exemple phare.
-[b]Brise-bouclier[/b] — l'exception du DLC, remise dans le rang : Transpercer perd le rang 4, progression d'arme standardisée.
-[b]Vestale[/b] — peut jouer depuis le rang 2 : Coupe de masse la soigne elle-même, Grâce divine et Illumination fonctionnent depuis n'importe quel rang.
+[h2]Les 20 héros en images comparatives[/h2]
+Les [b]27 images[/b] ci-dessus comparent le jeu original et la version publiée. Les fiches longues sont réparties sur deux images. Les changements récents rétablissent aussi Ransack de la Fugitive à ses valeurs originales et permettent à Expose de la Brise-bouclier de révéler le rang ennemi 4.
 
-[h2]Compatibilité[/h2]
-[b]DLC requis :[/b] The Crimson Court, The Shieldbreaker, Duelist, Runaway, The Musketeer (gratuit) (sinon le jeu peut ne pas se lancer).
-Incompatible avec les mods qui remplacent les mêmes héros. Compatible avec les sauvegardes en cours.
-Avec [i]UI Enhancement[/i], les compétences de la Mousquetaire gardent leurs noms d'origine (elles fonctionnent normalement).
+[h2]Installation et compatibilité[/h2]
+[b]Activez les cinq héros DLC :[/b] Flagellant (The Crimson Court), Brise-bouclier, Duelliste, Fugitive et Mousquetaire (gratuite). Cette page propose l'édition intégrée de 20 héros ; les paquets optionnels séparés ne sont plus disponibles. La refonte de la Mousquetaire est incluse, sans mod YAMR externe nécessaire.
 
-Vos retours sont les bienvenus : chaque changement a une justification écrite.
+Peut être activé dans un domaine existant. Les refontes remplaçant les mêmes fichiers de héros, effets ou bonus peuvent entrer en conflit. Avec UI Enhancement, les compétences de la Mousquetaire peuvent conserver leurs anciens noms.
+
+[b]Une raison d'emmener chaque héros. Vos expériences aideront à façonner les prochaines améliorations.[/b]

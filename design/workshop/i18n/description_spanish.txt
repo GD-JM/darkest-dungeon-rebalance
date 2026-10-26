@@ -1,69 +1,38 @@
-[h1]Ningún héroe sobra[/h1]
-[i]Más héroes y más habilidades que vale la pena llevar, sin cambiar la esencia de ningún héroe.[/i]
+[h1]Every Hero Worth Taking[/h1]
+[i]Conservar la identidad de cada héroe y dar más motivos para elegir habilidades y grupos diferentes.[/i]
 
-[h2]El objetivo: que ningún grupo sea obligatorio[/h2]
-Al principio, Darkest Dungeon puede volverse casi injugable sin una Vestal, un Ocultista o un Bufón, porque la curación y el alivio de estrés están en manos de unos pocos héroes. Este mod reparte la curación y el alivio de estrés entre muchos más héroes, para que funcionen grupos muy distintos.
+Un reajuste conjunto de 20 héroes para ampliar las composiciones de grupo. El objetivo es jugar con tus favoritos sin depender de un sanador concreto ni de las mismas cuatro habilidades. Más curación y alivio de estrés, apoyo contra la armadura para los atacantes físicos y más opciones de posición abren otras formas de jugar.
 
-Lo mismo pasa dentro de cada héroe: las habilidades y las posiciones están rebalanceadas para que ya no estés atado a un único set óptimo de cuatro habilidades, repitiendo lo mismo desde la misma posición.
+[h2]Seguimos actualizando y escuchando[/h2]
+[b]A 26 de octubre de 2026, esta página del Workshop cuenta con 33 entradas públicas de actualización.[/b] Incluyen ajustes de equilibrio, correcciones de errores y mejoras de textos e imágenes comparativas. [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3821353035]Ver el historial[/url]
 
-[h2]Un parche integral, la misma dificultad[/h2]
-Este mod rebalancea los 20 héroes juntos bajo un mismo conjunto de reglas: cada buff va acompañado de un precio o de un nerfeo en otro lado, así que el juego no se vuelve ni más fácil ni más difícil en general. Según nuestro modelo de fuerza de héroes, la fuerza total de todos ellos queda a menos de un 1% del vanilla, mientras que la brecha entre los más fuertes y los más débiles se reduce: la Duelista y el Maestro canino bajan un poco, y el Cazarecompensas y la Arbalestera suben.
+Seguiré jugando, comprobando y refinando el mod en busca del equilibrio perfecto. Las cifras actuales no son una respuesta definitiva.
 
-[h2]Cómo se decidieron los cambios[/h2]
+[b]Leeré y consideraré cada comentario.[/b] Aceptaré e incorporaré propuestas razonadas que encajen con los objetivos del mod. Cuéntame qué habilidades resultan demasiado fuertes, débiles o poco útiles y qué combinaciones funcionan bien. Los niveles, abalorios, composición y situación de combate ayudan a evaluarlo. Registraré los motivos de los cambios y los revisaré cuando la experiencia contradiga la intención.
+
+[h2]Más opciones, una tensión familiar[/h2]
 [list]
-[*][b]La curación y el alivio de estrés no son cosa de unos pocos.[/b]
-Ejemplo: Subidón de adrenalina de la Diabla (curación 3–7) y Artimañas tóxicas de la Asaltatumbas (1–5) son autocuraciones reales, y Refuerzo del Hombre de armas alivia el estrés del grupo cada turno.
-[*][b]No hay cuatro habilidades ni posición "correctas".[/b] Funcionan muchas combinaciones, no una build fija.
-Ejemplo: la réplica del Bandolero pasó de Avance del duelista a Disparo de seguimiento, así que contraataca a distancia sin avanzar.
-[*][b]Respetar las reglas del propio juego.[/b]
-Ejemplo: en el juego base el arma mejorada al máximo solo da 2 de velocidad (Arbalestera 3→5); Rompescudos (5→9) y Flagelante (6→9) eran la excepción. Ahora ambos ganan 2.
-[*][b]Todo buff tiene precio.[/b] Lo que sube en un lado baja en otro: la dificultad ni se infla ni se desinfla.
-Ejemplo: Juicio de la Vestal pasa de −25% a 0% de daño, y Ataque de perro del Maestro canino de 0% a −40% (a cambio, más sangrado).
-[*][b]Una habilidad hace lo que parece.[/b] Arte y función coinciden a simple vista.
-Ejemplo: una venda corta el sangrado, y la Diabla, que nunca se cansa, ya no se agota.
-[*][b]El lore marca el rumbo.[/b]
-Ejemplo: el Leproso fue rey, así que Intimidación pasa a ser Rompearmaduras, un golpe que lidera rompiendo armaduras, no una merma de apoyo. La Anticuaria gana oro, no pelea, y sigue siendo débil; nada en el lore del Maestro canino justifica su resistencia extra.
-[*][b]Los abalorios no cambian; el parche se adapta a ellos.[/b] Por compatibilidad.
-Ejemplo: los abalorios de la Mosquetera suben la probabilidad de merma, así que su Cortina de humo aún baja un poco la precisión.
+[*][b]Mejoras y debilitamientos se diseñan juntos.[/b] Daño, precisión, alcance y apoyo tienen contrapartidas. Repartir la fuerza entre héroes busca conservar la dificultad general y la tensión del original.
+[*][b]Importan la identidad y los abalorios de clase.[/b] Las habilidades conocidas y el trasfondo guían los ajustes; los abalorios existentes deben conservar usos valiosos.
+[*][b]Cálculos y partidas se complementan.[/b] Un modelo compara daño, curación, reducción de PROT y oportunidades de acción. Las partidas y los comentarios ayudan a mejorar sus conclusiones.
 [/list]
 
-[h2]Caso destacado: la Mosquetera[/h2]
-La Mosquetera original era una copia exacta de la Arbalestera, así que la rehicimos desde su lore: una tiradora célebre que, tras un torneo decepcionante, quiere ser leyenda cazando monstruos y, sin experiencia real de combate, mantiene la distancia.
+[h2]Qué cambia la versión publicada[/h2]
+Los intervalos abarcan niveles de habilidad 1–5. ACC y CRIT son del nivel 1 salvo indicación. Se usan nombres ingleses de habilidades para identificarlas sin ambigüedad.
 [list]
-[*][b]Bala penetrante[/b] (PRE 95): llega a todas las posiciones y perfora un 25–50% de armadura; su bonus contra marcados es muy inferior al de la Arbalestera.
-[*][b]Cortina de humo[/b] (3 por combate): aturde las posiciones 1–2; los aturdidos desaparecen en el humo y el grupo golpea la retaguardia.
-[*][b]Humo de cobertura[/b]: oculta a un aliado 2 turnos para que no lo apunten — protección sin que nadie reciba los golpes.
-[*][b]Marcar la presa[/b]: "¡Esta presa es mía!" Marca la presa, le quita un 10–20% de armadura y gana velocidad 3 turnos.
-[*][b]Disparo de batida, Arma corta, Zurcir heridas[/b]: echa atrás las posiciones 2–3, dispara y retrocede, y alivia algo de estrés al curar.
+[*][b]Más formas de sostener al grupo.[/b] Battle Heal del Cruzado cura 3–4→6–7 PV y añade +20% de curación recibida, apoyando su uso como sanador principal con abalorios. Fortifying Vapours de la Anticuaria combina curación y resistencia a hemorragia, veneno, aturdimiento y debilitamiento. La Arbalestera cura hemorragias con su venda y alivia estrés de forma garantizada con Rallying Flare; el Hombre de armas puede repetir Bolster.
+[*][b]Apoyo que abre armaduras.[/b] Weakening Curse del Ocultista reduce PROT en 25–35 puntos porcentuales. Illumination de la Vestal conserva la reducción de esquiva y la revelación, añadiendo −15–25 puntos de PROT; Flashpowder de la Anticuaria reduce 10–15. Se ha eliminado la quemadura de ambas habilidades. Puncture de la Rompescudos combina atracción, eliminación de guardia y −30–40 puntos de PROT; Bellow del Hombre de armas reduce la PROT de todos los enemigos en 10–15 puntos.
+[*][b]Héroes conocidos, otras estrategias.[/b] Tracking Shot del Bandolero prepara la represalia sin moverse. Wicked Slice alcanza la posición 3, mientras Open Vein ofrece más críticos y hemorragia (CRIT de habilidad 0% / 5%). El Cazarrecompensas usa Flashbang desde posiciones 2–4 y Caltrops desde cualquiera. Inspiring Tune del Bufón funciona desde la posición 2 y Solo desde cualquiera.
+[*][b]La Vestal elige apoyo o preparación.[/b] Illumination: ACC 95, reducción de esquiva y PROT. Hand of Light: ACC 90, daño −40%, para atacar y preparar los siguientes golpes.
+[*][b]Un papel propio para la Mosquetera.[/b] Piercing Ball penetra armadura, Smokescreen controla la primera línea enemiga y Covering Smoke da a un aliado 2 turnos de sigilo y +15–25 esquiva. El sigilo no protege de ataques de área.
 [/list]
-El precio: menos vida (24 frente a 27) y velocidad (2 frente a 3). Puede cambiar de posición, así que queda un poco por debajo de la Arbalestera.
 
-[h2]Héroe por héroe[/h2]
-Las imágenes de arriba muestran todas las habilidades modificadas, antes y después.
-[b]Abominación[/b] — transformarse por fin es una decisión real: Transformación ahora le alivia el estrés y Paliza funciona desde la posición 4.
-[b]Anticuaria[/b] — sigue siendo más débil a propósito (ella trae el oro), pero Polvos cegadores ahora queman y abren combos de quemadura.
-[b]Arbalestera[/b] — también hace de médica de campo: Venda de batalla cura la hemorragia y Bengala de concentración alivia el estrés del grupo de forma fiable.
-[b]Cazarecompensas[/b] — señalar, enganchar, ejecutar: Acércate tira 3 posiciones hasta dejar al objetivo al alcance de Remate; Gancho es un aturdimiento de ejecución contra la posición 1.
-[b]Cruzado[/b] — un sanador de apoyo: Curación de batalla aumenta la curación recibida; Grito de inspiración mejora con cada nivel.
-[b]Duelista[/b] — una de las heroínas más fuertes, recortada: Touché ya no la vuelve casi imposible de golpear.
-[b]Flagelante[/b] — de vuelta a las reglas del juego base: resistencias y crecimiento de VEL normalizados; Aguantar alivia estrés desde el nivel 1.
-[b]Asaltatumbas[/b] — Artimañas tóxicas pasa a ser una autocuración repetible; Lanzamiento de daga pega más fuerte a objetivos señalados.
-[b]Diabla[/b] — adiós al agotamiento: Graznido salvaje la enciende y debilita a todos los enemigos; Subidón de adrenalina es su autocuración.
-[b]Bandolero[/b] — funcionan tanto la build a distancia como la cuerpo a cuerpo: Disparo de seguimiento le da estocada sin moverse.
-[b]Maestro canino[/b] — especialista en sangrado a distancia: sus perros muerden cualquier posición; Silbido de objetivo hace que la presa reciba más críticos.
-[b]Bufón[/b] — sigue siendo el mejor curador de estrés, pero Tonada inspiradora funciona desde la posición 2 y Solo desde cualquier posición.
-[b]Leproso[/b] — Intimidación pasa a ser Rompearmaduras, y el coste de Venganza crece con el nivel: sirve desde el principio.
-[b]Hombre de armas[/b] — el veterano que sostiene la línea: Refuerzo es una curación de estrés para el grupo repetible; Mando añade protección.
-[b]Ocultista[/b] — Maleficio de vulnerabilidad reduce la resistencia a aturdimiento, hemorragia, infección y mermas, y le prepara el terreno a todo el grupo.
-[b]Médico de la peste[/b] — Medicina del campo de batalla es la curación que quita la infección (3–7), mientras la Arbalestera se ocupa de la hemorragia.
-[b]Fugitiva[/b] — Saquear ya no alcanza la posición 4.
-[b]Mosquetera[/b] — ver el caso destacado.
-[b]Rompescudos[/b] — la heroína del DLC vuelve a la norma: Perforación ya no llega a la posición 4 y el arma crece de forma estándar.
-[b]Vestal[/b] — puede rendir desde la posición 2: Mazazo la cura a ella misma, y Gracia divina e Iluminación funcionan desde cualquier posición.
+[h2]Los 20 héroes en imágenes comparativas[/h2]
+Las [b]27 imágenes[/b] de arriba comparan el original con la versión publicada. Las fichas largas se dividen en dos. Los cambios recientes también restauran Ransack de la Fugitiva al original y permiten que Expose de la Rompescudos alcance enemigos ocultos en la posición 4.
 
-[h2]Compatibilidad[/h2]
-[b]Requiere los DLC de los héroes que cambia:[/b] The Crimson Court, The Shieldbreaker, Duelist, Runaway y The Musketeer (gratis). Sin ellos, el juego puede no cargar.
-Es incompatible con mods que reemplacen esos mismos héroes. Se puede usar en partidas ya empezadas.
-Con [i]UI Enhancement[/i], las habilidades de la Mosquetera muestran sus nombres originales (funcionan igual).
+[h2]Instalación y compatibilidad[/h2]
+[b]Activa los cinco héroes DLC:[/b] Flagelante (The Crimson Court), Rompescudos, Duelista, Fugitiva y Mosquetera (gratuita). Esta es la edición integrada de 20 héroes; ya no se ofrecen paquetes opcionales separados. La revisión de la Mosquetera está incluida y no requiere un mod YAMR externo.
 
-Cualquier comentario es bienvenido: cada cambio tiene su razón por escrito, y con gusto lo explico o lo ajusto.
+Se puede activar en una finca existente. Otras revisiones que sustituyan los mismos archivos de héroes, efectos o mejoras pueden causar conflictos. Con UI Enhancement, las habilidades de la Mosquetera pueden mostrar sus nombres originales.
+
+[b]Cada héroe merece un motivo para formar parte del grupo. Tu experiencia ayudará a mejorar lo que viene.[/b]

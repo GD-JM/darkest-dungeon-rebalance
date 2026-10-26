@@ -1,0 +1,34 @@
+{
+  "id": "WS-DESC-004",
+  "item_id": 3821353035,
+  "version": "2.5.7",
+  "source_sha": "83e4cc9e5c9885aaea8b8df03e7ecea099aeb275",
+  "description_languages": [
+    "english",
+    "koreana",
+    "schinese",
+    "tchinese",
+    "french",
+    "german",
+    "russian",
+    "spanish",
+    "polish",
+    "brazilian"
+  ],
+  "history_entries": 33,
+  "history_count_date": "2026-10-26",
+  "public_gallery_images": 27,
+  "cdn_hash_matches": 27,
+  "payload_files_unchanged": 39,
+  "latest_note_unchanged": [
+    "1792912066"
+  ],
+  "unrelated_tracked_files_preserved": 925,
+  "source_equals_published_editorial": true,
+  "all_passed": true,
+  "verified_at": "2026-10-26T12:53:18.744857+00:00",
+  "maintenance_job": "description-83e4cc9-20261026",
+  "previous_publication_job": "83e4cc9e5c9885aaea8b8df03e7ecea099aeb275",
+  "game_or_git_push": false,
+  "publication_notes": "Korean title omission was detected and restored. The one-off metadata wrapper was corrected using metadata_with_marker. All ten descriptions and original titles then passed fresh API verification; public description, gallery, CDN bytes, note and downloaded payload passed."
+}

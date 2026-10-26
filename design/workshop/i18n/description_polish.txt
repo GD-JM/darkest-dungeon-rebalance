@@ -1,69 +1,38 @@
-[h1]Każdy bohater się liczy[/h1]
-[i]Więcej bohaterów i umiejętności, które naprawdę warto brać — a bohaterowie dalej są sobą.[/i]
+[h1]Every Hero Worth Taking[/h1]
+[i]Zachować charakter bohaterów i dać więcej powodów, by wybierać różne umiejętności i drużyny.[/i]
 
-[h2]Cel: koniec z obowiązkowym składem[/h2]
-Na początku Darkest Dungeon potrafi być niemal niegrywalne bez Kapłanki, Okultysty albo Arlekina, bo leczenie i redukcja stresu to domena zaledwie kilku bohaterów. Ten mod rozkłada leczenie i redukcję stresu na całą ekipę, żeby sprawdzało się dużo więcej różnych drużyn.
+Wspólna korekta balansu 20 bohaterów, nastawiona na różnorodność drużyn. Celem jest gra ulubionymi postaciami bez konieczności zabierania jednego konkretnego uzdrowiciela czy tych samych czterech umiejętności. Więcej leczenia i redukcji stresu, osłabianie pancerza dla wojowników fizycznych oraz nowe możliwości pozycji otwierają inne style gry.
 
-To samo dotyczy każdego bohatera z osobna: umiejętności i pozycje zostały przebalansowane, więc nie jesteś już skazany na jeden optymalny zestaw czterech umiejętności, klepanych w kółko z jednej pozycji.
+[h2]Kolejne aktualizacje i uważne słuchanie opinii[/h2]
+[b]Na 26 października 2026 r. ta pozycja Warsztatu ma 33 publiczne wpisy aktualizacji.[/b] Obejmują balans, poprawki błędów oraz ulepszenia opisów i grafik porównawczych. [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3821353035]Zobacz historię[/url]
 
-[h2]Jeden spójny patch, ta sama trudność[/h2]
-Większość modów na bohaterów zmienia jedną postać naraz, a to zwykle oznacza po prostu, że staje się silniejsza. Ten mod balansuje wszystkich 20 bohaterów naraz według jednego zestawu zasad: każdy buff jest okupiony kosztem albo nerfem gdzie indziej, więc gra jako całość nie robi się ani łatwiejsza, ani trudniejsza. Według naszego modelu siły bohaterów łączna siła całej ekipy różni się od vanilli o mniej niż 1%, a przepaść między najsilniejszymi a najsłabszymi maleje: Fechmistrzyni i Łowczy schodzą w dół, Łowca Nagród i Kuszniczka idą w górę.
+Będę dalej grać, sprawdzać i poprawiać mod, dążąc do idealnego balansu. Obecne liczby nie są ostateczną odpowiedzią.
 
-[h2]Jak podejmowano decyzje[/h2]
+[b]Przeczytam i rozważę każdy komentarz.[/b] Uzasadnione sugestie zgodne z celami moda będę przyjmować i wdrażać. Opisz umiejętności zbyt mocne, słabe lub niewarte wyboru, a także udane kombinacje. Poziomy postaci i umiejętności, błyskotki, skład i sytuacja w walce pomogą w ocenie. Zapiszę powody zmian i wrócę do nich, gdy praktyka pokaże wynik inny od zamierzonego.
+
+[h2]Więcej wyboru, znajome napięcie[/h2]
 [list]
-[*][b]Leczenie i stres to nie monopol kilku bohaterów.[/b]
-Przykład: Przypływ Adrenaliny Awanturniczki (leczenie 3–7) i Toksyczny Podstęp Hieny Cmentarnej (1–5) to prawdziwe samoleczenie, a Wzmocnienie Zbrojmistrza co turę zdejmuje stres z drużyny.
-[*][b]Bez „właściwej” czwórki umiejętności i „właściwej” pozycji.[/b] Działa wiele kombinacji, a nie jeden sztywny build.
-Przykład: riposta Oprycha przeszła z Doskoku Awanturnika na Strzał Śledzący, więc kontratakuje z dystansu bez wychodzenia do przodu.
-[*][b]Trzymamy się zasad samej gry.[/b]
-Przykład: w podstawce broń na maksa daje tylko 2 szybkości (Kuszniczka 3→5); Łamaczka Tarcz (5→9) i Flagelant (6→9) odstawali. Teraz obaj +2.
-[*][b]Każdy buff ma cenę.[/b] Co rośnie w jednym miejscu, spada w innym – trudność ani nie puchnie, ani nie maleje.
-Przykład: Wyrok Kapłanki z −25% na 0% obrażeń, a Atak Ogara Łowczego z 0% na −40% (w zamian większe krwawienie).
-[*][b]Umiejętność robi to, na co wygląda.[/b] Grafika i działanie pasują od razu.
-Przykład: opatrunek tamuje krwawienie, a niestrudzona Awanturniczka nie jest już wyczerpana.
-[*][b]Kierunek wyznacza oficjalny lore.[/b]
-Przykład: Trędowaty był kiedyś królem, więc Onieśmielenie to teraz Łamacz pancerza – cios prowadzący walkę i kruszący pancerz, a nie osłabienie wsparcia. Antykwariuszka zarabia złoto zamiast walczyć i zostaje słaba; nic w lore Łowczego nie uzasadnia dodatkowych odporności.
-[*][b]Błyskotki zostają, łatka się do nich dopasowuje.[/b] Dla kompatybilności.
-Przykład: błyskotki Muszkieterki zwiększają szansę osłabienia, więc jej nowa Zasłona Dymna wciąż lekko obniża celność.
+[*][b]Wzmocnienia i osłabienia projektuję razem.[/b] Obrażenia, celność, zasięg i wsparcie mają swój koszt. Przesunięcia siły między bohaterami mają zachować ogólną trudność i napięcie oryginału.
+[*][b]Liczą się tożsamość i klasowe błyskotki.[/b] Podstawą są znajome umiejętności i historia postaci; dotychczasowe błyskotki powinny zachować sensowne zastosowania.
+[*][b]Obliczenia wspierają testy w grze.[/b] Model porównuje obrażenia, leczenie, redukcję PROT i możliwości działania. Rozgrywka oraz opinie pomagają doskonalić wnioski.
 [/list]
 
-[h2]Wzorcowy przykład: Muszkieterka[/h2]
-Oryginalna Muszkieterka była kopią Kuszniczki, więc zbudowaliśmy ją od nowa z oficjalnego lore: słynna strzelczyni, która po rozczarowującym turnieju chce zostać legendą łowów na potwory, a bez doświadczenia bojowego trzyma dystans.
+[h2]Co zmienia opublikowana wersja[/h2]
+Zakresy dotyczą poziomów umiejętności 1–5. ACC i CRIT podano dla poziomu 1, chyba że zaznaczono inaczej. Angielskie nazwy pozwalają jednoznacznie wskazać umiejętności.
 [list]
-[*][b]Kula Przebijająca[/b] (CEL 95): sięga każdej pozycji i przebija 25–50% pancerza; premia na oznaczonych dużo niższa niż u Kuszniczki.
-[*][b]Zasłona Dymna[/b] (3 na walkę): ogłusza pozycje 1–2 wroga; ogłuszeni znikają w dymie, a drużyna bije tyły.
-[*][b]Dym Osłonowy[/b]: ukrywa sojusznika na 2 tury – ochrona bez tego, by ktoś przyjmował ciosy.
-[*][b]Wskazanie Zwierzyny[/b]: „Ta zdobycz jest moja!” Oznacza zwierzynę, zdziera jej 10–20% pancerza i zyskuje szybkość na 3 tury.
-[*][b]Strzał Nagonki, Gnat, Opatrunek[/b]: spycha pozycje 2–3 do tyłu, strzela i się cofa, a leczenie zdejmuje trochę stresu.
+[*][b]Więcej sposobów utrzymania drużyny.[/b] Battle Heal Krzyżowca leczy 3–4→6–7 PŻ i daje +20% otrzymywanego leczenia; z leczniczymi błyskotkami wspiera rolę głównego uzdrowiciela. Fortifying Vapours Antykwariuszki łączy leczenie z odpornością na krwawienie, zarazę, ogłuszenie i osłabienie. Bandaż Kuszniczki leczy krwawienie, Rallying Flare niezawodnie zmniejsza stres; Zbrojmistrz może powtarzać Bolster.
+[*][b]Wsparcie przełamuje pancerz.[/b] Weakening Curse Okultysty obniża PROT o 25–35 punktów procentowych. Illumination Kapłanki zachowuje redukcję uniku i ujawnienie, dodając −15–25 punktów PROT; Flashpowder Antykwariuszki daje −10–15. Obie umiejętności utraciły podpalenie. Puncture Łamaczki Tarcz łączy przyciągnięcie, usunięcie osłony i −30–40 punktów PROT; Bellow Zbrojmistrza obniża PROT wszystkich wrogów o 10–15 punktów.
+[*][b]Znani bohaterowie, inne style.[/b] Tracking Shot Oprycha przygotowuje ripostę bez ruchu. Wicked Slice sięga pozycji 3, a Open Vein stawia na krytyki i krwawienie (CRIT umiejętności 0% / 5%). Łowca Nagród używa Flashbang z pozycji 2–4, a Caltrops z każdej. Inspiring Tune Błazna działa także z pozycji 2, Solo z dowolnej.
+[*][b]Kapłanka wybiera wsparcie lub przygotowanie.[/b] Illumination: ACC 95, redukcja uniku i PROT. Hand of Light: ACC 90, obrażenia −40%; atakuje i wzmacnia późniejsze uderzenia.
+[*][b]Muszkieterka ma własną rolę.[/b] Piercing Ball przebija pancerz, Smokescreen kontroluje przód wroga, a Covering Smoke daje sojusznikowi 2 tury ukrycia i +15–25 uniku. Ukrycie nie chroni przed atakami obszarowymi.
 [/list]
-Cena: mniej zdrowia (24 zamiast 27) i szybkości (2 zamiast 3). Może zmieniać pozycję, więc jest nieco słabsza od Kuszniczki.
 
-[h2]Bohater po bohaterze[/h2]
-Grafiki powyżej pokazują każdą zmienioną umiejętność przed i po (na początek Łowca Nagród).
-[b]Abominacja[/b] — przemiana to w końcu prawdziwy wybór: Transformacja zdejmuje teraz z niego stres, a Trzaśnięcie działa z pozycji 4.
-[b]Antykwariuszka[/b] — celowo dalej słabsza (jej działką jest złoto), ale Proch Błyskowy teraz podpala i otwiera kombinacje z oparzeniem.
-[b]Kuszniczka[/b] — przy okazji polowa sanitariuszka: Bitewny Opatrunek leczy krwawienie, Flara niezawodnie zdejmuje stres z drużyny.
-[b]Łowca Nagród[/b] — oznacz, przyciągnij, dobij: Do Mnie przyciąga o 3 pozycje prosto w zasięg Egzekucji; Cios z Dołu to egzekucyjne ogłuszenie na pozycję 1.
-[b]Krzyżowiec[/b] — uzdrowiciel wsparcia: Bitewne Uzdrowienie zwiększa otrzymywane leczenie, a Inspirujący Okrzyk rośnie z każdym poziomem.
-[b]Fechmistrzyni[/b] — jedna z najsilniejszych postaci, lekko przycięta: Touché nie robi jej już niemal nietrafialnej.
-[b]Flagelant[/b] — z powrotem według zasad podstawki: odporności i przyrost szybkości znormalizowane; Przetrwanie zdejmuje stres już od 1. poziomu.
-[b]Hiena Cmentarna[/b] — Toksyczny Podstęp staje się samoleczeniem do użycia raz za razem; Rzut Sztyletem mocniej trafia oznaczone cele.
-[b]Awanturniczka[/b] — koniec z wyczerpaniem: Barbarzyński Okrzyk ją nakręca i osłabia wszystkich wrogów; Przypływ Adrenaliny to jej samoleczenie.
-[b]Oprych[/b] — działa zarówno build dystansowy, jak i do walki wręcz: Strzał Śledzący daje ripostę bez ruszania się z miejsca.
-[b]Łowczy[/b] — specjalista od krwawienia z dystansu: psy gryzą każdą pozycję; Gwizdek sprawia, że zwierzyna częściej obrywa krytycznie.
-[b]Arlekin[/b] — nadal najlepszy od zdejmowania stresu, ale Inspirująca Nuta działa z pozycji 2, a Solówka z każdej.
-[b]Trędowaty[/b] — Onieśmielenie to teraz Łamacz pancerza, a koszt Zemsty rośnie z poziomem, więc opłaca się od początku.
-[b]Zbrojmistrz[/b] — weteran, który trzyma linię: Wzmocnienie to redukcja stresu drużyny do użycia raz za razem; Rozkaz dodaje ochrony.
-[b]Okultysta[/b] — Przekleństwo obniża odporność na ogłuszenie, krwawienie, zarazę i osłabienie, szykując cel pod całą drużynę.
-[b]Badaczka Zarazy[/b] — Bitewne Panaceum to leczenie (3–7), które usuwa zarazę, a krwawienie bierze na siebie Kuszniczka.
-[b]Uciekinierka[/b] — Przetrząsanie nie sięga już pozycji 4.
-[b]Muszkieterka[/b] — patrz wzorcowy przykład wyżej.
-[b]Łamaczka Tarcz[/b] — odstająca bohaterka z DLC wraca do szeregu: Penetracja traci pozycję 4, rozwój broni ustandaryzowany.
-[b]Kapłanka[/b] — sprawdza się też na pozycji 2: Cios Maczugą leczy ją samą, a Boża Łaska i Oświecenie działają z każdej pozycji.
+[h2]Wszyscy 20 bohaterowie na grafikach[/h2]
+Powyższe [b]27 grafik[/b] porównuje oryginał z opublikowaną wersją. Dłuższe zestawienia rozdzielono na dwa obrazy. Ostatnio przywrócono też oryginalny Ransack Uciekinierki, a Expose Łamaczki Tarcz dosięga ukrytych wrogów na pozycji 4.
 
-[h2]Kompatybilność[/h2]
-[b]Wymaga DLC ze zmienianymi bohaterami:[/b] The Crimson Court, The Shieldbreaker, Duelist, Runaway i The Musketeer (darmowy). Bez nich gra może się nie uruchomić.
-Podmienia tylko pliki wymienionych bohaterów (plus jeden plik efektów i jeden plik buffów); gryzie się z modami, które podmieniają tych samych bohaterów. Można bezpiecznie wrzucić na istniejący zapis.
-Z [i]UI Enhancement[/i] umiejętności Muszkieterki mają oryginalne nazwy (działają normalnie).
+[h2]Instalacja i zgodność[/h2]
+[b]Włącz wszystkich pięcioro bohaterów DLC:[/b] Flagelanta (The Crimson Court), Łamaczkę Tarcz, Duelist, Runaway i Muszkieterkę (darmowa). To zintegrowana wersja 20 bohaterów; osobne opcjonalne pakiety nie są już dostępne. Zawiera przebudowę Muszkieterki, więc zewnętrzny YAMR nie jest potrzebny.
 
-Opinie mile widziane — każda zmiana ma spisane uzasadnienie, chętnie wyjaśnię albo coś poprawię.
+Można włączyć w istniejącej posiadłości. Inne mody zastępujące te same pliki bohaterów, efektów lub wzmocnień mogą powodować konflikty. Z UI Enhancement umiejętności Muszkieterki mogą wyświetlać stare nazwy.
+
+[b]Każdy bohater zasługuje na powód, by dołączyć do drużyny. Wasze doświadczenia pomogą w kolejnych poprawkach.[/b]

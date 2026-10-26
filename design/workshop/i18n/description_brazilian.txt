@@ -1,69 +1,38 @@
-[h1]Todo Herói Vale a Pena[/h1]
-[i]Mais heróis e mais habilidades que valem a pena levar, sem mudar a essência de nenhum herói.[/i]
+[h1]Every Hero Worth Taking[/h1]
+[i]Preservar a identidade de cada herói e dar mais motivos para escolher habilidades e equipes diferentes.[/i]
 
-[h2]O objetivo: nenhum grupo obrigatório[/h2]
-No começo, Darkest Dungeon pode ficar quase injogável sem uma Vestal, um Ocultista ou um Bufão, porque cura e alívio de estresse ficam nas mãos de poucos heróis. Este mod espalha a cura e o alívio de estresse por muito mais heróis, para que vários grupos diferentes funcionem.
+Um rebalanceamento integrado de 20 heróis, pensado para ampliar as composições. A ideia é jogar com seus favoritos sem depender de um curandeiro específico ou das mesmas quatro habilidades. Mais cura e alívio de estresse, suporte que reduz armadura para os atacantes físicos e mais opções de posição abrem outras formas de jogar.
 
-O mesmo vale dentro de cada herói: habilidades e posições foram rebalanceadas para você não ficar mais preso a um único conjunto ideal de quatro habilidades, repetido sempre da mesma posição.
+[h2]Atualizações contínuas, feedback levado a sério[/h2]
+[b]Em 26 de outubro de 2026, este item da Oficina tem 33 registros públicos de atualização.[/b] Eles incluem ajustes de equilíbrio, correções de erros e melhorias nas descrições e imagens comparativas. [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3821353035]Veja o histórico[/url]
 
-[h2]Um patch integrado, a mesma dificuldade[/h2]
-A maioria dos mods de heróis mexe em um herói por vez, e isso quase sempre significa deixá-lo mais forte. Este mod rebalanceia os 20 heróis juntos, seguindo as mesmas regras: todo buff vem acompanhado de um custo ou de um nerf em outro lugar, então o jogo não fica nem mais fácil nem mais difícil no geral. Pelo nosso modelo de força dos heróis, a força total do elenco fica a menos de 1% do vanilla, enquanto a distância entre os heróis mais fortes e os mais fracos diminui: a Duelista e o Mestre dos Cães caem um pouco, e o Mercenário e a Atiradora sobem.
+Vou continuar jogando, testando e aprimorando o mod em busca do equilíbrio perfeito. Os números atuais não são uma resposta definitiva.
 
-[h2]Como as mudanças foram decididas[/h2]
+[b]Vou ler e considerar cada comentário.[/b] Sugestões bem fundamentadas e alinhadas aos objetivos do mod serão aceitas e incorporadas. Conte quais habilidades parecem fortes demais, fracas ou sem motivo para equipar, e quais combinações funcionaram bem. Níveis, berloques, composição e situação da batalha ajudam na avaliação. Vou registrar os motivos das mudanças e revê-las quando a prática mostrar um resultado diferente do esperado.
+
+[h2]Mais escolhas, a mesma proposta de tensão[/h2]
 [list]
-[*][b]Cura e alívio de estresse não são exclusividade de poucos heróis.[/b]
-Exemplo: Surto de Adrenalina da Infernal (cura 3–7) e Truques Tóxicos da Ladra de Cova (1–5) viraram autocuras de verdade, e Reforçar do Soldado alivia o estresse do grupo todo turno.
-[*][b]Sem quatro habilidades nem posição "certas".[/b] Várias combinações funcionam de verdade, em vez de uma build travada.
-Exemplo: o contra-ataque do Bandido saiu do Avanço do Duelista e foi para o Tiro Rastreante, então o Bandido à distância contra-ataca sem avançar.
-[*][b]Seguir as regras do próprio jogo.[/b]
-Exemplo: no jogo base, a arma no máximo dá só 2 de velocidade (Atiradora 3→5); Destruidora (5→9) e Flagelante (6→9) fugiam disso. Agora os dois ganham 2.
-[*][b]Todo buff tem um preço.[/b] O que sobe num lugar desce em outro, então a dificuldade geral não infla nem desinfla.
-Exemplo: Julgamento da Vestal foi de −25% para 0% de dano, e Investida do Cão do Mestre dos Cães de 0% para −40% (o sangramento subiu no lugar).
-[*][b]A habilidade faz o que parece.[/b] Arte e função batem à primeira vista.
-Exemplo: bandagem estanca sangramento, e a Infernal, que nunca se cansa, não fica mais exausta.
-[*][b]A direção vem do lore oficial.[/b]
-Exemplo: o Leproso já foi rei, então Intimidar virou Quebra-armadura, um golpe que lidera a luta rachando armadura, em vez de uma penalidade de suporte. A Antiquária ganha ouro em vez de lutar e continua fraca, e nada no lore do Mestre dos Cães justifica resistência extra a sangramento e veneno.
-[*][b]Preciosidades ficam fixas; o patch se ajusta a elas.[/b] Pela compatibilidade.
-Exemplo: as preciosidades da Mosqueteira aumentam a chance de penalidade, então a nova Cortina de Fumaça ainda reduz um pouco a precisão.
+[*][b]Fortalecimentos e enfraquecimentos são pensados juntos.[/b] Dano, precisão, alcance e suporte têm contrapartidas. Redistribuir a força entre os heróis busca preservar a dificuldade geral e a tensão do original.
+[*][b]Identidade e berloques de classe importam.[/b] Habilidades conhecidas e a história dos heróis orientam os ajustes; os berloques existentes devem continuar tendo usos relevantes.
+[*][b]Cálculos e partidas se complementam.[/b] Um modelo compara dano, cura, redução de PROT e oportunidades de ação. Partidas reais e feedback ajudam a aperfeiçoar suas conclusões.
 [/list]
 
-[h2]Destaque: a Mosqueteira[/h2]
-A Mosqueteira original era uma cópia exata da Atiradora, então foi refeita a partir do lore oficial: uma atiradora famosa que, depois de um torneio decepcionante, quer virar lenda caçando monstros e, sem experiência real de combate, mantém distância.
+[h2]O que muda na versão publicada[/h2]
+As faixas cobrem níveis de habilidade 1–5. ACC e CRIT são do nível 1, salvo indicação. Os nomes em inglês identificam as habilidades com clareza.
 [list]
-[*][b]Bala Penetrante[/b] (PRE 95): alcança todas as posições e perfura 25–50% de armadura; o bônus contra marcados é bem menor que o da Atiradora.
-[*][b]Cortina de Fumaça[/b] (3 por batalha): atordoa as posições 1–2 inimigas; os atordoados somem na fumaça e o grupo foca a retaguarda.
-[*][b]Fumaça de Cobertura[/b]: esconde um aliado por 2 turnos para que os inimigos não o mirem — proteção sem ninguém apanhar no lugar.
-[*][b]Marcar a Presa[/b]: "Essa presa é minha!" Marca a presa, tira 10–20% da armadura dela e ganha velocidade por 3 turnos.
-[*][b]Tiro de Batida, Arma Secundária, Remendar[/b]: empurra as posições 2–3 para trás, atira e recua quando empurrada para frente, e alivia um pouco de estresse ao curar.
+[*][b]Mais formas de sustentar a equipe.[/b] Battle Heal do Cruzado cura 3–4→6–7 PV e concede +20% de cura recebida, apoiando seu uso como curandeiro principal com berloques. Fortifying Vapours da Antiquária combina cura e resistência a sangramento, veneno, atordoamento e enfraquecimento. A Arbalista cura sangramento com a bandagem e alivia estresse de forma garantida com Rallying Flare; o Homem de Armas pode repetir Bolster.
+[*][b]Suporte para abrir armaduras.[/b] Weakening Curse do Ocultista reduz PROT em 25–35 pontos percentuais. Illumination da Vestal mantém a redução de esquiva e a remoção de furtividade, acrescentando −15–25 pontos de PROT; Flashpowder da Antiquária reduz 10–15. A queimadura foi removida das duas habilidades. Puncture da Quebra-Escudos combina puxão, remoção de guarda e −30–40 pontos de PROT; Bellow do Homem de Armas reduz a PROT de todos os inimigos em 10–15 pontos.
+[*][b]Heróis conhecidos, outras estratégias.[/b] Tracking Shot do Bandoleiro prepara a riposta sem movimento. Wicked Slice alcança a posição 3, enquanto Open Vein oferece mais críticos e sangramento (CRIT de habilidade 0% / 5%). O Caçador de Recompensas usa Flashbang das posições 2–4 e Caltrops de qualquer posição. Inspiring Tune do Bufão funciona da posição 2 e Solo de qualquer uma.
+[*][b]A Vestal escolhe suporte ou preparação.[/b] Illumination: ACC 95, redução de esquiva e PROT. Hand of Light: ACC 90, dano −40%, para atacar e preparar os próximos golpes.
+[*][b]A Mosqueteira tem função própria.[/b] Piercing Ball penetra armadura, Smokescreen controla a linha de frente inimiga e Covering Smoke concede a um aliado 2 turnos de furtividade e +15–25 esquiva. Furtividade não protege de ataques em área.
 [/list]
-O preço: menos vida (24 contra 27 da Atiradora) e velocidade (2 contra 3). Ela pode trocar de posição, então fica um pouco abaixo da Atiradora, que é fixa.
 
-[h2]Herói por herói[/h2]
-As imagens acima mostram cada habilidade alterada, antes e depois (começando pelo Mercenário).
-[b]Abominação[/b] — se transformar finalmente é uma escolha de verdade: Transformar agora alivia o próprio estresse, e Bater funciona da posição 4.
-[b]Antiquária[/b] — continua mais fraca de propósito (ela traz o ouro), mas a Pólvora Ofuscante agora queima e abre combos de ardor.
-[b]Atiradora[/b] — também é médica de campo: Bandagem de Batalha cura sangramento, e Sinal Encorajador alivia o estresse do grupo com consistência.
-[b]Mercenário[/b] — marcar, puxar, executar: Venha Aqui puxa 3 posições até o alcance de Acabe com Ele; Direto é um atordoamento de execução na posição 1.
-[b]Cruzado[/b] — um curandeiro de suporte: Cura de Batalha aumenta a cura recebida; Grito Inspirador melhora a cada nível.
-[b]Duelista[/b] — uma das heroínas mais fortes, agora um pouco mais contida: Touché não a deixa mais quase impossível de acertar.
-[b]Flagelante[/b] — de volta às regras do jogo base: resistências e crescimento de VEL normalizados; Aguentar alivia estresse desde o nível 1.
-[b]Ladra de Cova[/b] — Truques Tóxicos vira uma autocura repetível; Adaga Arremessada bate mais forte em alvos marcados.
-[b]Infernal[/b] — adeus, exaustão: PANCADA Bárbara! deixa ela pilhada e enfraquece todos os inimigos; Surto de Adrenalina é a autocura dela.
-[b]Bandido[/b] — builds à distância e corpo a corpo funcionam: Tiro Rastreante dá revide sem sair do lugar.
-[b]Mestre dos Cães[/b] — especialista em sangramento à distância: os cães mordem qualquer posição; Apito de Alvo faz a presa sofrer mais críticos.
-[b]Bufão[/b] — continua sendo o melhor curador de estresse, mas Canção Inspiradora funciona da posição 2 e Solo de qualquer posição.
-[b]Leproso[/b] — Intimidar vira Quebra-armadura, um golpe que racha armadura, e o custo de Vingança cresce com o nível, então já vale usar no começo.
-[b]Soldado[/b] — o veterano que segura a linha: Reforçar é uma cura de estresse em grupo repetível; Comandar adiciona proteção.
-[b]Ocultista[/b] — Feitiço da Vulnerabilidade reduz a resistência a atordoamento, sangramento, peste e penalidades, preparando o terreno para o grupo inteiro.
-[b]Médica da Peste[/b] — Medicina de Batalha é a cura que remove peste (3–7), enquanto a Atiradora cuida do sangramento.
-[b]Fugitiva[/b] — Saquear não alcança mais a posição 4.
-[b]Mosqueteira[/b] — veja o destaque acima.
-[b]Destruidora[/b] — a heroína do DLC que fugia da curva volta à linha: Perfurar não alcança mais a posição 4, e o crescimento da arma foi padronizado.
-[b]Vestal[/b] — dá conta da posição 2: Golpe de Maça cura ela mesma, e Graça Divina e Iluminação funcionam de qualquer posição.
+[h2]Os 20 heróis nas imagens comparativas[/h2]
+As [b]27 imagens[/b] acima comparam o original com a versão publicada. Fichas longas são divididas em duas imagens. As mudanças recentes também restauram Ransack da Fugitiva ao original e permitem que Expose da Quebra-Escudos alcance inimigos furtivos na posição 4.
 
-[h2]Compatibilidade[/h2]
-[b]Requer os DLCs dos heróis alterados:[/b] The Crimson Court, The Shieldbreaker, Duelist, Runaway e The Musketeer (grátis). Sem eles, o jogo pode não abrir.
-Substitui só os arquivos dos heróis acima (mais um arquivo de efeitos e um de buffs); é incompatível com mods que substituem os mesmos heróis. Pode ser usado sem problemas em saves já em andamento.
-Com o [i]UI Enhancement[/i], as habilidades da Mosqueteira mostram os nomes originais (funcionam normalmente).
+[h2]Instalação e compatibilidade[/h2]
+[b]Ative os cinco heróis DLC:[/b] Flagelante (The Crimson Court), Quebra-Escudos, Duelista, Fugitiva e Mosqueteira (gratuita). Esta é a edição integrada de 20 heróis; pacotes opcionais separados não são mais oferecidos. A reformulação da Mosqueteira está incluída, sem necessidade de YAMR externo.
 
-Feedback é sempre bem-vindo: toda mudança tem um motivo registrado, e explico ou ajusto com prazer.
+Pode ser ativado em um domínio existente. Outros mods que substituam os mesmos arquivos de heróis, efeitos ou bônus podem causar conflitos. Com UI Enhancement, as habilidades da Mosqueteira podem aparecer com os nomes originais.
+
+[b]Todo herói merece um motivo para entrar na equipe. Sua experiência ajuda a definir as próximas melhorias.[/b]
