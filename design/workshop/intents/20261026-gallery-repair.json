@@ -1,0 +1,92 @@
+{
+  "id": "WS-GALLERY-002",
+  "decision": "adopted",
+  "original_quote": "스팀 창작마당에 사진 이미지가 다 안들어가있어 10몇장밖에 안돼 이거 패치 버전 맞춰서 이미지 다 채워줘",
+  "rationale_ko": "공개중인2.5.7에맞춰주소없는12개슬롯만원본으로복구하고공개27장과해시·버전·구독파일을검증했다. 미공개밸런스변경은게시하지않는다.",
+  "source": {
+    "product": "codex",
+    "reference": "local-knowledge read_evidence full text, 2026-10-26T03:11:09.936Z",
+    "session_id": "01a10741-76da-7e43-9500-98474ab3f383",
+    "message_id": "msg_01a17630-c470-7210-9a87-7ea1e6a1c1ee",
+    "event_id": "26bf23d3ae4df15561b7c014ceb4f5bd82356fda2c96005fd3289be16678e319"
+  },
+  "files": [
+    "design/analysis/workshop-gallery-repair-20261026.md",
+    "design/workshop/intents/20261026-gallery-repair.json"
+  ],
+  "external_item_id": 3821353035,
+  "published_version": "2.5.7",
+  "published_source_sha": "83e4cc9e5c9885aaea8b8df03e7ecea099aeb275",
+  "repaired_images": [
+    {
+      "index": 0,
+      "filename": "01_bounty_hunter_p1.png",
+      "sha256": "ce6c83784702c752c2373b53dc1bf40cd92e985d7d5343fbc7868246137b7bcd"
+    },
+    {
+      "index": 3,
+      "filename": "03_antiquarian.png",
+      "sha256": "54c31a61fbaee188cbdb1e5881802b40125bc2432f4fb67874539fe5a5b74395"
+    },
+    {
+      "index": 6,
+      "filename": "06_duelist.png",
+      "sha256": "ad53889207443091f3a68a9b0a318bf94451f7703851c78b7fa4cd0e24704abc"
+    },
+    {
+      "index": 10,
+      "filename": "10_highwayman_p1.png",
+      "sha256": "affb0cca4505f6351b6c956c1d742fc8419c14e7c38081cacd5253be359757b1"
+    },
+    {
+      "index": 11,
+      "filename": "10_highwayman_p2.png",
+      "sha256": "d69ad973ee14838b7a6d06a23dc3218471bc30d6cf71864a57d7680e527afa3b"
+    },
+    {
+      "index": 16,
+      "filename": "14_man_at_arms_p1.png",
+      "sha256": "6e36df15fcf9ee8f280bf6c13dc731b612df651a178d42255dab5d0ad04f73c8"
+    },
+    {
+      "index": 17,
+      "filename": "14_man_at_arms_p2.png",
+      "sha256": "9c1c1c52509fa747bf98bcc07b893fd60daa2a7389c2d826d49550c124b86e02"
+    },
+    {
+      "index": 20,
+      "filename": "17_runaway.png",
+      "sha256": "6dd1d4a847c81237806a8fb17089c64e7ac5cf20902b755f657cd227a38168f1"
+    },
+    {
+      "index": 21,
+      "filename": "18_shieldbreaker_p1.png",
+      "sha256": "fc3d7db24565277cb06101df022b5c24ae484785c929406f13fde52847633e81"
+    },
+    {
+      "index": 22,
+      "filename": "18_shieldbreaker_p2.png",
+      "sha256": "69fec61027e2603dfb24caa9ee1c7c8393002ad5d563849729f893cb70c58607"
+    },
+    {
+      "index": 23,
+      "filename": "19_vestal_p1.png",
+      "sha256": "d3529769583c8a571ec239736854e903eade652f5b3e24d462fb6e7f72a0e079"
+    },
+    {
+      "index": 24,
+      "filename": "19_vestal_p2.png",
+      "sha256": "e4e2761a6a7969d76f204c8ef713de3f7aa1a27aeff78bceb613f90ee85067e2"
+    }
+  ],
+  "verification": {
+    "all_passed": true,
+    "public_gallery": 27,
+    "cdn_matching": 27,
+    "descriptions": 10,
+    "payload_matching": 39,
+    "note_id": "1792912066"
+  },
+  "supersedes": [],
+  "scope": "existing broken preview slots only, no new patch or content publish"
+}
