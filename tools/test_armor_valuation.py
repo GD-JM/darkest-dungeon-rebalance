@@ -72,6 +72,12 @@ class ArmorModelTests(unittest.TestCase):
     def test_aoe_does_not_multiply_party_followup_budget(self):
         H=S.load_hero('man_at_arms','rb');row=next(r for r,k in H['skills'] if S.first(k,'id')=='bellow')
         eff=S.load_effects('rb');buffs=S.ec.load_buffs(S.G,S.M_ROOT)
+        # R-HP-027: Bellow no longer shreds PROT (MAA-020/022).
+        # Use a test-only armor effect: this test checks the shared attack budget,
+        # not a historical balance value. Keep current Bellow's speed debuff.
+        eff=dict(eff)
+        eff['TEST armor budget']='effect: .name "TEST armor budget" .target "target" .chance 140% .duration 3 .combat_stat_buff 1 .protection_rating_add -20% .on_hit true .on_miss false'
+        row += ' .effect "TEST armor budget"'
         values=[]
         for count in (1.,4.):
             with patch.object(V,'target_cases',return_value=([(self.m,count)],dict(units=count,availability=1.))),patch.object(V,'enemy_actions',return_value=(self.action,)):

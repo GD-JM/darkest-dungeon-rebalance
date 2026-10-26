@@ -1,8 +1,8 @@
 """강함 순위 모델 v2 (R-VALUE-04). 바닐라와 RB를 같은 방식으로 계산해 비교한다.
 
-사용: python tools/strength.py [--detail 영웅id] [--sens]
+사용: python tools/strength.py [--detail 영웅id] [--sens] [--unit hp|standard-pp|self-pp]
 - 5레벨 기술 / 무기·방어구 5단계 / 영웅 등급(_C) 일반 몬스터 모집단(보스·오브젝트 제외).
-- 모든 가치는 HP 환산. 기술 목록은 평타 배수(R-VALUE-02)로도 표기.
+- R-HP-027: 기본 출력은 HP 환산값. 전술 가중·가정이 포함되어 실제 체력 감소와 구분한다. %p는 명시적 보조 단위.
 - 파라미터와 출처는 PARAM 에 모아 둔다. 바꾸면 design/analysis/hero_power_v2.md 도 갱신할 것.
 """
 import os, re, glob, sys, io, math, argparse, json, functools, struct, statistics as st
@@ -808,7 +808,13 @@ class Ctx:
         atk = num(first(r, 'atk', '85'))
         sk_dm, buf = num(first(r, 'dmg', '0')) / 100, num(first(k, 'damage_low_multiply', '0')) / 100
         mul = max(0.0, 1 + sk_dm) * (1 + buf) if s.P.get('DMG_STACK') == 'mult' else max(0.0, 1 + sk_dm + buf)
-        cr = (num(first(r, 'crit', '0')) + num(first(k, 'crit_chance_add', '0')) + s.H['wcrit']) / 100
+        cr = max(0.0, min(1.0, (num(first(r, 'crit', '0')) + num(first(k, 'crit_chance_add', '0')) + s.H['wcrit']) / 100))
+        # R-HP-027: direct attacks and ripostes share weapon-specific integer HP loss.
+        # Keep the old continuous branch only for the existing ENGINE_DAMAGE=False audit.
+        # Trigger frequency and class critical procs remain separate model assumptions.
+        if s.P.get('ENGINE_DAMAGE', True):
+            return st.mean(hit(m, atk) * damage_mean(s.H['dmg'], sk_dm * 100, cr,
+                           m['prot'], buf, s.P.get('DMG_STACK', 'mult')) for m in MONS)
         per = ((1 - cr) * s.avg + cr * s.max * 1.5) * mul
         return st.mean(hit(m, atk) * per * (1 - m['prot']) for m in MONS)
 
@@ -1288,12 +1294,15 @@ def mode_plans(C, H, sk, P):
     default = next((m for m, md in H['modes'].items() if first(md, 'is_raid_default') == 'true'), next(iter(H['modes'])))
 
     def pkg(mode_from):
-        lst = d.get(mode_from + '_effects', [])
-        if not lst:
+        # R-HP-027: kv splits whitespace, so never reconstruct quoted effect names
+        # from d[mode+'_effects']. 'RB ABO beast_stress_party' must not silently
+        # resolve to vanilla beast_stress_party. Preserve the complete field text.
+        field = re.search(r'\.' + re.escape(mode_from) + r'_effects\b(.*?)(?=\s+\.[A-Za-z_]|$)', l)
+        if not field or not field.group(1).strip():
             return 0.0, {}
         base = re.sub(r'\.\w+_effects(\s+(?!\.)\S+)*', '', l)
         base = re.sub(r'\.per_battle_limit\s+\S+', '', base)
-        line = base + ' .effect ' + ' '.join('"%s"' % x.strip('"') for x in lst)
+        line = base + ' .effect ' + field.group(1).strip()
         return skill_value(C, line, kv(line))
 
     out = {}
@@ -1510,35 +1519,41 @@ def main():
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
     ap = argparse.ArgumentParser()
     ap.add_argument('--detail'); ap.add_argument('--sens', action='store_true')
+    ap.add_argument('--unit', choices=('hp', 'standard-pp', 'self-pp'), default='hp')
     a = ap.parse_args()
     allres = run()
     print(f'몬스터 모집단: 영웅 등급 일반 몬스터 {N_MON}종 (보스·오브젝트 제외) / 스트레스 1 = HP {stress_value():.2f} (가격 비율 {stress_price_ratio()[0]:.2f} + 고통 비용, R-VALUE-06)\n')
     rv = ranking(allres['vanilla'], '기본')[0]
     rr, orr = ranking(allres['rb'], '기본')
-    # 표시 단위 = 환산 피해 보정(%p) [제작자 지정, R-VALUE-02 개정]. HP는 내부 계산에만 쓴다.
-    #   기술: "이 기술 1회 = 그 영웅 무기로 피해 보정 X%인 단일 공격 1회" (평타 = 피해 보정 0%)
-    #   행동 가치: 표준 평타(바닐라 20영웅 평타 중앙값) 기준 -> 영웅끼리 비교 가능
+    # R-HP-027: same HP components for all heroes. Self pp is an explicit legacy view.
+    # HP-equivalent includes tactical priors; never relabel it actual HP loss or EHP.
     std = st.median(r['base'] for r in allres['vanilla'].values())
-    pp = lambda v, base: (v / base - 1) * 100
-    print(f'표준 평타 = 바닐라 20영웅 평타 중앙값 (1%p = {std / 100:.3f} HP)\n')
-    print('| RB 순위 | 영웅 | 총점 | 행동 가치 (표준 평타 기준 %p) | 유효 체력 | 속도 | 유연성 | 바닐라 순위 (총점) | 균등 / 행동 중시 | 상위 기술 (자기 무기 기준 환산 피해 보정) |')
+    unit = {'hp': 'HP 환산', 'standard-pp': '공통 평타 %p', 'self-pp': '자기 평타 %p (영웅간 비교 금지)'}[a.unit]
+    def show(v, base, component=False):
+        if a.unit == 'hp':
+            return f'{v:+.3f} HP환산'
+        denominator = std if a.unit == 'standard-pp' else base
+        return f'{(v / denominator - (0 if component else 1)) * 100:+.2f}%p'
+    print(f'모델(기술/장비 5단계), 단위={unit}; 공통 평타={std:.9f} HP. 총량과 구성은 같은 분모.\n')
+    print('주의: 직접 항목에도 열/광역 가중이 포함됨. 전체 HP환산은 실제 HP 감소/EHP와 다름. 총점은 별도 가중 지수이며 OLS 잔차가 아님.\n')
+    print('| RB 순위 | 영웅 | 총점 | 행동 가치 | 생존 지표(별도) | 속도 | 유연성 | 바닐라 순위 (총점) | 균등 / 행동 중시 | 상위 기술 |')
     print('|---|---|---|---|---|---|---|---|---|---|')
     for h in orr:
         r, v = allres['rb'][h], allres['vanilla'][h]
         top = sorted(r['skills'].items(), key=lambda x: -x[1][0])[:3]
-        ts = ', '.join(f'{s} {pp(x[0], r["base"]):+.0f}%p' for s, x in top)
+        ts = ', '.join(f'{s} {show(x[0], r["base"])}' for s, x in top)
         oth = '/'.join(str(ranking(allres['rb'], wk)[0][h]) for wk in ('균등', '행동 중시'))
-        print(f'| {rr[h]} | {KO[h]}{"*" if h in DLC else ""} | {r["score"]["기본"]:.0f} | {pp(r["act"], std):+.0f}%p | {r["surv"]:.0f} | '
+        print(f'| {rr[h]} | {KO[h]}{"*" if h in DLC else ""} | {r["score"]["기본"]:.0f} | {show(r["act"], r["base"])} | {r["surv"]:.0f} | '
               f'{r["spd"]:.0f} | {r["flex"]:.1f} | {rv[h]} ({v["score"]["기본"]:.0f}) | {oth} | {ts} |')
     if a.detail:
         for mode in ('vanilla', 'rb'):
             r = allres[mode][a.detail]
-            print(f'\n[{mode}] {KO[a.detail]} (자기 무기 기준, 평타 = 피해 보정 0% 단일 공격)  열 점수 {r["rank_pts"]}')
+            print(f'\n[{mode}] {KO[a.detail]} ({unit}) 열 점수 {r["rank_pts"]}')
             for s, (v, parts, launch) in sorted(r['skills'].items(), key=lambda x: -x[1][0]):
-                print(f'  {s:24s} 환산 {pp(v, r["base"]):+5.0f}%p  사용 {launch:5s} 구성: ' +
-                      ' '.join(f'{k}{x / r["base"] * 100:+.0f}' for k, x in parts.items()))
+                print(f'  {s:24s} {show(v, r["base"])} 사용 {launch:5s} 구성: ' +
+                      ' '.join(f'{k}={show(x, r["base"], True)}' for k, x in parts.items()))
             for m, (v, note) in r.get('plans', {}).items():
-                print(f'  [모드 {m}] 행동 가치 {pp(v, std):+.0f}%p (표준 평타 기준)  {note}')
+                print(f'  [모드 {m}] 행동 가치 {show(v, r["base"])} {note}')
     if a.sens:
         variants = {'스트레스=HP 1.22(가격만)': dict(STRESS_HP=1.22), '스트레스=HP 1(v1)': dict(STRESS_HP=1.0), '기절 x1.3': dict(STUN_MULT=1.3), '지원 x0.7': dict(SUPPORT_MULT=0.7),
                     '광역 직접 0.75': dict(E_AOE=0.75), '조건 유지율 0.45/0.2': dict(COND_SELF=0.45, COND_OTHER=0.2),

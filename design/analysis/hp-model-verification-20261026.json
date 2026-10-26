@@ -1,0 +1,77 @@
+{
+  "skills": 280,
+  "component_finite_checks": 807,
+  "inverse_component_checks": 1614,
+  "changed_skills": [
+    {
+      "mode": "vanilla",
+      "hero": "duelist",
+      "skill": "anticipation",
+      "before_hp": 9.786643405209773,
+      "after_hp": 9.812014072823409,
+      "delta_hp": 0.025370667613636044
+    },
+    {
+      "mode": "vanilla",
+      "hero": "highwayman",
+      "skill": "duelist_advance",
+      "before_hp": 20.80000301605202,
+      "after_hp": 20.92820243434479,
+      "delta_hp": 0.1281994182927697
+    },
+    {
+      "mode": "vanilla",
+      "hero": "man_at_arms",
+      "skill": "retribution",
+      "before_hp": 14.762881801807946,
+      "after_hp": 15.496356744989761,
+      "delta_hp": 0.7334749431818146
+    },
+    {
+      "mode": "rb",
+      "hero": "duelist",
+      "skill": "anticipation",
+      "before_hp": 9.786570070474523,
+      "after_hp": 9.81194073808816,
+      "delta_hp": 0.025370667613636044
+    },
+    {
+      "mode": "rb",
+      "hero": "highwayman",
+      "skill": "take_aim",
+      "before_hp": 16.124620215736037,
+      "after_hp": 16.25281963402881,
+      "delta_hp": 0.12819941829277326
+    },
+    {
+      "mode": "rb",
+      "hero": "man_at_arms",
+      "skill": "retribution",
+      "before_hp": 19.451618385328736,
+      "after_hp": 19.80421266130276,
+      "delta_hp": 0.35259427597402393
+    }
+  ],
+  "changed_mode_plans": [
+    {
+      "mode": "rb",
+      "hero": "abomination",
+      "plan": "beast",
+      "before_hp": -2.5072716285955856,
+      "after_hp": 2.489645703020141,
+      "note": "rage+slam+rake / 전환 1회 -33.0 HP (전환 -23.5, 복귀 +10.5, 모드 스트레스 -19.9)"
+    }
+  ],
+  "unchanged_skills": 274,
+  "unrelated_tracked_files_unchanged": 928,
+  "standard_hp": 8.1228759765625,
+  "stress_hp": 1.6615733437616491,
+  "scope": "5-level skill/equipment, 20 heroes, vanilla/RB. Arithmetic checks, not full engine/runtime/model validity.",
+  "game_data_unchanged": true,
+  "tests": {
+    "total": 46,
+    "failures": 0,
+    "errors": 0,
+    "log": "C:/Users/lemm1/Documents/Codex/2026-10-04/new-chat-2/outputs/abomination-hp-gdc-20261026/all-tests.txt"
+  }
+}

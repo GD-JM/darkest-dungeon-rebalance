@@ -1,0 +1,26 @@
+{
+  "id": "R-HP-027",
+  "decision": "adopted",
+  "original_quote": "맞어 너의 말처럼 HP로 전부 환산하는 데, 단위 통일의 의도자체가 중요한 게 아니라 다른 수치를 어떻게 HP로 통일시킬 것인가에 따른 공식 설계 및 산정이 어렵다고 하는 거잖아. 그거를 지금까지 클로드코드랑 피해량 % 단위 기준으로 전부 작성 해왔어 그거를 일단 너가 다 따와서 HP산정 공식으로 쓰면서 한번씩 검증하면서 내부 모델을 조금씩 수정해나가줬으면 좋겠어. 이거 너무 중요한 작업이야 꼭 해야해",
+  "rationale_ko": "기존 공식·역사를 가져오고 HP를 비교 단위로 노출하며 항목별 검증을 시작한다. 반격도 일반 공격과 동일한 정수 피해 계산을 사용한다. 이 수리는 사용자 요청의 구현이며 사용자가 특정 반격 숫자를 새 밸런스로 승인했다는 뜻이 아니다. 괴인/모든 게임 수치와 배포는 보존. 기존 광역 후속공격 테스트는 포효 방어감소가 제거되어 실패하므로 테스트 전용 방어감소 입력으로 기능 불변조건을 유지한다. 검증 중 발견된 괴인 모드별 평가의 공백 포함 효과명 손실을 고쳐, 현재 효과를 바닐라 효과로 잘못 치환하거나 누락하지 않도록 한다.",
+  "source": {
+    "product": "codex",
+    "reference": "current session user message 2026-10-26; read_evidence complete",
+    "session_id": "01a10741-76da-7e43-9500-98474ab3f383",
+    "message_id": "msg_01a177ed-68d5-70e0-9a78-58b9b313f875",
+    "event_id": "ef36d5e020c65950253e33b0d52e14622d3ada968f9b2b3ed38d03fdeb9f2a3d"
+  },
+  "files": [
+    "tools/strength.py",
+    "tools/test_hp_model.py",
+    "design/analysis/hp-model-contract-20261026.md",
+    "design/analysis/hp-formula-catalog-20261026.json",
+    "design/rules.md",
+    "design/analysis/hero_power_v2.md",
+    "tools/test_armor_valuation.py",
+    "design/analysis/hp-model-verification-20261026.json"
+  ],
+  "supersedes": [
+    "R-VALUE-02 display-only policy"
+  ]
+}
