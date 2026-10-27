@@ -15,7 +15,7 @@ combat_skill: .id "kris_stab" .level 1 .type "melee" .atk 90% .dmg 0% .crit 4% .
 combat_skill: .id "kris_stab" .level 2 .type "melee" .atk 95% .dmg 0% .crit 5% .launch 4321 .target 123 .is_crit_valid True .effect "RB ANT Kris Armor 3"
 combat_skill: .id "kris_stab" .level 3 .type "melee" .atk 100% .dmg 0% .crit 6% .launch 4321 .target 123 .is_crit_valid True .effect "RB ANT Kris Armor 4"
 combat_skill: .id "kris_stab" .level 4 .type "melee" .atk 105% .dmg 0% .crit 7% .launch 4321 .target 123 .is_crit_valid True .effect "RB ANT Kris Armor 5"
-// ANT-009 단검 찌르기: 적 방어 -5/-6/-8/-11/-15% 2턴 추가. 의도: 유물은 자신보다 팀원을 세지게(P-25) - 전열을 찔러 아군 물리 피해를 키운다. 근거: 이동 저항은 섬광 가루로, 회피 감소는 섬광 가루로 나눠 단검은 방어만.
+// ANT-009 서툰 칼질: 적 방어 -5/-6/-8/-11/-15% 2턴 추가. 의도: 유물은 자신보다 팀원을 세지게(P-25) - 전열을 찔러 아군 물리 피해를 키운다. 근거: 이동 저항은 섬광 가루로, 회피 감소는 섬광 가루로 나눠 단검은 방어만.
 combat_skill: .id "festering_vapours" .level 0 .type "ranged" .atk 95% .dmg -75% .crit 0% .launch 4321 .target 1234 .is_crit_valid True  .effect "Blight 1" "Antiq Blight Debuff 1"
 // ANT-002 부패의 연막 1렙: 중독 1 → 2 (RB ANT Blight 1).
 combat_skill: .id "festering_vapours" .level 1 .type "ranged" .atk 100% .dmg -75% .crit 1% .launch 4321 .target 1234 .is_crit_valid True  .effect "Antiq Blight 2" "RB ANT Antiq Blight Debuff 2"
@@ -31,19 +31,19 @@ combat_skill: .id "cower" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0% .move
 combat_skill: .id "cower" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .move 2 0 .launch 4321 .target  .is_crit_valid True  .effect "Antiq Cower 3" "Antiq Self Speed 3" "Antiq Blight Buff 3" "RB ANT Cower Heal 3" "RB ANT Cower Unmark" .is_stall_invalidating false
 combat_skill: .id "cower" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .move 2 0 .launch 4321 .target  .is_crit_valid True  .effect "Antiq Cower 4" "Antiq Self Speed 4" "Antiq Blight Buff 4" "RB ANT Cower Heal 4" "RB ANT Cower Unmark" .is_stall_invalidating false
 combat_skill: .id "cower" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .move 2 0 .launch 4321 .target  .is_crit_valid True  .effect "Antiq Cower 5" "Antiq Self Speed 5" "Antiq Blight Buff 5" "RB ANT Cower Heal 5" "RB ANT Cower Unmark" .is_stall_invalidating false
-// ANT-010 움츠리기: 자기 회복 2/2/3/4/5 + 자기 표식 해제. 의도: 4열에서 이동이 안 돼 쓰이지 않던 기술에 생존 역할. 근거: 회복 7은 핏줄의 메달(+33%) 포함 체력 32%로 과해 5로(제작자 지적), 약화 해제는 느낌이 안 맞아 표식 해제.
+// ANT-010 엎드려!: 자기 회복 2/2/3/4/5 + 자기 표식 해제. 의도: 4열에서 이동이 안 돼 쓰이지 않던 기술에 생존 역할. 근거: 회복 7은 핏줄의 메달(+33%) 포함 체력 32%로 과해 5로(제작자 지적), 약화 해제는 느낌이 안 맞아 표식 해제.
 combat_skill: .id "flashpowder" .level 0 .type "ranged" .atk 95% .dmg -100% .crit 0% .launch 4321 .target 34 .is_crit_valid False .ignore_stealth true  .effect "Destealth" "RB ANT Flash Dodge 1" "RB ANT Flash Move 1" "RB ANT Flash Burn 1" .is_stall_invalidating false
 combat_skill: .id "flashpowder" .level 1 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 4321 .target 34 .is_crit_valid False .ignore_stealth true  .effect "Destealth" "RB ANT Flash Dodge 2" "RB ANT Flash Move 2" "RB ANT Flash Burn 2" .is_stall_invalidating false
 combat_skill: .id "flashpowder" .level 2 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 4321 .target ~34 .is_crit_valid False .ignore_stealth true  .effect "Destealth" "RB ANT Flash Dodge 3" "RB ANT Flash Move 3" "RB ANT Flash Burn 3" .is_stall_invalidating false
 combat_skill: .id "flashpowder" .level 3 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 4321 .target ~234 .is_crit_valid False .ignore_stealth true  .effect "Destealth" "RB ANT Flash Dodge 4" "RB ANT Flash Move 4" "RW Burn 2" .is_stall_invalidating false
 combat_skill: .id "flashpowder" .level 4 .type "ranged" .atk 115% .dmg -100% .crit 0% .launch 4321 .target ~1234 .is_crit_valid False .ignore_stealth true  .effect "Destealth" "RB ANT Flash Dodge 5" "RB ANT Flash Move 5" "RW Burn 2" .is_stall_invalidating false
-// ANT-011 섬광 가루: 대상 3·4열 1명/1명/3·4열/2~4열/1~4열(은신 해제는 뒷열), 명중·방어 감소 삭제 -> 회피 -10/-11/-12/-14/-15%·이동 저항 -20/-22/-25/-27/-30% 2턴 + 화상 1/1/1/2/2. 의도: 명중 감소는 활력의 연막 회피와 겹쳐 무적 조합을 만들어 삭제(제작자). 근거: 회피 -15에서 명중105 적중률 94.8%, -20은 상한 근처라 낭비.
+// ANT-011 섬광 가루: 대상 3·4열 1명/1명/3·4열/2~4열/1~4열(은신 해제는 뒷열), 명중·방어 감소 삭제 -> 회피 -10/-11/-12/-14/-15%·이동 저항 -20/-22/-25/-27/-30% 2턴 + 화상 1/1/1/2/2. 의도: 명중 감소는 고양의 연막 회피와 겹쳐 무적 조합을 만들어 삭제(제작자). 근거: 회피 -15에서 명중105 적중률 94.8%, -20은 상한 근처라 낭비.
 // ANT-005 (2026-10-25, test): 방어도 감소15/16/17/19/20->10/11/12/14/15%p, 2턴 유지. 명중 약화·은신 해제 유지, 조련사는 제외. ANT-004의 방어 감소 크기만 낮춘다. 20261025 residual model 후속 실제 피해로 검산.
 // ANT-004 (2026-10-25, test): 화상을 제거하고 짧은 방어도 감소로 교체한다. 명중 감소와 은신 해제를 유지하여 유물수집상이 물리 딜러를 보조하도록 한다. 방어 감소 15/16/17/19/20%p, 2턴; 명중·피해·치명·사거리 유지.
 // ANT-001 flashpowder: 화상 1/1/2/2/3 추가(저항 무시, 확률 100~140%). 대상 fx가 불꽃 분출이라 아트와 일치(P-19), 도망자 화톳불·불길 역류 연계를 연다. 유물수집상은 모든 기술이 다른 영웅보다 낮은 컨셉(P-25)이라 화상량은 작게 [제작자]
 combat_move_skill: .id "move" .level 0 .type "move" .move 2 2 .launch 4321
 riposte_skill: .id "riposte1" .level 0 .type "melee" .atk 85% .dmg -50% .crit 0% .launch 1234 .target 1234 .is_crit_valid True
-// SYS-105 반격 기술 신설(명중 85, 피해 -50%, 치명 0): 유물 날 지켜줘가 주는 빌린 반격용. 반격 상태일 때만 쓰여 평소 영향 없음. 기준: 노상강도·현상금 반격 명중 85, 자기 반격 영웅보다 약하게 -50%.
+// SYS-105 반격 기술 신설(명중 85, 피해 -50%, 치명 0): 유물 동료 방패가 주는 빌린 반격용. 반격 상태일 때만 쓰여 평소 영향 없음. 기준: 노상강도·현상금 반격 명중 85, 자기 반격 영웅보다 약하게 -50%.
 combat_skill: .id "fortifying_vapours" .level 0 .heal 1 3 .launch 43 .target @1234  .effect "RB ANT Heal Amp 1" .is_stall_invalidating false
 combat_skill: .id "fortifying_vapours" .level 1 .heal 2 3 .launch 43 .target @1234  .effect "RB ANT Heal Amp 2" .is_stall_invalidating false
 combat_skill: .id "fortifying_vapours" .level 2 .heal 2 4 .launch 43 .target @1234  .effect "RB ANT Heal Amp 3" .is_stall_invalidating false
@@ -66,7 +66,7 @@ combat_skill: .id "protect_me" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0% 
 combat_skill: .id "protect_me" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .self_target_valid false .per_battle_limit 3 .launch 4321 .target @1234 .is_crit_valid True  .effect "Antiq DefBuff 3" "Mark Target" "Antiq ProtectMe ClearGuardsPerformer" "Antiq ProtectMe ClearGuardsTarget" "Antiq ProtectMe Guard" "RB ANT Guard Riposte" "RB ANT Guard Riposte Dmg 3" .is_stall_invalidating false
 combat_skill: .id "protect_me" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .self_target_valid false .per_battle_limit 3 .launch 4321 .target @1234 .is_crit_valid True  .effect "Antiq DefBuff 4" "Mark Target" "Antiq ProtectMe ClearGuardsPerformer" "Antiq ProtectMe ClearGuardsTarget" "Antiq ProtectMe Guard" "RB ANT Guard Riposte" "RB ANT Guard Riposte Dmg 4" .is_stall_invalidating false
 combat_skill: .id "protect_me" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .self_target_valid false .per_battle_limit 3 .launch 4321 .target @1234 .is_crit_valid True  .effect "Antiq DefBuff 5" "Mark Target" "Antiq ProtectMe ClearGuardsPerformer" "Antiq ProtectMe ClearGuardsTarget" "Antiq ProtectMe Guard" "RB ANT Guard Riposte" "RB ANT Guard Riposte Dmg 5" .is_stall_invalidating false
-// ANT-013 날 지켜줘: 지켜 주는 아군에게 반격 3턴(보정 없음) + 반격 전용 피해 +10/11/12/14/15% 2턴. 의도: 누구나 반격하게 해 팀원을 세지게, 결투가에게 써도 손해 없음. 근거: 게임 최장 반격 3턴이라 덮어써도 줄지 않음, 2턴이라 중첩 최대 2개.
+// ANT-013 동료 방패: 지켜 주는 아군에게 반격 3턴(보정 없음) + 반격 전용 피해 +10/11/12/14/15% 2턴. 의도: 누구나 반격하게 해 팀원을 세지게, 결투가에게 써도 손해 없음. 근거: 게임 최장 반격 3턴이라 덮어써도 줄지 않음, 2턴이라 중첩 최대 2개.
 tag: .id "light"
 tag: .id "non-religious"
 tag: .id "library"

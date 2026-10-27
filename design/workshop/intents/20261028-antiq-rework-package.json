@@ -20,7 +20,7 @@
    {"speaker": "user", "quote": "반격피해 버프 넣었구나 이거 10 ~ 15 로 가자 20은 너무 쌔다", "source": "same session, 2026-10-28"},
    {"speaker": "user", "quote": "아니지 결투가한테도 써 뭔소리야 결투가한테 제일 많이쓰는데 날 지켜줘 .", "source": "same session, 2026-10-28"}
   ],
-  "rationale_ko": "P-25(챔피언부터 장신구로 비등, 팀원을 세지게) 유물수집상 리워크. 수치 일부(단검 방어 -5~-15, 움츠리기 회복 2/2/3/4/5, 중독 저항 약화 -20/-22/-25/-27/-30, 반격 구조·반격 기술 -50%)는 Claude 제안을 제작자가 위 원문으로 받아들인 것. 상세·근거는 design/changes/antiquarian.md 2026-10-28 절과 design/analysis/antiq_curve_2026-10-27.md. 게임 내 확인 전(design/test_checklist_antiq_20261028.md). test 판.",
+  "rationale_ko": "P-25(챔피언부터 장신구로 비등, 팀원을 세지게) 유물수집상 리워크. 수치 일부(서툰 칼질 방어 -5~-15, 엎드려! 회복 2/2/3/4/5, 중독 저항 약화 -20/-22/-25/-27/-30, 반격 구조·반격 기술 -50%)는 Claude 제안을 제작자가 위 원문으로 받아들인 것. 상세·근거는 design/changes/antiquarian.md 2026-10-28 절과 design/analysis/antiq_curve_2026-10-27.md. 게임 내 확인 전(design/test_checklist_antiq_20261028.md). test 판.",
   "source": {"product": "claude", "reference": "Claude Code session cc3c95a9-aeea-4409-9feb-eb162a738694, 2026-10-27~28", "session_id": "cc3c95a9-aeea-4409-9feb-eb162a738694", "message_id": null, "event_id": null},
   "files": ["heroes/antiquarian/antiquarian.info.darkest", "heroes/antiquarian/antiquarian.effects_edit.txt", "effects/rebalance_antiquarian.effects.darkest", "shared/buffs/rebalance_antiquarian.buffs.json", "design/changes/antiquarian.md", "tools/antiq_curve.py", "design/analysis/antiq_curve_2026-10-27.md", "design/test_checklist_antiq_20261028.md"],
   "supersedes": []},
