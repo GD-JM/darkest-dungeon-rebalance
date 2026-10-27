@@ -11,13 +11,15 @@
      "Allies: stress +8",
      "Self: no stress heal",
      "Self: heal 5-10",
-     "Revert: allies stress heal 2"
+     "Revert: allies stress heal 2",
+     "Buff: blight resist +20-30%"
     ],
     "new": [
-     "Allies: stress +4",
-     "Self: stress +15",
+     "Allies: stress +5",
+     "Self: stress +12",
      "Self: heal 8-12",
-     "Revert: allies stress heal 3"
+     "Revert: allies stress heal 3",
+     "Buff: CRIT +6-10% (beast only)"
     ]
    },
    {
@@ -41,7 +43,7 @@
     ],
     "new": [
      "ACC 90",
-     "DMG -75%"
+     "DMG -80%"
     ]
    },
    {

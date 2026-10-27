@@ -1,0 +1,95 @@
+[
+  {
+    "id": "ABO-015",
+    "decision": "adopted",
+    "original_quote": "괴인 조정안 얘기해줄게 억제의 자물쇠를 괴인 중독 데미지 -75 에서 -80으로 바꾸자",
+    "rationale_ko": "현재 −75인 담즙 직접 피해를 −80으로 조정한다. 장신구에는 이 수치가 없으므로 스킬 피해 보정으로 해석한다. 중독 자체는 유지.",
+    "source": {
+      "product": "codex",
+      "reference": "local-knowledge event b78fe94814cce971fbe728f63866ed6ad1761c240eb42ef8bb41a96c44ad155f",
+      "session_id": "01a10741-76da-7e43-9500-98474ab3f383",
+      "message_id": "msg_01a17d46-e70f-7c30-b304-a978c868ea4f",
+      "event_id": "b78fe94814cce971fbe728f63866ed6ad1761c240eb42ef8bb41a96c44ad155f"
+    },
+    "files": [
+      "heroes/abomination/abomination.info.darkest",
+      "design/changes/abomination.md",
+      "design/analysis/abomination-transform-20261027.md",
+      "design/workshop/hero_cards.json",
+      "design/workshop/why.json"
+    ],
+    "supersedes": [
+      "ABO-002 direct damage only"
+    ]
+  },
+  {
+    "id": "ABO-016",
+    "decision": "adopted",
+    "original_quote": "변신시 팀원 스트레스 5에 변신 풀었을 시 스트레스 회복 3을 넣어서 팀원은 억제의 자물쇠 끼면 쌤쌤으로 만들고, 괴인은 그 수치에 맞춰서 변신했을 때의 스트레스 수치를 너가 정하고 변신 유지했을 때의 스트레스 수치도 너가 정해 위의 공식 참조해서",
+    "rationale_ko": "동료5/복귀3은 사용자 지정. 위임된 자기 진입12/유지6은 분석자가 선택했다. 무보정 왕복 파티비용18+6n 유지. HP8/9/10/11/12는 기존 값으로 재확인하며 신규 상향으로 집계하지 않는다. 다른 스트레스 보정이 있으면 자물쇠 중립을 보장하지 않는다.",
+    "source": {
+      "product": "codex",
+      "reference": "local-knowledge event b78fe94814cce971fbe728f63866ed6ad1761c240eb42ef8bb41a96c44ad155f",
+      "session_id": "01a10741-76da-7e43-9500-98474ab3f383",
+      "message_id": "msg_01a17d46-e70f-7c30-b304-a978c868ea4f",
+      "event_id": "b78fe94814cce971fbe728f63866ed6ad1761c240eb42ef8bb41a96c44ad155f"
+    },
+    "files": [
+      "heroes/abomination/abomination.info.darkest",
+      "heroes/abomination/abomination.effects_edit.txt",
+      "effects/rebalance_abomination.effects.darkest",
+      "design/changes/abomination.md",
+      "design/analysis/abomination-transform-20261027.md",
+      "design/workshop/hero_cards.json",
+      "design/workshop/why.json"
+    ],
+    "supersedes": [
+      "ABO-010 stress allocation only"
+    ],
+    "agent_selected_values": {
+      "self_entry": 12,
+      "self_upkeep": 6
+    },
+    "reaffirmed_HP": [
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  {
+    "id": "ABO-017",
+    "decision": "adopted",
+    "original_quote": "괴인 변신 했을 때의 버프에다가 치명타 확률 증가 넣어주자 중독 저항을 빼버리고 치명타 확률과 데미지 증가와 속도 증가 이렇게 3개를 넣어주자 그게 훨씬 더 변신 체감이 클 듯, 수치를 니가 뭐가 좋을 지 판정해.",
+    "rationale_ko": "변신 중독 저항을 치명5/6/7/8/10%p로 교체한다. 기존 피해·속도 강화 유지. in_mode beast와 inactive 제거로 인간형 영향을 차단한다. 숫자는 사용자 위임 범위에서 분석자가 선택.",
+    "source": {
+      "product": "codex",
+      "reference": "local-knowledge event b78fe94814cce971fbe728f63866ed6ad1761c240eb42ef8bb41a96c44ad155f",
+      "session_id": "01a10741-76da-7e43-9500-98474ab3f383",
+      "message_id": "msg_01a17d46-e70f-7c30-b304-a978c868ea4f",
+      "event_id": "b78fe94814cce971fbe728f63866ed6ad1761c240eb42ef8bb41a96c44ad155f"
+    },
+    "files": [
+      "heroes/abomination/abomination.info.darkest",
+      "heroes/abomination/abomination.effects_edit.txt",
+      "effects/rebalance_abomination.effects.darkest",
+      "shared/buffs/rebalance_abomination.buffs.json",
+      "design/changes/abomination-buffs-intents.txt",
+      "design/changes/abomination.md",
+      "design/analysis/abomination-transform-20261027.md",
+      "design/workshop/hero_cards.json",
+      "design/workshop/why.json"
+    ],
+    "supersedes": [],
+    "agent_selected_values": {
+      "critical": [
+        5,
+        6,
+        7,
+        8,
+        10
+      ]
+    }
+  }
+]

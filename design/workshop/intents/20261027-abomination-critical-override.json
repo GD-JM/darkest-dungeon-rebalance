@@ -1,0 +1,27 @@
+{
+  "id": "ABO-018",
+  "decision": "adopted",
+  "original_quote": "참회로 관리해 둔 자기 스트레스를 화력으로 바꾸는 운영이 돼. 이걸 기획의도로 정확하게 남겨 이게 핵심이야 주석으로 정확하게 남겨 괴인 변경사항만 전부 커밋해 치명은 678910으로 조금 더 버프하자 567810 아니고",
+  "rationale_ko": "참회로 관리한 괴인 자신의 스트레스를 변신 비용으로 지불하여 체력 회복과 야수 화력을 얻는 것이 핵심 기획이다. 야수 치명 5/6/7/8/10→6/7/8/9/10%p. 5레벨은 그대로이며 동료 부담을 낮추는 구조와 장신구 가이드는 유지한다.",
+  "source": {
+    "product": "codex",
+    "reference": "local-knowledge event 4bb2ca512f30f2d633e4a357b26997c9dec989ff1477a9ffe31eb4a68723ecc0",
+    "session_id": "01a10741-76da-7e43-9500-98474ab3f383",
+    "message_id": "msg_01a17d5f-a1aa-7d13-abab-11c5690eba7a",
+    "event_id": "4bb2ca512f30f2d633e4a357b26997c9dec989ff1477a9ffe31eb4a68723ecc0"
+  },
+  "files": [
+    "heroes/abomination/abomination.info.darkest",
+    "heroes/abomination/abomination.effects_edit.txt",
+    "effects/rebalance_abomination.effects.darkest",
+    "shared/buffs/rebalance_abomination.buffs.json",
+    "design/changes/abomination.md",
+    "design/changes/abomination-buffs-intents.txt",
+    "design/analysis/abomination-transform-20261027.md",
+    "design/workshop/hero_cards.json",
+    "design/workshop/why.json"
+  ],
+  "supersedes": [
+    "ABO-017 critical magnitude only"
+  ]
+}

@@ -38,28 +38,32 @@
  },
  "abomination|transform": {
   "ids": [
-   "ABO-010"
+   "ABO-010",
+   "ABO-016",
+   "ABO-017",
+   "ABO-018"
   ],
   "principles": [
    "P-23",
    "G-02",
    "P-22"
   ],
-  "en": "The Abomination pays 15 stress to transform and 6 per beast turn, managing the cost with Absolution. Higher healing and beast offense reward the risk; ally fear falls to 4 with 3 recovered on return.",
-  "ko": "변신 비용을 괴인 자신에게 집중한다. 자기 스트레스15와 유지6을 참회로 관리하는 대신 체력8~12와 야수 공격력을 얻으며, 동료는 공포4와 복귀3으로 부담을 줄인다."
+  "en": "Absolution prepares the Abomination’s own stress to be spent on transformation and beast firepower. Entry stress is 12 on self and 5 on each ally; reverting restores 3 stress to allies. Unmodified party cost matches vanilla at 18 plus 6 per upkeep application, while Suppression Padlock neutralizes the allies' 5-for-3 exchange before other modifiers. Heal 8-12 HP and gain CRIT +6-10% instead of blight resistance, alongside the existing damage and speed boosts.",
+  "ko": "참회로 관리해 둔 자기 스트레스를 변신 비용으로 지불하여 야수의 화력과 체력 회복으로 전환한다. 동료5/복귀3·자기12/유지6으로 스트레스 기본 총량18+6n을 유지하면서 자기 부담에 집중한다. 억제의 자물쇠는 다른 보정이 없는 동료를 중립으로 만든다. 기존 HP8~12·피해·속도 강화에 더해, 중독 저항을 야수 한정 치명6~10%p로 교체한다."
  },
  "abomination|vomit": {
   "ids": [
    "ABO-002",
-   "ABO-007"
+   "ABO-007",
+   "ABO-015"
   ],
   "principles": [
    "P-23",
    "G-02",
    "P-11"
   ],
-  "en": "Its blight already matched the Jester's Harvest (the same rank 2–3 damage-over-time AoE), but its direct damage lagged far behind, so damage goes up. The 5-point accuracy drop pays for that and follows the human-form direction (lower accuracy, stronger base output).",
-  "ko": "같은 2·3열 광역 지속 피해인 광대 수확과 지속 피해량은 이미 비슷했고 직접 피해만 크게 뒤처져 피해를 올렸다. 명중 −5는 그 상향의 대가이자 인간 형태 방향(명중↓ 기본 성능↑)과 같다."
+  "en": "Its blight already matched the Jester's Harvest (the same rank 2–3 damage-over-time AoE), but its direct damage lagged far behind, so damage goes up. The 5-point accuracy drop pays for that and follows the human-form direction (lower accuracy, stronger base output). Direct damage is now -80%, trading a little human-form damage for the revised beast burst.",
+  "ko": "같은 2·3열 광역 지속 피해인 광대 수확과 지속 피해량은 이미 비슷했고 직접 피해만 크게 뒤처져 피해를 올렸다. 명중 −5는 그 상향의 대가이자 인간 형태 방향(명중↓ 기본 성능↑)과 같다. ABO-015: 담즙 직접 피해를 -80으로 낮추어 변신 폭발력과 교환한다."
  },
  "antiquarian|flashpowder": {
   "ids": [

@@ -1,3 +1,9 @@
 // ABO-011 shared/buffs/rebalance_abomination.buffs.json: RB_ABO_AP_1..5 ignore_protection=0.20/0.23/0.27/0.30/0.35.
 // 자기 스트레스 비용 증가에 대한 분노 전용 관통 보상. 총사와 독립된 ID, 원본 장신구 불변. JSON에는 주석을 넣지 않는다.
 // 총사와 동일 skill_instant 소비 구조이나 V-19 관통 계산·다음 기술 누출 여부는 실제 게임 검증 필요.
+
+// ABO-017 RB_ABO_TRANSFORM_CRIT_1..5: crit_chance +0.05/0.06/0.07/0.08/0.10, in_mode beast, remove_if_not_active true.
+// Transform replaces its temporary blight-resistance effect with a temporary beast-only critical bonus; original shared buffs and Padlock remain unchanged.
+
+// ABO-018 (2026-10-27): CRIT 0.06/0.07/0.08/0.09/0.10. 사용자 조정으로 ABO-017의 0.05/0.06/0.07/0.08/0.10을 대체한다.
+// 기획 핵심: 참회로 관리해 둔 자기 스트레스를 변신 비용으로 지불해 체력 회복과 야수 화력으로 바꾼다.
