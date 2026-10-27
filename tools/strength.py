@@ -76,6 +76,8 @@ PARAM = dict(
     MARK_DRAW=1.72,       # 자기 표식 중 받는 공격 배수. 표식 대상이 단일 공격을 받을 확률 55.6%(없으면 25%, 몬스터 AI marked_target 가중치 x 실제 편성 빈도). 몬스터 공격의 15%는 광역이라 표식과 무관 -> (0.85 x 0.556 + 0.15) / (0.85 x 0.25 + 0.15) = 1.72       # 영웅 1명이 라운드당 받는 공격. 적 4명이 2.55라운드에 걸쳐 선형 감소 -> 평균 2명 생존 -> 2회를 4명이 나눔 (R-STRAT-02)
     ACT_TOP=3,            # 행동 가치 = 상위 3기술 평균 (4칸 중 1칸은 이동·상황기)
     # R-VALUE-08 화상 (도망자). 툴팁: 라운드 끝에 중첩만큼 피해, 그 뒤 남은 중첩 절반. 저항 무시. 틱은 DEFAULT_DUR 라운드까지 센다
+    BURN_CRIT_MULT=1.5,  # R-HP-028: official in-game glossary, critical burn stacks +50%, rounded up
+    FIREFLY_DECAY_ROUNDS=1,  # official 27987 hotfix: one effective round; raw duration=2 is not two effective rounds
     BURN_KEEP=0.5,        # 라운드마다 남는 비율 (절반, 내림 - V-12)
     BURN_SLOW_KEEP=0.75,  # '화상 감소 +50%' 약화(흩날리는 불티) 중 남는 비율. 감소를 늦춘다고 가정 (V-12)
     HOT_STEALTH_TICKS=1,  # '은신 중' 턴당 회복: 다음 턴 시작에 1번 받고 공격하면 은신이 풀린다
@@ -263,6 +265,20 @@ def burn_total(n, keep_rounds=0, P=None):
         if s <= 0:
             break
     return tot
+
+
+def burn_payload(n, critical=False, keep_rounds=0, P=None):
+    """R-HP-028: expected surviving burn packet, conditional on hit and crit branch.
+
+    Stack bonus/ceil is from the shipped glossary. Decay speed, finite horizon,
+    and death-before-tick discount remain explicit model assumptions.
+    """
+    P = P or PARAM
+    amount = math.ceil(n * P.get('BURN_CRIT_MULT', 1.5)) if critical else int(n)
+    total = burn_total(amount, keep_rounds, P)
+    if P.get('BURN_TIMING', True) and total:
+        total -= 0.5 * min(amount, total) * P['DEATH_RATE']
+    return total
 
 
 def burn_zone(z, rounds, P=None):
@@ -1071,10 +1087,13 @@ def skill_value(C, l, d):
                     add(nm, val * n_t * (P['E_DOT_AOE'] if aoe else P['E_DOT_SGL']) * rw)
             if 'dotBurn' in k:                                  # R-VALUE-08: 중첩 절반 감소, 저항 무시
                 slow = any(C.buffs.get(b.strip('"'), {}).get('stat_type') == 'hp_dot_burn_decay_percent' for b in k.get('buff_ids', []))
-                bt = burn_total(num(first(k, 'dotBurn')), dur if slow else 0, P)
-                if P.get('BURN_TIMING', True) and bt:               # R-VALUE-24 첫 틱이 대상 행동 뒤 (절반의 경우)
-                    bt *= 1 - 0.5 * min(int(num(first(k, 'dotBurn'))), bt) / bt * P['DEATH_RATE']
-                add('화상', ev(None, fn=lambda a, c: a * bt) * n_t * (P['E_DOT_AOE'] if aoe else P['E_DOT_SGL']) * rw)
+                keep_rounds = dur if slow else 0
+                if any(b.strip('"') == 'rw_burn_decay_debuff' for b in k.get('buff_ids', [])):
+                    keep_rounds = P.get('FIREFLY_DECAY_ROUNDS', 1)
+                # R-HP-028: critical burn gains stacks, not generic bleed/blight duration.
+                # Timing/decay interpretation remains a sensitivity, not an engine-verified claim.
+                add('화상', ev(None, fn=lambda a, c: a * burn_payload(num(first(k, 'dotBurn')), c, keep_rounds, P))
+                    * n_t * (P['E_DOT_AOE'] if aoe else P['E_DOT_SGL']) * rw)
             if 'controlled_burn_amount' in k:                   # 통제된 화상 열 효과 (빗나가도 걸림)
                 zb = burn_zone(num(first(k, 'controlled_burn_amount')), num(first(k, 'controlled_burn_duration', '3')), P)
                 h_ = 1.0 if first(k, 'on_miss', 'false').lower() == 'true' else st.mean(hit(m, atk) for m in MONS)
