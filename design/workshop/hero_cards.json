@@ -102,6 +102,17 @@
     "new": [
      "Target: PROT -10 to -15% (2 turns)"
     ]
+   },
+   {
+    "key": "antiquarian|invigorating_vapours",
+    "name": "Invigorating Vapours",
+    "icon": "six",
+    "old": [
+     "Party dodge +3/5/7/9/10"
+    ],
+    "new": [
+     "Party dodge +5/6/7/8/10 (3 turns)"
+    ]
    }
   ]
  },
@@ -705,10 +716,12 @@
     "name": "Open Vein",
     "icon": "seven",
     "old": [
-     "CRIT 0%"
+     "CRIT 0%",
+     "DMG -15%"
     ],
     "new": [
-     "CRIT 5%"
+     "CRIT 5%",
+     "DMG -20%"
     ]
    }
   ]

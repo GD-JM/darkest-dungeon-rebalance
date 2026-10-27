@@ -132,16 +132,24 @@ def load_edit_korean(M, G):
 
 
 def effect_sig(line):
-    """Name-independent signature of an effect line: frozenset of (key, value).
+    """SYS-104: compare complete field values, including lists and decimals.
 
-    Two effects with the same signature are functionally identical, so one can be
-    reused instead of creating a duplicate "RB ..." copy (rules.md R-DATA-01).
+    Field order and the effect name are irrelevant. Value order and every token
+    remain significant: sharing just the first buff is not semantic equality.
     """
     body = re.sub(r'^\s*effect:\s*', '', line.strip())
-    m = re.search(r'\.name\s*"[^"]*"', body)
-    if m:
-        body = body[:m.start()] + ' ' + body[m.end():]
-    return frozenset(re.findall(r'\.(\w+)\s*((?:"[^"]*"|[^\s.]+)?)', body))
+    tokens = re.findall(r'"[^"\n]*"|\.[A-Za-z_]\w*|[^\s"]+', body)
+    fields, key, values = [], None, []
+    for token in tokens:
+        if re.fullmatch(r'\.[A-Za-z_]\w*', token):
+            if key is not None and key != 'name':
+                fields.append((key, tuple(values)))
+            key, values = token[1:], []
+        else:
+            values.append(token)
+    if key is not None and key != 'name':
+        fields.append((key, tuple(values)))
+    return frozenset(fields)
 
 
 FAMILY = lambda nm: re.sub(r'\s*\d+$', '', nm).strip()

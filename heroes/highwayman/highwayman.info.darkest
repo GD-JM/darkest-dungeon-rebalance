@@ -99,11 +99,12 @@ combat_skill: .id "duelist_advance" .level 4 .type "melee" .atk 110% .dmg -20% .
 // HWY-013 duelist_advance: 명중 1렙 95 -> 90, dmg -20% -> -40%, 대상 123 -> 12(3열 도달 제거), Tracking Buff 바닐라 수치 복원(3턴 지속 유지) → HWY-016(x0.75) → HWY-018: 현재 피해 -20%, 버프 레벨당 +1(명중 4~8, 치명타 2~6, 피해 10~14%, 3턴)
 
 
-combat_skill: .id "opened_vein" .level 0 .type "melee" .atk 95% .dmg -15% .crit 5% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 1" "HW Open Vein Bleed Debuff 1" "HW Open Vein SPD Debuff 1"
-combat_skill: .id "opened_vein" .level 1 .type "melee" .atk 100% .dmg -15% .crit 6% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 2" "HW Open Vein Bleed Debuff 2" "HW Open Vein SPD Debuff 2"
-combat_skill: .id "opened_vein" .level 2 .type "melee" .atk 105% .dmg -15% .crit 7% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 3" "HW Open Vein Bleed Debuff 3" "HW Open Vein SPD Debuff 3"
-combat_skill: .id "opened_vein" .level 3 .type "melee" .atk 110% .dmg -15% .crit 8% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 4" "HW Open Vein Bleed Debuff 4" "HW Open Vein SPD Debuff 4"
-combat_skill: .id "opened_vein" .level 4 .type "melee" .atk 115% .dmg -15% .crit 9% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 5" "HW Open Vein Bleed Debuff 5" "HW Open Vein SPD Debuff 5"
+combat_skill: .id "opened_vein" .level 0 .type "melee" .atk 95% .dmg -20% .crit 5% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 1" "HW Open Vein Bleed Debuff 1" "HW Open Vein SPD Debuff 1"
+combat_skill: .id "opened_vein" .level 1 .type "melee" .atk 100% .dmg -20% .crit 6% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 2" "HW Open Vein Bleed Debuff 2" "HW Open Vein SPD Debuff 2"
+combat_skill: .id "opened_vein" .level 2 .type "melee" .atk 105% .dmg -20% .crit 7% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 3" "HW Open Vein Bleed Debuff 3" "HW Open Vein SPD Debuff 3"
+combat_skill: .id "opened_vein" .level 3 .type "melee" .atk 110% .dmg -20% .crit 8% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 4" "HW Open Vein Bleed Debuff 4" "HW Open Vein SPD Debuff 4"
+combat_skill: .id "opened_vein" .level 4 .type "melee" .atk 115% .dmg -20% .crit 9% .launch 321 .target 12 .is_crit_valid True  .effect "Bleed 5" "HW Open Vein Bleed Debuff 5" "HW Open Vein SPD Debuff 5"
+// HWY-025 (2026-10-26): Open Vein DMG -15% -> -20%; keep CRIT 5..9%. Pay part of HWY-024 critical/bleed gain with direct damage; preserve bleeding and both debuffs.
 // HWY-024 (2026-10-25, test): 정맥절개 치명 0/1/2/3/4% -> 5/6/7/8/9%. 칼질에서 받은 치명으로 전열 장갑 적에 대한 출혈 연계를 강조한다. 명중·피해·출혈·약화 유지; HWY-022의 치명 복귀만 대체한다.
 // HWY-022 opened_vein: back to vanilla (dmg -15%, crit 0..4%). HWY-006/019/020 withdrawn; the vanilla trade (acc 95 for two extra debuffs) already fits the rules.
 // HWY-022 정맥 절개 바닐라 복귀(피해 −15%, 치명 0~4%). HWY-006·019·020 철회. 근거: 역병 의사 절개(90/0%/5%, 효과 1개)와 비교해 명중 +5 대신 피해 −15%·치명 −5%로 약화 2개를 더 받는 바닐라 교환이 이미 원칙에 맞음 [제작자 10-21]

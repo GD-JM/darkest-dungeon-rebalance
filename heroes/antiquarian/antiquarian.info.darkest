@@ -45,11 +45,15 @@ combat_skill: .id "fortifying_vapours" .level 3 .heal 3 4 .launch 43 .target @12
 combat_skill: .id "fortifying_vapours" .level 4 .heal 3 5 .launch 43 .target @1234  .effect "RB ANT Fortify 5" .is_stall_invalidating false
 // ANT-003 fortifying_vapours: heal 1-1/1-2/2-2/2-3/3-3 -> 1-3/2-3/2-4/3-4/3-5; resists bleed+blight -> bleed, blight, stun, debuff +10/11/12/14/15% (3 turns).
 // ANT-003 강화의 연막: 회복 1–1…3–3 → 1–3/2–3/2–4/3–4/3–5, 저항 출혈·중독 → 출혈·중독·기절·약화 +10/11/12/14/15%(3턴). 의도: 게임 안 유효한 HP 회복 기술을 늘림. 회복 +50% 장신구 2개(생명의 촛대·대가의 정수)를 끼면 2배(5렙 6–10)라 기본값은 성전사(2–3→4–5)보다 낮게(P-25). 저항 4종으로 "몸을 단단히 하는 연막" — 기절 위험 아군을 미리 감싸는 쓰임 [제작자 10-23 "1~3, 3~5, 성전사보다 구려야", 저항 4종]
-combat_skill: .id "invigorating_vapours" .level 0 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 43 .target ~@1234 .is_crit_valid True  .effect "Antiq Dodge 1" .is_stall_invalidating false
-combat_skill: .id "invigorating_vapours" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 43 .target ~@1234 .is_crit_valid True  .effect "Antiq Dodge 2" .is_stall_invalidating false
+combat_skill: .id "invigorating_vapours" .level 0 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 43 .target ~@1234 .is_crit_valid True  .effect "RB ANT Antiq Dodge 1" .is_stall_invalidating false
+// ANT-006: approved dodge 5/6/7/8/10; dedicated changed-level effect, same three-turn party support.
+combat_skill: .id "invigorating_vapours" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 43 .target ~@1234 .is_crit_valid True  .effect "RB ANT Antiq Dodge 2" .is_stall_invalidating false
+// ANT-006: approved dodge 5/6/7/8/10; dedicated changed-level effect, same three-turn party support.
 combat_skill: .id "invigorating_vapours" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 43 .target ~@1234 .is_crit_valid True  .effect "Antiq Dodge 3" .is_stall_invalidating false
-combat_skill: .id "invigorating_vapours" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 43 .target ~@1234 .is_crit_valid True  .effect "Antiq Dodge 4" .is_stall_invalidating false
+combat_skill: .id "invigorating_vapours" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 43 .target ~@1234 .is_crit_valid True  .effect "RB ANT Antiq Dodge 4" .is_stall_invalidating false
+// ANT-006: approved dodge 5/6/7/8/10; dedicated changed-level effect, same three-turn party support.
 combat_skill: .id "invigorating_vapours" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .launch 43 .target ~@1234 .is_crit_valid True  .effect "Antiq Dodge 5" .is_stall_invalidating false
+// ANT-006 (2026-10-26): Invigorating Vapours dodge 3/5/7/9/10 -> 5/6/7/8/10; user-selected early-level curve. Duration 3, whole party and stacking unchanged.
 combat_skill: .id "protect_me" .level 0 .type "ranged" .atk 0% .dmg 0% .crit 0% .self_target_valid false .per_battle_limit 3 .launch 4321 .target @1234 .is_crit_valid True  .effect "Antiq DefBuff 1" "Mark Target" "Antiq ProtectMe ClearGuardsPerformer" "Antiq ProtectMe ClearGuardsTarget" "Antiq ProtectMe Guard" .generation_guaranteed true .is_stall_invalidating false
 combat_skill: .id "protect_me" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0% .self_target_valid false .per_battle_limit 3 .launch 4321 .target @1234 .is_crit_valid True  .effect "Antiq DefBuff 2" "Mark Target" "Antiq ProtectMe ClearGuardsPerformer" "Antiq ProtectMe ClearGuardsTarget" "Antiq ProtectMe Guard" .is_stall_invalidating false
 combat_skill: .id "protect_me" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .self_target_valid false .per_battle_limit 3 .launch 4321 .target @1234 .is_crit_valid True  .effect "Antiq DefBuff 3" "Mark Target" "Antiq ProtectMe ClearGuardsPerformer" "Antiq ProtectMe ClearGuardsTarget" "Antiq ProtectMe Guard" .is_stall_invalidating false

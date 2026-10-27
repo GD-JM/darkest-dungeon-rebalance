@@ -1,0 +1,5 @@
+MUS-122
+Approved source: C:\Users\lemm1\Documents\Codex\2026-10-04\new-chat-2\outputs\covering-smoke-icon-draft-v2.png
+Source SHA256: a9a6527da057408e2f009d01655e187f4bb61fe6328c6a88400ca390f5e5addb
+Output: heroes/musketeer/musketeer.ability.seven.png, RGBA 72x72 Lanczos asset build.
+Intent: dark-blue/black smoke surrounds an ally to communicate allied stealth. No skill changes.

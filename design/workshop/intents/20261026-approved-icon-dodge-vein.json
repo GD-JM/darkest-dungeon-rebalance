@@ -1,0 +1,105 @@
+[
+  {
+    "id": "ANT-006",
+    "decision": "adopted",
+    "original_quote": "유물 회피 567810으로 바꿔",
+    "rationale_ko": "섬광 가루와 강화의 연막은 유지. 활력의 연막 회피를 5/6/7/8/10으로 변경한다. 기술1·2는 상향, 기술4는 하향, 3·5는 유지하며 3턴 지속·중첩·전원 대상은 그대로다. 기존 중독·4종 저항 runtime을 편집 시트에 동기화하여 회피 재생성에 따른 이전 승인 효과의 회귀를 막는다. 이 동기화는 추가 성능 변경이 아니다.",
+    "source": {
+      "product": "codex",
+      "reference": "local-knowledge event d93df284982f63a61845429af6e52d067d9e59987c639e09ebab8853bff4b19b",
+      "session_id": "01a10741-76da-7e43-9500-98474ab3f383",
+      "message_id": "msg_01a17864-07b0-7a62-86e5-962712130610",
+      "event_id": "d93df284982f63a61845429af6e52d067d9e59987c639e09ebab8853bff4b19b"
+    },
+    "files": [
+      "heroes/antiquarian/antiquarian.info.darkest",
+      "heroes/antiquarian/antiquarian.effects_edit.txt",
+      "effects/rebalance_antiquarian.effects.darkest",
+      "design/changes/antiquarian.md",
+      "design/workshop/hero_cards.json",
+      "design/workshop/why.json"
+    ],
+    "supersedes": []
+  },
+  {
+    "id": "HWY-025",
+    "decision": "adopted",
+    "original_quote": "정맥절개 피해 -20 왜 반영안됐니? 치명타는 높아졌는데?",
+    "rationale_ko": "기존 -20은 검토안으로만 남아 실제 파일은 -15였다. 이번 명시 요청으로 -20을 적용한다. HWY-024의 치명 5~9% 및 출혈·약화는 유지하여 직접 피해와 장갑 대응 출혈의 교환을 만든다.",
+    "source": {
+      "product": "codex",
+      "reference": "local-knowledge event d93df284982f63a61845429af6e52d067d9e59987c639e09ebab8853bff4b19b",
+      "session_id": "01a10741-76da-7e43-9500-98474ab3f383",
+      "message_id": "msg_01a17864-07b0-7a62-86e5-962712130610",
+      "event_id": "d93df284982f63a61845429af6e52d067d9e59987c639e09ebab8853bff4b19b"
+    },
+    "files": [
+      "heroes/highwayman/highwayman.info.darkest",
+      "design/changes/highwayman.md",
+      "design/workshop/hero_cards.json",
+      "design/workshop/why.json"
+    ],
+    "supersedes": [
+      "HWY-022 damage only"
+    ]
+  },
+  {
+    "id": "MUS-122",
+    "decision": "adopted",
+    "original_quote": "연막 아이콘 만든거 반영하고",
+    "rationale_ko": "사용자가 요청한 어두운 파랑·검정, 아군을 감싸는 연기의 기존 승인 v2 시안을 게임 규격 72x72로 빌드하여 적용한다. 기존 seven 참조 및 은신·회피 수치는 유지한다.",
+    "source": {
+      "product": "codex",
+      "reference": "local-knowledge event d93df284982f63a61845429af6e52d067d9e59987c639e09ebab8853bff4b19b",
+      "session_id": "01a10741-76da-7e43-9500-98474ab3f383",
+      "message_id": "msg_01a17864-07b0-7a62-86e5-962712130610",
+      "event_id": "d93df284982f63a61845429af6e52d067d9e59987c639e09ebab8853bff4b19b"
+    },
+    "files": [
+      "heroes/musketeer/musketeer.ability.seven.png",
+      "heroes/musketeer/musketeer.art.darkest",
+      "design/changes/musketeer-icon-intents.txt",
+      "design/changes/musketeer.md",
+      "design/workshop/why.json"
+    ],
+    "supersedes": []
+  },
+  {
+    "id": "SYS-104",
+    "decision": "implementation-fix",
+    "original_quote": "유물 회피 567810으로 바꿔",
+    "rationale_ko": "승인된 회피 수정의 검증 중 발견한 생성기 동등성 비교 오류를 고친다. 사용자 신규 밸런스 결정으로 표현하지 않으며 기존 영웅 수치를 자동 재생성하지 않는다.",
+    "source": {
+      "product": "codex",
+      "reference": "local-knowledge event d93df284982f63a61845429af6e52d067d9e59987c639e09ebab8853bff4b19b",
+      "session_id": "01a10741-76da-7e43-9500-98474ab3f383",
+      "message_id": "msg_01a17864-07b0-7a62-86e5-962712130610",
+      "event_id": "d93df284982f63a61845429af6e52d067d9e59987c639e09ebab8853bff4b19b"
+    },
+    "files": [
+      "tools/effect_common.py",
+      "tools/test_effect_signature.py",
+      "design/changes/system.md"
+    ],
+    "supersedes": []
+  },
+  {
+    "id": "R-HP-028",
+    "decision": "analysis-model-fix",
+    "original_quote": "똑같이 도망자도 공식설정 이런거 다 끌고와서 원래 어떻게 설계된 영웅인지 파악하고 해당 내용 토대로 조정안 내놔봐",
+    "rationale_ko": "공식 게임 용어집의 화상 치명 +50% 중첩(올림)이 모델에 누락됨을 고친다. 공식 27987 핫픽스의 불티 약화 실효 1라운드도 별도 파라미터로 반영한다. 영웅/장신구 데이터 변경이 아니며 화상 발동 시점·감쇠 0.75 해석·야생불 전파는 아직 모델 가정/미검증이다.",
+    "source": {
+      "product": "codex",
+      "reference": "local-knowledge event d93df284982f63a61845429af6e52d067d9e59987c639e09ebab8853bff4b19b",
+      "session_id": "01a10741-76da-7e43-9500-98474ab3f383",
+      "message_id": "msg_01a17864-07b0-7a62-86e5-962712130610",
+      "event_id": "d93df284982f63a61845429af6e52d067d9e59987c639e09ebab8853bff4b19b"
+    },
+    "files": [
+      "tools/strength.py",
+      "tools/test_hp_model.py",
+      "design/analysis/runaway-and-feedback-20261026.md"
+    ],
+    "supersedes": []
+  }
+]

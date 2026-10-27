@@ -19,6 +19,7 @@ combat_skill: .id "buckshot" .icon "four" .anim "attack_rifle" .fx "buckshot" .t
 combat_skill: .id "sidearm" .icon "five" .anim "attack_pistol" .fx "sidearm" .targchestfx "sidearm_target" .area_pos_offset 100 0
 combat_skill: .id "patch_up" .icon "six" .anim "attack_bandage" .fx "patch_up" .targfx "patch_up_target" .can_display_performer_selection_after_turn false
 combat_skill: .id "skeet_shot" .icon "seven" .anim "attack_artillery" .fx "skeet_shot" .targfx "smokescreen_target" .area_pos_offset 0 -50 .target_area_pos_offset 0 -25 .condensed_tooltip_stats true .condensed_tooltip_effects true
+// MUS-122 (2026-10-26): Use the approved dark-blue smoke surrounding an ally icon, 72x72. Existing seven icon key and all combat behavior are preserved.
 // MUS-110 Covering Smoke: skeet airburst launch + smokescreen cloud over the ally. / 엄호 연막: 공중 폭발 발사 + 아군 위 연기.
 
 combat_move_skill: .id "move" .icon "generic_move" .anim "idle"

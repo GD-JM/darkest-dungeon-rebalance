@@ -1136,13 +1136,14 @@
  },
  "musketeer|skeet_shot": {
   "ids": [
-   "MUS-109"
+   "MUS-109",
+   "MUS-122"
   ],
   "principles": [
    "P-19"
   ],
-  "en": "A new way to protect: an airburst smoke shell hides one ally for two turns, so enemies cannot single them out. Nobody has to take the hits for them.",
-  "ko": "새로운 방식의 지키기. 공중에서 터진 연막이 아군 한 명을 2턴 숨겨 적이 직접 노리지 못한다. 누가 대신 맞아 줄 필요가 없다."
+  "en": "A new way to protect: an airburst smoke shell hides one ally for two turns, so enemies cannot single them out. Nobody has to take the hits for them. The new dark-blue icon shows smoke sheltering an ally, matching Covering Smoke without changing its effects.",
+  "ko": "새로운 방식의 지키기. 공중에서 터진 연막이 아군 한 명을 2턴 숨겨 적이 직접 노리지 못한다. 누가 대신 맞아 줄 필요가 없다. 사용자가 요청한 어두운 파랑·검정, 아군을 감싸는 연기의 기존 승인 v2 시안을 게임 규격 72x72로 빌드하여 적용한다. 기존 seven 참조 및 은신·회피 수치는 유지한다."
  },
  "leper|revenge": {
   "ids": [
@@ -1166,15 +1167,16 @@
  },
  "highwayman|opened_vein": {
   "ids": [
-   "HWY-024"
+   "HWY-024",
+   "HWY-025"
   ],
   "principles": [
    "G-02",
    "P-11",
    "P-21"
   ],
-  "en": "Open Vein gains five points of skill CRIT from Wicked Slice to support its bleed role against armoured enemies. Accuracy, damage, bleed and debuffs are unchanged; this is not protection piercing.",
-  "ko": "칼질에서 기술 치명 5%p를 받아 출혈이 통하는 장갑 적 대응을 강조한다. 기존 명중·피해·출혈·출혈 저항 감소·속도 감소는 유지한다. 치명타 자체에 방어 관통을 추가하는 변경은 아니다."
+  "en": "Open Vein gains five points of skill CRIT from Wicked Slice to support its bleed role against armoured enemies. Accuracy, damage, bleed and debuffs are unchanged; this is not protection piercing. Open Vein keeps its higher critical chance and bleed utility, paying for part of that gain with damage reduced from -15% to -20%.",
+  "ko": "칼질에서 기술 치명 5%p를 받아 출혈이 통하는 장갑 적 대응을 강조한다. 기존 명중·피해·출혈·출혈 저항 감소·속도 감소는 유지한다. 치명타 자체에 방어 관통을 추가하는 변경은 아니다. 기존 -20은 검토안으로만 남아 실제 파일은 -15였다. 이번 명시 요청으로 -20을 적용한다. HWY-024의 치명 5~9% 및 출혈·약화는 유지하여 직접 피해와 장갑 대응 출혈의 교환을 만든다."
  },
  "shieldbreaker|break_guard": {
   "ids": [
@@ -1207,5 +1209,13 @@
   ],
   "ko": "자기 스트레스 비용이 커진 변신의 광역 화력을 보상한다. 기존 할퀴기 누적 강화는 유지한다.",
   "en": "Rake gains direct area damage to reward the higher personal stress cost, keeping its existing stacking damage buff."
+ },
+ "antiquarian|invigorating_vapours": {
+  "ids": [
+   "ANT-006"
+  ],
+  "principles": [],
+  "ko": " 섬광 가루와 강화의 연막은 유지. 활력의 연막 회피를 5/6/7/8/10으로 변경한다. 기술1·2는 상향, 기술4는 하향, 3·5는 유지하며 3턴 지속·중첩·전원 대상은 그대로다.",
+  "en": " Dodge now scales 5/6/7/8/10: more useful early, with a smaller rank-four bonus and the same top rank."
  }
 }
