@@ -97,6 +97,9 @@ PARAM = dict(
     KILL_ON_HIT=1.57 / 4, # '.requires_kill_target' 효과(처치 시에만)의 발동률 = 영웅 1행동당 처치 수 (R-STRAT-01)
     # R-VALUE-11: 같은 대상에게 이후 들어올 회복 행동 수/라운드 [가정, 민감도 대상].
     HEAL_FOLLOWUP_RATE=0.5,
+    # R-VALUE-26 받는 스트레스 회복 증가: 같은 대상이 이후 받을 스트레스 회복 행동 수/라운드 [가정, HP 회복과 같은 값]
+    STRESS_HEAL_FOLLOWUP_RATE=0.5,
+    STRESS_HEAL_FOLLOWUP_AMOUNT=None,  # None: 영웅별 최대 단일 아군 스트레스 회복의 중앙값(바닐라)
     HEAL_FOLLOWUP_AMOUNT=None,  # None: 원본 영웅별 최대 단일 아군 직접 회복 평균의 중앙값, 회복 치명 포함
     # R-VALUE-12: 표식 특효 피해 비용. None: 일반 몬스터 표본의 AI 기술 가중 피해 비율로 추정.
     MARK_DAMAGE_BONUS=None,
@@ -745,6 +748,23 @@ def followup_heal_amount(heal_crit_sgl=PARAM['HEAL_CRIT_SGL']):
     return st.median(amounts) * (1 + heal_crit_sgl) if amounts else 0.0
 
 
+def followup_stress_heal_amount():
+    """R-VALUE-26: 각 영웅의 최대 단일 아군 스트레스 회복(효과 .healstress)을 1개씩 집계한 중앙값(바닐라)."""
+    eff = load_effects('vanilla')
+    amounts = []
+    for hero in KO:
+        vals = []
+        for l, d in load_hero(hero, 'vanilla')['skills']:
+            if '@' in first(d, 'target') and '~' not in first(d, 'target'):
+                for n in ec.effect_names_in(l):
+                    k = kv(eff.get(n, ''))
+                    if 'healstress' in k and first(k, 'target') == 'target':
+                        vals.append(num(first(k, 'healstress')))
+        if vals:
+            amounts.append(max(vals))
+    return st.median(amounts) if amounts else 0.0
+
+
 @functools.lru_cache(maxsize=None)
 def marked_damage_bonus():
     """표식 대상 추가 직접 피해 / 표식 없는 직접 피해. MONS 동일 표본, specific_skill 기본 AI 가중치.
@@ -844,6 +864,10 @@ class Ctx:
     def stat_value(s, stat, amt, dur, who):
         """강화 수치 -> HP (대상 1명, dur 턴)"""
         P = s.P
+        if stat == 'stress_heal_received_percent':      # R-VALUE-26 이후 받는 스트레스 회복 x 증가율 -> 스트레스 가치(HP)
+            packet = P['STRESS_HEAL_FOLLOWUP_AMOUNT']
+            if packet is None: packet = followup_stress_heal_amount()
+            return amt * packet * P['STRESS_HEAL_FOLLOWUP_RATE'] * dur * P['STRESS_HP'] * P['SUPPORT_MULT']
         if stat == 'hp_heal_received_percent':
             packet = P['HEAL_FOLLOWUP_AMOUNT']
             if packet is None: packet = followup_heal_amount(P['HEAL_CRIT_SGL'])
@@ -883,7 +907,7 @@ class Ctx:
                 cm = size_share((B.get('rule_data') or {}).get('float', 2))
             if B.get('stat_type') == 'stress_dmg_received_percent':
                 v += cm * s.stress_resist_value(B['amount'], dur, who)
-            elif B.get('stat_type') == 'hp_heal_received_percent':
+            elif B.get('stat_type') in ('hp_heal_received_percent', 'stress_heal_received_percent'):
                 v += cm * s.stat_value(B['stat_type'], B['amount'], dur, who)
             elif B.get('stat_type') in ('combat_stat_add', 'combat_stat_multiply'):
                 v += cm * s.stat_value(B['stat_sub_type'], B['amount'], dur, who)
@@ -1461,6 +1485,8 @@ def evaluate(mode, P=PARAM):
         P = dict(P, STRESS_HP=stress_value(P, median_hp=PARAM_MED_HP))   # R-VALUE-06 가격 비율 + 고통 비용
     if P['HEAL_FOLLOWUP_AMOUNT'] is None:
         P = dict(P, HEAL_FOLLOWUP_AMOUNT=followup_heal_amount(P['HEAL_CRIT_SGL']))
+    if P.get('STRESS_HEAL_FOLLOWUP_AMOUNT') is None:
+        P = dict(P, STRESS_HEAL_FOLLOWUP_AMOUNT=followup_stress_heal_amount())
     if P['MARK_DAMAGE_BONUS'] is None:
         P = dict(P, MARK_DAMAGE_BONUS=marked_damage_bonus())
     eff = load_effects(mode)
