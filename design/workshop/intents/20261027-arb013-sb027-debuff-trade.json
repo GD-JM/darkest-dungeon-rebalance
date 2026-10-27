@@ -1,0 +1,30 @@
+[
+  {
+    "id": "ARB-013",
+    "decision": "adopted",
+    "original_quote": "제압사격에 속도 감소 넣는건 아주 찬성이야 고개를 못 들게 하는 군사용어 화살비를 퍼붓는 거잖아 그러니 상대의 대응이 늦어지는 것도 개연성에 부합해 근데 제압사격에 -4 -8 그대로 가져와도 될 것 같은데? 포효가 4명을 상대로 그정도 디버프니까? 너 생각은 어때?",
+    "context_quotes": [
+      {"speaker": "user", "quote": "현재 빌드 기준으로 모든 약화 기술을 전수 조사하여 분포를 비교해보자 이유는 약화 분포를 평준화 하고 분배되지 않은 새로운 약화를 많은 약화로 바꿔서 약화를 다양화 하려고 하는 거야", "source": "claude session cc3c95a9-aeea-4409-9feb-eb162a738694, 2026-10-27"},
+      {"speaker": "user", "quote": "B안은 필요없고 회피 저하를 몇개 더 넣어주면 될 듯 방어감소 많은 건 당연한거고 명중감소가 좀 많긴 한데, 제압사격이 석궁이 표식이 회피감소라서 회피감소를 넣어줄 순 없어 그래서 제압사격이랑 삼자 트레이드를 할 어떤 약화를 찾아야 할 것같은데 어떤 게 좋을까? 제압사격이랑 명중 감소는 크게 어울리지 않는 것 같아 네이밍이랑 모션이랑 전부 다 화살의 비를 내리는 거거든 상대 3,4열에", "source": "claude session cc3c95a9-aeea-4409-9feb-eb162a738694, 2026-10-27"},
+      {"speaker": "user", "quote": "커밋해", "source": "claude session cc3c95a9-aeea-4409-9feb-eb162a738694, 2026-10-27"}
+    ],
+    "rationale_ko": "약화 분포 평준화: 명중 감소 6개 중 이름·모션과 맞지 않는 제압 사격의 명중 감소를 속도 −4/5/6/7/8로 바꾼다(방패 파괴자 노출의 수치를 그대로 이동). 치명 감소 유지는 Claude 제안이며 제작자가 따로 반대하지 않았다. test 판 적용.",
+    "source": {"product": "claude", "reference": "Claude Code session cc3c95a9-aeea-4409-9feb-eb162a738694, 2026-10-27", "session_id": "cc3c95a9-aeea-4409-9feb-eb162a738694", "message_id": null, "event_id": null},
+    "files": ["heroes/arbalest/arbalest.info.darkest", "heroes/arbalest/arbalest.effects_edit.txt", "effects/rebalance_arbalest.effects.darkest", "design/changes/arbalest.md"],
+    "supersedes": []
+  },
+  {
+    "id": "SB-027",
+    "decision": "adopted",
+    "original_quote": "아니지 노출에 회피 감소량 더 늘려야 한다고 속도 4 8에 걸맞게",
+    "context_quotes": [
+      {"speaker": "user", "quote": "근데 방파자 입장에서 속도 -4 ~ -8이란 파멸적 효과를 뜯기고 회피 -10 -20 얻는건 손해 같은데?", "source": "claude session cc3c95a9-aeea-4409-9feb-eb162a738694, 2026-10-27"},
+      {"speaker": "assistant", "quote": "노출 회피 감소: −20→−30을 추천합니다", "source": "claude session cc3c95a9-aeea-4409-9feb-eb162a738694, 2026-10-27 (승인 대상 제안)"},
+      {"speaker": "user", "quote": "커밋해", "source": "claude session cc3c95a9-aeea-4409-9feb-eb162a738694, 2026-10-27"}
+    ],
+    "rationale_ko": "회피 감소가 2개로 희소해 노출의 속도 −4~−8을 석궁 제압 사격에 넘기고 회피 감소를 준다. 단일 속도 −8을 잃는 손해에 맞게 회피 최고치(저격수의 표식 −20~−30)와 같은 −20/22/25/27/30으로 보상(Claude 제안, '커밋해'로 승인). test 판 적용.",
+    "source": {"product": "claude", "reference": "Claude Code session cc3c95a9-aeea-4409-9feb-eb162a738694, 2026-10-27", "session_id": "cc3c95a9-aeea-4409-9feb-eb162a738694", "message_id": null, "event_id": null},
+    "files": ["heroes/shieldbreaker/shieldbreaker.info.darkest", "heroes/shieldbreaker/shieldbreaker.effects_edit.txt", "effects/rebalance_shieldbreaker.effects.darkest", "design/changes/shieldbreaker.md"],
+    "supersedes": []
+  }
+]

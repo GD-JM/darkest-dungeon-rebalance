@@ -11,6 +11,21 @@ effect: .name "RB SB Spearing Blight 4" .target "target" .curio_result_type "neg
 effect: .name "RB SB Spearing Blight 5" .target "target" .curio_result_type "negative" .chance 140%  .dotPoison 3 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
 // SB-020 Spearing blight 3/turn for 3 turns (1/1/2/2/3 x3 from level 1; levels 1-2 equal vanilla).
 // edited vanilla effect (from dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest)
+effect: .name "RB SB Slow 1" .target "target" .curio_result_type "negative" .chance 100% .combat_stat_buff 1 .defense_rating_add -20%	.on_hit true .on_miss false
+// SB-027 [2026-10-27] Expose: enemy SPD -> DODGE -20 (slow 4-8 moved to Arbalest Suppressing Fire; dodge sized to Sniper Mark 20-30 to pay for the lost slow; DODGE debuffs 2->3).
+// edited vanilla effect (from dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest)
+effect: .name "RB SB Slow 2" .target "target" .curio_result_type "negative" .chance 110% .combat_stat_buff 1 .defense_rating_add -22%	.on_hit true .on_miss false
+// SB-027 [2026-10-27] Expose: enemy SPD -> DODGE -22 (slow 4-8 moved to Arbalest Suppressing Fire; dodge sized to Sniper Mark 20-30 to pay for the lost slow; DODGE debuffs 2->3).
+// edited vanilla effect (from dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest)
+effect: .name "RB SB Slow 3" .target "target" .curio_result_type "negative" .chance 120% .combat_stat_buff 1 .defense_rating_add -25%	.on_hit true .on_miss false
+// SB-027 [2026-10-27] Expose: enemy SPD -> DODGE -25 (slow 4-8 moved to Arbalest Suppressing Fire; dodge sized to Sniper Mark 20-30 to pay for the lost slow; DODGE debuffs 2->3).
+// edited vanilla effect (from dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest)
+effect: .name "RB SB Slow 4" .target "target" .curio_result_type "negative" .chance 130% .combat_stat_buff 1 .defense_rating_add -27%	.on_hit true .on_miss false
+// SB-027 [2026-10-27] Expose: enemy SPD -> DODGE -27 (slow 4-8 moved to Arbalest Suppressing Fire; dodge sized to Sniper Mark 20-30 to pay for the lost slow; DODGE debuffs 2->3).
+// edited vanilla effect (from dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest)
+effect: .name "RB SB Slow 5" .target "target" .curio_result_type "negative" .chance 140% .combat_stat_buff 1 .defense_rating_add -30%	.on_hit true .on_miss false
+// SB-027 [2026-10-27] Expose: enemy SPD -> DODGE -30 (slow 4-8 moved to Arbalest Suppressing Fire; dodge sized to Sniper Mark 20-30 to pay for the lost slow; DODGE debuffs 2->3).
+// edited vanilla effect (from dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest)
 effect: .name "RB SB Dmg Marked 1"	.target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 50%	.damage_high_multiply 50% .on_hit true .on_miss false
 // SB-016 [trace 2026-10-05] Support the author-set accuracy exchange and secondary marked-target damage role. Effect: SB Dmg Marked 1.
 // edited vanilla effect (from dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest)
@@ -26,6 +41,7 @@ effect: .name "RB SB Dmg Marked 4"	.target "performer" .chance 100% .curio_resul
 effect: .name "RB SB Dmg Marked 5"	.target "performer" .chance 100% .curio_result_type "positive" .keyStatus "tagged" .combat_stat_buff 1 .damage_low_multiply 90%	.damage_high_multiply 90% .on_hit true .on_miss false
 // SB-016 [trace 2026-10-05] Support the author-set accuracy exchange and secondary marked-target damage role. Effect: SB Dmg Marked 5.
 
+// mod-only new effects
 effect: .name "RB SB Puncture Armor 1" .target "target" .curio_result_type "negative" .chance 100% .duration 2 .combat_stat_buff 1 .protection_rating_add -30% .on_hit true .on_miss false .queue true
 // SB-023 PROT -30%p for 2 turns replaces Puncture slow; keep guard removal/block and pull, pay with reduced reach/damage. Residual audit 20261025 residual model; no original shared effects changed.
 effect: .name "RB SB Puncture Armor 2" .target "target" .curio_result_type "negative" .chance 110% .duration 2 .combat_stat_buff 1 .protection_rating_add -32% .on_hit true .on_miss false .queue true

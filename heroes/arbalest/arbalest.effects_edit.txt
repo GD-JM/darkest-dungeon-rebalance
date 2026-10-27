@@ -40,19 +40,24 @@ effect: .name "Sniper Damage 5".target "performer" .chance 100%	.curio_result_ty
 //# ======================================================================
 //# 기술: 제압 사격 (suppressing_fire)
 //# 레벨별 효과: 1레벨 Suppression 1 | 2레벨 Suppression 2 | 3레벨 Suppression 3 | 4레벨 Suppression 4 | 5레벨 Suppression 5
-effect: .name "Suppression 1" .target "target" .curio_result_type "negative" .chance 100% .duration 2 .combat_stat_buff 1 .attack_rating_add -15% .crit_chance_add -15%	.on_hit true .on_miss false
+effect: .name "Suppression 1" .target "target" .curio_result_type "negative" .chance 100% .duration 2 .combat_stat_buff 1 .speed_rating_add -4 .crit_chance_add -15%	.on_hit true .on_miss false
+// ARB-013 [2026-10-27] Suppressing Fire: enemy ACC -> SPD -4 (arrow rain pins ranks 3-4 down; takes SB Expose slow 4-8; ACC debuffs 6->5). Crit debuff kept.
 //#   공유 효과: 다른 영웅 1명(총사). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Suppression 2" .target "target" .curio_result_type "negative" .chance 110% .duration 2 .combat_stat_buff 1 .attack_rating_add -16% .crit_chance_add -16%	.on_hit true .on_miss false
+effect: .name "Suppression 2" .target "target" .curio_result_type "negative" .chance 110% .duration 2 .combat_stat_buff 1 .speed_rating_add -5 .crit_chance_add -16%	.on_hit true .on_miss false
+// ARB-013 [2026-10-27] Suppressing Fire: enemy ACC -> SPD -5 (arrow rain pins ranks 3-4 down; takes SB Expose slow 4-8; ACC debuffs 6->5). Crit debuff kept.
 //#   공유 효과: 다른 영웅 1명(총사). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Suppression 3" .target "target" .curio_result_type "negative" .chance 120% .duration 2 .combat_stat_buff 1 .attack_rating_add -17% .crit_chance_add -17%	.on_hit true .on_miss false
+effect: .name "Suppression 3" .target "target" .curio_result_type "negative" .chance 120% .duration 2 .combat_stat_buff 1 .speed_rating_add -6 .crit_chance_add -17%	.on_hit true .on_miss false
+// ARB-013 [2026-10-27] Suppressing Fire: enemy ACC -> SPD -6 (arrow rain pins ranks 3-4 down; takes SB Expose slow 4-8; ACC debuffs 6->5). Crit debuff kept.
 //#   공유 효과: 다른 영웅 1명(총사). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Suppression 4" .target "target" .curio_result_type "negative" .chance 130% .duration 2 .combat_stat_buff 1 .attack_rating_add -18% .crit_chance_add -18%	.on_hit true .on_miss false
+effect: .name "Suppression 4" .target "target" .curio_result_type "negative" .chance 130% .duration 2 .combat_stat_buff 1 .speed_rating_add -7 .crit_chance_add -18%	.on_hit true .on_miss false
+// ARB-013 [2026-10-27] Suppressing Fire: enemy ACC -> SPD -7 (arrow rain pins ranks 3-4 down; takes SB Expose slow 4-8; ACC debuffs 6->5). Crit debuff kept.
 //#   공유 효과: 다른 영웅 1명(총사). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Suppression 5" .target "target" .curio_result_type "negative" .chance 140% .duration 2 .combat_stat_buff 1 .attack_rating_add -20% .crit_chance_add -19%	.on_hit true .on_miss false
+effect: .name "Suppression 5" .target "target" .curio_result_type "negative" .chance 140% .duration 2 .combat_stat_buff 1 .speed_rating_add -8 .crit_chance_add -19%	.on_hit true .on_miss false
+// ARB-013 [2026-10-27] Suppressing Fire: enemy ACC -> SPD -8 (arrow rain pins ranks 3-4 down; takes SB Expose slow 4-8; ACC debuffs 6->5). Crit debuff kept.
 //#   공유 효과: 다른 영웅 1명(총사). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
 

@@ -76,11 +76,12 @@ combat_skill: .id "spearing" .level 4 .type "ranged" .atk 105% .dmg -60% .crit -
 combat_move_skill: .id "move" .level 0 .type "move" .move 2 2 .launch 4321
 
 
-combat_skill: .id "expose" .level 0 .type "melee" .atk 90% .dmg -50% .crit 2.5% .move 1 0 .launch 321 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "Expose Crit Debuff 1" "Destealth" "SB Slow 1"
-combat_skill: .id "expose" .level 1 .type "melee" .atk 95% .dmg -50% .crit 3.5% .move 1 0 .launch 321 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "Expose Crit Debuff 2" "Destealth" "SB Slow 2"
-combat_skill: .id "expose" .level 2 .type "melee" .atk 100% .dmg -50% .crit 4.5% .move 1 0 .launch 321 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "Expose Crit Debuff 3" "Destealth" "SB Slow 3"
-combat_skill: .id "expose" .level 3 .type "melee" .atk 105% .dmg -50% .crit 5.5% .move 1 0 .launch 321 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "Expose Crit Debuff 4" "Destealth" "SB Slow 4"
-combat_skill: .id "expose" .level 4 .type "melee" .atk 110% .dmg -50% .crit 6.5% .move 1 0 .launch 321 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "Expose Crit Debuff 5" "Destealth" "SB Slow 5"
+combat_skill: .id "expose" .level 0 .type "melee" .atk 90% .dmg -50% .crit 2.5% .move 1 0 .launch 321 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "Expose Crit Debuff 1" "Destealth" "RB SB Slow 1"
+combat_skill: .id "expose" .level 1 .type "melee" .atk 95% .dmg -50% .crit 3.5% .move 1 0 .launch 321 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "Expose Crit Debuff 2" "Destealth" "RB SB Slow 2"
+combat_skill: .id "expose" .level 2 .type "melee" .atk 100% .dmg -50% .crit 4.5% .move 1 0 .launch 321 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "Expose Crit Debuff 3" "Destealth" "RB SB Slow 3"
+combat_skill: .id "expose" .level 3 .type "melee" .atk 105% .dmg -50% .crit 5.5% .move 1 0 .launch 321 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "Expose Crit Debuff 4" "Destealth" "RB SB Slow 4"
+combat_skill: .id "expose" .level 4 .type "melee" .atk 110% .dmg -50% .crit 6.5% .move 1 0 .launch 321 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "Expose Crit Debuff 5" "Destealth" "RB SB Slow 5"
+// SB-027 노출: 적 속도 -4~-8 -> 회피 -20/22/25/27/30% (받는 치명타·은신 해제 유지). 의도: 속도는 석궁 제압 사격으로 넘기고, 빈틈을 드러내는 노출 이름대로 회피를 깎는다. 근거: 회피 감소 기술 2개로 희소 -> 3개, 단일 속도 -8을 잃는 만큼 회피 최고치(저격수의 표식 -20~-30)와 같은 크기로 보상(제작자 10-27 지정).
 // SB-026 (2026-10-25): Damage -45% -> -50% at all five levels. 4열 은신 대응 사거리와 기존 약화를 유지하면서 직접 피해를 추가로 낮춘다. 지원 기능 확대의 대가를 더 명확하게 만든다. 명중·치명·공격 유형·사거리·이동·기존 효과 유지.
 // SB-024 (2026-10-25, test): 4열 은신 대응을 위해 대상123->1234, 피해-40->-45%. 명중90, 치명·속도 약화·은신 해제·후퇴1 유지. 20261025 residual model의 실제 초기 은신 편성 도달률을 반영한 잔차 -2.87%p; 구멍내기와 대상 역할을 나눈다.
 // SB-015 [trace 2026-10-05] Trade accuracy with Pierce to favor the effect-bearing control skill.

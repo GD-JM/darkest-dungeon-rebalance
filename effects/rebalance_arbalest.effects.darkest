@@ -14,6 +14,21 @@ effect: .name "RB ARB Sniper Damage 3".target "performer" .chance 100%	.curio_re
 effect: .name "RB ARB Sniper Damage 4".target "performer" .chance 100%	.curio_result_type "positive" .keyStatus "tagged" .duration 3 .combat_stat_buff 1 .damage_low_multiply 90%  .damage_high_multiply 90% .crit_chance_add 12%	 .on_hit true .on_miss false
 // ARB-005 [trace 2026-10-05] Support marked-target specialization; retain the existing top-level ceiling. Effect: Sniper Damage 4.
 // edited vanilla effect (from effects/base.effects.darkest)
+effect: .name "RB ARB Suppression 1" .target "target" .curio_result_type "negative" .chance 100% .duration 2 .combat_stat_buff 1 .speed_rating_add -4 .crit_chance_add -15%	.on_hit true .on_miss false
+// ARB-013 [2026-10-27] Suppressing Fire: enemy ACC -> SPD -4 (arrow rain pins ranks 3-4 down; takes SB Expose slow 4-8; ACC debuffs 6->5). Crit debuff kept.
+// edited vanilla effect (from effects/base.effects.darkest)
+effect: .name "RB ARB Suppression 2" .target "target" .curio_result_type "negative" .chance 110% .duration 2 .combat_stat_buff 1 .speed_rating_add -5 .crit_chance_add -16%	.on_hit true .on_miss false
+// ARB-013 [2026-10-27] Suppressing Fire: enemy ACC -> SPD -5 (arrow rain pins ranks 3-4 down; takes SB Expose slow 4-8; ACC debuffs 6->5). Crit debuff kept.
+// edited vanilla effect (from effects/base.effects.darkest)
+effect: .name "RB ARB Suppression 3" .target "target" .curio_result_type "negative" .chance 120% .duration 2 .combat_stat_buff 1 .speed_rating_add -6 .crit_chance_add -17%	.on_hit true .on_miss false
+// ARB-013 [2026-10-27] Suppressing Fire: enemy ACC -> SPD -6 (arrow rain pins ranks 3-4 down; takes SB Expose slow 4-8; ACC debuffs 6->5). Crit debuff kept.
+// edited vanilla effect (from effects/base.effects.darkest)
+effect: .name "RB ARB Suppression 4" .target "target" .curio_result_type "negative" .chance 130% .duration 2 .combat_stat_buff 1 .speed_rating_add -7 .crit_chance_add -18%	.on_hit true .on_miss false
+// ARB-013 [2026-10-27] Suppressing Fire: enemy ACC -> SPD -7 (arrow rain pins ranks 3-4 down; takes SB Expose slow 4-8; ACC debuffs 6->5). Crit debuff kept.
+// edited vanilla effect (from effects/base.effects.darkest)
+effect: .name "RB ARB Suppression 5" .target "target" .curio_result_type "negative" .chance 140% .duration 2 .combat_stat_buff 1 .speed_rating_add -8 .crit_chance_add -19%	.on_hit true .on_miss false
+// ARB-013 [2026-10-27] Suppressing Fire: enemy ACC -> SPD -8 (arrow rain pins ranks 3-4 down; takes SB Expose slow 4-8; ACC debuffs 6->5). Crit debuff kept.
+// edited vanilla effect (from effects/base.effects.darkest)
 effect: .name "RB ARB FlareHealStress 1" .target "performer_group_other" .curio_result_type "positive" .chance 100% .healstress 2 .on_hit true .on_miss true .queue true .apply_once true
 // ARB-010 Rallying Flare stress heal 3/3/4/4/5 -> 2/2/3/3/4 (100%%). Spreads the all-in-one flare power.
 // ARB-006 [2026-10-06] Stress recovery chance 74% -> 100% for reliable non-Jester party support; retain heal amount and exclude self. Supersedes ARB-003 chance.
