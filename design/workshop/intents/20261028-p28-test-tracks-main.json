@@ -1,0 +1,9 @@
+{
+  "id": "P-28",
+  "decision": "adopted",
+  "original_quote": "지금 모드에 스팀에서 리밸런스 구독한 버전 말고 그냥 리밸런스 내부에서 올린 모드가 있거든? 그거는 지워줘 리밸런스 테스트 버전을 리밸런스 업데이트 버전에 맞춰서 계속 업데이트 해줘 어떤 메인 업데이트 버전을 기반으로해서 테스트 하는건지 바로바로 책정할 수 있게 이거는 원칙에 올려야할듯?",
+  "rationale_ko": "test는 최신 main 위에서 유지하고, 기반 버전(창작마당 배포 버전 + 미배포 main 커밋 수 + main 커밋)을 로컬 테스트 모드 이름에 표시한다(tools/set_local_title.py). 로컬 창작마당 빌드 복사본 mods/RebalanceWorkshop은 휴지통으로 이동(Claude 확인: 현재 배포 프로그램은 이 폴더를 쓰지 않음). 게임 수치 변경 없음.",
+  "source": {"product": "claude", "reference": "Claude Code session cc3c95a9-aeea-4409-9feb-eb162a738694, 2026-10-28", "session_id": "cc3c95a9-aeea-4409-9feb-eb162a738694", "message_id": null, "event_id": null},
+  "files": ["design/intent.md", "tools/set_local_title.py"],
+  "supersedes": []
+}
