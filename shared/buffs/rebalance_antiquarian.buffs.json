@@ -77,6 +77,253 @@
 				"float": 0,
 				"string": ""
 			}
+		},
+		{
+			"id": "RB_ANT_BLIGHT_RES_2",
+			"stat_type": "resistance",
+			"stat_sub_type": "poison",
+			"amount": -0.22,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_ANT_BLIGHT_RES_3",
+			"stat_type": "resistance",
+			"stat_sub_type": "poison",
+			"amount": -0.25,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_ANT_BLIGHT_RES_4",
+			"stat_type": "resistance",
+			"stat_sub_type": "poison",
+			"amount": -0.27,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_ANT_BLIGHT_RES_5",
+			"stat_type": "resistance",
+			"stat_sub_type": "poison",
+			"amount": -0.3,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_ANT_FLASH_MOVE_1",
+			"stat_type": "resistance",
+			"stat_sub_type": "move",
+			"amount": -0.2,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_ANT_FLASH_MOVE_2",
+			"stat_type": "resistance",
+			"stat_sub_type": "move",
+			"amount": -0.22,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_ANT_FLASH_MOVE_3",
+			"stat_type": "resistance",
+			"stat_sub_type": "move",
+			"amount": -0.25,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_ANT_FLASH_MOVE_4",
+			"stat_type": "resistance",
+			"stat_sub_type": "move",
+			"amount": -0.27,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_ANT_FLASH_MOVE_5",
+			"stat_type": "resistance",
+			"stat_sub_type": "move",
+			"amount": -0.3,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_ANT_RIPOSTE_DMGL_1",
+			"stat_type": "combat_stat_multiply",
+			"stat_sub_type": "damage_low",
+			"amount": 0.1,
+			"remove_if_not_active": false,
+			"rule_type": "riposte",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_ANT_RIPOSTE_DMGH_1",
+			"stat_type": "combat_stat_multiply",
+			"stat_sub_type": "damage_high",
+			"amount": 0.1,
+			"remove_if_not_active": false,
+			"rule_type": "riposte",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_ANT_RIPOSTE_DMGL_2",
+			"stat_type": "combat_stat_multiply",
+			"stat_sub_type": "damage_low",
+			"amount": 0.11,
+			"remove_if_not_active": false,
+			"rule_type": "riposte",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_ANT_RIPOSTE_DMGH_2",
+			"stat_type": "combat_stat_multiply",
+			"stat_sub_type": "damage_high",
+			"amount": 0.11,
+			"remove_if_not_active": false,
+			"rule_type": "riposte",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_ANT_RIPOSTE_DMGL_3",
+			"stat_type": "combat_stat_multiply",
+			"stat_sub_type": "damage_low",
+			"amount": 0.12,
+			"remove_if_not_active": false,
+			"rule_type": "riposte",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_ANT_RIPOSTE_DMGH_3",
+			"stat_type": "combat_stat_multiply",
+			"stat_sub_type": "damage_high",
+			"amount": 0.12,
+			"remove_if_not_active": false,
+			"rule_type": "riposte",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_ANT_RIPOSTE_DMGL_4",
+			"stat_type": "combat_stat_multiply",
+			"stat_sub_type": "damage_low",
+			"amount": 0.14,
+			"remove_if_not_active": false,
+			"rule_type": "riposte",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_ANT_RIPOSTE_DMGH_4",
+			"stat_type": "combat_stat_multiply",
+			"stat_sub_type": "damage_high",
+			"amount": 0.14,
+			"remove_if_not_active": false,
+			"rule_type": "riposte",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_ANT_RIPOSTE_DMGL_5",
+			"stat_type": "combat_stat_multiply",
+			"stat_sub_type": "damage_low",
+			"amount": 0.15,
+			"remove_if_not_active": false,
+			"rule_type": "riposte",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_ANT_RIPOSTE_DMGH_5",
+			"stat_type": "combat_stat_multiply",
+			"stat_sub_type": "damage_high",
+			"amount": 0.15,
+			"remove_if_not_active": false,
+			"rule_type": "riposte",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
 		}
 	]
 }

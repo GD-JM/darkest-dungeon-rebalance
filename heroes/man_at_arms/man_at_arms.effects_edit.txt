@@ -117,18 +117,23 @@ effect: .name "Defender 5" .target "performer" .curio_result_type "positive" .ch
 //# ======================================================================
 //# 기술: 응징 (retribution)
 //# 레벨별 효과: 1레벨 MAA Riposte 1, Mark Self | 2레벨 MAA Riposte 2, Mark Self | 3레벨 MAA Riposte 3, Mark Self | 4레벨 MAA Riposte 4, Mark Self | 5레벨 MAA Riposte 5, Mark Self
-effect: .name "MAA Riposte 1"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -40% .damage_high_multiply -40% .crit_chance_add 0%
+effect: .name "MAA Riposte 1"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -25% .damage_high_multiply -25% .crit_chance_add 0%
+// MAA-023 own riposte modifier -25% with riposte_skill -20% = unchanged total; non-stacking (stays inside riposte status).
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Mark Self" .target "performer" .curio_result_type "positive" .chance 100% .tag 1 .combat_stat_buff 1 .duration 2 .on_hit true .on_miss true .queue true
 //#   공유 효과: 다른 영웅 2명(결투가, 고행자). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "MAA Riposte 2"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -35% .damage_high_multiply -35% .crit_chance_add 1% 
+effect: .name "MAA Riposte 2"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -19% .damage_high_multiply -19% .crit_chance_add 1% 
+// MAA-023 own riposte modifier -19% with riposte_skill -20% = unchanged total; non-stacking (stays inside riposte status).
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "MAA Riposte 3"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -30% .damage_high_multiply -30% .crit_chance_add 2% 
+effect: .name "MAA Riposte 3"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -12% .damage_high_multiply -12% .crit_chance_add 2% 
+// MAA-023 own riposte modifier -12% with riposte_skill -20% = unchanged total; non-stacking (stays inside riposte status).
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "MAA Riposte 4"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -25% .damage_high_multiply -25% .crit_chance_add 3% 
+effect: .name "MAA Riposte 4"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -6% .damage_high_multiply -6% .crit_chance_add 3% 
+// MAA-023 own riposte modifier -6% with riposte_skill -20% = unchanged total; non-stacking (stays inside riposte status).
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "MAA Riposte 5"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -20% .damage_high_multiply -20% .crit_chance_add 4%
+effect: .name "MAA Riposte 5"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply 0% .damage_high_multiply 0% .crit_chance_add 4%
+// MAA-023 own riposte modifier 0% with riposte_skill -20% = unchanged total; non-stacking (stays inside riposte status).
 //#   원본 위치: effects/base.effects.darkest
 
 //# ======================================================================

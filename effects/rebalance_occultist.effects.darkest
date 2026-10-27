@@ -32,23 +32,28 @@ effect: .name "RB OCC Occ Weaken Prot 5" .target "target" .curio_result_type "ne
 // OCC-015 PROT -20% -> -35%: armor breaking is the primary role; support direct physical attackers while retaining 100-140% debuff chance and fixed trinkets.
 
 // mod-only new effects
-effect: .name "RB OCC Hex Resist 1" .target "target" .chance 100% .duration 3 .curio_result_type "negative"  .buff_ids "RB_OCC_HEX_STUN_1" "RB_OCC_HEX_BLIGHT_1" "RB_OCC_HEX_BLEED_1" "RB_OCC_HEX_DEBUFF_1" .on_hit true .on_miss false .queue true
+effect: .name "RB OCC Hex Resist 1" .target "target" .chance 100% .duration 3 .curio_result_type "negative"  .buff_ids "RB_OCC_HEX_STUN_1" "RB_OCC_HEX_BLIGHT_1" "RB_OCC_HEX_BLEED_1" "RB_OCC_HEX_DEBUFF_1" "RB_OCC_HEX_MOVE_1" .on_hit true .on_miss false .queue true
+// OCC-017 Vulnerability Hex adds MOVE resist -20% so it lowers every resist (stun/blight/bleed/debuff/move).
 // OCC-012 Vulnerability Hex resists -20% (stun, blight, bleed, debuff; was -15..-20).
 // OCC-009 Chance 100% (vanilla hex progression 100-140%; 115/135/155 came from a monster effect).
 // OCC-006 Stun/blight/bleed/debuff resist -15% for 3 turns (was -20% at every level; now grows each level).
-effect: .name "RB OCC Hex Resist 2" .target "target" .chance 110% .duration 3 .curio_result_type "negative"  .buff_ids "RB_OCC_HEX_STUN_2" "RB_OCC_HEX_BLIGHT_2" "RB_OCC_HEX_BLEED_2" "RB_OCC_HEX_DEBUFF_2" .on_hit true .on_miss false .queue true
+effect: .name "RB OCC Hex Resist 2" .target "target" .chance 110% .duration 3 .curio_result_type "negative"  .buff_ids "RB_OCC_HEX_STUN_2" "RB_OCC_HEX_BLIGHT_2" "RB_OCC_HEX_BLEED_2" "RB_OCC_HEX_DEBUFF_2" "RB_OCC_HEX_MOVE_2" .on_hit true .on_miss false .queue true
+// OCC-017 Vulnerability Hex adds MOVE resist -21% so it lowers every resist (stun/blight/bleed/debuff/move).
 // OCC-012 Vulnerability Hex resists -21% (stun, blight, bleed, debuff; was -15..-20).
 // OCC-009 Chance 110% (vanilla hex progression 100-140%; 115/135/155 came from a monster effect).
 // OCC-006 Stun/blight/bleed/debuff resist -16% for 3 turns (was -20% at every level; now grows each level).
-effect: .name "RB OCC Hex Resist 3" .target "target" .chance 120% .duration 3 .curio_result_type "negative"  .buff_ids "RB_OCC_HEX_STUN_3" "RB_OCC_HEX_BLIGHT_3" "RB_OCC_HEX_BLEED_3" "RB_OCC_HEX_DEBUFF_3" .on_hit true .on_miss false .queue true
+effect: .name "RB OCC Hex Resist 3" .target "target" .chance 120% .duration 3 .curio_result_type "negative"  .buff_ids "RB_OCC_HEX_STUN_3" "RB_OCC_HEX_BLIGHT_3" "RB_OCC_HEX_BLEED_3" "RB_OCC_HEX_DEBUFF_3" "RB_OCC_HEX_MOVE_3" .on_hit true .on_miss false .queue true
+// OCC-017 Vulnerability Hex adds MOVE resist -22% so it lowers every resist (stun/blight/bleed/debuff/move).
 // OCC-012 Vulnerability Hex resists -22% (stun, blight, bleed, debuff; was -15..-20).
 // OCC-009 Chance 120% (vanilla hex progression 100-140%; 115/135/155 came from a monster effect).
 // OCC-006 Stun/blight/bleed/debuff resist -17% for 3 turns (was -20% at every level; now grows each level).
-effect: .name "RB OCC Hex Resist 4" .target "target" .chance 130% .duration 3 .curio_result_type "negative"  .buff_ids "RB_OCC_HEX_STUN_4" "RB_OCC_HEX_BLIGHT_4" "RB_OCC_HEX_BLEED_4" "RB_OCC_HEX_DEBUFF_4" .on_hit true .on_miss false .queue true
+effect: .name "RB OCC Hex Resist 4" .target "target" .chance 130% .duration 3 .curio_result_type "negative"  .buff_ids "RB_OCC_HEX_STUN_4" "RB_OCC_HEX_BLIGHT_4" "RB_OCC_HEX_BLEED_4" "RB_OCC_HEX_DEBUFF_4" "RB_OCC_HEX_MOVE_4" .on_hit true .on_miss false .queue true
+// OCC-017 Vulnerability Hex adds MOVE resist -24% so it lowers every resist (stun/blight/bleed/debuff/move).
 // OCC-012 Vulnerability Hex resists -23% (stun, blight, bleed, debuff; was -15..-20).
 // OCC-009 Chance 130% (vanilla hex progression 100-140%; 115/135/155 came from a monster effect).
 // OCC-006 Stun/blight/bleed/debuff resist -18% for 3 turns (was -20% at every level; now grows each level).
-effect: .name "RB OCC Hex Resist 5" .target "target" .chance 140% .duration 3 .curio_result_type "negative"  .buff_ids "RB_OCC_HEX_STUN_5" "RB_OCC_HEX_BLIGHT_5" "RB_OCC_HEX_BLEED_5" "RB_OCC_HEX_DEBUFF_5" .on_hit true .on_miss false .queue true
+effect: .name "RB OCC Hex Resist 5" .target "target" .chance 140% .duration 3 .curio_result_type "negative"  .buff_ids "RB_OCC_HEX_STUN_5" "RB_OCC_HEX_BLIGHT_5" "RB_OCC_HEX_BLEED_5" "RB_OCC_HEX_DEBUFF_5" "RB_OCC_HEX_MOVE_5" .on_hit true .on_miss false .queue true
+// OCC-017 Vulnerability Hex adds MOVE resist -25% so it lowers every resist (stun/blight/bleed/debuff/move).
 // OCC-012 Vulnerability Hex resists -25% (stun, blight, bleed, debuff; was -15..-20).
 // OCC-009 Chance 140% (vanilla hex progression 100-140%; 115/135/155 came from a monster effect).
 // OCC-006 Stun/blight/bleed/debuff resist -20% for 3 turns (was -20% at every level; now grows each level).

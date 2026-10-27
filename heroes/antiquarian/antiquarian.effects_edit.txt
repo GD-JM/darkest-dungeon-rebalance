@@ -28,22 +28,28 @@ effect: .name "Antiq Blight Debuff 1" .target "target" .chance 100% .duration 3 
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Antiq Blight 2" .target "target" .curio_result_type "negative" .chance 110%  .dotPoison 2 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Antiq Blight Debuff 2" .target "target" .chance 110% .duration 3 .buff_ids antiq_blight_debuff_2 .on_hit true .on_miss false
+effect: .name "Antiq Blight Debuff 2" .target "target" .chance 110% .duration 3 .buff_ids "RB_ANT_BLIGHT_RES_2" .on_hit true .on_miss false
+// ANT-008 blight resist debuff -22% (-20/-22/-25/-27/-30), stays 3 turns (not extended with the blight).
 //#   강화 효과 수치(JSON, 참고용): antiq_blight_debuff_2 = poison -0.24
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Antiq Blight 3" .target "target" .curio_result_type "negative" .chance 120%  .dotPoison 2 .duration 3	.on_hit true .on_miss false .can_apply_on_death true
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Antiq Blight Debuff 3" .target "target" .chance 120% .duration 3 .buff_ids antiq_blight_debuff_3 .on_hit true .on_miss false
+effect: .name "Antiq Blight Debuff 3" .target "target" .chance 120% .duration 3 .buff_ids "RB_ANT_BLIGHT_RES_3" .on_hit true .on_miss false
+// ANT-008 blight resist debuff -25% (-20/-22/-25/-27/-30), stays 3 turns (not extended with the blight).
 //#   강화 효과 수치(JSON, 참고용): antiq_blight_debuff_3 = poison -0.28
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Antiq Blight 4" .target "target" .curio_result_type "negative" .chance 130%  .dotPoison 3 .duration 3	.on_hit true .on_miss false .can_apply_on_death true 
+effect: .name "Antiq Blight 4" .target "target" .curio_result_type "negative" .chance 130%  .dotPoison 3 .duration 4	.on_hit true .on_miss false .can_apply_on_death true 
+// ANT-008 Festering Vapours blight duration 3 -> 4 (3/3/3/4/5); blight 2/2/3/3/4 kept.
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Antiq Blight Debuff 4" .target "target" .chance 130% .duration 3 .buff_ids antiq_blight_debuff_4 .on_hit true .on_miss false
+effect: .name "Antiq Blight Debuff 4" .target "target" .chance 130% .duration 3 .buff_ids "RB_ANT_BLIGHT_RES_4" .on_hit true .on_miss false
+// ANT-008 blight resist debuff -27% (-20/-22/-25/-27/-30), stays 3 turns (not extended with the blight).
 //#   강화 효과 수치(JSON, 참고용): antiq_blight_debuff_4 = poison -0.32
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Antiq Blight 5" .target "target" .curio_result_type "negative" .chance 140%  .dotPoison 4 .duration 3	.on_hit true .on_miss false .can_apply_on_death true 
+effect: .name "Antiq Blight 5" .target "target" .curio_result_type "negative" .chance 140%  .dotPoison 4 .duration 5	.on_hit true .on_miss false .can_apply_on_death true 
+// ANT-008 Festering Vapours blight duration 3 -> 5 (3/3/3/4/5); blight 2/2/3/3/4 kept.
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Antiq Blight Debuff 5" .target "target" .chance 140% .duration 3 .buff_ids antiq_blight_debuff_5 .on_hit true .on_miss false
+effect: .name "Antiq Blight Debuff 5" .target "target" .chance 140% .duration 3 .buff_ids "RB_ANT_BLIGHT_RES_5" .on_hit true .on_miss false
+// ANT-008 blight resist debuff -30% (-20/-22/-25/-27/-30), stays 3 turns (not extended with the blight).
 //#   강화 효과 수치(JSON, 참고용): antiq_blight_debuff_5 = poison -0.36
 //#   원본 위치: effects/base.effects.darkest
 
@@ -185,27 +191,8 @@ effect: .name "RB ANT Flash Burn 2" .target "target" .curio_result_type "negativ
 // ANT-001 Flashpowder ignites the target: burn 1 (irresistible). Small on purpose - opens Runaway synergies (Hearthlight crit vs burning, Backdraft). Shared: Vestal gods_illumination (VES-013) uses these same effects - changing them changes both.
 effect: .name "RB ANT Flash Burn 3" .target "target" .curio_result_type "negative" .chance 120% .dotBurn 2 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
 // ANT-001 Flashpowder ignites the target: burn 2 (irresistible). Small on purpose - opens Runaway synergies (Hearthlight crit vs burning, Backdraft). Shared: Vestal gods_illumination (VES-013) uses these same effects - changing them changes both.
-effect: .name "RB ANT Flash Burn 4" .target "target" .curio_result_type "negative" .chance 130% .dotBurn 2 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
-// ANT-001 Flashpowder ignites the target: burn 2 (irresistible). Small on purpose - opens Runaway synergies (Hearthlight crit vs burning, Backdraft). Shared: Vestal gods_illumination (VES-013) uses these same effects - changing them changes both.
-effect: .name "RB ANT Flash Burn 5" .target "target" .curio_result_type "negative" .chance 140% .dotBurn 3 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
-// ANT-001 Flashpowder ignites the target: burn 3 (irresistible). Small on purpose - opens Runaway synergies (Hearthlight crit vs burning, Backdraft). Shared: Vestal gods_illumination (VES-013) uses these same effects - changing them changes both.
 
 // ANT-004 approved replacement effects; legacy burn definitions retained as history, no longer used by these skills.
-effect: .name "RB ANT Flash Armor 1" .target "target" .curio_result_type "negative" .chance 100% .duration 2 .combat_stat_buff 1 .protection_rating_add -10% .on_hit true .on_miss false .queue true
-// ANT-005 PROT -10%p (2 turns); user lowers Flashpowder to 10-15 to preserve its accuracy-debuff identity and the larger dedicated armor-break skills. Supersedes ANT-004 magnitude only.
-// ANT-004 섬광 가루: PROT -15%p for 2 turns; replace burn with physical-party support; existing other effects retained.
-effect: .name "RB ANT Flash Armor 2" .target "target" .curio_result_type "negative" .chance 110% .duration 2 .combat_stat_buff 1 .protection_rating_add -11% .on_hit true .on_miss false .queue true
-// ANT-005 PROT -11%p (2 turns); user lowers Flashpowder to 10-15 to preserve its accuracy-debuff identity and the larger dedicated armor-break skills. Supersedes ANT-004 magnitude only.
-// ANT-004 섬광 가루: PROT -16%p for 2 turns; replace burn with physical-party support; existing other effects retained.
-effect: .name "RB ANT Flash Armor 3" .target "target" .curio_result_type "negative" .chance 120% .duration 2 .combat_stat_buff 1 .protection_rating_add -12% .on_hit true .on_miss false .queue true
-// ANT-005 PROT -12%p (2 turns); user lowers Flashpowder to 10-15 to preserve its accuracy-debuff identity and the larger dedicated armor-break skills. Supersedes ANT-004 magnitude only.
-// ANT-004 섬광 가루: PROT -17%p for 2 turns; replace burn with physical-party support; existing other effects retained.
-effect: .name "RB ANT Flash Armor 4" .target "target" .curio_result_type "negative" .chance 130% .duration 2 .combat_stat_buff 1 .protection_rating_add -14% .on_hit true .on_miss false .queue true
-// ANT-005 PROT -14%p (2 turns); user lowers Flashpowder to 10-15 to preserve its accuracy-debuff identity and the larger dedicated armor-break skills. Supersedes ANT-004 magnitude only.
-// ANT-004 섬광 가루: PROT -19%p for 2 turns; replace burn with physical-party support; existing other effects retained.
-effect: .name "RB ANT Flash Armor 5" .target "target" .curio_result_type "negative" .chance 140% .duration 2 .combat_stat_buff 1 .protection_rating_add -15% .on_hit true .on_miss false .queue true
-// ANT-005 PROT -15%p (2 turns); user lowers Flashpowder to 10-15 to preserve its accuracy-debuff identity and the larger dedicated armor-break skills. Supersedes ANT-004 magnitude only.
-// ANT-004 섬광 가루: PROT -20%p for 2 turns; replace burn with physical-party support; existing other effects retained.
 
 effect: .name "Blight 1" .target "target" .curio_result_type "negative" .chance 100% .dotPoison 2 .duration 3 .on_hit true .on_miss false .can_apply_on_death true
 // ANT-002 / ANT-006: synchronize the editable row to existing runtime blight; prevents future dodge generation reverting approved blight. No new blight change.
@@ -232,3 +219,75 @@ effect: .name "RB ANT Fortify 4" .target "target" .curio_result_type "positive" 
 effect: .name "RB ANT Fortify 5" .target "target" .curio_result_type "positive" .chance 100% .duration 3 .buff_ids "BLEEDRESIST15" "BLIGHTRESIST15" "STUNRESIST15" "DEBUFFRESIST15" .on_hit true .on_miss true .queue true
 // ANT-003 Fortifying Vapours: bleed, blight, stun and debuff resist +15% for 3 turns (vanilla had bleed and blight only).
 // ANT-006: restore missing editor definition from already-approved runtime, preserving the four-resistance heal when regenerating dodge.
+
+// ===== 2026-10-28 Antiquarian rework (P-25: champion + trinkets, empower teammates) =====
+effect: .name "RB ANT Kris Armor 1" .target "target" .curio_result_type "negative" .chance 100% .duration 2 .combat_stat_buff 1 .protection_rating_add -5% .on_hit true .on_miss false .queue true
+// ANT-009 Kris Stab PROT -5% 2 turns: front-line armor break for the party (accelerating 5/6/8/11/15).
+effect: .name "RB ANT Cower Heal 1" .target "performer" .curio_result_type "positive" .chance 100% .heal 2 .on_hit true .on_miss true .queue true .source_heal_type hero_skill
+// ANT-010 Cower self heal 2 (2/2/3/4/5): makes Cower usable from rank 4; below Hellion 7 / Houndmaster 8 / Leper 10.
+effect: .name "RB ANT Flash Dodge 1" .target "target" .curio_result_type "negative" .chance 100% .duration 2 .combat_stat_buff 1 .defense_rating_add -10% .on_hit true .on_miss false .queue true
+// ANT-011 Flashpowder DODGE -10% 2 turns (replaces ACC debuff; -15 cap because hits near the 95% roll ceiling).
+effect: .name "RB ANT Flash Move 1" .target "target" .curio_result_type "negative" .chance 100% .duration 2 .buff_ids "RB_ANT_FLASH_MOVE_1" .on_hit true .on_miss false .queue true
+// ANT-011 Flashpowder MOVE resist -20% 2 turns: unassigned debuff, feeds pullers/pushers (Runaway Ransack, Occultist pull).
+effect: .name "RB ANT Flash Burn 1" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 1 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+// ANT-011 Flashpowder burn 1 (1/1/1/2/2): burn 2 = 2+1 = 3 total; opens Runaway burn synergies.
+effect: .name "RB ANT Heal Amp 1" .target "target" .curio_result_type "positive" .chance 100% .duration 3 .buff_type hp_heal_received_percent .buff_amount 20% .on_hit true .on_miss true .queue true
+// ANT-007 Fortifying Vapours stacking heal +20% received healing, 3 turns, stacks (moved from Crusader Battle Heal; vanilla Arbalest bandage 20-38).
+effect: .name "RB ANT Guard Riposte Dmg 1" .target "target" .curio_result_type "positive" .chance 100% .duration 2 .buff_ids "RB_ANT_RIPOSTE_DMGL_1" "RB_ANT_RIPOSTE_DMGH_1" .on_hit true .on_miss true .queue true
+// ANT-013 Protect Me riposte-only damage +10% 2 turns (rule riposte, like Duelist Feint); 2 turns caps overlap at 2 casts.
+effect: .name "RB ANT Kris Armor 2" .target "target" .curio_result_type "negative" .chance 110% .duration 2 .combat_stat_buff 1 .protection_rating_add -6% .on_hit true .on_miss false .queue true
+// ANT-009 Kris Stab PROT -6% 2 turns: front-line armor break for the party (accelerating 5/6/8/11/15).
+effect: .name "RB ANT Cower Heal 2" .target "performer" .curio_result_type "positive" .chance 100% .heal 2 .on_hit true .on_miss true .queue true .source_heal_type hero_skill
+// ANT-010 Cower self heal 2 (2/2/3/4/5): makes Cower usable from rank 4; below Hellion 7 / Houndmaster 8 / Leper 10.
+effect: .name "RB ANT Flash Dodge 2" .target "target" .curio_result_type "negative" .chance 110% .duration 2 .combat_stat_buff 1 .defense_rating_add -11% .on_hit true .on_miss false .queue true
+// ANT-011 Flashpowder DODGE -11% 2 turns (replaces ACC debuff; -15 cap because hits near the 95% roll ceiling).
+effect: .name "RB ANT Flash Move 2" .target "target" .curio_result_type "negative" .chance 110% .duration 2 .buff_ids "RB_ANT_FLASH_MOVE_2" .on_hit true .on_miss false .queue true
+// ANT-011 Flashpowder MOVE resist -22% 2 turns: unassigned debuff, feeds pullers/pushers (Runaway Ransack, Occultist pull).
+effect: .name "RB ANT Flash Burn 2" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 1 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+// ANT-011 Flashpowder burn 1 (1/1/1/2/2): burn 2 = 2+1 = 3 total; opens Runaway burn synergies.
+effect: .name "RB ANT Heal Amp 2" .target "target" .curio_result_type "positive" .chance 100% .duration 3 .buff_type hp_heal_received_percent .buff_amount 25% .on_hit true .on_miss true .queue true
+// ANT-007 Fortifying Vapours stacking heal +25% received healing, 3 turns, stacks (moved from Crusader Battle Heal; vanilla Arbalest bandage 20-38).
+effect: .name "RB ANT Guard Riposte Dmg 2" .target "target" .curio_result_type "positive" .chance 100% .duration 2 .buff_ids "RB_ANT_RIPOSTE_DMGL_2" "RB_ANT_RIPOSTE_DMGH_2" .on_hit true .on_miss true .queue true
+// ANT-013 Protect Me riposte-only damage +11% 2 turns (rule riposte, like Duelist Feint); 2 turns caps overlap at 2 casts.
+effect: .name "RB ANT Kris Armor 3" .target "target" .curio_result_type "negative" .chance 120% .duration 2 .combat_stat_buff 1 .protection_rating_add -8% .on_hit true .on_miss false .queue true
+// ANT-009 Kris Stab PROT -8% 2 turns: front-line armor break for the party (accelerating 5/6/8/11/15).
+effect: .name "RB ANT Cower Heal 3" .target "performer" .curio_result_type "positive" .chance 100% .heal 3 .on_hit true .on_miss true .queue true .source_heal_type hero_skill
+// ANT-010 Cower self heal 3 (2/2/3/4/5): makes Cower usable from rank 4; below Hellion 7 / Houndmaster 8 / Leper 10.
+effect: .name "RB ANT Flash Dodge 3" .target "target" .curio_result_type "negative" .chance 120% .duration 2 .combat_stat_buff 1 .defense_rating_add -12% .on_hit true .on_miss false .queue true
+// ANT-011 Flashpowder DODGE -12% 2 turns (replaces ACC debuff; -15 cap because hits near the 95% roll ceiling).
+effect: .name "RB ANT Flash Move 3" .target "target" .curio_result_type "negative" .chance 120% .duration 2 .buff_ids "RB_ANT_FLASH_MOVE_3" .on_hit true .on_miss false .queue true
+// ANT-011 Flashpowder MOVE resist -25% 2 turns: unassigned debuff, feeds pullers/pushers (Runaway Ransack, Occultist pull).
+effect: .name "RB ANT Flash Burn 3" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 1 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+// ANT-011 Flashpowder burn 1 (1/1/1/2/2): burn 2 = 2+1 = 3 total; opens Runaway burn synergies.
+effect: .name "RB ANT Heal Amp 3" .target "target" .curio_result_type "positive" .chance 100% .duration 3 .buff_type hp_heal_received_percent .buff_amount 30% .on_hit true .on_miss true .queue true
+// ANT-007 Fortifying Vapours stacking heal +30% received healing, 3 turns, stacks (moved from Crusader Battle Heal; vanilla Arbalest bandage 20-38).
+effect: .name "RB ANT Guard Riposte Dmg 3" .target "target" .curio_result_type "positive" .chance 100% .duration 2 .buff_ids "RB_ANT_RIPOSTE_DMGL_3" "RB_ANT_RIPOSTE_DMGH_3" .on_hit true .on_miss true .queue true
+// ANT-013 Protect Me riposte-only damage +12% 2 turns (rule riposte, like Duelist Feint); 2 turns caps overlap at 2 casts.
+effect: .name "RB ANT Kris Armor 4" .target "target" .curio_result_type "negative" .chance 130% .duration 2 .combat_stat_buff 1 .protection_rating_add -11% .on_hit true .on_miss false .queue true
+// ANT-009 Kris Stab PROT -11% 2 turns: front-line armor break for the party (accelerating 5/6/8/11/15).
+effect: .name "RB ANT Cower Heal 4" .target "performer" .curio_result_type "positive" .chance 100% .heal 4 .on_hit true .on_miss true .queue true .source_heal_type hero_skill
+// ANT-010 Cower self heal 4 (2/2/3/4/5): makes Cower usable from rank 4; below Hellion 7 / Houndmaster 8 / Leper 10.
+effect: .name "RB ANT Flash Dodge 4" .target "target" .curio_result_type "negative" .chance 130% .duration 2 .combat_stat_buff 1 .defense_rating_add -14% .on_hit true .on_miss false .queue true
+// ANT-011 Flashpowder DODGE -14% 2 turns (replaces ACC debuff; -15 cap because hits near the 95% roll ceiling).
+effect: .name "RB ANT Flash Move 4" .target "target" .curio_result_type "negative" .chance 130% .duration 2 .buff_ids "RB_ANT_FLASH_MOVE_4" .on_hit true .on_miss false .queue true
+// ANT-011 Flashpowder MOVE resist -27% 2 turns: unassigned debuff, feeds pullers/pushers (Runaway Ransack, Occultist pull).
+effect: .name "RB ANT Heal Amp 4" .target "target" .curio_result_type "positive" .chance 100% .duration 3 .buff_type hp_heal_received_percent .buff_amount 35% .on_hit true .on_miss true .queue true
+// ANT-007 Fortifying Vapours stacking heal +35% received healing, 3 turns, stacks (moved from Crusader Battle Heal; vanilla Arbalest bandage 20-38).
+effect: .name "RB ANT Guard Riposte Dmg 4" .target "target" .curio_result_type "positive" .chance 100% .duration 2 .buff_ids "RB_ANT_RIPOSTE_DMGL_4" "RB_ANT_RIPOSTE_DMGH_4" .on_hit true .on_miss true .queue true
+// ANT-013 Protect Me riposte-only damage +14% 2 turns (rule riposte, like Duelist Feint); 2 turns caps overlap at 2 casts.
+effect: .name "RB ANT Kris Armor 5" .target "target" .curio_result_type "negative" .chance 140% .duration 2 .combat_stat_buff 1 .protection_rating_add -15% .on_hit true .on_miss false .queue true
+// ANT-009 Kris Stab PROT -15% 2 turns: front-line armor break for the party (accelerating 5/6/8/11/15).
+effect: .name "RB ANT Cower Heal 5" .target "performer" .curio_result_type "positive" .chance 100% .heal 5 .on_hit true .on_miss true .queue true .source_heal_type hero_skill
+// ANT-010 Cower self heal 5 (2/2/3/4/5): makes Cower usable from rank 4; below Hellion 7 / Houndmaster 8 / Leper 10.
+effect: .name "RB ANT Flash Dodge 5" .target "target" .curio_result_type "negative" .chance 140% .duration 2 .combat_stat_buff 1 .defense_rating_add -15% .on_hit true .on_miss false .queue true
+// ANT-011 Flashpowder DODGE -15% 2 turns (replaces ACC debuff; -15 cap because hits near the 95% roll ceiling).
+effect: .name "RB ANT Flash Move 5" .target "target" .curio_result_type "negative" .chance 140% .duration 2 .buff_ids "RB_ANT_FLASH_MOVE_5" .on_hit true .on_miss false .queue true
+// ANT-011 Flashpowder MOVE resist -30% 2 turns: unassigned debuff, feeds pullers/pushers (Runaway Ransack, Occultist pull).
+effect: .name "RB ANT Heal Amp 5" .target "target" .curio_result_type "positive" .chance 100% .duration 3 .buff_type hp_heal_received_percent .buff_amount 40% .on_hit true .on_miss true .queue true
+// ANT-007 Fortifying Vapours stacking heal +40% received healing, 3 turns, stacks (moved from Crusader Battle Heal; vanilla Arbalest bandage 20-38).
+effect: .name "RB ANT Guard Riposte Dmg 5" .target "target" .curio_result_type "positive" .chance 100% .duration 2 .buff_ids "RB_ANT_RIPOSTE_DMGL_5" "RB_ANT_RIPOSTE_DMGH_5" .on_hit true .on_miss true .queue true
+// ANT-013 Protect Me riposte-only damage +15% 2 turns (rule riposte, like Duelist Feint); 2 turns caps overlap at 2 casts.
+effect: .name "RB ANT Cower Unmark" .target "performer" .chance 100% .untag 1 .on_hit true .on_miss true .queue true
+// ANT-010 Cower removes own mark (same key as vanilla Clear Marked Target).
+effect: .name "RB ANT Guard Riposte" .target "target" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3 .on_hit true .on_miss true .queue true
+// ANT-013 Protect Me gives the guarding ally riposte 3 turns, no damage modifier (Duelist form; never shorter than any own riposte). Riposte damage comes from the ally riposte_skill.

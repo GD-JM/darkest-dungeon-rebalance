@@ -112,7 +112,8 @@ combat_skill: .id "hook_and_slice" .level 4 .type "ranged" .atk 110% .dmg -85% .
 
 
 
-riposte_skill: .id "riposte1" .level 0 .type "melee" .atk 85% .dmg 0% .crit 5% .launch 1234 .target 1234 .is_crit_valid True 
+riposte_skill: .id "riposte1" .level 0 .type "melee" .atk 85% .dmg -50% .crit 5% .launch 1234 .target 1234 .is_crit_valid True 
+// BH-027 반격 기술 피해 0 -> -50%. 현상금은 반격을 켜는 자기 기술이 없어 유물 날 지켜줘로 빌린 반격만 쓴다(SYS-105와 같은 기준).
 tag: .id "heavy"
 tag: .id "non-religious"
 tag: .id "house_of_the_yellow_hand"

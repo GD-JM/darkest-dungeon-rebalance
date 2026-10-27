@@ -48,6 +48,8 @@ combat_skill: .id "incision" .level 4 .type "melee" .atk 110% .dmg 0% .crit 9% .
 
 
 combat_move_skill: .id "move" .level 0 .type "move" .move 1 1 .launch 4321
+riposte_skill: .id "riposte1" .level 0 .type "melee" .atk 85% .dmg -50% .crit 0% .launch 1234 .target 1234 .is_crit_valid True
+// SYS-105 반격 기술 신설(명중 85, 피해 -50%, 치명 0): 유물 날 지켜줘가 주는 빌린 반격용. 반격 상태일 때만 쓰여 평소 영향 없음. 기준: 노상강도·현상금 반격 명중 85, 자기 반격 영웅보다 약하게 -50%.
 
 
 combat_skill: .id "battlefield_medicine" .level 0 .heal 3 3 .launch 43 .target @1234  .effect "RB PD Cure Poison" .is_stall_invalidating false

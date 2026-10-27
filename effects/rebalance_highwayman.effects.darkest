@@ -56,3 +56,18 @@ effect: .name "RB HWY Tracking Buff 5" .target "performer" .curio_result_type "p
 // HWY-013 Restore vanilla Tracking Buff values (acc/crit/dmg); keep the 3-turn duration from HWY-010. Values superseded by HWY-016/HWY-018.
 // HWY-010 [2026-10-06] Limit Advance self setup to three turns instead of combat end; preserve accuracy, critical and damage bonuses.
 // HWY-005 [trace 2026-10-05] Use advance for smaller self setup after transferring riposte to Tracking Shot. Effect: Tracking Buff 5.
+// edited vanilla effect (from effects/base.effects.darkest)
+effect: .name "RB HWY Hwy Riposte 1"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -29%  .damage_high_multiply -29%  .crit_chance_add 0%
+// HWY-026 own riposte modifier -29% with riposte_skill -15% = unchanged total; non-stacking (stays inside riposte status).
+// edited vanilla effect (from effects/base.effects.darkest)
+effect: .name "RB HWY Hwy Riposte 2"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -21%  .damage_high_multiply -21%  .crit_chance_add 2% 
+// HWY-026 own riposte modifier -21% with riposte_skill -15% = unchanged total; non-stacking (stays inside riposte status).
+// edited vanilla effect (from effects/base.effects.darkest)
+effect: .name "RB HWY Hwy Riposte 3"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -12% .damage_high_multiply -12% .crit_chance_add 3% 
+// HWY-026 own riposte modifier -12% with riposte_skill -15% = unchanged total; non-stacking (stays inside riposte status).
+// edited vanilla effect (from effects/base.effects.darkest)
+effect: .name "RB HWY Hwy Riposte 4"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -6% .damage_high_multiply -6% .crit_chance_add 4% 
+// HWY-026 own riposte modifier -6% with riposte_skill -15% = unchanged total; non-stacking (stays inside riposte status).
+// edited vanilla effect (from effects/base.effects.darkest)
+effect: .name "RB HWY Hwy Riposte 5"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply 0% .damage_high_multiply 0% .crit_chance_add 5%
+// HWY-026 own riposte modifier 0% with riposte_skill -15% = unchanged total; non-stacking (stays inside riposte status).

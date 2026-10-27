@@ -21,3 +21,25 @@ effect: .name "RB CRU Crusader HealStress 5" .target "target" .curio_result_type
 // CRU-006 [2026-10-06] Approved Inspiring Cry level5: stress 8 -> 9; diversify standalone stress support. Supersedes CRU-005 sync and CRU-004 pending status.
 // CRU-005 [2026-10-06] Match the currently loaded vanilla effect; archive pending values so reapplying cannot silently alter stun or stress recovery.
 // CRU-004 [trace 2026-10-05] Pending edit only: improve standalone stress recovery supply; do not auto-apply.
+
+// mod-only new effects
+effect: .name "RB CRU Battle Heal Prot 1" .target "target" .curio_result_type "positive" .chance 100% .duration 2 .combat_stat_buff 1 .protection_rating_add 10% .on_hit true .on_miss true .queue true
+// CRU-011 Battle Heal gives PROT +10% 2 turns (stacking heal moved to Antiquarian Fortifying Vapours).
+effect: .name "RB CRU Bulwark Resist 1" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .buff_ids "RB_CRU_STUNRES_1" "RB_CRU_DBRES_1" .on_hit true .on_miss true .queue true
+// CRU-012 Bulwark of Faith STUN resist +20% and DEATHBLOW resist +5% until combat end (no overlap with Leper Withstand blight/bleed/debuff/move).
+effect: .name "RB CRU Battle Heal Prot 2" .target "target" .curio_result_type "positive" .chance 100% .duration 2 .combat_stat_buff 1 .protection_rating_add 11% .on_hit true .on_miss true .queue true
+// CRU-011 Battle Heal gives PROT +11% 2 turns (stacking heal moved to Antiquarian Fortifying Vapours).
+effect: .name "RB CRU Bulwark Resist 2" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .buff_ids "RB_CRU_STUNRES_2" "RB_CRU_DBRES_2" .on_hit true .on_miss true .queue true
+// CRU-012 Bulwark of Faith STUN resist +22% and DEATHBLOW resist +6% until combat end (no overlap with Leper Withstand blight/bleed/debuff/move).
+effect: .name "RB CRU Battle Heal Prot 3" .target "target" .curio_result_type "positive" .chance 100% .duration 2 .combat_stat_buff 1 .protection_rating_add 12% .on_hit true .on_miss true .queue true
+// CRU-011 Battle Heal gives PROT +12% 2 turns (stacking heal moved to Antiquarian Fortifying Vapours).
+effect: .name "RB CRU Bulwark Resist 3" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .buff_ids "RB_CRU_STUNRES_3" "RB_CRU_DBRES_3" .on_hit true .on_miss true .queue true
+// CRU-012 Bulwark of Faith STUN resist +25% and DEATHBLOW resist +7% until combat end (no overlap with Leper Withstand blight/bleed/debuff/move).
+effect: .name "RB CRU Battle Heal Prot 4" .target "target" .curio_result_type "positive" .chance 100% .duration 2 .combat_stat_buff 1 .protection_rating_add 13% .on_hit true .on_miss true .queue true
+// CRU-011 Battle Heal gives PROT +13% 2 turns (stacking heal moved to Antiquarian Fortifying Vapours).
+effect: .name "RB CRU Bulwark Resist 4" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .buff_ids "RB_CRU_STUNRES_4" "RB_CRU_DBRES_4" .on_hit true .on_miss true .queue true
+// CRU-012 Bulwark of Faith STUN resist +27% and DEATHBLOW resist +8% until combat end (no overlap with Leper Withstand blight/bleed/debuff/move).
+effect: .name "RB CRU Battle Heal Prot 5" .target "target" .curio_result_type "positive" .chance 100% .duration 2 .combat_stat_buff 1 .protection_rating_add 15% .on_hit true .on_miss true .queue true
+// CRU-011 Battle Heal gives PROT +15% 2 turns (stacking heal moved to Antiquarian Fortifying Vapours).
+effect: .name "RB CRU Bulwark Resist 5" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .buff_ids "RB_CRU_STUNRES_5" "RB_CRU_DBRES_5" .on_hit true .on_miss true .queue true
+// CRU-012 Bulwark of Faith STUN resist +30% and DEATHBLOW resist +10% until combat end (no overlap with Leper Withstand blight/bleed/debuff/move).

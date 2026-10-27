@@ -415,6 +415,71 @@
 				"float": 0,
 				"string": ""
 			}
+		},
+		{
+			"id": "RB_OCC_HEX_MOVE_1",
+			"stat_type": "resistance",
+			"stat_sub_type": "move",
+			"amount": -0.2,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_OCC_HEX_MOVE_2",
+			"stat_type": "resistance",
+			"stat_sub_type": "move",
+			"amount": -0.21,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_OCC_HEX_MOVE_3",
+			"stat_type": "resistance",
+			"stat_sub_type": "move",
+			"amount": -0.22,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_OCC_HEX_MOVE_4",
+			"stat_type": "resistance",
+			"stat_sub_type": "move",
+			"amount": -0.24,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_OCC_HEX_MOVE_5",
+			"stat_type": "resistance",
+			"stat_sub_type": "move",
+			"amount": -0.25,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
 		}
 	]
 }

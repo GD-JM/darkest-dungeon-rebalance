@@ -124,15 +124,20 @@ effect: .name "Tracking Buff 5" .target "performer" .curio_result_type "positive
 //# ======================================================================
 //# 기술: 결투가의 진격 (duelist_advance)
 //# 레벨별 효과: 1레벨 Hwy Riposte 1 | 2레벨 Hwy Riposte 2 | 3레벨 Hwy Riposte 3 | 4레벨 Hwy Riposte 4 | 5레벨 Hwy Riposte 5
-effect: .name "Hwy Riposte 1"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -40%  .damage_high_multiply -40%  .crit_chance_add 0%
+effect: .name "Hwy Riposte 1"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -29%  .damage_high_multiply -29%  .crit_chance_add 0%
+// HWY-026 own riposte modifier -29% with riposte_skill -15% = unchanged total; non-stacking (stays inside riposte status).
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Hwy Riposte 2"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -33%  .damage_high_multiply -33%  .crit_chance_add 2% 
+effect: .name "Hwy Riposte 2"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -21%  .damage_high_multiply -21%  .crit_chance_add 2% 
+// HWY-026 own riposte modifier -21% with riposte_skill -15% = unchanged total; non-stacking (stays inside riposte status).
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Hwy Riposte 3"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -25% .damage_high_multiply -25% .crit_chance_add 3% 
+effect: .name "Hwy Riposte 3"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -12% .damage_high_multiply -12% .crit_chance_add 3% 
+// HWY-026 own riposte modifier -12% with riposte_skill -15% = unchanged total; non-stacking (stays inside riposte status).
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Hwy Riposte 4"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -20% .damage_high_multiply -20% .crit_chance_add 4% 
+effect: .name "Hwy Riposte 4"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -6% .damage_high_multiply -6% .crit_chance_add 4% 
+// HWY-026 own riposte modifier -6% with riposte_skill -15% = unchanged total; non-stacking (stays inside riposte status).
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Hwy Riposte 5"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -15% .damage_high_multiply -15% .crit_chance_add 5%
+effect: .name "Hwy Riposte 5"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply 0% .damage_high_multiply 0% .crit_chance_add 5%
+// HWY-026 own riposte modifier 0% with riposte_skill -15% = unchanged total; non-stacking (stays inside riposte status).
 //#   원본 위치: effects/base.effects.darkest
 
 //# ======================================================================

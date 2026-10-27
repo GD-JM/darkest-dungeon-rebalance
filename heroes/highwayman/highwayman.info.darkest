@@ -77,11 +77,11 @@ combat_skill: .id "grape_shot_blast" .level 4 .type "ranged" .atk 110% .dmg -60%
 combat_move_skill: .id "move" .level 0 .type "move" .move 2 2 .launch 4321
 
 
-combat_skill: .id "take_aim" .level 0 .type "ranged" .atk 95% .dmg -60% .crit 0% .launch 4321 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "Hwy Riposte 1" "Destealth"
-combat_skill: .id "take_aim" .level 1 .type "ranged" .atk 100% .dmg -60% .crit 0% .launch 4321 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "Hwy Riposte 2" "Destealth"
-combat_skill: .id "take_aim" .level 2 .type "ranged" .atk 105% .dmg -60% .crit 0.5% .launch 4321 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "Hwy Riposte 3" "Destealth"
-combat_skill: .id "take_aim" .level 3 .type "ranged" .atk 110% .dmg -60% .crit 0.5% .launch 4321 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "Hwy Riposte 4" "Destealth"
-combat_skill: .id "take_aim" .level 4 .type "ranged" .atk 115% .dmg -60% .crit 1% .launch 4321 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "Hwy Riposte 5" "Destealth"
+combat_skill: .id "take_aim" .level 0 .type "ranged" .atk 95% .dmg -60% .crit 0% .launch 4321 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "RB HWY Hwy Riposte 1" "Destealth"
+combat_skill: .id "take_aim" .level 1 .type "ranged" .atk 100% .dmg -60% .crit 0% .launch 4321 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "RB HWY Hwy Riposte 2" "Destealth"
+combat_skill: .id "take_aim" .level 2 .type "ranged" .atk 105% .dmg -60% .crit 0.5% .launch 4321 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "RB HWY Hwy Riposte 3" "Destealth"
+combat_skill: .id "take_aim" .level 3 .type "ranged" .atk 110% .dmg -60% .crit 0.5% .launch 4321 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "RB HWY Hwy Riposte 4" "Destealth"
+combat_skill: .id "take_aim" .level 4 .type "ranged" .atk 115% .dmg -60% .crit 1% .launch 4321 .target 1234 .is_crit_valid True .ignore_stealth true  .effect "RB HWY Hwy Riposte 5" "Destealth"
 // HWY-019 take_aim: 피해 -75% -> -60%, 결투가 결정타(-60%)와 같게 [제작자]
 // HWY-004 [trace 2026-10-05] Enable stationary ranged riposte play instead of tying riposte to melee advance.
 // HWY-004 take_aim: Hwy Riposte, 전투당 1회 제거, dmg -80% -> -75% ->중보병꺼랑 데미지 바꿈 대상 234 -> 1234 → HWY-019: 피해 -60% (현재)
@@ -110,7 +110,8 @@ combat_skill: .id "opened_vein" .level 4 .type "melee" .atk 115% .dmg -20% .crit
 // HWY-022 정맥 절개 바닐라 복귀(피해 −15%, 치명 0~4%). HWY-006·019·020 철회. 근거: 역병 의사 절개(90/0%/5%, 효과 1개)와 비교해 명중 +5 대신 피해 −15%·치명 −5%로 약화 2개를 더 받는 바닐라 교환이 이미 원칙에 맞음 [제작자 10-21]
 
 
-riposte_skill: .id "riposte1" .level 0 .type "melee" .atk 85% .dmg 0% .crit 5% .launch 1234 .target 1234 .is_crit_valid True 
+riposte_skill: .id "riposte1" .level 0 .type "melee" .atk 85% .dmg -15% .crit 5% .launch 1234 .target 1234 .is_crit_valid True 
+// HWY-026 반격 기술 피해 0 -> -15%(5렙 자기 반격 값). 자기 반격 보정은 -29/-21/-12/-6/0%로 바꿔 결과는 그대로(-40/-33/-25/-20/-15). 의도: 유물 반격(보정 0)으로 덮어써도 저렙 숨은 강화가 +40%p -> +25%p, 5렙 0(P-25).
 tag: .id "light"
 tag: .id "non-religious"
 tag: .id "house_of_the_yellow_hand"

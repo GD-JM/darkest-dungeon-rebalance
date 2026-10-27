@@ -1,0 +1,134 @@
+{
+	"buffs": [
+		{
+			"id": "RB_CRU_STUNRES_1",
+			"stat_type": "resistance",
+			"stat_sub_type": "stun",
+			"amount": 0.2,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_CRU_STUNRES_2",
+			"stat_type": "resistance",
+			"stat_sub_type": "stun",
+			"amount": 0.22,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_CRU_STUNRES_3",
+			"stat_type": "resistance",
+			"stat_sub_type": "stun",
+			"amount": 0.25,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_CRU_STUNRES_4",
+			"stat_type": "resistance",
+			"stat_sub_type": "stun",
+			"amount": 0.27,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_CRU_STUNRES_5",
+			"stat_type": "resistance",
+			"stat_sub_type": "stun",
+			"amount": 0.3,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_CRU_DBRES_1",
+			"stat_type": "resistance",
+			"stat_sub_type": "death_blow",
+			"amount": 0.05,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_CRU_DBRES_2",
+			"stat_type": "resistance",
+			"stat_sub_type": "death_blow",
+			"amount": 0.06,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_CRU_DBRES_3",
+			"stat_type": "resistance",
+			"stat_sub_type": "death_blow",
+			"amount": 0.07,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_CRU_DBRES_4",
+			"stat_type": "resistance",
+			"stat_sub_type": "death_blow",
+			"amount": 0.08,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_CRU_DBRES_5",
+			"stat_type": "resistance",
+			"stat_sub_type": "death_blow",
+			"amount": 0.1,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		}
+	]
+}

@@ -1,0 +1,54 @@
+[
+ {"id": "ANT-007..013", "decision": "adopted", "original_quote": "응 넣고 커밋해 테스트해보게",
+  "context_quotes": [
+   {"speaker": "user", "quote": "기본적으로 유물 자체가 쌔지기 보다는 팀원들을 쌔지게 하는 쪽으로 방향성 잡으면 좋을 것 같아.", "source": "claude session cc3c95a9-aeea-4409-9feb-eb162a738694, 2026-10-27"},
+   {"speaker": "user", "quote": "이렇게 하자 성전사한테 있는 스택힐 있잖아 바닐라 석궁 힐에 있던거 그걸 유물한테 주자. 대신에 성전사 전투 치유에는 방어도를 부여할거야", "source": "same session, 2026-10-27"},
+   {"speaker": "user", "quote": "아니지 스택힐 20 ~ 40으로 바꾸면 되잖아", "source": "same session, 2026-10-27"},
+   {"speaker": "user", "quote": "섬광가루 적 개체수 늘리는 거 아주 좋아 1,2,3,4로 늘면 되겠네 여기에 어차피 데미지가 없으니 화상 넣는건 어때? 내 추천은 화상 2 정도?", "source": "same session, 2026-10-27"},
+   {"speaker": "user", "quote": "그럼 섬광 1렙은 타겟열을 3,4열로 바꿔야 겠네 섬광에 명중 감소가 있다면 연막의 회피감소와 같은 효과라 시너지를 일으켜서 회피율 100 무적 조합을 만들수가 있어 그래서 명중 감소를 빼야할 거 같아.", "source": "same session, 2026-10-28"},
+   {"speaker": "user", "quote": "이동저항을 섬광가루에 먹이자.", "source": "same session, 2026-10-28"},
+   {"speaker": "user", "quote": "이동저항 20에서 30으로 하자", "source": "same session, 2026-10-28"},
+   {"speaker": "user", "quote": "그래 회피 15로 가자 그게 맞겠지?", "source": "same session, 2026-10-28"},
+   {"speaker": "user", "quote": "칼질에다가 방어도 감소 넣으면 되지 맞잖아", "source": "same session, 2026-10-28"},
+   {"speaker": "user", "quote": "움츠리기에는 자기 회복 넣는 거 좋아.", "source": "same session, 2026-10-27"},
+   {"speaker": "user", "quote": "7은 ㅈ사기 같은데 괜찮을까? 받는 회복량 33퍼 장신구 있는거 알고있찌?", "source": "same session, 2026-10-28"},
+   {"speaker": "user", "quote": "부패의연막 뭔 개소리야 22334 중독 피해 이렇게 안한다고? 이게 맞아 보이는데 아무리봐도?", "source": "same session, 2026-10-28"},
+   {"speaker": "user", "quote": "중독 저항 약화 뭔가 수치가 안 예쁘잖아 다른 기술 비교해서 예쁜 수치 한번 찾아봐", "source": "same session, 2026-10-28"},
+   {"speaker": "user", "quote": "아니지 회피는 바닐라가 5렙 10이라 그걸 줄일 순 없어 567810하고", "source": "same session, 2026-10-28"},
+   {"speaker": "user", "quote": "모델 그러면 치명타 없애고 567810 유지하면 되는거 아니야?", "source": "same session, 2026-10-28"},
+   {"speaker": "user", "quote": "날 지켜줘 반격 아무나 쓸 수 있게 하는 거 베스트 아이디어 너무나 잘했어", "source": "same session, 2026-10-27"},
+   {"speaker": "user", "quote": "반격피해 버프 넣었구나 이거 10 ~ 15 로 가자 20은 너무 쌔다", "source": "same session, 2026-10-28"},
+   {"speaker": "user", "quote": "아니지 결투가한테도 써 뭔소리야 결투가한테 제일 많이쓰는데 날 지켜줘 .", "source": "same session, 2026-10-28"}
+  ],
+  "rationale_ko": "P-25(챔피언부터 장신구로 비등, 팀원을 세지게) 유물수집상 리워크. 수치 일부(단검 방어 -5~-15, 움츠리기 회복 2/2/3/4/5, 중독 저항 약화 -20/-22/-25/-27/-30, 반격 구조·반격 기술 -50%)는 Claude 제안을 제작자가 위 원문으로 받아들인 것. 상세·근거는 design/changes/antiquarian.md 2026-10-28 절과 design/analysis/antiq_curve_2026-10-27.md. 게임 내 확인 전(design/test_checklist_antiq_20261028.md). test 판.",
+  "source": {"product": "claude", "reference": "Claude Code session cc3c95a9-aeea-4409-9feb-eb162a738694, 2026-10-27~28", "session_id": "cc3c95a9-aeea-4409-9feb-eb162a738694", "message_id": null, "event_id": null},
+  "files": ["heroes/antiquarian/antiquarian.info.darkest", "heroes/antiquarian/antiquarian.effects_edit.txt", "effects/rebalance_antiquarian.effects.darkest", "shared/buffs/rebalance_antiquarian.buffs.json", "design/changes/antiquarian.md", "tools/antiq_curve.py", "design/analysis/antiq_curve_2026-10-27.md", "design/test_checklist_antiq_20261028.md"],
+  "supersedes": []},
+ {"id": "CRU-011, CRU-012", "decision": "adopted", "original_quote": "응 넣고 커밋해 테스트해보게",
+  "context_quotes": [
+   {"speaker": "user", "quote": "대신에 성전사 전투 치유에는 방어도를 부여할거야", "source": "same session, 2026-10-27"},
+   {"speaker": "user", "quote": "내 생각에 저항 4종은 성전사 신앙의 방패에 넣고 싶은데 괜찮을까? 나병 인내와 겹치지 않게 중독 출혈 약화 기절 이렇게 4개만 높일까? 신앙의 방패 횃불 확 늘리는 거는 없어도 돼", "source": "same session, 2026-10-28"},
+   {"speaker": "user", "quote": "기절 저항 죽음의 일격 저항 괜찮은듯? 개사기같긴 한데 ;; 방어력 적정한지?", "source": "same session, 2026-10-28"},
+   {"speaker": "user", "quote": "성전사 힐 78이면 성녀 대비 어느정도니? 장신구 고려하면 너무 과하지 않은지 판단해봐", "source": "same session, 2026-10-28"}
+  ],
+  "rationale_ko": "전투 치유 스택 힐 -> 방어 +10~15% 2턴(회복 유지: 7-8은 성녀 대비 83%로 과함, Claude 판단). 신앙의 방패 횃불 삭제 + 기절 저항 +20~30% + 죽음의 일격 저항 +5~10%(나병환자 인내와 겹치지 않는 저항, 수치는 Claude 제안). test 판.",
+  "source": {"product": "claude", "reference": "same session", "session_id": "cc3c95a9-aeea-4409-9feb-eb162a738694", "message_id": null, "event_id": null},
+  "files": ["heroes/crusader/crusader.info.darkest", "heroes/crusader/crusader.effects_edit.txt", "effects/rebalance_crusader.effects.darkest", "shared/buffs/rebalance_crusader.buffs.json", "design/changes/crusader.md"], "supersedes": []},
+ {"id": "OCC-016, OCC-017", "decision": "adopted", "original_quote": "응 넣고 커밋해 테스트해보게",
+  "context_quotes": [
+   {"speaker": "user", "quote": "그리고 신비학자 손아귀로 땅기는 거 있잖아 그거 당기기 3으로 하자 어때?", "source": "same session, 2026-10-28"},
+   {"speaker": "user", "quote": "당기기 3 바꾸는 이유는 손아귀 자체의 이펙트가 커서 확 당겨지는 게 더 어울리다고 판단해서야", "source": "same session, 2026-10-28"},
+   {"speaker": "user", "quote": "그리고 생각해보니 취약화주술에 이동저항이 없었네? 모든 저항 감소였는데 이거 보완해야할듯 맞지?", "source": "same session, 2026-10-28"}
+  ],
+  "rationale_ko": "악마의 아귀팔 당기기 3(P-19), 취약화 주술 이동 저항 -20~-25% 추가(기존 4종과 같은 수열, Claude). test 판.",
+  "source": {"product": "claude", "reference": "same session", "session_id": "cc3c95a9-aeea-4409-9feb-eb162a738694", "message_id": null, "event_id": null},
+  "files": ["heroes/occultist/occultist.info.darkest", "heroes/occultist/occultist.effects_edit.txt", "effects/rebalance_occultist.effects.darkest", "shared/buffs/rebalance_occultist.buffs.json", "design/changes/occultist.md"], "supersedes": []},
+ {"id": "HWY-026, MAA-023, BH-027, SYS-105", "decision": "adopted", "original_quote": "응 넣고 커밋해 테스트해보게",
+  "context_quotes": [
+   {"speaker": "user", "quote": "이게 적절하지가 않잖아 우리 모델이 뭐라 그랬어 저렙 때 약하고 나중에 강해진다고 했잖아 그 원칙에 완벽히 위배되는 모델이잖아 안그래? 계속 고민해서 더 나은 방안 찾아봐", "source": "same session, 2026-10-28"},
+   {"speaker": "user", "quote": "아니 그러면 반격 중첩해서 걸면 버프 더 커지는 거 아니야? 노상 중보가?", "source": "same session, 2026-10-28"}
+  ],
+  "rationale_ko": "아군 반격(ANT-013)을 위한 반격 기술 구조. 반격 기술 없던 16명 신설(명중 85, 피해 -50%), 현상금 -50%, 노상강도 -15%·중보병 -20%로 바꾸고 자기 반격 보정을 재계산해 자기 반격 결과는 그대로(보정은 반격 상태 안이라 중첩 없음). 구조는 Claude 제안. MAA-019 포효 주석은 편집 도구 재생성 때 사라지지 않게 영문 주석으로 보존(수치 변경 없음). test 판.",
+  "source": {"product": "claude", "reference": "same session", "session_id": "cc3c95a9-aeea-4409-9feb-eb162a738694", "message_id": null, "event_id": null},
+  "files": ["heroes/highwayman/highwayman.info.darkest", "heroes/highwayman/highwayman.effects_edit.txt", "effects/rebalance_highwayman.effects.darkest", "heroes/man_at_arms/man_at_arms.info.darkest", "heroes/man_at_arms/man_at_arms.effects_edit.txt", "effects/rebalance_man_at_arms.effects.darkest", "heroes/bounty_hunter/bounty_hunter.info.darkest", "heroes/abomination/abomination.info.darkest", "heroes/arbalest/arbalest.info.darkest", "heroes/flagellant/flagellant.info.darkest", "heroes/grave_robber/grave_robber.info.darkest", "heroes/hellion/hellion.info.darkest", "heroes/houndmaster/houndmaster.info.darkest", "heroes/jester/jester.info.darkest", "heroes/leper/leper.info.darkest", "heroes/musketeer/musketeer.info.darkest", "heroes/plague_doctor/plague_doctor.info.darkest", "heroes/runaway/runaway.info.darkest", "heroes/shieldbreaker/shieldbreaker.info.darkest", "heroes/vestal/vestal.info.darkest", "design/changes/highwayman.md", "design/changes/man_at_arms.md", "design/changes/bounty_hunter.md", "design/changes/system.md"], "supersedes": []}
+]
