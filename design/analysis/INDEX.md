@@ -48,3 +48,7 @@
 | [trinket_direction_A.md](trinket_direction_A.md), [trinket_direction_B.md](trinket_direction_B.md), [trinket_direction_C.md](trinket_direction_C.md) | 장신구가 제시하는 방향(버프)·가드레일(패널티)로 본 19명(조련사 제외) 기술 대조, 최소 수정 제안 | 장신구, 방향, 가드레일 | 2026-10-23 |
 | [trinket_viability_A.md](trinket_viability_A.md), [trinket_viability_B.md](trinket_viability_B.md), [trinket_viability_C.md](trinket_viability_C.md) | 전용 장신구 전수(20명) 바닐라 대비 현재 가치: 살아있음/약해짐/버려짐, 원인 ID·최소 수정안 (가드레일 = 버려지는 장신구 없게) | 장신구, 가드레일 | 2026-10-23 |
 | [abomination_transform_stress.md](abomination_transform_stress.md) | 괴인 변신 스트레스 수지(억제의 자물쇠 포함), "깎으려고 변신" 방지 계산, ABO-008 | 괴인, 스트레스, 장신구 | 2026-10-23 |
+| [debuff_survey.md](debuff_survey.md) | 약화 전수 조사: 영웅 20명 모든 기술·반격 1~5렙의 적 약화를 범주별(바닐라→현재), 영웅별 약화 확률 장신구, 몬스터·엔진에만 있는 미배분 약화 후보. 재생성 `tools/debuff_survey.py` | 약화 분포, 약화 평준화, 미배분 약화, 약화 다양화 | 2026-10-27 |
+| [bleed_vs_blight_count.md](bleed_vs_blight_count.md) | 출혈 vs 중독 영웅 기술 수(바닐라 12/8 → 현재 12/8), 기술별 1~5렙 수치·대상, 몬스터 출혈 28/중독 22 | 출혈 개수, 중독 개수, 출혈 중독 비교 | 2026-10-27 |
+| [buff_survey.md](buff_survey.md) | 강화(버프) 전수 조사: 영웅 20명 모든 기술·반격 1~5렙의 자신·아군 강화를 범주별(바닐라→현재)·받는 쪽(자신/아군 1명/아군 전체)·영웅별로. 재생성 `tools/buff_survey.py` | 버프 분포, 강화 분포, 파티 버프, 자기 강화 | 2026-10-27 |
+| [antiq_curve_2026-10-27.md](antiq_curve_2026-10-27.md) | 유물수집상 P-25(챔피언에서 장신구로 비등) 레벨 곡선: 1~5렙 x 장신구 조합 점수, 시안 v2/v3. 재계산 `tools/antiq_curve.py` | 유물수집상, 레벨 곡선, 장신구 | 2026-10-27 |
