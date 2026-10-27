@@ -149,7 +149,8 @@ effect: .name "FlareLight 1" .target "global" .chance 100% .curio_result_type "p
 effect: .name "Destealth" .target "target" .chance 100% .unstealth 1 .on_hit true .on_miss false
 //#   공유 효과: 다른 영웅 7명(유물수집상, 노상강도, 나병환자, 총사, 도망자, 방패 파괴자, 성녀). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "FlareHealStress 1" .target "performer_group_other" .curio_result_type "positive" .chance 100% .healstress 2 .on_hit true .on_miss true .queue true .apply_once true
+effect: .name "FlareHealStress 1" .target "performer_group_other" .curio_result_type "positive" .chance 100% .healstress 3 .on_hit true .on_miss true .queue true .apply_once true
+// ARB-014 [2026-10-28] Rallying Flare party stress heal 3 (3/3/4/4/5, +1): Arbalest score 47.0 (15th) -> 51.2 (14th), still below median 53.0.
 // ARB-010 Rallying Flare stress heal 3/3/4/4/5 -> 2/2/3/3/4 (100%%). Spreads the all-in-one flare power.
 // ARB-006 [2026-10-06] Stress recovery chance 74% -> 100% for reliable non-Jester party support; retain heal amount and exclude self. Supersedes ARB-003 chance.
 // ARB-003 [trace 2026-10-05] Add an alternative party stress recovery option with stable low-level chance. Effect: FlareHealStress 1.
@@ -159,7 +160,8 @@ effect: .name "FlareHealStress 1" .target "performer_group_other" .curio_result_
 effect: .name "FlareLight 2" .target "global" .chance 100% .curio_result_type "positive" .torch_increase 4	.on_hit true .on_miss true .apply_once true .queue true
 //#   공유 효과: 다른 영웅 1명(총사). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "FlareHealStress 2" .target "performer_group_other" .curio_result_type "positive" .chance 100% .healstress 2 .on_hit true .on_miss true .queue true .apply_once true
+effect: .name "FlareHealStress 2" .target "performer_group_other" .curio_result_type "positive" .chance 100% .healstress 3 .on_hit true .on_miss true .queue true .apply_once true
+// ARB-014 [2026-10-28] Rallying Flare party stress heal 3 (3/3/4/4/5, +1): Arbalest score 47.0 (15th) -> 51.2 (14th), still below median 53.0.
 // ARB-010 Rallying Flare stress heal 3/3/4/4/5 -> 2/2/3/3/4 (100%%). Spreads the all-in-one flare power.
 // ARB-006 [2026-10-06] Stress recovery chance 74% -> 100% for reliable non-Jester party support; retain heal amount and exclude self. Supersedes ARB-003 chance.
 // ARB-003 [trace 2026-10-05] Add an alternative party stress recovery option with stable low-level chance. Effect: FlareHealStress 2.
@@ -169,7 +171,8 @@ effect: .name "FlareHealStress 2" .target "performer_group_other" .curio_result_
 effect: .name "FlareLight 3" .target "global" .chance 100% .curio_result_type "positive" .torch_increase 5	.on_hit true .on_miss true .apply_once true .queue true
 //#   공유 효과: 다른 영웅 1명(총사). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "FlareHealStress 3" .target "performer_group_other" .curio_result_type "positive" .chance 100% .healstress 3 .on_hit true .on_miss true .queue true .apply_once true
+effect: .name "FlareHealStress 3" .target "performer_group_other" .curio_result_type "positive" .chance 100% .healstress 4 .on_hit true .on_miss true .queue true .apply_once true
+// ARB-014 [2026-10-28] Rallying Flare party stress heal 4 (3/3/4/4/5, +1): Arbalest score 47.0 (15th) -> 51.2 (14th), still below median 53.0.
 // ARB-010 Rallying Flare stress heal 3/3/4/4/5 -> 2/2/3/3/4 (100%%). Spreads the all-in-one flare power.
 // ARB-006 [2026-10-06] Stress recovery chance 74% -> 100% for reliable non-Jester party support; retain heal amount and exclude self. Supersedes ARB-003 chance.
 // ARB-003 [trace 2026-10-05] Add an alternative party stress recovery option with stable low-level chance. Effect: FlareHealStress 3.
@@ -179,7 +182,8 @@ effect: .name "FlareHealStress 3" .target "performer_group_other" .curio_result_
 effect: .name "FlareLight 4" .target "global" .chance 100% .curio_result_type "positive" .torch_increase 6	.on_hit true .on_miss true .apply_once true .queue true
 //#   공유 효과: 다른 영웅 1명(총사). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "FlareHealStress 4" .target "performer_group_other" .curio_result_type "positive" .chance 100% .healstress 3 .on_hit true .on_miss true .queue true .apply_once true
+effect: .name "FlareHealStress 4" .target "performer_group_other" .curio_result_type "positive" .chance 100% .healstress 4 .on_hit true .on_miss true .queue true .apply_once true
+// ARB-014 [2026-10-28] Rallying Flare party stress heal 4 (3/3/4/4/5, +1): Arbalest score 47.0 (15th) -> 51.2 (14th), still below median 53.0.
 // ARB-010 Rallying Flare stress heal 3/3/4/4/5 -> 2/2/3/3/4 (100%%). Spreads the all-in-one flare power.
 // ARB-006 [2026-10-06] Stress recovery chance 74% -> 100% for reliable non-Jester party support; retain heal amount and exclude self. Supersedes ARB-003 chance.
 // ARB-003 [trace 2026-10-05] Add an alternative party stress recovery option with stable low-level chance. Effect: FlareHealStress 4.
@@ -189,7 +193,8 @@ effect: .name "FlareHealStress 4" .target "performer_group_other" .curio_result_
 effect: .name "FlareLight 5" .target "global" .chance 100% .curio_result_type "positive" .torch_increase 7	.on_hit true .on_miss true .apply_once true .queue true 
 //#   공유 효과: 다른 영웅 1명(총사). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "FlareHealStress 5" .target "performer_group_other" .curio_result_type "positive" .chance 100% .healstress 4 .on_hit true .on_miss true .queue true .apply_once true
+effect: .name "FlareHealStress 5" .target "performer_group_other" .curio_result_type "positive" .chance 100% .healstress 5 .on_hit true .on_miss true .queue true .apply_once true
+// ARB-014 [2026-10-28] Rallying Flare party stress heal 5 (3/3/4/4/5, +1): Arbalest score 47.0 (15th) -> 51.2 (14th), still below median 53.0.
 // ARB-010 Rallying Flare stress heal 3/3/4/4/5 -> 2/2/3/3/4 (100%%). Spreads the all-in-one flare power.
 // ARB-006 [2026-10-06] Stress recovery chance 74% -> 100% for reliable non-Jester party support; retain heal amount and exclude self. Supersedes ARB-003 chance.
 // ARB-003 [trace 2026-10-05] Add an alternative party stress recovery option with stable low-level chance. Effect: FlareHealStress 5.

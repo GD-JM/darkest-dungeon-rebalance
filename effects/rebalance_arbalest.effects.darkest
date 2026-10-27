@@ -29,27 +29,32 @@ effect: .name "RB ARB Suppression 4" .target "target" .curio_result_type "negati
 effect: .name "RB ARB Suppression 5" .target "target" .curio_result_type "negative" .chance 140% .duration 2 .combat_stat_buff 1 .speed_rating_add -8 .crit_chance_add -19%	.on_hit true .on_miss false
 // ARB-013 [2026-10-27] Suppressing Fire: enemy ACC -> SPD -8 (arrow rain pins ranks 3-4 down; takes SB Expose slow 4-8; ACC debuffs 6->5). Crit debuff kept.
 // edited vanilla effect (from effects/base.effects.darkest)
-effect: .name "RB ARB FlareHealStress 1" .target "performer_group_other" .curio_result_type "positive" .chance 100% .healstress 2 .on_hit true .on_miss true .queue true .apply_once true
+effect: .name "RB ARB FlareHealStress 1" .target "performer_group_other" .curio_result_type "positive" .chance 100% .healstress 3 .on_hit true .on_miss true .queue true .apply_once true
+// ARB-014 [2026-10-28] Rallying Flare party stress heal 3 (3/3/4/4/5, +1): Arbalest score 47.0 (15th) -> 51.2 (14th), still below median 53.0.
 // ARB-010 Rallying Flare stress heal 3/3/4/4/5 -> 2/2/3/3/4 (100%%). Spreads the all-in-one flare power.
 // ARB-006 [2026-10-06] Stress recovery chance 74% -> 100% for reliable non-Jester party support; retain heal amount and exclude self. Supersedes ARB-003 chance.
 // ARB-003 [trace 2026-10-05] Add an alternative party stress recovery option with stable low-level chance. Effect: FlareHealStress 1.
 // edited vanilla effect (from effects/base.effects.darkest)
-effect: .name "RB ARB FlareHealStress 2" .target "performer_group_other" .curio_result_type "positive" .chance 100% .healstress 2 .on_hit true .on_miss true .queue true .apply_once true
+effect: .name "RB ARB FlareHealStress 2" .target "performer_group_other" .curio_result_type "positive" .chance 100% .healstress 3 .on_hit true .on_miss true .queue true .apply_once true
+// ARB-014 [2026-10-28] Rallying Flare party stress heal 3 (3/3/4/4/5, +1): Arbalest score 47.0 (15th) -> 51.2 (14th), still below median 53.0.
 // ARB-010 Rallying Flare stress heal 3/3/4/4/5 -> 2/2/3/3/4 (100%%). Spreads the all-in-one flare power.
 // ARB-006 [2026-10-06] Stress recovery chance 74% -> 100% for reliable non-Jester party support; retain heal amount and exclude self. Supersedes ARB-003 chance.
 // ARB-003 [trace 2026-10-05] Add an alternative party stress recovery option with stable low-level chance. Effect: FlareHealStress 2.
 // edited vanilla effect (from effects/base.effects.darkest)
-effect: .name "RB ARB FlareHealStress 3" .target "performer_group_other" .curio_result_type "positive" .chance 100% .healstress 3 .on_hit true .on_miss true .queue true .apply_once true
+effect: .name "RB ARB FlareHealStress 3" .target "performer_group_other" .curio_result_type "positive" .chance 100% .healstress 4 .on_hit true .on_miss true .queue true .apply_once true
+// ARB-014 [2026-10-28] Rallying Flare party stress heal 4 (3/3/4/4/5, +1): Arbalest score 47.0 (15th) -> 51.2 (14th), still below median 53.0.
 // ARB-010 Rallying Flare stress heal 3/3/4/4/5 -> 2/2/3/3/4 (100%%). Spreads the all-in-one flare power.
 // ARB-006 [2026-10-06] Stress recovery chance 74% -> 100% for reliable non-Jester party support; retain heal amount and exclude self. Supersedes ARB-003 chance.
 // ARB-003 [trace 2026-10-05] Add an alternative party stress recovery option with stable low-level chance. Effect: FlareHealStress 3.
 // edited vanilla effect (from effects/base.effects.darkest)
-effect: .name "RB ARB FlareHealStress 4" .target "performer_group_other" .curio_result_type "positive" .chance 100% .healstress 3 .on_hit true .on_miss true .queue true .apply_once true
+effect: .name "RB ARB FlareHealStress 4" .target "performer_group_other" .curio_result_type "positive" .chance 100% .healstress 4 .on_hit true .on_miss true .queue true .apply_once true
+// ARB-014 [2026-10-28] Rallying Flare party stress heal 4 (3/3/4/4/5, +1): Arbalest score 47.0 (15th) -> 51.2 (14th), still below median 53.0.
 // ARB-010 Rallying Flare stress heal 3/3/4/4/5 -> 2/2/3/3/4 (100%%). Spreads the all-in-one flare power.
 // ARB-006 [2026-10-06] Stress recovery chance 74% -> 100% for reliable non-Jester party support; retain heal amount and exclude self. Supersedes ARB-003 chance.
 // ARB-003 [trace 2026-10-05] Add an alternative party stress recovery option with stable low-level chance. Effect: FlareHealStress 4.
 // edited vanilla effect (from effects/base.effects.darkest)
-effect: .name "RB ARB FlareHealStress 5" .target "performer_group_other" .curio_result_type "positive" .chance 100% .healstress 4 .on_hit true .on_miss true .queue true .apply_once true
+effect: .name "RB ARB FlareHealStress 5" .target "performer_group_other" .curio_result_type "positive" .chance 100% .healstress 5 .on_hit true .on_miss true .queue true .apply_once true
+// ARB-014 [2026-10-28] Rallying Flare party stress heal 5 (3/3/4/4/5, +1): Arbalest score 47.0 (15th) -> 51.2 (14th), still below median 53.0.
 // ARB-010 Rallying Flare stress heal 3/3/4/4/5 -> 2/2/3/3/4 (100%%). Spreads the all-in-one flare power.
 // ARB-006 [2026-10-06] Stress recovery chance 74% -> 100% for reliable non-Jester party support; retain heal amount and exclude self. Supersedes ARB-003 chance.
 // ARB-003 [trace 2026-10-05] Add an alternative party stress recovery option with stable low-level chance. Effect: FlareHealStress 5.

@@ -1,0 +1,13 @@
+{
+  "id": "ARB-014",
+  "decision": "adopted",
+  "original_quote": "석궁은 버프하자 33445로",
+  "context_quotes": [
+    {"speaker": "user", "quote": "동시에 석궁 스트힐 33445로 바꾸는건 너무 사기 되려나?", "source": "claude session cc3c95a9-aeea-4409-9feb-eb162a738694, 2026-10-28"},
+    {"speaker": "assistant", "quote": "석궁 결집 신호탄 3/3/4/4/5: 적용해도 51.2점(14위)으로 중앙값 아래라 괜찮습니다.", "source": "same session, 2026-10-28 (승인 대상 제안)"}
+  ],
+  "rationale_ko": "석궁사수 결집 신호탄 아군 스트레스 회복 2/2/3/3/4 -> 3/3/4/4/5. 모델(5렙) 47.0(15위) -> 51.2(14위), 중앙값 53.0 아래. test 판.",
+  "source": {"product": "claude", "reference": "Claude Code session cc3c95a9-aeea-4409-9feb-eb162a738694, 2026-10-28", "session_id": "cc3c95a9-aeea-4409-9feb-eb162a738694", "message_id": null, "event_id": null},
+  "files": ["heroes/arbalest/arbalest.effects_edit.txt", "effects/rebalance_arbalest.effects.darkest", "design/changes/arbalest.md"],
+  "supersedes": []
+}
