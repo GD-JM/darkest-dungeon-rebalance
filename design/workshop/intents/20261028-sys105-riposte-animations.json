@@ -1,0 +1,13 @@
+{
+  "id": "SYS-105-ART",
+  "decision": "adopted",
+  "original_quote": "근데 각 캐릭별로 반격 모션을 전부 정해야 할 거 같은데 기본은 밀리 어택 모션으로? 밀리어택 없는 캐릭이면 어떡하지? 석궁 같은거? 그리고 모션 다 정해야 하잖아 그거 다 정한거야?",
+  "context_quotes": [
+    {"speaker": "user", "quote": "야수모드에서 반격 되냐? 되면 분노가 맞아", "source": "claude session cc3c95a9-aeea-4409-9feb-eb162a738694, message 5f9cfc2b-a22f-4b73-b905-620e70ee84bb, 2026-10-27"},
+    {"speaker": "user", "quote": "test 전체를 main에 합쳐 배포", "source": "claude session cc3c95a9-aeea-4409-9feb-eb162a738694, AskUserQuestion answer 49465af9-9087-4fd2-bf98-5459dac4d80e, 2026-10-28"}
+  ],
+  "rationale_ko": "SYS-105: 유물수집상 동료 방패로 빌린 반격을 쓰는 16명에게 반격 기술(riposte_skill)이 생겼으므로 각 영웅 art 파일에 반격 연출 줄을 넣는다. 원칙: 그 영웅의 대표 근접 공격 모션을 쓰고(사용자 제안 '기본은 밀리 어택 모션'), 근접 공격이 없는 원거리 영웅은 원거리 공격 모션(석궁사수 저격, 총사 보조무기). 괴인은 사용자 지시대로 야수 형태 분노 모션. 연출: 유물수집상 서툰 칼질, 성전사 강타, 고행자 처벌, 도굴꾼 곡괭이, 야만인 사악한 난도질, 조련사 곤봉, 광대 단검 찌르기, 나병환자 내려찍기, 신비학자 사혈, 역병 의사 절개, 도망자 작열하는 일격, 방패 파괴자 꿰뚫기, 성녀 철퇴 강타, 석궁사수 저격, 총사 보조무기, 괴인 분노(Claude 선택, 게임 내 확인 전 — test_checklist_antiq_20261028 #14). 총사 art는 기존 기록에도 있으나 이번 반격 줄 추가를 함께 기록한다.",
+  "source": {"product": "claude", "reference": "Claude Code session cc3c95a9-aeea-4409-9feb-eb162a738694, 2026-10-27 message fbbceae8-26f7-4163-a8ba-a7d74b6643ce; commit e3afadd", "session_id": "cc3c95a9-aeea-4409-9feb-eb162a738694", "message_id": "fbbceae8-26f7-4163-a8ba-a7d74b6643ce", "event_id": null},
+  "files": ["heroes/abomination/abomination.art.darkest", "heroes/antiquarian/antiquarian.art.darkest", "heroes/arbalest/arbalest.art.darkest", "heroes/crusader/crusader.art.darkest", "heroes/flagellant/flagellant.art.darkest", "heroes/grave_robber/grave_robber.art.darkest", "heroes/hellion/hellion.art.darkest", "heroes/houndmaster/houndmaster.art.darkest", "heroes/jester/jester.art.darkest", "heroes/leper/leper.art.darkest", "heroes/musketeer/musketeer.art.darkest", "heroes/occultist/occultist.art.darkest", "heroes/plague_doctor/plague_doctor.art.darkest", "heroes/runaway/runaway.art.darkest", "heroes/shieldbreaker/shieldbreaker.art.darkest", "heroes/vestal/vestal.art.darkest"],
+  "supersedes": []
+}
