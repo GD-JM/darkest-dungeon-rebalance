@@ -34,7 +34,7 @@ Les plages couvrent les niveaux de compétence 1–5. ACC et CRIT sont indiqués
 [/list]
 
 [h2]Les 18 héros rééquilibrés en images comparatives[/h2]
-Les [b]25 images[/b] ci-dessus comparent le jeu original et la version publiée. Les fiches longues sont réparties sur deux images. La Duelliste et la Fugitive restent pour l'instant d'origine, le temps de tester leurs changements. Les images couvrent aussi la Pilleuse de tombes, la Furie, le Maître-chien, le Lépreux et le Médecin de peste.
+Les [b]images[/b] ci-dessus comparent le jeu original et la version publiée. Les fiches longues sont réparties sur deux images. La Duelliste et la Fugitive restent pour l'instant d'origine, le temps de tester leurs changements. Les images couvrent aussi la Pilleuse de tombes, la Furie, le Maître-chien, le Lépreux et le Médecin de peste.
 
 [h2]Installation et compatibilité[/h2]
 [b]Activez les cinq héros DLC :[/b] Flagellant (The Crimson Court), Brise-bouclier, Duelliste, Fugitive et Mousquetaire (gratuite). Cette page propose l'édition intégrée ; les paquets optionnels séparés ne sont plus disponibles. La refonte de la Mousquetaire est incluse, sans mod YAMR externe nécessaire.

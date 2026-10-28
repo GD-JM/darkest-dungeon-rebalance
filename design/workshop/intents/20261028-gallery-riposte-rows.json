@@ -1,0 +1,39 @@
+{
+  "id": "RELEASE-20261028-GALLERY-RIPOSTE-ROWS",
+  "decision": "adopted",
+  "original_quote": "이미지 조정 안됐는데? \n중보병 반격은 나는 전혀 건든적이 없는데 패치노트에 저게 왜있지?\n도망자는 변경 없으니 이미지 없애 \n그리고 내가 설명 길어지면 이미지 2개로 나누라 했잖아 그거 원칙 들어가 있는거 맞지?",
+  "context_quotes": [
+    {
+      "speaker": "user",
+      "quote": "이게 적절하지가 않잖아 우리 모델이 뭐라 그랬어 저렙 때 약하고 나중에 강해진다고 했잖아 그 원칙에 완벽히 위배되는 모델이잖아 안그래? 계속 고민해서 더 나은 방안 찾아봐",
+      "source": "claude session cc3c95a9-aeea-4409-9feb-eb162a738694, 2026-10-27T16:29 (origin of HWY-026/MAA-023: borrowed riposte gave level-1 Highwayman/Man-at-Arms x1.67)"
+    }
+  ],
+  "rationale_ko": "(1) 갤러리: 배포 프로그램이 이번 릴리스에 있는 영웅의 이미지만 교체해, main에서 바닐라가 된 결투가·도망자의 예전 이미지가 남았다. sync.py WS-GALLERY-002로 우리 카드 파일명 전체를 소유 슬롯으로 보고 빠진 영웅 이미지를 지운다. (2) 노상강도·중보병·현상금 사냥꾼 반격 행 삭제: HWY-026/MAA-023은 사용자가 지적한 '빌린 반격이 저레벨 노상·중보를 x1.67로 강화' 문제를 막으려 반격 공격 피해와 자기 반격 강화를 맞바꾼 것이라 자기 반격 피해는 그대로다. 플레이어가 보는 변화가 없으므로 카드에서 빼고, 빌린 반격은 유물수집상 동료 방패 카드 한 줄로 설명한다(빌드 검사는 why.json의 SYS-105 표기로 확인). 수치 변경 없음. (3) P-29 원칙 명문화: 긴 카드는 기술 묶음 경계에서 2장(이미 cards.py·배포 계약에 구현). (4) 설명 10개 언어에서 이미지 장수 숫자 제거(문안 검토가 카드를 고치면 장수가 바뀜). (5) 2.5.8 업로드는 공개 확인을 못 해 같은 번호 패치 노트 중복을 피하려 2.5.9로 명시.",
+  "source": {
+    "product": "claude",
+    "reference": "Claude Code session cc3c95a9-aeea-4409-9feb-eb162a738694, 2026-10-28 (user message with Duelist/Man-at-Arms/Runaway card screenshots)",
+    "session_id": "cc3c95a9-aeea-4409-9feb-eb162a738694",
+    "message_id": null,
+    "event_id": null
+  },
+  "files": [
+    "design/workshop/hero_cards.json",
+    "tools/build_workshop.py",
+    "design/intent.md",
+    "design/workshop/changenotes/2026-10-28.txt",
+    "design/workshop/description_en.txt",
+    "design/workshop/description_ko.txt",
+    "design/workshop/i18n/description_brazilian.txt",
+    "design/workshop/i18n/description_french.txt",
+    "design/workshop/i18n/description_german.txt",
+    "design/workshop/i18n/description_polish.txt",
+    "design/workshop/i18n/description_russian.txt",
+    "design/workshop/i18n/description_schinese.txt",
+    "design/workshop/i18n/description_spanish.txt",
+    "design/workshop/i18n/description_tchinese.txt"
+  ],
+  "supersedes": [
+    "RELEASE-20261028-RIPOSTE-CARDS"
+  ]
+}

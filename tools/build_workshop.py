@@ -273,11 +273,12 @@ def main():
         absent = [h for h in summary[lang] if (EN_HERO[h] if lang == 'en' else S.KO[h]) not in d0]
         cards = json.load(open(os.path.join(W, 'hero_cards.json'), encoding='utf-8'))
         carded = {s['key'] for c in cards.values() for s in c['skills']}
-        # SYS-105: a riposte_skill added to a hero without one in vanilla is only the riposte borrowed from
-        # Antiquarian's Protect Me; that card row documents it once instead of a row on every hero card.
+        # SYS-105: riposte_skill changes made for the riposte borrowed from Antiquarian's Protect Me
+        # (new riposte attacks, and Highwayman/Man-at-Arms/Bounty Hunter rebased so their own riposte is
+        # unchanged) are documented once by that card row; their why.json entries cite SYS-105.
         if 'antiquarian|protect_me' in carded:
             carded |= {'%s|riposte_skill' % h for h in summary[lang]
-                       if not re.search(r'^riposte_skill:', rd(ec.vanilla_hero_file(G, h)), re.M)}
+                       if 'SYS-105' in WHY.get('%s|riposte_skill' % h, {}).get('ids', [])}
         absent += sorted({k for v in summary[lang].values() for _, k in v} - carded)
         assert not absent, ('설명문에 빠진 변경', lang, absent)
         open(os.path.join(W, 'description_built_%s.txt' % lang), 'w', encoding='utf-8', newline='\n').write(d0 + '\n')

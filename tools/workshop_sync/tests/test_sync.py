@@ -8,7 +8,7 @@ import sys
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from common import LANGUAGES, read_json, sha256, write_json
 from release import load_intents, validate_editor, is_game_file, next_version, merge_editorial, apply_description_patches, inherit_published_editorial, editor_diff, hero_gameplay_changed
-from sync import publish, publish_batch, verify_public, PublicRateLimited, once, metadata_with_marker, verify_phase, relevant
+from sync import publish, publish_batch, verify_public, PublicRateLimited, once, metadata_with_marker, verify_phase, relevant, owned_card_previews
 from steam import SteamError, SubmissionUnknown
 
 
@@ -204,6 +204,12 @@ class SyncTests(unittest.TestCase):
         real = riposte + part('effects/rebalance_leper.effects.darkest', '+effect: .name "RB LEP X"')
         self.assertTrue(hero_gameplay_changed(real, 'leper'))
         self.assertFalse(hero_gameplay_changed(real, 'jester'))
+
+    def test_dropped_hero_cards_leave_the_gallery(self):
+        # WS-GALLERY-002
+        previews = [dict(filename=n) for n in ('05_crusader.png', '06_duelist.png', '17_runaway.png', '13_man_at_arms_p2.png', 'trailer.png', 'fan_art.png')]
+        release = {'images': [dict(hero='crusader'), dict(hero='man_at_arms')]}
+        self.assertEqual(owned_card_previews(previews, release), {'05_crusader.png', '06_duelist.png', '17_runaway.png', '13_man_at_arms_p2.png'})
 
     def test_editing_sheet_is_not_runtime_payload(self):
         self.assertFalse(is_game_file('heroes/jester/jester.effects_edit.txt'))

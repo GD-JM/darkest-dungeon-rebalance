@@ -34,7 +34,7 @@ Bereiche gelten für Fähigkeitsstufen 1–5. ACC und CRIT beziehen sich sonst a
 [/list]
 
 [h2]Alle 18 überarbeiteten Helden in Vergleichsbildern[/h2]
-Die [b]25 Bilder[/b] oben vergleichen Original und veröffentlichte Fassung. Umfangreiche Heldenübersichten verteilen sich auf zwei Bilder. Duelist und Runaway spielen sich vorerst wie im Original, während ihre Änderungen getestet werden. Die Bilder zeigen auch Grave Robber, Hellion, Houndmaster, Leper und Plague Doctor.
+Die [b]Bilder[/b] oben vergleichen Original und veröffentlichte Fassung. Umfangreiche Heldenübersichten verteilen sich auf zwei Bilder. Duelist und Runaway spielen sich vorerst wie im Original, während ihre Änderungen getestet werden. Die Bilder zeigen auch Grave Robber, Hellion, Houndmaster, Leper und Plague Doctor.
 
 [h2]Installation und Kompatibilität[/h2]
 [b]Alle fünf DLC-Helden aktivieren:[/b] Flagellant (The Crimson Court), Shieldbreaker, Duelist, Runaway und Musketeer (kostenlos). Dies ist die gemeinsame Fassung; separate optionale Pakete werden nicht mehr angeboten. Die Musketeer-Überarbeitung ist enthalten, eine externe YAMR-Mod ist nicht nötig.
