@@ -3,11 +3,39 @@
   "decision": "adopted",
   "original_quote": "작업 계속해",
   "context_quotes": [
-    {"speaker": "user", "quote": "커밋 후 푸쉬 창작마당에 업데이트 하고 이미지 수정 하자 유물 개편 방향성 및 원칙만 설명에 적어줘", "source": "claude session cc3c95a9-aeea-4409-9feb-eb162a738694, message 36ec7c8e-5cf8-4e4f-89b3-4836fbe1df41, 2026-10-28"},
-    {"speaker": "user", "quote": "아직도 다 못했어? 너 왜 자꾸 멈춰? 근데 입력제한 걸렸으면 두번 나눠서 올리면 되는거 아니야?", "source": "claude session cc3c95a9-aeea-4409-9feb-eb162a738694, 2026-10-28"}
+    {
+      "speaker": "user",
+      "quote": "커밋 후 푸쉬 창작마당에 업데이트 하고 이미지 수정 하자 유물 개편 방향성 및 원칙만 설명에 적어줘",
+      "source": "claude session cc3c95a9-aeea-4409-9feb-eb162a738694, message 36ec7c8e-5cf8-4e4f-89b3-4836fbe1df41, 2026-10-28"
+    },
+    {
+      "speaker": "user",
+      "quote": "아직도 다 못했어? 너 왜 자꾸 멈춰? 근데 입력제한 걸렸으면 두번 나눠서 올리면 되는거 아니야?",
+      "source": "claude session cc3c95a9-aeea-4409-9feb-eb162a738694, 2026-10-28"
+    }
   ],
   "rationale_ko": "배포 빌드 검사(바뀐 영웅 이름은 설명문에, 바뀐 기술은 카드에) 통과를 위한 게시 자료 보완. 수치 변경 없음. (1) 원작에 반격이 있던 노상강도(HWY-026)·중보병(MAA-023)·현상금 사냥꾼(BH-027) 카드에 반격 행 추가: 반격 공격 피해 −15/−20/−50%, 노상·중보는 자기 반격 총합 그대로. (2) 반격이 원작에 없던 16명의 빌린 반격 기술(SYS-105)은 유물수집상 동료 방패 카드 행이 한 번에 설명하므로 카드 행 대신 이유(why) 항목만 추가하고, 빌드 검사가 그 카드로 대신 확인하도록 tools/build_workshop.py에 규칙 추가(Claude 판단: 16장 카드에 같은 행을 반복하지 않음). (3) 10개 언어 설명의 비교 이미지 문단에 도굴꾼·야만인·조련사·나병환자·역병 의사 이름 추가(공식 현지화 이름). 러시아어는 8000바이트 한도로 기존 문장 3곳 축약.",
-  "source": {"product": "claude", "reference": "Claude Code session cc3c95a9-aeea-4409-9feb-eb162a738694, 2026-10-28 (release build check after editor pass)", "session_id": "cc3c95a9-aeea-4409-9feb-eb162a738694", "message_id": null, "event_id": null},
-  "files": ["design/workshop/hero_cards.json", "design/workshop/why.json", "design/workshop/description_en.txt", "design/workshop/description_ko.txt", "design/workshop/i18n/description_brazilian.txt", "design/workshop/i18n/description_french.txt", "design/workshop/i18n/description_german.txt", "design/workshop/i18n/description_polish.txt", "design/workshop/i18n/description_russian.txt", "design/workshop/i18n/description_schinese.txt", "design/workshop/i18n/description_spanish.txt", "design/workshop/i18n/description_tchinese.txt"],
+  "source": {
+    "product": "claude",
+    "reference": "Claude Code session cc3c95a9-aeea-4409-9feb-eb162a738694, 2026-10-28 (release build check after editor pass)",
+    "session_id": "cc3c95a9-aeea-4409-9feb-eb162a738694",
+    "message_id": null,
+    "event_id": null
+  },
+  "files": [
+    "design/workshop/hero_cards.json",
+    "design/workshop/why.json",
+    "design/workshop/description_en.txt",
+    "design/workshop/description_ko.txt",
+    "design/workshop/i18n/description_brazilian.txt",
+    "design/workshop/i18n/description_french.txt",
+    "design/workshop/i18n/description_german.txt",
+    "design/workshop/i18n/description_polish.txt",
+    "design/workshop/i18n/description_russian.txt",
+    "design/workshop/i18n/description_schinese.txt",
+    "design/workshop/i18n/description_spanish.txt",
+    "design/workshop/i18n/description_tchinese.txt",
+    "tools/build_workshop.py"
+  ],
   "supersedes": []
 }
