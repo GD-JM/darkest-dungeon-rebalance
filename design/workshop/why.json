@@ -292,51 +292,6 @@
   "en": "A −40% two-target attack with low accuracy on top had no reason to be picked over Smite; at 90 accuracy there are fights where it is the better choice.",
   "ko": "피해 −40% 2인 공격에 명중까지 낮아 강타 대신 고를 이유가 없었다. 명중 90이면 강타보다 나은 상황이 생긴다."
  },
- "duelist|coup_de_grace": {
-  "ids": [
-   "DUE-010"
-  ],
-  "principles": [
-   "R-TRADE-02",
-   "R-STRAT-01"
-  ],
-  "en": "The Duelist is one of the strongest heroes in the base game. Coup de Grâce reaches every rank from any position, ignores protection and grants an extra action on a kill, so it now pays more in damage for all that.",
-  "ko": "결투가는 원작에서 손꼽히게 강한 영웅입니다. 최후의 일격은 어느 열에서나 1~4열을 치고 방어를 무시하며 처치하면 추가 행동까지 주므로, 그만큼 피해로 대가를 더 치르게 했습니다."
- },
- "duelist|feint": {
-  "ids": [
-   "DUE-007"
-  ],
-  "principles": [
-   "P-14",
-   "G-01"
-  ],
-  "en": "Its protection shred was identical to the Bounty Hunter's Mark for Death. Feint now takes the Mark's smaller original values, keeping the two skills distinct and trimming an already strong hero.",
-  "ko": "방어 감소가 현상금 사냥꾼의 죽음의 표식과 숫자까지 같았습니다. 표식의 원래(더 작은) 수치를 받아 두 기술을 구분하고, 이미 강한 결투가를 조금 낮췄습니다."
- },
- "duelist|the_boot": {
-  "ids": [
-   "DUE-006"
-  ],
-  "principles": [
-   "R-STUN-01",
-   "R-STRAT-01"
-  ],
-  "en": "A melee kick that stuns and pushes in one action gave up less damage than other stun skills and felt overpowered in play. −60% puts it inside the usual damage range of stun skills.",
-  "ko": "기절과 밀치기를 한 번에 거는 근접기인데 다른 기절 기술보다 피해 손실이 작아 실제 플레이에서 지나치게 강했습니다. −60%는 기절 기술의 일반적인 피해 범위 안입니다."
- },
- "duelist|touche": {
-  "ids": [
-   "DUE-005",
-   "DUE-011"
-  ],
-  "principles": [
-   "R-CMB-01",
-   "P-12"
-  ],
-  "en": "A no-damage jab usable from any rank granted +40–50 dodge for 4 turns, and two casts stacked could push enemy hit chance to 0%, blocking their stuns and debuffs as well. With a smaller, 2-turn buff, even two stacks only reach what one cast used to give. The buff now lasts 3 turns; two stacks stay below one vanilla use.",
-  "ko": "피해 없는 찌르기가 어느 열에서나 회피 +40~50을 4턴 주었고, 두 번 겹치면 적 명중률이 0%까지 떨어져 기절·약화까지 전부 막았습니다. 강화를 작게, 2턴으로 줄여 두 번 겹쳐도 예전 1회 수준에 머물게 했습니다. 지속은 3턴, 두 번 겹쳐도 바닐라 1회보다 낮다."
- },
  "flagellant|endure": {
   "ids": [
    "FLA-008",
@@ -867,18 +822,6 @@
   ],
   "en": "The Plague Doctor's other skills are strong enough that Incision was rarely worth a slot. Higher accuracy gives it a reason to be picked.",
   "ko": "역병 의사는 다른 기술이 좋아서 절개를 고를 이유가 약했다. 명중을 올려 선택지로 만든다."
- },
- "runaway|ransack": {
-  "ids": [
-   "RUN-001",
-   "RUN-004"
-  ],
-  "principles": [
-   "P-10",
-   "G-02"
-  ],
-  "en": "Test branch only: restore Ransack to vanilla damage -10% and targets 1-4 for comparison. This is not an adoption for main or the Workshop release; its original movement and effects are preserved.",
-  "ko": "test에서만 바닐라 피해-10%와 대상1~4열로 복원하여 직접 비교 시험한다. main/창작마당 채택은 아니며 기존 이동·당기기 등 원본 효과는 유지한다."
  },
  "shieldbreaker|expose": {
   "ids": [
