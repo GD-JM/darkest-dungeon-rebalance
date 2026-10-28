@@ -168,6 +168,23 @@ class SyncTests(unittest.TestCase):
                        [dict(language='english',old_text='Original text',new_text='Patched text')])
             (source/'design/workshop/description_en.txt').write_text(result[0]['body'],encoding='utf-8')
 
+    def test_push_editing_committed_published_text_is_not_a_conflict(self):
+        # WS-INTENT-003: published text was committed back (commit c), then edited again in the push.
+        texts = {'a': 'Old intro\nOld list\n', 'c': 'New intro\nNew list\n', 'b': 'New intro\nNew list\nAdded section\n'}
+        prior = self.root/'prior'
+        (prior/'source/design/workshop').mkdir(parents=True)
+        (prior/'source/design/workshop/description_en.txt').write_text(texts['c'], encoding='utf-8')
+        write_json(prior/'release.json', {'source_sha':'a'*40})
+        class HistoryGit:
+            def git(self, command, *args):
+                if command == 'rev-list':
+                    return ('b'*40) + '\n' + ('c'*40) + '\n' if args[2].endswith('.txt') else ''
+                commit, rel = args[0].split(':', 1)
+                return '{}' if rel.endswith('.json') else texts[commit[0]]
+        source = self.root/'source'
+        inherit_published_editorial(source, HistoryGit(), 'a'*40, 'b'*40, {'version':'2.5.7','job':str(prior)}, self.root)
+        self.assertEqual((source/'design/workshop/description_en.txt').read_text(encoding='utf-8'), texts['b'])
+
     def test_editing_sheet_is_not_runtime_payload(self):
         self.assertFalse(is_game_file('heroes/jester/jester.effects_edit.txt'))
         self.assertFalse(is_game_file('heroes/jester/jester.vanilla.txt'))

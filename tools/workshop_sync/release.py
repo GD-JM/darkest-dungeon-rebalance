@@ -65,6 +65,21 @@ def merge_editorial(base, generated, pushed):
     return copy.deepcopy(pushed)  # This scalar/list was explicitly edited in the user's push.
 
 
+def pushed_descends_from(git, previous, sha, rel, text):
+    """WS-INTENT-003: published text committed back to Git after release is a later merge base."""
+    try:
+        commits = git.git('rev-list', f'{previous}..{sha}', '--', rel).split()
+    except RuntimeError:
+        return False
+    for commit in commits:
+        try:
+            if normalized_text(git.git('show', commit + ':' + rel)) == normalized_text(text):
+                return True
+        except RuntimeError:
+            continue  # The path may not exist in that commit.
+    return False
+
+
 def inherit_published_editorial(source, git, previous, sha, previous_release, job):
     """WS-INTENT-002: generated publication text persists across pushes without a push-back loop."""
     paths = ['design/workshop/hero_cards.json', 'design/workshop/why.json',
@@ -100,6 +115,8 @@ def inherit_published_editorial(source, git, previous, sha, previous_release, jo
                 merged = generated
             elif normalized_text(generated) == normalized_text(base) or normalized_text(generated) == normalized_text(pushed):
                 merged = pushed
+            elif pushed_descends_from(git, previous, sha, rel, generated):
+                merged = pushed  # WS-INTENT-003: the push already edits on top of the published text.
             else:
                 files = [merge_dir/f'{index}-{name}.txt' for name in ('generated', 'base', 'pushed')]
                 for path, body in zip(files, (generated, base, pushed)):
