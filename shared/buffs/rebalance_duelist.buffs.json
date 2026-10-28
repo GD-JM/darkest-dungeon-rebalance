@@ -1,0 +1,56 @@
+{
+	"buffs": [
+		{
+			"id": "RB_DUE_PROT-12",
+			"stat_type": "combat_stat_add",
+			"stat_sub_type": "protection_rating",
+			"amount": -0.12,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_DUE_PROT-17",
+			"stat_type": "combat_stat_add",
+			"stat_sub_type": "protection_rating",
+			"amount": -0.17,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_DUE_PROT-22",
+			"stat_type": "combat_stat_add",
+			"stat_sub_type": "protection_rating",
+			"amount": -0.22,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		},
+		{
+			"id": "RB_DUE_PROT-25",
+			"stat_type": "combat_stat_add",
+			"stat_sub_type": "protection_rating",
+			"amount": -0.25,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			}
+		}
+	]
+}

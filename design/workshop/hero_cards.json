@@ -436,6 +436,69 @@
    }
   ]
  },
+ "duelist": {
+  "name": "Duelist",
+  "tagline": "One of the strongest heroes, slightly trimmed.",
+  "skills": [
+   {
+    "key": "duelist|touche",
+    "name": "Touché",
+    "icon": "two",
+    "old": [
+     "Self: dodge +40-50%",
+     "Lasts 4 turns"
+    ],
+    "new": [
+     "Self: dodge +15-25%",
+     "Lasts 3 turns"
+    ]
+   },
+   {
+    "key": "duelist|feint",
+    "name": "Feint",
+    "icon": "three",
+    "old": [
+     "Target: PROT -20 to -30%"
+    ],
+    "new": [
+     "Target: PROT -10 to -20%"
+    ]
+   },
+   {
+    "key": "duelist|disengage",
+    "name": "Disengage",
+    "icon": "four",
+    "old": [
+     "No debuff"
+    ],
+    "new": [
+     "Target: DMG -10 to -15% (2 turns)"
+    ]
+   },
+   {
+    "key": "duelist|coup_de_grace",
+    "name": "Coup de Grâce",
+    "icon": "six",
+    "old": [
+     "DMG -60%"
+    ],
+    "new": [
+     "DMG -70%"
+    ]
+   },
+   {
+    "key": "duelist|the_boot",
+    "name": "The Boot",
+    "icon": "seven",
+    "old": [
+     "DMG -40%"
+    ],
+    "new": [
+     "DMG -60%"
+    ]
+   }
+  ]
+ },
  "flagellant": {
   "name": "Flagellant",
   "tagline": "Back to the base game's numbers.",
@@ -1106,6 +1169,25 @@
      "Heal 3 (level 5: 7)",
      "Cures blight only",
      "No self-cure"
+    ]
+   }
+  ]
+ },
+ "runaway": {
+  "name": "Runaway",
+  "tagline": "Test build: Ransack restored to vanilla.",
+  "skills": [
+   {
+    "key": "runaway|ransack",
+    "name": "Ransack",
+    "icon": "four",
+    "old": [
+     "DMG -10%",
+     "Hits ranks 1-4"
+    ],
+    "new": [
+     "DMG -10%",
+     "Hits ranks 1-4"
     ]
    }
   ]
