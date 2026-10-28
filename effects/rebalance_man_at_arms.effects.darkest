@@ -98,19 +98,24 @@ effect: .name "RB MAA Bolster Rally 4" .target "target" .curio_result_type "posi
 effect: .name "RB MAA Bolster Rally 5" .target "target" .curio_result_type "positive" .chance 100% .healstress 3 .on_hit true .on_miss true .queue true
 // MAA-010 Bolster repeatable support: party stress heal 1/1/2/2/3, dodge 1-5 for 3 turns, stress damage -10%% for 2 turns (max 2 stacks = vanilla -20%%), no per-battle limit.
 // MAA-007 Bolster party stress heal by level 2/2/3/3/4 (was flat 2). Once per battle.
-effect: .name "RB MAA Bolster Guarded 1" .target "target" .curio_result_type "positive" .chance 100% .buff_ids "RB_MAA_Bolster_Guarded_StressHeal" .duration 2 .on_hit true .on_miss true .queue true
+effect: .name "RB MAA Bolster Guarded 1" .target "target" .curio_result_type "positive" .chance 100% .buff_ids "RB_MAA_Bolster_Guarded_StressHeal_1" .duration 2 .on_hit true .on_miss true .queue true
+// MAA-018 restore (2026-10-28): the 55a1bd8 regeneration copied a stale sheet line (missing _N buff id, 2/3/2/3/2 turns); guarded bonus is 2 turns at every level again.
 // MAA-017 Bolster: guarded allies stress heal received +15/17/20/22/25%% (was +50%%).
 // MAA-011 Guarded allies receive 1.5x stress healing while this lasts (synergy with Defender, Protect Me, Guard Dog).
-effect: .name "RB MAA Bolster Guarded 2" .target "target" .curio_result_type "positive" .chance 100% .buff_ids "RB_MAA_Bolster_Guarded_StressHeal" .duration 3 .on_hit true .on_miss true .queue true
+effect: .name "RB MAA Bolster Guarded 2" .target "target" .curio_result_type "positive" .chance 100% .buff_ids "RB_MAA_Bolster_Guarded_StressHeal_2" .duration 2 .on_hit true .on_miss true .queue true
+// MAA-018 restore (2026-10-28): the 55a1bd8 regeneration copied a stale sheet line (missing _N buff id, 2/3/2/3/2 turns); guarded bonus is 2 turns at every level again.
 // MAA-017 Bolster: guarded allies stress heal received +15/17/20/22/25%% (was +50%%).
 // MAA-011 Guarded allies receive 1.5x stress healing while this lasts (synergy with Defender, Protect Me, Guard Dog).
-effect: .name "RB MAA Bolster Guarded 3" .target "target" .curio_result_type "positive" .chance 100% .buff_ids "RB_MAA_Bolster_Guarded_StressHeal" .duration 2 .on_hit true .on_miss true .queue true
+effect: .name "RB MAA Bolster Guarded 3" .target "target" .curio_result_type "positive" .chance 100% .buff_ids "RB_MAA_Bolster_Guarded_StressHeal_3" .duration 2 .on_hit true .on_miss true .queue true
+// MAA-018 restore (2026-10-28): the 55a1bd8 regeneration copied a stale sheet line (missing _N buff id, 2/3/2/3/2 turns); guarded bonus is 2 turns at every level again.
 // MAA-017 Bolster: guarded allies stress heal received +15/17/20/22/25%% (was +50%%).
 // MAA-011 Guarded allies receive 1.5x stress healing while this lasts (synergy with Defender, Protect Me, Guard Dog).
-effect: .name "RB MAA Bolster Guarded 4" .target "target" .curio_result_type "positive" .chance 100% .buff_ids "RB_MAA_Bolster_Guarded_StressHeal" .duration 3 .on_hit true .on_miss true .queue true
+effect: .name "RB MAA Bolster Guarded 4" .target "target" .curio_result_type "positive" .chance 100% .buff_ids "RB_MAA_Bolster_Guarded_StressHeal_4" .duration 2 .on_hit true .on_miss true .queue true
+// MAA-018 restore (2026-10-28): the 55a1bd8 regeneration copied a stale sheet line (missing _N buff id, 2/3/2/3/2 turns); guarded bonus is 2 turns at every level again.
 // MAA-017 Bolster: guarded allies stress heal received +15/17/20/22/25%% (was +50%%).
 // MAA-011 Guarded allies receive 1.5x stress healing while this lasts (synergy with Defender, Protect Me, Guard Dog).
-effect: .name "RB MAA Bolster Guarded 5" .target "target" .curio_result_type "positive" .chance 100% .buff_ids "RB_MAA_Bolster_Guarded_StressHeal" .duration 2 .on_hit true .on_miss true .queue true
+effect: .name "RB MAA Bolster Guarded 5" .target "target" .curio_result_type "positive" .chance 100% .buff_ids "RB_MAA_Bolster_Guarded_StressHeal_5" .duration 2 .on_hit true .on_miss true .queue true
+// MAA-018 restore (2026-10-28): the 55a1bd8 regeneration copied a stale sheet line (missing _N buff id, 2/3/2/3/2 turns); guarded bonus is 2 turns at every level again.
 // MAA-017 Bolster: guarded allies stress heal received +15/17/20/22/25%% (was +50%%).
 // MAA-011 Guarded allies receive 1.5x stress healing while this lasts (synergy with Defender, Protect Me, Guard Dog).
 effect: .name "RB MAA Bellow Blind 1" .target "target" .curio_result_type "negative" .chance 100% .duration 2 .combat_stat_buff 1 .attack_rating_add -5% .on_hit true .on_miss false
