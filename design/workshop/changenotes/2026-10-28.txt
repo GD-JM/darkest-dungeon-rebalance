@@ -1,0 +1,2 @@
+[b]Update 2.5.9[/b]
+2.5.8 was uploaded on 2026-10-28 but the public page could not be verified. 2.5.9 supersedes it: hero images for Duelist and Runaway (vanilla on this build) are removed from the gallery, and the Highwayman, Man-at-Arms and Bounty Hunter riposte rows are dropped from their cards because their own riposte damage is unchanged; the borrowed riposte is explained on the Antiquarian card.

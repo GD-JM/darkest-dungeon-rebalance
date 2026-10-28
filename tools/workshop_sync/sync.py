@@ -96,10 +96,7 @@ def publish(config, job, release, images_only=False, metadata_only=False):
         write_json(job / 'steam-before.json', initial)
         if not initial['owned']:
             raise ValueError('Active Steam account does not own the configured Workshop item')
-        # The specific source-known hero filenames are ours; unrelated images/videos survive.
-        heroes = {p['hero'] for p in release['images']}
-        old_names = {p['filename'] for p in initial['previews'] if any(
-            re.fullmatch(r'\d{2}_' + re.escape(h) + r'(?:_p[12])?\.png', p['filename']) for h in heroes)}
+        old_names = owned_card_previews(initial['previews'], release)
         phases = ['assets'] + ([] if images_only else [d['language'] for d in release['descriptions'] if d['language'] != 'english'])
         for phase in phases:
             if phase in journal['completed']:
@@ -216,6 +213,20 @@ def verify_public(item_id, expected_preview_urls=None):
     except Exception as exc:
         raise SteamError('Public access could not be verified: ' + str(exc)) from exc
     return verify_public_html(html, expected_preview_urls)
+
+
+# WS-GALLERY-002: card images of heroes dropped from a release (e.g. Duelist/Runaway back to vanilla)
+# are still ours and must leave the gallery, not survive as stale slots.
+CARD_HEROES = frozenset({'abomination', 'antiquarian', 'arbalest', 'bounty_hunter', 'crusader', 'duelist',
+                         'flagellant', 'grave_robber', 'hellion', 'highwayman', 'houndmaster', 'jester', 'leper',
+                         'man_at_arms', 'musketeer', 'occultist', 'plague_doctor', 'runaway', 'shieldbreaker', 'vestal'})
+
+
+def owned_card_previews(previews, release):
+    """The specific source-known hero card filenames are ours; unrelated images/videos survive."""
+    heroes = CARD_HEROES | {p['hero'] for p in release['images']}
+    return {p['filename'] for p in previews if any(
+        re.fullmatch(r'\d{2}_' + re.escape(h) + r'(?:_p[12])?\.png', p['filename']) for h in heroes)}
 
 
 def verify_public_html(html, expected_preview_urls=None):
