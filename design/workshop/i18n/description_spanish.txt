@@ -1,7 +1,7 @@
 [h1]Every Hero Worth Taking[/h1]
 [i]Conservar la identidad de cada héroe y dar más motivos para elegir habilidades y grupos diferentes.[/i]
 
-Un reajuste conjunto de 20 héroes para ampliar las composiciones de grupo. El objetivo es jugar con tus favoritos sin depender de un sanador concreto ni de las mismas cuatro habilidades. Más curación y alivio de estrés, apoyo contra la armadura para los atacantes físicos y más opciones de posición abren otras formas de jugar.
+Un reajuste conjunto de 18 héroes para ampliar las composiciones de grupo. El objetivo es jugar con tus favoritos sin depender de un sanador concreto ni de las mismas cuatro habilidades. Más curación y alivio de estrés, apoyo contra la armadura para los atacantes físicos y más opciones de posición abren otras formas de jugar.
 
 [h2]Seguimos actualizando y escuchando[/h2]
 [b]A 26 de octubre de 2026, esta página del Workshop cuenta con 33 entradas públicas de actualización.[/b] Incluyen ajustes de equilibrio, correcciones de errores y mejoras de textos e imágenes comparativas. [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3821353035]Ver el historial[/url]
@@ -20,18 +20,24 @@ Seguiré jugando, comprobando y refinando el mod en busca del equilibrio perfect
 [h2]Qué cambia la versión publicada[/h2]
 Los intervalos abarcan niveles de habilidad 1–5. ACC y CRIT son del nivel 1 salvo indicación. Se usan nombres ingleses de habilidades para identificarlas sin ambigüedad.
 [list]
-[*][b]Más formas de sostener al grupo.[/b] Battle Heal del Cruzado cura 3–4→6–7 PV y añade +20% de curación recibida, apoyando su uso como sanador principal con abalorios. Fortifying Vapours de la Anticuaria combina curación y resistencia a hemorragia, veneno, aturdimiento y debilitamiento. La Arbalestera cura hemorragias con su venda y alivia estrés de forma garantizada con Rallying Flare; el Hombre de armas puede repetir Bolster.
-[*][b]Apoyo que abre armaduras.[/b] Weakening Curse del Ocultista reduce PROT en 25–35 puntos porcentuales. Illumination de la Vestal conserva la reducción de esquiva y la revelación, añadiendo −15–25 puntos de PROT; Flashpowder de la Anticuaria reduce 10–15. Se ha eliminado la quemadura de ambas habilidades. Puncture de la Rompescudos combina atracción, eliminación de guardia y −30–40 puntos de PROT; Bellow del Hombre de armas reduce la PROT de todos los enemigos en 10–15 puntos.
+[*][b]Más formas de sostener al grupo.[/b] Battle Heal del Cruzado cura 3–4→6–7 PV y aumenta la PROT del objetivo, apoyando su uso como sanador principal con abalorios. Fortifying Vapours de la Anticuaria cura y amplifica toda la curación que recibe el objetivo, acumulándose con cada uso. La Arbalestera cura hemorragias con su venda y alivia estrés de forma garantizada con Rallying Flare; el Hombre de armas puede repetir Bolster.
+[*][b]Apoyo que abre armaduras.[/b] Weakening Curse del Ocultista reduce PROT en 25–35 puntos porcentuales. Illumination de la Vestal conserva la reducción de esquiva y la revelación, añadiendo −15–25 puntos de PROT; Nervous Stab de la Anticuaria reduce 5–15. Se ha eliminado la quemadura de Illumination. Puncture de la Rompescudos combina atracción, eliminación de guardia y −30–40 puntos de PROT; Bellow del Hombre de armas reduce la PROT de todos los enemigos en 10–15 puntos.
 [*][b]Héroes conocidos, otras estrategias.[/b] Tracking Shot del Bandolero prepara la represalia sin moverse. Wicked Slice alcanza la posición 3, mientras Open Vein ofrece más críticos y hemorragia (CRIT de habilidad 0% / 5%). El Cazarrecompensas usa Flashbang desde posiciones 2–4 y Caltrops desde cualquiera. Inspiring Tune del Bufón funciona desde la posición 2 y Solo desde cualquiera.
 [*][b]La Vestal elige apoyo o preparación.[/b] Illumination: ACC 95, reducción de esquiva y PROT. Hand of Light: ACC 90, daño −40%, para atacar y preparar los siguientes golpes.
 [*][b]Un papel propio para la Mosquetera.[/b] Piercing Ball penetra armadura, Smokescreen controla la primera línea enemiga y Covering Smoke da a un aliado 2 turnos de sigilo y +15–25 esquiva. El sigilo no protege de ataques de área.
 [/list]
 
-[h2]Los 20 héroes en imágenes comparativas[/h2]
-Las [b]27 imágenes[/b] de arriba comparan el original con la versión publicada. Las fichas largas se dividen en dos. Los cambios recientes también restauran Ransack de la Fugitiva al original y permiten que Expose de la Rompescudos alcance enemigos ocultos en la posición 4.
+[h2]Anticuaria y Abominación: la dirección[/h2]
+[list]
+[*][b]La Anticuaria encuentra su lugar en el nivel Campeón.[/b] Hasta Veterano es débil a cambio del oro extra que aporta. Desde Campeón, sus potentes abalorios de clase la ponen a la altura de otros héroes. En lugar de hacerse fuerte ella misma, fortalece a sus aliados, por lo que vale la pena llevarla a la Mazmorra oscura.
+[*][b]En la Abominación, transformarse pasa a ser una elección real.[/b] Su forma humana tiene menos precisión, pero mejor rendimiento base. El estrés controlado con Absolution paga la transformación y se convierte en curación, daño, velocidad y CRIT de la bestia, aliviando a los aliados.
+[/list]
+
+[h2]Los 18 héroes reajustados en imágenes comparativas[/h2]
+Las [b]25 imágenes[/b] de arriba comparan el original con la versión publicada. Las fichas largas se dividen en dos. La Duelista y la Fugitiva siguen como en el original mientras se prueban sus cambios.
 
 [h2]Instalación y compatibilidad[/h2]
-[b]Activa los cinco héroes DLC:[/b] Flagelante (The Crimson Court), Rompescudos, Duelista, Fugitiva y Mosquetera (gratuita). Esta es la edición integrada de 20 héroes; ya no se ofrecen paquetes opcionales separados. La revisión de la Mosquetera está incluida y no requiere un mod YAMR externo.
+[b]Activa los cinco héroes DLC:[/b] Flagelante (The Crimson Court), Rompescudos, Duelista, Fugitiva y Mosquetera (gratuita). Esta es la edición integrada; ya no se ofrecen paquetes opcionales separados. La revisión de la Mosquetera está incluida y no requiere un mod YAMR externo.
 
 Se puede activar en una finca existente. Otras revisiones que sustituyan los mismos archivos de héroes, efectos o mejoras pueden causar conflictos. Con UI Enhancement, las habilidades de la Mosquetera pueden mostrar sus nombres originales.
 

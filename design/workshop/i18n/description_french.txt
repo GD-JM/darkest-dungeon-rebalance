@@ -1,7 +1,7 @@
 [h1]Every Hero Worth Taking[/h1]
 [i]Préserver l'identité de chaque héros et donner une raison de choisir davantage de héros, de compétences et d'équipes.[/i]
 
-Un rééquilibrage intégré de 20 héros, conçu pour varier les compositions. L'objectif est de faire jouer ensemble vos héros préférés sans dépendre d'un soigneur précis ni des mêmes quatre compétences. Plus d'options de soin et de réduction du stress, du soutien contre l'armure pour les attaquants physiques et des positions plus utiles ouvrent d'autres styles de jeu.
+Un rééquilibrage intégré de 18 héros, conçu pour varier les compositions. L'objectif est de faire jouer ensemble vos héros préférés sans dépendre d'un soigneur précis ni des mêmes quatre compétences. Plus d'options de soin et de réduction du stress, du soutien contre l'armure pour les attaquants physiques et des positions plus utiles ouvrent d'autres styles de jeu.
 
 [h2]Des mises à jour régulières, des retours écoutés[/h2]
 [b]Au 26 octobre 2026, cette page Workshop compte 33 notes de mise à jour publiques.[/b] Elles couvrent l'équilibrage, les corrections de bugs et l'amélioration des descriptions et images comparatives. [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3821353035]Consulter l'historique[/url]
@@ -20,18 +20,24 @@ Je continuerai à jouer, tester et améliorer ce mod avec un équilibre parfait 
 [h2]Ce que change la version publiée[/h2]
 Les plages couvrent les niveaux de compétence 1–5. ACC et CRIT sont indiqués au niveau 1 sauf précision. Les noms anglais des compétences facilitent leur identification.
 [list]
-[*][b]Davantage de soutien pour l'équipe.[/b] Battle Heal du Croisé soigne 3–4→6–7 PV et ajoute +20% aux soins reçus : avec des colifichets de soin, il peut devenir le soigneur principal. Fortifying Vapours de l'Antiquaire combine soin et résistances au saignement, au poison, à l'étourdissement et aux affaiblissements. L'Arbalétrière soigne le saignement avec son bandage et réduit assurément le stress avec Rallying Flare ; l'Homme d'armes peut répéter Bolster.
-[*][b]Le soutien ouvre les armures aux attaquants physiques.[/b] Weakening Curse de l'Occultiste réduit la PROT de 25–35 points de pourcentage. Illumination de la Vestale conserve la baisse d'esquive et la révélation, avec −15–25 points de PROT ; Flashpowder de l'Antiquaire inflige −10–15 points. Leurs effets de brûlure ont été supprimés. Puncture de la Brise-bouclier combine attraction, suppression de garde et −30–40 points de PROT ; Bellow de l'Homme d'armes réduit la PROT de tous les ennemis de 10–15 points.
+[*][b]Davantage de soutien pour l'équipe.[/b] Battle Heal du Croisé soigne 3–4→6–7 PV et augmente la PROT de la cible : avec des colifichets de soin, il peut devenir le soigneur principal. Fortifying Vapours de l'Antiquaire soigne et amplifie tous les soins reçus par la cible, de façon cumulable à chaque utilisation. L'Arbalétrière soigne le saignement avec son bandage et réduit assurément le stress avec Rallying Flare ; l'Homme d'armes peut répéter Bolster.
+[*][b]Le soutien ouvre les armures aux attaquants physiques.[/b] Weakening Curse de l'Occultiste réduit la PROT de 25–35 points de pourcentage. Illumination de la Vestale conserve la baisse d'esquive et la révélation, avec −15–25 points de PROT ; Nervous Stab de l'Antiquaire inflige −5–15 points. La brûlure d'Illumination a été supprimée. Puncture de la Brise-bouclier combine attraction, suppression de garde et −30–40 points de PROT ; Bellow de l'Homme d'armes réduit la PROT de tous les ennemis de 10–15 points.
 [*][b]Des héros familiers, d'autres façons de jouer.[/b] Tracking Shot du Bandit prépare la riposte sans déplacement. Wicked Slice atteint le rang 3 ; Open Vein privilégie le critique et le saignement (CRIT de compétence 0% / 5%). Le Chasseur de primes utilise Flashbang depuis les rangs 2–4 et Caltrops depuis n'importe quel rang. Inspiring Tune du Bouffon fonctionne au rang 2 et Solo partout.
 [*][b]La Vestale choisit soutien ou préparation.[/b] Illumination : ACC 95, réduction d'esquive et de PROT. Hand of Light : ACC 90, dégâts −40%, pour attaquer et préparer ses prochaines attaques.
 [*][b]Un rôle propre à la Mousquetaire.[/b] Piercing Ball pénètre l'armure, Smokescreen contrôle le front adverse, et Covering Smoke accorde à un allié 2 tours de furtivité et +15–25 esquive. La furtivité ne protège pas des attaques de zone.
 [/list]
 
-[h2]Les 20 héros en images comparatives[/h2]
-Les [b]27 images[/b] ci-dessus comparent le jeu original et la version publiée. Les fiches longues sont réparties sur deux images. Les changements récents rétablissent aussi Ransack de la Fugitive à ses valeurs originales et permettent à Expose de la Brise-bouclier de révéler le rang ennemi 4.
+[h2]Antiquaire et Abomination : l'orientation[/h2]
+[list]
+[*][b]L'Antiquaire trouve sa place au rang Champion.[/b] Jusqu'au rang Vétéran, elle reste faible en échange de l'or supplémentaire qu'elle rapporte. À partir du rang Champion, ses puissants colifichets de classe la mettent au niveau des autres héros. Plutôt que de devenir forte elle-même, elle renforce ses alliés, ce qui justifie de l'emmener au Donjon Ténébreux.
+[*][b]Pour l'Abomination, se transformer devient un vrai choix.[/b] Sa forme humaine a moins de précision mais de meilleures performances de base. Le stress géré avec Absolution paie la transformation et devient soin, dégâts, vitesse et CRIT de la bête, en allégeant le fardeau des alliés.
+[/list]
+
+[h2]Les 18 héros rééquilibrés en images comparatives[/h2]
+Les [b]25 images[/b] ci-dessus comparent le jeu original et la version publiée. Les fiches longues sont réparties sur deux images. La Duelliste et la Fugitive restent pour l'instant d'origine, le temps de tester leurs changements.
 
 [h2]Installation et compatibilité[/h2]
-[b]Activez les cinq héros DLC :[/b] Flagellant (The Crimson Court), Brise-bouclier, Duelliste, Fugitive et Mousquetaire (gratuite). Cette page propose l'édition intégrée de 20 héros ; les paquets optionnels séparés ne sont plus disponibles. La refonte de la Mousquetaire est incluse, sans mod YAMR externe nécessaire.
+[b]Activez les cinq héros DLC :[/b] Flagellant (The Crimson Court), Brise-bouclier, Duelliste, Fugitive et Mousquetaire (gratuite). Cette page propose l'édition intégrée ; les paquets optionnels séparés ne sont plus disponibles. La refonte de la Mousquetaire est incluse, sans mod YAMR externe nécessaire.
 
 Peut être activé dans un domaine existant. Les refontes remplaçant les mêmes fichiers de héros, effets ou bonus peuvent entrer en conflit. Avec UI Enhancement, les compétences de la Mousquetaire peuvent conserver leurs anciens noms.
 

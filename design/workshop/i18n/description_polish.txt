@@ -1,7 +1,7 @@
 [h1]Every Hero Worth Taking[/h1]
 [i]Zachować charakter bohaterów i dać więcej powodów, by wybierać różne umiejętności i drużyny.[/i]
 
-Wspólna korekta balansu 20 bohaterów, nastawiona na różnorodność drużyn. Celem jest gra ulubionymi postaciami bez konieczności zabierania jednego konkretnego uzdrowiciela czy tych samych czterech umiejętności. Więcej leczenia i redukcji stresu, osłabianie pancerza dla wojowników fizycznych oraz nowe możliwości pozycji otwierają inne style gry.
+Wspólna korekta balansu 18 bohaterów, nastawiona na różnorodność drużyn. Celem jest gra ulubionymi postaciami bez konieczności zabierania jednego konkretnego uzdrowiciela czy tych samych czterech umiejętności. Więcej leczenia i redukcji stresu, osłabianie pancerza dla wojowników fizycznych oraz nowe możliwości pozycji otwierają inne style gry.
 
 [h2]Kolejne aktualizacje i uważne słuchanie opinii[/h2]
 [b]Na 26 października 2026 r. ta pozycja Warsztatu ma 33 publiczne wpisy aktualizacji.[/b] Obejmują balans, poprawki błędów oraz ulepszenia opisów i grafik porównawczych. [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3821353035]Zobacz historię[/url]
@@ -20,18 +20,24 @@ Będę dalej grać, sprawdzać i poprawiać mod, dążąc do idealnego balansu. 
 [h2]Co zmienia opublikowana wersja[/h2]
 Zakresy dotyczą poziomów umiejętności 1–5. ACC i CRIT podano dla poziomu 1, chyba że zaznaczono inaczej. Angielskie nazwy pozwalają jednoznacznie wskazać umiejętności.
 [list]
-[*][b]Więcej sposobów utrzymania drużyny.[/b] Battle Heal Krzyżowca leczy 3–4→6–7 PŻ i daje +20% otrzymywanego leczenia; z leczniczymi błyskotkami wspiera rolę głównego uzdrowiciela. Fortifying Vapours Antykwariuszki łączy leczenie z odpornością na krwawienie, zarazę, ogłuszenie i osłabienie. Bandaż Kuszniczki leczy krwawienie, Rallying Flare niezawodnie zmniejsza stres; Zbrojmistrz może powtarzać Bolster.
-[*][b]Wsparcie przełamuje pancerz.[/b] Weakening Curse Okultysty obniża PROT o 25–35 punktów procentowych. Illumination Kapłanki zachowuje redukcję uniku i ujawnienie, dodając −15–25 punktów PROT; Flashpowder Antykwariuszki daje −10–15. Obie umiejętności utraciły podpalenie. Puncture Łamaczki Tarcz łączy przyciągnięcie, usunięcie osłony i −30–40 punktów PROT; Bellow Zbrojmistrza obniża PROT wszystkich wrogów o 10–15 punktów.
+[*][b]Więcej sposobów utrzymania drużyny.[/b] Battle Heal Krzyżowca leczy 3–4→6–7 PŻ i zwiększa PROT celu; z leczniczymi błyskotkami wspiera rolę głównego uzdrowiciela. Fortifying Vapours Antykwariuszki leczy i wzmacnia całe leczenie otrzymywane przez cel, kumulując się z każdym użyciem. Bandaż Kuszniczki leczy krwawienie, Rallying Flare niezawodnie zmniejsza stres; Zbrojmistrz może powtarzać Bolster.
+[*][b]Wsparcie przełamuje pancerz.[/b] Weakening Curse Okultysty obniża PROT o 25–35 punktów procentowych. Illumination Kapłanki zachowuje redukcję uniku i ujawnienie, dodając −15–25 punktów PROT; Nervous Stab Antykwariuszki daje −5–15. Illumination utraciło podpalenie. Puncture Łamaczki Tarcz łączy przyciągnięcie, usunięcie osłony i −30–40 punktów PROT; Bellow Zbrojmistrza obniża PROT wszystkich wrogów o 10–15 punktów.
 [*][b]Znani bohaterowie, inne style.[/b] Tracking Shot Oprycha przygotowuje ripostę bez ruchu. Wicked Slice sięga pozycji 3, a Open Vein stawia na krytyki i krwawienie (CRIT umiejętności 0% / 5%). Łowca Nagród używa Flashbang z pozycji 2–4, a Caltrops z każdej. Inspiring Tune Błazna działa także z pozycji 2, Solo z dowolnej.
 [*][b]Kapłanka wybiera wsparcie lub przygotowanie.[/b] Illumination: ACC 95, redukcja uniku i PROT. Hand of Light: ACC 90, obrażenia −40%; atakuje i wzmacnia późniejsze uderzenia.
 [*][b]Muszkieterka ma własną rolę.[/b] Piercing Ball przebija pancerz, Smokescreen kontroluje przód wroga, a Covering Smoke daje sojusznikowi 2 tury ukrycia i +15–25 uniku. Ukrycie nie chroni przed atakami obszarowymi.
 [/list]
 
-[h2]Wszyscy 20 bohaterowie na grafikach[/h2]
-Powyższe [b]27 grafik[/b] porównuje oryginał z opublikowaną wersją. Dłuższe zestawienia rozdzielono na dwa obrazy. Ostatnio przywrócono też oryginalny Ransack Uciekinierki, a Expose Łamaczki Tarcz dosięga ukrytych wrogów na pozycji 4.
+[h2]Antykwariuszka i Abominacja: kierunek[/h2]
+[list]
+[*][b]Antykwariuszka odnajduje swoje miejsce na poziomie Czempion.[/b] Do poziomu Weteran pozostaje słaba w zamian za dodatkowe złoto, które przynosi. Od poziomu Czempion jej potężne błyskotki klasowe stawiają ją na równi z innymi bohaterami. Zamiast samej stawać się silną, wzmacnia drużynę, więc warto zabrać ją do Najmroczniejszego Lochu.
+[*][b]U Abominacji przemiana staje się prawdziwym wyborem.[/b] Ludzka postać ma niższą celność, ale lepsze podstawowe parametry. Stres kontrolowany przez Absolution opłaca przemianę i zamienia się w leczenie, obrażenia, szybkość i CRIT bestii, odciążając sojuszników.
+[/list]
+
+[h2]Wszyscy 18 zmienieni bohaterowie na grafikach[/h2]
+Powyższe [b]25 grafik[/b] porównuje oryginał z opublikowaną wersją. Dłuższe zestawienia rozdzielono na dwa obrazy. Duelist i Runaway na razie działają jak w oryginale, dopóki ich zmiany są testowane.
 
 [h2]Instalacja i zgodność[/h2]
-[b]Włącz wszystkich pięcioro bohaterów DLC:[/b] Flagelanta (The Crimson Court), Łamaczkę Tarcz, Duelist, Runaway i Muszkieterkę (darmowa). To zintegrowana wersja 20 bohaterów; osobne opcjonalne pakiety nie są już dostępne. Zawiera przebudowę Muszkieterki, więc zewnętrzny YAMR nie jest potrzebny.
+[b]Włącz wszystkich pięcioro bohaterów DLC:[/b] Flagelanta (The Crimson Court), Łamaczkę Tarcz, Duelist, Runaway i Muszkieterkę (darmowa). To zintegrowana wersja; osobne opcjonalne pakiety nie są już dostępne. Zawiera przebudowę Muszkieterki, więc zewnętrzny YAMR nie jest potrzebny.
 
 Można włączyć w istniejącej posiadłości. Inne mody zastępujące te same pliki bohaterów, efektów lub wzmocnień mogą powodować konflikty. Z UI Enhancement umiejętności Muszkieterki mogą wyświetlać stare nazwy.
 

@@ -1,7 +1,7 @@
 [h1]Every Hero Worth Taking[/h1]
 [i]Keep each hero's identity. Give more heroes, skills and parties a reason to be chosen.[/i]
 
-An integrated rebalance of 20 heroes, built around party variety. The goal is to make your favorite heroes work together without relying on a particular healer or the same four skills. Broader healing and stress relief, armor-breaking support for physical attackers, and more useful rank choices open new ways to play.
+An integrated rebalance of 18 heroes, built around party variety. The goal is to make your favorite heroes work together without relying on a particular healer or the same four skills. Broader healing and stress relief, armor-breaking support for physical attackers, and more useful rank choices open new ways to play.
 
 [h2]Still updating. Still listening.[/h2]
 [b]As of 26 October 2026, this Workshop item has 33 public change-note entries.[/b] The work includes balance revisions, bug fixes, and improvements to descriptions and comparison images. [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3821353035]Read the update history[/url]
@@ -20,18 +20,24 @@ I will keep playing, testing and refining this mod in pursuit of perfect balance
 [h2]What the published build changes[/h2]
 Ranges below cover skill levels 1–5. ACC and CRIT are level-1 skill values unless stated otherwise.
 [list]
-[*][b]More ways to sustain a party.[/b] Crusader's Battle Heal restores 3–4→6–7 HP and adds +20% healing received, supporting a primary-healer build with healing trinkets. Antiquarian's Fortifying Vapours combines healing with bleed, blight, stun and debuff resistance. Arbalest brings a bleed-curing bandage and guaranteed stress relief from Rallying Flare; Man-at-Arms brings repeatable Bolster.
-[*][b]Support opens armored targets to physical attackers.[/b] Occultist's Weakening Curse reduces PROT by 25–35 percentage points. Vestal's Illumination retains dodge reduction and destealth while reducing PROT by 15–25 points; Antiquarian's Flashpowder reduces it by 10–15. Both skills have lost their burn effect. Shieldbreaker's Puncture combines pull and guard removal with 30–40 points of PROT reduction; Man-at-Arms' Bellow reduces all enemies' PROT by 10–15 points.
+[*][b]More ways to sustain a party.[/b] Crusader's Battle Heal restores 3–4→6–7 HP and raises the target's PROT, supporting a primary-healer build with healing trinkets. Antiquarian's Fortifying Vapours heals and amplifies all healing the target receives, stacking with each use. Arbalest brings a bleed-curing bandage and guaranteed stress relief from Rallying Flare; Man-at-Arms brings repeatable Bolster.
+[*][b]Support opens armored targets to physical attackers.[/b] Occultist's Weakening Curse reduces PROT by 25–35 percentage points. Vestal's Illumination retains dodge reduction and destealth while reducing PROT by 15–25 points; Antiquarian's Nervous Stab reduces it by 5–15. Illumination has lost its burn effect. Shieldbreaker's Puncture combines pull and guard removal with 30–40 points of PROT reduction; Man-at-Arms' Bellow reduces all enemies' PROT by 10–15 points.
 [*][b]Different builds for familiar heroes.[/b] Highwayman's Tracking Shot prepares riposte without moving. Wicked Slice reaches rank 3, while Open Vein offers higher CRIT and bleed pressure (skill CRIT 0% / 5%). Bounty Hunter can use Flashbang from ranks 2–4 and Caltrops from any rank. Jester can use Inspiring Tune from rank 2 and Solo from any rank.
 [*][b]Vestal chooses between support and setup.[/b] Illumination has ACC 95 and reduces dodge and PROT; Hand of Light has ACC 90 and DMG −40%, dealing damage while preparing her next attacks.
 [*][b]Musketeer has her own role.[/b] Piercing Ball's armor penetration, Smokescreen's front-line control, and Covering Smoke's 2-turn ally stealth and +15–25 dodge give her distinct support tools. Stealth does not protect against area attacks.
 [/list]
 
-[h2]See all 20 heroes in the comparison images[/h2]
-The [b]27 images[/b] above compare vanilla with the published build. Longer hero summaries are split into two images. Recent changes also restore Runaway's Ransack to vanilla and let Shieldbreaker's Expose answer stealth in enemy rank 4.
+[h2]Antiquarian and Abomination: the direction[/h2]
+[list]
+[*][b]Antiquarian earns her place at Champion.[/b] Up to Veteran she stays weak, in exchange for the extra gold she brings. From Champion, her powerful class trinkets bring her level with other heroes. Rather than growing strong herself, she makes her teammates stronger, so she is worth taking into the Darkest Dungeon.
+[*][b]Abomination makes transforming a real choice.[/b] His human form has lower accuracy but stronger base performance. The stress he manages with Absolution pays for the transformation and turns into the beast's healing, damage, speed and CRIT, easing the burden on allies.
+[/list]
+
+[h2]See all 18 rebalanced heroes in the comparison images[/h2]
+The [b]25 images[/b] above compare vanilla with the published build. Longer hero summaries are split into two images. Duelist and Runaway play as vanilla for now while their changes are being tested.
 
 [h2]Installation and compatibility[/h2]
-[b]Enable all five DLC heroes:[/b] Flagellant (The Crimson Court), Shieldbreaker, Duelist, Runaway and Musketeer (free). This is the integrated 20-hero edition; separate optional packages are no longer offered. The Musketeer rework is included; an external YAMR mod is not required.
+[b]Enable all five DLC heroes:[/b] Flagellant (The Crimson Court), Shieldbreaker, Duelist, Runaway and Musketeer (free). This is the integrated edition; separate optional packages are no longer offered. The Musketeer rework is included; an external YAMR mod is not required.
 
 Can be enabled in an existing estate. Other reworks replacing the same hero, effect or buff files may conflict. With UI Enhancement, Musketeer skills may display their original names.
 

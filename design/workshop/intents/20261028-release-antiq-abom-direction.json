@@ -1,0 +1,14 @@
+{
+  "id": "RELEASE-20261028-ANTIQ-ABOM-DIRECTION",
+  "decision": "adopted",
+  "original_quote": "커밋 후 푸쉬 창작마당에 업데이트 하고 이미지 수정 하자 유물 개편 방향성 및 원칙만 설명에 적어줘",
+  "context_quotes": [
+    {"speaker": "user", "quote": "괴인도", "source": "claude session cc3c95a9-aeea-4409-9feb-eb162a738694, message 9d3ccecd-2e92-44b5-aea0-b51917112568, 2026-10-28"},
+    {"speaker": "user", "quote": "test 전체를 main에 합쳐 배포", "source": "claude session cc3c95a9-aeea-4409-9feb-eb162a738694, AskUserQuestion answer 49465af9-9087-4fd2-bf98-5459dac4d80e, 2026-10-28"},
+    {"speaker": "user", "quote": "테스트에는 결투가 도망자 수정된 버전 두고 메인에만 결투가 도망자 바닐라로 올려", "source": "claude session cc3c95a9-aeea-4409-9feb-eb162a738694, 2026-10-28"}
+  ],
+  "rationale_ko": "창작마당 게시 자료를 test에서 합친 유물수집상 개편(ANT-007~013, SYS-105)과 성전사(CRU-011/012)·신비학자(OCC-016/017)·석궁사수(ARB-013/014)·방패 파괴자(SB-027) 변경에 맞춘다. 카드: 유물수집상 7기술 카드 신설, 성전사 전투 치유·신앙의 방패, 신비학자 취약화 주술·악마의 손아귀, 석궁사수 제압 사격·신호탄, 방패 파괴자 노출 갱신. 설명 10개 언어: 유물수집상·괴인 '방향과 원칙'만 담은 섹션 추가(유물수집상 P-25: 베테랑까지 약함, 영웅(챔피언) 등급부터 전용 장신구로 일반 영웅과 비슷, 자신보다 동료를 강하게 해 가장 어두운 던전에 데려갈 이유. 괴인 P-23/ABO-018: 인간 형태 명중↓ 기본 성능↑, 참회로 관리한 자기 스트레스를 변신 비용으로 치르고 야수 화력으로 전환, 동료 부담 감소). 낡은 문장 정정: 전투 치유 받는 회복량 +20%→대상 방어 증가, 강화의 연막 저항 4종→받는 회복량 증가(중첩), 섬광 가루 방어 감소→서툰 칼질 방어 5~15%p, 이미지 27→25장, 결투가·도망자 main 바닐라 안내, 18영웅 표기. 러시아어는 8000바이트 한도로 기존 문장 3곳을 줄였다(의미 유지, Claude 판단).",
+  "source": {"product": "claude", "reference": "Claude Code session cc3c95a9-aeea-4409-9feb-eb162a738694, 2026-10-28 message 36ec7c8e-5cf8-4e4f-89b3-4836fbe1df41", "session_id": "cc3c95a9-aeea-4409-9feb-eb162a738694", "message_id": "36ec7c8e-5cf8-4e4f-89b3-4836fbe1df41", "event_id": null},
+  "files": ["design/workshop/hero_cards.json", "design/workshop/why.json", "design/workshop/description_en.txt", "design/workshop/description_ko.txt", "design/workshop/i18n/description_brazilian.txt", "design/workshop/i18n/description_french.txt", "design/workshop/i18n/description_german.txt", "design/workshop/i18n/description_polish.txt", "design/workshop/i18n/description_russian.txt", "design/workshop/i18n/description_schinese.txt", "design/workshop/i18n/description_spanish.txt", "design/workshop/i18n/description_tchinese.txt"],
+  "supersedes": []
+}

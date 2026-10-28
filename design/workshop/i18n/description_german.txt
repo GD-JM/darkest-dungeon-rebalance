@@ -1,7 +1,7 @@
 [h1]Every Hero Worth Taking[/h1]
 [i]Den Charakter der Helden bewahren und mehr Helden, Fähigkeiten und Gruppen eine echte Aufgabe geben.[/i]
 
-Eine gemeinsame Balance-Überarbeitung von 20 Helden für vielfältigere Gruppen. Lieblingshelden sollen zusammen funktionieren, ohne auf einen bestimmten Heiler oder stets dieselben vier Fähigkeiten angewiesen zu sein. Mehr Heilung und Stressabbau, Rüstungsschwächung für physische Angreifer und zusätzliche Positionsoptionen eröffnen andere Spielweisen.
+Eine gemeinsame Balance-Überarbeitung von 18 Helden für vielfältigere Gruppen. Lieblingshelden sollen zusammen funktionieren, ohne auf einen bestimmten Heiler oder stets dieselben vier Fähigkeiten angewiesen zu sein. Mehr Heilung und Stressabbau, Rüstungsschwächung für physische Angreifer und zusätzliche Positionsoptionen eröffnen andere Spielweisen.
 
 [h2]Weitere Updates. Ein offenes Ohr für Feedback.[/h2]
 [b]Am 26. Oktober 2026 enthält dieser Workshop-Eintrag 33 öffentliche Änderungsnotizen.[/b] Dazu gehören Balance-Anpassungen, Fehlerkorrekturen sowie verbesserte Beschreibungen und Vergleichsbilder. [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3821353035]Update-Verlauf ansehen[/url]
@@ -20,18 +20,24 @@ Ich werde weiter spielen, prüfen und überarbeiten, mit perfekter Balance als Z
 [h2]Was die veröffentlichte Fassung verändert[/h2]
 Bereiche gelten für Fähigkeitsstufen 1–5. ACC und CRIT beziehen sich sonst auf Fähigkeitsstufe 1. Die englischen Fähigkeitsnamen dienen zur eindeutigen Zuordnung.
 [list]
-[*][b]Mehr Möglichkeiten zur Gruppenversorgung.[/b] Crusaders Battle Heal heilt 3–4→6–7 LP und gewährt +20% erhaltene Heilung: mit Heilschmuck eine Option als Hauptheiler. Antiquarians Fortifying Vapours verbindet Heilung mit Blutungs-, Gift-, Betäubungs- und Schwächungsresistenz. Arbalests Bandage heilt Blutungen, Rallying Flare baut zuverlässig Stress ab; Man-at-Arms kann Bolster wiederholt einsetzen.
-[*][b]Unterstützung gegen Rüstung.[/b] Occultists Weakening Curse senkt PROT um 25–35 Prozentpunkte. Vestals Illumination behält Ausweichsenkung und Tarnungsaufhebung und senkt PROT um 15–25 Punkte; Antiquarians Flashpowder um 10–15. Beide Fähigkeiten verursachen keine Verbrennung mehr. Shieldbreakers Puncture kombiniert Heranziehen und Aufheben von Schutz mit 30–40 Punkten PROT-Senkung; Man-at-Arms' Bellow senkt den PROT aller Gegner um 10–15 Punkte.
+[*][b]Mehr Möglichkeiten zur Gruppenversorgung.[/b] Crusaders Battle Heal heilt 3–4→6–7 LP und erhöht den PROT des Ziels: mit Heilschmuck eine Option als Hauptheiler. Antiquarians Fortifying Vapours heilt und verstärkt jede Heilung, die das Ziel erhält, stapelbar mit jedem Einsatz. Arbalests Bandage heilt Blutungen, Rallying Flare baut zuverlässig Stress ab; Man-at-Arms kann Bolster wiederholt einsetzen.
+[*][b]Unterstützung gegen Rüstung.[/b] Occultists Weakening Curse senkt PROT um 25–35 Prozentpunkte. Vestals Illumination behält Ausweichsenkung und Tarnungsaufhebung und senkt PROT um 15–25 Punkte; Antiquarians Nervous Stab um 5–15. Illumination verursacht keine Verbrennung mehr. Shieldbreakers Puncture kombiniert Heranziehen und Aufheben von Schutz mit 30–40 Punkten PROT-Senkung; Man-at-Arms' Bellow senkt den PROT aller Gegner um 10–15 Punkte.
 [*][b]Bekannte Helden, andere Spielweisen.[/b] Highwaymans Tracking Shot ermöglicht Riposte ohne Bewegung. Wicked Slice erreicht Position 3, Open Vein bietet mehr CRIT und Blutungsdruck (Fähigkeits-CRIT 0% / 5%). Bounty Hunter kann Flashbang von Position 2–4 und Caltrops von jeder Position nutzen. Jesters Inspiring Tune funktioniert auch von Position 2, Solo von überall.
 [*][b]Vestal wählt Unterstützung oder Vorbereitung.[/b] Illumination: ACC 95, Ausweich- und PROT-Senkung. Hand of Light: ACC 90, Schaden −40%; greift an und stärkt spätere Angriffe.
 [*][b]Musketeer mit eigener Rolle.[/b] Piercing Ball durchdringt Rüstung, Smokescreen kontrolliert die gegnerische Front. Covering Smoke gewährt einem Verbündeten für 2 Runden Tarnung und +15–25 Ausweichen. Flächenangriffe bleiben gefährlich.
 [/list]
 
-[h2]Alle 20 Helden in Vergleichsbildern[/h2]
-Die [b]27 Bilder[/b] oben vergleichen Original und veröffentlichte Fassung. Umfangreiche Heldenübersichten verteilen sich auf zwei Bilder. Zuletzt wurde außerdem Runaways Ransack auf das Original zurückgesetzt; Shieldbreakers Expose erreicht nun getarnte Gegner auf Position 4.
+[h2]Antiquarian und Abomination: die Richtung[/h2]
+[list]
+[*][b]Antiquarian findet ihren Platz ab Entschlossenheit 5.[/b] Bis Entschlossenheit 3 (Veteran) bleibt sie schwach, dafür bringt sie mehr Gold ein. Ab Entschlossenheit 5 bringt ihr starker Klassenschmuck sie auf das Niveau anderer Helden. Statt selbst stark zu werden, stärkt sie ihre Gefährten und lohnt sich so auch im Dunkelsten Dungeon.
+[*][b]Bei der Abomination wird die Verwandlung zur echten Wahl.[/b] Die Menschengestalt hat weniger Genauigkeit, aber stärkere Grundwerte. Mit Absolution verwalteter Stress bezahlt die Verwandlung und wird zu Heilung, Schaden, Tempo und CRIT der Bestie; die Gefährten werden weniger belastet.
+[/list]
+
+[h2]Alle 18 überarbeiteten Helden in Vergleichsbildern[/h2]
+Die [b]25 Bilder[/b] oben vergleichen Original und veröffentlichte Fassung. Umfangreiche Heldenübersichten verteilen sich auf zwei Bilder. Duelist und Runaway spielen sich vorerst wie im Original, während ihre Änderungen getestet werden.
 
 [h2]Installation und Kompatibilität[/h2]
-[b]Alle fünf DLC-Helden aktivieren:[/b] Flagellant (The Crimson Court), Shieldbreaker, Duelist, Runaway und Musketeer (kostenlos). Dies ist die gemeinsame 20-Helden-Fassung; separate optionale Pakete werden nicht mehr angeboten. Die Musketeer-Überarbeitung ist enthalten, eine externe YAMR-Mod ist nicht nötig.
+[b]Alle fünf DLC-Helden aktivieren:[/b] Flagellant (The Crimson Court), Shieldbreaker, Duelist, Runaway und Musketeer (kostenlos). Dies ist die gemeinsame Fassung; separate optionale Pakete werden nicht mehr angeboten. Die Musketeer-Überarbeitung ist enthalten, eine externe YAMR-Mod ist nicht nötig.
 
 In bestehenden Anwesen aktivierbar. Andere Überarbeitungen derselben Helden-, Effekt- oder Buff-Dateien können Konflikte verursachen. Mit UI Enhancement können Musketeer-Fähigkeiten ihre ursprünglichen Namen anzeigen.
 

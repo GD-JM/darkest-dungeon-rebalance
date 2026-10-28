@@ -68,15 +68,14 @@
  "antiquarian|flashpowder": {
   "ids": [
    "ANT-001",
-   "ANT-004",
-   "ANT-005"
+   "ANT-011"
   ],
   "principles": [
    "P-19",
    "P-25"
   ],
-  "en": "Flashpowder keeps accuracy reduction and destealth. Its short PROT debuff falls to 10-15 points rather than matching dedicated armor breakers; the old burn remains removed.",
-  "ko": "명중 약화·은신 해제와 화상 제거를 유지하며 방어도 감소만10~15%p로 낮춰 전담 방어 약화 기술과 구분한다. 지속2턴, 약화 확률100~140%는 유지한다."
+  "en": "The flash spreads to more enemies as she levels, starting from the back where stealth hides. It opens enemies to hits and to being moved; the accuracy drop is gone so it cannot stack with party dodge into an invincible combo.",
+  "ko": "레벨이 오를수록 은신이 숨는 뒷열부터 더 많은 적에게 퍼집니다. 회피와 이동 저항을 깎아 아군 공격·이동기를 돕고, 파티 회피와 겹쳐 무적이 되지 않도록 명중 감소는 뺐습니다."
  },
  "arbalest|battlefield_bandage": {
   "ids": [
@@ -108,15 +107,16 @@
    "ARB-003",
    "ARB-006",
    "ARB-010",
-   "ARB-009"
+   "ARB-009",
+   "ARB-014"
   ],
   "principles": [
    "G-05",
    "P-22",
    "P-11"
   ],
-  "en": "Her guild text calls her a rallying point, so the flare now gives guaranteed stress relief to the rest of the party, an alternative to relying on the Jester. To keep it from being a do-everything skill, the amount stays modest and the ally stun/mark cleanse moved to other heroes.",
-  "ko": "길드 설명이 그녀를 '결집소'라 부르므로, 신호탄이 나머지 아군 전원의 스트레스를 확정으로 회복한다 — 광대에만 기대지 않는 선택지. 만능 기술이 되지 않게 회복량은 적당히 두고 아군 기절·표식 해제는 다른 영웅에게 넘겼다."
+  "en": "Her guild text calls her a rallying point, so the flare now gives guaranteed stress relief to the rest of the party, an alternative to relying on the Jester. To keep it from being a do-everything skill, the amount stays modest and the ally stun/mark cleanse moved to other heroes. The party stress heal rises to 3-5.",
+  "ko": "길드 설명이 그녀를 '결집소'라 부르므로, 신호탄이 나머지 아군 전원의 스트레스를 확정으로 회복한다 — 광대에만 기대지 않는 선택지. 만능 기술이 되지 않게 회복량은 적당히 두고 아군 기절·표식 해제는 다른 영웅에게 넘겼다. 아군 스트레스 회복을 3~5로 올립니다."
  },
  "arbalest|sniper_shot": {
   "ids": [
@@ -133,14 +133,15 @@
  },
  "arbalest|suppressing_fire": {
   "ids": [
-   "ARB-008"
+   "ARB-008",
+   "ARB-013"
   ],
   "principles": [
    "G-02",
    "R-STRAT-01"
   ],
-  "en": "It was almost never picked over her core skills. More damage on the two back-rank enemies, on top of the accuracy and crit debuff, makes it a real tool for shutting down back-line stress dealers.",
-  "ko": "핵심 기술에 밀려 거의 고르지 않던 기술이다. 후열(3·4열) 두 적에게 명중·치명타 감소와 함께 피해를 더 줘서, 후열 스트레스 딜러를 묶는 실제 선택지로 만든다."
+  "en": "A rain of bolts that keeps the back line's heads down: it now slows them instead of lowering accuracy, delaying their response.",
+  "ko": "후열에 화살비를 퍼부어 고개를 못 들게 하는 제압 사격입니다. 명중 대신 속도를 깎아 적의 대응을 늦춥니다."
  },
  "bounty_hunter|collect_bounty": {
   "ids": [
@@ -238,26 +239,27 @@
  "crusader|battle_heal": {
   "ids": [
    "CRU-001",
-   "CRU-010"
+   "CRU-010",
+   "CRU-011"
   ],
   "principles": [
    "G-05",
    "P-11"
   ],
-  "en": "Higher immediate healing lets healing-trinket investment support a primary healer Crusader. Healing received stays at +20%: improve the first heal and switching targets rather than relying on stronger repeated-heal amplification. This is a healing buff, not a demonstrated power-neutral trade.",
-  "ko": "단독 회복 담당을 목표로 사용자가 두 안 중 선택·적용을 위임했다. 기본 회복 3–4/4–4/4–5/5–6/6–7, 받는 회복 +20% 고정을 선택한다. 첫 치료와 대상 전환의 안정성, 회복 장신구 효율을 우선하며 5–6/+38% 성장안은 미채택이다. 성녀의 즉시·광역 회복 우위는 유지한다. 실제 상향이며 다른 기술의 미승인 너프로 상쇄하지 않는다."
+  "en": "Higher immediate healing supports a primary-healer Crusader; the heal now also hardens the target's armor. Healing amplification moved to the Antiquarian.",
+  "ko": "즉시 회복량을 높여 주 힐러 운용을 받치고, 이제 대상의 방어도 올려 줍니다. 받는 회복 증가는 유물수집상에게 옮겼습니다."
  },
  "crusader|bulwark_of_faith": {
   "ids": [
-   "CRU-007"
+   "CRU-007",
+   "CRU-012"
   ],
   "principles": [
    "G-03",
-   "P-19",
-   "R-RANK-01"
+   "P-19"
   ],
-  "en": "The Leper's Withstand does the same job (protection buff, self mark, once per battle) from more ranks, and most pure self-defense skills work from any rank; raising a shield has no reason to need the front. He can now use it from rank 4, where Holy Lance starts.",
-  "ko": "나병환자 견디기는 같은 구조(방어 강화·자기 표식·전투당 1회)인데 더 많은 열에서 쓰고, 순수 자기 방어 기술은 대부분 전 열이다. 방패를 드는 동작에 열 제약 이유가 없다. 이제 성스러운 돌격 시작 열(4열)에서도 쓸 수 있다."
+  "en": "A true tanking stance: usable from any rank, it now steels him against stuns and death blows for the rest of the battle instead of raising the torch.",
+  "ko": "어느 열에서나 쓸 수 있고, 횃불 대신 전투가 끝날 때까지 기절과 죽음의 일격에 버티게 해 주는 탱커 기술이 됩니다."
  },
  "crusader|inspiring_cry": {
   "ids": [
@@ -768,15 +770,16 @@
    "OCC-005",
    "OCC-006",
    "OCC-009",
-   "OCC-004"
+   "OCC-004",
+   "OCC-017"
   ],
   "principles": [
    "P-19",
    "R-STRAT-01",
    "R-SKILL-05"
   ],
-  "en": "Mark plus dodge down duplicated the Arbalest's Sniper's Mark. True to its name, the hex now lowers resistances, the only hero skill that weakens stun and debuff resist, setting up the party's stuns, blights and bleeds; like the other pure mark skills it no longer deals damage, and its values now grow every level.",
-  "ko": "표식+회피 감소는 석궁사수 저격 표식과 겹쳤다. 이름대로 저항을 낮추게 바꿨고, 기절·약화 저항을 깎는 유일한 영웅 기술이라 아군 기절·중독·출혈을 받쳐 준다. 다른 순수 표식 기술처럼 피해를 없앴고, 수치는 매 레벨 성장하게 했다."
+  "en": "Mark plus dodge down duplicated the Arbalest's Sniper's Mark. True to its name, the hex now lowers resistances, the only hero skill that weakens stun and debuff resist, setting up the party's stuns, blights and bleeds; like the other pure mark skills it no longer deals damage, and its values now grow every level. It now lowers move resistance too, so it weakens every resistance.",
+  "ko": "표식+회피 감소는 석궁사수 저격 표식과 겹쳤다. 이름대로 저항을 낮추게 바꿨고, 기절·약화 저항을 깎는 유일한 영웅 기술이라 아군 기절·중독·출혈을 받쳐 준다. 다른 순수 표식 기술처럼 피해를 없앴고, 수치는 매 레벨 성장하게 했다. 이동 저항도 깎아 모든 저항을 낮춥니다."
  },
  "occultist|weakening_curse": {
   "ids": [
@@ -827,14 +830,15 @@
   "ids": [
    "SB-015",
    "SB-024",
-   "SB-026"
+   "SB-026",
+   "SB-027"
   ],
   "principles": [
    "R-TRADE-02",
    "R-SKILL-09"
   ],
-  "en": "Expose keeps rank-4 reach for back-rank stealth, critical vulnerability, slow and retreat. Damage falls to -50% as an additional cost for its support and reach.",
-  "ko": "4열 은신 대응 사거리와 기존 약화를 유지하면서 직접 피해를 추가로 낮춘다. 지원 기능 확대의 대가를 더 명확하게 만든다. 전 레벨 피해-50%; 다른 효과와 범위 유지. 기존 모델의 전후 잔차가 0에 가깝다는 설명은 현 수치의 총량 보존 증거로 재사용하지 않는다."
+  "en": "Expose keeps rank-4 reach for back-rank stealth, critical vulnerability, slow and retreat. Damage falls to -50% as an additional cost for its support and reach. Its slow moved to Suppressing Fire; Expose now strips dodge instead, true to its name.",
+  "ko": "4열 은신 대응 사거리와 기존 약화를 유지하면서 직접 피해를 추가로 낮춘다. 지원 기능 확대의 대가를 더 명확하게 만든다. 전 레벨 피해-50%; 다른 효과와 범위 유지. 기존 모델의 전후 잔차가 0에 가깝다는 설명은 현 수치의 총량 보존 증거로 재사용하지 않는다. 속도 감소는 석궁 제압 사격으로 옮기고, 이름대로 회피를 깎습니다."
  },
  "shieldbreaker|pierce": {
   "ids": [
@@ -1155,10 +1159,78 @@
  },
  "antiquarian|invigorating_vapours": {
   "ids": [
-   "ANT-006"
+   "ANT-006",
+   "ANT-012"
   ],
-  "principles": [],
-  "ko": " 섬광 가루와 강화의 연막은 유지. 활력의 연막 회피를 5/6/7/8/10으로 변경한다. 기술1·2는 상향, 기술4는 하향, 3·5는 유지하며 3턴 지속·중첩·전원 대상은 그대로다.",
-  "en": " Dodge now scales 5/6/7/8/10: more useful early, with a smaller rank-four bonus and the same top rank."
+  "principles": [
+   "P-25"
+  ],
+  "en": "Dodge now scales 5/6/7/8/10: more useful early, with the same top rank.",
+  "ko": "회피가 5/6/7/8/10으로 성장합니다. 초반에 더 쓸 만하고 최고 레벨은 같습니다."
+ },
+ "antiquarian|kris_stab": {
+  "ids": [
+   "ANT-009"
+  ],
+  "principles": [
+   "P-25"
+  ],
+  "en": "Her dagger now cracks armor for the rest of the party, growing faster with each level.",
+  "ko": "서툰 칼질이 파티의 물리 공격을 돕도록 방어를 깎고, 레벨마다 더 크게 성장합니다."
+ },
+ "antiquarian|festering_vapours": {
+  "ids": [
+   "ANT-002",
+   "ANT-008"
+  ],
+  "principles": [
+   "P-25",
+   "P-27"
+  ],
+  "en": "Her blight lasts longer at higher levels and pairs with her blight trinkets. The resist drop stays a short 3 turns.",
+  "ko": "높은 레벨일수록 중독이 오래 남고, 중독 장신구와 맞물립니다. 중독 저항 감소는 3턴으로 짧게 둡니다."
+ },
+ "antiquarian|cower": {
+  "ids": [
+   "ANT-010"
+  ],
+  "principles": [
+   "P-25"
+  ],
+  "en": "Useful even from rank 4: she patches herself up and slips out of enemy focus.",
+  "ko": "4열에서도 쓸 수 있도록 자기 회복과 표식 해제를 줍니다."
+ },
+ "antiquarian|fortifying_vapours": {
+  "ids": [
+   "ANT-003",
+   "ANT-007"
+  ],
+  "principles": [
+   "P-25",
+   "P-27"
+  ],
+  "en": "Her vapours now amplify every heal the target receives and stack with each use, multiplying the party's healers and her own healing trinkets.",
+  "ko": "대상이 받는 모든 회복을 키우고 쓸 때마다 중첩되어, 파티의 힐러와 유물수집상 자신의 회복 장신구를 함께 키웁니다."
+ },
+ "antiquarian|protect_me": {
+  "ids": [
+   "ANT-013",
+   "SYS-105"
+  ],
+  "principles": [
+   "P-25"
+  ],
+  "en": "The ally who guards her now ripostes for 3 turns, whoever it is. Riposte specialists keep their own riposte and gain the bonus, so she makes the frontline stronger.",
+  "ko": "그녀를 지키는 아군이 누구든 3턴간 반격합니다. 반격 전문 영웅은 자기 반격을 유지한 채 피해 보너스를 받아 전열이 더 강해집니다."
+ },
+ "occultist|daemons_pull": {
+  "ids": [
+   "OCC-016"
+  ],
+  "principles": [
+   "P-19"
+  ],
+  "en": "The hands from the abyss look like they drag hard, so the pull now drags a rank-4 enemy all the way to the front.",
+  "ko": "심연의 손이 크게 끌어당기는 연출에 맞춰, 4열 적을 맨 앞까지 끌어옵니다."
  }
 }

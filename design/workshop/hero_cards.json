@@ -90,17 +90,69 @@
  },
  "antiquarian": {
   "name": "Antiquarian",
-  "tagline": "Weaker in combat by design; she pays her way in gold.",
+  "tagline": "Weak until Champion; with her trinkets she lifts the whole party.",
   "skills": [
+   {
+    "key": "antiquarian|kris_stab",
+    "name": "Nervous Stab",
+    "icon": "one",
+    "old": [
+     "No debuff"
+    ],
+    "new": [
+     "Target: PROT -5 to -15% (2 turns)"
+    ]
+   },
+   {
+    "key": "antiquarian|festering_vapours",
+    "name": "Festering Vapours",
+    "icon": "two",
+    "old": [
+     "Blight 1-4 (3 turns)",
+     "Blight resist -20 to -36%"
+    ],
+    "new": [
+     "Blight 2-4, lasts 3-5 turns",
+     "Blight resist -20 to -30% (3 turns)"
+    ]
+   },
+   {
+    "key": "antiquarian|cower",
+    "name": "Get Down!",
+    "icon": "three",
+    "old": [
+     "No heal"
+    ],
+    "new": [
+     "Self: heal 2-5",
+     "Self: removes mark"
+    ]
+   },
    {
     "key": "antiquarian|flashpowder",
     "name": "Flashpowder",
     "icon": "four",
     "old": [
-     "No PROT debuff"
+     "One enemy, ranks 1-4",
+     "Target: ACC -10 to -15%"
     ],
     "new": [
-     "Target: PROT -10 to -15% (2 turns)"
+     "1 enemy (rank 3-4) -> all 4 at level 5",
+     "DODGE -10 to -15%, MOVE res -20 to -30%",
+     "Burn 1-2; no ACC debuff"
+    ]
+   },
+   {
+    "key": "antiquarian|fortifying_vapours",
+    "name": "Fortifying Vapours",
+    "icon": "five",
+    "old": [
+     "Heal 1-1 to 3-3",
+     "Bleed/blight resist +10-15%"
+    ],
+    "new": [
+     "Heal 1-3 to 3-5",
+     "Healing received +20-40% (3 turns, stacks)"
     ]
    },
    {
@@ -112,6 +164,18 @@
     ],
     "new": [
      "Party dodge +5/6/7/8/10 (3 turns)"
+    ]
+   },
+   {
+    "key": "antiquarian|protect_me",
+    "name": "Protect Me",
+    "icon": "seven",
+    "old": [
+     "Guarding ally: no riposte"
+    ],
+    "new": [
+     "Guarding ally: riposte 3 turns",
+     "Riposte DMG +10-15% (2 turns)"
     ]
    }
   ]
@@ -138,10 +202,12 @@
     "name": "Suppressing Fire",
     "icon": "two",
     "old": [
-     "DMG -80%"
+     "DMG -80%",
+     "Target: ACC -15 to -20%"
     ],
     "new": [
-     "DMG -60%"
+     "DMG -60%",
+     "Target: SPD -4 to -8 (no ACC debuff)"
     ]
    },
    {
@@ -183,7 +249,7 @@
     ],
     "new": [
      "No mark or stun removal",
-     "Party stress heal 2-4",
+     "Party stress heal 3-5",
      "Stress heal always works"
     ]
    }
@@ -335,10 +401,13 @@
     "name": "Bulwark of Faith",
     "icon": "four",
     "old": [
-     "Use from ranks 1-2"
+     "Use from ranks 1-2",
+     "Torch +24"
     ],
     "new": [
-     "Use from any rank"
+     "Use from any rank",
+     "Stun res +20-30%, deathblow +5-10%",
+     "No torch gain"
     ]
    },
    {
@@ -347,11 +416,11 @@
     "icon": "five",
     "old": [
      "Heal 2-3 (level 5: 5-6)",
-     "No healing-received buff"
+     "No buff"
     ],
     "new": [
      "Heal 3-4 (level 5: 6-7)",
-     "Healing received +20%"
+     "Target: PROT +10-15% (2 turns)"
     ]
    },
    {
@@ -993,7 +1062,18 @@
     ],
     "new": [
      "Target resists -20 to -25%:",
-     "stun, blight, bleed, debuff (3 turns)"
+     "stun, blight, bleed, debuff, move (3 turns)"
+    ]
+   },
+   {
+    "key": "occultist|daemons_pull",
+    "name": "Daemon's Pull",
+    "icon": "seven",
+    "old": [
+     "Pull 2"
+    ],
+    "new": [
+     "Pull 3"
     ]
    }
   ]
@@ -1112,12 +1192,14 @@
     "old": [
      "ACC 85",
      "DMG -40%",
-     "Hits ranks 1-3"
+     "Hits ranks 1-3",
+     "Target: SPD -4 to -8"
     ],
     "new": [
      "ACC 90",
      "DMG -50%",
-     "Hits ranks 1-4"
+     "Hits ranks 1-4",
+     "Target: DODGE -20 to -30%"
     ]
    },
    {
