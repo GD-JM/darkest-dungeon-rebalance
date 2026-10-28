@@ -135,6 +135,6 @@ Darkest Refined 브랜드 이미지를 만들거나 고친다. 규칙은 mods/Re
 | `comic_panels.py` | 코믹스 칸 자동 분할 + 번호 시트(새 B컷 좌표 찾기용, 좌표계 = 가로 560) |
 | `make_mock_page.py` | 창작마당 페이지 목업 HTML |
 | `spine21.py` | 게임 전투 자세 전신 조립(보조) |
-| `upload_private_draft.py` | 비공개 시안 아이템 3828956017 업로드(대표·소개·템플릿·현재 카드, 슬롯 제자리 교체). 기록 `private_draft_item.json` |
+| `upload_private_draft.py` | 비공개 시안 아이템 3828956017 업로드. 기본 = 실제 공개 페이지처럼(언어별 제목·10개 언어 설명 `darkest_refined_draft/description_*.txt`·`i18n/`, 갤러리 = 소개 4 + 현재 영웅 카드), `--templates` = 템플릿 견본 추가. 슬롯 제자리 교체, 기록 `private_draft_item.json` |
 | `source_art/` | 원본 공식 아트(커밋 안 함) |
 | `darkest_refined_draft/` | 결과물(커밋 안 함) |
