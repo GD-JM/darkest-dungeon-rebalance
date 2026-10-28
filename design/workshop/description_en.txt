@@ -34,7 +34,7 @@ Ranges below cover skill levels 1–5. ACC and CRIT are level-1 skill values unl
 [/list]
 
 [h2]See all 18 rebalanced heroes in the comparison images[/h2]
-The [b]25 images[/b] above compare vanilla with the published build. Longer hero summaries are split into two images. Duelist and Runaway play as vanilla for now while their changes are being tested.
+The [b]25 images[/b] above compare vanilla with the published build. Longer hero summaries are split into two images. Duelist and Runaway play as vanilla for now while their changes are being tested. The images also cover Grave Robber, Hellion, Houndmaster, Leper and Plague Doctor.
 
 [h2]Installation and compatibility[/h2]
 [b]Enable all five DLC heroes:[/b] Flagellant (The Crimson Court), Shieldbreaker, Duelist, Runaway and Musketeer (free). This is the integrated edition; separate optional packages are no longer offered. The Musketeer rework is included; an external YAMR mod is not required.
