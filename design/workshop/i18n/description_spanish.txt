@@ -34,7 +34,7 @@ Los intervalos abarcan niveles de habilidad 1–5. ACC y CRIT son del nivel 1 sa
 [/list]
 
 [h2]Los 18 héroes reajustados en imágenes comparativas[/h2]
-Las [b]25 imágenes[/b] de arriba comparan el original con la versión publicada. Las fichas largas se dividen en dos. La Duelista y la Fugitiva siguen como en el original mientras se prueban sus cambios.
+Las [b]25 imágenes[/b] de arriba comparan el original con la versión publicada. Las fichas largas se dividen en dos. La Duelista y la Fugitiva siguen como en el original mientras se prueban sus cambios. Las imágenes también incluyen a la Asaltatumbas, la Diabla, el Maestro canino, el Leproso y el Médico de la peste.
 
 [h2]Instalación y compatibilidad[/h2]
 [b]Activa los cinco héroes DLC:[/b] Flagelante (The Crimson Court), Rompescudos, Duelista, Fugitiva y Mosquetera (gratuita). Esta es la edición integrada; ya no se ofrecen paquetes opcionales separados. La revisión de la Mosquetera está incluida y no requiere un mod YAMR externo.

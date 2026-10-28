@@ -272,7 +272,13 @@ def main():
         # 설명문은 영웅별 방향 + 대표 변경만 쓴다 [사용자 10-17]; 기술 전부는 영웅별 이미지(hero_cards.json → make_hero_cards.py)
         absent = [h for h in summary[lang] if (EN_HERO[h] if lang == 'en' else S.KO[h]) not in d0]
         cards = json.load(open(os.path.join(W, 'hero_cards.json'), encoding='utf-8'))
-        absent += sorted({k for v in summary[lang].values() for _, k in v} - {s['key'] for c in cards.values() for s in c['skills']})
+        carded = {s['key'] for c in cards.values() for s in c['skills']}
+        # SYS-105: a riposte_skill added to a hero without one in vanilla is only the riposte borrowed from
+        # Antiquarian's Protect Me; that card row documents it once instead of a row on every hero card.
+        if 'antiquarian|protect_me' in carded:
+            carded |= {'%s|riposte_skill' % h for h in summary[lang]
+                       if not re.search(r'^riposte_skill:', rd(ec.vanilla_hero_file(G, h)), re.M)}
+        absent += sorted({k for v in summary[lang].values() for _, k in v} - carded)
         assert not absent, ('설명문에 빠진 변경', lang, absent)
         open(os.path.join(W, 'description_built_%s.txt' % lang), 'w', encoding='utf-8', newline='\n').write(d0 + '\n')
         nb = len(d0.encode('utf-8')) + d0.count('\n')

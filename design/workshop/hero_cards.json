@@ -367,6 +367,18 @@
      "Bleed + damage taken +10-20%",
      "(SPD debuff moved to Come Hither)"
     ]
+   },
+   {
+    "key": "bounty_hunter|riposte_skill",
+    "name": "Riposte",
+    "icon": null,
+    "old": [
+     "Riposte attack DMG 0%"
+    ],
+    "new": [
+     "Riposte attack DMG -50%",
+     "Used only via Antiquarian's Protect Me"
+    ]
    }
   ]
  },
@@ -792,6 +804,18 @@
      "CRIT 5%",
      "DMG -20%"
     ]
+   },
+   {
+    "key": "highwayman|riposte_skill",
+    "name": "Riposte",
+    "icon": null,
+    "old": [
+     "Riposte attack DMG 0%"
+    ],
+    "new": [
+     "Riposte attack DMG -15%",
+     "Own riposte total unchanged (-40 to -15%)"
+    ]
    }
   ]
  },
@@ -1082,6 +1106,18 @@
      "Party stress heal 1-3",
      "Stress taken -10% (2-3 turns)",
      "Guarded allies: +50% stress healing"
+    ]
+   },
+   {
+    "key": "man_at_arms|riposte_skill",
+    "name": "Riposte",
+    "icon": null,
+    "old": [
+     "Riposte attack DMG 0%"
+    ],
+    "new": [
+     "Riposte attack DMG -20%",
+     "Own riposte total unchanged (-40 to -20%)"
     ]
    }
   ]

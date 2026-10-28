@@ -34,7 +34,7 @@ As faixas cobrem níveis de habilidade 1–5. ACC e CRIT são do nível 1, salvo
 [/list]
 
 [h2]Os 18 heróis rebalanceados nas imagens comparativas[/h2]
-As [b]25 imagens[/b] acima comparam o original com a versão publicada. Fichas longas são divididas em duas imagens. Duelista e Fugitiva seguem como no original enquanto suas mudanças são testadas.
+As [b]25 imagens[/b] acima comparam o original com a versão publicada. Fichas longas são divididas em duas imagens. Duelista e Fugitiva seguem como no original enquanto suas mudanças são testadas. As imagens também mostram Ladra de Cova, Infernal, Mestre dos Cães, Leproso e Médica da Peste.
 
 [h2]Instalação e compatibilidade[/h2]
 [b]Ative os cinco heróis DLC:[/b] Flagelante (The Crimson Court), Quebra-Escudos, Duelista, Fugitiva e Mosqueteira (gratuita). Esta é a edição integrada; pacotes opcionais separados não são mais oferecidos. A reformulação da Mosqueteira está incluída, sem necessidade de YAMR externo.

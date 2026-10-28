@@ -273,12 +273,48 @@ def changed_design_evidence(diff, changed):
     return records
 
 
+def diff_parts(diff):
+    for part in re.split(r'(?=^diff --git )', diff, flags=re.M):
+        match = re.match(r'diff --git a/(\S+) b/(\S+)', part)
+        if match:
+            yield match.group(2), part
+
+
+def editor_diff(diff):
+    """WS-EDITOR-005: omit hunks the editor already receives in full elsewhere or that are not runtime data.
+
+    design/changes hunks are design_records, adopted intents are user_intents, descriptions are
+    current_descriptions, and effects_edit sheets are editing inputs, not runtime payload.
+    Every remaining hunk is kept whole.
+    """
+    omit = re.compile(r'design/changes/.*|design/workshop/intents/.*|heroes/[^/]+/[^/]+\.effects_edit\.txt'
+                      r'|design/workshop/description_[a-z]+\.txt|design/workshop/i18n/(description|title)_[a-z]+\.txt')
+    return ''.join(part for path, part in diff_parts(diff) if not omit.fullmatch(path))
+
+
+def hero_gameplay_changed(diff, hero):
+    """WS-EDITOR-005: full hero data only when a runtime line other than a comment or riposte_skill changed.
+
+    Animation (.art) lines and the shared borrowed-riposte line stay visible in the diff itself.
+    """
+    for path, part in diff_parts(diff):
+        if hero not in path or not is_game_file(path) or path.endswith('.art.darkest'):
+            continue
+        for line in part.splitlines():
+            if line.startswith(('+++', '---')) or line[:1] not in '+-':
+                continue
+            body = line[1:].strip()
+            if body and not body.startswith('//') and not body.startswith('riposte_skill:'):
+                return True
+    return False
+
+
 def edit_release(source, job, config, sha, previous, changed, diff, intents, previous_release=None):
     w = source / 'design/workshop'
     cards = read_json(w / 'hero_cards.json')
     version = next_version(source, previous_release)
     context = {'source_sha': sha, 'previous_published_sha': previous, 'version': version,
-               'changed_files': changed, 'diff': diff, 'user_intents': intents,
+               'changed_files': changed, 'diff': editor_diff(diff), 'user_intents': intents,
                'current_cards': cards, 'current_descriptions': descriptions(source),
                'current_reasons': read_json(w / 'why.json'), 'design_records': {}}
     # WS-MODULAR-002: old source snapshots must not advertise retired Workshop IDs.
@@ -287,13 +323,15 @@ def edit_release(source, job, config, sha, previous, changed, diff, intents, pre
     # Include committed source, vanilla reference and effects for changed heroes; never a live test file.
     context['hero_data'] = {}
     for hero in cards:
-        if any(hero in p for p in changed if is_game_file(p)):
+        if hero_gameplay_changed(diff, hero):
             context['hero_data'][hero] = {}
             for rel in [f'heroes/{hero}/{hero}.info.darkest', f'heroes/{hero}/{hero}.vanilla.txt', f'effects/rebalance_{hero}.effects.darkest']:
                 if (source / rel).exists():
                     context['hero_data'][hero][rel] = (source / rel).read_text(encoding='utf-8-sig')
     encoded = json.dumps(context, ensure_ascii=False)
-    if len(encoded) > 650_000:
+    # WS-EDITOR-004: the default bound stays 650,000; a larger value is a per-release explicit approval
+    # set in the local config and removed after that release.
+    if len(encoded) > int(config.get('editor_evidence_bound', 650_000)):
         raise ValueError('Release evidence exceeds the configured review bound; split or review this release explicitly')
     editor_dir = job / 'editor'
     editor_dir.mkdir(exist_ok=True)

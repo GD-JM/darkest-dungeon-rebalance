@@ -1289,5 +1289,198 @@
   ],
   "en": "The hands from the abyss look like they drag hard, so the pull now drags a rank-4 enemy all the way to the front.",
   "ko": "심연의 손이 크게 끌어당기는 연출에 맞춰, 4열 적을 맨 앞까지 끌어옵니다."
+ },
+ "highwayman|riposte_skill": {
+  "ids": [
+   "HWY-026",
+   "SYS-105"
+  ],
+  "principles": [
+   "P-25"
+  ],
+  "en": "The riposte attack now carries his level-5 penalty and his own riposte buff was rebased, so his own riposte deals the same as before. A riposte borrowed from the Antiquarian no longer gives low-level Highwaymen a hidden boost.",
+  "ko": "반격 공격에 5레벨 감소치를 넣고 자기 반격 강화를 다시 맞춰, 자기 반격 피해는 이전과 같습니다. 유물수집상에게 빌린 반격이 저레벨 노상강도를 몰래 강화하지 않습니다."
+ },
+ "man_at_arms|riposte_skill": {
+  "ids": [
+   "MAA-023",
+   "SYS-105"
+  ],
+  "principles": [
+   "P-25"
+  ],
+  "en": "Same as the Highwayman: the riposte attack carries the level-5 penalty and his own riposte buff was rebased, so his own riposte is unchanged while a borrowed riposte gives no hidden low-level boost.",
+  "ko": "노상강도와 같습니다. 반격 공격에 5레벨 감소치를 넣고 자기 반격 강화를 다시 맞춰 자기 반격은 그대로이고, 빌린 반격이 저레벨 강화가 되지 않습니다."
+ },
+ "bounty_hunter|riposte_skill": {
+  "ids": [
+   "BH-027",
+   "SYS-105"
+  ],
+  "principles": [
+   "P-25"
+  ],
+  "en": "He has no skill of his own that grants riposte, so his riposte only comes from the Antiquarian's Protect Me, at the same -50% damage as other borrowed ripostes.",
+  "ko": "스스로 반격을 거는 기술이 없어 유물수집상 동료 방패로 빌린 반격만 쓰며, 다른 빌린 반격과 같은 피해 −50%입니다."
+ },
+ "abomination|riposte_skill": {
+  "ids": [
+   "SYS-105"
+  ],
+  "principles": [
+   "P-25"
+  ],
+  "en": "New riposte attack (ACC 85, DMG -50%, no crit), used only when the Antiquarian's Protect Me lends this hero a riposte; it has no effect otherwise.",
+  "ko": "유물수집상 동료 방패로 반격을 빌렸을 때만 쓰는 반격 공격(명중 85, 피해 −50%, 치명타 없음)입니다. 그 밖에는 효과가 없습니다."
+ },
+ "antiquarian|riposte_skill": {
+  "ids": [
+   "SYS-105"
+  ],
+  "principles": [
+   "P-25"
+  ],
+  "en": "New riposte attack (ACC 85, DMG -50%, no crit), used only when the Antiquarian's Protect Me lends this hero a riposte; it has no effect otherwise.",
+  "ko": "유물수집상 동료 방패로 반격을 빌렸을 때만 쓰는 반격 공격(명중 85, 피해 −50%, 치명타 없음)입니다. 그 밖에는 효과가 없습니다."
+ },
+ "arbalest|riposte_skill": {
+  "ids": [
+   "SYS-105"
+  ],
+  "principles": [
+   "P-25"
+  ],
+  "en": "New riposte attack (ACC 85, DMG -50%, no crit), used only when the Antiquarian's Protect Me lends this hero a riposte; it has no effect otherwise.",
+  "ko": "유물수집상 동료 방패로 반격을 빌렸을 때만 쓰는 반격 공격(명중 85, 피해 −50%, 치명타 없음)입니다. 그 밖에는 효과가 없습니다."
+ },
+ "crusader|riposte_skill": {
+  "ids": [
+   "SYS-105"
+  ],
+  "principles": [
+   "P-25"
+  ],
+  "en": "New riposte attack (ACC 85, DMG -50%, no crit), used only when the Antiquarian's Protect Me lends this hero a riposte; it has no effect otherwise.",
+  "ko": "유물수집상 동료 방패로 반격을 빌렸을 때만 쓰는 반격 공격(명중 85, 피해 −50%, 치명타 없음)입니다. 그 밖에는 효과가 없습니다."
+ },
+ "flagellant|riposte_skill": {
+  "ids": [
+   "SYS-105"
+  ],
+  "principles": [
+   "P-25"
+  ],
+  "en": "New riposte attack (ACC 85, DMG -50%, no crit), used only when the Antiquarian's Protect Me lends this hero a riposte; it has no effect otherwise.",
+  "ko": "유물수집상 동료 방패로 반격을 빌렸을 때만 쓰는 반격 공격(명중 85, 피해 −50%, 치명타 없음)입니다. 그 밖에는 효과가 없습니다."
+ },
+ "grave_robber|riposte_skill": {
+  "ids": [
+   "SYS-105"
+  ],
+  "principles": [
+   "P-25"
+  ],
+  "en": "New riposte attack (ACC 85, DMG -50%, no crit), used only when the Antiquarian's Protect Me lends this hero a riposte; it has no effect otherwise.",
+  "ko": "유물수집상 동료 방패로 반격을 빌렸을 때만 쓰는 반격 공격(명중 85, 피해 −50%, 치명타 없음)입니다. 그 밖에는 효과가 없습니다."
+ },
+ "hellion|riposte_skill": {
+  "ids": [
+   "SYS-105"
+  ],
+  "principles": [
+   "P-25"
+  ],
+  "en": "New riposte attack (ACC 85, DMG -50%, no crit), used only when the Antiquarian's Protect Me lends this hero a riposte; it has no effect otherwise.",
+  "ko": "유물수집상 동료 방패로 반격을 빌렸을 때만 쓰는 반격 공격(명중 85, 피해 −50%, 치명타 없음)입니다. 그 밖에는 효과가 없습니다."
+ },
+ "houndmaster|riposte_skill": {
+  "ids": [
+   "SYS-105"
+  ],
+  "principles": [
+   "P-25"
+  ],
+  "en": "New riposte attack (ACC 85, DMG -50%, no crit), used only when the Antiquarian's Protect Me lends this hero a riposte; it has no effect otherwise.",
+  "ko": "유물수집상 동료 방패로 반격을 빌렸을 때만 쓰는 반격 공격(명중 85, 피해 −50%, 치명타 없음)입니다. 그 밖에는 효과가 없습니다."
+ },
+ "jester|riposte_skill": {
+  "ids": [
+   "SYS-105"
+  ],
+  "principles": [
+   "P-25"
+  ],
+  "en": "New riposte attack (ACC 85, DMG -50%, no crit), used only when the Antiquarian's Protect Me lends this hero a riposte; it has no effect otherwise.",
+  "ko": "유물수집상 동료 방패로 반격을 빌렸을 때만 쓰는 반격 공격(명중 85, 피해 −50%, 치명타 없음)입니다. 그 밖에는 효과가 없습니다."
+ },
+ "leper|riposte_skill": {
+  "ids": [
+   "SYS-105"
+  ],
+  "principles": [
+   "P-25"
+  ],
+  "en": "New riposte attack (ACC 85, DMG -50%, no crit), used only when the Antiquarian's Protect Me lends this hero a riposte; it has no effect otherwise.",
+  "ko": "유물수집상 동료 방패로 반격을 빌렸을 때만 쓰는 반격 공격(명중 85, 피해 −50%, 치명타 없음)입니다. 그 밖에는 효과가 없습니다."
+ },
+ "musketeer|riposte_skill": {
+  "ids": [
+   "SYS-105"
+  ],
+  "principles": [
+   "P-25"
+  ],
+  "en": "New riposte attack (ACC 85, DMG -50%, no crit), used only when the Antiquarian's Protect Me lends this hero a riposte; it has no effect otherwise.",
+  "ko": "유물수집상 동료 방패로 반격을 빌렸을 때만 쓰는 반격 공격(명중 85, 피해 −50%, 치명타 없음)입니다. 그 밖에는 효과가 없습니다."
+ },
+ "occultist|riposte_skill": {
+  "ids": [
+   "SYS-105"
+  ],
+  "principles": [
+   "P-25"
+  ],
+  "en": "New riposte attack (ACC 85, DMG -50%, no crit), used only when the Antiquarian's Protect Me lends this hero a riposte; it has no effect otherwise.",
+  "ko": "유물수집상 동료 방패로 반격을 빌렸을 때만 쓰는 반격 공격(명중 85, 피해 −50%, 치명타 없음)입니다. 그 밖에는 효과가 없습니다."
+ },
+ "plague_doctor|riposte_skill": {
+  "ids": [
+   "SYS-105"
+  ],
+  "principles": [
+   "P-25"
+  ],
+  "en": "New riposte attack (ACC 85, DMG -50%, no crit), used only when the Antiquarian's Protect Me lends this hero a riposte; it has no effect otherwise.",
+  "ko": "유물수집상 동료 방패로 반격을 빌렸을 때만 쓰는 반격 공격(명중 85, 피해 −50%, 치명타 없음)입니다. 그 밖에는 효과가 없습니다."
+ },
+ "runaway|riposte_skill": {
+  "ids": [
+   "SYS-105"
+  ],
+  "principles": [
+   "P-25"
+  ],
+  "en": "New riposte attack (ACC 85, DMG -50%, no crit), used only when the Antiquarian's Protect Me lends this hero a riposte; it has no effect otherwise.",
+  "ko": "유물수집상 동료 방패로 반격을 빌렸을 때만 쓰는 반격 공격(명중 85, 피해 −50%, 치명타 없음)입니다. 그 밖에는 효과가 없습니다."
+ },
+ "shieldbreaker|riposte_skill": {
+  "ids": [
+   "SYS-105"
+  ],
+  "principles": [
+   "P-25"
+  ],
+  "en": "New riposte attack (ACC 85, DMG -50%, no crit), used only when the Antiquarian's Protect Me lends this hero a riposte; it has no effect otherwise.",
+  "ko": "유물수집상 동료 방패로 반격을 빌렸을 때만 쓰는 반격 공격(명중 85, 피해 −50%, 치명타 없음)입니다. 그 밖에는 효과가 없습니다."
+ },
+ "vestal|riposte_skill": {
+  "ids": [
+   "SYS-105"
+  ],
+  "principles": [
+   "P-25"
+  ],
+  "en": "New riposte attack (ACC 85, DMG -50%, no crit), used only when the Antiquarian's Protect Me lends this hero a riposte; it has no effect otherwise.",
+  "ko": "유물수집상 동료 방패로 반격을 빌렸을 때만 쓰는 반격 공격(명중 85, 피해 −50%, 치명타 없음)입니다. 그 밖에는 효과가 없습니다."
  }
 }

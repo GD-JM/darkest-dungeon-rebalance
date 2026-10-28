@@ -34,7 +34,7 @@ Zakresy dotyczą poziomów umiejętności 1–5. ACC i CRIT podano dla poziomu 1
 [/list]
 
 [h2]Wszyscy 18 zmienieni bohaterowie na grafikach[/h2]
-Powyższe [b]25 grafik[/b] porównuje oryginał z opublikowaną wersją. Dłuższe zestawienia rozdzielono na dwa obrazy. Duelist i Runaway na razie działają jak w oryginale, dopóki ich zmiany są testowane.
+Powyższe [b]25 grafik[/b] porównuje oryginał z opublikowaną wersją. Dłuższe zestawienia rozdzielono na dwa obrazy. Duelist i Runaway na razie działają jak w oryginale, dopóki ich zmiany są testowane. Grafiki obejmują też Hienę Cmentarną, Awanturniczkę, Łowczego, Trędowatego i Badaczkę Zarazy.
 
 [h2]Instalacja i zgodność[/h2]
 [b]Włącz wszystkich pięcioro bohaterów DLC:[/b] Flagelanta (The Crimson Court), Łamaczkę Tarcz, Duelist, Runaway i Muszkieterkę (darmowa). To zintegrowana wersja; osobne opcjonalne pakiety nie są już dostępne. Zawiera przebudowę Muszkieterki, więc zewnętrzny YAMR nie jest potrzebny.

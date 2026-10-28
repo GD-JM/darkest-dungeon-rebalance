@@ -1,0 +1,12 @@
+{
+  "id": "MAA-018-RESTORE-20261028",
+  "decision": "adopted",
+  "original_quote": "2턴 통일로 바꾸고 결투가 페인트도 15 ~ 25 로 바꾸자  유물 수집상 부패의 연막 중독을 22334로 바꾸자일단 커밋만 해   유물이 강화의 연막 버프하고 싶은데 방향성 뭐가 있을까 이유는게임 내의 유효 HP 힐 스킬을 늘리는 거야 지금은 너무 적긴 해 유효성이 없어",
+  "context_quotes": [
+    {"speaker": "user", "quote": "작업 계속해", "source": "claude session cc3c95a9-aeea-4409-9feb-eb162a738694, 2026-10-28 (deploy continuation after editor found the contradiction)"}
+  ],
+  "rationale_ko": "이미 채택된 MAA-018(고양 호위 연계 보너스 모든 레벨 2턴)의 복구. 55a1bd8 효과 재생성이 편집 시트의 낡은 줄로 덮어써 존재하지 않는 버프 ID(레벨 번호 없음)와 2/3/2/3/2턴이 생성 파일에 들어갔다. 생성 파일과 시트를 `_1`~`_5`, 2턴으로 되돌린다. 새 수치 결정 없음(Claude 판단: 회귀 버그 수정).",
+  "source": {"product": "claude", "reference": "MAA-018 original: design/workshop/intents/20261023-approved-test-release.json (preserved user event 213337c29af09e22d28b7f0289caf84b72fe82d91509c8e7e51467515e4fb549); restore in Claude Code session cc3c95a9-aeea-4409-9feb-eb162a738694, 2026-10-28", "session_id": "cc3c95a9-aeea-4409-9feb-eb162a738694", "message_id": null, "event_id": "213337c29af09e22d28b7f0289caf84b72fe82d91509c8e7e51467515e4fb549"},
+  "files": ["effects/rebalance_man_at_arms.effects.darkest", "heroes/man_at_arms/man_at_arms.effects_edit.txt", "design/changes/man_at_arms.md"],
+  "supersedes": []
+}

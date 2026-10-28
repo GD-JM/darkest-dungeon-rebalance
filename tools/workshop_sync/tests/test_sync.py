@@ -7,7 +7,7 @@ from unittest.mock import patch
 import sys
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from common import LANGUAGES, read_json, sha256, write_json
-from release import load_intents, validate_editor, is_game_file, next_version, merge_editorial, apply_description_patches, inherit_published_editorial
+from release import load_intents, validate_editor, is_game_file, next_version, merge_editorial, apply_description_patches, inherit_published_editorial, editor_diff, hero_gameplay_changed
 from sync import publish, publish_batch, verify_public, PublicRateLimited, once, metadata_with_marker, verify_phase, relevant
 from steam import SteamError, SubmissionUnknown
 
@@ -184,6 +184,26 @@ class SyncTests(unittest.TestCase):
         source = self.root/'source'
         inherit_published_editorial(source, HistoryGit(), 'a'*40, 'b'*40, {'version':'2.5.7','job':str(prior)}, self.root)
         self.assertEqual((source/'design/workshop/description_en.txt').read_text(encoding='utf-8'), texts['b'])
+
+    def test_editor_diff_omits_only_duplicated_or_non_runtime_hunks(self):
+        # WS-EDITOR-005
+        def part(path, body='+x\n'):
+            return f'diff --git a/{path} b/{path}\n--- a/{path}\n+++ b/{path}\n@@ -1 +1 @@\n{body}'
+        kept = [part('heroes/jester/jester.info.darkest'), part('design/workshop/why.json'), part('effects/rebalance_jester.effects.darkest')]
+        omitted = [part('design/changes/jester.md'), part('design/workshop/intents/a.json'), part('heroes/jester/jester.effects_edit.txt'),
+                   part('design/workshop/description_en.txt'), part('design/workshop/i18n/description_french.txt')]
+        self.assertEqual(editor_diff(''.join(kept + omitted)), ''.join(kept))
+
+    def test_hero_data_only_for_gameplay_changes(self):
+        # WS-EDITOR-005: borrowed riposte line, comments and animation do not pull the full hero files.
+        def part(path, *lines):
+            return f'diff --git a/{path} b/{path}\n--- a/{path}\n+++ b/{path}\n@@ -1 +1 @@\n' + ''.join(l + '\n' for l in lines)
+        riposte = (part('heroes/leper/leper.info.darkest', '+riposte_skill: .id "riposte1"', '+// SYS-105 note', '-// old note')
+                   + part('heroes/leper/leper.art.darkest', '+combat_skill: .id "riposte1"'))
+        self.assertFalse(hero_gameplay_changed(riposte, 'leper'))
+        real = riposte + part('effects/rebalance_leper.effects.darkest', '+effect: .name "RB LEP X"')
+        self.assertTrue(hero_gameplay_changed(real, 'leper'))
+        self.assertFalse(hero_gameplay_changed(real, 'jester'))
 
     def test_editing_sheet_is_not_runtime_payload(self):
         self.assertFalse(is_game_file('heroes/jester/jester.effects_edit.txt'))
