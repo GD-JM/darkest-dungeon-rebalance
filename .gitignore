@@ -2,3 +2,7 @@ modfiles.txt
 Thumbs.db
 *.bak
 __pycache__/
+
+# Darkest Refined branding: Red Hook official art and generated images stay local (BRAND_STYLE.md §8)
+design/branding/source_art/
+design/branding/darkest_refined_draft/

@@ -1,0 +1,78 @@
+{
+ "_doc": "렌더 목록. layout = BRAND_STYLE.md의 템플릿 이름. art = brand_art.json 키. 문구는 플레이어용 영어(내부 ID 금지), 수치는 main 카드 기준. out = 출력 파일명(darkest_refined_draft/ 아래).",
+ "renders": [
+  {"out": "preview_darkest_refined.png", "layout": "square_comic_grid",
+   "title": ["DARKEST", "REFINED"], "tagline": "Familiar heroes. New possibilities.", "footer": "HERO REBALANCE & REWORKS",
+   "art": ["crusader_army", "bounty_door", "jester_masks", "flagellant_cross"]},
+
+  {"out": "intro_1_healing.png", "layout": "panel_comic", "title": "HEALING, SHARED",
+   "lead": "No single healer has to carry the party. Recovery and stress relief are spread across the roster.",
+   "items": [["Crusader · Battle Heal", "Heals 3–4 (6–7 at level 5) and hardens the target's armor."],
+             ["Arbalest · Bandage & Rallying Flare", "The bandage cures bleed; the flare relieves 3–5 stress for the whole party."],
+             ["Antiquarian · Fortifying Vapours", "Amplifies every heal the target receives, +20–40%, stacking."],
+             ["Man-at-Arms · Bolster", "A repeatable party stress heal that steadies the line."]],
+   "art": ["arbalest_fire", "antiquarian_knife"]},
+
+  {"out": "intro_2_armor.png", "layout": "panel_comic", "title": "BREAK THE ARMOR",
+   "lead": "Support opens armored enemies, and physical attackers finish what it starts.",
+   "items": [["Occultist · Weakening Curse", "Enemy PROT −25 to −35% for 3 turns."],
+             ["Shieldbreaker · Puncture", "Pierces guard and cuts PROT by 30–40%."],
+             ["Leper · Sunder", "The fallen king leads the charge: PROT −30 to −50% on the front rank."],
+             ["Vestal · Illumination", "Strips dodge and armor and reveals the hidden, from any rank."]],
+   "art": ["occultist_flame", "shieldbreaker_mask"]},
+
+  {"out": "intro_3_builds.png", "layout": "panel_poster", "title": "ANOTHER WAY TO PLAY",
+   "lead": "Familiar heroes gain new ranks, roles and reasons to bring a different fourth skill.",
+   "items": [["Highwayman · Tracking Shot", "Readies a riposte without stepping forward."],
+             ["Jester · Solo & Inspiring Tune", "Solo from any rank, Inspiring Tune from rank 2."],
+             ["Vestal · Mace Bash", "A front-rank Vestal can now heal herself as she fights."],
+             ["Abomination · Transform", "Stress he keeps in check with Absolution becomes the beast's firepower."]],
+   "art": "poster_highwayman"},
+
+  {"out": "intro_4_refined.png", "layout": "panel_comic", "title": "REFINED, NOT REINVENTED",
+   "lead": "Every change is tuned inside the original game's own rules, so it never feels foreign.",
+   "items": [["The same tension", "Every buff carries a price. The game stays as hard as you remember."],
+             ["Clear guardrails", "Class trinkets and each hero's official lore set the limits of every change."],
+             ["Evidence, not instinct", "Game data, a comparison model and real play decide the numbers."],
+             ["Built with players", "Every comment is read, and every change keeps a written reason."]],
+   "art": ["wall_group", "vestal_garden"]},
+
+  {"out": "templates/square_keyart.png", "layout": "square_keyart",
+   "title": ["DARKEST", "REFINED"], "tagline": "Familiar heroes. New possibilities.", "footer": "HERO REBALANCE & REWORKS",
+   "art": "poster_highwayman"},
+
+  {"out": "templates/square_triptych.png", "layout": "square_triptych",
+   "title": ["DARKEST", "REFINED"], "tagline": "Familiar heroes. New possibilities.", "footer": "HERO REBALANCE & REWORKS",
+   "art": ["poster_hellion", "keyart_ancestor", "poster_highwayman"]},
+
+  {"out": "templates/hero_spotlight_hellion.png", "layout": "hero_spotlight", "hero": "HELLION",
+   "tagline": "She never tires. Now neither does her kit.",
+   "rows": [["THE PROBLEM", "Her strongest swings exhausted her, at odds with a warrior whose lore says she never tires."],
+            ["WHAT STAYS", "A relentless front-line berserker who wins through pressure."],
+            ["THE CHANGE, AND ITS PRICE", "Breakthrough and Bleed Out no longer exhaust her. Adrenaline Rush now heals 3–7 instead of boosting her attacks."],
+            ["NEW WAYS TO PLAY", "Barbaric YAWP! has no use limit and weakens every enemy: shout, heal herself and keep swinging."]],
+   "art": "poster_hellion"},
+
+  {"out": "templates/hero_spotlight_abomination.png", "layout": "hero_spotlight", "hero": "ABOMINATION",
+   "tagline": "Restraint becomes the beast's power.",
+   "rows": [["THE PROBLEM", "Transforming dumped stress on every ally, so the beast often stayed in its chains."],
+            ["WHAT STAYS", "A cursed outsider: controlled in human form, explosive as the beast."],
+            ["THE CHANGE, AND ITS PRICE", "He carries the cost himself: self stress +12, allies only +5. Transforming heals 8–12 and the beast gains CRIT +6–10%."],
+            ["NEW WAYS TO PLAY", "Keep your stress in check with Absolution, then spend it to unleash the beast."]],
+   "art": "abomination_sigil"},
+
+  {"out": "templates/banner_wide.png", "layout": "banner", "title": "WHAT'S NEW",
+   "subtitle": "Update 2.5.9  ·  Hero Rebalance & Reworks", "art": "crusader_army"},
+
+  {"out": "templates/update_card.png", "layout": "update", "title": "UPDATE 2.5.9",
+   "subtitle": "The Antiquarian earns her place, and support skills reach further.",
+   "items": ["Antiquarian rework: weak until Champion, then her class trinkets lift the whole party.",
+             "Crusader's Battle Heal now also raises the target's PROT.",
+             "Arbalest's Rallying Flare relieves 3–5 stress for the party.",
+             "Duelist and Runaway play as vanilla while their changes are being tested."],
+   "art": "antiquarian_master"},
+
+  {"out": "templates/quote_card.png", "layout": "quote",
+   "quote": "Every hero deserves a reason to join the party.", "attribution": "DARKEST REFINED", "art": "wall_losing"}
+ ]
+}

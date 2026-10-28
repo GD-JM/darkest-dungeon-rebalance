@@ -1,0 +1,48 @@
+{
+  "id": "BRAND-20261029-DARKEST-REFINED-STYLE",
+  "decision": "adopted",
+  "original_quote": "코드랑 문서는 커밋해(깃헙 실제로 새로 판거야?) 실제로 스팀 창작마당에 이거 나온거 이미지 다 너무 좋거든 진짜처럼 만들어서 비공개로 올리자",
+  "context_quotes": [
+    {
+      "speaker": "user",
+      "quote": "응 굉장히 만족해 좋은 브랜딩이야 Darkest Refined로 가자 실제 게임 캐릭터 이미지로 대표 이미지랑 소개 이미지, 소개글까지 더미 시안 만들어서 보여줘",
+      "source": "Codex conversation pasted by the user into claude session 29a675d2-6792-4e0a-b0de-212cae3f4b77, 2026-10-28"
+    },
+    {
+      "speaker": "user",
+      "quote": "공식 코믹스까지 찾아봐 쓸 수 있는건 다 찾아보고 판단해보자",
+      "source": "claude session 29a675d2-6792-4e0a-b0de-212cae3f4b77, 2026-10-29"
+    },
+    {
+      "speaker": "user",
+      "quote": "응 받아서 코믹스 시안 만들어줘 지금까지 이미지 다 보고 가장 잘 어울릴만한 거  각각 선별해서 만들면 될 듯?",
+      "source": "claude session 29a675d2-6792-4e0a-b0de-212cae3f4b77, 2026-10-29"
+    },
+    {
+      "speaker": "user",
+      "quote": "포스터도 넣어서 다시 만들어줘 일단 만들 수 있는 시안과 레이아웃은 다 만들어줘 나중에 내용 넣으면 되니까  그리고 이 레이아웃의 폰트라든지 배치라든지 아트스타일이라든지 이런거를 고정해서 원칙으로 md로 박아두고 나중에 프롬프트에 넣으면 똑같은 아트 스타일로 이미지 뽑고 수정이나 이런거 할 수 있게까지 만들어줘",
+      "source": "claude session 29a675d2-6792-4e0a-b0de-212cae3f4b77, 2026-10-29"
+    }
+  ],
+  "rationale_ko": "리브랜딩 Darkest Refined의 이미지 제작 체계를 저장소에 고정한다. BRAND_STYLE.md(색·글꼴·템플릿 9종 좌표·아트/문구/파일 원칙·프롬프트 블록), brand_render.py(렌더 엔진), brand_art.json/brand_content.json(아트·문구 데이터), comic_panels.py(코믹스 칸 좌표 찾기), make_mock_page.py(창작마당 목업), spine21.py(게임 전신 조립, 보조), upload_private_draft.py + private_draft_item.json(비공개 시안 아이템 3828956017). 공식 아트(source_art)와 생성 이미지는 Red Hook 저작물이라 .gitignore로 제외. 게임 데이터·공개 창작마당 변경 없음.",
+  "source": {
+    "product": "claude",
+    "reference": "Claude Code session 29a675d2-6792-4e0a-b0de-212cae3f4b77, 2026-10-29",
+    "session_id": "29a675d2-6792-4e0a-b0de-212cae3f4b77",
+    "message_id": null,
+    "event_id": null
+  },
+  "files": [
+    ".gitignore",
+    "design/branding/BRAND_STYLE.md",
+    "design/branding/brand_render.py",
+    "design/branding/brand_art.json",
+    "design/branding/brand_content.json",
+    "design/branding/comic_panels.py",
+    "design/branding/make_mock_page.py",
+    "design/branding/spine21.py",
+    "design/branding/upload_private_draft.py",
+    "design/branding/private_draft_item.json"
+  ],
+  "supersedes": []
+}
