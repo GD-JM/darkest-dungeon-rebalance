@@ -293,7 +293,9 @@ def edit_release(source, job, config, sha, previous, changed, diff, intents, pre
                 if (source / rel).exists():
                     context['hero_data'][hero][rel] = (source / rel).read_text(encoding='utf-8-sig')
     encoded = json.dumps(context, ensure_ascii=False)
-    if len(encoded) > 650_000:
+    # WS-EDITOR-004: the default bound stays 650,000; a larger value is a per-release explicit approval
+    # set in the local config and removed after that release.
+    if len(encoded) > int(config.get('editor_evidence_bound', 650_000)):
         raise ValueError('Release evidence exceeds the configured review bound; split or review this release explicitly')
     editor_dir = job / 'editor'
     editor_dir.mkdir(exist_ok=True)
