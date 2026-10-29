@@ -692,14 +692,12 @@
  },
  "jester|inspiring_tune": {
   "ids": [
-   "JES-003"
+   "JES-003",
+   "JES-014"
   ],
-  "principles": [
-   "G-03",
-   "G-05"
-  ],
-  "en": "This makes a rank-2 Jester possible: after stepping forward with Dirk Stab he can still heal stress without spending a turn moving back. The Jester should stay the best stress healer; the fix for over-reliance on him is giving other heroes more alternatives.",
-  "ko": "2열 광대를 가능하게 한다. 단검 찌르기로 앞으로 나간 뒤에도 뒤로 물러나는 행동 없이 스트레스를 회복할 수 있다. 스트레스 회복은 광대가 가장 좋아야 하며, 쏠림은 다른 영웅에게 대체 수단을 늘려 푼다."
+  "principles": [],
+  "en": "Inspiring Tune now works only from rank 3, so the stress heal ties the Jester to one position.",
+  "ko": "격려의 선율은 이제 3열에서만 쓸 수 있어, 스트레스 회복을 위해 광대가 한 자리를 지켜야 합니다."
  },
  "jester|solo": {
   "ids": [

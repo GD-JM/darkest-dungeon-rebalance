@@ -1,0 +1,22 @@
+{
+  "id": "JES-014",
+  "decision": "adopted",
+  "original_quote": "광대 스트레스 힐 3열에서만 되게 수정",
+  "rationale_ko": "격려의 선율(광대 스트레스 회복) 사용 열을 2/3/4 → 3으로. 바닐라(3/4)보다 좁다. JES-003의 2열 사용 근거를 대체. 이유는 원문에 없어 카드·이유 문장은 사실만 적었다.",
+  "source": {
+    "product": "claude",
+    "reference": "Claude Code session 29a675d2-6792-4e0a-b0de-212cae3f4b77, 2026-10-29",
+    "session_id": "29a675d2-6792-4e0a-b0de-212cae3f4b77",
+    "message_id": null,
+    "event_id": null
+  },
+  "files": [
+    "heroes/jester/jester.info.darkest",
+    "design/changes/jester.md",
+    "design/workshop/hero_cards.json",
+    "design/workshop/why.json"
+  ],
+  "supersedes": [
+    "JES-003"
+  ]
+}
