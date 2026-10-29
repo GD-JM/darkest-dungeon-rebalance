@@ -33,8 +33,13 @@ TITLES = {'english': 'Darkest Refined — Hero Rebalance & Reworks',
 
 
 def description(lang):
-    f = DRAFT / ('description_en.txt' if lang == 'english' else 'description_ko.txt' if lang == 'koreana'
-                 else f'i18n/description_{lang}.txt')
+    """꾸민 설명(build_descriptions.py → final/, Steam 이미지 주소로 만든 것)이 있으면 그것, 없으면 원문."""
+    final = DRAFT / 'final' / f'description_{lang}.txt'
+    if final.exists() and 'images.steamusercontent.com' in final.read_text(encoding='utf-8'):
+        f = final
+    else:
+        f = DRAFT / ('description_en.txt' if lang == 'english' else 'description_ko.txt' if lang == 'koreana'
+                     else f'i18n/description_{lang}.txt')
     text = f.read_text(encoding='utf-8').strip()
     assert len(text.encode('utf-8')) + text.count(chr(10)) < 8000, lang  # Steam 한도: 줄바꿈은 CRLF 2바이트
     return text

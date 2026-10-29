@@ -8,6 +8,7 @@
 ```
 python design/branding/brand_render.py            # brand_content.json 전부 렌더
 python design/branding/brand_render.py intro_2    # out 이름에 intro_2가 들어간 것만
+python design/branding/build_descriptions.py --local  # 꾸민 설명(목업용)
 python design/branding/make_mock_page.py          # 창작마당 모양 목업(HTML)
 ```
 
@@ -86,6 +87,23 @@ python design/branding/make_mock_page.py          # 창작마당 모양 목업(H
 
 **hero_spotlight 4단 순서(영웅 상세 설명의 틀)**: THE PROBLEM(원작의 문제) → WHAT STAYS(지키는 정체성) → THE CHANGE, AND ITS PRICE(변경과 대가) → NEW WAYS TO PLAY(가능해진 운용). 영웅별 개별 페이지·설명문도 같은 순서를 쓴다(+ 검증과 피드백).
 
+## 5-B. 설명란 꾸밈 (창작마당 설명 BBCode + 이미지)
+
+참고한 창작마당 사례(2026-10-29 조사): DD Tweaks — 섹션마다 1100×120 머리 이미지, 공식 오리진 코믹스를 설명 안에 크레딧과 함께 삽입, 1100폭 인포그래픽 / Marvin Seo 클래스 모드 — 390×80 링크 배너, 85×85 초상 아이콘 줄. 모두 이미지는 Steam 이미지 서버(images.steamusercontent.com).
+
+| 레이아웃 | 크기 | 구성 |
+|---|---|---|
+| `title_banner` | 1100×340 | 설명 맨 위 간판: 오른쪽 700px 그림 · 왼쪽 DARKEST(66)/REFINED(96) · 규칙선 · 대표 문구 |
+| `section_header` | 1100×120 | 섹션 머리: 오른쪽 560px에 섹션마다 다른 B컷(왼쪽 560px 바탕색, 300px 풀림) · 마름모 + 금색 제목(58, 최대 폭 620) · 4px 안쪽 금테 + 12px 가는 테 |
+| `button` | 300×66 | 링크 버튼(한 줄에 두 개): 금테 + 가운데 제목(30) + 양옆 마름모 |
+| `roster_strip` | 1100×(줄 수) | 바뀐 영웅 초상 9명씩: 길드 헤더 원화의 얼굴 쪽 정사각 104px, 만화 칸 테두리, 이름(Palatino 16) |
+
+**설명 구조(모든 언어 공통 순서)**: 간판 → 소개 문단 → [조정 원칙] → [해볼 것 + 소개 이미지 3] → [두 개편 + 스포트라이트 2] → [이미지 안내 + 초상 줄] → [피드백 + 버튼 2(업데이트 기록·댓글)] → [설치] → [크레딧 + 출처 문장].
+- 섹션 머리 이미지는 영어 하나로 모든 언어에 쓴다(제목 글꼴 DwarvenAxe에 한글·키릴·한자가 없다). 본문은 언어별.
+- 원문은 `darkest_refined_draft/description_*.txt`·`i18n/`에 [h1]/[h2]로 쓰고, `build_descriptions.py`가 이미지로 바꿔 `final/`에 만든다. 원문에서 [h2]는 정확히 6개, 위 순서.
+- 8000바이트(줄바꿈 2바이트, 목표 7900) 안에 안 들면 선택 이미지를 소개 → 스포트라이트 → 초상 줄 순서로 뺀다. 간판·섹션 머리·버튼·크레딧은 항상 남긴다.
+- 이미지는 비공개 보관 아이템(`upload_desc_assets.py`, 기록 `private_assets_item.json`)에 올리고 Steam 주소를 `desc_asset_urls.json`에 저장해 [img]에 쓴다. 공개 전환 때도 같은 주소를 쓴다.
+
 ## 6. 아트 원칙
 
 1. **출처**: Red Hook Studios 공식 아트만 쓴다 — 영웅 오리진 코믹스 18편(결투가·도망자 없음), 홍보 포스터(야만인·노상강도), 키아트, 초기 배경화면, 게임 내 원화. `source_art/`에 보관(공식 위키 darkestdungeon.wiki.gg에서 사용자가 직접 저장).
@@ -136,5 +154,7 @@ Darkest Refined 브랜드 이미지를 만들거나 고친다. 규칙은 mods/Re
 | `make_mock_page.py` | 창작마당 페이지 목업 HTML |
 | `spine21.py` | 게임 전투 자세 전신 조립(보조) |
 | `upload_private_draft.py` | 비공개 시안 아이템 3828956017 업로드. 기본 = 실제 공개 페이지처럼(언어별 제목·10개 언어 설명 `darkest_refined_draft/description_*.txt`·`i18n/`, 갤러리 = 소개 4 + 현재 영웅 카드), `--templates` = 템플릿 견본 추가. 슬롯 제자리 교체, 기록 `private_draft_item.json` |
+| `build_descriptions.py` | 원문 설명 → 꾸민 설명(`final/`). `--local`은 목업용 상대 경로 |
+| `upload_desc_assets.py` | 설명 이미지 보관용 비공개 아이템 업로드 → `desc_asset_urls.json` |
 | `source_art/` | 원본 공식 아트(커밋 안 함) |
 | `darkest_refined_draft/` | 결과물(커밋 안 함) |

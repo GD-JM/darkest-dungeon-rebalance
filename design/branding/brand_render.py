@@ -462,8 +462,96 @@ def quote(c):
     return grain(im, 7)
 
 
+# ── 설명란 꾸밈 (BRAND_STYLE.md §5-B) ───────────────────────────────────
+# 창작마당 설명은 가로 약 636px로 줄여 보이므로 2배 가까운 해상도(1100)로 만든다.
+def section_header(c):
+    """1100×120: 섹션 머리 띠. 왼쪽 금색 제목, 오른쪽에 섹션마다 다른 B컷이 어둠에서 떠오른다."""
+    W, H = 1100, 120
+    im = Image.new('RGB', (W, H), INK)
+    im.paste(fit(c['art'], 560, H), (W - 560, 0))
+    im = dark_left(im, 560, 300)
+    d = ImageDraw.Draw(im)
+    d.polygon([(30, 60), (40, 50), (50, 60), (40, 70)], fill=GOLD)
+    title(im, (66, 62), c['title'], 58, anchor='lm', max_width=620)
+    frame(im, 4, inner=False)
+    d.rectangle((12, 12, W - 13, H - 13), outline=FRAME_IN, width=1)
+    return grain(im, 6)
+
+
+def title_banner(c):
+    """1100×340: 설명 맨 위 간판. 그림 위에 DARKEST / REFINED와 대표 문구."""
+    W, H = 1100, 340
+    im = Image.new('RGB', (W, H), INK)
+    im.paste(fit(c['art'], 700, H), (W - 700, 0))
+    im = dark_left(im, 420, 300)
+    d = ImageDraw.Draw(im)
+    title(im, (60, 104), c['title'][0], 66, anchor='lm', tracking=3)
+    title(im, (60, 196), c['title'][1], 96, anchor='lm', tracking=3)
+    rule(d, 60, 470, 262, diamond=False)
+    d.text((60, 296), c['tagline'], font=font('palai', 28), fill=IVORY, anchor='lm')
+    credit(d, (W - 22, H - 18), size=13)
+    frame(im, 6, inner=False)
+    return grain(im, 6)
+
+
+def button(c):
+    """300×66: 링크 버튼(설명란 한 줄에 두 개). 어두운 바탕, 금테, 가운데 금색 글자, 양옆 마름모."""
+    W, H = 300, 66
+    im = canvas(W, H, (-W * 0.2, -H * 0.5, W * 1.2, H * 1.6))
+    d = ImageDraw.Draw(im)
+    title(im, (W // 2, H // 2 + 2), c['title'], 30, max_width=W - 76)
+    for x in (20, W - 20):
+        d.polygon([(x, H // 2 - 7), (x + 7, H // 2), (x, H // 2 + 7), (x - 7, H // 2)], fill=GOLD)
+    d.rectangle((2, 2, W - 3, H - 3), outline=FRAME, width=3)
+    d.rectangle((8, 8, W - 9, H - 9), outline=FRAME_IN, width=1)
+    return grain(im, 5)
+
+
+FACE_X = {'crusader': 0.56, 'arbalest': 0.5, 'antiquarian': 0.42, 'abomination': 0.36, 'musketeer': 0.46, 'occultist': 0.46,
+          'leper': 0.26, 'shieldbreaker': 0.42, 'jester': 0.72, 'highwayman': 0.47, 'vestal': 0.36, 'man_at_arms': 0.5,
+          'plague_doctor': 0.44, 'hellion': 0.47, 'houndmaster': 0.42, 'grave_robber': 0.66, 'bounty_hunter': 0.6, 'flagellant': 0.5}
+
+
+def face(hero, size):
+    """게임 길드 헤더 원화(만화풍)에서 얼굴 쪽 정사각을 잘라 밝힌다."""
+    import glob
+    from PIL import ImageEnhance
+    path = (glob.glob(os.path.join(G, 'heroes', hero, hero + '_guild_header.png')) +
+            glob.glob(os.path.join(G, 'dlc', '**', 'heroes', hero, hero + '_guild_header.png'), recursive=True))[0]
+    a = Image.open(path).convert('RGBA')
+    a = Image.alpha_composite(Image.new('RGBA', a.size, INK + (255,)), a).convert('RGB')
+    side = int(a.height * 0.5)
+    cx = int(a.width * FACE_X.get(hero, 0.5))
+    x0 = max(0, min(a.width - side, cx - side // 2))
+    f = a.crop((x0, 0, x0 + side, side)).resize((size, size), Image.LANCZOS)
+    return ImageEnhance.Brightness(ImageEnhance.Contrast(f).enhance(1.1)).enhance(1.9)
+
+
+def roster_strip(c):
+    """1100×H: 바뀐 영웅 초상 줄(9명씩). 칸 테두리는 만화 칸과 같은 규칙."""
+    W, per, size, gap = 1100, 9, 104, 14
+    names = c['heroes']
+    rows = (len(names) + per - 1) // per
+    H = 30 + rows * (size + 40) + 10
+    im = canvas(W, H, (W * 0.1, -H * 0.3, W * 0.9, H * 1.3))
+    d = ImageDraw.Draw(im)
+    fn = font('pala', 16)
+    for i, (hero, label) in enumerate(names):
+        r, k = divmod(i, per)
+        n_row = min(per, len(names) - r * per)
+        x0 = (W - (n_row * size + (n_row - 1) * gap)) // 2 + k * (size + gap)
+        y0 = 26 + r * (size + 40)
+        im.paste(face(hero, size), (x0, y0))
+        d.rectangle((x0 - 1, y0 - 1, x0 + size, y0 + size), outline=(8, 6, 5), width=3)
+        d.rectangle((x0 + 2, y0 + 2, x0 + size - 3, y0 + size - 3), outline=CELL_LINE, width=1)
+        d.text((x0 + size // 2, y0 + size + 16), label, font=fn, fill=BODY, anchor='mm')
+    frame(im, 4, inner=False)
+    return grain(im, 5)
+
+
 LAYOUTS = {f.__name__: f for f in (square_comic_grid, square_keyart, square_triptych, panel_comic, panel_poster,
-                                   hero_spotlight, banner, update, quote)}
+                                   hero_spotlight, banner, update, quote, section_header, title_banner, button,
+                                   roster_strip)}
 
 
 def main(only=None):

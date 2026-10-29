@@ -1,0 +1,30 @@
+{
+  "id": "BRAND-20261029-DESC-DECOR",
+  "decision": "adopted",
+  "original_quote": "템플릿도 같이 올려줘 첨부 이미지처럼 설명도 꾸밀 수가 있어 너가 창작마당 둘러보면서 단순 글만 쓴거 말고 이미지랑 어울리게 설명란 꾸민것들 찾아서 우리 스타일에 어울릴만한 것들 찾아서 적용해봐봐",
+  "context_quotes": [
+    {
+      "speaker": "user",
+      "quote": "다시 시도해 주세요",
+      "source": "claude session 29a675d2-6792-4e0a-b0de-212cae3f4b77, 2026-10-29 (after interrupted session)"
+    }
+  ],
+  "rationale_ko": "창작마당 설명란을 이미지로 꾸미는 체계. 조사한 사례(DD Tweaks 1100×120 섹션 머리·공식 코믹스 삽입, Marvin Seo 링크 배너·초상 아이콘 줄)를 우리 스타일로 옮김: brand_render.py 템플릿 4종(title_banner, section_header, button, roster_strip), build_descriptions.py(원문 [h1]/[h2] → 이미지, 8000바이트 예산 안에서 선택 이미지 자동 제외), upload_desc_assets.py(설명 이미지 보관용 비공개 아이템), make_mock_page.py 이미지 표시, upload_private_draft.py는 꾸민 설명 사용, BRAND_STYLE.md §5-B. 게임 데이터·공개 창작마당 변경 없음.",
+  "source": {
+    "product": "claude",
+    "reference": "Claude Code session 29a675d2-6792-4e0a-b0de-212cae3f4b77, 2026-10-29",
+    "session_id": "29a675d2-6792-4e0a-b0de-212cae3f4b77",
+    "message_id": null,
+    "event_id": null
+  },
+  "files": [
+    "design/branding/brand_render.py",
+    "design/branding/brand_content.json",
+    "design/branding/build_descriptions.py",
+    "design/branding/upload_desc_assets.py",
+    "design/branding/upload_private_draft.py",
+    "design/branding/make_mock_page.py",
+    "design/branding/BRAND_STYLE.md"
+  ],
+  "supersedes": []
+}

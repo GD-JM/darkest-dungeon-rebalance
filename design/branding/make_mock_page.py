@@ -9,6 +9,7 @@ CARDS_SRC = sys.argv[1] if len(sys.argv) > 1 else None
 
 def bbcode(text):
     t = html.escape(text.strip())
+    t = re.sub(r'\[img\](.*?)\[/img\]', r'<img class="bbimg" src="\1">', t)
     t = re.sub(r'\[url=([^\]]+)\](.*?)\[/url\]', r'<a href="\1">\2</a>', t)
     for tag, rep in (('h1', 'div class="bb_h1"'), ('h2', 'div class="bb_h2"'), ('b', 'b'), ('i', 'i')):
         t = t.replace(f'[{tag}]', f'<{rep}>').replace(f'[/{tag}]', f'</{rep.split()[0]}>')
@@ -34,8 +35,12 @@ def main():
             shutil.copy(f, os.path.join(D, 'cards', os.path.basename(f)))
     gallery = ['preview_darkest_refined.png'] + sorted(os.path.basename(f) for f in glob.glob(os.path.join(D, 'intro_*.png')))
     gallery += ['cards/' + os.path.basename(f) for f in sorted(glob.glob(os.path.join(D, 'cards', '*.png')))]
-    en = bbcode(open(os.path.join(D, 'description_en.txt'), encoding='utf-8').read())
-    ko = bbcode(open(os.path.join(D, 'description_ko.txt'), encoding='utf-8').read())
+    # 꾸민 설명(build_descriptions.py → final/)이 있으면 그것을 보여준다. 설명 속 이미지는 상대 경로라 brand-mock 서버로 연다.
+    def pick(lang, short):
+        f = os.path.join(D, 'final', f'description_{lang}.txt')
+        return f if os.path.exists(f) else os.path.join(D, f'description_{short}.txt')
+    en = bbcode(open(pick('english', 'en'), encoding='utf-8').read())
+    ko = bbcode(open(pick('koreana', 'ko'), encoding='utf-8').read())
     gallery = [data_uri(g) for g in gallery]
     thumbs = ''.join(f'<img class="thumb{" on" if i == 0 else ""}" src="{g}" data-i="{i}">' for i, g in enumerate(gallery))
     page = f'''<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -56,6 +61,7 @@ body{{margin:0;background:var(--bg);color:var(--text);font:14px/1.6 "Segoe UI",A
 .desc{{background:var(--panel);padding:16px 18px;margin-top:0}} .desc a{{color:var(--accent)}}
 .bb_h1{{font-size:22px;color:#fff;margin:0 0 6px}} .bb_h2{{font-size:17px;color:var(--accent);margin:18px 0 6px;font-weight:600}}
 ul{{margin:4px 0 4px 18px;padding:0}} li{{margin:4px 0}}
+.bbimg{{max-width:100%;vertical-align:middle}} .desc{{max-width:636px}}
 </style></head><body><div class="wrap">
 <div class="note">로컬 시안 미리보기입니다. 창작마당에 올라가지 않았습니다. 대표 이미지·소개 이미지 4장·소개글은 새 시안이고, 영웅 비교 이미지는 현재 배포본(2.5.8) 그대로입니다.</div>
 <div class="crumbs">Darkest Dungeon &gt; Workshop &gt; Items</div>
