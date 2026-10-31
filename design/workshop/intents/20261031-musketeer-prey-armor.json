@@ -1,0 +1,27 @@
+{
+  "id": "MUS-123",
+  "decision": "adopted",
+  "original_quote": "총사 사냥감 지정은 20~30으로 올리고 의도 주석 남겨서 커밋까지만 해 푸시는 하지 말고.",
+  "rationale_ko": "표식과 방어 감소를 통해 물리 영웅의 방어 대응을 돕는 총사 역할을 강화한다. 기존 성장 간격을 유지하고 전 레벨10%p 상향한다. 푸시 금지.",
+  "source": {
+    "product": "codex",
+    "reference": "local-knowledge event 469d013087daf0a738907ab440c96b86f3ab16de9ba5e47adcfb61f61ea3a008",
+    "session_id": "01a10741-76da-7e43-9500-98474ab3f383",
+    "message_id": "msg_01a19254-76ed-70b0-bf0e-b55a28c4d7c7",
+    "event_id": "469d013087daf0a738907ab440c96b86f3ab16de9ba5e47adcfb61f61ea3a008"
+  },
+  "files": [
+    "heroes/musketeer/musketeer.info.darkest",
+    "effects/rebalance_musketeer.effects.darkest",
+    "design/changes/musketeer.md",
+    "design/workshop/hero_cards.json",
+    "design/workshop/why.json"
+  ],
+  "supersedes": [
+    "MUS-118 PROT reduction 10/12.5/15/17.5/20 only"
+  ],
+  "not_adopted": [
+    "Runaway ranks/movement/Hearthlight/Firefly rework",
+    "Antiquarian/Vestal pending removals"
+  ]
+}

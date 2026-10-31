@@ -73,3 +73,14 @@ effect: .name "RB MUS Prey Speed 4" .target "performer" .curio_result_type "posi
 // MUS-105 Mark the Quarry: self speed +3/3/4/4/5 for 3 turns. MUS-118: self accuracy removed.
 effect: .name "RB MUS Prey Speed 5" .target "performer" .curio_result_type "positive" .chance 100% .duration 3 .combat_stat_buff 1 .speed_rating_add 5 .on_hit true .on_miss true
 // MUS-105 Mark the Quarry: self speed +3/3/4/4/5 for 3 turns. MUS-118: self accuracy removed.
+
+effect: .name "RB MUS Prey Armor 1" .target "target" .curio_result_type "negative" .chance 100% .duration 3 .combat_stat_buff 1 .protection_rating_add -20%	.on_hit true .on_miss false .queue true
+// MUS-123 (2026-10-31): Mark the Quarry PROT -20% for 3 turns; stronger armor support for physical allies. Preserve debuff chance and all triggers.
+effect: .name "RB MUS Prey Armor 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3 .combat_stat_buff 1 .protection_rating_add -22.5%	.on_hit true .on_miss false .queue true
+// MUS-123 (2026-10-31): Mark the Quarry PROT -22.5% for 3 turns; stronger armor support for physical allies. Preserve debuff chance and all triggers.
+effect: .name "RB MUS Prey Armor 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3 .combat_stat_buff 1 .protection_rating_add -25%	.on_hit true .on_miss false .queue true
+// MUS-123 (2026-10-31): Mark the Quarry PROT -25% for 3 turns; stronger armor support for physical allies. Preserve debuff chance and all triggers.
+effect: .name "RB MUS Prey Armor 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .combat_stat_buff 1 .protection_rating_add -27.5%	.on_hit true .on_miss false .queue true
+// MUS-123 (2026-10-31): Mark the Quarry PROT -27.5% for 3 turns; stronger armor support for physical allies. Preserve debuff chance and all triggers.
+effect: .name "RB MUS Prey Armor 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .combat_stat_buff 1 .protection_rating_add -30%	.on_hit true .on_miss false .queue true
+// MUS-123 (2026-10-31): Mark the Quarry PROT -30% for 3 turns; stronger armor support for physical allies. Preserve debuff chance and all triggers.

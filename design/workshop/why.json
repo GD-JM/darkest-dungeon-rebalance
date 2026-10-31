@@ -1098,13 +1098,15 @@
  },
  "musketeer|call_the_shot": {
   "ids": [
-   "MUS-105"
+   "MUS-105",
+   "MUS-118",
+   "MUS-123"
   ],
   "principles": [
    "P-19"
   ],
-  "en": "\"This prize is mine!\" She marks her quarry and hurries to prove herself: faster for three turns and deadlier against large monsters.",
-  "ko": "\"이놈은 내 거야!\" 사냥감을 찍고 증명하려 서두른다. 3턴 동안 빨라지고 큰 사냥감에게 치명타가 잘 터진다."
+  "en": "Mark the Quarry marks an enemy and reduces PROT by 20-30% for 3 turns, while giving Musketeer SPD +3-5. Raising the armor reduction from 10-20% makes the setup action more useful for physical allies as well as her own shots. Excess reduction below zero PROT adds no benefit.",
+  "ko": "사냥감 지정은 표식과 방어 감소20~30%p(3턴)를 걸고 총사에게 속도+3~5를 준다. 방어 감소를10~20에서 높여 자신의 사격뿐 아니라 물리 아군을 돕는 준비 행동의 실효성을 강화한다. 방어0 아래의 초과 감소에는 추가 이익이 없다."
  },
  "musketeer|buckshot": {
   "ids": [
