@@ -100,7 +100,8 @@
      "No debuff"
     ],
     "new": [
-     "Target: PROT -5 to -15% (2 turns)"
+     "No debuff at levels 1-4",
+     "Level 5: marks the target (2 turns)"
     ]
    },
    {
@@ -112,7 +113,8 @@
      "Blight resist -20 to -36%"
     ],
     "new": [
-     "Blight 2-4, lasts 3-5 turns",
+     "Blight 2/2/3/3/4",
+     "3 turns; level 5: 5 turns",
      "Blight resist -20 to -30% (3 turns)"
     ]
    },
@@ -124,8 +126,8 @@
      "No heal"
     ],
     "new": [
-     "Self: heal 2-5",
-     "Self: removes mark"
+     "Self: heal 2/2/3/4/5",
+     "Level 5: removes her mark"
     ]
    },
    {
@@ -133,13 +135,13 @@
     "name": "Flashpowder",
     "icon": "four",
     "old": [
-     "One enemy, ranks 1-4",
-     "Target: ACC -10 to -15%"
+     "Target: ACC -10 to -15%",
+     "No burn"
     ],
     "new": [
-     "1 enemy (rank 3-4) -> all 4 at level 5",
-     "DODGE -10 to -15%, MOVE res -20 to -30%",
-     "Burn 1-2; no ACC debuff"
+     "Target: dodge -10 to -15% (2 turns)",
+     "Burn 1/1/2/2/3; no ACC debuff",
+     "Level 5: MOVE res -30% (2 turns)"
     ]
    },
    {
@@ -152,7 +154,8 @@
     ],
     "new": [
      "Heal 1-3 to 3-5",
-     "Healing received +20-40% (3 turns, stacks)"
+     "Healing received +20% (3 turns, stacks)",
+     "Level 5: +40%"
     ]
    },
    {
@@ -174,8 +177,8 @@
      "Guarding ally: no riposte"
     ],
     "new": [
-     "Guarding ally: riposte 3 turns",
-     "Riposte DMG +10-15% (2 turns)"
+     "Level 5: guarding ally ripostes (3 turns)",
+     "Level 5: riposte DMG +15% (2 turns)"
     ]
    }
   ]
