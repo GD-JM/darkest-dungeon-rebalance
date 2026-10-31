@@ -1,0 +1,29 @@
+{
+  "id": "CRU-013",
+  "decision": "adopted",
+  "original_quote": "광신적 고발은 피해 -50에 화상 11222. 커밋까지만 해 푸시는 하지 말고",
+  "rationale_ko": "광신적 고발의 즉시 피해를 낮추고 화상 1/1/2/2/2로 방어 대응 및 영웅 간 화상 연계를 제공한다. 사용자 지정은 커밋까지이며 푸시는 금지다.",
+  "source": {
+    "product": "codex",
+    "reference": "local-knowledge event d6c6446c367f825dab76d48d68e491f46e15b64e49e02d44647d5bd4b3e3a411",
+    "session_id": "01a10741-76da-7e43-9500-98474ab3f383",
+    "message_id": "msg_01a1911f-6a09-7b63-9c1a-575477031ef2",
+    "event_id": "d6c6446c367f825dab76d48d68e491f46e15b64e49e02d44647d5bd4b3e3a411"
+  },
+  "files": [
+    "heroes/crusader/crusader.info.darkest",
+    "heroes/crusader/crusader.effects_edit.txt",
+    "design/changes/crusader.md",
+    "design/workshop/hero_cards.json",
+    "design/workshop/why.json"
+  ],
+  "supersedes": [
+    "CRU-002 damage -40% only; ACC 90 retained"
+  ],
+  "not_adopted": [
+    "Musketeer PROT 20-30",
+    "Hand of Light Burn",
+    "Runaway rank/movement redesign",
+    "Controlled Burn trigger nerf (on hold)"
+  ]
+}

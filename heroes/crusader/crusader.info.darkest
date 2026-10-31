@@ -21,11 +21,12 @@ combat_skill: .id "smite" .level 3 .type "melee" .atk 100% .dmg 0% .crit 3% .lau
 combat_skill: .id "smite" .level 4 .type "melee" .atk 105% .dmg 0% .crit 4% .launch 21 .target 12 .is_crit_valid True  .effect "Unholy Killer 5"
 
 
-combat_skill: .id "zealous_accusation" .level 0 .type "ranged" .atk 90% .dmg -40% .crit -4% .launch 21 .target ~12 .is_crit_valid True 
-combat_skill: .id "zealous_accusation" .level 1 .type "ranged" .atk 95% .dmg -40% .crit -3% .launch 21 .target ~12 .is_crit_valid True 
-combat_skill: .id "zealous_accusation" .level 2 .type "ranged" .atk 100% .dmg -40% .crit -2% .launch 21 .target ~12 .is_crit_valid True 
-combat_skill: .id "zealous_accusation" .level 3 .type "ranged" .atk 105% .dmg -40% .crit -1% .launch 21 .target ~12 .is_crit_valid True 
-combat_skill: .id "zealous_accusation" .level 4 .type "ranged" .atk 110% .dmg -40% .crit 0% .launch 21 .target ~12 .is_crit_valid True 
+combat_skill: .id "zealous_accusation" .level 0 .type "ranged" .atk 90% .dmg -50% .crit -4% .launch 21 .target ~12 .is_crit_valid True .effect "RB ANT Flash Burn 1"
+combat_skill: .id "zealous_accusation" .level 1 .type "ranged" .atk 95% .dmg -50% .crit -3% .launch 21 .target ~12 .is_crit_valid True .effect "RB ANT Flash Burn 1"
+combat_skill: .id "zealous_accusation" .level 2 .type "ranged" .atk 100% .dmg -50% .crit -2% .launch 21 .target ~12 .is_crit_valid True .effect "RW Burn 2"
+combat_skill: .id "zealous_accusation" .level 3 .type "ranged" .atk 105% .dmg -50% .crit -1% .launch 21 .target ~12 .is_crit_valid True .effect "RW Burn 2"
+combat_skill: .id "zealous_accusation" .level 4 .type "ranged" .atk 110% .dmg -50% .crit 0% .launch 21 .target ~12 .is_crit_valid True .effect "RW Burn 2"
+// CRU-013 (2026-10-31): 광신적 고발 피해 -40% -> -50%, 화상 1/1/2/2/2. 즉발 피해를 줄이는 대신 방어 대응과 다른 영웅의 화상 연계를 제공한다. 명중90 및 기존 사용열/대상열 유지.
 // CRU-002 [trace 2026-10-05] Improve selection of the ranged two-target skill relative to Smite.
 
 // 레인지 표준 명중 90으로 바꿈 85 -> 90 이유는 선택성 늘리기 위해. 강타가 좋아서 고발을 쓸 이유가 많이 없는데 고발까지 있으면 명중 높일 수 있음.

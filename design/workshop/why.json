@@ -286,13 +286,14 @@
  },
  "crusader|zealous_accusation": {
   "ids": [
-   "CRU-002"
+   "CRU-002",
+   "CRU-013"
   ],
   "principles": [
    "G-02"
   ],
-  "en": "A −40% two-target attack with low accuracy on top had no reason to be picked over Smite; at 90 accuracy there are fights where it is the better choice.",
-  "ko": "피해 −40% 2인 공격에 명중까지 낮아 강타 대신 고를 이유가 없었다. 명중 90이면 강타보다 나은 상황이 생긴다."
+  "en": "Zealous Accusation keeps ACC 90 and exchanges direct damage (-40% to -50%) for Burn 1/1/2/2/2. This gives Crusader an armor-independent damage component and lets other heroes help supply Burn for Runaway synergies. The trade is not a claim of exactly conserved total damage.",
+  "ko": "광신적 고발 명중90을 유지하고 피해 -40%를 -50%로 낮추는 대신 화상1/1/2/2/2를 추가한다. 성전사에게 방어에 막히지 않는 피해 일부를 주고 다른 영웅도 화상을 공급하여 도망자와 조합하도록 한다. 이 교환이 정확한 총량 보존을 뜻하지는 않는다."
  },
  "duelist|coup_de_grace": {
   "ids": [
