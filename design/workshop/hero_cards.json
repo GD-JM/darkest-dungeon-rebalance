@@ -441,19 +441,19 @@
  },
  "duelist": {
   "name": "Duelist",
-  "tagline": "One of the strongest heroes, slightly trimmed.",
+  "tagline": "Riposte identity preserved; direct offense trimmed.",
   "skills": [
    {
     "key": "duelist|touche",
     "name": "Touché",
     "icon": "two",
     "old": [
-     "Self: dodge +40-50%",
-     "Lasts 4 turns"
+     "Self: dodge +40-50",
+     "Consumed on successful dodge (max 4 turns)"
     ],
     "new": [
-     "Self: dodge +15-25%",
-     "Lasts 3 turns"
+     "Vanilla restored",
+     "Same dodge amount and consumption"
     ]
    },
    {
@@ -461,10 +461,12 @@
     "name": "Feint",
     "icon": "three",
     "old": [
-     "Target: PROT -20 to -30%"
+     "Target: PROT -20 to -30%",
+     "Self: riposte DMG +25-35% (4 turns)"
     ],
     "new": [
-     "Target: PROT -10 to -20%"
+     "Target: PROT -15 to -25%",
+     "Self: riposte DMG +20-30% (4 turns)"
     ]
    },
    {
@@ -476,6 +478,20 @@
     ],
     "new": [
      "Target: DMG -10 to -15% (2 turns)"
+    ]
+   },
+   {
+    "key": "duelist|fleche",
+    "name": "Flèche",
+    "icon": "five",
+    "old": [
+     "DMG +25%",
+     "No self dodge penalty"
+    ],
+    "new": [
+     "DMG +10%",
+     "Self: dodge -10 (4 turns)",
+     "Removed outside aggressive stance"
     ]
    },
    {

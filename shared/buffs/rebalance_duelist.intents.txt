@@ -1,0 +1,2 @@
+// DUE-016: Feint riposte-only damage +25/27/30/32/35 -> +20/22/25/27/30; retain PROT -15/17/20/22/25 and conditional accuracy reduction. Latest correction is 20..30, not flat20.
+// Strict JSON keeps rationale here rather than adding invalid JSON comments. Every RB_DUE_FEINT_RIPOSTEDMG[L/H]BUFF1..5 clones the corresponding vanilla riposte rule and changes only its ID and amount. Vanilla shared buffs are untouched.

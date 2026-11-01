@@ -1,0 +1,48 @@
+{
+  "id": "DUE-014/015/016",
+  "decision": "adopted",
+  "original_quote": "그럼 이 안대로 test에 적용하고 변경 의도 주석 남겨서 모델 수정한 거랑 같이 커밋까지 해 푸시는 하지 말고 추가로 노상강도 사악한 칼질과 정맥절개 대비해서 너무 너프 많이됐다는 의견이 있던데 너 생각 궁금 애초에 바닐라에 사악한 칼질에 20% 추뎀을 넣은게 이해가 안됐거든 사악한 칼질 치명타 5% 유지하고 3열 타격 유지하고 정맥 절개랑 어떻게 차별화를 줄 수 있을까",
+  "context_quotes": [
+    {
+      "role": "user",
+      "quote": "그럼 부츠 60 최후의 일격 70 돌진 10 회피 -10  눈속임 방어도 -15~ 25 반격피해 +20, 회수 그대로 \n\n이 정도면 어때 괜찮아? 모델이 결투가나 도망자 모든 스킬 전부 반영되게 고쳐  \n",
+      "event_id": "7991995f129b304589047907b0b8163948092e41429f58f614a3bc6448ab7dbb"
+    },
+    {
+      "role": "user",
+      "quote": "반격 피해 20~ 30\n",
+      "event_id": "ea88be41848c719647af52f654e0fa65d9ec20670b5c47f1cee0f439913c8ddc"
+    }
+  ],
+  "rationale_ko": "반격 특화 정체성을 유지하며 반격 외 성능을 하향한다. 찌르기는 바닐라 복원, 날쌘 돌진+10/공격 자세 회피−10, 눈속임 반격 강화20~30. 방어 감소15~25·부츠−60·최후의 일격−70·회수·예상 유지. 노상강도는 분석 요청으로 적용 제외. test 커밋만, 푸시 금지.",
+  "source": {
+    "product": "codex",
+    "reference": "현재 세션 2026-11-01 적용 승인; local-knowledge read_evidence 확인",
+    "session_id": "01a10741-76da-7e43-9500-98474ab3f383",
+    "message_id": "msg_01a19776-e1a7-71f2-b4d5-24e3c8770ccc",
+    "event_id": "2b6a356272f9f6eefc1623745cb1a6d211b2b2bea5c6184ebd477ac6a653959f"
+  },
+  "files": [
+    "heroes/duelist/duelist.info.darkest",
+    "heroes/duelist/duelist.effects_edit.txt",
+    "shared/buffs/rebalance_duelist.buffs.json",
+    "shared/buffs/rebalance_duelist.intents.txt",
+    "tools/test_dlc_valuation.py",
+    "design/changes/duelist.md",
+    "design/analysis/dlc-model-20261101.md",
+    "design/workshop/hero_cards.json",
+    "design/workshop/why.json",
+    "effects/rebalance_duelist.effects.darkest"
+  ],
+  "supersedes": [
+    "DUE-005",
+    "DUE-011"
+  ],
+  "retained": [
+    "DUE-006",
+    "DUE-010",
+    "DUE-012",
+    "DUE-013"
+  ],
+  "scope": "test only; no push; no Highwayman numeric edits"
+}

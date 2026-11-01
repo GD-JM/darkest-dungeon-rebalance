@@ -9,11 +9,14 @@ import os, re, glob, sys, io, math, argparse, json, functools, struct, statistic
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import effect_common as ec
 import damage_support
+import dlc_valuation
 
 M_ROOT, G = ec.paths()
 
 # ---------------------------------------------------------------- 파라미터 (출처)
 PARAM = dict(
+    DLC_MODEL=True,       # R-DLC-029: state-conditioned DLC mechanics; --dlc-state pins assumptions.
+    DLC_OPENING_EXPOSURE=0.5, # Assumed incoming attempts before first hero turn; not a measured frequency.
     MON_HIT=102.5,        # 몬스터 명중 중앙값 (hero_power.md 4-1)
     ENEMY_ACT=4.26,       # R-STRAT-01 채택 행동가치 상수(과거 5.5x.775로 보정). 실제 명중확률 수정과 별도이며 자동 재보정하지 않음
     ALLY_ATK=7.17,        # 아군 1공격 가치 (hero_power.md 4-1)
@@ -903,6 +906,9 @@ class Ctx:
             if not B:
                 continue
             cm = 1.0 if B.get('rule_type') in (None, 'always') else s.P['COND_OTHER']
+            known_rule = dlc_valuation.rule_weight(s, B)
+            if known_rule is not None:
+                cm = known_rule
             if B.get('rule_type') == 'monsterSize':           # 대형 대상 조건 = 그 크기 이상 몬스터 비율
                 cm = size_share((B.get('rule_data') or {}).get('float', 2))
             if B.get('stat_type') == 'stress_dmg_received_percent':
@@ -1008,6 +1014,13 @@ def joint_support_overlap(C, effects, ally, self_only, n_t):
 
 def skill_value(C, l, d):
     P, H = C.P, C.H
+    if P.get('DLC_MODEL', True) and H['id'] in dlc_valuation.SKILLS and P.get('DLC_STATE', {}).get('target_hp') is not None:
+        # R-DLC-029: direct kill, stun survival and subsequent debuff support
+        # must use the same target HP; never award control of an already dead target.
+        P = dict(P, STUN_TARGET_HP=P['DLC_STATE']['target_hp'], SUPPORT_TARGET_HP=P['DLC_STATE']['target_hp'])
+        C = Ctx(H, C.eff, C.buffs, P)
+    if P.get('DLC_MODEL', True):
+        l, d = dlc_valuation.prepare(sys.modules[__name__], C, l, d)
     tgt = first(d, 'target')
     ally, aoe, self_only = '@' in tgt, '~' in tgt, tgt == ''     # '@~1234' 와 '~@1234' 두 표기가 모두 있다
     enemy = not ally and not self_only
@@ -1304,10 +1317,12 @@ def skill_value(C, l, d):
     if P.get('FRONT_REACH') and enemy and lranks and lranks <= {'1', '2'} and set(str(r) for r in tranks) & {'3', '4'}:
         fr = P['FRONT_REACH'][1] if 4 in tranks else P['FRONT_REACH'][0]
         add('전열→후열', fr * sum(v for v in parts.values() if v > 0))   # R-VALUE-20: 4열 > 3열
+    if P.get('DLC_MODEL', True):
+        parts = dlc_valuation.correct(sys.modules[__name__], C, l, d, parts)
     availability = 1.0
-    if limit:
+    if limit and not (P.get('DLC_STATE') and H['id'] in dlc_valuation.SKILLS):
         availability *= min(1.0, limit / 3)
-    if first(d, 'requires_burning').lower() == 'true':      # 화상 걸린 대상이 있어야 쓸 수 있다: 자기 상태 조건 유지율
+    if first(d, 'requires_burning').lower() == 'true' and not (P.get('DLC_STATE') and H['id'] in dlc_valuation.SKILLS):
         availability *= P['COND_SELF']
     if 'required_performer_hp_range' in d:
         availability *= P['LOW_HP_SELF'] if C.self_wound else P['LOW_HP_OTHER']
@@ -1564,9 +1579,20 @@ def main():
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
     ap = argparse.ArgumentParser()
     ap.add_argument('--detail'); ap.add_argument('--sens', action='store_true')
+    ap.add_argument('--dlc-state', help='JSON file with explicit DLC state assumptions (not game data)')
+    ap.add_argument('--legacy-dlc', action='store_true', help='Reproduce pre R-DLC-029 model only')
     ap.add_argument('--unit', choices=('hp', 'standard-pp', 'self-pp'), default='hp')
     a = ap.parse_args()
-    allres = run()
+    params = dict(PARAM, DLC_MODEL=not a.legacy_dlc)
+    if a.dlc_state:
+        with open(a.dlc_state, encoding='utf-8-sig') as f:
+            params['DLC_STATE'] = json.load(f)
+        dlc_valuation.State(**params['DLC_STATE'])
+    allres = run(params)
+    if params['DLC_MODEL']:
+        print('R-DLC-029: 결투가/도망자는 명시적 상태·유한 노출 보정. 장신구 자동 최적화·전투 AI 시뮬레이션 순위가 아님.')
+        if a.detail in dlc_valuation.SKILLS:
+            print(json.dumps(dlc_valuation.coverage(), ensure_ascii=False, indent=2))
     print(f'몬스터 모집단: 영웅 등급 일반 몬스터 {N_MON}종 (보스·오브젝트 제외) / 스트레스 1 = HP {stress_value():.2f} (가격 비율 {stress_price_ratio()[0]:.2f} + 고통 비용, R-VALUE-06)\n')
     rv = ranking(allres['vanilla'], '기본')[0]
     rr, orr = ranking(allres['rb'], '기본')

@@ -349,14 +349,26 @@
  },
  "duelist|feint": {
   "ids": [
-   "DUE-007"
+   "DUE-013",
+   "DUE-016"
   ],
   "principles": [
-   "P-14",
-   "G-01"
+   "G-01",
+   "P-11"
   ],
-  "en": "Its protection shred was identical to the Bounty Hunter's Mark for Death. Feint now takes the Mark's smaller original values, keeping the two skills distinct and trimming an already strong hero.",
-  "ko": "방어 감소가 현상금 사냥꾼의 죽음의 표식과 숫자까지 같았습니다. 표식의 원래(더 작은) 수치를 받아 두 기술을 구분하고, 이미 강한 결투가를 조금 낮췄습니다."
+  "en": "Retains PROT shred of 15-25% and lowers riposte damage amplification to 20-30%. Keeps counterattack preparation valuable while trimming the strong hero.",
+  "ko": "방어 감소15~25%를 유지하고 반격 피해 강화를20~30%로 낮춥니다. 강한 결투가를 조정하면서 반격 준비의 가치를 남깁니다."
+ },
+ "duelist|fleche": {
+  "ids": [
+   "DUE-015"
+  ],
+  "principles": [
+   "G-01",
+   "P-11"
+  ],
+  "en": "Reduces direct damage to +10% and attaches the existing aggressive-stance dodge penalty of 10. Forward movement and counterattack identity remain.",
+  "ko": "직접 피해를+10%로 낮추고 기존 공격 자세 회피−10 효과를 연결합니다. 전진 공격을 보존하되 반격 외 공격 효율과 위험을 조정합니다."
  },
  "duelist|the_boot": {
   "ids": [
@@ -371,15 +383,14 @@
  },
  "duelist|touche": {
   "ids": [
-   "DUE-005",
-   "DUE-011"
+   "DUE-014"
   ],
   "principles": [
-   "R-CMB-01",
+   "G-01",
    "P-12"
   ],
-  "en": "A no-damage jab usable from any rank granted +40–50 dodge for 4 turns, and two casts stacked could push enemy hit chance to 0%, blocking their stuns and debuffs as well. With a smaller, 2-turn buff, even two stacks only reach what one cast used to give. The buff now lasts 3 turns; two stacks stay below one vanilla use.",
-  "ko": "피해 없는 찌르기가 어느 열에서나 회피 +40~50을 4턴 주었고, 두 번 겹치면 적 명중률이 0%까지 떨어져 기절·약화까지 전부 막았습니다. 강화를 작게, 2턴으로 줄여 두 번 겹쳐도 예전 1회 수준에 머물게 했습니다. 지속은 3턴, 두 번 겹쳐도 바닐라 1회보다 낮다."
+  "en": "Restores vanilla dodge, consumed on the next successful dodge with a four-turn cap. Earlier persistent-dodge assumptions were incorrect; preserve defensive-stance identity.",
+  "ko": "다음 회피 성공 시 소모되는 바닐라 회피를 복원합니다(최대4턴). 과거의 지속형 회피 해석을 바로잡고 방어 자세의 정체성을 유지합니다."
  },
  "flagellant|endure": {
   "ids": [
