@@ -36,23 +36,28 @@ effect: .name "RW Searing DMG vs Burning 5" .target "performer" .curio_result_ty
 //# ======================================================================
 //# 기술: 흩날리는 불티 (firefly)
 //# 레벨별 효과: 1레벨 RW Firefly Burn 1, RW Firefly Torch 1 | 2레벨 RW Firefly Burn 2, RW Firefly Torch 1 | 3레벨 RW Firefly Burn 3, RW Firefly Torch 2 | 4레벨 RW Firefly Burn 4, RW Firefly Torch 2 | 5레벨 RW Firefly Burn 5, RW Firefly Torch 3
-effect: .name "RW Firefly Burn 1" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 7 .dot_irresistible true .buff_ids rw_burn_decay_debuff .duration 2 .on_hit true .on_miss false .can_apply_on_death true
+effect: .name "RW Firefly Burn 1" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 7 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+// RUN-007 Keep vanilla burn; move decay delay off repeatable Firefly.
 //#   강화 효과 수치(JSON, 참고용): rw_burn_decay_debuff = hp_dot_burn_decay_percent 0.5
 //#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
 effect: .name "RW Firefly Torch 1" .target "performer" .chance 100% .torch_increase 4 .on_hit true .on_miss true .queue true
 //#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
-effect: .name "RW Firefly Burn 2" .target "target" .curio_result_type "negative" .chance 110% .dotBurn 7 .dot_irresistible true .buff_ids rw_burn_decay_debuff .duration 2 .on_hit true .on_miss false .can_apply_on_death true
+effect: .name "RW Firefly Burn 2" .target "target" .curio_result_type "negative" .chance 110% .dotBurn 7 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+// RUN-007 Keep vanilla burn; move decay delay off repeatable Firefly.
 //#   강화 효과 수치(JSON, 참고용): rw_burn_decay_debuff = hp_dot_burn_decay_percent 0.5
 //#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
-effect: .name "RW Firefly Burn 3" .target "target" .curio_result_type "negative" .chance 120% .dotBurn 8 .dot_irresistible true .buff_ids rw_burn_decay_debuff .duration 2 .on_hit true .on_miss false .can_apply_on_death true
+effect: .name "RW Firefly Burn 3" .target "target" .curio_result_type "negative" .chance 120% .dotBurn 8 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+// RUN-007 Keep vanilla burn; move decay delay off repeatable Firefly.
 //#   강화 효과 수치(JSON, 참고용): rw_burn_decay_debuff = hp_dot_burn_decay_percent 0.5
 //#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
 effect: .name "RW Firefly Torch 2" .target "performer" .chance 100% .torch_increase 5 .on_hit true .on_miss true .queue true
 //#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
-effect: .name "RW Firefly Burn 4" .target "target" .curio_result_type "negative" .chance 130% .dotBurn 8 .dot_irresistible true .buff_ids rw_burn_decay_debuff .duration 2 .on_hit true .on_miss false .can_apply_on_death true
+effect: .name "RW Firefly Burn 4" .target "target" .curio_result_type "negative" .chance 130% .dotBurn 8 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+// RUN-007 Keep vanilla burn; move decay delay off repeatable Firefly.
 //#   강화 효과 수치(JSON, 참고용): rw_burn_decay_debuff = hp_dot_burn_decay_percent 0.5
 //#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
-effect: .name "RW Firefly Burn 5" .target "target" .curio_result_type "negative" .chance 140% .dotBurn 9 .dot_irresistible true .buff_ids rw_burn_decay_debuff .duration 2 .on_hit true .on_miss false .can_apply_on_death true
+effect: .name "RW Firefly Burn 5" .target "target" .curio_result_type "negative" .chance 140% .dotBurn 9 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+// RUN-007 Keep vanilla burn; move decay delay off repeatable Firefly.
 //#   강화 효과 수치(JSON, 참고용): rw_burn_decay_debuff = hp_dot_burn_decay_percent 0.5
 //#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
 effect: .name "RW Firefly Torch 3" .target "performer" .chance 100% .torch_increase 6 .on_hit true .on_miss true .queue true
@@ -145,25 +150,35 @@ effect: .name "RW Hearthlight CRIT Buff 5" .target "performer_group" .chance 100
 //# 레벨별 효과: 1레벨 RW CB Torch, RW CB Burn 1, RW CB Rank Effect 1 | 2레벨 RW CB Torch, RW CB Burn 2, RW CB Rank Effect 2 | 3레벨 RW CB Torch, RW CB Burn 3, RW CB Rank Effect 3 | 4레벨 RW CB Torch, RW CB Burn 4, RW CB Rank Effect 4 | 5레벨 RW CB Torch, RW CB Burn 5, RW CB Rank Effect 5
 effect: .name "RW CB Torch" .target "performer" .chance 100% .torch_increase 6 .on_hit true .on_miss true .queue true
 //#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
-effect: .name "RW CB Burn 1" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 6 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+effect: .name "RW CB Burn 1" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 3 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+// RUN-008 Reduce initial burn; preserve short-fight impact with stronger ground.
 //#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
-effect: .name "RW CB Rank Effect 1" .target "target" .chance 100% .on_hit true .on_miss true .controlled_burn_amount 2 .controlled_burn_duration 3
+effect: .name "RW CB Rank Effect 1" .target "target" .chance 100% .on_hit true .on_miss true .controlled_burn_amount 3 .controlled_burn_duration 2
+// RUN-008 Ground 3/3/4/4/5 for 2 rounds; reduce long-fight accumulation.
 //#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
-effect: .name "RW CB Burn 2" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 6 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+effect: .name "RW CB Burn 2" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 3 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+// RUN-008 Reduce initial burn; preserve short-fight impact with stronger ground.
 //#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
-effect: .name "RW CB Rank Effect 2" .target "target" .chance 100% .on_hit true .on_miss true .controlled_burn_amount 2 .controlled_burn_duration 3
+effect: .name "RW CB Rank Effect 2" .target "target" .chance 100% .on_hit true .on_miss true .controlled_burn_amount 3 .controlled_burn_duration 2
+// RUN-008 Ground 3/3/4/4/5 for 2 rounds; reduce long-fight accumulation.
 //#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
-effect: .name "RW CB Burn 3" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 6 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+effect: .name "RW CB Burn 3" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 4 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+// RUN-008 Reduce initial burn; preserve short-fight impact with stronger ground.
 //#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
-effect: .name "RW CB Rank Effect 3" .target "target" .chance 100% .on_hit true .on_miss true .controlled_burn_amount 3 .controlled_burn_duration 3
+effect: .name "RW CB Rank Effect 3" .target "target" .chance 100% .on_hit true .on_miss true .controlled_burn_amount 4 .controlled_burn_duration 2
+// RUN-008 Ground 3/3/4/4/5 for 2 rounds; reduce long-fight accumulation.
 //#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
-effect: .name "RW CB Burn 4" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 6 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+effect: .name "RW CB Burn 4" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 4 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+// RUN-008 Reduce initial burn; preserve short-fight impact with stronger ground.
 //#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
-effect: .name "RW CB Rank Effect 4" .target "target" .chance 100% .on_hit true .on_miss true .controlled_burn_amount 3 .controlled_burn_duration 3
+effect: .name "RW CB Rank Effect 4" .target "target" .chance 100% .on_hit true .on_miss true .controlled_burn_amount 4 .controlled_burn_duration 2
+// RUN-008 Ground 3/3/4/4/5 for 2 rounds; reduce long-fight accumulation.
 //#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
-effect: .name "RW CB Burn 5" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 6 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+effect: .name "RW CB Burn 5" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 5 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+// RUN-008 Reduce initial burn; preserve short-fight impact with stronger ground.
 //#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
-effect: .name "RW CB Rank Effect 5" .target "target" .chance 100% .on_hit true .on_miss true .controlled_burn_amount 4 .controlled_burn_duration 3
+effect: .name "RW CB Rank Effect 5" .target "target" .chance 100% .on_hit true .on_miss true .controlled_burn_amount 5 .controlled_burn_duration 2
+// RUN-008 Ground 3/3/4/4/5 for 2 rounds; reduce long-fight accumulation.
 //#   원본 위치: dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest
 
 //# ======================================================================
@@ -178,3 +193,13 @@ effect: .name "on_crit_speed"    .target "performer" .curio_result_type "positiv
 //#   공유 효과: 다른 영웅 1명(노상강도). 여기서 고치면 이 영웅만 바뀐다
 //#   강화 효과 수치(JSON, 참고용): on_crit_spd = speed_rating 2
 //#   원본 위치: effects/base.effects.darkest
+effect: .name "RB RUN Hearthlight Decay 1" .target "target" .curio_result_type "negative" .chance 100% .keyStatus "burning" .buff_ids rw_burn_decay_debuff .duration 2 .on_hit true .on_miss false
+// RUN-009 Move decay delay to rear-only forward support, replacing conditional CRIT. Non-stacking remains a release-blocking runtime issue; see design review.
+effect: .name "RB RUN Hearthlight Decay 2" .target "target" .curio_result_type "negative" .chance 110% .keyStatus "burning" .buff_ids rw_burn_decay_debuff .duration 2 .on_hit true .on_miss false
+// RUN-009 Move decay delay to rear-only forward support, replacing conditional CRIT. Non-stacking remains a release-blocking runtime issue; see design review.
+effect: .name "RB RUN Hearthlight Decay 3" .target "target" .curio_result_type "negative" .chance 120% .keyStatus "burning" .buff_ids rw_burn_decay_debuff .duration 2 .on_hit true .on_miss false
+// RUN-009 Move decay delay to rear-only forward support, replacing conditional CRIT. Non-stacking remains a release-blocking runtime issue; see design review.
+effect: .name "RB RUN Hearthlight Decay 4" .target "target" .curio_result_type "negative" .chance 130% .keyStatus "burning" .buff_ids rw_burn_decay_debuff .duration 2 .on_hit true .on_miss false
+// RUN-009 Move decay delay to rear-only forward support, replacing conditional CRIT. Non-stacking remains a release-blocking runtime issue; see design review.
+effect: .name "RB RUN Hearthlight Decay 5" .target "target" .curio_result_type "negative" .chance 140% .keyStatus "burning" .buff_ids rw_burn_decay_debuff .duration 2 .on_hit true .on_miss false
+// RUN-009 Move decay delay to rear-only forward support, replacing conditional CRIT. Non-stacking remains a release-blocking runtime issue; see design review.

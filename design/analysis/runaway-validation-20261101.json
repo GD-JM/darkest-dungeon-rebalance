@@ -1,0 +1,9 @@
+{
+  "numeric_checks": "passed",
+  "unrelated_tracked_files_preserved": 999,
+  "scope": "Runaway only",
+  "game_runtime_tested": false,
+  "release_blocked": true,
+  "blocker": "Hearthlight non-stacking safeguard unresolved",
+  "pushed": false
+}

@@ -1,0 +1,347 @@
+{
+  "scope": "One attack expected direct + lifetime MARGINAL burn; no decay slowing, no other attacks/deaths. C example hit, no gear, fixed zone activations. Not entire skill value.",
+  "comparison": [
+    {
+      "gear": "none",
+      "level": 1,
+      "prot": 0,
+      "existing_burn": 0,
+      "S": {
+        "direct": 4.66,
+        "incremental_burn": 3.39,
+        "total": 8.06
+      },
+      "F": {
+        "direct": 1.28,
+        "incremental_burn": 8.34,
+        "total": 9.62
+      }
+    },
+    {
+      "gear": "none",
+      "level": 1,
+      "prot": 0,
+      "existing_burn": 4,
+      "S": {
+        "direct": 5.84,
+        "incremental_burn": 3.44,
+        "total": 9.28
+      },
+      "F": {
+        "direct": 1.28,
+        "incremental_burn": 9.08,
+        "total": 10.36
+      }
+    },
+    {
+      "gear": "none",
+      "level": 1,
+      "prot": 0.5,
+      "existing_burn": 0,
+      "S": {
+        "direct": 2.17,
+        "incremental_burn": 3.39,
+        "total": 5.56
+      },
+      "F": {
+        "direct": 0.48,
+        "incremental_burn": 8.34,
+        "total": 8.82
+      }
+    },
+    {
+      "gear": "none",
+      "level": 1,
+      "prot": 0.5,
+      "existing_burn": 4,
+      "S": {
+        "direct": 2.69,
+        "incremental_burn": 3.44,
+        "total": 6.13
+      },
+      "F": {
+        "direct": 0.48,
+        "incremental_burn": 9.08,
+        "total": 9.56
+      }
+    },
+    {
+      "gear": "none",
+      "level": 5,
+      "prot": 0,
+      "existing_burn": 0,
+      "S": {
+        "direct": 10.26,
+        "incremental_burn": 8.08,
+        "total": 18.34
+      },
+      "F": {
+        "direct": 2.97,
+        "incremental_burn": 14.45,
+        "total": 17.41
+      }
+    },
+    {
+      "gear": "none",
+      "level": 5,
+      "prot": 0,
+      "existing_burn": 4,
+      "S": {
+        "direct": 14.11,
+        "incremental_burn": 8.86,
+        "total": 22.97
+      },
+      "F": {
+        "direct": 2.97,
+        "incremental_burn": 14.72,
+        "total": 17.69
+      }
+    },
+    {
+      "gear": "none",
+      "level": 5,
+      "prot": 0.5,
+      "existing_burn": 0,
+      "S": {
+        "direct": 4.91,
+        "incremental_burn": 8.08,
+        "total": 12.99
+      },
+      "F": {
+        "direct": 1.43,
+        "incremental_burn": 14.45,
+        "total": 15.87
+      }
+    },
+    {
+      "gear": "none",
+      "level": 5,
+      "prot": 0.5,
+      "existing_burn": 4,
+      "S": {
+        "direct": 6.88,
+        "incremental_burn": 8.86,
+        "total": 15.74
+      },
+      "F": {
+        "direct": 1.43,
+        "incremental_burn": 14.72,
+        "total": 16.14
+      }
+    },
+    {
+      "gear": "toy_sunstone_or_CC_set",
+      "level": 1,
+      "prot": 0,
+      "existing_burn": 0,
+      "S": {
+        "direct": 4.66,
+        "incremental_burn": 6.74,
+        "total": 11.4
+      },
+      "F": {
+        "direct": 1.52,
+        "incremental_burn": 15.8,
+        "total": 17.32
+      }
+    },
+    {
+      "gear": "toy_sunstone_or_CC_set",
+      "level": 1,
+      "prot": 0,
+      "existing_burn": 4,
+      "S": {
+        "direct": 6.32,
+        "incremental_burn": 8.06,
+        "total": 14.38
+      },
+      "F": {
+        "direct": 1.7,
+        "incremental_burn": 17.19,
+        "total": 18.88
+      }
+    },
+    {
+      "gear": "toy_sunstone_or_CC_set",
+      "level": 1,
+      "prot": 0.5,
+      "existing_burn": 0,
+      "S": {
+        "direct": 2.17,
+        "incremental_burn": 6.74,
+        "total": 8.9
+      },
+      "F": {
+        "direct": 0.57,
+        "incremental_burn": 15.8,
+        "total": 16.37
+      }
+    },
+    {
+      "gear": "toy_sunstone_or_CC_set",
+      "level": 1,
+      "prot": 0.5,
+      "existing_burn": 4,
+      "S": {
+        "direct": 2.96,
+        "incremental_burn": 8.06,
+        "total": 11.03
+      },
+      "F": {
+        "direct": 0.75,
+        "incremental_burn": 17.19,
+        "total": 17.93
+      }
+    },
+    {
+      "gear": "toy_sunstone_or_CC_set",
+      "level": 5,
+      "prot": 0,
+      "existing_burn": 0,
+      "S": {
+        "direct": 10.26,
+        "incremental_burn": 14.38,
+        "total": 24.64
+      },
+      "F": {
+        "direct": 3.3,
+        "incremental_burn": 23.8,
+        "total": 27.1
+      }
+    },
+    {
+      "gear": "toy_sunstone_or_CC_set",
+      "level": 5,
+      "prot": 0,
+      "existing_burn": 4,
+      "S": {
+        "direct": 15.41,
+        "incremental_burn": 15.61,
+        "total": 31.01
+      },
+      "F": {
+        "direct": 3.54,
+        "incremental_burn": 26.7,
+        "total": 30.24
+      }
+    },
+    {
+      "gear": "toy_sunstone_or_CC_set",
+      "level": 5,
+      "prot": 0.5,
+      "existing_burn": 0,
+      "S": {
+        "direct": 4.91,
+        "incremental_burn": 14.38,
+        "total": 19.29
+      },
+      "F": {
+        "direct": 1.58,
+        "incremental_burn": 23.8,
+        "total": 25.38
+      }
+    },
+    {
+      "gear": "toy_sunstone_or_CC_set",
+      "level": 5,
+      "prot": 0.5,
+      "existing_burn": 4,
+      "S": {
+        "direct": 7.56,
+        "incremental_burn": 15.61,
+        "total": 23.16
+      },
+      "F": {
+        "direct": 1.78,
+        "incremental_burn": 26.7,
+        "total": 28.48
+      }
+    }
+  ],
+  "controlled_burn": [
+    {
+      "level": 1,
+      "ticks": 2,
+      "initial": 6,
+      "ground": 2,
+      "total": 18
+    },
+    {
+      "level": 1,
+      "ticks": 2,
+      "initial": 5,
+      "ground": 2,
+      "total": 15
+    },
+    {
+      "level": 1,
+      "ticks": 2,
+      "initial": 4,
+      "ground": 2,
+      "total": 14
+    },
+    {
+      "level": 5,
+      "ticks": 2,
+      "initial": 6,
+      "ground": 4,
+      "total": 26
+    },
+    {
+      "level": 5,
+      "ticks": 2,
+      "initial": 5,
+      "ground": 4,
+      "total": 24
+    },
+    {
+      "level": 5,
+      "ticks": 2,
+      "initial": 4,
+      "ground": 4,
+      "total": 23
+    },
+    {
+      "level": 1,
+      "ticks": 3,
+      "initial": 6,
+      "ground": 2,
+      "total": 22
+    },
+    {
+      "level": 1,
+      "ticks": 3,
+      "initial": 5,
+      "ground": 2,
+      "total": 19
+    },
+    {
+      "level": 1,
+      "ticks": 3,
+      "initial": 4,
+      "ground": 2,
+      "total": 18
+    },
+    {
+      "level": 5,
+      "ticks": 3,
+      "initial": 6,
+      "ground": 4,
+      "total": 34
+    },
+    {
+      "level": 5,
+      "ticks": 3,
+      "initial": 5,
+      "ground": 4,
+      "total": 32
+    },
+    {
+      "level": 5,
+      "ticks": 3,
+      "initial": 4,
+      "ground": 4,
+      "total": 31
+    }
+  ]
+}

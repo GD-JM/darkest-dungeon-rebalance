@@ -1,0 +1,43 @@
+{
+  "id": "RUN-007/008/009/010",
+  "decision": "adopted",
+  "implementation_status": "test applied; non-stacking safeguard unresolved, release blocked",
+  "original_quote": "오케이 그럼 이거로 커밋해 우리가 나누었던 도망자 관련 대화 전부 돌아보면서 핵심 될만한 패치 방향성 내용 핵심 원칙 같은 것들 전부 남겨줘 나중에 다 써야하니까 \n",
+  "rationale_ko": "도망자의 총량 하향. 후열 화상 준비와 전열 활용을 연계하고 일반전 초반 위력을 보존하며 장기전 누적을 줄인다. 확정표 전체 및 기록·커밋 승인.",
+  "source": {
+    "product": "codex",
+    "reference": "local-knowledge 73e38b6720afbec0b9950a11f84f6425c0c63a582d0128a9b0fe4e99695343fc",
+    "session_id": "01a10741-76da-7e43-9500-98474ab3f383",
+    "message_id": "msg_01a19705-cda8-7903-b626-150add4f77e1",
+    "event_id": "73e38b6720afbec0b9950a11f84f6425c0c63a582d0128a9b0fe4e99695343fc"
+  },
+  "context_quotes": [
+    {
+      "role": "assistant",
+      "text": "**통제된 화상은 지면 지속 2라운드, 최초 화상 3/3/4/4/5, 지면 화상 3/3/4/4/5를 추천해. 대신 흩날리는 불티의 화상량 −1은 일단 보류하는 게 좋아.** 불티의 화상 감소 지연까지 화톳불로 옮긴다면 이미 상당한 하향이기 때문이야.\n\n전체 조정안은 이렇게 잡겠어. 아래는 **최종 제안이며 아직 미적용**이야.\n\n| 기술 | 추천 조정 | 의도 |\n|---|---|---|\n| **통제된 화상** | 최초·지면 각각 **3/3/4/4/5**, 지면 **2라운드**, 사용열 **3·4열**. 기존 사용 횟수 유지 | 초반 위력을 유지하면서 장기 누적과 지면 활용 시간을 제한 |\n| **흩날리는 불티** | 화상 **7/7/8/8/9 유지**, 화상 감소 지연 제거 | 후열에서 계속 공격하는 선택지는 보존하되 반복 사용의 누적 효율 하향 |\n| **화톳불** | 사용열 **3·4열**, 앞으로 **2열 이동**. 기존 화상 대상 치명타 증가를 **화상 감소 지연 50%, 실효 2회**로 교체. 명중 지원 유지 | 후열에서 준비한 화상을 유지하면서 전열로 넘어가는 연결 기술 |\n| **작열하는 타격** | 바닐라 유지 | 전진한 뒤 사용할 기본 공격의 보상 보존 |\n| **불길 역류** | 화상 중첩당 피해 보너스 **25→20%**, 사용열 **1·2열**, 추가 횟수 제한 없음 | 누적 폭발력은 낮추되 전진해서 터뜨리는 운영 유지 |\n| **판 뒤엎기** | **3·4열 사용 → 적 1·2·3열**, 앞으로 **1열 이동** | 화톳불과 다른 이동 선택지. 당기기·시체 제거로 연계 |\n| **도피** | 바닐라 유지 | 다시 후열로 돌아가 운영을 재개 |\n\n화톳불의 감소 지연은 **중첩으로 100%가 되지 않게** 해야 해. 또한 화톳불과 불길 역류의 사용열 변경은 제안이고, 현재 실제 적용된 것은 판 뒤엎기 변경과 불길 역류의 **중첩당 20%**뿐이야.\n\n**통제된 화상은 이 정도면 하향 폭이 충분해.** 명중 후, 이동·장신구·다른 화상 없이 적이 매 라운드 한 번 행동하는 조건에서 잔여 화상까지 합산하면:\n\n| 기술 레벨 | 바닐라 | 추천안 | 변화 |\n|---|---:|---:|---:|\n| 1~2 | 22 HP | 16 HP | **−27%** |\n| 3~4 | 26 HP | 23 HP | **−12%** |\n| 5 | 34 HP | 28 HP | **−18%** |\n\n5레벨 첫 두 번의 화상 피해는 **19→20 HP**로 유지되지만, 이후 누적은 줄어들어. 그래서 **일반전에서 깔았는데 아무것도 못 하는 느낌은 줄이고, 장기전에서 계속 이득을 얻는 부분을 깎는 안**이야. 지면 2라운드가 끝나도 이미 적에게 붙은 화상은 남아.\n\n불티까지 −1 하면, 감소 지연을 제거한 조건에서 1회 화상의 자연 소멸까지 총량이 **11→10 / 15→11 / 16→15 HP**로 내려가. 특히 **3·4레벨은 정수 단위 감소 때문에 약 27% 추가 하향**이 발생해. 균일하게 −1처럼 보여도 실제 하향 폭은 균일하지 않아.\n\n그래서 먼저 **통제된 화상 지속 축소 + 불티의 감소 지연 이전 + 불길 역류 중첩 계수 하향**으로 조정하는 것을 추천해. 후열 고정 운영을 약화하면서도 선택지로 남기고, 화톳불이나 판 뒤엎기로 전진했을 때 공격 기술을 활용하는 구조야. 이 상태에서도 불티 반복이 지나치게 강하면 그때 화상량을 낮추는 편이 수치 원인을 구분하기 좋아.",
+      "event_id": "9c3e1f594e7c90bdeb1563052fbb0542364969a251f0502379903e6ffe832efc"
+    }
+  ],
+  "files": [
+    "heroes/runaway/runaway.info.darkest",
+    "heroes/runaway/runaway.effects_edit.txt",
+    "effects/rebalance_runaway.effects.darkest",
+    "design/changes/runaway.md",
+    "design/analysis/runaway-design-20261101.md",
+    "design/analysis/runaway-discussion-sources-20261101.json",
+    "design/workshop/hero_cards.json",
+    "design/workshop/why.json"
+  ],
+  "supersedes": [
+    "RUN-006 scope-only restriction on launch changes"
+  ],
+  "not_applied": [
+    "Firefly Burn -1",
+    "Searing Strike nerf",
+    "Backdraft extra use limit",
+    "Independent move-only Controlled Burn amount"
+  ],
+  "release_blockers": [
+    "Hearthlight 50% non-stacking/refresh implementation and runtime proof outstanding"
+  ]
+}

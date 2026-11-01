@@ -1177,24 +1177,79 @@
   ]
  },
  "runaway": {
-  "name": "Runaway",
-  "tagline": "Test build: Ransack restored to vanilla.",
-  "skills": [
-   {
-    "key": "runaway|ransack",
-    "name": "Ransack",
-    "icon": "four",
-    "old": [
-     "DMG -10%",
-     "Hits ranks 1-4"
-    ],
-    "new": [
-     "DMG -10%",
-     "Hits ranks 1-4"
+    "name": "Runaway",
+    "tagline": "Advance from the rear; temper the fire.",
+    "skills": [
+      {
+        "key": "runaway|ransack",
+        "name": "Ransack",
+        "icon": "four",
+        "old": [
+          "Use from any rank",
+          "Hits ranks 1-4"
+        ],
+        "new": [
+          "Use from ranks 3-4",
+          "Hits ranks 1-3"
+        ]
+      },
+      {
+        "key": "runaway|backdraft",
+        "name": "Backdraft",
+        "icon": "seven",
+        "old": [
+          "DMG +25% per Burn stack",
+          "Use from ranks 1-3"
+        ],
+        "new": [
+          "DMG +20% per Burn stack",
+          "Use from ranks 1-2"
+        ]
+      },
+      {
+        "key": "runaway|firefly",
+        "name": "Firefly",
+        "icon": "two",
+        "old": [
+          "Burn 7/7/8/8/9",
+          "Delays Burn decay"
+        ],
+        "new": [
+          "Burn 7/7/8/8/9",
+          "No Burn decay delay"
+        ]
+      },
+      {
+        "key": "runaway|controlled_burn",
+        "name": "Controlled Burn",
+        "icon": "six",
+        "old": [
+          "Use from ranks 1-3",
+          "Initial Burn 6",
+          "Ground Burn 2/2/3/3/4; 3 rounds"
+        ],
+        "new": [
+          "Use from ranks 3-4",
+          "Initial Burn 3/3/4/4/5",
+          "Ground Burn 3/3/4/4/5; 2 rounds"
+        ]
+      },
+      {
+        "key": "runaway|hearthlight",
+        "name": "Hearthlight",
+        "icon": "five",
+        "old": [
+          "Use from any rank",
+          "Party: CRIT vs Burning +10-14%"
+        ],
+        "new": [
+          "Use from ranks 3-4; forward 2",
+          "Burning targets: delay Burn decay 50% (2 turns)",
+          "Party accuracy retained"
+        ]
+      }
     ]
-   }
-  ]
- },
+  },
  "shieldbreaker": {
   "name": "Shieldbreaker",
   "tagline": "The DLC outlier, back to the base game's rules.",

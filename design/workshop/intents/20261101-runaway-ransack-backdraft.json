@@ -1,0 +1,28 @@
+{
+  "id": "RUN-005/006",
+  "decision": "adopted",
+  "original_quote": "불티 -1 하향이랑 통제된 화상 자체 화상 딜 낮춰야 될 거 같은데 이거 판정해줘봐 그럼 또 여기서 작열도 너프해야 하는거 아닌가? 생각해봐판뒤엎기 변경안 확정하고 역류 중첩 피해 감소 딱 이정도만 적용하자 ",
+  "rationale_ko": "사용자는 이번 적용을 판 뒤엎기 사용34/대상123/전진1과 불길 역류 중첩당피해20%로 제한했다. 범용성과 고중첩 폭발력을 하향하고 기존 효과 정체성을 보존한다.",
+  "source": {
+    "product": "codex",
+    "reference": "local-knowledge event bcd2f4e054b592c953bf83fe43fdc3a59a12f55b647814b0896d9b41eba4f38c",
+    "session_id": "01a10741-76da-7e43-9500-98474ab3f383",
+    "message_id": "msg_01a196b9-f0a0-7d82-9ddb-a7f9e60a3ccb",
+    "event_id": "bcd2f4e054b592c953bf83fe43fdc3a59a12f55b647814b0896d9b41eba4f38c"
+  },
+  "files": [
+    "heroes/runaway/runaway.info.darkest",
+    "design/changes/runaway.md",
+    "design/workshop/hero_cards.json",
+    "design/workshop/why.json"
+  ],
+  "supersedes": [
+    "RUN-004"
+  ],
+  "not_applied": [
+    "Firefly burn -1",
+    "Controlled Burn initial burn reduction",
+    "Searing Strike nerf",
+    "Other prior proposed Runaway rework changes"
+  ]
+}
