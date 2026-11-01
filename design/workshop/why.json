@@ -618,16 +618,14 @@
  },
  "highwayman|wicked_slice": {
   "ids": [
-   "HWY-008",
    "HWY-019",
-   "HWY-024"
+   "HWY-027"
   ],
   "principles": [
-   "R-SKILL-09",
    "G-02"
   ],
-  "en": "Wicked Slice retains its rank-3 reach and standard damage, but gives five points of skill CRIT to Open Vein to separate reach from bleed-focused pressure.",
-  "ko": "사악한 칼질의 3열 도달·기본 피해를 유지하고 기술 치명 5%p를 정맥절개로 옮긴다. 칼질은 사거리, 정맥절개는 출혈이 통하는 장갑 적 대응으로 역할을 나눈다."
+  "en": "Keeps standard damage and rank-3 reach, raises accuracy to 90 and restores skill CRIT to 5%. Reliable direct attacks and reach distinguish it from Open Vein bleed and debuffs.",
+  "ko": "피해0·3열 도달을 유지하고 명중90·치명5로 기본 공격의 안정성을 보완한다. 정맥 절개의 출혈·높은 명중·약화와 직접 피해/사거리로 구분한다."
  },
  "houndmaster|blackjack": {
   "ids": [
@@ -769,20 +767,54 @@
   "en": "Solo rarely beat the Jester's other songs and attacks for a skill slot. It is now a spotlight usable from any rank: more dodge to survive drawing attention, a bigger Finale bonus, corpse clearing to pull back-rank enemies forward, and a slow on every enemy, like an audience whose eyes are all on the stage.",
   "ko": "독주는 광대의 다른 노래·공격에 밀려 기술 칸을 얻지 못했다. 이제 모든 열에서 쓰는 '무대 조명' 기술로, 시선을 끄는 동안 버틸 회피를 높이고, 대단원 준비 보너스를 키우고, 시체를 치워 뒤쪽 적을 앞으로 당기며, 무대에 시선을 뺏긴 적 전체의 속도를 늦춘다."
  },
+ "leper|chop": {
+  "ids": [
+   "LEP-008"
+  ],
+  "principles": [
+   "G-01",
+   "G-02"
+  ],
+  "en": "Adds 5 accuracy without changing damage, ranks, movement or speed. Eases the combined burden of poor accuracy and heavy frontline restrictions; trinkets still improve reliability.",
+  "ko": "느린 속도·짧은 사거리·대열 취약은 유지하고 명중만5 높인다. 이미 제한된 공격 기회가 빗나가는 부담을 줄이며 장신구와 자기 강화의 역할은 남긴다."
+ },
+ "leper|focus": {
+  "ids": [
+   "LEP-008"
+  ],
+  "principles": [
+   "G-01",
+   "G-02"
+  ],
+  "en": "Adds 5 accuracy without changing damage, ranks, movement or speed. Eases the combined burden of poor accuracy and heavy frontline restrictions; trinkets still improve reliability.",
+  "ko": "느린 속도·짧은 사거리·대열 취약은 유지하고 명중만5 높인다. 이미 제한된 공격 기회가 빗나가는 부담을 줄이며 장신구와 자기 강화의 역할은 남긴다."
+ },
+ "leper|hew": {
+  "ids": [
+   "LEP-008"
+  ],
+  "principles": [
+   "G-01",
+   "G-02"
+  ],
+  "en": "Adds 5 accuracy without changing damage, ranks, movement or speed. Eases the combined burden of poor accuracy and heavy frontline restrictions; trinkets still improve reliability.",
+  "ko": "느린 속도·짧은 사거리·대열 취약은 유지하고 명중만5 높인다. 이미 제한된 공격 기회가 빗나가는 부담을 줄이며 장신구와 자기 강화의 역할은 남긴다."
+ },
  "leper|intimidate": {
   "ids": [
    "LEP-001",
    "LEP-002",
    "LEP-003",
-   "LEP-005"
+   "LEP-005",
+   "LEP-008"
   ],
   "principles": [
    "P-19",
    "G-02",
    "G-01"
   ],
-  "en": "Intimidate was a support skill (enemy debuffs, self-mark, destealth) that clashed with the Leper's identity as a king carried by his supporters, and its destealth overlapped five other skills. It is now a front-line blow with the same accuracy and damage as Purge, its twin animation, that briefly cracks the target's armor so Chop and the party can break heavily armored front-liners.",
-  "ko": "위협은 적 약화·자기 표식·은신 해제를 거는 지원 기술이라 '서포터가 받쳐 주는 왕'인 나병환자 정체성과 맞지 않았고, 은신 해제는 다른 다섯 기술과 겹쳤다. 이제 같은 모션의 축출과 명중·피해가 같은 1열 일격으로, 이름대로 적의 갑옷을 짧고 크게 깎아 토막치기와 아군 공격이 중장갑 전열을 뚫게 한다."
+  "en": "Intimidate was a support skill (enemy debuffs, self-mark, destealth) that clashed with the Leper's identity as a king carried by his supporters, and its destealth overlapped five other skills. It is now a front-line blow with the same accuracy and damage as Purge, its twin animation, that briefly cracks the target's armor so Chop and the party can break heavily armored front-liners. Accuracy now starts at 90 (+5) to improve delivery; damage, rank-1 restriction, shred and resistance rolls are unchanged.",
+  "ko": "위협은 적 약화·자기 표식·은신 해제를 거는 지원 기술이라 '서포터가 받쳐 주는 왕'인 나병환자 정체성과 맞지 않았고, 은신 해제는 다른 다섯 기술과 겹쳤다. 이제 같은 모션의 축출과 명중·피해가 같은 1열 일격으로, 이름대로 적의 갑옷을 짧고 크게 깎아 토막치기와 아군 공격이 중장갑 전열을 뚫게 한다. LEP-008: 명중85→90으로 효과 전달을 안정화한다. 피해−40·1열 제한·방어 감소·저항 판정은 그대로다."
  },
  "man_at_arms|bellow": {
   "ids": [
@@ -1223,16 +1255,14 @@
  },
  "highwayman|opened_vein": {
   "ids": [
-   "HWY-024",
-   "HWY-025"
+   "HWY-028"
   ],
   "principles": [
    "G-02",
-   "P-11",
-   "P-21"
+   "P-11"
   ],
-  "en": "Open Vein gains five points of skill CRIT from Wicked Slice to support its bleed role against armoured enemies. Accuracy, damage, bleed and debuffs are unchanged; this is not protection piercing. Open Vein keeps its higher critical chance and bleed utility, paying for part of that gain with damage reduced from -15% to -20%.",
-  "ko": "칼질에서 기술 치명 5%p를 받아 출혈이 통하는 장갑 적 대응을 강조한다. 기존 명중·피해·출혈·출혈 저항 감소·속도 감소는 유지한다. 치명타 자체에 방어 관통을 추가하는 변경은 아니다. 기존 -20은 검토안으로만 남아 실제 파일은 -15였다. 이번 명시 요청으로 -20을 적용한다. HWY-024의 치명 5~9% 및 출혈·약화는 유지하여 직접 피해와 장갑 대응 출혈의 교환을 만든다."
+  "en": "Restores vanilla damage -15% and skill CRIT 0% together, undoing the earlier critical-for-damage trade. Accuracy, bleed and debuffs retain its frontline armour role.",
+  "ko": "치명 상향의 대가였던 피해 하향도 함께 되돌려 피해−15·치명0 바닐라로 복원한다. 높은 명중·출혈·출혈 저항 감소·속도 감소로 전열 장갑 대응을 맡긴다."
  },
  "shieldbreaker|break_guard": {
   "ids": [

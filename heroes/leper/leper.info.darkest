@@ -14,25 +14,28 @@ armour: .name "leper_armour_3" .def 15% .prot 0 .hp 56 .spd 0 .upgradeRequiremen
 armour: .name "leper_armour_4" .def 20% .prot 0 .hp 63 .spd 0 .upgradeRequirementCode 3
 
 
-combat_skill: .id "chop" .level 0 .type "melee" .atk 75% .dmg 0% .crit 3% .launch 12 .target 12 .is_crit_valid True  .generation_guaranteed true
-combat_skill: .id "chop" .level 1 .type "melee" .atk 80% .dmg 0% .crit 4% .launch 12 .target 12 .is_crit_valid True 
-combat_skill: .id "chop" .level 2 .type "melee" .atk 85% .dmg 0% .crit 5% .launch 12 .target 12 .is_crit_valid True 
-combat_skill: .id "chop" .level 3 .type "melee" .atk 90% .dmg 0% .crit 6% .launch 12 .target 12 .is_crit_valid True 
-combat_skill: .id "chop" .level 4 .type "melee" .atk 95% .dmg 0% .crit 7% .launch 12 .target 12 .is_crit_valid True 
+combat_skill: .id "chop" .level 0 .type "melee" .atk 80% .dmg 0% .crit 3% .launch 12 .target 12 .is_crit_valid True  .generation_guaranteed true
+combat_skill: .id "chop" .level 1 .type "melee" .atk 85% .dmg 0% .crit 4% .launch 12 .target 12 .is_crit_valid True 
+combat_skill: .id "chop" .level 2 .type "melee" .atk 90% .dmg 0% .crit 5% .launch 12 .target 12 .is_crit_valid True 
+combat_skill: .id "chop" .level 3 .type "melee" .atk 95% .dmg 0% .crit 6% .launch 12 .target 12 .is_crit_valid True 
+combat_skill: .id "chop" .level 4 .type "melee" .atk 100% .dmg 0% .crit 7% .launch 12 .target 12 .is_crit_valid True 
+// LEP-008 (2026-11-02): Chop ACC75 -> 80 (80/85/90/95/100). Ease stacked accuracy/slow-speed/rank restrictions while retaining heavy frontline identity; damage, reach, movement and speed unchanged.
 
 
-combat_skill: .id "hew" .level 0 .type "melee" .atk 75% .dmg -50% .crit -4% .launch 12 .target ~12 .is_crit_valid True 
-combat_skill: .id "hew" .level 1 .type "melee" .atk 80% .dmg -50% .crit -3% .launch 12 .target ~12 .is_crit_valid True 
-combat_skill: .id "hew" .level 2 .type "melee" .atk 85% .dmg -50% .crit -2% .launch 12 .target ~12 .is_crit_valid True 
-combat_skill: .id "hew" .level 3 .type "melee" .atk 90% .dmg -50% .crit -1% .launch 12 .target ~12 .is_crit_valid True 
-combat_skill: .id "hew" .level 4 .type "melee" .atk 95% .dmg -50% .crit 0% .launch 12 .target ~12 .is_crit_valid True 
+combat_skill: .id "hew" .level 0 .type "melee" .atk 80% .dmg -50% .crit -4% .launch 12 .target ~12 .is_crit_valid True 
+combat_skill: .id "hew" .level 1 .type "melee" .atk 85% .dmg -50% .crit -3% .launch 12 .target ~12 .is_crit_valid True 
+combat_skill: .id "hew" .level 2 .type "melee" .atk 90% .dmg -50% .crit -2% .launch 12 .target ~12 .is_crit_valid True 
+combat_skill: .id "hew" .level 3 .type "melee" .atk 95% .dmg -50% .crit -1% .launch 12 .target ~12 .is_crit_valid True 
+combat_skill: .id "hew" .level 4 .type "melee" .atk 100% .dmg -50% .crit 0% .launch 12 .target ~12 .is_crit_valid True 
+// LEP-008 (2026-11-02): Hew ACC75 -> 80 (80/85/90/95/100). Improve frontline reliability only; keep two front targets and DMG -50. Prior target23 proposal was not adopted.
 
 
-combat_skill: .id "focus" .level 0 .type "melee" .atk 85% .dmg -40% .crit 0% .launch 1 .target 1 .is_crit_valid True  .effect "Push 3A" "clear_corpses" "Leper Acc"
-combat_skill: .id "focus" .level 1 .type "melee" .atk 90% .dmg -40% .crit 1% .launch 1 .target 1 .is_crit_valid True  .effect "Push 3B" "clear_corpses" "Leper Acc"
-combat_skill: .id "focus" .level 2 .type "melee" .atk 95% .dmg -40% .crit 2% .launch 1 .target 1 .is_crit_valid True  .effect "Push 3C" "clear_corpses" "Leper Acc"
-combat_skill: .id "focus" .level 3 .type "melee" .atk 100% .dmg -40% .crit 3% .launch 1 .target 1 .is_crit_valid True  .effect "Push 3D" "clear_corpses" "Leper Acc"
-combat_skill: .id "focus" .level 4 .type "melee" .atk 105% .dmg -40% .crit 4% .launch 1 .target 1 .is_crit_valid True  .effect "Push 3E" "clear_corpses" "Leper Acc"
+combat_skill: .id "focus" .level 0 .type "melee" .atk 90% .dmg -40% .crit 0% .launch 1 .target 1 .is_crit_valid True  .effect "Push 3A" "clear_corpses" "Leper Acc"
+combat_skill: .id "focus" .level 1 .type "melee" .atk 95% .dmg -40% .crit 1% .launch 1 .target 1 .is_crit_valid True  .effect "Push 3B" "clear_corpses" "Leper Acc"
+combat_skill: .id "focus" .level 2 .type "melee" .atk 100% .dmg -40% .crit 2% .launch 1 .target 1 .is_crit_valid True  .effect "Push 3C" "clear_corpses" "Leper Acc"
+combat_skill: .id "focus" .level 3 .type "melee" .atk 105% .dmg -40% .crit 3% .launch 1 .target 1 .is_crit_valid True  .effect "Push 3D" "clear_corpses" "Leper Acc"
+combat_skill: .id "focus" .level 4 .type "melee" .atk 110% .dmg -40% .crit 4% .launch 1 .target 1 .is_crit_valid True  .effect "Push 3E" "clear_corpses" "Leper Acc"
+// LEP-008 (2026-11-02): Purge ACC85 -> 90 (90/95/100/105/110). A damage-reduced utility hit should connect reliably; push resistance and rank1 restriction remain, no self advance added.
 
 
 combat_skill: .id "revenge" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target  .is_crit_valid True  .effect "Leper Strength 1" "RB LEP Vulnerability 1"
@@ -63,11 +66,12 @@ combat_skill: .id "solemnity" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .l
 combat_skill: .id "solemnity" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 12 .target  .is_crit_valid True  .effect "LeperHealSelf 5" "LeperHealSelfStress 5" .is_stall_invalidating false
 
 
-combat_skill: .id "intimidate" .level 0 .type "melee" .atk 85% .dmg -40% .crit 3% .launch 1 .target 1 .is_crit_valid True .effect "RB LEP Intimidate 1"
-combat_skill: .id "intimidate" .level 1 .type "melee" .atk 90% .dmg -40% .crit 4% .launch 1 .target 1 .is_crit_valid True .effect "RB LEP Intimidate 2"
-combat_skill: .id "intimidate" .level 2 .type "melee" .atk 95% .dmg -40% .crit 5% .launch 1 .target 1 .is_crit_valid True .effect "RB LEP Intimidate 3"
-combat_skill: .id "intimidate" .level 3 .type "melee" .atk 100% .dmg -40% .crit 6% .launch 1 .target 1 .is_crit_valid True .effect "RB LEP Intimidate 4"
-combat_skill: .id "intimidate" .level 4 .type "melee" .atk 105% .dmg -40% .crit 7% .launch 1 .target 1 .is_crit_valid True .effect "RB LEP Intimidate 5"
+combat_skill: .id "intimidate" .level 0 .type "melee" .atk 90% .dmg -40% .crit 3% .launch 1 .target 1 .is_crit_valid True .effect "RB LEP Intimidate 1"
+combat_skill: .id "intimidate" .level 1 .type "melee" .atk 95% .dmg -40% .crit 4% .launch 1 .target 1 .is_crit_valid True .effect "RB LEP Intimidate 2"
+combat_skill: .id "intimidate" .level 2 .type "melee" .atk 100% .dmg -40% .crit 5% .launch 1 .target 1 .is_crit_valid True .effect "RB LEP Intimidate 3"
+combat_skill: .id "intimidate" .level 3 .type "melee" .atk 105% .dmg -40% .crit 6% .launch 1 .target 1 .is_crit_valid True .effect "RB LEP Intimidate 4"
+combat_skill: .id "intimidate" .level 4 .type "melee" .atk 110% .dmg -40% .crit 7% .launch 1 .target 1 .is_crit_valid True .effect "RB LEP Intimidate 5"
+// LEP-008 (2026-11-02): Sunder ACC85 -> 90 (90/95/100/105/110). Improve armour-shred delivery without changing PROT reduction, resistance roll, duration2, damage or rank1 restriction.
 // LEP-001 intimidate: 적 피해·속도 감소·은신 해제·자기 표식·자기 속도 전부 제거 -> 방어 무시 일격. 1열 -> 1열(축출과 같은 모션), 명중 75~95·치명 3~7%(토막치기와 같음), 피해 -20%. 방어 20% 넘는 적에게만 토막치기보다 셈. 나병환자는 서포터가 받쳐 주는 왕 — 은신 해제·약화는 정체성과 안 맞음 [제작자]
 // LEP-002 intimidate: 방어 무시 -> 맞은 적 방어 -15/17/20/22/25%(2턴). 이름(위협)에 맞는 적 약화. 명중·치명·피해 -20%·1열->1열은 LEP-001 그대로. 첫 타는 토막치기보다 약하고, 이어지는 토막치기·아군 공격이 이득 [제작자]
 // LEP-003 intimidate: 명중 75~95 -> 85~105, 피해 -20% -> -40%(같은 모션의 축출과 동일). 첫 타가 약해진 만큼 방어 감소 -15~25 -> -25/27/30/32/35%(2턴). 치명 3~7% 유지 [제작자]

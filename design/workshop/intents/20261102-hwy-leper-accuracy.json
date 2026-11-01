@@ -1,0 +1,38 @@
+{
+  "id": "HWY-027/028-LEP-008",
+  "decision": "adopted",
+  "original_quote": "그럼 사악한 칼질 피해 0 명중 90 치명 5에 3열 유지하고 정맥 절개 맞춰서 조정하고 나병은 토막치기 가르기 80 축출 갑옷 쪼개기 90으로 가자. test에 적용하고 의도 주석 남겨서 커밋까지 해 푸시는 하지 말고 이제 결투가 도망자 포함해서 모든 영웅 진짜 다 한거같은데 남은 영웅 있니?",
+  "context_quotes": [
+    {
+      "role": "user",
+      "quote": "사악한 칼질 피해 0으로 하고 명중 90은? 정맥절개는 바닐라 치명 0이야 나병이는 그냥 지금 몇가지 단점 유지한 채로 명중만 높이는 거로 가자 육중한 컨셉은 유지하고 명중이 이 게임에서 너무 항구적으로 부족한 스탯이라서 이게 낮아버리면 이중으로 고통받는 구조라 생각해 그래서 명중을 어느정도 구제해주는 것이 적절한 버프안이라 생각해 축출 선더를 85 맞추고 가르기 토막을 명중 80으로 맞추는건 어때 아니면 축출 선더 명중 더 업해도 괜찮아 90 까지",
+      "event_id": "37b80a0c70ea0ac215ad0da3ac0d4ba86079e68339a8c6922af62840a835093f"
+    },
+    {
+      "role": "assistant",
+      "quote": "정맥 절개까지 바닐라 치명0으로 복원하려는 뜻이라면, **피해도 −20→−15로 함께 복원하는 쪽**을 권합니다. −20은 치명을 올린 대가였으니까요.",
+      "reference": "직전 답변의 정맥 절개 연동 조정 제안"
+    }
+  ],
+  "rationale_ko": "칼질의 안정적 직접 피해·3열 접근과 정맥 절개의 높은 명중·출혈·약화를 구분한다. 정맥 절개 치명 원복과 피해 대가 철회를 함께 적용한다. 나병환자는 육중한 전열 정체성과 여러 단점을 남기되 낮은 명중이 중복 부담이 되는 부분만 완화한다. 가르기 사거리·축출 전진 제안은 미채택.",
+  "source": {
+    "product": "codex",
+    "reference": "local-knowledge read_evidence로 확인한 현재 세션 승인 원문. 날짜는 사용자 Asia/Seoul 기준2026-11-02.",
+    "session_id": "01a10741-76da-7e43-9500-98474ab3f383",
+    "message_id": "msg_01a197b5-fae6-78a2-9353-e668c82578e7",
+    "event_id": "0ca095087f32d8e9fd71a5a77b1fb73d36057fd70b56ac7e6a19a6c97e77b059"
+  },
+  "files": [
+    "heroes/highwayman/highwayman.info.darkest",
+    "heroes/leper/leper.info.darkest",
+    "design/changes/highwayman.md",
+    "design/changes/leper.md",
+    "design/workshop/hero_cards.json",
+    "design/workshop/why.json"
+  ],
+  "supersedes": [
+    "HWY-024",
+    "HWY-025"
+  ],
+  "scope": "test only; commit, no push; preserve other pending hero/model/branding work"
+}
