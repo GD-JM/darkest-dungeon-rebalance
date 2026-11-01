@@ -382,13 +382,10 @@
     "name": "Zealous Accusation",
     "icon": "two",
     "old": [
-     "ACC 85",
-     "DMG -40%"
+     "ACC 85"
     ],
     "new": [
-     "ACC 90",
-     "DMG -50%",
-     "Burn 1/1/2/2/2"
+     "ACC 90"
     ]
    },
    {

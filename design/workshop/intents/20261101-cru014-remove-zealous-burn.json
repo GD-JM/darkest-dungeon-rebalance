@@ -1,0 +1,23 @@
+{
+  "id": "CRU-014",
+  "decision": "adopted",
+  "original_quote": "이러면 진짜 좋은게 처음 설정했던 아군을 강하게 해서 강해진다는 원칙을 지킬 수가 있어 대부분 조합에 어울리게 아군 시너지를 높여주는 방향 이라 만족하는 결과야 이게 장신구 세팅과도 잘 맞는지 확인해줘. 그리고 지금 성전사 열정적 고발에 화상 넣었는데 그거 뺴줘 아무리 생각해도 안 어울리네",
+  "rationale_ko": "제작자가 성전사 광신적 고발(사용자 표기 '열정적 고발')의 화상이 어울리지 않는다며 삭제를 요청했다. 화상 1/1/2/2/2를 삭제한다. 피해 -50%는 CRU-013에서 화상과 맞바꾼 값이라 -40%로 함께 되돌렸다(Claude 판단, 원문에는 피해 언급 없음). 명중·열은 그대로.",
+  "source": {
+    "product": "claude",
+    "reference": "Claude Code session cc3c95a9-aeea-4409-9feb-eb162a738694, 2026-11-01",
+    "session_id": "cc3c95a9-aeea-4409-9feb-eb162a738694",
+    "message_id": "74c495c9-7230-4ea5-b3b1-a4a162010cd9",
+    "event_id": null
+  },
+  "files": [
+    "heroes/crusader/crusader.info.darkest",
+    "heroes/crusader/crusader.effects_edit.txt",
+    "design/changes/crusader.md",
+    "design/workshop/hero_cards.json",
+    "design/workshop/why.json"
+  ],
+  "supersedes": [
+    "CRU-013"
+  ]
+}

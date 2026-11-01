@@ -175,8 +175,3 @@ effect: .name "RB CRU Battle Heal Prot 5" .target "target" .curio_result_type "p
 // CRU-011 Battle Heal gives PROT +15% 2 turns (stacking heal moved to Antiquarian Fortifying Vapours).
 effect: .name "RB CRU Bulwark Resist 5" .target "performer" .curio_result_type "positive" .chance 100% .duration 1 .buff_duration_type combat_end .buff_ids "RB_CRU_STUNRES_5" "RB_CRU_DBRES_5" .on_hit true .on_miss true .queue true
 // CRU-012 Bulwark of Faith STUN resist +30% and DEATHBLOW resist +10% until combat end (no overlap with Leper Withstand blight/bleed/debuff/move).
-
-// CRU-013 광신적 고발 화상 1/1/2/2/2. 기술1~2는 기존 RB ANT Flash Burn 1을 교차 참조하며 중복 정의하지 않는다.
-// CRU-013 기술3~5는 공식 도망자의 RW Burn 2를 재사용한다. 공유 효과를 수정할 때 광신적 고발 참조도 함께 검토한다.
-effect: .name "RW Burn 2" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 2 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
-// CRU-013 Reuse vanilla Burn 2 for Zealous Accusation levels 3-5; exchange immediate damage for armor-independent delayed damage and party Burn synergy.
