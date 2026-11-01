@@ -32,13 +32,14 @@
   },
   "runaway|hearthlight": {
     "ids": [
-      "RUN-009"
+      "RUN-009",
+      "RUN-011"
     ],
     "principles": [
       "P-10"
     ],
-    "ko": "사용34/전진2, 명중 지원 유지. 화상 대상 치명 지원을 화상 감소 지연50% 실효2회로 교체해 준비와 전진을 연결한다. 중첩 방지 미해결로 배포 전 검증 필요.",
-    "en": "Use from ranks 3-4 and advance 2; retain party accuracy, replace conditional CRIT with 50% Burn decay delay for two target turns. Non-stacking validation is release-blocking."
+    "ko": "사용34/전진2와 명중 지원 유지. 감소 지연50%를 실효1회로 단축한다. 복수 도망자의 합산은 원본과 같이 허용하며 별도 중첩 상한은 두지 않는다.",
+    "en": "Use from ranks 3-4 and advance 2; retain party accuracy. Burn decay delay remains 50% for one target turn. Multiple Runaways may stack it as in the original; no separate stacking cap."
   },
  "abomination|manacles": {
   "ids": [
@@ -1103,15 +1104,16 @@
    "VES-014",
    "VES-016",
    "VES-020",
-   "VES-021"
+   "VES-021",
+   "VES-022"
   ],
   "principles": [
    "P-19",
    "G-03",
    "P-11"
   ],
-  "en": "Accuracy 95 makes Illumination reliable for finishing and support. Burn is replaced with PROT -15 to -25 points for three turns; dodge -15 to -25, stealth removal and torch gain remain. This helps physical allies without changing Hand of Light accuracy90 or damage-40%.",
-  "ko": "광휘 명중95를 유지하며 화상을 방어도 감소15~25%p(3턴)로 교체한다. 회피 감소15~25·은신 해제·횃불도 유지하여 물리 딜러를 지원한다. 손길 명중90·피해-40%·자기 강화는 보존한다."
+  "en": "Illumination adds Burn 1/1/2/2/3 while keeping ACC 95, DODGE and PROT debuffs, stealth removal and torch gain. Other heroes can supply Burn for Runaway synergies instead of making her provide every part of the combination.",
+  "ko": "광휘에 화상1/1/2/2/3을 추가하고 명중95·회피 감소·방어 감소·은신 해제·횃불을 유지한다. 다른 영웅도 화상을 공급하여 도망자와의 조합 연계를 연다."
  },
  "vestal|judgement": {
   "ids": [

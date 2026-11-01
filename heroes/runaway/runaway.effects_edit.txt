@@ -193,13 +193,18 @@ effect: .name "on_crit_speed"    .target "performer" .curio_result_type "positiv
 //#   공유 효과: 다른 영웅 1명(노상강도). 여기서 고치면 이 영웅만 바뀐다
 //#   강화 효과 수치(JSON, 참고용): on_crit_spd = speed_rating 2
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "RB RUN Hearthlight Decay 1" .target "target" .curio_result_type "negative" .chance 100% .keyStatus "burning" .buff_ids rw_burn_decay_debuff .duration 2 .on_hit true .on_miss false
+effect: .name "RB RUN Hearthlight Decay 1" .target "target" .curio_result_type "negative" .chance 100% .buff_ids rb_run_hearthlight_decay_burning .duration 1 .buff_duration_type after_turn .skill_instant false .on_hit true .on_miss false
+// RUN-011 50% for one effective decay event (after_turn 1); stacking allowed. Recipient burning rule replaces skill-instant keyStatus to prevent null-target selection crash.
 // RUN-009 Move decay delay to rear-only forward support, replacing conditional CRIT. Non-stacking remains a release-blocking runtime issue; see design review.
-effect: .name "RB RUN Hearthlight Decay 2" .target "target" .curio_result_type "negative" .chance 110% .keyStatus "burning" .buff_ids rw_burn_decay_debuff .duration 2 .on_hit true .on_miss false
+effect: .name "RB RUN Hearthlight Decay 2" .target "target" .curio_result_type "negative" .chance 110% .buff_ids rb_run_hearthlight_decay_burning .duration 1 .buff_duration_type after_turn .skill_instant false .on_hit true .on_miss false
+// RUN-011 50% for one effective decay event (after_turn 1); stacking allowed. Recipient burning rule replaces skill-instant keyStatus to prevent null-target selection crash.
 // RUN-009 Move decay delay to rear-only forward support, replacing conditional CRIT. Non-stacking remains a release-blocking runtime issue; see design review.
-effect: .name "RB RUN Hearthlight Decay 3" .target "target" .curio_result_type "negative" .chance 120% .keyStatus "burning" .buff_ids rw_burn_decay_debuff .duration 2 .on_hit true .on_miss false
+effect: .name "RB RUN Hearthlight Decay 3" .target "target" .curio_result_type "negative" .chance 120% .buff_ids rb_run_hearthlight_decay_burning .duration 1 .buff_duration_type after_turn .skill_instant false .on_hit true .on_miss false
+// RUN-011 50% for one effective decay event (after_turn 1); stacking allowed. Recipient burning rule replaces skill-instant keyStatus to prevent null-target selection crash.
 // RUN-009 Move decay delay to rear-only forward support, replacing conditional CRIT. Non-stacking remains a release-blocking runtime issue; see design review.
-effect: .name "RB RUN Hearthlight Decay 4" .target "target" .curio_result_type "negative" .chance 130% .keyStatus "burning" .buff_ids rw_burn_decay_debuff .duration 2 .on_hit true .on_miss false
+effect: .name "RB RUN Hearthlight Decay 4" .target "target" .curio_result_type "negative" .chance 130% .buff_ids rb_run_hearthlight_decay_burning .duration 1 .buff_duration_type after_turn .skill_instant false .on_hit true .on_miss false
+// RUN-011 50% for one effective decay event (after_turn 1); stacking allowed. Recipient burning rule replaces skill-instant keyStatus to prevent null-target selection crash.
 // RUN-009 Move decay delay to rear-only forward support, replacing conditional CRIT. Non-stacking remains a release-blocking runtime issue; see design review.
-effect: .name "RB RUN Hearthlight Decay 5" .target "target" .curio_result_type "negative" .chance 140% .keyStatus "burning" .buff_ids rw_burn_decay_debuff .duration 2 .on_hit true .on_miss false
+effect: .name "RB RUN Hearthlight Decay 5" .target "target" .curio_result_type "negative" .chance 140% .buff_ids rb_run_hearthlight_decay_burning .duration 1 .buff_duration_type after_turn .skill_instant false .on_hit true .on_miss false
+// RUN-011 50% for one effective decay event (after_turn 1); stacking allowed. Recipient burning rule replaces skill-instant keyStatus to prevent null-target selection crash.
 // RUN-009 Move decay delay to rear-only forward support, replacing conditional CRIT. Non-stacking remains a release-blocking runtime issue; see design review.

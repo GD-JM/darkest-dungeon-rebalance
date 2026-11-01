@@ -1,0 +1,36 @@
+{
+  "id": "RUN-011",
+  "decision": "adopted",
+  "original_quote": "그러면 그대로 적용해 문제 아니잖아",
+  "context_quotes": [
+    {
+      "role": "user",
+      "text": "아니 실효 1회로 하면 되잖아 실효 1턴만 되면 중첩 걱정할 일이 없잖아 ㅎㅎ",
+      "event_id": "c40f9d397d7139a10c2ece3dc8fefa551e0bdad9c00a8c32de33d102566735c8"
+    },
+    {
+      "role": "assistant",
+      "text": "추천안은 **50%·실효 1회, 후열 사용·2열 전진 유지**야. 선택 시 충돌은 이와 별도로 고쳐야 해.",
+      "event_id": "50c55ec19c3433714a177d3d44636a335f4c7e2665ae18c3c550cc08db6567bf"
+    }
+  ],
+  "rationale_ko": "실효1회로 단축하며 원본에도 있었던 복수 도망자 합산은 허용. 선택 충돌은 같은 설계 범위에서 수정.",
+  "source": {
+    "product": "codex",
+    "reference": "현재 승인과 직전 대화",
+    "session_id": "01a10741-76da-7e43-9500-98474ab3f383",
+    "event_id": "311eb5d3bbe1716df8c20265698d359e044033de7695540a9d6cbb8f1d1726a7",
+    "message_id": "msg_01a1972f-1120-7000-9628-b6a34dfb3008"
+  },
+  "files": [
+    "heroes/runaway/runaway.effects_edit.txt",
+    "effects/rebalance_runaway.effects.darkest",
+    "shared/buffs/rebalance_runaway.buffs.json",
+    "design/workshop/hero_cards.json",
+    "design/workshop/why.json"
+  ],
+  "supersedes": [
+    "RUN-009 duration2 and mandatory nonstack safeguard"
+  ],
+  "validation_scope": "duration1/after_turn and receiver burning predicate verified statically; final in-combat countdown/selection test pending. Stacking is allowed; one event does not prevent two heroes applying before an enemy acts."
+}

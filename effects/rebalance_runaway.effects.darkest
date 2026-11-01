@@ -48,13 +48,18 @@ effect: .name "RB RUN RW CB Rank Effect 5" .target "target" .chance 100% .on_hit
 // RUN-008 Ground 3/3/4/4/5 for 2 rounds; reduce long-fight accumulation.
 
 // mod-only new effects
-effect: .name "RB RUN Hearthlight Decay 1" .target "target" .curio_result_type "negative" .chance 100% .keyStatus "burning" .buff_ids rw_burn_decay_debuff .duration 2 .on_hit true .on_miss false
+effect: .name "RB RUN Hearthlight Decay 1" .target "target" .curio_result_type "negative" .chance 100% .buff_ids rb_run_hearthlight_decay_burning .duration 1 .buff_duration_type after_turn .skill_instant false .on_hit true .on_miss false
+// RUN-011 50% for one effective decay event (after_turn 1); stacking allowed. Recipient burning rule replaces skill-instant keyStatus to prevent null-target selection crash.
 // RUN-009 Move decay delay to rear-only forward support, replacing conditional CRIT. Non-stacking remains a release-blocking runtime issue; see design review.
-effect: .name "RB RUN Hearthlight Decay 2" .target "target" .curio_result_type "negative" .chance 110% .keyStatus "burning" .buff_ids rw_burn_decay_debuff .duration 2 .on_hit true .on_miss false
+effect: .name "RB RUN Hearthlight Decay 2" .target "target" .curio_result_type "negative" .chance 110% .buff_ids rb_run_hearthlight_decay_burning .duration 1 .buff_duration_type after_turn .skill_instant false .on_hit true .on_miss false
+// RUN-011 50% for one effective decay event (after_turn 1); stacking allowed. Recipient burning rule replaces skill-instant keyStatus to prevent null-target selection crash.
 // RUN-009 Move decay delay to rear-only forward support, replacing conditional CRIT. Non-stacking remains a release-blocking runtime issue; see design review.
-effect: .name "RB RUN Hearthlight Decay 3" .target "target" .curio_result_type "negative" .chance 120% .keyStatus "burning" .buff_ids rw_burn_decay_debuff .duration 2 .on_hit true .on_miss false
+effect: .name "RB RUN Hearthlight Decay 3" .target "target" .curio_result_type "negative" .chance 120% .buff_ids rb_run_hearthlight_decay_burning .duration 1 .buff_duration_type after_turn .skill_instant false .on_hit true .on_miss false
+// RUN-011 50% for one effective decay event (after_turn 1); stacking allowed. Recipient burning rule replaces skill-instant keyStatus to prevent null-target selection crash.
 // RUN-009 Move decay delay to rear-only forward support, replacing conditional CRIT. Non-stacking remains a release-blocking runtime issue; see design review.
-effect: .name "RB RUN Hearthlight Decay 4" .target "target" .curio_result_type "negative" .chance 130% .keyStatus "burning" .buff_ids rw_burn_decay_debuff .duration 2 .on_hit true .on_miss false
+effect: .name "RB RUN Hearthlight Decay 4" .target "target" .curio_result_type "negative" .chance 130% .buff_ids rb_run_hearthlight_decay_burning .duration 1 .buff_duration_type after_turn .skill_instant false .on_hit true .on_miss false
+// RUN-011 50% for one effective decay event (after_turn 1); stacking allowed. Recipient burning rule replaces skill-instant keyStatus to prevent null-target selection crash.
 // RUN-009 Move decay delay to rear-only forward support, replacing conditional CRIT. Non-stacking remains a release-blocking runtime issue; see design review.
-effect: .name "RB RUN Hearthlight Decay 5" .target "target" .curio_result_type "negative" .chance 140% .keyStatus "burning" .buff_ids rw_burn_decay_debuff .duration 2 .on_hit true .on_miss false
+effect: .name "RB RUN Hearthlight Decay 5" .target "target" .curio_result_type "negative" .chance 140% .buff_ids rb_run_hearthlight_decay_burning .duration 1 .buff_duration_type after_turn .skill_instant false .on_hit true .on_miss false
+// RUN-011 50% for one effective decay event (after_turn 1); stacking allowed. Recipient burning rule replaces skill-instant keyStatus to prevent null-target selection crash.
 // RUN-009 Move decay delay to rear-only forward support, replacing conditional CRIT. Non-stacking remains a release-blocking runtime issue; see design review.

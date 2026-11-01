@@ -138,3 +138,10 @@ effect: .name "RB VES Illumination Armor 4" .target "target" .curio_result_type 
 // VES-020 광휘: PROT -22%p for 3 turns; replace burn with physical-party support; existing other effects retained.
 effect: .name "RB VES Illumination Armor 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .combat_stat_buff 1 .protection_rating_add -25% .on_hit true .on_miss false .queue true
 // VES-020 광휘: PROT -25%p for 3 turns; replace burn with physical-party support; existing other effects retained.
+
+// VES-022 광휘 화상 1/1/2/2/3. 1~2레벨은 다른 영웅의 기존 RB ANT Flash Burn 1을 참조하며 이 파일에서 중복 정의하지 않는다.
+// VES-022 3~5레벨은 아래 공식 도망자 화상 효과를 그대로 재사용한다. 섬광 가루의 1/1/1/2/2 수치는 바꾸지 않는다.
+effect: .name "RW Burn 2" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 2 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+// VES-022 광휘 3~4레벨: 기존 화상 2 효과 재사용.
+effect: .name "RW Burn 3" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 3 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+// VES-022 광휘 5레벨: 기존 화상 3 효과 재사용.
