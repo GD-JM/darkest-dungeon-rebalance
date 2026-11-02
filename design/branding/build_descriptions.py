@@ -21,6 +21,10 @@ BUDGET = 7900
 
 
 def source(lang):
+    # Darkest Refined 출시 원본(design/refined/description/<언어>.txt)이 있으면 그것, 없으면 시안 원본
+    rel = HERE.parent / 'refined' / 'description' / f'{lang}.txt'
+    if rel.exists():
+        return rel.read_text(encoding='utf-8').strip()
     return (DRAFT / ('description_en.txt' if lang == 'english' else 'description_ko.txt' if lang == 'koreana'
                      else f'i18n/description_{lang}.txt')).read_text(encoding='utf-8').strip()
 
@@ -43,7 +47,7 @@ def build(text, img, optional, lang='english'):
         if key == 'h_try' and 'intros' in optional:
             body += '\n' + '\n'.join(tag(n) for n in ('intro_1_healing', 'intro_2_armor', 'intro_3_builds'))
         if key == 'h_reworks' and 'spotlights' in optional:
-            body += '\n' + '\n'.join(tag(n) for n in ('hero_spotlight_antiquarian', 'hero_spotlight_abomination'))
+            body += '\n' + '\n'.join(tag(n) for n in ('spotlight_antiquarian', 'spotlight_abomination'))
         if key == 'h_images' and 'roster' in optional:
             body = tag('roster') + '\n' + body
         if key == 'h_listening':
@@ -60,7 +64,8 @@ def build(text, img, optional, lang='english'):
 def main(local=False):
     if local:
         # 목업(darkest_refined_draft/mock_workshop_page.html) 기준 상대 경로
-        img2 = lambda n: ('templates/' if n.startswith('hero_spotlight') else '' if n.startswith('intro_') else 'desc/') + n + '.png'
+        img2 = lambda n: (n.replace('spotlight_', 'spotlights/', 1) if n.startswith('spotlight_')
+                          else n if n.startswith('intro_') else 'desc/' + n) + '.png'
     else:
         urls = json.loads((HERE / 'desc_asset_urls.json').read_text(encoding='utf-8'))
         img2 = lambda n: urls[n + '.png']

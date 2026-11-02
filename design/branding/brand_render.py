@@ -141,6 +141,16 @@ def spaced(text):
     return '   '.join(' '.join(word) for word in text.split(' '))
 
 
+def badge(d, x, y, text, size=15):
+    """잔광색 작은 꼬리표(REWORKED·NEW SKILL). 왼쪽 위 (x, y)에 그리고 오른쪽 끝 x를 돌려준다."""
+    f = font('palab', size)
+    t = spaced(text)
+    w, h = int(d.textlength(t, font=f)) + 22, size + 13
+    d.rounded_rectangle((x, y, x + w, y + h), radius=4, fill=EMBER, outline=GOLD, width=2)
+    d.text((x + w // 2, y + h // 2 + 1), t, font=f, fill=GOLD_HI, anchor='mm')
+    return x + w
+
+
 # ── 아트 ───────────────────────────────────────────────────────────────
 ART = {k: v for k, v in json.load(open(os.path.join(HERE, 'brand_art.json'), encoding='utf-8')).items() if not k.startswith('_')}
 
@@ -302,9 +312,11 @@ def panel_text(im, c, right_limit=640):
         y += 38
     y += 18
     fh, fb = font('palab', 26), font('pala', 23)
-    for name, text in c['items']:
+    for name, text, *tag in c['items']:
         d.polygon([(76, y + 15), (84, y + 7), (92, y + 15), (84, y + 23)], fill=GOLD)
         d.text((104, y), name, font=fh, fill=GOLD_HI)
+        if tag:     # 세 번째 칸 = 꼬리표(예: REWORKED)
+            badge(d, 104 + int(d.textlength(name, font=fh)) + 14, y + 2, tag[0], size=13)
         y += 34
         for line in wrap(d, text, fb, right_limit - 80):
             d.text((104, y), line, font=fb, fill=BODY)
@@ -342,14 +354,17 @@ def panel_poster(c):
 
 
 def hero_spotlight(c):
-    """1200×800. 세로 아트(포스터)는 왼쪽 큰 칸, 가로 아트(코믹스 넓은 칸)는 위 띠 + 아래 두 단."""
-    if aspect(c['art']) > 1.0:
+    """1200×800. 고해상도 세로 아트(포스터)만 왼쪽 큰 칸. 코믹스 칸(가로든 세로든 작음)은 원본 크기 근처로
+    왼쪽 위에 두는 위 띠 + 아래 두 단 — 작은 칸을 키우면 뭉개진다."""
+    if aspect(c['art']) > 1.0 or art_source(c['art'])[0].height < 600:
         return hero_spotlight_wide(c)
     W, H = 1200, 800
     im = canvas(W, H, (-W * 0.2, H * 0.05, W * 0.55, H * 1.2))
     cell(im, c['art'], (40, 40, 520, H - 40))
     d = ImageDraw.Draw(im)
     x0, xr = 572, W - 56
+    if c.get('badge'):
+        badge(d, x0, 22, c['badge'])
     title(im, (x0, 88), c['hero'], 64, anchor='lm', max_width=xr - x0)
     rule(d, x0, xr, 134, diamond=False)
     y = 156
@@ -382,6 +397,8 @@ def hero_spotlight_wide(c):
     cell(im, c['art'], (40, 40, 40 + aw, 40 + bh))
     d = ImageDraw.Draw(im)
     x0 = 40 + aw + 44
+    if c.get('badge'):      # 이름 위 꼬리표(리워크 영웅)
+        badge(d, x0, 40 + bh // 2 - 112, c['badge'])
     title(im, (x0, 40 + bh // 2 - 40), c['hero'], 60, anchor='lm', max_width=W - 60 - x0)
     y = 40 + bh // 2 + 6
     for line in wrap(d, c['tagline'], font('palai', 28), W - 60 - x0):
@@ -391,14 +408,18 @@ def hero_spotlight_wide(c):
     rule(d, 70, W - 70, ry, diamond=False)
     fl, fb = font('palab', 18), font('pala', 22)
     colw, xs = (W - 140 - 40) // 2, (70, 70 + (W - 140 - 40) // 2 + 40)
-    for i, (label, text) in enumerate(c['rows']):
-        x = xs[i % 2]
-        y = ry + 26 + (i // 2) * 160
-        d.text((x, y), spaced(label), font=fl, fill=GOLD)
-        y += 28
-        for line in wrap(d, text, fb, colw):
-            d.text((x, y), line, font=fb, fill=BODY)
+    top = ry + 26
+    for r in range(0, len(c['rows']), 2):      # 두 칸씩 한 줄, 다음 줄은 긴 쪽 아래에서 시작
+        bottom = top
+        for x, (label, text) in zip(xs, c['rows'][r:r + 2]):
+            y = top
+            d.text((x, y), spaced(label), font=fl, fill=GOLD)
             y += 28
+            for line in wrap(d, text, fb, colw):
+                d.text((x, y), line, font=fb, fill=BODY)
+                y += 28
+            bottom = max(bottom, y)
+        top = bottom + 26
     d.text((70, H - 30), 'DARKEST REFINED  ·  Hero Rebalance & Reworks', font=font('pala', 20), fill=DIM, anchor='lm')
     credit(d, (W - 36, H - 30))
     frame(im, 10, inner=False)
@@ -529,7 +550,7 @@ def face(hero, size):
 
 def roster_strip(c):
     """1100×H: 바뀐 영웅 초상 줄(9명씩). 칸 테두리는 만화 칸과 같은 규칙."""
-    W, per, size, gap = 1100, 9, 104, 14
+    W, per, size, gap = 1100, c.get('per', 9), c.get('size', 104), c.get('gap', 14)   # 20명은 10명씩 두 줄
     names = c['heroes']
     rows = (len(names) + per - 1) // per
     H = 30 + rows * (size + 40) + 10

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	<PreviewIconFile>preview_icon.png</PreviewIconFile>
+	<ItemDescriptionShort>Darkest Refined: a careful rebalance of all 20 heroes. Every buff carries a price, and every change keeps a written reason.</ItemDescriptionShort>
+	<ModDataPath>{MOD_DATA_PATH}</ModDataPath>
+	<Title>Darkest Refined — Hero Rebalance &amp; Reworks</Title>
+	<Language>english</Language>
+	<UpdateDetails>{UPDATE_DETAILS}</UpdateDetails>
+	<Visibility>private</Visibility>
+	<UploadMode>direct_upload</UploadMode>
+	<VersionMajor>1</VersionMajor>
+	<VersionMinor>0</VersionMinor>
+	<TargetBuild>0</TargetBuild>
+	<Tags>
+		<Tags>Overhauls</Tags>
+		<Tags>Gameplay Tweaks</Tags>
+		<Tags>Class Tweaks</Tags>
+	</Tags>
+	<ItemDescription>{DESCRIPTION}</ItemDescription>
+	<PublishedFileId>{ITEM_ID}</PublishedFileId>
+</project>

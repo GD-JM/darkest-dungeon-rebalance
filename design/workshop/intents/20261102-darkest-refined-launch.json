@@ -1,0 +1,18 @@
+[
+ {
+  "id": "REFINED-20261102-LAUNCH",
+  "decision": "adopted",
+  "original_quote": "응 합본 먼저로 확정하고 출시 준비 진행해",
+  "context_quotes": [
+   {"speaker": "user", "quote": "그럼 그냥 합본판 먼저 내고 나중에 영웅 일일이 분리시키도록 할까? 그게 편하겠니 너가 일 하는데? 기존꺼 DLC 없게 만드는 건 코덱스 시킬게", "source": "claude session 29a675d2-6792-4e0a-b0de-212cae3f4b77"},
+   {"speaker": "user", "quote": "응 그렇게 나눠서 진행해 기존거를 수정하는 식으로 작업하지 말고 새로 만들어서 너가 따로 작업해서 업로드하고, 기존 꺼는 그 형식 그대로 그냥 코덱스가 DLC 영웅만 빼는 식으로 작업할거야 그래서 합본 이후에 업로드 순서는 DLC 4개를 먼저 하는 게 좋을것 같아", "source": "claude session 29a675d2-6792-4e0a-b0de-212cae3f4b77"}
+  ],
+  "rationale_ko": "Darkest Refined를 기존 창작마당 아이템(3821353035)과 별개의 새 아이템으로 만든다. 합본(20명)을 먼저 비공개로 올려 사용자가 확인한 뒤 공개하고, 영웅 단독판은 이후 DLC 영웅부터 순차 출시한다. 기존 빌더(build_workshop.py)와 배포 도구(workshop-sync)는 고치지 않고 tools/refined/에 별도 빌더·게시 도구를 둔다. 게임 수치 변경은 없다.",
+  "source": {"product": "claude", "reference": "Claude Code session 29a675d2-6792-4e0a-b0de-212cae3f4b77 (2026-11-02)", "session_id": null, "message_id": null, "event_id": null},
+  "files": ["tools/refined/build_refined.py", "tools/refined/publish_refined.py", "design/refined/packages.json", "design/refined/project.template.xml", "design/refined/preview_icon.png", "design/refined/items.json",
+            "design/refined/description/english.txt", "design/refined/description/koreana.txt", "design/refined/description/brazilian.txt", "design/refined/description/french.txt", "design/refined/description/german.txt",
+            "design/refined/description/polish.txt", "design/refined/description/russian.txt", "design/refined/description/schinese.txt", "design/refined/description/spanish.txt", "design/refined/description/tchinese.txt",
+            "design/branding/brand_art.json", "design/branding/brand_content.json", "design/branding/brand_render.py", "design/branding/build_descriptions.py", "design/branding/desc_asset_urls.json"],
+  "supersedes": []
+ }
+]

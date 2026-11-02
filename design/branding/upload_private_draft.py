@@ -1,8 +1,11 @@
 """Darkest Refined 시안 전용 비공개 창작마당 아이템 생성·업로드 (BRAND_STYLE.md §8)
 사용: workshop-sync 파이썬으로 실행 — & <codex python> -B design/branding/upload_private_draft.py [--templates]
-  기본 = 실제 공개 페이지처럼(제목·10개 언어 설명·갤러리 = 소개 이미지 + 현재 영웅 카드)
+  기본 = 실제 공개 페이지처럼(제목·10개 언어 설명·갤러리 = 소개 이미지 + 영웅마다 스포트라이트 → 그 영웅 카드)
+  모든 언어 설명에 이미 [img]로 들어간 이미지(소개 1~3, 두 개편 스포트라이트)는 갤러리에서 뺀다.
   --templates = 템플릿 견본도 갤러리에 추가(검토용)
  [사용자 2026-10-29: "비공개 아이템 만들어서 올려줘" / "진짜처럼 만들어서 비공개로 올리자"]
+ [사용자 2026-10-29: "영웅별로 … 뭐가 문제이고 패치 방향성 무엇으로 잡았고 어떻게 해결했는지 그래서 저거를 전부
+  창작마당 이미지에 넣고 이미 설명과 본글에서 활용된 이미지는 저기서는 뺐으면 좋겠어"]
 기존 공개 아이템 3821353035은 건드리지 않는다. 생성은 한 번만: 결과가 애매하면 재시도하지 않고 멈춘다.
 """
 import json, shutil, sys
@@ -45,6 +48,17 @@ def description(lang):
     return text
 
 
+def in_description():
+    """모든 언어의 꾸민 설명에 [img]로 들어간 이미지(초안 폴더 기준 경로). 한 언어라도 빠졌으면 갤러리에 남긴다."""
+    urls = json.loads((HERE / 'desc_asset_urls.json').read_text(encoding='utf-8'))
+    texts = [description(lang) for lang in LANGS]
+    used = set()
+    for name, url in urls.items():          # 자산 이름: intro_1_healing.png / spotlight_antiquarian.png
+        if all(url in t for t in texts):
+            used.add(name.replace('spotlight_', 'spotlights/', 1) if name.startswith('spotlight_') else name)
+    return used
+
+
 def fit_png(im, out, width):
     """Steam 갤러리 PNG 1MB 미만: 넘으면 조금씩 줄인다."""
     while True:
@@ -61,18 +75,28 @@ def prepare(templates=False):
     UP.mkdir()
     im = Image.open(DRAFT / 'preview_darkest_refined.png').convert('RGB')
     im.save(UP / 'thumb.jpg', 'JPEG', quality=92)
+    used = in_description()
     files = []
+
+    def add(f, name):
+        if f.relative_to(DRAFT).as_posix() in used:
+            return
+        src = Image.open(f).convert('RGB')
+        fit_png(src, UP / name, src.width)
+        files.append(UP / name)
+
     for f in sorted(DRAFT.glob('intro_[0-9]_*.png')):
-        src = Image.open(f).convert('RGB')
-        fit_png(src, UP / f.name, src.width)
-        files.append(UP / f.name)
+        add(f, f.name)
     for f in sorted((DRAFT / 'templates').glob('*.png')) if templates else []:
-        src = Image.open(f).convert('RGB')
-        fit_png(src, UP / ('tpl_' + f.name), src.width)
-        files.append(UP / ('tpl_' + f.name))
-    for f in sorted((DRAFT / 'cards').glob('*.png')):
-        files.append(shutil.copy(f, UP / ('card_' + f.name)))
-    files = [Path(f) for f in files]
+        add(f, 'tpl_' + f.name)
+    shown = set()
+    for f in sorted((DRAFT / 'cards').glob('*.png')):      # 01_bounty_hunter_p1.png → bounty_hunter
+        hero = f.stem[3:].removesuffix('_p1').removesuffix('_p2')
+        spot = DRAFT / 'spotlights' / f'{hero}.png'
+        if hero not in shown and spot.exists():
+            add(spot, f'spot_{hero}.png')
+        shown.add(hero)
+        files.append(Path(shutil.copy(f, UP / ('card_' + f.name))))
     for f in files + [UP / 'thumb.jpg']:
         assert 0 < f.stat().st_size < 1_000_000, f
     return files

@@ -1,0 +1,45 @@
+[h1]Darkest Refined[/h1]
+[i]Des héros familiers. De nouvelles possibilités. Un rééquilibrage des héros minutieusement ajusté.[/i]
+
+Les héros que vous emmenez toujours. Les quatre compétences que vous choisissez toujours.
+Et si chacun des autres choix avait, lui aussi, une vraie raison d'exister ?
+
+Darkest Refined ajuste avec soin les héros et les compétences de Darkest Dungeon pour que vous puissiez imaginer et tester vos propres équipes. Les soins et la gestion du stress ne reposent plus sur un ou deux héros, les compétences de soutien ouvrent la voie aux attaquants physiques, et les forces de chaque héros sont réglées pour se combiner avec celles de ses alliés.
+
+La difficulté et la tension du jeu original passent en premier. Chaque amélioration a un prix, et les rôles affaiblis trouvent de nouveaux usages. Les données du jeu, les colifichets de classe, l'histoire officielle et les parties réelles sont examinés ensemble, et chaque changement garde une raison écrite. Votre expérience et vos retours argumentés continuent de l'affiner.
+
+[h2]Comment c'est ajusté[/h2]
+[list]
+[*][b]La même tension.[/b] Améliorations et affaiblissements sont conçus ensemble : le jeu reste aussi difficile que dans vos souvenirs.
+[*][b]Des garde-fous clairs.[/b] Les colifichets de classe et l'histoire officielle de chaque héros fixent les limites de chaque changement, pour que rien ne paraisse étranger.
+[*][b]Des preuves, pas l'intuition.[/b] Un modèle comparant dégâts, soins, réduction de PROT et actions guide les chiffres ; les parties réelles et vos retours les corrigent.
+[/list]
+
+[h2]Ce que vous pouvez essayer[/h2]
+Les plages couvrent les niveaux de compétence 1 à 5.
+[list]
+[*][b]Des soins partagés.[/b] Le soin reposait sur la Vestale, l'Occultiste et le Bouffon ; désormais de nombreux héros se partagent ce rôle, pour un jeu plus souple et des équipes plus variées. Battle Heal du Croisé rend 3–4 PV (6–7 au niveau 5) et augmente la PROT de la cible. Battlefield Bandage de l'Arbalétrière soigne le saignement, et Battlefield Medicine du Médecin de peste soigne le poison d'un allié. Fortifying Vapours de l'Antiquaire amplifie tous les soins reçus par la cible, de façon cumulable. Rallying Flare de l'Arbalétrière retire 3–5 de stress à l'équipe, et Bolster de l'Homme d'armes a été refondu en compétence de soin du stress.
+[*][b]Briser l'armure.[/b] Comme l'armure augmente avec la difficulté, les attaquants physiques autres que la Brise-bouclier et la Pilleuse de tombes étaient souvent délaissés. Désormais, les héros de soutien peuvent affaiblir l'armure ennemie pour eux : Weakening Curse de l'Occultiste (PROT −25 à −35 %), Puncture de la Brise-bouclier (−30 à −40 %), Brise-armure du Lépreux [b](NOUVELLE COMPÉTENCE)[/b] (−30 à −50 %) et Illumination de la Vestale (−15 à −25 %) ouvrent les ennemis cuirassés aux attaquants physiques.
+[*][b]Une autre façon de jouer.[/b] Tracking Shot du Bandit suit désormais l'ennemi et attire son attention pour gagner une riposte, et Duelist's Advance lui donne les bonus de combat d'un duelliste. Pierce de la Brise-bouclier ne peut plus atteindre tous les rangs ennemis ; en échange, la danseuse de son histoire passe librement entre alliés et ennemis et laisse une marque à chaque pas. La Mousquetaire est entièrement refondue : depuis l'arrière, elle perce l'armure et cache ses alliés dans la fumée.
+[/list]
+
+[h2]Deux refontes à la une[/h2]
+[list]
+[*][b]L'Antiquaire trouve sa place au rang Champion.[/b] Jusqu'au rang Vétéran, elle reste faible en échange de l'or supplémentaire qu'elle rapporte. À partir du rang Champion, ses colifichets de classe la mettent au niveau des autres héros. Plutôt que de devenir forte elle-même, elle renforce ses alliés, ce qui justifie de l'emmener au Donjon Ténébreux.
+[*][b]L'Abomination : la maîtrise devient puissance.[/b] Sa forme humaine a moins de précision mais de meilleures performances de base. Le stress qu'il contient avec Absolution paie la transformation et devient soin, dégâts, vitesse et CRIT de la bête, en allégeant le fardeau des alliés.
+[/list]
+
+[h2]Chaque changement, en images[/h2]
+Les images ci-dessus présentent pour chaque héros le problème et sa solution, puis comparent l'original à la version actuelle ; les fiches longues sont réparties sur deux images. Les 20 héros sont tous modifiés, et un volume par héros, avec l'intention de conception de chaque compétence, suivra.
+
+[h2]Des mises à jour régulières, des retours écoutés[/h2]
+[b]Je lis et j'examine chaque commentaire.[/b] Parlez-moi des compétences trop fortes, trop faibles ou inutiles, et des combinaisons qui fonctionnent. Les niveaux du héros et des compétences, les colifichets, l'équipe et le contexte du combat m'aident à évaluer vos retours. [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3821353035]Consulter l'historique[/url]
+
+[h2]Installation et compatibilité[/h2]
+[b]Activez les cinq héros DLC :[/b] Flagellant (The Crimson Court), Brise-bouclier, Duelliste, Fugitive et Mousquetaire (gratuite). La refonte de la Mousquetaire est incluse ; aucun mod externe n'est nécessaire.
+
+Compatible avec un domaine existant. D'autres refontes remplaçant les mêmes fichiers de héros, d'effets ou de buffs peuvent entrer en conflit. Avec UI Enhancement, les compétences de la Mousquetaire peuvent afficher leurs noms d'origine.
+
+[b]Chaque héros mérite une raison de rejoindre l'équipe.[/b]
+
+[i]Art des images : bandes dessinées officielles des origines des héros et illustrations promotionnelles de Darkest Dungeon © Red Hook Studios. Ce mod est un mod de fan non officiel.[/i]

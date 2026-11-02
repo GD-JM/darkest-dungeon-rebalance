@@ -22,7 +22,7 @@ JOURNAL = HERE / 'private_assets_item.json'
 URLS = HERE / 'desc_asset_urls.json'
 TITLE = 'Darkest Refined — description assets (private)'
 INLINE = ['intro_1_healing.png', 'intro_2_armor.png', 'intro_3_builds.png',
-          'templates/hero_spotlight_antiquarian.png', 'templates/hero_spotlight_abomination.png']
+          'spotlights/antiquarian.png', 'spotlights/abomination.png']
 
 
 def fit_png(im, out):
@@ -41,7 +41,7 @@ def prepare():
     UP.mkdir()
     files = []
     for f in sorted((DRAFT / 'desc').glob('*.png')) + [DRAFT / p for p in INLINE]:
-        out = UP / ('d_' + f.name)
+        out = UP / ('d_' + ('spotlight_' if f.parent.name == 'spotlights' else '') + f.name)
         fit_png(Image.open(f).convert('RGB'), out)
         files.append(out)
     Image.open(DRAFT / 'desc' / 'title_banner.png').convert('RGB').save(UP / 'thumb.jpg', 'JPEG', quality=90)
