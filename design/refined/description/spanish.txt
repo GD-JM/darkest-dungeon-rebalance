@@ -20,13 +20,13 @@ Los rangos cubren los niveles 1–5 de habilidad.
 [list]
 [*][b]Curación compartida.[/b] La curación recaía en la Vestal, el Ocultista y el Bufón; ahora muchos héroes se reparten ese papel, para un juego más flexible y grupos más variados. Battle Heal del Cruzado cura 3–4 PV (6–7 a nivel 5) y aumenta la PROT del objetivo. Battlefield Bandage de la Arbalestera cura hemorragias y Battlefield Medicine del Médico de la peste cura el veneno de un aliado. Fortifying Vapours de la Anticuaria amplifica toda la curación que recibe el objetivo, acumulable. Rallying Flare de la Arbalestera alivia 3–5 de estrés al grupo, y Bolster del Hombre de armas se ha rehecho como habilidad de alivio de estrés.
 [*][b]Rompe la armadura.[/b] Como la armadura aumenta con la dificultad, los atacantes físicos aparte de la Rompescudos y la Asaltatumbas solían quedarse fuera. Ahora los héroes de apoyo pueden reducir la armadura enemiga por ellos: Weakening Curse del Ocultista (PROT −25 a −35%), Puncture de la Rompescudos (−30 a −40%), Rompearmaduras del Leproso [b](NUEVA HABILIDAD)[/b] (−30 a −50%) e Illumination de la Vestal (−15 a −25%) abren a los enemigos acorazados para los atacantes físicos.
-[*][b]Otra forma de jugar.[/b] Tracking Shot del Bandolero ahora rastrea al enemigo y atrae su atención para ganar la represalia, y Duelist's Advance le otorga las mejoras de combate de un duelista. Pierce de la Rompescudos ya no alcanza todas las posiciones enemigas; a cambio, la bailarina de su historia se mueve libremente entre aliados y enemigos y deja huella a cada paso. La Mosquetera se ha rehecho por completo: desde la retaguardia perfora armaduras y oculta a sus aliados en el humo.
+[*][b]Otra forma de jugar.[/b] Tracking Shot del Bandolero ahora sigue los movimientos del enemigo para preparar la represalia, y Duelist's Advance le otorga las mejoras de combate de un duelista. Pierce de la Rompescudos ya no alcanza todas las posiciones enemigas; a cambio, la bailarina de su historia se mueve libremente entre aliados y enemigos y deja huella a cada paso. La Mosquetera se ha rehecho por completo: desde la retaguardia perfora armaduras y oculta a sus aliados en el humo.
 [/list]
 
 [h2]Dos reworks destacados[/h2]
 [list]
 [*][b]La Anticuaria encuentra su lugar en el nivel Campeón.[/b] Hasta Veterano es débil a cambio del oro extra que aporta. Desde Campeón, sus abalorios de clase la ponen a la altura de otros héroes. En lugar de hacerse fuerte ella misma, fortalece a sus aliados, por lo que vale la pena llevarla a la Mazmorra oscura.
-[*][b]Abominación: el control se vuelve poder.[/b] Su forma humana tiene menos precisión, pero mejor rendimiento base. El estrés que controla con Absolution paga la transformación y se convierte en curación, daño, velocidad y CRIT de la bestia, aliviando a los aliados.
+[*][b]Abominación: el control se vuelve poder.[/b] Su forma humana cambia algo de precisión en Manacles por un Beast's Bile más fuerte. El estrés que controla con Absolution paga la transformación y se convierte en curación, daño, velocidad y CRIT de la bestia, aliviando a los aliados.
 [/list]
 
 [h2]Cada cambio, en imágenes[/h2]

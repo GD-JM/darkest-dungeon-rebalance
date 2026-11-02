@@ -20,13 +20,13 @@ Os intervalos cobrem os níveis 1–5 das habilidades.
 [list]
 [*][b]Cura compartilhada.[/b] A cura dependia da Vestal, do Ocultista e do Bufão; agora vários heróis dividem esse papel, deixando o jogo mais flexível e as equipes mais variadas. Battle Heal do Cruzado cura 3–4 PV (6–7 no nível 5) e aumenta a PROT do alvo. Battlefield Bandage da Arbalista cura sangramento, e Battlefield Medicine da Médica da Peste cura o veneno de um aliado. Fortifying Vapours da Antiquária amplia toda a cura recebida pelo alvo, acumulando. Rallying Flare da Arbalista alivia 3–5 de estresse da equipe, e Bolster do Homem de Armas foi reformulado como habilidade de alívio de estresse.
 [*][b]Quebre a armadura.[/b] Como a armadura cresce com a dificuldade, atacantes físicos além da Quebra-Escudos e da Ladra de Cova costumavam ficar de fora. Agora os heróis de suporte podem reduzir a armadura inimiga por eles: Weakening Curse do Ocultista (PROT −25 a −35%), Puncture da Quebra-Escudos (−30 a −40%), Quebra-armadura do Leproso [b](NOVA HABILIDADE)[/b] (−30 a −50%) e Illumination da Vestal (−15 a −25%) abrem inimigos blindados para os atacantes físicos.
-[*][b]Outra forma de jogar.[/b] Tracking Shot do Bandoleiro agora rastreia o inimigo e atrai sua atenção para ganhar a riposta, e Duelist's Advance lhe dá os bônus de combate de um duelista. Pierce da Quebra-Escudos não alcança mais todas as posições inimigas; em troca, a dançarina de sua história transita livremente entre aliados e inimigos e deixa sua marca a cada passo. A Mosqueteira foi totalmente reformulada: da retaguarda, ela perfura armaduras e esconde aliados na fumaça.
+[*][b]Outra forma de jogar.[/b] Tracking Shot do Bandoleiro agora acompanha os movimentos do inimigo para preparar a riposta, e Duelist's Advance lhe dá os bônus de combate de um duelista. Pierce da Quebra-Escudos não alcança mais todas as posições inimigas; em troca, a dançarina de sua história transita livremente entre aliados e inimigos e deixa sua pegada a cada passo. A Mosqueteira foi totalmente reformulada: da retaguarda, ela perfura armaduras e esconde aliados na fumaça.
 [/list]
 
 [h2]Duas reformulações em destaque[/h2]
 [list]
 [*][b]A Antiquária se firma no nível Campeão.[/b] Até o nível Veterano ela é fraca, em troca do ouro extra que traz. A partir do nível Campeão, seus berloques de classe a colocam no nível dos outros heróis. Em vez de ficar forte sozinha, ela fortalece a equipe, e por isso vale a pena levá-la ao Darkest Dungeon.
-[*][b]Abominação: o controle vira poder.[/b] A forma humana tem menos precisão, mas desempenho base maior. O estresse que ele controla com Absolution paga a transformação e vira cura, dano, velocidade e CRIT da besta, aliviando os aliados.
+[*][b]Abominação: o controle vira poder.[/b] A forma humana troca um pouco da precisão de Manacles por um Beast's Bile mais forte. O estresse que ele controla com Absolution paga a transformação e vira cura, dano, velocidade e CRIT da besta, aliviando os aliados.
 [/list]
 
 [h2]Cada mudança, nas imagens[/h2]

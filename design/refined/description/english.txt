@@ -20,13 +20,13 @@ Ranges cover skill levels 1–5.
 [list]
 [*][b]Healing, shared.[/b] Healing used to rest on the Vestal, the Occultist and the Jester; now many heroes share the load, making the game more flexible and parties more varied. Crusader's Battle Heal restores 3–4 HP (6–7 at level 5) and raises the target's PROT. Arbalest's Battlefield Bandage cures bleed, and Plague Doctor's Battlefield Medicine cures an ally's blight. Antiquarian's Fortifying Vapours amplifies all healing the target receives, stacking. Arbalest's Rallying Flare relieves 3–5 stress for the party, and Man-at-Arms' Bolster has been reworked into a stress-healing skill.
 [*][b]Break the armor.[/b] As armor rises with difficulty, physical attackers other than the Shieldbreaker and the Grave Robber were often left behind. Now support heroes can strip enemy armor for them: Occultist's Weakening Curse (PROT −25 to −35%), Shieldbreaker's Puncture (−30 to −40%), Leper's Sunder [b](NEW SKILL)[/b] (−30 to −50%) and Vestal's Illumination (−15 to −25%) open armored enemies for physical attackers.
-[*][b]Another way to play.[/b] Highwayman's Tracking Shot now tracks the enemy and draws their attention to earn a riposte, and Duelist's Advance grants him a duelist's combat buffs. Shieldbreaker's Pierce can no longer reach every enemy rank; instead the dancer of her story slips freely between friend and foe, leaving a mark with every step. Musketeer is fully reworked: from the back she pierces armor and hides allies in smoke.
+[*][b]Another way to play.[/b] Highwayman's Tracking Shot now tracks the enemy's movements to ready a riposte, and Duelist's Advance grants him a duelist's combat buffs. Shieldbreaker's Pierce can no longer reach every enemy rank; instead the dancer of her story slips freely between friend and foe, leaving her footprint with every step. Musketeer is fully reworked: from the back she pierces armor and hides allies in smoke.
 [/list]
 
 [h2]Two reworks in focus[/h2]
 [list]
-[*][b]Antiquarian earns her place at Champion.[/b] Up to Veteran she stays weak, in exchange for the extra gold she brings. From Champion, her class trinkets bring her level with other heroes. Rather than growing strong herself, she makes her teammates stronger, so she is worth taking into the Darkest Dungeon.
-[*][b]Abomination: restraint becomes power.[/b] His human form has lower accuracy but stronger base performance. The stress he keeps in check with Absolution pays for the transformation and turns into the beast's healing, damage, speed and CRIT, easing the burden on allies.
+[*][b]Antiquarian earns her place at Champion.[/b] Up to Veteran she stays weak, in exchange for the extra gold she brings. From Champion, her class trinkets bring her close to other heroes. Rather than growing strong herself, she makes her teammates stronger, so she is worth taking into the Darkest Dungeon.
+[*][b]Abomination: restraint becomes power.[/b] His human form trades a little accuracy on Manacles for a harder-hitting Beast's Bile. The stress he keeps in check with Absolution pays for the transformation and turns into the beast's healing, damage, speed and CRIT, easing the burden on allies.
 [/list]
 
 [h2]Every change, in the images[/h2]

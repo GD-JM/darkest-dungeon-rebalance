@@ -29,11 +29,11 @@
     ],
     [
      "Arbalest · Bandage & Rallying Flare",
-     "The bandage cures bleed; the flare relieves 3–5 stress for the whole party."
+     "The bandage cures bleed; the flare relieves 3–5 stress for the rest of the party."
     ],
     [
      "Antiquarian · Fortifying Vapours",
-     "Amplifies every heal the target receives, +20–40%, stacking."
+     "Amplifies every heal the target receives, +20%, +40% at level 5, stacking."
     ],
     [
      "Man-at-Arms · Bolster",
@@ -368,7 +368,7 @@
     ],
     [
      "THE DIRECTION",
-     "Human form trades accuracy for stronger base output, so transforming becomes a real choice."
+     "Human form trades a little accuracy on Manacles for a harder-hitting Beast's Bile; the beast's price moves onto himself, so transforming becomes a real choice."
     ],
     [
      "THE SOLUTION, AND ITS PRICE",
@@ -397,11 +397,11 @@
     ],
     [
      "THE SOLUTION, AND ITS PRICE",
-     "Fortifying Vapours makes healing received +20% (+40% at level 5, stacking); at level 5 Protect Me lends her guard a riposte. Her other skills also gain a new effect at level 5."
+     "Fortifying Vapours makes healing received +20% (+40% at level 5, stacking); at level 5 Protect Me lends her guard a riposte, Nervous Stab marks and Get Down! clears her mark."
     ],
     [
      "NEW WAYS TO PLAY",
-     "Bring her for the party: boost the healer, arm the bodyguard, open enemies with Nervous Stab."
+     "Bring her for the party: boost the healer, arm the bodyguard, and mark targets with a level-5 Nervous Stab."
     ]
    ],
    "art": "antiquarian_knife"
@@ -464,7 +464,7 @@
    "rows": [
     [
      "THE PROBLEM",
-     "His resistances and speed growth sat above every base-game hero's, with no reason in his lore."
+     "His bleed resist and speed growth sat above the base game's usual caps, and his stun and move resists above the baseline, with no reason in his lore."
     ],
     [
      "THE DIRECTION",
@@ -539,7 +539,7 @@
    "rows": [
     [
      "THE PROBLEM",
-     "Riposte came only from stepping forward, so a ranged Highwayman couldn't use it, and Point Blank Shot hit hard at no cost."
+     "Riposte came only from Duelist's Advance, which steps him forward and breaks a ranged formation, and Point Blank Shot hit hard for only a one-rank recoil."
     ],
     [
      "THE DIRECTION",
@@ -777,7 +777,7 @@
     ],
     [
      "NEW WAYS TO PLAY",
-     "A back-rank hunter who protects allies with smoke instead of healing."
+     "A back-rank hunter who shields allies with smoke; Patch Up now also eases 2–4 stress."
     ]
    ],
    "art": "musketeer_aim"
@@ -798,7 +798,7 @@
     ],
     [
      "THE SOLUTION, AND ITS PRICE",
-     "Coup de Grâce DMG −70%, The Boot −60%, Flèche +10%. Feint now cuts PROT 15–25% and boosts riposte 20–30%. Touché is back to the base game."
+     "Coup de Grâce DMG −70% (was −60%), The Boot −60% (was −40%), Flèche +10% (was +25%). Feint's PROT cut drops to 15–25% and its riposte boost to 20–30%. Touché is back to the base game."
     ],
     [
      "NEW WAYS TO PLAY",

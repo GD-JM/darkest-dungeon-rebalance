@@ -20,13 +20,13 @@ Zakresy dotyczą poziomów umiejętności 1–5.
 [list]
 [*][b]Wspólne leczenie.[/b] Leczenie spoczywało na Kapłance, Okultyście i Błaźnie; teraz dzieli je wielu bohaterów, co czyni grę elastyczniejszą, a drużyny bardziej różnorodnymi. Battle Heal Krzyżowca leczy 3–4 PŻ (6–7 na poziomie 5) i zwiększa PROT celu. Battlefield Bandage Kuszniczki leczy krwawienie, a Battlefield Medicine Badaczki Zarazy leczy zatrucie sojusznika. Fortifying Vapours Antykwariuszki wzmacnia całe leczenie otrzymywane przez cel i się kumuluje. Rallying Flare Kuszniczki zmniejsza stres drużyny o 3–5, a Bolster Zbrojmistrza przerobiono na umiejętność leczenia stresu.
 [*][b]Przełam pancerz.[/b] Ponieważ pancerz rośnie wraz z poziomem trudności, wojownicy fizyczni poza Łamaczką Tarcz i Hieną Cmentarną często byli pomijani. Teraz bohaterowie wsparcia mogą osłabić pancerz wroga za nich: Weakening Curse Okultysty (PROT −25 do −35%), Puncture Łamaczki Tarcz (−30 do −40%), Łamacz pancerza Trędowatego [b](NOWA UMIEJĘTNOŚĆ)[/b] (−30 do −50%) i Illumination Kapłanki (−15 do −25%) otwierają opancerzonych wrogów dla wojowników fizycznych.
-[*][b]Inny styl gry.[/b] Tracking Shot Oprycha śledzi teraz wroga i przyciąga jego uwagę, by zdobyć ripostę, a Duelist's Advance daje mu bojowe wzmocnienia pojedynkowicza. Pierce Łamaczki Tarcz nie sięga już każdej pozycji wroga; w zamian tancerka z jej historii swobodnie przechodzi między sojusznikami a wrogami i zostawia ślad przy każdym kroku. Muszkieterka jest całkowicie przebudowana: z tyłu przebija pancerz i ukrywa sojuszników w dymie.
+[*][b]Inny styl gry.[/b] Tracking Shot Oprycha śledzi teraz ruchy wroga i przygotowuje ripostę, a Duelist's Advance daje mu bojowe wzmocnienia pojedynkowicza. Pierce Łamaczki Tarcz nie sięga już każdej pozycji wroga; w zamian tancerka z jej historii swobodnie przechodzi między sojusznikami a wrogami i zostawia ślad przy każdym kroku. Muszkieterka jest całkowicie przebudowana: z tyłu przebija pancerz i ukrywa sojuszników w dymie.
 [/list]
 
 [h2]Dwie przebudowy w centrum uwagi[/h2]
 [list]
 [*][b]Antykwariuszka odnajduje swoje miejsce na poziomie Czempion.[/b] Do poziomu Weteran pozostaje słaba w zamian za dodatkowe złoto, które przynosi. Od poziomu Czempion jej błyskotki klasowe stawiają ją na równi z innymi bohaterami. Zamiast samej stawać się silną, wzmacnia drużynę, więc warto zabrać ją do Najmroczniejszego Lochu.
-[*][b]Abominacja: opanowanie staje się siłą.[/b] Ludzka postać ma niższą celność, ale lepsze podstawowe parametry. Stres opanowany przez Absolution opłaca przemianę i zamienia się w leczenie, obrażenia, szybkość i CRIT bestii, odciążając sojuszników.
+[*][b]Abominacja: opanowanie staje się siłą.[/b] Ludzka postać oddaje trochę celności Manacles za mocniejsze Beast's Bile. Stres opanowany przez Absolution opłaca przemianę i zamienia się w leczenie, obrażenia, szybkość i CRIT bestii, odciążając sojuszników.
 [/list]
 
 [h2]Każda zmiana na grafikach[/h2]

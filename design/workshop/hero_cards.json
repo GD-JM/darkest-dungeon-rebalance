@@ -9,7 +9,7 @@
     "icon": "one",
     "old": [
      "Allies: stress +8",
-     "Self: no stress heal",
+     "Self: no self stress",
      "Self: heal 5-10",
      "Revert: allies stress heal 2",
      "Buff: blight resist +20-30%"
@@ -1117,8 +1117,8 @@
     "new": [
      "No use limit",
      "Party stress heal 1-3",
-     "Stress taken -10% (2-3 turns)",
-     "Guarded allies: +50% stress healing"
+     "Stress taken -10% (2/3/2/3/2 turns)",
+     "Guarded allies: stress heal received +15-25% (2 turns)"
     ]
    }
   ]
@@ -1533,11 +1533,11 @@
     "icon": "two",
     "old": [
      "DMG -80% to ranks 3-4",
-     "ACC/crit -15% (2 turns)"
+     "ACC -15 to -20%, crit -15 to -19% (2 turns)"
     ],
     "new": [
      "No damage, ranks 1-2",
-     "Stun, ACC -10% (2 turns)",
+     "Stun, ACC -10 to -15% (2 turns)",
      "Stunned enemies hide in smoke",
      "3 per battle"
     ]
@@ -1576,11 +1576,11 @@
     "icon": "five",
     "old": [
      "Any rank, random target",
-     "ACC 75, self SPD +3"
+     "ACC 75, CRIT 0%, self SPD +3"
     ],
     "new": [
      "Use ranks 1-3, target 1-3",
-     "ACC 90, DMG -20%",
+     "ACC 90, DMG -20%, CRIT 3%",
      "Target crit -10 to -15% (2 turns)",
      "Then step back 1"
     ]
@@ -1605,7 +1605,7 @@
     "old": [
      "Skeet Shot",
      "Party stress heal 1 (60%)",
-     "Light, destealth"
+     "Light, destealth, party mark/stun removal"
     ],
     "new": [
      "One ally (not self)",

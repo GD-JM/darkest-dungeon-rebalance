@@ -20,13 +20,13 @@ Bereiche gelten für Fähigkeitsstufe 1–5.
 [list]
 [*][b]Geteilte Heilung.[/b] Heilung lag bisher bei Vestal, Occultist und Jester; jetzt teilen sich viele Helden diese Aufgabe – das macht das Spiel flexibler und die Gruppen vielfältiger. Crusaders Battle Heal heilt 3–4 LP (6–7 auf Stufe 5) und erhöht den PROT des Ziels. Arbalests Battlefield Bandage heilt Blutungen, Plague Doctors Battlefield Medicine heilt die Vergiftung eines Verbündeten. Antiquarians Fortifying Vapours verstärkt jede Heilung, die das Ziel erhält, stapelbar. Arbalests Rallying Flare baut für die Gruppe 3–5 Stress ab, und Man-at-Arms' Bolster wurde zu einer Stressheilung überarbeitet.
 [*][b]Rüstung brechen.[/b] Da die Rüstung mit dem Schwierigkeitsgrad steigt, wurden physische Angreifer außer Shieldbreaker und Grave Robber oft links liegen gelassen. Jetzt können Unterstützer die gegnerische Rüstung für sie schwächen: Occultists Weakening Curse (PROT −25 bis −35 %), Shieldbreakers Puncture (−30 bis −40 %), Lepers Rüstungsbrecher [b](NEUE FÄHIGKEIT)[/b] (−30 bis −50 %) und Vestals Illumination (−15 bis −25 %) öffnen gepanzerte Gegner für physische Angreifer.
-[*][b]Eine andere Spielweise.[/b] Highwaymans Tracking Shot verfolgt nun den Gegner und zieht dessen Aufmerksamkeit auf sich, um eine Riposte zu erhalten, und Duelist's Advance gibt ihm die Kampfboni eines Duellanten. Shieldbreakers Pierce erreicht nicht mehr jede gegnerische Position; dafür bewegt sich die Tänzerin ihrer Geschichte frei zwischen Freund und Feind und hinterlässt mit jedem Schritt Spuren. Musketeer wurde vollständig überarbeitet: Von hinten durchschlägt sie Rüstung und verbirgt Verbündete im Rauch.
+[*][b]Eine andere Spielweise.[/b] Highwaymans Tracking Shot verfolgt nun die Bewegungen des Gegners und bereitet eine Riposte vor, und Duelist's Advance gibt ihm die Kampfboni eines Duellanten. Shieldbreakers Pierce erreicht nicht mehr jede gegnerische Position; dafür bewegt sich die Tänzerin ihrer Geschichte frei zwischen Freund und Feind und hinterlässt mit jedem Schritt Spuren. Musketeer wurde vollständig überarbeitet: Von hinten durchschlägt sie Rüstung und verbirgt Verbündete im Rauch.
 [/list]
 
 [h2]Zwei Überarbeitungen im Fokus[/h2]
 [list]
 [*][b]Antiquarian findet ihren Platz ab Entschlossenheit 5.[/b] Bis Entschlossenheit 3 (Veteran) bleibt sie schwach, dafür bringt sie mehr Gold ein. Ab Entschlossenheit 5 bringt ihr Klassenschmuck sie auf das Niveau anderer Helden. Statt selbst stark zu werden, stärkt sie ihre Gefährten und lohnt sich so auch im Dunkelsten Dungeon.
-[*][b]Abomination: Beherrschung wird Stärke.[/b] Die Menschengestalt hat weniger Genauigkeit, aber stärkere Grundwerte. Mit Absolution beherrschter Stress bezahlt die Verwandlung und wird zu Heilung, Schaden, Tempo und CRIT der Bestie; die Gefährten werden weniger belastet.
+[*][b]Abomination: Beherrschung wird Stärke.[/b] Die Menschengestalt tauscht etwas Genauigkeit bei Manacles gegen ein stärkeres Beast's Bile. Mit Absolution beherrschter Stress bezahlt die Verwandlung und wird zu Heilung, Schaden, Tempo und CRIT der Bestie; die Gefährten werden weniger belastet.
 [/list]
 
 [h2]Jede Änderung im Bild[/h2]

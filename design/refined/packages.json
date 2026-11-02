@@ -1,4 +1,9 @@
 {
  "_doc": "Darkest Refined 꾸러미 정의 (tools/refined/build_refined.py). heroes가 비면 20명 전원(tools/strength.py S.KO 순서). [사용자 2026-11-02] 합본 먼저 출시, 영웅 단독판은 나중에(DLC 영웅 먼저).",
- "refined": {"key": "refined", "heroes": [], "note": "Darkest Refined — first release."}
+ "refined": {
+  "key": "refined",
+  "heroes": [],
+  "note": "Darkest Refined — first release.",
+  "thumbnail": "preview_darkest_refined.png"
+ }
 }

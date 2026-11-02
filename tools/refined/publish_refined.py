@@ -127,8 +127,9 @@ def main():
         descs = descriptions()
         used = set(re.findall(r'\[img\](.*?)\[/img\]', '\n'.join(descs.values())))
         files = gallery(manifest, job, used)
-        thumb = fit_png(DRAFT / 'final_pages' / 'cover_all.png', job / 'thumb.png')
-        note = json.load(open(REPO / 'design' / 'refined' / 'packages.json', encoding='utf-8'))['refined']['note']
+        pkg = json.load(open(REPO / 'design' / 'refined' / 'packages.json', encoding='utf-8'))['refined']
+        thumb = fit_png(DRAFT / pkg.get('thumbnail', 'final_pages/cover_all.png'), job / 'thumb.png')
+        note = pkg['note']
         with Steam(str(GAME), item) as st:
             owned = {p['filename'] for p in st.query()['previews'] if p['type'] == 0}
             st.update(title=TITLES['english'], description=descs['english'], language='english', content=job / 'payload',
