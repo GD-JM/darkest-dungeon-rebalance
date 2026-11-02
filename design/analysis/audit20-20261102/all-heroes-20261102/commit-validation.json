@@ -1,0 +1,36 @@
+{
+  "commit": "f7ab1577d3f35fd4e9f6393f6e0ec83fe90aaf7a",
+  "checks": [
+    {
+      "level": 1,
+      "burn": 1.0,
+      "duration": 1
+    },
+    {
+      "level": 2,
+      "burn": 1.0,
+      "duration": 1
+    },
+    {
+      "level": 3,
+      "burn": 2.0,
+      "duration": 1
+    },
+    {
+      "level": 4,
+      "burn": 2.0,
+      "duration": 1
+    },
+    {
+      "level": 5,
+      "burn": 3.0,
+      "duration": 1
+    }
+  ],
+  "tests_passed": 79,
+  "comments": "20 heroes passed",
+  "manifest": 90,
+  "preserved": 1016,
+  "push": false,
+  "game_runtime": false
+}

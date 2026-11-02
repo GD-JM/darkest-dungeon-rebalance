@@ -1,0 +1,1069 @@
+{
+  "riposte": [
+    {
+      "hero": "highwayman",
+      "skill": "추적탄",
+      "one_attempt_damage": 6.668371716589863,
+      "attempts_1": 6.668371716589863,
+      "attempts_2": 13.336743433179725,
+      "extra_attempt_hp": 6.668371716589863,
+      "effect": {
+        "target": [
+          "\"performer\""
+        ],
+        "curio_result_type": [
+          "\"positive\""
+        ],
+        "chance": [
+          "100%"
+        ],
+        "riposte": [
+          "1"
+        ],
+        "riposte_on_hit_chance_add": [
+          "100%"
+        ],
+        "riposte_on_miss_chance_add": [
+          "100%"
+        ],
+        "duration": [
+          "3"
+        ],
+        "on_hit": [
+          "true"
+        ],
+        "on_miss": [
+          "true"
+        ],
+        "damage_low_multiply": [
+          "0%"
+        ],
+        "damage_high_multiply": [
+          "0%"
+        ],
+        "crit_chance_add": [
+          "5%"
+        ]
+      }
+    },
+    {
+      "hero": "man_at_arms",
+      "skill": "응징",
+      "one_attempt_damage": 6.171934907834102,
+      "attempts_1": 6.171934907834102,
+      "attempts_2": 12.343869815668205,
+      "extra_attempt_hp": 6.171934907834102,
+      "effect": {
+        "target": [
+          "\"performer\""
+        ],
+        "curio_result_type": [
+          "\"positive\""
+        ],
+        "chance": [
+          "100%"
+        ],
+        "riposte": [
+          "1"
+        ],
+        "riposte_on_hit_chance_add": [
+          "100%"
+        ],
+        "riposte_on_miss_chance_add": [
+          "100%"
+        ],
+        "duration": [
+          "3"
+        ],
+        "on_hit": [
+          "true"
+        ],
+        "on_miss": [
+          "true"
+        ],
+        "damage_low_multiply": [
+          "0%"
+        ],
+        "damage_high_multiply": [
+          "0%"
+        ],
+        "crit_chance_add": [
+          "4%"
+        ]
+      }
+    },
+    {
+      "hero": "duelist",
+      "skill": "예상",
+      "one_attempt_damage": 7.6475717741935485,
+      "attempts_1": 7.6475717741935485,
+      "attempts_2": 15.295143548387097,
+      "extra_attempt_hp": 7.6475717741935485,
+      "effect": {
+        "target": [
+          "\"performer\""
+        ],
+        "curio_result_type": [
+          "\"positive\""
+        ],
+        "chance": [
+          "100%"
+        ],
+        "riposte": [
+          "1"
+        ],
+        "riposte_on_hit_chance_add": [
+          "100%"
+        ],
+        "riposte_on_miss_chance_add": [
+          "100%"
+        ],
+        "duration": [
+          "2"
+        ],
+        "on_hit": [
+          "true"
+        ],
+        "on_miss": [
+          "true"
+        ]
+      }
+    }
+  ],
+  "callbacks": {
+    "duelist_blade_oil": {
+      "name": "동백 기름",
+      "fields": {
+        "kill_performer_additional_effects": [
+          "Duelist Blade Oil On Kill"
+        ]
+      },
+      "effects": {
+        "Duelist Blade Oil On Kill": {
+          "row": "effect: .name \"Duelist Blade Oil On Kill\" .target \"performer\" .chance 100% .curio_result_type \"positive\" .duration 4 .buff_ids \"TRINKET_DUELIST_BLADE_OIL_NEXT_RIPOSTE_CRIT\" .on_hit true .on_miss false .queue true .apply_once true",
+          "buffs": [
+            {
+              "id": "TRINKET_DUELIST_BLADE_OIL_NEXT_RIPOSTE_CRIT",
+              "stat_type": "combat_stat_add",
+              "stat_sub_type": "crit_chance",
+              "amount": 1.0,
+              "remove_if_not_active": false,
+              "rule_type": "riposte",
+              "is_false_rule": false,
+              "rule_data": {
+                "float": 0,
+                "string": ""
+              },
+              "consume_on_rule_active": true,
+              "description_tooltip_id": "buff_tooltip_duelist_blade_oil_next_riposte"
+            }
+          ]
+        }
+      },
+      "trigger_limit": null
+    },
+    "duelist_razor_hilt": {
+      "name": "면도날 힐트",
+      "fields": {
+        "riposte_skill_additional_effects": [
+          "Duelist Razor Hilt On Riposte Hit",
+          "Duelist Razor Hilt On Riposte Crits Received"
+        ]
+      },
+      "effects": {
+        "Duelist Razor Hilt On Riposte Crits Received": {
+          "row": "effect: .name \"Duelist Razor Hilt On Riposte Crits Received\" .target \"target\" .curio_result_type \"negative\" .chance 130% .buff_ids TRINKET_DUELIST_RAZOR_HILT_CRITS_RECEIVED_D1 .duration 3 .on_hit true .on_miss false .queue true .apply_once true",
+          "buffs": [
+            {
+              "id": "TRINKET_DUELIST_RAZOR_HILT_CRITS_RECEIVED_D1",
+              "stat_type": "crit_received_chance",
+              "stat_sub_type": "",
+              "amount": 0.07,
+              "remove_if_not_active": false,
+              "rule_type": "always",
+              "is_false_rule": false,
+              "rule_data": {
+                "float": 0,
+                "string": ""
+              }
+            }
+          ]
+        },
+        "Duelist Razor Hilt On Riposte Hit": {
+          "row": "effect: .name \"Duelist Razor Hilt On Riposte Hit\" .target \"target\" .curio_result_type \"negative\" .chance 130% .dotBleed 2 .duration 2 .on_hit true .on_miss false .queue true .apply_once true",
+          "buffs": []
+        }
+      },
+      "trigger_limit": null
+    },
+    "duelist_champions_mantle": {
+      "name": "챔피언의 망토",
+      "fields": {
+        "attack_skill_additional_effects": [
+          "Duelist Champion Mantle Activate Riposte"
+        ]
+      },
+      "effects": {
+        "Duelist Champion Mantle Activate Riposte": {
+          "row": "effect: .name \"Duelist Champion Mantle Activate Riposte\" .target \"performer\" .chance 100% .curio_result_type \"positive\" .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 2 .on_hit true .on_miss false .queue true .apply_once true",
+          "buffs": []
+        }
+      },
+      "trigger_limit": null
+    },
+    "rw_warm_scarf": {
+      "name": "온기의 스카프",
+      "fields": {
+        "on_dodge_additional_effects": [
+          "On dodge attacker shuffle single trigger effect"
+        ]
+      },
+      "effects": {
+        "On dodge attacker shuffle single trigger effect": {
+          "row": "effect: .name \"On dodge attacker shuffle single trigger effect\"  .target \"target\" .shuffletarget .chance 100% .on_hit false .on_miss true .apply_once true .can_apply_on_death true .is_trigger_effect true",
+          "buffs": []
+        }
+      },
+      "trigger_limit": 8
+    },
+    "rw_pyro_accelerant": {
+      "name": "가연성 액체",
+      "fields": {
+        "attack_skill_additional_effects": [
+          "Pyro On Attack Monster Debuffs",
+          "Pyro Self Burn"
+        ]
+      },
+      "effects": {
+        "Pyro Self Burn": {
+          "row": "effect: .name \"Pyro Self Burn\"  .target \"performer\" .curio_result_type \"negative\" .chance 100% .dotBurn 2 .dot_irresistible true .on_hit true .on_miss true .queue true .is_trigger_effect true .apply_once true",
+          "buffs": []
+        },
+        "Pyro On Attack Monster Debuffs": {
+          "row": "effect: .name \"Pyro On Attack Monster Debuffs\"  .target \"target_group\" .curio_result_type \"negative\" .chance 120% .buff_ids rw_pyro_crit_debuff_while_burning rw_pyro_crits_received_debuff_while_burning .duration 3 .on_hit true .on_miss true .queue true .is_trigger_effect true .apply_once true",
+          "buffs": [
+            {
+              "id": "rw_pyro_crit_debuff_while_burning",
+              "stat_type": "combat_stat_add",
+              "stat_sub_type": "crit_chance",
+              "amount": -0.06,
+              "remove_if_not_active": false,
+              "rule_type": "is_actor_status",
+              "is_false_rule": false,
+              "rule_data": {
+                "float": 0,
+                "string": "burning"
+              },
+              "is_clear_debuff_valid": false
+            },
+            {
+              "id": "rw_pyro_crits_received_debuff_while_burning",
+              "stat_type": "crit_received_chance",
+              "stat_sub_type": "",
+              "amount": 0.06,
+              "remove_if_not_active": false,
+              "rule_type": "is_actor_status",
+              "is_false_rule": false,
+              "rule_data": {
+                "float": 0,
+                "string": "burning"
+              },
+              "is_clear_debuff_valid": false
+            }
+          ]
+        }
+      },
+      "trigger_limit": 12
+    },
+    "rw_charcoal_effigy": {
+      "name": "숯덩이 인형",
+      "fields": {
+        "was_hit_additional_effects": [
+          "When hit Self heal trigger effect"
+        ]
+      },
+      "effects": {
+        "When hit Self heal trigger effect": {
+          "row": "effect: .name \"When hit Self heal trigger effect\"  .target \"performer\" .curio_result_type \"positive\" .chance 100% .heal 3 .on_hit true .on_miss false .queue true .is_trigger_effect true .buff_duration_type combat_end",
+          "buffs": []
+        }
+      },
+      "trigger_limit": 12
+    },
+    "rw_rescuers_rucksack": {
+      "name": "구출자의 륙색",
+      "fields": {
+        "friendly_skill_additional_effects": [
+          "On Friendly Skill Other Heroes Heal"
+        ]
+      },
+      "effects": {
+        "On Friendly Skill Other Heroes Heal": {
+          "row": "effect: .name \"On Friendly Skill Other Heroes Heal\"  .target \"performer_group_other\" .curio_result_type \"positive\" .chance 100% .dotHpHeal 5 .duration 1 .on_hit true .on_miss true .queue true .apply_once true .can_apply_on_death true",
+          "buffs": []
+        }
+      },
+      "trigger_limit": null
+    },
+    "rw_infernal_coalstone": {
+      "name": "지옥불 석탄",
+      "fields": {
+        "attack_skill_additional_effects": [
+          "On Attack Hit If Target is in Rank Knockback",
+          "On Attack Hit If Target is in Rank Pull"
+        ]
+      },
+      "effects": {
+        "On Attack Hit If Target is in Rank Pull": {
+          "row": "effect: .name \"On Attack Hit If Target is in Rank Pull\"  .target \"target_enemy_rank\" .clear_rank_target 4 .chance 130% .pull 1 .on_hit true .on_miss false .apply_once false .can_apply_on_death true",
+          "buffs": []
+        },
+        "On Attack Hit If Target is in Rank Knockback": {
+          "row": "effect: .name \"On Attack Hit If Target is in Rank Knockback\"  .target \"target_enemy_rank\" .clear_rank_target 1 .chance 130% .push 1 .on_hit true .on_miss false .apply_once false .can_apply_on_death true",
+          "buffs": []
+        }
+      },
+      "trigger_limit": null
+    },
+    "rw_set_knitted_blanket": {
+      "name": "뜨개질 담요",
+      "fields": {
+        "was_hit_additional_effects": [
+          "When hit Self Burn"
+        ]
+      },
+      "effects": {
+        "When hit Self Burn": {
+          "row": "effect: .name \"When hit Self Burn\"  .target \"performer\" .curio_result_type \"negative\" .chance 100% .dotBurn 1 .dot_irresistible true .on_hit true .on_miss false .apply_once true",
+          "buffs": []
+        }
+      },
+      "trigger_limit": null
+    },
+    "duelist_set_academie_ring": {
+      "name": "아카데미 반지",
+      "fields": {
+        "friendly_skill_additional_effects": [
+          "Duelist Academie Ring On Friendly Skill"
+        ],
+        "attack_skill_additional_effects": [
+          "Duelist Academie Ring On Attack Miss"
+        ]
+      },
+      "effects": {
+        "Duelist Academie Ring On Attack Miss": {
+          "row": "effect: .name \"Duelist Academie Ring On Attack Miss\" .target \"performer\" .chance 100% .duration 4 .buff_ids \"TRINKET_DUELIST_ACADEMIE_RING_MISS_DODGE_D10\" .on_hit false .on_miss true .queue true .apply_once true",
+          "buffs": [
+            {
+              "id": "TRINKET_DUELIST_ACADEMIE_RING_MISS_DODGE_D10",
+              "stat_type": "combat_stat_add",
+              "stat_sub_type": "defense_rating",
+              "amount": -0.1,
+              "remove_if_not_active": false,
+              "rule_type": "always",
+              "is_false_rule": false,
+              "rule_data": {
+                "float": 0,
+                "string": ""
+              }
+            }
+          ]
+        },
+        "Duelist Academie Ring On Friendly Skill": {
+          "row": "effect: .name \"Duelist Academie Ring On Friendly Skill\" .target \"performer\" .chance 100% .curio_result_type \"positive\" .duration 2 .buff_ids \"TRINKET_DUELIST_ACADEMIE_RING_FRIENDLY_ACC_B10\" .on_hit true .on_miss true .queue true .apply_once true",
+          "buffs": [
+            {
+              "id": "TRINKET_DUELIST_ACADEMIE_RING_FRIENDLY_ACC_B10",
+              "stat_type": "combat_stat_add",
+              "stat_sub_type": "attack_rating",
+              "amount": 0.1,
+              "remove_if_not_active": false,
+              "rule_type": "always",
+              "is_false_rule": false,
+              "rule_data": {
+                "float": 0,
+                "string": ""
+              }
+            }
+          ]
+        }
+      },
+      "trigger_limit": null
+    },
+    "duelist_set_lovers_glove": {
+      "name": "연인의 장갑",
+      "fields": {
+        "kill_performer_additional_effects": [
+          "Duelist Lovers Glove On Kill Other Heroes"
+        ],
+        "attack_skill_additional_effects": [
+          "Duelist Lovers Glove On Attack Miss"
+        ]
+      },
+      "effects": {
+        "Duelist Lovers Glove On Attack Miss": {
+          "row": "effect: .name \"Duelist Lovers Glove On Attack Miss\" .target \"performer\" .chance 100% .stress 7 .on_hit false .on_miss true .queue true .apply_once true",
+          "buffs": []
+        },
+        "Duelist Lovers Glove On Kill Other Heroes": {
+          "row": "effect: .name \"Duelist Lovers Glove On Kill Other Heroes\" .target \"performer_group_other\" .chance 100% .curio_result_type \"positive\" .duration 3 .buff_ids \"TRINKET_DUELIST_LOVERS_GLOVE_KILL_ACC_B7\" \"TRINKET_DUELIST_LOVERS_GLOVE_KILL_SPD_B3\" .on_hit true .on_miss false .queue true .apply_once true",
+          "buffs": [
+            {
+              "id": "TRINKET_DUELIST_LOVERS_GLOVE_KILL_ACC_B7",
+              "stat_type": "combat_stat_add",
+              "stat_sub_type": "attack_rating",
+              "amount": 0.07,
+              "remove_if_not_active": false,
+              "rule_type": "always",
+              "is_false_rule": false,
+              "rule_data": {
+                "float": 0,
+                "string": ""
+              }
+            },
+            {
+              "id": "TRINKET_DUELIST_LOVERS_GLOVE_KILL_SPD_B3",
+              "stat_type": "combat_stat_add",
+              "stat_sub_type": "speed_rating",
+              "amount": 3,
+              "remove_if_not_active": false,
+              "rule_type": "always",
+              "is_false_rule": false,
+              "rule_data": {
+                "float": 0,
+                "string": ""
+              }
+            }
+          ]
+        }
+      },
+      "trigger_limit": null
+    },
+    "rw_sunstone_searing": {
+      "name": "불타는 태양돌",
+      "fields": {
+        "attack_skill_additional_effects": [
+          "RW Sunstone Searing Self Burn"
+        ]
+      },
+      "effects": {
+        "RW Sunstone Searing Self Burn": {
+          "row": "effect: .name \"RW Sunstone Searing Self Burn\" .target \"performer\" .chance 100% .dotBurn 2 .dot_irresistible true .on_hit true .on_miss true .queue true .apply_once true",
+          "buffs": []
+        }
+      },
+      "trigger_limit": null
+    },
+    "duelist_phantom_wit": {
+      "name": "망령의 재치",
+      "fields": {
+        "riposte_kill_additional_effects": [
+          "Duelist Phantom Wit On Riposte Kill"
+        ],
+        "riposte_crit_additional_effects": [
+          "Duelist Phantom Wit On Riposte Crit"
+        ]
+      },
+      "effects": {
+        "Duelist Phantom Wit On Riposte Crit": {
+          "row": "effect: .name \"Duelist Phantom Wit On Riposte Crit\" .target \"performer\" .chance 100% .curio_result_type \"positive\" .heal_percent 10% .on_hit true .on_miss false .queue true .apply_once true",
+          "buffs": []
+        },
+        "Duelist Phantom Wit On Riposte Kill": {
+          "row": "effect: .name \"Duelist Phantom Wit On Riposte Kill\" .target \"performer\" .chance 100% .curio_result_type \"positive\" .heal_percent 25% .on_hit true .on_miss false .queue true .apply_once true",
+          "buffs": []
+        }
+      },
+      "trigger_limit": null
+    },
+    "com_cru_non_euclidean_hilt": {
+      "name": "비기하학적 칼자루",
+      "fields": {
+        "attack_skill_additional_effects": [
+          "Euclidean Hilt Blight"
+        ]
+      },
+      "effects": {
+        "Euclidean Hilt Blight": {
+          "row": "effect: .name \"Euclidean Hilt Blight\" .target \"target\" .curio_result_type \"negative\" .chance 120%  .dotPoison 2 .duration 2\t.on_hit true .on_miss false .can_apply_on_death true",
+          "buffs": []
+        }
+      },
+      "trigger_limit": null
+    },
+    "com_arb_keening_bolts": {
+      "name": "애가의 화살",
+      "fields": {
+        "attack_skill_additional_effects": [
+          "Keening Bolt Stress On Attack"
+        ]
+      },
+      "effects": {
+        "Keening Bolt Stress On Attack": {
+          "row": "effect: .name \"Keening Bolt Stress On Attack\" .target \"performer\" .chance 25% .stress 3 .on_hit true .on_miss true .queue true .crit_doesnt_apply_to_roll true .apply_once true",
+          "buffs": []
+        }
+      },
+      "trigger_limit": null
+    },
+    "com_hel_thirsting_blade": {
+      "name": "목마른 칼날",
+      "fields": {
+        "attack_skill_additional_effects": [
+          "Thirsting Blade Self Atk On Miss"
+        ]
+      },
+      "effects": {
+        "Thirsting Blade Self Atk On Miss": {
+          "row": "effect: .name \"Thirsting Blade Self Atk On Miss\" .target \"performer\" target .chance 100% .health_damage 5 .damage_type additionaleffect .damage_source_data \"com_hel_thirsting_blade\" .damage_source_type \"trinket\" .on_hit false .on_miss true .queue true .apply_once true",
+          "buffs": []
+        }
+      },
+      "trigger_limit": null
+    }
+  },
+  "selected_effects": {
+    "Leper Protect 5": {
+      "row": "effect: .name \"Leper Protect 5\" .target \"performer\" .curio_result_type \"positive\" .chance 100% .duration 1 .buff_duration_type combat_end .combat_stat_buff 1 .protection_rating_add 30%\t.on_hit true .on_miss true .queue true",
+      "buffs": []
+    },
+    "Leper Resist Buff 1": {
+      "row": "effect: .name \"Leper Resist Buff 1\" .target \"performer\" .chance 100% .duration 1 .buff_duration_type combat_end .buff_ids leper_blight_resist leper_bleed_resist leper_debuff_resist leper_move_resist .on_hit true .queue true",
+      "buffs": [
+        {
+          "id": "leper_blight_resist",
+          "stat_type": "resistance",
+          "stat_sub_type": "poison",
+          "amount": 0.3,
+          "remove_if_not_active": false,
+          "rule_type": "always",
+          "is_false_rule": false,
+          "rule_data": {
+            "float": 0,
+            "string": ""
+          }
+        },
+        {
+          "id": "leper_bleed_resist",
+          "stat_type": "resistance",
+          "stat_sub_type": "bleed",
+          "amount": 0.3,
+          "remove_if_not_active": false,
+          "rule_type": "always",
+          "is_false_rule": false,
+          "rule_data": {
+            "float": 0,
+            "string": ""
+          }
+        },
+        {
+          "id": "leper_debuff_resist",
+          "stat_type": "resistance",
+          "stat_sub_type": "debuff",
+          "amount": 0.3,
+          "remove_if_not_active": false,
+          "rule_type": "always",
+          "is_false_rule": false,
+          "rule_data": {
+            "float": 0,
+            "string": ""
+          }
+        },
+        {
+          "id": "leper_move_resist",
+          "stat_type": "resistance",
+          "stat_sub_type": "move",
+          "amount": 0.3,
+          "remove_if_not_active": false,
+          "rule_type": "always",
+          "is_false_rule": false,
+          "rule_data": {
+            "float": 0,
+            "string": ""
+          }
+        }
+      ]
+    },
+    "GR Fade Attack 5": {
+      "row": "effect: .name \"GR Fade Attack 5\" .target \"performer\" .chance 100% .curio_result_type \"positive\" .combat_stat_buff 1 .duration 2 .damage_low_multiply 100% .damage_high_multiply 100% .crit_chance_add 8% .on_hit true .on_miss false",
+      "buffs": []
+    },
+    "GR Dodge 5": {
+      "row": "effect: .name \"GR Dodge 5\" .target \"performer\" .curio_result_type \"positive\" .chance 100% .combat_stat_buff 1 .duration 4 .defense_rating_add 15%\t.on_hit true .on_miss true .queue true",
+      "buffs": []
+    },
+    "RB MUS Cover Dodge 5": {
+      "row": "effect: .name \"RB MUS Cover Dodge 5\" .target \"target\" .curio_result_type \"positive\" .chance 100% .duration 2 .combat_stat_buff 1 .defense_rating_add 25% .on_hit true .on_miss true",
+      "buffs": []
+    },
+    "Stealth2": {
+      "row": "effect: .name \"Stealth2\" .target \"target\" .chance 100% .stealth 1 .on_hit true .on_miss false .duration 2",
+      "buffs": []
+    },
+    "RB PD Cure Poison": {
+      "row": "effect: .name \"RB PD Cure Poison\" .target \"target\" .curio_result_type \"positive\" .chance 100% .cure_poison 1 .on_hit true .on_miss false",
+      "buffs": []
+    },
+    "RB MUS Prey Armor 5": {
+      "row": "effect: .name \"RB MUS Prey Armor 5\" .target \"target\" .curio_result_type \"negative\" .chance 140% .duration 3 .combat_stat_buff 1 .protection_rating_add -30%\t.on_hit true .on_miss false .queue true",
+      "buffs": []
+    }
+  },
+  "healing": [
+    {
+      "hero": "crusader",
+      "skill": "전투 치유",
+      "range": [
+        "6",
+        "7"
+      ],
+      "gear": [
+        "commanders_orders",
+        "cc_set_cru_signed_conscription"
+      ],
+      "result": {
+        "hp": 12.289641705005593,
+        "parts": {
+          "강화": 0.35368649999999996,
+          "회복": 11.1384,
+          "스트레스": 0.7975552050055915
+        },
+        "gear": {
+          "ids": [
+            "commanders_orders",
+            "cc_set_cru_signed_conscription"
+          ],
+          "names": [
+            "지휘명령서",
+            "서명이 새겨진 징병서류"
+          ],
+          "active_buffs": [
+            "TRINKET_STRESSRECOVERY_B2",
+            "TRINKET_HEALDONE_B2",
+            "TRINKET_DMGL_D2",
+            "TRINKET_DMGH_D2",
+            "TRINKET_cru_signed_conscription_HEALDONE_B1",
+            "TRINKET_cru_signed_conscription_STRESSHEALDONE_B1"
+          ],
+          "inactive_or_unknown": [],
+          "unpriced_stats": [
+            {
+              "stat": "stress_heal_received_percent",
+              "sub": "",
+              "amount": 0.15
+            }
+          ],
+          "callbacks": [],
+          "hp": 61.0,
+          "dodge": 25.0,
+          "speed": 3.0,
+          "prot": 0.0,
+          "res": {
+            "stun": 40.0,
+            "poison": 30.0,
+            "bleed": 30.0,
+            "disease": 30.0,
+            "move": 40.0,
+            "debuff": 30.0,
+            "death_blow": 67.0,
+            "trap": 10.0
+          },
+          "received_stress": 0,
+          "received_heal": 0,
+          "received_stress_heal": 0.15
+        },
+        "row": "combat_skill: .id \"battle_heal\" .level 4 .heal 9.18 10.71 .launch 1234 .target @1234  .effect \"RB CRU Battle Heal Prot 5\" .is_stall_invalidating false"
+      }
+    },
+    {
+      "hero": "vestal",
+      "skill": "신성한 은총",
+      "range": [
+        "9",
+        "9"
+      ],
+      "gear": [
+        "sacred_scroll",
+        "cc_set_vest_salacious_diary"
+      ],
+      "result": {
+        "hp": 16.723955205005595,
+        "parts": {
+          "회복": 15.926400000000003,
+          "스트레스": 0.7975552050055915
+        },
+        "gear": {
+          "ids": [
+            "sacred_scroll",
+            "cc_set_vest_salacious_diary"
+          ],
+          "names": [
+            "신성한 두루마리",
+            "외설스러운 일기장"
+          ],
+          "active_buffs": [
+            "TRINKET_sacred_scroll_STRESSDMG_BUFF",
+            "TRINKET_sacred_scroll_HEALDONE_BUFF",
+            "TRINKET_sacred_scroll_STUNSKILL_DEBUFF",
+            "TRINKET_sacred_scroll_DMGL_D1",
+            "TRINKET_sacred_scroll_DMGH_D1",
+            "TRINKET_vest_salacious_diary_HEALDONE_B1"
+          ],
+          "inactive_or_unknown": [
+            {
+              "id": "TRINKET_vest_salacious_diary_STRESSHEALDONE_in_camp_B1",
+              "reason": "unpriced rule",
+              "rule": "in_camp"
+            }
+          ],
+          "unpriced_stats": [
+            {
+              "stat": "stress_dmg_received_percent",
+              "sub": "",
+              "amount": -0.1
+            }
+          ],
+          "callbacks": [],
+          "hp": 44.0,
+          "dodge": 20.0,
+          "speed": 6.0,
+          "prot": 0.0,
+          "res": {
+            "stun": 30.0,
+            "poison": 30.0,
+            "bleed": 40.0,
+            "disease": 30.0,
+            "move": 30.0,
+            "debuff": 30.0,
+            "death_blow": 67.0,
+            "trap": 10.0
+          },
+          "received_stress": -0.1,
+          "received_heal": 0,
+          "received_stress_heal": 0
+        },
+        "row": "combat_skill: .id \"divine_grace\" .level 4 .heal 14.22 14.22 .launch 4321 .target @4321  .is_stall_invalidating false"
+      }
+    },
+    {
+      "hero": "musketeer",
+      "skill": "응급처치",
+      "range": [
+        "4",
+        "5"
+      ],
+      "gear": [
+        "medics_boots",
+        "cc_set_musk_silver_bullet"
+      ],
+      "result": {
+        "hp": 14.14704858005219,
+        "parts": {
+          "스트레스": 7.443848580052188,
+          "회복": 6.703200000000001
+        },
+        "gear": {
+          "ids": [
+            "medics_boots",
+            "cc_set_musk_silver_bullet"
+          ],
+          "names": [
+            "위생병의 장화",
+            "은 화승총 탄환"
+          ],
+          "active_buffs": [
+            "TRINKET_HEALDONE_B2",
+            "TRINKET_arb_sharpshooters_string_wax_DEBUFFSKILL_B1",
+            "TRINKET_arb_sharpshooters_string_wax_MOVESKILL_B1"
+          ],
+          "inactive_or_unknown": [
+            {
+              "id": "TRINKET_arb_sharpshooters_string_wax_MARKEDACC_B1",
+              "reason": "inactive",
+              "rule": "actorStatus"
+            },
+            {
+              "id": "TRINKET_arb_sharpshooters_string_wax_MARKEDCRIT_B1",
+              "reason": "inactive",
+              "rule": "actorStatus"
+            }
+          ],
+          "unpriced_stats": [],
+          "callbacks": [],
+          "hp": 42.0,
+          "dodge": 20.0,
+          "speed": 4.0,
+          "prot": 0.0,
+          "res": {
+            "stun": 40.0,
+            "poison": 30.0,
+            "bleed": 30.0,
+            "disease": 30.0,
+            "move": 40.0,
+            "debuff": 30.0,
+            "death_blow": 67.0,
+            "trap": 10.0
+          },
+          "received_stress": 0,
+          "received_heal": 0,
+          "received_stress_heal": 0
+        },
+        "row": "combat_skill: .id \"patch_up\" .level 4 .heal 5.32 6.65 .launch 43 .target @1234 .effect \"RB MUS Patch Destress 5\" .is_stall_invalidating false"
+      }
+    },
+    {
+      "hero": "arbalest",
+      "skill": "야전 붕대질",
+      "range": [
+        "7",
+        "7"
+      ],
+      "gear": [
+        "medics_greaves",
+        "bulls_eye_bandana"
+      ],
+      "result": {
+        "hp": 11.224755205005593,
+        "parts": {
+          "회복": 10.427200000000001,
+          "스트레스": 0.7975552050055915
+        },
+        "gear": {
+          "ids": [
+            "medics_greaves",
+            "bulls_eye_bandana"
+          ],
+          "names": [
+            "간호병의 각반",
+            "백발백중의 두건"
+          ],
+          "active_buffs": [
+            "TRINKET_HEALDONE_B2",
+            "TRINKET_ACC_B2",
+            "TRINKET_CRIT_B2",
+            "TRINKET_DEF_D2"
+          ],
+          "inactive_or_unknown": [],
+          "unpriced_stats": [],
+          "callbacks": [],
+          "hp": 47.0,
+          "dodge": 16.0,
+          "speed": 5.0,
+          "prot": 0.0,
+          "res": {
+            "stun": 40.0,
+            "poison": 30.0,
+            "bleed": 30.0,
+            "disease": 30.0,
+            "move": 40.0,
+            "debuff": 30.0,
+            "death_blow": 67.0,
+            "trap": 10.0
+          },
+          "received_stress": 0,
+          "received_heal": 0,
+          "received_stress_heal": 0
+        },
+        "row": "combat_skill: .id \"battlefield_bandage\" .level 4 .heal 9.31 9.31 .launch 43 .target @1234  .effect \"RB ARB Cure Bleed\" .is_stall_invalidating false"
+      }
+    },
+    {
+      "hero": "antiquarian",
+      "skill": "강화의 연막",
+      "range": [
+        "3",
+        "5"
+      ],
+      "gear": [
+        "antiq_5",
+        "cc_set_anti_the_masters_essence"
+      ],
+      "result": {
+        "hp": 10.873411205005592,
+        "parts": {
+          "회복 증폭": 1.1158560000000002,
+          "회복": 8.96,
+          "스트레스": 0.7975552050055915
+        },
+        "gear": {
+          "ids": [
+            "antiq_5",
+            "cc_set_anti_the_masters_essence"
+          ],
+          "names": [
+            "생명의 촛대",
+            "대가의 정수"
+          ],
+          "active_buffs": [
+            "TRINKET_ANTIQ_HEALGIVEN_BUFF",
+            "TRINKET_ANTIQ_HP_BUFF",
+            "TRINKET_anti_the_masters_essence_HEALDONE_B1",
+            "TRINKET_anti_the_masters_essence_BLIGHTSKILL_B1",
+            "TRINKET_anti_the_masters_essence_DEBUFFSKILL_B1"
+          ],
+          "inactive_or_unknown": [],
+          "unpriced_stats": [],
+          "callbacks": [],
+          "hp": 33.349999999999994,
+          "dodge": 30.0,
+          "speed": 7.0,
+          "prot": 0.0,
+          "res": {
+            "stun": 20.0,
+            "poison": 20.0,
+            "bleed": 20.0,
+            "disease": 20.0,
+            "move": 20.0,
+            "debuff": 20.0,
+            "death_blow": 67.0,
+            "trap": 10.0
+          },
+          "received_stress": 0,
+          "received_heal": 0,
+          "received_stress_heal": 0
+        },
+        "row": "combat_skill: .id \"fortifying_vapours\" .level 4 .heal 6.0 10.0 .launch 43 .target @1234  .effect \"RB ANT Heal Amp 5\" .is_stall_invalidating false"
+      }
+    },
+    {
+      "hero": "occultist",
+      "skill": "기괴한 재구축",
+      "range": [
+        "0",
+        "20"
+      ],
+      "gear": [
+        "demons_cauldron",
+        "cc_set_occ_vial_of_sand"
+      ],
+      "result": {
+        "hp": 11.997555205005593,
+        "parts": {
+          "회복": 11.200000000000001,
+          "스트레스": 0.7975552050055915
+        },
+        "gear": {
+          "ids": [
+            "demons_cauldron",
+            "cc_set_occ_vial_of_sand"
+          ],
+          "names": [
+            "악마의 가마솥",
+            "모래가 담긴 약병"
+          ],
+          "active_buffs": [
+            "TRINKET_STUNSKILL_B3",
+            "TRINKET_DEBUFFSKILL_B3",
+            "TRINKET_CRIT_B1",
+            "TRINKET_RESOLVECHECK_D3",
+            "TRINKET_STRESSDMG_D3",
+            "TRINKET_occ_vial_of_sand_STUNSKILL_B1",
+            "TRINKET_occ_vial_of_sand_DEBUFFSKILL_B1",
+            "TRINKET_occ_vial_of_sand_MOVESKILL_B1",
+            "TRINKET_occ_vial_of_sand_STUNRESIST_B1"
+          ],
+          "inactive_or_unknown": [],
+          "unpriced_stats": [
+            {
+              "stat": "resolve_check_percent",
+              "sub": "",
+              "amount": -0.1
+            },
+            {
+              "stat": "stress_dmg_received_percent",
+              "sub": "",
+              "amount": 0.15
+            }
+          ],
+          "callbacks": [],
+          "hp": 35.0,
+          "dodge": 30.0,
+          "speed": 8.0,
+          "prot": 0.0,
+          "res": {
+            "stun": 40.0,
+            "poison": 30.0,
+            "bleed": 40.0,
+            "disease": 40.0,
+            "move": 20.0,
+            "debuff": 60.0,
+            "death_blow": 67.0,
+            "trap": 10.0
+          },
+          "received_stress": 0.15,
+          "received_heal": 0,
+          "received_stress_heal": 0
+        },
+        "row": "combat_skill: .id \"wyrd_reconstruction\" .level 4 .heal 0.0 20.0 .launch 1234 .target @1234  .effect \"Wyrd Bleed 4\" .is_stall_invalidating false"
+      }
+    },
+    {
+      "hero": "plague_doctor",
+      "skill": "야전 의술",
+      "range": [
+        "7",
+        "7"
+      ],
+      "gear": [
+        "blasphemous_vial",
+        "witchs_vial"
+      ],
+      "result": {
+        "hp": 8.637555205005592,
+        "parts": {
+          "회복": 7.840000000000001,
+          "스트레스": 0.7975552050055915
+        },
+        "gear": {
+          "ids": [
+            "blasphemous_vial",
+            "witchs_vial"
+          ],
+          "names": [
+            "신성모독의 물약",
+            "마녀의 물약"
+          ],
+          "active_buffs": [
+            "TRINKET_STUNSKILL_B2",
+            "TRINKET_BLIGHTSKILL_B1",
+            "TRINKET_blasphemous_vial_STRESS_D1",
+            "TRINKET_STUNSKILL_B15"
+          ],
+          "inactive_or_unknown": [
+            {
+              "id": "TRINKET_rangedonly_ACC_B2",
+              "reason": "inactive",
+              "rule": "rangedonly"
+            }
+          ],
+          "unpriced_stats": [
+            {
+              "stat": "stress_dmg_received_percent",
+              "sub": "",
+              "amount": 0.25
+            }
+          ],
+          "callbacks": [],
+          "hp": 38.0,
+          "dodge": 20.0,
+          "speed": 9.0,
+          "prot": 0.0,
+          "res": {
+            "stun": 20.0,
+            "poison": 60.0,
+            "bleed": 20.0,
+            "disease": 50.0,
+            "move": 20.0,
+            "debuff": 50.0,
+            "death_blow": 67.0,
+            "trap": 20.0
+          },
+          "received_stress": 0.25,
+          "received_heal": 0,
+          "received_stress_heal": 0
+        },
+        "row": "combat_skill: .id \"battlefield_medicine\" .level 4 .heal 7.0 7.0 .launch 43 .target @1234  .effect \"RB PD Cure Poison\" .is_stall_invalidating false"
+      }
+    }
+  ]
+}

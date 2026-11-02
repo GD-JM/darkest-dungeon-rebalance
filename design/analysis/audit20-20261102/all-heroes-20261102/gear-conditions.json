@@ -1,0 +1,309 @@
+[
+  {
+    "hero": "runaway",
+    "skill": "firefly",
+    "state": {},
+    "value": {
+      "hp": 22.73639168306436,
+      "parts": {
+        "직접": 3.2721960044209184,
+        "치명타": 1.993529691643549,
+        "화상 상태 변화": 17.470665986999894
+      },
+      "gear": {
+        "ids": [
+          "rw_set_carved_toy",
+          "focus_ring"
+        ],
+        "names": [
+          "깎아 만든 장난감",
+          "집중의 반지"
+        ],
+        "active_buffs": [
+          "TRINKET_RW_CARVED_TOY_ACC_BURNING",
+          "TRINKET_RW_STUN_RESIST_D1",
+          "TRINKET_RW_BLEED_RESIST_D1",
+          "TRINKET_focus_ring_ACC_BUFF",
+          "TRINKET_focus_ring_CRIT_BUFF",
+          "TRINKET_DEF_D3"
+        ],
+        "inactive_or_unknown": [
+          {
+            "id": "TRINKET_RW_CARVED_TOY_CRIT_STEALTHED",
+            "reason": "inactive",
+            "rule": "target_is_burning"
+          }
+        ],
+        "unpriced_stats": [],
+        "callbacks": [],
+        "hp": 38.0,
+        "dodge": 17.0,
+        "speed": 7.0,
+        "prot": 0.0,
+        "res": {
+          "stun": 5.0,
+          "poison": 40.0,
+          "bleed": 25.0,
+          "disease": 30.0,
+          "move": 30.0,
+          "debuff": 20.0,
+          "death_blow": 67.0,
+          "trap": 30.0
+        },
+        "received_stress": 0,
+        "received_heal": 0,
+        "received_stress_heal": 0
+      },
+      "row": "combat_skill: .id \"firefly\" .level 4 .type \"ranged\" .atk 130.0% .dmg -75% .crit 7% .launch 43 .target 234 .is_crit_valid True .effect \"RB RUN RW Firefly Burn 5\" \"RW Firefly Torch 3\""
+    }
+  },
+  {
+    "hero": "runaway",
+    "skill": "firefly",
+    "state": {
+      "burn": 6
+    },
+    "value": {
+      "hp": 25.31160888135038,
+      "parts": {
+        "직접": 3.528181145699432,
+        "치명타": 3.1896475066296786,
+        "화상 상태 변화": 18.59378022902127
+      },
+      "gear": {
+        "ids": [
+          "rw_set_carved_toy",
+          "focus_ring"
+        ],
+        "names": [
+          "깎아 만든 장난감",
+          "집중의 반지"
+        ],
+        "active_buffs": [
+          "TRINKET_RW_CARVED_TOY_ACC_BURNING",
+          "TRINKET_RW_CARVED_TOY_CRIT_STEALTHED",
+          "TRINKET_RW_STUN_RESIST_D1",
+          "TRINKET_RW_BLEED_RESIST_D1",
+          "TRINKET_focus_ring_ACC_BUFF",
+          "TRINKET_focus_ring_CRIT_BUFF",
+          "TRINKET_DEF_D3"
+        ],
+        "inactive_or_unknown": [],
+        "unpriced_stats": [],
+        "callbacks": [],
+        "hp": 38.0,
+        "dodge": 17.0,
+        "speed": 7.0,
+        "prot": 0.0,
+        "res": {
+          "stun": 5.0,
+          "poison": 40.0,
+          "bleed": 25.0,
+          "disease": 30.0,
+          "move": 30.0,
+          "debuff": 20.0,
+          "death_blow": 67.0,
+          "trap": 30.0
+        },
+        "received_stress": 0,
+        "received_heal": 0,
+        "received_stress_heal": 0
+      },
+      "row": "combat_skill: .id \"firefly\" .level 4 .type \"ranged\" .atk 130.0% .dmg -75% .crit 7% .launch 43 .target 234 .is_crit_valid True .effect \"RB RUN RW Firefly Burn 5\" \"RW Firefly Torch 3\""
+    }
+  },
+  {
+    "hero": "duelist",
+    "skill": "fleche",
+    "state": {},
+    "value": {
+      "hp": 18.43893465278287,
+      "parts": {
+        "직접": 13.565140788378756,
+        "대가": -0.283004506761392,
+        "치명타": 2.5286523656238455,
+        "공격 유도": -0.2974254545454544,
+        "표식 위험": -0.6034666854481345,
+        "표식 반격 연계": 4.189381994645165,
+        "자세 약화 정정": -0.6603438491099146
+      },
+      "gear": {
+        "ids": [
+          "duelist_razor_hilt",
+          "focus_ring"
+        ],
+        "names": [
+          "면도날 힐트",
+          "집중의 반지"
+        ],
+        "active_buffs": [
+          "TRINKET_DUELIST_BLEED_RESIST_D1",
+          "TRINKET_focus_ring_ACC_BUFF",
+          "TRINKET_focus_ring_CRIT_BUFF",
+          "TRINKET_DEF_D3"
+        ],
+        "inactive_or_unknown": [
+          {
+            "id": "TRINKET_DUELIST_RAZOR_HILT_AP_VS_BLEEDING",
+            "reason": "inactive",
+            "rule": "actorStatus"
+          }
+        ],
+        "unpriced_stats": [],
+        "callbacks": [
+          {
+            "trinket": "duelist_razor_hilt",
+            "event": "riposte_skill_additional_effects",
+            "effects": [
+              "Duelist Razor Hilt On Riposte Hit",
+              "Duelist Razor Hilt On Riposte Crits Received"
+            ]
+          }
+        ],
+        "hp": 37.0,
+        "dodge": 17.0,
+        "speed": 8.0,
+        "prot": 0.0,
+        "res": {
+          "stun": 30.0,
+          "poison": 30.0,
+          "bleed": 10.0,
+          "disease": 30.0,
+          "move": 30.0,
+          "debuff": 40.0,
+          "death_blow": 67.0,
+          "trap": 10.0
+        },
+        "received_stress": 0,
+        "received_heal": 0,
+        "received_stress_heal": 0
+      },
+      "row": "combat_skill: .id \"fleche\" .level 4 .type \"melee\" .atk 120.0% .dmg 10% .crit 13% .move 0 2 .launch 432 .target 123 .is_crit_valid True  .effect \"Mark Self\" \"Duelist Fleche Self Debuff\" .valid_modes stance_aggressive"
+    }
+  },
+  {
+    "hero": "duelist",
+    "skill": "fleche",
+    "state": {
+      "bleeding": true
+    },
+    "value": {
+      "hp": 20.567133085131303,
+      "parts": {
+        "직접": 15.693339220727188,
+        "대가": -0.283004506761392,
+        "치명타": 2.5286523656238455,
+        "공격 유도": -0.2974254545454544,
+        "표식 위험": -0.6034666854481345,
+        "표식 반격 연계": 4.189381994645165,
+        "자세 약화 정정": -0.6603438491099146
+      },
+      "gear": {
+        "ids": [
+          "duelist_razor_hilt",
+          "focus_ring"
+        ],
+        "names": [
+          "면도날 힐트",
+          "집중의 반지"
+        ],
+        "active_buffs": [
+          "TRINKET_DUELIST_RAZOR_HILT_AP_VS_BLEEDING",
+          "TRINKET_DUELIST_BLEED_RESIST_D1",
+          "TRINKET_focus_ring_ACC_BUFF",
+          "TRINKET_focus_ring_CRIT_BUFF",
+          "TRINKET_DEF_D3"
+        ],
+        "inactive_or_unknown": [],
+        "unpriced_stats": [],
+        "callbacks": [
+          {
+            "trinket": "duelist_razor_hilt",
+            "event": "riposte_skill_additional_effects",
+            "effects": [
+              "Duelist Razor Hilt On Riposte Hit",
+              "Duelist Razor Hilt On Riposte Crits Received"
+            ]
+          }
+        ],
+        "hp": 37.0,
+        "dodge": 17.0,
+        "speed": 8.0,
+        "prot": 0.0,
+        "res": {
+          "stun": 30.0,
+          "poison": 30.0,
+          "bleed": 10.0,
+          "disease": 30.0,
+          "move": 30.0,
+          "debuff": 40.0,
+          "death_blow": 67.0,
+          "trap": 10.0
+        },
+        "received_stress": 0,
+        "received_heal": 0,
+        "received_stress_heal": 0
+      },
+      "row": "combat_skill: .id \"fleche\" .level 4 .type \"melee\" .atk 120.0% .dmg 10% .crit 13% .move 0 2 .launch 432 .target 123 .is_crit_valid True  .effect \"Mark Self\" \"Duelist Fleche Self Debuff\" .valid_modes stance_aggressive .ignore_protection true"
+    }
+  },
+  {
+    "hero": "abomination",
+    "skill": "transform",
+    "state": {},
+    "value": {
+      "hp": 3.680972641297524,
+      "parts": {
+        "대가": -17.94499211262581,
+        "강화": 5.155653240120679,
+        "회복": 8.96,
+        "스트레스": 7.510311513802653
+      },
+      "gear": {
+        "ids": [
+          "padlock_5",
+          "padlock_4"
+        ],
+        "names": [
+          "억제의 자물쇠",
+          "분노의 자물쇠"
+        ],
+        "active_buffs": [
+          "TRINKET_ABOM_TRANSFORM_STRESS_BUFF",
+          "TRINKET_ABOM_STRESSDOT_BUFF",
+          "TRINKET_ABOM_DMG_BUFF_L",
+          "TRINKET_ABOM_DMG_BUFF_H",
+          "TRINKET_ABOM_SPD_BUFF",
+          "TRINKET_ABOM_HP_DEBUFF"
+        ],
+        "inactive_or_unknown": [],
+        "unpriced_stats": [
+          {
+            "stat": "stress_dmg_received_percent",
+            "sub": "mode",
+            "amount": -0.4
+          }
+        ],
+        "callbacks": [],
+        "hp": 41.4,
+        "dodge": 27.5,
+        "speed": 12.0,
+        "prot": 0.0,
+        "res": {
+          "stun": 40.0,
+          "poison": 60.0,
+          "bleed": 30.0,
+          "disease": 20.0,
+          "move": 40.0,
+          "debuff": 20.0,
+          "death_blow": 67.0,
+          "trap": 10.0
+        },
+        "received_stress": 0,
+        "received_heal": 0,
+        "received_stress_heal": 0
+      },
+      "row": "combat_skill: .id \"transform\" .level 4 .type \"ranged\" .atk 0.0% .dmg 0% .crit 0% .launch 4321 .target  .is_crit_valid True .valid_modes human beast .human_effects switch_mode_beast_self \"RB ABO beast_stress_party\" beast_buff_5 \"RB ABO Transform Critical 5\" xform_damage_5 \"RB ABO Transform Heal 5\" \"RB ABO Transform Self Stress\" .beast_effects switch_mode_human_self \"RB ABO human_stress_heal_party_1\" beast_debuff_5 .is_continue_turn true .per_turn_limit 1 .per_battle_limit 2 .is_stall_invalidating false .refresh_after_each_wave true"
+    }
+  }
+]

@@ -1,0 +1,3960 @@
+{
+  "assumptions": {
+    "skill_weapon_level": 5,
+    "target_dodge": 20,
+    "debuff_resistance": 60,
+    "stun_resistance": 90,
+    "stress_missing": true,
+    "gear": {
+      "abomination": [
+        2,
+        [
+          "com_abom_broken_key",
+          "padlock_2"
+        ]
+      ],
+      "antiquarian": [
+        4,
+        [
+          "antiq_5",
+          "cc_set_anti_the_masters_essence"
+        ]
+      ],
+      "arbalest": [
+        4,
+        [
+          "medics_greaves",
+          "bulls_eye_bandana"
+        ]
+      ],
+      "bounty_hunter": [
+        2,
+        [
+          "hunters_talon",
+          "focus_ring"
+        ]
+      ],
+      "crusader": [
+        2,
+        [
+          "commanders_orders",
+          "cc_set_cru_signed_conscription"
+        ]
+      ],
+      "duelist": [
+        2,
+        [
+          "duelist_set_academie_ring",
+          "focus_ring"
+        ]
+      ],
+      "flagellant": [
+        1,
+        [
+          "flag_3",
+          "focus_ring"
+        ]
+      ],
+      "grave_robber": [
+        3,
+        [
+          "raiders_talisman",
+          "cc_set_gr_sharpened_letter_opener"
+        ]
+      ],
+      "hellion": [
+        1,
+        [
+          "heavens_hairpin",
+          "bleeding_pendant"
+        ]
+      ],
+      "highwayman": [
+        2,
+        [
+          "sharpening_sheath",
+          "cc_set_high_shameful_locket"
+        ]
+      ],
+      "houndmaster": [
+        3,
+        [
+          "cudgel_weight",
+          "cc_set_hm_lawmans_badge"
+        ]
+      ],
+      "jester": [
+        3,
+        [
+          "bright_tambourine",
+          "critical_dice"
+        ]
+      ],
+      "leper": [
+        1,
+        [
+          "fortunate_armlet",
+          "berserk_mask"
+        ]
+      ],
+      "man_at_arms": [
+        2,
+        [
+          "rampart_shield",
+          "cc_set_maa_old_unit_banner"
+        ]
+      ],
+      "musketeer": [
+        4,
+        [
+          "medics_boots",
+          "cc_set_musk_silver_bullet"
+        ]
+      ],
+      "occultist": [
+        2,
+        [
+          "demons_cauldron",
+          "cc_set_occ_vial_of_sand"
+        ]
+      ],
+      "plague_doctor": [
+        4,
+        [
+          "blasphemous_vial",
+          "witchs_vial"
+        ]
+      ],
+      "runaway": [
+        3,
+        [
+          "rw_set_carved_toy",
+          "focus_ring"
+        ]
+      ],
+      "shieldbreaker": [
+        1,
+        [
+          "sb_5",
+          "sb_set_1"
+        ]
+      ],
+      "vestal": [
+        3,
+        [
+          "sacred_scroll",
+          "cc_set_vest_salacious_diary"
+        ]
+      ]
+    },
+    "party_optimization": false
+  },
+  "stuns": [
+    {
+      "hero": "plague_doctor",
+      "skill": "실명 기체",
+      "ids": [],
+      "accuracy": 115.0,
+      "crit": 0,
+      "chance": 140.0,
+      "success": {
+        "60": 0.8,
+        "90": 0.5,
+        "140": 0.0
+      },
+      "target": "~34",
+      "meta": {
+        "ids": [],
+        "names": [],
+        "active_buffs": [],
+        "inactive_or_unknown": [],
+        "unpriced_stats": [],
+        "callbacks": [],
+        "hp": 38.0,
+        "dodge": 20.0,
+        "speed": 9.0,
+        "prot": 0.0,
+        "res": {
+          "stun": 20.0,
+          "poison": 60.0,
+          "bleed": 20.0,
+          "disease": 50.0,
+          "move": 20.0,
+          "debuff": 50.0,
+          "death_blow": 67.0,
+          "trap": 20.0
+        },
+        "received_stress": 0,
+        "received_heal": 0,
+        "received_stress_heal": 0
+      }
+    },
+    {
+      "hero": "plague_doctor",
+      "skill": "실명 기체",
+      "ids": [
+        "blasphemous_vial",
+        "witchs_vial"
+      ],
+      "accuracy": 125.0,
+      "crit": 0,
+      "chance": 175.0,
+      "success": {
+        "60": 1.0,
+        "90": 0.85,
+        "140": 0.35
+      },
+      "target": "~34",
+      "meta": {
+        "ids": [
+          "blasphemous_vial",
+          "witchs_vial"
+        ],
+        "names": [
+          "신성모독의 물약",
+          "마녀의 물약"
+        ],
+        "active_buffs": [
+          "TRINKET_rangedonly_ACC_B2",
+          "TRINKET_STUNSKILL_B2",
+          "TRINKET_BLIGHTSKILL_B1",
+          "TRINKET_blasphemous_vial_STRESS_D1",
+          "TRINKET_STUNSKILL_B15"
+        ],
+        "inactive_or_unknown": [],
+        "unpriced_stats": [
+          {
+            "stat": "stress_dmg_received_percent",
+            "sub": "",
+            "amount": 0.25
+          }
+        ],
+        "callbacks": [],
+        "hp": 38.0,
+        "dodge": 20.0,
+        "speed": 9.0,
+        "prot": 0.0,
+        "res": {
+          "stun": 20.0,
+          "poison": 60.0,
+          "bleed": 20.0,
+          "disease": 50.0,
+          "move": 20.0,
+          "debuff": 50.0,
+          "death_blow": 67.0,
+          "trap": 20.0
+        },
+        "received_stress": 0.25,
+        "received_heal": 0,
+        "received_stress_heal": 0
+      }
+    },
+    {
+      "hero": "abomination",
+      "skill": "사슬질",
+      "ids": [],
+      "accuracy": 110.0,
+      "crit": 0.11,
+      "chance": 130.0,
+      "success": {
+        "60": 0.6859000000000001,
+        "90": 0.4009000000000001,
+        "140": 0.010450000000000001
+      },
+      "target": "123",
+      "meta": {
+        "ids": [],
+        "names": [],
+        "active_buffs": [],
+        "inactive_or_unknown": [],
+        "unpriced_stats": [],
+        "callbacks": [],
+        "hp": 46.0,
+        "dodge": 27.5,
+        "speed": 9.0,
+        "prot": 0.0,
+        "res": {
+          "stun": 40.0,
+          "poison": 60.0,
+          "bleed": 30.0,
+          "disease": 20.0,
+          "move": 40.0,
+          "debuff": 20.0,
+          "death_blow": 67.0,
+          "trap": 10.0
+        },
+        "received_stress": 0,
+        "received_heal": 0,
+        "received_stress_heal": 0
+      }
+    },
+    {
+      "hero": "abomination",
+      "skill": "사슬질",
+      "ids": [
+        "com_abom_broken_key",
+        "padlock_2"
+      ],
+      "accuracy": 125.0,
+      "crit": 0.11,
+      "chance": 185.0,
+      "success": {
+        "60": 1.0,
+        "90": 0.9554999999999999,
+        "140": 0.47200000000000003
+      },
+      "target": "123",
+      "meta": {
+        "ids": [
+          "com_abom_broken_key",
+          "padlock_2"
+        ],
+        "names": [
+          "부러진 열쇠",
+          "전환의 자물쇠"
+        ],
+        "active_buffs": [
+          "TRINKET_com_abom_broken_key_att_rating_B15",
+          "TRINKET_com_abom_broken_key_stun_B35",
+          "TRINKET_com_abom_broken_key_stress_dmg_rec_D10",
+          "TRINKET_ABOM_STUN_BUFF",
+          "TRINKET_ABOM_BLIGHT_BUFF"
+        ],
+        "inactive_or_unknown": [],
+        "unpriced_stats": [
+          {
+            "stat": "stress_dmg_received_percent",
+            "sub": "",
+            "amount": 0.1
+          }
+        ],
+        "callbacks": [],
+        "hp": 46.0,
+        "dodge": 27.5,
+        "speed": 9.0,
+        "prot": 0.0,
+        "res": {
+          "stun": 40.0,
+          "poison": 60.0,
+          "bleed": 30.0,
+          "disease": 20.0,
+          "move": 40.0,
+          "debuff": 20.0,
+          "death_blow": 67.0,
+          "trap": 10.0
+        },
+        "received_stress": 0.1,
+        "received_heal": 0,
+        "received_stress_heal": 0
+      }
+    },
+    {
+      "hero": "occultist",
+      "skill": "심연에서의 손아귀",
+      "ids": [],
+      "accuracy": 110.0,
+      "crit": 0.23,
+      "chance": 150.0,
+      "success": {
+        "60": 0.8768500000000001,
+        "90": 0.6137,
+        "140": 0.13870000000000002
+      },
+      "target": "123",
+      "meta": {
+        "ids": [],
+        "names": [],
+        "active_buffs": [],
+        "inactive_or_unknown": [],
+        "unpriced_stats": [],
+        "callbacks": [],
+        "hp": 35.0,
+        "dodge": 30.0,
+        "speed": 8.0,
+        "prot": 0.0,
+        "res": {
+          "stun": 20.0,
+          "poison": 30.0,
+          "bleed": 40.0,
+          "disease": 40.0,
+          "move": 20.0,
+          "debuff": 60.0,
+          "death_blow": 67.0,
+          "trap": 10.0
+        },
+        "received_stress": 0,
+        "received_heal": 0,
+        "received_stress_heal": 0
+      }
+    },
+    {
+      "hero": "occultist",
+      "skill": "심연에서의 손아귀",
+      "ids": [
+        "demons_cauldron",
+        "cc_set_occ_vial_of_sand"
+      ],
+      "accuracy": 110.0,
+      "crit": 0.26,
+      "chance": 200.0,
+      "success": {
+        "60": 0.9500000000000001,
+        "90": 0.9500000000000001,
+        "140": 0.6194000000000001
+      },
+      "target": "123",
+      "meta": {
+        "ids": [
+          "demons_cauldron",
+          "cc_set_occ_vial_of_sand"
+        ],
+        "names": [
+          "악마의 가마솥",
+          "모래가 담긴 약병"
+        ],
+        "active_buffs": [
+          "TRINKET_STUNSKILL_B3",
+          "TRINKET_DEBUFFSKILL_B3",
+          "TRINKET_CRIT_B1",
+          "TRINKET_RESOLVECHECK_D3",
+          "TRINKET_STRESSDMG_D3",
+          "TRINKET_occ_vial_of_sand_STUNSKILL_B1",
+          "TRINKET_occ_vial_of_sand_DEBUFFSKILL_B1",
+          "TRINKET_occ_vial_of_sand_MOVESKILL_B1",
+          "TRINKET_occ_vial_of_sand_STUNRESIST_B1"
+        ],
+        "inactive_or_unknown": [],
+        "unpriced_stats": [
+          {
+            "stat": "resolve_check_percent",
+            "sub": "",
+            "amount": -0.1
+          },
+          {
+            "stat": "stress_dmg_received_percent",
+            "sub": "",
+            "amount": 0.15
+          }
+        ],
+        "callbacks": [],
+        "hp": 35.0,
+        "dodge": 30.0,
+        "speed": 8.0,
+        "prot": 0.0,
+        "res": {
+          "stun": 40.0,
+          "poison": 30.0,
+          "bleed": 40.0,
+          "disease": 40.0,
+          "move": 20.0,
+          "debuff": 60.0,
+          "death_blow": 67.0,
+          "trap": 10.0
+        },
+        "received_stress": 0.15,
+        "received_heal": 0,
+        "received_stress_heal": 0
+      }
+    },
+    {
+      "hero": "crusader",
+      "skill": "기절의 일격",
+      "ids": [],
+      "accuracy": 110.0,
+      "crit": 0.11,
+      "chance": 150.0,
+      "success": {
+        "60": 0.86545,
+        "90": 0.5909000000000001,
+        "140": 0.11590000000000002
+      },
+      "target": "12",
+      "meta": {
+        "ids": [],
+        "names": [],
+        "active_buffs": [],
+        "inactive_or_unknown": [],
+        "unpriced_stats": [],
+        "callbacks": [],
+        "hp": 61.0,
+        "dodge": 25.0,
+        "speed": 3.0,
+        "prot": 0.0,
+        "res": {
+          "stun": 40.0,
+          "poison": 30.0,
+          "bleed": 30.0,
+          "disease": 30.0,
+          "move": 40.0,
+          "debuff": 30.0,
+          "death_blow": 67.0,
+          "trap": 10.0
+        },
+        "received_stress": 0,
+        "received_heal": 0,
+        "received_stress_heal": 0
+      }
+    },
+    {
+      "hero": "crusader",
+      "skill": "기절의 일격",
+      "ids": [
+        "paralyzers_crest",
+        "focus_ring"
+      ],
+      "accuracy": 120.0,
+      "crit": 0.16,
+      "chance": 170.0,
+      "success": {
+        "60": 1.0,
+        "90": 0.8320000000000001,
+        "140": 0.332
+      },
+      "target": "12",
+      "meta": {
+        "ids": [
+          "paralyzers_crest",
+          "focus_ring"
+        ],
+        "names": [
+          "마비사의 문장",
+          "집중의 반지"
+        ],
+        "active_buffs": [
+          "TRINKET_STUNSKILL_B2",
+          "TRINKET_DEF_D1",
+          "TRINKET_focus_ring_ACC_BUFF",
+          "TRINKET_focus_ring_CRIT_BUFF",
+          "TRINKET_DEF_D3"
+        ],
+        "inactive_or_unknown": [],
+        "unpriced_stats": [],
+        "callbacks": [],
+        "hp": 61.0,
+        "dodge": 15.0,
+        "speed": 3.0,
+        "prot": 0.0,
+        "res": {
+          "stun": 40.0,
+          "poison": 30.0,
+          "bleed": 30.0,
+          "disease": 30.0,
+          "move": 40.0,
+          "debuff": 30.0,
+          "death_blow": 67.0,
+          "trap": 10.0
+        },
+        "received_stress": 0,
+        "received_heal": 0,
+        "received_stress_heal": 0
+      }
+    },
+    {
+      "hero": "houndmaster",
+      "skill": "둔기 강타",
+      "ids": [],
+      "accuracy": 110.0,
+      "crit": 0.17,
+      "chance": 140.0,
+      "success": {
+        "60": 0.7923000000000001,
+        "90": 0.5073000000000001,
+        "140": 0.0323
+      },
+      "target": "123",
+      "meta": {
+        "ids": [],
+        "names": [],
+        "active_buffs": [],
+        "inactive_or_unknown": [],
+        "unpriced_stats": [],
+        "callbacks": [],
+        "hp": 37.0,
+        "dodge": 30.0,
+        "speed": 7.0,
+        "prot": 0.0,
+        "res": {
+          "stun": 40.0,
+          "poison": 30.0,
+          "bleed": 30.0,
+          "disease": 30.0,
+          "move": 40.0,
+          "debuff": 30.0,
+          "death_blow": 67.0,
+          "trap": 40.0
+        },
+        "received_stress": 0,
+        "received_heal": 0,
+        "received_stress_heal": 0
+      }
+    },
+    {
+      "hero": "houndmaster",
+      "skill": "둔기 강타",
+      "ids": [
+        "cudgel_weight",
+        "focus_ring"
+      ],
+      "accuracy": 120.0,
+      "crit": 0.22,
+      "chance": 165.0,
+      "success": {
+        "60": 1.0,
+        "90": 0.7939999999999999,
+        "140": 0.29400000000000004
+      },
+      "target": "123",
+      "meta": {
+        "ids": [
+          "cudgel_weight",
+          "focus_ring"
+        ],
+        "names": [
+          "무거운 곤봉",
+          "집중의 반지"
+        ],
+        "active_buffs": [
+          "STUNSKILL25",
+          "TRINKET_SPD_D1",
+          "TRINKET_focus_ring_ACC_BUFF",
+          "TRINKET_focus_ring_CRIT_BUFF",
+          "TRINKET_DEF_D3"
+        ],
+        "inactive_or_unknown": [],
+        "unpriced_stats": [],
+        "callbacks": [],
+        "hp": 37.0,
+        "dodge": 22.0,
+        "speed": 6.0,
+        "prot": 0.0,
+        "res": {
+          "stun": 40.0,
+          "poison": 30.0,
+          "bleed": 30.0,
+          "disease": 30.0,
+          "move": 40.0,
+          "debuff": 30.0,
+          "death_blow": 67.0,
+          "trap": 40.0
+        },
+        "received_stress": 0,
+        "received_heal": 0,
+        "received_stress_heal": 0
+      }
+    },
+    {
+      "hero": "duelist",
+      "skill": "부츠",
+      "ids": [],
+      "accuracy": 115.0,
+      "crit": 0.14,
+      "chance": 140.0,
+      "success": {
+        "60": 0.8280000000000001,
+        "90": 0.528,
+        "140": 0.028000000000000004
+      },
+      "target": "12",
+      "meta": {
+        "ids": [],
+        "names": [],
+        "active_buffs": [],
+        "inactive_or_unknown": [],
+        "unpriced_stats": [],
+        "callbacks": [],
+        "hp": 37.0,
+        "dodge": 25.0,
+        "speed": 8.0,
+        "prot": 0.0,
+        "res": {
+          "stun": 30.0,
+          "poison": 30.0,
+          "bleed": 30.0,
+          "disease": 30.0,
+          "move": 30.0,
+          "debuff": 40.0,
+          "death_blow": 67.0,
+          "trap": 10.0
+        },
+        "received_stress": 0,
+        "received_heal": 0,
+        "received_stress_heal": 0
+      }
+    },
+    {
+      "hero": "duelist",
+      "skill": "부츠",
+      "ids": [
+        "duelist_steel_tip_boots",
+        "focus_ring"
+      ],
+      "accuracy": 125.0,
+      "crit": 0.19,
+      "chance": 150.0,
+      "success": {
+        "60": 0.919,
+        "90": 0.638,
+        "140": 0.138
+      },
+      "target": "12",
+      "meta": {
+        "ids": [
+          "duelist_steel_tip_boots",
+          "focus_ring"
+        ],
+        "names": [
+          "철테 두른 장화",
+          "집중의 반지"
+        ],
+        "active_buffs": [
+          "TRINKET_DUELIST_STUN_SKILL_B1",
+          "TRINKET_focus_ring_ACC_BUFF",
+          "TRINKET_focus_ring_CRIT_BUFF",
+          "TRINKET_DEF_D3"
+        ],
+        "inactive_or_unknown": [
+          {
+            "id": "TRINKET_DUELIST_AGGRESSIVE_CRIT_B1",
+            "reason": "inactive",
+            "rule": "in_mode"
+          }
+        ],
+        "unpriced_stats": [],
+        "callbacks": [],
+        "hp": 37.0,
+        "dodge": 17.0,
+        "speed": 8.0,
+        "prot": 0.0,
+        "res": {
+          "stun": 30.0,
+          "poison": 30.0,
+          "bleed": 30.0,
+          "disease": 30.0,
+          "move": 30.0,
+          "debuff": 40.0,
+          "death_blow": 67.0,
+          "trap": 10.0
+        },
+        "received_stress": 0,
+        "received_heal": 0,
+        "received_stress_heal": 0
+      }
+    },
+    {
+      "hero": "vestal",
+      "skill": "눈부신 광채",
+      "ids": [],
+      "accuracy": 110.0,
+      "crit": 0.14,
+      "chance": 140.0,
+      "success": {
+        "60": 0.7866000000000001,
+        "90": 0.5016,
+        "140": 0.026600000000000006
+      },
+      "target": "12",
+      "meta": {
+        "ids": [],
+        "names": [],
+        "active_buffs": [],
+        "inactive_or_unknown": [],
+        "unpriced_stats": [],
+        "callbacks": [],
+        "hp": 44.0,
+        "dodge": 20.0,
+        "speed": 6.0,
+        "prot": 0.0,
+        "res": {
+          "stun": 30.0,
+          "poison": 30.0,
+          "bleed": 40.0,
+          "disease": 30.0,
+          "move": 30.0,
+          "debuff": 30.0,
+          "death_blow": 67.0,
+          "trap": 10.0
+        },
+        "received_stress": 0,
+        "received_heal": 0,
+        "received_stress_heal": 0
+      }
+    },
+    {
+      "hero": "vestal",
+      "skill": "눈부신 광채",
+      "ids": [
+        "sacred_scroll",
+        "cc_set_vest_salacious_diary"
+      ],
+      "accuracy": 110.0,
+      "crit": 0.14,
+      "chance": 130.0,
+      "success": {
+        "60": 0.6916,
+        "90": 0.4066000000000001,
+        "140": 0.013300000000000003
+      },
+      "target": "12",
+      "meta": {
+        "ids": [
+          "sacred_scroll",
+          "cc_set_vest_salacious_diary"
+        ],
+        "names": [
+          "신성한 두루마리",
+          "외설스러운 일기장"
+        ],
+        "active_buffs": [
+          "TRINKET_sacred_scroll_STRESSDMG_BUFF",
+          "TRINKET_sacred_scroll_HEALDONE_BUFF",
+          "TRINKET_sacred_scroll_STUNSKILL_DEBUFF",
+          "TRINKET_sacred_scroll_DMGL_D1",
+          "TRINKET_sacred_scroll_DMGH_D1",
+          "TRINKET_vest_salacious_diary_HEALDONE_B1"
+        ],
+        "inactive_or_unknown": [
+          {
+            "id": "TRINKET_vest_salacious_diary_STRESSHEALDONE_in_camp_B1",
+            "reason": "unpriced rule",
+            "rule": "in_camp"
+          }
+        ],
+        "unpriced_stats": [
+          {
+            "stat": "stress_dmg_received_percent",
+            "sub": "",
+            "amount": -0.1
+          }
+        ],
+        "callbacks": [],
+        "hp": 44.0,
+        "dodge": 20.0,
+        "speed": 6.0,
+        "prot": 0.0,
+        "res": {
+          "stun": 30.0,
+          "poison": 30.0,
+          "bleed": 40.0,
+          "disease": 30.0,
+          "move": 30.0,
+          "debuff": 30.0,
+          "death_blow": 67.0,
+          "trap": 10.0
+        },
+        "received_stress": -0.1,
+        "received_heal": 0,
+        "received_stress_heal": 0
+      }
+    }
+  ],
+  "armor": [
+    {
+      "hero": "occultist",
+      "skill": "약화 저주",
+      "prot": 0,
+      "followups": 1,
+      "followup_extra_hp": 0.0,
+      "gear": false
+    },
+    {
+      "hero": "occultist",
+      "skill": "약화 저주",
+      "prot": 0,
+      "followups": 2,
+      "followup_extra_hp": 0.0,
+      "gear": false
+    },
+    {
+      "hero": "occultist",
+      "skill": "약화 저주",
+      "prot": 0,
+      "followups": 3,
+      "followup_extra_hp": 0.0,
+      "gear": false
+    },
+    {
+      "hero": "vestal",
+      "skill": "광휘",
+      "prot": 0,
+      "followups": 1,
+      "followup_extra_hp": 1.4970666666666672,
+      "gear": false
+    },
+    {
+      "hero": "vestal",
+      "skill": "광휘",
+      "prot": 0,
+      "followups": 2,
+      "followup_extra_hp": 2.9941333333333344,
+      "gear": false
+    },
+    {
+      "hero": "vestal",
+      "skill": "광휘",
+      "prot": 0,
+      "followups": 3,
+      "followup_extra_hp": 4.491200000000002,
+      "gear": false
+    },
+    {
+      "hero": "musketeer",
+      "skill": "사냥감 지정",
+      "prot": 0,
+      "followups": 1,
+      "followup_extra_hp": 0.0,
+      "gear": false
+    },
+    {
+      "hero": "musketeer",
+      "skill": "사냥감 지정",
+      "prot": 0,
+      "followups": 2,
+      "followup_extra_hp": 0.0,
+      "gear": false
+    },
+    {
+      "hero": "musketeer",
+      "skill": "사냥감 지정",
+      "prot": 0,
+      "followups": 3,
+      "followup_extra_hp": 0.0,
+      "gear": false
+    },
+    {
+      "hero": "leper",
+      "skill": "갑옷 쪼개기",
+      "prot": 0,
+      "followups": 1,
+      "followup_extra_hp": 0.0,
+      "gear": false
+    },
+    {
+      "hero": "leper",
+      "skill": "갑옷 쪼개기",
+      "prot": 0,
+      "followups": 2,
+      "followup_extra_hp": 0.0,
+      "gear": false
+    },
+    {
+      "hero": "leper",
+      "skill": "갑옷 쪼개기",
+      "prot": 0,
+      "followups": 3,
+      "followup_extra_hp": 0.0,
+      "gear": false
+    },
+    {
+      "hero": "shieldbreaker",
+      "skill": "구멍내기",
+      "prot": 0,
+      "followups": 1,
+      "followup_extra_hp": 0.0,
+      "gear": false
+    },
+    {
+      "hero": "shieldbreaker",
+      "skill": "구멍내기",
+      "prot": 0,
+      "followups": 2,
+      "followup_extra_hp": 0.0,
+      "gear": false
+    },
+    {
+      "hero": "shieldbreaker",
+      "skill": "구멍내기",
+      "prot": 0,
+      "followups": 3,
+      "followup_extra_hp": 0.0,
+      "gear": false
+    },
+    {
+      "hero": "man_at_arms",
+      "skill": "응징",
+      "prot": 0,
+      "followups": 1,
+      "followup_extra_hp": 0.0,
+      "gear": false
+    },
+    {
+      "hero": "man_at_arms",
+      "skill": "응징",
+      "prot": 0,
+      "followups": 2,
+      "followup_extra_hp": 0.0,
+      "gear": false
+    },
+    {
+      "hero": "man_at_arms",
+      "skill": "응징",
+      "prot": 0,
+      "followups": 3,
+      "followup_extra_hp": 0.0,
+      "gear": false
+    },
+    {
+      "hero": "antiquarian",
+      "skill": "섬광 가루",
+      "prot": 0,
+      "followups": 1,
+      "followup_extra_hp": 1.4970666666666672,
+      "gear": false
+    },
+    {
+      "hero": "antiquarian",
+      "skill": "섬광 가루",
+      "prot": 0,
+      "followups": 2,
+      "followup_extra_hp": 2.9941333333333344,
+      "gear": false
+    },
+    {
+      "hero": "antiquarian",
+      "skill": "섬광 가루",
+      "prot": 0,
+      "followups": 3,
+      "followup_extra_hp": 4.491200000000002,
+      "gear": false
+    },
+    {
+      "hero": "occultist",
+      "skill": "약화 저주",
+      "prot": 0.25,
+      "followups": 1,
+      "followup_extra_hp": 3.367237631417315,
+      "gear": false
+    },
+    {
+      "hero": "occultist",
+      "skill": "약화 저주",
+      "prot": 0.25,
+      "followups": 2,
+      "followup_extra_hp": 6.73447526283463,
+      "gear": false
+    },
+    {
+      "hero": "occultist",
+      "skill": "약화 저주",
+      "prot": 0.25,
+      "followups": 3,
+      "followup_extra_hp": 10.101712894251946,
+      "gear": false
+    },
+    {
+      "hero": "vestal",
+      "skill": "광휘",
+      "prot": 0.25,
+      "followups": 1,
+      "followup_extra_hp": 4.634682666666668,
+      "gear": false
+    },
+    {
+      "hero": "vestal",
+      "skill": "광휘",
+      "prot": 0.25,
+      "followups": 2,
+      "followup_extra_hp": 9.269365333333337,
+      "gear": false
+    },
+    {
+      "hero": "vestal",
+      "skill": "광휘",
+      "prot": 0.25,
+      "followups": 3,
+      "followup_extra_hp": 13.904048000000005,
+      "gear": false
+    },
+    {
+      "hero": "musketeer",
+      "skill": "사냥감 지정",
+      "prot": 0.25,
+      "followups": 1,
+      "followup_extra_hp": 3.2145466666666676,
+      "gear": false
+    },
+    {
+      "hero": "musketeer",
+      "skill": "사냥감 지정",
+      "prot": 0.25,
+      "followups": 2,
+      "followup_extra_hp": 6.429093333333335,
+      "gear": false
+    },
+    {
+      "hero": "musketeer",
+      "skill": "사냥감 지정",
+      "prot": 0.25,
+      "followups": 3,
+      "followup_extra_hp": 9.643640000000003,
+      "gear": false
+    },
+    {
+      "hero": "leper",
+      "skill": "갑옷 쪼개기",
+      "prot": 0.25,
+      "followups": 1,
+      "followup_extra_hp": 3.145433911285589,
+      "gear": false
+    },
+    {
+      "hero": "leper",
+      "skill": "갑옷 쪼개기",
+      "prot": 0.25,
+      "followups": 2,
+      "followup_extra_hp": 6.290867822571178,
+      "gear": false
+    },
+    {
+      "hero": "leper",
+      "skill": "갑옷 쪼개기",
+      "prot": 0.25,
+      "followups": 3,
+      "followup_extra_hp": 9.436301733856766,
+      "gear": false
+    },
+    {
+      "hero": "shieldbreaker",
+      "skill": "구멍내기",
+      "prot": 0.25,
+      "followups": 1,
+      "followup_extra_hp": 3.130164812116122,
+      "gear": false
+    },
+    {
+      "hero": "shieldbreaker",
+      "skill": "구멍내기",
+      "prot": 0.25,
+      "followups": 2,
+      "followup_extra_hp": 6.260329624232244,
+      "gear": false
+    },
+    {
+      "hero": "shieldbreaker",
+      "skill": "구멍내기",
+      "prot": 0.25,
+      "followups": 3,
+      "followup_extra_hp": 9.390494436348366,
+      "gear": false
+    },
+    {
+      "hero": "man_at_arms",
+      "skill": "응징",
+      "prot": 0.25,
+      "followups": 1,
+      "followup_extra_hp": 2.9835011250000005,
+      "gear": false
+    },
+    {
+      "hero": "man_at_arms",
+      "skill": "응징",
+      "prot": 0.25,
+      "followups": 2,
+      "followup_extra_hp": 5.967002250000001,
+      "gear": false
+    },
+    {
+      "hero": "man_at_arms",
+      "skill": "응징",
+      "prot": 0.25,
+      "followups": 3,
+      "followup_extra_hp": 8.950503375000002,
+      "gear": false
+    },
+    {
+      "hero": "antiquarian",
+      "skill": "섬광 가루",
+      "prot": 0.25,
+      "followups": 1,
+      "followup_extra_hp": 1.1124133333333346,
+      "gear": false
+    },
+    {
+      "hero": "antiquarian",
+      "skill": "섬광 가루",
+      "prot": 0.25,
+      "followups": 2,
+      "followup_extra_hp": 2.224826666666669,
+      "gear": false
+    },
+    {
+      "hero": "antiquarian",
+      "skill": "섬광 가루",
+      "prot": 0.25,
+      "followups": 3,
+      "followup_extra_hp": 3.337240000000004,
+      "gear": false
+    },
+    {
+      "hero": "occultist",
+      "skill": "약화 저주",
+      "prot": 0.5,
+      "followups": 1,
+      "followup_extra_hp": 4.704951994941844,
+      "gear": false
+    },
+    {
+      "hero": "occultist",
+      "skill": "약화 저주",
+      "prot": 0.5,
+      "followups": 2,
+      "followup_extra_hp": 9.409903989883688,
+      "gear": false
+    },
+    {
+      "hero": "occultist",
+      "skill": "약화 저주",
+      "prot": 0.5,
+      "followups": 3,
+      "followup_extra_hp": 14.114855984825532,
+      "gear": false
+    },
+    {
+      "hero": "vestal",
+      "skill": "광휘",
+      "prot": 0.5,
+      "followups": 1,
+      "followup_extra_hp": 4.229144,
+      "gear": false
+    },
+    {
+      "hero": "vestal",
+      "skill": "광휘",
+      "prot": 0.5,
+      "followups": 2,
+      "followup_extra_hp": 8.458288,
+      "gear": false
+    },
+    {
+      "hero": "vestal",
+      "skill": "광휘",
+      "prot": 0.5,
+      "followups": 3,
+      "followup_extra_hp": 12.687432,
+      "gear": false
+    },
+    {
+      "hero": "musketeer",
+      "skill": "사냥감 지정",
+      "prot": 0.5,
+      "followups": 1,
+      "followup_extra_hp": 3.8813409523809517,
+      "gear": false
+    },
+    {
+      "hero": "musketeer",
+      "skill": "사냥감 지정",
+      "prot": 0.5,
+      "followups": 2,
+      "followup_extra_hp": 7.762681904761903,
+      "gear": false
+    },
+    {
+      "hero": "musketeer",
+      "skill": "사냥감 지정",
+      "prot": 0.5,
+      "followups": 3,
+      "followup_extra_hp": 11.644022857142856,
+      "gear": false
+    },
+    {
+      "hero": "leper",
+      "skill": "갑옷 쪼개기",
+      "prot": 0.5,
+      "followups": 1,
+      "followup_extra_hp": 6.269967062584783,
+      "gear": false
+    },
+    {
+      "hero": "leper",
+      "skill": "갑옷 쪼개기",
+      "prot": 0.5,
+      "followups": 2,
+      "followup_extra_hp": 12.539934125169566,
+      "gear": false
+    },
+    {
+      "hero": "leper",
+      "skill": "갑옷 쪼개기",
+      "prot": 0.5,
+      "followups": 3,
+      "followup_extra_hp": 18.80990118775435,
+      "gear": false
+    },
+    {
+      "hero": "shieldbreaker",
+      "skill": "구멍내기",
+      "prot": 0.5,
+      "followups": 1,
+      "followup_extra_hp": 5.014358076043601,
+      "gear": false
+    },
+    {
+      "hero": "shieldbreaker",
+      "skill": "구멍내기",
+      "prot": 0.5,
+      "followups": 2,
+      "followup_extra_hp": 10.028716152087203,
+      "gear": false
+    },
+    {
+      "hero": "shieldbreaker",
+      "skill": "구멍내기",
+      "prot": 0.5,
+      "followups": 3,
+      "followup_extra_hp": 15.043074228130804,
+      "gear": false
+    },
+    {
+      "hero": "man_at_arms",
+      "skill": "응징",
+      "prot": 0.5,
+      "followups": 1,
+      "followup_extra_hp": 2.9636763749999986,
+      "gear": false
+    },
+    {
+      "hero": "man_at_arms",
+      "skill": "응징",
+      "prot": 0.5,
+      "followups": 2,
+      "followup_extra_hp": 5.927352749999997,
+      "gear": false
+    },
+    {
+      "hero": "man_at_arms",
+      "skill": "응징",
+      "prot": 0.5,
+      "followups": 3,
+      "followup_extra_hp": 8.891029124999996,
+      "gear": false
+    },
+    {
+      "hero": "antiquarian",
+      "skill": "섬광 가루",
+      "prot": 0.5,
+      "followups": 1,
+      "followup_extra_hp": 0.7301333333333324,
+      "gear": false
+    },
+    {
+      "hero": "antiquarian",
+      "skill": "섬광 가루",
+      "prot": 0.5,
+      "followups": 2,
+      "followup_extra_hp": 1.4602666666666648,
+      "gear": false
+    },
+    {
+      "hero": "antiquarian",
+      "skill": "섬광 가루",
+      "prot": 0.5,
+      "followups": 3,
+      "followup_extra_hp": 2.1903999999999972,
+      "gear": false
+    }
+  ],
+  "mark": [
+    {
+      "hero": "bounty_hunter",
+      "rank": 2,
+      "skill": "현상금 수거",
+      "prot": 0,
+      "plain": 12.852000000000002,
+      "marked": 25.704000000000004,
+      "extra": 12.852000000000002,
+      "marked_bonus": 1.0
+    },
+    {
+      "hero": "bounty_hunter",
+      "rank": 2,
+      "skill": "현상금 수거",
+      "prot": 0.5,
+      "plain": 6.264000000000001,
+      "marked": 12.680470588235297,
+      "extra": 6.4164705882352955,
+      "marked_bonus": 1.0
+    },
+    {
+      "hero": "arbalest",
+      "rank": 4,
+      "skill": "저격",
+      "prot": 0,
+      "plain": 12.600000000000001,
+      "marked": 25.200000000000003,
+      "extra": 12.600000000000001,
+      "marked_bonus": 1.0
+    },
+    {
+      "hero": "arbalest",
+      "rank": 4,
+      "skill": "저격",
+      "prot": 0.5,
+      "plain": 6.0,
+      "marked": 12.413333333333334,
+      "extra": 6.413333333333334,
+      "marked_bonus": 1.0
+    },
+    {
+      "hero": "musketeer",
+      "rank": 4,
+      "skill": "관통탄",
+      "prot": 0,
+      "plain": 12.495000000000001,
+      "marked": 17.66,
+      "extra": 5.164999999999999,
+      "marked_bonus": 0.4
+    },
+    {
+      "hero": "musketeer",
+      "rank": 4,
+      "skill": "관통탄",
+      "prot": 0.5,
+      "plain": 12.495000000000001,
+      "marked": 17.66,
+      "extra": 5.164999999999999,
+      "marked_bonus": 0.4
+    },
+    {
+      "hero": "houndmaster",
+      "rank": 1,
+      "skill": "사냥개 돌진",
+      "prot": 0,
+      "plain": 7.06325,
+      "marked": 13.57075,
+      "extra": 6.5075,
+      "marked_bonus": 1.0
+    },
+    {
+      "hero": "houndmaster",
+      "rank": 1,
+      "skill": "사냥개 돌진",
+      "prot": 0.5,
+      "plain": 3.3345000000000002,
+      "marked": 6.5075,
+      "extra": 3.173,
+      "marked_bonus": 1.0
+    }
+  ],
+  "dlc": [
+    {
+      "hero": "runaway",
+      "skill": "흩날리는 불티",
+      "id": "firefly",
+      "prot": 0,
+      "target_hp": 25,
+      "condition": 0,
+      "state": {
+        "target_hp": 25,
+        "rear_hp": 25,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "burn": 0,
+        "rear_burn": 0,
+        "target_rank": 2
+      },
+      "hp": 16.97203896273381,
+      "parts": {
+        "직접": 2.9699999999999998,
+        "치명타": 1.2445389627338106,
+        "화상 상태 변화": 12.757499999999999
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "흩날리는 불티",
+      "id": "firefly",
+      "prot": 0,
+      "target_hp": 25,
+      "condition": 6,
+      "state": {
+        "target_hp": 25,
+        "rear_hp": 25,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "burn": 6,
+        "rear_burn": 6,
+        "target_rank": 2
+      },
+      "hp": 13.69153896273381,
+      "parts": {
+        "직접": 2.9699999999999998,
+        "치명타": 1.2445389627338106,
+        "화상 상태 변화": 9.477
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "흩날리는 불티",
+      "id": "firefly",
+      "prot": 0,
+      "target_hp": 25,
+      "condition": 12,
+      "state": {
+        "target_hp": 25,
+        "rear_hp": 25,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "burn": 12,
+        "rear_burn": 12,
+        "target_rank": 2
+      },
+      "hp": 4.78153896273381,
+      "parts": {
+        "직접": 2.9699999999999998,
+        "치명타": 1.2445389627338106,
+        "화상 상태 변화": 0.567
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "흩날리는 불티",
+      "id": "firefly",
+      "prot": 0,
+      "target_hp": 100,
+      "condition": 0,
+      "state": {
+        "target_hp": 100,
+        "rear_hp": 100,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "burn": 0,
+        "rear_burn": 0,
+        "target_rank": 2
+      },
+      "hp": 17.458038962733813,
+      "parts": {
+        "직접": 2.9699999999999998,
+        "치명타": 1.2445389627338106,
+        "화상 상태 변화": 13.243500000000001
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "흩날리는 불티",
+      "id": "firefly",
+      "prot": 0,
+      "target_hp": 100,
+      "condition": 6,
+      "state": {
+        "target_hp": 100,
+        "rear_hp": 100,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "burn": 6,
+        "rear_burn": 6,
+        "target_rank": 2
+      },
+      "hp": 17.57953896273381,
+      "parts": {
+        "직접": 2.9699999999999998,
+        "치명타": 1.2445389627338106,
+        "화상 상태 변화": 13.365
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "흩날리는 불티",
+      "id": "firefly",
+      "prot": 0,
+      "target_hp": 100,
+      "condition": 12,
+      "state": {
+        "target_hp": 100,
+        "rear_hp": 100,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "burn": 12,
+        "rear_burn": 12,
+        "target_rank": 2
+      },
+      "hp": 17.458038962733813,
+      "parts": {
+        "직접": 2.9699999999999998,
+        "치명타": 1.2445389627338106,
+        "화상 상태 변화": 13.243500000000001
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "흩날리는 불티",
+      "id": "firefly",
+      "prot": 0.5,
+      "target_hp": 25,
+      "condition": 0,
+      "state": {
+        "target_hp": 25,
+        "rear_hp": 25,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "burn": 0,
+        "rear_burn": 0,
+        "target_rank": 2
+      },
+      "hp": 15.67003896273381,
+      "parts": {
+        "직접": 1.425,
+        "치명타": 1.2445389627338106,
+        "화상 상태 변화": 13.0005
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "흩날리는 불티",
+      "id": "firefly",
+      "prot": 0.5,
+      "target_hp": 25,
+      "condition": 6,
+      "state": {
+        "target_hp": 25,
+        "rear_hp": 25,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "burn": 6,
+        "rear_burn": 6,
+        "target_rank": 2
+      },
+      "hp": 13.53703896273381,
+      "parts": {
+        "직접": 1.425,
+        "치명타": 1.2445389627338106,
+        "화상 상태 변화": 10.8675
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "흩날리는 불티",
+      "id": "firefly",
+      "prot": 0.5,
+      "target_hp": 25,
+      "condition": 12,
+      "state": {
+        "target_hp": 25,
+        "rear_hp": 25,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "burn": 12,
+        "rear_burn": 12,
+        "target_rank": 2
+      },
+      "hp": 4.627038962733811,
+      "parts": {
+        "직접": 1.425,
+        "치명타": 1.2445389627338106,
+        "화상 상태 변화": 1.9574999999999998
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "흩날리는 불티",
+      "id": "firefly",
+      "prot": 0.5,
+      "target_hp": 100,
+      "condition": 0,
+      "state": {
+        "target_hp": 100,
+        "rear_hp": 100,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "burn": 0,
+        "rear_burn": 0,
+        "target_rank": 2
+      },
+      "hp": 15.913038962733811,
+      "parts": {
+        "직접": 1.425,
+        "치명타": 1.2445389627338106,
+        "화상 상태 변화": 13.243500000000001
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "흩날리는 불티",
+      "id": "firefly",
+      "prot": 0.5,
+      "target_hp": 100,
+      "condition": 6,
+      "state": {
+        "target_hp": 100,
+        "rear_hp": 100,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "burn": 6,
+        "rear_burn": 6,
+        "target_rank": 2
+      },
+      "hp": 16.034538962733812,
+      "parts": {
+        "직접": 1.425,
+        "치명타": 1.2445389627338106,
+        "화상 상태 변화": 13.365
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "흩날리는 불티",
+      "id": "firefly",
+      "prot": 0.5,
+      "target_hp": 100,
+      "condition": 12,
+      "state": {
+        "target_hp": 100,
+        "rear_hp": 100,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "burn": 12,
+        "rear_burn": 12,
+        "target_rank": 2
+      },
+      "hp": 15.913038962733811,
+      "parts": {
+        "직접": 1.425,
+        "치명타": 1.2445389627338106,
+        "화상 상태 변화": 13.243500000000001
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "통제된 화상",
+      "id": "controlled_burn",
+      "prot": 0,
+      "target_hp": 25,
+      "condition": 0,
+      "state": {
+        "target_hp": 25,
+        "rear_hp": 25,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "burn": 0,
+        "rear_burn": 0,
+        "target_rank": 2
+      },
+      "hp": 22.5,
+      "parts": {
+        "화상 상태 변화": 22.5
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "통제된 화상",
+      "id": "controlled_burn",
+      "prot": 0,
+      "target_hp": 25,
+      "condition": 6,
+      "state": {
+        "target_hp": 25,
+        "rear_hp": 25,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "burn": 6,
+        "rear_burn": 6,
+        "target_rank": 2
+      },
+      "hp": 13.5,
+      "parts": {
+        "화상 상태 변화": 13.5
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "통제된 화상",
+      "id": "controlled_burn",
+      "prot": 0,
+      "target_hp": 25,
+      "condition": 12,
+      "state": {
+        "target_hp": 25,
+        "rear_hp": 25,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "burn": 12,
+        "rear_burn": 12,
+        "target_rank": 2
+      },
+      "hp": 3.6,
+      "parts": {
+        "화상 상태 변화": 3.6
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "통제된 화상",
+      "id": "controlled_burn",
+      "prot": 0,
+      "target_hp": 100,
+      "condition": 0,
+      "state": {
+        "target_hp": 100,
+        "rear_hp": 100,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "burn": 0,
+        "rear_burn": 0,
+        "target_rank": 2
+      },
+      "hp": 22.5,
+      "parts": {
+        "화상 상태 변화": 22.5
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "통제된 화상",
+      "id": "controlled_burn",
+      "prot": 0,
+      "target_hp": 100,
+      "condition": 6,
+      "state": {
+        "target_hp": 100,
+        "rear_hp": 100,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "burn": 6,
+        "rear_burn": 6,
+        "target_rank": 2
+      },
+      "hp": 22.5,
+      "parts": {
+        "화상 상태 변화": 22.5
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "통제된 화상",
+      "id": "controlled_burn",
+      "prot": 0,
+      "target_hp": 100,
+      "condition": 12,
+      "state": {
+        "target_hp": 100,
+        "rear_hp": 100,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "burn": 12,
+        "rear_burn": 12,
+        "target_rank": 2
+      },
+      "hp": 22.5,
+      "parts": {
+        "화상 상태 변화": 22.5
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "통제된 화상",
+      "id": "controlled_burn",
+      "prot": 0.5,
+      "target_hp": 25,
+      "condition": 0,
+      "state": {
+        "target_hp": 25,
+        "rear_hp": 25,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "burn": 0,
+        "rear_burn": 0,
+        "target_rank": 2
+      },
+      "hp": 22.5,
+      "parts": {
+        "화상 상태 변화": 22.5
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "통제된 화상",
+      "id": "controlled_burn",
+      "prot": 0.5,
+      "target_hp": 25,
+      "condition": 6,
+      "state": {
+        "target_hp": 25,
+        "rear_hp": 25,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "burn": 6,
+        "rear_burn": 6,
+        "target_rank": 2
+      },
+      "hp": 13.5,
+      "parts": {
+        "화상 상태 변화": 13.5
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "통제된 화상",
+      "id": "controlled_burn",
+      "prot": 0.5,
+      "target_hp": 25,
+      "condition": 12,
+      "state": {
+        "target_hp": 25,
+        "rear_hp": 25,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "burn": 12,
+        "rear_burn": 12,
+        "target_rank": 2
+      },
+      "hp": 3.6,
+      "parts": {
+        "화상 상태 변화": 3.6
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "통제된 화상",
+      "id": "controlled_burn",
+      "prot": 0.5,
+      "target_hp": 100,
+      "condition": 0,
+      "state": {
+        "target_hp": 100,
+        "rear_hp": 100,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "burn": 0,
+        "rear_burn": 0,
+        "target_rank": 2
+      },
+      "hp": 22.5,
+      "parts": {
+        "화상 상태 변화": 22.5
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "통제된 화상",
+      "id": "controlled_burn",
+      "prot": 0.5,
+      "target_hp": 100,
+      "condition": 6,
+      "state": {
+        "target_hp": 100,
+        "rear_hp": 100,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "burn": 6,
+        "rear_burn": 6,
+        "target_rank": 2
+      },
+      "hp": 22.5,
+      "parts": {
+        "화상 상태 변화": 22.5
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "통제된 화상",
+      "id": "controlled_burn",
+      "prot": 0.5,
+      "target_hp": 100,
+      "condition": 12,
+      "state": {
+        "target_hp": 100,
+        "rear_hp": 100,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "burn": 12,
+        "rear_burn": 12,
+        "target_rank": 2
+      },
+      "hp": 22.5,
+      "parts": {
+        "화상 상태 변화": 22.5
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "화톳불",
+      "id": "hearthlight",
+      "prot": 0,
+      "target_hp": 25,
+      "condition": 0,
+      "state": {
+        "target_hp": 25,
+        "rear_hp": 25,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "burn": 0,
+        "rear_burn": 0,
+        "target_rank": 2
+      },
+      "hp": 4.988334545454546,
+      "parts": {
+        "은신 해제": 1.14,
+        "강화": 3.8483345454545455,
+        "화상 상태 변화": 0.0
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "화톳불",
+      "id": "hearthlight",
+      "prot": 0,
+      "target_hp": 25,
+      "condition": 6,
+      "state": {
+        "target_hp": 25,
+        "rear_hp": 25,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "burn": 6,
+        "rear_burn": 6,
+        "target_rank": 2
+      },
+      "hp": 9.59633454545455,
+      "parts": {
+        "은신 해제": 1.14,
+        "강화": 3.8483345454545455,
+        "화상 상태 변화": 4.608000000000004
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "화톳불",
+      "id": "hearthlight",
+      "prot": 0,
+      "target_hp": 25,
+      "condition": 12,
+      "state": {
+        "target_hp": 25,
+        "rear_hp": 25,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "burn": 12,
+        "rear_burn": 12,
+        "target_rank": 2
+      },
+      "hp": 14.204334545454554,
+      "parts": {
+        "은신 해제": 1.14,
+        "강화": 3.8483345454545455,
+        "화상 상태 변화": 9.216000000000008
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "화톳불",
+      "id": "hearthlight",
+      "prot": 0,
+      "target_hp": 100,
+      "condition": 0,
+      "state": {
+        "target_hp": 100,
+        "rear_hp": 100,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "burn": 0,
+        "rear_burn": 0,
+        "target_rank": 2
+      },
+      "hp": 4.988334545454546,
+      "parts": {
+        "은신 해제": 1.14,
+        "강화": 3.8483345454545455,
+        "화상 상태 변화": 0.0
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "화톳불",
+      "id": "hearthlight",
+      "prot": 0,
+      "target_hp": 100,
+      "condition": 6,
+      "state": {
+        "target_hp": 100,
+        "rear_hp": 100,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "burn": 6,
+        "rear_burn": 6,
+        "target_rank": 2
+      },
+      "hp": 9.59633454545455,
+      "parts": {
+        "은신 해제": 1.14,
+        "강화": 3.8483345454545455,
+        "화상 상태 변화": 4.608000000000004
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "화톳불",
+      "id": "hearthlight",
+      "prot": 0,
+      "target_hp": 100,
+      "condition": 12,
+      "state": {
+        "target_hp": 100,
+        "rear_hp": 100,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "burn": 12,
+        "rear_burn": 12,
+        "target_rank": 2
+      },
+      "hp": 14.204334545454554,
+      "parts": {
+        "은신 해제": 1.14,
+        "강화": 3.8483345454545455,
+        "화상 상태 변화": 9.216000000000008
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "화톳불",
+      "id": "hearthlight",
+      "prot": 0.5,
+      "target_hp": 25,
+      "condition": 0,
+      "state": {
+        "target_hp": 25,
+        "rear_hp": 25,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "burn": 0,
+        "rear_burn": 0,
+        "target_rank": 2
+      },
+      "hp": 4.988334545454546,
+      "parts": {
+        "은신 해제": 1.14,
+        "강화": 3.8483345454545455,
+        "화상 상태 변화": 0.0
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "화톳불",
+      "id": "hearthlight",
+      "prot": 0.5,
+      "target_hp": 25,
+      "condition": 6,
+      "state": {
+        "target_hp": 25,
+        "rear_hp": 25,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "burn": 6,
+        "rear_burn": 6,
+        "target_rank": 2
+      },
+      "hp": 9.59633454545455,
+      "parts": {
+        "은신 해제": 1.14,
+        "강화": 3.8483345454545455,
+        "화상 상태 변화": 4.608000000000004
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "화톳불",
+      "id": "hearthlight",
+      "prot": 0.5,
+      "target_hp": 25,
+      "condition": 12,
+      "state": {
+        "target_hp": 25,
+        "rear_hp": 25,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "burn": 12,
+        "rear_burn": 12,
+        "target_rank": 2
+      },
+      "hp": 14.204334545454554,
+      "parts": {
+        "은신 해제": 1.14,
+        "강화": 3.8483345454545455,
+        "화상 상태 변화": 9.216000000000008
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "화톳불",
+      "id": "hearthlight",
+      "prot": 0.5,
+      "target_hp": 100,
+      "condition": 0,
+      "state": {
+        "target_hp": 100,
+        "rear_hp": 100,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "burn": 0,
+        "rear_burn": 0,
+        "target_rank": 2
+      },
+      "hp": 4.988334545454546,
+      "parts": {
+        "은신 해제": 1.14,
+        "강화": 3.8483345454545455,
+        "화상 상태 변화": 0.0
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "화톳불",
+      "id": "hearthlight",
+      "prot": 0.5,
+      "target_hp": 100,
+      "condition": 6,
+      "state": {
+        "target_hp": 100,
+        "rear_hp": 100,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "burn": 6,
+        "rear_burn": 6,
+        "target_rank": 2
+      },
+      "hp": 9.59633454545455,
+      "parts": {
+        "은신 해제": 1.14,
+        "강화": 3.8483345454545455,
+        "화상 상태 변화": 4.608000000000004
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "화톳불",
+      "id": "hearthlight",
+      "prot": 0.5,
+      "target_hp": 100,
+      "condition": 12,
+      "state": {
+        "target_hp": 100,
+        "rear_hp": 100,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "burn": 12,
+        "rear_burn": 12,
+        "target_rank": 2
+      },
+      "hp": 14.204334545454554,
+      "parts": {
+        "은신 해제": 1.14,
+        "강화": 3.8483345454545455,
+        "화상 상태 변화": 9.216000000000008
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "작열하는 타격",
+      "id": "searing_strike",
+      "prot": 0,
+      "target_hp": 25,
+      "condition": 0,
+      "state": {
+        "target_hp": 25,
+        "rear_hp": 25,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "burn": 0,
+        "rear_burn": 0,
+        "target_rank": 2
+      },
+      "hp": 17.561369698551555,
+      "parts": {
+        "직접": 10.26,
+        "치명타": 1.161569698551557,
+        "화상 상태 변화": 6.1398
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "작열하는 타격",
+      "id": "searing_strike",
+      "prot": 0,
+      "target_hp": 25,
+      "condition": 6,
+      "state": {
+        "target_hp": 25,
+        "rear_hp": 25,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "burn": 6,
+        "rear_burn": 6,
+        "target_rank": 2
+      },
+      "hp": 14.710169698551555,
+      "parts": {
+        "직접": 13.985999999999999,
+        "치명타": 1.161569698551557,
+        "화상 상태 변화": -0.4374000000000001
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "작열하는 타격",
+      "id": "searing_strike",
+      "prot": 0,
+      "target_hp": 25,
+      "condition": 12,
+      "state": {
+        "target_hp": 25,
+        "rear_hp": 25,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "burn": 12,
+        "rear_burn": 12,
+        "target_rank": 2
+      },
+      "hp": 5.800169698551556,
+      "parts": {
+        "직접": 13.985999999999999,
+        "치명타": 1.161569698551557,
+        "화상 상태 변화": -9.3474
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "작열하는 타격",
+      "id": "searing_strike",
+      "prot": 0,
+      "target_hp": 100,
+      "condition": 0,
+      "state": {
+        "target_hp": 100,
+        "rear_hp": 100,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "burn": 0,
+        "rear_burn": 0,
+        "target_rank": 2
+      },
+      "hp": 18.581969698551557,
+      "parts": {
+        "직접": 10.26,
+        "치명타": 1.161569698551557,
+        "화상 상태 변화": 7.1604
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "작열하는 타격",
+      "id": "searing_strike",
+      "prot": 0,
+      "target_hp": 100,
+      "condition": 6,
+      "state": {
+        "target_hp": 100,
+        "rear_hp": 100,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "burn": 6,
+        "rear_burn": 6,
+        "target_rank": 2
+      },
+      "hp": 22.433969698551557,
+      "parts": {
+        "직접": 14.112,
+        "치명타": 1.161569698551557,
+        "화상 상태 변화": 7.1604
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "작열하는 타격",
+      "id": "searing_strike",
+      "prot": 0,
+      "target_hp": 100,
+      "condition": 12,
+      "state": {
+        "target_hp": 100,
+        "rear_hp": 100,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "burn": 12,
+        "rear_burn": 12,
+        "target_rank": 2
+      },
+      "hp": 22.433969698551557,
+      "parts": {
+        "직접": 14.112,
+        "치명타": 1.161569698551557,
+        "화상 상태 변화": 7.1604
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "작열하는 타격",
+      "id": "searing_strike",
+      "prot": 0.5,
+      "target_hp": 25,
+      "condition": 0,
+      "state": {
+        "target_hp": 25,
+        "rear_hp": 25,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "burn": 0,
+        "rear_burn": 0,
+        "target_rank": 2
+      },
+      "hp": 13.2308268414087,
+      "parts": {
+        "직접": 4.908857142857143,
+        "치명타": 1.161569698551557,
+        "화상 상태 변화": 7.1604
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "작열하는 타격",
+      "id": "searing_strike",
+      "prot": 0.5,
+      "target_hp": 25,
+      "condition": 6,
+      "state": {
+        "target_hp": 25,
+        "rear_hp": 25,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "burn": 6,
+        "rear_burn": 6,
+        "target_rank": 2
+      },
+      "hp": 13.535569698551557,
+      "parts": {
+        "직접": 6.884,
+        "치명타": 1.161569698551557,
+        "화상 상태 변화": 5.49
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "작열하는 타격",
+      "id": "searing_strike",
+      "prot": 0.5,
+      "target_hp": 25,
+      "condition": 12,
+      "state": {
+        "target_hp": 25,
+        "rear_hp": 25,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "burn": 12,
+        "rear_burn": 12,
+        "target_rank": 2
+      },
+      "hp": 5.089969698551557,
+      "parts": {
+        "직접": 6.884,
+        "치명타": 1.161569698551557,
+        "화상 상태 변화": -2.9556
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "작열하는 타격",
+      "id": "searing_strike",
+      "prot": 0.5,
+      "target_hp": 100,
+      "condition": 0,
+      "state": {
+        "target_hp": 100,
+        "rear_hp": 100,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "burn": 0,
+        "rear_burn": 0,
+        "target_rank": 2
+      },
+      "hp": 13.2308268414087,
+      "parts": {
+        "직접": 4.908857142857143,
+        "치명타": 1.161569698551557,
+        "화상 상태 변화": 7.1604
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "작열하는 타격",
+      "id": "searing_strike",
+      "prot": 0.5,
+      "target_hp": 100,
+      "condition": 6,
+      "state": {
+        "target_hp": 100,
+        "rear_hp": 100,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "burn": 6,
+        "rear_burn": 6,
+        "target_rank": 2
+      },
+      "hp": 15.205969698551558,
+      "parts": {
+        "직접": 6.884,
+        "치명타": 1.161569698551557,
+        "화상 상태 변화": 7.1604
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "작열하는 타격",
+      "id": "searing_strike",
+      "prot": 0.5,
+      "target_hp": 100,
+      "condition": 12,
+      "state": {
+        "target_hp": 100,
+        "rear_hp": 100,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "burn": 12,
+        "rear_burn": 12,
+        "target_rank": 2
+      },
+      "hp": 15.205969698551558,
+      "parts": {
+        "직접": 6.884,
+        "치명타": 1.161569698551557,
+        "화상 상태 변화": 7.1604
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "불길 역류",
+      "id": "backdraft",
+      "prot": 0,
+      "target_hp": 25,
+      "condition": 0,
+      "state": {
+        "target_hp": 25,
+        "rear_hp": 25,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "burn": 0,
+        "rear_burn": 0,
+        "target_rank": 2
+      },
+      "hp": 0.0,
+      "parts": {
+        "사용 불가": 0.0
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "불길 역류",
+      "id": "backdraft",
+      "prot": 0,
+      "target_hp": 25,
+      "condition": 6,
+      "state": {
+        "target_hp": 25,
+        "rear_hp": 25,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "burn": 6,
+        "rear_burn": 6,
+        "target_rank": 2
+      },
+      "hp": 22.305847772475243,
+      "parts": {
+        "직접": 13.305000000000001,
+        "치명타": 3.1703477724752402,
+        "뒤 대상 직접": 13.305000000000001,
+        "화상 전이 순증감": -7.474500000000002
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "불길 역류",
+      "id": "backdraft",
+      "prot": 0,
+      "target_hp": 25,
+      "condition": 12,
+      "state": {
+        "target_hp": 25,
+        "rear_hp": 25,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "burn": 12,
+        "rear_burn": 12,
+        "target_rank": 2
+      },
+      "hp": 8.687847772475246,
+      "parts": {
+        "직접": 18.925,
+        "치명타": 3.1703477724752402,
+        "뒤 대상 직접": 18.925,
+        "화상 전이 순증감": -32.332499999999996
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "불길 역류",
+      "id": "backdraft",
+      "prot": 0,
+      "target_hp": 100,
+      "condition": 0,
+      "state": {
+        "target_hp": 100,
+        "rear_hp": 100,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "burn": 0,
+        "rear_burn": 0,
+        "target_rank": 2
+      },
+      "hp": 0.0,
+      "parts": {
+        "사용 불가": 0.0
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "불길 역류",
+      "id": "backdraft",
+      "prot": 0,
+      "target_hp": 100,
+      "condition": 6,
+      "state": {
+        "target_hp": 100,
+        "rear_hp": 100,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "burn": 6,
+        "rear_burn": 6,
+        "target_rank": 2
+      },
+      "hp": 31.364347772475245,
+      "parts": {
+        "직접": 13.305000000000001,
+        "치명타": 3.1703477724752402,
+        "뒤 대상 직접": 13.305000000000001,
+        "화상 전이 순증감": 1.5840000000000014
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "불길 역류",
+      "id": "backdraft",
+      "prot": 0,
+      "target_hp": 100,
+      "condition": 12,
+      "state": {
+        "target_hp": 100,
+        "rear_hp": 100,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "burn": 12,
+        "rear_burn": 12,
+        "target_rank": 2
+      },
+      "hp": 45.77034777247525,
+      "parts": {
+        "직접": 20.445,
+        "치명타": 3.1703477724752402,
+        "뒤 대상 직접": 20.445,
+        "화상 전이 순증감": 1.710000000000005
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "불길 역류",
+      "id": "backdraft",
+      "prot": 0.5,
+      "target_hp": 25,
+      "condition": 0,
+      "state": {
+        "target_hp": 25,
+        "rear_hp": 25,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "burn": 0,
+        "rear_burn": 0,
+        "target_rank": 2
+      },
+      "hp": 0.0,
+      "parts": {
+        "사용 불가": 0.0
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "불길 역류",
+      "id": "backdraft",
+      "prot": 0.5,
+      "target_hp": 25,
+      "condition": 6,
+      "state": {
+        "target_hp": 25,
+        "rear_hp": 25,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "burn": 6,
+        "rear_burn": 6,
+        "target_rank": 2
+      },
+      "hp": 14.660847772475243,
+      "parts": {
+        "직접": 6.355,
+        "치명타": 3.1703477724752402,
+        "뒤 대상 직접": 6.355,
+        "화상 전이 순증감": -1.2194999999999971
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "불길 역류",
+      "id": "backdraft",
+      "prot": 0.5,
+      "target_hp": 25,
+      "condition": 12,
+      "state": {
+        "target_hp": 25,
+        "rear_hp": 25,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "burn": 12,
+        "rear_burn": 12,
+        "target_rank": 2
+      },
+      "hp": -1.21215222752476,
+      "parts": {
+        "직접": 9.925,
+        "치명타": 3.1703477724752402,
+        "뒤 대상 직접": 9.925,
+        "화상 전이 순증감": -24.2325
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "불길 역류",
+      "id": "backdraft",
+      "prot": 0.5,
+      "target_hp": 100,
+      "condition": 0,
+      "state": {
+        "target_hp": 100,
+        "rear_hp": 100,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "burn": 0,
+        "rear_burn": 0,
+        "target_rank": 2
+      },
+      "hp": 0.0,
+      "parts": {
+        "사용 불가": 0.0
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "불길 역류",
+      "id": "backdraft",
+      "prot": 0.5,
+      "target_hp": 100,
+      "condition": 6,
+      "state": {
+        "target_hp": 100,
+        "rear_hp": 100,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "burn": 6,
+        "rear_burn": 6,
+        "target_rank": 2
+      },
+      "hp": 17.464347772475243,
+      "parts": {
+        "직접": 6.355,
+        "치명타": 3.1703477724752402,
+        "뒤 대상 직접": 6.355,
+        "화상 전이 순증감": 1.5840000000000014
+      }
+    },
+    {
+      "hero": "runaway",
+      "skill": "불길 역류",
+      "id": "backdraft",
+      "prot": 0.5,
+      "target_hp": 100,
+      "condition": 12,
+      "state": {
+        "target_hp": 100,
+        "rear_hp": 100,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "burn": 12,
+        "rear_burn": 12,
+        "target_rank": 2
+      },
+      "hp": 24.73034777247525,
+      "parts": {
+        "직접": 9.925,
+        "치명타": 3.1703477724752402,
+        "뒤 대상 직접": 9.925,
+        "화상 전이 순증감": 1.710000000000005
+      }
+    },
+    {
+      "hero": "duelist",
+      "skill": "최후의 일격",
+      "id": "coup_de_grace",
+      "prot": 0,
+      "target_hp": 6,
+      "condition": false,
+      "state": {
+        "target_hp": 6,
+        "rear_hp": 6,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "target_stunned": false,
+        "target_rank": 2,
+        "stance": "stance_aggressive"
+      },
+      "hp": 7.427738374578672,
+      "parts": {
+        "직접": 4.0,
+        "치명타": 1.9937383745786719,
+        "처치 후 추가 행동": 1.4340000000000002
+      }
+    },
+    {
+      "hero": "duelist",
+      "skill": "최후의 일격",
+      "id": "coup_de_grace",
+      "prot": 0,
+      "target_hp": 6,
+      "condition": true,
+      "state": {
+        "target_hp": 6,
+        "rear_hp": 6,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "target_stunned": true,
+        "target_rank": 2,
+        "stance": "stance_aggressive"
+      },
+      "hp": 23.13869187289336,
+      "parts": {
+        "직접": 6.0,
+        "치명타": 9.96869187289336,
+        "처치 후 추가 행동": 7.17
+      }
+    },
+    {
+      "hero": "duelist",
+      "skill": "최후의 일격",
+      "id": "coup_de_grace",
+      "prot": 0,
+      "target_hp": 12,
+      "condition": false,
+      "state": {
+        "target_hp": 12,
+        "rear_hp": 12,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "target_stunned": false,
+        "target_rank": 2,
+        "stance": "stance_aggressive"
+      },
+      "hp": 5.993738374578672,
+      "parts": {
+        "직접": 4.0,
+        "치명타": 1.9937383745786719,
+        "처치 후 추가 행동": 0.0
+      }
+    },
+    {
+      "hero": "duelist",
+      "skill": "최후의 일격",
+      "id": "coup_de_grace",
+      "prot": 0,
+      "target_hp": 12,
+      "condition": true,
+      "state": {
+        "target_hp": 12,
+        "rear_hp": 12,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "target_stunned": true,
+        "target_rank": 2,
+        "stance": "stance_aggressive"
+      },
+      "hp": 15.96869187289336,
+      "parts": {
+        "직접": 6.0,
+        "치명타": 9.96869187289336,
+        "처치 후 추가 행동": 0.0
+      }
+    },
+    {
+      "hero": "duelist",
+      "skill": "최후의 일격",
+      "id": "coup_de_grace",
+      "prot": 0,
+      "target_hp": 30,
+      "condition": false,
+      "state": {
+        "target_hp": 30,
+        "rear_hp": 30,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "target_stunned": false,
+        "target_rank": 2,
+        "stance": "stance_aggressive"
+      },
+      "hp": 5.993738374578672,
+      "parts": {
+        "직접": 4.0,
+        "치명타": 1.9937383745786719,
+        "처치 후 추가 행동": 0.0
+      }
+    },
+    {
+      "hero": "duelist",
+      "skill": "최후의 일격",
+      "id": "coup_de_grace",
+      "prot": 0,
+      "target_hp": 30,
+      "condition": true,
+      "state": {
+        "target_hp": 30,
+        "rear_hp": 30,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "target_stunned": true,
+        "target_rank": 2,
+        "stance": "stance_aggressive"
+      },
+      "hp": 15.96869187289336,
+      "parts": {
+        "직접": 6.0,
+        "치명타": 9.96869187289336,
+        "처치 후 추가 행동": 0.0
+      }
+    },
+    {
+      "hero": "duelist",
+      "skill": "최후의 일격",
+      "id": "coup_de_grace",
+      "prot": 0.5,
+      "target_hp": 6,
+      "condition": false,
+      "state": {
+        "target_hp": 6,
+        "rear_hp": 6,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "target_stunned": false,
+        "target_rank": 2,
+        "stance": "stance_aggressive"
+      },
+      "hp": 7.427738374578672,
+      "parts": {
+        "직접": 4.0,
+        "치명타": 1.9937383745786719,
+        "처치 후 추가 행동": 1.4340000000000002
+      }
+    },
+    {
+      "hero": "duelist",
+      "skill": "최후의 일격",
+      "id": "coup_de_grace",
+      "prot": 0.5,
+      "target_hp": 6,
+      "condition": true,
+      "state": {
+        "target_hp": 6,
+        "rear_hp": 6,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "target_stunned": true,
+        "target_rank": 2,
+        "stance": "stance_aggressive"
+      },
+      "hp": 23.13869187289336,
+      "parts": {
+        "직접": 6.0,
+        "치명타": 9.96869187289336,
+        "처치 후 추가 행동": 7.17
+      }
+    },
+    {
+      "hero": "duelist",
+      "skill": "최후의 일격",
+      "id": "coup_de_grace",
+      "prot": 0.5,
+      "target_hp": 12,
+      "condition": false,
+      "state": {
+        "target_hp": 12,
+        "rear_hp": 12,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "target_stunned": false,
+        "target_rank": 2,
+        "stance": "stance_aggressive"
+      },
+      "hp": 5.993738374578672,
+      "parts": {
+        "직접": 4.0,
+        "치명타": 1.9937383745786719,
+        "처치 후 추가 행동": 0.0
+      }
+    },
+    {
+      "hero": "duelist",
+      "skill": "최후의 일격",
+      "id": "coup_de_grace",
+      "prot": 0.5,
+      "target_hp": 12,
+      "condition": true,
+      "state": {
+        "target_hp": 12,
+        "rear_hp": 12,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "target_stunned": true,
+        "target_rank": 2,
+        "stance": "stance_aggressive"
+      },
+      "hp": 15.96869187289336,
+      "parts": {
+        "직접": 6.0,
+        "치명타": 9.96869187289336,
+        "처치 후 추가 행동": 0.0
+      }
+    },
+    {
+      "hero": "duelist",
+      "skill": "최후의 일격",
+      "id": "coup_de_grace",
+      "prot": 0.5,
+      "target_hp": 30,
+      "condition": false,
+      "state": {
+        "target_hp": 30,
+        "rear_hp": 30,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "target_stunned": false,
+        "target_rank": 2,
+        "stance": "stance_aggressive"
+      },
+      "hp": 5.993738374578672,
+      "parts": {
+        "직접": 4.0,
+        "치명타": 1.9937383745786719,
+        "처치 후 추가 행동": 0.0
+      }
+    },
+    {
+      "hero": "duelist",
+      "skill": "최후의 일격",
+      "id": "coup_de_grace",
+      "prot": 0.5,
+      "target_hp": 30,
+      "condition": true,
+      "state": {
+        "target_hp": 30,
+        "rear_hp": 30,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 4,
+        "target_stunned": true,
+        "target_rank": 2,
+        "stance": "stance_aggressive"
+      },
+      "hp": 15.96869187289336,
+      "parts": {
+        "직접": 6.0,
+        "치명타": 9.96869187289336,
+        "처치 후 추가 행동": 0.0
+      }
+    },
+    {
+      "hero": "duelist",
+      "skill": "눈속임",
+      "id": "feint",
+      "prot": 0,
+      "target_hp": 6,
+      "condition": false,
+      "state": {
+        "target_hp": 6,
+        "rear_hp": 6,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "target_stunned": false,
+        "target_rank": 2,
+        "stance": "stance_aggressive"
+      },
+      "hp": 0.0,
+      "parts": {
+        "사용 불가": 0.0
+      }
+    },
+    {
+      "hero": "duelist",
+      "skill": "눈속임",
+      "id": "feint",
+      "prot": 0,
+      "target_hp": 6,
+      "condition": true,
+      "state": {
+        "target_hp": 6,
+        "rear_hp": 6,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "target_stunned": true,
+        "target_rank": 2,
+        "stance": "stance_aggressive"
+      },
+      "hp": 0.0,
+      "parts": {
+        "사용 불가": 0.0
+      }
+    },
+    {
+      "hero": "duelist",
+      "skill": "눈속임",
+      "id": "feint",
+      "prot": 0,
+      "target_hp": 12,
+      "condition": false,
+      "state": {
+        "target_hp": 12,
+        "rear_hp": 12,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "target_stunned": false,
+        "target_rank": 2,
+        "stance": "stance_aggressive"
+      },
+      "hp": 0.0,
+      "parts": {
+        "사용 불가": 0.0
+      }
+    },
+    {
+      "hero": "duelist",
+      "skill": "눈속임",
+      "id": "feint",
+      "prot": 0,
+      "target_hp": 12,
+      "condition": true,
+      "state": {
+        "target_hp": 12,
+        "rear_hp": 12,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "target_stunned": true,
+        "target_rank": 2,
+        "stance": "stance_aggressive"
+      },
+      "hp": 0.0,
+      "parts": {
+        "사용 불가": 0.0
+      }
+    },
+    {
+      "hero": "duelist",
+      "skill": "눈속임",
+      "id": "feint",
+      "prot": 0,
+      "target_hp": 30,
+      "condition": false,
+      "state": {
+        "target_hp": 30,
+        "rear_hp": 30,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "target_stunned": false,
+        "target_rank": 2,
+        "stance": "stance_aggressive"
+      },
+      "hp": 0.0,
+      "parts": {
+        "사용 불가": 0.0
+      }
+    },
+    {
+      "hero": "duelist",
+      "skill": "눈속임",
+      "id": "feint",
+      "prot": 0,
+      "target_hp": 30,
+      "condition": true,
+      "state": {
+        "target_hp": 30,
+        "rear_hp": 30,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "target_stunned": true,
+        "target_rank": 2,
+        "stance": "stance_aggressive"
+      },
+      "hp": 0.0,
+      "parts": {
+        "사용 불가": 0.0
+      }
+    },
+    {
+      "hero": "duelist",
+      "skill": "눈속임",
+      "id": "feint",
+      "prot": 0.5,
+      "target_hp": 6,
+      "condition": false,
+      "state": {
+        "target_hp": 6,
+        "rear_hp": 6,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "target_stunned": false,
+        "target_rank": 2,
+        "stance": "stance_aggressive"
+      },
+      "hp": 0.0,
+      "parts": {
+        "사용 불가": 0.0
+      }
+    },
+    {
+      "hero": "duelist",
+      "skill": "눈속임",
+      "id": "feint",
+      "prot": 0.5,
+      "target_hp": 6,
+      "condition": true,
+      "state": {
+        "target_hp": 6,
+        "rear_hp": 6,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "target_stunned": true,
+        "target_rank": 2,
+        "stance": "stance_aggressive"
+      },
+      "hp": 0.0,
+      "parts": {
+        "사용 불가": 0.0
+      }
+    },
+    {
+      "hero": "duelist",
+      "skill": "눈속임",
+      "id": "feint",
+      "prot": 0.5,
+      "target_hp": 12,
+      "condition": false,
+      "state": {
+        "target_hp": 12,
+        "rear_hp": 12,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "target_stunned": false,
+        "target_rank": 2,
+        "stance": "stance_aggressive"
+      },
+      "hp": 0.0,
+      "parts": {
+        "사용 불가": 0.0
+      }
+    },
+    {
+      "hero": "duelist",
+      "skill": "눈속임",
+      "id": "feint",
+      "prot": 0.5,
+      "target_hp": 12,
+      "condition": true,
+      "state": {
+        "target_hp": 12,
+        "rear_hp": 12,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "target_stunned": true,
+        "target_rank": 2,
+        "stance": "stance_aggressive"
+      },
+      "hp": 0.0,
+      "parts": {
+        "사용 불가": 0.0
+      }
+    },
+    {
+      "hero": "duelist",
+      "skill": "눈속임",
+      "id": "feint",
+      "prot": 0.5,
+      "target_hp": 30,
+      "condition": false,
+      "state": {
+        "target_hp": 30,
+        "rear_hp": 30,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "target_stunned": false,
+        "target_rank": 2,
+        "stance": "stance_aggressive"
+      },
+      "hp": 0.0,
+      "parts": {
+        "사용 불가": 0.0
+      }
+    },
+    {
+      "hero": "duelist",
+      "skill": "눈속임",
+      "id": "feint",
+      "prot": 0.5,
+      "target_hp": 30,
+      "condition": true,
+      "state": {
+        "target_hp": 30,
+        "rear_hp": 30,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "target_stunned": true,
+        "target_rank": 2,
+        "stance": "stance_aggressive"
+      },
+      "hp": 0.0,
+      "parts": {
+        "사용 불가": 0.0
+      }
+    },
+    {
+      "hero": "duelist",
+      "skill": "날쌘 돌진",
+      "id": "fleche",
+      "prot": 0,
+      "target_hp": 6,
+      "condition": false,
+      "state": {
+        "target_hp": 6,
+        "rear_hp": 6,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "target_stunned": false,
+        "target_rank": 2,
+        "stance": "stance_aggressive"
+      },
+      "hp": 14.959117878812897,
+      "parts": {
+        "직접": 5.7,
+        "대가": -1.1416458332993111,
+        "치명타": 2.0834566014347122,
+        "표식 위험": -0.5501215640825536,
+        "표식 반격 연계": 9.666580758069568,
+        "자세 약화 정정": -0.7991520833095177
+      }
+    },
+    {
+      "hero": "duelist",
+      "skill": "날쌘 돌진",
+      "id": "fleche",
+      "prot": 0,
+      "target_hp": 6,
+      "condition": true,
+      "state": {
+        "target_hp": 6,
+        "rear_hp": 6,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "target_stunned": true,
+        "target_rank": 2,
+        "stance": "stance_aggressive"
+      },
+      "hp": 14.959117878812897,
+      "parts": {
+        "직접": 5.7,
+        "대가": -1.1416458332993111,
+        "치명타": 2.0834566014347122,
+        "표식 위험": -0.5501215640825536,
+        "표식 반격 연계": 9.666580758069568,
+        "자세 약화 정정": -0.7991520833095177
+      }
+    },
+    {
+      "hero": "duelist",
+      "skill": "날쌘 돌진",
+      "id": "fleche",
+      "prot": 0,
+      "target_hp": 12,
+      "condition": false,
+      "state": {
+        "target_hp": 12,
+        "rear_hp": 12,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "target_stunned": false,
+        "target_rank": 2,
+        "stance": "stance_aggressive"
+      },
+      "hp": 20.02397502167004,
+      "parts": {
+        "직접": 10.764857142857144,
+        "대가": -1.1416458332993111,
+        "치명타": 2.0834566014347122,
+        "표식 위험": -0.5501215640825536,
+        "표식 반격 연계": 9.666580758069568,
+        "자세 약화 정정": -0.7991520833095177
+      }
+    },
+    {
+      "hero": "duelist",
+      "skill": "날쌘 돌진",
+      "id": "fleche",
+      "prot": 0,
+      "target_hp": 12,
+      "condition": true,
+      "state": {
+        "target_hp": 12,
+        "rear_hp": 12,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "target_stunned": true,
+        "target_rank": 2,
+        "stance": "stance_aggressive"
+      },
+      "hp": 20.02397502167004,
+      "parts": {
+        "직접": 10.764857142857144,
+        "대가": -1.1416458332993111,
+        "치명타": 2.0834566014347122,
+        "표식 위험": -0.5501215640825536,
+        "표식 반격 연계": 9.666580758069568,
+        "자세 약화 정정": -0.7991520833095177
+      }
+    },
+    {
+      "hero": "duelist",
+      "skill": "날쌘 돌진",
+      "id": "fleche",
+      "prot": 0,
+      "target_hp": 30,
+      "condition": false,
+      "state": {
+        "target_hp": 30,
+        "rear_hp": 30,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "target_stunned": false,
+        "target_rank": 2,
+        "stance": "stance_aggressive"
+      },
+      "hp": 22.540117878812897,
+      "parts": {
+        "직접": 13.281,
+        "대가": -1.1416458332993111,
+        "치명타": 2.0834566014347122,
+        "표식 위험": -0.5501215640825536,
+        "표식 반격 연계": 9.666580758069568,
+        "자세 약화 정정": -0.7991520833095177
+      }
+    },
+    {
+      "hero": "duelist",
+      "skill": "날쌘 돌진",
+      "id": "fleche",
+      "prot": 0,
+      "target_hp": 30,
+      "condition": true,
+      "state": {
+        "target_hp": 30,
+        "rear_hp": 30,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "target_stunned": true,
+        "target_rank": 2,
+        "stance": "stance_aggressive"
+      },
+      "hp": 22.540117878812897,
+      "parts": {
+        "직접": 13.281,
+        "대가": -1.1416458332993111,
+        "치명타": 2.0834566014347122,
+        "표식 위험": -0.5501215640825536,
+        "표식 반격 연계": 9.666580758069568,
+        "자세 약화 정정": -0.7991520833095177
+      }
+    },
+    {
+      "hero": "duelist",
+      "skill": "날쌘 돌진",
+      "id": "fleche",
+      "prot": 0.5,
+      "target_hp": 6,
+      "condition": false,
+      "state": {
+        "target_hp": 6,
+        "rear_hp": 6,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "target_stunned": false,
+        "target_rank": 2,
+        "stance": "stance_aggressive"
+      },
+      "hp": 10.021725671020693,
+      "parts": {
+        "직접": 5.27657142857143,
+        "대가": -1.1416458332993111,
+        "치명타": 2.0834566014347122,
+        "표식 위험": -0.5501215640825536,
+        "표식 반격 연계": 5.152617121705934,
+        "자세 약화 정정": -0.7991520833095177
+      }
+    },
+    {
+      "hero": "duelist",
+      "skill": "날쌘 돌진",
+      "id": "fleche",
+      "prot": 0.5,
+      "target_hp": 6,
+      "condition": true,
+      "state": {
+        "target_hp": 6,
+        "rear_hp": 6,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "target_stunned": true,
+        "target_rank": 2,
+        "stance": "stance_aggressive"
+      },
+      "hp": 10.021725671020693,
+      "parts": {
+        "직접": 5.27657142857143,
+        "대가": -1.1416458332993111,
+        "치명타": 2.0834566014347122,
+        "표식 위험": -0.5501215640825536,
+        "표식 반격 연계": 5.152617121705934,
+        "자세 약화 정정": -0.7991520833095177
+      }
+    },
+    {
+      "hero": "duelist",
+      "skill": "날쌘 돌진",
+      "id": "fleche",
+      "prot": 0.5,
+      "target_hp": 12,
+      "condition": false,
+      "state": {
+        "target_hp": 12,
+        "rear_hp": 12,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "target_stunned": false,
+        "target_rank": 2,
+        "stance": "stance_aggressive"
+      },
+      "hp": 11.069439956734978,
+      "parts": {
+        "직접": 6.324285714285715,
+        "대가": -1.1416458332993111,
+        "치명타": 2.0834566014347122,
+        "표식 위험": -0.5501215640825536,
+        "표식 반격 연계": 5.152617121705934,
+        "자세 약화 정정": -0.7991520833095177
+      }
+    },
+    {
+      "hero": "duelist",
+      "skill": "날쌘 돌진",
+      "id": "fleche",
+      "prot": 0.5,
+      "target_hp": 12,
+      "condition": true,
+      "state": {
+        "target_hp": 12,
+        "rear_hp": 12,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "target_stunned": true,
+        "target_rank": 2,
+        "stance": "stance_aggressive"
+      },
+      "hp": 11.069439956734978,
+      "parts": {
+        "직접": 6.324285714285715,
+        "대가": -1.1416458332993111,
+        "치명타": 2.0834566014347122,
+        "표식 위험": -0.5501215640825536,
+        "표식 반격 연계": 5.152617121705934,
+        "자세 약화 정정": -0.7991520833095177
+      }
+    },
+    {
+      "hero": "duelist",
+      "skill": "날쌘 돌진",
+      "id": "fleche",
+      "prot": 0.5,
+      "target_hp": 30,
+      "condition": false,
+      "state": {
+        "target_hp": 30,
+        "rear_hp": 30,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "target_stunned": false,
+        "target_rank": 2,
+        "stance": "stance_aggressive"
+      },
+      "hp": 11.069439956734978,
+      "parts": {
+        "직접": 6.324285714285715,
+        "대가": -1.1416458332993111,
+        "치명타": 2.0834566014347122,
+        "표식 위험": -0.5501215640825536,
+        "표식 반격 연계": 5.152617121705934,
+        "자세 약화 정정": -0.7991520833095177
+      }
+    },
+    {
+      "hero": "duelist",
+      "skill": "날쌘 돌진",
+      "id": "fleche",
+      "prot": 0.5,
+      "target_hp": 30,
+      "condition": true,
+      "state": {
+        "target_hp": 30,
+        "rear_hp": 30,
+        "rear_exists": true,
+        "remaining_enemies": 2,
+        "rounds": 3,
+        "rank": 2,
+        "target_stunned": true,
+        "target_rank": 2,
+        "stance": "stance_aggressive"
+      },
+      "hp": 11.069439956734978,
+      "parts": {
+        "직접": 6.324285714285715,
+        "대가": -1.1416458332993111,
+        "치명타": 2.0834566014347122,
+        "표식 위험": -0.5501215640825536,
+        "표식 반격 연계": 5.152617121705934,
+        "자세 약화 정정": -0.7991520833095177
+      }
+    }
+  ],
+  "burn_math": [
+    {
+      "stacks": 0,
+      "baseline": 0,
+      "illumination_additional": 4,
+      "hearthlight_success_additional": 0
+    },
+    {
+      "stacks": 3,
+      "baseline": 4,
+      "illumination_additional": 6,
+      "hearthlight_success_additional": 2
+    },
+    {
+      "stacks": 6,
+      "baseline": 10,
+      "illumination_additional": 5,
+      "hearthlight_success_additional": 2
+    },
+    {
+      "stacks": 9,
+      "baseline": 15,
+      "illumination_additional": 6,
+      "hearthlight_success_additional": 3
+    },
+    {
+      "stacks": 12,
+      "baseline": 21,
+      "illumination_additional": 4,
+      "hearthlight_success_additional": 4
+    },
+    {
+      "stacks": 20,
+      "baseline": 35,
+      "illumination_additional": 4,
+      "hearthlight_success_additional": 7
+    }
+  ],
+  "equipment_callbacks": {
+    "duelist_blade_oil": {
+      "kill_performer_additional_effects": [
+        "Duelist Blade Oil On Kill"
+      ]
+    },
+    "duelist_razor_hilt": {
+      "riposte_skill_additional_effects": [
+        "Duelist Razor Hilt On Riposte Hit",
+        "Duelist Razor Hilt On Riposte Crits Received"
+      ]
+    },
+    "duelist_champions_mantle": {
+      "attack_skill_additional_effects": [
+        "Duelist Champion Mantle Activate Riposte"
+      ]
+    },
+    "rw_warm_scarf": {
+      "on_dodge_additional_effects": [
+        "On dodge attacker shuffle single trigger effect"
+      ]
+    },
+    "rw_pyro_accelerant": {
+      "attack_skill_additional_effects": [
+        "Pyro On Attack Monster Debuffs",
+        "Pyro Self Burn"
+      ]
+    },
+    "rw_charcoal_effigy": {
+      "was_hit_additional_effects": [
+        "When hit Self heal trigger effect"
+      ]
+    },
+    "rw_rescuers_rucksack": {
+      "friendly_skill_additional_effects": [
+        "On Friendly Skill Other Heroes Heal"
+      ]
+    },
+    "rw_infernal_coalstone": {
+      "attack_skill_additional_effects": [
+        "On Attack Hit If Target is in Rank Knockback",
+        "On Attack Hit If Target is in Rank Pull"
+      ]
+    },
+    "rw_set_knitted_blanket": {
+      "was_hit_additional_effects": [
+        "When hit Self Burn"
+      ]
+    },
+    "duelist_set_academie_ring": {
+      "friendly_skill_additional_effects": [
+        "Duelist Academie Ring On Friendly Skill"
+      ],
+      "attack_skill_additional_effects": [
+        "Duelist Academie Ring On Attack Miss"
+      ]
+    },
+    "duelist_set_lovers_glove": {
+      "kill_performer_additional_effects": [
+        "Duelist Lovers Glove On Kill Other Heroes"
+      ],
+      "attack_skill_additional_effects": [
+        "Duelist Lovers Glove On Attack Miss"
+      ]
+    },
+    "rw_sunstone_searing": {
+      "attack_skill_additional_effects": [
+        "RW Sunstone Searing Self Burn"
+      ]
+    },
+    "duelist_phantom_wit": {
+      "riposte_kill_additional_effects": [
+        "Duelist Phantom Wit On Riposte Kill"
+      ],
+      "riposte_crit_additional_effects": [
+        "Duelist Phantom Wit On Riposte Crit"
+      ]
+    },
+    "com_cru_non_euclidean_hilt": {
+      "attack_skill_additional_effects": [
+        "Euclidean Hilt Blight"
+      ]
+    },
+    "com_arb_keening_bolts": {
+      "attack_skill_additional_effects": [
+        "Keening Bolt Stress On Attack"
+      ]
+    },
+    "com_hel_thirsting_blade": {
+      "attack_skill_additional_effects": [
+        "Thirsting Blade Self Atk On Miss"
+      ]
+    }
+  }
+}
