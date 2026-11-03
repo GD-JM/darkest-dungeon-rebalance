@@ -465,8 +465,8 @@
      "Self: riposte DMG +25-35% (4 turns)"
     ],
     "new": [
-     "Target: PROT -15 to -25%",
-     "Self: riposte DMG +20-30% (4 turns)"
+     "Target: PROT -20 to -30%",
+     "Self: riposte DMG +10-30% (4 turns)"
     ]
    },
    {

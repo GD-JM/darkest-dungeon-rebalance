@@ -1,0 +1,33 @@
+{
+  "id": "DUE-021",
+  "decision": "adopted",
+  "original_quote": "대신에 방어도 감소는 바닐라로 돌려",
+  "context_quotes": [
+    {
+      "role": "user",
+      "text": "10 에서 30으로 가자 이 정도면 적당한듯 푸쉬후 이미지 수정"
+    }
+  ],
+  "source": {
+    "product": "codex",
+    "reference": "현재 대화 결투가 눈속임 최종 조정",
+    "event_id": null,
+    "message_id": null,
+    "session_id": null
+  },
+  "files": [
+    "shared/buffs/rebalance_duelist.buffs.json",
+    "heroes/duelist/duelist.effects_edit.txt",
+    "effects/rebalance_duelist.effects.darkest",
+    "shared/buffs/rebalance_duelist.intents.txt",
+    "design/changes/duelist.md",
+    "design/workshop/hero_cards.json",
+    "design/workshop/why.json",
+    "design/workshop/cards/heroes/06_duelist.png"
+  ],
+  "rationale_ko": "눈속임 저레벨 반격의 상대적 우위를 완화하고 고레벨 보상을 유지한다. 방어 감소는 바닐라 수치로 복원한다. English Feint, 简体中文 佯攻.",
+  "supersedes": [
+    "DUE-013",
+    "DUE-016"
+  ]
+}

@@ -1,3 +1,4 @@
 // DUE-016: Feint riposte-only damage +25/27/30/32/35 -> +20/22/25/27/30; retain PROT -15/17/20/22/25 and conditional accuracy reduction. Latest correction is 20..30, not flat20.
 // Strict JSON keeps rationale here rather than adding invalid JSON comments. Every RB_DUE_FEINT_RIPOSTEDMG[L/H]BUFF1..5 clones the corresponding vanilla riposte rule and changes only its ID and amount. Vanilla shared buffs are untouched.
 // DUE-018: 찌르기 회피만 40/42/45/47/50 -> 30/32/35/37/40. 다음 회피 소모 엔진 연결을 유지하기 위해 DUELIST_TOUCHE_DODGE_1..5 ID와 모든 나머지 필드를 보존한다. 모드 내부 override이며 설치된 원본은 수정하지 않는다.
+// DUE-021: 눈속임 저레벨 반격 피해 보상을 줄이고 성장폭을 확대. 방어 감소는 바닐라 효과로 복원. +10/15/20/25/30%, 방어 −20/22/25/27/30%.

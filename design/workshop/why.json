@@ -351,14 +351,15 @@
  "duelist|feint": {
   "ids": [
    "DUE-013",
-   "DUE-016"
+   "DUE-016",
+   "DUE-021"
   ],
   "principles": [
    "G-01",
    "P-11"
   ],
-  "en": "Retains PROT shred of 15-25% and lowers riposte damage amplification to 20-30%. Keeps counterattack preparation valuable while trimming the strong hero.",
-  "ko": "방어 감소15~25%를 유지하고 반격 피해 강화를20~30%로 낮춥니다. 강한 결투가를 조정하면서 반격 준비의 가치를 남깁니다."
+  "en": "Feint scales from +10% to +30% riposte damage to narrow its early advantage. Restore vanilla PROT reduction.",
+  "ko": "눈속임 저레벨 반격의 상대적 우위를 완화하고 고레벨 보상을 유지한다. 방어 감소는 바닐라 수치로 복원한다."
  },
  "duelist|fleche": {
   "ids": [
