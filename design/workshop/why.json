@@ -744,13 +744,14 @@
  },
  "jester|inspiring_tune": {
   "ids": [
-   "JES-003",
-   "JES-014"
+    "JES-003",
+    "JES-014",
+    "JES-015"
   ],
   "principles": [],
-  "en": "Inspiring Tune now works only from rank 3, so the stress heal ties the Jester to one position.",
-  "ko": "격려의 선율은 이제 3열에서만 쓸 수 있어, 스트레스 회복을 위해 광대가 한 자리를 지켜야 합니다."
- },
+  "ko": "격려의 선율 사용열을 3·4열로 복원한다. 2열은 제외하고 회복량·효과를 유지한다.",
+  "en": "Restore Inspiring Tune to ranks 3-4. Rank 2 stays excluded; recovery and effects remain unchanged."
+},
  "jester|solo": {
   "ids": [
    "JES-005",

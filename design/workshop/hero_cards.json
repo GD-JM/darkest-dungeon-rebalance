@@ -913,51 +913,40 @@
   "name": "Jester",
   "tagline": "Solo becomes a real pick; his buffs no longer overlap.",
   "skills": [
-   {
-    "key": "jester|solo",
-    "name": "Solo",
-    "icon": "four",
-    "old": [
-     "Use from ranks 3-4",
-     "Self: dodge +20-30% (4 turns)",
-     "Finale: DMG +75%, CRIT +8%",
-     "No enemy slow",
-     "No corpse clearing or unmark"
-    ],
-    "new": [
-     "Use from any rank",
-     "Self: dodge +30-40% (4 turns)",
-     "Finale: DMG +100%, CRIT +10%",
-     "All enemies: SPD -1 to -3 (3 turns)",
-     "Clears corpses; party: removes mark"
-    ]
-   },
-   {
-    "key": "jester|battle_ballad",
-    "name": "Battle Ballad",
-    "icon": "six",
-    "old": [
-     "Party: ACC +5-10%",
-     "Party: CRIT +2-6%"
-    ],
-    "new": [
-     "Party: no ACC buff",
-     "Party: CRIT +4-8%"
-    ]
-   },
-   {
-    "key": "jester|inspiring_tune",
-    "name": "Inspiring Tune",
-    "icon": "seven",
-    "old": [
-     "Use from ranks 3-4"
-    ],
-    "new": [
-     "Use from rank 3 only"
-    ]
-   }
+    {
+      "key": "jester|solo",
+      "name": "Solo",
+      "icon": "four",
+      "old": [
+        "Use from ranks 3-4",
+        "Self: dodge +20-30% (4 turns)",
+        "Finale: DMG +75%, CRIT +8%",
+        "No enemy slow",
+        "No corpse clearing or unmark"
+      ],
+      "new": [
+        "Use from any rank",
+        "Self: dodge +30-40% (4 turns)",
+        "Finale: DMG +100%, CRIT +10%",
+        "All enemies: SPD -1 to -3 (3 turns)",
+        "Clears corpses; party: removes mark"
+      ]
+    },
+    {
+      "key": "jester|battle_ballad",
+      "name": "Battle Ballad",
+      "icon": "six",
+      "old": [
+        "Party: ACC +5-10%",
+        "Party: CRIT +2-6%"
+      ],
+      "new": [
+        "Party: no ACC buff",
+        "Party: CRIT +4-8%"
+      ]
+    }
   ]
- },
+},
  "leper": {
   "name": "Leper",
   "tagline": "Heavy frontline power with more reliable accuracy.",
