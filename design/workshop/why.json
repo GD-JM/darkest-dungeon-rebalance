@@ -1,46 +1,46 @@
 {
-  "runaway|backdraft": {
-    "ids": [
-      "RUN-006",
-      "RUN-010"
-    ],
-    "principles": [
-      "P-10"
-    ],
-    "ko": "불길 역류의 중첩당 피해20%와 전열12 사용으로 장기 누적 폭발을 줄이고 전진을 요구한다. 추가 횟수 제한은 없다.",
-    "en": "Reduce damage per Burn stack to 20% and require ranks 1-2, preserving unrestricted use and Burn transfer."
-  },
-  "runaway|firefly": {
-    "ids": [
-      "RUN-007"
-    ],
-    "principles": [
-      "P-10"
-    ],
-    "ko": "흩날리는 불티의 화상량은 유지하되 감소 지연을 화톳불로 옮겨 후열 반복 효율을 하향한다. 화상량-1은 이중 하향과 중간레벨 정수 절삭을 고려해 보류했다.",
-    "en": "Keep Burn amounts, but move decay delay to Hearthlight to reduce rear-rank repetition without a second Burn nerf."
-  },
-  "runaway|controlled_burn": {
-    "ids": [
-      "RUN-008"
-    ],
-    "principles": [
-      "P-10"
-    ],
-    "ko": "최초/지면3/3/4/4/5, 지면2라운드, 사용34로 초기 사용감을 보존하고 장기 누적을 줄인다. 이동과 턴 시작은 동일한 지면 수치를 공유한다.",
-    "en": "Initial and ground Burn become 3/3/4/4/5, ground duration 2 rounds, use ranks 3-4. Preserve opening impact while reducing long-fight accumulation."
-  },
-  "runaway|hearthlight": {
-    "ids": [
-      "RUN-009",
-      "RUN-011"
-    ],
-    "principles": [
-      "P-10"
-    ],
-    "ko": "사용34/전진2와 명중 지원 유지. 감소 지연50%를 실효1회로 단축한다. 복수 도망자의 합산은 원본과 같이 허용하며 별도 중첩 상한은 두지 않는다.",
-    "en": "Use from ranks 3-4 and advance 2; retain party accuracy. Burn decay delay remains 50% for one target turn. Multiple Runaways may stack it as in the original; no separate stacking cap."
-  },
+ "runaway|backdraft": {
+  "ids": [
+   "RUN-006",
+   "RUN-010"
+  ],
+  "principles": [
+   "P-10"
+  ],
+  "ko": "불길 역류의 중첩당 피해20%와 전열12 사용으로 장기 누적 폭발을 줄이고 전진을 요구한다. 추가 횟수 제한은 없다.",
+  "en": "Reduce damage per Burn stack to 20% and require ranks 1-2, preserving unrestricted use and Burn transfer."
+ },
+ "runaway|firefly": {
+  "ids": [
+   "RUN-007"
+  ],
+  "principles": [
+   "P-10"
+  ],
+  "ko": "흩날리는 불티의 화상량은 유지하되 감소 지연을 화톳불로 옮겨 후열 반복 효율을 하향한다. 화상량-1은 이중 하향과 중간레벨 정수 절삭을 고려해 보류했다.",
+  "en": "Keep Burn amounts, but move decay delay to Hearthlight to reduce rear-rank repetition without a second Burn nerf."
+ },
+ "runaway|controlled_burn": {
+  "ids": [
+   "RUN-008"
+  ],
+  "principles": [
+   "P-10"
+  ],
+  "ko": "최초/지면3/3/4/4/5, 지면2라운드, 사용34로 초기 사용감을 보존하고 장기 누적을 줄인다. 이동과 턴 시작은 동일한 지면 수치를 공유한다.",
+  "en": "Initial and ground Burn become 3/3/4/4/5, ground duration 2 rounds, use ranks 3-4. Preserve opening impact while reducing long-fight accumulation."
+ },
+ "runaway|hearthlight": {
+  "ids": [
+   "RUN-009",
+   "RUN-011"
+  ],
+  "principles": [
+   "P-10"
+  ],
+  "ko": "사용34/전진2와 명중 지원 유지. 감소 지연50%를 실효1회로 단축한다. 복수 도망자의 합산은 원본과 같이 허용하며 별도 중첩 상한은 두지 않는다.",
+  "en": "Use from ranks 3-4 and advance 2; retain party accuracy. Burn decay delay remains 50% for one target turn. Multiple Runaways may stack it as in the original; no separate stacking cap."
+ },
  "abomination|manacles": {
   "ids": [
    "ABO-005",
@@ -362,14 +362,15 @@
  },
  "duelist|fleche": {
   "ids": [
-   "DUE-015"
+   "DUE-015",
+   "DUE-017"
   ],
   "principles": [
    "G-01",
    "P-11"
   ],
-  "en": "Reduces direct damage to +10% and attaches the existing aggressive-stance dodge penalty of 10. Forward movement and counterattack identity remain.",
-  "ko": "직접 피해를+10%로 낮추고 기존 공격 자세 회피−10 효과를 연결합니다. 전진 공격을 보존하되 반격 외 공격 효율과 위험을 조정합니다."
+  "en": "Reduce direct damage from +25% to +10%. Withdraw only the added self dodge penalty; retain forward movement, self mark and stance requirement.",
+  "ko": "반격 외 직접 공격의 피해 +25%를 +10%로 낮춘다. 이후 요청에 따라 추가 자기 회피 −10만 철회하며 전진·자기 표식·자세 조건은 유지한다."
  },
  "duelist|the_boot": {
   "ids": [
@@ -745,11 +746,12 @@
  "jester|inspiring_tune": {
   "ids": [
    "JES-003",
-   "JES-014"
+   "JES-014",
+   "JES-015"
   ],
   "principles": [],
-  "en": "Inspiring Tune now works only from rank 3, so the stress heal ties the Jester to one position.",
-  "ko": "격려의 선율은 이제 3열에서만 쓸 수 있어, 스트레스 회복을 위해 광대가 한 자리를 지켜야 합니다."
+  "ko": "격려의 선율 사용열을 3·4열로 복원한다. 2열은 제외하고 회복량·효과를 유지한다.",
+  "en": "Restore Inspiring Tune to ranks 3-4. Rank 2 stays excluded; recovery and effects remain unchanged."
  },
  "jester|solo": {
   "ids": [
@@ -956,16 +958,16 @@
   "ko": "역병 의사는 다른 기술이 좋아서 절개를 고를 이유가 약했다. 명중을 올려 선택지로 만든다."
  },
  "runaway|ransack": {
-    "ids": [
-      "RUN-005"
-    ],
-    "principles": [
-      "P-10",
-      "G-02"
-    ],
-    "en": "Restrict Ransack to rear-rank entry: use from ranks 3-4 and hit ranks 1-3. Forward 1, damage -10%, pull, corpse clear and stealth accuracy are preserved.",
-    "ko": "판 뒤엎기를 사용3·4열/대상1·2·3열의 후열 진입기로 제한해 범용성을 하향한다. 전진1·피해−10·당기기·시체 제거·은신 명중은 유지한다."
-  },
+  "ids": [
+   "RUN-005"
+  ],
+  "principles": [
+   "P-10",
+   "G-02"
+  ],
+  "en": "Restrict Ransack to rear-rank entry: use from ranks 3-4 and hit ranks 1-3. Forward 1, damage -10%, pull, corpse clear and stealth accuracy are preserved.",
+  "ko": "판 뒤엎기를 사용3·4열/대상1·2·3열의 후열 진입기로 제한해 범용성을 하향한다. 전진1·피해−10·당기기·시체 제거·은신 명중은 유지한다."
+ },
  "shieldbreaker|expose": {
   "ids": [
    "SB-015",
@@ -1105,15 +1107,16 @@
    "VES-016",
    "VES-020",
    "VES-021",
-   "VES-022"
+   "VES-022",
+   "VES-023"
   ],
   "principles": [
    "P-19",
    "G-03",
    "P-11"
   ],
-  "en": "Illumination adds Burn 1/1/2/2/3 while keeping ACC 95, DODGE and PROT debuffs, stealth removal and torch gain. Other heroes can supply Burn for Runaway synergies instead of making her provide every part of the combination.",
-  "ko": "광휘에 화상1/1/2/2/3을 추가하고 명중95·회피 감소·방어 감소·은신 해제·횃불을 유지한다. 다른 영웅도 화상을 공급하여 도망자와의 조합 연계를 연다."
+  "en": "Remove only the PROT debuff: Burn already provides offensive utility. Retain Burn 1/1/2/2/3, ACC95, damage -75%, dodge reduction, destealth, torch and ranks; no replacement debuff.",
+  "ko": "화상이 이미 공격적 활용성을 제공하므로 광휘의 방어 감소만 삭제한다. 다른 약화는 추가하지 않고 화상·회피 감소·은신 해제·횃불·명중95·피해-75%·사용열·대상열은 유지한다."
  },
  "vestal|judgement": {
   "ids": [
@@ -1543,15 +1546,15 @@
   "ko": "유물수집상 동료 방패로 반격을 빌렸을 때만 쓰는 반격 공격(명중 85, 피해 −50%, 치명타 없음)입니다. 그 밖에는 효과가 없습니다."
  },
  "runaway|riposte_skill": {
-    "ids": [
-      "SYS-105"
-    ],
-    "principles": [
-      "P-25"
-    ],
-    "en": "New riposte attack (ACC 85, DMG -50%, no crit), used only when the Antiquarian's Protect Me lends this hero a riposte; it has no effect otherwise.",
-    "ko": "유물수집상 동료 방패로 반격을 빌렸을 때만 쓰는 반격 공격(명중 85, 피해 −50%, 치명타 없음)입니다. 그 밖에는 효과가 없습니다."
-  },
+  "ids": [
+   "SYS-105"
+  ],
+  "principles": [
+   "P-25"
+  ],
+  "en": "New riposte attack (ACC 85, DMG -50%, no crit), used only when the Antiquarian's Protect Me lends this hero a riposte; it has no effect otherwise.",
+  "ko": "유물수집상 동료 방패로 반격을 빌렸을 때만 쓰는 반격 공격(명중 85, 피해 −50%, 치명타 없음)입니다. 그 밖에는 효과가 없습니다."
+ },
  "shieldbreaker|riposte_skill": {
   "ids": [
    "SYS-105"

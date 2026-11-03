@@ -1,0 +1,22 @@
+{
+  "id": "JES-015",
+  "decision": "adopted",
+  "original_quote": "광대 스트레스 회복 3열에서만 쓰는게 아니라 3,4열로 바꿔",
+  "rationale_ko": "3열 전용 제한을 철회하고 3·4열 사용을 복원. 회복량과 나머지 효과 유지.",
+  "source": {
+    "product": "codex",
+    "reference": "현재 대화 2026-11-03 광대 사용열 요청",
+    "session_id": null,
+    "message_id": null,
+    "event_id": null
+  },
+  "files": [
+    "heroes/jester/jester.info.darkest",
+    "design/changes/jester.md",
+    "design/workshop/hero_cards.json",
+    "design/workshop/why.json"
+  ],
+  "supersedes": [
+    "JES-014 rank-3-only restriction"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "DUE-017",
+  "decision": "adopted",
+  "original_quote": "결투가 뜻은 돌진을 썼을 때 회피 마이너스 효과는 바닐라에 없던거고 고거만 빼달란 소리야",
+  "rationale_ko": "날쌘 돌진에 추가한 자기 회피 감소만 철회한다. 피해 +10% 등 나머지 성능은 유지한다.",
+  "source": {
+    "product": "codex",
+    "reference": "현재 대화 2026-11-02: 날쌘 돌진 이미지 지적 뒤 사용자의 범위 정정 메시지",
+    "session_id": "01a10741-76da-7e43-9500-98474ab3f383",
+    "message_id": null,
+    "event_id": null
+  },
+  "files": [
+    "heroes/duelist/duelist.info.darkest",
+    "heroes/duelist/duelist.effects_edit.txt",
+    "design/changes/duelist.md",
+    "design/workshop/hero_cards.json",
+    "design/workshop/why.json"
+  ],
+  "supersedes": [
+    "DUE-015 self dodge penalty only"
+  ]
+}

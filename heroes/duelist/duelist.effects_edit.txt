@@ -202,8 +202,8 @@ effect: .name "on_crit_duelist_def"    .target "performer" .curio_result_type "p
 //#   강화 효과 수치(JSON, 참고용): on_crit_duelist_def = defense_rating 0.1
 //#   원본 위치: dlc/4964110_fires_edge/features/duelist/effects/duelist.effects.darkest
 
-//# DUE-015 Existing vanilla Fleche downside now attached
-effect: .name "Duelist Fleche Self Debuff" .target "performer" .chance 100% .duration 4 .buff_ids "DUELIST_FLECHE_DODGEDEBUFF" .on_hit true .on_miss true
+//# DUE-017 Historical unused vanilla Fleche downside; detached from all five skill levels.
+// effect: .name "Duelist Fleche Self Debuff" .target "performer" .chance 100% .duration 4 .buff_ids "DUELIST_FLECHE_DODGEDEBUFF" .on_hit true .on_miss true
 // DUE-015 Fleche damage +25 -> +10; add existing attack-stance dodge -10 debuff (4 turns, removed outside stance). Trim direct offense while keeping riposte identity.
 
 //# DUE-012 Existing live Disengage effects, synchronized without numeric changes
@@ -217,3 +217,5 @@ effect: .name "RB DUE Disengage Weaken 4" .target "target" .curio_result_type "n
 // DUE-012 Preserve existing enemy damage -10/11/12/13/15 for 2 turns; sheet synchronization only.
 effect: .name "RB DUE Disengage Weaken 5" .target "target" .curio_result_type "negative" .chance 140% .duration 2 .combat_stat_buff 1 .damage_low_multiply -15% .damage_high_multiply -15% .on_hit true .on_miss false
 // DUE-012 Preserve existing enemy damage -10/11/12/13/15 for 2 turns; sheet synchronization only.
+
+// DUE-017: The vanilla definition remains untouched in game files; this editing-sheet row is archival, not an active effect to reattach.
