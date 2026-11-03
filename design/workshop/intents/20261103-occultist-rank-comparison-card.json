@@ -1,0 +1,18 @@
+{
+  "id": "WS-OCC-RANKS",
+  "decision": "adopted",
+  "original_quote": "오케이 커밋하고 푸쉬하고 이미지 수정해줘",
+  "source": {
+    "product": "codex",
+    "reference": "신비학자 3·4열 모델 결과 직후 사용자 요청",
+    "event_id": null,
+    "session_id": null,
+    "message_id": null
+  },
+  "rationale_ko": "3열 제물 암습과 4열 당기기·저주 선택을 영웅 이미지 소개 문구로 보여준다. 당기기와 저주는 3열에서도 가능하며 게임 수치 변경은 없다.",
+  "files": [
+    "design/workshop/hero_cards.json",
+    "design/workshop/cards/heroes/15_occultist.png"
+  ],
+  "supersedes": []
+}

@@ -1111,7 +1111,7 @@
  },
  "occultist": {
   "name": "Occultist",
-  "tagline": "Vulnerability Hex now sets up stuns, blights and bleeds.",
+  "tagline": "Use the blade in rank 3, or pull and curse from rank 4.",
   "skills": [
    {
     "key": "occultist|weakening_curse",
