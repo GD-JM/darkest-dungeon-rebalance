@@ -1395,108 +1395,106 @@
   "name": "Vestal",
   "tagline": "A front-rank Vestal is now an option.",
   "skills": [
-   {
-    "key": "vestal|mace_bash",
-    "name": "Mace Bash",
-    "icon": "two",
-    "old": [
-     "CRIT 0%",
-     "No self-heal"
-    ],
-    "new": [
-     "CRIT 5%",
-     "Self: heal 3-5"
-    ]
-   },
-   {
-    "key": "vestal|judgement",
-    "name": "Judgement",
-    "icon": "one",
-    "old": [
-     "ACC 85",
-     "DMG -25%",
-     "CRIT 5%",
-     "Self: heal 3-5"
-    ],
-    "new": [
-     "ACC 90",
-     "DMG 0%",
-     "CRIT 0%",
-     "No self-heal"
-    ]
-   },
-   {
-    "key": "vestal|dazzling_light",
-    "name": "Dazzling Light",
-    "icon": "three",
-    "old": [
-     "Use from ranks 2-4",
-     "Targets ranks 1-3"
-    ],
-    "new": [
-     "Use from ranks 2-4",
-     "Targets ranks 1-2 only"
-    ]
-   },
-   {
-    "key": "vestal|divine_grace",
-    "name": "Divine Grace",
-    "icon": "four",
-    "old": [
-     "Use from ranks 3-4",
-     "Heal 4-5 (level 5: 8-9)"
-    ],
-    "new": [
-     "Use from any rank",
-     "Heal 5 (level 5: 9)"
-    ]
-   },
-   {
-    "key": "vestal|gods_comfort",
-    "name": "Divine Comfort",
-    "icon": "five",
-    "old": [
-     "Use from ranks 2-4",
-     "Party heal 1-3"
-    ],
-    "new": [
-     "Use from ranks 3-4",
-     "Party heal 2-3"
-    ]
-   },
-   {
-    "key": "vestal|gods_illumination",
-    "name": "Illumination",
-    "icon": "six",
-    "old": [
-     "ACC 90",
-     "Use from ranks 1-3",
-     "Target: dodge -20 to -30%",
-     "No PROT debuff"
-    ],
-    "new": [
-     "ACC 95",
-     "Use from any rank",
-     "Target: dodge -15 to -25%",
-     "Target: PROT -15 to -25% (3 turns)",
-     "Target: Burn 1/1/2/2/3"
-    ]
-   },
-   {
-    "key": "vestal|gods_hand",
-    "name": "Hand of Light",
-    "icon": "seven",
-    "old": [
-     "ACC 85",
-     "DMG -50%"
-    ],
-    "new": [
-     "ACC 90",
-     "DMG -40%"
-    ]
-   }
+    {
+      "key": "vestal|mace_bash",
+      "name": "Mace Bash",
+      "icon": "two",
+      "old": [
+        "CRIT 0%",
+        "No self-heal"
+      ],
+      "new": [
+        "CRIT 5%",
+        "Self: heal 3-5"
+      ]
+    },
+    {
+      "key": "vestal|judgement",
+      "name": "Judgement",
+      "icon": "one",
+      "old": [
+        "ACC 85",
+        "DMG -25%",
+        "CRIT 5%",
+        "Self: heal 3-5"
+      ],
+      "new": [
+        "ACC 90",
+        "DMG 0%",
+        "CRIT 0%",
+        "No self-heal"
+      ]
+    },
+    {
+      "key": "vestal|dazzling_light",
+      "name": "Dazzling Light",
+      "icon": "three",
+      "old": [
+        "Use from ranks 2-4",
+        "Targets ranks 1-3"
+      ],
+      "new": [
+        "Use from ranks 2-4",
+        "Targets ranks 1-2 only"
+      ]
+    },
+    {
+      "key": "vestal|divine_grace",
+      "name": "Divine Grace",
+      "icon": "four",
+      "old": [
+        "Use from ranks 3-4",
+        "Heal 4-5 (level 5: 8-9)"
+      ],
+      "new": [
+        "Use from any rank",
+        "Heal 5 (level 5: 9)"
+      ]
+    },
+    {
+      "key": "vestal|gods_comfort",
+      "name": "Divine Comfort",
+      "icon": "five",
+      "old": [
+        "Use from ranks 2-4",
+        "Party heal 1-3"
+      ],
+      "new": [
+        "Use from ranks 3-4",
+        "Party heal 2-3"
+      ]
+    },
+    {
+      "key": "vestal|gods_illumination",
+      "name": "Illumination",
+      "icon": "six",
+      "old": [
+        "ACC 90",
+        "Use from ranks 1-3",
+        "Target: dodge -20 to -30%"
+      ],
+      "new": [
+        "ACC 95",
+        "Use from any rank",
+        "Target: dodge -15 to -25%",
+        "Target: Burn 1/1/2/2/3"
+      ]
+    },
+    {
+      "key": "vestal|gods_hand",
+      "name": "Hand of Light",
+      "icon": "seven",
+      "old": [
+        "ACC 85",
+        "DMG -50%"
+      ],
+      "new": [
+        "ACC 90",
+        "DMG -40%"
+      ]
+    }
   ]
- },
+},
  "musketeer": {
   "name": "Musketeer",
   "tagline": "No longer an Arbalest copy: a hunter who pierces armor and hides her allies in smoke.",

@@ -1100,22 +1100,23 @@
  },
  "vestal|gods_illumination": {
   "ids": [
-   "VES-006",
-   "VES-013",
-   "VES-014",
-   "VES-016",
-   "VES-020",
-   "VES-021",
-   "VES-022"
+    "VES-006",
+    "VES-013",
+    "VES-014",
+    "VES-016",
+    "VES-020",
+    "VES-021",
+    "VES-022",
+    "VES-023"
   ],
   "principles": [
-   "P-19",
-   "G-03",
-   "P-11"
+    "P-19",
+    "G-03",
+    "P-11"
   ],
-  "en": "Illumination adds Burn 1/1/2/2/3 while keeping ACC 95, DODGE and PROT debuffs, stealth removal and torch gain. Other heroes can supply Burn for Runaway synergies instead of making her provide every part of the combination.",
-  "ko": "광휘에 화상1/1/2/2/3을 추가하고 명중95·회피 감소·방어 감소·은신 해제·횃불을 유지한다. 다른 영웅도 화상을 공급하여 도망자와의 조합 연계를 연다."
- },
+  "en": "Remove only the PROT debuff: Burn already provides offensive utility. Retain Burn 1/1/2/2/3, ACC95, damage -75%, dodge reduction, destealth, torch and ranks; no replacement debuff.",
+  "ko": "화상이 이미 공격적 활용성을 제공하므로 광휘의 방어 감소만 삭제한다. 다른 약화는 추가하지 않고 화상·회피 감소·은신 해제·횃불·명중95·피해-75%·사용열·대상열은 유지한다."
+},
  "vestal|judgement": {
   "ids": [
    "VES-002",

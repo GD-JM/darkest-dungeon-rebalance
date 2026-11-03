@@ -1,0 +1,32 @@
+{
+  "id": "VES-023",
+  "decision": "adopted",
+  "original_quote": "반영해서 커밋 푸쉬해",
+  "context_quotes": [
+    {
+      "role": "user",
+      "text": "그냥 빼도될듯? 어차피 화상 있으니"
+    },
+    {
+      "role": "assistant",
+      "text": "추가 보상 없이 방어 감소만 삭제하는 안을 추천해."
+    }
+  ],
+  "rationale_ko": "화상이 이미 있으므로 방어 감소만 제거하고 다른 약화로 대체하지 않는다.",
+  "source": {
+    "product": "codex",
+    "reference": "현재 대화 2026-11-03 광휘 방어 감소 제거 및 커밋·푸시 승인",
+    "session_id": null,
+    "message_id": null,
+    "event_id": null
+  },
+  "files": [
+    "heroes/vestal/vestal.info.darkest",
+    "design/changes/vestal.md",
+    "design/workshop/hero_cards.json",
+    "design/workshop/why.json"
+  ],
+  "supersedes": [
+    "VES-021 PROT reduction only"
+  ]
+}
