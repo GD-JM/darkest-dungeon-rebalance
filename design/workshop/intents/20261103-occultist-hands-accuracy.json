@@ -1,0 +1,20 @@
+{
+  "id": "OCC-019",
+  "decision": "adopted",
+  "original_quote": "그럼 심연에서의 손아귀 명중은 제물 암습처럼 80/85/90/95/100으로 가자. 피해 -50이랑 강한 기절은 그대로 두고 3,4열 사용까지 묶어서 의도 주석 남기고",
+  "source": {
+    "product": "codex",
+    "reference": "현재 대화 손아귀 명중 승인",
+    "event_id": null,
+    "session_id": null,
+    "message_id": null
+  },
+  "files": [
+    "heroes/occultist/occultist.info.darkest",
+    "design/changes/occultist.md"
+  ],
+  "rationale_ko": "OCC-019: 심연에서의 손아귀는 3·4열에서 제물 암습과 같은 명중(80~100)으로 강한 기절과 피해 −50%를 건다. 3열 공격·치유 겸용과 4열 제어에 명중 투자 비용을 둔다. 성녀의 높은 명중·횃불 상승과 대비해 적중 시 횃불을 낮춘다.",
+  "supersedes": [
+    "OCC-010 명중"
+  ]
+}

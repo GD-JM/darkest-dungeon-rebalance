@@ -1577,5 +1577,17 @@
   ],
   "en": "New riposte attack (ACC 85, DMG -50%, no crit), used only when the Antiquarian's Protect Me lends this hero a riposte; it has no effect otherwise.",
   "ko": "유물수집상 동료 방패로 반격을 빌렸을 때만 쓰는 반격 공격(명중 85, 피해 −50%, 치명타 없음)입니다. 그 밖에는 효과가 없습니다."
+ },
+ "occultist|hands_from_abyss": {
+  "ids": [
+   "OCC-018",
+   "OCC-019",
+   "OCC-020"
+  ],
+  "principles": [
+   "G-01"
+  ],
+  "ko": "성녀의 눈부신 광채와 같은 적 1·2열에 한정한다. 심연에서의 손아귀는 명중을 제물 암습 수준으로 낮춘 대신 적중하면 피해·치명타·기절 확률이 광채보다 높고 횃불을 낮춘다. 후열 신비학자의 흑마법과 명중 장신구 투자 선택을 살린다.",
+  "en": "Hands from the Abyss trades accuracy and enemy rank-3 reach for rear-rank use. Its dark magic hits harder, crits more and stuns more reliably on hit than Dazzling Light, while lowering torchlight."
  }
 }

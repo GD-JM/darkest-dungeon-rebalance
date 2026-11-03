@@ -1,0 +1,29 @@
+{
+ "id": "OCC-020",
+ "decision": "adopted",
+ "original_quote": "그렇게 가자 신비학자와 성녀의 이 대응 밸런스를 그대로 유지하자 이대로 푸쉬하자 이게 좋은 게 흑마법이란 컨셉과 너무 잘 맞고 그래서 명중 빼고, 피해 치명타 기절확률이 전부 높은거야 광채보다 이게 좋아보여 그러면 이 변화를 토대로 또 건드려야 할게 있을까? 변경해야할거가 있을까?",
+ "rationale_ko": "성녀의 눈부신 광채와 같은 적 1·2열에 한정한다. 심연에서의 손아귀는 명중을 제물 암습 수준으로 낮춘 대신 적중하면 피해·치명타·기절 확률이 광채보다 높고 횃불을 낮춘다. 후열 신비학자의 흑마법과 명중 장신구 투자 선택을 살린다. English: Hands from the Abyss; 简体中文: 深渊之手.",
+ "context_quotes": [
+  {
+   "role": "assistant",
+   "text": "내 판단도 **심연에서의 손아귀는 적 1·2열만 대상으로 하는 쪽**이야."
+  }
+ ],
+ "source": {
+  "product": "codex",
+  "reference": "현재 대화 손아귀 최종 승인",
+  "message_id": null,
+  "event_id": null,
+  "session_id": null
+ },
+ "files": [
+  "heroes/occultist/occultist.info.darkest",
+  "design/changes/occultist.md",
+  "design/workshop/hero_cards.json",
+  "design/workshop/why.json",
+  "design/workshop/cards/heroes/15_occultist.png"
+ ],
+ "supersedes": [
+  "OCC-018 대상 1~3"
+ ]
+}
