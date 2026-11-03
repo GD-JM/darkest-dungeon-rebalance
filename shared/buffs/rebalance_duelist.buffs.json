@@ -181,6 +181,81 @@
 				"float": 0,
 				"string": ""
 			}
+		},
+		{
+			"id": "DUELIST_TOUCHE_DODGE_1",
+			"stat_type": "combat_stat_add",
+			"stat_sub_type": "defense_rating",
+			"amount": 0.3,
+			"duration": 4,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			},
+			"description_tooltip_id": "buff_tooltip_duelist_touche"
+		},
+		{
+			"id": "DUELIST_TOUCHE_DODGE_2",
+			"stat_type": "combat_stat_add",
+			"stat_sub_type": "defense_rating",
+			"amount": 0.32,
+			"duration": 4,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			},
+			"description_tooltip_id": "buff_tooltip_duelist_touche"
+		},
+		{
+			"id": "DUELIST_TOUCHE_DODGE_3",
+			"stat_type": "combat_stat_add",
+			"stat_sub_type": "defense_rating",
+			"amount": 0.35,
+			"duration": 4,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			},
+			"description_tooltip_id": "buff_tooltip_duelist_touche"
+		},
+		{
+			"id": "DUELIST_TOUCHE_DODGE_4",
+			"stat_type": "combat_stat_add",
+			"stat_sub_type": "defense_rating",
+			"amount": 0.37,
+			"duration": 4,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			},
+			"description_tooltip_id": "buff_tooltip_duelist_touche"
+		},
+		{
+			"id": "DUELIST_TOUCHE_DODGE_5",
+			"stat_type": "combat_stat_add",
+			"stat_sub_type": "defense_rating",
+			"amount": 0.4,
+			"duration": 4,
+			"remove_if_not_active": false,
+			"rule_type": "always",
+			"is_false_rule": false,
+			"rule_data": {
+				"float": 0,
+				"string": ""
+			},
+			"description_tooltip_id": "buff_tooltip_duelist_touche"
 		}
 	]
 }

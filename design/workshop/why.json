@@ -363,14 +363,15 @@
  "duelist|fleche": {
   "ids": [
    "DUE-015",
-   "DUE-017"
+   "DUE-017",
+   "DUE-020"
   ],
   "principles": [
    "G-01",
    "P-11"
   ],
-  "en": "Reduce direct damage from +25% to +10%. Withdraw only the added self dodge penalty; retain forward movement, self mark and stance requirement.",
-  "ko": "반격 외 직접 공격의 피해 +25%를 +10%로 낮춘다. 이후 요청에 따라 추가 자기 회피 −10만 철회하며 전진·자기 표식·자세 조건은 유지한다."
+  "en": "Raise advancing attack damage from +10% to +20%; retain movement and other effects, with no added dodge penalty.",
+  "ko": "전진 공격 피해를 +10%에서 +20%로 높인다. 이동 및 다른 효과 유지, 추가 회피 페널티는 다시 넣지 않는다."
  },
  "duelist|the_boot": {
   "ids": [
@@ -385,14 +386,15 @@
  },
  "duelist|touche": {
   "ids": [
-   "DUE-014"
+   "DUE-014",
+   "DUE-018"
   ],
   "principles": [
    "G-01",
    "P-12"
   ],
-  "en": "Restores vanilla dodge, consumed on the next successful dodge with a four-turn cap. Earlier persistent-dodge assumptions were incorrect; preserve defensive-stance identity.",
-  "ko": "다음 회피 성공 시 소모되는 바닐라 회피를 복원합니다(최대4턴). 과거의 지속형 회피 해석을 바로잡고 방어 자세의 정체성을 유지합니다."
+  "en": "Reduce only dodge from +40-50 to +30-40; preserve consumption on successful dodge and the four-turn cap.",
+  "ko": "찌르기 회피 수치만 +40~50에서 +30~40으로 낮춘다. 다음 회피 성공 시 소모와 최대4턴은 유지한다."
  },
  "flagellant|endure": {
   "ids": [

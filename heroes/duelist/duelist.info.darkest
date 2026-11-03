@@ -47,11 +47,12 @@ combat_skill: .id "disengage" .level 4 .type "melee" .atk 115% .dmg -50% .crit 3
 
 combat_move_skill: .id "move" .level 0 .type "move" .move 3 3 .launch 4321 .valid_modes stance_defensive stance_aggressive
 
-combat_skill: .id "fleche" .level 0 .type "melee" .atk 90%  .dmg 10% .crit 9% .move 0 2 .launch 432 .target 123 .is_crit_valid True  .effect "Mark Self" .valid_modes stance_aggressive
-combat_skill: .id "fleche" .level 1 .type "melee" .atk 95%  .dmg 10% .crit 10% .move 0 2 .launch 432 .target 123 .is_crit_valid True  .effect "Mark Self" .valid_modes stance_aggressive
-combat_skill: .id "fleche" .level 2 .type "melee" .atk 100% .dmg 10% .crit 11% .move 0 2 .launch 432 .target 123 .is_crit_valid True  .effect "Mark Self" .valid_modes stance_aggressive
-combat_skill: .id "fleche" .level 3 .type "melee" .atk 105% .dmg 10% .crit 12% .move 0 2 .launch 432 .target 123 .is_crit_valid True  .effect "Mark Self" .valid_modes stance_aggressive
-combat_skill: .id "fleche" .level 4 .type "melee" .atk 110% .dmg 10% .crit 13% .move 0 2 .launch 432 .target 123 .is_crit_valid True  .effect "Mark Self" .valid_modes stance_aggressive
+combat_skill: .id "fleche" .level 0 .type "melee" .atk 90%  .dmg 20% .crit 9% .move 0 2 .launch 432 .target 123 .is_crit_valid True  .effect "Mark Self" .valid_modes stance_aggressive
+combat_skill: .id "fleche" .level 1 .type "melee" .atk 95%  .dmg 20% .crit 10% .move 0 2 .launch 432 .target 123 .is_crit_valid True  .effect "Mark Self" .valid_modes stance_aggressive
+combat_skill: .id "fleche" .level 2 .type "melee" .atk 100% .dmg 20% .crit 11% .move 0 2 .launch 432 .target 123 .is_crit_valid True  .effect "Mark Self" .valid_modes stance_aggressive
+combat_skill: .id "fleche" .level 3 .type "melee" .atk 105% .dmg 20% .crit 12% .move 0 2 .launch 432 .target 123 .is_crit_valid True  .effect "Mark Self" .valid_modes stance_aggressive
+combat_skill: .id "fleche" .level 4 .type "melee" .atk 110% .dmg 20% .crit 13% .move 0 2 .launch 432 .target 123 .is_crit_valid True  .effect "Mark Self" .valid_modes stance_aggressive
+// DUE-020: 날쌘 돌진 피해 +10% -> +20%. 사용자 요청에 따라 전진 공격 피해를 높이고 이동/명중/치명타/효과는 유지한다. DUE-017의 회피 페널티 제거 유지.
 // DUE-015 Fleche damage +25 -> +10; add existing attack-stance dodge -10 debuff (4 turns, removed outside stance). Trim direct offense while keeping riposte identity.
 // DUE-017 (2026-11-02): Remove only the added self dodge -10 effect from Fleche. Keep damage +10%, accuracy, critical chance, forward 2, self mark and stance requirement unchanged; DUE-015 downside superseded.
 

@@ -452,8 +452,8 @@
      "Consumed on successful dodge (max 4 turns)"
     ],
     "new": [
-     "Vanilla restored",
-     "Same dodge amount and consumption"
+     "Self: dodge +30-40",
+     "Consumed on successful dodge (max 4 turns)"
     ]
    },
    {
@@ -488,7 +488,7 @@
      "DMG +25%"
     ],
     "new": [
-     "DMG +10%"
+     "DMG +20%"
     ]
    },
    {
