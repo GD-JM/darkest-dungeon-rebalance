@@ -69,11 +69,12 @@ combat_skill: .id "emboldening_vapours" .level 3 .type "melee" .atk 0% .dmg 0% .
 combat_skill: .id "emboldening_vapours" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 2 .launch 4321 .target @1234 .is_crit_valid True  .effect "PD Vapours Buff 5"
 
 
-combat_skill: .id "disorienting_blast" .level 0 .type "ranged" .atk 95% .dmg -100% .crit 0% .launch 432 .target 234 .is_crit_valid False  .effect "Disorient 1" "clear_corpses" "PD Disorienting Stun 1" .is_stall_invalidating false
-combat_skill: .id "disorienting_blast" .level 1 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 432 .target 234 .is_crit_valid False  .effect "Disorient 2" "clear_corpses" "PD Disorienting Stun 2" .is_stall_invalidating false
-combat_skill: .id "disorienting_blast" .level 2 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 432 .target 234 .is_crit_valid False  .effect "Disorient 3" "clear_corpses" "PD Disorienting Stun 3" .is_stall_invalidating false
-combat_skill: .id "disorienting_blast" .level 3 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 432 .target 234 .is_crit_valid False  .effect "Disorient 4" "clear_corpses" "PD Disorienting Stun 4" .is_stall_invalidating false
-combat_skill: .id "disorienting_blast" .level 4 .type "ranged" .atk 115% .dmg -100% .crit 0% .launch 432 .target 234 .is_crit_valid False  .effect "Disorient 5" "clear_corpses" "PD Disorienting Stun 5" .is_stall_invalidating false
+combat_skill: .id "disorienting_blast" .level 0 .type "ranged" .atk 95% .dmg -100% .crit 0% .launch 432 .target 234 .is_crit_valid False  .effect "Pull 2A" "clear_corpses" "PD Disorienting Stun 1" .is_stall_invalidating false
+combat_skill: .id "disorienting_blast" .level 1 .type "ranged" .atk 100% .dmg -100% .crit 0% .launch 432 .target 234 .is_crit_valid False  .effect "Pull 2B" "clear_corpses" "PD Disorienting Stun 2" .is_stall_invalidating false
+combat_skill: .id "disorienting_blast" .level 2 .type "ranged" .atk 105% .dmg -100% .crit 0% .launch 432 .target 234 .is_crit_valid False  .effect "Pull 2C" "clear_corpses" "PD Disorienting Stun 3" .is_stall_invalidating false
+combat_skill: .id "disorienting_blast" .level 3 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 432 .target 234 .is_crit_valid False  .effect "Pull 2D" "clear_corpses" "PD Disorienting Stun 4" .is_stall_invalidating false
+combat_skill: .id "disorienting_blast" .level 4 .type "ranged" .atk 115% .dmg -100% .crit 0% .launch 432 .target 234 .is_crit_valid False  .effect "Pull 2E" "clear_corpses" "PD Disorienting Stun 5" .is_stall_invalidating false
+// PD-003 혼란 기체 폭발은 뒤섞기 대신 2칸 당겨 아군 전열의 공격을 준비한다. 이동 저항은 이 연계를 막는다.
 
 
 tag: .id "light"

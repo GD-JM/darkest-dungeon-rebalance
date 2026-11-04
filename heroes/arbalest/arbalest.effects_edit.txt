@@ -90,17 +90,28 @@ effect: .name "Arb Mark Debuff 5" .target "target" .curio_result_type "negative"
 
 //# ======================================================================
 //# 기술: 사냥돌 발사 (bola)
-//# 레벨별 효과: 1레벨 Bolo Push 1A | 2레벨 Bolo Push 1B | 3레벨 Bolo Push 1C | 4레벨 Bolo Push 1D | 5레벨 Bolo Push 1D
-effect: .name "Bolo Push 1A" .target "target"  .push 1 .chance 75%   .on_hit true .on_miss false  .can_apply_on_death true
+//# 레벨별 효과: 1레벨 Bolo Push 1A | 2레벨 Bolo Push 1B | 3레벨 Bolo Push 1C | 4레벨 Bolo Push 1D | 5레벨 Bolo Push 1E
+effect: .name "Pull 2A" .target "target" .pull 2 	.chance 100%	.on_hit true .on_miss false .can_apply_on_death true
+// ARB-018 단일 표적을 전열로 끌어올 때 제압 사격과 구별되는 직접 피해와 이동 성공률을 확보한다.
+// ARB-017 사냥돌 발사: 적 2·3·4열 중 한 명을 2칸 당겨 전열 동료가 공격할 수 있게 한다. 이동 저항이 높은 적은 이 연계를 막을 수 있다.
 //#   공유 효과: 다른 영웅 1명(총사). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Bolo Push 1B" .target "target"  .push 1 .chance 85%   .on_hit true .on_miss false .can_apply_on_death true
+effect: .name "Pull 2B" .target "target" .pull 2 	.chance 110%	.on_hit true .on_miss false .can_apply_on_death true
+// ARB-018 단일 표적을 전열로 끌어올 때 제압 사격과 구별되는 직접 피해와 이동 성공률을 확보한다.
+// ARB-017 사냥돌 발사: 적 2·3·4열 중 한 명을 2칸 당겨 전열 동료가 공격할 수 있게 한다. 이동 저항이 높은 적은 이 연계를 막을 수 있다.
 //#   공유 효과: 다른 영웅 1명(총사). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Bolo Push 1C" .target "target"  .push 1 .chance 95%   .on_hit true .on_miss false .can_apply_on_death true
+effect: .name "Pull 2C" .target "target" .pull 2 	.chance 120%	.on_hit true .on_miss false .can_apply_on_death true
+// ARB-018 단일 표적을 전열로 끌어올 때 제압 사격과 구별되는 직접 피해와 이동 성공률을 확보한다.
+// ARB-017 사냥돌 발사: 적 2·3·4열 중 한 명을 2칸 당겨 전열 동료가 공격할 수 있게 한다. 이동 저항이 높은 적은 이 연계를 막을 수 있다.
 //#   공유 효과: 다른 영웅 1명(총사). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Bolo Push 1D" .target "target"  .push 1 .chance 105%   .on_hit true .on_miss false .can_apply_on_death true
+effect: .name "Pull 2D" .target "target" .pull 2 	.chance 130%	.on_hit true .on_miss false .can_apply_on_death true
+// ARB-018 단일 표적을 전열로 끌어올 때 제압 사격과 구별되는 직접 피해와 이동 성공률을 확보한다.
+// ARB-017 사냥돌 발사: 적 2·3·4열 중 한 명을 2칸 당겨 전열 동료가 공격할 수 있게 한다. 이동 저항이 높은 적은 이 연계를 막을 수 있다.
+effect: .name "Pull 2E" .target "target" .pull 2 	.chance 140%	.on_hit true .on_miss false .can_apply_on_death true
+// ARB-018 단일 표적을 전열로 끌어올 때 제압 사격과 구별되는 직접 피해와 이동 성공률을 확보한다.
+// ARB-017 사냥돌 발사: 적 2·3·4열 중 한 명을 2칸 당겨 전열 동료가 공격할 수 있게 한다. 이동 저항이 높은 적은 이 연계를 막을 수 있다.
 //#   공유 효과: 다른 영웅 1명(총사). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
 

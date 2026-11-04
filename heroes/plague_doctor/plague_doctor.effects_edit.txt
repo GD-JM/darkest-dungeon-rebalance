@@ -114,7 +114,8 @@ effect: .name "PD Vapours Buff 5" .target "target" .curio_result_type "positive"
 //# ======================================================================
 //# 기술: 혼란 기체 폭발 (disorienting_blast)
 //# 레벨별 효과: 1레벨 Disorient 1, clear_corpses, PD Disorienting Stun 1 | 2레벨 Disorient 2, clear_corpses, PD Disorienting Stun 2 | 3레벨 Disorient 3, clear_corpses, PD Disorienting Stun 3 | 4레벨 Disorient 4, clear_corpses, PD Disorienting Stun 4 | 5레벨 Disorient 5, clear_corpses, PD Disorienting Stun 5
-effect: .name "Disorient 1" .target "target" .shuffletarget	.chance 100% .on_hit true .on_miss false 	.apply_once true .can_apply_on_death true
+effect: .name "Pull 2A" .target "target" .pull 2 	.chance 100%	.on_hit true .on_miss false .can_apply_on_death true
+// PD-003 혼란 기체 폭발은 뒤섞기 대신 2칸 당겨 아군 전열의 공격을 준비한다. 이동 저항은 이 연계를 막는다.
 //#   공유 효과: 다른 영웅 1명(현상금 사냥꾼). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "clear_corpses" .target "target_group" .chance 100% .kill_enemy_types corpse .on_hit true .on_miss false .queue false .can_apply_on_death true
@@ -122,22 +123,26 @@ effect: .name "clear_corpses" .target "target_group" .chance 100% .kill_enemy_ty
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "PD Disorienting Stun 1" .target "target" .curio_result_type "negative" .chance 100% .stun 1	.on_hit true .on_miss false .queue true
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Disorient 2" .target "target" .shuffletarget	.chance 110% .on_hit true .on_miss false	.apply_once true .can_apply_on_death true
+effect: .name "Pull 2B" .target "target" .pull 2 	.chance 110%	.on_hit true .on_miss false .can_apply_on_death true
+// PD-003 혼란 기체 폭발은 뒤섞기 대신 2칸 당겨 아군 전열의 공격을 준비한다. 이동 저항은 이 연계를 막는다.
 //#   공유 효과: 다른 영웅 1명(현상금 사냥꾼). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "PD Disorienting Stun 2" .target "target" .curio_result_type "negative" .chance 110% .stun 1	.on_hit true .on_miss false .queue true
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Disorient 3" .target "target" .shuffletarget	.chance 120% .on_hit true .on_miss false	.apply_once true .can_apply_on_death true
+effect: .name "Pull 2C" .target "target" .pull 2 	.chance 120%	.on_hit true .on_miss false .can_apply_on_death true
+// PD-003 혼란 기체 폭발은 뒤섞기 대신 2칸 당겨 아군 전열의 공격을 준비한다. 이동 저항은 이 연계를 막는다.
 //#   공유 효과: 다른 영웅 1명(현상금 사냥꾼). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "PD Disorienting Stun 3" .target "target" .curio_result_type "negative" .chance 120% .stun 1	.on_hit true .on_miss false .queue true
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Disorient 4" .target "target" .shuffletarget	.chance 130% .on_hit true .on_miss false	.apply_once true .can_apply_on_death true
+effect: .name "Pull 2D" .target "target" .pull 2 	.chance 130%	.on_hit true .on_miss false .can_apply_on_death true
+// PD-003 혼란 기체 폭발은 뒤섞기 대신 2칸 당겨 아군 전열의 공격을 준비한다. 이동 저항은 이 연계를 막는다.
 //#   공유 효과: 다른 영웅 1명(현상금 사냥꾼). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "PD Disorienting Stun 4" .target "target" .curio_result_type "negative" .chance 130% .stun 1	.on_hit true .on_miss false .queue true
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Disorient 5" .target "target" .shuffletarget	.chance 140% .on_hit true .on_miss false	.apply_once true .can_apply_on_death true
+effect: .name "Pull 2E" .target "target" .pull 2 	.chance 140%	.on_hit true .on_miss false .can_apply_on_death true
+// PD-003 혼란 기체 폭발은 뒤섞기 대신 2칸 당겨 아군 전열의 공격을 준비한다. 이동 저항은 이 연계를 막는다.
 //#   공유 효과: 다른 영웅 1명(현상금 사냥꾼). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "PD Disorienting Stun 5" .target "target" .curio_result_type "negative" .chance 140% .stun 1	.on_hit true .on_miss false .queue true

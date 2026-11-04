@@ -1,46 +1,46 @@
 {
-  "runaway|backdraft": {
-    "ids": [
-      "RUN-006",
-      "RUN-010"
-    ],
-    "principles": [
-      "P-10"
-    ],
-    "ko": "불길 역류의 중첩당 피해20%와 전열12 사용으로 장기 누적 폭발을 줄이고 전진을 요구한다. 추가 횟수 제한은 없다.",
-    "en": "Reduce damage per Burn stack to 20% and require ranks 1-2, preserving unrestricted use and Burn transfer."
-  },
-  "runaway|firefly": {
-    "ids": [
-      "RUN-007"
-    ],
-    "principles": [
-      "P-10"
-    ],
-    "ko": "흩날리는 불티의 화상량은 유지하되 감소 지연을 화톳불로 옮겨 후열 반복 효율을 하향한다. 화상량-1은 이중 하향과 중간레벨 정수 절삭을 고려해 보류했다.",
-    "en": "Keep Burn amounts, but move decay delay to Hearthlight to reduce rear-rank repetition without a second Burn nerf."
-  },
-  "runaway|controlled_burn": {
-    "ids": [
-      "RUN-008"
-    ],
-    "principles": [
-      "P-10"
-    ],
-    "ko": "최초/지면3/3/4/4/5, 지면2라운드, 사용34로 초기 사용감을 보존하고 장기 누적을 줄인다. 이동과 턴 시작은 동일한 지면 수치를 공유한다.",
-    "en": "Initial and ground Burn become 3/3/4/4/5, ground duration 2 rounds, use ranks 3-4. Preserve opening impact while reducing long-fight accumulation."
-  },
-  "runaway|hearthlight": {
-    "ids": [
-      "RUN-009",
-      "RUN-011"
-    ],
-    "principles": [
-      "P-10"
-    ],
-    "ko": "사용34/전진2와 명중 지원 유지. 감소 지연50%를 실효1회로 단축한다. 복수 도망자의 합산은 원본과 같이 허용하며 별도 중첩 상한은 두지 않는다.",
-    "en": "Use from ranks 3-4 and advance 2; retain party accuracy. Burn decay delay remains 50% for one target turn. Multiple Runaways may stack it as in the original; no separate stacking cap."
-  },
+ "runaway|backdraft": {
+  "ids": [
+   "RUN-006",
+   "RUN-010"
+  ],
+  "principles": [
+   "P-10"
+  ],
+  "ko": "불길 역류의 중첩당 피해20%와 전열12 사용으로 장기 누적 폭발을 줄이고 전진을 요구한다. 추가 횟수 제한은 없다.",
+  "en": "Reduce damage per Burn stack to 20% and require ranks 1-2, preserving unrestricted use and Burn transfer."
+ },
+ "runaway|firefly": {
+  "ids": [
+   "RUN-007"
+  ],
+  "principles": [
+   "P-10"
+  ],
+  "ko": "흩날리는 불티의 화상량은 유지하되 감소 지연을 화톳불로 옮겨 후열 반복 효율을 하향한다. 화상량-1은 이중 하향과 중간레벨 정수 절삭을 고려해 보류했다.",
+  "en": "Keep Burn amounts, but move decay delay to Hearthlight to reduce rear-rank repetition without a second Burn nerf."
+ },
+ "runaway|controlled_burn": {
+  "ids": [
+   "RUN-008"
+  ],
+  "principles": [
+   "P-10"
+  ],
+  "ko": "최초/지면3/3/4/4/5, 지면2라운드, 사용34로 초기 사용감을 보존하고 장기 누적을 줄인다. 이동과 턴 시작은 동일한 지면 수치를 공유한다.",
+  "en": "Initial and ground Burn become 3/3/4/4/5, ground duration 2 rounds, use ranks 3-4. Preserve opening impact while reducing long-fight accumulation."
+ },
+ "runaway|hearthlight": {
+  "ids": [
+   "RUN-009",
+   "RUN-011"
+  ],
+  "principles": [
+   "P-10"
+  ],
+  "ko": "사용34/전진2와 명중 지원 유지. 감소 지연50%를 실효1회로 단축한다. 복수 도망자의 합산은 원본과 같이 허용하며 별도 중첩 상한은 두지 않는다.",
+  "en": "Use from ranks 3-4 and advance 2; retain party accuracy. Burn decay delay remains 50% for one target turn. Multiple Runaways may stack it as in the original; no separate stacking cap."
+ },
  "abomination|manacles": {
   "ids": [
    "ABO-005",
@@ -136,14 +136,16 @@
  "arbalest|bola": {
   "ids": [
    "ARB-007",
-   "ARB-004"
+   "ARB-004",
+   "ARB-017",
+   "ARB-018"
   ],
   "principles": [
    "G-02",
    "P-01"
   ],
-  "en": "Bola was crowded out by her four core skills, so it deals more damage. The level-5 push also now uses the stronger push effect the base game defined but never linked; before, its push chance stopped growing at level 5 and actually got less reliable as enemy resistances rose.",
-  "ko": "핵심 기술 4개에 밀려 쓸 일이 없어 피해를 올렸다. 5렙 밀치기는 바닐라에 정의돼 있지만 연결되지 않던 효과로 바로잡았다 — 전에는 5렙에서 확률 성장이 멈춰, 적 저항이 오를수록 오히려 밀치기가 덜 성공했다."
+  "en": "Bola pulls one enemy two ranks forward for a frontline ally. Move resistance can foil the setup. Higher damage and move chance reward using Bola on one target.",
+  "ko": "ARB-017 사냥돌 발사: 적 2·3·4열 중 한 명을 2칸 당겨 전열 동료가 공격할 수 있게 한다. 이동 저항이 높은 적은 이 연계를 막을 수 있다. ARB-018 단일 표적을 전열로 끌어올 때 제압 사격과 구별되는 직접 피해와 이동 성공률을 확보한다."
  },
  "arbalest|flare": {
   "ids": [
@@ -746,14 +748,14 @@
  },
  "jester|inspiring_tune": {
   "ids": [
-    "JES-003",
-    "JES-014",
-    "JES-015"
+   "JES-003",
+   "JES-014",
+   "JES-015"
   ],
   "principles": [],
   "ko": "격려의 선율 사용열을 3·4열로 복원한다. 2열은 제외하고 회복량·효과를 유지한다.",
   "en": "Restore Inspiring Tune to ranks 3-4. Rank 2 stays excluded; recovery and effects remain unchanged."
-},
+ },
  "jester|solo": {
   "ids": [
    "JES-005",
@@ -761,15 +763,16 @@
    "JES-008",
    "JES-009",
    "JES-001",
-   "JES-011"
+   "JES-011",
+   "JES-016"
   ],
   "principles": [
    "G-02",
    "P-19",
    "G-03"
   ],
-  "en": "Solo rarely beat the Jester's other songs and attacks for a skill slot. It is now a spotlight usable from any rank: more dodge to survive drawing attention, a bigger Finale bonus, corpse clearing to pull back-rank enemies forward, and a slow on every enemy, like an audience whose eyes are all on the stage.",
-  "ko": "독주는 광대의 다른 노래·공격에 밀려 기술 칸을 얻지 못했다. 이제 모든 열에서 쓰는 '무대 조명' 기술로, 시선을 끄는 동안 버틸 회피를 높이고, 대단원 준비 보너스를 키우고, 시체를 치워 뒤쪽 적을 앞으로 당기며, 무대에 시선을 뺏긴 적 전체의 속도를 늦춘다."
+  "en": "Solo rarely beat the Jester's other songs and attacks for a skill slot. It is now a spotlight usable from any rank: more dodge to survive drawing attention, a bigger Finale bonus, corpse clearing to pull back-rank enemies forward. Solo now scrambles the enemy formation instead of slowing every enemy.",
+  "ko": "독주는 광대의 다른 노래·공격에 밀려 기술 칸을 얻지 못했다. 이제 모든 열에서 쓰는 '무대 조명' 기술로, 시선을 끄는 동안 버틸 회피를 높이고, 대단원 준비 보너스를 키우고, 시체를 치워 뒤쪽 적을 앞으로 당긴다. 독주로 적 전체의 속도를 낮추는 대신 적 대열을 뒤섞어 진형 교란을 맡는다."
  },
  "leper|chop": {
   "ids": [
@@ -960,16 +963,16 @@
   "ko": "역병 의사는 다른 기술이 좋아서 절개를 고를 이유가 약했다. 명중을 올려 선택지로 만든다."
  },
  "runaway|ransack": {
-    "ids": [
-      "RUN-005"
-    ],
-    "principles": [
-      "P-10",
-      "G-02"
-    ],
-    "en": "Restrict Ransack to rear-rank entry: use from ranks 3-4 and hit ranks 1-3. Forward 1, damage -10%, pull, corpse clear and stealth accuracy are preserved.",
-    "ko": "판 뒤엎기를 사용3·4열/대상1·2·3열의 후열 진입기로 제한해 범용성을 하향한다. 전진1·피해−10·당기기·시체 제거·은신 명중은 유지한다."
-  },
+  "ids": [
+   "RUN-005"
+  ],
+  "principles": [
+   "P-10",
+   "G-02"
+  ],
+  "en": "Restrict Ransack to rear-rank entry: use from ranks 3-4 and hit ranks 1-3. Forward 1, damage -10%, pull, corpse clear and stealth accuracy are preserved.",
+  "ko": "판 뒤엎기를 사용3·4열/대상1·2·3열의 후열 진입기로 제한해 범용성을 하향한다. 전진1·피해−10·당기기·시체 제거·은신 명중은 유지한다."
+ },
  "shieldbreaker|expose": {
   "ids": [
    "SB-015",
@@ -1103,23 +1106,23 @@
  },
  "vestal|gods_illumination": {
   "ids": [
-    "VES-006",
-    "VES-013",
-    "VES-014",
-    "VES-016",
-    "VES-020",
-    "VES-021",
-    "VES-022",
-    "VES-023"
+   "VES-006",
+   "VES-013",
+   "VES-014",
+   "VES-016",
+   "VES-020",
+   "VES-021",
+   "VES-022",
+   "VES-023"
   ],
   "principles": [
-    "P-19",
-    "G-03",
-    "P-11"
+   "P-19",
+   "G-03",
+   "P-11"
   ],
   "en": "Remove only the PROT debuff: Burn already provides offensive utility. Retain Burn 1/1/2/2/3, ACC95, damage -75%, dodge reduction, destealth, torch and ranks; no replacement debuff.",
   "ko": "화상이 이미 공격적 활용성을 제공하므로 광휘의 방어 감소만 삭제한다. 다른 약화는 추가하지 않고 화상·회피 감소·은신 해제·횃불·명중95·피해-75%·사용열·대상열은 유지한다."
-},
+ },
  "vestal|judgement": {
   "ids": [
    "VES-002",
@@ -1548,15 +1551,15 @@
   "ko": "유물수집상 동료 방패로 반격을 빌렸을 때만 쓰는 반격 공격(명중 85, 피해 −50%, 치명타 없음)입니다. 그 밖에는 효과가 없습니다."
  },
  "runaway|riposte_skill": {
-    "ids": [
-      "SYS-105"
-    ],
-    "principles": [
-      "P-25"
-    ],
-    "en": "New riposte attack (ACC 85, DMG -50%, no crit), used only when the Antiquarian's Protect Me lends this hero a riposte; it has no effect otherwise.",
-    "ko": "유물수집상 동료 방패로 반격을 빌렸을 때만 쓰는 반격 공격(명중 85, 피해 −50%, 치명타 없음)입니다. 그 밖에는 효과가 없습니다."
-  },
+  "ids": [
+   "SYS-105"
+  ],
+  "principles": [
+   "P-25"
+  ],
+  "en": "New riposte attack (ACC 85, DMG -50%, no crit), used only when the Antiquarian's Protect Me lends this hero a riposte; it has no effect otherwise.",
+  "ko": "유물수집상 동료 방패로 반격을 빌렸을 때만 쓰는 반격 공격(명중 85, 피해 −50%, 치명타 없음)입니다. 그 밖에는 효과가 없습니다."
+ },
  "shieldbreaker|riposte_skill": {
   "ids": [
    "SYS-105"
@@ -1576,5 +1579,25 @@
   ],
   "en": "New riposte attack (ACC 85, DMG -50%, no crit), used only when the Antiquarian's Protect Me lends this hero a riposte; it has no effect otherwise.",
   "ko": "유물수집상 동료 방패로 반격을 빌렸을 때만 쓰는 반격 공격(명중 85, 피해 −50%, 치명타 없음)입니다. 그 밖에는 효과가 없습니다."
+ },
+ "arbalest|blindfire": {
+  "ids": [
+   "ARB-019"
+  ],
+  "principles": [
+   "G-02"
+  ],
+  "en": "A more accurate fallback after displacement; the target is still random.",
+  "ko": "대상을 고를 수 없는 무차별 사격이 대열 붕괴 뒤에도 맞도록 명중을 10 높였다. 빗나가도 받는 속도 강화는 유지한다."
+ },
+ "plague_doctor|disorienting_blast": {
+  "ids": [
+   "PD-003"
+  ],
+  "principles": [
+   "G-02"
+  ],
+  "en": "Pull one enemy toward the frontline so allies can follow up.",
+  "ko": "PD-003 혼란 기체 폭발은 뒤섞기 대신 2칸 당겨 아군 전열의 공격을 준비한다. 이동 저항은 이 연계를 막는다."
  }
 }

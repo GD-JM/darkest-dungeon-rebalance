@@ -1,0 +1,34 @@
+[
+  {
+    "id": "ARB-019",
+    "decision": "adopted",
+    "original_quote": "무차별도 버프해서 올리자 속도 버프도 버프할까? 광대 독주에 속도 약화 빼고 뒤섞기 넣자",
+    "source": {
+      "product": "codex",
+      "reference": "무차별 사격 상향·독주 뒤섞기 요청"
+    },
+    "rationale_ko": "대상을 고를 수 없는 무차별 사격이 대열 붕괴 뒤에도 맞도록 명중을 10 높였다. 빗나가도 받는 속도 강화는 유지한다.",
+    "files": [
+      "heroes/arbalest/arbalest.info.darkest",
+      "design/changes/arbalest.md",
+      "design/workshop/hero_cards.json",
+      "design/workshop/why.json"
+    ]
+  },
+  {
+    "id": "JES-016",
+    "decision": "adopted",
+    "original_quote": "무차별도 버프해서 올리자 속도 버프도 버프할까? 광대 독주에 속도 약화 빼고 뒤섞기 넣자",
+    "source": {
+      "product": "codex",
+      "reference": "무차별 사격 상향·독주 뒤섞기 요청"
+    },
+    "rationale_ko": "독주로 적 전체의 속도를 낮추는 대신 적 대열을 뒤섞어 진형 교란을 맡는다.",
+    "files": [
+      "heroes/jester/jester.info.darkest",
+      "design/changes/jester.md",
+      "design/workshop/hero_cards.json",
+      "design/workshop/why.json"
+    ]
+  }
+]
