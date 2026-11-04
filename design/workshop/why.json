@@ -380,14 +380,15 @@
  },
  "duelist|the_boot": {
   "ids": [
-   "DUE-006"
+   "DUE-006",
+   "DUE-023"
   ],
   "principles": [
    "R-STUN-01",
    "R-STRAT-01"
   ],
-  "en": "A melee kick that stuns and pushes in one action gave up less damage than other stun skills and felt overpowered in play. −60% puts it inside the usual damage range of stun skills.",
-  "ko": "기절과 밀치기를 한 번에 거는 근접기인데 다른 기절 기술보다 피해 손실이 작아 실제 플레이에서 지나치게 강했습니다. −60%는 기절 기술의 일반적인 피해 범위 안입니다."
+  "en": "A melee kick that stuns and pushes in one action gave up less damage than other stun skills and felt overpowered in play. −60% puts it inside the usual damage range of stun skills. The kick pushes two ranks to give its impact weight at reduced damage.",
+  "ko": "기절과 밀치기를 한 번에 거는 근접기인데 다른 기절 기술보다 피해 손실이 작아 실제 플레이에서 지나치게 강했습니다. −60%는 기절 기술의 일반적인 피해 범위 안입니다. 강한 타격음과 동작을 피해 대신 2칸 밀치기로 표현한다."
  },
  "duelist|touche": {
   "ids": [
@@ -982,14 +983,15 @@
    "SB-015",
    "SB-024",
    "SB-026",
-   "SB-027"
+   "SB-027",
+   "SB-030"
   ],
   "principles": [
    "R-TRADE-02",
    "R-SKILL-09"
   ],
-  "en": "Expose keeps rank-4 reach for back-rank stealth, critical vulnerability, slow and retreat. Damage falls to -50% as an additional cost for its support and reach. Its slow moved to Suppressing Fire; Expose now strips dodge instead, true to its name.",
-  "ko": "4열 은신 대응 사거리와 기존 약화를 유지하면서 직접 피해를 추가로 낮춘다. 지원 기능 확대의 대가를 더 명확하게 만든다. 전 레벨 피해-50%; 다른 효과와 범위 유지. 기존 모델의 전후 잔차가 0에 가깝다는 설명은 현 수치의 총량 보존 증거로 재사용하지 않는다. 속도 감소는 석궁 제압 사격으로 옮기고, 이름대로 회피를 깎습니다."
+  "en": "Reveal a rear enemy and pull it into frontline reach. Follow-up hits and criticals depend on the party.",
+  "ko": "은신한 후열을 드러내 2칸 끌어온다. 파티의 후속 명중과 치명타까지 한 기술이 보장하지 않도록 회피 감소와 치명타 취약을 제거한다."
  },
  "shieldbreaker|pierce": {
   "ids": [
@@ -1281,14 +1283,16 @@
  "shieldbreaker|break_guard": {
   "ids": [
    "SB-023",
-   "SB-025"
+   "SB-025",
+   "SB-028",
+   "SB-029"
   ],
   "principles": [
    "P-11",
    "P-21"
   ],
-  "en": "Puncture keeps pull, guard bypass/removal/blocking and its short PROT reduction. Damage falls to -60% to charge more for this combined utility on a strong weapon.",
-  "ko": "당기기·보호 무시/해제/차단·방어도 감소를 겸하는 지원기의 직접 피해 대가를 늘린다. 방패 파괴자의 높은 기본 공격력까지 고려한다. 전 레벨 피해-60%; 다른 효과와 범위 유지. 기존 모델의 전후 잔차가 0에 가깝다는 설명은 현 수치의 총량 보존 증거로 재사용하지 않는다."
+  "en": "Break guard and reduce PROT on ranks 1-3. Pulling rank 3 one step brings it within melee reach.",
+  "ko": "보호받는 전열을 열고 방어를 깎아 동료의 공격을 준비한다. 3열 적은 1칸만 끌어도 전열에 닿는다."
  },
  "abomination|rage": {
   "principles": [
@@ -1615,5 +1619,15 @@
   ],
   "en": "Pull one enemy toward the frontline so allies can follow up.",
   "ko": "PD-003 혼란 기체 폭발은 뒤섞기 대신 2칸 당겨 아군 전열의 공격을 준비한다. 이동 저항은 이 연계를 막는다."
+ },
+ "duelist|disengage": {
+  "ids": [
+   "DUE-022"
+  ],
+  "principles": [
+   "R-STRAT-01"
+  ],
+  "en": "Retreat and pull a rear enemy into reach of frontline allies.",
+  "ko": "방어 자세에서 물러서며 적 2·3·4열 한 명을 전열 동료 앞으로 유인한다. 기존 적 피해 감소를 2칸 당기기로 교체한다."
  }
 }

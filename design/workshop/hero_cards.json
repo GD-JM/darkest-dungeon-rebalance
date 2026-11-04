@@ -487,10 +487,12 @@
     "name": "Disengage",
     "icon": "four",
     "old": [
-     "No debuff"
+     "Hits ranks 1-2",
+     "No pull"
     ],
     "new": [
-     "Target: DMG -10 to -15% (2 turns)"
+     "Hits one enemy in ranks 2-4",
+     "Pull 2 (100-140%)"
     ]
    },
    {
@@ -520,10 +522,12 @@
     "name": "The Boot",
     "icon": "seven",
     "old": [
-     "DMG -40%"
+     "DMG -40%",
+     "Push 1"
     ],
     "new": [
-     "DMG -60%"
+     "DMG -60%",
+     "Push 2"
     ]
    }
   ]
@@ -1362,12 +1366,12 @@
      "DMG -50%",
      "Hits ranks 1-4",
      "Target: SPD -1 to -3",
-     "No PROT debuff"
+     "No PROT debuff",
+     "Pull 2"
     ],
     "new": [
      "DMG -60%",
-     "Hits ranks 1-3",
-     "No SPD debuff",
+     "Hits ranks 1-3; pull 1",
      "Target: PROT -30 to -40% (2 turns)"
     ]
    },
@@ -1394,13 +1398,13 @@
      "ACC 85",
      "DMG -40%",
      "Hits ranks 1-3",
-     "Target: SPD -4 to -8"
+     "Target: SPD -4 to -8",
+     "Target: CRIT received +8 to +10%"
     ],
     "new": [
-     "ACC 90",
-     "DMG -50%",
-     "Hits ranks 1-4",
-     "Target: DODGE -20 to -30%"
+     "ACC 90; DMG -50%",
+     "Hits ranks 2-4; pull 2",
+     "Removes stealth; no DODGE or CRIT debuff"
     ]
    },
    {

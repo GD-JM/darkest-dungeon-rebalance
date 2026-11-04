@@ -1,0 +1,43 @@
+[
+  {
+    "id": "SB-029",
+    "decision": "adopted",
+    "original_quote": "구멍내기는 적 1,2,3열에 당기기 1, 보호무시랑 방어감소 유지하고 노출은 적 2,3,4열에 당기기 2랑 은신해제만 남기자.",
+    "rationale_ko": "보호받는 전열을 열고 방어를 깎아 동료의 공격을 준비한다. 3열 적은 1칸만 끌어도 전열에 닿는다.",
+    "source": {
+      "product": "codex",
+      "reference": "방패 파괴자 및 결투가 네 기술 test 커밋 요청"
+    },
+    "files": [
+      "heroes/shieldbreaker/shieldbreaker.info.darkest",
+      "heroes/shieldbreaker/shieldbreaker.effects_edit.txt",
+      "design/changes/shieldbreaker.md",
+      "design/workshop/hero_cards.json",
+      "design/workshop/why.json"
+    ],
+    "supersedes": [
+      "SB-028"
+    ]
+  },
+  {
+    "id": "SB-030",
+    "decision": "adopted",
+    "original_quote": "구멍내기는 적 1,2,3열에 당기기 1, 보호무시랑 방어감소 유지하고 노출은 적 2,3,4열에 당기기 2랑 은신해제만 남기자.",
+    "rationale_ko": "은신한 후열을 드러내 2칸 끌어온다. 파티의 후속 명중과 치명타까지 한 기술이 보장하지 않도록 회피 감소와 치명타 취약을 제거한다.",
+    "source": {
+      "product": "codex",
+      "reference": "방패 파괴자 및 결투가 네 기술 test 커밋 요청"
+    },
+    "files": [
+      "heroes/shieldbreaker/shieldbreaker.info.darkest",
+      "heroes/shieldbreaker/shieldbreaker.effects_edit.txt",
+      "design/changes/shieldbreaker.md",
+      "design/workshop/hero_cards.json",
+      "design/workshop/why.json",
+      "effects/rebalance_shieldbreaker.effects.darkest"
+    ],
+    "supersedes": [
+      "SB-027"
+    ]
+  }
+]

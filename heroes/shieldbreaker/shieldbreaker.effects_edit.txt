@@ -20,33 +20,33 @@
 
 //# ======================================================================
 //# 기술: 구멍내기 (break_guard)
-//# 레벨별 효과: 1레벨 Clear Guarded Target, Block Guard, Pull 2A, Daze Slowdown 1 | 2레벨 Clear Guarded Target, Block Guard, Pull 2B, Daze Slowdown 2 | 3레벨 Clear Guarded Target, Block Guard, Pull 2C, Daze Slowdown 3 | 4레벨 Clear Guarded Target, Block Guard, Pull 2D, Daze Slowdown 4 | 5레벨 Clear Guarded Target, Block Guard, Pull 2E, Daze Slowdown 5
+//# 레벨별 효과: 1레벨 Clear Guarded Target, Block Guard, Pull 1A, RB SB Puncture Armor 1 | 2레벨 Clear Guarded Target, Block Guard, Pull 1B, RB SB Puncture Armor 2 | 3레벨 Clear Guarded Target, Block Guard, Pull 1C, RB SB Puncture Armor 3 | 4레벨 Clear Guarded Target, Block Guard, Pull 1D, RB SB Puncture Armor 4 | 5레벨 Clear Guarded Target, Block Guard, Pull 1E, RB SB Puncture Armor 5
 effect: .name "Clear Guarded Target" .target "target" .chance 100% .clearguarded 1 .on_hit true .on_miss true
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Block Guard" .target target .chance 500% .buff_ids "block_guard" .duration 2 .on_hit true .on_miss false .queue true
 //#   강화 효과 수치(JSON, 참고용): block_guard = guard_blocked 1
 //#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
-effect: .name "Pull 2A" .target "target" .pull 2 	.chance 100%	.on_hit true .on_miss false .can_apply_on_death true
+effect: .name "Pull 1A" .target "target"  .pull 1 	.chance 100%	.on_hit true .on_miss false .can_apply_on_death true
 //#   공유 효과: 다른 영웅 2명(현상금 사냥꾼, 신비학자) / 몬스터 기술 1곳. 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Daze Slowdown 1" .target "target" .chance 100% .combat_stat_buff 1 .speed_rating_add -1 .on_hit true .on_miss false .queue false
 //#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
-effect: .name "Pull 2B" .target "target" .pull 2 	.chance 110%	.on_hit true .on_miss false .can_apply_on_death true
+effect: .name "Pull 1B" .target "target"  .pull 1 	.chance 110%	.on_hit true .on_miss false .can_apply_on_death true
 //#   공유 효과: 다른 영웅 2명(현상금 사냥꾼, 신비학자). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Daze Slowdown 2" .target "target" .chance 110% .combat_stat_buff 1 .speed_rating_add -1 .on_hit true .on_miss false .queue false
 //#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
-effect: .name "Pull 2C" .target "target" .pull 2 	.chance 120%	.on_hit true .on_miss false .can_apply_on_death true
+effect: .name "Pull 1C" .target "target"  .pull 1 	.chance 120%	.on_hit true .on_miss false .can_apply_on_death true
 //#   공유 효과: 다른 영웅 2명(현상금 사냥꾼, 신비학자) / 몬스터 기술 1곳. 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Daze Slowdown 3" .target "target" .chance 120% .combat_stat_buff 1 .speed_rating_add -2 .on_hit true .on_miss false .queue false
 //#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
-effect: .name "Pull 2D" .target "target" .pull 2 	.chance 130%	.on_hit true .on_miss false .can_apply_on_death true
+effect: .name "Pull 1D" .target "target"  .pull 1 	.chance 130%	.on_hit true .on_miss false .can_apply_on_death true
 //#   공유 효과: 다른 영웅 2명(현상금 사냥꾼, 신비학자). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Daze Slowdown 4" .target "target" .chance 130% .combat_stat_buff 1 .speed_rating_add -2 .on_hit true .on_miss false .queue false
 //#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
-effect: .name "Pull 2E" .target "target" .pull 2 	.chance 140%	.on_hit true .on_miss false .can_apply_on_death true
+effect: .name "Pull 1E" .target "target"  .pull 1 	.chance 140%	.on_hit true .on_miss false .can_apply_on_death true
 //#   공유 효과: 다른 영웅 2명(현상금 사냥꾼, 신비학자) / 몬스터 기술 1곳. 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Daze Slowdown 5" .target "target" .chance 140% .combat_stat_buff 1 .speed_rating_add -3 .on_hit true .on_miss false .queue false
@@ -88,36 +88,31 @@ effect: .name "SB Spearing Blight 5" .target "target" .curio_result_type "negati
 
 //# ======================================================================
 //# 기술: 노출 (expose)
-//# 레벨별 효과: 1레벨 Expose Crit Debuff 1, Destealth, SB Slow 1 | 2레벨 Expose Crit Debuff 2, Destealth, SB Slow 2 | 3레벨 Expose Crit Debuff 3, Destealth, SB Slow 3 | 4레벨 Expose Crit Debuff 4, Destealth, SB Slow 4 | 5레벨 Expose Crit Debuff 5, Destealth, SB Slow 5
-effect: .name "Expose Crit Debuff 1" .target "target" .curio_result_type "negative" .chance 100% .buff_type crit_received_chance .buff_amount 8%	.on_hit true .on_miss false
+//# 레벨별 효과: 1레벨 Destealth, Pull 2A | 2레벨 Destealth, Pull 2B | 3레벨 Destealth, Pull 2C | 4레벨 Destealth, Pull 2D | 5레벨 Destealth, Pull 2E
 //#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
 effect: .name "Destealth" .target "target" .chance 100% .unstealth 1 .on_hit true .on_miss false
 //#   공유 효과: 다른 영웅 7명(유물수집상, 석궁사수, 노상강도, 나병환자, 총사, 도망자, 성녀). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "SB Slow 1" .target "target" .curio_result_type "negative" .chance 100% .combat_stat_buff 1 .defense_rating_add -20%	.on_hit true .on_miss false
 // SB-027 [2026-10-27] Expose: enemy SPD -> DODGE -20 (slow 4-8 moved to Arbalest Suppressing Fire; dodge sized to Sniper Mark 20-30 to pay for the lost slow; DODGE debuffs 2->3).
 //#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
-effect: .name "Expose Crit Debuff 2" .target "target" .curio_result_type "negative" .chance 110% .buff_type crit_received_chance .buff_amount 8%	.on_hit true .on_miss false
 //#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
-effect: .name "SB Slow 2" .target "target" .curio_result_type "negative" .chance 110% .combat_stat_buff 1 .defense_rating_add -22%	.on_hit true .on_miss false
 // SB-027 [2026-10-27] Expose: enemy SPD -> DODGE -22 (slow 4-8 moved to Arbalest Suppressing Fire; dodge sized to Sniper Mark 20-30 to pay for the lost slow; DODGE debuffs 2->3).
 //#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
-effect: .name "Expose Crit Debuff 3" .target "target" .curio_result_type "negative" .chance 120% .buff_type crit_received_chance .buff_amount 9%	.on_hit true .on_miss false
 //#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
-effect: .name "SB Slow 3" .target "target" .curio_result_type "negative" .chance 120% .combat_stat_buff 1 .defense_rating_add -25%	.on_hit true .on_miss false
 // SB-027 [2026-10-27] Expose: enemy SPD -> DODGE -25 (slow 4-8 moved to Arbalest Suppressing Fire; dodge sized to Sniper Mark 20-30 to pay for the lost slow; DODGE debuffs 2->3).
 //#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
-effect: .name "Expose Crit Debuff 4" .target "target" .curio_result_type "negative" .chance 130% .buff_type crit_received_chance .buff_amount 9%	.on_hit true .on_miss false
 //#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
-effect: .name "SB Slow 4" .target "target" .curio_result_type "negative" .chance 130% .combat_stat_buff 1 .defense_rating_add -27%	.on_hit true .on_miss false
 // SB-027 [2026-10-27] Expose: enemy SPD -> DODGE -27 (slow 4-8 moved to Arbalest Suppressing Fire; dodge sized to Sniper Mark 20-30 to pay for the lost slow; DODGE debuffs 2->3).
 //#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
-effect: .name "Expose Crit Debuff 5" .target "target" .curio_result_type "negative" .chance 140% .buff_type crit_received_chance .buff_amount 10%	.on_hit true .on_miss false
 //#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
-effect: .name "SB Slow 5" .target "target" .curio_result_type "negative" .chance 140% .combat_stat_buff 1 .defense_rating_add -30%	.on_hit true .on_miss false
 // SB-027 [2026-10-27] Expose: enemy SPD -> DODGE -30 (slow 4-8 moved to Arbalest Suppressing Fire; dodge sized to Sniper Mark 20-30 to pay for the lost slow; DODGE debuffs 2->3).
 //#   원본 위치: dlc/702540_shieldbreaker/effects/shieldbreaker.effects.darkest
 
+effect: .name "Pull 2A" .target "target" .pull 2 	.chance 100%	.on_hit true .on_miss false .can_apply_on_death true
+effect: .name "Pull 2B" .target "target" .pull 2 	.chance 110%	.on_hit true .on_miss false .can_apply_on_death true
+effect: .name "Pull 2C" .target "target" .pull 2 	.chance 120%	.on_hit true .on_miss false .can_apply_on_death true
+effect: .name "Pull 2D" .target "target" .pull 2 	.chance 130%	.on_hit true .on_miss false .can_apply_on_death true
+effect: .name "Pull 2E" .target "target" .pull 2 	.chance 140%	.on_hit true .on_miss false .can_apply_on_death true
 //# ======================================================================
 //# 기술: 휘감기 (single_out)
 //# 레벨별 효과: 1레벨 SB Dmg Marked 1, SB Adder Blight 1 | 2레벨 SB Dmg Marked 2, SB Adder Blight 2 | 3레벨 SB Dmg Marked 3, SB Adder Blight 3 | 4레벨 SB Dmg Marked 4, SB Adder Blight 4 | 5레벨 SB Dmg Marked 5, SB Adder Blight 5

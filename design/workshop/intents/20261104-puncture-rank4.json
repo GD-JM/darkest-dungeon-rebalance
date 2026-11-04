@@ -1,0 +1,16 @@
+{
+  "id": "SB-028",
+  "decision": "adopted",
+  "original_quote": "실브 당기기 4열 닿게 하고",
+  "rationale_ko": "구멍내기로 보호받는 4열 적도 2열까지 끌어와 아군 전열이 공격할 수 있도록 대상 범위를 복원한다.",
+  "source": {
+    "product": "codex",
+    "reference": "회수와 밀치기 검토 중 구멍내기 4열 적용 요청"
+  },
+  "files": [
+    "heroes/shieldbreaker/shieldbreaker.info.darkest",
+    "design/changes/shieldbreaker.md",
+    "design/workshop/hero_cards.json",
+    "design/workshop/why.json"
+  ]
+}
