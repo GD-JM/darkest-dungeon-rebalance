@@ -164,27 +164,29 @@
  "arbalest|sniper_shot": {
   "ids": [
    "ARB-005",
-   "ARB-012"
+   "ARB-012",
+   "ARB-016"
   ],
   "principles": [
    "P-26",
    "P-21",
    "P-11"
   ],
-  "en": "Mark damage is being spread across more heroes (Houndmaster down, other mark dealers up), so Sniper Shot's low-level marked bonus rises while the level-5 cap stays. The crit bump is because at level 1 it hit no harder than the Vestal's Judgement and felt weak; extra crit suits a precision shot.",
-  "ko": "표식 피해를 여러 영웅에 재배분하면서(조련사 하향, 다른 표식 딜러 상향) 저격의 저레벨 표식 보너스를 올리고 5렙 상한은 그대로 뒀다. 치명타 상향은 1렙 저격이 성녀 심판과 같은 피해라 약하게 느껴졌기 때문이며, 정밀 사격이라 치명타가 어울린다."
+  "en": "Mark damage is being spread across more heroes (Houndmaster down, other mark dealers up), so Sniper Shot's low-level marked bonus rises while the level-5 cap stays. The crit bump is because at level 1 it hit no harder than the Vestal's Judgement and felt weak; extra crit suits a precision shot. Sniper Shot can pick out a guarded enemy in ranks 2–4. The Musketeer can aim at rank 1.",
+  "ko": "표식 피해를 여러 영웅에 재배분하면서(조련사 하향, 다른 표식 딜러 상향) 저격의 저레벨 표식 보너스를 올리고 5렙 상한은 그대로 뒀다. 치명타 상향은 1렙 저격이 성녀 심판과 같은 피해라 약하게 느껴졌기 때문이며, 정밀 사격이라 치명타가 어울린다. 호위 뒤의 적 한 명을 골라 쏘는 저격의 특성을 살렸다. 총사가 적 1열까지 조준하는 대신 석궁사수는 적 2·3·4열에서 보호를 무시한다."
  },
  "arbalest|suppressing_fire": {
   "ids": [
    "ARB-008",
-   "ARB-013"
+   "ARB-013",
+   "ARB-015"
   ],
   "principles": [
    "G-02",
    "R-STRAT-01"
   ],
-  "en": "A rain of bolts that keeps the back line's heads down: it now slows them instead of lowering accuracy, delaying their response.",
-  "ko": "후열에 화살비를 퍼부어 고개를 못 들게 하는 제압 사격입니다. 명중 대신 속도를 깎아 적의 대응을 늦춥니다."
+  "en": "Suppressing Fire slows both back ranks and lowers their accuracy so allies can weather their next attacks.",
+  "ko": "후열의 두 적이 늦게 행동하고 공격을 빗맞히도록 속도 감소를 유지하고 치명타 감소를 명중 감소로 바꿨다."
  },
  "bounty_hunter|collect_bounty": {
   "ids": [
@@ -865,15 +867,16 @@
  "man_at_arms|rampart": {
   "ids": [
    "MAA-006",
-   "MAA-014"
+   "MAA-014",
+   "MAA-024"
   ],
   "principles": [
    "P-19",
    "G-03",
    "R-STUN-02"
   ],
-  "en": "The Man-at-Arms is heavy infantry who holds his ground, so Rampart no longer moves him forward and controls the enemy without shuffling your formation. Its damage is set to the standard for front-rank stuns, matching the Crusader's Stunning Blow.",
-  "ko": "중보병은 자리를 지키는 무거운 보병이라 성채의 일격의 자기 전진을 없애, 아군 대열을 흔들지 않고 적을 제어하게 했다. 피해는 1·2열 기절 기술의 기준값에 맞춰 성전사 기절의 일격과 같은 구도로 두었다."
+  "en": "The Man-at-Arms is heavy infantry who holds his ground, so Rampart no longer moves him forward and controls the enemy without shuffling your formation. Its damage is set to the standard for front-rank stuns, matching the Crusader's Stunning Blow. Rampart now requires rank 1 or 2, like the Crusader’s stun. Rank 3 can still use Retribution.",
+  "ko": "중보병은 자리를 지키는 무거운 보병이라 성채의 일격의 자기 전진을 없애, 아군 대열을 흔들지 않고 적을 제어하게 했다. 피해는 1·2열 기절 기술의 기준값에 맞춰 성전사 기절의 일격과 같은 구도로 두었다. 성전사의 전열 기절과 대응하도록 사용 위치를 1·2열로 좁혔다. 3열에서 성채의 일격과 응징의 반격을 모두 운용하면 전열보다 유리해지는 문제를 줄인다."
  },
  "man_at_arms|retribution": {
   "ids": [
