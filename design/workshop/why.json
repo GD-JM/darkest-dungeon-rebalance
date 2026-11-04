@@ -136,14 +136,16 @@
  "arbalest|bola": {
   "ids": [
    "ARB-007",
-   "ARB-004"
+   "ARB-004",
+   "ARB-017",
+   "ARB-018"
   ],
   "principles": [
    "G-02",
    "P-01"
   ],
-  "en": "Bola was crowded out by her four core skills, so it deals more damage. The level-5 push also now uses the stronger push effect the base game defined but never linked; before, its push chance stopped growing at level 5 and actually got less reliable as enemy resistances rose.",
-  "ko": "핵심 기술 4개에 밀려 쓸 일이 없어 피해를 올렸다. 5렙 밀치기는 바닐라에 정의돼 있지만 연결되지 않던 효과로 바로잡았다 — 전에는 5렙에서 확률 성장이 멈춰, 적 저항이 오를수록 오히려 밀치기가 덜 성공했다."
+  "en": "Bola pulls one enemy two ranks forward for a frontline ally. Move resistance can foil the setup. Higher damage and move chance reward using Bola on one target.",
+  "ko": "ARB-017 사냥돌 발사: 적 2·3·4열 중 한 명을 2칸 당겨 전열 동료가 공격할 수 있게 한다. 이동 저항이 높은 적은 이 연계를 막을 수 있다. ARB-018 단일 표적을 전열로 끌어올 때 제압 사격과 구별되는 직접 피해와 이동 성공률을 확보한다."
  },
  "arbalest|flare": {
   "ids": [
@@ -765,15 +767,16 @@
    "JES-008",
    "JES-009",
    "JES-001",
-   "JES-011"
+   "JES-011",
+   "JES-016"
   ],
   "principles": [
    "G-02",
    "P-19",
    "G-03"
   ],
-  "en": "Solo rarely beat the Jester's other songs and attacks for a skill slot. It is now a spotlight usable from any rank: more dodge to survive drawing attention, a bigger Finale bonus, corpse clearing to pull back-rank enemies forward, and a slow on every enemy, like an audience whose eyes are all on the stage.",
-  "ko": "독주는 광대의 다른 노래·공격에 밀려 기술 칸을 얻지 못했다. 이제 모든 열에서 쓰는 '무대 조명' 기술로, 시선을 끄는 동안 버틸 회피를 높이고, 대단원 준비 보너스를 키우고, 시체를 치워 뒤쪽 적을 앞으로 당기며, 무대에 시선을 뺏긴 적 전체의 속도를 늦춘다."
+  "en": "Solo rarely beat the Jester's other songs and attacks for a skill slot. It is now a spotlight usable from any rank: more dodge to survive drawing attention, a bigger Finale bonus, corpse clearing to pull back-rank enemies forward. Solo now scrambles the enemy formation instead of slowing every enemy.",
+  "ko": "독주는 광대의 다른 노래·공격에 밀려 기술 칸을 얻지 못했다. 이제 모든 열에서 쓰는 '무대 조명' 기술로, 시선을 끄는 동안 버틸 회피를 높이고, 대단원 준비 보너스를 키우고, 시체를 치워 뒤쪽 적을 앞으로 당긴다. 독주로 적 전체의 속도를 낮추는 대신 적 대열을 뒤섞어 진형 교란을 맡는다."
  },
  "leper|chop": {
   "ids": [
@@ -1592,5 +1595,25 @@
   ],
   "ko": "성녀의 눈부신 광채와 같은 적 1·2열에 한정한다. 심연에서의 손아귀는 명중을 제물 암습 수준으로 낮춘 대신 적중하면 피해·치명타·기절 확률이 광채보다 높고 횃불을 낮춘다. 후열 신비학자의 흑마법과 명중 장신구 투자 선택을 살린다.",
   "en": "Hands from the Abyss trades accuracy and enemy rank-3 reach for rear-rank use. Its dark magic hits harder, crits more and stuns more reliably on hit than Dazzling Light, while lowering torchlight."
+ },
+ "arbalest|blindfire": {
+  "ids": [
+   "ARB-019"
+  ],
+  "principles": [
+   "G-02"
+  ],
+  "en": "A more accurate fallback after displacement; the target is still random.",
+  "ko": "대상을 고를 수 없는 무차별 사격이 대열 붕괴 뒤에도 맞도록 명중을 10 높였다. 빗나가도 받는 속도 강화는 유지한다."
+ },
+ "plague_doctor|disorienting_blast": {
+  "ids": [
+   "PD-003"
+  ],
+  "principles": [
+   "G-02"
+  ],
+  "en": "Pull one enemy toward the frontline so allies can follow up.",
+  "ko": "PD-003 혼란 기체 폭발은 뒤섞기 대신 2칸 당겨 아군 전열의 공격을 준비한다. 이동 저항은 이 연계를 막는다."
  }
 }

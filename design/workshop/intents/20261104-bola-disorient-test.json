@@ -1,0 +1,37 @@
+[
+  {
+    "id": "ARB-018",
+    "decision": "adopted",
+    "original_quote": "이동 확률도 더 높여 1명으로 줄였는데 바닐라 쓰면 어떡해 제대로 해.",
+    "rationale_ko": "ARB-018 단일 표적을 전열로 끌어올 때 제압 사격과 구별되는 직접 피해와 이동 성공률을 확보한다.",
+    "source": {
+      "product": "codex",
+      "reference": "사냥돌 발사 재산정 및 역병의사 당기기 적용 요청"
+    },
+    "files": [
+      "heroes/arbalest/arbalest.info.darkest",
+      "heroes/arbalest/arbalest.effects_edit.txt",
+      "effects/rebalance_arbalest.effects.darkest",
+      "design/changes/arbalest.md",
+      "design/workshop/hero_cards.json",
+      "design/workshop/why.json"
+    ]
+  },
+  {
+    "id": "PD-003",
+    "decision": "adopted",
+    "original_quote": "역병 당기기 적용하고 뒤섞기를 다른 영웅한테 넣자",
+    "rationale_ko": "PD-003 혼란 기체 폭발은 뒤섞기 대신 2칸 당겨 아군 전열의 공격을 준비한다. 이동 저항은 이 연계를 막는다.",
+    "source": {
+      "product": "codex",
+      "reference": "사냥돌 발사 재산정 및 역병의사 당기기 적용 요청"
+    },
+    "files": [
+      "heroes/plague_doctor/plague_doctor.info.darkest",
+      "heroes/plague_doctor/plague_doctor.effects_edit.txt",
+      "design/changes/plague_doctor.md",
+      "design/workshop/hero_cards.json",
+      "design/workshop/why.json"
+    ]
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "id": "ARB-017",
+  "decision": "adopted",
+  "original_quote": "적 2·3·4열 중 한 명을 2칸 당기기",
+  "source": {
+    "product": "codex",
+    "reference": "사냥돌 발사 test 적용 형태 선택 응답",
+    "event_id": null
+  },
+  "rationale_ko": "ARB-017 사냥돌 발사: 적 2·3·4열 중 한 명을 2칸 당겨 전열 동료가 공격할 수 있게 한다. 이동 저항이 높은 적은 이 연계를 막을 수 있다.",
+  "files": [
+    "heroes/arbalest/arbalest.info.darkest",
+    "heroes/arbalest/arbalest.effects_edit.txt",
+    "effects/rebalance_arbalest.effects.darkest",
+    "design/changes/arbalest.md",
+    "design/workshop/hero_cards.json",
+    "design/workshop/why.json"
+  ],
+  "supersedes": []
+}
