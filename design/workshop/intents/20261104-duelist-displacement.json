@@ -1,0 +1,37 @@
+[
+  {
+    "id": "DUE-022",
+    "decision": "adopted",
+    "original_quote": "회수는 피해 감소 약화 빼고 적 2,3,4열 중 한 명을 2칸 당기는 걸로 가자. 확률은 100~140으로 하고",
+    "rationale_ko": "방어 자세에서 물러서며 적 2·3·4열 한 명을 전열 동료 앞으로 유인한다. 기존 적 피해 감소를 2칸 당기기로 교체한다.",
+    "source": {
+      "product": "codex",
+      "reference": "회수·부츠 이동 변경 확정 메시지"
+    },
+    "files": [
+      "heroes/duelist/duelist.info.darkest",
+      "heroes/duelist/duelist.effects_edit.txt",
+      "design/changes/duelist.md",
+      "design/workshop/hero_cards.json",
+      "design/workshop/why.json",
+      "effects/rebalance_duelist.effects.darkest"
+    ]
+  },
+  {
+    "id": "DUE-023",
+    "decision": "adopted",
+    "original_quote": "부츠도 2칸 미는거로 하자. 왜냐하면 이펙트랑 효과음이 무지막지한데 데미지를 빼버렸어 그래서 뭔가 그에 걸맞는 효과가 나와야할 거 같아.",
+    "rationale_ko": "강한 타격음과 동작을 피해 대신 2칸 밀치기로 표현한다.",
+    "source": {
+      "product": "codex",
+      "reference": "회수·부츠 이동 변경 확정 메시지"
+    },
+    "files": [
+      "heroes/duelist/duelist.info.darkest",
+      "heroes/duelist/duelist.effects_edit.txt",
+      "design/changes/duelist.md",
+      "design/workshop/hero_cards.json",
+      "design/workshop/why.json"
+    ]
+  }
+]

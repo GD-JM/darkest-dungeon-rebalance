@@ -163,35 +163,40 @@ effect: .name "Duelist Coup CRIT vs Stunned" .target "performer" .chance 100% .c
 
 //# ======================================================================
 //# 기술: 부츠 (the_boot)
-//# 레벨별 효과: 1레벨 Stun 1, Push 1B | 2레벨 Stun 2, Push 1C | 3레벨 Stun 3, Push 1D | 4레벨 Stun 4, Push 1E | 5레벨 Stun 5, Push 1F
+//# 레벨별 효과: 1레벨 Stun 1, Push 2B | 2레벨 Stun 2, Push 2C | 3레벨 Stun 3, Push 2D | 4레벨 Stun 4, Push 2E | 5레벨 Stun 5, Push 2F
 effect: .name "Stun 1" .target "target" .curio_result_type "negative" .chance 100% .stun 1	.on_hit true .on_miss false .queue true
 //#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 성전사, 중보병, 역병 의사) / 몬스터 기술 13곳. 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Push 1B" .target "target"  .push 1 	.chance 110%   .on_hit true .on_miss false .can_apply_on_death true
+effect: .name "Push 2B" .target "target"  .push 2	  .chance 110%	.on_hit true .on_miss false .can_apply_on_death true
+// DUE-023 강한 타격음과 동작을 피해 대신 2칸 밀치기로 표현한다.
 //#   공유 효과: 다른 영웅 2명(노상강도, 중보병). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Stun 2" .target "target" .curio_result_type "negative" .chance 110% .stun 1	.on_hit true .on_miss false .queue true
 //#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 성전사, 중보병, 역병 의사) / 몬스터 기술 5곳. 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Push 1C" .target "target"  .push 1 	.chance 120%   .on_hit true .on_miss false .can_apply_on_death true
+effect: .name "Push 2C" .target "target"  .push 2     .chance 120%	.on_hit true .on_miss false .can_apply_on_death true
+// DUE-023 강한 타격음과 동작을 피해 대신 2칸 밀치기로 표현한다.
 //#   공유 효과: 다른 영웅 2명(노상강도, 중보병) / 몬스터 기술 4곳. 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Stun 3" .target "target" .curio_result_type "negative" .chance 120% .stun 1	.on_hit true .on_miss false .queue true
 //#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 성전사, 중보병, 역병 의사) / 몬스터 기술 14곳. 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Push 1D" .target "target"  .push 1 	.chance 130%   .on_hit true .on_miss false .can_apply_on_death true
+effect: .name "Push 2D" .target "target"  .push 2     .chance 130%	.on_hit true .on_miss false .can_apply_on_death true
+// DUE-023 강한 타격음과 동작을 피해 대신 2칸 밀치기로 표현한다.
 //#   공유 효과: 다른 영웅 2명(노상강도, 중보병). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Stun 4" .target "target" .curio_result_type "negative" .chance 130% .stun 1	.on_hit true .on_miss false .queue true
 //#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 성전사, 중보병, 역병 의사) / 몬스터 기술 1곳. 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Push 1E" .target "target"  .push 1 	.chance 140%   .on_hit true .on_miss false .can_apply_on_death true
+effect: .name "Push 2E" .target "target"  .push 2     .chance 140%	.on_hit true .on_miss false .can_apply_on_death true
+// DUE-023 강한 타격음과 동작을 피해 대신 2칸 밀치기로 표현한다.
 //#   공유 효과: 다른 영웅 2명(노상강도, 중보병) / 몬스터 기술 5곳. 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
 effect: .name "Stun 5" .target "target" .curio_result_type "negative" .chance 140% .stun 1	.on_hit true .on_miss false .queue true
 //#   공유 효과: 다른 영웅 4명(현상금 사냥꾼, 성전사, 중보병, 역병 의사) / 몬스터 기술 14곳. 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Push 1F" .target "target"  .push 1 	.chance 150%   .on_hit true .on_miss false .can_apply_on_death true
+effect: .name "Push 2F" .target "target"  .push 2     .chance 150%	.on_hit true .on_miss false .can_apply_on_death true
+// DUE-023 강한 타격음과 동작을 피해 대신 2칸 밀치기로 표현한다.
 //#   공유 효과: 몬스터 기술 3곳. 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
 
@@ -207,13 +212,18 @@ effect: .name "Duelist Fleche Self Debuff" .target "performer" .chance 100% .dur
 // DUE-015 Fleche damage +25 -> +10; add existing attack-stance dodge -10 debuff (4 turns, removed outside stance). Trim direct offense while keeping riposte identity.
 
 //# DUE-012 Existing live Disengage effects, synchronized without numeric changes
-effect: .name "RB DUE Disengage Weaken 1" .target "target" .curio_result_type "negative" .chance 100% .duration 2 .combat_stat_buff 1 .damage_low_multiply -10% .damage_high_multiply -10% .on_hit true .on_miss false
+effect: .name "Pull 2A" .target "target" .pull 2 	.chance 100%	.on_hit true .on_miss false .can_apply_on_death true
+// DUE-022 방어 자세에서 물러서며 적 2·3·4열 한 명을 전열 동료 앞으로 유인한다. 기존 적 피해 감소를 2칸 당기기로 교체한다.
 // DUE-012 Preserve existing enemy damage -10/11/12/13/15 for 2 turns; sheet synchronization only.
-effect: .name "RB DUE Disengage Weaken 2" .target "target" .curio_result_type "negative" .chance 110% .duration 2 .combat_stat_buff 1 .damage_low_multiply -11% .damage_high_multiply -11% .on_hit true .on_miss false
+effect: .name "Pull 2B" .target "target" .pull 2 	.chance 110%	.on_hit true .on_miss false .can_apply_on_death true
+// DUE-022 방어 자세에서 물러서며 적 2·3·4열 한 명을 전열 동료 앞으로 유인한다. 기존 적 피해 감소를 2칸 당기기로 교체한다.
 // DUE-012 Preserve existing enemy damage -10/11/12/13/15 for 2 turns; sheet synchronization only.
-effect: .name "RB DUE Disengage Weaken 3" .target "target" .curio_result_type "negative" .chance 120% .duration 2 .combat_stat_buff 1 .damage_low_multiply -12% .damage_high_multiply -12% .on_hit true .on_miss false
+effect: .name "Pull 2C" .target "target" .pull 2 	.chance 120%	.on_hit true .on_miss false .can_apply_on_death true
+// DUE-022 방어 자세에서 물러서며 적 2·3·4열 한 명을 전열 동료 앞으로 유인한다. 기존 적 피해 감소를 2칸 당기기로 교체한다.
 // DUE-012 Preserve existing enemy damage -10/11/12/13/15 for 2 turns; sheet synchronization only.
-effect: .name "RB DUE Disengage Weaken 4" .target "target" .curio_result_type "negative" .chance 130% .duration 2 .combat_stat_buff 1 .damage_low_multiply -13% .damage_high_multiply -13% .on_hit true .on_miss false
+effect: .name "Pull 2D" .target "target" .pull 2 	.chance 130%	.on_hit true .on_miss false .can_apply_on_death true
+// DUE-022 방어 자세에서 물러서며 적 2·3·4열 한 명을 전열 동료 앞으로 유인한다. 기존 적 피해 감소를 2칸 당기기로 교체한다.
 // DUE-012 Preserve existing enemy damage -10/11/12/13/15 for 2 turns; sheet synchronization only.
-effect: .name "RB DUE Disengage Weaken 5" .target "target" .curio_result_type "negative" .chance 140% .duration 2 .combat_stat_buff 1 .damage_low_multiply -15% .damage_high_multiply -15% .on_hit true .on_miss false
+effect: .name "Pull 2E" .target "target" .pull 2 	.chance 140%	.on_hit true .on_miss false .can_apply_on_death true
+// DUE-022 방어 자세에서 물러서며 적 2·3·4열 한 명을 전열 동료 앞으로 유인한다. 기존 적 피해 감소를 2칸 당기기로 교체한다.
 // DUE-012 Preserve existing enemy damage -10/11/12/13/15 for 2 turns; sheet synchronization only.

@@ -38,13 +38,8 @@ effect: .name "RB DUE Duelist Feint Debuff 5" .target "target" .chance 150% .dur
 // DUE-007 Feint protection shred -20% (was -20..-30, same numbers as Mark for Death); accuracy debuff kept.
 
 // mod-only new effects
-effect: .name "RB DUE Disengage Weaken 1" .target "target" .curio_result_type "negative" .chance 100% .duration 2 .combat_stat_buff 1 .damage_low_multiply -10% .damage_high_multiply -10% .on_hit true .on_miss false
 // DUE-012 Preserve existing enemy damage -10/11/12/13/15 for 2 turns; sheet synchronization only.
-effect: .name "RB DUE Disengage Weaken 2" .target "target" .curio_result_type "negative" .chance 110% .duration 2 .combat_stat_buff 1 .damage_low_multiply -11% .damage_high_multiply -11% .on_hit true .on_miss false
 // DUE-012 Preserve existing enemy damage -10/11/12/13/15 for 2 turns; sheet synchronization only.
-effect: .name "RB DUE Disengage Weaken 3" .target "target" .curio_result_type "negative" .chance 120% .duration 2 .combat_stat_buff 1 .damage_low_multiply -12% .damage_high_multiply -12% .on_hit true .on_miss false
 // DUE-012 Preserve existing enemy damage -10/11/12/13/15 for 2 turns; sheet synchronization only.
-effect: .name "RB DUE Disengage Weaken 4" .target "target" .curio_result_type "negative" .chance 130% .duration 2 .combat_stat_buff 1 .damage_low_multiply -13% .damage_high_multiply -13% .on_hit true .on_miss false
 // DUE-012 Preserve existing enemy damage -10/11/12/13/15 for 2 turns; sheet synchronization only.
-effect: .name "RB DUE Disengage Weaken 5" .target "target" .curio_result_type "negative" .chance 140% .duration 2 .combat_stat_buff 1 .damage_low_multiply -15% .damage_high_multiply -15% .on_hit true .on_miss false
 // DUE-012 Preserve existing enemy damage -10/11/12/13/15 for 2 turns; sheet synchronization only.
