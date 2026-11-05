@@ -53,6 +53,7 @@ combat_skill: .id "break_guard" .level 3 .type "ranged" .atk 105% .dmg -60% .cri
 combat_skill: .id "break_guard" .level 4 .type "ranged" .atk 110% .dmg -60% .crit 0% .move 0 1 .launch 4321 .target 123 .is_crit_valid True .ignore_guard true  .effect "Clear Guarded Target" "Block Guard" "Pull 1E" "RB SB Puncture Armor 5"
 // SB-029 보호받는 전열을 열고 방어를 깎아 동료의 공격을 준비한다. 3열 적은 1칸만 끌어도 전열에 닿는다.
 // SB-028 구멍내기로 보호받는 4열 적도 2열까지 끌어와 아군 전열이 공격할 수 있도록 대상 범위를 복원한다.
+// SB-031 방향(SB-029·SB-030 공통): 도망자 출시 이후 적 대열을 흔드는(열을 뒤섞는) 기술이 더 많아져야 했고, 무희인 방패 파괴자에게 열 섞기 기술을 가장 많이 준다(구멍내기 당기기 1, 노출 당기기 2). [제작자 2026-11-05]
 // SB-025 (2026-10-25): Damage -55% -> -60% at all five levels. 당기기·보호 무시/해제/차단·방어도 감소를 겸하는 지원기의 직접 피해 대가를 늘린다. 방패 파괴자의 높은 기본 공격력까지 고려한다. 명중·치명·공격 유형·사거리·이동·기존 효과 유지.
 // SB-023 (2026-10-25, test): 보호 무시·해체·차단, 당기기2, 전진1 유지. 대상1234->123, 피해-50->-55%, 속도-1/-1/-2/-2/-3을 방어도-30/-32/-35/-37/-40%p(2턴)로 교환. 20261025 residual model 기준 잔차 -0.19%p; 물리 아군의 집중 공격에 가치가 생기도록 한다.
 
@@ -86,6 +87,7 @@ combat_skill: .id "expose" .level 2 .type "melee" .atk 100% .dmg -50% .crit 4.5%
 combat_skill: .id "expose" .level 3 .type "melee" .atk 105% .dmg -50% .crit 5.5% .move 1 0 .launch 321 .target 234 .is_crit_valid True .ignore_stealth true  .effect "Destealth" "Pull 2D"
 combat_skill: .id "expose" .level 4 .type "melee" .atk 110% .dmg -50% .crit 6.5% .move 1 0 .launch 321 .target 234 .is_crit_valid True .ignore_stealth true  .effect "Destealth" "Pull 2E"
 // SB-030 은신한 후열을 드러내 2칸 끌어온다. 파티의 후속 명중과 치명타까지 한 기술이 보장하지 않도록 회피 감소와 치명타 취약을 제거한다.
+// SB-031 방향(SB-029·SB-030 공통): 도망자 출시 이후 적 대열을 흔드는(열을 뒤섞는) 기술이 더 많아져야 했고, 무희인 방패 파괴자에게 열 섞기 기술을 가장 많이 준다(구멍내기 당기기 1, 노출 당기기 2). [제작자 2026-11-05]
 // SB-027 노출: 적 속도 -4~-8 -> 회피 -20/22/25/27/30% (받는 치명타·은신 해제 유지). 의도: 속도는 석궁 제압 사격으로 넘기고, 빈틈을 드러내는 노출 이름대로 회피를 깎는다. 근거: 회피 감소 기술 2개로 희소 -> 3개, 단일 속도 -8을 잃는 만큼 회피 최고치(저격수의 표식 -20~-30)와 같은 크기로 보상(제작자 10-27 지정).
 // SB-026 (2026-10-25): Damage -45% -> -50% at all five levels. 4열 은신 대응 사거리와 기존 약화를 유지하면서 직접 피해를 추가로 낮춘다. 지원 기능 확대의 대가를 더 명확하게 만든다. 명중·치명·공격 유형·사거리·이동·기존 효과 유지.
 // SB-024 (2026-10-25, test): 4열 은신 대응을 위해 대상123->1234, 피해-40->-45%. 명중90, 치명·속도 약화·은신 해제·후퇴1 유지. 20261025 residual model의 실제 초기 은신 편성 도달률을 반영한 잔차 -2.87%p; 구멍내기와 대상 역할을 나눈다.

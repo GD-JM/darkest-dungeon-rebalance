@@ -32,6 +32,7 @@ combat_skill: .id "feint" .level 1 .type "melee" .atk 100% .dmg -50% .crit 9% .l
 combat_skill: .id "feint" .level 2 .type "melee" .atk 105% .dmg -50% .crit 10% .launch 321 .target 12 .is_crit_valid True  .effect "Mark Self" "RB DUE Duelist Feint Buff 3" "RB DUE Duelist Feint Debuff 3" .valid_modes stance_defensive
 combat_skill: .id "feint" .level 3 .type "melee" .atk 110% .dmg -50% .crit 11% .launch 321 .target 12 .is_crit_valid True  .effect "Mark Self" "RB DUE Duelist Feint Buff 4" "RB DUE Duelist Feint Debuff 4" .valid_modes stance_defensive
 combat_skill: .id "feint" .level 4 .type "melee" .atk 115% .dmg -50% .crit 12% .launch 321 .target 12 .is_crit_valid True  .effect "Mark Self" "RB DUE Duelist Feint Buff 5" "RB DUE Duelist Feint Debuff 5" .valid_modes stance_defensive
+// DUE-024 의도(DUE-021 보충): 노상강도·중보병 반격은 1레벨 피해 −40%에서 5레벨 −15%/−20%로 레벨과 함께 세지는데(반격 기술 피해 + 레벨별 자기 반격 보정), 결투가 반격은 1레벨부터 피해 보정 0%라 저레벨 체감이 훨씬 세고 고레벨에선 수렴한다. 눈속임 반격 피해 강화를 +10/15/20/25/30%로 두어 저레벨 격차를 줄이고 고레벨은 원작(+35%)에 가깝게, 다른 반격 영웅과 같은 방향의 곡선으로 맞춘다. [제작자 2026-11-05]
 // DUE-016 Feint riposte-only damage +25/27/30/32/35 -> +20/22/25/27/30; retain PROT -15/17/20/22/25 and conditional accuracy reduction. Latest correction is 20..30, not flat20.
 // DUE-013 feint: target PROT -10/12/15/17/20% -> -15/17/20/22/25% (3 turns).
 // DUE-013 페인트: 방어 감소 −10~−20% → −15/17/20/22/25%(3턴). 의도: 죽음의 표식이 받는 피해로 바뀌어(BH-022) 숫자 겹침(DUE-007 이유)이 사라짐 — 바닐라(−20~−30)와 DUE-007 사이로 [제작자 10-23]
