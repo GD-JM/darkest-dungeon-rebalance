@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<!-- FIX-002: Standalone PvE cure keys. Reuse shipped PvE camping cure phrases in every supported language; no arena_priority or combat mechanics changes. -->
+  <language id="english">
+    <entry id="effect_tooltip_cure_poison"><![CDATA[Remove {colour_start|blight}Blight{colour_end}]]></entry>
+    <entry id="effect_tooltip_cure_bleed"><![CDATA[Remove {colour_start|bleed}Bleeding{colour_end}]]></entry>
+  </language>
+  <language id="french">
+    <entry id="effect_tooltip_cure_poison"><![CDATA[Soigne une {colour_start|blight}infection{colour_end}]]></entry>
+    <entry id="effect_tooltip_cure_bleed"><![CDATA[Soigne un {colour_start|bleed}saignement{colour_end}]]></entry>
+  </language>
+  <language id="german">
+    <entry id="effect_tooltip_cure_poison"><![CDATA[{colour_start|blight}Gifthauch{colour_end} entfernen]]></entry>
+    <entry id="effect_tooltip_cure_bleed"><![CDATA[{colour_start|bleed}Bluten{colour_end} entfernen]]></entry>
+  </language>
+  <language id="spanish">
+    <entry id="effect_tooltip_cure_poison"><![CDATA[Cura {colour_start|blight}infecciones{colour_end}.]]></entry>
+    <entry id="effect_tooltip_cure_bleed"><![CDATA[Detiene {colour_start|bleed}hemorragias{colour_end}.]]></entry>
+  </language>
+  <language id="brazilian">
+    <entry id="effect_tooltip_cure_poison"><![CDATA[Remover {colour_start|blight}Peste{colour_end}]]></entry>
+    <entry id="effect_tooltip_cure_bleed"><![CDATA[Remover {colour_start|bleed}Sangramento{colour_end}]]></entry>
+  </language>
+  <language id="russian">
+    <entry id="effect_tooltip_cure_poison"><![CDATA[Нейтрализовать {colour_start|blight}яд{colour_end}]]></entry>
+    <entry id="effect_tooltip_cure_bleed"><![CDATA[Нейтрализовать {colour_start|bleed}кровотечение{colour_end}]]></entry>
+  </language>
+  <language id="polish">
+    <entry id="effect_tooltip_cure_poison"><![CDATA[Usunięcie: {colour_start|blight}Zaraza{colour_end}]]></entry>
+    <entry id="effect_tooltip_cure_bleed"><![CDATA[Usunięcie: {colour_start|bleed}Krwawienie{colour_end}]]></entry>
+  </language>
+  <language id="czech">
+    <entry id="effect_tooltip_cure_poison"><![CDATA[Odstranit {colour_start|blight}sněť{colour_end}]]></entry>
+    <entry id="effect_tooltip_cure_bleed"><![CDATA[Odstranit {colour_start|bleed}krvácení{colour_end}]]></entry>
+  </language>
+  <language id="italian">
+    <entry id="effect_tooltip_cure_poison"><![CDATA[Rimuovi {colour_start|blight}Morbo{colour_end}]]></entry>
+    <entry id="effect_tooltip_cure_bleed"><![CDATA[Rimuovi {colour_start|bleed}Sanguinamento{colour_end}]]></entry>
+  </language>
+  <language id="schinese">
+    <entry id="effect_tooltip_cure_poison"><![CDATA[移除目标的{colour_start|blight}腐蚀{colour_end}]]></entry>
+    <entry id="effect_tooltip_cure_bleed"><![CDATA[移除目标的{colour_start|bleed}流血{colour_end}]]></entry>
+  </language>
+  <language id="japanese">
+    <entry id="effect_tooltip_cure_poison"><![CDATA[{colour_start|blight}毒{colour_end}を解消]]></entry>
+    <entry id="effect_tooltip_cure_bleed"><![CDATA[{colour_start|bleed}出血{colour_end}を解消]]></entry>
+  </language>
+  <language id="koreana">
+    <entry id="effect_tooltip_cure_poison"><![CDATA[{colour_start|blight}중독{colour_end} 제거]]></entry>
+    <entry id="effect_tooltip_cure_bleed"><![CDATA[{colour_start|bleed}출혈{colour_end} 제거]]></entry>
+  </language>
+  <language id="koreanb">
+    <entry id="effect_tooltip_cure_poison"><![CDATA[{colour_start|blight}중독{colour_end} 제거]]></entry>
+    <entry id="effect_tooltip_cure_bleed"><![CDATA[{colour_start|bleed}출혈{colour_end} 제거]]></entry>
+  </language>
+</root>

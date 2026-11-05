@@ -1,0 +1,62 @@
+[
+  {
+    "id": "LEP-009",
+    "decision": "adopted",
+    "original_quote": "나병 방어도 감소 3턴으로 늘리고",
+    "rationale_ko": "갑옷 쪼개기의 방어 감소 지속만 2턴에서 3턴으로 늘린다.",
+    "files": [
+      "effects/rebalance_leper.effects.darkest",
+      "heroes/leper/leper.effects_edit.txt",
+      "heroes/leper/leper.info.darkest",
+      "design/changes/leper.md",
+      "design/workshop/hero_cards.json",
+      "design/workshop/why.json"
+    ],
+    "supersedes": [
+      "LEP-005"
+    ],
+    "source": {
+      "product": "codex",
+      "reference": "2026-11-05 현재 대화: 섬광 가루 7·갑옷 쪼개기·치료 툴팁 요청",
+      "event_id": null,
+      "message_id": null,
+      "session_id": null
+    }
+  },
+  {
+    "id": "PD-003-rationale-20261105",
+    "decision": "adopted",
+    "original_quote": "역병 혼란기체폭발이 섬광탄이랑 거의 비슷하거든 그래서 당겨오기로 차별화를 주었다 주석 추가해",
+    "rationale_ko": "섬광탄과의 역할 중복을 구분하는 당기기 전환 의도를 보완한다. 수치는 변경하지 않는다.",
+    "files": [
+      "heroes/plague_doctor/plague_doctor.info.darkest",
+      "design/changes/plague_doctor.md"
+    ],
+    "supersedes": [],
+    "source": {
+      "product": "codex",
+      "reference": "2026-11-05 현재 대화: 섬광 가루 7·갑옷 쪼개기·치료 툴팁 요청",
+      "event_id": null,
+      "message_id": null,
+      "session_id": null
+    }
+  },
+  {
+    "id": "FIX-002",
+    "decision": "adopted",
+    "original_quote": "여기서 툴팁 오류 수정하고 5-5 회복이 아닌 5 회복 이렇게 뜨게 가능? 단지 이 기술 뿐만 아니라 모든 회복 기술에 적용해줘. 근데 한국어판만 하면 안되고 모든 번역에서 툴팁이 올바르게 뜨게 해줘야해 그 작업 가능해?",
+    "rationale_ko": "누락된 개별 중독/출혈 치료 문자열을 전 언어에 제공한다. 고정 회복 단일값 표시는 별도 조사 대상으로 두며 이번 번역 수정의 완료 범위와 구분한다.",
+    "files": [
+      "localization/rebalance_cure_tooltips.string_table.xml",
+      "design/changes/tooltip_fixes.md"
+    ],
+    "supersedes": [],
+    "source": {
+      "product": "codex",
+      "reference": "2026-11-05 현재 대화: 섬광 가루 7·갑옷 쪼개기·치료 툴팁 요청",
+      "event_id": null,
+      "message_id": null,
+      "session_id": null
+    }
+  }
+]

@@ -72,6 +72,7 @@ combat_skill: .id "intimidate" .level 2 .type "melee" .atk 100% .dmg -40% .crit 
 combat_skill: .id "intimidate" .level 3 .type "melee" .atk 105% .dmg -40% .crit 6% .launch 1 .target 1 .is_crit_valid True .effect "RB LEP Intimidate 4"
 combat_skill: .id "intimidate" .level 4 .type "melee" .atk 110% .dmg -40% .crit 7% .launch 1 .target 1 .is_crit_valid True .effect "RB LEP Intimidate 5"
 // LEP-008 (2026-11-02): Sunder ACC85 -> 90 (90/95/100/105/110). Improve armour-shred delivery without changing PROT reduction, resistance roll, duration2, damage or rank1 restriction.
+// LEP-009 갑옷 쪼개기: 방어 감소 지속을 전 레벨 2턴에서 3턴으로 연장. 사용자 요청 "나병 방어도 감소 3턴으로 늘리고". 감소량·확률·명중·피해·사용열·대상열은 유지.
 // LEP-001 intimidate: 적 피해·속도 감소·은신 해제·자기 표식·자기 속도 전부 제거 -> 방어 무시 일격. 1열 -> 1열(축출과 같은 모션), 명중 75~95·치명 3~7%(토막치기와 같음), 피해 -20%. 방어 20% 넘는 적에게만 토막치기보다 셈. 나병환자는 서포터가 받쳐 주는 왕 — 은신 해제·약화는 정체성과 안 맞음 [제작자]
 // LEP-002 intimidate: 방어 무시 -> 맞은 적 방어 -15/17/20/22/25%(2턴). 이름(위협)에 맞는 적 약화. 명중·치명·피해 -20%·1열->1열은 LEP-001 그대로. 첫 타는 토막치기보다 약하고, 이어지는 토막치기·아군 공격이 이득 [제작자]
 // LEP-003 intimidate: 명중 75~95 -> 85~105, 피해 -20% -> -40%(같은 모션의 축출과 동일). 첫 타가 약해진 만큼 방어 감소 -15~25 -> -25/27/30/32/35%(2턴). 치명 3~7% 유지 [제작자]

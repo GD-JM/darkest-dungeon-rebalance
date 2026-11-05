@@ -120,3 +120,6 @@ effect: .name "RB ANT Cower Unmark" .target "performer" .chance 100% .untag 1 .o
 // ANT-010 Cower removes own mark (same key as vanilla Clear Marked Target).
 effect: .name "RB ANT Guard Riposte" .target "target" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3 .on_hit true .on_miss true .queue true
 // ANT-013 Protect Me gives the guarding ally riposte 3 turns, no damage modifier (Duelist form; never shorter than any own riposte). Riposte damage comes from the ally riposte_skill.
+
+effect: .name "RB ANT Flash Burn Champion" .target "target" .curio_result_type "negative" .chance 140% .dotBurn 7 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
+// ANT-015 Level-5 Flashpowder burn 3 -> 7. Champion reward comparable to Runaway damage, without direct damage, crits or decay delay; no changes to shared Runaway/Vestal burn effects.
