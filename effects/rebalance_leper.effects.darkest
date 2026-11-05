@@ -3,31 +3,36 @@
 
 
 // mod-only new effects
-effect: .name "RB LEP Intimidate 1" .target "target" .curio_result_type "negative" .chance 100% .duration 3 .combat_stat_buff 1 .protection_rating_add -30% .on_hit true .on_miss false .queue true
+effect: .name "RB LEP Intimidate 1" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .combat_stat_buff 1 .protection_rating_add -30% .on_hit true .on_miss false .queue true
+// LEP-010 (2026-11-05): Debuff chance 100/110/120/130/140 -> 130/140/150/160/170%, matching vanilla Target Whistle. Make the rank-1 armour-breaking hit reliable without increasing shred, duration or direct damage; accuracy and gear still matter.
 // LEP-009 (2026-11-05): Armour reduction duration 2 -> 3 turns at all levels; retain -30/35/40/45/50% and proc100..140. User requested a longer armour-shred window; no other skill change.
 // LEP-002 Intimidate: protection -15% for 2 turns (short, unlike the 3-turn marks; stays below armor-pierce specialists).
 // LEP-003 Protection -25% (raised with the hit lowered to Purge stats: dmg -40%, acc 85-105).
 // LEP-004 Duration 2 -> 3 turns: with the hit at -40% the debuff is the reason to use the skill.
 // LEP-005 Back to 2 turns with a heavier shred: protection -30%.
-effect: .name "RB LEP Intimidate 2" .target "target" .curio_result_type "negative" .chance 110% .duration 3 .combat_stat_buff 1 .protection_rating_add -35% .on_hit true .on_miss false .queue true
+effect: .name "RB LEP Intimidate 2" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .combat_stat_buff 1 .protection_rating_add -35% .on_hit true .on_miss false .queue true
+// LEP-010 (2026-11-05): Debuff chance 100/110/120/130/140 -> 130/140/150/160/170%, matching vanilla Target Whistle. Make the rank-1 armour-breaking hit reliable without increasing shred, duration or direct damage; accuracy and gear still matter.
 // LEP-009 (2026-11-05): Armour reduction duration 2 -> 3 turns at all levels; retain -30/35/40/45/50% and proc100..140. User requested a longer armour-shred window; no other skill change.
 // LEP-002 Intimidate: protection -17% for 2 turns (short, unlike the 3-turn marks; stays below armor-pierce specialists).
 // LEP-003 Protection -27% (raised with the hit lowered to Purge stats: dmg -40%, acc 85-105).
 // LEP-004 Duration 2 -> 3 turns: with the hit at -40% the debuff is the reason to use the skill.
 // LEP-005 Back to 2 turns with a heavier shred: protection -35%.
-effect: .name "RB LEP Intimidate 3" .target "target" .curio_result_type "negative" .chance 120% .duration 3 .combat_stat_buff 1 .protection_rating_add -40% .on_hit true .on_miss false .queue true
+effect: .name "RB LEP Intimidate 3" .target "target" .curio_result_type "negative" .chance 150% .duration 3 .combat_stat_buff 1 .protection_rating_add -40% .on_hit true .on_miss false .queue true
+// LEP-010 (2026-11-05): Debuff chance 100/110/120/130/140 -> 130/140/150/160/170%, matching vanilla Target Whistle. Make the rank-1 armour-breaking hit reliable without increasing shred, duration or direct damage; accuracy and gear still matter.
 // LEP-009 (2026-11-05): Armour reduction duration 2 -> 3 turns at all levels; retain -30/35/40/45/50% and proc100..140. User requested a longer armour-shred window; no other skill change.
 // LEP-002 Intimidate: protection -20% for 2 turns (short, unlike the 3-turn marks; stays below armor-pierce specialists).
 // LEP-003 Protection -30% (raised with the hit lowered to Purge stats: dmg -40%, acc 85-105).
 // LEP-004 Duration 2 -> 3 turns: with the hit at -40% the debuff is the reason to use the skill.
 // LEP-005 Back to 2 turns with a heavier shred: protection -40%.
-effect: .name "RB LEP Intimidate 4" .target "target" .curio_result_type "negative" .chance 130% .duration 3 .combat_stat_buff 1 .protection_rating_add -45% .on_hit true .on_miss false .queue true
+effect: .name "RB LEP Intimidate 4" .target "target" .curio_result_type "negative" .chance 160% .duration 3 .combat_stat_buff 1 .protection_rating_add -45% .on_hit true .on_miss false .queue true
+// LEP-010 (2026-11-05): Debuff chance 100/110/120/130/140 -> 130/140/150/160/170%, matching vanilla Target Whistle. Make the rank-1 armour-breaking hit reliable without increasing shred, duration or direct damage; accuracy and gear still matter.
 // LEP-009 (2026-11-05): Armour reduction duration 2 -> 3 turns at all levels; retain -30/35/40/45/50% and proc100..140. User requested a longer armour-shred window; no other skill change.
 // LEP-002 Intimidate: protection -22% for 2 turns (short, unlike the 3-turn marks; stays below armor-pierce specialists).
 // LEP-003 Protection -32% (raised with the hit lowered to Purge stats: dmg -40%, acc 85-105).
 // LEP-004 Duration 2 -> 3 turns: with the hit at -40% the debuff is the reason to use the skill.
 // LEP-005 Back to 2 turns with a heavier shred: protection -45%.
-effect: .name "RB LEP Intimidate 5" .target "target" .curio_result_type "negative" .chance 140% .duration 3 .combat_stat_buff 1 .protection_rating_add -50% .on_hit true .on_miss false .queue true
+effect: .name "RB LEP Intimidate 5" .target "target" .curio_result_type "negative" .chance 170% .duration 3 .combat_stat_buff 1 .protection_rating_add -50% .on_hit true .on_miss false .queue true
+// LEP-010 (2026-11-05): Debuff chance 100/110/120/130/140 -> 130/140/150/160/170%, matching vanilla Target Whistle. Make the rank-1 armour-breaking hit reliable without increasing shred, duration or direct damage; accuracy and gear still matter.
 // LEP-009 (2026-11-05): Armour reduction duration 2 -> 3 turns at all levels; retain -30/35/40/45/50% and proc100..140. User requested a longer armour-shred window; no other skill change.
 // LEP-002 Intimidate: protection -25% for 2 turns (short, unlike the 3-turn marks; stays below armor-pierce specialists).
 // LEP-003 Protection -35% (raised with the hit lowered to Purge stats: dmg -40%, acc 85-105).

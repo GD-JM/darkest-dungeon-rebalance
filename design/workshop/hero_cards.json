@@ -873,6 +873,7 @@
      "ACC 90, DMG -40%, CRIT 3%",
      "Hits rank 1 only (no stealth bypass)",
      "Target: PROT -30 to -50% (3 turns)",
+     "Debuff chance 130-170%",
      "No SPD debuff",
      "No self-mark, SPD buff or destealth"
     ]
