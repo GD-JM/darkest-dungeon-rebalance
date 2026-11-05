@@ -103,6 +103,12 @@ def build(src, out, item, package, heroes=None):
         os.makedirs(os.path.dirname(p), exist_ok=True)
         json.dump({'buffs': need_b}, open(p, 'w', encoding='utf-8'), indent='\t')
     # 기술 이름 현지화: 스냅샷의 localization/*.string_table.xml → <아이템번호>_<언어>.loc2 (make_loc 공용, 번호만 바꿔 부른다)
+    # REFINED-HERO-001 [2026-11-05] 영웅 단독판은 그 영웅에 필요한 문자열 표만 넣는다(pkg['loc'], 확장자 없는 이름 목록).
+    # 다른 영웅의 기술 이름·툴팁이 단독판에 섞이지 않게 한다. loc 키가 없으면(합본) 전부.
+    if pkg.get('loc') is not None:
+        for f in glob.glob(os.path.join(src, 'localization', '*.string_table.xml')):
+            if os.path.basename(f)[:-len('.string_table.xml')] not in pkg['loc']:
+                os.remove(f)
     import make_loc
     make_loc.M, make_loc.G = src, GAME
     make_loc.PFID = str(item)
@@ -113,6 +119,10 @@ def build(src, out, item, package, heroes=None):
     esc = lambda s: s.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
     proj = proj.replace('{ITEM_ID}', str(item)).replace('{MOD_DATA_PATH}', out.replace('\\', '/') + '/')
     proj = proj.replace('{DESCRIPTION}', esc(desc)).replace('{UPDATE_DETAILS}', esc(pkg.get('note', 'Update')))
+    if pkg.get('title'):   # REFINED-HERO-001: 단독판은 게임 모드 목록에 자기 제목으로 보인다
+        proj = re.sub(r'<Title>.*?</Title>', lambda m: '<Title>%s</Title>' % esc(pkg['title']), proj)
+    if pkg.get('short'):
+        proj = re.sub(r'<ItemDescriptionShort>.*?</ItemDescriptionShort>', lambda m: '<ItemDescriptionShort>%s</ItemDescriptionShort>' % esc(pkg['short']), proj)
     open(os.path.join(out, 'project.xml'), 'w', encoding='utf-8', newline='\n').write(proj.replace('\r\n', '\n'))
     entries = []
     for root, _, files in os.walk(out):

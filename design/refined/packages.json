@@ -1,9 +1,63 @@
 {
- "_doc": "Darkest Refined 꾸러미 정의 (tools/refined/build_refined.py). heroes가 비면 20명 전원(tools/strength.py S.KO 순서). [사용자 2026-11-02] 합본 먼저 출시, 영웅 단독판은 나중에(DLC 영웅 먼저).",
+ "_doc": "Darkest Refined 꾸러미 정의 (tools/refined/build_refined.py). heroes가 비면 20명 전원(tools/strength.py S.KO 순서). [사용자 2026-11-02] 합본 먼저 출시, 영웅 단독판은 나중에(DLC 영웅 먼저). 영웅 단독판(REFINED-HERO-001, 2026-11-05): 출시 순서 번호, loc = 그 영웅에 필요한 문자열 표만(고행자 고통의 약화 제거 툴팁 오타 수정 = rebalance_fixes).",
  "refined": {
   "key": "refined",
   "heroes": [],
   "note": "Darkest Refined — first release.",
   "thumbnail": "preview_darkest_refined.png"
+ },
+ "musketeer": {
+  "key": "musketeer",
+  "heroes": [
+   "musketeer"
+  ],
+  "loc": [
+   "rebalance_musketeer"
+  ],
+  "title": "Darkest Refined No.01 - Musketeer",
+  "short": "Darkest Refined No.01: Musketeer rebalance only. Do not enable together with the Darkest Refined collection or other Musketeer mods.",
+  "note": "Darkest Refined No.01 Musketeer release."
+ },
+ "flagellant": {
+  "key": "flagellant",
+  "heroes": [
+   "flagellant"
+  ],
+  "loc": [
+   "rebalance_fixes"
+  ],
+  "title": "Darkest Refined No.02 - Flagellant",
+  "short": "Darkest Refined No.02: Flagellant rebalance only. Do not enable together with the Darkest Refined collection or other Flagellant mods.",
+  "note": "Darkest Refined No.02 Flagellant release."
+ },
+ "shieldbreaker": {
+  "key": "shieldbreaker",
+  "heroes": [
+   "shieldbreaker"
+  ],
+  "loc": [],
+  "title": "Darkest Refined No.03 - Shieldbreaker",
+  "short": "Darkest Refined No.03: Shieldbreaker rebalance only. Do not enable together with the Darkest Refined collection or other Shieldbreaker mods.",
+  "note": "Darkest Refined No.03 Shieldbreaker release."
+ },
+ "runaway": {
+  "key": "runaway",
+  "heroes": [
+   "runaway"
+  ],
+  "loc": [],
+  "title": "Darkest Refined No.04 - Runaway",
+  "short": "Darkest Refined No.04: Runaway rebalance only. Do not enable together with the Darkest Refined collection or other Runaway mods.",
+  "note": "Darkest Refined No.04 Runaway release."
+ },
+ "duelist": {
+  "key": "duelist",
+  "heroes": [
+   "duelist"
+  ],
+  "loc": [],
+  "title": "Darkest Refined No.05 - Duelist",
+  "short": "Darkest Refined No.05: Duelist rebalance only. Do not enable together with the Darkest Refined collection or other Duelist mods.",
+  "note": "Darkest Refined No.05 Duelist release."
  }
 }

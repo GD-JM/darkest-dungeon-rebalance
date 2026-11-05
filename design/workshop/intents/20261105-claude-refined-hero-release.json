@@ -1,0 +1,24 @@
+[
+  {
+    "id": "REFINED-HERO-001",
+    "decision": "adopted",
+    "original_quote": "자 이제 업로드 하자 이 정도면 충분한 듯 1번부터 차례로 업로드 시작해 공개로",
+    "context_quotes": [
+      {"quote": "그럼 그냥 합본판 먼저 내고 나중에 영웅 일일이 분리시키도록 할까?", "speaker": "user", "source": "Claude Code 세션 29a675d2, 2026-11-02"},
+      {"quote": "다키스트 리파인드 하고 숫자가 기준이 뭐야? 분명치 않으면 내가 출시하는 순서대로 내자 1. 총사 2. 고행자 3. 실브 4. 도망자 5. 결투가 6. 유물수집상", "speaker": "user", "source": "Claude Code 세션 29a675d2, 2026-11-04"}
+    ],
+    "rationale_ko": "Darkest Refined 영웅 단독판(출시 순서 No.01 총사 ~ No.05 결투가)을 같은 빌더로 만든다. 단독판은 그 영웅의 영웅 파일·효과·강화와 그 영웅에 필요한 문자열 표만 담고(다른 영웅 기술 이름이 섞이지 않게), 게임 모드 목록에 자기 제목으로 보인다. 비공개 시안 아이템을 그대로 출시 아이템으로 쓴다.",
+    "source": {"product": "claude", "reference": "Claude Code 세션 29a675d2, 2026-11-05 공개 업로드 요청", "session_id": "29a675d2-6792-4e0a-b0de-212cae3f4b77", "message_id": null, "event_id": null},
+    "files": ["tools/refined/build_refined.py", "design/refined/packages.json", "design/refined/items.json"],
+    "supersedes": []
+  },
+  {
+    "id": "REFINED-GALLERY-001",
+    "decision": "adopted",
+    "original_quote": "최근꺼 보니까 스팀 이미지에 기존 리밸런싱의 패치내역 이미지와 새로 만든 이미지가 섞여있던데 기존 이미지 전부 빼줄 수 있어?",
+    "rationale_ko": "합본 갤러리에 옛 리밸런스 비교 카드('Every Hero Worth Taking' 표기)를 넣지 않고 새 스타일 이미지만 둔다.",
+    "source": {"product": "claude", "reference": "Claude Code 세션 29a675d2, 2026-11-03", "session_id": "29a675d2-6792-4e0a-b0de-212cae3f4b77", "message_id": null, "event_id": null},
+    "files": ["tools/refined/publish_refined.py"],
+    "supersedes": []
+  }
+]

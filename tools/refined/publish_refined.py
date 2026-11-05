@@ -87,7 +87,7 @@ def descriptions():
 
 
 def gallery(cards, job, used_urls):
-    """소개 4 → 영웅마다 스포트라이트 → 비교 카드. 모든 언어 설명에 이미 [img]로 들어간 이미지는 뺀다."""
+    """소개 4 → 영웅마다 스포트라이트. 옛 비교 카드는 넣지 않고, 모든 언어 설명에 이미 [img]로 들어간 이미지도 뺀다."""
     urls = json.loads((BRAND / 'desc_asset_urls.json').read_text(encoding='utf-8'))
     in_desc = {n for n, u in urls.items() if u in used_urls}
     up = job / 'gallery'
@@ -102,7 +102,7 @@ def gallery(cards, job, used_urls):
         if h not in shown and spot.exists() and f'spotlight_{h}.png' not in in_desc:
             files.append(fit_png(spot, up / f'spot_{h}.png'))
         shown.add(h)
-        files.append(fit_png(job / 'cards' / c['path'], up / ('card_' + c['path'])))
+        # [사용자 2026-11-03] 옛 리밸런스 비교 카드('Every Hero Worth Taking' 표기)는 갤러리에 넣지 않는다 — 새 스타일 이미지만
     return files
 
 
