@@ -140,8 +140,8 @@
     ],
     "new": [
      "Target: dodge -10 to -15% (2 turns)",
-     "Burn 1/1/2/2/3; no ACC debuff",
-     "Level 5: MOVE res -30% (2 turns)"
+     "Burn 1/1/2/2/7; no ACC debuff",
+     "MOVE res -20/-22/-25/-27/-30% (2 turns)"
     ]
    },
    {
@@ -254,8 +254,8 @@
     ],
     "new": [
      "No mark or stun removal",
-     "Party stress heal 3-5",
-     "Stress heal always works"
+     "Stress heal 2/2/3/3/4, including self",
+     "100% chance; once per use"
     ]
    },
    {
@@ -763,7 +763,7 @@
     ],
     "new": [
      "Self: moves back 2",
-     "Push 2",
+     "Push 3",
      "Crit 8-12%"
     ]
    },
@@ -1016,7 +1016,7 @@
     "new": [
      "ACC 90, DMG -40%, CRIT 3%",
      "Hits rank 1 only (no stealth bypass)",
-     "Target: PROT -30 to -50% (2 turns)",
+     "Target: PROT -30 to -50% (3 turns)",
      "No SPD debuff",
      "No self-mark, SPD buff or destealth"
     ]

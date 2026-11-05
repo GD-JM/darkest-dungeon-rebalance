@@ -111,14 +111,15 @@
   "ids": [
    "ANT-001",
    "ANT-011",
-   "ANT-014"
+   "ANT-014",
+   "ANT-015"
   ],
   "principles": [
    "P-19",
    "P-25"
   ],
-  "en": "One target at every level so it can carry burn; at level 5 it also loosens the target for pulls and knockbacks.",
-  "ko": "화상을 싣기 위해 모든 레벨에서 적 1명을 노리고, 5레벨에는 이동 저항을 깎아 끌어오기·밀치기를 돕습니다."
+  "en": "MOVE resistance reduction supports displacement at every level. Level 5 raises burn to 7 as the Champion damage reward.",
+  "ko": "이동 저항 감소는 모든 레벨에서 아군의 위치 교란을 돕고,5레벨에는 화상7로 공격 보상이 크게 증가한다."
  },
  "arbalest|battlefield_bandage": {
   "ids": [
@@ -153,15 +154,16 @@
    "ARB-006",
    "ARB-010",
    "ARB-009",
-   "ARB-014"
+   "ARB-014",
+   "ARB-020"
   ],
   "principles": [
    "G-05",
    "P-22",
    "P-11"
   ],
-  "en": "Her guild text calls her a rallying point, so the flare now gives guaranteed stress relief to the rest of the party, an alternative to relying on the Jester. To keep it from being a do-everything skill, the amount stays modest and the ally stun/mark cleanse moved to other heroes. The party stress heal rises to 3-5.",
-  "ko": "길드 설명이 그녀를 '결집소'라 부르므로, 신호탄이 나머지 아군 전원의 스트레스를 확정으로 회복한다 — 광대에만 기대지 않는 선택지. 만능 기술이 되지 않게 회복량은 적당히 두고 아군 기절·표식 해제는 다른 영웅에게 넘겼다. 아군 스트레스 회복을 3~5로 올립니다."
+  "en": "Includes the Arbalest in stress relief, lowering each heal by one to keep total recovery close to the previous level.",
+  "ko": "자신도 회복하도록 대상을 넓히되 개별 회복량을1 낮춰 전체 회복량을 조절한다."
  },
  "arbalest|sniper_shot": {
   "ids": [
@@ -600,14 +602,15 @@
   "ids": [
    "HWY-001",
    "HWY-017",
-   "HWY-021"
+   "HWY-021",
+   "HWY-032"
   ],
   "principles": [
    "P-12",
    "G-00"
   ],
-  "en": "With 95 accuracy and +50% damage at no cost it was overpowered, but a flat nerf would feel bad. Instead he recoils 2 ranks (mirroring the Grave Robber's Lunge), so it is hard to fire repeatedly, and the push grows to 2 as an upside. This loosens the fixed Vestal/Jester/Highwayman/Shieldbreaker lineup. Crit rises to 8-12% (same as Lunge) to reward the two-rank retreat.",
-  "ko": "명중 95에 대가 없는 피해 +50%로 명백히 과했지만, 수치를 그냥 깎으면 체감이 불쾌합니다. 대신 2칸 뒤로 물러나게 해(도굴꾼 돌진과 대칭) 연달아 쓰기 어렵게 하고, 밀치기를 2칸으로 늘려 쓰는 맛을 더했습니다. 성녀·광대·노상강도·방패 파괴자 고정 조합을 푸는 목적도 있습니다. 2칸 밀려나는 대가가 커서 치명을 8~12%(돌진과 같음)로 올렸다."
+  "en": "Pushes the front enemy three ranks, bringing the original back enemy to rank 3 in a full single-size lineup.",
+  "ko": "강한 반동으로 적1열을3칸 밀어 원래4열 적을3열로 끌어올린다."
  },
  "highwayman|take_aim": {
   "ids": [
@@ -814,15 +817,16 @@
    "LEP-002",
    "LEP-003",
    "LEP-005",
-   "LEP-008"
+   "LEP-008",
+   "LEP-009"
   ],
   "principles": [
    "P-19",
    "G-02",
    "G-01"
   ],
-  "en": "Intimidate was a support skill (enemy debuffs, self-mark, destealth) that clashed with the Leper's identity as a king carried by his supporters, and its destealth overlapped five other skills. It is now a front-line blow with the same accuracy and damage as Purge, its twin animation, that briefly cracks the target's armor so Chop and the party can break heavily armored front-liners. Accuracy now starts at 90 (+5) to improve delivery; damage, rank-1 restriction, shred and resistance rolls are unchanged.",
-  "ko": "위협은 적 약화·자기 표식·은신 해제를 거는 지원 기술이라 '서포터가 받쳐 주는 왕'인 나병환자 정체성과 맞지 않았고, 은신 해제는 다른 다섯 기술과 겹쳤다. 이제 같은 모션의 축출과 명중·피해가 같은 1열 일격으로, 이름대로 적의 갑옷을 짧고 크게 깎아 토막치기와 아군 공격이 중장갑 전열을 뚫게 한다. LEP-008: 명중85→90으로 효과 전달을 안정화한다. 피해−40·1열 제한·방어 감소·저항 판정은 그대로다."
+  "en": "Intimidate was a support skill (enemy debuffs, self-mark, destealth) that clashed with the Leper's identity as a king carried by his supporters, and its destealth overlapped five other skills. It is now a front-line blow with the same accuracy and damage as Purge, its twin animation, that briefly cracks the target's armor so Chop and the party can break heavily armored front-liners. Accuracy now starts at 90 (+5) to improve delivery; damage, rank-1 restriction, shred and resistance rolls are unchanged. LEP-009 extends the armour reduction from 2 to 3 turns, giving follow-up attacks a longer window; magnitude and application chance are unchanged.",
+  "ko": "위협은 적 약화·자기 표식·은신 해제를 거는 지원 기술이라 '서포터가 받쳐 주는 왕'인 나병환자 정체성과 맞지 않았고, 은신 해제는 다른 다섯 기술과 겹쳤다. 이제 같은 모션의 축출과 명중·피해가 같은 1열 일격으로, 이름대로 적의 갑옷을 짧고 크게 깎아 토막치기와 아군 공격이 중장갑 전열을 뚫게 한다. LEP-008: 명중85→90으로 효과 전달을 안정화한다. 피해−40·1열 제한·방어 감소·저항 판정은 그대로다. LEP-009: 방어 감소 지속을2→3턴으로 늘려 후속 공격 기회를 연장한다. 감소량·적용 확률은 유지한다."
  },
  "man_at_arms|bellow": {
   "ids": [

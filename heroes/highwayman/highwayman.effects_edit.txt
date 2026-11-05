@@ -40,20 +40,25 @@ effect: .name "HW Pistol Dmg Marked 5"	.target "performer" .chance 100%	.curio_r
 
 //# ======================================================================
 //# 기술: 영거리 사격 (point_blank_shot)
-//# 레벨별 효과: 1레벨 Push 1A | 2레벨 Push 1B | 3레벨 Push 1C | 4레벨 Push 1D | 5레벨 Push 1E
-effect: .name "Push 1A" .target "target"  .push 1 	.chance 100%   .on_hit true .on_miss false .can_apply_on_death true
+//# 레벨별 효과: 1레벨 Push 3A | 2레벨 Push 3B | 3레벨 Push 3C | 4레벨 Push 3D | 5레벨 Push 3E
+effect: .name "Push 3A" .target "target" .push 3 	.chance 100%	.on_hit true .on_miss false .can_apply_on_death true
+// HWY-032 Reuse vanilla push3 at the existing100..140% chance; distance only.
 //#   공유 효과: 다른 영웅 1명(중보병) / 몬스터 기술 4곳. 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Push 1B" .target "target"  .push 1 	.chance 110%   .on_hit true .on_miss false .can_apply_on_death true
+effect: .name "Push 3B" .target "target" .push 3 	.chance 110%	.on_hit true .on_miss false .can_apply_on_death true
+// HWY-032 Reuse vanilla push3 at the existing100..140% chance; distance only.
 //#   공유 효과: 다른 영웅 2명(결투가, 중보병). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Push 1C" .target "target"  .push 1 	.chance 120%   .on_hit true .on_miss false .can_apply_on_death true
+effect: .name "Push 3C" .target "target" .push 3 	.chance 120%	.on_hit true .on_miss false .can_apply_on_death true
+// HWY-032 Reuse vanilla push3 at the existing100..140% chance; distance only.
 //#   공유 효과: 다른 영웅 2명(결투가, 중보병) / 몬스터 기술 4곳. 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Push 1D" .target "target"  .push 1 	.chance 130%   .on_hit true .on_miss false .can_apply_on_death true
+effect: .name "Push 3D" .target "target" .push 3	.chance 130%	.on_hit true .on_miss false .can_apply_on_death true
+// HWY-032 Reuse vanilla push3 at the existing100..140% chance; distance only.
 //#   공유 효과: 다른 영웅 2명(결투가, 중보병). 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
-effect: .name "Push 1E" .target "target"  .push 1 	.chance 140%   .on_hit true .on_miss false .can_apply_on_death true
+effect: .name "Push 3E" .target "target" .push 3 	.chance 140%	.on_hit true .on_miss false .can_apply_on_death true
+// HWY-032 Reuse vanilla push3 at the existing100..140% chance; distance only.
 //#   공유 효과: 다른 영웅 2명(결투가, 중보병) / 몬스터 기술 5곳. 여기서 고치면 이 영웅만 바뀐다
 //#   원본 위치: effects/base.effects.darkest
 

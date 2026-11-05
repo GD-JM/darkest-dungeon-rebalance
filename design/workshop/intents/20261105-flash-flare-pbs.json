@@ -1,0 +1,100 @@
+[
+  {
+    "id": "ANT-015",
+    "decision": "adopted",
+    "original_quote": "오케이 밀치기는 안 넣고 방패파괴자 그냥 바꾸는 거 없이 일단 기존거로 유지하자 석궁은 자신 포함 22334 스트회복이 맞는 듯, 섬광 그렇게 바꿔서 푸쉬하고 나병 변화 푸시하고 툴팁변화 푸시하고 5-5는 못 바꾼다는거지 ㅇㅋ 그렇게 하자",
+    "rationale_ko": "전 레벨 이동 연계 지원과 최고레벨 화상7의 도약을 분리한다.",
+    "source": {
+      "product": "codex",
+      "reference": "2026-11-05 현재 대화: 섬광·신호탄 승인 및 영거리 사격 추가 요청",
+      "session_id": null,
+      "message_id": null,
+      "event_id": null
+    },
+    "files": [
+      "heroes/antiquarian/antiquarian.info.darkest",
+      "effects/rebalance_antiquarian.effects.darkest",
+      "heroes/antiquarian/antiquarian.effects_edit.txt",
+      "design/changes/antiquarian.md",
+      "design/workshop/hero_cards.json",
+      "design/workshop/why.json"
+    ],
+    "supersedes": [
+      "ANT-014-flashpowder"
+    ],
+    "context_quotes": [
+      {
+        "speaker": "user",
+        "quote": "유물이 5레벨 추가 보상을 도망자랑 버금가는 화상으로 생각하긴 했는데 나는 화상 7 정도 생각했음",
+        "source": {
+          "product": "codex",
+          "reference": "2026-11-05 현재 대화: 섬광·신호탄 승인 및 영거리 사격 추가 요청",
+          "session_id": null,
+          "message_id": null,
+          "event_id": null
+        }
+      },
+      {
+        "speaker": "assistant",
+        "quote": "섬광 가루는 기존 화상 1/1/2/2를 유지하고 5레벨만 7로 올리며, 이동 저항 감소 20/22/25/27/30%p를 전 레벨에 넣는 안으로 test에 적용할까요?",
+        "source": {
+          "product": "codex",
+          "reference": "2026-11-05 현재 대화: 섬광·신호탄 승인 및 영거리 사격 추가 요청",
+          "session_id": null,
+          "message_id": null,
+          "event_id": null
+        }
+      }
+    ],
+    "constraints": [
+      "방패 파괴자 변경 없음",
+      "화상 감소 지연 없음",
+      "5–5 회복 표시는 유지"
+    ]
+  },
+  {
+    "id": "ARB-020",
+    "decision": "adopted",
+    "original_quote": "오케이 밀치기는 안 넣고 방패파괴자 그냥 바꾸는 거 없이 일단 기존거로 유지하자 석궁은 자신 포함 22334 스트회복이 맞는 듯, 섬광 그렇게 바꿔서 푸쉬하고 나병 변화 푸시하고 툴팁변화 푸시하고 5-5는 못 바꾼다는거지 ㅇㅋ 그렇게 하자",
+    "rationale_ko": "자기 스트레스 관리도 가능하게 하되 개별회복량을1 낮춰 파티 총량을 조정한다.",
+    "source": {
+      "product": "codex",
+      "reference": "2026-11-05 현재 대화: 섬광·신호탄 승인 및 영거리 사격 추가 요청",
+      "session_id": null,
+      "message_id": null,
+      "event_id": null
+    },
+    "files": [
+      "effects/rebalance_arbalest.effects.darkest",
+      "heroes/arbalest/arbalest.effects_edit.txt",
+      "heroes/arbalest/arbalest.info.darkest",
+      "design/changes/arbalest.md",
+      "design/workshop/hero_cards.json",
+      "design/workshop/why.json"
+    ],
+    "supersedes": [
+      "ARB-014"
+    ]
+  },
+  {
+    "id": "HWY-032",
+    "decision": "adopted",
+    "original_quote": "영거리 사격 3열 밀기로 수정하자",
+    "rationale_ko": "1열 적을3칸 밀어 원래4열 적을3열로 전진시킨다. 이동거리 외에는 유지한다.",
+    "source": {
+      "product": "codex",
+      "reference": "2026-11-05 현재 대화: 섬광·신호탄 승인 및 영거리 사격 추가 요청",
+      "session_id": null,
+      "message_id": null,
+      "event_id": null
+    },
+    "files": [
+      "heroes/highwayman/highwayman.info.darkest",
+      "heroes/highwayman/highwayman.effects_edit.txt",
+      "design/changes/highwayman.md",
+      "design/workshop/hero_cards.json",
+      "design/workshop/why.json"
+    ],
+    "supersedes": []
+  }
+]

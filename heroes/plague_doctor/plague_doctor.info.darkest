@@ -75,6 +75,7 @@ combat_skill: .id "disorienting_blast" .level 2 .type "ranged" .atk 105% .dmg -1
 combat_skill: .id "disorienting_blast" .level 3 .type "ranged" .atk 110% .dmg -100% .crit 0% .launch 432 .target 234 .is_crit_valid False  .effect "Pull 2D" "clear_corpses" "PD Disorienting Stun 4" .is_stall_invalidating false
 combat_skill: .id "disorienting_blast" .level 4 .type "ranged" .atk 115% .dmg -100% .crit 0% .launch 432 .target 234 .is_crit_valid False  .effect "Pull 2E" "clear_corpses" "PD Disorienting Stun 5" .is_stall_invalidating false
 // PD-003 혼란 기체 폭발은 뒤섞기 대신 2칸 당겨 아군 전열의 공격을 준비한다. 이동 저항은 이 연계를 막는다.
+// PD-003 (2026-11-05 의도 보완): 혼란 기체 폭발은 현상금 사냥꾼의 섬광탄과 기절·위치 교란 역할이 비슷하여, 뒤섞기 대신 지정한 적 2칸 당기기로 차별화했다. 전열 동료의 후속 공격을 준비한다. 이번 수정은 주석만이며 수치는 유지.
 
 
 tag: .id "light"
