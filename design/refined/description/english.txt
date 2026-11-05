@@ -18,19 +18,21 @@ The original difficulty and tension come first. Every buff carries a price, and 
 [h2]What you can try[/h2]
 Ranges cover skill levels 1–5.
 [list]
-[*][b]Healing, shared.[/b] Healing used to rest on the Vestal, the Occultist and the Jester; now many heroes share the load, making the game more flexible and parties more varied. Crusader's Battle Heal restores 3–4 HP (6–7 at level 5) and raises the target's PROT. Arbalest's Battlefield Bandage cures bleed, and Plague Doctor's Battlefield Medicine cures an ally's blight. Antiquarian's Fortifying Vapours amplifies all healing the target receives, stacking. Arbalest's Rallying Flare relieves 3–5 stress for the party, and Man-at-Arms' Bolster has been reworked into a stress-healing skill.
-[*][b]Break the armor.[/b] As armor rises with difficulty, physical attackers other than the Shieldbreaker and the Grave Robber were often left behind. Now support heroes can strip enemy armor for them: Occultist's Weakening Curse (PROT −25 to −35%), Shieldbreaker's Puncture (−30 to −40%), Leper's Sunder [b](NEW SKILL)[/b] (−30 to −50%) and Vestal's Illumination (−15 to −25%) open armored enemies for physical attackers.
-[*][b]Another way to play.[/b] Highwayman's Tracking Shot now tracks the enemy's movements to ready a riposte, and Duelist's Advance grants him a duelist's combat buffs. Shieldbreaker's Pierce can no longer reach every enemy rank; instead the dancer of her story slips freely between friend and foe, leaving her footprint with every step. Musketeer is fully reworked: from the back she pierces armor and hides allies in smoke.
+[*][b]Healing, shared.[/b] Healing used to rest on the Vestal, the Occultist and the Jester; now many heroes share the load, making the game more flexible and parties more varied. Crusader's Battle Heal restores 3–4 HP (6–7 at level 5) and raises the target's PROT. Arbalest's Battlefield Bandage cures bleed, and Plague Doctor's Battlefield Medicine cures an ally's blight. Antiquarian's Fortifying Vapours amplifies all healing the target receives, stacking. Arbalest's Rallying Flare relieves 2–4 stress for the whole party, herself included, and Man-at-Arms' Bolster has been reworked into a stress-healing skill.
+[*][b]Break the armor.[/b] As armor rises with difficulty, physical attackers other than the Shieldbreaker and the Grave Robber were often left behind. Now support heroes can strip enemy armor for them: Occultist's Weakening Curse (PROT −25 to −35%), Shieldbreaker's Puncture (−30 to −40%) and Leper's Sunder [b](NEW SKILL)[/b] (−30 to −50%) open armored enemies for physical attackers.
+[*][b]Another way to play.[/b] Highwayman's Tracking Shot now tracks the enemy's movements to ready a riposte, and Duelist's Advance grants him a duelist's combat buffs. Shieldbreaker's Pierce can no longer reach every enemy rank; instead the dancer of her story moves through her own line and, with more pulling skills than any other hero, shakes up the enemy line too. Musketeer is fully reworked: from the back she pierces armor and hides allies in smoke.
 [/list]
 
 [h2]Two reworks in focus[/h2]
 [list]
 [*][b]Antiquarian earns her place at Champion.[/b] Up to Veteran she stays weak, in exchange for the extra gold she brings. From Champion, her class trinkets bring her close to other heroes. Rather than growing strong herself, she makes her teammates stronger, so she is worth taking into the Darkest Dungeon.
-[*][b]Abomination: restraint becomes power.[/b] His human form trades a little accuracy on Manacles for a harder-hitting Beast's Bile. The stress he keeps in check with Absolution pays for the transformation and turns into the beast's healing, damage, speed and CRIT, easing the burden on allies.
+[*][b]Abomination: restraint becomes power.[/b] His human form trades a little accuracy on Manacles and Beast's Bile for a harder-hitting Bile. The stress he keeps in check with Absolution pays for the transformation and turns into the beast's healing, damage, speed and CRIT, easing the burden on allies.
 [/list]
 
 [h2]Every change, in the images[/h2]
-The images above open each hero with what was wrong and how it was fixed, then compare vanilla with the current build; longer cards are split into two images. All 20 heroes are changed, and a volume per hero with every skill's design intent will follow.
+The gallery above holds the introduction images and one image per hero: what was wrong, the direction, the fix and its cost, and how to play the hero now. All 20 heroes are changed.
+
+Standalone editions, one per hero, cover every skill with its changed values, why it changed, the change intent, comparisons and design history. No.01 Musketeer, No.02 Flagellant, No.03 Shieldbreaker, No.04 Runaway and No.05 Duelist are out, and the remaining heroes will follow.
 
 [h2]Still updating. Still listening.[/h2]
 [b]I read and consider every comment.[/b] Tell me about skills that feel too strong, too weak or not worth equipping, and combinations that work well. Hero and skill levels, trinkets, party and battle context help me evaluate feedback. [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3821353035]Read the update history[/url]
@@ -38,7 +40,9 @@ The images above open each hero with what was wrong and how it was fixed, then c
 [h2]Installation and compatibility[/h2]
 [b]Enable all five DLC heroes:[/b] Flagellant (The Crimson Court), Shieldbreaker, Duelist, Runaway and Musketeer (free). The Musketeer rework is included; no external mod is required.
 
-Can be enabled in an existing estate. Other reworks replacing the same hero, effect or buff files may conflict. With UI Enhancement, Musketeer skills may display their original names.
+[b]Do not enable this collection together with the earlier Every Hero Worth Taking or the Darkest Refined standalone editions.[/b] They change the same hero files. Other reworks replacing the same hero, effect or buff files may also conflict.
+
+Can be enabled in an existing estate. With UI Enhancement, Musketeer skills may display their original names.
 
 [b]Every hero deserves a reason to join the party.[/b]
 

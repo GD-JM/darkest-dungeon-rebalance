@@ -25,11 +25,26 @@ INLINE = ['intro_1_healing.png', 'intro_2_armor.png', 'intro_3_builds.png',
           'spotlights/antiquarian.png', 'spotlights/abomination.png']
 
 
+def _nonce_info():
+    """[2026-11-05] 같은 이미지를 같은 자리에 다시 올리면 스팀 등록만 남고 파일이 사라져 404가 났다(DLC 단독판 시안).
+    업로드 PNG마다 실행별 nonce 텍스트를 넣어 바이트를 바꾼다."""
+    import os, time
+    from PIL.PngImagePlugin import PngInfo
+    global _NONCE
+    try:
+        _NONCE
+    except NameError:
+        _NONCE = f'{time.time_ns()}-{os.getpid()}'
+    info = PngInfo()
+    info.add_text('upload', _NONCE)
+    return info
+
+
 def fit_png(im, out):
     width = im.width
     while True:
         g = im if width == im.width else im.resize((width, round(im.height * width / im.width)), Image.LANCZOS)
-        g.save(out, optimize=True)
+        g.save(out, optimize=True, pnginfo=_nonce_info())
         if out.stat().st_size < 990_000:
             return
         width = int(width * 0.93)

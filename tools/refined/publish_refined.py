@@ -39,18 +39,33 @@ from steam import Steam, SteamError                        # noqa: E402
 import build_refined                                       # noqa: E402
 
 
+def _nonce_info():
+    """[2026-11-05] 같은 이미지를 같은 자리에 다시 올리면 스팀 등록만 남고 파일이 사라져 404가 났다(DLC 단독판 시안).
+    업로드 PNG마다 실행별 nonce 텍스트를 넣어 바이트를 바꾼다."""
+    import os, time
+    from PIL.PngImagePlugin import PngInfo
+    global _NONCE
+    try:
+        _NONCE
+    except NameError:
+        _NONCE = f'{time.time_ns()}-{os.getpid()}'
+    info = PngInfo()
+    info.add_text('upload', _NONCE)
+    return info
+
+
 def fit_png(src, dst):
     """Steam 미리보기: 1MB 미만 PNG. 그대로 → 256색 → 폭 축소."""
     from PIL import Image
     im = Image.open(src).convert('RGB')
-    im.save(dst, optimize=True)
+    im.save(dst, optimize=True, pnginfo=_nonce_info())
     if dst.stat().st_size < 990_000:
         return dst
-    im.quantize(256, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.FLOYDSTEINBERG).save(dst, optimize=True)
+    im.quantize(256, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.FLOYDSTEINBERG).save(dst, optimize=True, pnginfo=_nonce_info())
     w = im.width
     while dst.stat().st_size >= 990_000:
         w = int(w * 0.93)
-        im.resize((w, round(im.height * w / im.width)), Image.LANCZOS).quantize(256, method=Image.Quantize.MEDIANCUT).save(dst, optimize=True)
+        im.resize((w, round(im.height * w / im.width)), Image.LANCZOS).quantize(256, method=Image.Quantize.MEDIANCUT).save(dst, optimize=True, pnginfo=_nonce_info())
     return dst
 
 
@@ -86,7 +101,7 @@ def descriptions():
     return out
 
 
-def gallery(cards, job, used_urls):
+def gallery(heroes, job, used_urls):
     """소개 4 → 영웅마다 스포트라이트. 옛 비교 카드는 넣지 않고, 모든 언어 설명에 이미 [img]로 들어간 이미지도 뺀다."""
     urls = json.loads((BRAND / 'desc_asset_urls.json').read_text(encoding='utf-8'))
     in_desc = {n for n, u in urls.items() if u in used_urls}
@@ -95,13 +110,12 @@ def gallery(cards, job, used_urls):
     files = []
     if 'intro_4_refined.png' not in in_desc:
         files.append(fit_png(DRAFT / 'intro_4_refined.png', up / 'intro_4_refined.png'))
-    shown = set()
-    for c in cards:
-        h = c['hero']
+    # [2026-11-05] 스포트라이트는 이 꾸러미에 실제로 빌드된 영웅 전원 기준. main의 hero_cards.json은 기존판(3821353035)이
+    # 15명판이 되면서 DLC 영웅 카드가 빠져, 카드 목록 기준으로 돌면 DLC 영웅 스포트라이트가 갤러리에서 빠졌다.
+    for h in heroes:
         spot = DRAFT / 'spotlights' / f'{h}.png'
-        if h not in shown and spot.exists() and f'spotlight_{h}.png' not in in_desc:
+        if spot.exists() and f'spotlight_{h}.png' not in in_desc:
             files.append(fit_png(spot, up / f'spot_{h}.png'))
-        shown.add(h)
         # [사용자 2026-11-03] 옛 리밸런스 비교 카드('Every Hero Worth Taking' 표기)는 갤러리에 넣지 않는다 — 새 스타일 이미지만
     return files
 
@@ -126,7 +140,7 @@ def main():
         manifest = WSC.render_cards(card_data, GAME, job / 'cards', 1500, mod_root=src)
         descs = descriptions()
         used = set(re.findall(r'\[img\](.*?)\[/img\]', '\n'.join(descs.values())))
-        files = gallery(manifest, job, used)
+        files = gallery(summary['heroes'], job, used)
         pkg = json.load(open(REPO / 'design' / 'refined' / 'packages.json', encoding='utf-8'))['refined']
         thumb = fit_png(DRAFT / pkg.get('thumbnail', 'final_pages/cover_all.png'), job / 'thumb.png')
         note = pkg['note']

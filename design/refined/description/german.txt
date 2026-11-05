@@ -18,19 +18,21 @@ Schwierigkeit und Spannung des Originals stehen an erster Stelle. Jede Verstärk
 [h2]Was du ausprobieren kannst[/h2]
 Bereiche gelten für Fähigkeitsstufe 1–5.
 [list]
-[*][b]Geteilte Heilung.[/b] Heilung lag bisher bei Vestal, Occultist und Jester; jetzt teilen sich viele Helden diese Aufgabe – das macht das Spiel flexibler und die Gruppen vielfältiger. Crusaders Battle Heal heilt 3–4 LP (6–7 auf Stufe 5) und erhöht den PROT des Ziels. Arbalests Battlefield Bandage heilt Blutungen, Plague Doctors Battlefield Medicine heilt die Vergiftung eines Verbündeten. Antiquarians Fortifying Vapours verstärkt jede Heilung, die das Ziel erhält, stapelbar. Arbalests Rallying Flare baut für die Gruppe 3–5 Stress ab, und Man-at-Arms' Bolster wurde zu einer Stressheilung überarbeitet.
-[*][b]Rüstung brechen.[/b] Da die Rüstung mit dem Schwierigkeitsgrad steigt, wurden physische Angreifer außer Shieldbreaker und Grave Robber oft links liegen gelassen. Jetzt können Unterstützer die gegnerische Rüstung für sie schwächen: Occultists Weakening Curse (PROT −25 bis −35 %), Shieldbreakers Puncture (−30 bis −40 %), Lepers Rüstungsbrecher [b](NEUE FÄHIGKEIT)[/b] (−30 bis −50 %) und Vestals Illumination (−15 bis −25 %) öffnen gepanzerte Gegner für physische Angreifer.
-[*][b]Eine andere Spielweise.[/b] Highwaymans Tracking Shot verfolgt nun die Bewegungen des Gegners und bereitet eine Riposte vor, und Duelist's Advance gibt ihm die Kampfboni eines Duellanten. Shieldbreakers Pierce erreicht nicht mehr jede gegnerische Position; dafür bewegt sich die Tänzerin ihrer Geschichte frei zwischen Freund und Feind und hinterlässt mit jedem Schritt Spuren. Musketeer wurde vollständig überarbeitet: Von hinten durchschlägt sie Rüstung und verbirgt Verbündete im Rauch.
+[*][b]Geteilte Heilung.[/b] Heilung lag bisher bei Vestal, Occultist und Jester; jetzt teilen sich viele Helden diese Aufgabe, was das Spiel flexibler und die Gruppen vielfältiger macht. Crusaders Battle Heal heilt 3–4 LP (6–7 auf Stufe 5) und erhöht den PROT des Ziels. Arbalests Battlefield Bandage heilt Blutungen, Plague Doctors Battlefield Medicine heilt die Vergiftung eines Verbündeten. Antiquarians Fortifying Vapours verstärkt jede Heilung, die das Ziel erhält, stapelbar. Arbalests Rallying Flare baut für die ganze Gruppe, sie selbst eingeschlossen, 2–4 Stress ab, und Man-at-Arms' Bolster wurde zu einer Stressheilung überarbeitet.
+[*][b]Rüstung brechen.[/b] Da die Rüstung mit dem Schwierigkeitsgrad steigt, wurden physische Angreifer außer Shieldbreaker und Grave Robber oft links liegen gelassen. Jetzt können Unterstützer die gegnerische Rüstung für sie schwächen: Occultists Weakening Curse (PROT −25 bis −35 %), Shieldbreakers Puncture (−30 bis −40 %) und Lepers Rüstungsbrecher [b](NEUE FÄHIGKEIT)[/b] (−30 bis −50 %) öffnen gepanzerte Gegner für physische Angreifer.
+[*][b]Eine andere Spielweise.[/b] Highwaymans Tracking Shot verfolgt nun die Bewegungen des Gegners und bereitet eine Riposte vor, und Duelist's Advance gibt ihm die Kampfboni eines Duellanten. Shieldbreakers Pierce erreicht nicht mehr jede gegnerische Position; dafür bewegt sich die Tänzerin ihrer Geschichte durch die eigenen Reihen und bringt mit mehr Fähigkeiten zum Heranziehen von Gegnern als jeder andere Held auch die gegnerische Aufstellung durcheinander. Musketeer wurde vollständig überarbeitet: Von hinten durchschlägt sie Rüstung und verbirgt Verbündete im Rauch.
 [/list]
 
 [h2]Zwei Überarbeitungen im Fokus[/h2]
 [list]
 [*][b]Antiquarian findet ihren Platz ab Entschlossenheit 5.[/b] Bis Entschlossenheit 3 (Veteran) bleibt sie schwach, dafür bringt sie mehr Gold ein. Ab Entschlossenheit 5 bringt ihr Klassenschmuck sie auf das Niveau anderer Helden. Statt selbst stark zu werden, stärkt sie ihre Gefährten und lohnt sich so auch im Dunkelsten Dungeon.
-[*][b]Abomination: Beherrschung wird Stärke.[/b] Die Menschengestalt tauscht etwas Genauigkeit bei Manacles gegen ein stärkeres Beast's Bile. Mit Absolution beherrschter Stress bezahlt die Verwandlung und wird zu Heilung, Schaden, Tempo und CRIT der Bestie; die Gefährten werden weniger belastet.
+[*][b]Abomination: Beherrschung wird Stärke.[/b] Die Menschengestalt tauscht etwas Genauigkeit bei Manacles und Beast's Bile gegen ein stärkeres Beast's Bile. Mit Absolution beherrschter Stress bezahlt die Verwandlung und wird zu Heilung, Schaden, Tempo und CRIT der Bestie; die Gefährten werden weniger belastet.
 [/list]
 
 [h2]Jede Änderung im Bild[/h2]
-Die Bilder oben zeigen für jeden Helden zuerst das Problem und die Lösung und vergleichen dann das Original mit der aktuellen Version; lange Karten sind auf zwei Bilder verteilt. Alle 20 Helden wurden geändert, und ein eigener Band pro Held mit der Designabsicht jeder Fähigkeit folgt.
+Die Galerie oben enthält die Einführungsbilder und ein Bild pro Held: was nicht stimmte, die Richtung, die Lösung und ihr Preis und wie man den Helden jetzt spielt. Alle 20 Helden wurden geändert.
+
+Einzelausgaben, eine pro Held, zeigen jede Fähigkeit mit geänderten Werten, dem Grund der Änderung, der Änderungsabsicht, Vergleichen und dem Designverlauf. No.01 Musketeer, No.02 Flagellant, No.03 Shieldbreaker, No.04 Runaway und No.05 Duelist sind erschienen; die übrigen Helden folgen.
 
 [h2]Weitere Updates. Ein offenes Ohr für Feedback.[/h2]
 [b]Ich lese und prüfe jeden Kommentar.[/b] Erzähl mir von Fähigkeiten, die zu stark, zu schwach oder nutzlos wirken, und von Kombinationen, die gut funktionieren. Helden- und Fähigkeitsstufen, Schmuck, Gruppe und Kampfsituation helfen mir bei der Bewertung. [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3821353035]Update-Verlauf ansehen[/url]
@@ -38,7 +40,9 @@ Die Bilder oben zeigen für jeden Helden zuerst das Problem und die Lösung und 
 [h2]Installation und Kompatibilität[/h2]
 [b]Alle fünf DLC-Helden aktivieren:[/b] Flagellant (The Crimson Court), Shieldbreaker, Duelist, Runaway und Musketeer (kostenlos). Die Musketeer-Überarbeitung ist enthalten; eine externe Mod ist nicht nötig.
 
-Kann in einem bestehenden Anwesen aktiviert werden. Andere Überarbeitungen, die dieselben Helden-, Effekt- oder Buff-Dateien ersetzen, können Konflikte verursachen. Mit UI Enhancement zeigen Musketeer-Fähigkeiten eventuell ihre ursprünglichen Namen.
+[b]Nicht zusammen mit dem früheren Every Hero Worth Taking oder den Darkest-Refined-Einzelausgaben aktivieren.[/b] Sie ändern dieselben Heldendateien wie diese Sammlung. Andere Überarbeitungen, die dieselben Helden-, Effekt- oder Buff-Dateien ersetzen, können ebenfalls Konflikte verursachen.
+
+Kann in einem bestehenden Anwesen aktiviert werden. Mit UI Enhancement zeigen Musketeer-Fähigkeiten eventuell ihre ursprünglichen Namen.
 
 [b]Jeder Held verdient einen Grund, mitzukommen.[/b]
 

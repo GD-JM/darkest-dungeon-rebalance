@@ -29,7 +29,7 @@
     ],
     [
      "Arbalest · Bandage & Rallying Flare",
-     "The bandage cures bleed; the flare relieves 3–5 stress for the rest of the party."
+     "The bandage cures bleed; the flare relieves 2–4 stress for the whole party, herself included."
     ],
     [
      "Antiquarian · Fortifying Vapours",
@@ -65,8 +65,8 @@
      "REWORKED"
     ],
     [
-     "Vestal · Illumination",
-     "Strips dodge and armor and reveals the hidden, from any rank."
+     "Musketeer · Mark the Quarry",
+     "Marks the prey and cuts PROT by 20–30% for 3 turns."
     ]
    ],
    "art": [
@@ -89,8 +89,8 @@
      "Steps in as a duelist and builds a stacking combat buff."
     ],
     [
-     "Shieldbreaker · Pierce",
-     "No longer reaches rank 4; the dancer weaves between the ranks instead."
+     "Shieldbreaker · Pierce & Expose",
+     "Pierce no longer reaches rank 4; Expose now reveals a back-liner and pulls it 2 ranks forward."
     ],
     [
      "Musketeer · full rework",
@@ -114,7 +114,7 @@
      "Class trinkets and each hero's official lore set the limits of every change."
     ],
     [
-     "Evidence, not instinct",
+     "Measured, then tuned",
      "Game data, a comparison model and real play decide the numbers."
     ],
     [
@@ -368,7 +368,7 @@
     ],
     [
      "THE DIRECTION",
-     "Human form trades a little accuracy on Manacles for a harder-hitting Beast's Bile; the beast's price moves onto himself, so transforming becomes a real choice."
+     "Human form gives up a little accuracy for a harder-hitting Beast's Bile; the beast's price moves onto himself, so transforming is a real choice."
     ],
     [
      "THE SOLUTION, AND ITS PRICE",
@@ -393,7 +393,7 @@
     ],
     [
      "THE DIRECTION",
-     "Weak until Veteran, strong from Champion: she makes others stronger rather than herself."
+     "Weak until Veteran, strong from Champion, and her strength goes into the rest of the party."
     ],
     [
      "THE SOLUTION, AND ITS PRICE",
@@ -401,7 +401,7 @@
     ],
     [
      "NEW WAYS TO PLAY",
-     "Bring her for the party: boost the healer, arm the bodyguard, and mark targets with a level-5 Nervous Stab."
+     "Bring her for the party: boost the healer and arm the bodyguard. Her Flashpowder lowers dodge and move resist so hits and pulls land; its burn is 1–2, then 7 at level 5."
     ]
    ],
    "art": "antiquarian_knife"
@@ -410,7 +410,7 @@
    "out": "spotlights/arbalest.png",
    "layout": "hero_spotlight",
    "hero": "ARBALEST",
-   "tagline": "A rallying point, not just a crossbow.",
+   "tagline": "The crossbow that rallies the party.",
    "rows": [
     [
      "THE PROBLEM",
@@ -422,11 +422,11 @@
     ],
     [
      "THE SOLUTION, AND ITS PRICE",
-     "Battlefield Bandage cures bleed, Rallying Flare relieves 3–5 party stress every time, Bola hits harder. The Flare no longer clears mark and stun."
+     "Battlefield Bandage cures bleed; Rallying Flare relieves 2–4 stress for the whole party, herself included, and no longer clears mark and stun."
     ],
     [
      "NEW WAYS TO PLAY",
-     "A back-rank medic who handles bleed dungeons and steadies the party's nerves between shots."
+     "Bola pulls a rank 2–4 enemy 2 ranks toward your front line; Suppressing Fire slows the back two and lowers their ACC; Sniper Shot fires past Guard."
     ]
    ],
    "art": "arbalest_child"
@@ -447,7 +447,7 @@
     ],
     [
      "THE SOLUTION, AND ITS PRICE",
-     "Stunning Blow stuns at 110–150%; Battle Heal restores 3–4 (6–7 at level 5) and raises PROT; Inspiring Cry grows every level. Bulwark of Faith no longer raises the torch."
+     "Stunning Blow gets a strong stun (110% chance); Battle Heal restores 3–4 (6–7 at level 5) and raises PROT; Inspiring Cry grows every level. Bulwark of Faith no longer raises the torch."
     ],
     [
      "NEW WAYS TO PLAY",
@@ -547,7 +547,7 @@
     ],
     [
      "THE SOLUTION, AND ITS PRICE",
-     "Tracking Shot grants riposte without moving; Duelist's Advance gives a stacking combat buff; Point Blank Shot now recoils him 2 ranks."
+     "Tracking Shot grants riposte without moving; Duelist's Advance gives a stacking combat buff; Point Blank Shot recoils him 2 ranks and knocks the target back 3."
     ],
     [
      "NEW WAYS TO PLAY",
@@ -568,7 +568,7 @@
     ],
     [
      "THE DIRECTION",
-     "A protector with ranged bleed, not a second mark dealer."
+     "A protector who spreads bleed from range and leaves the big marked hits to others."
     ],
     [
      "THE SOLUTION, AND ITS PRICE",
@@ -601,7 +601,7 @@
     ],
     [
      "NEW WAYS TO PLAY",
-     "A spotlight Jester: Solo slows every enemy and clears corpses, pulling the back line forward."
+     "A spotlight Jester: Solo scrambles the enemy formation, clears corpses, and lifts his allies' marks while marking himself."
     ]
    ],
    "art": "jester_cup"
@@ -622,11 +622,11 @@
     ],
     [
      "THE SOLUTION, AND ITS PRICE",
-     "Intimidate becomes Sunder: a rank-1 strike that cracks PROT by 30–50% for 2 turns. It no longer reaches every rank. Revenge's cost now grows with level."
+     "Intimidate becomes Sunder: a rank-1 strike that cracks PROT by 30–50% for 3 turns (130% chance). It no longer reaches every rank. Revenge's cost now grows with level."
     ],
     [
      "NEW WAYS TO PLAY",
-     "Open armored foes for the whole party before the heavy swings land."
+     "Open armored foes for the whole party before the heavy swings land. Chop, Hew and Purge each gain 5 accuracy."
     ]
    ],
    "art": "leper_gate",
@@ -652,7 +652,7 @@
     ],
     [
      "NEW WAYS TO PLAY",
-     "Rampart stuns without shuffling him forward, and Retribution cracks armor for the next blows."
+     "Rampart stuns from ranks 1–2 without shuffling him forward, and Retribution cracks armor for the next blows."
     ]
    ],
    "art": "maa_profile"
@@ -677,7 +677,7 @@
     ],
     [
      "NEW WAYS TO PLAY",
-     "Hex a target, then stun, bleed or crack it. Level-5 Wyrd Reconstruction keeps the level-4 bleed risk."
+     "Hex a target, then stun, bleed or crack it. Hands from the Abyss now stuns a rank 1–2 enemy from ranks 3–4, at ACC 80. Level-5 Wyrd Reconstruction keeps the level-4 bleed risk."
     ]
    ],
    "art": "occultist_face"
@@ -690,7 +690,7 @@
    "rows": [
     [
      "THE PROBLEM",
-     "Battlefield Medicine cured everything for everyone, and Incision was rarely worth a slot."
+     "Battlefield Medicine cured everything for everyone, Incision was rarely worth a slot, and Disorienting Blast overlapped the Bounty Hunter's Flashbang."
     ],
     [
      "THE DIRECTION",
@@ -698,11 +698,11 @@
     ],
     [
      "THE SOLUTION, AND ITS PRICE",
-     "Battlefield Medicine heals 3 (7 at level 5) and cures an ally's blight only; no free self-cleanse. Incision gains accuracy."
+     "Battlefield Medicine heals 3 (7 at level 5) and cures an ally's blight only; no free self-cleanse. Incision gains accuracy. Disorienting Blast pulls 2 ranks instead of shuffling."
     ],
     [
      "NEW WAYS TO PLAY",
-     "Bring her to blight-heavy dungeons and pair her with the Arbalest for full coverage."
+     "Bring her to blight-heavy dungeons with the Arbalest; Disorienting Blast stuns an enemy in ranks 2–4 and drags it toward your front line."
     ]
    ],
    "art": "plague_doctor_cough"
@@ -719,15 +719,15 @@
     ],
     [
      "THE DIRECTION",
-     "Weak when rooted, strong when moving: the dancer of her story."
+     "The dancer who shakes up the enemy line, and the only hero with two skills that pull enemies forward."
     ],
     [
      "THE SOLUTION, AND ITS PRICE",
-     "Pierce loses rank 4; weapon and speed growth follow the standard curve; stun and move resist 30. Expose now strips dodge 20–30%."
+     "Pierce loses rank 4; weapon and speed growth follow the standard curve; stun and move resist 30. Puncture pulls 1 rank instead of 2, and Expose drops its slow and crit debuff."
     ],
     [
      "NEW WAYS TO PLAY",
-     "Serpent Sway brings her back to rank 1 after Adder's Kiss or Impale; Impale blights from level 1."
+     "Expose reveals a hidden back-liner and drags it 2 ranks forward; Puncture breaks guard and PROT. Serpent Sway brings her back to rank 1, and Impale blights from level 1."
     ]
    ],
    "art": "shieldbreaker_fight"
@@ -752,7 +752,7 @@
     ],
     [
      "NEW WAYS TO PLAY",
-     "Bash and heal from rank 2, or stay back with Divine Comfort; Illumination strips dodge and PROT 15–25%."
+     "Bash and heal from rank 2, or stay back with Divine Comfort; Illumination strips dodge 15–25% and burns 1–3 from any rank."
     ]
    ],
    "art": "vestal_hood"
@@ -798,11 +798,11 @@
     ],
     [
      "THE SOLUTION, AND ITS PRICE",
-     "Coup de Grâce DMG −70% (was −60%), The Boot −60% (was −40%), Flèche +10% (was +25%). Feint's PROT cut drops to 15–25% and its riposte boost to 20–30%. Touché is back to the base game."
+     "Coup de Grâce DMG −70% (was −60%); The Boot DMG −60% (was −40%), its heavy kick now pushing 2 ranks; Flèche +20% (was +25%). Feint's riposte boost is 10–30% and Touché's dodge 30–40%."
     ],
     [
      "NEW WAYS TO PLAY",
-     "Disengage now weakens the target's damage by 10–15% as she steps back: feint, retreat, and let the riposte do the work."
+     "Disengage now pulls a rank 2–4 enemy 2 ranks forward as she leaps back, drawing it into your front line's reach."
     ]
    ],
    "art": "duelist_header"

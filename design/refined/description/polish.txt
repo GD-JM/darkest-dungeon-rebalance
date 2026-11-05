@@ -18,19 +18,21 @@ Najważniejsze są trudność i napięcie oryginału. Każde wzmocnienie ma swoj
 [h2]Co możesz wypróbować[/h2]
 Zakresy dotyczą poziomów umiejętności 1–5.
 [list]
-[*][b]Wspólne leczenie.[/b] Leczenie spoczywało na Kapłance, Okultyście i Błaźnie; teraz dzieli je wielu bohaterów, co czyni grę elastyczniejszą, a drużyny bardziej różnorodnymi. Battle Heal Krzyżowca leczy 3–4 PŻ (6–7 na poziomie 5) i zwiększa PROT celu. Battlefield Bandage Kuszniczki leczy krwawienie, a Battlefield Medicine Badaczki Zarazy leczy zatrucie sojusznika. Fortifying Vapours Antykwariuszki wzmacnia całe leczenie otrzymywane przez cel i się kumuluje. Rallying Flare Kuszniczki zmniejsza stres drużyny o 3–5, a Bolster Zbrojmistrza przerobiono na umiejętność leczenia stresu.
-[*][b]Przełam pancerz.[/b] Ponieważ pancerz rośnie wraz z poziomem trudności, wojownicy fizyczni poza Łamaczką Tarcz i Hieną Cmentarną często byli pomijani. Teraz bohaterowie wsparcia mogą osłabić pancerz wroga za nich: Weakening Curse Okultysty (PROT −25 do −35%), Puncture Łamaczki Tarcz (−30 do −40%), Łamacz pancerza Trędowatego [b](NOWA UMIEJĘTNOŚĆ)[/b] (−30 do −50%) i Illumination Kapłanki (−15 do −25%) otwierają opancerzonych wrogów dla wojowników fizycznych.
-[*][b]Inny styl gry.[/b] Tracking Shot Oprycha śledzi teraz ruchy wroga i przygotowuje ripostę, a Duelist's Advance daje mu bojowe wzmocnienia pojedynkowicza. Pierce Łamaczki Tarcz nie sięga już każdej pozycji wroga; w zamian tancerka z jej historii swobodnie przechodzi między sojusznikami a wrogami i zostawia ślad przy każdym kroku. Muszkieterka jest całkowicie przebudowana: z tyłu przebija pancerz i ukrywa sojuszników w dymie.
+[*][b]Wspólne leczenie.[/b] Leczenie spoczywało na Kapłance, Okultyście i Błaźnie; teraz dzieli je wielu bohaterów, co czyni grę elastyczniejszą, a drużyny bardziej różnorodnymi. Battle Heal Krzyżowca leczy 3–4 PŻ (6–7 na poziomie 5) i zwiększa PROT celu. Battlefield Bandage Kuszniczki leczy krwawienie, a Battlefield Medicine Badaczki Zarazy leczy zatrucie sojusznika. Fortifying Vapours Antykwariuszki wzmacnia całe leczenie otrzymywane przez cel i się kumuluje. Rallying Flare Kuszniczki zmniejsza stres całej drużyny, łącznie z nią samą, o 2–4, a Bolster Zbrojmistrza przerobiono na umiejętność leczenia stresu.
+[*][b]Przełam pancerz.[/b] Ponieważ pancerz rośnie wraz z poziomem trudności, wojownicy fizyczni poza Łamaczką Tarcz i Hieną Cmentarną często byli pomijani. Teraz bohaterowie wsparcia mogą osłabić pancerz wroga za nich: Weakening Curse Okultysty (PROT −25 do −35%), Puncture Łamaczki Tarcz (−30 do −40%) i Łamacz pancerza Trędowatego [b](NOWA UMIEJĘTNOŚĆ)[/b] (−30 do −50%) otwierają opancerzonych wrogów dla wojowników fizycznych.
+[*][b]Inny styl gry.[/b] Tracking Shot Oprycha śledzi teraz ruchy wroga i przygotowuje ripostę, a Duelist's Advance daje mu bojowe wzmocnienia pojedynkowicza. Pierce Łamaczki Tarcz nie sięga już każdej pozycji wroga; w zamian tancerka z jej historii przemieszcza się we własnym szyku i, mając więcej umiejętności przyciągających wrogów niż jakikolwiek inny bohater, miesza także szyk przeciwnika. Muszkieterka jest całkowicie przebudowana: z tyłu przebija pancerz i ukrywa sojuszników w dymie.
 [/list]
 
 [h2]Dwie przebudowy w centrum uwagi[/h2]
 [list]
 [*][b]Antykwariuszka odnajduje swoje miejsce na poziomie Czempion.[/b] Do poziomu Weteran pozostaje słaba w zamian za dodatkowe złoto, które przynosi. Od poziomu Czempion jej błyskotki klasowe stawiają ją na równi z innymi bohaterami. Zamiast samej stawać się silną, wzmacnia drużynę, więc warto zabrać ją do Najmroczniejszego Lochu.
-[*][b]Abominacja: opanowanie staje się siłą.[/b] Ludzka postać oddaje trochę celności Manacles za mocniejsze Beast's Bile. Stres opanowany przez Absolution opłaca przemianę i zamienia się w leczenie, obrażenia, szybkość i CRIT bestii, odciążając sojuszników.
+[*][b]Abominacja: opanowanie staje się siłą.[/b] Ludzka postać oddaje trochę celności Manacles i Beast's Bile za mocniejsze Beast's Bile. Stres opanowany przez Absolution opłaca przemianę i zamienia się w leczenie, obrażenia, szybkość i CRIT bestii, odciążając sojuszników.
 [/list]
 
 [h2]Każda zmiana na grafikach[/h2]
-Powyższe grafiki pokazują dla każdego bohatera problem i rozwiązanie, a potem porównują oryginał z obecną wersją; dłuższe zestawienia rozdzielono na dwa obrazy. Zmieniono wszystkich 20 bohaterów, a osobne tomy z zamysłem każdej umiejętności pojawią się później.
+Galeria powyżej zawiera grafiki wprowadzające i jedną grafikę na bohatera: problem, kierunek, rozwiązanie i jego koszt oraz nowy sposób gry. Zmieniono wszystkich 20 bohaterów.
+
+Osobne wydania, po jednym na bohatera, opisują każdą umiejętność: zmienione wartości, powód i zamysł zmiany, porównania i historię projektu. Ukazały się już No.01 Muszkieterka, No.02 Flagelant, No.03 Łamaczka Tarcz, No.04 Runaway i No.05 Duelist; pozostali bohaterowie pojawią się kolejno.
 
 [h2]Kolejne aktualizacje i uważne słuchanie opinii[/h2]
 [b]Czytam i rozważam każdy komentarz.[/b] Napisz, które umiejętności wydają się za mocne, za słabe lub bezużyteczne i które połączenia działają dobrze. Poziomy bohatera i umiejętności, błyskotki, drużyna i sytuacja w walce pomagają mi ocenić opinie. [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3821353035]Zobacz historię[/url]
@@ -38,7 +40,9 @@ Powyższe grafiki pokazują dla każdego bohatera problem i rozwiązanie, a pote
 [h2]Instalacja i zgodność[/h2]
 [b]Włącz wszystkich pięcioro bohaterów DLC:[/b] Flagelanta (The Crimson Court), Łamaczkę Tarcz, Duelist, Runaway i Muszkieterkę (darmowa). Przebudowa Muszkieterki jest w zestawie; żaden zewnętrzny mod nie jest potrzebny.
 
-Można włączyć w istniejącej posiadłości. Inne przebudowy zastępujące te same pliki bohaterów, efektów lub wzmocnień mogą powodować konflikty. Z UI Enhancement umiejętności Muszkieterki mogą wyświetlać oryginalne nazwy.
+[b]Nie włączaj tej kolekcji razem z wcześniejszym Every Hero Worth Taking ani z osobnymi wydaniami Darkest Refined.[/b] Zmieniają one te same pliki bohaterów. Inne przebudowy zastępujące te same pliki bohaterów, efektów lub wzmocnień również mogą powodować konflikty.
+
+Można włączyć w istniejącej posiadłości. Z UI Enhancement umiejętności Muszkieterki mogą wyświetlać oryginalne nazwy.
 
 [b]Każdy bohater zasługuje na powód, by dołączyć do drużyny.[/b]
 

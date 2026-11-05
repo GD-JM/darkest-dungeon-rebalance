@@ -18,19 +18,21 @@ La difficulté et la tension du jeu original passent en premier. Chaque amélior
 [h2]Ce que vous pouvez essayer[/h2]
 Les plages couvrent les niveaux de compétence 1 à 5.
 [list]
-[*][b]Des soins partagés.[/b] Le soin reposait sur la Vestale, l'Occultiste et le Bouffon ; désormais de nombreux héros se partagent ce rôle, pour un jeu plus souple et des équipes plus variées. Battle Heal du Croisé rend 3–4 PV (6–7 au niveau 5) et augmente la PROT de la cible. Battlefield Bandage de l'Arbalétrière soigne le saignement, et Battlefield Medicine du Médecin de peste soigne le poison d'un allié. Fortifying Vapours de l'Antiquaire amplifie tous les soins reçus par la cible, de façon cumulable. Rallying Flare de l'Arbalétrière retire 3–5 de stress à l'équipe, et Bolster de l'Homme d'armes a été refondu en compétence de soin du stress.
-[*][b]Briser l'armure.[/b] Comme l'armure augmente avec la difficulté, les attaquants physiques autres que la Brise-bouclier et la Pilleuse de tombes étaient souvent délaissés. Désormais, les héros de soutien peuvent affaiblir l'armure ennemie pour eux : Weakening Curse de l'Occultiste (PROT −25 à −35 %), Puncture de la Brise-bouclier (−30 à −40 %), Brise-armure du Lépreux [b](NOUVELLE COMPÉTENCE)[/b] (−30 à −50 %) et Illumination de la Vestale (−15 à −25 %) ouvrent les ennemis cuirassés aux attaquants physiques.
-[*][b]Une autre façon de jouer.[/b] Tracking Shot du Bandit suit désormais les mouvements de l'ennemi pour préparer une riposte, et Duelist's Advance lui donne les bonus de combat d'un duelliste. Pierce de la Brise-bouclier ne peut plus atteindre tous les rangs ennemis ; en échange, la danseuse de son histoire passe librement entre alliés et ennemis et laisse son empreinte à chaque pas. La Mousquetaire est entièrement refondue : depuis l'arrière, elle perce l'armure et cache ses alliés dans la fumée.
+[*][b]Des soins partagés.[/b] Le soin reposait sur la Vestale, l'Occultiste et le Bouffon ; désormais de nombreux héros se partagent ce rôle, pour un jeu plus souple et des équipes plus variées. Battle Heal du Croisé rend 3–4 PV (6–7 au niveau 5) et augmente la PROT de la cible. Battlefield Bandage de l'Arbalétrière soigne le saignement, et Battlefield Medicine du Médecin de peste soigne le poison d'un allié. Fortifying Vapours de l'Antiquaire amplifie tous les soins reçus par la cible, de façon cumulable. Rallying Flare de l'Arbalétrière retire 2–4 de stress à toute l'équipe, elle comprise, et Bolster de l'Homme d'armes a été refondu en compétence de soin du stress.
+[*][b]Briser l'armure.[/b] Comme l'armure augmente avec la difficulté, les attaquants physiques autres que la Brise-bouclier et la Pilleuse de tombes étaient souvent délaissés. Désormais, les héros de soutien peuvent affaiblir l'armure ennemie pour eux : Weakening Curse de l'Occultiste (PROT −25 à −35 %), Puncture de la Brise-bouclier (−30 à −40 %) et Brise-armure du Lépreux [b](NOUVELLE COMPÉTENCE)[/b] (−30 à −50 %) ouvrent les ennemis cuirassés aux attaquants physiques.
+[*][b]Une autre façon de jouer.[/b] Tracking Shot du Bandit suit désormais les mouvements de l'ennemi pour préparer une riposte, et Duelist's Advance lui donne les bonus de combat d'un duelliste. Pierce de la Brise-bouclier ne peut plus atteindre tous les rangs ennemis ; en échange, la danseuse de son histoire circule dans ses rangs et, avec plus de compétences qui attirent l'ennemi que tout autre héros, bouscule aussi les rangs adverses. La Mousquetaire est entièrement refondue : depuis l'arrière, elle perce l'armure et cache ses alliés dans la fumée.
 [/list]
 
 [h2]Deux refontes à la une[/h2]
 [list]
 [*][b]L'Antiquaire trouve sa place au rang Champion.[/b] Jusqu'au rang Vétéran, elle reste faible en échange de l'or supplémentaire qu'elle rapporte. À partir du rang Champion, ses colifichets de classe la rapprochent des autres héros. Plutôt que de devenir forte elle-même, elle renforce ses alliés, ce qui justifie de l'emmener au Donjon Ténébreux.
-[*][b]L'Abomination : la maîtrise devient puissance.[/b] Sa forme humaine échange un peu de précision de Manacles contre un Beast's Bile plus puissant. Le stress qu'il contient avec Absolution paie la transformation et devient soin, dégâts, vitesse et CRIT de la bête, en allégeant le fardeau des alliés.
+[*][b]L'Abomination : la maîtrise devient puissance.[/b] Sa forme humaine échange un peu de précision de Manacles et de Beast's Bile contre un Beast's Bile plus puissant. Le stress qu'il contient avec Absolution paie la transformation et devient soin, dégâts, vitesse et CRIT de la bête, en allégeant le fardeau des alliés.
 [/list]
 
 [h2]Chaque changement, en images[/h2]
-Les images ci-dessus présentent pour chaque héros le problème et sa solution, puis comparent l'original à la version actuelle ; les fiches longues sont réparties sur deux images. Les 20 héros sont tous modifiés, et un volume par héros, avec l'intention de conception de chaque compétence, suivra.
+La galerie ci-dessus réunit les images de présentation et une image par héros : le problème, la direction, la solution et son coût, et comment le jouer désormais. Les 20 héros sont tous modifiés.
+
+Des éditions séparées par héros détaillent chaque compétence : valeurs modifiées, pourquoi elle a changé, intention du changement, comparaisons et historique de conception. No.01 Mousquetaire, No.02 Flagellant, No.03 Brise-bouclier, No.04 Fugitive et No.05 Duelliste sont disponibles ; les autres héros suivront.
 
 [h2]Des mises à jour régulières, des retours écoutés[/h2]
 [b]Je lis et j'examine chaque commentaire.[/b] Parlez-moi des compétences trop fortes, trop faibles ou inutiles, et des combinaisons qui fonctionnent. Les niveaux du héros et des compétences, les colifichets, l'équipe et le contexte du combat m'aident à évaluer vos retours. [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3821353035]Consulter l'historique[/url]
@@ -38,7 +40,9 @@ Les images ci-dessus présentent pour chaque héros le problème et sa solution,
 [h2]Installation et compatibilité[/h2]
 [b]Activez les cinq héros DLC :[/b] Flagellant (The Crimson Court), Brise-bouclier, Duelliste, Fugitive et Mousquetaire (gratuite). La refonte de la Mousquetaire est incluse ; aucun mod externe n'est nécessaire.
 
-Compatible avec un domaine existant. D'autres refontes remplaçant les mêmes fichiers de héros, d'effets ou de buffs peuvent entrer en conflit. Avec UI Enhancement, les compétences de la Mousquetaire peuvent afficher leurs noms d'origine.
+[b]N'activez pas cette collection avec l'ancien Every Hero Worth Taking ni avec les éditions séparées de Darkest Refined.[/b] Ils modifient les mêmes fichiers de héros. D'autres refontes remplaçant les mêmes fichiers de héros, d'effets ou de buffs peuvent aussi entrer en conflit.
+
+Compatible avec un domaine existant. Avec UI Enhancement, les compétences de la Mousquetaire peuvent afficher leurs noms d'origine.
 
 [b]Chaque héros mérite une raison de rejoindre l'équipe.[/b]
 

@@ -18,19 +18,21 @@ La dificultad y la tensión del original van primero. Cada mejora tiene un preci
 [h2]Qué puedes probar[/h2]
 Los rangos cubren los niveles 1–5 de habilidad.
 [list]
-[*][b]Curación compartida.[/b] La curación recaía en la Vestal, el Ocultista y el Bufón; ahora muchos héroes se reparten ese papel, para un juego más flexible y grupos más variados. Battle Heal del Cruzado cura 3–4 PV (6–7 a nivel 5) y aumenta la PROT del objetivo. Battlefield Bandage de la Arbalestera cura hemorragias y Battlefield Medicine del Médico de la peste cura el veneno de un aliado. Fortifying Vapours de la Anticuaria amplifica toda la curación que recibe el objetivo, acumulable. Rallying Flare de la Arbalestera alivia 3–5 de estrés al grupo, y Bolster del Hombre de armas se ha rehecho como habilidad de alivio de estrés.
-[*][b]Rompe la armadura.[/b] Como la armadura aumenta con la dificultad, los atacantes físicos aparte de la Rompescudos y la Asaltatumbas solían quedarse fuera. Ahora los héroes de apoyo pueden reducir la armadura enemiga por ellos: Weakening Curse del Ocultista (PROT −25 a −35%), Puncture de la Rompescudos (−30 a −40%), Rompearmaduras del Leproso [b](NUEVA HABILIDAD)[/b] (−30 a −50%) e Illumination de la Vestal (−15 a −25%) abren a los enemigos acorazados para los atacantes físicos.
-[*][b]Otra forma de jugar.[/b] Tracking Shot del Bandolero ahora sigue los movimientos del enemigo para preparar la represalia, y Duelist's Advance le otorga las mejoras de combate de un duelista. Pierce de la Rompescudos ya no alcanza todas las posiciones enemigas; a cambio, la bailarina de su historia se mueve libremente entre aliados y enemigos y deja huella a cada paso. La Mosquetera se ha rehecho por completo: desde la retaguardia perfora armaduras y oculta a sus aliados en el humo.
+[*][b]Curación compartida.[/b] La curación recaía en la Vestal, el Ocultista y el Bufón; ahora muchos héroes se reparten ese papel, para un juego más flexible y grupos más variados. Battle Heal del Cruzado cura 3–4 PV (6–7 a nivel 5) y aumenta la PROT del objetivo. Battlefield Bandage de la Arbalestera cura hemorragias y Battlefield Medicine del Médico de la peste cura el veneno de un aliado. Fortifying Vapours de la Anticuaria amplifica toda la curación que recibe el objetivo, acumulable. Rallying Flare de la Arbalestera alivia 2–4 de estrés a todo el grupo, ella incluida, y Bolster del Hombre de armas se ha rehecho como habilidad de alivio de estrés.
+[*][b]Rompe la armadura.[/b] Como la armadura aumenta con la dificultad, los atacantes físicos aparte de la Rompescudos y la Asaltatumbas solían quedarse fuera. Ahora los héroes de apoyo pueden reducir la armadura enemiga por ellos: Weakening Curse del Ocultista (PROT −25 a −35%), Puncture de la Rompescudos (−30 a −40%) y Rompearmaduras del Leproso [b](NUEVA HABILIDAD)[/b] (−30 a −50%) abren a los enemigos acorazados para los atacantes físicos.
+[*][b]Otra forma de jugar.[/b] Tracking Shot del Bandolero ahora sigue los movimientos del enemigo para preparar la represalia, y Duelist's Advance le otorga las mejoras de combate de un duelista. Pierce de la Rompescudos ya no alcanza todas las posiciones enemigas; a cambio, la bailarina de su historia se mueve por su propia fila y, con más habilidades para atraer enemigos que cualquier otro héroe, también desordena la fila enemiga. La Mosquetera se ha rehecho por completo: desde la retaguardia perfora armaduras y oculta a sus aliados en el humo.
 [/list]
 
 [h2]Dos reworks destacados[/h2]
 [list]
 [*][b]La Anticuaria encuentra su lugar en el nivel Campeón.[/b] Hasta Veterano es débil a cambio del oro extra que aporta. Desde Campeón, sus abalorios de clase la ponen a la altura de otros héroes. En lugar de hacerse fuerte ella misma, fortalece a sus aliados, por lo que vale la pena llevarla a la Mazmorra oscura.
-[*][b]Abominación: el control se vuelve poder.[/b] Su forma humana cambia algo de precisión en Manacles por un Beast's Bile más fuerte. El estrés que controla con Absolution paga la transformación y se convierte en curación, daño, velocidad y CRIT de la bestia, aliviando a los aliados.
+[*][b]Abominación: el control se vuelve poder.[/b] Su forma humana cambia algo de precisión en Manacles y Beast's Bile por un Beast's Bile más fuerte. El estrés que controla con Absolution paga la transformación y se convierte en curación, daño, velocidad y CRIT de la bestia, aliviando a los aliados.
 [/list]
 
 [h2]Cada cambio, en imágenes[/h2]
-Las imágenes de arriba presentan en cada héroe el problema y su solución, y luego comparan el original con la versión actual; las fichas largas se dividen en dos imágenes. Los 20 héroes están cambiados, y llegará un volumen por héroe con la intención de diseño de cada habilidad.
+La galería de arriba reúne las imágenes de presentación y una imagen por héroe: el problema, la dirección, la solución y su coste, y cómo jugarlo ahora. Los 20 héroes están cambiados.
+
+Las ediciones individuales, una por héroe, detallan cada habilidad con sus valores cambiados, por qué cambió, la intención del cambio, comparaciones y el historial de diseño. Ya están disponibles No.01 Mosquetera, No.02 Flagelante, No.03 Rompescudos, No.04 Fugitiva y No.05 Duelista; el resto de héroes llegará después.
 
 [h2]Seguimos actualizando y escuchando[/h2]
 [b]Leo y considero cada comentario.[/b] Cuéntame qué habilidades parecen demasiado fuertes, demasiado débiles o inútiles, y qué combinaciones funcionan bien. Los niveles del héroe y de las habilidades, los abalorios, el grupo y el contexto del combate me ayudan a valorarlo. [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3821353035]Ver el historial[/url]
@@ -38,7 +40,9 @@ Las imágenes de arriba presentan en cada héroe el problema y su solución, y l
 [h2]Instalación y compatibilidad[/h2]
 [b]Activa los cinco héroes DLC:[/b] Flagelante (The Crimson Court), Rompescudos, Duelista, Fugitiva y Mosquetera (gratuita). El rework de la Mosquetera está incluido; no hace falta ningún mod externo.
 
-Se puede activar en una partida existente. Otros reworks que reemplacen los mismos archivos de héroes, efectos o mejoras pueden entrar en conflicto. Con UI Enhancement, las habilidades de la Mosquetera pueden mostrar sus nombres originales.
+[b]No actives esta colección junto con el anterior Every Hero Worth Taking ni con las ediciones individuales de Darkest Refined.[/b] Cambian los mismos archivos de héroes. Otros reworks que reemplacen los mismos archivos de héroes, efectos o mejoras también pueden entrar en conflicto.
+
+Se puede activar en una partida existente. Con UI Enhancement, las habilidades de la Mosquetera pueden mostrar sus nombres originales.
 
 [b]Cada héroe merece un motivo para unirse al grupo.[/b]
 
