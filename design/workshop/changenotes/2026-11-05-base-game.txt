@@ -1,0 +1,5 @@
+[b]Update 2.5.19[/b]
+Base-game migration: this item now contains the 15 base-game heroes. DLC hero changes are available in the five existing Darkest Refined standalone mods linked at the top of the description. This resolves the former requirement to enable every DLC hero. Hero balance values are unchanged. Sorry for the extra setup; feedback and updates will continue.
+
+[b]更新 2.5.19[/b]
+本体版迁移：此条目现仅包含15名本体英雄。DLC英雄改动已移至说明顶部链接的五个Darkest Refined独立模组，不再要求本条目启用全部DLC英雄。英雄平衡数值未变。很抱歉给原订阅者增加了设置步骤，我会继续听取反馈并更新。

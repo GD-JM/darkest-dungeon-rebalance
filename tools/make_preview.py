@@ -1,6 +1,6 @@
 # 창작마당 대표 이미지: 비교 카드(make_cards.py)와 같은 톤 — 어두운 갈색 바탕, 청동 테두리, 금색 팔라티노 제목, 게임 초상화
 # 사용: python tools/make_preview.py [배경.png]  → design/workshop/cards/preview.png (+ 미리보기 아이콘용 사본)
-import os, sys
+import os, sys, json
 from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageEnhance
 
 G = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..'))
@@ -46,8 +46,10 @@ def main(bg_path=None):
     d.text(((S - w) / 2, 238), s, font=sf, fill=DIM)
     # 초상화 격자 5-5-5-5 (20명)
     size, gap = 140, 20
-    rows = [HEROES[i:i + 5] for i in range(0, len(HEROES), 5)]
-    y = 322
+    excluded = set(json.load(open(os.path.join(M, 'design/workshop/changes.json'), encoding='utf-8')).get('exclude_heroes', []))
+    included = [h for h in HEROES if h not in excluded]  # WS-BASE-001: match the actual package
+    rows = [included[i:i + 5] for i in range(0, len(included), 5)]
+    y = 390 if len(included) == 15 else 322
     for r in rows:
         x0 = (S - (len(r) * size + (len(r) - 1) * gap)) / 2
         for i, h in enumerate(r):

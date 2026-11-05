@@ -11,10 +11,11 @@ G = os.path.dirname(os.path.dirname(M))
 PFID = '3821353035'
 
 
-def main(out_dir=None, local=True):
+def main(out_dir=None, local=True, exclude_tables=()):
     loc_dir = os.path.join(M, 'localization')
     out_dir = out_dir or loc_dir
-    xmls = glob.glob(os.path.join(loc_dir, '*.string_table.xml'))
+    xmls = [p for p in glob.glob(os.path.join(loc_dir, '*.string_table.xml'))
+            if os.path.basename(p).removesuffix('.string_table.xml') not in exclude_tables]  # WS-BASE-001: public base package excludes DLC-specific names
     if not xmls:
         return []
     tmp = tempfile.mkdtemp(prefix='rb_loc_')

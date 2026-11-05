@@ -351,10 +351,10 @@ Unchanged committed text/cards are existing approved material: preserve them ins
 For descriptions return only exact old_text -> new_text replacements of passages affected by this release, with their language.
 Preserve every unrelated paragraph verbatim. Never rewrite entire descriptions or change titles. Every old_text must occur exactly once.
 Apply relevant factual updates consistently across the ten languages. Presentation-only image splitting needs NO description patches unless explicitly requested.
-Only the original all-DLC Workshop item 3821353035 remains. Optional packages were retired by the user. Remove obsolete optional-package links and promises; keep the requirement to enable all five DLC heroes. Never claim runtime testing. Keep paragraphs short enough for the existing byte budget.
+WS-BASE-001: Item 3821353035 is now the 15 base-game hero package. The user approved migration to existing Darkest Refined DLC standalone items (Musketeer 3832933701, Flagellant 3832933671, Shieldbreaker 3832933678, Runaway 3832933691, Duelist 3832933684). Preserve or add the migration notice and all five links at the TOP of all ten descriptions. Explain subscribing AND enabling the corresponding owned DLC hero mods to retain their changes; these are optional for the base package. Remove claims of 20 included heroes, bundled DLC changes and all-five-DLC requirements from every language. Preserve all unrelated base-hero paragraphs. Future Refined collection is separate and not released by this task. Do not add removed DLC heroes to cards. Explain the reason: the former package could not run without all DLC, so the Darkest Refined rebranding separates the base package for DLC-free access. Apologize for the extra setup and promise continued communication and updates. This is an actual packaging migration, not a new numeric balance patch. DLC-only historical rationale changes in the diff belong to excluded heroes; do not reinsert their card rows or present them as included content. Never claim runtime testing. Keep paragraphs short enough for the existing byte budget.
 No internal change IDs in public prose. Each fully patched description must stay strictly below8000 UTF-8 bytes counting CRLF.
 Return reasons only when changed, with matching source IDs. Account for all adopted intent IDs.
-Skill reasons must use actual hero|skill keys from current_cards or card_updates. Presentation-only reasons may use hero_cards|image_split.
+Skill reasons must use actual hero|skill keys from current_cards or card_updates. Presentation-only reasons may use hero_cards|image_split. For WS-BASE-001 package migration use package|base_game; excluded DLC rationale may remain in current_reasons without a new card.
 If source evidence is missing, contradictory, insufficient to verify old/current numbers, or requests unapproved interpretation, set blocked_reason explicitly.
 EVIDENCE\n''' + encoded
     codex = config.get('codex') or shutil.which('codex')
@@ -392,7 +392,11 @@ EVIDENCE\n''' + encoded
         key = reason['key']
         if key not in {s['key'] for h in updated_cards.values() for s in h['skills']}:
             referenced = [r for r in intents if r['id'] in reason['source_ids']]
-            if key != 'hero_cards|image_split' or not referenced or any(is_game_file(p) for r in referenced for p in r['files']):
+            # WS-BASE-001: packaging rationale is not a hero skill. Only the explicit
+            # migration intent may use this key even though changes.json is a game input.
+            package_reason = key == 'package|base_game' and {r['id'] for r in referenced} == {'WS-BASE-001'}
+            excluded_reason = key in reasons and key.split('|', 1)[0] in set(read_json(w / 'changes.json', {}).get('exclude_heroes', []))
+            if not package_reason and not excluded_reason and (key != 'hero_cards|image_split' or not referenced or any(is_game_file(p) for r in referenced for p in r['files'])):
                 raise ValueError('Rationale references an unknown skill block')
             general_reasons.append(reason)
             continue  # Presentation rationale is not a hero's gameplay rationale.

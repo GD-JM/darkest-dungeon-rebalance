@@ -1,3 +1,9 @@
+[h2]DLC 영웅 개편은 개별 모드로 이전했습니다[/h2]
+기존 통합판은 DLC가 없는 분들이 모드를 실행조차 할 수 없는 문제가 있었습니다. Darkest Refined로 새롭게 정리하는 과정에서, DLC 없이도 이 모드 하나만 구독하고 활성화하면 본편 15영웅의 변경을 이용할 수 있도록 분리했습니다. 기존 구독자분들께 추가 설정의 번거로움을 드려 송구합니다. 앞으로도 여러분과 계속 소통하며 업데이트를 이어 가겠습니다.
+
+이 모드는 이제 본편 15영웅을 대상으로 합니다. 기존 DLC 영웅의 변경 사항을 계속 사용하려면, 보유하고 사용하는 영웅의 Darkest Refined 개별판을 추가로 구독하고 게임에서 활성화해 주세요. 본편판만 사용할 때는 추가 구독이 필요하지 않습니다.
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933701]총사[/url] · [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933671]고행자[/url] · [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933678]방패 파괴자[/url] · [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933691]도망자[/url] · [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933684]결투가[/url]
+
 [h1]전 영웅 리밸런스[/h1]
 [i]영웅 고유의 맛은 그대로, 데려갈 이유와 선택할 기술은 더 다양하게.[/i]
 

@@ -64,3 +64,7 @@ GitHub push는 성공했지만 Steam/Codex 단계가 실패했다면 push 성공
 - 자동 문안 작성은 게임 수치·밸런스 결정을 새로 만들 권한이 없다.
 - 상태: `workshop-sync/runtime/state.json`, `health.json`, `worker.log`와 각 배포의 `release.json`/`publish-state.json`을 확인한다. 실제 완료가 확인되기 전 '게시 완료'라 말하지 않는다.
 - 관련 없는 개인 대화를 수집하지 않는다. 이어담 on/off를 변경하지 않는다. 이 공통 계약은 각 도구가 현재 작업의 원문을 기록하도록 연결하며, 다른 앱의 대화 입력을 가로채지 않는다.
+
+
+## WS-BASE-001 (2026-11-05): latest user override
+Existing item 3821353035 is now the base-game 15-hero package. Exclude Musketeer, Flagellant, Shieldbreaker, Runaway and Duelist only from its published build/cards/cover. Preserve all source hero data and separate Darkest Refined work. Existing standalone IDs: 3832933701/3832933671/3832933678/3832933691/3832933684. They supersede the earlier blanket prohibition on optional packages; do not recreate the six retired October items. This pipeline still publishes only 3821353035. Preserve the migration notice and links in all ten languages. Future collection and remaining standalone heroes are separate tasks.

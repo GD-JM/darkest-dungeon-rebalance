@@ -15,7 +15,7 @@
 		<Tags>Overhauls</Tags>
 		<Tags>Gameplay Tweaks</Tags>
 		<Tags>Class Tweaks</Tags>
-		<Tags>New Class</Tags>
+		<!-- WS-BASE-001: base hero changes only; no new class tag. -->
 	</Tags>
 	<ItemDescription>{DESCRIPTION}</ItemDescription>
 	<PublishedFileId>3821353035</PublishedFileId>

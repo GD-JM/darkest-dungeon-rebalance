@@ -108,6 +108,9 @@ def main():
         shutil.rmtree(OUT)
     os.makedirs(OUT)
     van_eff = ec.load_vanilla_effects(G)
+    # WS-BASE-001: retain base-hero Burn without requiring Runaway's effect file.
+    # Same numeric effect; unique names prevent collisions with standalone DLC mods.
+    base_aliases = {'RW Burn 2': 'RB Base Burn 2', 'RW Burn 3': 'RB Base Burn 3'} if spec.get('base_game_only') else {}
     cust_eff = {}
     # 창작마당판 전용 효과(design/workshop/workshop.effects.darkest)도 같은 표에 넣어, 참조되면 출력 효과 파일로 복사된다
     for f in glob.glob(os.path.join(M, 'effects', 'rebalance_*.effects.darkest')) + [os.path.join(W, 'workshop.effects.darkest')]:
@@ -115,6 +118,8 @@ def main():
             m = re.match(r'effect:\s*\.name\s+"([^"]+)"', l)
             if m:
                 cust_eff[m.group(1)] = l
+    for old, new in base_aliases.items():
+        cust_eff[new] = van_eff[old][0].replace('.name "' + old + '"', '.name "' + new + '"', 1)
     notes = []      # (hero, 대상, [ID], en 주석들, ko 주석들)
     heroes = []
     for hero in S.KO:
@@ -160,7 +165,10 @@ def main():
             i += 1
         dst = os.path.join(OUT, 'heroes', hero, hero + '.info.darkest')
         os.makedirs(os.path.dirname(dst), exist_ok=True)
-        open(dst, 'wb').write(eol.join(lines).encode('utf-8'))
+        packaged = eol.join(lines)
+        for old, new in base_aliases.items():
+            packaged = packaged.replace('"' + old + '"', '"' + new + '"')
+        open(dst, 'wb').write(packaged.encode('utf-8'))
         # WS-ASSET-001: keep approved custom skill art in the actual upload.
         from workshop_assets import copy_skill_icons
         copy_skill_icons(os.path.dirname(cf), os.path.dirname(dst), hero)
@@ -201,7 +209,7 @@ def main():
         json.dump({'buffs': need_b}, open(p, 'w', encoding='utf-8'), indent='\t')
     # 기술 이름 현지화(MUS-110): 커스텀판 localization/*.string_table.xml을 컴파일(tools/make_loc.py)해 loc2만 복사
     import make_loc
-    make_loc.main(out_dir=os.path.join(OUT, 'localization'), local=False)   # 창작마당판: 언어별 원문 그대로
+    make_loc.main(out_dir=os.path.join(OUT, 'localization'), local=False, exclude_tables=spec.get('exclude_localization', []))   # 창작마당판: 언어별 원문 그대로
     # 패치 노트 (영어 = 메인, 한국어): 무엇 = 바닐라 vs 출력 데이터 자동 비교(patch_notes.py), 왜 = design/workshop/why.json(검토된 근거)
     names = {}
     for f in glob.glob(os.path.join(G, 'localization', '*.string_table.xml')) + glob.glob(os.path.join(G, 'dlc', '*', 'localization', '*.string_table.xml')) + glob.glob(os.path.join(G, 'dlc', '*', 'features', '*', 'localization', '*.string_table.xml')):

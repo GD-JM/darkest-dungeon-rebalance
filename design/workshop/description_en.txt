@@ -1,3 +1,9 @@
+[h2]DLC hero reworks have moved to individual mods[/h2]
+The previous combined package could not run for players missing its DLC. As part of the move to Darkest Refined, this item now works on its own for the 15 base-game heroes, without DLC. I am sorry for the extra setup this causes existing subscribers. I will keep listening to your feedback and updating the mod.
+
+This item now covers the 15 base-game heroes. To keep the DLC hero changes, subscribe to and enable the corresponding Darkest Refined individual mods for the DLC heroes you own and use. The base package does not require these subscriptions.
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933701]Musketeer[/url] · [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933671]Flagellant[/url] · [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933678]Shieldbreaker[/url] · [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933691]Runaway[/url] · [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933684]Duelist[/url]
+
 [h1]Every Hero Worth Taking[/h1]
 [i]Keep each hero's identity. Give more heroes, skills and parties a reason to be chosen.[/i]
 

@@ -1,0 +1,45 @@
+{
+  "id": "WS-BASE-001",
+  "decision": "adopted",
+  "original_quote": "기존 구독 사람들한테 다키스트 리파인 dlc 영웅 5개 추가로 구독해달라고 설명란 맨 위에다 적어줘 댓글에도 적을까 그리고 이미지에서도 dlc는 빼고 메인 이미지에서도 dlc 5영웅은 빼야해 이해했니?",
+  "context_quotes": [
+    {
+      "speaker": "user",
+      "quote": "그래서 지금 꺼를 dlc 없는 판으로 재수정해서 올리고 나중에 dlc 포함한 통합판을 다키스트 리파인 통합판으로 올릴거야 그 전까지 각 영웅 하나하나 다키스트 리파인- 개별영웅으로 업로드할거고 그래서 지금 다키스트 리파인 dlc 영웅 전부 업로드 했어 그래서"
+    },
+    {
+      "speaker": "user",
+      "quote": "이전 구성 재시도만 취소하고 진행"
+    },
+    {
+      "speaker": "user",
+      "quote": "응 클로드 예약 재시도만 취소하고 진행해 기존 창작마당 본편 15영웅판으로 바꾸고 설명 상단 안내랑 대표 이미지 비교 이미지 다 수정해서 푸시 배포까지 해 댓글도 완료되면 달아줘 새 DLC 5개는 건들지 말고\n\n그러면 기존꺼랑 dlc 5개 구독하면 기존이랑 똑같이 되는거지?\n\n\n그리고 이렇게 작업한 이유도 꼭 남겨줘 리밸런싱 설명란에 왜냐하면 dlc 없는 사람은 아예 이 모드를 플레이조차 할 수 없어서 리브랜딩하는 겸 dlc 없는 사람은 이 모드만 구독하고도 플레이 가능하게 수정했다 번거롭게 해서 송구하다 앞으로도 계속 소통하며 업데이트 이어 나가겠다. 멘트 남겨줘"
+    }
+  ],
+  "rationale_ko": "기존 통합판은 DLC가 없는 이용자가 실행조차 할 수 없었기 때문에, Darkest Refined 리브랜딩과 함께 기존 구독 경로를 DLC 불필요 본편 15영웅판으로 전환한다. DLC 영웅은 이미 공개된 5개 개별판으로 분리하고 해당 DLC를 보유한 기존 이용자에게 추가 구독·활성화를 안내한다. 기존 수치는 유지한다. 전환의 번거로움에 사과하고 계속 소통하며 업데이트하겠다는 약속을 설명 상단과 배포 완료 댓글에 남긴다. 새 DLC 5개는 수정하지 않는다.",
+  "source": {
+    "product": "codex",
+    "reference": "2026-11-05 현재 대화: Claude 맥락 확인 및 기존 창작마당 본편판 전환 요청과 예약 재시도 취소 승인",
+    "event_id": null
+  },
+  "files": [
+    "design/workshop/changes.json",
+    "design/workshop/hero_cards.json",
+    "tools/make_loc.py",
+    "tools/build_workshop.py",
+    "tools/make_preview.py",
+    "design/workshop/project.template.xml",
+    "design/workshop/description_en.txt",
+    "design/workshop/description_ko.txt",
+    "tools/workshop_sync/release.py",
+    "tools/workshop_sync/agent-contract.md",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "design/analysis/base-game-migration-20261105.md",
+    "design/workshop/cards/preview.png",
+    "design/workshop/changenotes/2026-11-05-base-game.txt"
+  ],
+  "supersedes": [
+    "WS-MODULAR-002"
+  ]
+}
