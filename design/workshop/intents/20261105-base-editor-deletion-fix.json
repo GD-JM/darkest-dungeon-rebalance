@@ -1,0 +1,16 @@
+{
+  "id": "WS-BASE-002",
+  "decision": "adopted",
+  "original_quote": "기존 창작마당 본편 15영웅판으로 바꾸고 설명 상단 안내랑 대표 이미지 비교 이미지 다 수정해서 푸시 배포까지 해",
+  "rationale_ko": "승인된 DLC 문단 제거가 빈 대체문 문자열이라는 이유만으로 차단되어 실패했다. 정확히 1회 일치하는 기존 문단의 삭제는 허용하되 빈 검색문·중복 매칭·3500자 제한은 유지한다. 게임 수치나 게시 범위를 늘리지 않는 배포 도구 복구다.",
+  "source": {
+    "product": "codex",
+    "reference": "2026-11-05 현재 대화 본편판 전환 요청; d790b95 배포 오류 Invalid or overly broad description patch",
+    "event_id": null
+  },
+  "files": [
+    "tools/workshop_sync/release.py",
+    "tools/workshop_sync/tests/test_sync.py"
+  ],
+  "supersedes": []
+}

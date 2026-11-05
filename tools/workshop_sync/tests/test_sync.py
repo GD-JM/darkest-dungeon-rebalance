@@ -148,6 +148,16 @@ class SyncTests(unittest.TestCase):
             descriptions=[dict(language=lang, title='Title', body='한'*3000) for lang in LANGUAGES])
         with self.assertRaisesRegex(ValueError, 'byte budget'): validate_editor(result, {}, [])
 
+    def test_description_patch_can_remove_obsolete_dlc_passage(self):
+        source = {'english': dict(language='english', title='Title', body='Keep A. Old DLC rule. Keep B.')}
+        result = apply_description_patches(source, [dict(language='english', old_text='Old DLC rule. ', new_text='')])
+        self.assertEqual(result[0]['body'], 'Keep A. Keep B.')
+        self.assertEqual(source['english']['body'], 'Keep A. Old DLC rule. Keep B.')
+        with self.assertRaises(ValueError):
+            apply_description_patches(source, [dict(language='english', old_text='', new_text='')])
+        with self.assertRaises(ValueError):
+            apply_description_patches(source, [dict(language='english', old_text='Not present', new_text='')])
+
     def test_description_patch_preserves_unrelated_text_exactly(self):
         source = {'english':dict(language='english',title='Title',body='Crusader: 5\nJester: 8\nCredits stay intact')}
         result = apply_description_patches(source,[dict(language='english',old_text='Crusader: 5',new_text='Crusader: 6')])

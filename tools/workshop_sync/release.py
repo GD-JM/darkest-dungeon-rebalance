@@ -215,7 +215,9 @@ def apply_description_patches(existing, patches):
     merged = copy.deepcopy(existing)
     for change in patches:
         lang, old, new = change['language'], change['old_text'], change['new_text']
-        if lang not in merged or not old or not new or max(len(old), len(new)) > 3500:
+        # WS-BASE-002: deleting an explicitly matched obsolete DLC passage is valid.
+        # Empty old text remains forbidden; exact-one match and size bounds stay.
+        if lang not in merged or not old or max(len(old), len(new)) > 3500:
             raise ValueError('Invalid or overly broad description patch')
         if merged[lang]['body'].count(old) != 1:
             raise ValueError('Description patch must match exactly one original passage: ' + lang)
