@@ -1,0 +1,21 @@
+{
+  "id": "VES-024",
+  "decision": "adopted",
+  "original_quote": "바닐라가 -25잖아 맞으면 그냥 푸시해 지금 너무 쌔 성녀가",
+  "rationale_ko": "설치된 바닐라 심판 -25% 확인 후 피해만 복원해 성녀의 과도한 강함을 낮춘다.",
+  "source": {
+    "product": "codex",
+    "reference": "현재 대화 성녀 심판 -25 확인 후 푸시 요청",
+    "message_id": null,
+    "event_id": null
+  },
+  "files": [
+    "heroes/vestal/vestal.info.darkest",
+    "design/changes/vestal.md",
+    "design/workshop/hero_cards.json",
+    "design/workshop/why.json"
+  ],
+  "supersedes": [
+    "VES-009 judgement damage only"
+  ]
+}

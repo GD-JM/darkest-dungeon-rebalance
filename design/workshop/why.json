@@ -1148,17 +1148,18 @@
  },
  "vestal|judgement": {
   "ids": [
-   "VES-002",
-   "VES-009",
-   "VES-001"
+    "VES-002",
+    "VES-009",
+    "VES-001",
+    "VES-024"
   ],
   "principles": [
-   "G-02",
-   "R-SKILL-09"
+    "G-02",
+    "R-SKILL-09"
   ],
-  "en": "Vanilla Judgement reached rank 4 and healed her, so it was locked into every rear Vestal's four-skill rotation. With the heal moved to Mace Bash, it stays as the plain rear attack that reaches rank 4: standard ranged accuracy and no damage penalty, but still weaker than Divine Comfort.",
-  "ko": "바닐라 심판은 4열까지 닿으면서 자기 회복까지 있어 후열 성녀의 고정 기술 4개 중 하나였다. 회복을 철퇴로 넘긴 뒤에는 회복 없는 4열 도달 공격으로 남기며, 명중은 원거리 표준, 피해 감소는 없앴다. 그래도 신성한 위무를 넘지는 않는다."
- },
+  "en": "Judgement damage returns from 0% to vanilla -25% at every level to reduce the Vestal's excessive back-rank damage alongside her healing and support. Accuracy, critical chance, ranks and the removal of self-healing remain unchanged.",
+  "ko": "성녀가 너무 강하다는 사용자 판단에 따라 심판 피해만 0%에서 바닐라 -25%로 복원해 후열 직접 화력을 낮춘다. 명중·치명타·사용열·대상열·자기 회복 제거는 유지한다."
+},
  "vestal|mace_bash": {
   "ids": [
    "VES-001"
