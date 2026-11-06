@@ -62,9 +62,13 @@ def normalized(text):
 def verify_phase(details, release, phase):
     if phase == 'assets':
         names = [Path(p['path']).name for p in release['images']]
-        heroes = {p['hero'] for p in release['images']}
-        found = [p['filename'] for p in details['previews'] if any(
-            re.fullmatch(r'\d{2}_' + re.escape(h) + r'(?:_p[12])?\.png', p['filename']) for h in heroes)]
+        if 'managed_preview_names' in release:
+            managed = set(release['managed_preview_names']) | set(names)
+            found = [p['filename'] for p in details['previews'] if p['filename'] in managed]
+        else:
+            heroes = {p['hero'] for p in release['images']}
+            found = [p['filename'] for p in details['previews'] if any(
+                re.fullmatch(r'\d{2}_' + re.escape(h) + r'(?:_p[12])?\.png', p['filename']) for h in heroes)]
         if found != names:
             raise ValueError('Uploaded preview list does not match the prepared release')
         desc = next(d for d in release.get('descriptions', []) if d['language'] == 'english') if release.get('descriptions') else None
@@ -75,9 +79,19 @@ def verify_phase(details, release, phase):
 
 
 def publish(config, job, release, images_only=False, metadata_only=False):
-    # WS-MODULAR-002: the user retired all six optional items; never revive cached jobs.
-    if int(release.get('item_id', ITEM_ID)) != ITEM_ID:
-        raise ValueError('Optional Workshop packages retired; only 3821353035 may publish')
+    # WS-FLEET-001: only explicitly registered releases; October retired IDs stay forbidden.
+    from fleet_registry import RETIRED, validate as validate_fleet
+    item_id = int(release.get('item_id', ITEM_ID))
+    if item_id in RETIRED:
+        raise ValueError('The retired Workshop item cannot publish')
+    if item_id != ITEM_ID:
+        registry_path = Path(release.get('registry_path', ''))
+        if not registry_path.is_file() or sha256(registry_path) != release.get('registry_sha256'):
+            raise ValueError('Non-base release needs an immutable approved fleet registry')
+        registry = validate_fleet(read_json(registry_path))
+        matches = [p for p in registry['items'] if int(p['id']) == item_id and p.get('released')]
+        if len(matches) != 1 or matches[0]['kind'] not in {'combined', 'hero'}:
+            raise ValueError('Workshop item is not a registered released edition')
     journal_path = job / 'publish-state.json'
     journal = read_json(journal_path, {'digest': release['digest'], 'completed': [], 'phase': None, 'status': 'ready'})
     if journal['digest'] != release['digest']:
@@ -96,7 +110,7 @@ def publish(config, job, release, images_only=False, metadata_only=False):
         write_json(job / 'steam-before.json', initial)
         if not initial['owned']:
             raise ValueError('Active Steam account does not own the configured Workshop item')
-        old_names = owned_card_previews(initial['previews'], release)
+        old_names = set(release['managed_preview_names']) if 'managed_preview_names' in release else owned_card_previews(initial['previews'], release)
         phases = ['assets'] + ([] if images_only else [d['language'] for d in release['descriptions'] if d['language'] != 'english'])
         for phase in phases:
             if phase in journal['completed']:
@@ -119,9 +133,8 @@ def publish(config, job, release, images_only=False, metadata_only=False):
             if phase == 'assets':
                 kwargs['replace_previews'] = (old_names, [image_dir / p['path'] for p in release['images']])
                 if not images_only and not metadata_only:
-                    kwargs.update(content=release['payload'], thumbnail=Path(release['payload']) / 'preview_icon.png', note=release['note'])
-                    if 'item_id' in release and release['item_id'] != ITEM_ID:
-                        kwargs['visibility'] = 0
+                    kwargs.update(content=release['payload'], thumbnail=Path(release['payload']) / 'preview_icon.png', note=release.get('note'))
+                    # A normal update never publishes a hidden/draft item as a side effect.
             if not images_only:
                 desc = next(d for d in release['descriptions'] if d['language'] == lang)
                 kwargs.update(description=desc['body'], title=desc['title'])
@@ -267,15 +280,26 @@ def publish_batch(config, job, release, module_releases):
                     write_json(dependency_path, dependency)
             publish(config, target_job, target_release)
             outcomes[key] = {'upload_complete': True}
-            if time.time() < cooldown_until:
-                raise SteamError('Public verification deferred until Steam HTTP cooldown expires')
             # WS-GALLERY-001: a successful upload can still leave missing public previews.
             remote = read_json(target_job / 'steam-after.json', {})
             expected_names = {Path(image['path']).name for image in target_release.get('images', [])}
             expected_urls = [p['url'] for p in remote.get('previews', []) if p['filename'] in expected_names]
             if expected_names and len(expected_urls) != len(expected_names):
                 raise SteamError('Cannot verify public gallery: missing uploaded preview evidence')
-            if verify_public(target_release.get('item_id', ITEM_ID), expected_urls):
+            # Fresh, explicitly captured browser DOM evidence can reconcile HTTP 429.
+            # Require this exact release, item and complete expected preview path set.
+            proof = read_json(target_job / 'public-browser-verification.json', {})
+            browser_verified = False
+            if proof:
+                age = time.time() - datetime.fromisoformat(proof['observed_at']).timestamp()
+                item = target_release.get('item_id', ITEM_ID)
+                browser_verified = (0 <= age < 1800 and proof.get('source_sha') == target_release['source_sha']
+                    and proof.get('item_id') == item and proof.get('subscribe_visible') is True
+                    and proof.get('url') == f'https://steamcommunity.com/sharedfiles/filedetails/?id={item}&l=koreana'
+                    and set(proof.get('preview_paths', [])) == {urlsplit(u).path.rstrip('/') for u in expected_urls})
+            if not browser_verified and time.time() < cooldown_until:
+                raise SteamError('Public verification deferred until Steam HTTP cooldown expires')
+            if browser_verified or verify_public(target_release.get('item_id', ITEM_ID), expected_urls):
                 outcomes[key] = {'status': 'complete', 'public_access_verified': True}
             else:
                 outcomes[key] = {'status': 'awaiting_public_review', 'upload_complete': True}

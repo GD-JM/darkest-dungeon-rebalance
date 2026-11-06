@@ -1,0 +1,12 @@
+{
+  "houndmaster_image_hash_match": true,
+  "gallery_count": 21,
+  "all_previews_present": true,
+  "payload_mismatches": [],
+  "payload_files": 56,
+  "public_note_and_gallery_pending": false,
+  "public_gallery_count": 21,
+  "public_subscribe_visible": true,
+  "public_note_verified": true,
+  "public_verification_method": "cua_repl DOM on exact item and changelog URL, 2026-11-06 12:33 UTC"
+}

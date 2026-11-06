@@ -1,0 +1,7 @@
+{
+  "all_passed": true,
+  "api_cdn_download_report": "live-verification.json",
+  "public_browser_report": "public-browser-verification.json",
+  "http_429_preserved": true,
+  "matching_note_id": "1793968049"
+}

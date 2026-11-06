@@ -1,0 +1,24 @@
+{
+  "base": {
+    "item_id": 3821353035,
+    "version": "2.5.21",
+    "images": 21,
+    "payload_files": 46,
+    "languages": 10,
+    "verified": true
+  },
+  "combined": {
+    "item_id": 3828956017,
+    "images": 21,
+    "payload_files": 56,
+    "verified": true
+  },
+  "shieldbreaker_comparison": {
+    "item_id": 3832933678,
+    "images_updated": 2,
+    "languages": 10,
+    "verified": true
+  },
+  "game_runtime_test": false,
+  "fleet_automation": "Existing fleet-wide automation/collection implementation remains a separate unfinished task; combined and cross-reference release coordinated explicitly in this request."
+}

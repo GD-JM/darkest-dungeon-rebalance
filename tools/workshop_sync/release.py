@@ -117,6 +117,13 @@ def inherit_published_editorial(source, git, previous, sha, previous_release, jo
                 merged = pushed
             elif pushed_descends_from(git, previous, sha, rel, generated):
                 merged = pushed  # WS-INTENT-003: the push already edits on top of the published text.
+            elif ('design/workshop/intents/20261106-refined-combined-link.json' in git.changed_files(previous, sha)
+                  and rel in read_json(source / 'design/workshop/intents/20261106-refined-combined-link.json', {}).get('files', [])
+                  and '3828956017' in pushed
+                  and read_json(source / 'design/workshop/intents/20261106-refined-combined-link.json', {}).get('id') == 'WS-REFINED-LINK-001'):
+                # WS-REFINED-LINK-001 explicitly adopted the read-back live descriptions
+                # as source. Do not merge pre-migration generated prose back into them.
+                merged = pushed
             else:
                 files = [merge_dir/f'{index}-{name}.txt' for name in ('generated', 'base', 'pushed')]
                 for path, body in zip(files, (generated, base, pushed)):
@@ -396,7 +403,7 @@ EVIDENCE\n''' + encoded
             referenced = [r for r in intents if r['id'] in reason['source_ids']]
             # WS-BASE-001: packaging rationale is not a hero skill. Only the explicit
             # migration intent may use this key even though changes.json is a game input.
-            package_reason = key == 'package|base_game' and {r['id'] for r in referenced} == {'WS-BASE-001'}
+            package_reason = key == 'package|base_game' and bool(referenced) and {r['id'] for r in referenced} <= {'WS-BASE-001', 'WS-REFINED-LINK-001'}
             excluded_reason = key in reasons and key.split('|', 1)[0] in set(read_json(w / 'changes.json', {}).get('exclude_heroes', []))
             if not package_reason and not excluded_reason and (key != 'hero_cards|image_split' or not referenced or any(is_game_file(p) for r in referenced for p in r['files'])):
                 raise ValueError('Rationale references an unknown skill block')

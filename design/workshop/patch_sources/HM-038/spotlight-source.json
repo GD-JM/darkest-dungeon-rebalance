@@ -1,0 +1,25 @@
+{
+  "out": "spotlights/houndmaster.png",
+  "layout": "hero_spotlight",
+  "hero": "HOUNDMASTER",
+  "tagline": "Focus one target, or spread the bleed.",
+  "rows": [
+    [
+      "THE PROBLEM",
+      "Hound's Rush out-damaged the true mark dealers while his protective tools were too weak to bother with."
+    ],
+    [
+      "THE DIRECTION",
+      "A protector who spreads bleed from range and leaves the big marked hits to others."
+    ],
+    [
+      "THE SOLUTION, AND ITS PRICE",
+      "Both hound attacks work from any rank at ACC 85. Rush deals DMG -20%; Harry deals DMG -85%. Both bleed 2/2/3/3/4 for 3 turns."
+    ],
+    [
+      "NEW WAYS TO PLAY",
+      "Guard Dog gives +20–30% dodge, Cry Havoc heals 4–6 party stress more reliably, and Lick Wounds works from any rank."
+    ]
+  ],
+  "art": "houndmaster_club"
+}

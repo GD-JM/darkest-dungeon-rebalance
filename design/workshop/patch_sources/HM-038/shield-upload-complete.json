@@ -1,0 +1,19 @@
+{
+  "languages": {
+    "english": true,
+    "koreana": true,
+    "brazilian": true,
+    "french": true,
+    "german": true,
+    "polish": true,
+    "russian": true,
+    "schinese": true,
+    "spanish": true,
+    "tchinese": true
+  },
+  "images": {
+    "shieldbreaker_ko_sheet_impale.png": "https://images.steamusercontent.com/ugc/12101043640194380665/365B74BA994F327B80282DEA85926C15C4061D9E/",
+    "shieldbreaker_en_sheet_impale.png": "https://images.steamusercontent.com/ugc/12667347281096848443/368B5893CD3B7E31FB410B6793FC03135061A30D/"
+  },
+  "image_count_unchanged": true
+}

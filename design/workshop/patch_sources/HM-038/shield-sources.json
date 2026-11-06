@@ -1,0 +1,402 @@
+[
+  {
+    "language": "ko",
+    "file": "sheet_impale.png",
+    "sheet": {
+      "file": "sheet_impale.png",
+      "head": {
+        "icon": "four",
+        "name": "꿰뚫기",
+        "sub": "Impale · 1레벨부터 독을 묻힌 창"
+      },
+      "changes": [
+        [
+          "위치",
+          [
+            "pips",
+            "1",
+            "1234"
+          ],
+          [
+            "pips",
+            "1",
+            "1234"
+          ]
+        ],
+        [
+          "명중",
+          "90",
+          "85"
+        ],
+        [
+          "중독",
+          "3레벨부터",
+          "1레벨부터"
+        ]
+      ],
+      "levels": {
+        "title": "레벨별 효과",
+        "rows": [
+          [
+            "중독 (3턴)",
+            [
+              "없음",
+              "없음",
+              "1",
+              "1",
+              "2"
+            ],
+            [
+              "1",
+              "1",
+              "2",
+              "2",
+              "3"
+            ]
+          ],
+          [
+            "명중",
+            [
+              "90",
+              "95",
+              "100",
+              "105",
+              "110"
+            ],
+            [
+              "85",
+              "90",
+              "95",
+              "100",
+              "105"
+            ]
+          ]
+        ]
+      },
+      "note": "적 전원을 한 줄로 꿰뚫는 범위, 피해 −60%, 치명 −6%, 자기 뒤로 1칸, 중독 확률 100~140%는 바닐라 그대로. 적 한 명당 중독 총량 3/3/6/6/9 (바닐라 0/0/3/3/6).",
+      "why": "바닐라 꿰뚫기는 3레벨부터 중독이 붙어, 1·2레벨에는 피해 −60%짜리 일렬 공격이었다. 1레벨부터 중독을 넣어 초반에도 쓸 만하게 했다.",
+      "lore": [
+        [
+          "…가는 자리마다 독을 남기니, 그녀는 실로 무자비한 전투원이라 할 수 있습니다.",
+          "길드 설명"
+        ]
+      ],
+      "intent": [
+        "꿰뚫기는 창 한 번에 적 대열을 한 줄로 꿰는 기술이다. 가는 자리마다 독을 남기는 영웅(위 길드 설명)이니, 꿰뚫린 적 모두에게 1레벨부터 독이 남게 했다.",
+        "1·2레벨은 원작 효과 파일에 이미 있던 중독 1 × 3턴을 그대로 쓰고, 3~5레벨은 1씩 올렸다. 피해 −60%와 중독 지속 3턴은 바닐라대로 두었다.",
+        "명중은 85다. 적 전원을 노리는 광역이라 단일 기술인 살모사의 입맞춤(90)보다 5 낮게 잡았다. 명중이 같은 조련사의 사냥개 습격과는 무게를 나눴다. 꿰뚫기는 피해 −60%·중독 1~3으로 직접 피해에, 사냥개 습격은 피해 −85%·출혈 2~4로 지속 피해에 기운다."
+      ],
+      "quotes": [
+        "창작마당에선 최대한 바닐라처럼"
+      ],
+      "compare": {
+        "title": "적 여럿에게 지속 피해를 거는 기술 (1레벨 · 지속 피해는 1~5레벨)",
+        "cols": [
+          "기술",
+          "위치",
+          "명중",
+          "피해",
+          "지속 피해 (3턴)"
+        ],
+        "widths": [
+          300,
+          250,
+          90,
+          110,
+          270
+        ],
+        "rows": [
+          [
+            {
+              "skill": [
+                "shieldbreaker",
+                "four",
+                "꿰뚫기",
+                "방패 파괴자"
+              ]
+            },
+            {
+              "pips": [
+                "1",
+                "1234"
+              ]
+            },
+            "85",
+            "−60%",
+            "중독 1~3"
+          ],
+          [
+            {
+              "skill": [
+                "houndmaster",
+                "two",
+                "사냥개 습격",
+                "조련사"
+              ]
+            },
+            {
+              "pips": [
+                "4321",
+                "1234"
+              ]
+            },
+            "85",
+            "−85%",
+            "출혈 2~4"
+          ],
+          [
+            {
+              "skill": [
+                "bounty_hunter",
+                "seven",
+                "마름쇠",
+                "현상금 사냥꾼"
+              ]
+            },
+            {
+              "pips": [
+                "1234",
+                "34"
+              ]
+            },
+            "90",
+            "−85%",
+            "출혈 2~4"
+          ],
+          [
+            {
+              "skill": [
+                "plague_doctor",
+                "two",
+                "역병 수류탄",
+                "역병 의사"
+              ]
+            },
+            {
+              "pips": [
+                "43",
+                "34"
+              ]
+            },
+            "95",
+            "−90%",
+            "중독 4~6"
+          ]
+        ],
+        "note": "위치: 금색 = 사용 열, 붉은색 = 대상 열. 꿰뚫기와 사냥개 습격은 적 1~4열을 모두 맞힌다."
+      },
+      "history": [
+        [
+          "9월 27일",
+          "명중 90 → 85, 1·2레벨에도 중독 1 (원작 효과).",
+          null
+        ],
+        [
+          "10월 21일",
+          "3~5레벨 중독을 1씩 올림 (1/1/2/2/3, 3턴).",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "language": "en",
+    "file": "sheet_impale.png",
+    "sheet": {
+      "file": "sheet_impale.png",
+      "head": {
+        "icon": "four",
+        "name": "Impale",
+        "sub": "A venomed spear from level 1"
+      },
+      "changes": [
+        [
+          "Ranks",
+          [
+            "pips",
+            "1",
+            "1234"
+          ],
+          [
+            "pips",
+            "1",
+            "1234"
+          ]
+        ],
+        [
+          "ACC",
+          "90",
+          "85"
+        ],
+        [
+          "Blight",
+          "From level 3",
+          "From level 1"
+        ]
+      ],
+      "levels": {
+        "title": "By level",
+        "rows": [
+          [
+            "Blight (3 rds)",
+            [
+              "None",
+              "None",
+              "1",
+              "1",
+              "2"
+            ],
+            [
+              "1",
+              "1",
+              "2",
+              "2",
+              "3"
+            ]
+          ],
+          [
+            "ACC",
+            [
+              "90",
+              "95",
+              "100",
+              "105",
+              "110"
+            ],
+            [
+              "85",
+              "90",
+              "95",
+              "100",
+              "105"
+            ]
+          ]
+        ]
+      },
+      "note": "A line through every enemy, −60% damage, −6% crit, self back 1 and 100–140% Blight chance are unchanged from vanilla. Total Blight per enemy 3/3/6/6/9 (vanilla 0/0/3/3/6).",
+      "why": "Vanilla Impale gained Blight only at level 3, so at levels 1 and 2 it was a −60% damage line attack. Blight now applies from level 1, so the skill is worth using early.",
+      "lore": [
+        [
+          "…leaving the taste of venom wherever she goes, the Shieldbreaker is a remorseless combatant.",
+          "Guild description"
+        ]
+      ],
+      "intent": [
+        "Impale runs the enemy line through with one thrust of the spear. She is a hero who leaves venom wherever she goes (guild description above), so every enemy it runs through is left with Blight from level 1.",
+        "Levels 1 and 2 use the Blight 1 × 3 rounds already in the base game’s effect file, and levels 3–5 each go up by 1. The −60% damage and the 3-round Blight duration stay as in vanilla.",
+        "Accuracy is 85. It hits every enemy, so it sits 5 below the single-target Adder’s Kiss (90). The weight is split with the Houndmaster’s Hound’s Harry, which has the same accuracy: Impale leans toward direct damage with −60% damage and Blight 1–3, Hound’s Harry toward damage over time with −85% damage and Bleed 2–4."
+      ],
+      "quotes": [
+        "창작마당에선 최대한 바닐라처럼"
+      ],
+      "compare": {
+        "title": "Damage over time on several enemies (level 1 · DoT at levels 1–5)",
+        "cols": [
+          "Skill",
+          "Ranks",
+          "ACC",
+          "DMG",
+          "DoT (3 rds)"
+        ],
+        "widths": [
+          300,
+          250,
+          90,
+          110,
+          270
+        ],
+        "rows": [
+          [
+            {
+              "skill": [
+                "shieldbreaker",
+                "four",
+                "Impale",
+                "Shieldbreaker"
+              ]
+            },
+            {
+              "pips": [
+                "1",
+                "1234"
+              ]
+            },
+            "85",
+            "−60%",
+            "Blight 1–3"
+          ],
+          [
+            {
+              "skill": [
+                "houndmaster",
+                "two",
+                "Hound’s Harry",
+                "Houndmaster"
+              ]
+            },
+            {
+              "pips": [
+                "4321",
+                "1234"
+              ]
+            },
+            "85",
+            "−85%",
+            "Bleed 2–4"
+          ],
+          [
+            {
+              "skill": [
+                "bounty_hunter",
+                "seven",
+                "Caltrops",
+                "Bounty Hunter"
+              ]
+            },
+            {
+              "pips": [
+                "1234",
+                "34"
+              ]
+            },
+            "90",
+            "−85%",
+            "Bleed 2–4"
+          ],
+          [
+            {
+              "skill": [
+                "plague_doctor",
+                "two",
+                "Plague Grenade",
+                "Plague Doctor"
+              ]
+            },
+            {
+              "pips": [
+                "43",
+                "34"
+              ]
+            },
+            "95",
+            "−90%",
+            "Blight 4–6"
+          ]
+        ],
+        "note": "Ranks: gold = usable from, red = targets. Impale and Hound’s Harry hit enemy ranks 1–4."
+      },
+      "history": [
+        [
+          "Sep 27",
+          "ACC 90 → 85, Blight 1 at levels 1–2 as well (base-game effect).",
+          null
+        ],
+        [
+          "Oct 21",
+          "Blight at levels 3–5 raised by 1 each (1/1/2/2/3, 3 rds).",
+          null
+        ]
+      ]
+    }
+  }
+]
