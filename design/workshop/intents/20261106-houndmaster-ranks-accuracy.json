@@ -1,0 +1,27 @@
+{
+  "id": "HM-037",
+  "decision": "adopted",
+  "original_quote": "조련사 수정하자 일단 사냥개 습격과 돌진이 1열에서 사용불가해야해. 1열에서는 보호랑, 힐이랑, 기절 표식 4개만 쓸 수 있게, 사냥개 돌진과 습격은 432열 그리고 장신구 보면 사냥개 돌격과 습격 모두 명중 85로 해야하고 그리고 출혈 쪽이 엄청 많거든 출혈 쪽이 더 강해져야 할 것 같은 느낌이 들어 33445 3턴 해도 괜찮을까? 돌진은? 습격은 기존 11223 3턴 맞지? 돌격과 습격 분리되려면 데미지 수치가 몇이되어야 할까",
+  "rationale_ko": "사용 열과 명중만 확정 적용. 1열은 보호·지원 네 기술로 제한하고 두 사냥개 공격은 2·3·4열/명중 85 기준으로 통일. 출혈 33445 및 직접 피해 보정은 미채택 검토안.",
+  "source": {
+    "product": "codex",
+    "reference": "local-knowledge read_evidence 02f1b4a62be79e76cafbfb7a35dbda7dfb1fea29f8ed162a0b09153925171886",
+    "session_id": "01a10741-76da-7e43-9500-98474ab3f383",
+    "message_id": "msg_01a1b0ab-8743-7541-bb62-b0ff5658ed56",
+    "event_id": "02f1b4a62be79e76cafbfb7a35dbda7dfb1fea29f8ed162a0b09153925171886"
+  },
+  "files": [
+    "heroes/houndmaster/houndmaster.info.darkest",
+    "design/workshop/hero_cards.json",
+    "design/workshop/why.json"
+  ],
+  "supersedes": [
+    "HM-019 launch ranks only",
+    "HM-023 accuracy only"
+  ],
+  "not_adopted": [
+    "Rush bleed 3/3/4/4/5",
+    "Rush damage -45%",
+    "Harry bleed rollback"
+  ]
+}

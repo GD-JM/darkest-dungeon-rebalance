@@ -1,0 +1,23 @@
+{
+  "id": "HM-038",
+  "decision": "adopted",
+  "original_quote": "피해 -20에 22334 3턴 가자 돌진은 습격은 지금에서 피해 -85로 가자 그리고 1열 사용도 가능하게 수정 하고 푸시하자",
+  "rationale_ko": "단일 직접 피해 강화와 광역 직접 피해 감소. 1열 사용은 두 기술 모두 복원하는 것으로 해석하여 진행 안내했다. 명중 85 시작 및 기존 출혈 유지.",
+  "source": {
+    "product": "codex",
+    "reference": "현재 대화 사용자 메시지 2026-11-06 HM-037 응답 직후",
+    "session_id": "01a10741-76da-7e43-9500-98474ab3f383",
+    "message_id": null,
+    "event_id": null
+  },
+  "files": [
+    "heroes/houndmaster/houndmaster.info.darkest",
+    "design/workshop/hero_cards.json",
+    "design/workshop/why.json"
+  ],
+  "supersedes": [
+    "HM-037 rank restriction",
+    "HM-036 direct damage",
+    "HM-030 direct damage"
+  ]
+}
