@@ -1,24 +1,14 @@
 {
- "runaway|backdraft": {
+ "runaway|hearthlight": {
   "ids": [
-   "RUN-006",
-   "RUN-010"
+   "RUN-009",
+   "RUN-011"
   ],
   "principles": [
    "P-10"
   ],
-  "ko": "불길 역류의 중첩당 피해20%와 전열12 사용으로 장기 누적 폭발을 줄이고 전진을 요구한다. 추가 횟수 제한은 없다.",
-  "en": "Reduce damage per Burn stack to 20% and require ranks 1-2, preserving unrestricted use and Burn transfer."
- },
- "runaway|firefly": {
-  "ids": [
-   "RUN-007"
-  ],
-  "principles": [
-   "P-10"
-  ],
-  "ko": "흩날리는 불티의 화상량은 유지하되 감소 지연을 화톳불로 옮겨 후열 반복 효율을 하향한다. 화상량-1은 이중 하향과 중간레벨 정수 절삭을 고려해 보류했다.",
-  "en": "Keep Burn amounts, but move decay delay to Hearthlight to reduce rear-rank repetition without a second Burn nerf."
+  "ko": "사용34/전진2와 명중 지원 유지. 감소 지연50%를 실효1회로 단축한다. 복수 도망자의 합산은 원본과 같이 허용하며 별도 중첩 상한은 두지 않는다.",
+  "en": "Use from ranks 3-4 and advance 2; retain party accuracy. Burn decay delay remains 50% for one target turn. Multiple Runaways may stack it as in the original; no separate stacking cap."
  },
  "runaway|controlled_burn": {
   "ids": [
@@ -30,16 +20,26 @@
   "ko": "최초/지면3/3/4/4/5, 지면2라운드, 사용34로 초기 사용감을 보존하고 장기 누적을 줄인다. 이동과 턴 시작은 동일한 지면 수치를 공유한다.",
   "en": "Initial and ground Burn become 3/3/4/4/5, ground duration 2 rounds, use ranks 3-4. Preserve opening impact while reducing long-fight accumulation."
  },
- "runaway|hearthlight": {
+ "runaway|firefly": {
   "ids": [
-   "RUN-009",
-   "RUN-011"
+   "RUN-007"
   ],
   "principles": [
    "P-10"
   ],
-  "ko": "사용34/전진2와 명중 지원 유지. 감소 지연50%를 실효1회로 단축한다. 복수 도망자의 합산은 원본과 같이 허용하며 별도 중첩 상한은 두지 않는다.",
-  "en": "Use from ranks 3-4 and advance 2; retain party accuracy. Burn decay delay remains 50% for one target turn. Multiple Runaways may stack it as in the original; no separate stacking cap."
+  "ko": "흩날리는 불티의 화상량은 유지하되 감소 지연을 화톳불로 옮겨 후열 반복 효율을 하향한다. 화상량-1은 이중 하향과 중간레벨 정수 절삭을 고려해 보류했다.",
+  "en": "Keep Burn amounts, but move decay delay to Hearthlight to reduce rear-rank repetition without a second Burn nerf."
+ },
+ "runaway|backdraft": {
+  "ids": [
+   "RUN-006",
+   "RUN-010"
+  ],
+  "principles": [
+   "P-10"
+  ],
+  "ko": "불길 역류의 중첩당 피해20%와 전열12 사용으로 장기 누적 폭발을 줄이고 전진을 요구한다. 추가 횟수 제한은 없다.",
+  "en": "Reduce damage per Burn stack to 20% and require ranks 1-2, preserving unrestricted use and Burn transfer."
  },
  "abomination|manacles": {
   "ids": [
@@ -368,14 +368,15 @@
  },
  "duelist|fleche": {
   "ids": [
-   "DUE-015"
+   "DUE-015",
+   "DUE-017"
   ],
   "principles": [
    "G-01",
    "P-11"
   ],
-  "en": "Reduces direct damage to +10% and attaches the existing aggressive-stance dodge penalty of 10. Forward movement and counterattack identity remain.",
-  "ko": "직접 피해를+10%로 낮추고 기존 공격 자세 회피−10 효과를 연결합니다. 전진 공격을 보존하되 반격 외 공격 효율과 위험을 조정합니다."
+  "en": "Reduce direct damage from +25% to +10%. Withdraw only the added self dodge penalty; retain forward movement, self mark and stance requirement.",
+  "ko": "반격 외 직접 공격의 피해 +25%를 +10%로 낮춘다. 이후 요청에 따라 추가 자기 회피 −10만 철회하며 전진·자기 표식·자세 조건은 유지한다."
  },
  "duelist|the_boot": {
   "ids": [
@@ -1143,17 +1144,18 @@
  },
  "vestal|judgement": {
   "ids": [
-   "VES-002",
-   "VES-009",
-   "VES-001"
+    "VES-002",
+    "VES-009",
+    "VES-001",
+    "VES-024"
   ],
   "principles": [
-   "G-02",
-   "R-SKILL-09"
+    "G-02",
+    "R-SKILL-09"
   ],
-  "en": "Vanilla Judgement reached rank 4 and healed her, so it was locked into every rear Vestal's four-skill rotation. With the heal moved to Mace Bash, it stays as the plain rear attack that reaches rank 4: standard ranged accuracy and no damage penalty, but still weaker than Divine Comfort.",
-  "ko": "바닐라 심판은 4열까지 닿으면서 자기 회복까지 있어 후열 성녀의 고정 기술 4개 중 하나였다. 회복을 철퇴로 넘긴 뒤에는 회복 없는 4열 도달 공격으로 남기며, 명중은 원거리 표준, 피해 감소는 없앴다. 그래도 신성한 위무를 넘지는 않는다."
- },
+  "en": "Judgement damage returns from 0% to vanilla -25% at every level to reduce the Vestal's excessive back-rank damage alongside her healing and support. Accuracy, critical chance, ranks and the removal of self-healing remain unchanged.",
+  "ko": "성녀가 너무 강하다는 사용자 판단에 따라 심판 피해만 0%에서 바닐라 -25%로 복원해 후열 직접 화력을 낮춘다. 명중·치명타·사용열·대상열·자기 회복 제거는 유지한다."
+},
  "vestal|mace_bash": {
   "ids": [
    "VES-001"
@@ -1600,15 +1602,17 @@
   "en": "New riposte attack (ACC 85, DMG -50%, no crit), used only when the Antiquarian's Protect Me lends this hero a riposte; it has no effect otherwise.",
   "ko": "유물수집상 동료 방패로 반격을 빌렸을 때만 쓰는 반격 공격(명중 85, 피해 −50%, 치명타 없음)입니다. 그 밖에는 효과가 없습니다."
  },
- "arbalest|blindfire": {
+ "occultist|hands_from_abyss": {
   "ids": [
-   "ARB-019"
+   "OCC-018",
+   "OCC-019",
+   "OCC-020"
   ],
   "principles": [
-   "G-02"
+   "G-01"
   ],
-  "en": "A more accurate fallback after displacement; the target is still random.",
-  "ko": "대상을 고를 수 없는 무차별 사격이 대열 붕괴 뒤에도 맞도록 명중을 10 높였다. 빗나가도 받는 속도 강화는 유지한다."
+  "ko": "성녀의 눈부신 광채와 같은 적 1·2열에 한정한다. 심연에서의 손아귀는 명중을 제물 암습 수준으로 낮춘 대신 적중하면 피해·치명타·기절 확률이 광채보다 높고 횃불을 낮춘다. 후열 신비학자의 흑마법과 명중 장신구 투자 선택을 살린다.",
+  "en": "Hands from the Abyss trades accuracy and enemy rank-3 reach for rear-rank use. Its dark magic hits harder, crits more and stuns more reliably on hit than Dazzling Light, while lowering torchlight."
  },
  "plague_doctor|disorienting_blast": {
   "ids": [
@@ -1619,6 +1623,16 @@
   ],
   "en": "Pull one enemy toward the frontline so allies can follow up.",
   "ko": "PD-003 혼란 기체 폭발은 뒤섞기 대신 2칸 당겨 아군 전열의 공격을 준비한다. 이동 저항은 이 연계를 막는다."
+ },
+ "arbalest|blindfire": {
+  "ids": [
+   "ARB-019"
+  ],
+  "principles": [
+   "G-02"
+  ],
+  "en": "A more accurate fallback after displacement; the target is still random.",
+  "ko": "대상을 고를 수 없는 무차별 사격이 대열 붕괴 뒤에도 맞도록 명중을 10 높였다. 빗나가도 받는 속도 강화는 유지한다."
  },
  "duelist|disengage": {
   "ids": [

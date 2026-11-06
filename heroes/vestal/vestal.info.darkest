@@ -34,11 +34,12 @@ combat_skill: .id "mace_bash" .level 4 .type "melee" .atk 105% .dmg 0% .crit 9% 
 // 치명타 확률 심판이랑 바꿈
 // 표기: .effect 를 한 줄에 두 번 쓰던 것을 한 목록으로 합침(바닐라·창작마당 모드 어디에도 없는 형식, 한쪽이 무시될 수 있음). 효과 변화 없음
 
-combat_skill: .id "judgement" .level 0 .type "ranged" .atk 90% .dmg 0% .crit 0% .launch 43 .target 1234 .is_crit_valid True 
-combat_skill: .id "judgement" .level 1 .type "ranged" .atk 95% .dmg 0% .crit 1% .launch 43 .target 1234 .is_crit_valid True
-combat_skill: .id "judgement" .level 2 .type "ranged" .atk 100% .dmg 0% .crit 2% .launch 43 .target 1234 .is_crit_valid True
-combat_skill: .id "judgement" .level 3 .type "ranged" .atk 105% .dmg 0% .crit 3% .launch 43 .target 1234 .is_crit_valid True
-combat_skill: .id "judgement" .level 4 .type "ranged" .atk 110% .dmg 0% .crit 4% .launch 43 .target 1234 .is_crit_valid True
+combat_skill: .id "judgement" .level 0 .type "ranged" .atk 90% .dmg -25% .crit 0% .launch 43 .target 1234 .is_crit_valid True 
+combat_skill: .id "judgement" .level 1 .type "ranged" .atk 95% .dmg -25% .crit 1% .launch 43 .target 1234 .is_crit_valid True
+combat_skill: .id "judgement" .level 2 .type "ranged" .atk 100% .dmg -25% .crit 2% .launch 43 .target 1234 .is_crit_valid True
+combat_skill: .id "judgement" .level 3 .type "ranged" .atk 105% .dmg -25% .crit 3% .launch 43 .target 1234 .is_crit_valid True
+combat_skill: .id "judgement" .level 4 .type "ranged" .atk 110% .dmg -25% .crit 4% .launch 43 .target 1234 .is_crit_valid True
+// VES-024 [2026-11-06] 심판 피해 0% -> -25% 전 레벨. 사용자: "바닐라가 -25잖아 맞으면 그냥 푸시해 지금 너무 쌔 성녀가". 바닐라 피해만 복원하여 강한 회복/지원에 더해진 후열 직접 화력을 낮춘다. 명중·치명타·사거리·자기 회복 제거는 유지. VES-009 피해 상향만 대체.
 // VES-002 VES-009 [trace 2026-10-05] Keep a rear-reaching damage choice after moving self healing to Mace Bash.
 // 자힐을 메이스로 넘김
 // 명중을 RANGE 표준인 90으로 바꾸고 대신에 치명타 확율을 메이스랑 바꿈
