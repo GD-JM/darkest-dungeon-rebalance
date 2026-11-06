@@ -17,7 +17,7 @@ HEADERS = ['h_tuned', 'h_try', 'h_reworks', 'h_images', 'h_listening', 'h_instal
 ITEM = 3828956017   # [2026-11-05] 통합본 자기 업데이트 기록·댓글로 연결(예전엔 기존판 3821353035로 걸려 있었음)
 CHANGELOG = f'https://steamcommunity.com/sharedfiles/filedetails/changelog/{ITEM}'
 COMMENTS = f'https://steamcommunity.com/sharedfiles/filedetails/comments/{ITEM}'
-BUDGET = 7900
+BUDGET = 7990   # [2026-11-06] 7,971바이트(줄바꿈 2바이트 계산) 업로드 성공을 확인하고 7900→7990. 한도는 8000.
 
 
 def source(lang):
@@ -33,11 +33,20 @@ def size(text):
     return len(text.encode('utf-8')) + text.count('\n')
 
 
+FOCUS = ['antiquarian', 'musketeer']   # [사용자 2026-11-06] 설명란 스포트라이트는 두 개편만, 20명 전원은 갤러리에
+
+
+def asset_lang(lang):
+    """한국어 설명은 한국어 이미지, 나머지 언어는 영어 이미지. [사용자 2026-11-05] "온전한 한국어판 온전한 영어판" """
+    return 'ko' if lang == 'koreana' else 'en'
+
+
 def build(text, img, optional, lang='english'):
-    """optional: 넣을 선택 이미지 집합 {'intros', 'spotlights', 'roster'}."""
+    """[2026-11-06] 설명란 '모든 변경은 이미지에'에는 두 개편(FOCUS) 스포트라이트만 언어별로 넣고, 20명 전원은 갤러리에 둔다.
+    롤스터는 뺐다. optional = {'intros'}만."""
     tag = lambda name: f'[img]{img(name)}[/img]'
     text = re.sub(r'\[h1\].*?\[/h1\]\n?', tag('title_banner') + '\n', text, count=1)
-    if lang == 'english':  # 영어 대표 문구는 간판 이미지에 이미 있다
+    if lang in ('english', 'koreana'):  # 대표 문구는 그 언어 간판 이미지에 이미 있다
         text = re.sub(r'(\[/img\]\n)\[i\][^\n]*\[/i\]\n', r'\1', text, count=1)
     parts = re.split(r'\[h2\].*?\[/h2\]\n?', text)
     assert len(parts) == len(HEADERS) + 1, f'expected {len(HEADERS)} [h2] sections, got {len(parts) - 1}'
@@ -46,10 +55,8 @@ def build(text, img, optional, lang='english'):
         body = body.strip('\n')
         if key == 'h_try' and 'intros' in optional:
             body += '\n' + '\n'.join(tag(n) for n in ('intro_1_healing', 'intro_2_armor', 'intro_3_builds'))
-        if key == 'h_reworks' and 'spotlights' in optional:
-            body += '\n' + '\n'.join(tag(n) for n in ('spotlight_antiquarian', 'spotlight_abomination'))
-        if key == 'h_images' and 'roster' in optional:
-            body = tag('roster') + '\n' + body
+        if key == 'h_images':
+            body += '\n' + '\n'.join(tag(f'spot_{h}') for h in FOCUS)
         if key == 'h_listening':
             body = re.sub(r'\[url=[^\]]*changelog[^\]]*\].*?\[/url\]', '', body).rstrip()
             body += (f'\n[url={CHANGELOG}]{tag("btn_history")}[/url] [url={COMMENTS}]{tag("btn_feedback")}[/url]')
@@ -61,21 +68,30 @@ def build(text, img, optional, lang='english'):
     return ''.join(out).strip() + '\n'
 
 
+def asset_key(name):
+    """설명 [img] 이름 → 이미지 파일 상대 경로(언어 폴더 기준)."""
+    if name.startswith('spot_'):
+        return 'spotlights/' + name[5:] + '.png'
+    if name.startswith('intro_'):
+        return name + '.png'
+    return 'desc/' + name + '.png'
+
+
 def main(local=False):
     if local:
-        # 목업(darkest_refined_draft/mock_workshop_page.html) 기준 상대 경로
-        img2 = lambda n: (n.replace('spotlight_', 'spotlights/', 1) if n.startswith('spotlight_')
-                          else n if n.startswith('intro_') else 'desc/' + n) + '.png'
+        def img_for(lang):
+            base = 'ko/' if asset_lang(lang) == 'ko' else ''
+            return lambda n: base + asset_key(n)
     else:
         urls = json.loads((HERE / 'desc_asset_urls.json').read_text(encoding='utf-8'))
-        img2 = lambda n: urls[n + '.png']
+        img_for = lambda lang: (lambda n: urls[asset_lang(lang)][asset_key(n)])
     OUT.mkdir(exist_ok=True)
     report = {}
     for lang in LANGS:
         text = source(lang)
-        optional = ['intros', 'spotlights', 'roster']
+        optional = ['intros']
         while True:
-            final = build(text, img2, set(optional), lang)
+            final = build(text, img_for(lang), set(optional), lang)
             if size(final) < BUDGET or not optional:
                 break
             optional.pop(0)

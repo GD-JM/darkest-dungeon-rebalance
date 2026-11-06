@@ -18,7 +18,7 @@ GAME = 'C:/Program Files (x86)/Steam/steamapps/common/DarkestDungeon'
 HERE = Path(__file__).resolve().parent
 DRAFT = HERE / 'darkest_refined_draft'
 UP = DRAFT / '_upload_assets'
-JOURNAL = HERE / 'private_assets_item.json'
+JOURNAL = HERE / "private_assets_item_v2.json"   # [2026-11-05] 언어별 이미지 세트는 새 보관 아이템에(공개 중인 통합본이 쓰는 3829228028 주소를 깨지 않게)
 URLS = HERE / 'desc_asset_urls.json'
 TITLE = 'Darkest Refined — description assets (private)'
 INLINE = ['intro_1_healing.png', 'intro_2_armor.png', 'intro_3_builds.png',
@@ -51,20 +51,29 @@ def fit_png(im, out):
 
 
 def prepare():
+    """[2026-11-05] 언어별 이미지 세트(en·ko): 머리·간판·버튼(desc/), 소개 3장, 스포트라이트 묶음 7장.
+    미리보기 파일 이름 = <언어>_<경로를 _로>. 반환: (파일 목록, {파일 이름: (언어, 상대 경로)})."""
     if UP.exists():
         shutil.rmtree(UP)
     UP.mkdir()
-    files = []
-    for f in sorted((DRAFT / 'desc').glob('*.png')) + [DRAFT / p for p in INLINE]:
-        out = UP / ('d_' + ('spotlight_' if f.parent.name == 'spotlights' else '') + f.name)
-        fit_png(Image.open(f).convert('RGB'), out)
-        files.append(out)
+    files, keys = [], {}
+    for lang, root in (('en', DRAFT), ('ko', DRAFT / 'ko')):
+        rels = ['desc/' + f.name for f in sorted((root / 'desc').glob('*.png')) if f.name != 'roster.png']
+        rels += ['intro_1_healing.png', 'intro_2_armor.png', 'intro_3_builds.png']
+        srcs = [root / r for r in rels]
+        for h in ('antiquarian', 'musketeer'):   # [사용자 2026-11-06] 설명란 스포트라이트는 두 개편만(언어별)
+            rels.append(f'spotlights/{h}.png'); srcs.append(root / 'spotlights' / f'{h}.png')
+        for rel, f in zip(rels, srcs):
+            out = UP / (lang + '_' + rel.replace('/', '_'))
+            fit_png(Image.open(f).convert('RGB'), out)
+            files.append(out)
+            keys[out.name] = (lang, rel)
     Image.open(DRAFT / 'desc' / 'title_banner.png').convert('RGB').save(UP / 'thumb.jpg', 'JPEG', quality=90)
-    return files
+    return files, keys
 
 
 def main():
-    files = prepare()
+    files, keys = prepare()
     state = read_json(JOURNAL, {})
     with WorkerLock(WS / 'runtime' / 'worker.lock'):
         if state.get('status') == 'creating':
@@ -84,11 +93,16 @@ def main():
             owned = {p['filename'] for p in steam.query()['previews'] if p['type'] == 0}
             r = steam.update(title=TITLE, description='Image storage for the Darkest Refined description. Not a mod.',
                              visibility=2, thumbnail=UP / 'thumb.jpg', replace_previews=(owned, files), language='english')
-            urls = {p['filename'][2:]: p['url'] for p in r['previews'] if p['filename'].startswith('d_')}
+            urls = {'en': {}, 'ko': {}}
+            for p in r['previews']:
+                if p['filename'] in keys:
+                    lang, rel = keys[p['filename']]
+                    urls[lang][rel] = p['url']
+            assert all(len(v) == len(keys) // 2 for v in urls.values()), {k: len(v) for k, v in urls.items()}
             state.update(status='uploaded', previews=len(r['previews']))
             write_json(JOURNAL, state)
     URLS.write_text(json.dumps(urls, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
-    print(json.dumps(state, ensure_ascii=False), len(urls), 'urls')
+    print(json.dumps(state, ensure_ascii=False), {k: len(v) for k, v in urls.items()}, 'urls')
 
 
 if __name__ == '__main__':

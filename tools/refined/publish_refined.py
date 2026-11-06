@@ -102,19 +102,17 @@ def descriptions():
 
 
 def gallery(heroes, job, used_urls):
-    """소개 4 → 영웅마다 스포트라이트. 옛 비교 카드는 넣지 않고, 모든 언어 설명에 이미 [img]로 들어간 이미지도 뺀다."""
-    urls = json.loads((BRAND / 'desc_asset_urls.json').read_text(encoding='utf-8'))
-    in_desc = {n for n, u in urls.items() if u in used_urls}
+    """[사용자 2026-11-06] 갤러리 = 표지 → 영웅 20명 스포트라이트 전부(영어, 모든 언어 공용).
+    설명란에는 두 개편 스포트라이트만 언어별로 들어가고, 갤러리는 그것과 겹쳐도 20명을 다 보여 준다. 옛 비교 카드는 넣지 않는다."""
     up = job / 'gallery'
     up.mkdir()
-    files = []
-    if 'intro_4_refined.png' not in in_desc:
-        files.append(fit_png(DRAFT / 'intro_4_refined.png', up / 'intro_4_refined.png'))
+    pkg = json.load(open(REPO / 'design' / 'refined' / 'packages.json', encoding='utf-8'))['refined']
+    files = [fit_png(DRAFT / pkg.get('thumbnail', 'preview_darkest_refined.png'), up / 'cover.png')]
     # [2026-11-05] 스포트라이트는 이 꾸러미에 실제로 빌드된 영웅 전원 기준. main의 hero_cards.json은 기존판(3821353035)이
     # 15명판이 되면서 DLC 영웅 카드가 빠져, 카드 목록 기준으로 돌면 DLC 영웅 스포트라이트가 갤러리에서 빠졌다.
     for h in heroes:
         spot = DRAFT / 'spotlights' / f'{h}.png'
-        if spot.exists() and f'spotlight_{h}.png' not in in_desc:
+        if spot.exists():
             files.append(fit_png(spot, up / f'spot_{h}.png'))
         # [사용자 2026-11-03] 옛 리밸런스 비교 카드('Every Hero Worth Taking' 표기)는 갤러리에 넣지 않는다 — 새 스타일 이미지만
     return files

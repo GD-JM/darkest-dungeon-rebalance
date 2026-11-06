@@ -2,6 +2,11 @@
 # [사용자 2026-10-29: "레이아웃의 폰트라든지 배치라든지 아트스타일이라든지 이런거를 고정해서 원칙으로 md로 박아두고 … 똑같은 아트 스타일로 이미지 뽑고 수정"]
 # 사용: python design/branding/brand_render.py            → brand_content.json 전부
 #       python design/branding/brand_render.py intro_1    → out 이름에 'intro_1'이 들어간 것만
+#       python design/branding/brand_render.py --lang ko [이름]  → 한국어판: brand_content_ko.json → darkest_refined_draft/ko/
+#       python design/branding/brand_render.py --groups [--lang ko]  → 스포트라이트 4명 묶음 5장 → darkest_refined_draft/spotlight_groups/<lang>/
+# [2026-11-05 한국어판 추가] 한국어 설명에는 한국어 이미지만, 영어 설명에는 영어 이미지만("온전한 한국어판, 온전한 영어판").
+#   글자 그리기만 언어별로 갈린다(heading·text·lines·label·tag). 영어 경로는 예전 호출 그대로라 영어 출력은 픽셀 단위로 같다.
+#   한국어 글꼴 = 게임 한국어판 비트맵 글꼴(제목 EBS주시경, 본문 이순신 돋움) — page_tools/gamefont.py를 가져다 쓴다.
 import json, os, random, re, sys
 from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont
 
@@ -139,6 +144,145 @@ def wrap(d, text, f, width):
 
 def spaced(text):
     return '   '.join(' '.join(word) for word in text.split(' '))
+
+
+# ── 언어별 글자 그리기 (한국어판) ──────────────────────────────────────
+# 영어(LANG 'en')는 예전 코드와 같은 호출을 그대로 한다. 한국어는 게임 한국어 글꼴 체인(gamefont.py)으로 그린다.
+LANG = 'en'
+PAGE_TOOLS = 'C:/Users/lemm1/Documents/DarkestRefined/page_tools'      # gamefont.py 위치(복사하지 않고 가져다 쓴다)
+STR = {'footer': 'DARKEST REFINED  ·  Hero Rebalance & Reworks'}     # 언어별 고정 문구(문구 파일 "strings"로 덮어쓴다)
+# 한국어 글자 크기 = 영어 크기 × 비율. 제목(EBS주시경)은 DwarvenAxe보다 획이 가늘어 같은 px로 높이를 맞추고,
+# 라벨은 영어의 띄어 쓴 대문자만큼 눈에 띄게 키운다. 줄 간격은 한글이 빽빽해 영어 줄 간격 × KO_LH.
+KO_SCALE = {'title': 1.0, 'pala': 1.0, 'palai': 0.96, 'palab': 1.0, 'label': 1.22}
+KO_LH = 1.08
+GF = KO = None          # gamefont 모듈, (제목, 본문, 굵은 본문) 체인
+NOBREAK = []            # 줄을 나누지 않는 공식 이름(영웅·기술, 띄어쓰기 포함) — set_lang('ko')에서 loc.json으로 채운다
+NOBREAK_EXTRA = ['가장 어두운 던전', '영웅 등급', '전용 장신구', '이동 저항', '죽음의 일격']
+
+
+def set_lang(lang, strings=None):
+    """'en' 또는 'ko'. 한국어는 gamefont를 불러 게임 한국어 글꼴 체인을 쓴다."""
+    global LANG, GF, KO
+    LANG = lang
+    STR.update(strings or {})
+    if lang == 'ko' and KO is None:
+        if PAGE_TOOLS not in sys.path:
+            sys.path.insert(0, PAGE_TOOLS)
+        import gamefont
+        GF = gamefont
+
+        class Head(gamefont.Chain):
+            """제목 체인: 한글 제목 글꼴에 없는 쉼표·숫자·라틴은 DwarvenAxe에서 오는데, 기준선이 한글보다 높아
+            쉼표가 따옴표처럼 뜬다(‘다듬고, 계속’). 그 글자만 0.28px 내려 한글 높이 가운데에 맞춘다."""
+            def glyph(self, ch, px):
+                g = super().glyph(ch, px)
+                if g and self.find(ch)[0] == 1:
+                    return (g[0], g[1], g[2] + px * 0.28, g[3])
+                return g
+
+        class Body(gamefont.Chain):
+            """본문 체인: ubuntu의 물결표는 옆 여백이 거의 없어 '−30~−40%'가 '~~'처럼 붙는다 → 양옆에 0.06px씩 띄운다."""
+            def glyph(self, ch, px):
+                g = super().glyph(ch, px)
+                if g and ch == '~':
+                    return (g[0], g[1] + px * 0.06, g[2], g[3] + px * 0.12)
+                return g
+
+        gamefont.set_lang('ko')
+        gamefont.HEAD = Head(['korean_dwarven_axe_l', 'dwarvenaxe-l', 'korean_ubuntu_m'], [1.0, 1.12, 0.95])  # fonts()와 같은 구성
+        gamefont.BODY = Body(['korean_ubuntu', 'ubuntu'], [1.0, 0.98])
+        gamefont.BODYB = Body(['korean_ubuntu_m', 'ubuntu_m'], [1.0, 0.98])
+        KO = gamefont.fonts()               # gold()가 쓰는 전역 제목 글꼴도 이 체인
+        # 영웅 20명의 공식 한국어 직업·기술 이름 중 띄어쓰기가 있는 것(제압 사격, 결집 신호탄 …)은 한 덩어리로 줄바꿈
+        loc = json.load(open(os.path.join(PAGE_TOOLS, 'loc.json'), encoding='utf-8'))
+        ko = dict(loc['vanilla']['koreana'], **loc['mod']['koreana'])
+        heroes = [k[len('hero_class_name_'):] for k in ko if k.startswith('hero_class_name_')]
+        names = {v for k, v in ko.items() for h in heroes
+                 if k == 'hero_class_name_' + h or k.startswith(('combat_skill_name_' + h + '_', 'combat_move_skill_name_' + h))}
+        NOBREAK[:] = sorted({n for n in names | set(NOBREAK_EXTRA) if ' ' in n}, key=len, reverse=True)
+
+
+def kpx(face, size):
+    return max(8, round(size * KO_SCALE[face]))
+
+
+def lh(n):
+    """줄 간격: 영어는 그대로, 한국어는 KO_LH배."""
+    return n if LANG != 'ko' else round(n * KO_LH)
+
+
+def chain(face):
+    return KO[2] if face in ('palab', 'label') else KO[1]
+
+
+def heading(im, xy, text, height, anchor='mm', tracking=2.0, max_width=None):
+    """금색 제목. 영어 = title()(DwarvenAxe). 한국어 = gamefont.gold()(EBS주시경), 위치는 글자 실제 상자 기준으로 title()과 같게 맞춘다."""
+    if LANG != 'ko':
+        return title(im, xy, text, height, anchor, tracking, max_width)
+    H = KO[0]
+    px = kpx('title', height)
+    if max_width and H.width(text, px, 1) > max_width:
+        px = int(px * max_width / H.width(text, px, 1))
+    bb = H.mask(GF.norm(text), px, 1).getbbox()
+    w, h = bb[2] - bb[0], bb[3] - bb[1]
+    x, y = xy
+    x -= {'l': 0, 'm': w // 2, 'r': w}[anchor[0]]
+    y -= {'t': 0, 'a': 0, 'm': h // 2}[anchor[1]]
+    # gold(anchor 'la')는 마스크 왼쪽 위를 (x - 0.1px, y - 0.22px)에 둔다 → 글자 상자 왼쪽 위가 (x, y)에 오게 되돌린다
+    GF.gold(im, (x - bb[0] + px * 0.1 + 0.5, y - bb[1] + px * 0.22 + 0.5), text, px, anchor='la', tracking=1)
+    return (x, y, x + w, y + h)
+
+
+def text(im, d, xy, s, face, size, fill, anchor=None):
+    """한 줄 글. 영어 = d.text(Palatino). 한국어 = gamefont.draw(이순신 돋움), 기울임은 한글에 없어 바른 글꼴."""
+    if LANG != 'ko':
+        d.text(xy, s, font=font(face, size), fill=fill, anchor=anchor)
+        return
+    a = anchor or 'la'
+    GF.draw(im, xy, s, chain(face), kpx(face, size), fill, anchor=a[0] + {'t': 'a', 's': 'a'}.get(a[1], a[1]))
+
+
+def lines(d, s, face, size, width):
+    """줄바꿈. 영어 = wrap()(단어). 한국어 = 어절(띄어쓰기) 단위, 문구 속 '\\n'은 강제 줄바꿈."""
+    if LANG != 'ko':
+        return wrap(d, s, font(face, size), width)
+    ch, px, nb = chain(face), kpx(face, size), ' '
+    out = []
+    for para in s.split('\n'):
+        for n in NOBREAK:                       # 공식 이름 속 띄어쓰기는 줄을 나누지 않는 칸으로
+            para = para.replace(n, n.replace(' ', nb))
+        para = re.sub(r' (?=[+\-−–]\d)', nb, para)   # '피해 −40%'처럼 능력치와 부호 붙은 수치는 붙여 둔다
+        cur = ''
+        for word in para.split(' '):
+            t = (cur + ' ' + word).strip(' ')
+            if not cur or ch.width(t.replace(nb, ' '), px) <= width:
+                cur = t
+            else:
+                out.append(cur)
+                cur = word
+        out.append(cur)
+    out = [o.replace(nb, ' ') for o in out]
+    # 한 어절이 칸보다 길면 gamefont.wrap으로 글자 단위로 자른다(드묾)
+    return [p for o in out for p in (GF.wrap(o, ch, px, width) if ch.width(o, px) > width else [o])]
+
+
+def label(im, d, xy, s, size, fill):
+    """작은 금색 라벨(THE PROBLEM 등). 영어 = 글자 사이를 띄운 Palatino Bold. 한국어 = 굵은 본문 글꼴, 자간만 조금."""
+    if LANG != 'ko':
+        d.text(xy, spaced(s), font=font('palab', size), fill=fill)
+        return
+    GF.draw(im, xy, s, chain('label'), kpx('label', size), fill, tracking=1)
+
+
+def tag(im, d, x, y, s, size=15):
+    """꼬리표(REWORKED 등). 한국어는 같은 상자에 굵은 한글. 오른쪽 끝 x를 돌려준다."""
+    if LANG != 'ko':
+        return badge(d, x, y, s, size)
+    px = kpx('label', size)
+    w, h = int(KO[2].width(s, px, 1)) + 22, size + 13
+    d.rounded_rectangle((x, y, x + w, y + h), radius=4, fill=EMBER, outline=GOLD, width=2)
+    GF.draw(im, (x + w // 2, y + h // 2 + 1), s, KO[2], px, GOLD_HI, anchor='mm', tracking=1)
+    return x + w
 
 
 def badge(d, x, y, text, size=15):
@@ -303,27 +447,27 @@ def panel_text(im, c, right_limit=640):
     """1200×800 왼쪽 글 영역: 제목·규칙선·리드·항목 4개·꼬리말."""
     W, H = im.size
     d = ImageDraw.Draw(im)
-    title(im, (70, 92), c['title'], 62, anchor='lm', max_width=right_limit - 40)
+    heading(im, (70, 92), c['title'], 62, anchor='lm', max_width=right_limit - 40)
     rule(d, 70, right_limit, 140, diamond=False)
     y = 172
-    fl = font('palai', 28)
-    for line in wrap(d, c['lead'], fl, right_limit - 30):
-        d.text((70, y), line, font=fl, fill=IVORY)
-        y += 38
+    for line in lines(d, c['lead'], 'palai', 28, right_limit - 30):
+        text(im, d, (70, y), line, 'palai', 28, IVORY)
+        y += lh(38)
     y += 18
-    fh, fb = font('palab', 26), font('pala', 23)
-    for name, text, *tag in c['items']:
+    for name, body, *tg in c['items']:
         d.polygon([(76, y + 15), (84, y + 7), (92, y + 15), (84, y + 23)], fill=GOLD)
-        d.text((104, y), name, font=fh, fill=GOLD_HI)
-        if tag:     # 세 번째 칸 = 꼬리표(예: REWORKED)
-            badge(d, 104 + int(d.textlength(name, font=fh)) + 14, y + 2, tag[0], size=13)
-        y += 34
-        for line in wrap(d, text, fb, right_limit - 80):
-            d.text((104, y), line, font=fb, fill=BODY)
-            y += 30
+        text(im, d, (104, y), name, 'palab', 26, GOLD_HI)
+        if tg:      # 세 번째 칸 = 꼬리표(예: REWORKED)
+            nw = d.textlength(name, font=font('palab', 26)) if LANG != 'ko' else KO[2].width(name, kpx('palab', 26))
+            tag(im, d, 104 + int(nw) + 14, y + 2, tg[0], size=13)
+        y += lh(34)
+        for line in lines(d, body, 'pala', 23, right_limit - 80):
+            text(im, d, (104, y), line, 'pala', 23, BODY)
+            y += lh(30)
         y += 14
-    d.text((70, H - 42), 'DARKEST REFINED  ·  Hero Rebalance & Reworks', font=font('pala', 20), fill=DIM, anchor='lm')
+    text(im, d, (70, H - 42), STR['footer'], 'pala', 20, DIM, anchor='lm')
     credit(d, (W - 36, H - 22))
+    fits(c, y - 14, H - 66)
     return d
 
 
@@ -353,42 +497,46 @@ def panel_poster(c):
     return grain(im, 7)
 
 
-def hero_spotlight(c):
+def hero_spotlight(c, part=False):
     """1200×800. 고해상도 세로 아트(포스터)만 왼쪽 큰 칸. 코믹스 칸(가로든 세로든 작음)은 원본 크기 근처로
-    왼쪽 위에 두는 위 띠 + 아래 두 단 — 작은 칸을 키우면 뭉개진다."""
+    왼쪽 위에 두는 위 띠 + 아래 두 단 — 작은 칸을 키우면 뭉개진다.
+    part=True: 묶음용 블록(꼬리말·테·그레인 없이) → (그림, 내용 아래 끝 y)."""
     if aspect(c['art']) > 1.0 or art_source(c['art'])[0].height < 600:
-        return hero_spotlight_wide(c)
+        return hero_spotlight_wide(c, part)
     W, H = 1200, 800
-    im = canvas(W, H, (-W * 0.2, H * 0.05, W * 0.55, H * 1.2))
+    im = canvas(W, H, (-W * 0.2, H * 0.05, W * 0.55, H * 1.2)) if not part else Image.new("RGB", (W, H), INK)
     cell(im, c['art'], (40, 40, 520, H - 40))
     d = ImageDraw.Draw(im)
     x0, xr = 572, W - 56
     if c.get('badge'):
-        badge(d, x0, 22, c['badge'])
-    title(im, (x0, 88), c['hero'], 64, anchor='lm', max_width=xr - x0)
+        tag(im, d, x0, 22, c['badge'])
+    heading(im, (x0, 88), c['hero'], 64, anchor='lm', max_width=xr - x0)
     rule(d, x0, xr, 134, diamond=False)
     y = 156
-    for line in wrap(d, c['tagline'], font('palai', 28), xr - x0):
-        d.text((x0, y), line, font=font('palai', 28), fill=IVORY)
-        y += 38
+    for line in lines(d, c['tagline'], 'palai', 28, xr - x0):
+        text(im, d, (x0, y), line, 'palai', 28, IVORY)
+        y += lh(38)
     y += 16
-    fl, fb = font('palab', 19), font('pala', 23)
-    for label, text in c['rows']:
-        d.text((x0, y), spaced(label), font=fl, fill=GOLD)
-        y += 30
-        for line in wrap(d, text, fb, xr - x0):
-            d.text((x0, y), line, font=fb, fill=BODY)
-            y += 30
+    for lab, body in c['rows']:
+        label(im, d, (x0, y), lab, 19, GOLD)
+        y += lh(30)
+        for line in lines(d, body, 'pala', 23, xr - x0):
+            text(im, d, (x0, y), line, 'pala', 23, BODY)
+            y += lh(30)
         y += 16
-    d.text((x0, H - 42), 'DARKEST REFINED  ·  Hero Rebalance & Reworks', font=font('pala', 20), fill=DIM, anchor='lm')
+    if part:
+        fits(c, y - 16, H - 40)
+        return im, max(H - 40, y - 16)
+    text(im, d, (x0, H - 42), STR['footer'], 'pala', 20, DIM, anchor='lm')
     credit(d, (W - 36, H - 22))
+    fits(c, y - 16, H - 66)
     frame(im, 10, inner=False)
     return grain(im, 7)
 
 
-def hero_spotlight_wide(c):
+def hero_spotlight_wide(c, part=False):
     W, H = 1200, 800
-    im = canvas(W, H, (W * 0.1, H * 0.55, W * 0.9, H * 1.4))
+    im = canvas(W, H, (W * 0.1, H * 0.55, W * 0.9, H * 1.4)) if not part else Image.new("RGB", (W, H), INK)
     # 넓은 칸은 원본 크기 근처(최대 1.25배)로만 키워 왼쪽 위에 두고, 오른쪽에 이름·한 줄
     src, _ = art_source(c['art'])
     bh = 300
@@ -398,30 +546,33 @@ def hero_spotlight_wide(c):
     d = ImageDraw.Draw(im)
     x0 = 40 + aw + 44
     if c.get('badge'):      # 이름 위 꼬리표(리워크 영웅)
-        badge(d, x0, 40 + bh // 2 - 112, c['badge'])
-    title(im, (x0, 40 + bh // 2 - 40), c['hero'], 60, anchor='lm', max_width=W - 60 - x0)
+        tag(im, d, x0, 40 + bh // 2 - 112, c['badge'])
+    heading(im, (x0, 40 + bh // 2 - 40), c['hero'], 60, anchor='lm', max_width=W - 60 - x0)
     y = 40 + bh // 2 + 6
-    for line in wrap(d, c['tagline'], font('palai', 28), W - 60 - x0):
-        d.text((x0, y), line, font=font('palai', 28), fill=IVORY)
-        y += 36
+    for line in lines(d, c['tagline'], 'palai', 28, W - 60 - x0):
+        text(im, d, (x0, y), line, 'palai', 28, IVORY)
+        y += lh(36)
     ry = 40 + bh + 34
     rule(d, 70, W - 70, ry, diamond=False)
-    fl, fb = font('palab', 18), font('pala', 22)
     colw, xs = (W - 140 - 40) // 2, (70, 70 + (W - 140 - 40) // 2 + 40)
     top = ry + 26
     for r in range(0, len(c['rows']), 2):      # 두 칸씩 한 줄, 다음 줄은 긴 쪽 아래에서 시작
         bottom = top
-        for x, (label, text) in zip(xs, c['rows'][r:r + 2]):
+        for x, (lab, body) in zip(xs, c['rows'][r:r + 2]):
             y = top
-            d.text((x, y), spaced(label), font=fl, fill=GOLD)
-            y += 28
-            for line in wrap(d, text, fb, colw):
-                d.text((x, y), line, font=fb, fill=BODY)
-                y += 28
+            label(im, d, (x, y), lab, 18, GOLD)
+            y += lh(28)
+            for line in lines(d, body, 'pala', 22, colw):
+                text(im, d, (x, y), line, 'pala', 22, BODY)
+                y += lh(28)
             bottom = max(bottom, y)
         top = bottom + 26
-    d.text((70, H - 30), 'DARKEST REFINED  ·  Hero Rebalance & Reworks', font=font('pala', 20), fill=DIM, anchor='lm')
+    if part:
+        fits(c, top - 26, H - 40)
+        return im, max(40 + bh, top - 26)
+    text(im, d, (70, H - 30), STR['footer'], 'pala', 20, DIM, anchor='lm')
     credit(d, (W - 36, H - 30))
+    fits(c, top - 26, H - 54)
     frame(im, 10, inner=False)
     return grain(im, 7)
 
@@ -493,7 +644,7 @@ def section_header(c):
     im = dark_left(im, 560, 300)
     d = ImageDraw.Draw(im)
     d.polygon([(30, 60), (40, 50), (50, 60), (40, 70)], fill=GOLD)
-    title(im, (66, 62), c['title'], 58, anchor='lm', max_width=620)
+    heading(im, (66, 62), c['title'], 58, anchor='lm', max_width=620)
     frame(im, 4, inner=False)
     d.rectangle((12, 12, W - 13, H - 13), outline=FRAME_IN, width=1)
     return grain(im, 6)
@@ -504,12 +655,25 @@ def title_banner(c):
     W, H = 1100, 340
     im = Image.new('RGB', (W, H), INK)
     im.paste(fit(c['art'], 700, H), (W - 700, 0))
-    im = dark_left(im, 420, 300)
-    d = ImageDraw.Draw(im)
-    title(im, (60, 104), c['title'][0], 66, anchor='lm', tracking=3)
-    title(im, (60, 196), c['title'][1], 96, anchor='lm', tracking=3)
-    rule(d, 60, 470, 262, diamond=False)
-    d.text((60, 296), c['tagline'], font=font('palai', 28), fill=IVORY, anchor='lm')
+    if LANG == 'ko':    # 영문 로고는 브랜드라 그대로 두고 조금 줄인 뒤, 아래에 한국어 이름과 두 줄 소개
+        im = dark_left(im, 470, 300)
+        d = ImageDraw.Draw(im)
+        title(im, (60, 62), c['title'][0], 48, anchor='lm', tracking=3)
+        r = title(im, (60, 128), c['title'][1], 72, anchor='lm', tracking=3)
+        n = heading(im, (62, r[3] + 12), c['name'], 46, anchor='lt')
+        rule(d, 60, 520, n[3] + 14, diamond=False)
+        y = n[3] + 30
+        for line in lines(d, c['tagline'], 'palai', 26, 600):
+            text(im, d, (60, y), line, 'palai', 26, IVORY)
+            y += 32
+        fits(c, y - 8, H - 14)
+    else:
+        im = dark_left(im, 420, 300)
+        d = ImageDraw.Draw(im)
+        title(im, (60, 104), c['title'][0], 66, anchor='lm', tracking=3)
+        title(im, (60, 196), c['title'][1], 96, anchor='lm', tracking=3)
+        rule(d, 60, 470, 262, diamond=False)
+        d.text((60, 296), c['tagline'], font=font('palai', 28), fill=IVORY, anchor='lm')
     credit(d, (W - 22, H - 18), size=13)
     frame(im, 6, inner=False)
     return grain(im, 6)
@@ -520,7 +684,7 @@ def button(c):
     W, H = 300, 66
     im = canvas(W, H, (-W * 0.2, -H * 0.5, W * 1.2, H * 1.6))
     d = ImageDraw.Draw(im)
-    title(im, (W // 2, H // 2 + 2), c['title'], 30, max_width=W - 76)
+    heading(im, (W // 2, H // 2 + 2), c['title'], 30, max_width=W - 76)
     for x in (20, W - 20):
         d.polygon([(x, H // 2 - 7), (x + 7, H // 2), (x, H // 2 + 7), (x - 7, H // 2)], fill=GOLD)
     d.rectangle((2, 2, W - 3, H - 3), outline=FRAME, width=3)
@@ -556,8 +720,7 @@ def roster_strip(c):
     H = 30 + rows * (size + 40) + 10
     im = canvas(W, H, (W * 0.1, -H * 0.3, W * 0.9, H * 1.3))
     d = ImageDraw.Draw(im)
-    fn = font('pala', 16)
-    for i, (hero, label) in enumerate(names):
+    for i, (hero, name) in enumerate(names):
         r, k = divmod(i, per)
         n_row = min(per, len(names) - r * per)
         x0 = (W - (n_row * size + (n_row - 1) * gap)) // 2 + k * (size + gap)
@@ -565,7 +728,7 @@ def roster_strip(c):
         im.paste(face(hero, size), (x0, y0))
         d.rectangle((x0 - 1, y0 - 1, x0 + size, y0 + size), outline=(8, 6, 5), width=3)
         d.rectangle((x0 + 2, y0 + 2, x0 + size - 3, y0 + size - 3), outline=CELL_LINE, width=1)
-        d.text((x0 + size // 2, y0 + size + 16), label, font=fn, fill=BODY, anchor='mm')
+        text(im, d, (x0 + size // 2, y0 + size + 16), name, 'pala', 16, BODY, anchor='mm')
     frame(im, 4, inner=False)
     return grain(im, 5)
 
@@ -575,16 +738,148 @@ LAYOUTS = {f.__name__: f for f in (square_comic_grid, square_keyart, square_trip
                                    roster_strip)}
 
 
-def main(only=None):
-    renders = json.load(open(os.path.join(HERE, 'brand_content.json'), encoding='utf-8'))['renders']
+# 한국어판을 그릴 수 있는 레이아웃(설명란 간판·섹션 머리·버튼·초상 줄·소개 패널·스포트라이트). 나머지는 영어 전용.
+KO_LAYOUTS = {'title_banner', 'section_header', 'button', 'roster_strip', 'panel_comic', 'panel_poster', 'hero_spotlight'}
+OVERFLOW = []
+KO_TAGS = {'REWORKED': '개편', 'NEW SKILL': '새 기술'}
+
+
+def fits(c, bottom, limit):
+    """글이 칸 아래(꼬리말 자리)를 넘으면 경고만 남긴다(그림은 그대로)."""
+    if bottom > limit:
+        OVERFLOW.append(c['out'])
+        print(f"  !! 넘침 {c['out']}: 글 끝 {int(bottom)} > 한도 {limit}")
+
+
+def intro_override(renders):
+    """소개 패널 한국어 문구: page_tools/combined_intro_ko.json이 있으면 그 문구(title·lead·items)를 쓴다.
+    받는 모양: {"renders":[{out,...}]} / [{out,...}] / {"intro_1_healing": {...}} (out 파일 이름 또는 intro_N 접두로 맞춘다)."""
+    p = os.path.join(PAGE_TOOLS, 'combined_intro_ko.json')
+    if not os.path.exists(p):
+        return renders
+    src = json.load(open(p, encoding='utf-8'))
+    items = src.get('renders', src) if isinstance(src, dict) else src
+    if isinstance(items, dict):
+        items = [dict(v, out=k) for k, v in items.items() if not k.startswith('_') and isinstance(v, dict)]
+    by = {}
+    for it in items:
+        k = os.path.splitext(os.path.basename(it.get('out', '')))[0]
+        by[k] = it
+        by['_'.join(k.split('_')[:2])] = it
+    for c in renders:
+        k = os.path.splitext(os.path.basename(c['out']))[0]
+        it = by.get(k) or by.get('_'.join(k.split('_')[:2]))
+        if it and c['layout'] in ('panel_comic', 'panel_poster'):
+            c.update({f: it[f] for f in ('title', 'lead', 'items') if f in it})
+            if 'sub' in it and 'lead' not in it:        # 그 파일은 리드 줄을 'sub'로 쓴다
+                c['lead'] = it['sub']
+            # 꼬리표: null = 없음, 영어 꼬리표 단어는 한국어판에 맞게 바꾼다
+            c['items'] = [[n, b] + ([KO_TAGS.get(t[0], t[0])] if t and t[0] else []) for n, b, *t in c['items']]
+            print('  intro text <-', os.path.basename(p), k)
+    return renders
+
+
+# ── 스포트라이트 묶음 (설명란용) ─────────────────────────────────────
+# [2026-11-05 구성 확정] 스포트라이트는 갤러리에서 빼고 설명란 안에 언어별로 넣는다. 설명란 용량 때문에 영웅 4명씩
+# 세로로 이어 붙인 묶음 5장(정보 손실 없이 영웅마다 4문단 그대로). 순서 = 영어 이름 알파벳순(초상 줄과 같음).
+GROUP_ORDER = ['abomination', 'antiquarian', 'arbalest', 'bounty_hunter', 'crusader', 'duelist', 'flagellant', 'grave_robber',
+               'hellion', 'highwayman', 'houndmaster', 'jester', 'leper', 'man_at_arms', 'musketeer', 'occultist',
+               'plague_doctor', 'runaway', 'shieldbreaker', 'vestal']
+GROUP_W, GROUP_MAX = 1100, 1_000_000      # 설명란 이미지 폭, 업로드 한도(1MB 미만, 여유 두고 10진 1MB)
+
+
+def spotlight_group(cs):
+    """스포트라이트 블록(꼬리말·테 없이 내용 높이로 자름)을 세로로 잇고, 사이에 금색 구분선, 맨 아래 꼬리말 한 번, 전체 테 하나.
+    1200폭으로 그린 뒤 1100으로 줄이고 그레인은 마지막에 한 번."""
+    blocks = []
+    for c in cs:
+        im, bottom = hero_spotlight(c, part=True)
+        blocks.append(im.crop((0, 0, im.width, min(im.height, bottom + 40))))
+    W, foot = 1200, 64
+    H = sum(b.height for b in blocks) + foot
+    im = Image.new('RGB', (W, H), INK)
+    d = ImageDraw.Draw(im)
+    y, cuts = 0, []
+    for b in blocks:
+        im.paste(b, (0, y))
+        y += b.height
+        cuts.append(y)
+    for y in cuts[:-1]:         # 구분선은 블록을 다 붙인 뒤에(다음 블록에 덮이지 않게)
+        rule(d, 70, W - 70, y, diamond=True)
+    text(im, d, (70, H - 34), STR['footer'], 'pala', 20, DIM, anchor='lm')
+    credit(d, (W - 36, H - 34))
+    frame(im, 10, inner=False)
+    im = im.resize((GROUP_W, round(H * GROUP_W / W)), Image.LANCZOS)
+    return grain(im, 7)
+
+
+def save_small(im, path):
+    """1MB 미만 PNG: 그대로 저장해 보고 넘으면 256색으로 줄인다. 크기(바이트)를 돌려준다."""
+    im.save(path, optimize=True)
+    if os.path.getsize(path) >= GROUP_MAX:
+        im.quantize(256, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE).save(path, optimize=True)
+    return os.path.getsize(path)
+
+
+def groups(renders, lang, per=4):
+    """묶음 그리기. 한 장이라도 1MB 이상이면 한 장에 넣는 영웅 수를 하나 줄여 다시 그린다(4명 5장 → 3명 7장).
+    그레인(BRAND_STYLE §4)이 용량 대부분이라 4명 묶음은 256색으로도 1MB 언저리다(2026-11-05 측정 영어 995~1074KB)."""
+    import glob
+    by = {os.path.splitext(os.path.basename(c['out']))[0]: c for c in renders if c['layout'] == 'hero_spotlight'}
+    out_dir = os.path.join(OUT, 'spotlight_groups', lang)
+    os.makedirs(out_dir, exist_ok=True)
+    for f in glob.glob(os.path.join(out_dir, 'group_*.png')):     # 예전 묶음(장 수가 달랐을 수 있음) 지우기
+        os.remove(f)
+    sizes = []
+    for g in range(0, len(GROUP_ORDER), per):
+        names = GROUP_ORDER[g:g + per]
+        p = os.path.join(out_dir, f'group_{g // per + 1}.png')
+        im = spotlight_group([by[n] for n in names])
+        sizes.append(save_small(im, p))
+        print(f"saved spotlight_groups/{lang}/group_{g // per + 1}.png {im.size} {sizes[-1] / 1024:.0f}KB", ', '.join(names))
+    if max(sizes) >= GROUP_MAX and per > 1:
+        print(f'!! 1MB 이상 묶음이 있어 {per}명 → {per - 1}명씩 다시 그린다')
+        return groups(renders, lang, per - 1)
+    return sizes
+
+
+def main(only=None, lang='en', group=False, per=4):
+    """lang 'en' = brand_content.json(예전과 같음), 'ko' = brand_content_ko.json(out은 ko/ 아래).
+    group=True: 스포트라이트 묶음만 그린다(darkest_refined_draft/spotlight_groups/<lang>/group_N.png)."""
+    name = 'brand_content.json' if lang == 'en' else f'brand_content_{lang}.json'
+    data = json.load(open(os.path.join(HERE, name), encoding='utf-8'))
+    set_lang(lang, data.get('strings'))
+    renders = data['renders']
+    if group:
+        return groups(renders, lang, per)
+    if lang == 'ko':
+        renders = intro_override(renders)
     for c in renders:
         if only and only not in c['out']:
             continue
+        if lang != 'en' and c['layout'] not in KO_LAYOUTS:
+            raise SystemExit(f"{c['out']}: {c['layout']} 레이아웃은 아직 영어 전용")
         out = os.path.join(OUT, c['out'])
         os.makedirs(os.path.dirname(out), exist_ok=True)
         LAYOUTS[c['layout']](c).save(out, optimize=True)
         print('saved', c['out'], c['layout'])
+    if OVERFLOW:
+        print('넘침', len(OVERFLOW), '장:', ', '.join(OVERFLOW))
 
 
 if __name__ == '__main__':
-    main(sys.argv[1] if len(sys.argv) > 1 else None)
+    sys.stdout.reconfigure(encoding='utf-8')
+    args = sys.argv[1:]
+    lang = 'en'
+    if '--lang' in args:
+        i = args.index('--lang')
+        lang = args[i + 1]
+        del args[i:i + 2]
+    group = '--groups' in args          # 스포트라이트 묶음: brand_render.py --groups [--lang ko] [--per 3]
+    per = 4
+    if '--per' in args:
+        i = args.index('--per')
+        per = int(args[i + 1])
+        del args[i:i + 2]
+    args = [a for a in args if a != '--groups']
+    main(args[0] if args else None, lang, group, per)

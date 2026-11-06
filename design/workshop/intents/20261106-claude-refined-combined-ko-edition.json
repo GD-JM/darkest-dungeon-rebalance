@@ -1,0 +1,32 @@
+[
+  {
+    "id": "REFINED-COMBINED-002",
+    "decision": "adopted",
+    "original_quote": "한국어판 먼저 보여줘 지금 한국어 영어 섞여있잖아 온전한 한국어판 온전한 영어판 이런식으로",
+    "context_quotes": [
+      {"quote": "스포트라이트를 영웅 2~4명씩 묶어 장 수를 줄인다(예: 20명 → 5~10장). 이거로 해서 본문 최대한 덜 줄이는 쪽으로 손실 없게 하는 쪽으로 해줘", "speaker": "user", "source": "Claude Code 세션 29a675d2, 2026-11-05"},
+      {"quote": "예시 이미지 이거는 영웅 다 넣지 말고, 설명란에는 유물이랑 총사만 넣어 나머지는 스팀 메인 이미지에서 관람할 수 있게 넣어만 놔", "speaker": "user", "source": "Claude Code 세션 29a675d2, 2026-11-06"},
+      {"quote": "우리 dlc 총사랑 다 만든거 있잖아 그거 링크도 남겨 그리고 추가로 기존 리밸런싱 링크도 남겨 설명란 맨 밑에다가 리밸런싱은 dlc 없으면 이거 쓰라고 옆에 써놔", "speaker": "user", "source": "Claude Code 세션 29a675d2, 2026-11-06"},
+      {"quote": "오케이 이제 이거로 배포하자 공개까지 ㄱㄱ", "speaker": "user", "source": "Claude Code 세션 29a675d2, 2026-11-06"}
+    ],
+    "rationale_ko": "통합본 설명란 이미지를 언어별로 만든다(한국어 설명 = 한국어 이미지, brand_render.py --lang ko). 설명란에는 두 개편(유물수집상·총사) 스포트라이트만 언어별로 넣고, 갤러리에는 표지와 영웅 20명 스포트라이트(영문)를 둔다. 맨 밑에 단독판 No.01~05와 기존 Every Hero Worth Taking(DLC 없을 때) 링크. 새 이미지 세트는 새 보관 아이템 3834129393에 올려 공개 중 주소를 깨지 않는다.",
+    "source": {"product": "claude", "reference": "Claude Code 세션 29a675d2, 2026-11-05~06", "session_id": "29a675d2-6792-4e0a-b0de-212cae3f4b77", "message_id": null, "event_id": null},
+    "files": ["design/branding/brand_render.py", "design/branding/brand_content_ko.json", "design/branding/brand_content.json", "design/branding/build_descriptions.py", "design/branding/upload_desc_assets.py", "design/branding/BRAND_STYLE.md", "tools/refined/publish_refined.py"],
+    "supersedes": ["REFINED-COMBINED-001"]
+  },
+  {
+    "id": "REFINED-COMBINED-003",
+    "decision": "adopted",
+    "original_quote": "핵심원칙은 재미를 위해서고, 그 재미가 뭐냐면 파티 조합다양성의 증가야. 영웅들간의 유연한 조합 새로운 조합이 가능하게 만드는 게 출발이였어. 왜냐하면 기존에 성녀 광대 방파자 방파자 는 거의 정답 조합이였거든",
+    "context_quotes": [
+      {"quote": "모든 영웅 스킬 리워크 및 리밸런스 라는 모드의 정체성도 처음에 그냥 설명으로 얘기해줬음 좋겠어 그리고 그 다음 왜 리워크 왜 리밸런스를 했냐에서 얘기가 풀어나가지는거지", "speaker": "user", "source": "Claude Code 세션 29a675d2, 2026-11-06"},
+      {"quote": "영웅끼리 효과를 이어갑니다 이걸 빼고 스트레스와 hp 회복 수단이 다양해지고 그로 인해 더 여러가지 조합이 가능해지는 걸 설명해줘 그리고 이거를 처음으로 설명해 이게 핵심이야 사실", "speaker": "user", "source": "Claude Code 세션 29a675d2, 2026-11-06"},
+      {"quote": "예시로 드는거는 바닐라랑 비교해보고 그 비교에서 정말 달라진 것만 예시 들었음 좋겠어 바닐라에서도 가능한 걸 예시 들면 안되지", "speaker": "user", "source": "Claude Code 세션 29a675d2, 2026-11-06"},
+      {"quote": "석궁사수는 성녀 신비학자에 비해 그냥 밸류가 부족했어. 힐도 밀리고 유틸과 딜도 그렇게 상회하지 못했어. 그나마 표식파티에서는 활약 가능하나 표식파티 자체가 마이너했다. 그래서 회복 능력의 활용성을 더 늘렸고, 스트레스힐 역시 가능하며, 여타 공격능력 역시 상향하여 상대 후방 3,4열을 상대로 기존보다 더 강한 영향력을 펼칠 수 있는 영웅으로 재설계하였다.", "speaker": "user", "source": "Claude Code 세션 29a675d2, 2026-11-06"}
+    ],
+    "rationale_ko": "한국어 통합본 설명을 정체성 → 핵심(파티 조합 다양성, 정답 조합 해체) → 해결(회복·스트레스 힐러 다변화, 방패 파괴자 하향, 표식 파티 다양화) → refined 방식(근거·설정·직관, 기술 4개 고정 탈피) → 바닐라 대비 실제로 달라진 예시(회복 분담, 표식, 끌어오기) → 목적(완벽한 밸런스를 함께) 순서로 다시 썼다. 석궁사수 스포트라이트의 기존 문제점·패치 방향은 제작자 문장으로 바꿨다. 다른 9개 언어 본문은 아직 이 서사로 옮기지 않았다.",
+    "source": {"product": "claude", "reference": "Claude Code 세션 29a675d2, 2026-11-06", "session_id": "29a675d2-6792-4e0a-b0de-212cae3f4b77", "message_id": null, "event_id": null},
+    "files": ["design/refined/description/koreana.txt", "design/branding/brand_content_ko.json", "design/branding/brand_content.json"],
+    "supersedes": []
+  }
+]
