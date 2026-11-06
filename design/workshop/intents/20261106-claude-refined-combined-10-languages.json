@@ -1,0 +1,12 @@
+{
+  "id": "REFINED-COMBINED-004",
+  "decision": "adopted",
+  "original_quote": "모든 언어로 번역해서 보여주는 거 다해줘",
+  "context_quotes": [
+    {"quote": "최대한 빨리해 원래 다 번역하고 그 나라 언어권 사람이 누르면 그 언어로 뜨게 만들고 공개했어야 했는데 지금 우리가 실수한거야", "speaker": "user", "source": "Claude Code 세션 29a675d2, 2026-11-06"}
+  ],
+  "rationale_ko": "통합본 설명 9개 언어(영어·포르투갈어(브라질)·프랑스어·독일어·폴란드어·러시아어·중국어 간체/번체·스페인어)를 한국어 확정본 서사로 다시 옮기고, 기술·영웅·DLC 이름을 각 언어 게임 공식 현지화로 바로잡았다. 영어 소개 이미지 3장 문구를 새 세 문단(회복 분담·표식 파티·끌어오기)에 맞췄다. 번체 중국어는 게임 현지화가 없어 간체 공식명을 번체 글자로 옮겼다.",
+  "source": {"product": "claude", "reference": "Claude Code 세션 29a675d2, 2026-11-06", "session_id": "29a675d2-6792-4e0a-b0de-212cae3f4b77", "message_id": null, "event_id": null},
+  "files": ["design/refined/description/english.txt", "design/refined/description/brazilian.txt", "design/refined/description/french.txt", "design/refined/description/german.txt", "design/refined/description/polish.txt", "design/refined/description/russian.txt", "design/refined/description/schinese.txt", "design/refined/description/spanish.txt", "design/refined/description/tchinese.txt", "design/branding/brand_content.json", "design/branding/build_descriptions.py"],
+  "supersedes": []
+}

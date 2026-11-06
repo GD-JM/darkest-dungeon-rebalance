@@ -1,49 +1,50 @@
 [h1]Darkest Refined[/h1]
-[i]Bekannte Helden. Neue Möglichkeiten. Ein sorgfältig abgestimmtes Helden-Rebalancing.[/i]
+[i]Bekannte Helden, neue Möglichkeiten. Ein Rebalancing, das die Spannung des Originals bewahrt und jeder Wahl mehr Tiefe gibt.[/i]
 
-Die Helden, die du immer mitnimmst. Die vier Fähigkeiten, die du immer wählst.
-Was wäre, wenn auch jede andere Wahl einen echten Grund hätte?
+Darkest Refined überarbeitet die Fähigkeiten aller 20 Helden von Darkest Dungeon und balanciert sie neu.
 
-Darkest Refined stimmt die Helden und Fähigkeiten von Darkest Dungeon sorgfältig ab, damit du eigene Gruppen planen und ausprobieren kannst. Heilung und Stressabbau hängen nicht mehr an ein oder zwei Helden, Unterstützungsfähigkeiten ebnen physischen Angreifern den Weg, und die Stärken jedes Helden greifen in die seiner Gefährten.
+Ausgangspunkt ist der Spaß am Zusammenstellen der Gruppe. Im Original waren Vestalin, Narr und Schildbrecherin fast die einzig richtige Antwort und lösten nahezu jede Lage. Die Eigenart jedes Helden ist eine Stärke des Spiels, doch in der festgefahrenen Aufstellung ging sie unter.
 
-Schwierigkeit und Spannung des Originals stehen an erster Stelle. Jede Verstärkung hat ihren Preis, und geschwächte Rollen finden neue Aufgaben. Spieldaten, Klassenschmuck, offizielle Hintergrundgeschichten und echte Partien werden gemeinsam geprüft, und jede Änderung behält eine schriftliche Begründung. Deine Erfahrungen und begründetes Feedback verfeinern die Mod weiter.
+Deshalb wurde die Heilung anderer Helden angehoben, damit sie die Vestalin ersetzen können, und ihr Stressabbau, damit es nicht der Narr sein muss. Die Schildbrecherin wurde passend zu ihrer offiziellen Geschichte und zur Entwicklungskurve anderer Helden gesenkt, andere Helden entsprechend angehoben. Markierungsgruppen, bisher eine Nische, hängen nicht mehr an Arbaleste, Hundemeister, Okkultist und Kopfgeldjäger: Viele Helden markieren jetzt besser.
 
 [h2]So wird abgestimmt[/h2]
+Kein Patch, der die Balance nach Bauchgefühl oder aus Ärger umwirft: Jede Änderung wurde auf Angemessenheit und Treue zur offiziellen Heldengeschichte geprüft, damit die Tiefe des Originals bleibt.
 [list]
-[*][b]Dieselbe Spannung.[/b] Stärkungen und Schwächungen werden gemeinsam entworfen, das Spiel bleibt so schwer, wie du es kennst.
-[*][b]Klare Leitplanken.[/b] Klassenschmuck und die offizielle Geschichte jedes Helden setzen jeder Änderung Grenzen, damit sich nichts fremd anfühlt.
-[*][b]Belege statt Bauchgefühl.[/b] Ein Vergleichsmodell für Schaden, Heilung, PROT-Senkung und Aktionen leitet die Zahlen; echte Partien und dein Feedback korrigieren sie.
+[*][b]Nur mit Begründung.[/b] Aufgenommen wurde nur, was sich durch den Vergleich mit anderen Helden, die offizielle Geschichte und die Zahlenprinzipien des Originals erklären lässt.
+[*][b]Bild und Name halten, was sie versprechen.[/b] Erstversorgung heilt Bluten, Gefechtsmedizin Gifthauch. Die kampflustige Barbarin erschöpft sich nicht mehr und verursacht dafür weniger Schaden.
+[*][b]Nicht auf vier Fähigkeiten festgelegt.[/b] Ungenutzte Fähigkeiten wurden gestärkt und zum Standard gewordene geschwächt, damit jede Lage eine andere Wahl verlangt. Bei der Vestalin, bisher festgelegt auf Richtspruch, Blendendes Licht und zwei Heilungen, wandert die Selbstheilung von Richtspruch zu Kolbenhieb, Blendendes Licht trifft nur noch Position 1 und 2, und Göttliche Gnade wirkt von jeder Position.
 [/list]
 
 [h2]Was du ausprobieren kannst[/h2]
-Bereiche gelten für Fähigkeitsstufe 1–5.
 [list]
-[*][b]Geteilte Heilung.[/b] Heilung lag bisher bei Vestal, Occultist und Jester; jetzt teilen sich viele Helden diese Aufgabe, was das Spiel flexibler und die Gruppen vielfältiger macht. Crusaders Battle Heal heilt 3–4 LP (6–7 auf Stufe 5) und erhöht den PROT des Ziels. Arbalests Battlefield Bandage heilt Blutungen, Plague Doctors Battlefield Medicine heilt die Vergiftung eines Verbündeten. Antiquarians Fortifying Vapours verstärkt jede Heilung, die das Ziel erhält, stapelbar. Arbalests Rallying Flare baut für die ganze Gruppe, sie selbst eingeschlossen, 2–4 Stress ab, und Man-at-Arms' Bolster wurde zu einer Stressheilung überarbeitet.
-[*][b]Rüstung brechen.[/b] Da die Rüstung mit dem Schwierigkeitsgrad steigt, wurden physische Angreifer außer Shieldbreaker und Grave Robber oft links liegen gelassen. Jetzt können Unterstützer die gegnerische Rüstung für sie schwächen: Occultists Weakening Curse (PROT −25 bis −35 %), Shieldbreakers Puncture (−30 bis −40 %) und Lepers Rüstungsbrecher [b](NEUE FÄHIGKEIT)[/b] (−30 bis −50 %) öffnen gepanzerte Gegner für physische Angreifer.
-[*][b]Eine andere Spielweise.[/b] Highwaymans Tracking Shot verfolgt nun die Bewegungen des Gegners und bereitet eine Riposte vor, und Duelist's Advance gibt ihm die Kampfboni eines Duellanten. Shieldbreakers Pierce erreicht nicht mehr jede gegnerische Position; dafür bewegt sich die Tänzerin ihrer Geschichte durch die eigenen Reihen und bringt mit mehr Fähigkeiten zum Heranziehen von Gegnern als jeder andere Held auch die gegnerische Aufstellung durcheinander. Musketeer wurde vollständig überarbeitet: Von hinten durchschlägt sie Rüstung und verbirgt Verbündete im Rauch.
+[*][b]Viele Helden teilen sich die Heilung.[/b] Erstversorgung der Arbaleste heilt jetzt Bluten, und Gefechtsmedizin der Pestdoktorin steigt von 1–3 auf 3–7 Heilung und übernimmt Gifthauch. Beide heilen 3–7, knapp unter der Vestalin. Im Original waren Narr und Kreuzfahrer die einzigen echten Stressheiler. Jetzt können Ruf der Zerstörung des Hundemeisters (4–6), Leuchtsignal der Arbaleste (2–4, sie selbst eingeschlossen), Zuspruch des Waffenknechts (1–3, ohne Limit pro Kampf), Ertragen (netto 8 ab Stufe 1) und Leiden (4–6) des Flagellanten sowie Begeisternder Schlachtruf des Kreuzfahrers (5–9) diese Rolle übernehmen.
+[*][b]Viele Helden bilden eine Markierungsgruppe.[/b] Beute markieren der Musketierin ist jetzt eine Markierung, die statt AUSWEICHEN die ABW um 20–30 % senkt, und Du bist der Nächste des Kopfgeldjägers erhöht statt der ABW-Senkung den erlittenen Schaden um 15–25 %, sodass die ganze Gruppe profitiert. Vorsichtiger Stich der Antiquarin, bisher ohne Markierung, markiert auf Stufe 5.
+[*][b]Die hintere Reihe heranziehen und erledigen.[/b] Statt vier gibt es jetzt acht Fähigkeiten, die Gegner heranziehen. Bola der Arbaleste stieß Position 1 und 2 zurück und zieht nun einen Gegner auf Position 2–4 um 2 heran; Verwirrender Knall der Pestdoktorin mischte zufällig, jetzt betäubt er und zieht um 2 heran. Rückschritt der Duellantin und Enthüllen der Schildbrecherin ziehen ebenfalls einen Gegner um 2 heran.
 [/list]
 
 [h2]Zwei Überarbeitungen im Fokus[/h2]
 [list]
-[*][b]Antiquarian findet ihren Platz ab Entschlossenheit 5.[/b] Bis Entschlossenheit 3 (Veteran) bleibt sie schwach, dafür bringt sie mehr Gold ein. Ab Entschlossenheit 5 bringt ihr Klassenschmuck sie auf das Niveau anderer Helden. Statt selbst stark zu werden, stärkt sie ihre Gefährten und lohnt sich so auch im Dunkelsten Dungeon.
-[*][b]Abomination: Beherrschung wird Stärke.[/b] Die Menschengestalt tauscht etwas Genauigkeit bei Manacles und Beast's Bile gegen ein stärkeres Beast's Bile. Mit Absolution beherrschter Stress bezahlt die Verwandlung und wird zu Heilung, Schaden, Tempo und CRIT der Bestie; die Gefährten werden weniger belastet.
+[*][b]Die Antiquarin geht mit bis in den Dunkelsten Dungeon.[/b] Bis Veteran bleibt sie schwach; auf Fähigkeitsstufe 5 erhält sie neue Effekte, und ab Experte leistet sie mit ihren Klassen-Accessoires ihren Teil. Auf Stufe 5 gibt Beschützt mich! jedem Verbündeten, der sie schützt, 3 Runden Gegenschlag.
+[*][b]Die Musketierin verbirgt ihre Gefährten.[/b] Alle sieben Fähigkeiten, die sie mit der Arbaleste teilte, wurden neu gebaut. Deckungsrauch ist die einzige Fähigkeit, die einen Verbündeten tarnt, 2 Runden lang, und Durchschlagende Kugel durchdringt auf jeder Position von 1 bis 4 25–50 % ABW.
 [/list]
 
 [h2]Jede Änderung im Bild[/h2]
-Die Galerie oben enthält die Einführungsbilder und ein Bild pro Held: was nicht stimmte, die Richtung, die Lösung und ihr Preis und wie man den Helden jetzt spielt. Alle 20 Helden wurden geändert.
+Was bei den 20 Helden nicht stimmte, die Richtung, die Lösung und ihr Preis und wie man sie jetzt spielt, steht in den Galeriebildern oben. Unten folgen die zwei Überarbeitungen im Fokus.
 
-Einzelausgaben, eine pro Held, zeigen jede Fähigkeit mit geänderten Werten, dem Grund der Änderung, der Änderungsabsicht, Vergleichen und dem Designverlauf. No.01 Musketeer, No.02 Flagellant, No.03 Shieldbreaker, No.04 Runaway und No.05 Duelist sind erschienen; die übrigen Helden folgen.
+Grund und Belege jeder Fähigkeitsänderung findest du in den Einzelausgaben pro Held ganz unten; weitere Helden folgen.
 
-[h2]Weitere Updates. Ein offenes Ohr für Feedback.[/h2]
-[b]Ich lese und prüfe jeden Kommentar.[/b] Erzähl mir von Fähigkeiten, die zu stark, zu schwach oder nutzlos wirken, und von Kombinationen, die gut funktionieren. Helden- und Fähigkeitsstufen, Schmuck, Gruppe und Kampfsituation helfen mir bei der Bewertung. [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3821353035]Update-Verlauf ansehen[/url]
+[h2]Weiter verfeinert, weiter zugehört[/h2]
+Das Ziel ist perfekte Balance. Ich verfeinere den Patch weiter und suche die Antworten gemeinsam mit deinem Feedback. Sag mir, welche Fähigkeiten zu stark oder zu schwach sind, welche man nie ausrüsten würde und welche Kombinationen gut funktionieren. Helden- und Fähigkeitsstufen, Accessoires, Gruppe und Kampfsituation helfen mir sehr.
 
 [h2]Installation und Kompatibilität[/h2]
-[b]Alle fünf DLC-Helden aktivieren:[/b] Flagellant (The Crimson Court), Shieldbreaker, Duelist, Runaway und Musketeer (kostenlos). Die Musketeer-Überarbeitung ist enthalten; eine externe Mod ist nicht nötig.
+[b]Alle fünf DLC-Helden müssen aktiviert sein:[/b] Flagellant (Crimson Court), Schildbrecherin, Duellantin, Ausreißerin, Musketierin (kostenlos).
 
-[b]Nicht zusammen mit dem früheren Every Hero Worth Taking oder den Darkest-Refined-Einzelausgaben aktivieren.[/b] Sie ändern dieselben Heldendateien wie diese Sammlung. Andere Überarbeitungen, die dieselben Helden-, Effekt- oder Buff-Dateien ersetzen, können ebenfalls Konflikte verursachen.
+[b]Nicht zusammen mit Every Hero Worth Taking oder den Einzelausgaben pro Held (Links unten) aktivieren.[/b] Sie ändern dieselben Heldendateien.
 
-Kann in einem bestehenden Anwesen aktiviert werden. Mit UI Enhancement zeigen Musketeer-Fähigkeiten eventuell ihre ursprünglichen Namen.
+In einem bestehenden Dorf nutzbar. Mit UI Enhancement können Fähigkeiten der Musketierin ihre ursprünglichen Namen zeigen.
 
-[b]Jeder Held verdient einen Grund, mitzukommen.[/b]
+[i]Bilder: offizielle Darkest-Dungeon-Comics und -Artworks © Red Hook Studios. Inoffizielle Fan-Mod.[/i]
 
-[i]Bilder: offizielle Darkest-Dungeon-Ursprungscomics der Helden und Werbegrafiken © Red Hook Studios. Dies ist eine inoffizielle Fan-Mod.[/i]
+[b]Darkest Refined: Einzelausgaben pro Held[/b]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933701]No.01 Musketierin[/url] · [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933671]No.02 Flagellant[/url] · [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933678]No.03 Schildbrecherin[/url] · [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933691]No.04 Ausreißerin[/url] · [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933684]No.05 Duellantin[/url]
+[b]Früheres Rebalancing:[/b] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3821353035]Every Hero Worth Taking[/url] (Ohne DLC nutze diese Mod. Sie ändert nur die 15 Grundhelden.)

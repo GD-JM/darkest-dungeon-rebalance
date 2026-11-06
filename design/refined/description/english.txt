@@ -1,49 +1,50 @@
 [h1]Darkest Refined[/h1]
-[i]Familiar heroes. New possibilities. A carefully tuned hero rebalance.[/i]
+[i]Familiar heroes, new possibilities. A rebalance that keeps the original tension and adds depth to every choice.[/i]
 
-The heroes you always bring. The four skills you always pick.
-What if every other choice had a real reason too?
+Darkest Refined reworks and rebalances the skills of all 20 heroes in Darkest Dungeon.
 
-Darkest Refined carefully tunes the heroes and skills of Darkest Dungeon so you can plan and test parties of your own. Healing and stress relief no longer rest on one or two heroes, support skills open the way for physical attackers, and each hero's strengths are tuned to work with their allies.
+It starts from the fun of building a party. In the original game, Vestal, Jester and Shieldbreaker were close to the one right answer and handled almost any situation. Each hero's distinct character is one of the game's strengths, but as parties settled into that lineup, the character was buried.
 
-The original difficulty and tension come first. Every buff carries a price, and weakened roles find new uses. Game data, class trinkets, official lore and real play are reviewed together, and every change keeps a written reason. Your experience and reasoned feedback keep refining it.
+So other heroes' healing was raised so they can stand in for the Vestal, and other heroes' stress healing so the Jester is no longer required. The Shieldbreaker was brought down in line with her official lore and other heroes' growth curves, and other heroes were raised by that share. Marking parties, once a niche, are no longer tied to the Arbalest, Houndmaster, Occultist and Bounty Hunter: many more heroes have stronger marking abilities.
 
 [h2]How it is tuned[/h2]
+This is not a patch that shakes up balance on gut feeling or annoyance. Each change was checked for whether it is justified and whether it fits the hero's official lore, so the original's depth stays intact.
 [list]
-[*][b]The same tension.[/b] Buffs and nerfs are designed together, so the game stays as hard as you remember.
-[*][b]Clear guardrails.[/b] Class trinkets and each hero's official lore set the limits of every change, so nothing feels foreign.
-[*][b]Evidence, not instinct.[/b] A comparison model of damage, healing, armor reduction and actions guides the numbers; real play and your feedback correct them.
+[*][b]Only what can be justified.[/b] Only changes explained by comparison with other heroes, official lore and the original game's number rules made it in.
+[*][b]Works the way it looks.[/b] Art and names deliver what they promise. Battlefield Bandage cures bleed and Battlefield Medicine cures blight, splitting the work. The warlike Hellion no longer becomes exhausted, and deals less damage in return.
+[*][b]Not locked into four skills.[/b] Unused skills were raised and skills that had become the default were lowered, so different situations call for different skills. The Vestal, once locked into Judgement, Dazzling Light and her two heals, now has Judgement's self-heal moved to Mace Bash, Dazzling Light limited to ranks 1 and 2, and Divine Grace usable from any rank.
 [/list]
 
 [h2]What you can try[/h2]
-Ranges cover skill levels 1–5.
 [list]
-[*][b]Healing, shared.[/b] Healing used to rest on the Vestal, the Occultist and the Jester; now many heroes share the load, making the game more flexible and parties more varied. Crusader's Battle Heal restores 3–4 HP (6–7 at level 5) and raises the target's PROT. Arbalest's Battlefield Bandage cures bleed, and Plague Doctor's Battlefield Medicine cures an ally's blight. Antiquarian's Fortifying Vapours amplifies all healing the target receives, stacking. Arbalest's Rallying Flare relieves 2–4 stress for the whole party, herself included, and Man-at-Arms' Bolster has been reworked into a stress-healing skill.
-[*][b]Break the armor.[/b] As armor rises with difficulty, physical attackers other than the Shieldbreaker and the Grave Robber were often left behind. Now support heroes can strip enemy armor for them: Occultist's Weakening Curse (PROT −25 to −35%), Shieldbreaker's Puncture (−30 to −40%) and Leper's Sunder [b](NEW SKILL)[/b] (−30 to −50%) open armored enemies for physical attackers.
-[*][b]Another way to play.[/b] Highwayman's Tracking Shot now tracks the enemy's movements to ready a riposte, and Duelist's Advance grants him a duelist's combat buffs. Shieldbreaker's Pierce can no longer reach every enemy rank; instead the dancer of her story moves through her own line and, with more pulling skills than any other hero, shakes up the enemy line too. Musketeer is fully reworked: from the back she pierces armor and hides allies in smoke.
+[*][b]Healing is shared across heroes.[/b] Arbalest's Battlefield Bandage now cures bleed, and Plague Doctor's Battlefield Medicine rises from 1–3 to 3–7 healing and takes on blight. Both heal 3–7, making them healers just short of the Vestal. In the original, the only real stress healers were the Jester and the Crusader. Now Houndmaster's Cry Havoc (4–6), Arbalest's Rallying Flare (2–4, herself included), Man-at-Arms' Bolster (1–3, no per-battle limit), Flagellant's Endure (net 8 from level 1) and Suffer (4–6), and Crusader's Inspiring Cry (5–9) can all be the stress healer a party needs.
+[*][b]Many heroes can build a marking party.[/b] Musketeer's Mark the Quarry is now a mark that cuts PROT by 20–30% instead of dodge, and Bounty Hunter's Mark for Death raises damage taken by 15–25% instead of cutting PROT, so the whole party benefits from the mark. Antiquarian's Nervous Stab, which had no mark, now marks at level 5.
+[*][b]Pull the back line in and finish it.[/b] Skills that pull enemies grew from four in the original to eight. Arbalest's Bola, which knocked back ranks 1 and 2, now pulls an enemy in ranks 2–4 forward 2, and Plague Doctor's Disorienting Blast, which shuffled at random, now stuns and pulls 2. Duelist's Disengage and Shieldbreaker's Expose also pull an enemy forward 2.
 [/list]
 
 [h2]Two reworks in focus[/h2]
 [list]
-[*][b]Antiquarian earns her place at Champion.[/b] Up to Veteran she stays weak, in exchange for the extra gold she brings. From Champion, her class trinkets bring her close to other heroes. Rather than growing strong herself, she makes her teammates stronger, so she is worth taking into the Darkest Dungeon.
-[*][b]Abomination: restraint becomes power.[/b] His human form trades a little accuracy on Manacles and Beast's Bile for a harder-hitting Bile. The stress he keeps in check with Absolution pays for the transformation and turns into the beast's healing, damage, speed and CRIT, easing the burden on allies.
+[*][b]The Antiquarian goes all the way to the Darkest Dungeon.[/b] She stays weak up to Veteran; at skill level 5 her skills gain new effects, and from Champion she pulls her weight with her class trinkets. At level 5, Protect Me gives whichever ally guards her 3 turns of riposte.
+[*][b]The Musketeer hides her allies.[/b] All seven skills she shared with the Arbalest were rebuilt. Covering Smoke is the only skill that stealths an ally, for 2 turns, and Piercing Ball pierces 25–50% PROT on any rank from 1 to 4.
 [/list]
 
 [h2]Every change, in the images[/h2]
-The gallery above holds the introduction images and one image per hero: what was wrong, the direction, the fix and its cost, and how to play the hero now. All 20 heroes are changed.
+What was wrong with each of the 20 heroes, the direction, the fix and its cost, and how to play them now are all in the gallery images above. Below are the two reworks in focus, the Antiquarian and the Musketeer.
 
-Standalone editions, one per hero, cover every skill with its changed values, why it changed, the change intent, comparisons and design history. No.01 Musketeer, No.02 Flagellant, No.03 Shieldbreaker, No.04 Runaway and No.05 Duelist are out, and the remaining heroes will follow.
+The reason and evidence behind each skill change are in the per-hero standalone editions linked at the bottom, and the remaining heroes will follow in turn.
 
-[h2]Still updating. Still listening.[/h2]
-[b]I read and consider every comment.[/b] Tell me about skills that feel too strong, too weak or not worth equipping, and combinations that work well. Hero and skill levels, trinkets, party and battle context help me evaluate feedback. [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3821353035]Read the update history[/url]
+[h2]Still refining. Still listening.[/h2]
+The goal is perfect balance. I will keep refining the patch to come closer to that ideal, and gather your feedback to find the answers together. Tell me about skills that feel too strong or too weak, skills with no reason to equip, and combinations that work well. Hero and skill levels, trinkets, party and battle situation help my judgement a great deal.
 
 [h2]Installation and compatibility[/h2]
-[b]Enable all five DLC heroes:[/b] Flagellant (The Crimson Court), Shieldbreaker, Duelist, Runaway and Musketeer (free). The Musketeer rework is included; no external mod is required.
+[b]All five DLC heroes must be enabled:[/b] Flagellant (The Crimson Court), Shieldbreaker, Duelist, Runaway, Musketeer (free).
 
-[b]Do not enable this collection together with the earlier Every Hero Worth Taking or the Darkest Refined standalone editions.[/b] They change the same hero files. Other reworks replacing the same hero, effect or buff files may also conflict.
+[b]Do not enable it together with Every Hero Worth Taking or the per-hero standalone editions (links at the bottom).[/b] They change the same hero files.
 
-Can be enabled in an existing estate. With UI Enhancement, Musketeer skills may display their original names.
+Can be applied to an existing estate. With UI Enhancement, Musketeer skills may display their original names.
 
-[b]Every hero deserves a reason to join the party.[/b]
+[i]Art: official Darkest Dungeon comics and art © Red Hook Studios. This is an unofficial fan mod.[/i]
 
-[i]Art in the images: official Darkest Dungeon hero origin comics and promotional art © Red Hook Studios. This is an unofficial fan mod.[/i]
+[b]Darkest Refined standalone editions[/b]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933701]No.01 Musketeer[/url] · [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933671]No.02 Flagellant[/url] · [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933678]No.03 Shieldbreaker[/url] · [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933691]No.04 Runaway[/url] · [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933684]No.05 Duelist[/url]
+[b]Earlier rebalance:[/b] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3821353035]Every Hero Worth Taking[/url] (If you don't have the DLC, use this mod. It changes only the 15 base heroes.)

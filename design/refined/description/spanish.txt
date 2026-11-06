@@ -1,49 +1,50 @@
 [h1]Darkest Refined[/h1]
-[i]Héroes conocidos. Nuevas posibilidades. Un reajuste de héroes afinado con cuidado.[/i]
+[i]Héroes conocidos, nuevas posibilidades. Un reajuste que conserva la tensión del original y da más profundidad a cada decisión.[/i]
 
-Los héroes que siempre llevas. Las cuatro habilidades que siempre eliges.
-¿Y si cada una de las demás opciones también tuviera un motivo real?
+Darkest Refined rehace y reajusta las habilidades de los 20 héroes de Darkest Dungeon.
 
-Darkest Refined ajusta con cuidado los héroes y habilidades de Darkest Dungeon para que puedas idear y probar tus propios grupos. La curación y el alivio de estrés ya no dependen de uno o dos héroes, las habilidades de apoyo abren camino a los atacantes físicos y las fortalezas de cada héroe encajan con las de sus aliados.
+Todo parte de la diversión de armar un grupo. En el original, la Vestal, el Bufón y la Rompescudos eran casi la única respuesta correcta y resolvían casi cualquier situación. El carácter de cada héroe es un punto fuerte del juego, pero al fijarse los grupos quedó enterrado.
 
-La dificultad y la tensión del original van primero. Cada mejora tiene un precio y los papeles debilitados encuentran nuevos usos. Los datos del juego, los abalorios de clase, la historia oficial y las partidas reales se revisan juntos, y cada cambio conserva un motivo escrito. Tu experiencia y tus comentarios razonados lo siguen refinando.
+Por eso se subió la curación de otros héroes para que puedan sustituir a la Vestal, y su alivio de estrés para que el Bufón deje de ser obligatorio. La Rompescudos bajó en línea con su historia oficial y con la progresión de los demás héroes, que subieron en la misma medida. Los grupos de marca, antes minoritarios, ya no dependen de la Arbalestera, el Maestro canino, el Ocultista y el Cazarecompensas: muchos héroes marcan mejor.
 
 [h2]Cómo se ajusta[/h2]
+No es un parche que sacude el equilibrio por intuición o por molestia. Se revisó cada cambio, si es adecuado y si respeta la historia oficial del héroe, para no dañar la profundidad del original.
 [list]
-[*][b]La misma tensión.[/b] Mejoras y reducciones se diseñan juntas, y el juego sigue siendo tan difícil como lo recuerdas.
-[*][b]Límites claros.[/b] Los abalorios de clase y la historia oficial de cada héroe marcan los límites de cada cambio, para que nada resulte ajeno.
-[*][b]Pruebas, no intuición.[/b] Un modelo que compara daño, curación, reducción de PROT y acciones guía los números; las partidas reales y tus comentarios los corrigen.
+[*][b]Solo con fundamento.[/b] Solo entran cambios que se explican comparando con otros héroes, por la historia oficial y por los principios numéricos del original.
+[*][b]Imagen y nombre cumplen lo que prometen.[/b] Venda de batalla cura la hemorragia y Medicina del campo de batalla la infección. La belicosa Diabla ya no se agota y, a cambio, hace menos daño.
+[*][b]Sin quedar atado a cuatro habilidades.[/b] Las habilidades olvidadas subieron y las que se habían vuelto obligatorias bajaron, para que cada situación pida otra elección. La Vestal, atada a Juicio, Luz deslumbrante y sus dos curaciones, pasa el autocurado de Juicio a Mazazo, limita Luz deslumbrante a las posiciones 1 y 2 y puede usar Gracia divina desde cualquier posición.
 [/list]
 
 [h2]Qué puedes probar[/h2]
-Los rangos cubren los niveles 1–5 de habilidad.
 [list]
-[*][b]Curación compartida.[/b] La curación recaía en la Vestal, el Ocultista y el Bufón; ahora muchos héroes se reparten ese papel, para un juego más flexible y grupos más variados. Battle Heal del Cruzado cura 3–4 PV (6–7 a nivel 5) y aumenta la PROT del objetivo. Battlefield Bandage de la Arbalestera cura hemorragias y Battlefield Medicine del Médico de la peste cura el veneno de un aliado. Fortifying Vapours de la Anticuaria amplifica toda la curación que recibe el objetivo, acumulable. Rallying Flare de la Arbalestera alivia 2–4 de estrés a todo el grupo, ella incluida, y Bolster del Hombre de armas se ha rehecho como habilidad de alivio de estrés.
-[*][b]Rompe la armadura.[/b] Como la armadura aumenta con la dificultad, los atacantes físicos aparte de la Rompescudos y la Asaltatumbas solían quedarse fuera. Ahora los héroes de apoyo pueden reducir la armadura enemiga por ellos: Weakening Curse del Ocultista (PROT −25 a −35%), Puncture de la Rompescudos (−30 a −40%) y Rompearmaduras del Leproso [b](NUEVA HABILIDAD)[/b] (−30 a −50%) abren a los enemigos acorazados para los atacantes físicos.
-[*][b]Otra forma de jugar.[/b] Tracking Shot del Bandolero ahora sigue los movimientos del enemigo para preparar la represalia, y Duelist's Advance le otorga las mejoras de combate de un duelista. Pierce de la Rompescudos ya no alcanza todas las posiciones enemigas; a cambio, la bailarina de su historia se mueve por su propia fila y, con más habilidades para atraer enemigos que cualquier otro héroe, también desordena la fila enemiga. La Mosquetera se ha rehecho por completo: desde la retaguardia perfora armaduras y oculta a sus aliados en el humo.
+[*][b]Varios héroes se reparten la curación.[/b] Venda de batalla de la Arbalestera ahora cura la hemorragia, y Medicina del campo de batalla del Médico de la peste pasa de 1–3 a 3–7 de curación y se encarga de la infección. Los dos curan 3–7, justo por debajo de la Vestal. En el original, los únicos aliviadores de estrés reales eran el Bufón y el Cruzado. Ahora Grito de confusión del Maestro canino (4–6), Bengala de concentración de la Arbalestera (2–4, ella incluida), Refuerzo del Hombre de armas (1–3, sin límite por combate), Aguantar (8 netos desde el nivel 1) y Sufrir (4–6) del Flagelante, y Grito de inspiración del Cruzado (5–9) pueden asumir ese papel.
+[*][b]Varios héroes arman un grupo de marca.[/b] Marcar la presa de la Mosquetera es ahora una marca que reduce la PROT un 20–30 % en vez de la EVASIÓN, y Marca de la muerte del Cazarecompensas aumenta el daño recibido un 15–25 % en vez de reducir la PROT, así que todo el grupo aprovecha la marca. Puñalada nerviosa de la Anticuaria, que no marcaba, marca a nivel 5.
+[*][b]Atrae a la retaguardia y remátala.[/b] Las habilidades que atraen enemigos pasan de cuatro a ocho. Bola de la Arbalestera, que empujaba las posiciones 1 y 2, atrae 2 posiciones a un enemigo en las posiciones 2–4, y Explosión de confusión del Médico de la peste, que reordenaba al azar, aturde y atrae 2. Fondo de la Duelista y Pinchazo de la Rompescudos también atraen 2 a un enemigo.
 [/list]
 
-[h2]Dos reworks destacados[/h2]
+[h2]Dos rediseños destacados[/h2]
 [list]
-[*][b]La Anticuaria encuentra su lugar en el nivel Campeón.[/b] Hasta Veterano es débil a cambio del oro extra que aporta. Desde Campeón, sus abalorios de clase la ponen a la altura de otros héroes. En lugar de hacerse fuerte ella misma, fortalece a sus aliados, por lo que vale la pena llevarla a la Mazmorra oscura.
-[*][b]Abominación: el control se vuelve poder.[/b] Su forma humana cambia algo de precisión en Manacles y Beast's Bile por un Beast's Bile más fuerte. El estrés que controla con Absolution paga la transformación y se convierte en curación, daño, velocidad y CRIT de la bestia, aliviando a los aliados.
+[*][b]La Anticuaria llega hasta la Mazmorra oscura.[/b] Hasta Veterano es débil; a nivel 5 de habilidad gana efectos nuevos, y desde Campeón cumple su papel con sus abalorios de clase. A nivel 5, Protégeme da 3 turnos de estocada a cualquier aliado que la proteja.
+[*][b]La Mosquetera oculta a sus aliados.[/b] Se rehicieron sus siete habilidades, antes iguales a las de la Arbalestera. Humo de cobertura es la única habilidad que da sigilo a un aliado, durante 2 turnos, y Bala penetrante perfora un 25–50 % de PROT en cualquier posición de 1 a 4.
 [/list]
 
 [h2]Cada cambio, en imágenes[/h2]
-La galería de arriba reúne las imágenes de presentación y una imagen por héroe: el problema, la dirección, la solución y su coste, y cómo jugarlo ahora. Los 20 héroes están cambiados.
+Los problemas de los 20 héroes, la dirección del parche, la solución y su coste, y cómo se juegan ahora están en las imágenes de la galería de arriba. Abajo, los dos rediseños destacados.
 
-Las ediciones individuales, una por héroe, detallan cada habilidad con sus valores cambiados, por qué cambió, la intención del cambio, comparaciones y el historial de diseño. Ya están disponibles No.01 Mosquetera, No.02 Flagelante, No.03 Rompescudos, No.04 Fugitiva y No.05 Duelista; el resto de héroes llegará después.
+El motivo y el fundamento de cada cambio de habilidad están en las ediciones individuales por héroe, al final; el resto llegará poco a poco.
 
-[h2]Seguimos actualizando y escuchando[/h2]
-[b]Leo y considero cada comentario.[/b] Cuéntame qué habilidades parecen demasiado fuertes, demasiado débiles o inútiles, y qué combinaciones funcionan bien. Los niveles del héroe y de las habilidades, los abalorios, el grupo y el contexto del combate me ayudan a valorarlo. [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3821353035]Ver el historial[/url]
+[h2]Seguimos afinando y escuchando[/h2]
+El objetivo es un equilibrio perfecto. Seguiré afinando el parche para acercarme a ese ideal y buscando las respuestas junto con tus opiniones. Cuéntame qué habilidades son demasiado fuertes o débiles, cuáles no tienen motivo para equiparse y qué combinaciones funcionan bien. Los niveles del héroe y de las habilidades, los abalorios, el grupo y la situación del combate me ayudan mucho a valorarlo.
 
 [h2]Instalación y compatibilidad[/h2]
-[b]Activa los cinco héroes DLC:[/b] Flagelante (The Crimson Court), Rompescudos, Duelista, Fugitiva y Mosquetera (gratuita). El rework de la Mosquetera está incluido; no hace falta ningún mod externo.
+[b]Hay que activar los cinco héroes DLC:[/b] Flagelante (Crimson Court), Rompescudos, Duelista, Fugitiva, Mosquetera (gratuita).
 
-[b]No actives esta colección junto con el anterior Every Hero Worth Taking ni con las ediciones individuales de Darkest Refined.[/b] Cambian los mismos archivos de héroes. Otros reworks que reemplacen los mismos archivos de héroes, efectos o mejoras también pueden entrar en conflicto.
+[b]No lo actives junto con Every Hero Worth Taking ni con las ediciones individuales por héroe (enlaces al final).[/b] Cambian los mismos archivos de héroes.
 
-Se puede activar en una partida existente. Con UI Enhancement, las habilidades de la Mosquetera pueden mostrar sus nombres originales.
+Se puede aplicar a un poblado existente. Con UI Enhancement, las habilidades de la Mosquetera pueden mostrar sus nombres originales.
 
-[b]Cada héroe merece un motivo para unirse al grupo.[/b]
+[i]Arte: cómics y arte oficiales de Darkest Dungeon © Red Hook Studios. Mod de fan no oficial.[/i]
 
-[i]Arte de las imágenes: cómics oficiales de origen de los héroes y arte promocional de Darkest Dungeon © Red Hook Studios. Este es un mod de fan no oficial.[/i]
+[b]Darkest Refined: ediciones individuales por héroe[/b]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933701]No.01 Mosquetera[/url] · [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933671]No.02 Flagelante[/url] · [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933678]No.03 Rompescudos[/url] · [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933691]No.04 Fugitiva[/url] · [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933684]No.05 Duelista[/url]
+[b]Reajuste anterior:[/b] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3821353035]Every Hero Worth Taking[/url] (Si no tienes los DLC, usa este mod. Solo cambia los 15 héroes base.)

@@ -1,49 +1,50 @@
 [h1]Darkest Refined[/h1]
-[i]Des héros familiers. De nouvelles possibilités. Un rééquilibrage des héros minutieusement ajusté.[/i]
+[i]Des héros familiers, de nouvelles possibilités. Un rééquilibrage qui garde la tension de l'original et approfondit chaque choix.[/i]
 
-Les héros que vous emmenez toujours. Les quatre compétences que vous choisissez toujours.
-Et si chacun des autres choix avait, lui aussi, une vraie raison d'exister ?
+Darkest Refined refond et rééquilibre les compétences des 20 héros de Darkest Dungeon.
 
-Darkest Refined ajuste avec soin les héros et les compétences de Darkest Dungeon pour que vous puissiez imaginer et tester vos propres équipes. Les soins et la gestion du stress ne reposent plus sur un ou deux héros, les compétences de soutien ouvrent la voie aux attaquants physiques, et les forces de chaque héros sont réglées pour se combiner avec celles de ses alliés.
+Tout part du plaisir de composer une équipe. Dans l'original, le trio Vestale, Bouffon et Brise-bouclier était presque la seule bonne réponse et réglait la plupart des situations. La personnalité de chaque héros fait la force du jeu, mais les équipes figées l'ont effacée.
 
-La difficulté et la tension du jeu original passent en premier. Chaque amélioration a un prix, et les rôles affaiblis trouvent de nouveaux usages. Les données du jeu, les colifichets de classe, l'histoire officielle et les parties réelles sont examinés ensemble, et chaque changement garde une raison écrite. Votre expérience et vos retours argumentés continuent de l'affiner.
+Les soins d'autres héros ont donc été relevés pour remplacer la Vestale, et leur soulagement du stress pour se passer du Bouffon. La Brise-bouclier a été abaissée selon son histoire officielle et la progression des autres héros, qui ont été relevés d'autant. Les équipes de marque, restées marginales, ne dépendent plus de l'Arbalétrière, du Maître-chien, de l'Occultiste et du Chasseur de primes : de nombreux héros marquent mieux.
 
 [h2]Comment c'est ajusté[/h2]
+Ce patch ne bouscule pas l'équilibre au feeling ou par agacement. Chaque changement a été vérifié, justifié et fidèle à l'histoire officielle du héros, pour préserver la profondeur de l'original.
 [list]
-[*][b]La même tension.[/b] Améliorations et affaiblissements sont conçus ensemble : le jeu reste aussi difficile que dans vos souvenirs.
-[*][b]Des garde-fous clairs.[/b] Les colifichets de classe et l'histoire officielle de chaque héros fixent les limites de chaque changement, pour que rien ne paraisse étranger.
-[*][b]Des preuves, pas l'intuition.[/b] Un modèle comparant dégâts, soins, réduction de PROT et actions guide les chiffres ; les parties réelles et vos retours les corrigent.
+[*][b]Seulement ce qui se justifie.[/b] Seuls entrent les changements expliqués par la comparaison entre héros, l'histoire officielle et les principes chiffrés de l'original.
+[*][b]Images et noms tiennent parole.[/b] Bandages militaires soigne le saignement et Soins militaires l'infection. La belliqueuse Furie ne s'épuise plus et inflige en contrepartie moins de dégâts.
+[*][b]Plus enfermé dans quatre compétences.[/b] Les compétences délaissées sont relevées et celles devenues incontournables abaissées, pour varier les choix selon la situation. La Vestale, figée sur Jugement, Lumière aveuglante et ses deux soins, voit l'auto-soin de Jugement passer à Coupe de masse, Lumière aveuglante limitée aux rangs 1 et 2, et Grâce divine utilisable de tout rang.
 [/list]
 
 [h2]Ce que vous pouvez essayer[/h2]
-Les plages couvrent les niveaux de compétence 1 à 5.
 [list]
-[*][b]Des soins partagés.[/b] Le soin reposait sur la Vestale, l'Occultiste et le Bouffon ; désormais de nombreux héros se partagent ce rôle, pour un jeu plus souple et des équipes plus variées. Battle Heal du Croisé rend 3–4 PV (6–7 au niveau 5) et augmente la PROT de la cible. Battlefield Bandage de l'Arbalétrière soigne le saignement, et Battlefield Medicine du Médecin de peste soigne le poison d'un allié. Fortifying Vapours de l'Antiquaire amplifie tous les soins reçus par la cible, de façon cumulable. Rallying Flare de l'Arbalétrière retire 2–4 de stress à toute l'équipe, elle comprise, et Bolster de l'Homme d'armes a été refondu en compétence de soin du stress.
-[*][b]Briser l'armure.[/b] Comme l'armure augmente avec la difficulté, les attaquants physiques autres que la Brise-bouclier et la Pilleuse de tombes étaient souvent délaissés. Désormais, les héros de soutien peuvent affaiblir l'armure ennemie pour eux : Weakening Curse de l'Occultiste (PROT −25 à −35 %), Puncture de la Brise-bouclier (−30 à −40 %) et Brise-armure du Lépreux [b](NOUVELLE COMPÉTENCE)[/b] (−30 à −50 %) ouvrent les ennemis cuirassés aux attaquants physiques.
-[*][b]Une autre façon de jouer.[/b] Tracking Shot du Bandit suit désormais les mouvements de l'ennemi pour préparer une riposte, et Duelist's Advance lui donne les bonus de combat d'un duelliste. Pierce de la Brise-bouclier ne peut plus atteindre tous les rangs ennemis ; en échange, la danseuse de son histoire circule dans ses rangs et, avec plus de compétences qui attirent l'ennemi que tout autre héros, bouscule aussi les rangs adverses. La Mousquetaire est entièrement refondue : depuis l'arrière, elle perce l'armure et cache ses alliés dans la fumée.
+[*][b]Les soins se partagent entre héros.[/b] Bandages militaires de l'Arbalétrière soigne désormais le saignement, et Soins militaires du Médecin de peste passe de 1–3 à 3–7 de soin et prend en charge l'infection. Tous deux soignent 3–7, un cran sous la Vestale. Dans l'original, les vrais soigneurs de stress étaient le Bouffon et le Croisé. Désormais, Hurler au loup du Maître-chien (4–6), Fusée de ralliement de l'Arbalétrière (2–4, elle comprise), Soutien de l'Homme d'armes (1–3, sans limite par combat), Endurer (8 net dès le niveau 1) et Souffrance (4–6) du Flagellant, et Cri de ralliement du Croisé (5–9) peuvent tous tenir ce rôle.
+[*][b]Beaucoup de héros montent une équipe de marque.[/b] Désigner la proie de la Mousquetaire devient une marque qui réduit la PROT de 20–30 % au lieu de l'ESQUIVE, et Marque de mort du Chasseur de primes augmente les dégâts subis de 15–25 % au lieu de réduire la PROT : toute l'équipe profite de la marque. Coup nerveux de l'Antiquaire, qui ne marquait pas, marque au niveau 5.
+[*][b]Attirer l'arrière-garde pour l'achever.[/b] Les compétences qui attirent l'ennemi passent de quatre à huit. Bolas de l'Arbalétrière, qui repoussait les rangs 1 et 2, attire de 2 un ennemi des rangs 2 à 4, et Explosion déroutante du Médecin de peste, qui mélangeait au hasard, étourdit et attire de 2. Désengagement de la Duelliste et Exposer de la Brise-bouclier attirent aussi un ennemi de 2.
 [/list]
 
 [h2]Deux refontes à la une[/h2]
 [list]
-[*][b]L'Antiquaire trouve sa place au rang Champion.[/b] Jusqu'au rang Vétéran, elle reste faible en échange de l'or supplémentaire qu'elle rapporte. À partir du rang Champion, ses colifichets de classe la rapprochent des autres héros. Plutôt que de devenir forte elle-même, elle renforce ses alliés, ce qui justifie de l'emmener au Donjon Ténébreux.
-[*][b]L'Abomination : la maîtrise devient puissance.[/b] Sa forme humaine échange un peu de précision de Manacles et de Beast's Bile contre un Beast's Bile plus puissant. Le stress qu'il contient avec Absolution paie la transformation et devient soin, dégâts, vitesse et CRIT de la bête, en allégeant le fardeau des alliés.
+[*][b]L'Antiquaire vous suit jusqu'au Donjon Ténébreux.[/b] Faible jusqu'à Vétéran, elle gagne de nouveaux effets au niveau 5 de compétence et tient son rôle dès Champion avec ses breloques de classe. Au niveau 5, Protège-moi donne 3 tours de riposte à tout allié qui la protège.
+[*][b]La Mousquetaire cache ses alliés.[/b] Ses sept compétences, identiques à celles de l'Arbalétrière, ont toutes été refaites. Fumée de couverture est la seule compétence qui rend un allié furtif (2 tours), et Balle perçante perce 25–50 % de PROT sur n'importe quel rang de 1 à 4.
 [/list]
 
 [h2]Chaque changement, en images[/h2]
-La galerie ci-dessus réunit les images de présentation et une image par héros : le problème, la direction, la solution et son coût, et comment le jouer désormais. Les 20 héros sont tous modifiés.
+Problèmes, direction, solution et prix, nouvelle façon de jouer : tout sur les 20 héros est dans la galerie ci-dessus. Ci-dessous, les deux refontes à la une.
 
-Des éditions séparées par héros détaillent chaque compétence : valeurs modifiées, pourquoi elle a changé, intention du changement, comparaisons et historique de conception. No.01 Mousquetaire, No.02 Flagellant, No.03 Brise-bouclier, No.04 Fugitive et No.05 Duelliste sont disponibles ; les autres héros suivront.
+Le pourquoi de chaque changement, preuves à l'appui, est dans les éditions par héros tout en bas ; les autres suivront.
 
-[h2]Des mises à jour régulières, des retours écoutés[/h2]
-[b]Je lis et j'examine chaque commentaire.[/b] Parlez-moi des compétences trop fortes, trop faibles ou inutiles, et des combinaisons qui fonctionnent. Les niveaux du héros et des compétences, les colifichets, l'équipe et le contexte du combat m'aident à évaluer vos retours. [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3821353035]Consulter l'historique[/url]
+[h2]Toujours affiné, toujours à l'écoute[/h2]
+L'objectif est un équilibre parfait : je continuerai d'affiner le patch et de chercher les réponses avec vos avis. Signalez-moi les compétences trop fortes ou trop faibles, celles qu'on n'a aucune raison d'équiper et les combinaisons qui marchent bien. Les niveaux du héros et des compétences, les breloques, l'équipe et la situation du combat m'aident beaucoup à juger.
 
 [h2]Installation et compatibilité[/h2]
-[b]Activez les cinq héros DLC :[/b] Flagellant (The Crimson Court), Brise-bouclier, Duelliste, Fugitive et Mousquetaire (gratuite). La refonte de la Mousquetaire est incluse ; aucun mod externe n'est nécessaire.
+[b]Les cinq héros DLC doivent être activés :[/b] Flagellant (Crimson Court), Brise-bouclier, Duelliste, Évadée, Mousquetaire (gratuite).
 
-[b]N'activez pas cette collection avec l'ancien Every Hero Worth Taking ni avec les éditions séparées de Darkest Refined.[/b] Ils modifient les mêmes fichiers de héros. D'autres refontes remplaçant les mêmes fichiers de héros, d'effets ou de buffs peuvent aussi entrer en conflit.
+[b]Ne l'activez pas avec Every Hero Worth Taking ni avec les éditions par héros (liens en bas).[/b] Ils modifient les mêmes fichiers de héros.
 
-Compatible avec un domaine existant. Avec UI Enhancement, les compétences de la Mousquetaire peuvent afficher leurs noms d'origine.
+Applicable à un hameau existant. Avec UI Enhancement, les compétences de la Mousquetaire peuvent s'afficher sous leur nom d'origine.
 
-[b]Chaque héros mérite une raison de rejoindre l'équipe.[/b]
+[i]Images : bandes dessinées et illustrations officielles de Darkest Dungeon © Red Hook Studios. Mod de fan non officiel.[/i]
 
-[i]Art des images : bandes dessinées officielles des origines des héros et illustrations promotionnelles de Darkest Dungeon © Red Hook Studios. Ce mod est un mod de fan non officiel.[/i]
+[b]Darkest Refined : éditions séparées par héros[/b]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933701]No.01 Mousquetaire[/url] · [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933671]No.02 Flagellant[/url] · [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933678]No.03 Brise-bouclier[/url] · [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933691]No.04 Évadée[/url] · [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933684]No.05 Duelliste[/url]
+[b]Ancien rééquilibrage :[/b] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3821353035]Every Hero Worth Taking[/url] (Sans les DLC, utilisez ce mod. Il ne modifie que les 15 héros de base.)
