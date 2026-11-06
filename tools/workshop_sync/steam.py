@@ -156,6 +156,9 @@ class Steam:
         current = self.query(language)
         if not current['owned']:
             raise SteamError('Active Steam account does not own the configured item')
+        # WS-NAV-002: retain the approved titles and standalone navigation on future uploads.
+        from refined_navigation import preserve_navigation
+        title, description = preserve_navigation(self.item_id, language, title, description, current)
         h = self.fn('ISteamUGC_StartItemUpdate', C.c_uint64, C.c_void_p, C.c_uint32, C.c_uint64)(self.ugc, APP_ID, self.item_id)
         if not h or h == INVALID:
             raise SteamError('Cannot start item update')
