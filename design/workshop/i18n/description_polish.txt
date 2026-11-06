@@ -1,7 +1,17 @@
+[h2]Wersja z bohaterami DLC: Darkest Refined[/h2]
+Aby grać w pełną wersję z bohaterami DLC, anuluj subskrypcję tego moda Rebalance, a następnie zasubskrybuj i włącz Darkest Refined poniżej. Nie włączaj obu modów jednocześnie. Wymagane są odpowiednie DLC.
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3828956017]Darkest Refined[/url]
+
+[h2]Bohaterowie DLC są teraz w osobnych modach[/h2]
+Poprzedni wspólny pakiet nie działał bez wszystkich wymaganych DLC. Przy zmianie marki na Darkest Refined ten mod wydzielono: obejmuje teraz 15 bohaterów podstawowej gry i nie wymaga DLC. Przepraszam za dodatkową konfigurację. Będę nadal rozmawiać z wami i aktualizować mod.
+
+Aby zachować zmiany bohaterów DLC, których posiadacie i używacie, zasubskrybujcie odpowiednie mody i włączcie je w grze. Dla pakietu podstawowego są opcjonalne.
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933701]Muszkieterka[/url] · [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933671]Flagelant[/url] · [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933678]Łamaczka Tarcz[/url] · [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933691]Runaway[/url] · [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933684]Duelist[/url]
+
 [h1]Every Hero Worth Taking[/h1]
 [i]Zachować charakter bohaterów i dać więcej powodów, by wybierać różne umiejętności i drużyny.[/i]
 
-Wspólna korekta balansu 18 bohaterów, nastawiona na różnorodność drużyn. Celem jest gra ulubionymi postaciami bez konieczności zabierania jednego konkretnego uzdrowiciela czy tych samych czterech umiejętności. Więcej leczenia i redukcji stresu, osłabianie pancerza dla wojowników fizycznych oraz nowe możliwości pozycji otwierają inne style gry.
+Korekta balansu 15 bohaterów podstawowej gry, nastawiona na różnorodność drużyn. Celem jest gra ulubionymi postaciami bez konieczności zabierania jednego konkretnego uzdrowiciela czy tych samych czterech umiejętności. Więcej leczenia i redukcji stresu, osłabianie pancerza dla wojowników fizycznych oraz nowe możliwości pozycji otwierają inne style gry.
 
 [h2]Kolejne aktualizacje i uważne słuchanie opinii[/h2]
 [b]Na 26 października 2026 r. ta pozycja Warsztatu ma 33 publiczne wpisy aktualizacji.[/b] Obejmują balans, poprawki błędów oraz ulepszenia opisów i grafik porównawczych. [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3821353035]Zobacz historię[/url]
@@ -20,25 +30,24 @@ Będę dalej grać, sprawdzać i poprawiać mod, dążąc do idealnego balansu. 
 [h2]Co zmienia opublikowana wersja[/h2]
 Zakresy dotyczą poziomów umiejętności 1–5. ACC i CRIT podano dla poziomu 1, chyba że zaznaczono inaczej. Angielskie nazwy pozwalają jednoznacznie wskazać umiejętności.
 [list]
-[*][b]Więcej sposobów utrzymania drużyny.[/b] Battle Heal Krzyżowca leczy 3–4→6–7 PŻ i zwiększa PROT celu; z leczniczymi błyskotkami wspiera rolę głównego uzdrowiciela. Fortifying Vapours Antykwariuszki leczy i wzmacnia całe leczenie otrzymywane przez cel, kumulując się z każdym użyciem. Bandaż Kuszniczki leczy krwawienie, Rallying Flare niezawodnie zmniejsza stres; Zbrojmistrz może powtarzać Bolster.
-[*][b]Wsparcie przełamuje pancerz.[/b] Weakening Curse Okultysty obniża PROT o 25–35 punktów procentowych. Illumination Kapłanki zachowuje redukcję uniku i ujawnienie, dodając −15–25 punktów PROT; Nervous Stab Antykwariuszki daje −5–15. Illumination utraciło podpalenie. Puncture Łamaczki Tarcz łączy przyciągnięcie, usunięcie osłony i −30–40 punktów PROT; Bellow Zbrojmistrza obniża PROT wszystkich wrogów o 10–15 punktów.
-[*][b]Znani bohaterowie, inne style.[/b] Tracking Shot Oprycha przygotowuje ripostę bez ruchu. Wicked Slice sięga pozycji 3, a Open Vein stawia na krytyki i krwawienie (CRIT umiejętności 0% / 5%). Łowca Nagród używa Flashbang z pozycji 2–4, a Caltrops z każdej. Inspiring Tune Błazna działa także z pozycji 2, Solo z dowolnej.
-[*][b]Kapłanka wybiera wsparcie lub przygotowanie.[/b] Illumination: ACC 95, redukcja uniku i PROT. Hand of Light: ACC 90, obrażenia −40%; atakuje i wzmacnia późniejsze uderzenia.
-[*][b]Muszkieterka ma własną rolę.[/b] Piercing Ball przebija pancerz, Smokescreen kontroluje przód wroga, a Covering Smoke daje sojusznikowi 2 tury ukrycia i +15–25 uniku. Ukrycie nie chroni przed atakami obszarowymi.
+[*][b]Więcej sposobów utrzymania drużyny.[/b] Battle Heal Krzyżowca leczy 3–4→6–7 PŻ i zwiększa PROT celu; z leczniczymi błyskotkami wspiera rolę głównego uzdrowiciela. Fortifying Vapours Antykwariuszki leczy i wzmacnia całe leczenie otrzymywane przez cel, kumulując się z każdym użyciem. Bandaż Kuszniczki leczy krwawienie; Rallying Flare gwarantuje redukcję stresu o 2/2/3/3/4 całej drużynie, także jej samej. Zbrojmistrz może powtarzać Bolster.
+[*][b]Wsparcie przełamuje pancerz.[/b] Okultysta obniża PROT o 25–35 punktów. Kapłanka łączy redukcję uniku, ujawnienie i podpalenie 1/1/2/2/3. Atak włączający ripostę Zbrojmistrza obniża PROT jednej ofiary o 15–25 punktów; jego ryk zmniejsza ACC o 5–10 na 2 tury. Pchnięcie Antykwariuszki nie osłabia pancerza.
+[*][b]Znani bohaterowie, inne style.[/b] Oprych przygotowuje ripostę bez ruchu. Jego cięcie sięga pozycji 3 z ACC 90, obrażeniami 0% i CRIT 5%; atak krwawiący zachowuje oryginalne obrażenia −15% i CRIT 0%, z wyższą ACC. Łowca Nagród rzuca granat z pozycji 2–4, kolczatki z dowolnej. Błazen leczy stres z pozycji 3–4; Solo działa wszędzie i tasuje szyk wroga zamiast go spowalniać. Point Blank Shot odpycha o 3 pozycje. Trędowaty ma ACC 80 w obu cięciach, 90 w Purge i Sunder; Sunder: PROT −30–50 punktów na 3 tury; szansa osłabienia 130–170%.
+[*][b]Kapłanka wybiera wsparcie lub przygotowanie.[/b] Illumination: ACC 95, redukcja uniku i podpalenie. Hand of Light: ACC 90, obrażenia −40%; atakuje i wzmacnia późniejsze uderzenia.
 [/list]
 
 [h2]Antykwariuszka i Abominacja: kierunek[/h2]
 [list]
-[*][b]Antykwariuszka odnajduje swoje miejsce na poziomie Czempion.[/b] Do poziomu Weteran pozostaje słaba w zamian za dodatkowe złoto, które przynosi. Od poziomu Czempion jej potężne błyskotki klasowe stawiają ją na równi z innymi bohaterami. Zamiast samej stawać się silną, wzmacnia drużynę, więc warto zabrać ją do Najmroczniejszego Lochu.
+[*][b]Antykwariuszka rośnie dzięki drużynie.[/b] Umiejętności poziomów 1–4 pozostają słabe w zamian za złoto. Poziom 5 odblokowuje oznaczenie na 2 tury, usunięcie własnego oznaczenia i ripostę sojusznika; otrzymywane leczenie rośnie z +20% do +40%, a zaraza trwa 5 tur. Flashpowder obniża odporność na ruch o 20/22/25/27/30 punktów na 2 tury; podpalenie 1/1/2/2/7. Klasowe błyskotki wspierają tę drużynową rolę także w Najmroczniejszym Lochu.
 [*][b]U Abominacji przemiana staje się prawdziwym wyborem.[/b] Ludzka postać ma niższą celność, ale lepsze podstawowe parametry. Stres kontrolowany przez Absolution opłaca przemianę i zamienia się w leczenie, obrażenia, szybkość i CRIT bestii, odciążając sojuszników.
 [/list]
 
-[h2]Wszyscy 18 zmienieni bohaterowie na grafikach[/h2]
-Powyższe [b]grafiki[/b] porównują oryginał z opublikowaną wersją. Dłuższe zestawienia rozdzielono na dwa obrazy. Duelist i Runaway na razie działają jak w oryginale, dopóki ich zmiany są testowane. Grafiki obejmują też Hienę Cmentarną, Awanturniczkę, Łowczego, Trędowatego i Badaczkę Zarazy.
+[h2]Wszystkich 15 bohaterów podstawowej gry na grafikach porównawczych[/h2]
+[b]Grafiki[/b] porównują oryginał z obecną wersją; długie zestawienia zajmują dwa obrazy. Są też Hiena Cmentarna, Awanturniczka, Łowczy, Trędowaty i Badaczka Zarazy.
 
 [h2]Instalacja i zgodność[/h2]
-[b]Włącz wszystkich pięcioro bohaterów DLC:[/b] Flagelanta (The Crimson Court), Łamaczkę Tarcz, Duelist, Runaway i Muszkieterkę (darmowa). To zintegrowana wersja; osobne opcjonalne pakiety nie są już dostępne. Zawiera przebudowę Muszkieterki, więc zewnętrzny YAMR nie jest potrzebny.
+Zasubskrybuj ten mod i włącz go dla 15 bohaterów podstawowej gry. DLC nie są wymagane.
 
-Można włączyć w istniejącej posiadłości. Inne mody zastępujące te same pliki bohaterów, efektów lub wzmocnień mogą powodować konflikty. Z UI Enhancement umiejętności Muszkieterki mogą wyświetlać stare nazwy.
+Można włączyć w istniejącej posiadłości. Inne mody zastępujące te same pliki bohaterów, efektów lub wzmocnień mogą powodować konflikty.
 
 [b]Każdy bohater zasługuje na powód, by dołączyć do drużyny. Wasze doświadczenia pomogą w kolejnych poprawkach.[/b]

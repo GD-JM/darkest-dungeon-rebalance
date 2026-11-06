@@ -1,0 +1,27 @@
+{
+  "id": "WS-REFINED-LINK-001",
+  "decision": "adopted",
+  "original_quote": "지금 다키스트리파인 통합판 올라왔거든 거기 링크를 리밸런싱 우리꺼에 설명 맨처음에 박아줘 DLC 까지 포함된 통합판 즐기려면 리밸런싱 구독 끊고 다키스트 리파인 구독하면 된다고 설명하면서",
+  "rationale_ko": "기존 본편판 설명 최상단에서 DLC 포함20영웅 통합판3828956017로 이동하도록 안내한다. 기존판 구독 해제 후 통합판 구독·활성화, 동시 사용 금지와 해당DLC 필요를 명시한다. 러시아어는8000바이트 제한 때문에 기존 분리 이유 문단을 압축했으며 개별판 링크와 나머지 설명을 보존했다. 라이브 설명을 원본으로 동기화해 과거 전체DLC요구문이 복원되지 않게 한다.",
+  "source": {
+    "product": "codex",
+    "reference": "2026-11-06 현재 대화: 통합판 링크 최상단 게시 요청",
+    "event_id": null,
+    "message_id": null,
+    "session_id": null
+  },
+  "files": [
+    "design/workshop/description_en.txt",
+    "design/workshop/description_ko.txt",
+    "design/workshop/i18n/description_schinese.txt",
+    "design/workshop/i18n/description_tchinese.txt",
+    "design/workshop/i18n/description_french.txt",
+    "design/workshop/i18n/description_german.txt",
+    "design/workshop/i18n/description_russian.txt",
+    "design/workshop/i18n/description_spanish.txt",
+    "design/workshop/i18n/description_polish.txt",
+    "design/workshop/i18n/description_brazilian.txt"
+  ],
+  "supersedes": [],
+  "verification": "10 languages submitted and read back with titles/previews/metadata preserved; public Korean page top notice and correct link verified. Description-only Steam API update; no game payload or note submission."
+}

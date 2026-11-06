@@ -1,7 +1,17 @@
+[h2]Gesamtversion mit DLC-Helden: Darkest Refined[/h2]
+Für die Gesamtversion mit DLC-Helden dieses Rebalance-Mod deabonnieren, dann Darkest Refined unten abonnieren und aktivieren. Nicht beide Mods zugleich aktivieren. Die entsprechenden DLCs werden benötigt.
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3828956017]Darkest Refined[/url]
+
+[h2]DLC-Helden sind jetzt in Einzelmods[/h2]
+Das bisherige Gesamtpaket lief nur mit allen benötigten DLCs. Im Zuge der Umbenennung zu Darkest Refined umfasst dieser Eintrag jetzt die 15 Helden des Hauptspiels und benötigt keine DLCs. Entschuldigt die zusätzliche Einrichtung. Ich werde weiter mit euch im Austausch bleiben und Updates veröffentlichen.
+
+Um die Änderungen für eure vorhandenen und genutzten DLC-Helden zu behalten, abonniert und aktiviert die jeweiligen Einzelmods im Spiel. Für das Basispaket sind sie optional.
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933701]Musketeer[/url] · [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933671]Flagellant[/url] · [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933678]Shieldbreaker[/url] · [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933691]Runaway[/url] · [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933684]Duelist[/url]
+
 [h1]Every Hero Worth Taking[/h1]
 [i]Den Charakter der Helden bewahren und mehr Helden, Fähigkeiten und Gruppen eine echte Aufgabe geben.[/i]
 
-Eine gemeinsame Balance-Überarbeitung von 18 Helden für vielfältigere Gruppen. Lieblingshelden sollen zusammen funktionieren, ohne auf einen bestimmten Heiler oder stets dieselben vier Fähigkeiten angewiesen zu sein. Mehr Heilung und Stressabbau, Rüstungsschwächung für physische Angreifer und zusätzliche Positionsoptionen eröffnen andere Spielweisen.
+Eine Balance-Überarbeitung der 15 Helden des Hauptspiels für vielfältigere Gruppen. Lieblingshelden sollen zusammen funktionieren, ohne auf einen bestimmten Heiler oder stets dieselben vier Fähigkeiten angewiesen zu sein. Mehr Heilung und Stressabbau, Rüstungsschwächung für physische Angreifer und zusätzliche Positionsoptionen eröffnen andere Spielweisen.
 
 [h2]Weitere Updates. Ein offenes Ohr für Feedback.[/h2]
 [b]Am 26. Oktober 2026 enthält dieser Workshop-Eintrag 33 öffentliche Änderungsnotizen.[/b] Dazu gehören Balance-Anpassungen, Fehlerkorrekturen sowie verbesserte Beschreibungen und Vergleichsbilder. [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3821353035]Update-Verlauf ansehen[/url]
@@ -20,25 +30,24 @@ Ich werde weiter spielen, prüfen und überarbeiten, mit perfekter Balance als Z
 [h2]Was die veröffentlichte Fassung verändert[/h2]
 Bereiche gelten für Fähigkeitsstufen 1–5. ACC und CRIT beziehen sich sonst auf Fähigkeitsstufe 1. Die englischen Fähigkeitsnamen dienen zur eindeutigen Zuordnung.
 [list]
-[*][b]Mehr Möglichkeiten zur Gruppenversorgung.[/b] Crusaders Battle Heal heilt 3–4→6–7 LP und erhöht den PROT des Ziels: mit Heilschmuck eine Option als Hauptheiler. Antiquarians Fortifying Vapours heilt und verstärkt jede Heilung, die das Ziel erhält, stapelbar mit jedem Einsatz. Arbalests Bandage heilt Blutungen, Rallying Flare baut zuverlässig Stress ab; Man-at-Arms kann Bolster wiederholt einsetzen.
-[*][b]Unterstützung gegen Rüstung.[/b] Occultists Weakening Curse senkt PROT um 25–35 Prozentpunkte. Vestals Illumination behält Ausweichsenkung und Tarnungsaufhebung und senkt PROT um 15–25 Punkte; Antiquarians Nervous Stab um 5–15. Illumination verursacht keine Verbrennung mehr. Shieldbreakers Puncture kombiniert Heranziehen und Aufheben von Schutz mit 30–40 Punkten PROT-Senkung; Man-at-Arms' Bellow senkt den PROT aller Gegner um 10–15 Punkte.
-[*][b]Bekannte Helden, andere Spielweisen.[/b] Highwaymans Tracking Shot ermöglicht Riposte ohne Bewegung. Wicked Slice erreicht Position 3, Open Vein bietet mehr CRIT und Blutungsdruck (Fähigkeits-CRIT 0% / 5%). Bounty Hunter kann Flashbang von Position 2–4 und Caltrops von jeder Position nutzen. Jesters Inspiring Tune funktioniert auch von Position 2, Solo von überall.
-[*][b]Vestal wählt Unterstützung oder Vorbereitung.[/b] Illumination: ACC 95, Ausweich- und PROT-Senkung. Hand of Light: ACC 90, Schaden −40%; greift an und stärkt spätere Angriffe.
-[*][b]Musketeer mit eigener Rolle.[/b] Piercing Ball durchdringt Rüstung, Smokescreen kontrolliert die gegnerische Front. Covering Smoke gewährt einem Verbündeten für 2 Runden Tarnung und +15–25 Ausweichen. Flächenangriffe bleiben gefährlich.
+[*][b]Mehr Möglichkeiten zur Gruppenversorgung.[/b] Crusaders Battle Heal heilt 3–4→6–7 LP und erhöht den PROT des Ziels: mit Heilschmuck eine Option als Hauptheiler. Antiquarians Fortifying Vapours heilt und verstärkt jede Heilung, die das Ziel erhält, stapelbar mit jedem Einsatz. Arbalests Bandage heilt Blutungen; Rallying Flare baut garantiert 2/2/3/3/4 Stress bei der ganzen Gruppe einschließlich ihr selbst ab. Man-at-Arms kann Bolster wiederholt einsetzen.
+[*][b]Unterstützung gegen Rüstung.[/b] Der Okkultist senkt PROT um 25–35 Punkte. Die Vestalin kombiniert Ausweichsenkung, Aufdecken und Verbrennung 1/1/2/2/3. Der Riposte-Auftakt des Waffenknechts senkt die PROT eines Ziels um 15–25 Punkte; sein Ruf senkt stattdessen ACC um 5–10 für 2 Runden. Der Messerstich der Antiquarin senkt keine PROT.
+[*][b]Bekannte Helden, andere Spielweisen.[/b] Der Wegelagerer bereitet Riposte ohne Bewegung vor. Sein Hieb erreicht Position 3 mit ACC 90, Schaden 0% und CRIT 5%. Sein Blutungsangriff behält den ursprünglichen Schaden −15% und CRIT 0%, bei höherer ACC. Der Kopfgeldjäger nutzt seine Blendgranate von Position 2–4 und Krähenfüße von überall. Der Narr heilt Stress von Position 3–4; Solo bleibt überall nutzbar und mischt die Gegnerformation, statt sie zu verlangsamen. Point Blank Shot stößt um 3 Positionen zurück. Der Aussätzige hat ACC 80 für beide Hiebe, ACC 90 für Purge und Sunder; Sunder: PROT −30–50 Punkte für 3 Runden; Debuff-Chance 130–170%.
+[*][b]Vestal wählt Unterstützung oder Vorbereitung.[/b] Illumination: ACC 95, Ausweichsenkung und Verbrennung. Hand of Light: ACC 90, Schaden −40%; greift an und stärkt spätere Angriffe.
 [/list]
 
 [h2]Antiquarian und Abomination: die Richtung[/h2]
 [list]
-[*][b]Antiquarian findet ihren Platz ab Entschlossenheit 5.[/b] Bis Entschlossenheit 3 (Veteran) bleibt sie schwach, dafür bringt sie mehr Gold ein. Ab Entschlossenheit 5 bringt ihr starker Klassenschmuck sie auf das Niveau anderer Helden. Statt selbst stark zu werden, stärkt sie ihre Gefährten und lohnt sich so auch im Dunkelsten Dungeon.
+[*][b]Die Antiquarin wächst durch ihre Gefährten.[/b] Für zusätzliches Gold bleiben ihre Fähigkeiten auf Stufe 1–4 schwach. Stufe 5 bringt einen Sprung: eine Markierung für 2 Runden, Entfernen ihrer eigenen Markierung und Riposte für einen Verbündeten. Empfangene Heilung steigt von +20% auf +40%, Gift hält 5 Runden. Flashpowder senkt Bewegungsresistenz um 20/22/25/27/30 Punkte für 2 Runden; Verbrennung 1/1/2/2/7. Klassenschmuck unterstützt diese Gruppenrolle bis in den Dunkelsten Dungeon.
 [*][b]Bei der Abomination wird die Verwandlung zur echten Wahl.[/b] Die Menschengestalt hat weniger Genauigkeit, aber stärkere Grundwerte. Mit Absolution verwalteter Stress bezahlt die Verwandlung und wird zu Heilung, Schaden, Tempo und CRIT der Bestie; die Gefährten werden weniger belastet.
 [/list]
 
-[h2]Alle 18 überarbeiteten Helden in Vergleichsbildern[/h2]
-Die [b]Bilder[/b] oben vergleichen Original und veröffentlichte Fassung. Umfangreiche Heldenübersichten verteilen sich auf zwei Bilder. Duelist und Runaway spielen sich vorerst wie im Original, während ihre Änderungen getestet werden. Die Bilder zeigen auch Grave Robber, Hellion, Houndmaster, Leper und Plague Doctor.
+[h2]Alle 15 Helden des Hauptspiels in Vergleichsbildern[/h2]
+Die [b]Bilder[/b] vergleichen Original und aktuelle Fassung; lange Übersichten nutzen zwei Bilder. Auch Grabräuberin, Barbarin, Hundemeister, Aussätziger und Pestdoktor sind enthalten.
 
 [h2]Installation und Kompatibilität[/h2]
-[b]Alle fünf DLC-Helden aktivieren:[/b] Flagellant (The Crimson Court), Shieldbreaker, Duelist, Runaway und Musketeer (kostenlos). Dies ist die gemeinsame Fassung; separate optionale Pakete werden nicht mehr angeboten. Die Musketeer-Überarbeitung ist enthalten, eine externe YAMR-Mod ist nicht nötig.
+Diesen Mod für die 15 Helden des Hauptspiels abonnieren und aktivieren. Es werden keine DLCs benötigt.
 
-In bestehenden Anwesen aktivierbar. Andere Überarbeitungen derselben Helden-, Effekt- oder Buff-Dateien können Konflikte verursachen. Mit UI Enhancement können Musketeer-Fähigkeiten ihre ursprünglichen Namen anzeigen.
+In bestehenden Anwesen aktivierbar. Andere Überarbeitungen derselben Helden-, Effekt- oder Buff-Dateien können Konflikte verursachen.
 
 [b]Jeder Held soll einen Grund haben, mitzukommen. Eure Spielerfahrung hilft bei den nächsten Verbesserungen.[/b]

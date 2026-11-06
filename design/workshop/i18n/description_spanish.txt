@@ -1,7 +1,17 @@
+[h2]Edición con héroes DLC: Darkest Refined[/h2]
+Para la edición completa con héroes DLC, cancela la suscripción a este mod Rebalance y suscríbete a Darkest Refined abajo; después actívalo. No actives ambos mods a la vez. Se requieren los DLC correspondientes.
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3828956017]Darkest Refined[/url]
+
+[h2]Los héroes DLC pasan a mods individuales[/h2]
+El paquete anterior no funcionaba sin todos sus DLC. Con el cambio a Darkest Refined, este mod cubre ahora los 15 héroes del juego base sin requerir DLC. Siento los ajustes adicionales; seguiré comunicándome con ustedes y actualizando el mod.
+
+Para conservar los cambios de los héroes DLC que posees y usas, suscríbete a sus mods individuales y actívalos en el juego. Son opcionales para el paquete base.
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933701]Mosquetera[/url] · [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933671]Flagelante[/url] · [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933678]Rompescudos[/url] · [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933691]Fugitiva[/url] · [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3832933684]Duelista[/url]
+
 [h1]Every Hero Worth Taking[/h1]
 [i]Conservar la identidad de cada héroe y dar más motivos para elegir habilidades y grupos diferentes.[/i]
 
-Un reajuste conjunto de 18 héroes para ampliar las composiciones de grupo. El objetivo es jugar con tus favoritos sin depender de un sanador concreto ni de las mismas cuatro habilidades. Más curación y alivio de estrés, apoyo contra la armadura para los atacantes físicos y más opciones de posición abren otras formas de jugar.
+Un reajuste de los 15 héroes del juego base para ampliar las composiciones de grupo. El objetivo es jugar con tus favoritos sin depender de un sanador concreto ni de las mismas cuatro habilidades. Más curación y alivio de estrés, apoyo contra la armadura para los atacantes físicos y más opciones de posición abren otras formas de jugar.
 
 [h2]Seguimos actualizando y escuchando[/h2]
 [b]A 26 de octubre de 2026, esta página del Workshop cuenta con 33 entradas públicas de actualización.[/b] Incluyen ajustes de equilibrio, correcciones de errores y mejoras de textos e imágenes comparativas. [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3821353035]Ver el historial[/url]
@@ -20,25 +30,24 @@ Seguiré jugando, comprobando y refinando el mod en busca del equilibrio perfect
 [h2]Qué cambia la versión publicada[/h2]
 Los intervalos abarcan niveles de habilidad 1–5. ACC y CRIT son del nivel 1 salvo indicación. Se usan nombres ingleses de habilidades para identificarlas sin ambigüedad.
 [list]
-[*][b]Más formas de sostener al grupo.[/b] Battle Heal del Cruzado cura 3–4→6–7 PV y aumenta la PROT del objetivo, apoyando su uso como sanador principal con abalorios. Fortifying Vapours de la Anticuaria cura y amplifica toda la curación que recibe el objetivo, acumulándose con cada uso. La Arbalestera cura hemorragias con su venda y alivia estrés de forma garantizada con Rallying Flare; el Hombre de armas puede repetir Bolster.
-[*][b]Apoyo que abre armaduras.[/b] Weakening Curse del Ocultista reduce PROT en 25–35 puntos porcentuales. Illumination de la Vestal conserva la reducción de esquiva y la revelación, añadiendo −15–25 puntos de PROT; Nervous Stab de la Anticuaria reduce 5–15. Se ha eliminado la quemadura de Illumination. Puncture de la Rompescudos combina atracción, eliminación de guardia y −30–40 puntos de PROT; Bellow del Hombre de armas reduce la PROT de todos los enemigos en 10–15 puntos.
-[*][b]Héroes conocidos, otras estrategias.[/b] Tracking Shot del Bandolero prepara la represalia sin moverse. Wicked Slice alcanza la posición 3, mientras Open Vein ofrece más críticos y hemorragia (CRIT de habilidad 0% / 5%). El Cazarrecompensas usa Flashbang desde posiciones 2–4 y Caltrops desde cualquiera. Inspiring Tune del Bufón funciona desde la posición 2 y Solo desde cualquiera.
-[*][b]La Vestal elige apoyo o preparación.[/b] Illumination: ACC 95, reducción de esquiva y PROT. Hand of Light: ACC 90, daño −40%, para atacar y preparar los siguientes golpes.
-[*][b]Un papel propio para la Mosquetera.[/b] Piercing Ball penetra armadura, Smokescreen controla la primera línea enemiga y Covering Smoke da a un aliado 2 turnos de sigilo y +15–25 esquiva. El sigilo no protege de ataques de área.
+[*][b]Más formas de sostener al grupo.[/b] Battle Heal del Cruzado cura 3–4→6–7 PV y aumenta la PROT del objetivo, apoyando su uso como sanador principal con abalorios. Fortifying Vapours de la Anticuaria cura y amplifica toda la curación que recibe el objetivo, acumulándose con cada uso. La venda de la Arbalestera cura hemorragias; Rallying Flare alivia 2/2/3/3/4 de estrés de forma garantizada a todo el grupo, incluida ella. El Hombre de armas puede repetir Bolster.
+[*][b]Apoyo que abre armaduras.[/b] El Ocultista reduce PROT en 25–35 puntos. La Vestal combina reducción de esquiva, revelación y quemadura 1/1/2/2/3. El ataque que activa la represalia del Hombre de armas reduce PROT en 15–25 puntos a una víctima; su grito reduce ACC en 5–10 durante 2 turnos. La puñalada de la Anticuaria ya no reduce armadura.
+[*][b]Héroes conocidos, otras estrategias.[/b] El Bandolero prepara la represalia sin moverse. Su tajo alcanza la posición 3 con ACC 90, daño 0% y CRIT 5%; su ataque de hemorragia conserva daño −15% y CRIT 0% del original, con mayor ACC. El Cazarrecompensas lanza su granada desde posiciones 2–4 y abrojos desde cualquiera. El Bufón alivia estrés desde las posiciones 3–4; Solo funciona desde cualquiera y desordena al enemigo en vez de ralentizarlo. Point Blank Shot empuja 3 posiciones. El Leproso tiene ACC 80 en sus dos tajos, 90 en Purge y Sunder; Sunder: PROT −30–50 puntos por 3 turnos; probabilidad de debilitamiento 130–170%.
+[*][b]La Vestal elige apoyo o preparación.[/b] Illumination: ACC 95, reducción de esquiva y quemadura. Hand of Light: ACC 90, daño −40%, para atacar y preparar los siguientes golpes.
 [/list]
 
 [h2]Anticuaria y Abominación: la dirección[/h2]
 [list]
-[*][b]La Anticuaria encuentra su lugar en el nivel Campeón.[/b] Hasta Veterano es débil a cambio del oro extra que aporta. Desde Campeón, sus potentes abalorios de clase la ponen a la altura de otros héroes. En lugar de hacerse fuerte ella misma, fortalece a sus aliados, por lo que vale la pena llevarla a la Mazmorra oscura.
+[*][b]La Anticuaria crece fortaleciendo al grupo.[/b] Sus habilidades siguen débiles en niveles 1–4 a cambio del oro extra. El nivel 5 desbloquea una marca de 2 turnos, quitarse su marca y dar represalia a un aliado; la curación recibida pasa de +20% a +40% y la infección dura 5 turnos. Flashpowder reduce la resistencia al movimiento en 20/22/25/27/30 puntos durante 2 turnos; quemadura 1/1/2/2/7. Sus abalorios apoyan esta función colectiva hasta la Mazmorra oscura.
 [*][b]En la Abominación, transformarse pasa a ser una elección real.[/b] Su forma humana tiene menos precisión, pero mejor rendimiento base. El estrés controlado con Absolution paga la transformación y se convierte en curación, daño, velocidad y CRIT de la bestia, aliviando a los aliados.
 [/list]
 
-[h2]Los 18 héroes reajustados en imágenes comparativas[/h2]
-Las [b]imágenes[/b] de arriba comparan el original con la versión publicada. Las fichas largas se dividen en dos. La Duelista y la Fugitiva siguen como en el original mientras se prueban sus cambios. Las imágenes también incluyen a la Asaltatumbas, la Diabla, el Maestro canino, el Leproso y el Médico de la peste.
+[h2]Los 15 héroes del juego base en imágenes comparativas[/h2]
+Las [b]imágenes[/b] comparan el original y la versión actual; las fichas largas se dividen en dos. También aparecen la Asaltatumbas, la Diabla, el Maestro canino, el Leproso y el Médico de la peste.
 
 [h2]Instalación y compatibilidad[/h2]
-[b]Activa los cinco héroes DLC:[/b] Flagelante (The Crimson Court), Rompescudos, Duelista, Fugitiva y Mosquetera (gratuita). Esta es la edición integrada; ya no se ofrecen paquetes opcionales separados. La revisión de la Mosquetera está incluida y no requiere un mod YAMR externo.
+Suscríbete a este mod y actívalo para los 15 héroes del juego base. No requiere DLC.
 
-Se puede activar en una finca existente. Otras revisiones que sustituyan los mismos archivos de héroes, efectos o mejoras pueden causar conflictos. Con UI Enhancement, las habilidades de la Mosquetera pueden mostrar sus nombres originales.
+Se puede activar en una finca existente. Otras revisiones que sustituyan los mismos archivos de héroes, efectos o mejoras pueden causar conflictos.
 
 [b]Cada héroe merece un motivo para formar parte del grupo. Tu experiencia ayudará a mejorar lo que viene.[/b]
