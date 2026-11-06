@@ -41,8 +41,8 @@
     ]
    ],
    "art": [
-    "arbalest_fire",
-    "antiquarian_knife"
+    "arbalest_cabin",
+    "plague_doctor_surgery"
    ]
   },
   {
@@ -52,8 +52,8 @@
    "lead": "Marking no longer depends on the Arbalest and the Bounty Hunter.",
    "items": [
     [
-     "Grave Robber · Thrown Dagger",
-     "Damage vs. marked raised from +25–40% to +40–80%."
+     "Antiquarian · Nervous Stab",
+     "A skill with no mark now marks for 2 turns at level 5"
     ],
     [
      "Musketeer · Mark the Quarry",
@@ -70,13 +70,13 @@
     ]
    ],
    "art": [
-    "occultist_flame",
-    "shieldbreaker_mask"
+    "bounty_tavern",
+    "bounty_grab"
    ]
   },
   {
    "out": "intro_3_builds.png",
-   "layout": "panel_poster",
+   "layout": "panel_comic",
    "title": "PULL THE BACK LINE IN",
    "lead": "Skills that pull enemies grew from four in the original to eight.",
    "items": [
@@ -85,8 +85,8 @@
      "Instead of a random shuffle, stuns an enemy in ranks 2–4 and pulls it 2."
     ],
     [
-     "Bounty Hunter · Come Hither",
-     "Pulls an enemy in ranks 3–4 forward 3, SPD −4 to −8 (3 turns), to finish in rank 1."
+     "Shieldbreaker · Expose",
+     "Strips stealth and pulls a rank 2–4 enemy 2 ranks"
     ],
     [
      "Arbalest · Bola",
@@ -97,7 +97,10 @@
      "Steps back and pulls one enemy in ranks 2–4 forward 2 for the front line."
     ]
    ],
-   "art": "poster_highwayman"
+   "art": [
+    "maa_field",
+    "shieldbreaker_rope"
+   ]
   },
   {
    "out": "intro_4_refined.png",

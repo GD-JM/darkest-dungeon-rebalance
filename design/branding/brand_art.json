@@ -559,5 +559,95 @@
    0.35
   ],
   "note": "게임 길드 초상(공식 코믹스 없음)"
+ },
+ "arbalest_cabin": {
+  "type": "comic",
+  "hero": "arbalest",
+  "grid560": [
+   20,
+   250,
+   345,
+   440
+  ],
+  "focus": [
+   0.5,
+   0.45
+  ],
+  "note": "오두막에 들어서는 아버지와 아이"
+ },
+ "plague_doctor_surgery": {
+  "type": "comic",
+  "hero": "plague_doctor",
+  "grid560": [
+   295,
+   415,
+   530,
+   668
+  ],
+  "focus": [
+   0.5,
+   0.45
+  ],
+  "note": "해부·수술하는 역병 의사(fig.4)"
+ },
+ "bounty_tavern": {
+  "type": "comic",
+  "hero": "bounty_hunter",
+  "grid560": [
+   10,
+   135,
+   550,
+   290
+  ],
+  "focus": [
+   0.6,
+   0.5
+  ],
+  "note": "선술집의 표적들"
+ },
+ "bounty_grab": {
+  "type": "comic",
+  "hero": "bounty_hunter",
+  "grid560": [
+   160,
+   305,
+   390,
+   535
+  ],
+  "focus": [
+   0.5,
+   0.45
+  ],
+  "note": "표적을 움켜쥐어 끌어당기는 현상금 사냥꾼"
+ },
+ "maa_field": {
+  "type": "comic",
+  "hero": "man_at_arms",
+  "grid560": [
+   12,
+   330,
+   285,
+   470
+  ],
+  "focus": [
+   0.4,
+   0.5
+  ],
+  "note": "포화 속 전열"
+ },
+ "shieldbreaker_rope": {
+  "type": "comic",
+  "hero": "shieldbreaker",
+  "grid560": [
+   420,
+   250,
+   530,
+   375
+  ],
+  "focus": [
+   0.5,
+   0.5
+  ],
+  "note": "밧줄에 묶인 손"
  }
 }

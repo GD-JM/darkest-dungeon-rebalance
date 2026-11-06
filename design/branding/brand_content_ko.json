@@ -180,8 +180,8 @@
     ]
    ],
    "art": [
-    "arbalest_fire",
-    "antiquarian_knife"
+    "arbalest_cabin",
+    "plague_doctor_surgery"
    ]
   },
   {
@@ -209,13 +209,13 @@
     ]
    ],
    "art": [
-    "occultist_flame",
-    "shieldbreaker_mask"
+    "bounty_tavern",
+    "bounty_grab"
    ]
   },
   {
    "out": "ko/intro_3_builds.png",
-   "layout": "panel_poster",
+   "layout": "panel_comic",
    "title": "같은 영웅, 다른 운용",
    "lead": "익숙한 영웅이 새로운 열과 역할을 얻는다.\n네 번째 기술을 바꿔 들 이유도 생긴다.",
    "items": [
@@ -236,7 +236,10 @@
      "후열에서 갑옷을 꿰뚫고, 연기로 동료를 숨긴다."
     ]
    ],
-   "art": "poster_highwayman"
+   "art": [
+    "maa_field",
+    "shieldbreaker_rope"
+   ]
   },
   {
    "out": "ko/intro_4_refined.png",

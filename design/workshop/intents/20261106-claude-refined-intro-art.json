@@ -1,0 +1,14 @@
+{
+  "id": "REFINED-COMBINED-005",
+  "decision": "adopted",
+  "original_quote": "abb로 하자",
+  "context_quotes": [
+    {"quote": "그 이후에 소개 이미지 그림: 내용과 안 맞는 곳이 있습니다. 예를 들어 끌어오기 장에 노상강도 그림이 붙어 있습니다. 주제에 맞는 컷으로 바꿀 수 있습니다. 이것도 맞는 이미지 일단 나한테 먼저 보여줘봐", "speaker": "user", "source": "Claude Code 세션 29a675d2, 2026-11-06"},
+    {"quote": "그거 다 하고 후보 이미지 다른 거랑 안겹치게 해서 내놔", "speaker": "user", "source": "Claude Code 세션 29a675d2, 2026-11-06"},
+    {"quote": "예시로 드는거는 바닐라랑 비교해보고 그 비교에서 정말 달라진 것만 예시 들었음 좋겠어 바닐라에서도 가능한 걸 예시 들면 안되지 예로 현상금 이리와라 같은 경우 바닐라에서도 상대 끌고오는 기술이야", "speaker": "user", "source": "Claude Code 세션 29a675d2, 2026-11-06"}
+  ],
+  "rationale_ko": "통합본 소개 이미지 3장의 그림을 주제에 맞고 다른 이미지(스포트라이트·섹션 머리·표지·단독판)와 겹치지 않는 공식 코믹스 새 칸으로 바꿨다: 회복 분담 = 오두막의 석궁사수 + 수술하는 역병 의사(A), 표식 파티 = 선술집의 표적들 + 표적을 움켜쥔 현상금 사냥꾼(B), 끌어오기 = 포화 속 전열 + 밧줄에 묶인 손(B). 소개 이미지 항목도 본문 기준에 맞춰 바닐라에도 있던 '이리 오너라'를 '방패 파괴자 노출'로, 크기만 커진 '도굴꾼 단검 투척'을 '유물수집상 서툰 칼질(5레벨 표식 신설)'로 바꿨다.",
+  "source": {"product": "claude", "reference": "Claude Code 세션 29a675d2, 2026-11-06", "session_id": "29a675d2-6792-4e0a-b0de-212cae3f4b77", "message_id": null, "event_id": null},
+  "files": ["design/branding/brand_art.json", "design/branding/brand_content.json", "design/branding/brand_content_ko.json"],
+  "supersedes": []
+}
