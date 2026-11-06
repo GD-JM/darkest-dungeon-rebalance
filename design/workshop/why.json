@@ -663,34 +663,46 @@
  },
  "houndmaster|hounds_harry": {
   "ids": [
-   "HM-012",
-   "HM-027"
+    "HM-012",
+    "HM-027",
+    "HM-030",
+    "HM-033",
+    "HM-034",
+    "HM-036",
+    "HM-037",
+    "HM-038"
   ],
   "principles": [
-   "G-02",
-   "G-03",
-   "R-VALUE-03"
+    "G-02",
+    "G-03",
+    "R-VALUE-03"
   ],
-  "en": "Hound's Harry was almost never picked: an area bleed spreads thin, fights end before it pays off, and many enemies (skeletons, the Drowned) are nearly immune to bleed. It gets a little more damage and the standard 90 accuracy of bleed skills, and losing rank 1 makes rank 2 the one spot where Harry and Blackjack are both available.",
-  "ko": "사냥개 습격은 거의 쓰이지 않았다. 광역 출혈은 얕게 퍼져 전투가 끝나기 전에 다 들어가지 못하고, 해골·익사자처럼 출혈에 사실상 면역인 적도 많다. 피해를 조금 올리고 명중을 출혈 기술 표준인 90으로 맞췄으며, 1열 사용을 빼서 습격과 둔기 강타를 함께 쓸 수 있는 2열이 조련사의 주 자리가 되게 했다."
- },
+  "en": "Hound's Harry deals -85% damage, emphasizing its area bleed. Both can be used from any rank, start at 85 ACC and inflict 2/2/3/3/4 bleed for 3 turns.",
+  "ko": "사냥개 습격의 피해는 −85%로 낮춰 광역 출혈 부여에 무게를 둔다. 두 공격 모두 1~4열에서 사용하며 명중 85 시작, 출혈 2/2/3/3/4(3턴)를 유지한다."
+},
  "houndmaster|hounds_rush": {
   "ids": [
-   "HM-019",
-   "HM-016",
-   "HM-018",
-   "HM-010",
-   "HM-023",
-   "HM-011"
+    "HM-019",
+    "HM-016",
+    "HM-018",
+    "HM-010",
+    "HM-023",
+    "HM-011",
+    "HM-030",
+    "HM-033",
+    "HM-034",
+    "HM-036",
+    "HM-037",
+    "HM-038"
   ],
   "principles": [
-   "P-24",
-   "G-00",
-   "P-11"
+    "P-24",
+    "G-00",
+    "P-11"
   ],
-  "en": "Hound's Rush can now be used from any rank, making it the Houndmaster's go-anywhere attack; in return its base damage and mark bonus are lower, because he should shine at support rather than damage (Dog Treats can still spike it). Higher accuracy and a shorter bleed that hits harder at high levels keep the lighter hit reliable.",
-  "ko": "사냥개 돌진을 모든 열에서 쓸 수 있게 해 어디서나 쓰는 범용 공격으로 만들었고, 조련사는 딜이 아니라 지원이 강해야 하므로 대신 기본 피해와 표식 추가 피해를 낮췄다(개 간식으로 순간 화력은 여전히 낼 수 있다). 명중을 올리고 출혈은 짧지만 고레벨에서 더 세게 해, 가벼워진 한 방도 안정적으로 들어가게 했다."
- },
+  "en": "Hound's Rush deals -20% damage for stronger single-target attacks. Both can be used from any rank, start at 85 ACC and inflict 2/2/3/3/4 bleed for 3 turns.",
+  "ko": "사냥개 돌진의 피해는 −20%로 올려 단일 집중 공격을 강화한다. 두 공격 모두 1~4열에서 사용하며 명중 85 시작, 출혈 2/2/3/3/4(3턴)를 유지한다."
+},
  "houndmaster|howl": {
   "ids": [
    "HM-014",

@@ -16,11 +16,14 @@ armour: .name "houndmaster_armour_3" .def 25% .prot 0 .hp 33 .spd 0 .upgradeRequ
 armour: .name "houndmaster_armour_4" .def 30% .prot 0 .hp 37 .spd 0 .upgradeRequirementCode 3
 
 
-combat_skill: .id "hounds_rush" .level 0 .type "ranged" .atk 90% .dmg -40% .crit 5% .launch 4321 .target 1234 .is_crit_valid True  .effect "Beast Killer 1" "HM Dmg Marked 1" "RB HM Hound Bleed 1" .generation_guaranteed true
-combat_skill: .id "hounds_rush" .level 1 .type "ranged" .atk 95% .dmg -40% .crit 6% .launch 4321 .target 1234 .is_crit_valid True  .effect "Beast Killer 2" "HM Dmg Marked 2" "RB HM Hound Bleed 2"
-combat_skill: .id "hounds_rush" .level 2 .type "ranged" .atk 100% .dmg -40% .crit 7% .launch 4321 .target 1234 .is_crit_valid True  .effect "Beast Killer 3" "HM Dmg Marked 3" "RB HM Hound Bleed 3"
-combat_skill: .id "hounds_rush" .level 3 .type "ranged" .atk 105% .dmg -40% .crit 8% .launch 4321 .target 1234 .is_crit_valid True  .effect "Beast Killer 4" "HM Dmg Marked 4" "RB HM Hound Bleed 4"
-combat_skill: .id "hounds_rush" .level 4 .type "ranged" .atk 110% .dmg -40% .crit 9% .launch 4321 .target 1234 .is_crit_valid True  .effect "Beast Killer 5" "HM Dmg Marked 5" "RB HM Hound Bleed 5"
+combat_skill: .id "hounds_rush" .level 0 .type "ranged" .atk 85% .dmg -20% .crit 5% .launch 4321 .target 1234 .is_crit_valid True  .effect "Beast Killer 1" "HM Dmg Marked 1" "RB HM Hound Bleed 1" .generation_guaranteed true
+combat_skill: .id "hounds_rush" .level 1 .type "ranged" .atk 90% .dmg -20% .crit 6% .launch 4321 .target 1234 .is_crit_valid True  .effect "Beast Killer 2" "HM Dmg Marked 2" "RB HM Hound Bleed 2"
+combat_skill: .id "hounds_rush" .level 2 .type "ranged" .atk 95% .dmg -20% .crit 7% .launch 4321 .target 1234 .is_crit_valid True  .effect "Beast Killer 3" "HM Dmg Marked 3" "RB HM Hound Bleed 3"
+combat_skill: .id "hounds_rush" .level 3 .type "ranged" .atk 100% .dmg -20% .crit 8% .launch 4321 .target 1234 .is_crit_valid True  .effect "Beast Killer 4" "HM Dmg Marked 4" "RB HM Hound Bleed 4"
+combat_skill: .id "hounds_rush" .level 4 .type "ranged" .atk 105% .dmg -20% .crit 9% .launch 4321 .target 1234 .is_crit_valid True  .effect "Beast Killer 5" "HM Dmg Marked 5" "RB HM Hound Bleed 5"
+// HM-038 [2026-11-06] 사냥개 돌진 피해 -20%, 사냥개 습격 피해 -85%; 두 기술 모두 1~4열 사용. 명중 85 시작 및 출혈 2/2/3/3/4 x 3턴 유지. 단일 집중 화력은 올리고 광역 즉시 피해는 낮춰 구분한다. 사용자 결정으로 HM-037의 1열 제한을 철회하며 출혈 33445/피해 -45 제안은 채택하지 않는다.
+// HM-037 [2026-11-06] 사냥개 돌진 사용 열 4321 -> 432, 명중 90/95/100/105/110 -> 85/90/95/100/105.
+// HM-037 의도: 1열은 경비견·상처 핥기·둔기 강타·목표물 지정의 보호/지원 자리로 제한한다. 두 사냥개 공격은 2·3·4열/명중 85 기준으로 맞추고 원거리 명중 장신구의 보완을 살린다. 습격은 이미 이 조건이며 피해·출혈 상향은 검토 중이므로 적용하지 않는다. HM-019 사용 열 확대와 HM-023 명중 상향을 대체한다.
 // HM-036 hounds_rush: dmg -50% -> -40%, bleed 3/3/4/4/5 -> 2/2/3/3/4 (3 turns).
 // HM-036 사냥개 돌진: 피해 −50% → −40%, 출혈 3/3/4/4/5 → 2/2/3/3/4(3턴). 의도: 피해 % 장신구(징 박힌 목걸이 +20%, 보안관 배지 세트 출혈 대상 +25%)가 퇴색하지 않게(바닐라 대비 50% → 60%, P-27). 출혈 정체성은 사냥개 습격(적 전체 2~4)이 지킴 [제작자 10-23]
 // HM-032 hounds_rush: marked bonus back to vanilla +60/70/80/90/100% (MARK-01 fixed +60). Base damage is now -50%, so a marked hit is still weaker than vanilla.
@@ -35,11 +38,12 @@ combat_skill: .id "hounds_rush" .level 4 .type "ranged" .atk 110% .dmg -40% .cri
 // HM-023 hounds_rush: 1렙 명중 85 -> 90, 출혈 1/1/2/2/3 지속 1 -> 2턴(RB HM Hound Bleed). 피해 -25%로 크게 낮춘 만큼 [제작자]
 
 
-combat_skill: .id "hounds_harry" .level 0 .type "ranged" .atk 85% .dmg -80% .crit -5% .launch 432 .target ~1234 .is_crit_valid True  .effect "RB HM Harry Bleed 1"
-combat_skill: .id "hounds_harry" .level 1 .type "ranged" .atk 90% .dmg -80% .crit -4% .launch 432 .target ~1234 .is_crit_valid True  .effect "RB HM Harry Bleed 2"
-combat_skill: .id "hounds_harry" .level 2 .type "ranged" .atk 95% .dmg -80% .crit -3% .launch 432 .target ~1234 .is_crit_valid True  .effect "RB HM Harry Bleed 3"
-combat_skill: .id "hounds_harry" .level 3 .type "ranged" .atk 100% .dmg -80% .crit -2% .launch 432 .target ~1234 .is_crit_valid True  .effect "RB HM Harry Bleed 4"
-combat_skill: .id "hounds_harry" .level 4 .type "ranged" .atk 105% .dmg -80% .crit -1% .launch 432 .target ~1234 .is_crit_valid True  .effect "RB HM Harry Bleed 5"
+combat_skill: .id "hounds_harry" .level 0 .type "ranged" .atk 85% .dmg -85% .crit -5% .launch 4321 .target ~1234 .is_crit_valid True  .effect "RB HM Harry Bleed 1"
+combat_skill: .id "hounds_harry" .level 1 .type "ranged" .atk 90% .dmg -85% .crit -4% .launch 4321 .target ~1234 .is_crit_valid True  .effect "RB HM Harry Bleed 2"
+combat_skill: .id "hounds_harry" .level 2 .type "ranged" .atk 95% .dmg -85% .crit -3% .launch 4321 .target ~1234 .is_crit_valid True  .effect "RB HM Harry Bleed 3"
+combat_skill: .id "hounds_harry" .level 3 .type "ranged" .atk 100% .dmg -85% .crit -2% .launch 4321 .target ~1234 .is_crit_valid True  .effect "RB HM Harry Bleed 4"
+combat_skill: .id "hounds_harry" .level 4 .type "ranged" .atk 105% .dmg -85% .crit -1% .launch 4321 .target ~1234 .is_crit_valid True  .effect "RB HM Harry Bleed 5"
+// HM-038 [2026-11-06] 사냥개 돌진 피해 -20%, 사냥개 습격 피해 -85%; 두 기술 모두 1~4열 사용. 명중 85 시작 및 출혈 2/2/3/3/4 x 3턴 유지. 단일 집중 화력은 올리고 광역 즉시 피해는 낮춰 구분한다. 사용자 결정으로 HM-037의 1열 제한을 철회하며 출혈 33445/피해 -45 제안은 채택하지 않는다.
 // HM-034 hounds_harry: bleed chance 110..150% -> 100..140% (RB HM Harry Bleed).
 // HM-034 사냥개 습격: 출혈 확률 110~150% → 100~140%. 의도: 바닐라의 +10% 특혜 정상화(HM-028 휘파람과 같은 원칙). 근거: 출혈 확률 장신구(징 박힌 목걸이 +30%, 허물송곳니 호루라기 +50%)가 이미 받쳐 줌 [제작자 10-23 "왜 특혜 줬는지 이해 안 된다, 출혈 장신구 많아서 괜찮다"]
 // HM-033 hounds_harry: accuracy 90 -> 85 (vanilla; area attacks sit 5 below single-target, as Hound's Rush 90).

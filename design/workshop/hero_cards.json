@@ -820,112 +820,112 @@
   "name": "Houndmaster",
   "tagline": "A ranged bleed specialist: the hounds bite anywhere and set up the kill.",
   "skills": [
-   {
-    "key": "houndmaster|resistances",
-    "name": "Resistances",
-    "icon": null,
-    "old": [
-     "Blight resist 40%",
-     "Bleed resist 40%"
-    ],
-    "new": [
-     "Blight resist 30%",
-     "Bleed resist 30%"
-    ]
-   },
-   {
-    "key": "houndmaster|hounds_rush",
-    "name": "Hound's Rush",
-    "icon": "one",
-    "old": [
-     "ACC 85",
-     "DMG 0%",
-     "Use from ranks 2-4",
-     "Bleed 1-2 for 3 turns"
-    ],
-    "new": [
-     "ACC 90",
-     "DMG -40%",
-     "Use from any rank",
-     "Bleed 2-4 for 3 turns"
-    ]
-   },
-   {
-    "key": "houndmaster|hounds_harry",
-    "name": "Hound's Harry",
-    "icon": "two",
-    "old": [
-     "DMG -75%",
-     "Use from any rank",
-     "Bleed 1-3, chance 110-150%"
-    ],
-    "new": [
-     "DMG -80%",
-     "Use from ranks 2-4",
-     "Bleed 2-4, chance 100-140%"
-    ]
-   },
-   {
-    "key": "houndmaster|whistle",
-    "name": "Target Whistle",
-    "icon": "three",
-    "old": [
-     "Target: PROT -20 to -30%"
-    ],
-    "new": [
-     "Target: crit received +10-15% (3 turns)"
-    ]
-   },
-   {
-    "key": "houndmaster|howl",
-    "name": "Cry Havoc",
-    "icon": "four",
-    "old": [
-     "Party stress heal 2-6",
-     "Chance 66-74%"
-    ],
-    "new": [
-     "Party stress heal 4-6",
-     "Chance 70-74%"
-    ]
-   },
-   {
-    "key": "houndmaster|guard_dog",
-    "name": "Guard Dog",
-    "icon": "five",
-    "old": [
-     "Self: dodge +10-20% (3 turns)"
-    ],
-    "new": [
-     "Self: dodge +20-30% (3 turns)"
-    ]
-   },
-   {
-    "key": "houndmaster|lick_wounds",
-    "name": "Lick Wounds",
-    "icon": "six",
-    "old": [
-     "Use from ranks 2-4"
-    ],
-    "new": [
-     "Use from any rank"
-    ]
-   },
-   {
-    "key": "houndmaster|blackjack",
-    "name": "Blackjack",
-    "icon": "seven",
-    "old": [
-     "ACC 95",
-     "Stun chance 110-150%"
-    ],
-    "new": [
-     "ACC 90",
-     "Stun chance 100-140%"
-    ]
-   }
+    {
+      "key": "houndmaster|resistances",
+      "name": "Resistances",
+      "icon": null,
+      "old": [
+        "Blight resist 40%",
+        "Bleed resist 40%"
+      ],
+      "new": [
+        "Blight resist 30%",
+        "Bleed resist 30%"
+      ]
+    },
+    {
+      "key": "houndmaster|hounds_rush",
+      "name": "Hound's Rush",
+      "icon": "one",
+      "old": [
+        "ACC 85",
+        "DMG 0%",
+        "Use from ranks 2-4",
+        "Bleed 1-2 for 3 turns"
+      ],
+      "new": [
+        "ACC 85",
+        "DMG -20%",
+        "Use from any rank",
+        "Bleed 2-4 for 3 turns"
+      ]
+    },
+    {
+      "key": "houndmaster|hounds_harry",
+      "name": "Hound's Harry",
+      "icon": "two",
+      "old": [
+        "DMG -75%",
+        "Use from any rank",
+        "Bleed 1-3, chance 110-150%"
+      ],
+      "new": [
+        "DMG -85%",
+        "Use from any rank",
+        "Bleed 2-4, chance 100-140%"
+      ]
+    },
+    {
+      "key": "houndmaster|whistle",
+      "name": "Target Whistle",
+      "icon": "three",
+      "old": [
+        "Target: PROT -20 to -30%"
+      ],
+      "new": [
+        "Target: crit received +10-15% (3 turns)"
+      ]
+    },
+    {
+      "key": "houndmaster|howl",
+      "name": "Cry Havoc",
+      "icon": "four",
+      "old": [
+        "Party stress heal 2-6",
+        "Chance 66-74%"
+      ],
+      "new": [
+        "Party stress heal 4-6",
+        "Chance 70-74%"
+      ]
+    },
+    {
+      "key": "houndmaster|guard_dog",
+      "name": "Guard Dog",
+      "icon": "five",
+      "old": [
+        "Self: dodge +10-20% (3 turns)"
+      ],
+      "new": [
+        "Self: dodge +20-30% (3 turns)"
+      ]
+    },
+    {
+      "key": "houndmaster|lick_wounds",
+      "name": "Lick Wounds",
+      "icon": "six",
+      "old": [
+        "Use from ranks 2-4"
+      ],
+      "new": [
+        "Use from any rank"
+      ]
+    },
+    {
+      "key": "houndmaster|blackjack",
+      "name": "Blackjack",
+      "icon": "seven",
+      "old": [
+        "ACC 95",
+        "Stun chance 110-150%"
+      ],
+      "new": [
+        "ACC 90",
+        "Stun chance 100-140%"
+      ]
+    }
   ]
- },
+},
  "jester": {
   "name": "Jester",
   "tagline": "Solo becomes a real pick; his buffs no longer overlap.",
