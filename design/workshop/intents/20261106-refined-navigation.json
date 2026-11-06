@@ -1,0 +1,20 @@
+{
+  "id": "WS-NAV-001",
+  "decision": "adopted",
+  "original_quote": "‘통합판 표기’와 ‘개별 영웅판 상단 연결’ 해보자 근데 통합판 표기 돼있잖아 아니야?",
+  "rationale_ko": "기존 설명의 20영웅 표기는 유지하고 검색 제목에 통합판 범위를 명시한다. 개별판 상단에서 통합판과 개별판 선택 및 중복 활성화 금지를 안내한다. 게임 수치와 이미지 변경은 없음.",
+  "source": {
+    "product": "codex",
+    "reference": "현재 대화 2026-11-06 통합판 표기 및 개별판 상단 연결 요청",
+    "message_id": null,
+    "event_id": null
+  },
+  "files": [
+    "tools/refined/publish_refined.py",
+    "design/branding/upload_private_draft.py"
+  ],
+  "external_sources": [
+    "C:\\Users\\lemm1\\Documents\\DarkestRefined\\page_tools\\upload_dlc_text.py",
+    "C:\\Users\\lemm1\\Documents\\DarkestRefined\\page_tools\\refined_navigation.py"
+  ]
+}

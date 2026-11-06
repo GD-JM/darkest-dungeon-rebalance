@@ -19,16 +19,8 @@ ITEMS = REPO / 'design' / 'refined' / 'items.json'
 BRAND = REPO / 'design' / 'branding'
 DRAFT = BRAND / 'darkest_refined_draft'
 LANGS = ['english', 'koreana', 'brazilian', 'french', 'german', 'polish', 'russian', 'schinese', 'spanish', 'tchinese']
-TITLES = {'english': 'Darkest Refined — Hero Rebalance & Reworks',
-          'koreana': '다키스트 리파인드 — 영웅 리밸런스 & 리워크',
-          'brazilian': 'Darkest Refined — Rebalanceamento e reformulações de heróis',
-          'french': 'Darkest Refined — Rééquilibrage et refontes des héros',
-          'german': 'Darkest Refined — Helden-Rebalance & Überarbeitungen',
-          'polish': 'Darkest Refined — Balans i przebudowy bohaterów',
-          'russian': 'Darkest Refined — ребаланс и переработка героев',
-          'schinese': 'Darkest Refined — 英雄再平衡与重做',
-          'spanish': 'Darkest Refined — Reajuste y reworks de héroes',
-          'tchinese': 'Darkest Refined — 英雄再平衡與重製'}
+# WS-NAV-001: expose the existing 20-hero combined scope in Workshop search.
+TITLES = {'english': 'Darkest Refined — 20-Hero Complete Edition | Hero Rebalance', 'koreana': '다키스트 리파인드 — 20영웅 통합판 | 영웅 리밸런스', 'schinese': 'Darkest Refined — 20英雄整合版 | 英雄再平衡', 'tchinese': 'Darkest Refined — 20英雄整合版 | 英雄再平衡', 'brazilian': 'Darkest Refined — Edição completa: 20 heróis | Rebalanceamento', 'french': 'Darkest Refined — Édition complète : 20 héros | Rééquilibrage', 'german': 'Darkest Refined — Komplettpaket: 20 Helden | Helden-Rebalance', 'polish': 'Darkest Refined — Pełny pakiet: 20 bohaterów | Rebalans', 'russian': 'Darkest Refined — Все 20 героев | Ребаланс', 'spanish': 'Darkest Refined — Edición completa: 20 héroes | Reequilibrio'}
 OLD_ITEM = 3821353035
 
 sys.path.insert(0, str(WS))

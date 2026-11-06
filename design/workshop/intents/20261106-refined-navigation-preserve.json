@@ -1,0 +1,25 @@
+{
+  "id": "WS-NAV-002",
+  "decision": "adopted",
+  "original_quote": "그럼 지금 바꾼 제목이 검색에도 제대로 반영됐는지 확인하고, 다음에 푸시해도 제목이랑 상단 안내 안 덮어써지게 변경한 원본도 커밋해줘",
+  "rationale_ko": "기존 설명의 20영웅 표기는 유지하고 검색 제목에 통합판 범위를 명시한다. 개별판 상단에서 통합판과 개별판 선택 및 중복 활성화 금지를 안내한다. 게임 수치와 이미지 변경은 없음.",
+  "source": {
+    "product": "codex",
+    "reference": "현재 대화 2026-11-06 통합판 표기 및 개별판 상단 연결 요청",
+    "message_id": null,
+    "event_id": null
+  },
+  "files": [
+    "tools/workshop_sync/steam.py",
+    "tools/workshop_sync/refined_navigation.py",
+    "design/workshop/navigation_sources/upload_dlc_text.py",
+    "design/workshop/navigation_sources/refined_navigation.py"
+  ],
+  "external_sources": [
+    "C:\\Users\\lemm1\\Documents\\DarkestRefined\\page_tools\\upload_dlc_text.py",
+    "C:\\Users\\lemm1\\Documents\\DarkestRefined\\page_tools\\refined_navigation.py"
+  ],
+  "context_quotes": [
+    "‘통합판 표기’와 ‘개별 영웅판 상단 연결’ 해보자 근데 통합판 표기 돼있잖아 아니야?"
+  ]
+}
