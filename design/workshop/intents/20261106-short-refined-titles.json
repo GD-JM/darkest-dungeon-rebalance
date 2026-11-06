@@ -1,0 +1,19 @@
+{
+  "id": "WS-NAV-003",
+  "decision": "adopted",
+  "original_quote": "이것도 설명이 너무 길다 Darkest Refined 통합본 이정도로 끝내 1.0 같은건 작게 응 설명에는 리밸런스 남기고 다른 개별 영웅판도 비슷하게 작업해줘",
+  "rationale_ko": "게임 목록과 창작마당 제목을 브랜드+통합본 또는 공식 영웅명으로 줄인다. 리밸런스 설명과 안내는 유지. 버전은 게임 기본 별도 표시로 유지하며 글자 크기를 바꿨다고 주장하지 않는다.",
+  "source": {
+    "product": "codex",
+    "reference": "현재 대화 모드 목록 제목 단축 요청",
+    "event_id": null
+  },
+  "files": [
+    "tools/workshop_sync/refined_navigation.py",
+    "design/workshop/navigation_sources/refined_navigation.py"
+  ],
+  "supersedes": [
+    "WS-NAV-001 titles",
+    "WS-NAV-002 titles"
+  ]
+}
