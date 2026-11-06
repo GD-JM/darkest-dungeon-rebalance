@@ -121,6 +121,11 @@ def build(src, out, item, package, heroes=None):
     proj = proj.replace('{DESCRIPTION}', esc(desc)).replace('{UPDATE_DETAILS}', esc(pkg.get('note', 'Update')))
     if pkg.get('title'):   # REFINED-HERO-001: 단독판은 게임 모드 목록에 자기 제목으로 보인다
         proj = re.sub(r'<Title>.*?</Title>', lambda m: '<Title>%s</Title>' % esc(pkg['title']), proj)
+    # WS-NAV-003: keep game list titles short even when older package titles are supplied.
+    import runpy
+    TITLES = runpy.run_path(os.path.join(REPO, "tools", "workshop_sync", "refined_navigation.py"))["TITLES"]
+    if int(item) in TITLES:
+        proj = re.sub(r'<Title>.*?</Title>', lambda m: '<Title>%s</Title>' % esc(TITLES[int(item)]['english']), proj)
     if pkg.get('short'):
         proj = re.sub(r'<ItemDescriptionShort>.*?</ItemDescriptionShort>', lambda m: '<ItemDescriptionShort>%s</ItemDescriptionShort>' % esc(pkg['short']), proj)
     open(os.path.join(out, 'project.xml'), 'w', encoding='utf-8', newline='\n').write(proj.replace('\r\n', '\n'))
