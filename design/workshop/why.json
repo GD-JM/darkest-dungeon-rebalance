@@ -674,15 +674,16 @@
     "HM-034",
     "HM-036",
     "HM-037",
-    "HM-038"
+    "HM-038",
+    "HM-039"
   ],
   "principles": [
     "G-02",
     "G-03",
     "R-VALUE-03"
   ],
-  "en": "Hound's Harry deals -85% damage, emphasizing its area bleed. Both can be used from any rank, start at 85 ACC and inflict 2/2/3/3/4 bleed for 3 turns.",
-  "ko": "사냥개 습격의 피해는 −85%로 낮춰 광역 출혈 부여에 무게를 둔다. 두 공격 모두 1~4열에서 사용하며 명중 85 시작, 출혈 2/2/3/3/4(3턴)를 유지한다."
+  "en": "Hound's Rush is usable from ranks 2-4; Hound's Harry remains usable from all ranks. Restrict the single-target attack so rank 1 does not supersede rank 2. Corrects HM-038's overbroad interpretation; damage, accuracy, bleed and target ranks are unchanged.",
+  "ko": "사냥개 돌진만 2·3·4열 사용, 사냥개 습격은 모든 열 유지. 1열이 2열보다 유리해지지 않도록 단일 집중 공격을 제한한다. HM-038의 확대 해석을 정정하며 피해·명중·출혈·대상열은 유지한다."
 },
  "houndmaster|hounds_rush": {
   "ids": [
@@ -697,15 +698,16 @@
     "HM-034",
     "HM-036",
     "HM-037",
-    "HM-038"
+    "HM-038",
+    "HM-039"
   ],
   "principles": [
     "P-24",
     "G-00",
     "P-11"
   ],
-  "en": "Hound's Rush deals -20% damage for stronger single-target attacks. Both can be used from any rank, start at 85 ACC and inflict 2/2/3/3/4 bleed for 3 turns.",
-  "ko": "사냥개 돌진의 피해는 −20%로 올려 단일 집중 공격을 강화한다. 두 공격 모두 1~4열에서 사용하며 명중 85 시작, 출혈 2/2/3/3/4(3턴)를 유지한다."
+  "en": "Hound's Rush is usable from ranks 2-4; Hound's Harry remains usable from all ranks. Restrict the single-target attack so rank 1 does not supersede rank 2. Corrects HM-038's overbroad interpretation; damage, accuracy, bleed and target ranks are unchanged.",
+  "ko": "사냥개 돌진만 2·3·4열 사용, 사냥개 습격은 모든 열 유지. 1열이 2열보다 유리해지지 않도록 단일 집중 공격을 제한한다. HM-038의 확대 해석을 정정하며 피해·명중·출혈·대상열은 유지한다."
 },
  "houndmaster|howl": {
   "ids": [
