@@ -2,14 +2,15 @@
   "id": "SYS-105",
   "decision": "adopted",
   "original_quote": "아니 자꾸 중간에 멈추지 말고 이미지 문구까지 전수검증 끝까지 해. 찌르기는 승인했던 30~40으로 맞추고 노출 설명도 고쳐. 남은 오류 전부 정리해서 커밋 푸시 배포하고 창작마당이랑 갤러리 이미지까지 맞춰줘",
-  "rationale_ko": "배포 중 자동 문안이 과거 WS-BASE-001을 현재 채택 의도로 잘못 인용하여 기존 검증이 차단했다. 과거 이전 안내는 맥락일 뿐이며 이번 user_intents에 포함될 때만 재공지하도록 생성 지침을 명확히 한다. source_ids 일치 검증 및 게시 전 검증은 그대로 유지. 실패 결과는 수정하지 않고 새 커밋의 새 작업에서 재생성한다.",
+  "rationale_ko": "배포 중 자동 문안이 과거 WS-BASE-001을 현재 채택 의도로 잘못 인용하여 기존 검증이 차단했다. 과거 이전 안내는 맥락일 뿐이며 이번 user_intents에 포함될 때만 재공지하도록 생성 지침을 명확히 한다. source_ids 일치 검증 및 게시 전 검증은 그대로 유지. 실패 결과는 수정하지 않고 새 커밋의 새 작업에서 재생성한다. 이미지 전용 수정과 원본 ID 버프 복구는 info 줄 변경이 없어 생성기 입력에서 누락되므로, 커밋된 카드·검토표·실제 다운로드 검증 자료를 명시적으로 공급한다.",
   "source": {
     "product": "codex",
     "reference": "현재 대화 2026-11-07 전수 오류 수정·푸시 배포 요청",
     "event_id": null
   },
   "files": [
-    "tools/workshop_sync/release.py"
+    "tools/workshop_sync/release.py",
+    "design/analysis/image-audit-published-20261107.json"
   ],
   "supersedes": []
 }

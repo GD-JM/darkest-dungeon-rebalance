@@ -337,6 +337,18 @@ def edit_release(source, job, config, sha, previous, changed, diff, intents, pre
             for rel in [f'heroes/{hero}/{hero}.info.darkest', f'heroes/{hero}/{hero}.vanilla.txt', f'effects/rebalance_{hero}.effects.darkest']:
                 if (source / rel).exists():
                     context['hero_data'][hero][rel] = (source / rel).read_text(encoding='utf-8-sig')
+    # SYS-105: image-only and native-buff repairs may not change a hero info row.
+    # Supply committed audit sources instead of asking the editor to infer them.
+    context['publication_audit'] = {}
+    for rel in (
+        'design/analysis/image-audit-20261107.md',
+        'design/analysis/image-audit-published-20261107.json',
+        'design/workshop/all-hero-cards-audited.json',
+        'design/workshop/refined-brand-audited.json',
+        'shared/buffs/rebalance_duelist.buffs.json',
+    ):
+        if (source / rel).is_file() and any(i['id'] in {'SYS-104', 'SYS-105'} for i in intents):
+            context['publication_audit'][rel] = (source / rel).read_text(encoding='utf-8-sig')
     encoded = json.dumps(context, ensure_ascii=False)
     # WS-EDITOR-004: the default bound stays 650,000; a larger value is a per-release explicit approval
     # set in the local config and removed after that release.

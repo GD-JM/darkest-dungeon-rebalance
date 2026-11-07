@@ -1,0 +1,348 @@
+{
+  "reviewed_skill_level_rows": 700,
+  "reviewed_card_blocks": 114,
+  "reviewed_heroes": 20,
+  "gallery": {
+    "url": "https://gall.dcinside.com/mgallery/board/view/?id=darkest&no=338322&page=1",
+    "count": 32,
+    "all_loaded": true,
+    "all_ordered_ids_match": true,
+    "changed_indices": [
+      11,
+      30
+    ],
+    "images": [
+      {
+        "height": 566,
+        "i": 0,
+        "loaded": true,
+        "src": "https://dcimg6.dcinside.co.kr/viewimage.php?id=29bcc22de0c12c&no=24b0d769e1d32ca73fe783fa1bd62531230f05a470410ff5b2c3b20b37ce7fe2bd6adfb6d3be49f92dbd09461dc7d4e4c77ecc11a14a74e7fe011997d4bb5059f2d1f9",
+        "width": 850
+      },
+      {
+        "height": 566,
+        "i": 1,
+        "loaded": true,
+        "src": "https://dcimg6.dcinside.co.kr/viewimage.php?id=29bcc22de0c12c&no=24b0d769e1d32ca73fe783fa1bd62531230f05a470410ff5b2c3b20b37ce7fe2bd6adfb6d3be49f92dbd09461dc5dbe7e840f94ee34a6a2dce159660edfc3c0627d8a1",
+        "width": 850
+      },
+      {
+        "height": 566,
+        "i": 2,
+        "loaded": true,
+        "src": "https://dcimg6.dcinside.co.kr/viewimage.php?id=29bcc22de0c12c&no=24b0d769e1d32ca73fe783fa1bd62531230f05a470410ff5b2c3b20b37ce7fe2bd6adfb6d3be49f92dbd094614c6d2e4fbe681e5f0481684c21feea7c9a99b7f34ea61",
+        "width": 850
+      },
+      {
+        "height": 566,
+        "i": 3,
+        "loaded": true,
+        "src": "https://dcimg6.dcinside.co.kr/viewimage.php?id=29bcc22de0c12c&no=24b0d769e1d32ca73fe783fa1bd62531230f05a470410ff5b2c3b20b37ce7fe2bd6adfb6d3be49f92dbd094614c5d3e060325d555f02b71885be1551eaaa4548f84715",
+        "width": 850
+      },
+      {
+        "height": 566,
+        "i": 4,
+        "loaded": true,
+        "src": "https://dcimg6.dcinside.co.kr/viewimage.php?id=29bcc22de0c12c&no=24b0d769e1d32ca73fe783fa1bd62531230f05a470410ff5b2c3b20b37ce7fe2bd6adfb6d3be49f92dbd094618c3d5e1c608fc83442305b86af91c6b650ba73320586b",
+        "width": 850
+      },
+      {
+        "height": 728,
+        "i": 5,
+        "loaded": true,
+        "src": "https://dcimg6.dcinside.co.kr/viewimage.php?id=29bcc22de0c12c&no=24b0d769e1d32ca73fe783fa1bd62531230f05a470410ff5b2c3b20b37ce7fe2bd6adfb6d3be49f92dbd094618c4d0e00066d7dee00888ccec9396b20698cea6b7325d",
+        "width": 850
+      },
+      {
+        "height": 654,
+        "i": 6,
+        "loaded": true,
+        "src": "https://dcimg6.dcinside.co.kr/viewimage.php?id=29bcc22de0c12c&no=24b0d769e1d32ca73fe783fa1bd62531230f05a470410ff5b2c3b20b37ce7fe2bd6adfb6d3be49f92dbd094615c3d6e4956f9254a3e8a7b064a1d4f28a6096e3181ec2",
+        "width": 850
+      },
+      {
+        "height": 872,
+        "i": 7,
+        "loaded": true,
+        "src": "https://dcimg6.dcinside.co.kr/viewimage.php?id=29bcc22de0c12c&no=24b0d769e1d32ca73fe783fa1bd62531230f05a470410ff5b2c3b20b37ce7fe2bd6adfb6d3be49f92dbd09461fc3dae6ff367cf31ea0cd98fa679469f0f8972b1c2e95",
+        "width": 850
+      },
+      {
+        "height": 999,
+        "i": 8,
+        "loaded": true,
+        "src": "https://dcimg6.dcinside.co.kr/viewimage.php?id=29bcc22de0c12c&no=24b0d769e1d32ca73fe783fa1bd62531230f05a470410ff5b2c3b20b37ce7fe2bd6adfb6d3be49f92dbd09461fc0d4e7e30472bf5316aa05c599d9fbf4af36820e08d5",
+        "width": 850
+      },
+      {
+        "height": 947,
+        "i": 9,
+        "loaded": true,
+        "src": "https://dcimg6.dcinside.co.kr/viewimage.php?id=29bcc22de0c12c&no=24b0d769e1d32ca73fe783fa1bd62531230f05a470410ff5b2c3b20b37ce7fe2bd6adfb6d3be49f92dbd09461ec1d4e1142343fd9358518c5d737fedc5691cbe084411",
+        "width": 850
+      },
+      {
+        "height": 680,
+        "i": 10,
+        "loaded": true,
+        "src": "https://dcimg6.dcinside.co.kr/viewimage.php?id=29bcc22de0c12c&no=24b0d769e1d32ca73fe783fa1bd62531230f05a470410ff5b2c3b20b37ce7fe2bd6adfb6d3be49f92dbd094615c6d2ef69cfb152c485a791d54923dfe8c7c31bcf08af",
+        "width": 850
+      },
+      {
+        "height": 753,
+        "i": 11,
+        "loaded": true,
+        "src": "https://dcimg6.dcinside.co.kr/viewimage.php?id=29bcc22de0c12c&no=24b0d769e1d32ca73fe783fa1bd62531230f05a470410ff5b2c3b20b37ce7fe2bd6adfb6d3be49f92dbd094619c8dae04f6a2db41d1067396e94a70985555189669338",
+        "width": 850
+      },
+      {
+        "height": 655,
+        "i": 12,
+        "loaded": true,
+        "src": "https://dcimg6.dcinside.co.kr/viewimage.php?id=29bcc22de0c12c&no=24b0d769e1d32ca73fe783fa1bd62531230f05a470410ff5b2c3b20b37ce7fe2bd6adfb6d3be49f92dbd09461fc9d0e3e157e1464c9ada000223cebdbb014e4652f9d8",
+        "width": 850
+      },
+      {
+        "height": 558,
+        "i": 13,
+        "loaded": true,
+        "src": "https://dcimg6.dcinside.co.kr/viewimage.php?id=29bcc22de0c12c&no=24b0d769e1d32ca73fe783fa1bd62531230f05a470410ff5b2c3b20b37ce7fe2bd6adfb6d3be49f92dbd09461bc0dae4731574c2ef1eb0bc805129e48bb1aaf00f7cf2",
+        "width": 850
+      },
+      {
+        "height": 754,
+        "i": 14,
+        "loaded": true,
+        "src": "https://dcimg6.dcinside.co.kr/viewimage.php?id=29bcc22de0c12c&no=24b0d769e1d32ca73fe783fa1bd62531230f05a470410ff5b2c3b20b37ce7fe2bd6adfb6d3be49f92dbd094618c7dbe334734829994deb545647509b81f3a19aca9f26",
+        "width": 850
+      },
+      {
+        "height": 557,
+        "i": 15,
+        "loaded": true,
+        "src": "https://dcimg6.dcinside.co.kr/viewimage.php?id=29bcc22de0c12c&no=24b0d769e1d32ca73fe783fa1bd62531230f05a470410ff5b2c3b20b37ce7fe2bd6adfb6d3be49f92dbd09461ac3d5e6171fb4d7e3d1487ae3ee37fcf1f479d349fc9e",
+        "width": 850
+      },
+      {
+        "height": 607,
+        "i": 16,
+        "loaded": true,
+        "src": "https://dcimg6.dcinside.co.kr/viewimage.php?id=29bcc22de0c12c&no=24b0d769e1d32ca73fe783fa1bd62531230f05a470410ff5b2c3b20b37ce7fe2bd6adfb6d3be49f92dbd09461bc6d0e6db5628887fd3abcadc672b3ad7ab1885d855a4",
+        "width": 850
+      },
+      {
+        "height": 582,
+        "i": 17,
+        "loaded": true,
+        "src": "https://dcimg6.dcinside.co.kr/viewimage.php?id=29bcc22de0c12c&no=24b0d769e1d32ca73fe783fa1bd62531230f05a470410ff5b2c3b20b37ce7fe2bd6adfb6d3be49f92dbd09461fc8d2e0d855113ce6d9945ba5187fc331c487c6a580a9",
+        "width": 850
+      },
+      {
+        "height": 655,
+        "i": 18,
+        "loaded": true,
+        "src": "https://dcimg6.dcinside.co.kr/viewimage.php?id=29bcc22de0c12c&no=24b0d769e1d32ca73fe783fa1bd62531230f05a470410ff5b2c3b20b37ce7fe2bd6adfb6d3be49f92dbd09461dc2d2ef69b14c74613b4778e6967844c2eee92a5cf59f",
+        "width": 850
+      },
+      {
+        "height": 510,
+        "i": 19,
+        "loaded": true,
+        "src": "https://dcimg6.dcinside.co.kr/viewimage.php?id=29bcc22de0c12c&no=24b0d769e1d32ca73fe783fa1bd62531230f05a470410ff5b2c3b20b37ce7fe2bd6adfb6d3be49f92dbd09461bc1d3e2f960ea2c7860d35d1e0b4809fb3bc1c95568a9",
+        "width": 850
+      },
+      {
+        "height": 775,
+        "i": 20,
+        "loaded": true,
+        "src": "https://dcimg6.dcinside.co.kr/viewimage.php?id=29bcc22de0c12c&no=24b0d769e1d32ca73fe783fa1bd62531230f05a470410ff5b2c3b20b37ce7fe2bd6adfb6d3be49f92dbd09461ec2dae658cc2ef6a44ab3965a07153082d20cc1c4d5c8",
+        "width": 850
+      },
+      {
+        "height": 535,
+        "i": 21,
+        "loaded": true,
+        "src": "https://dcimg6.dcinside.co.kr/viewimage.php?id=29bcc22de0c12c&no=24b0d769e1d32ca73fe783fa1bd62531230f05a470410ff5b2c3b20b37ce7fe2bd6adfb6d3be49f92dbd09461fc6d1e06457c3668dc9f9d09e664e8abce9870b848f84",
+        "width": 850
+      },
+      {
+        "height": 655,
+        "i": 22,
+        "loaded": true,
+        "src": "https://dcimg6.dcinside.co.kr/viewimage.php?id=29bcc22de0c12c&no=24b0d769e1d32ca73fe783fa1bd62531230f05a470410ff5b2c3b20b37ce7fe2bd6adfb6d3be49f92dbd09461bc5dae288356b0bd41e859c4bec2d341693ab5b9375fb",
+        "width": 850
+      },
+      {
+        "height": 705,
+        "i": 23,
+        "loaded": true,
+        "src": "https://dcimg6.dcinside.co.kr/viewimage.php?id=29bcc22de0c12c&no=24b0d769e1d32ca73fe783fa1bd62531230f05a470410ff5b2c3b20b37ce7fe2bd6adfb6d3be49f92dbd09461bc3dbe536054a5c7ea355471020d290155c46d2557dc1",
+        "width": 850
+      },
+      {
+        "height": 487,
+        "i": 24,
+        "loaded": true,
+        "src": "https://dcimg6.dcinside.co.kr/viewimage.php?id=29bcc22de0c12c&no=24b0d769e1d32ca73fe783fa1bd62531230f05a470410ff5b2c3b20b37ce7fe2bd6adfb6d3be49f92dbd09461fc1d6e482c19a0cdbb5006fa6e6f58b892e909a102408",
+        "width": 850
+      },
+      {
+        "height": 777,
+        "i": 25,
+        "loaded": true,
+        "src": "https://dcimg6.dcinside.co.kr/viewimage.php?id=29bcc22de0c12c&no=24b0d769e1d32ca73fe783fa1bd62531230f05a470410ff5b2c3b20b37ce7fe2bd6adfb6d3be49f92dbd094619c8d7e70c1c5a448e31066e78eb45b7d3e550f2294d6c",
+        "width": 850
+      },
+      {
+        "height": 680,
+        "i": 26,
+        "loaded": true,
+        "src": "https://dcimg6.dcinside.co.kr/viewimage.php?id=29bcc22de0c12c&no=24b0d769e1d32ca73fe783fa1bd62531230f05a470410ff5b2c3b20b37ce7fe2bd6adfb6d3be49f92dbd094614c8d7e0f40fac84ce6b955d5fc5b3e9ac154029c6b9ea",
+        "width": 850
+      },
+      {
+        "height": 678,
+        "i": 27,
+        "loaded": true,
+        "src": "https://dcimg6.dcinside.co.kr/viewimage.php?id=29bcc22de0c12c&no=24b0d769e1d32ca73fe783fa1bd62531230f05a470410ff5b2c3b20b37ce7fe2bd6adfb6d3be49f92dbd094614c7d1e454a6a87a9fc793708d3547da09f2d91c26519a",
+        "width": 850
+      },
+      {
+        "height": 556,
+        "i": 28,
+        "loaded": true,
+        "src": "https://dcimg6.dcinside.co.kr/viewimage.php?id=29bcc22de0c12c&no=24b0d769e1d32ca73fe783fa1bd62531230f05a470410ff5b2c3b20b37ce7fe2bd6adfb6d3be49f92dbd09461dc2d6e4e1a2fe8b8a63c50c68ce49175ae63ce57d77fa",
+        "width": 850
+      },
+      {
+        "height": 655,
+        "i": 29,
+        "loaded": true,
+        "src": "https://dcimg6.dcinside.co.kr/viewimage.php?id=29bcc22de0c12c&no=24b0d769e1d32ca73fe783fa1bd62531230f05a470410ff5b2c3b20b37ce7fe2bd6adfb6d3be49f92dbd09461ec9d1efc30933cc91f40aa3129b24078d69954bb086ce",
+        "width": 850
+      },
+      {
+        "height": 778,
+        "i": 30,
+        "loaded": true,
+        "src": "https://dcimg6.dcinside.co.kr/viewimage.php?id=29bcc22de0c12c&no=24b0d769e1d32ca73fe783fa1bd62531230f05a470410ff5b2c3b20b37ce7fe2bd6adfb6d3be49f92dbd094619c2d3e799c2c81155e354ab3c01a6eb9b2868d415293e",
+        "width": 850
+      },
+      {
+        "height": 827,
+        "i": 31,
+        "loaded": true,
+        "src": "https://dcimg6.dcinside.co.kr/viewimage.php?id=29bcc22de0c12c&no=24b0d769e1d32ca73fe783fa1bd62531230f05a470410ff5b2c3b20b37ce7fe2bd6adfb6d3be49f92dbd09461ac2d1e78aa57afff954553c2d670b6d85ca205d5000dd",
+        "width": 850
+      }
+    ]
+  },
+  "packages": {
+    "3828956017": {
+      "success": true,
+      "downloaded_payload_matches": true,
+      "touch_amounts": [
+        0.3,
+        0.32,
+        0.35,
+        0.37,
+        0.4
+      ],
+      "preview_count": 21,
+      "title_description_preserved": true,
+      "source_sha": "4ea8396ff4af65b18b2ad9a5b416f6543aea1410",
+      "changed_files": [
+        "modfiles.txt",
+        "shared/buffs/dr_refined.buffs.json"
+      ],
+      "note": "[b]Image and deployment correction — 2026-11-07[/b]\nRestored the approved Touché dodge values of 30/32/35/37/40. Its original successful-dodge consumption and duration are unchanged. The source values were present, but the build omitted their named-buff overrides. Corrected the builder and added a regression check. Flèche remains at +20% damage.\nReviewed all 20 heroes against the published image text. Expose removes stealth and pulls; its removed debuffs were dodge and critical vulnerability, not speed. Serpent Sway advances one rank. Clarified the Hellion and Plague Doctor descriptions. All existing gallery slots are preserved.\n\n[b]图片与打包修正[/b]\n恢复已批准的决斗家回避加成：30/32/35/37/40。成功闪避时消耗及原有持续时间保持不变。原始数值已存在，但打包时遗漏了同名增益覆盖；现已修复并加入回归检查。前进攻击的伤害加成保持+20%。\n已核对20名英雄的图片文字；修正破盾者被移除的减益类型，并明确其防御移动技能仅前进1格。修正蛮族战士与瘟疫医生的相关表述，保留全部原有图片。",
+      "payload_hashes": {
+        "modfiles.txt": "5549b1d08c426ef241088999f5a8454750b3dbc7ea04df43ae255ec0a34e5f92",
+        "preview_icon.png": "d90d35be7c02f8c0380e0f88b8a6169fcab911593108dddecf45b1080ed96e93",
+        "project.xml": "8f79e4e4894a258fd002a70ad4e01c79268ded7451ec50d2ecfc9ae90f3685ea",
+        "effects/dr_refined.effects.darkest": "acacd74bd829ae648ff4df8c4fbe0245b24205ce03336115d17821a72690cbcd",
+        "localization/3828956017_brazilian.loc2": "f5560aeb9a8947c11d8a3468b1bde67f572c543938aa3b4edd07b22a9f27367a",
+        "localization/3828956017_czech.loc2": "4bb3b6d62ec21fa4af303aef41286aa3eaa0ee3ebec528756012a260de9524b9",
+        "localization/3828956017_english.loc2": "3079ac5d5c83f8182919b11a495f297808e7a25909ca3cbe3a7f219929a4a401",
+        "localization/3828956017_french.loc2": "b539f291e0d2466ed009df3ab7a0e7adff711adada0827f9c24d68a5973d22d8",
+        "localization/3828956017_german.loc2": "e5f29d346cb50e09afdd9ada20be2335d0d80084f457459ff5a4b459ec431857",
+        "localization/3828956017_italian.loc2": "86c613d29d1de05fae4cc217eda75f00f440329822c204b196c27e9c87b87a04",
+        "localization/3828956017_japanese.loc2": "1e993b6c7ab9c7bf0a3ec63180e0457bd78b07db0f0043a2e453793ee2c60a47",
+        "localization/3828956017_koreana.loc2": "514f58e2426f1ec330cfefe2680f0254a5e58f8cf391b4cca75d062c0a52557b",
+        "localization/3828956017_koreanb.loc2": "514f58e2426f1ec330cfefe2680f0254a5e58f8cf391b4cca75d062c0a52557b",
+        "localization/3828956017_polish.loc2": "a2ab2e7b232bd0319b337f6467532b8a5eb096cdf1953964479817d0d0abcd89",
+        "localization/3828956017_russian.loc2": "d8cdafa1a808341ffe26be29d1f9d89cfdb2433e896a04b37188856f4e26aaa4",
+        "localization/3828956017_schinese.loc2": "5a16ccf47e9bcf1d628c68fd30bf0b3a1adfca0efe11549082246dc24201d2ec",
+        "localization/3828956017_spanish.loc2": "b5ec298031f986855ff9b8a6b83e294e999cd11d8ef488dfbe8963a573512a42",
+        "heroes/abomination/abomination.art.darkest": "23f0b8dc48a66d38433bea607eec9a727d123cf0fc76a1af47af570345584854",
+        "heroes/abomination/abomination.info.darkest": "a6e5d74072a04efaf6adb79597c7730a28510b25b77d6eeac4d7bb030981696b",
+        "heroes/antiquarian/antiquarian.art.darkest": "b17de1742afab304129e2a3ab1bbcbaac9a9aff3b3035e9d2624c4a2e5a32ddd",
+        "heroes/antiquarian/antiquarian.info.darkest": "f843dced1903a7ee958b7c8a3175634bf45216bd24bbe6b87a585430fed57845",
+        "heroes/arbalest/arbalest.art.darkest": "b08ce4caa10f870327aef92357d9d205990c9a2cdc1b3f07c873758bad083d21",
+        "heroes/arbalest/arbalest.info.darkest": "214cf6834c43c44e276a8e7ba2b7e31013f8126b0e4dba66236f42889e12554d",
+        "heroes/bounty_hunter/bounty_hunter.info.darkest": "3a987d26d73cefafcf3366dea40b78c8d8288a41cbb8145a3ea5f5e4302fa48b",
+        "heroes/crusader/crusader.art.darkest": "e563c6b381a0560b5a56624c4641215f5c8b1f0f0c0e9531587b67ff218c91c2",
+        "heroes/crusader/crusader.info.darkest": "132c4c687ea0365c38eb200a2239e873d87646387d71bd0fe77c8b6d5460c904",
+        "heroes/duelist/duelist.info.darkest": "b9b7300ee9cded1270079884c44b9d872e77520e5b08100203d8ad0460ca7996",
+        "heroes/flagellant/flagellant.art.darkest": "9d3d5841e8719760b840410f994dd286e6f022f46f6a5388aedaf364ae9678ae",
+        "heroes/flagellant/flagellant.info.darkest": "3011e11e9b35a83ed3593236db0b75bdbff191a2e09e4f4ca6092c8408d8c943",
+        "heroes/grave_robber/grave_robber.art.darkest": "7136d59abaa4e95c4540bbd88aba851b6fb2debcfdfb4c521dba568dc2ff7a2c",
+        "heroes/grave_robber/grave_robber.info.darkest": "3d0b7e5bf3f422e111c07f21bd98feb5b92670852cb5a658a358479e61197328",
+        "heroes/hellion/hellion.art.darkest": "4fefaa958739e072d78f56d82039ee3f832db1ac18209267dcbe2dff16acaee3",
+        "heroes/hellion/hellion.info.darkest": "470281bbace5ccec013f774fade0b0099cab209c93b09afc212bfccd6cd03e2e",
+        "heroes/highwayman/highwayman.info.darkest": "91fee602bd0182f9509914660cb8aeb6b323c483f15e00006d4ed335c46b51d5",
+        "heroes/houndmaster/houndmaster.art.darkest": "084c9ab971b94e9faf0eab635cce2340962a9c87f17c7cda299be1c3c74446b0",
+        "heroes/houndmaster/houndmaster.info.darkest": "afa86c3073dae1016011e8b1594e91daf76ab580f3acf25ff158f5f1eb12b301",
+        "heroes/jester/jester.art.darkest": "a6e9a8a650b83f86722906003b8ca5add480b3f1ffce0349294c926b1cd06864",
+        "heroes/jester/jester.info.darkest": "89e08f5ea8f7eaca81ddec96b0e23defb27a5862c34d3d15bc45cd722b3d9e72",
+        "heroes/leper/leper.ability.seven.png": "2483b2fb25d0097862142f2c68caef0ea5ecb09600e0b91ccefb958bf509eab1",
+        "heroes/leper/leper.art.darkest": "bc7e649bf611e4101f63f3114135456678f5fbb0a48d3b7634dd362315d97bd2",
+        "heroes/leper/leper.info.darkest": "3cafa958b6c701e948976ca65bb9b4e96c927d2d043855663208c229a76f5fdf",
+        "heroes/man_at_arms/man_at_arms.info.darkest": "e1046b41f53072d0a9289ce56a91b2873825a6363e0e38cb3f2314fb00970968",
+        "heroes/musketeer/musketeer.ability.seven.png": "1f123cfeca7b6ac4102e14d29f10a2bda2fc292ff8f5fd93686d3b6deba58432",
+        "heroes/musketeer/musketeer.art.darkest": "251ec663cd309785d92fb3999f158f9647b5e3f018d0c7cbc802afbd7e83bb9b",
+        "heroes/musketeer/musketeer.info.darkest": "92d7b94b968ce903700da3166cd4402d1d0311c2d89ab1c86effd2819fd436da",
+        "heroes/occultist/occultist.art.darkest": "0ac46a410dfbef27032c34547a4dc5740afb80734f5c5aed9ce423a83756d1ec",
+        "heroes/occultist/occultist.info.darkest": "f7820727917140155c5033fbd3e4adb7814f6250b71052b2737f36d017a307f8",
+        "heroes/plague_doctor/plague_doctor.art.darkest": "ace12e6444f408f1bfa4e4b81a83c0d2b93181a74dfb56b211beeaaeabde2322",
+        "heroes/plague_doctor/plague_doctor.info.darkest": "3216065b41361d5f22eb9c87c98eec38a662111963cf8cecc81910ed85f21e53",
+        "heroes/runaway/runaway.art.darkest": "71fc9530106c031a73eef5b86eed07569fdee2d9408ea55f13d8173a3dff207b",
+        "heroes/runaway/runaway.info.darkest": "c887762d06883914c9797c9ab814bc36aab7b1911efc9ab608c7b0805259e33c",
+        "heroes/shieldbreaker/shieldbreaker.art.darkest": "20dcedfd105401bb84753f3e610a654b85fb27ecb6c918ffb815c91dfcc119b4",
+        "heroes/shieldbreaker/shieldbreaker.info.darkest": "8e3af4e9f5b9b10a86994e49d7b08ae91bea549a94a31724977fd01ed29c836d",
+        "heroes/vestal/vestal.art.darkest": "5bd22ebc380b624287509b828aaa43cca37aafa137afdd60a24d330ff4eb761c",
+        "heroes/vestal/vestal.info.darkest": "bf60f938624efee7d332c757b8ff7624fd6375dc9ef2cdc6036e76c5f38e349b",
+        "shared/buffs/dr_refined.buffs.json": "90d95dd367d37e4486d92d8660861575e69f9ae46c24cd2921141a0a0fc23ce8"
+      }
+    },
+    "3832933684": {
+      "success": true,
+      "downloaded_payload_matches": true,
+      "touch_amounts": [
+        0.3,
+        0.32,
+        0.35,
+        0.37,
+        0.4
+      ],
+      "preview_count": 1,
+      "title_description_preserved": true,
+      "source_sha": "4ea8396ff4af65b18b2ad9a5b416f6543aea1410",
+      "changed_files": [
+        "modfiles.txt",
+        "shared/buffs/dr_duelist.buffs.json"
+      ],
+      "note": "[b]Image and deployment correction — 2026-11-07[/b]\nRestored the approved Touché dodge values of 30/32/35/37/40. Its original successful-dodge consumption and duration are unchanged. The source values were present, but the build omitted their named-buff overrides. Corrected the builder and added a regression check. Flèche remains at +20% damage.\n\n[b]图片与打包修正[/b]\n恢复已批准的决斗家回避加成：30/32/35/37/40。成功闪避时消耗及原有持续时间保持不变。原始数值已存在，但打包时遗漏了同名增益覆盖；现已修复并加入回归检查。前进攻击的伤害加成保持+20%。",
+      "payload_hashes": {
+        "modfiles.txt": "bdc9cd865577f4358f20c23fabcef7e8ef6216f00eea551b89240937d6375f4f",
+        "preview_icon.png": "d90d35be7c02f8c0380e0f88b8a6169fcab911593108dddecf45b1080ed96e93",
+        "project.xml": "f2c6d58563fe092967e3917720668b3dabbacaf36d08fe8b4b76159396b5a454",
+        "effects/dr_duelist.effects.darkest": "09f405ddd1e0045bd2d0013c8ff3a151808b5a3b9ac4c53b86632391b0ec0c9d",
+        "heroes/duelist/duelist.info.darkest": "b9b7300ee9cded1270079884c44b9d872e77520e5b08100203d8ad0460ca7996",
+        "shared/buffs/dr_duelist.buffs.json": "3baf2433628bb14838e9f803c9fb32497424b02345be61154b8fd76d78635a92"
+      }
+    }
+  },
+  "limits": "Downloaded payload validation, not an in-game combat test. Base package publication is pending its normal automated gate; it excludes Duelist."
+}
