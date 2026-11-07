@@ -1,0 +1,839 @@
+{
+  "_doc": "렌더 목록. layout = BRAND_STYLE.md의 템플릿 이름. art = brand_art.json 키. 문구는 플레이어용 영어(내부 ID 금지), 수치는 main 카드 기준. out = 출력 파일명(darkest_refined_draft/ 아래).",
+  "renders": [
+    {
+      "out": "preview_darkest_refined.png",
+      "layout": "square_comic_grid",
+      "title": [
+        "DARKEST",
+        "REFINED"
+      ],
+      "tagline": "Familiar heroes. New possibilities.",
+      "footer": "HERO REBALANCE & REWORKS",
+      "art": [
+        "crusader_army",
+        "bounty_door",
+        "jester_masks",
+        "flagellant_cross"
+      ]
+    },
+    {
+      "out": "intro_1_healing.png",
+      "layout": "panel_comic",
+      "title": "HEALING, SHARED",
+      "lead": "A party that holds without a Vestal or a Jester.",
+      "items": [
+        [
+          "Arbalest · Battlefield Bandage",
+          "Cures bleed and heals 3–7, a healer for bleed dungeons."
+        ],
+        [
+          "Plague Doctor · Battlefield Medicine",
+          "Cures blight and heals 3–7, a healer for blight dungeons."
+        ],
+        [
+          "Flagellant · Suffer",
+          "Takes on an ally's bleed and blight and relieves 4–6 stress."
+        ],
+        [
+          "Man-at-Arms · Bolster",
+          "Relieves 1–3 stress for the whole party, no per-battle limit."
+        ]
+      ],
+      "art": [
+        "arbalest_cabin",
+        "plague_doctor_surgery"
+      ]
+    },
+    {
+      "out": "intro_2_armor.png",
+      "layout": "panel_comic",
+      "title": "MANY HANDS ON THE MARK",
+      "lead": "Marking no longer depends on the Arbalest and the Bounty Hunter.",
+      "items": [
+        [
+          "Antiquarian · Nervous Stab",
+          "A skill with no mark now marks for 2 turns at level 5"
+        ],
+        [
+          "Musketeer · Mark the Quarry",
+          "Marks the target and cuts PROT by 20–30% (3 turns).",
+          "REWORKED"
+        ],
+        [
+          "Bounty Hunter · Mark for Death",
+          "Damage taken +15–25%, so the whole party benefits."
+        ],
+        [
+          "Arbalest · Sniper Shot",
+          "+60–100% damage vs. marked, ignores guard."
+        ]
+      ],
+      "art": [
+        "bounty_tavern",
+        "bounty_grab"
+      ]
+    },
+    {
+      "out": "intro_3_builds.png",
+      "layout": "panel_comic",
+      "title": "PULL THE BACK LINE IN",
+      "lead": "Skills that pull enemies grew from four in the original to eight.",
+      "items": [
+        [
+          "Plague Doctor · Disorienting Blast",
+          "Instead of a random shuffle, stuns an enemy in ranks 2–4 and pulls it 2."
+        ],
+        [
+          "Shieldbreaker · Expose",
+          "Strips stealth and pulls a rank 2–4 enemy 2 ranks"
+        ],
+        [
+          "Arbalest · Bola",
+          "Instead of knocking back ranks 1–2, pulls one enemy in ranks 2–4 forward 2."
+        ],
+        [
+          "Duelist · Disengage",
+          "Steps back and pulls one enemy in ranks 2–4 forward 2 for the front line."
+        ]
+      ],
+      "art": [
+        "maa_field",
+        "shieldbreaker_rope"
+      ]
+    },
+    {
+      "out": "intro_4_refined.png",
+      "layout": "panel_comic",
+      "title": "REFINED, NOT REINVENTED",
+      "lead": "Every change is tuned inside the original game's own rules, so it never feels foreign.",
+      "items": [
+        [
+          "The same tension",
+          "Every buff carries a price. The game stays as hard as you remember."
+        ],
+        [
+          "Clear guardrails",
+          "Class trinkets and each hero's official lore set the limits of every change."
+        ],
+        [
+          "Measured, then tuned",
+          "Game data, a comparison model and real play decide the numbers."
+        ],
+        [
+          "Built with players",
+          "Every comment is read, and every change keeps a written reason."
+        ]
+      ],
+      "art": [
+        "wall_group",
+        "vestal_garden"
+      ]
+    },
+    {
+      "out": "templates/square_keyart.png",
+      "layout": "square_keyart",
+      "title": [
+        "DARKEST",
+        "REFINED"
+      ],
+      "tagline": "Familiar heroes. New possibilities.",
+      "footer": "HERO REBALANCE & REWORKS",
+      "art": "poster_highwayman"
+    },
+    {
+      "out": "templates/square_triptych.png",
+      "layout": "square_triptych",
+      "title": [
+        "DARKEST",
+        "REFINED"
+      ],
+      "tagline": "Familiar heroes. New possibilities.",
+      "footer": "HERO REBALANCE & REWORKS",
+      "art": [
+        "poster_hellion",
+        "keyart_ancestor",
+        "poster_highwayman"
+      ]
+    },
+    {
+      "out": "templates/banner_wide.png",
+      "layout": "banner",
+      "title": "WHAT'S NEW",
+      "subtitle": "Update 2.5.9  ·  Hero Rebalance & Reworks",
+      "art": "crusader_army"
+    },
+    {
+      "out": "templates/update_card.png",
+      "layout": "update",
+      "title": "UPDATE 2.5.9",
+      "subtitle": "The Antiquarian earns her place, and support skills reach further.",
+      "items": [
+        "Antiquarian rework: weak until Champion, then her class trinkets lift the whole party.",
+        "Crusader's Battle Heal now also raises the target's PROT.",
+        "Arbalest's Rallying Flare relieves 3–5 stress for the party.",
+        "Duelist and Runaway play as vanilla while their changes are being tested."
+      ],
+      "art": "antiquarian_master"
+    },
+    {
+      "out": "templates/quote_card.png",
+      "layout": "quote",
+      "quote": "Every hero deserves a reason to join the party.",
+      "attribution": "DARKEST REFINED",
+      "art": "wall_losing"
+    },
+    {
+      "out": "desc/title_banner.png",
+      "layout": "title_banner",
+      "title": [
+        "DARKEST",
+        "REFINED"
+      ],
+      "tagline": "Familiar heroes. New possibilities.",
+      "art": "crusader_army"
+    },
+    {
+      "out": "desc/h_tuned.png",
+      "layout": "section_header",
+      "title": "HOW IT IS TUNED",
+      "art": "maa_battle"
+    },
+    {
+      "out": "desc/h_try.png",
+      "layout": "section_header",
+      "title": "WHAT YOU CAN TRY",
+      "art": "arbalest_fire"
+    },
+    {
+      "out": "desc/h_reworks.png",
+      "layout": "section_header",
+      "title": "TWO REWORKS IN FOCUS",
+      "art": "antiquarian_master"
+    },
+    {
+      "out": "desc/h_images.png",
+      "layout": "section_header",
+      "title": "EVERY CHANGE, IN THE IMAGES",
+      "art": "bounty_brawl"
+    },
+    {
+      "out": "desc/h_listening.png",
+      "layout": "section_header",
+      "title": "STILL LISTENING",
+      "art": "jester_masks"
+    },
+    {
+      "out": "desc/h_install.png",
+      "layout": "section_header",
+      "title": "INSTALLATION",
+      "art": "occultist_flame"
+    },
+    {
+      "out": "desc/h_credits.png",
+      "layout": "section_header",
+      "title": "CREDITS",
+      "art": "leper_gate"
+    },
+    {
+      "out": "desc/btn_history.png",
+      "layout": "button",
+      "title": "UPDATE HISTORY"
+    },
+    {
+      "out": "desc/btn_feedback.png",
+      "layout": "button",
+      "title": "LEAVE FEEDBACK"
+    },
+    {
+      "out": "desc/roster.png",
+      "layout": "roster_strip",
+      "heroes": [
+        [
+          "bounty_hunter",
+          "Bounty Hunter"
+        ],
+        [
+          "abomination",
+          "Abomination"
+        ],
+        [
+          "antiquarian",
+          "Antiquarian"
+        ],
+        [
+          "arbalest",
+          "Arbalest"
+        ],
+        [
+          "crusader",
+          "Crusader"
+        ],
+        [
+          "duelist",
+          "Duelist"
+        ],
+        [
+          "flagellant",
+          "Flagellant"
+        ],
+        [
+          "grave_robber",
+          "Grave Robber"
+        ],
+        [
+          "hellion",
+          "Hellion"
+        ],
+        [
+          "highwayman",
+          "Highwayman"
+        ],
+        [
+          "houndmaster",
+          "Houndmaster"
+        ],
+        [
+          "jester",
+          "Jester"
+        ],
+        [
+          "leper",
+          "Leper"
+        ],
+        [
+          "man_at_arms",
+          "Man-at-Arms"
+        ],
+        [
+          "occultist",
+          "Occultist"
+        ],
+        [
+          "plague_doctor",
+          "Plague Doctor"
+        ],
+        [
+          "runaway",
+          "Runaway"
+        ],
+        [
+          "shieldbreaker",
+          "Shieldbreaker"
+        ],
+        [
+          "vestal",
+          "Vestal"
+        ],
+        [
+          "musketeer",
+          "Musketeer"
+        ]
+      ],
+      "per": 10,
+      "size": 96,
+      "gap": 10
+    },
+    {
+      "out": "spotlights/bounty_hunter.png",
+      "layout": "hero_spotlight",
+      "hero": "BOUNTY HUNTER",
+      "tagline": "Mark, hook, execute.",
+      "rows": [
+        [
+          "THE PROBLEM",
+          "Flashbang was simply better than Uppercut, every marking skill was nearly the same, and his finishing tools rarely lined up."
+        ],
+        [
+          "THE DIRECTION",
+          "One clear routine for a professional: mark the target, hook it forward, finish it."
+        ],
+        [
+          "THE SOLUTION, AND ITS PRICE",
+          "Mark for Death makes the target take +15–25% damage; Come Hither pulls 3 ranks and slows; Finish Him hits stunned and bleeding foes harder, but only from ranks 1–2."
+        ],
+        [
+          "NEW WAYS TO PLAY",
+          "Caltrops from any rank bleeds both back ranks, then Uppercut stuns and Finish Him closes it out from the front."
+        ]
+      ],
+      "art": "bounty_ambush"
+    },
+    {
+      "out": "spotlights/abomination.png",
+      "layout": "hero_spotlight",
+      "hero": "ABOMINATION",
+      "tagline": "Restraint becomes the beast's power.",
+      "rows": [
+        [
+          "THE PROBLEM",
+          "Transforming dumped stress on every ally, so the beast often stayed in its chains."
+        ],
+        [
+          "THE DIRECTION",
+          "Human form gives up a little accuracy for a harder-hitting Beast's Bile; the beast's price moves onto himself, so transforming is a real choice."
+        ],
+        [
+          "THE SOLUTION, AND ITS PRICE",
+          "He carries the cost himself: self stress +12, allies only +5. Transforming heals 8–12 and the beast gains CRIT +6–10%."
+        ],
+        [
+          "NEW WAYS TO PLAY",
+          "Keep your stress in check with Absolution, then spend it to unleash the beast."
+        ]
+      ],
+      "art": "abomination_sigil"
+    },
+    {
+      "out": "spotlights/antiquarian.png",
+      "layout": "hero_spotlight",
+      "hero": "ANTIQUARIAN",
+      "tagline": "She makes the others stronger.",
+      "rows": [
+        [
+          "THE PROBLEM",
+          "She paid the bills and sat out the real fights, so she was left behind before the Darkest Dungeon."
+        ],
+        [
+          "THE DIRECTION",
+          "Weak until Veteran, strong from Champion, and her strength goes into the rest of the party."
+        ],
+        [
+          "THE SOLUTION, AND ITS PRICE",
+          "Fortifying Vapours makes healing received +20% (+40% at level 5, stacking); at level 5 Protect Me lends her guard a riposte, Nervous Stab marks and Get Down! clears her mark."
+        ],
+        [
+          "NEW WAYS TO PLAY",
+          "Bring her for the party: boost the healer and arm the bodyguard. Her Flashpowder lowers dodge and move resist so hits and pulls land; its burn is 1–2, then 7 at level 5."
+        ]
+      ],
+      "art": "antiquarian_knife"
+    },
+    {
+      "out": "spotlights/arbalest.png",
+      "layout": "hero_spotlight",
+      "hero": "ARBALEST",
+      "tagline": "The crossbow that rallies the party.",
+      "rows": [
+        [
+          "THE PROBLEM",
+          "She simply offered less than the Vestal or Occultist: weaker heals, no better utility or damage. She shone only in mark parties, and mark parties were niche."
+        ],
+        [
+          "THE DIRECTION",
+          "Widen her healing, let her relieve stress too, and raise her attacks so she pressures enemy ranks 3–4 harder than before."
+        ],
+        [
+          "THE SOLUTION, AND ITS PRICE",
+          "Battlefield Bandage cures bleed; Rallying Flare relieves 2–4 stress for the whole party, herself included, and no longer clears mark and stun."
+        ],
+        [
+          "NEW WAYS TO PLAY",
+          "Bola pulls a rank 2–4 enemy 2 ranks toward your front line; Suppressing Fire slows the back two and lowers their ACC; Sniper Shot fires past Guard."
+        ]
+      ],
+      "art": "arbalest_child"
+    },
+    {
+      "out": "spotlights/crusader.png",
+      "layout": "hero_spotlight",
+      "hero": "CRUSADER",
+      "tagline": "The holy knight can carry the party's healing.",
+      "rows": [
+        [
+          "THE PROBLEM",
+          "His signature stun was unreliable, Zealous Accusation had no reason to be picked, and his healing lagged behind dedicated healers."
+        ],
+        [
+          "THE DIRECTION",
+          "A slow, steadfast knight: make each signature tool dependable and let him be a primary healer."
+        ],
+        [
+          "THE SOLUTION, AND ITS PRICE",
+          "Stunning Blow gets a strong stun (110% chance); Battle Heal restores 3–4 (6–7 at level 5) and raises PROT; Inspiring Cry grows every level. Bulwark of Faith no longer raises the torch."
+        ],
+        [
+          "NEW WAYS TO PLAY",
+          "From any rank, Bulwark of Faith steels him against stuns and death blows for the rest of the battle."
+        ]
+      ],
+      "art": "crusader_leave"
+    },
+    {
+      "out": "spotlights/flagellant.png",
+      "layout": "hero_spotlight",
+      "hero": "FLAGELLANT",
+      "tagline": "Back to the base game's rules.",
+      "rows": [
+        [
+          "THE PROBLEM",
+          "His bleed resist and speed growth sat above the base game's usual caps, and his stun and move resists above the baseline, with no reason in his lore."
+        ],
+        [
+          "THE DIRECTION",
+          "Follow the base game's own rules, and make his self-sacrifice useful from level 1."
+        ],
+        [
+          "THE SOLUTION, AND ITS PRICE",
+          "Stun and move resist back to 40, bleed to 60, speed growth 6/6/7/7/8. Endure no longer speeds him up."
+        ],
+        [
+          "NEW WAYS TO PLAY",
+          "Endure relieves 12–16 stress (a net 8 after its own cost); Suffer takes an ally's bleed and blight and eases their stress by 4–6."
+        ]
+      ],
+      "art": "flagellant_scream"
+    },
+    {
+      "out": "spotlights/grave_robber.png",
+      "layout": "hero_spotlight",
+      "hero": "GRAVE ROBBER",
+      "tagline": "More than one dagger worth throwing.",
+      "rows": [
+        [
+          "THE PROBLEM",
+          "Thrown Dagger's built-in accuracy buff made it the skill you always picked, and Toxin Trickery was almost never taken."
+        ],
+        [
+          "THE DIRECTION",
+          "Spread her value across the kit so more skills earn a slot, and let her join mark parties."
+        ],
+        [
+          "THE SOLUTION, AND ITS PRICE",
+          "The accuracy buff moves to Poison Darts; Thrown Dagger hits marked targets harder (+40–80%); Toxin Trickery heals 1–5 with smaller, shorter buffs."
+        ],
+        [
+          "NEW WAYS TO PLAY",
+          "A self-sustaining skirmisher who fits mark parties without leaning on one skill."
+        ]
+      ],
+      "art": "grave_robber_window"
+    },
+    {
+      "out": "spotlights/hellion.png",
+      "layout": "hero_spotlight",
+      "hero": "HELLION",
+      "tagline": "She never tires. Now neither does her kit.",
+      "rows": [
+        [
+          "THE PROBLEM",
+          "Her burst skills imposed self-debuffs, and her kit offered too few appealing alternatives."
+        ],
+        [
+          "THE DIRECTION",
+          "Remove exhaustion and keep her relentless, paying for it elsewhere in her kit."
+        ],
+        [
+          "THE SOLUTION, AND ITS PRICE",
+          "Breakthrough, Bleed Out and Barbaric YAWP! no longer exhaust her. YAWP trades its stun for her attack buff; Breakthrough hits a little softer."
+        ],
+        [
+          "NEW WAYS TO PLAY",
+          "YAWP has no use limit and cows every enemy into hitting softer; Adrenaline Rush heals 3–7 and Wicked Hack is now a real pick."
+        ]
+      ],
+      "art": "poster_hellion"
+    },
+    {
+      "out": "spotlights/highwayman.png",
+      "layout": "hero_spotlight",
+      "hero": "HIGHWAYMAN",
+      "tagline": "Ranged and melee builds both work.",
+      "rows": [
+        [
+          "THE PROBLEM",
+          "Riposte came only from Duelist's Advance, which steps him forward and breaks a ranged formation, and Point Blank Shot hit hard for only a one-rank recoil."
+        ],
+        [
+          "THE DIRECTION",
+          "Let both the gunslinger and the duelist stand on their own."
+        ],
+        [
+          "THE SOLUTION, AND ITS PRICE",
+          "Tracking Shot grants riposte without moving; Duelist's Advance gives a stacking combat buff; Point Blank Shot recoils him 2 ranks and knocks the target back 3."
+        ],
+        [
+          "NEW WAYS TO PLAY",
+          "Hold the back with pistol and riposte, or step in as a duelist with Wicked Slice and Open Vein."
+        ]
+      ],
+      "art": "highwayman_face"
+    },
+    {
+      "out": "spotlights/houndmaster.png",
+      "layout": "hero_spotlight",
+      "hero": "HOUNDMASTER",
+      "tagline": "Focus one target, or spread the bleed.",
+      "rows": [
+        [
+          "THE PROBLEM",
+          "Hound's Rush out-damaged the true mark dealers while his protective tools were too weak to bother with."
+        ],
+        [
+          "THE DIRECTION",
+          "A protector who spreads bleed from range and leaves the big marked hits to others."
+        ],
+        [
+          "THE SOLUTION, AND ITS PRICE",
+          "Hound's Rush works from ranks 2-4; Hound's Harry works from any rank. Both start at ACC 85. Rush: DMG -20%; Harry: DMG -85%. Both bleed 2/2/3/3/4 for 3 turns."
+        ],
+        [
+          "NEW WAYS TO PLAY",
+          "Guard Dog gives +20–30% dodge, Cry Havoc heals 4–6 party stress more reliably, and Lick Wounds works from any rank."
+        ]
+      ],
+      "art": "houndmaster_club"
+    },
+    {
+      "out": "spotlights/jester.png",
+      "layout": "hero_spotlight",
+      "hero": "JESTER",
+      "tagline": "Still the best stress healer.",
+      "rows": [
+        [
+          "THE PROBLEM",
+          "Solo rarely earned a slot, and Battle Ballad duplicated the Man-at-Arms' Command."
+        ],
+        [
+          "THE DIRECTION",
+          "Keep him the best stress healer while other heroes gain alternatives."
+        ],
+        [
+          "THE SOLUTION, AND ITS PRICE",
+          "Battle Ballad trades its accuracy for more crit (+4–8%); Solo works from any rank with more dodge and a bigger Finale."
+        ],
+        [
+          "NEW WAYS TO PLAY",
+          "A spotlight Jester: Solo scrambles the enemy formation, clears corpses, and lifts his allies' marks while marking himself."
+        ]
+      ],
+      "art": "jester_cup"
+    },
+    {
+      "out": "spotlights/leper.png",
+      "layout": "hero_spotlight",
+      "hero": "LEPER",
+      "tagline": "A fallen king who leads the charge.",
+      "rows": [
+        [
+          "THE PROBLEM",
+          "Intimidate was a support debuff that clashed with a king carried by his followers, and Revenge cost too much early on."
+        ],
+        [
+          "THE DIRECTION",
+          "His lore sets the role: a front-line blow that leads the fight."
+        ],
+        [
+          "THE SOLUTION, AND ITS PRICE",
+          "Intimidate becomes Sunder: a rank-1 strike that cracks PROT by 30–50% for 3 turns (130% chance). It no longer reaches every rank. Revenge's cost now grows with level."
+        ],
+        [
+          "NEW WAYS TO PLAY",
+          "Open armored foes for the whole party before the heavy swings land. Chop, Hew and Purge each gain 5 accuracy."
+        ]
+      ],
+      "art": "leper_gate",
+      "badge": "REWORKED"
+    },
+    {
+      "out": "spotlights/man_at_arms.png",
+      "layout": "hero_spotlight",
+      "hero": "MAN-AT-ARMS",
+      "tagline": "The veteran who holds the line.",
+      "rows": [
+        [
+          "THE PROBLEM",
+          "His damage sat below what his kit predicts, Command copied the Jester's Ballad, and party stress relief rested on the Jester."
+        ],
+        [
+          "THE DIRECTION",
+          "A veteran bodyguard who steadies and leads his allies."
+        ],
+        [
+          "THE SOLUTION, AND ITS PRICE",
+          "Bolster becomes a repeatable party stress heal (1–3); Command gives PROT +10–15% and removes stun, but no crit."
+        ],
+        [
+          "NEW WAYS TO PLAY",
+          "Rampart stuns from ranks 1–2 without shuffling him forward, and Retribution cracks armor for the next blows."
+        ]
+      ],
+      "art": "maa_profile"
+    },
+    {
+      "out": "spotlights/occultist.png",
+      "layout": "hero_spotlight",
+      "hero": "OCCULTIST",
+      "tagline": "Curses that set up the whole party.",
+      "rows": [
+        [
+          "THE PROBLEM",
+          "Vulnerability Hex was just another mark, and many players stopped Wyrd Reconstruction at level 4."
+        ],
+        [
+          "THE DIRECTION",
+          "A debuffer whose curses enable the party's stuns, bleeds and physical hits."
+        ],
+        [
+          "THE SOLUTION, AND ITS PRICE",
+          "Weakening Curse cuts PROT by 25–35%; Vulnerability Hex lowers five resistances by 20–25%; Daemon's Pull drags rank 4 to the front. The hex no longer lowers dodge."
+        ],
+        [
+          "NEW WAYS TO PLAY",
+          "Hex a target, then stun, bleed or crack it. Hands from the Abyss now stuns a rank 1–2 enemy from ranks 3–4, at ACC 80. Level-5 Wyrd Reconstruction keeps the level-4 bleed risk."
+        ]
+      ],
+      "art": "occultist_face"
+    },
+    {
+      "out": "spotlights/plague_doctor.png",
+      "layout": "hero_spotlight",
+      "hero": "PLAGUE DOCTOR",
+      "tagline": "Each healer gets her own niche.",
+      "rows": [
+        [
+          "THE PROBLEM",
+          "Battlefield Medicine cured both bleed and blight on its target and herself; Incision was rarely worth a slot, and Disorienting Blast overlapped Flashbang."
+        ],
+        [
+          "THE DIRECTION",
+          "Give each healer a clear niche: blight for her, bleed for the Arbalest."
+        ],
+        [
+          "THE SOLUTION, AND ITS PRICE",
+          "Battlefield Medicine heals 3 (7 at level 5) and cures an ally's blight only; no free self-cleanse. Incision gains accuracy. Disorienting Blast pulls 2 ranks instead of shuffling."
+        ],
+        [
+          "NEW WAYS TO PLAY",
+          "Bring her to blight-heavy dungeons with the Arbalest; Disorienting Blast stuns an enemy in ranks 2–4 and drags it toward your front line."
+        ]
+      ],
+      "art": "plague_doctor_cough"
+    },
+    {
+      "out": "spotlights/shieldbreaker.png",
+      "layout": "hero_spotlight",
+      "hero": "SHIELDBREAKER",
+      "tagline": "The DLC outlier, back in line.",
+      "rows": [
+        [
+          "THE PROBLEM",
+          "Pierce did everything on one cheap skill, her speed grew faster than any base-game hero's, and her stun and move resists sat above the baseline."
+        ],
+        [
+          "THE DIRECTION",
+          "The dancer who shakes up the enemy line, and the only hero with two skills that pull enemies forward."
+        ],
+        [
+          "THE SOLUTION, AND ITS PRICE",
+          "Pierce loses rank 4; weapon and speed growth follow the standard curve; stun and move resist 30. Puncture pulls 1 rank instead of 2, and Expose drops its dodge and crit-received debuffs."
+        ],
+        [
+          "NEW WAYS TO PLAY",
+          "Expose reveals a hidden back-liner and drags it 2 ranks forward; Puncture breaks guard and PROT. Serpent Sway advances her 1 rank, and Impale blights from level 1."
+        ]
+      ],
+      "art": "shieldbreaker_fight"
+    },
+    {
+      "out": "spotlights/vestal.png",
+      "layout": "hero_spotlight",
+      "hero": "VESTAL",
+      "tagline": "A front-rank Vestal is now an option.",
+      "rows": [
+        [
+          "THE PROBLEM",
+          "The rear Vestal's fixed rotation left no room for other builds."
+        ],
+        [
+          "THE DIRECTION",
+          "Let her fight from the front without losing her rear-rank strengths."
+        ],
+        [
+          "THE SOLUTION, AND ITS PRICE",
+          "Mace Bash heals her 3–5; Divine Grace works from any rank; Judgement loses its self-heal."
+        ],
+        [
+          "NEW WAYS TO PLAY",
+          "Bash and heal from rank 2, or stay back with Divine Comfort; Illumination strips dodge 15–25% and burns 1–3 from any rank."
+        ]
+      ],
+      "art": "vestal_hood"
+    },
+    {
+      "out": "spotlights/musketeer.png",
+      "layout": "hero_spotlight",
+      "hero": "MUSKETEER",
+      "tagline": "No longer an Arbalest copy.",
+      "rows": [
+        [
+          "THE PROBLEM",
+          "The Musketeer was an exact copy of the Arbalest, with nothing of her own."
+        ],
+        [
+          "THE DIRECTION",
+          "Rebuild her from her lore: a celebrated sharpshooter hunting monsters to become a legend."
+        ],
+        [
+          "THE SOLUTION, AND ITS PRICE",
+          "Piercing Ball reaches every rank and pierces 25–50% armor; Smokescreen stuns the front two; Covering Smoke hides an ally. Less HP and speed than the Arbalest."
+        ],
+        [
+          "NEW WAYS TO PLAY",
+          "A back-rank hunter who shields allies with smoke; Patch Up now also eases 2–4 stress."
+        ]
+      ],
+      "art": "musketeer_aim"
+    },
+    {
+      "out": "spotlights/duelist.png",
+      "layout": "hero_spotlight",
+      "hero": "DUELIST",
+      "tagline": "The riposte stays. The overkill goes.",
+      "rows": [
+        [
+          "THE PROBLEM",
+          "One of the strongest heroes in the base game: Coup de Grâce reached every rank from any position, ignored protection and gave an extra action on a kill, and The Boot stunned and pushed for little cost."
+        ],
+        [
+          "THE DIRECTION",
+          "Keep the riposte duelist whole, and trim her direct offense so the counterattack plan stays her main strength."
+        ],
+        [
+          "THE SOLUTION, AND ITS PRICE",
+          "Coup de Grâce DMG −70% (was −60%); The Boot DMG −60% (was −40%), its heavy kick now pushing 2 ranks; Flèche +20% (was +25%). Feint's riposte boost is 10–30% and Touché's dodge 30–40%."
+        ],
+        [
+          "NEW WAYS TO PLAY",
+          "Disengage now pulls a rank 2–4 enemy 2 ranks forward as she leaps back, drawing it into your front line's reach."
+        ]
+      ],
+      "art": "duelist_header"
+    },
+    {
+      "out": "spotlights/runaway.png",
+      "layout": "hero_spotlight",
+      "hero": "RUNAWAY",
+      "tagline": "Advance from the rear. Temper the fire.",
+      "rows": [
+        [
+          "THE PROBLEM",
+          "From the back rank she could keep Burn stacking through long fights, and her kit worked from almost anywhere."
+        ],
+        [
+          "THE DIRECTION",
+          "Open from ranks 3–4, then step into the fight: keep the strong opening, cut the long-fight burn."
+        ],
+        [
+          "THE SOLUTION, AND ITS PRICE",
+          "Ransack and Controlled Burn start from ranks 3–4; Controlled Burn is 3–5 and its ground fire lasts 2 rounds; Backdraft +20% per stack from ranks 1–2; Firefly no longer delays Burn decay."
+        ],
+        [
+          "NEW WAYS TO PLAY",
+          "Open with Controlled Burn or Ransack, advance 2 with Hearthlight, then cash in the Burn stacks with Backdraft up front."
+        ]
+      ],
+      "art": "runaway_header"
+    }
+  ]
+}

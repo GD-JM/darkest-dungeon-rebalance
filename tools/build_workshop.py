@@ -177,11 +177,13 @@ def main():
             shutil.copy(art, os.path.join(os.path.dirname(dst), hero + '.art.darkest'))
     # 의존 효과·강화
     need = []
+    referenced_effects = set()
     for hero in heroes:
         for l in rd(os.path.join(OUT, 'heroes', hero, hero + '.info.darkest')).splitlines():
             # SYS-103: crit/mode/reaction effects are runtime dependencies too.
             if l.strip() and not l.lstrip().startswith('//'):
                 for n in ec.effect_names_in(l):
+                    referenced_effects.add(n)
                     if n not in van_eff and n not in need:
                         assert n in cust_eff, ('정의 없는 효과', hero, n)
                         need.append(n)
@@ -192,11 +194,14 @@ def main():
         for b in json.load(open(f, encoding='utf-8-sig'))['buffs']:
             cust_buffs[b['id']] = b
     need_b = []
-    for l in effects:
+    # SYS-104: vanilla effects may reference deliberately overridden named buffs.
+    # Resolve every packaged hero effect, not only newly named effects.
+    buff_effects = [cust_eff[n] if n in cust_eff else van_eff[n][0] for n in sorted(referenced_effects)]
+    for l in buff_effects:
         m = re.search(r'\.buff_ids\s+(.*?)(?=\s\.[a-z_]+|$)', l)
         for a, b in (re.findall(r'"([^"]+)"|(\S+)', m.group(1)) if m else []):
             bid = a or b
-            if bid not in van_buffs and bid not in [x['id'] for x in need_b]:
+            if (bid in cust_buffs or bid not in van_buffs) and bid not in [x['id'] for x in need_b]:
                 assert bid in cust_buffs, ('정의 없는 강화', bid)
                 need_b.append(cust_buffs[bid])
     if effects:
