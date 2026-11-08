@@ -1,0 +1,43 @@
+[h1]Darkest Refined No.05 · Duelista[/h1]
+Una maestra del estoque que alterna entre dos poses. En pose defensiva esquiva, atrae los ataques con su marca y responde con Contrataque. En pose ofensiva aturde a los enemigos con Puntapié y los remata con Coup de Grâce. Es una de las heroínas más fuertes del juego original, y esa fuerza se concentraba más en sus ataques fuera del Contrataque y en su evasión que en el propio Contrataque.
+[list]
+[*][b]Las ocasiones de Contrataque se mantienen[/b] El Contrataque al comienzo del combate (2 rondas) y el de Anticipación no cambian. Finta solo reduce el daño del Contrataque en niveles bajos.
+[*][b]Ataques fuera del Contrataque y evasión debilitados[/b] Puntapié, Flèche y Coup de Grâce pierden daño, y Touché pierde evasión.
+[*][b]Efectos que mueven la formación enemiga[/b] Fondo atrae 2 posiciones hacia delante a un enemigo situado en las posiciones 2 a 4 mientras ella retrocede, y Puntapié empuja 2 posiciones a cambio de su menor daño.
+[/list]
+En conjunto es un debilitamiento.
+
+[h1]Habilidades cambiadas[/h1]
+[h2]Touché · evasión propia +40–50% → +30–40%[/h2]
+@@sheet_touche.png
+
+[h2]Finta · daño del Contrataque +25–35% → +10–30%[/h2]
+@@sheet_feint.png
+
+[h2]Fondo · DAÑO -50% → -40%; conserva la atracción[/h2]
+@@sheet_disengage.png
+
+[h2]Flèche · daño +25% → +20%[/h2]
+@@sheet_fleche.png
+
+[h2]Coup de Grâce · daño −60% → −70%[/h2]
+@@sheet_coup.png
+
+[h2]Puntapié · daño −40% → −60%, Empujar 1 → 2[/h2]
+@@sheet_boot.png
+
+[h1]Lo que no cambia[/h1]
+Anticipación, Contrataque (PRE 100 · DÑO 0%), los valores de Estoque y de Jubón y capa, las resistencias y los abalorios de clase siguen como en el juego original.
+
+[h1]Cómo jugarla[/h1]
+[h2]Retroceder con Fondo y atraer 2 posiciones a un enemigo de atrás[/h2]
+@@play_1.png
+
+[h1]Instalación · Compatibilidad[/h1]
+[list]
+[*]Requiere el DLC Duelista.
+[*]Se puede activar y desactivar en una partida en curso.
+[*]No lo actives junto con la edición completa de Darkest Refined ni con otro mod que cambie los archivos de la Duelista.
+[/list]
+
+[i]Arte: Darkest Dungeon © Red Hook Studios. Mod no oficial creado por fans.[/i]

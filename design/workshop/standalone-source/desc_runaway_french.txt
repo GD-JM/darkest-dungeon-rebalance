@@ -1,0 +1,44 @@
+[h1]Darkest Refined No.04 · Évadée[/h1]
+L'Évadée est une héroïne de brûlure qui cumule la brûlure avec Luciole et la fait exploser avec Retour de flammes. Dans le jeu de base, elle enchaînait tout ce combo sans quitter le rang 3, et dans les longs combats comme celui de l'Ombre, sa brûlure s'accumulait beaucoup trop. Cette édition est [b]un nerf dans l'ensemble[/b], avec deux changements.
+[list]
+[*][b]Préparer à l'arrière, faire exploser à l'avant.[/b] Luciole et Brûlure contrôlée s'utilisent depuis les rangs 3–4, Coup ardent et Retour de flammes depuis les rangs 1–2. Entre les deux, elle avance avec Âtre (2 rangs) ou Fouiller (1 rang).
+[*][b]Moins d'accumulation dans les longs combats.[/b] Les combats courts gardent leur puissance, et la partie où la brûlure restait retenue et continuait de s'accumuler a été réduite.
+[/list]
+Jouer uniquement Luciole depuis l'arrière reste possible, et l'Évadée peut aussi faire exploser la brûlure appliquée par l'Antiquaire et la Vestale.
+
+[h1]Compétences modifiées[/h1]
+
+[h2]Luciole · Le retard de 50 % de la réduction de brûlure passe à Âtre[/h2]
+@@sheet_firefly.png
+
+[h2]Brûlure contrôlée · Depuis les rangs 3–4, sol 3 rounds → 2 rounds[/h2]
+@@sheet_controlled_burn.png
+
+[h2]Âtre · Brûlure 1/1/2/2/3, puis déclin ralenti de 50% (1 tour)[/h2]
+@@sheet_hearthlight.png
+
+[h2]Fouiller · Depuis les rangs 3–4, cibles limitées aux rangs ennemis 1–3[/h2]
+@@sheet_ransack.png
+
+[h2]Retour de flammes · Depuis les rangs 1–2, DGT par cumul de brûlure +25 % → +20 %[/h2]
+@@sheet_backdraft.png
+
+[h1]Ce qui ne change pas[/h1]
+Coup ardent, Fuite éperdue, l'équipement et les résistances restent ceux du jeu de base.
+
+[h1]Comment la jouer[/h1]
+
+[h2]Poser la brûlure depuis le rang 4, puis avancer au rang 2 avec Âtre et faire exploser[/h2]
+@@play_1.png
+
+[h2]L'Évadée fait exploser la brûlure posée par l'Antiquaire et la Vestale[/h2]
+@@play_2.png
+
+[h1]Installation · Compatibilité[/h1]
+[list]
+[*]Nécessite le DLC [b]The Fire's Edge[/b].
+[*]Ne modifie que les fichiers de l'Évadée. Peut être activé dans un hameau existant.
+[*]Ne l'activez pas avec l'édition complète de Darkest Refined ni avec un autre mod qui modifie l'Évadée.
+[/list]
+
+[i]Images : Darkest Dungeon © Red Hook Studios. Mod de fan non officiel.[/i]

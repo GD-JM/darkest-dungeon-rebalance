@@ -1,0 +1,43 @@
+[h1]Darkest Refined No.05 · Duelliste[/h1]
+Une maîtresse des lames qui alterne entre deux postures. En posture défensive, elle esquive, attire les attaques avec sa marque et y répond par une riposte. En posture agressive, elle étourdit l'ennemi d'un coup de Bottine puis l'achève avec Coup de Grâce. C'est l'une des héroïnes les plus fortes du jeu original, et cette force tenait davantage à ses attaques hors riposte et à son esquive qu'à la riposte elle-même.
+[list]
+[*][b]Les occasions de riposte restent intactes[/b] La riposte de début de combat (2 manches) et la riposte d'Anticipation ne changent pas. Feinte réduit seulement les dégâts de riposte aux bas niveaux.
+[*][b]Attaques hors riposte et esquive affaiblies[/b] Bottine, Flèche et Coup de Grâce perdent des dégâts, et Touche perd de l'esquive.
+[*][b]Des effets qui déplacent la formation ennemie[/b] Désengagement tire de 2 rangs un ennemi des rangs 2 à 4 pendant qu'elle recule, et Bottine repousse de 2 rangs en échange de dégâts plus faibles.
+[/list]
+Dans l'ensemble, c'est un affaiblissement.
+
+[h1]Compétences modifiées[/h1]
+[h2]Touche · esquive personnelle +40–50 % → +30–40 %[/h2]
+@@sheet_touche.png
+
+[h2]Feinte · dégâts de riposte +25–35 % → +10–30 %[/h2]
+@@sheet_feint.png
+
+[h2]Désengagement · DÉG -50% → -40% ; attraction conservée[/h2]
+@@sheet_disengage.png
+
+[h2]Flèche · dégâts +25 % → +20 %[/h2]
+@@sheet_fleche.png
+
+[h2]Coup de Grâce · dégâts −60 % → −70 %[/h2]
+@@sheet_coup.png
+
+[h2]Bottine · dégâts −40 % → −60 %, Poussée 1 → 2[/h2]
+@@sheet_boot.png
+
+[h1]Ce qui ne change pas[/h1]
+Anticipation, la riposte (PRÉ 100 · DGT 0 %), les valeurs de la Rapière et du Pourpoint et cape, les résistances et les breloques de classe restent celles du jeu original.
+
+[h1]Comment la jouer[/h1]
+[h2]Reculer avec Désengagement et tirer de 2 rangs un ennemi de l'arrière[/h2]
+@@play_1.png
+
+[h1]Installation · Compatibilité[/h1]
+[list]
+[*]Nécessite le DLC Duelliste.
+[*]Peut être activé ou désactivé en cours de campagne.
+[*]Ne l'activez pas en même temps que l'édition complète Darkest Refined ou qu'un autre mod qui modifie les fichiers de la Duelliste.
+[/list]
+
+[i]Illustrations : Darkest Dungeon © Red Hook Studios. Mod de fan non officiel.[/i]

@@ -1,0 +1,44 @@
+[h1]Darkest Refined No.04 · Runaway[/h1]
+The Runaway is a Burn hero who stacks Burn with Firefly and sets it off with Backdraft. In vanilla she could run this whole combo while standing in rank 3, and in long fights such as the Shambler her Burn piled up far too much. This edition is [b]a nerf overall[/b], with two changes.
+[list]
+[*][b]Prepare in back, detonate in front.[/b] Firefly and Controlled Burn are used from ranks 3–4, Searing Strike and Backdraft from ranks 1–2. In between, she moves up with Hearthlight (2 ranks) or Ransack (1 rank).
+[*][b]Less build-up in long fights.[/b] Short fights keep their punch, and the part where Burn was held in place and kept stacking has been trimmed.
+[/list]
+Back-rank play using only Firefly is still possible, and the Runaway can also detonate Burn applied by the Antiquarian and the Vestal.
+
+[h1]Changed skills[/h1]
+
+[h2]Firefly · 50% Burn decay delay moved to Hearthlight[/h2]
+@@sheet_firefly.png
+
+[h2]Controlled Burn · Used from ranks 3–4, ground 3 rounds → 2 rounds[/h2]
+@@sheet_controlled_burn.png
+
+[h2]Hearthlight · Burn 1/1/2/2/3, then 50% decay delay (1 turn)[/h2]
+@@sheet_hearthlight.png
+
+[h2]Ransack · Used from ranks 3–4, targets narrowed to enemy ranks 1–3[/h2]
+@@sheet_ransack.png
+
+[h2]Backdraft · Used from ranks 1–2, DMG per Burn stack +25% → +20%[/h2]
+@@sheet_backdraft.png
+
+[h1]Unchanged[/h1]
+Searing Strike, Run and Hide, equipment and resistances are the same as vanilla.
+
+[h1]How to play[/h1]
+
+[h2]Lay Burn from rank 4, then step up to rank 2 with Hearthlight and detonate[/h2]
+@@play_1.png
+
+[h2]The Runaway detonates Burn applied by the Antiquarian and Vestal[/h2]
+@@play_2.png
+
+[h1]Install · Compatibility[/h1]
+[list]
+[*]Requires the [b]The Fire's Edge[/b] DLC.
+[*]Changes only the Runaway's files. Safe to enable in an existing estate.
+[*]Do not enable it together with the Darkest Refined combined edition or any other mod that changes the Runaway.
+[/list]
+
+[i]Art: Darkest Dungeon © Red Hook Studios. Unofficial fan mod.[/i]

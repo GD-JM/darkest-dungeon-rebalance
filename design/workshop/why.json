@@ -39,8 +39,8 @@
   "principles": [
    "P-10"
   ],
-  "ko": "사용3·4열/전진2와 명중 지원 유지. 먼저 화상1/1/2/2/3을 걸어 전진 후 공격을 준비하고, 이어서 화상 감소 지연50%를 적용한다. 기존 지속1/행동 후 및 복수 도망자 중첩 허용 유지. 실제 만료 시점은 전투 검증 전이다.",
-  "en": "Apply Burn 1/1/2/2/3 before the 50% decay debuff to prepare forward attacks. Keep rear-rank use, forward 2 and party accuracy. Retain duration 1 after-turn and stacking; actual expiry timing awaits combat verification."
+  "ko": "사용3·4열/전진2와 명중 지원 유지. 먼저 화상1/1/2/2/3을 걸어 전진 후 공격을 준비하고, 이어서 화상 감소 지연50%를 적용한다. 기존 지속1/행동 후 및 복수 도망자 중첩 허용 유지. 사용자가 실제 전투에서 화상과 1턴 감소 지연 작동을 확인했다고 보고했다.",
+  "en": "Apply Burn 1/1/2/2/3 before the 50% decay debuff to prepare forward attacks. Keep rear-rank use, forward 2 and party accuracy. Retain duration 1 after-turn and stacking; the player reported that Burn and one-turn decay delay work in combat."
  },
  "abomination|manacles": {
   "ids": [

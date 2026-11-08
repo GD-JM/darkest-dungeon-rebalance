@@ -1,0 +1,43 @@
+[h1]Darkest Refined No.05 · Duelist[/h1]
+A master of the blade who moves between two stances. In Defensive Stance she evades, draws attacks with a mark and answers them with Riposte. In Aggressive Stance she kicks enemies into a stun and finishes them with Coup de Grâce. She is one of the strongest heroes in the original game, and that strength sat more in her attacks outside the riposte and in her dodge than in the riposte itself.
+[list]
+[*][b]Riposte chances stay[/b] The combat-start Riposte (2 rounds) and Anticipation's Riposte are untouched. Feint only lowers riposte damage at low levels.
+[*][b]Attacks outside the riposte and dodge are nerfed[/b] The Boot, Flèche and Coup de Grâce lose damage, and Touché loses dodge.
+[*][b]Effects that move the enemy line[/b] Disengage pulls one enemy in ranks 2–4 forward 2 ranks as she retreats, and The Boot pushes 2 ranks in exchange for its lower damage.
+[/list]
+Overall this is a nerf.
+
+[h1]Changed skills[/h1]
+[h2]Touché · self dodge +40–50% → +30–40%[/h2]
+@@sheet_touche.png
+
+[h2]Feint · riposte damage +25–35% → +10–30%[/h2]
+@@sheet_feint.png
+
+[h2]Disengage · DMG -50% → -40%; pull retained[/h2]
+@@sheet_disengage.png
+
+[h2]Flèche · damage +25% → +20%[/h2]
+@@sheet_fleche.png
+
+[h2]Coup de Grâce · damage −60% → −70%[/h2]
+@@sheet_coup.png
+
+[h2]The Boot · damage −40% → −60%, push 1 → 2 ranks[/h2]
+@@sheet_boot.png
+
+[h1]What stays the same[/h1]
+Anticipation, Riposte (ACC 100 · DMG 0%), the Rapier and Doublet & Cloak stats, resistances and class trinkets are as in the original game.
+
+[h1]How to play[/h1]
+[h2]Retreat with Disengage and pull a back-rank enemy 2 ranks forward[/h2]
+@@play_1.png
+
+[h1]Installation · Compatibility[/h1]
+[list]
+[*]Requires the Duelist DLC.
+[*]Safe to enable or disable in an ongoing campaign.
+[*]Do not enable it together with the Darkest Refined collected edition or any other mod that changes the Duelist's files.
+[/list]
+
+[i]Art: Darkest Dungeon © Red Hook Studios. Unofficial fan mod.[/i]

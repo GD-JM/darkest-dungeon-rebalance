@@ -805,7 +805,7 @@
         ],
         [
           "NEW WAYS TO PLAY",
-          "Disengage now pulls a rank 2–4 enemy 2 ranks forward as she leaps back, drawing it into your front line's reach."
+          "Disengage deals -40% DMG (was -50%), retreats and pulls a rank 2-4 enemy forward 2. Touché stays at 0% DMG."
         ]
       ],
       "art": "duelist_header"
@@ -830,7 +830,7 @@
         ],
         [
           "NEW WAYS TO PLAY",
-          "Open with Controlled Burn or Ransack, advance 2 with Hearthlight, then cash in the Burn stacks with Backdraft up front."
+          "Hearthlight advances 2, applies Burn 1/1/2/2/3, then delays Burn decay by 50% for 1 turn. Party accuracy remains; follow up from the front."
         ]
       ],
       "art": "runaway_header"

@@ -1,0 +1,44 @@
+[h1]Darkest Refined No.04 · Fugitiva[/h1]
+A Fugitiva é uma heroína de Ardor que acumula Ardor com Vaga-Lume e o detona com Deflagração. No original, ela fazia esse combo inteiro parada na posição 3, e em lutas longas como a do Cambaleante o Ardor acumulava demais. Nesta edição ela recebe [b]um nerf no geral[/b], com duas mudanças.
+[list]
+[*][b]Prepara atrás, detona na frente.[/b] Vaga-Lume e Chamas Controladas são usadas nas posições 3–4; Ataque Abrasador e Deflagração, nas posições 1–2. Entre uma coisa e outra, ela avança com Luz da Lareira (2 posições) ou Saquear (1 posição).
+[*][b]Menos acúmulo em lutas longas.[/b] Lutas curtas mantêm a força, e a parte em que o Ardor ficava retido e continuava acumulando foi reduzida.
+[/list]
+Jogar só com Vaga-Lume na retaguarda continua possível, e a Fugitiva também pode detonar o Ardor aplicado pela Antiquária e pela Vestal.
+
+[h1]Habilidades alteradas[/h1]
+
+[h2]Vaga-Lume · Atraso de 50% no decaimento de Ardor passou para Luz da Lareira[/h2]
+@@sheet_firefly.png
+
+[h2]Chamas Controladas · Usada nas posições 3–4, chão 3 rodadas → 2 rodadas[/h2]
+@@sheet_controlled_burn.png
+
+[h2]Luz da Lareira · Queimadura 1/1/2/2/3, depois redução do decaimento em 50% (1 turno)[/h2]
+@@sheet_hearthlight.png
+
+[h2]Saquear · Usada nas posições 3–4, alvos reduzidos às posições inimigas 1–3[/h2]
+@@sheet_ransack.png
+
+[h2]Deflagração · Usada nas posições 1–2, dano por acúmulo de Ardor +25% → +20%[/h2]
+@@sheet_backdraft.png
+
+[h1]O que não mudou[/h1]
+Ataque Abrasador, Correr e Se Esconder, equipamentos e resistências são os mesmos do original.
+
+[h1]Como jogar[/h1]
+
+[h2]Espalhar Ardor da posição 4 e avançar à posição 2 com Luz da Lareira para detonar[/h2]
+@@play_1.png
+
+[h2]A Fugitiva detona o Ardor aplicado pela Antiquária e pela Vestal[/h2]
+@@play_2.png
+
+[h1]Instalação · Compatibilidade[/h1]
+[list]
+[*]Requer a DLC [b]The Fire's Edge[/b].
+[*]Altera só os arquivos da Fugitiva. Pode ser ativado em uma aldeia existente.
+[*]Não ative junto com a edição completa do Darkest Refined nem com outros mods que alterem a Fugitiva.
+[/list]
+
+[i]Arte: Darkest Dungeon © Red Hook Studios. Mod de fã não oficial.[/i]

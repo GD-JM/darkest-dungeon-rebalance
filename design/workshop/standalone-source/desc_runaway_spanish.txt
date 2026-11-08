@@ -1,0 +1,44 @@
+[h1]Darkest Refined No.04 · Fugitiva[/h1]
+La Fugitiva es una heroína de Quemadura que acumula Quemadura con Luciérnaga y la hace estallar con Deflagración. En el juego original podía hacer todo este combo sin moverse de la posición 3, y en combates largos como el del Destructor su Quemadura se acumulaba demasiado. Esta edición es [b]un nerf en conjunto[/b], con dos cambios.
+[list]
+[*][b]Preparar atrás, detonar delante.[/b] Luciérnaga y Quemadura controlada se usan desde las posiciones 3–4; Golpe candente y Deflagración, desde las 1–2. Entre una cosa y otra avanza con Candela (2 posiciones) o Saquear (1 posición).
+[*][b]Menos acumulación en combates largos.[/b] Los combates cortos conservan su fuerza, y se ha recortado la parte en la que la Quemadura se mantenía retenida y seguía acumulándose.
+[/list]
+Jugar solo con Luciérnaga desde atrás sigue siendo posible, y la Fugitiva también puede detonar la Quemadura que aplican la Anticuaria y la Vestal.
+
+[h1]Habilidades cambiadas[/h1]
+
+[h2]Luciérnaga · El retraso del 50% en la disminución de Quemadura pasa a Candela[/h2]
+@@sheet_firefly.png
+
+[h2]Quemadura controlada · Desde las posiciones 3–4, suelo 3 rondas → 2 rondas[/h2]
+@@sheet_controlled_burn.png
+
+[h2]Candela · Quemadura 1/1/2/2/3 y después un 50% menos de reducción (1 turno)[/h2]
+@@sheet_hearthlight.png
+
+[h2]Saquear · Desde las posiciones 3–4, objetivos limitados a las posiciones enemigas 1–3[/h2]
+@@sheet_ransack.png
+
+[h2]Deflagración · Desde las posiciones 1–2, DÑO por acumulación de Quemadura +25% → +20%[/h2]
+@@sheet_backdraft.png
+
+[h1]Lo que no cambia[/h1]
+Golpe candente, Desaparecer, el equipo y las resistencias son los del juego original.
+
+[h1]Cómo jugarla[/h1]
+
+[h2]Aplicar Quemadura desde la posición 4, avanzar a la 2 con Candela y detonar[/h2]
+@@play_1.png
+
+[h2]La Fugitiva detona la Quemadura que aplican la Anticuaria y la Vestal[/h2]
+@@play_2.png
+
+[h1]Instalación · Compatibilidad[/h1]
+[list]
+[*]Requiere el DLC [b]The Fire's Edge[/b].
+[*]Solo cambia los archivos de la Fugitiva. Se puede activar en un poblado existente.
+[*]No lo actives junto con la edición completa de Darkest Refined ni con otros mods que cambien a la Fugitiva.
+[/list]
+
+[i]Arte: Darkest Dungeon © Red Hook Studios. Mod de fan no oficial.[/i]

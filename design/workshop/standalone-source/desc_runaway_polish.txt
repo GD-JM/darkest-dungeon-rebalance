@@ -1,0 +1,44 @@
+[h1]Darkest Refined No.04 · Uciekinierka[/h1]
+Uciekinierka to bohaterka oparzeń, która kumuluje Oparzenie Świetlikiem i detonuje je Ognistym podmuchem. W podstawowej grze cały ten zestaw wykonywała, stojąc na pozycji 3, a w długich walkach, na przykład z Wałęsakiem, jej Oparzenie kumulowało się zdecydowanie za mocno. Ta edycja to [b]ogólne osłabienie[/b] z dwiema zmianami.
+[list]
+[*][b]Przygotowanie z tyłu, detonacja z przodu.[/b] Świetlika i Kontrolowane spalanie używa się z pozycji 3–4, Zjadliwy atak i Ognisty podmuch z pozycji 1–2. Pomiędzy nimi przesuwa się do przodu Światłem paleniska (2 pozycje) lub Przetrząsaniem (1 pozycja).
+[*][b]Mniej kumulacji w długich walkach.[/b] Krótkie walki zachowują siłę, a część, w której Oparzenie było podtrzymywane i ciągle się kumulowało, została ograniczona.
+[/list]
+Gra samym Świetlikiem z tylnych pozycji nadal jest możliwa, a Uciekinierka może też detonować Oparzenie nałożone przez Antykwariuszkę i Kapłankę.
+
+[h1]Zmienione umiejętności[/h1]
+
+[h2]Świetlik · 50% opóźnienia osłabienia oparzenia przeniesione do Światła paleniska[/h2]
+@@sheet_firefly.png
+
+[h2]Kontrolowane spalanie · Z pozycji 3–4, podłoże 3 rundy → 2 rundy[/h2]
+@@sheet_controlled_burn.png
+
+[h2]Światło paleniska · Podpalenie 1/1/2/2/3, następnie spadek wolniejszy o 50% (1 tura)[/h2]
+@@sheet_hearthlight.png
+
+[h2]Przetrząsanie · Z pozycji 3–4, cele zawężone do wrogich pozycji 1–3[/h2]
+@@sheet_ransack.png
+
+[h2]Ognisty podmuch · Z pozycji 1–2, OBR za punkt oparzenia +25% → +20%[/h2]
+@@sheet_backdraft.png
+
+[h1]Co zostaje bez zmian[/h1]
+Zjadliwy atak, Kryj się, wyposażenie i odporności są takie jak w podstawowej grze.
+
+[h1]Jak nią grać[/h1]
+
+[h2]Nałożyć Oparzenie z pozycji 4, wejść Światłem paleniska na pozycję 2 i zdetonować[/h2]
+@@play_1.png
+
+[h2]Uciekinierka detonuje Oparzenie nałożone przez Antykwariuszkę i Kapłankę[/h2]
+@@play_2.png
+
+[h1]Instalacja · Zgodność[/h1]
+[list]
+[*]Wymaga DLC [b]The Fire's Edge[/b].
+[*]Zmienia tylko pliki Uciekinierki. Można włączyć w istniejącej posiadłości.
+[*]Nie włączajcie razem z pełnym wydaniem Darkest Refined ani z innymi modami zmieniającymi Uciekinierkę.
+[/list]
+
+[i]Grafiki: Darkest Dungeon © Red Hook Studios. Nieoficjalny mod fanowski.[/i]

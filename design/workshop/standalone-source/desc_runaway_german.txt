@@ -1,0 +1,44 @@
+[h1]Darkest Refined No.04 · Ausreißerin[/h1]
+Die Ausreißerin ist eine Verbrennen-Heldin, die mit Glühwürmchen Verbrennen stapelt und es mit Feuersbrunst zündet. Im Originalspiel konnte sie diese ganze Kombination auf Position 3 stehend spielen, und in langen Kämpfen wie gegen den Schlurfer häufte sich ihr Verbrennen viel zu stark an. Diese Ausgabe ist [b]insgesamt eine Abschwächung[/b] mit zwei Änderungen.
+[list]
+[*][b]Hinten vorbereiten, vorne zünden.[/b] Glühwürmchen und Gezügeltes Verbrennen werden von Position 3–4 eingesetzt, Sengender Schlag und Feuersbrunst von Position 1–2. Dazwischen rückt sie mit Kaminfeuer (2 Positionen) oder Plündern (1 Position) vor.
+[*][b]Weniger Anhäufung in langen Kämpfen.[/b] Kurze Kämpfe behalten ihre Wucht, und der Teil, in dem Verbrennen festgehalten wurde und sich immer weiter stapelte, wurde gekürzt.
+[/list]
+Nur Glühwürmchen aus der hinteren Reihe zu spielen bleibt möglich, und die Ausreißerin kann auch das Verbrennen zünden, das Antiquarin und Vestalin verursachen.
+
+[h1]Geänderte Fähigkeiten[/h1]
+
+[h2]Glühwürmchen · 50 % Verzögerung beim Schwund von Verbrennen wandert zu Kaminfeuer[/h2]
+@@sheet_firefly.png
+
+[h2]Gezügeltes Verbrennen · Von Position 3–4, Boden 3 Runden → 2 Runden[/h2]
+@@sheet_controlled_burn.png
+
+[h2]Kaminfeuer · Brand 1/1/2/2/3, danach 50% langsamerer Abbau (1 Runde)[/h2]
+@@sheet_hearthlight.png
+
+[h2]Plündern · Von Position 3–4, Ziele auf gegnerische Positionen 1–3 beschränkt[/h2]
+@@sheet_ransack.png
+
+[h2]Feuersbrunst · Von Position 1–2, SCH pro Verbrennen-Stapel +25 % → +20 %[/h2]
+@@sheet_backdraft.png
+
+[h1]Was gleich bleibt[/h1]
+Sengender Schlag, Ab durch die Mitte, Ausrüstung und Resistenzen sind wie im Originalspiel.
+
+[h1]So spielt man sie[/h1]
+
+[h2]Von Position 4 Verbrennen legen, dann mit Kaminfeuer auf Position 2 vorrücken und zünden[/h2]
+@@play_1.png
+
+[h2]Die Ausreißerin zündet das Verbrennen von Antiquarin und Vestalin[/h2]
+@@play_2.png
+
+[h1]Installation · Kompatibilität[/h1]
+[list]
+[*]Benötigt den DLC [b]Fire’s Edge[/b].
+[*]Ändert nur die Dateien der Ausreißerin. In einem bestehenden Dorf nutzbar.
+[*]Nicht zusammen mit der Gesamtausgabe von Darkest Refined oder anderen Mods aktivieren, die die Ausreißerin ändern.
+[/list]
+
+[i]Bilder: Darkest Dungeon © Red Hook Studios. Inoffizielle Fan-Mod.[/i]

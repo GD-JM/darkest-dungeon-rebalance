@@ -487,10 +487,12 @@
         "name": "Disengage",
         "icon": "four",
         "old": [
+          "DMG -50%",
           "Hits ranks 1-2",
           "No pull"
         ],
         "new": [
+          "DMG -40%",
           "Hits one enemy in ranks 2-4",
           "Pull 2 (100-140%)"
         ]
@@ -1310,7 +1312,8 @@
         ],
         "new": [
           "Use from ranks 3-4; forward 2",
-          "Burning targets: delay Burn decay 50% (1 turn)",
+          "All enemies: Burn 1/1/2/2/3 on hit",
+          "Then delay Burn decay 50% (1 turn)",
           "Party accuracy retained"
         ]
       }

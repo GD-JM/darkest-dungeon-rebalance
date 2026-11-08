@@ -1,0 +1,29 @@
+{
+  "id": "RUN-012-DUE-025-PUBLISH",
+  "decision": "adopted",
+  "original_quote": "그럼 화톳불이랑 회수 변경도 메인에 반영해서 푸시 배포하고 창작마당 업데이트 노트랑 이미지, 방금 올린 갤러리 이미지까지 최신 수치로 맞춰줘",
+  "rationale_ko": "화톳불 화상1/1/2/2/3 선적용 후 기존 1턴 50% 감소 지연과 회수 피해−40%를 공개판에 반영한다. 최신 메인 수치를 보존하고 본편판에 DLC를 재편입하지 않는다. 통합판과 도망자·결투가 개별판 및 DC 게시글338491의 해당 이미지·노트를 동기화한다.",
+  "source": {
+    "product": "codex",
+    "reference": "현재 대화 2026-11-08 사용자 main 배포 승인",
+    "session_id": null,
+    "message_id": null,
+    "event_id": null
+  },
+  "files": [
+    "design/workshop/all-hero-cards-audited.json",
+    "design/workshop/all-hero-cards-audited-ko.json",
+    "design/workshop/refined-brand-audited.json",
+    "design/workshop/why.json",
+    "design/changes/runaway.md",
+    "design/changes/duelist.md",
+    "heroes/runaway/runaway.info.darkest",
+    "effects/rebalance_runaway.effects.darkest",
+    "heroes/runaway/runaway.effects_edit.txt",
+    "heroes/duelist/duelist.info.darkest"
+  ],
+  "supersedes": [
+    "RUN-012 test-only publication scope",
+    "DUE-025 test-only publication scope"
+  ]
+}

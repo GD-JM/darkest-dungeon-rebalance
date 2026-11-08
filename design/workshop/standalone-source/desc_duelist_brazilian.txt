@@ -1,0 +1,43 @@
+[h1]Darkest Refined No.05 · Duelista[/h1]
+Uma mestra da lâmina que alterna entre duas posturas. Na Postura Defensiva ela se esquiva, atrai ataques com a marca e responde com Revide. Na Postura Agressiva atordoa os inimigos com A Bota e os finaliza com Golpe de Misericórdia. É uma das heroínas mais fortes do jogo original, e essa força estava mais nos ataques fora do Revide e na esquiva do que no próprio Revide.
+[list]
+[*][b]As chances de Revide continuam[/b] O Revide no início do combate (2 rodadas) e o Revide de Antecipação não mudaram. Finta só reduz o dano do Revide nos níveis baixos.
+[*][b]Ataques fora do Revide e esquiva enfraquecidos[/b] A Bota, Flecha e Golpe de Misericórdia perdem dano, e Touché perde esquiva.
+[*][b]Efeitos que movem a formação inimiga[/b] Desengajar puxa 2 posições um inimigo das posições 2 a 4 enquanto ela recua, e A Bota empurra 2 posições em troca do dano menor.
+[/list]
+No geral, é um enfraquecimento.
+
+[h1]Habilidades alteradas[/h1]
+[h2]Touché · esquiva própria +40–50% → +30–40%[/h2]
+@@sheet_touche.png
+
+[h2]Finta · dano do Revide +25–35% → +10–30%[/h2]
+@@sheet_feint.png
+
+[h2]Desengajar · DANO -50% → -40%; puxão mantido[/h2]
+@@sheet_disengage.png
+
+[h2]Flecha · dano +25% → +20%[/h2]
+@@sheet_fleche.png
+
+[h2]Golpe de Misericórdia · dano −60% → −70%[/h2]
+@@sheet_coup.png
+
+[h2]A Bota · dano −40% → −60%, Empurrar 1 → 2[/h2]
+@@sheet_boot.png
+
+[h1]O que não mudou[/h1]
+Antecipação, Revide (PRE 100 · DANO 0%), os valores de Rapieira e de Gibão e Manto, as resistências e as preciosidades exclusivas da classe continuam como no jogo original.
+
+[h1]Como jogar[/h1]
+[h2]Recuar com Desengajar e puxar um inimigo da retaguarda 2 posições[/h2]
+@@play_1.png
+
+[h1]Instalação · Compatibilidade[/h1]
+[list]
+[*]Requer a DLC Duelista.
+[*]Pode ser ativado e desativado em uma campanha em andamento.
+[*]Não ative junto com a edição completa do Darkest Refined nem com outro mod que altere os arquivos da Duelista.
+[/list]
+
+[i]Arte: Darkest Dungeon © Red Hook Studios. Mod não oficial feito por fãs.[/i]

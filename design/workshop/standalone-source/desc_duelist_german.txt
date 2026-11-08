@@ -1,0 +1,43 @@
+[h1]Darkest Refined No.05 · Duellantin[/h1]
+Eine Meisterin der Klinge, die zwischen zwei Haltungen wechselt. In defensiver Haltung weicht sie aus, zieht als Gezeichnete Angriffe auf sich und antwortet mit Gegenschlag. In aggressiver Haltung betäubt sie Gegner mit Der Stiefel und erledigt sie mit Gnadenstoß. Im Originalspiel gehört sie zu den stärksten Helden, und diese Stärke lag mehr in ihren Angriffen außerhalb des Gegenschlags und in ihrem Ausweichen als im Gegenschlag selbst.
+[list]
+[*][b]Gelegenheiten zum Gegenschlag bleiben[/b] Der Gegenschlag zu Kampfbeginn (2 Runden) und der Gegenschlag von Vorahnung bleiben unverändert. Finte senkt nur auf niedrigen Stufen den Gegenschlag-Schaden.
+[*][b]Angriffe außerhalb des Gegenschlags und Ausweichen abgeschwächt[/b] Der Stiefel, Flèche und Gnadenstoß verlieren Schaden, Touché verliert Ausweichen.
+[*][b]Effekte, die die gegnerische Aufstellung verschieben[/b] Rückschritt zieht beim Zurückweichen einen Gegner auf Position 2 bis 4 um 2 Positionen nach vorne, und Der Stiefel stößt im Tausch für den geringeren Schaden 2 Positionen zurück.
+[/list]
+Insgesamt ist das eine Abschwächung.
+
+[h1]Geänderte Fähigkeiten[/h1]
+[h2]Touché · eigenes Ausweichen +40–50 % → +30–40 %[/h2]
+@@sheet_touche.png
+
+[h2]Finte · Gegenschlag-Schaden +25–35 % → +10–30 %[/h2]
+@@sheet_feint.png
+
+[h2]Rückschritt · SCHADEN -50% → -40%; Heranziehen bleibt[/h2]
+@@sheet_disengage.png
+
+[h2]Flèche · Schaden +25 % → +20 %[/h2]
+@@sheet_fleche.png
+
+[h2]Gnadenstoß · Schaden −60 % → −70 %[/h2]
+@@sheet_coup.png
+
+[h2]Der Stiefel · Schaden −40 % → −60 %, Zurückstoßen 1 → 2[/h2]
+@@sheet_boot.png
+
+[h1]Was gleich bleibt[/h1]
+Vorahnung, Gegenschlag (PRÄ 100 · SCH 0 %), die Werte von Degen und von Wams und Umhang, Widerstände und Klassen-Accessoires entsprechen dem Originalspiel.
+
+[h1]So spielt man sie[/h1]
+[h2]Mit Rückschritt zurückweichen und einen hinteren Gegner 2 Positionen nach vorne ziehen[/h2]
+@@play_1.png
+
+[h1]Installation · Kompatibilität[/h1]
+[list]
+[*]Benötigt den DLC Duellantin.
+[*]Kann in einer laufenden Kampagne aktiviert und deaktiviert werden.
+[*]Nicht zusammen mit der Darkest Refined Gesamtausgabe oder einer anderen Mod aktivieren, die die Dateien der Duellantin ändert.
+[/list]
+
+[i]Bilder: Darkest Dungeon © Red Hook Studios. Inoffizielle Fan-Mod.[/i]

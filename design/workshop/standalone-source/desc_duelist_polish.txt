@@ -1,0 +1,43 @@
+[h1]Darkest Refined No.05 · Fechmistrzyni[/h1]
+Mistrzyni miecza, która przechodzi między dwiema postawami. W postawie defensywnej unika ciosów, ściąga ataki na siebie naznaczeniem i odpowiada ripostą. W postawie agresywnej ogłusza wrogów Kopniakiem i dobija ich ciosem Coup de grâce. To jedna z najsilniejszych postaci w oryginalnej grze, a jej siła tkwiła bardziej w atakach poza ripostą i w unikach niż w samej riposcie.
+[list]
+[*][b]Okazje do riposty bez zmian[/b] Riposta na początku walki (2 rundy) i riposta z Przewidywania pozostają nietknięte. Finta obniża tylko obrażenia riposty na niskich poziomach.
+[*][b]Ataki poza ripostą i unik osłabione[/b] Kopniak, Flèche i Coup de grâce tracą obrażenia, a Touché traci unik.
+[*][b]Efekty przesuwające szyk wroga[/b] Wycofanie się przyciąga o 2 pozycje jednego wroga z pozycji 2–4, gdy Fechmistrzyni się cofa, a Kopniak w zamian za niższe obrażenia odrzuca o 2 pozycje.
+[/list]
+Ogólnie to osłabienie.
+
+[h1]Zmienione umiejętności[/h1]
+[h2]Touché · własny unik +40–50% → +30–40%[/h2]
+@@sheet_touche.png
+
+[h2]Finta · obrażenia riposty +25–35% → +10–30%[/h2]
+@@sheet_feint.png
+
+[h2]Wycofanie się · OBR -50% → -40%; przyciąganie bez zmian[/h2]
+@@sheet_disengage.png
+
+[h2]Flèche · obrażenia +25% → +20%[/h2]
+@@sheet_fleche.png
+
+[h2]Coup de grâce · obrażenia −60% → −70%[/h2]
+@@sheet_coup.png
+
+[h2]Kopniak · obrażenia −40% → −60%, odrzucenie 1 → 2[/h2]
+@@sheet_boot.png
+
+[h1]Co się nie zmienia[/h1]
+Przewidywanie, riposta (CEL 100 · OBR 0%), wartości Rapiera oraz Dubletu i Peleryny, odporności i błyskotki klasowe pozostają jak w oryginalnej grze.
+
+[h1]Jak nią grać[/h1]
+[h2]Odwrót Wycofaniem się i przyciągnięcie wroga z tyłu o 2 pozycje[/h2]
+@@play_1.png
+
+[h1]Instalacja · Zgodność[/h1]
+[list]
+[*]Wymaga DLC Fechmistrzyni.
+[*]Można włączać i wyłączać w trakcie trwającej kampanii.
+[*]Nie włączaj razem ze zbiorczym wydaniem Darkest Refined ani z innym modem zmieniającym pliki Fechmistrzyni.
+[/list]
+
+[i]Grafika: Darkest Dungeon © Red Hook Studios. Nieoficjalny mod fanowski.[/i]
