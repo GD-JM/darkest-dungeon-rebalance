@@ -620,15 +620,16 @@
  "highwayman|take_aim": {
   "ids": [
    "HWY-004",
-   "HWY-019"
+   "HWY-019",
+   "HWY-033"
   ],
   "principles": [
    "G-03",
    "P-19",
    "G-02"
   ],
-  "en": "Riposte used to come only from Duelist's Advance, which moves him forward, so a ranged build couldn't use it without breaking formation. Taking aim and reading the foe fits a counter better: Tracking Shot now grants riposte without moving, can be used every turn, and hits a bit harder to finish targets while setting up.",
-  "ko": "반격은 앞으로 이동하는 결투가의 진격에만 있어서 원거리 빌드는 자리를 깨지 않고는 반격을 쓸 수 없었습니다. 조준하며 상대를 간파하는 쪽이 반격에 더 어울리므로, 추적탄이 이동 없이 반격을 켜고 매 턴 쓸 수 있으며 마무리 공격을 할 만큼 피해도 조금 올렸습니다."
+  "en": "Riposte used to come only from Duelist's Advance, which moves him forward, so a ranged build couldn't use it without breaking formation. Taking aim and reading the foe fits a counter better: Tracking Shot now grants riposte without moving, can be used every turn, and hits a bit harder to finish targets while setting up. Compensate the application-action countdown (duration 3 to 4), targeting three remaining riposte turns after use; damage and crit unchanged.",
+  "ko": "반격은 앞으로 이동하는 결투가의 진격에만 있어서 원거리 빌드는 자리를 깨지 않고는 반격을 쓸 수 없었습니다. 조준하며 상대를 간파하는 쪽이 반격에 더 어울리므로, 추적탄이 이동 없이 반격을 켜고 매 턴 쓸 수 있으며 마무리 공격을 할 만큼 피해도 조금 올렸습니다. 반격은 사용 직후 남은3턴을 목표로 적용 행동 차감을 보정한다(duration3→4). 피해·치명 유지."
  },
  "highwayman|wicked_slice": {
   "ids": [
@@ -905,14 +906,15 @@
  "man_at_arms|retribution": {
   "ids": [
    "MAA-004",
-   "MAA-021"
+   "MAA-021",
+   "MAA-025"
   ],
   "principles": [
    "P-19",
    "G-02"
   ],
-  "en": "The opening hit trades 20 percentage points of damage for 15-25% PROT reduction, supporting physical allies and subsequent counters. Counters do not apply the debuff again.",
-  "ko": "첫 타격 피해를20%p 줄이는 대신 방어15~25를 깎아 물리 아군과 후속 반격을 돕는다. 방어 약화는 응징 첫 타격에만 적용한다."
+  "en": "The opening hit trades 20 percentage points of damage for 15-25% PROT reduction, supporting physical allies and subsequent counters. Counters do not apply the debuff again. Compensate the application-action countdown (duration 3 to 4), targeting three remaining riposte turns after use; damage and crit unchanged.",
+  "ko": "첫 타격 피해를20%p 줄이는 대신 방어15~25를 깎아 물리 아군과 후속 반격을 돕는다. 방어 약화는 응징 첫 타격에만 적용한다. 반격은 사용 직후 남은3턴을 목표로 적용 행동 차감을 보정한다(duration3→4). 피해·치명 유지."
  },
  "man_at_arms|weapon": {
   "ids": [

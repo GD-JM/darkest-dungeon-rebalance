@@ -1,0 +1,33 @@
+{
+  "id": "HWY-033-MAA-025",
+  "decision": "adopted",
+  "original_quote": "야 노상 반격 왜 2턴이냐 3턴으로 바꿔 중보도 확인해봐 그리고 결투가의 진격이랑 사악한 칼질 정맥 절개 이 3개 쓰임새 구별하는 방법 제안좀 해줘 막상 써보니 출혈과 진격중에 진격 많이 쓰는 느낌도 없지 않은듯? 특히 반격 사항은 반드시 빠르게 해결해서 푸시해야해",
+  "context_quotes": [
+    {
+      "role": "user",
+      "text": "사용 직후 남은 시간이 2턴",
+      "source": "현재 대화의 표시 시점 확인 답변"
+    }
+  ],
+  "rationale_ko": "사용 직후 남은3턴이 목표. 데이터값3이 아니라 적용 직후 표시2를 문제로 확인하여 두 영웅 자기 반격 지속만4로 보정한다. 사용자 실전 관찰 기반이며 직접 런타임 재검증은 미실시.",
+  "source": {
+    "product": "codex",
+    "reference": "현재 대화 2026-11-08 반격 긴급 푸시 요청 및 남은시간 확인 답변",
+    "session_id": null,
+    "message_id": null,
+    "event_id": null
+  },
+  "files": [
+    "effects/rebalance_highwayman.effects.darkest",
+    "heroes/highwayman/highwayman.effects_edit.txt",
+    "design/changes/highwayman.md",
+    "effects/rebalance_man_at_arms.effects.darkest",
+    "heroes/man_at_arms/man_at_arms.effects_edit.txt",
+    "design/changes/man_at_arms.md",
+    "design/workshop/why.json"
+  ],
+  "supersedes": [
+    "HWY-026 duration field only",
+    "MAA-023 duration field only"
+  ]
+}

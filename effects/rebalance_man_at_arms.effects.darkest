@@ -22,19 +22,24 @@ effect: .name "RB MAA Disrupt 5" .target "target" .curio_result_type "negative" 
 // MAA-020 포효 방어 감소 제거. 기존 속도 감소와 지속3턴 유지; 명중 감소는 별도2턴 효과.
 // MAA-019 포효: PROT -15%p for 3 turns; replace dodge reduction because Command already grants accuracy; keep SPD debuff.
 // edited vanilla effect (from effects/base.effects.darkest)
-effect: .name "RB MAA Riposte 1"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -25% .damage_high_multiply -25% .crit_chance_add 0%
+effect: .name "RB MAA Riposte 1"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 4  .on_hit true .on_miss true .damage_low_multiply -25% .damage_high_multiply -25% .crit_chance_add 0%
+// MAA-025: Riposte duration 3 -> 4 to compensate the application-action countdown; target is 3 remaining turns after use. Keep damage, accuracy, crit and existing replacement semantics. User observed Hwy 3 -> 2 immediately; MAA uses the same duration structure. Combat confirmation pending.
 // MAA-023 own riposte modifier -25% with riposte_skill -20% = unchanged total; non-stacking (stays inside riposte status).
 // edited vanilla effect (from effects/base.effects.darkest)
-effect: .name "RB MAA Riposte 2"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -19% .damage_high_multiply -19% .crit_chance_add 1% 
+effect: .name "RB MAA Riposte 2"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 4  .on_hit true .on_miss true .damage_low_multiply -19% .damage_high_multiply -19% .crit_chance_add 1% 
+// MAA-025: Riposte duration 3 -> 4 to compensate the application-action countdown; target is 3 remaining turns after use. Keep damage, accuracy, crit and existing replacement semantics. User observed Hwy 3 -> 2 immediately; MAA uses the same duration structure. Combat confirmation pending.
 // MAA-023 own riposte modifier -19% with riposte_skill -20% = unchanged total; non-stacking (stays inside riposte status).
 // edited vanilla effect (from effects/base.effects.darkest)
-effect: .name "RB MAA Riposte 3"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -12% .damage_high_multiply -12% .crit_chance_add 2% 
+effect: .name "RB MAA Riposte 3"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 4  .on_hit true .on_miss true .damage_low_multiply -12% .damage_high_multiply -12% .crit_chance_add 2% 
+// MAA-025: Riposte duration 3 -> 4 to compensate the application-action countdown; target is 3 remaining turns after use. Keep damage, accuracy, crit and existing replacement semantics. User observed Hwy 3 -> 2 immediately; MAA uses the same duration structure. Combat confirmation pending.
 // MAA-023 own riposte modifier -12% with riposte_skill -20% = unchanged total; non-stacking (stays inside riposte status).
 // edited vanilla effect (from effects/base.effects.darkest)
-effect: .name "RB MAA Riposte 4"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply -6% .damage_high_multiply -6% .crit_chance_add 3% 
+effect: .name "RB MAA Riposte 4"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 4  .on_hit true .on_miss true .damage_low_multiply -6% .damage_high_multiply -6% .crit_chance_add 3% 
+// MAA-025: Riposte duration 3 -> 4 to compensate the application-action countdown; target is 3 remaining turns after use. Keep damage, accuracy, crit and existing replacement semantics. User observed Hwy 3 -> 2 immediately; MAA uses the same duration structure. Combat confirmation pending.
 // MAA-023 own riposte modifier -6% with riposte_skill -20% = unchanged total; non-stacking (stays inside riposte status).
 // edited vanilla effect (from effects/base.effects.darkest)
-effect: .name "RB MAA Riposte 5"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 3  .on_hit true .on_miss true .damage_low_multiply 0% .damage_high_multiply 0% .crit_chance_add 4%
+effect: .name "RB MAA Riposte 5"  .target "performer" .curio_result_type "positive" .chance 100% .riposte 1 .riposte_on_hit_chance_add 100% .riposte_on_miss_chance_add 100% .duration 4  .on_hit true .on_miss true .damage_low_multiply 0% .damage_high_multiply 0% .crit_chance_add 4%
+// MAA-025: Riposte duration 3 -> 4 to compensate the application-action countdown; target is 3 remaining turns after use. Keep damage, accuracy, crit and existing replacement semantics. User observed Hwy 3 -> 2 immediately; MAA uses the same duration structure. Combat confirmation pending.
 // MAA-023 own riposte modifier 0% with riposte_skill -20% = unchanged total; non-stacking (stays inside riposte status).
 // edited vanilla effect (from effects/base.effects.darkest)
 effect: .name "RB MAA Command 1" .target "target" .curio_result_type "negative" .chance 100% .buff_ids "MAA_Command_ACC_1" "RB_MAA_COMMAND_PROT_1" "MAA_Command_GuardedDMGL_1" "MAA_Command_GuardedDMGH_1" .on_hit true .on_miss true .queue true
