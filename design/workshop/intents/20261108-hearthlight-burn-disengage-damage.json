@@ -1,0 +1,59 @@
+[
+  {
+    "id": "RUN-012",
+    "decision": "adopted",
+    "original_quote": "그럼 화톳불 11223으로 적용하고 화상 먼저 걸린 다음 지연 적용되게 해줘 회수도 -40으로 같이 반영하고 의도 주석 남겨서 test에 커밋까지만 해 푸시는 말고 이게 왜좋냐면 실효 1회는 할 필요 없잖아 어차피 도망자 2명이면 불티에서도 화상감소 지연 50% 2번 박히면 화상 안 닳았잖아 그래서 굳이 할 필요 없는거 아니야?",
+    "rationale_ko": "화상이 없는 상대에게도 전진 준비 효과를 주되 화상1/1/2/2/3으로 광역 피해를 절제한다. 사용자가 요청한 Burn→Decay 순서를 배치하고 기존 중첩을 허용한다. 지속 연장이나 별도 중첩 제한은 적용하지 않는다.",
+    "source": {
+      "product": "codex",
+      "reference": "현재 대화 2026-11-08 사용자 메시지: 그럼 화톳불 11223으로 적용하고 화상 먼저 걸린 다음 지연 적용되게 해줘 회수도 -40으로 같이 반영하고 의도 주석 남겨서 test에 커밋까지만 해 푸시는 말고 이게 왜좋냐면 실효 1회는 할 필요 없잖아 어차피 도망자 2명이면 불티에서도 화상감소 지연 50% 2번 박히면 화상 안 닳았잖아 그래서 굳이 할 필요 없는거 아니야?",
+      "session_id": null,
+      "message_id": null,
+      "event_id": null
+    },
+    "files": [
+      "heroes/runaway/runaway.info.darkest",
+      "effects/rebalance_runaway.effects.darkest",
+      "heroes/runaway/runaway.effects_edit.txt",
+      "design/changes/runaway.md",
+      "design/workshop/hero_cards.json",
+      "design/workshop/why.json"
+    ],
+    "supersedes": [],
+    "scope": "test commit only; no push/publication",
+    "validation_limitations": "Static data/order checks only. Current executable duration/order not combat-verified."
+  },
+  {
+    "id": "DUE-025",
+    "decision": "adopted",
+    "original_quote": "그럼 화톳불 11223으로 적용하고 화상 먼저 걸린 다음 지연 적용되게 해줘 회수도 -40으로 같이 반영하고 의도 주석 남겨서 test에 커밋까지만 해 푸시는 말고 이게 왜좋냐면 실효 1회는 할 필요 없잖아 어차피 도망자 2명이면 불티에서도 화상감소 지연 50% 2번 박히면 화상 안 닳았잖아 그래서 굳이 할 필요 없는거 아니야?",
+    "rationale_ko": "회수의 피해 배열을 구분하고 직접 피해를 소폭 보강한다. 회수만−40%이며 찌르기는0%를 유지한다.",
+    "source": {
+      "product": "codex",
+      "reference": "현재 대화 2026-11-08 사용자 메시지: 그럼 화톳불 11223으로 적용하고 화상 먼저 걸린 다음 지연 적용되게 해줘 회수도 -40으로 같이 반영하고 의도 주석 남겨서 test에 커밋까지만 해 푸시는 말고 이게 왜좋냐면 실효 1회는 할 필요 없잖아 어차피 도망자 2명이면 불티에서도 화상감소 지연 50% 2번 박히면 화상 안 닳았잖아 그래서 굳이 할 필요 없는거 아니야?",
+      "session_id": null,
+      "message_id": null,
+      "event_id": null
+    },
+    "files": [
+      "heroes/duelist/duelist.info.darkest",
+      "design/changes/duelist.md",
+      "design/workshop/hero_cards.json",
+      "design/workshop/why.json"
+    ],
+    "supersedes": [],
+    "scope": "test commit only; no push/publication",
+    "validation_limitations": "Static data/order checks only. Current executable duration/order not combat-verified.",
+    "context_quotes": [
+      {
+        "role": "user",
+        "quote": "회수만 −40%, 찌르기는 0% 유지",
+        "source": {
+          "product": "codex",
+          "reference": "현재 대화 사용자 명확화 답변",
+          "event_id": null
+        }
+      }
+    ]
+  }
+]
