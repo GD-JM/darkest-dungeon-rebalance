@@ -1,0 +1,17 @@
+{
+  "id": "RUN-012-PLAYER-VALIDATION",
+  "decision": "validated-by-user",
+  "original_quote": "일단 푸쉬하고 작동 잘해 ㅅ화톳불도 화상지연 1턴 잘 적용한다.",
+  "rationale_ko": "사용자 실전 보고: 화톳불 화상 및 감소 지연1턴 정상 적용. 수치 변경 없이 test push 승인.",
+  "source": {
+    "product": "codex",
+    "reference": "현재 대화 2026-11-08 사용자 후속 메시지",
+    "event_id": null,
+    "session_id": null,
+    "message_id": null
+  },
+  "files": [
+    "design/changes/runaway.md"
+  ],
+  "supersedes": []
+}
