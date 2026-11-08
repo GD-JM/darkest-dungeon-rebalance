@@ -33,13 +33,14 @@
  "runaway|hearthlight": {
   "ids": [
    "RUN-009",
-   "RUN-011"
+   "RUN-011",
+   "RUN-012"
   ],
   "principles": [
    "P-10"
   ],
-  "ko": "사용34/전진2와 명중 지원 유지. 감소 지연50%를 실효1회로 단축한다. 복수 도망자의 합산은 원본과 같이 허용하며 별도 중첩 상한은 두지 않는다.",
-  "en": "Use from ranks 3-4 and advance 2; retain party accuracy. Burn decay delay remains 50% for one target turn. Multiple Runaways may stack it as in the original; no separate stacking cap."
+  "ko": "사용3·4열/전진2와 명중 지원 유지. 먼저 화상1/1/2/2/3을 걸어 전진 후 공격을 준비하고, 이어서 화상 감소 지연50%를 적용한다. 기존 지속1/행동 후 및 복수 도망자 중첩 허용 유지. 실제 만료 시점은 전투 검증 전이다.",
+  "en": "Apply Burn 1/1/2/2/3 before the 50% decay debuff to prepare forward attacks. Keep rear-rank use, forward 2 and party accuracy. Retain duration 1 after-turn and stacking; actual expiry timing awaits combat verification."
  },
  "abomination|manacles": {
   "ids": [
@@ -667,48 +668,48 @@
  },
  "houndmaster|hounds_harry": {
   "ids": [
-    "HM-012",
-    "HM-027",
-    "HM-030",
-    "HM-033",
-    "HM-034",
-    "HM-036",
-    "HM-037",
-    "HM-038",
-    "HM-039"
+   "HM-012",
+   "HM-027",
+   "HM-030",
+   "HM-033",
+   "HM-034",
+   "HM-036",
+   "HM-037",
+   "HM-038",
+   "HM-039"
   ],
   "principles": [
-    "G-02",
-    "G-03",
-    "R-VALUE-03"
+   "G-02",
+   "G-03",
+   "R-VALUE-03"
   ],
   "en": "Hound's Rush is usable from ranks 2-4; Hound's Harry remains usable from all ranks. Restrict the single-target attack so rank 1 does not supersede rank 2. Corrects HM-038's overbroad interpretation; damage, accuracy, bleed and target ranks are unchanged.",
   "ko": "사냥개 돌진만 2·3·4열 사용, 사냥개 습격은 모든 열 유지. 1열이 2열보다 유리해지지 않도록 단일 집중 공격을 제한한다. HM-038의 확대 해석을 정정하며 피해·명중·출혈·대상열은 유지한다."
-},
+ },
  "houndmaster|hounds_rush": {
   "ids": [
-    "HM-019",
-    "HM-016",
-    "HM-018",
-    "HM-010",
-    "HM-023",
-    "HM-011",
-    "HM-030",
-    "HM-033",
-    "HM-034",
-    "HM-036",
-    "HM-037",
-    "HM-038",
-    "HM-039"
+   "HM-019",
+   "HM-016",
+   "HM-018",
+   "HM-010",
+   "HM-023",
+   "HM-011",
+   "HM-030",
+   "HM-033",
+   "HM-034",
+   "HM-036",
+   "HM-037",
+   "HM-038",
+   "HM-039"
   ],
   "principles": [
-    "P-24",
-    "G-00",
-    "P-11"
+   "P-24",
+   "G-00",
+   "P-11"
   ],
   "en": "Hound's Rush is usable from ranks 2-4; Hound's Harry remains usable from all ranks. Restrict the single-target attack so rank 1 does not supersede rank 2. Corrects HM-038's overbroad interpretation; damage, accuracy, bleed and target ranks are unchanged.",
   "ko": "사냥개 돌진만 2·3·4열 사용, 사냥개 습격은 모든 열 유지. 1열이 2열보다 유리해지지 않도록 단일 집중 공격을 제한한다. HM-038의 확대 해석을 정정하며 피해·명중·출혈·대상열은 유지한다."
-},
+ },
  "houndmaster|howl": {
   "ids": [
    "HM-014",
@@ -1150,18 +1151,18 @@
  },
  "vestal|judgement": {
   "ids": [
-    "VES-002",
-    "VES-009",
-    "VES-001",
-    "VES-024"
+   "VES-002",
+   "VES-009",
+   "VES-001",
+   "VES-024"
   ],
   "principles": [
-    "G-02",
-    "R-SKILL-09"
+   "G-02",
+   "R-SKILL-09"
   ],
   "en": "Judgement damage returns from 0% to vanilla -25% at every level to reduce the Vestal's excessive back-rank damage alongside her healing and support. Accuracy, critical chance, ranks and the removal of self-healing remain unchanged.",
   "ko": "성녀가 너무 강하다는 사용자 판단에 따라 심판 피해만 0%에서 바닐라 -25%로 복원해 후열 직접 화력을 낮춘다. 명중·치명타·사용열·대상열·자기 회복 제거는 유지한다."
-},
+ },
  "vestal|mace_bash": {
   "ids": [
    "VES-001"
@@ -1642,12 +1643,13 @@
  },
  "duelist|disengage": {
   "ids": [
-   "DUE-022"
+   "DUE-022",
+   "DUE-025"
   ],
   "principles": [
    "R-STRAT-01"
   ],
-  "en": "Retreat and pull a rear enemy into reach of frontline allies.",
-  "ko": "방어 자세에서 물러서며 적 2·3·4열 한 명을 전열 동료 앞으로 유인한다. 기존 적 피해 감소를 2칸 당기기로 교체한다."
+  "en": "Retreat and pull a rear enemy into reach of frontline allies. Raise Disengage damage from -50% to -40% to improve the retreat/pull attack; retain all utility and Touche damage at 0%.",
+  "ko": "방어 자세에서 물러서며 적 2·3·4열 한 명을 전열 동료 앞으로 유인한다. 기존 적 피해 감소를 2칸 당기기로 교체한다. 회수 피해−50%→−40%로 유인 공격의 직접 피해를 소폭 올리고 다른 기술과 피해 배열을 구분한다. 찌르기 피해0%와 나머지 효과는 유지한다."
  }
 }

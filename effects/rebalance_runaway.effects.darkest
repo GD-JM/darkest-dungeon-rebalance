@@ -63,3 +63,14 @@ effect: .name "RB RUN Hearthlight Decay 4" .target "target" .curio_result_type "
 effect: .name "RB RUN Hearthlight Decay 5" .target "target" .curio_result_type "negative" .chance 140% .buff_ids rb_run_hearthlight_decay_burning .duration 1 .buff_duration_type after_turn .skill_instant false .on_hit true .on_miss false
 // RUN-011 50% for one effective decay event (after_turn 1); stacking allowed. Recipient burning rule replaces skill-instant keyStatus to prevent null-target selection crash.
 // RUN-009 Move decay delay to rear-only forward support, replacing conditional CRIT. Non-stacking remains a release-blocking runtime issue; see design review.
+
+effect: .name "RB RUN Hearthlight Burn 1" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 1 .dot_irresistible true .skill_instant false .on_hit true .on_miss false .can_apply_on_death true
+// RUN-012 Small on-hit Burn primes forward attacks; ordered before conditional decay. Burn is irresistible, decay still checks debuff resistance.
+effect: .name "RB RUN Hearthlight Burn 2" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 1 .dot_irresistible true .skill_instant false .on_hit true .on_miss false .can_apply_on_death true
+// RUN-012 Small on-hit Burn primes forward attacks; ordered before conditional decay. Burn is irresistible, decay still checks debuff resistance.
+effect: .name "RB RUN Hearthlight Burn 3" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 2 .dot_irresistible true .skill_instant false .on_hit true .on_miss false .can_apply_on_death true
+// RUN-012 Small on-hit Burn primes forward attacks; ordered before conditional decay. Burn is irresistible, decay still checks debuff resistance.
+effect: .name "RB RUN Hearthlight Burn 4" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 2 .dot_irresistible true .skill_instant false .on_hit true .on_miss false .can_apply_on_death true
+// RUN-012 Small on-hit Burn primes forward attacks; ordered before conditional decay. Burn is irresistible, decay still checks debuff resistance.
+effect: .name "RB RUN Hearthlight Burn 5" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 3 .dot_irresistible true .skill_instant false .on_hit true .on_miss false .can_apply_on_death true
+// RUN-012 Small on-hit Burn primes forward attacks; ordered before conditional decay. Burn is irresistible, decay still checks debuff resistance.

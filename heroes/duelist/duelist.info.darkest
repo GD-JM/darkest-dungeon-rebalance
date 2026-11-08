@@ -38,11 +38,12 @@ combat_skill: .id "feint" .level 4 .type "melee" .atk 115% .dmg -50% .crit 12% .
 // DUE-013 페인트: 방어 감소 −10~−20% → −15/17/20/22/25%(3턴). 의도: 죽음의 표식이 받는 피해로 바뀌어(BH-022) 숫자 겹침(DUE-007 이유)이 사라짐 — 바닐라(−20~−30)와 DUE-007 사이로 [제작자 10-23]
 // DUE-007 feint: 방어 감소 -20/22/25/27/30% -> -10/12/15/17/20%(RB DUE Duelist Feint Debuff). 현상금 사냥꾼 죽음의 표식(-20~-30)과 같은 숫자였음, 표식의 바닐라 값으로 [제작자]
 
-combat_skill: .id "disengage" .level 0 .type "melee" .atk 95%  .dmg -50% .crit -1% .move 3 0 .launch 21 .target 234 .is_crit_valid True  .effect "Duelist Disengage Buff 1" "Duelist Disengage Any Position" "Pull 2A" .valid_modes stance_defensive
-combat_skill: .id "disengage" .level 1 .type "melee" .atk 100% .dmg -50% .crit 0%  .move 3 0 .launch 21 .target 234 .is_crit_valid True  .effect "Duelist Disengage Buff 2" "Duelist Disengage Any Position" "Pull 2B" .valid_modes stance_defensive
-combat_skill: .id "disengage" .level 2 .type "melee" .atk 105% .dmg -50% .crit 1%  .move 3 0 .launch 21 .target 234 .is_crit_valid True  .effect "Duelist Disengage Buff 3" "Duelist Disengage Any Position" "Pull 2C" .valid_modes stance_defensive
-combat_skill: .id "disengage" .level 3 .type "melee" .atk 110% .dmg -50% .crit 2%  .move 3 0 .launch 21 .target 234 .is_crit_valid True  .effect "Duelist Disengage Buff 4" "Duelist Disengage Any Position" "Pull 2D" .valid_modes stance_defensive
-combat_skill: .id "disengage" .level 4 .type "melee" .atk 115% .dmg -50% .crit 3%  .move 3 0 .launch 21 .target 234 .is_crit_valid True  .effect "Duelist Disengage Buff 5" "Duelist Disengage Any Position" "Pull 2E" .valid_modes stance_defensive
+combat_skill: .id "disengage" .level 0 .type "melee" .atk 95%  .dmg -40% .crit -1% .move 3 0 .launch 21 .target 234 .is_crit_valid True  .effect "Duelist Disengage Buff 1" "Duelist Disengage Any Position" "Pull 2A" .valid_modes stance_defensive
+combat_skill: .id "disengage" .level 1 .type "melee" .atk 100% .dmg -40% .crit 0%  .move 3 0 .launch 21 .target 234 .is_crit_valid True  .effect "Duelist Disengage Buff 2" "Duelist Disengage Any Position" "Pull 2B" .valid_modes stance_defensive
+combat_skill: .id "disengage" .level 2 .type "melee" .atk 105% .dmg -40% .crit 1%  .move 3 0 .launch 21 .target 234 .is_crit_valid True  .effect "Duelist Disengage Buff 3" "Duelist Disengage Any Position" "Pull 2C" .valid_modes stance_defensive
+combat_skill: .id "disengage" .level 3 .type "melee" .atk 110% .dmg -40% .crit 2%  .move 3 0 .launch 21 .target 234 .is_crit_valid True  .effect "Duelist Disengage Buff 4" "Duelist Disengage Any Position" "Pull 2D" .valid_modes stance_defensive
+combat_skill: .id "disengage" .level 4 .type "melee" .atk 115% .dmg -40% .crit 3%  .move 3 0 .launch 21 .target 234 .is_crit_valid True  .effect "Duelist Disengage Buff 5" "Duelist Disengage Any Position" "Pull 2E" .valid_modes stance_defensive
+// DUE-025 Disengage damage -50% -> -40%: improve the retreat/pull attack and distinguish damage profiles; Touche remains 0%, all other fields retained.
 // DUE-022 방어 자세에서 물러서며 적 2·3·4열 한 명을 전열 동료 앞으로 유인한다. 기존 적 피해 감소를 2칸 당기기로 교체한다.
 // DUE-012 Disengage: enemy damage -10/11/12/13/15% for 2 turns (chance 100..140%).
 // DUE-012 이탈: 적 피해 −10/11/12/13/15% 2턴 추가(확률 100~140%). 의도: 아카데미 반지(약화 확률 +35%)가 쓸 약화가 페인트 하나뿐이었음. 칼을 쳐내고 물러나는 방어 자세 기술에 "무장 해제" 성격. 전용 기술인 약화의 저주(−10~20%, 3턴)보다 작게 [제작자 10-22]
