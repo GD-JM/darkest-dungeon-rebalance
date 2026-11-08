@@ -11,7 +11,7 @@ Back-rank play using only Firefly is still possible, and the Runaway can also de
 [h2]Firefly · 50% Burn decay delay moved to Hearthlight[/h2]
 @@sheet_firefly.png
 
-[h2]Controlled Burn · Used from ranks 3–4, ground 3 rounds → 2 rounds[/h2]
+[h2]Controlled Burn · Ground duration restored to 3 rounds; Burn 3/3/4/4/5[/h2]
 @@sheet_controlled_burn.png
 
 [h2]Hearthlight · Burn 1/1/2/2/3, then 50% decay delay (1 turn)[/h2]

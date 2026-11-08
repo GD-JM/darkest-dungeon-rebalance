@@ -11,7 +11,7 @@ Gra samym Świetlikiem z tylnych pozycji nadal jest możliwa, a Uciekinierka mo�
 [h2]Świetlik · 50% opóźnienia osłabienia oparzenia przeniesione do Światła paleniska[/h2]
 @@sheet_firefly.png
 
-[h2]Kontrolowane spalanie · Z pozycji 3–4, podłoże 3 rundy → 2 rundy[/h2]
+[h2]Kontrolowane spalanie · Ogień na ziemi ponownie trwa 3 rundy; podpalenie 3/3/4/4/5[/h2]
 @@sheet_controlled_burn.png
 
 [h2]Światło paleniska · Podpalenie 1/1/2/2/3, następnie spadek wolniejszy o 50% (1 tura)[/h2]

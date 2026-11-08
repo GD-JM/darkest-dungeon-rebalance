@@ -11,7 +11,7 @@ Jouer uniquement Luciole depuis l'arrière reste possible, et l'Évadée peut au
 [h2]Luciole · Le retard de 50 % de la réduction de brûlure passe à Âtre[/h2]
 @@sheet_firefly.png
 
-[h2]Brûlure contrôlée · Depuis les rangs 3–4, sol 3 rounds → 2 rounds[/h2]
+[h2]Brûlure contrôlée · Durée au sol rétablie à 3 rounds ; brûlure 3/3/4/4/5[/h2]
 @@sheet_controlled_burn.png
 
 [h2]Âtre · Brûlure 1/1/2/2/3, puis déclin ralenti de 50% (1 tour)[/h2]

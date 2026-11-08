@@ -22,13 +22,14 @@
  },
  "runaway|controlled_burn": {
   "ids": [
-   "RUN-008"
+   "RUN-008",
+   "RUN-013"
   ],
   "principles": [
    "P-10"
   ],
-  "ko": "최초/지면3/3/4/4/5, 지면2라운드, 사용34로 초기 사용감을 보존하고 장기 누적을 줄인다. 이동과 턴 시작은 동일한 지면 수치를 공유한다.",
-  "en": "Initial and ground Burn become 3/3/4/4/5, ground duration 2 rounds, use ranks 3-4. Preserve opening impact while reducing long-fight accumulation."
+  "ko": "최초/지면 화상3/3/4/4/5, 사용34/대상123/전투당2회 유지. 2라운드는 너무 짧다는 사용 피드백에 따라 지면 지속만3라운드로 복원하여 설치 후 이동·후속 운영 시간을 확보한다.",
+  "en": "Keep initial/ground Burn 3/3/4/4/5, use ranks 3-4, target ranks 1-3 and two charges. Restore ground duration to 3 rounds because two rounds felt too short for setup and movement play."
  },
  "runaway|hearthlight": {
   "ids": [
@@ -170,15 +171,16 @@
   "ids": [
    "ARB-005",
    "ARB-012",
-   "ARB-016"
+   "ARB-016",
+   "ARB-021"
   ],
   "principles": [
    "P-26",
    "P-21",
    "P-11"
   ],
-  "en": "Mark damage is being spread across more heroes (Houndmaster down, other mark dealers up), so Sniper Shot's low-level marked bonus rises while the level-5 cap stays. The crit bump is because at level 1 it hit no harder than the Vestal's Judgement and felt weak; extra crit suits a precision shot. Sniper Shot can pick out a guarded enemy in ranks 2–4. The Musketeer can aim at rank 1.",
-  "ko": "표식 피해를 여러 영웅에 재배분하면서(조련사 하향, 다른 표식 딜러 상향) 저격의 저레벨 표식 보너스를 올리고 5렙 상한은 그대로 뒀다. 치명타 상향은 1렙 저격이 성녀 심판과 같은 피해라 약하게 느껴졌기 때문이며, 정밀 사격이라 치명타가 어울린다. 호위 뒤의 적 한 명을 골라 쏘는 저격의 특성을 살렸다. 총사가 적 1열까지 조준하는 대신 석궁사수는 적 2·3·4열에서 보호를 무시한다."
+  "en": "Mark damage is being spread across more heroes (Houndmaster down, other mark dealers up), so Sniper Shot's low-level marked bonus rises while the level-5 cap stays. The crit bump is because at level 1 it hit no harder than the Vestal's Judgement and felt weak; extra crit suits a precision shot. Sniper Shot can pick out a guarded enemy in ranks 2–4. The Musketeer can aim at rank 1. Add target rank 1 to avoid an attack gap or mandatory Blindfire when only a front enemy remains. Other values are unchanged.",
+  "ko": "표식 피해를 여러 영웅에 재배분하면서(조련사 하향, 다른 표식 딜러 상향) 저격의 저레벨 표식 보너스를 올리고 5렙 상한은 그대로 뒀다. 치명타 상향은 1렙 저격이 성녀 심판과 같은 피해라 약하게 느껴졌기 때문이며, 정밀 사격이라 치명타가 어울린다. 호위 뒤의 적 한 명을 골라 쏘는 저격의 특성을 살렸다. 총사가 적 1열까지 조준하는 대신 석궁사수는 적 2·3·4열에서 보호를 무시한다. 적1열을 추가해 전열 적만 남았을 때의 공격 공백과 무차별 사격 강제 채용을 줄인다. 나머지 수치는 유지한다."
  },
  "arbalest|suppressing_fire": {
   "ids": [

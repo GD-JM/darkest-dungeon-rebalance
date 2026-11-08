@@ -11,7 +11,7 @@ Jogar só com Vaga-Lume na retaguarda continua possível, e a Fugitiva também p
 [h2]Vaga-Lume · Atraso de 50% no decaimento de Ardor passou para Luz da Lareira[/h2]
 @@sheet_firefly.png
 
-[h2]Chamas Controladas · Usada nas posições 3–4, chão 3 rodadas → 2 rodadas[/h2]
+[h2]Chamas Controladas · Duração no solo restaurada para 3 rodadas; queimadura 3/3/4/4/5[/h2]
 @@sheet_controlled_burn.png
 
 [h2]Luz da Lareira · Queimadura 1/1/2/2/3, depois redução do decaimento em 50% (1 turno)[/h2]

@@ -1,0 +1,42 @@
+{
+  "id": "ARB-021-RUN-013-PUBLISH",
+  "decision": "adopted",
+  "original_quote": "그럼 저격 1열도 타겟 가능하게 하자 나머지 수치는 유지하고 의도 주석 남겨서 통제된 화상 3턴이랑 같이 커밋하고 메인 푸시 배포까지 해 창작마당 이미지랑 업데이트 노트도 맞춰줘. 그리고 수정할 거 다 수정하자 너가할 수 있는거 다",
+  "rationale_ko": "저격 적1열 추가로 마무리 공격 공백을 줄이고 통제된 화상 지면3라운드로 후속 운영 시간을 확보한다. 나머지 능력치를 보존한다. 본편판·통합판·도망자 개별판의 해당 이미지·설명·노트를 갱신하며 과거2라운드 총량 설명을 제거한다.",
+  "source": {
+    "product": "codex",
+    "reference": "현재 대화 2026-11-08 저격1열 및 통제된 화상3라운드 커밋·main 푸시·배포 승인",
+    "session_id": null,
+    "message_id": null,
+    "event_id": null
+  },
+  "files": [
+    "design/changes/arbalest.md",
+    "design/changes/runaway.md",
+    "design/workshop/all-hero-cards-audited-ko.json",
+    "design/workshop/all-hero-cards-audited.json",
+    "design/workshop/hero_cards.json",
+    "design/workshop/intents/20261108-controlled-burn-three-rounds.json",
+    "design/workshop/refined-brand-audited.json",
+    "design/workshop/standalone-source/content_runaway.py",
+    "design/workshop/standalone-source/content_runaway_en.py",
+    "design/workshop/standalone-source/desc_runaway_brazilian.txt",
+    "design/workshop/standalone-source/desc_runaway_english.txt",
+    "design/workshop/standalone-source/desc_runaway_french.txt",
+    "design/workshop/standalone-source/desc_runaway_german.txt",
+    "design/workshop/standalone-source/desc_runaway_ko.txt",
+    "design/workshop/standalone-source/desc_runaway_polish.txt",
+    "design/workshop/standalone-source/desc_runaway_russian.txt",
+    "design/workshop/standalone-source/desc_runaway_schinese.txt",
+    "design/workshop/standalone-source/desc_runaway_spanish.txt",
+    "design/workshop/standalone-source/desc_runaway_tchinese.txt",
+    "design/workshop/why.json",
+    "effects/rebalance_runaway.effects.darkest",
+    "heroes/arbalest/arbalest.info.darkest",
+    "heroes/runaway/runaway.effects_edit.txt"
+  ],
+  "supersedes": [
+    "RUN-013 test-only publication status",
+    "ARB-016 target234 only"
+  ]
+}

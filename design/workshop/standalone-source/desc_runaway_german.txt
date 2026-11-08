@@ -11,7 +11,7 @@ Nur Glühwürmchen aus der hinteren Reihe zu spielen bleibt möglich, und die Au
 [h2]Glühwürmchen · 50 % Verzögerung beim Schwund von Verbrennen wandert zu Kaminfeuer[/h2]
 @@sheet_firefly.png
 
-[h2]Gezügeltes Verbrennen · Von Position 3–4, Boden 3 Runden → 2 Runden[/h2]
+[h2]Gezügeltes Verbrennen · Bodenfeuer wieder 3 Runden; Brand 3/3/4/4/5[/h2]
 @@sheet_controlled_burn.png
 
 [h2]Kaminfeuer · Brand 1/1/2/2/3, danach 50% langsamerer Abbau (1 Runde)[/h2]

@@ -193,12 +193,14 @@
         "icon": "one",
         "old": [
           "CRIT 5%",
-          "Vs marked: DMG +50-100%"
+          "Vs marked: DMG +50-100%",
+          "Hits ranks 2-4"
         ],
         "new": [
           "CRIT 6%",
           "Vs marked: DMG +60-100%",
-          "Ignores guard"
+          "Ignores guard",
+          "Hits ranks 1-4"
         ]
       },
       {
@@ -1299,7 +1301,7 @@
         "new": [
           "Use from ranks 3-4",
           "Initial Burn 3/3/4/4/5",
-          "Ground Burn 3/3/4/4/5; 2 rounds"
+          "Ground Burn 3/3/4/4/5; 3 rounds"
         ]
       },
       {

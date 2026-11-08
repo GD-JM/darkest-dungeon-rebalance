@@ -11,7 +11,7 @@ Jugar solo con Luciérnaga desde atrás sigue siendo posible, y la Fugitiva tamb
 [h2]Luciérnaga · El retraso del 50% en la disminución de Quemadura pasa a Candela[/h2]
 @@sheet_firefly.png
 
-[h2]Quemadura controlada · Desde las posiciones 3–4, suelo 3 rondas → 2 rondas[/h2]
+[h2]Quemadura controlada · El fuego en el suelo vuelve a durar 3 rondas; quemadura 3/3/4/4/5[/h2]
 @@sheet_controlled_burn.png
 
 [h2]Candela · Quemadura 1/1/2/2/3 y después un 50% menos de reducción (1 turno)[/h2]

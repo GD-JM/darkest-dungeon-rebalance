@@ -1,0 +1,23 @@
+{
+  "id": "RUN-013",
+  "decision": "adopted",
+  "original_quote": "그리고 통제된 화상도 3턴으로 바꾸자 2턴 너무 적다 진격을 -20 으로 하자 그러면 딱 들어맞지 않나? 근데 지금이 -20아니야?  그리고 석궁사수 저격 1열 왜 못쏘는걸까 1열도 타겟할 수 있게 만들면 리스크가 클까?",
+  "rationale_ko": "지면 지속2라운드가 너무 짧다는 사용 피드백에 따라3라운드로 복원. 진격−20 유지와 저격 검토는 별개이며 다른 수치는 변경하지 않는다.",
+  "source": {
+    "product": "codex",
+    "reference": "현재 대화 2026-11-08 통제된 화상3턴 요청",
+    "session_id": null,
+    "message_id": null,
+    "event_id": null
+  },
+  "files": [
+    "effects/rebalance_runaway.effects.darkest",
+    "heroes/runaway/runaway.effects_edit.txt",
+    "design/changes/runaway.md",
+    "design/workshop/hero_cards.json",
+    "design/workshop/why.json"
+  ],
+  "supersedes": [
+    "RUN-008 ground duration only"
+  ]
+}

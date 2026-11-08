@@ -429,7 +429,7 @@
         ],
         [
           "NEW WAYS TO PLAY",
-          "Bola pulls a rank 2–4 enemy 2 ranks toward your front line; Suppressing Fire slows the back two and lowers their ACC; Sniper Shot fires past Guard."
+          "Bola pulls a rank 2-4 enemy forward 2; Suppressing Fire slows the back two and lowers their ACC; Sniper Shot bypasses Guard and now targets ranks 1-4."
         ]
       ],
       "art": "arbalest_child"
@@ -822,11 +822,11 @@
         ],
         [
           "THE DIRECTION",
-          "Open from ranks 3–4, then step into the fight: keep the strong opening, cut the long-fight burn."
+          "Prepare from ranks 3-4, then advance. Three-round ground fire leaves time for movement and follow-up attacks."
         ],
         [
           "THE SOLUTION, AND ITS PRICE",
-          "Ransack and Controlled Burn start from ranks 3–4; Controlled Burn is 3–5 and its ground fire lasts 2 rounds; Backdraft +20% per stack from ranks 1–2; Firefly no longer delays Burn decay."
+          "Controlled Burn: initial and ground Burn 3/3/4/4/5, ground duration 3 rounds, 2 uses. Backdraft: +20% per stack from ranks 1-2. Firefly no longer delays Burn decay."
         ],
         [
           "NEW WAYS TO PLAY",

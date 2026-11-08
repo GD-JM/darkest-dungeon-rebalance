@@ -20,31 +20,36 @@ effect: .name "RB RUN RW Firefly Burn 5" .target "target" .curio_result_type "ne
 effect: .name "RB RUN RW CB Burn 1" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 3 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
 // RUN-008 Reduce initial burn; preserve short-fight impact with stronger ground.
 // edited vanilla effect (from dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest)
-effect: .name "RB RUN RW CB Rank Effect 1" .target "target" .chance 100% .on_hit true .on_miss true .controlled_burn_amount 3 .controlled_burn_duration 2
+effect: .name "RB RUN RW CB Rank Effect 1" .target "target" .chance 100% .on_hit true .on_miss true .controlled_burn_amount 3 .controlled_burn_duration 3
+// RUN-013: Ground duration 2 -> 3 rounds because the user finds 2 too short for setup/movement play. Keep initial/ground Burn 3/3/4/4/5, rear-rank use and two charges. Supersedes RUN-008 duration only; this is controlled_burn_duration, not riposte duration compensation.
 // RUN-008 Ground 3/3/4/4/5 for 2 rounds; reduce long-fight accumulation.
 // edited vanilla effect (from dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest)
 effect: .name "RB RUN RW CB Burn 2" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 3 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
 // RUN-008 Reduce initial burn; preserve short-fight impact with stronger ground.
 // edited vanilla effect (from dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest)
-effect: .name "RB RUN RW CB Rank Effect 2" .target "target" .chance 100% .on_hit true .on_miss true .controlled_burn_amount 3 .controlled_burn_duration 2
+effect: .name "RB RUN RW CB Rank Effect 2" .target "target" .chance 100% .on_hit true .on_miss true .controlled_burn_amount 3 .controlled_burn_duration 3
+// RUN-013: Ground duration 2 -> 3 rounds because the user finds 2 too short for setup/movement play. Keep initial/ground Burn 3/3/4/4/5, rear-rank use and two charges. Supersedes RUN-008 duration only; this is controlled_burn_duration, not riposte duration compensation.
 // RUN-008 Ground 3/3/4/4/5 for 2 rounds; reduce long-fight accumulation.
 // edited vanilla effect (from dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest)
 effect: .name "RB RUN RW CB Burn 3" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 4 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
 // RUN-008 Reduce initial burn; preserve short-fight impact with stronger ground.
 // edited vanilla effect (from dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest)
-effect: .name "RB RUN RW CB Rank Effect 3" .target "target" .chance 100% .on_hit true .on_miss true .controlled_burn_amount 4 .controlled_burn_duration 2
+effect: .name "RB RUN RW CB Rank Effect 3" .target "target" .chance 100% .on_hit true .on_miss true .controlled_burn_amount 4 .controlled_burn_duration 3
+// RUN-013: Ground duration 2 -> 3 rounds because the user finds 2 too short for setup/movement play. Keep initial/ground Burn 3/3/4/4/5, rear-rank use and two charges. Supersedes RUN-008 duration only; this is controlled_burn_duration, not riposte duration compensation.
 // RUN-008 Ground 3/3/4/4/5 for 2 rounds; reduce long-fight accumulation.
 // edited vanilla effect (from dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest)
 effect: .name "RB RUN RW CB Burn 4" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 4 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
 // RUN-008 Reduce initial burn; preserve short-fight impact with stronger ground.
 // edited vanilla effect (from dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest)
-effect: .name "RB RUN RW CB Rank Effect 4" .target "target" .chance 100% .on_hit true .on_miss true .controlled_burn_amount 4 .controlled_burn_duration 2
+effect: .name "RB RUN RW CB Rank Effect 4" .target "target" .chance 100% .on_hit true .on_miss true .controlled_burn_amount 4 .controlled_burn_duration 3
+// RUN-013: Ground duration 2 -> 3 rounds because the user finds 2 too short for setup/movement play. Keep initial/ground Burn 3/3/4/4/5, rear-rank use and two charges. Supersedes RUN-008 duration only; this is controlled_burn_duration, not riposte duration compensation.
 // RUN-008 Ground 3/3/4/4/5 for 2 rounds; reduce long-fight accumulation.
 // edited vanilla effect (from dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest)
 effect: .name "RB RUN RW CB Burn 5" .target "target" .curio_result_type "negative" .chance 100% .dotBurn 5 .dot_irresistible true .on_hit true .on_miss false .can_apply_on_death true
 // RUN-008 Reduce initial burn; preserve short-fight impact with stronger ground.
 // edited vanilla effect (from dlc/4964110_fires_edge/features/runaway/effects/runaway.effects.darkest)
-effect: .name "RB RUN RW CB Rank Effect 5" .target "target" .chance 100% .on_hit true .on_miss true .controlled_burn_amount 5 .controlled_burn_duration 2
+effect: .name "RB RUN RW CB Rank Effect 5" .target "target" .chance 100% .on_hit true .on_miss true .controlled_burn_amount 5 .controlled_burn_duration 3
+// RUN-013: Ground duration 2 -> 3 rounds because the user finds 2 too short for setup/movement play. Keep initial/ground Burn 3/3/4/4/5, rear-rank use and two charges. Supersedes RUN-008 duration only; this is controlled_burn_duration, not riposte duration compensation.
 // RUN-008 Ground 3/3/4/4/5 for 2 rounds; reduce long-fight accumulation.
 
 // mod-only new effects
